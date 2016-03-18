@@ -16,10 +16,10 @@ Github release (not from master), and you will need read access to the repo.
 
 ### Bower
 ```
-$ bower install git@github.com:bitcrowd/bitstyles.git#v0.1.1-alpha
+$ bower install git@github.com:bitcrowd/bitstyles.git#v0.1.2-alpha
 ```
 
 ### npm
 ```
-$ npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.1.1-alpha
+$ npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.1.2-alpha
 ```
