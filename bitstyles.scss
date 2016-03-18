@@ -1,0 +1,20 @@
+// SETTINGS
+// Global variables, site-wide settings, config switches, etc.
+
+// TOOLS
+// Site-wide mixins and functions.
+
+// GENERIC
+// Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
+
+// BASE
+// Unclassed HTML elements (Directly selects element typs e.g. a {}, blockquote {}, address {}).
+
+// OBJECTS
+// Objects, abstractions, and design patterns (e.g. .media {}). Cosmetic-free.
+
+// COMPONENTS
+// Discrete, complete chunks of UI (e.g. .carousel {}). Cosmetically-designed components. This is the one layer that inuitcss doesn’t get involved with.
+
+// TRUMPS
+// High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
