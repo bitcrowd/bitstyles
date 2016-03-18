@@ -1,0 +1,15 @@
+// scss-lint:disable ColorVariable
+
+// Monochrome
+$bitstyles-color-black: #000000 !default;
+$bitstyles-color-white: #ffffff !default;
+
+$bitstyles-color-gray-lightest: #ffffff !default;
+$bitstyles-color-gray-light: #ffffff !default;
+$bitstyles-color-gray-medium: #ffffff !default;
+$bitstyles-color-gray-dark: #ffffff !default;
+$bitstyles-color-gray-darkest: #ffffff !default;
+
+// Implementations
+$bitstyles-color-link: $bitstyles-color-gray-darkest !default;
+$bitstyles-color-link-visted: $bitstyles-color-gray-medium !default;

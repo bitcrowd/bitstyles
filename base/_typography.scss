@@ -1,0 +1,47 @@
+body {
+  font-family: $bitstyles-font-family-body;
+  line-height: 1.5;
+
+  .fonts-loaded & {
+    font-family: $bitstyles-font-family-body-loaded;
+  }
+}
+
+a {
+  color: $bitstyles-color-link;
+  text-decoration: none;
+  transition: $bitstyles-transition-duration $bitstyles-transition-easing;
+}
+
+a:visited {
+  color: $bitstyles-color-link-visted;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $bitstyles-font-family-header;
+
+  .fonts-loaded & {
+    font-family: $bitstyles-font-family-header-loaded;
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  font-style: italic;
+}

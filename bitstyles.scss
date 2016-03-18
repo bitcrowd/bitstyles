@@ -1,14 +1,25 @@
 // SETTINGS
 // Global variables, site-wide settings, config switches, etc.
+@import 'settings/global';
+@import 'settings/units';
+@import 'settings/layout';
+@import 'settings/animations';
+@import 'settings/colors';
+@import 'settings/typography';
 
 // TOOLS
 // Site-wide mixins and functions.
+@import 'tools/zindex';
 
 // GENERIC
 // Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
+@import 'generic/box-sizing';
+@import 'generic/normalize';
+
 
 // BASE
-// Unclassed HTML elements (Directly selects element typs e.g. a {}, blockquote {}, address {}).
+// Unclassed HTML elements (Directly selects element types e.g. a {}, blockquote {}, address {}).
+@import 'base/typography';
 
 // OBJECTS
 // Objects, abstractions, and design patterns (e.g. .media {}). Cosmetic-free.
@@ -18,3 +29,4 @@
 
 // TRUMPS
 // High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
+@import 'trumps/typography';

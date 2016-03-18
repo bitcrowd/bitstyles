@@ -1,0 +1,31 @@
+// This mixin allows you to assign z-index values in a stacking context of
+// your choice.
+// Solves problems outlined at:
+// <http://philipwalton.com/articles/what-no-one-told-you-about-z-index/>
+//
+// Define a global variable (such as $globalz). Assign to it a sass list of
+// stacking contexts.
+// $globalz: stackcontext1;
+// or
+// $globalz: stackcontext1,stackcontext2,stackcontext3;
+// Items further to the right are higher in the stack.
+//
+// Now when you assign a zindex in your Sass, you can choose which stacking
+// context it will be assigned to.
+// .class {
+//   z-index: z($globalz, stackcontext1);
+// }
+//
+// The function will then loop through each item, in each stacking context, and
+// assign it a z-index value, based on its declared order in your Sass.
+
+@function z($list, $element) {
+  $z-index: index($list, $element);
+
+  @if $z-index {
+    @return $z-index;
+  }
+
+  @warn 'There is no item "#{$element}" in this list; choose one of: #{$list}';
+  @return null;
+}
