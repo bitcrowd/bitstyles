@@ -1,0 +1,19 @@
+.btn {
+  border: 0;
+  color: $bitstyles-color-black;
+  display: inline-block;
+  font-size: inherit;
+  line-height: 2;
+  padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
+  transition: $bitstyles-transition-duration $bitstyles-transition-easing;
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-color-gray-medium;
+    outline: none;
+  }
+
+  * {
+    font-size: inherit;
+  }
+}

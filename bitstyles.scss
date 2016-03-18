@@ -6,6 +6,8 @@
 @import 'settings/animations';
 @import 'settings/colors';
 @import 'settings/typography';
+@import 'settings/icon';
+@import 'settings/button';
 
 // TOOLS
 // Site-wide mixins and functions.
@@ -16,13 +18,15 @@
 @import 'generic/box-sizing';
 @import 'generic/normalize';
 
-
 // BASE
 // Unclassed HTML elements (Directly selects element types e.g. a {}, blockquote {}, address {}).
 @import 'base/typography';
+@import 'base/images';
 
 // OBJECTS
 // Objects, abstractions, and design patterns (e.g. .media {}). Cosmetic-free.
+@import 'objects/icon';
+@import 'objects/button';
 
 // COMPONENTS
 // Discrete, complete chunks of UI (e.g. .carousel {}). Cosmetically-designed components. This is the one layer that inuitcss doesn’t get involved with.
