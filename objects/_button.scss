@@ -1,31 +1,31 @@
 .button {
-  -webkit-appearance: none;
-  background: $bitstyles-button-background-color;
-  border: $bitstyles-button-border;
-  color: $bitstyles-button-color;
-  cursor: pointer;
+  position: relative;
   display: inline-block;
-  font: inherit;
+  padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
   margin: 0;
   overflow: visible;
-  padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
-  position: relative;
+  font: inherit;
+  color: $bitstyles-button-color;
   text-align: center;
-  touch-action: manipulation;
-  transition: $bitstyles-button-transition;
-  user-select: none;
   vertical-align: middle;
+  cursor: pointer;
+  background: $bitstyles-button-background-color;
+  border: $bitstyles-button-border;
+  transition: $bitstyles-button-transition;
+  -webkit-appearance: none;
+  user-select: none;
+  touch-action: manipulation;
 
   &:hover,
   &:focus {
-    background: $bitstyles-button-background-color-hover;
     color: $bitstyles-button-color-hover;
+    background: $bitstyles-button-background-color-hover;
     outline: none;
   }
 }
 
 .button__label {
-  display: inline;
   position: relative;
+  display: inline;
   vertical-align: middle;
 }
