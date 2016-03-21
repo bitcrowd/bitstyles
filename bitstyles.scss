@@ -18,6 +18,8 @@
 @import 'tools/media-query';
 @import 'tools/absolute-center';
 @import 'tools/vertical-center';
+@import 'tools/break-long-words';
+@import 'tools/truncate-with-ellipsis';
 
 // GENERIC
 // Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
