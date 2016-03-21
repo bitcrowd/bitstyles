@@ -28,9 +28,6 @@
 @import 'objects/icon';
 @import 'objects/button';
 
-// COMPONENTS
-// Discrete, complete chunks of UI (e.g. .carousel {}). Cosmetically-designed components. This is the one layer that inuitcss doesn’t get involved with.
-
 // TRUMPS
 // High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
 @import 'trumps/typography';
