@@ -1,4 +1,4 @@
-.btn {
+.button {
   -webkit-appearance: none;
   background: $bitstyles-button-background-color;
   border: $bitstyles-button-border;
@@ -24,7 +24,7 @@
   }
 }
 
-.btn__label {
+.button__label {
   display: inline;
   position: relative;
   vertical-align: middle;
