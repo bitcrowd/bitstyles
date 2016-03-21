@@ -1,0 +1,7 @@
+@mixin absolute-cover($override: '') {
+  position: absolute;
+  left: 0#{$override};
+  top: 0#{$override};
+  right: 0#{$override};
+  bottom: 0#{$override};
+}
