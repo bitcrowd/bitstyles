@@ -1,0 +1,22 @@
+// scss-lint:disable NameFormat
+
+@mixin fixed-ratio {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
+}
+
+@mixin fixed-ratio__inner {
+  @include absolute-cover;
+  display: block;
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+}
