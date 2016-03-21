@@ -10,15 +10,16 @@ body {
 a {
   color: $bitstyles-color-link;
   text-decoration: none;
-  transition: $bitstyles-transition-duration $bitstyles-transition-easing;
-}
+  transition: $bitstyles-link-transition;
 
-a:visited {
-  color: $bitstyles-color-link-visted;
-}
+  &:visited {
+    color: $bitstyles-color-link-visted;
+  }
 
-a:hover {
-  text-decoration: underline;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }
 
 h1,
@@ -40,8 +41,4 @@ address {
 
 dt {
   font-weight: bold;
-}
-
-dd {
-  font-style: italic;
 }
