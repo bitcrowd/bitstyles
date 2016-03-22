@@ -1,19 +1,31 @@
 .btn {
-  border: 0;
-  color: $bitstyles-color-black;
+  -webkit-appearance: none;
+  background: $bitstyles-button-background-color;
+  border: $bitstyles-button-border;
+  color: $bitstyles-button-color;
+  cursor: pointer;
   display: inline-block;
-  font-size: inherit;
-  line-height: 2;
+  font: inherit;
+  margin: 0;
+  overflow: visible;
   padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
-  transition: $bitstyles-transition-duration $bitstyles-transition-easing;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  transition: $bitstyles-button-transition;
+  user-select: none;
+  vertical-align: middle;
 
   &:hover,
   &:focus {
-    color: $bitstyles-color-gray-medium;
+    background: $bitstyles-button-background-color-hover;
+    color: $bitstyles-button-color-hover;
     outline: none;
   }
+}
 
-  * {
-    font-size: inherit;
-  }
+.btn__label {
+  display: inline;
+  position: relative;
+  vertical-align: middle;
 }

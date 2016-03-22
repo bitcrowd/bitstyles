@@ -1,2 +1,11 @@
 $bitstyles-button-padding-vertical: 0.6rem !default;
 $bitstyles-button-padding-horizontal: 1.5rem !default;
+
+$bitstyles-button-background-color: $bitstyles-color-black !default;
+$bitstyles-button-color: $bitstyles-color-white !default;
+$bitstyles-button-background-color-hover: $bitstyles-color-white !default;
+$bitstyles-button-color-hover: $bitstyles-color-black !default;
+
+$bitstyles-button-border: 1px solid !default;
+
+$bitstyles-button-transition: color $bitstyles-transition-duration $bitstyles-transition-easing, background-color $bitstyles-transition-duration $bitstyles-transition-easing !default;
