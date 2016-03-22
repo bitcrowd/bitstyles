@@ -2,14 +2,9 @@
   display: inline-block;
   fill: currentColor;
   height: $bitstyles-icon-size;
+  max-height: 100%;
+  max-width: 100%;
   outline: none;
-  transition: fill $bitstyles-transition-duration $bitstyles-transition-easing, stroke $bitstyles-transition-duration $bitstyles-transition-easing, background-color $bitstyles-transition-duration $bitstyles-transition-easing, transform $bitstyles-transition-duration $bitstyles-transition-easing;
   vertical-align: middle;
   width: $bitstyles-icon-size;
-
-  // inherit hover colours of a containing button
-  .btn &:hover,
-  .btn &:focus {
-    fill: currentColor;
-  }
 }
