@@ -1,3 +1,8 @@
+// Icons — expected to be svg
+// ```<svg class="icon"><use xlink:href="icons.svg#icon--name"></use></svg>```
+//
+// Styleguide Icon
+
 $bitstyles-icon-settings: false !default;
 @if ($bitstyles-icon-settings == false) {
   @include output-settings-warning(icon)

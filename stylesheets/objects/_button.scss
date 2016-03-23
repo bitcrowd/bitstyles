@@ -1,3 +1,12 @@
+// Generic buttons — produces a larger-than-text hit target, these are intended to be actions not links.
+// Most often a `<button>` rather than `<a href="#">`.
+// ```<button class="button"><span class="button__label">Button Text</span></button>```
+//
+// :hover       - Hover state.
+// :focus       - Focus state.
+//
+// Styleguide Button
+
 $bitstyles-button-settings: false !default;
 @if ($bitstyles-button-settings == false) {
   @include output-settings-warning(button);
