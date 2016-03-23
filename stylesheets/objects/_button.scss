@@ -25,6 +25,7 @@ $bitstyles-button-settings: false !default;
   cursor: pointer;
   background: $bitstyles-button-background-color;
   border: $bitstyles-button-border;
+  border-radius: $bitstyles-button-border-radius;
   transition: $bitstyles-button-transition;
   -webkit-appearance: none;
   user-select: none;
