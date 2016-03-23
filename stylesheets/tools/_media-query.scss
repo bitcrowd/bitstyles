@@ -1,3 +1,11 @@
+// Helper function to ease usage of media-queries. Uses the breakpoints listed in $breakpoint sass variable.
+// Usage:
+// @media-query(breakpoint-name) {
+//    .selector {
+//       …styles here…
+//    }
+// }
+
 @mixin media-query($mq) {
   $breakpoint-found: false;
 

@@ -1,3 +1,5 @@
+// An element that covers its nearest relatively-positioned parent from edge to edge.
+
 @mixin absolute-cover($distance: 0) {
   position: absolute;
   left: $distance;
