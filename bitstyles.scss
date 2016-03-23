@@ -13,6 +13,16 @@
 // Site-wide mixins and functions.
 @import 'tools/zindex';
 @import 'tools/rem-sizing';
+@import 'tools/absolute-cover';
+@import 'tools/fixed-ratio';
+@import 'tools/media-query';
+@import 'tools/absolute-center';
+@import 'tools/vertical-center';
+@import 'tools/break-long-words';
+@import 'tools/truncate-with-ellipsis';
+@import 'tools/clearfix';
+@import 'tools/hidden';
+@import 'tools/visuallyhidden';
 
 // GENERIC
 // Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
