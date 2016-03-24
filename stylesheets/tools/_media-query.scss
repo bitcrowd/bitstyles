@@ -6,7 +6,7 @@
 //    }
 // }
 
-@mixin media-query($mq) {
+@mixin media-query($mq, $breakpoints: $bitstyles-breakpoints) {
   $breakpoint-found: false;
 
   @each $breakpoint in $breakpoints {

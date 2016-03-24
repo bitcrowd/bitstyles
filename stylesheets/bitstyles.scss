@@ -9,6 +9,8 @@
 @import 'settings/icon';
 @import 'settings/button';
 @import 'settings/grid';
+@import 'settings/hidden';
+@import 'settings/visuallyhidden';
 
 // TOOLS
 // Site-wide mixins and functions.
@@ -41,6 +43,15 @@
 @import 'objects/icon';
 @import 'objects/button';
 // @import 'objects/grid';
+// @import 'objects/absolute-center';
+// @import 'objects/absolute-cover';
+// @import 'objects/break-long-words';
+// @import 'objects/clearfix';
+// @import 'objects/fixed-ratio';
+// @import 'objects/hidden';
+// @import 'objects/truncate-with-ellipsis';
+// @import 'objects/vertical-center';
+// @import 'objects/visuallyhidden';
 
 // TRUMPS
 // High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).

@@ -1,0 +1,16 @@
+$bitstyles-hidden-settings: false !default;
+@if ($bitstyles-hidden-settings == false) {
+  @include output-settings-warning(hidden);
+}
+
+.hidden {
+  @include hidden;
+}
+
+@each $breakpoint in $hidden-breakpoints {
+  @include media-query($breakpoint) {
+    .hidden\@#{$breakpoint} {
+      @include hidden;
+    }
+  }
+}

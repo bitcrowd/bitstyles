@@ -1,0 +1,16 @@
+$bitstyles-visuallyhidden-settings: false !default;
+@if ($bitstyles-visuallyhidden-settings == false) {
+  @include output-settings-warning(visuallyhidden);
+}
+
+.visuallyhidden {
+  @include visuallyhidden;
+}
+
+@each $breakpoint in $visuallyhidden-breakpoints {
+  @include media-query($breakpoint) {
+    .visuallyhidden\@#{$breakpoint} {
+      @include visuallyhidden;
+    }
+  }
+}

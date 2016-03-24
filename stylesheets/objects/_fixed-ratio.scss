@@ -1,0 +1,9 @@
+// scss-lint:disable NameFormat
+
+.fixed-ratio {
+  @include fixed-ratio;
+}
+
+.fixed-ratio__inner {
+  @include fixed-ratio__inner;
+}
