@@ -1,4 +1,5 @@
 // scss-lint:disable NameFormat
+// An element that has intrinsic shape — width will be 100%, height will be limited to keep 16:9 aspect ratio.
 
 @mixin fixed-ratio {
   position: relative;

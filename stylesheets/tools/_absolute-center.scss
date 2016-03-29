@@ -1,3 +1,6 @@
+// Vertically & horizontally centred element.
+// Absolutely positioned, so centred relative to nearest relatively-positioned parent.
+
 @mixin absolute-center {
   position: absolute;
   left: 50%;

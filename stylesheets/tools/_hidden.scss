@@ -1,4 +1,5 @@
 // scss-lint:disable ImportantRule
+// Fully hides an element & its children — does not affect document flow, does not get read by google or screenreaders.
 
 @mixin hidden {
   display: none !important;

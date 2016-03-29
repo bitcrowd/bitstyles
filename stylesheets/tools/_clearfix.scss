@@ -1,3 +1,5 @@
+// Apply to a floated element (or its parent) to ensure following elements are cleared.
+
 @mixin clearfix {
   &::after {
     display: table;

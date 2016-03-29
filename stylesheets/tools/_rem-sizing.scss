@@ -1,3 +1,5 @@
+// Converts pixels to rems — use to define font-sizes etc.
+
 @function px-to-rem($pixel-size, $root-size: 16px) {
   @return ($pixel-size / $root-size) * 1rem;
 }
