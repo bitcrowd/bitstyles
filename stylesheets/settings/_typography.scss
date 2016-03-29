@@ -6,8 +6,8 @@ $bitstyles-font-family-header-loaded: serif !default;
 $bitstyles-font-family-body: helvetica, sans, sans-serif !default;
 $bitstyles-font-family-body-loaded: helvetica, sans, sans-serif !default;
 
-$bitstyles-font-weight-light: 300;
-$bitstyles-font-weight-normal: 400;
-$bitstyles-font-weight-bold: 700;
+$bitstyles-font-weight-light: 300 !default;
+$bitstyles-font-weight-normal: 400 !default;
+$bitstyles-font-weight-bold: 700 !default;
 
-$bitstyles-link-transition: color $bitstyles-transition-duration $bitstyles-transition-easing;
+$bitstyles-link-transition: color $bitstyles-transition-duration $bitstyles-transition-easing !default;

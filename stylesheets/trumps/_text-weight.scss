@@ -1,0 +1,14 @@
+// Trumps to override font-weight.
+// Named `.text-` for consistency with the other text/font-related trumps
+
+.#{$bitstyles-namespace}text-weight--light {
+  font-weight: $bitstyles-font-weight-light;
+}
+
+.#{$bitstyles-namespace}text-weight--normal {
+  font-weight: $bitstyles-font-weight-normal;
+}
+
+.#{$bitstyles-namespace}text-weight--bold {
+  font-weight: $bitstyles-font-weight-bold;
+}
