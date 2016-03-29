@@ -1,3 +1,8 @@
+$bitstyles-button-settings: false !default;
+@if ($bitstyles-button-settings == false) {
+  @include output-settings-warning(button);
+};
+
 .button {
   position: relative;
   display: inline-block;

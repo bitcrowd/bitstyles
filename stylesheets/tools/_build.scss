@@ -1,0 +1,3 @@
+@mixin output-settings-warning($settings-name) {
+  @warn 'Oops! Have you included a #{$settings-name} settings file?'
+}
