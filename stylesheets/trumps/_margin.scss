@@ -1,0 +1,7 @@
+// Use to add ad-hoc margins to elements
+
+@each $position in (left, top, right, bottom) {
+  .#{$bitstyles-namespace}margin-#{$position} {
+    margin-#{$position}: $bitstyles-margin;
+  }
+}
