@@ -29,6 +29,10 @@
   "dependencies": {
     "inuit-layout": "^0.2.2",
     "inuit-responsive-widths": "^0.2.2",
-    "inuit-widths": "^0.4.2"
+    "inuit-widths": "^0.4.2",
+    "normalize.css": "^4.0.0"
+  },
+  "scripts": {
+    "postinstall": "cp node_modules/normalize.css/normalize.css node_modules/normalize.css/_normalize.scss"
   }
 }

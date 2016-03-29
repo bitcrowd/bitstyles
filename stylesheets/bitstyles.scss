@@ -29,7 +29,7 @@
 // GENERIC
 // Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
 @import 'generic/box-sizing';
-@import 'generic/normalize';
+@import 'node_modules/normalize.css/normalize.scss';
 
 // BASE
 // Unclassed HTML elements (Directly selects element types e.g. a {}, blockquote {}, address {}).
@@ -40,7 +40,7 @@
 // Objects, abstractions, and design patterns (e.g. .media {}). Cosmetic-free.
 @import 'objects/icon';
 @import 'objects/button';
-@import 'objects/grid';
+// @import 'objects/grid';
 
 // TRUMPS
 // High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
