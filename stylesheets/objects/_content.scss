@@ -1,5 +1,7 @@
-// Semi-fixed-width centred content wrapper.
-// You may want to change the padding at different screen sizes.
+// Semi-fixed-width centred content wrapper. Takes full width available up to a maximum,
+// at which point width stays the same. Always remains centred.
+//
+// Styleguide Content
 
 $bitstyles-content-settings: false !default;
 @if ($bitstyles-content-settings == false) {

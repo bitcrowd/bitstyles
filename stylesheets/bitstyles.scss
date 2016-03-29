@@ -10,13 +10,11 @@
 @import 'settings/button';
 @import 'settings/button--icon';
 @import 'settings/grid';
-<<<<<<< 39ec947d92d307e3dc3a223a254f58ab6aee9aec
 @import 'settings/hidden';
 @import 'settings/visuallyhidden';
-=======
 @import 'settings/content';
 @import 'settings/topbar';
->>>>>>> Adds topbar & content as objects.
+@import 'settings/bordered-header';
 
 // TOOLS
 // Site-wide mixins and functions.
@@ -63,6 +61,7 @@
 // @import 'objects/topbar';
 // @import 'objects/expander';
 // @import 'objects/flex';
+// @import 'objects/bordered-header';
 
 // TRUMPS
 // High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
