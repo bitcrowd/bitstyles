@@ -1,6 +1,6 @@
 // Text styling helpers
 .#{$bitstyles-namespace}text-bold {
-  font-weight: bold;
+  font-weight: $bitstyles-font-weight-bold;
 }
 
 .#{$bitstyles-namespace}text-italic {
