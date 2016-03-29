@@ -1,0 +1,7 @@
+$bitstyles-content-settings: true;
+
+$bitstyles-content-max-width: 45rem !default;
+$bitstyles-content-horizontal-padding: $bitstyles-margin !default;
+
+$bitstyles-content-horizontal-padding-large: $bitstyles-margin * 2 !default;
+$bitstyles-content-large-breakpoint: 'large' !default; // The breakpoint at which we implement the above horizontal-padding value.
