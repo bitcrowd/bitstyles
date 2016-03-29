@@ -23,3 +23,8 @@ $ bower install git@github.com:bitcrowd/bitstyles.git#v0.1.2-alpha
 ```
 $ npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.1.2-alpha
 ```
+
+## Build
+To ensure your changes do not break the build, run
+```gulp watch```
+to recompile & lint sass on every change.
