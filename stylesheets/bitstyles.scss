@@ -8,6 +8,7 @@
 @import 'settings/typography';
 @import 'settings/icon';
 @import 'settings/button';
+@import 'settings/grid';
 
 // TOOLS
 // Site-wide mixins and functions.
@@ -39,6 +40,7 @@
 // Objects, abstractions, and design patterns (e.g. .media {}). Cosmetic-free.
 @import 'objects/icon';
 @import 'objects/button';
+@import 'objects/grid';
 
 // TRUMPS
 // High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
