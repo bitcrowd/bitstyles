@@ -19,6 +19,7 @@ a {
 
   &:hover,
   &:focus {
+    color: $bitstyles-color-link-hover;
     text-decoration: underline;
   }
 }
@@ -29,11 +30,18 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0 0 $bitstyles-margin;
   font-family: $bitstyles-font-family-header;
+  font-weight: $bitstyles-font-weight-bold;
+  text-rendering: optimizeLegibility;
 
   .fonts-loaded & {
     font-family: $bitstyles-font-family-header-loaded;
   }
+}
+
+p {
+  margin: 0 0 $bitstyles-margin;
 }
 
 address {
@@ -41,5 +49,5 @@ address {
 }
 
 dt {
-  font-weight: bold;
+  font-weight: $bitstyles-font-weight-bold;
 }
