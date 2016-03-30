@@ -1,3 +1,14 @@
+// Absolute Cover
+//
+// The element will cover its nearest relatively-positioned parent element from edge to edge.
+//
+// markup:
+// <div class="absolute-cover">
+//   Content goes here
+// </div>
+//
+// Styleguide 1.4
+
 .absolute-cover {
   @include absolute-cover;
 }

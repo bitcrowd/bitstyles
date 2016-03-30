@@ -1,11 +1,11 @@
-// Icons — expected to be svg
-// ```<svg class="icon"><use xlink:href="icons.svg#icon--name"></use></svg>```
+// Icons
 //
-// .icon--small
-// .icon--medium
-// .icon--large
+// Expected to be svg
 //
-// Styleguide Icon
+// markup:
+// <svg class="icon"><use xlink:href="icons.svg#icon--name"></use></svg>
+//
+// Styleguide 1.3
 
 $bitstyles-icon-settings: false !default;
 @if ($bitstyles-icon-settings == false) {

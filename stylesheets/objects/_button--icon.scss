@@ -1,9 +1,20 @@
-// A specialised button type — (visible) content is intended to be only an icon.
-// Icon alt attribute should give valid text to use as button label,
-// or provide a `.visuallyhidden` text element as sibling to the icon.
-// <button class="button button--icon"><svg class="icon"><use xlink:href="icons-svg#twitter"></use></svg></button>
+// Icon Button
 //
-// Styleguide Icon Button
+// A specialised button type — (visible) content is intended to be only an icon.
+// Icon title element should give valid text to use as button label, or provide a `.visuallyhidden` text element as sibling to the icon.
+//
+// markup:
+// <button class="button button--icon">
+//   <svg class="icon">
+//     <title></title>
+//     <use xlink:href="images/icons.svg#twitter-logo"></use>
+//   </svg>
+// </button>
+//
+// :hover       - Hover state.
+// :focus       - Focus state.
+//
+// Styleguide 1.2
 
 $bitstyles-button-icon-settings: false !default;
 @if ($bitstyles-button-icon-settings == false) {
