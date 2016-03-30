@@ -1,3 +1,7 @@
 $bitstyles-icon-settings: true;
 
-$bitstyles-icon-size: 1rem !default;
+$bitstyles-icon-sizes: (
+  'small'     1rem,
+  'medium'    2rem,
+  'large'     3rem
+) !default;
