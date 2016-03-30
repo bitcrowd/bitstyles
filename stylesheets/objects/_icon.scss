@@ -1,6 +1,10 @@
 // Icons — expected to be svg
 // ```<svg class="icon"><use xlink:href="icons.svg#icon--name"></use></svg>```
 //
+// .icon--small
+// .icon--medium
+// .icon--large
+//
 // Styleguide Icon
 
 $bitstyles-icon-settings: false !default;
@@ -10,12 +14,22 @@ $bitstyles-icon-settings: false !default;
 
 .icon {
   display: inline-block;
-  width: $bitstyles-icon-size;
-  height: $bitstyles-icon-size;
+  width: 1em;
+  height: 1em;
   max-width: 100%;
   max-height: 100%;
+  font-size: 1em;
   vertical-align: middle;
   outline: none;
   transition: fill $bitstyles-transition-duration $bitstyles-transition-easing, stroke $bitstyles-transition-duration $bitstyles-transition-easing, background-color $bitstyles-transition-duration $bitstyles-transition-easing, transform $bitstyles-transition-duration $bitstyles-transition-easing;
   fill: currentColor;
+}
+
+@each $icon-size in $bitstyles-icon-sizes {
+  $alias: nth($icon-size, 1);
+  $size: nth($icon-size, 2);
+
+  .icon--#{$alias} {
+    font-size: $size;
+  }
 }
