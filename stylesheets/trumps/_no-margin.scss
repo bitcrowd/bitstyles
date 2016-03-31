@@ -1,0 +1,12 @@
+// Use to remove margins from elements on an ad-hoc basis
+//
+// The generator here outputs:
+// - .no-margin--left
+// - .no-margin--top
+// …
+
+@each $position in (left, top, right, bottom) {
+  .#{$bitstyles-namespace}no-margin--#{$position} {
+    margin-#{$position}: 0;
+  }
+}

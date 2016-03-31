@@ -1,0 +1,12 @@
+// Override font-style of an element.
+// Named `.text-` for consistency with the other text/font-related trumps
+//
+// The generator here outputs:
+// - .text-style--italic
+// - .text-style--normal
+
+@each $style in (italic, normal) {
+  .#{$bitstyles-namespace}text-style--#{$style} {
+    font-style: $style;
+  }
+}
