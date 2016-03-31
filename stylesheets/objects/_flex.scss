@@ -1,0 +1,13 @@
+// Simple flex layout.
+// Make one of the children `.flex__primary` to make it take as much space as is available.
+//
+// Styleguide Flex
+
+.flex {
+  display: flex;
+  align-items: stretch;
+}
+
+.flex__primary {
+  flex: 1 0 auto;
+}

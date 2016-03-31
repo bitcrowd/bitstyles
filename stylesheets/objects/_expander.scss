@@ -1,0 +1,31 @@
+// Needs JS to function. The toggle is an interactive element of some kind (button, link),
+// the body is the content you want to be revealed — it starts at zero height,
+// expands to size of content once active.
+// `<button class="expander-toggle" aria-expanded="false" aria-controls="expander-0"></button>
+//  <div class="expander-body" id="expander-0" aria-hidden="true">…lots of content here…</div>`
+//
+// Styleguide Expander
+
+.expander-toggle {
+  .icon {
+    transform: rotate(180deg);
+    transition: transform $bitstyles-transition-duration $bitstyles-transition-easing;
+  }
+
+  &.is-active {
+    .icon {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.expander-body {
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $bitstyles-transition-duration-long $bitstyles-transition-easing;
+
+  &.is-active {
+    max-height: 99999rem;
+  }
+}

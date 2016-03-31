@@ -1,0 +1,35 @@
+// Creates equally-sized horizontal lines to the left & right of the element.
+// asciiart example:
+// -------- header ---------
+//
+// Styleguide Bordered Header
+
+$bitstyles-bordered-header-settings: false !default;
+@if ($bitstyles-bordered-header-settings == false) {
+  @include output-settings-warning(bordered-header);
+}
+
+.bordered-header {
+  display: table;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+
+  &::before,
+  &::after {
+    position: relative;
+    top: 0.8em;
+    display: table-cell;
+    width: 23%;
+    border-top: 1px solid $bitstyles-bordered-header-border-color;
+    content: '';
+  }
+
+  &::before {
+    left: $bitstyles-bordered-header-horizontal-space;
+  }
+
+  &::after {
+    right: $bitstyles-bordered-header-horizontal-space;
+  }
+}

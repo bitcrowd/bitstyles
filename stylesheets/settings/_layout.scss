@@ -13,3 +13,5 @@ $bitstyles-breakpoints: (
   'large'               'screen and (min-width: #{$breakpoint-medium-large-boundary})',
   'hidpi'               '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)'
 ) !default;
+
+$bitstyles-global-z: topbar !default;

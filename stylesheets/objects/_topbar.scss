@@ -1,0 +1,19 @@
+// Fixed-position topbar/menu.
+//
+// Styleguide Topbar
+
+$bitstyles-topbar-settings: false !default;
+@if ($bitstyles-topbar-settings == false) {
+  @include output-settings-warning(topbar);
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: z($bitstyles-global-z, topbar);
+  padding: $bitstyles-topbar-vertical-padding $bitstyles-topbar-horizontal-padding;
+  transition: background-color $bitstyles-transition-duration $bitstyles-transition-easing, transform 0.3s $bitstyles-transition-easing;
+  backface-visibility: hidden;
+}

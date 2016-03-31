@@ -1,0 +1,32 @@
+// Semi-fixed-width centred content wrapper. Takes full width available up to a maximum,
+// at which point width stays the same. Always remains centred.
+//
+// Styleguide Content
+
+$bitstyles-content-settings: false !default;
+@if ($bitstyles-content-settings == false) {
+  @include output-settings-warning(content);
+}
+
+.content {
+  display: block;
+  max-width: $bitstyles-content-max-width;
+  padding-right: $bitstyles-content-horizontal-padding;
+  padding-left: $bitstyles-content-horizontal-padding;
+  margin-right: auto;
+  margin-left: auto;
+  transition: padding $bitstyles-transition-duration $bitstyles-transition-easing;
+}
+
+@each $breakpoint in $bitstyles-breakpoints {
+  $alias: nth($breakpoint, 1);
+
+  @if $alias == $bitstyles-content-large-breakpoint {
+    @include media-query($alias) {
+      .content {
+        padding-right: $bitstyles-content-horizontal-padding-large;
+        padding-left: $bitstyles-content-horizontal-padding-large;
+      }
+    }
+  }
+}
