@@ -1,3 +1,4 @@
+// Margins
 // Use to add ad-hoc margins to elements.
 //
 // The generator here outputs:
@@ -7,6 +8,8 @@
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}margin--#{$position} {
+    //styleguide:ignore:start
     margin-#{$position}: $bitstyles-margin;
+    //styleguide:ignore:end
   }
 }

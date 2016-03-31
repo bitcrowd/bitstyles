@@ -1,8 +1,11 @@
+// Bordered Header
+//
 // Creates equally-sized horizontal lines to the left & right of the element.
+//
 // asciiart example:
 // -------- header ---------
 //
-// Styleguide Bordered Header
+// Styleguide 1.6
 
 $bitstyles-bordered-header-settings: false !default;
 @if ($bitstyles-bordered-header-settings == false) {

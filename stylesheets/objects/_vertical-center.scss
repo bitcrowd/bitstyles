@@ -1,3 +1,9 @@
+// Vertical Centre
+//
+// Centres an element vertically (not horizontally). Not using absolute positioning.
+//
+// Styleguide 2.13
+
 .vertical-center {
   @include vertical-center;
 }

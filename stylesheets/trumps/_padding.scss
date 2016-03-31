@@ -1,4 +1,5 @@
-// Use to add ad-hoc margins to elements
+// Paddings
+// Use to add ad-hoc padding to elements
 //
 // The generator here outputs:
 // - .padding--left
@@ -7,6 +8,8 @@
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}padding--#{$position} {
+    //styleguide:ignore:start
     padding-#{$position}: $bitstyles-margin;
+    //styleguide:ignore:end
   }
 }

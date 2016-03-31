@@ -1,7 +1,9 @@
+// Content
+//
 // Semi-fixed-width centred content wrapper. Takes full width available up to a maximum,
 // at which point width stays the same. Always remains centred.
 //
-// Styleguide Content
+// Styleguide 1.8
 
 $bitstyles-content-settings: false !default;
 @if ($bitstyles-content-settings == false) {

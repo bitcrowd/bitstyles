@@ -1,3 +1,9 @@
+// Truncate with ellipsis
+//
+// Truncates text with an ellipsis (…)
+//
+// Styleguide 2.14
+
 .truncate-with-ellipsis {
   @include truncate-with-ellipsis;
 }

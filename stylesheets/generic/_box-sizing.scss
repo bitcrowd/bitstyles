@@ -1,4 +1,7 @@
-// apply a natural box layout model to all elements, but allowing components to change
+// Can be used to apply the border-box box model to all elements instead of the default content-box,
+// while still allowing components to change.
+//
+// No styleguide reference.
 
 html {
   box-sizing: $bitstyles-box-sizing;

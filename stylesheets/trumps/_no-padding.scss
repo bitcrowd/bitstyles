@@ -1,4 +1,5 @@
-// Use to remove margins from elements on an ad-hoc basis
+// No-Paddings
+// Use to remove padding from elements on an ad-hoc basis
 //
 // The generator here outputs:
 // - .no-padding--left
@@ -7,6 +8,8 @@
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}no-padding--#{$position} {
+    //styleguide:ignore:start
     padding-#{$position}: 0;
+    //styleguide:ignore:end
   }
 }

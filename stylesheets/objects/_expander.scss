@@ -1,10 +1,14 @@
+// Expander
+//
 // Needs JS to function. The toggle is an interactive element of some kind (button, link),
 // the body is the content you want to be revealed — it starts at zero height,
 // expands to size of content once active.
+//
+// markup:
 // `<button class="expander-toggle" aria-expanded="false" aria-controls="expander-0"></button>
 //  <div class="expander-body" id="expander-0" aria-hidden="true">…lots of content here…</div>`
 //
-// Styleguide Expander
+// Styleguide 1.9
 
 .expander-toggle {
   .icon {

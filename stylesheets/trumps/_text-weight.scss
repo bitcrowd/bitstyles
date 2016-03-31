@@ -1,5 +1,6 @@
-// Trumps to override font-weight.
+// Font-weight.
 // Named `.text-` for consistency with the other text/font-related trumps
+// No styleguide reference.
 
 .#{$bitstyles-namespace}text-weight--light {
   font-weight: $bitstyles-font-weight-light;
