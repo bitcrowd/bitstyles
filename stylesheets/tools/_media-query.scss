@@ -1,3 +1,5 @@
+// Media Query
+//
 // Helper function to ease usage of media-queries. Uses the breakpoints listed in $breakpoint sass variable.
 // Usage:
 // @media-query(breakpoint-name) {
@@ -5,6 +7,7 @@
 //       …styles here…
 //    }
 // }
+// Styleguide 2.11
 
 @mixin media-query($mq, $breakpoints: $bitstyles-breakpoints) {
   $breakpoint-found: false;

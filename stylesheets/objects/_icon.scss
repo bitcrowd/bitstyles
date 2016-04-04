@@ -1,9 +1,13 @@
 // Icons
 //
-// Expected to be svg
+// We use an svg-based icon system. All icons are present as symbols within `icons.svg`, and are used by embedding svg tags (see example markup).
+// Provide a `<title>` element at the point an icon is used to ensure there is some text content (equivalent to the alt property on `<img>`s.)
 //
 // markup:
-// <svg class="icon"><use xlink:href="icons.svg#icon--name"></use></svg>
+// <svg class="icon">
+//   <title>Twitter logo</title>
+//   <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
+// </svg>
 //
 // Styleguide 1.3
 

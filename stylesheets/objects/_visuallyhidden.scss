@@ -2,7 +2,7 @@
 //
 // Hide an element visually while leaving it readable & accessible — readable by google & screenreaders.
 //
-// Styleguide 2.5
+// Styleguide 1.17
 
 $bitstyles-visuallyhidden-settings: false !default;
 @if ($bitstyles-visuallyhidden-settings == false) {

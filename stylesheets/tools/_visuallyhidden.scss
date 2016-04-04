@@ -1,5 +1,10 @@
-// scss-lint:disable ImportantRule
+// Visuallyhidden
+//
 // Hides an element, but leaves it still readable by screenreaders & google.
+//
+// Styleguide 2.9
+
+// scss-lint:disable ImportantRule
 
 @mixin visuallyhidden {
   position: absolute !important;
