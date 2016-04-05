@@ -10,19 +10,22 @@
 // Produces a larger-than-text hit target. Intended to be an action, not a link — most often a `<button>` rather than `<a href="#">`.
 //
 // markup:
-// <button class="button">
+// <button class="button {$modifiers}">
 //   <span class="button__label">Button Text</span>
 // </button>
 //
+// default      - Base state
 // :hover       - Hover state.
 // :focus       - Focus state.
 //
 // Styleguide 1.1
 
+// styleguide:ignore:start
 $bitstyles-button-settings: false !default;
 @if ($bitstyles-button-settings == false) {
   @include output-settings-warning(button);
 };
+// styleguide:ignore:end
 
 .button {
   position: relative;

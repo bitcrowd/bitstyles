@@ -1,11 +1,27 @@
 // Hidden
 //
+// Fully hides an element & its children — does not affect document flow, does not get read by google or screenreaders.
+// Available at every breakpoint defined in `$hidden-breakpoints`.
+//
+// .hidden          - Hide this element always (generally so it can be revealed using JS)
+// .hidden@small    - Hide this content on smallscreens
+// .hidden@large    - Hide this content on larger screens
+//
+// markup:
+// <p>Paragraph 1 content</p>
+// <p class="{$modifiers}">Paragraph 2 content</p>
+// <p>Paragraph 3 content</p>
+// <p class="{$modifiers}">Paragraph 4 content</p>
+// <p>Paragraph 4 content</p>
+//
 // Styleguide 1.13
 
+// styleguide:ignore:start
 $bitstyles-hidden-settings: false !default;
 @if ($bitstyles-hidden-settings == false) {
   @include output-settings-warning(hidden);
 }
+// styleguide:ignore:end
 
 .hidden {
   @include hidden;

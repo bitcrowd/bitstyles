@@ -1,10 +1,14 @@
 // No-Paddings
+//
 // Use to remove padding from elements on an ad-hoc basis
 //
 // The generator here outputs:
-// - .no-padding--left
-// - .no-padding--top
-// …
+// .no-padding--left    - Removes left padding.
+// .no-padding--top     - Removes top padding.
+// .no-padding--right   - Removes right padding.
+// .no-padding--bottom  - Removes bottom padding.
+//
+// Styleguide 3.3
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}no-padding--#{$position} {

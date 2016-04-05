@@ -5,7 +5,7 @@
 // Styleguide 2.8
 
 @mixin vertical-center {
-  position: relative;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }

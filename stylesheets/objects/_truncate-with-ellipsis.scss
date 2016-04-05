@@ -1,6 +1,13 @@
 // Truncate with ellipsis
 //
-// Truncates text with an ellipsis (…)
+// Truncates text with an ellipsis (…). Parent element needs a set or limited width.
+// Note the exact algorithm is defined per browser and is of varying quality
+// — you may loose a couple of characters just to display an ellipsis instead.
+//
+// markup:
+// <div class="u-2/12 background-grey">
+//   <p class="truncate-with-ellipsis">Truncated content goes here</p>
+// </div>
 //
 // Styleguide 1.15
 

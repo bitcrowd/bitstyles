@@ -4,6 +4,8 @@
 // the body is the content you want to be revealed — it starts at zero height,
 // expands to size of content once active.
 //
+// Use the `.button` classes on the `.expander__toggle` to set size & appearance.
+//
 // markup:
 // <button class="expander-toggle" aria-expanded="false" aria-controls="expander-0">Show/Hide</button>
 // <p>Other content</p>

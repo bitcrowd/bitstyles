@@ -3,11 +3,11 @@
 // The element will cover its nearest relatively-positioned parent element from edge to edge.
 //
 // markup:
-// <div class="absolute-cover">
-//   Content goes here
+// <div class="absolute-cover background-grey">
+//   <p>Covering content</p>
 // </div>
 //
-// Styleguide 1.4
+// Styleguide 1.16
 
 .absolute-cover {
   @include absolute-cover;

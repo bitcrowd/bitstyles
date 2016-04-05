@@ -1,6 +1,12 @@
-// Font-weight.
-// Named `.text-` for consistency with the other text/font-related trumps
-// No styleguide reference.
+// Font-weight
+//
+// Named `.text-` for consistency with the other text/font-related trumps.
+//
+// .text-weight--light     - Ensure font-weight is light
+// .text-weight--normal    - Ensure font-weight is normal
+// .text-weight--bold      - Ensure font-weight is bold
+//
+// Styleguide 3.7
 
 .#{$bitstyles-namespace}text-weight--light {
   font-weight: $bitstyles-font-weight-light;

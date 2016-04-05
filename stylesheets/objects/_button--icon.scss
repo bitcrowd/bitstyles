@@ -5,22 +5,25 @@
 // or provide a `<span class="visuallyhidden"></span>` as sibling to the icon.
 //
 // markup:
-// <button class="button button--icon">
+// <button class="button button--icon {$modifiers}">
 //   <svg class="icon">
 //     <title>Twitter logo</title>
 //     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
 //   </svg>
 // </button>
 //
-// :hover       - Hover state.
-// :focus       - Focus state.
+// default       - Base state
+// :hover        - Hover state.
+// :focus        - Focus state.
 //
 // Styleguide 1.2
 
+// styleguide:ignore:start
 $bitstyles-button-icon-settings: false !default;
 @if ($bitstyles-button-icon-settings == false) {
   @include output-settings-warning(button--icon);
 };
+// styleguide:ignore:end
 
 .button--icon {
   padding: $bitstyles-button-icon-padding;

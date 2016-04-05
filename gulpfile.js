@@ -28,7 +28,9 @@ gulp.task('styleguide:generate', function() {
 });
 
 gulp.task('styleguide:applystyles', function() {
-  return gulp.src('build/bitstyles.css')
+  return gulp.src([
+    'build/bitstyles.css',
+    'assets/stylesheets/styleguide-extras.scss'])
     .pipe(sass({
       errLogToConsole: true
     }))

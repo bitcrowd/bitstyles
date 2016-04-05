@@ -1,13 +1,12 @@
 // Break long words
 //
 // A cross-browser friendly emthod of ensuring no words exceed the width of the container.
+// Use especially with user-generated content.
 //
 // markup:
-// <div class="absolute-cover">
-//   Content goes here
-// </div>
+// <p class="break-long-words">LongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshere</p>
 //
-// Styleguide 1.5
+// Styleguide 1.8
 
 .break-long-words {
   @include break-long-words;

@@ -3,6 +3,14 @@
 // Simple flex layout.
 // Make one of the children `.flex__primary` to make it take as much space as is available.
 //
+// markup:
+// <ul class="flex">
+//  <li>Some content here</li>
+//  <li class="flex__primary">Some more important content here</li>
+//  <li>Some content here</li>
+//  <li>Some content here</li>
+// </ul>
+//
 // Styleguide 1.10
 
 .flex {

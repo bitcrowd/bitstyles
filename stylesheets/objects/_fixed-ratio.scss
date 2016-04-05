@@ -1,6 +1,16 @@
-// Fixed-aspect-ratio element.
+// Fixed-ratio.
 //
-// No styleguide reference.
+// Enforces an aspect ratio on this element anbd its contents. Default ratio is 16:9, element take 100% width and height matches.
+//
+// markup:
+// <figure>
+//   <div class="fixed-ratio">
+//     <img class="fixed-ratio__inner" src="http://placehold.it/640x360">
+//   </div>
+//   <figcaption>An image at 16:9 aspect ratio</figcaption>
+// </figure>
+//
+// Styleguide 1.18
 
 // scss-lint:disable NameFormat
 

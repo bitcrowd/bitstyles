@@ -1,10 +1,14 @@
 // No-Margins
-// Use to remove margins from elements on an ad-hoc basis
+//
+// Remove margins from elements on an ad-hoc basis.
 //
 // The generator here outputs:
-// - .no-margin--left
-// - .no-margin--top
-// …
+// .no-margin--left    - Removes left-margin
+// .no-margin--top     - Removes top-margin
+// .no-margin--right   - Removes right-margin
+// .no-margin--bottom  - Removes bottom-margin
+//
+// Styleguide 3.2
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}no-margin--#{$position} {

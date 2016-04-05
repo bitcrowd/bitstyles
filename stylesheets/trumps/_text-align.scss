@@ -1,11 +1,15 @@
 // Text Align
+//
 // Overide text-align on an element
 // Named `.text-` for consistency with the other text/font-related trumps.
 //
 // The generator here outputs:
-// - .text-align--left
-// - .text-align--top
-// …
+// .text-align--left    - Align text left
+// .text-align--right   - Align text right.
+// .text-align--center  - Centre align text.
+// .text-align--justify - Justify text.
+//
+// Styleguide 3.5
 
 @each $position in (left, right, center, justify) {
   .#{$bitstyles-namespace}text-align--#{$position} {

@@ -1,10 +1,14 @@
 // Paddings
+//
 // Use to add ad-hoc padding to elements
 //
 // The generator here outputs:
-// - .padding--left
-// - .padding--top
-// …
+// .padding--left    - Add left-padding.
+// .padding--top     - Add top-padding.
+// .padding--right   - Add right-padding.
+// .padding--bottom  - Add bottom-padding.
+//
+// Styleguide 3.4
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}padding--#{$position} {
