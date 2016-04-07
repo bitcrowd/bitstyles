@@ -5,7 +5,13 @@
   "main": "bitstyles.scss",
   "private": true,
   "scripts": {
-    "postinstall": "cp node_modules/normalize.css/normalize.css node_modules/normalize.css/_normalize.scss"
+    "postinstall": "cp node_modules/normalize.css/normalize.css node_modules/normalize.css/_normalize.scss",
+    "build": "gulp build",
+    "lint": "gulp lint",
+    "styleguide": "gulp styleguide",
+    "test:build": "gulp test:build",
+    "test:run": "gulp test:run",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
