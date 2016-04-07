@@ -4,38 +4,47 @@
 // — use html comments between each `.layout__item` to remove any whitespace otherwise the browser will display them as a small gap!
 //
 // Each column needs the class `.layout__item` and a width class. With current defaults,
-// the widths create a 12-column system e.g. 1/12, 2/12, 3/12…, 11/12.
+// the widths create a 12-column system e.g. 1-of-12, 2-of-12, 3-of-12…, 11-of-12.
 //
 // markup:
 // <div class="layout">
-//    <div class="layout__item u-2/12">
+//   <div class="layout__item u-1-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div><!--
-// --><div class="layout__item u-10/12">
+// --><div class="layout__item u-11-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div>
-//    <div class="layout__item u-3/12">
+//    <div class="layout__item u-2-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div><!--
-// --><div class="layout__item u-9/12">
+// --><div class="layout__item u-10-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div>
-//    <div class="layout__item u-4/12">
+//    <div class="layout__item u-3-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div><!--
-// --><div class="layout__item u-8/12">
+// --><div class="layout__item u-9-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div>
-//    <div class="layout__item u-5/12">
+//    <div class="layout__item u-4-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div><!--
-// --><div class="layout__item u-7/12">
+// --><div class="layout__item u-8-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div>
-//    <div class="layout__item u-6/12">
+//    <div class="layout__item u-5-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div><!--
-// --><div class="layout__item u-6/12">
+// --><div class="layout__item u-7-of-12">
+//      <p class="background-grey">Content here</p>
+//    </div>
+//    <div class="layout__item u-6-of-12">
+//      <p class="background-grey">Content here</p>
+//    </div><!--
+// --><div class="layout__item u-6-of-12">
+//      <p class="background-grey">Content here</p>
+//    </div>
+//    <div class="layout__item u-12-of-12">
 //      <p class="background-grey">Content here</p>
 //    </div>
 // </div>
