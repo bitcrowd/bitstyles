@@ -1,5 +1,8 @@
 // SETTINGS
-// Global variables, site-wide settings, config switches, etc.
+// Global settings & settings for each object below (if needed).
+//
+// * No CSS output *
+
 @import 'settings/global';
 @import 'settings/units';
 @import 'settings/layout';
@@ -15,9 +18,17 @@
 @import 'settings/content';
 @import 'settings/topbar';
 @import 'settings/bordered-header';
+//
+// ******** Add project-specific settings here ********
+//
 
-// TOOLS
-// Site-wide mixins and functions.
+
+// ******** TOOLS
+// Mixins and functions. Includes mixins we later use to build objects e.g. at different breakpoints,
+// and some we use only in the background as utilities.
+//
+// * No CSS output *
+
 @import 'tools/build';
 @import 'tools/zindex';
 @import 'tools/rem-sizing';
@@ -31,19 +42,26 @@
 @import 'tools/clearfix';
 @import 'tools/hidden';
 @import 'tools/visuallyhidden';
+//
+// ******** Add project-specific tools here ********
+//
 
-// GENERIC
+
+// ******** GENERIC
 // Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
 @import 'generic/box-sizing';
 @import 'node_modules/normalize.css/normalize.scss';
 
-// BASE
-// Unclassed HTML elements (Directly selects element types e.g. a {}, blockquote {}, address {}).
+
+// ******** BASE
+// Unclassed elements (Directly selects elements e.g. <a>, <blockquote>, <address>).
 @import 'base/typography';
 @import 'base/images';
 
-// OBJECTS
-// Objects, abstractions, and design patterns (e.g. .media {}). Cosmetic-free.
+
+// ******** OBJECTS
+// Objects, abstractions, and design patterns (e.g. .media, .icon, .button, grid system). Cosmetic-free.
+// These are intended to be reused throughout the site, composed together as needed e.g. <div class="button expander-toggle"></div>
 @import 'objects/icon';
 @import 'objects/button';
 // @import 'objects/button--icon';
@@ -62,9 +80,21 @@
 // @import 'objects/expander';
 // @import 'objects/flex';
 // @import 'objects/bordered-header';
+//
+// ******** Add project-specific low-level objects here ********
+//
 
-// TRUMPS
-// High-specificity, very explicit selectors. Overrides and helper classes (e.g. .hidden {}).
+
+// ******** COMPONENTS
+// Chunks of UI e.g. the structure for a page type, a single block of UI composed of smaller objects.
+// Inherently project-specific, hence none in the library.
+//
+// ******** Add project-specific components here ********
+//
+
+
+// ******** TRUMPS
+// High-specificity overrides and helper classes (e.g. .hidden {}). `!important` exists here.
 // @import 'trumps/text-weight';
 // @import 'trumps/text-align';
 // @import 'trumps/text-style';
@@ -72,3 +102,6 @@
 // @import 'trumps/padding';
 // @import 'trumps/no-margin';
 // @import 'trumps/no-padding';
+//
+// ******** Add project-specific trumps here ********
+//
