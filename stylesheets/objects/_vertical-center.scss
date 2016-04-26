@@ -3,7 +3,7 @@
 // Centres an element vertically (not horizontally). Uses absolute positioning, therefore outside the document flow.
 //
 // markup:
-// <div class="background-grey">
+// <div class="background-grey min-height-block">
 //   <p class="vertical-center">Vertically-centred content here</p>
 // </div>
 //
