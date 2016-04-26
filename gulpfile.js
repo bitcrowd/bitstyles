@@ -43,8 +43,8 @@ gulp.task('styleguide:assets', function() {
     .pipe(gulp.dest('styleguide/assets/images/'));
 });
 
-gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']);
+gulp.task('styleguide', ['build', 'styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']);
 
 gulp.task('watch', function() {
-  gulp.watch('stylesheets/**/*.scss', ['styles', 'scss-lint']);
+  gulp.watch('stylesheets/**/*.scss', ['build', 'lint']);
 });
