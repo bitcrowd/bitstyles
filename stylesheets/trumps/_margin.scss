@@ -2,7 +2,10 @@
 //
 // Add ad-hoc margins to elements.
 //
-// The generator here outputs:
+// markup:
+// <p class="{$modifiers}">Some content here</p>
+//
+//                  - Base style
 // .margin--left    - Left margin added.
 // .margin--top     - Top margin added.
 // .margin--right   - Right margin added.

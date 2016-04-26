@@ -2,7 +2,10 @@
 //
 // Remove margins from elements on an ad-hoc basis.
 //
-// The generator here outputs:
+// markup:
+// <p class="{$modifiers}">Some content here</p>
+//
+//                     - Base style
 // .no-margin--left    - Removes left-margin
 // .no-margin--top     - Removes top-margin
 // .no-margin--right   - Removes right-margin

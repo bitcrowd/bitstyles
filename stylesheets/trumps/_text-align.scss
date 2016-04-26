@@ -3,7 +3,10 @@
 // Overide text-align on an element
 // Named `.text-` for consistency with the other text/font-related trumps.
 //
-// The generator here outputs:
+// markup:
+// <p class="{$modifiers}">Some content here</p>
+//
+//                      - Base text
 // .text-align--left    - Align text left
 // .text-align--right   - Align text right.
 // .text-align--center  - Centre align text.

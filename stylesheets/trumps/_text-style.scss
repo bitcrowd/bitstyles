@@ -3,7 +3,10 @@
 // Override font-style of an element.
 // Named `.text-` for consistency with the other text/font-related trumps
 //
-// The generator here outputs:
+// markup:
+// <p class="{$modifiers}">Some content here</p>
+//
+//                        - Base text
 // .text-style--italic    - Italicise text.
 // .text-style--normal    - De-italicise text.
 //

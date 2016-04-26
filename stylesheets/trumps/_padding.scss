@@ -2,7 +2,10 @@
 //
 // Use to add ad-hoc padding to elements
 //
-// The generator here outputs:
+// markup:
+// <div class="{$modifiers}"><p>Some content here</p></div>
+//
+//                   - Base styling
 // .padding--left    - Add left-padding.
 // .padding--top     - Add top-padding.
 // .padding--right   - Add right-padding.
