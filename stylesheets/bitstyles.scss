@@ -23,12 +23,13 @@
 //
 
 
-// ******** TOOLS
+// Tools: Functions & Mixins
+//
 // Mixins and functions. Includes mixins we later use to build objects e.g. at different breakpoints,
 // and some we use only in the background as utilities.
-//
 // * No CSS output *
-
+//
+// Styleguide 2.0
 @import 'tools/build';
 @import 'tools/zindex';
 @import 'tools/rem-sizing';
@@ -59,9 +60,12 @@
 @import 'base/images';
 
 
-// ******** OBJECTS
+// Objects
+//
 // Objects, abstractions, and design patterns (e.g. .media, .icon, .button, grid system). Cosmetic-free.
 // These are intended to be reused throughout the site, composed together as needed e.g. <div class="button expander-toggle"></div>
+//
+// Styleguide 1.0
 @import 'objects/icon';
 @import 'objects/button';
 @import 'objects/button--icon';
@@ -93,8 +97,11 @@
 //
 
 
-// ******** TRUMPS
+// Trumps
+//
 // High-specificity overrides and helper classes (e.g. .hidden {}). `!important` exists here.
+//
+// Styleguide 3.0
 @import 'trumps/text-weight';
 @import 'trumps/text-align';
 @import 'trumps/text-style';

@@ -1,10 +1,3 @@
-// Objects
-//
-// These are low-level structures that can be reused throughout the system, composed into larger components.
-//
-// Styleguide 1.0
-
-
 // Generic Button
 //
 // Produces a larger-than-text hit target. Intended to be an action, not a link — most often a `<button>` rather than `<a href="#">`.
@@ -14,7 +7,7 @@
 //   <span class="button__label">Button Text</span>
 // </button>
 //
-// default      - Base state
+//              - Base state
 // :hover       - Hover state.
 // :focus       - Focus state.
 //
