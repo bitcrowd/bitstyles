@@ -20,10 +20,12 @@
 
 // styleguide:ignore:start
 $bitstyles-button-icon-settings: false !default;
+
 @if ($bitstyles-button-icon-settings == false) {
   @include output-settings-warning(button--icon);
-};
+}
 // styleguide:ignore:end
+}
 
 .button--icon {
   padding: $bitstyles-button-icon-padding;

@@ -15,9 +15,10 @@
 
 // styleguide:ignore:start
 $bitstyles-button-settings: false !default;
+
 @if ($bitstyles-button-settings == false) {
   @include output-settings-warning(button);
-};
+}
 // styleguide:ignore:end
 
 .button {

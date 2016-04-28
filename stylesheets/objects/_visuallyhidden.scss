@@ -15,6 +15,7 @@
 
 // styleguide:ignore:start
 $bitstyles-visuallyhidden-settings: false !default;
+
 @if ($bitstyles-visuallyhidden-settings == false) {
   @include output-settings-warning(visuallyhidden);
 }
