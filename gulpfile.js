@@ -8,14 +8,15 @@ var gulp        = require('gulp'),
       throwError: true
     }),
     stylefmt = require('stylefmt'),
-    styleguideOutputPath = 'styleguide';
+    styleguideOutputPath = 'styleguide',
+    autoprefixer = require('autoprefixer');
 
 gulp.task('build', function() {
   var sass = require('gulp-sass');
 
   return gulp.src('stylesheets/bitstyles.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([postcssReporter]))
+    .pipe(postcss([autoprefixer({ browsers: ['last 2 versions'] }), postcssReporter]))
     .pipe(gulp.dest('build/'));
 });
 
@@ -31,6 +32,7 @@ gulp.task('lint', function() {
 gulp.task('stylefmt', function() {
   return gulp.src('stylesheets/**/*.scss')
     .pipe(postcss([stylefmt], {syntax: syntaxScss}))
+    // Be sure to commit any changes before trying this so you can undo all the changes it makes
     // .pipe(gulp.dest('stylesheets/'));
 });
 
