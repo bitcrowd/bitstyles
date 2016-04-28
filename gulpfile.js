@@ -3,20 +3,21 @@ var gulp        = require('gulp'),
     spawn       = require('child_process').spawn,
     postcss     = require('gulp-postcss'),
     reporter    = require('postcss-reporter'),
-    postcssReporter    = reporter({
+    postcssReporter = reporter({
       clearMessages: true,
       throwError: true
     }),
     stylefmt = require('stylefmt'),
-    styleguideOutputPath = 'styleguide',
-    autoprefixer = require('autoprefixer');
+    styleguideOutputPath = 'styleguide';
 
 gulp.task('build', function() {
-  var sass = require('gulp-sass');
+  var sass = require('gulp-sass'),
+      autoprefixer = require('autoprefixer'),
+      cssnano = require('cssnano');
 
   return gulp.src('stylesheets/bitstyles.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([autoprefixer({ browsers: ['last 2 versions'] }), postcssReporter]))
+    .pipe(postcss([autoprefixer({ browsers: ['last 2 versions'] }), cssnano({safe: true}), postcssReporter]))
     .pipe(gulp.dest('build/'));
 });
 
@@ -30,9 +31,11 @@ gulp.task('lint', function() {
 });
 
 gulp.task('stylefmt', function() {
+  var stylefmt = require('stylefmt');
+
   return gulp.src('stylesheets/**/*.scss')
     .pipe(postcss([stylefmt], {syntax: syntaxScss}))
-    // Be sure to commit any changes before trying this so you can undo all the changes it makes
+    // ¡Be sure to commit any changes before trying this so you can undo all the changes it makes — some are unwanted!
     // .pipe(gulp.dest('stylesheets/'));
 });
 
