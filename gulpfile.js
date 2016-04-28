@@ -13,11 +13,14 @@ var gulp        = require('gulp'),
 gulp.task('build', function() {
   var sass = require('gulp-sass'),
       autoprefixer = require('autoprefixer'),
-      cssnano = require('cssnano');
+      cssnano = require('cssnano'),
+      sourcemaps = require('gulp-sourcemaps');
 
   return gulp.src('stylesheets/bitstyles.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer({ browsers: ['last 2 versions'] }), cssnano({safe: true}), postcssReporter]))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('build/'));
 });
 
