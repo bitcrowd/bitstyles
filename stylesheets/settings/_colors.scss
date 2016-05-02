@@ -5,12 +5,15 @@ $bitstyles-color-black:           #000000 !default;
 $bitstyles-color-white:           #ffffff !default;
 
 // Greys
-$bitstyles-color-gray-lightest:   #f2f2f2 !default;
-$bitstyles-color-gray-light:      #cccccc !default;
-$bitstyles-color-gray-medium:     #999999 !default;
-$bitstyles-color-gray-dark:       #666666 !default;
-$bitstyles-color-gray-darkest:    #333333 !default;
-
+$bitstyles-color-gray-10:         #e5e5e5 !default;
+$bitstyles-color-gray-20:         #cccccc !default;
+$bitstyles-color-gray-30:         #b2b2b2 !default;
+$bitstyles-color-gray-40:         #999999 !default;
+$bitstyles-color-gray-50:         #7f7f7f !default;
+$bitstyles-color-gray-60:         #666666 !default;
+$bitstyles-color-gray-70:         #4c4c4c !default;
+$bitstyles-color-gray-80:         #333333 !default;
+$bitstyles-color-gray-90:         #191919 !default;
 
 // Colours by usage
 $bitstyles-color-text:            #333333 !default;
@@ -18,6 +21,6 @@ $bitstyles-color-positive:        #00ff00 !default;
 $bitstyles-color-negative:        #ff0000 !default;
 
 // Implementations
-$bitstyles-color-link:            $bitstyles-color-gray-darkest !default;
-$bitstyles-color-link-visted:     $bitstyles-color-gray-medium !default;
-$bitstyles-color-link-hover:      $bitstyles-color-gray-light !default;
+$bitstyles-color-link:            $bitstyles-color-gray-80 !default;
+$bitstyles-color-link-visted:     $bitstyles-color-gray-40 !default;
+$bitstyles-color-link-hover:      $bitstyles-color-gray-20 !default;
