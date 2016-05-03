@@ -1,4 +1,8 @@
+// Clearfix
+//
 // Apply to a floated element (or its parent) to ensure following elements are cleared.
+//
+// Styleguide 2.4
 
 @mixin clearfix {
   &::after {

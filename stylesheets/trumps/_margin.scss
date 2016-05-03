@@ -1,12 +1,22 @@
-// Use to add ad-hoc margins to elements.
+// Margins
 //
-// The generator here outputs:
-// - .margin--left
-// - .margin--top
-// …
+// Add ad-hoc margins to elements.
+//
+// markup:
+// <p class="{$modifiers}">Some content here</p>
+//
+//                  - Base style
+// .margin--left    - Left margin added.
+// .margin--top     - Top margin added.
+// .margin--right   - Right margin added.
+// .margin--bottom  - Bottom margin added.
+//
+// Styleguide 3.1
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}margin--#{$position} {
+    //styleguide:ignore:start
     margin-#{$position}: $bitstyles-margin;
+    //styleguide:ignore:end
   }
 }

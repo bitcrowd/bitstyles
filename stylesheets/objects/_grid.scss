@@ -1,20 +1,59 @@
-// Responsive grid, using inuit.css’s inline-block-based grid system
-// .layout
-//    .layout__item.u-2\/12
+// Grid
 //
-// Styleguide Grid
+// Responsive grid using a inline-block grid system (no floats, no flexbox). Note this means whitespace is important
+// — use html comments between each `.layout__item` to remove any whitespace otherwise the browser will display them as a small gap!
+//
+// Each column needs the class `.layout__item` and a width class. With current defaults,
+// the widths create a 12-column system e.g. 1/12, 2/12, 3/12…, 11/12.
+//
+// markup:
+// <div class="layout">
+//    <div class="layout__item u-2/12">
+//      <p class="background-grey">Content here</p>
+//    </div><!--
+// --><div class="layout__item u-10/12">
+//      <p class="background-grey">Content here</p>
+//    </div>
+//    <div class="layout__item u-3/12">
+//      <p class="background-grey">Content here</p>
+//    </div><!--
+// --><div class="layout__item u-9/12">
+//      <p class="background-grey">Content here</p>
+//    </div>
+//    <div class="layout__item u-4/12">
+//      <p class="background-grey">Content here</p>
+//    </div><!--
+// --><div class="layout__item u-8/12">
+//      <p class="background-grey">Content here</p>
+//    </div>
+//    <div class="layout__item u-5/12">
+//      <p class="background-grey">Content here</p>
+//    </div><!--
+// --><div class="layout__item u-7/12">
+//      <p class="background-grey">Content here</p>
+//    </div>
+//    <div class="layout__item u-6/12">
+//      <p class="background-grey">Content here</p>
+//    </div><!--
+// --><div class="layout__item u-6/12">
+//      <p class="background-grey">Content here</p>
+//    </div>
+// </div>
+//
+// Styleguide 1.4
 
+// styleguide:ignore:start
 $bitstyles-grid-settings: false !default;
 @if ($bitstyles-grid-settings == false) {
   @include output-settings-warning(grid);
 };
 
+
 @import '../node_modules/inuit-defaults/settings.defaults';
-@import '../node_modules/inuit-responsive-settings/settings.responsive';
-
 @import '../node_modules/inuit-tools-widths/tools.widths';
-
 @import '../node_modules/inuit-layout/objects.layout';
-
 @import '../node_modules/inuit-widths/trumps.widths';
 @import '../node_modules/inuit-responsive-widths/trumps.widths-responsive';
+
+// Ignore the whole thing for now — there’s nothing here to look at directly.
+// styleguide:ignore:end

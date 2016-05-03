@@ -1,3 +1,14 @@
+// Vertical Centre
+//
+// Centres an element vertically (not horizontally). Uses absolute positioning, therefore outside the document flow.
+//
+// markup:
+// <div class="background-grey min-height-block">
+//   <p class="vertical-center">Vertically-centred content here</p>
+// </div>
+//
+// Styleguide 1.12
+
 .vertical-center {
   @include vertical-center;
 }

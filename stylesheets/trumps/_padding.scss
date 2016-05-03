@@ -1,12 +1,22 @@
-// Use to add ad-hoc margins to elements
+// Paddings
 //
-// The generator here outputs:
-// - .padding--left
-// - .padding--top
-// …
+// Use to add ad-hoc padding to elements
+//
+// markup:
+// <div class="{$modifiers}"><p>Some content here</p></div>
+//
+//                   - Base styling
+// .padding--left    - Add left-padding.
+// .padding--top     - Add top-padding.
+// .padding--right   - Add right-padding.
+// .padding--bottom  - Add bottom-padding.
+//
+// Styleguide 3.4
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}padding--#{$position} {
+    //styleguide:ignore:start
     padding-#{$position}: $bitstyles-margin;
+    //styleguide:ignore:end
   }
 }

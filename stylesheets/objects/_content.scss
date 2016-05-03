@@ -1,12 +1,21 @@
+// Content
+//
 // Semi-fixed-width centred content wrapper. Takes full width available up to a maximum,
 // at which point width stays the same. Always remains centred.
 //
-// Styleguide Content
+// markup:
+// <div class="content">
+//   <p>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
+// </div>
+//
+// Styleguide 1.5
 
+// styleguide:ignore:start
 $bitstyles-content-settings: false !default;
 @if ($bitstyles-content-settings == false) {
   @include output-settings-warning(content);
 }
+// styleguide:ignore:end
 
 .content {
   display: block;
@@ -18,15 +27,9 @@ $bitstyles-content-settings: false !default;
   transition: padding $bitstyles-transition-duration $bitstyles-transition-easing;
 }
 
-@each $breakpoint in $bitstyles-breakpoints {
-  $alias: nth($breakpoint, 1);
-
-  @if $alias == $bitstyles-content-large-breakpoint {
-    @include media-query($alias) {
-      .content {
-        padding-right: $bitstyles-content-horizontal-padding-large;
-        padding-left: $bitstyles-content-horizontal-padding-large;
-      }
-    }
+@include media-query($bitstyles-content-large-breakpoint) {
+  .content {
+    padding-right: $bitstyles-content-horizontal-padding-large;
+    padding-left: $bitstyles-content-horizontal-padding-large;
   }
 }

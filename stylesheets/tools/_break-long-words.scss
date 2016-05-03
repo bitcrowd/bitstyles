@@ -1,4 +1,8 @@
+// Break long words
+//
 // Forces text content within an element to break if longer than the element is wide.
+//
+// Styleguide 2.3
 
 @mixin break-long-words {
   overflow-wrap: break-word;

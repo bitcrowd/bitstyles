@@ -23,12 +23,13 @@
 //
 
 
-// ******** TOOLS
+// Tools: Functions & Mixins
+//
 // Mixins and functions. Includes mixins we later use to build objects e.g. at different breakpoints,
 // and some we use only in the background as utilities.
-//
 // * No CSS output *
-
+//
+// Styleguide 2.0
 @import 'tools/build';
 @import 'tools/zindex';
 @import 'tools/rem-sizing';
@@ -59,27 +60,30 @@
 @import 'base/images';
 
 
-// ******** OBJECTS
+// Objects
+//
 // Objects, abstractions, and design patterns (e.g. .media, .icon, .button, grid system). Cosmetic-free.
 // These are intended to be reused throughout the site, composed together as needed e.g. <div class="button expander-toggle"></div>
+//
+// Styleguide 1.0
 @import 'objects/icon';
 @import 'objects/button';
-// @import 'objects/button--icon';
-// @import 'objects/grid';
-// @import 'objects/absolute-center';
-// @import 'objects/absolute-cover';
-// @import 'objects/break-long-words';
-// @import 'objects/clearfix';
-// @import 'objects/fixed-ratio';
-// @import 'objects/hidden';
-// @import 'objects/truncate-with-ellipsis';
-// @import 'objects/vertical-center';
-// @import 'objects/visuallyhidden';
-// @import 'objects/content';
-// @import 'objects/topbar';
-// @import 'objects/expander';
-// @import 'objects/flex';
-// @import 'objects/bordered-header';
+@import 'objects/button--icon';
+@import 'objects/grid';
+@import 'objects/absolute-center';
+@import 'objects/absolute-cover';
+@import 'objects/break-long-words';
+@import 'objects/clearfix';
+@import 'objects/fixed-ratio';
+@import 'objects/hidden';
+@import 'objects/truncate-with-ellipsis';
+@import 'objects/vertical-center';
+@import 'objects/visuallyhidden';
+@import 'objects/content';
+@import 'objects/topbar';
+@import 'objects/expander';
+@import 'objects/flex';
+@import 'objects/bordered-header';
 //
 // ******** Add project-specific low-level objects here ********
 //
@@ -93,15 +97,18 @@
 //
 
 
-// ******** TRUMPS
+// Trumps
+//
 // High-specificity overrides and helper classes (e.g. .hidden {}). `!important` exists here.
-// @import 'trumps/text-weight';
-// @import 'trumps/text-align';
-// @import 'trumps/text-style';
-// @import 'trumps/margin';
-// @import 'trumps/padding';
-// @import 'trumps/no-margin';
-// @import 'trumps/no-padding';
+//
+// Styleguide 3.0
+@import 'trumps/text-weight';
+@import 'trumps/text-align';
+@import 'trumps/text-style';
+@import 'trumps/margin';
+@import 'trumps/padding';
+@import 'trumps/no-margin';
+@import 'trumps/no-padding';
 //
 // ******** Add project-specific trumps here ********
 //

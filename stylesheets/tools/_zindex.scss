@@ -1,3 +1,5 @@
+// Z-index
+//
 // This mixin allows you to assign z-index values in a stacking context of
 // your choice.
 // Solves problems outlined at:
@@ -18,6 +20,8 @@
 //
 // The function will then loop through each item, in each stacking context, and
 // assign it a z-index value, based on its declared order in your Sass.
+//
+// Styleguide 2.10
 
 @function z($list, $element) {
   $z-index: index($list, $element);

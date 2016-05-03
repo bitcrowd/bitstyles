@@ -1,3 +1,14 @@
+// Absolute Center
+//
+// Centres an element vertically & horizontally, relative to its closest relatively-positioned parent element.
+//
+// markup:
+// <div class="background-grey min-height-block">
+//   <p class="absolute-center">Centred content</p>
+// </div>
+//
+// Styleguide 1.11
+
 .absolute-center {
   @include absolute-center;
 }

@@ -39,6 +39,13 @@ To change the css output by the library (e.g. standard margins, typographic scal
 For the complete list of varables you can override, look through the various files in the `stylesheets/settings/` folder.
 
 ## Developing Bitstyles
+Bitstyles requires `node v5.7.0`. If you have [nvm](https://github.com/creationix/nvm) installed:
+
+```
+nvm use
+```
+will switch to the correct version of nodejs.
+
 Clone this repository, `cd` into the folder created, then install dependencies:
 ```
 npm install

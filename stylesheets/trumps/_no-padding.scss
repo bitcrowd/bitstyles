@@ -1,12 +1,22 @@
-// Use to remove margins from elements on an ad-hoc basis
+// No-Paddings
 //
-// The generator here outputs:
-// - .no-padding--left
-// - .no-padding--top
-// …
+// Use to remove padding from elements on an ad-hoc basis
+//
+// markup:
+// <p class="{$modifiers}">Some content here</p>
+//
+//                      - Base style
+// .no-padding--left    - Removes left padding.
+// .no-padding--top     - Removes top padding.
+// .no-padding--right   - Removes right padding.
+// .no-padding--bottom  - Removes bottom padding.
+//
+// Styleguide 3.3
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}no-padding--#{$position} {
+    //styleguide:ignore:start
     padding-#{$position}: 0;
+    //styleguide:ignore:end
   }
 }

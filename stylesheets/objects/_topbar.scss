@@ -1,11 +1,20 @@
+// Topbar
+//
 // Fixed-position topbar/menu.
 //
-// Styleguide Topbar
+// markup:
+// <header class="topbar">
+//   <h1>Topbar content here (menu, logo…)</h1>
+// </header>
+//
+// Styleguide 1.6
 
+// styleguide:ignore:start
 $bitstyles-topbar-settings: false !default;
 @if ($bitstyles-topbar-settings == false) {
   @include output-settings-warning(topbar);
 }
+// styleguide:ignore:end
 
 .topbar {
   position: fixed;

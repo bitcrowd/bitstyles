@@ -1,9 +1,16 @@
+// Text-style
+//
 // Override font-style of an element.
 // Named `.text-` for consistency with the other text/font-related trumps
 //
-// The generator here outputs:
-// - .text-style--italic
-// - .text-style--normal
+// markup:
+// <p class="{$modifiers}">Some content here</p>
+//
+//                        - Base text
+// .text-style--italic    - Italicise text.
+// .text-style--normal    - De-italicise text.
+//
+// Styleguide 3.6
 
 @each $style in (italic, normal) {
   .#{$bitstyles-namespace}text-style--#{$style} {

@@ -1,3 +1,17 @@
+// Clearfix
+//
+// Force an element to behave as if its floated children have been `clear: both`ed.
+// The element will therefore be of the correct height (including backgrounds etc.)
+// and will be separated from other content (as cleared elements are).
+//
+// markup:
+// <div class="clearfix background-grey">
+//   <div class="floated-element">Content goes here</div>
+//   <div class="floated-element">Content goes here</div>
+// </div>
+//
+// Styleguide 1.7
+
 .clearfix {
   @include clearfix;
 }
