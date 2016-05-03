@@ -25,7 +25,6 @@ $bitstyles-button-icon-settings: false !default;
   @include output-settings-warning(button--icon);
 }
 // styleguide:ignore:end
-}
 
 .button--icon {
   padding: $bitstyles-button-icon-padding;

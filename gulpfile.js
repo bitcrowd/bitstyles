@@ -1,14 +1,15 @@
-var gulp        = require('gulp'),
-    styleguide  = require('sc5-styleguide'),
-    spawn       = require('child_process').spawn,
-    postcss     = require('gulp-postcss'),
-    reporter    = require('postcss-reporter'),
+var gulp            = require('gulp'),
+    styleguide      = require('sc5-styleguide'),
+    spawn           = require('child_process').spawn,
+    postcss         = require('gulp-postcss'),
+    reporter        = require('postcss-reporter'),
     postcssReporter = reporter({
       clearMessages: true,
       throwError: true
     }),
-    stylefmt = require('stylefmt'),
-    styleguideOutputPath = 'styleguide';
+    stylefmt        = require('stylefmt'),
+    styleguideOutputPath = 'styleguide',
+    syntaxScss      = require('postcss-scss');
 
 gulp.task('build', function() {
   var sass = require('gulp-sass'),
@@ -26,8 +27,7 @@ gulp.task('build', function() {
 
 gulp.task('lint', function() {
   var stylelint          = require('stylelint'),
-      stylelintProcessor = stylelint(),
-      syntaxScss         = require('postcss-scss');
+      stylelintProcessor = stylelint();
 
   return gulp.src('stylesheets/**/*.scss')
     .pipe(postcss([stylelintProcessor, postcssReporter], {syntax: syntaxScss}));
