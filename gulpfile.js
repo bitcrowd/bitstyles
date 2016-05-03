@@ -7,7 +7,6 @@ var gulp            = require('gulp'),
       clearMessages: true,
       throwError: true
     }),
-    stylefmt        = require('stylefmt'),
     styleguideOutputPath = 'styleguide',
     syntaxScss      = require('postcss-scss');
 
@@ -31,15 +30,6 @@ gulp.task('lint', function() {
 
   return gulp.src('stylesheets/**/*.scss')
     .pipe(postcss([stylelintProcessor, postcssReporter], {syntax: syntaxScss}));
-});
-
-gulp.task('stylefmt', function() {
-  var stylefmt = require('stylefmt');
-
-  return gulp.src('stylesheets/**/*.scss')
-    .pipe(postcss([stylefmt], {syntax: syntaxScss}))
-    // ¡Be sure to commit any changes before trying this so you can undo all the changes it makes — some are unwanted!
-    // .pipe(gulp.dest('stylesheets/'));
 });
 
 gulp.task('styleguide:generate', function() {
