@@ -5,5 +5,7 @@
 // Styleguide 2.6
 
 @mixin hidden {
+  /* stylelint-disable declaration-no-important */
   display: none !important;
+  /* stylelint-enable declaration-no-important */
 }

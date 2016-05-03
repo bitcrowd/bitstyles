@@ -6,8 +6,8 @@
 
 @mixin absolute-cover($distance: 0) {
   position: absolute;
-  left: $distance;
   top: $distance;
   right: $distance;
   bottom: $distance;
+  left: $distance;
 }
