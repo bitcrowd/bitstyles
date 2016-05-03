@@ -53,7 +53,32 @@ npm install
 
 ### Build
 To ensure your changes do not break the build, run
+
+```gulp watch```
+
+to recompile & lint sass on every change.
+
+## Testing
+### Installation
+CasperJS & PhantomJS need to be installed globally:
+
 ```
-gulp watch
+npm install -g phantomjs casperjs
 ```
-to recompile & lint the sass on every change.
+everything else you need is installed with
+```
+npm install
+```
+
+### Running
+The project uses a visual regression testing system called [BackstopJS](https://garris.github.io/BackstopJS/) to compare screenshots of each object before & after changes are made.
+When you first checkout the repo, create the initial screenshots:
+```
+gulp styleguide
+npm run test:build
+```
+Then each time you are ready to create a PR, run the tests to compare against the initial reference screenshots:
+```
+npm run test:run
+```
+Short results from the comparison will be displayed on the command line, more detail is available at [http://localhost:3001](http://localhost:3001) which should open automatically.

@@ -1,6 +1,7 @@
 $bitstyles-grid-settings: true;
 
 $inuit-layout-namespace: $bitstyles-namespace !default;
+$inuit-use-fractions: false !default;
 $inuit-layout-gutter: 0 !default;
 $inuit-enable-layout--bottom: false !default;
 $breakpoints: $bitstyles-breakpoints !default; // inuit breakpoints

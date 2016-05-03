@@ -65,6 +65,11 @@
 // Objects, abstractions, and design patterns (e.g. .media, .icon, .button, grid system). Cosmetic-free.
 // These are intended to be reused throughout the site, composed together as needed e.g. <div class="button expander-toggle"></div>
 //
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
 // Styleguide 1.0
 @import 'objects/icon';
 @import 'objects/button';
