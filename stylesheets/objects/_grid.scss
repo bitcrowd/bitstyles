@@ -53,12 +53,14 @@
 
 // styleguide:ignore:start
 $bitstyles-grid-settings: false !default;
+
 @if ($bitstyles-grid-settings == false) {
   @include output-settings-warning(grid);
-};
-
+}
 
 @import '../node_modules/inuit-defaults/settings.defaults';
+@import '../node_modules/inuit-defaults/settings.defaults';
+@import '../node_modules/inuit-responsive-settings/settings.responsive';
 @import '../node_modules/inuit-tools-widths/tools.widths';
 @import '../node_modules/inuit-layout/objects.layout';
 @import '../node_modules/inuit-widths/trumps.widths';

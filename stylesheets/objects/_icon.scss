@@ -19,9 +19,10 @@
 
 // styleguide:ignore:start
 $bitstyles-icon-settings: false !default;
+
 @if ($bitstyles-icon-settings == false) {
-  @include output-settings-warning(icon)
-};
+  @include output-settings-warning(icon);
+}
 // styleguide:ignore:end
 
 .icon {

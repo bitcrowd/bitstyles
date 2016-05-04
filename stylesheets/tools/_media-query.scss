@@ -12,15 +12,15 @@
 @mixin media-query($mq, $breakpoints: $bitstyles-breakpoints) {
   $breakpoint-found: false;
 
-  @each $breakpoint in $breakpoints {
-    $alias:     nth($breakpoint, 1);
+  @each $breakpoint in $bitstyles-breakpoints {
+    $alias: nth($breakpoint, 1);
     $condition: nth($breakpoint, 2);
 
     @if $mq == $alias and $condition {
       $breakpoint-found: true;
 
       @media #{$condition} {
-        @content
+        @content;
       }
     }
   }

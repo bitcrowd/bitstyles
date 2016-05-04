@@ -12,6 +12,7 @@
 
 // styleguide:ignore:start
 $bitstyles-content-settings: false !default;
+
 @if ($bitstyles-content-settings == false) {
   @include output-settings-warning(content);
 }

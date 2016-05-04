@@ -15,9 +15,10 @@
 
 // styleguide:ignore:start
 $bitstyles-button-settings: false !default;
+
 @if ($bitstyles-button-settings == false) {
   @include output-settings-warning(button);
-};
+}
 // styleguide:ignore:end
 
 .button {
@@ -35,7 +36,9 @@ $bitstyles-button-settings: false !default;
   border: $bitstyles-button-border;
   border-radius: $bitstyles-button-border-radius;
   transition: $bitstyles-button-transition;
+  /* stylelint-disable property-no-vendor-prefix */
   -webkit-appearance: none;
+  /* stylelint-enable property-no-vendor-prefix */
   user-select: none;
   touch-action: manipulation;
 

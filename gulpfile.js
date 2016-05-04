@@ -1,19 +1,35 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    scsslint = require('gulp-scss-lint'),
-    styleguide = require('sc5-styleguide'),
+var gulp            = require('gulp'),
+    styleguide      = require('sc5-styleguide'),
+    spawn           = require('child_process').spawn,
+    postcss         = require('gulp-postcss'),
+    reporter        = require('postcss-reporter'),
+    postcssReporter = reporter({
+      clearMessages: true,
+      throwError: true
+    }),
     styleguideOutputPath = 'styleguide',
-    spawn = require('child_process').spawn;
+    syntaxScss      = require('postcss-scss');
 
 gulp.task('build', function() {
+  var sass = require('gulp-sass'),
+      autoprefixer = require('autoprefixer'),
+      cssnano = require('cssnano'),
+      sourcemaps = require('gulp-sourcemaps');
+
   return gulp.src('stylesheets/bitstyles.scss')
-    .pipe(sass())
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([autoprefixer({ browsers: ['last 2 versions'] }), cssnano({safe: true}), postcssReporter]))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('build/'));
 });
 
 gulp.task('lint', function() {
+  var stylelint          = require('stylelint'),
+      stylelintProcessor = stylelint();
+
   return gulp.src('stylesheets/**/*.scss')
-    .pipe(scsslint({'config': '.scss-lint.yml'}));
+    .pipe(postcss([stylelintProcessor, postcssReporter], {syntax: syntaxScss}));
 });
 
 gulp.task('styleguide:generate', function() {
@@ -59,5 +75,5 @@ gulp.task('test:run', function(callback){
 });
 
 gulp.task('watch', function() {
-  gulp.watch('stylesheets/**/*.scss', ['build', 'lint']);
+  gulp.watch('stylesheets/**/*.scss', ['lint', 'build']);
 });

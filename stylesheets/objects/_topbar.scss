@@ -11,6 +11,7 @@
 
 // styleguide:ignore:start
 $bitstyles-topbar-settings: false !default;
+
 @if ($bitstyles-topbar-settings == false) {
   @include output-settings-warning(topbar);
 }

@@ -21,7 +21,7 @@
 
   &.is-active {
     .icon {
-      transform: rotate(0deg);
+      transform: rotate(0deg); /* stylelint-disable-line number-zero-length-no-unit */
     }
   }
 }
