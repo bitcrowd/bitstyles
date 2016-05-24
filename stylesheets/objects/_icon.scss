@@ -1,3 +1,5 @@
+/** @define icon */
+//
 // Icons
 //
 // We use an svg-based icon system. All icons are present as symbols within `icons.svg`, and are used by embedding svg tags (see example markup).
@@ -42,6 +44,7 @@ $bitstyles-icon-settings: false !default;
   $alias: nth($icon-size, 1);
   $size: nth($icon-size, 2);
 
+  /* postcss-bem-linter: ignore */
   .icon--#{$alias} {
     font-size: $size;
   }
