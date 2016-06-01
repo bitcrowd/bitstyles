@@ -72,9 +72,13 @@ npm install
 
 ### Running
 The project uses a visual regression testing system called [BackstopJS](https://garris.github.io/BackstopJS/) to compare screenshots of each object before & after changes are made.
-When you first checkout the repo, create the initial screenshots:
+
+After starting the styleguide server (and leaving it running):
 ```
 gulp styleguide
+```
+Create the initial screenshots:
+```
 npm run test:build
 ```
 Then each time you are ready to create a PR, run the tests to compare against the initial reference screenshots:
