@@ -9,14 +9,13 @@ var gulp            = require('gulp'),
       throwError: true
     }),
     styleguideOutputPath = 'styleguide',
-    syntaxScss      = require('postcss-scss');
+    syntaxScss      = require('postcss-scss'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano'),
+    sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('build', function() {
-  var sass = require('gulp-sass'),
-      autoprefixer = require('autoprefixer'),
-      cssnano = require('cssnano'),
-      sourcemaps = require('gulp-sourcemaps');
-
   return gulp.src('stylesheets/bitstyles.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
