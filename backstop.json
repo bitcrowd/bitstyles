@@ -403,6 +403,34 @@
       "misMatchThreshold" : 0.1,
       "onBeforeScript": "",
       "onReadyScript": ""
+    },
+    {
+      "label": "List reset",
+      "url": "http://localhost:3000/section/1.19-1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .list-reset"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "List reset",
+      "url": "http://localhost:3000/section/1.19-2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .list-reset--bullets-only"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
     }
   ],
   "paths": {
