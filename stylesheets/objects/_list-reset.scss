@@ -20,5 +20,5 @@
 }
 
 .list-reset--bullets-only {
-  @include list-reset(false, false);
+  @include list-reset(false);
 }
