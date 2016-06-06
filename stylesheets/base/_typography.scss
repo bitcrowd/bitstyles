@@ -1,7 +1,3 @@
-// Base typographic styles
-//
-// No styleguide reference.
-
 html {
   font-family: $bitstyles-font-family-body;
   font-size: $bitstyles-font-size-base;
@@ -11,6 +7,20 @@ html {
     font-family: $bitstyles-font-family-body-loaded;
   }
 }
+
+// Links
+//
+// Standard links.
+//
+// markup:
+// <a href="#"" class="{$modifiers}">Jelly cake marshmallow</a>
+//
+// default        - Default state
+// :hover         - Hover state
+// :focus         - Focus state
+// :visited       - Visited state
+//
+// Styleguide 4.3
 
 a {
   color: $bitstyles-color-link;
@@ -28,6 +38,20 @@ a {
   }
 }
 
+// Headers
+//
+// Semantic headers, `<h1>` being the most important in a section or page, `<h6>` being the least.
+//
+// markup:
+// <h1>Header 1</h1>
+// <h2>Header 2</h2>
+// <h3>Header 3</h3>
+// <h4>Header 4</h4>
+// <h5>Header 5</h5>
+// <h6>Header 6</h6>
+//
+// Styleguide 4.1
+
 h1,
 h2,
 h3,
@@ -44,14 +68,47 @@ h6 {
   }
 }
 
+// Paragraphs
+//
+// A paragraph of text.
+//
+// markup:
+// <p>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
+//
+// Styleguide 4.2
+
 p {
   margin: 0 0 $bitstyles-margin;
 }
 
+
+// Address
+//
+// Address element. Often used to indicate authorship and contact information.
+//
+// markup:
+// <address>Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</address
+//
+// Styleguide 4.4
 address {
   font-style: normal;
 }
 
+
+// Definition text
+//
+// Part of a Definition List.
+//
+// markup:
+// <dt>Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon.</dt>
+//
+// sg-wrapper:
+// <dl class="object-section">
+//   <sg-wrapper-content/>
+//   <dd>Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</dd>
+// </dl>
+//
+// Styleguide 4.5
 dt {
   font-weight: $bitstyles-font-weight-bold;
 }

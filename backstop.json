@@ -431,6 +431,118 @@
       "misMatchThreshold" : 0.1,
       "onBeforeScript": "",
       "onReadyScript": ""
+    },
+    {
+      "label": "Headers",
+      "url": "http://localhost:3000/section/4.1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Paragraphs",
+      "url": "http://localhost:3000/section/4.2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section p"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Links - default",
+      "url": "http://localhost:3000/section/4.3-1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section a"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Links - hover",
+      "url": "http://localhost:3000/section/4.3-2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section a.pseudo-class-hover"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Links - focus",
+      "url": "http://localhost:3000/section/4.3-3/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section a.pseudo-class-focus"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Links - visited",
+      "url": "http://localhost:3000/section/4.3-4/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section a.pseudo-class-visited"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Address",
+      "url": "http://localhost:3000/section/4.4/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section address"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Definition text",
+      "url": "http://localhost:3000/section/4.5/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section dt"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
     }
   ],
   "paths": {
