@@ -25,11 +25,16 @@ gulp.task('build', function() {
 });
 
 gulp.task('lint:scss', function() {
-  var stylelint          = require('stylelint'),
-      stylelintProcessor = stylelint();
+  var stylelint = require('stylelint'),
+      bemlint = require('postcss-bem-linter')({
+        preset: 'bem',
+        ignoreSelectors: [
+          '.is-active'
+        ]
+      });
 
   return gulp.src('stylesheets/**/*.scss')
-    .pipe(postcss([stylelintProcessor, postcssReporter], {syntax: syntaxScss}));
+    .pipe(postcss([stylelint, bemlint, postcssReporter], {syntax: syntaxScss}));
 });
 
 gulp.task('lint:js', function() {
@@ -57,6 +62,8 @@ gulp.task('styleguide:generate', function() {
 });
 
 gulp.task('styleguide:applystyles', function() {
+  var sass = require('gulp-sass');
+
   return gulp.src([
       'build/bitstyles.css',
       'assets/stylesheets/styleguide-extras.scss'
