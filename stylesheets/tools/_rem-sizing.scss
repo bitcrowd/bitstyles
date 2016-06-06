@@ -1,5 +1,8 @@
+// Px to Rem sizing
+//
 // Converts pixels to rems — use to define font-sizes etc.
-// No Styleguide reference.
+//
+// Styleguide 2.12
 
 @function px-to-rem($pixel-size, $root-size: 16px) {
   @return ($pixel-size / $root-size) * 1rem;
