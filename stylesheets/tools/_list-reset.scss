@@ -1,0 +1,16 @@
+// List reset
+//
+// Removes the default bullet points from a list, along with any margins and
+// padding.
+//
+// Optional parameters to prevent removal of margins and padding.
+//
+// Styleguide 2.13
+
+@mixin list-reset($spacing: true) {
+  @if $spacing {
+    padding: 0;
+    margin: 0;
+  }
+  list-style-type: none;
+}
