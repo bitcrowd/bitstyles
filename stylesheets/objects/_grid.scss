@@ -58,13 +58,13 @@ $bitstyles-grid-settings: false !default;
   @include output-settings-warning(grid);
 }
 
-@import '../node_modules/inuit-defaults/settings.defaults';
-@import '../node_modules/inuit-defaults/settings.defaults';
-@import '../node_modules/inuit-responsive-settings/settings.responsive';
-@import '../node_modules/inuit-tools-widths/tools.widths';
-@import '../node_modules/inuit-layout/objects.layout';
-@import '../node_modules/inuit-widths/trumps.widths';
-@import '../node_modules/inuit-responsive-widths/trumps.widths-responsive';
+@import 'inuit-defaults/settings.defaults';
+@import 'inuit-defaults/settings.defaults';
+@import 'inuit-responsive-settings/settings.responsive';
+@import 'inuit-tools-widths/tools.widths';
+@import 'inuit-layout/objects.layout';
+@import 'inuit-widths/trumps.widths';
+@import 'inuit-responsive-widths/trumps.widths-responsive';
 
 // Ignore the whole thing for now — there’s nothing here to look at directly.
 // styleguide:ignore:end
