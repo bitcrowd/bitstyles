@@ -81,7 +81,6 @@ p {
   margin: 0 0 $bitstyles-margin;
 }
 
-
 // Address
 //
 // Address element. Often used to indicate authorship and contact information.
@@ -95,20 +94,262 @@ address {
 }
 
 
-// Definition text
+// Definition list
 //
-// Part of a Definition List.
+// Used to define terms.
 //
 // markup:
-// <dt>Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon.</dt>
-//
-// sg-wrapper:
-// <dl class="object-section">
-//   <sg-wrapper-content/>
-//   <dd>Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</dd>
+// <dl>
+//   <dt>Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon.</dt>
+//   <dd>Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon.</dd>
 // </dl>
 //
 // Styleguide 4.5
 dt {
   font-weight: $bitstyles-font-weight-bold;
 }
+
+// List - Unordered
+//
+// An unordered list.
+//
+// markup:
+// <ul>
+//   <li>Pie cotton candy chupa chups.</li>
+//   <li>Liquorice cheesecake wafer.</li>
+//   <li>Gummies cheesecake oat cake sugar.</li>
+// </ul>
+//
+// Styleguide 4.6
+
+// List - Ordered
+//
+// An unordered list.
+//
+// markup:
+// <ol>
+//   <li>Pie cotton candy chupa chups.</li>
+//   <li>Liquorice cheesecake wafer.</li>
+//   <li>Gummies cheesecake oat cake sugar.</li>
+// </ol>
+//
+// Styleguide 4.7
+
+// Blockquote
+//
+// Quoted text.
+//
+// markup:
+// <blockquote>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly</blockquote>
+//
+// Styleguide 4.8
+
+// Typographic styles
+//
+// Inline elements that have a default typographic representation in a browser.
+//
+// Styleguide 4.9
+
+// strong
+//
+// markup:
+// <strong>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly</strong>
+//
+// Styleguide 4.9.1
+
+// em
+//
+// markup:
+// <em>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</em>
+//
+// Styleguide 4.9.2
+
+// pre
+//
+// markup:
+// <pre>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</pre>
+//
+// Styleguide 4.9.3
+
+// code
+//
+// markup:
+// <code>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</code>
+//
+// Styleguide 4.9.4
+
+// kbd
+//
+// markup:
+// <kbd>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</kbd>
+//
+// Styleguide 4.9.5
+
+// samp
+//
+// markup:
+// <samp>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</samp>
+//
+// Styleguide 4.9.6
+
+// var
+//
+// markup:
+// <var>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</var>
+//
+// Styleguide 4.9.7
+
+// cite
+//
+// markup:
+// <cite>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</cite>
+//
+// Styleguide 4.9.8
+
+// del
+//
+// markup:
+// <del>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</del>
+//
+// Styleguide 4.9.9
+
+// abbr
+//
+// markup:
+// <abbr>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</abbr>
+//
+// Styleguide 4.9.10
+
+// i
+//
+// markup:
+// <i>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</i>
+//
+// Styleguide 4.9.11
+
+// b
+//
+// markup:
+// <b>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</b>
+//
+// Styleguide 4.9.12
+
+// ins
+//
+// markup:
+// <ins>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</ins>
+//
+// Styleguide 4.9.13
+
+// dfn
+//
+// markup:
+// <dfn>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</dfn>
+//
+// Styleguide 4.9.14
+
+// small
+//
+// markup:
+// <small>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</small>
+//
+// Styleguide 4.9.15
+
+// sub
+//
+// markup:
+// <sub>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</sub>
+//
+// Styleguide 4.9.16
+
+// sup
+//
+// markup:
+// <sup>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</sup>
+//
+// Styleguide 4.9.17
+
+// big
+//
+// markup:
+// <big>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</big>
+//
+// Styleguide 4.9.18
+
+// s
+//
+// markup:
+// <s>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</s>
+//
+// Styleguide 4.9.19
+
+// strike
+//
+// markup:
+// <strike>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</strike>
+//
+// Styleguide 4.9.20
+
+// q
+//
+// markup:
+// <q>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</q>
+//
+// Styleguide 4.9.21
+
+// time
+//
+// markup:
+// <time>20:57</time>
+//
+// Styleguide 4.9.22
+
+// Table
+//
+// markup:
+// <table>
+//   <caption>Awesome caption</caption>
+//   <thead>
+//     <tr>
+//       <th>Header content 1</th>
+//       <th>Header content 2</th>
+//     </tr>
+//   </thead>
+//   <tfoot>
+//     <tr>
+//       <td>Footer content 1</td>
+//       <td>Footer content 2</td>
+//     </tr>
+//   </tfoot>
+//   <tbody>
+//     <tr>
+//       <td>Body content 1</td>
+//       <td>Body content 2</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 4.10
+
+// Image
+//
+// markup:
+// <img src="assets/images/placeholder_16-9.png">
+//
+// Styleguide 4.11
+
+// Horizontal rule
+//
+// markup:
+// <hr>
+//
+// Styleguide 4.12
+
+// Figure and figcaption
+//
+// <figure>
+//   <img class="fixed-ratio__inner" src="assets/images/placeholder_16-9.png">
+//   <figcaption>An image at 16:9 aspect ratio</figcaption>
+// </figure>
+//
+// Styleguide 4.13
