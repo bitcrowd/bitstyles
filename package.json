@@ -5,7 +5,6 @@
   "main": "bitstyles.scss",
   "private": true,
   "scripts": {
-    "postinstall": "cp node_modules/normalize.css/normalize.css node_modules/normalize.css/_normalize.scss",
     "build": "gulp build",
     "lint": "gulp lint:scss lint:js",
     "lint-js": "gulp lint:js",
@@ -49,6 +48,6 @@
     "stylelint-config-standard": "^6.0.0"
   },
   "dependencies": {
-    "normalize.css": "^4.0.0"
+    "normalize-scss": "^5.0.3"
   }
 }
