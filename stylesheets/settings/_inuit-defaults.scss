@@ -1,0 +1,47 @@
+/*
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ *
+ * Copyright 2014 Harry Roberts
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+///*------------------------------------*\
+//    #DEFAULTS
+//\*------------------------------------*/
+
+// These variables are inuitcss’ defaults; they should not be modified or
+// adjusted directly; you should predefine the variables in your own project.
+
+// High-level base settings.
+$inuit-base-font-size:          16px !default;
+$inuit-base-line-height:        24px !default;
+$inuit-base-text-color:         #333 !default;
+$inuit-base-background-color:   #fff !default;
+
+// Namespace.
+//
+// Would you like inuitcss’ classes to be prepended with a namespace? If so,
+// define it here.
+$inuit-namespace:               null !default;
+
+// These variables are framework variables, sourced from variables defined
+// above. Feel free to use these variables throughout your project, but do not
+// modify or reassign them.
+$inuit-base-spacing-unit:           $inuit-base-line-height;
+$inuit-base-spacing-unit--tiny:     round($inuit-base-spacing-unit / 4);
+$inuit-base-spacing-unit--small:    round($inuit-base-spacing-unit / 2);
+$inuit-base-spacing-unit--large:    round($inuit-base-spacing-unit * 2);
+$inuit-base-spacing-unit--huge:     round($inuit-base-spacing-unit * 4);
