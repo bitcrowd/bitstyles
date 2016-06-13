@@ -46,6 +46,7 @@
 @import 'tools/visuallyhidden';
 @import 'tools/list-reset';
 @import 'tools/font-face';
+@import 'tools/grid-column-generator';
 //
 // ******** Add project-specific tools here ********
 //
@@ -128,6 +129,7 @@
 @import 'trumps/padding';
 @import 'trumps/no-margin';
 @import 'trumps/no-padding';
+@import 'trumps/grid-columns';
 //
 // ******** Add project-specific trumps here ********
 //

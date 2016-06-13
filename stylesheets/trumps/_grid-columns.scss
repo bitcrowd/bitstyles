@@ -1,0 +1,47 @@
+// Grid Columns
+//
+// Uses `grid-column-generator()` to create a series of classes that control
+// grid widths. Works across breakpoints.
+//
+// Commonly used as part of a grid layout, but can be used alone if needed.
+//
+// REQUIRES:
+// - `settings/grid`
+// - `tools/grid-column-generator`
+//
+// markup:
+//   <div class="grid-2-of-12"><div class="background-grey">2-of-12</div></div>
+//   <div class="grid-4-of-12"><div class="background-grey">4-of-12</div></div>
+//   <div class="grid-6-of-12"><div class="background-grey">6-of-12</div></div>
+//
+// Styleguide 3.8
+
+// Check to see if Grid settings file is present
+$bitstyles-grid-settings: false !default;
+
+@if ($bitstyles-grid-settings == false) {
+  @include output-settings-warning(grid);
+}
+
+// Generate basic grid columns with no breakpoints
+@if ($bitstyles-grid-basic == true) {
+  @include grid-columns($bitstyles-widths-columns);
+}
+
+// Generate grid columns for each breakpoint
+@each $breakpoint in $bitstyles-breakpoints {
+
+  // Breakpoint name
+  $breakpoint-alias: nth($breakpoint, 1);
+
+  // For each breakpoint...
+  @include media-query($breakpoint-alias) {
+
+    // ..generate grid columns, with appropiate postfix.
+    @each $i in $bitstyles-widths-columns-responsive {
+      @include grid-columns($i, -#{$breakpoint-alias});
+    }
+
+  }
+
+}

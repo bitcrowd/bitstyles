@@ -1,0 +1,40 @@
+// Grid column generator
+//
+// Feed in number of columns desired. This mixin will generate column classes
+// in the format:
+//
+// `.grid-1-of-7`
+//
+// and will set the appropiate percentage width.
+//
+// Styleguide 2.14
+
+@mixin grid-columns($columns, $breakpoint: null) {
+  @each $column-item in $columns {
+
+    // If there is only one column...
+    @if ($columns == 1) {
+
+      .grid-1-of-1#{$breakpoint} {
+        width: 100% !important; /* stylelint-disable-line declaration-no-important */
+      }
+
+    }
+
+    @else {
+
+      // For each column create the appropiate class
+      @for $i from 1 to ($column-item + 1) {
+
+        /* stylelint-disable max-nesting-depth */
+        .grid-#{$i}-of-#{$column-item}#{$breakpoint} {
+          width: ($i / $column-item) * 100% !important; /* stylelint-disable-line declaration-no-important */
+        }
+        /* stylelint-enable max-nesting-depth */
+
+      }
+
+    }
+
+  }
+}

@@ -243,20 +243,25 @@
     },
     {
       "label": "Grid",
-      "url": "http://localhost:3000/section/1.4/fullscreen",
+      "url": "http://localhost:3000/section/1.4.1/fullscreen",
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .u-1-of-12",
-        ".object-section .u-2-of-12",
-        ".object-section .u-3-of-12",
-        ".object-section .u-4-of-12",
-        ".object-section .u-5-of-12",
-        ".object-section .u-6-of-12",
-        ".object-section .u-7-of-12",
-        ".object-section .u-8-of-12",
-        ".object-section .u-9-of-12",
-        ".object-section .u-10-of-12"
+        ".object-section .grid"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Grid - responsive",
+      "url": "http://localhost:3000/section/1.4.2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .grid"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -438,7 +443,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .u-2-of-12"
+        ".object-section .grid-2-of-12"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
