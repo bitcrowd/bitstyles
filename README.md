@@ -2,12 +2,9 @@
 
 A developing collection of CSS styles and helpers, for use in Bitcrowd projects.
 
-This will be included in projects using [Bower](http://bower.io/) or
-[npm](https://www.npmjs.com/).
-
 ## Using Bitstyles in a project
 
-Bitstyles can be added to your project via `npm` or `bower`, as each project demands.
+Bitstyles can be added to your project via [npm](https://www.npmjs.com/) or [Bower](http://bower.io/), as each project demands.
 
 The source repository is currently private, and is not registered with the Bower
 or npm registries. You will therefore need to install directly from a tagged
@@ -15,25 +12,92 @@ Github release (not from master), and you will need read access to the repo.
 
 ### Bower
 ```
-$ bower install git@github.com:bitcrowd/bitstyles.git#v0.1.2-alpha --save
+$ bower install git@github.com:bitcrowd/bitstyles.git#v0.2.2-alpha --save
 ```
+
+Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
+
+```
+bower_components/bitstyles/stylesheets
+```
+
+If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
+
+```javascript
+gulp.task('stylesheet', function(){
+  return gulp.src('app/css/main.scss')
+    .pipe(sass({
+      includePaths: ['bower_components/bitstyles/stylesheets']
+    }).on('error', sass.logError));
+}
+```
+
+If you’re using rails, you can add this path to the asset pipeline in `config/application.rb`
+
+```ruby
+config.assets.paths << 'bower_components/bitstyles/stylesheets'
+```
+
 
 ### npm
 ```
-$ npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.1.2-alpha --save
+$ npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.2.2-alpha --save
 ```
 
-Once installed, import the bitstyles manifest file your project’s sass manifest file (e.g. `app.scss`, `main.scss`):
+Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
 
 ```
-@import 'node_modules/bitstyles/stylesheets/bitstyles';
+node_modules/bitstyles/stylesheets
 ```
 
-To change the css output by the library (e.g. standard margins, typographic scale, column count of the grid system…) you must override the variables used to build it. To do this, first declare any variables with your own values, before then including the bitstyles manifest:
+If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
 
+```javascript
+gulp.task('stylesheet', function(){
+  return gulp.src('app/css/main.scss')
+    .pipe(sass({
+      includePaths: ['node_modules/bitstyles/stylesheets']
+    }).on('error', sass.logError));
+}
 ```
-@import 'app/stylesheets/settings/bitstyles-overrides';
-@import 'node_modules/bitstyles/stylesheets/bitstyles';
+
+If you’re using rails, you can add this path to the asset pipeline in `config/application.rb`
+
+```ruby
+config.assets.paths << 'node_modules/bitstyles/stylesheets'
+```
+
+### Importing the sass to your project
+
+Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Most likely you’ll not need everything in there, so comment-out or delete the lines of objects you don’t need. If there is a corresponding settings file for the object, be sure to comment that out too:
+
+```scss
+@import 'settings/icon';
+// @import 'settings/button';
+// @import 'settings/button--icon';
+@import 'settings/grid';
+
+// …
+
+@import 'objects/icon';
+// @import 'object/button';
+@import 'objects/grid';
+```
+
+To change the css output by the library (e.g. standard margins, typographic scale, column count of the grid system…) you must override the variables used to build it. To do this declare any variables with your own values before including the bitstyles settings:
+
+```scss
+@import 'settings/icon-overrides';
+@import 'settings/grid-overrides';
+
+@import 'settings/icon';
+// @import 'settings/button';
+// @import 'settings/button--icon';
+@import 'settings/grid';
+
+@import 'objects/icon';
+// @import 'object/button';
+@import 'objects/grid';
 ```
 
 For the complete list of varables you can override, look through the various files in the `stylesheets/settings/` folder.
