@@ -1,6 +1,12 @@
 /** @define button */
 //
-// Generic Button
+// Button
+//
+// Styleguide 1.1
+
+
+//
+// Button - generic
 //
 // Produces a larger-than-text hit target. Intended to be an action, not a link — most often a `<button>` rather than `<a href="#">`.
 //
@@ -13,7 +19,7 @@
 // :hover       - Hover state.
 // :focus       - Focus state.
 //
-// Styleguide 1.1
+// Styleguide 1.1.1
 
 // styleguide:ignore:start
 $bitstyles-button-settings: false !default;
@@ -54,6 +60,52 @@ $bitstyles-button-settings: false !default;
 
 .button__label {
   position: relative;
-  display: inline;
+  display: inline-block;
   vertical-align: middle;
+}
+
+// Button - with icon
+//
+// A button can be used with an optional decorative icon, placed before the
+// text. Source order dictates icon position.
+//
+// markup:
+// <button class="button {$modifiers}">
+//   <svg class="button__icon icon">
+//     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
+//   </svg>
+//   <span class="button__label">Button Text</span>
+// </button>
+//
+//              - Base state
+// :hover       - Hover state.
+// :focus       - Focus state.
+//
+// Styleguide 1.1.2
+
+// Button - with icon, reversed
+//
+// A button can be used with an optional decorative icon, placed before the
+// text. Source order dictates icon position.
+//
+// markup:
+// <button class="button {$modifiers}">
+//   <span class="button__label">Button Text</span>
+//   <svg class="button__icon icon">
+//     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
+//   </svg>
+// </button>
+//
+//              - Base state
+// :hover       - Hover state.
+// :focus       - Focus state.
+//
+// Styleguide 1.1.3
+
+.button__icon + .button__label {
+  margin-left: $bitstyles-padding-horizontal;
+}
+
+.button__label + .button__icon {
+  margin-left: $bitstyles-padding-horizontal;
 }

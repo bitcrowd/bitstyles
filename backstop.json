@@ -18,8 +18,8 @@
   ],
   "scenarios": [
     {
-      "label": "Generic Buttons - default",
-      "url": "http://localhost:3000/section/1.1-1/fullscreen",
+      "label": "Button, generic - default",
+      "url": "http://localhost:3000/section/1.1.1-1/fullscreen",
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
@@ -32,8 +32,8 @@
       "onReadyScript": ""
     },
     {
-      "label": "Generic Buttons - hover",
-      "url": "http://localhost:3000/section/1.1-2/fullscreen",
+      "label": "Button, generic - hover",
+      "url": "http://localhost:3000/section/1.1.1-2/fullscreen",
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
@@ -46,8 +46,92 @@
       "onReadyScript": ""
     },
     {
-      "label": "Generic Buttons - focus",
-      "url": "http://localhost:3000/section/1.1-3/fullscreen",
+      "label": "Button, generic - focus",
+      "url": "http://localhost:3000/section/1.1.1-3/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .button.pseudo-class-focus"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Button, with icon - default",
+      "url": "http://localhost:3000/section/1.1.2-1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .button"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Button, with icon - hover",
+      "url": "http://localhost:3000/section/1.1.2-2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .button.pseudo-class-hover"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Button, with icon - focus",
+      "url": "http://localhost:3000/section/1.1.3-3/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .button.pseudo-class-focus"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Button, with reversed icon - default",
+      "url": "http://localhost:3000/section/1.1.2-1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .button"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Button, with reversed icon - hover",
+      "url": "http://localhost:3000/section/1.1.2-2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .button.pseudo-class-hover"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Button, with reversed icon - focus",
+      "url": "http://localhost:3000/section/1.1.3-3/fullscreen",
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
