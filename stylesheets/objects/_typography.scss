@@ -1,0 +1,100 @@
+// Typography
+//
+// These typographic classes mimic the html elements `<h1>`..`<h6>` — use the semantically correct
+// element in markup, then apply the correct class to achieve the correct visual appearance.
+// Note the `.h0` has been added as an additional layer above `.h1`, use to acheive an extra-large
+// 'hero' (using Bootstrap nomenclature) text.
+//
+// Markup:
+// <h1 class="h0">Header 0</h1>
+// <h2 class="h1">Header 1</h2>
+// <h3 class="h2">Header 2</h3>
+// <h4 class="h3">Header 3</h4>
+// <h5 class="h4">Header 4</h5>
+// <h6 class="h5">Header 5</h6>
+// <h6 class="h5">Header 6</h6>
+// <h1 class="h6">Header 6</h1>
+// <h2 class="h5">Header 5</h2>
+// <h3 class="h4">Header 4</h3>
+// <h4 class="h3">Header 3</h4>
+// <h5 class="h2">Header 2</h5>
+// <h6 class="h1">Header 1</h6>
+// <h6 class="h0">Header 0</h6>
+//
+// Styleguide 1.20
+
+// styleguide:ignore:start
+$bitstyles-typography-settings: false !default;
+
+@if ($bitstyles-typography-settings == false) {
+  @include output-settings-warning(typography);
+}
+// styleguide:ignore:end
+
+.h0,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @include generic-heading;
+}
+
+.h0 {
+  font-size: $bitstyles-font-size-h0-small;
+}
+
+.h1 {
+  font-size: $bitstyles-font-size-h1-small;
+}
+
+.h2 {
+  font-size: $bitstyles-font-size-h2-small;
+}
+
+.h3 {
+  font-size: $bitstyles-font-size-h3-small;
+}
+
+.h4 {
+  font-size: $bitstyles-font-size-h4-small;
+}
+
+.h5 {
+  font-size: $bitstyles-font-size-h5-small;
+}
+
+.h6 {
+  font-size: $bitstyles-font-size-h6-small;
+}
+
+@include media-query($bitstyles-typography-breakpoint) {
+  .h0 {
+    font-size: $bitstyles-font-size-h0;
+  }
+
+  .h1 {
+    font-size: $bitstyles-font-size-h1;
+  }
+
+  .h2 {
+    font-size: $bitstyles-font-size-h2;
+  }
+
+  .h3 {
+    font-size: $bitstyles-font-size-h3;
+  }
+
+  .h4 {
+    font-size: $bitstyles-font-size-h4;
+  }
+
+  .h5 {
+    font-size: $bitstyles-font-size-h5;
+  }
+
+  .h6 {
+    font-size: $bitstyles-font-size-h6;
+  }
+}

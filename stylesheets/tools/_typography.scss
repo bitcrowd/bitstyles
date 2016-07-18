@@ -1,0 +1,10 @@
+@mixin generic-heading {
+  margin: 0 0 $bitstyles-margin;
+  font-family: $bitstyles-font-family-header;
+  font-weight: $bitstyles-font-weight-bold;
+  text-rendering: optimizeLegibility;
+
+  .fonts-loaded & {
+    font-family: $bitstyles-font-family-header-loaded;
+  }
+}
