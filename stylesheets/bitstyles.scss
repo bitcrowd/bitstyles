@@ -55,12 +55,22 @@
 @import 'generic/box-sizing';
 @import 'node_modules/normalize.css/normalize.scss';
 
-
-// ******** BASE
-// Unclassed elements (Directly selects elements e.g. <a>, <blockquote>, <address>).
+// Base
+//
+// Unclassed elements. (Directly selects elements e.g. `<a>`, `<blockquote>`, `<address>`).
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 4.0
 @import 'base/typography';
 @import 'base/images';
-
+@import 'base/forms';    // FOR TESTING ONLY - Empty of styles
+@import 'base/media';    // FOR TESTING ONLY - Empty of styles
+@import 'base/hr';       // FOR TESTING ONLY - Empty of styles
+@import 'base/figure';   // FOR TESTING ONLY - Empty of styles
 
 // Objects
 //
