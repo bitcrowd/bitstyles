@@ -68,10 +68,7 @@ $bitstyles-button-settings: false !default;
 //
 // markup:
 // <button class="button {$modifiers}">
-//   <svg class="button__icon icon">
-//     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
-//   </svg>
-//   <span class="button__label">Button Text</span>
+//   <svg class="button__icon icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg><span class="button__label">Button Text</span>
 // </button>
 //
 //              - Base state
@@ -87,10 +84,7 @@ $bitstyles-button-settings: false !default;
 //
 // markup:
 // <button class="button {$modifiers}">
-//   <span class="button__label">Button Text</span>
-//   <svg class="button__icon icon">
-//     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
-//   </svg>
+//   <span class="button__label">Button Text</span><svg class="button__icon icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg>
 // </button>
 //
 //              - Base state
@@ -100,9 +94,9 @@ $bitstyles-button-settings: false !default;
 // Styleguide 1.1.3
 
 .button__icon + .button__label {
-  margin-left: $bitstyles-padding-horizontal;
+  margin-left: $bitstyles-button-icon-spacing;
 }
 
 .button__label + .button__icon {
-  margin-left: $bitstyles-padding-horizontal;
+  margin-left: $bitstyles-button-icon-spacing;
 }
