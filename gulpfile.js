@@ -22,7 +22,11 @@ const sourcemaps = require('gulp-sourcemaps');
 gulp.task('build', function compileCss() {
   return gulp.src('stylesheets/bitstyles.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: [
+        './node_modules/'
+      ]
+    }).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer({ browsers: ['last 2 versions'] }),
       cssnano({ safe: true }),
