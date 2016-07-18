@@ -26,24 +26,31 @@ $bitstyles-grid-settings: false !default;
 // styleguide:ignore:end
 
 // Generate basic grid columns with no breakpoints
-@if ($bitstyles-grid-basic == true) {
-  @include grid-columns($bitstyles-widths-columns);
-}
+@include grid-columns($bitstyles-widths-columns);
 
 // Generate grid columns for each breakpoint
-@each $breakpoint in $bitstyles-breakpoints {
+@if variable-exists(bitstyles-grid-breakpoints) {
+  @each $breakpoint in $bitstyles-breakpoints {
+    @each $grid-breakpoint in $bitstyles-grid-breakpoints {
 
-  // Breakpoint name
-  $breakpoint-alias: nth($breakpoint, 1);
+      // Get the current breakpoint name
+      $breakpoint-alias: nth($breakpoint, 1);
 
-  // For each breakpoint...
-  @include media-query($breakpoint-alias) {
+      /* stylelint-disable max-nesting-depth */
+      // If the breakpoint is in the breakpoint grid list...
+      @if ($breakpoint-alias == $grid-breakpoint) {
+        // ...then for each breakpoint...
+        @include media-query($breakpoint-alias) {
+          // ..generate grid columns, with the appropiate postfix.
+          @each $i in $bitstyles-widths-columns-responsive {
+            @include grid-columns($i, -#{$breakpoint-alias});
+          }
 
-    // ..generate grid columns, with appropiate postfix.
-    @each $i in $bitstyles-widths-columns-responsive {
-      @include grid-columns($i, -#{$breakpoint-alias});
+        }
+      }
+      /* stylelint-enable max-nesting-depth */
+
     }
-
   }
 
 }

@@ -18,33 +18,87 @@
 //
 // markup:
 // <ul class="grid">
-//    <li class="grid__item grid-1-of-12"><div class="background-grey">1-of-12</div></li><!--
-// --><li class="grid__item grid-11-of-12"><div>11-of-12</div></li><!--
-// --><li class="grid__item grid-2-of-12"><div class="background-grey">2-of-12</div></li><!--
-// --><li class="grid__item grid-10-of-12"><div>10-of-12</div></li><!--
-// --><li class="grid__item grid-3-of-12"><div class="background-grey">3-of-12</div></li><!--
-// --><li class="grid__item grid-9-of-12"><div>9-of-12</div></li><!--
-// --><li class="grid__item grid-4-of-12"><div class="background-grey">4-of-12</div></li><!--
-// --><li class="grid__item grid-8-of-12"><div>8-of-12</div></li><!--
-// --><li class="grid__item grid-5-of-12"><div class="background-grey">5-of-12</div></li><!--
-// --><li class="grid__item grid-7-of-12"><div>7-of-12</div></li><!--
-// --><li class="grid__item grid-6-of-12"><div class="background-grey">6-of-12</div></li><!--
-// --><li class="grid__item grid-6-of-12"><div>grid</div></li><!--
-// --><li class="grid__item grid-7-of-12"><div class="background-grey">7-of-12</div></li><!--
-// --><li class="grid__item grid-5-of-12"><div>5-of-12</div></li><!--
-// --><li class="grid__item grid-8-of-12"><div class="background-grey">8-of-12</div></li><!--
-// --><li class="grid__item grid-4-of-12"><div>4-of-12</div></li><!--
-// --><li class="grid__item grid-9-of-12"><div class="background-grey">9-of-12</div></li><!--
-// --><li class="grid__item grid-3-of-12"><div>3-of-12</div></li><!--
-// --><li class="grid__item grid-10-of-12"><div class="background-grey">10-of-12</div></li><!--
-// --><li class="grid__item grid-2-of-12"><div>2-of-12</div></li><!--
-// --><li class="grid__item grid-11-of-12"><div class="background-grey">11-of-12</div></li><!--
-// --><li class="grid__item grid-1-of-12"><div>1-of-12</div></li><!--
-// --><li class="grid__item grid-12-of-12"><div class="background-grey">12-of-12</div></li><!--
-// --><li class="grid__item grid-3-of-12"><div class="background-grey">3-of-12</div></li><!--
-// --><li class="grid__item grid-3-of-12"><div>3-of-12</div></li><!--
-// --><li class="grid__item grid-3-of-12"><div class="background-grey">3-of-12</div></li><!--
-// --><li class="grid__item grid-3-of-12"><div>3-of-12</div></li>
+//    <li class="grid__item grid-1-of-12">
+//        <div class="background-grey">1-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-11-of-12">
+//        <div>11-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-2-of-12">
+//        <div class="background-grey">2-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-10-of-12">
+//        <div>10-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-3-of-12">
+//        <div class="background-grey">3-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-9-of-12">
+//        <div>9-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-4-of-12">
+//        <div class="background-grey">4-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-8-of-12">
+//        <div>8-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-5-of-12">
+//        <div class="background-grey">5-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-7-of-12">
+//        <div>7-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-6-of-12">
+//        <div class="background-grey">6-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-6-of-12">
+//        <div>6-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-7-of-12">
+//        <div class="background-grey">7-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-5-of-12">
+//        <div>5-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-8-of-12">
+//        <div class="background-grey">8-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-4-of-12">
+//        <div>4-of-12</div>
+//     </li><!--
+// --><li class="grid__item grid-9-of-12">
+//        <div class="background-grey">9-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-3-of-12">
+//        <div>3-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-10-of-12">
+//        <div class="background-grey">10-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-2-of-12">
+//        <div>2-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-11-of-12">
+//        <div class="background-grey">11-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-1-of-12">
+//        <div>1-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-12-of-12">
+//        <div class="background-grey">12-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-3-of-12">
+//        <div class="background-grey">3-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-3-of-12">
+//        <div>3-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-3-of-12">
+//        <div class="background-grey">3-of-12</div>
+//      </li><!--
+// --><li class="grid__item grid-3-of-12">
+//        <div>3-of-12</div>
+//      </li>
 // </ul>
 //
 // Styleguide 1.4.1
@@ -67,12 +121,12 @@ $bitstyles-grid-gutter: $bitstyles-padding-horizontal !default;
   margin-left: -$bitstyles-grid-gutter;
 }
 
-// Define individual grids
+// Define individual grid items
 .#{$bitstyles-namespace}grid__item {
   display: inline-block;
   width: 100%;
   padding-left: $bitstyles-grid-gutter;
-  box-sizing: border-box; // global box sizing does not seem to reach down here
+  box-sizing: border-box;
   vertical-align: top;
 }
 
