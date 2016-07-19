@@ -10,9 +10,15 @@
 // - `tools/grid-column-generator`
 //
 // markup:
-//   <div class="grid-2-of-12"><div class="background-grey">2-of-12</div></div>
-//   <div class="grid-4-of-12"><div class="background-grey">4-of-12</div></div>
-//   <div class="grid-6-of-12"><div class="background-grey">6-of-12</div></div>
+//   <div class="grid-2-of-12">
+//      <div class="background-grey">2-of-12</div>
+//   </div>
+//   <div class="grid-4-of-12">
+//     <div class="background-grey">4-of-12</div>
+//   </div>
+//   <div class="grid-6-of-12">
+//     <div class="background-grey">6-of-12</div>
+//   </div>
 //
 // Styleguide 3.8
 
