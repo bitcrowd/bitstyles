@@ -1,0 +1,21 @@
+// Webfont
+//
+// Helper mixin to output a widely cross-browser-compatible `@font-face` declaration.
+//
+// ```@include webfont(Roboto, italic, 700, 'fonts/roboto-bold-italic');```
+//
+// Styleguide 2.14
+
+@mixin webfont($font-family, $font-style, $font-weight, $font-url) {
+  @font-face {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: font-url('#{$font-url}.eot');
+    src:
+      font-url('#{$font-url}.eot?#iefix') format('embedded-opentype'),
+      font-url('#{$font-url}.woff2') format('woff2'),
+      font-url('#{$font-url}.woff') format('woff'),
+      font-url('#{$font-url}.ttf') format('truetype');
+  }
+}
