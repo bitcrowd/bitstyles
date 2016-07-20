@@ -1,11 +1,11 @@
 // Grid Layouts
 //
-// **IMPORTANT!** This object requires the following files:
+// **IMPORTANT!** This layout module requires the following files:
 // - `settings/grid`
 // - `trumps/grid-columns`
 // - `tools/grid-column-generator`
 //
-// Styleguide 1.4
+// Styleguide 5.2
 
 // Grid layout - basic
 //
@@ -18,90 +18,90 @@
 //
 // markup:
 // <ul class="grid">
-//    <li class="grid__item grid-1-of-12">
+//    <li class="l-grid__item grid-1-of-12">
 //        <div class="background-grey">1-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-11-of-12">
+// --><li class="l-grid__item grid-11-of-12">
 //        <div>11-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-2-of-12">
+// --><li class="l-grid__item grid-2-of-12">
 //        <div class="background-grey">2-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-10-of-12">
+// --><li class="l-grid__item grid-10-of-12">
 //        <div>10-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-3-of-12">
+// --><li class="l-grid__item grid-3-of-12">
 //        <div class="background-grey">3-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-9-of-12">
+// --><li class="l-grid__item grid-9-of-12">
 //        <div>9-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-4-of-12">
+// --><li class="l-grid__item grid-4-of-12">
 //        <div class="background-grey">4-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-8-of-12">
+// --><li class="l-grid__item grid-8-of-12">
 //        <div>8-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-5-of-12">
+// --><li class="l-grid__item grid-5-of-12">
 //        <div class="background-grey">5-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-7-of-12">
+// --><li class="l-grid__item grid-7-of-12">
 //        <div>7-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-6-of-12">
+// --><li class="l-grid__item grid-6-of-12">
 //        <div class="background-grey">6-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-6-of-12">
+// --><li class="l-grid__item grid-6-of-12">
 //        <div>6-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-7-of-12">
+// --><li class="l-grid__item grid-7-of-12">
 //        <div class="background-grey">7-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-5-of-12">
+// --><li class="l-grid__item grid-5-of-12">
 //        <div>5-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-8-of-12">
+// --><li class="l-grid__item grid-8-of-12">
 //        <div class="background-grey">8-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-4-of-12">
+// --><li class="l-grid__item grid-4-of-12">
 //        <div>4-of-12</div>
 //     </li><!--
-// --><li class="grid__item grid-9-of-12">
+// --><li class="l-grid__item grid-9-of-12">
 //        <div class="background-grey">9-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-3-of-12">
+// --><li class="l-grid__item grid-3-of-12">
 //        <div>3-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-10-of-12">
+// --><li class="l-grid__item grid-10-of-12">
 //        <div class="background-grey">10-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-2-of-12">
+// --><li class="l-grid__item grid-2-of-12">
 //        <div>2-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-11-of-12">
+// --><li class="l-grid__item grid-11-of-12">
 //        <div class="background-grey">11-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-1-of-12">
+// --><li class="l-grid__item grid-1-of-12">
 //        <div>1-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-12-of-12">
+// --><li class="l-grid__item grid-12-of-12">
 //        <div class="background-grey">12-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-3-of-12">
+// --><li class="l-grid__item grid-3-of-12">
 //        <div class="background-grey">3-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-3-of-12">
+// --><li class="l-grid__item grid-3-of-12">
 //        <div>3-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-3-of-12">
+// --><li class="l-grid__item grid-3-of-12">
 //        <div class="background-grey">3-of-12</div>
 //      </li><!--
-// --><li class="grid__item grid-3-of-12">
+// --><li class="l-grid__item grid-3-of-12">
 //        <div>3-of-12</div>
 //      </li>
 // </ul>
 //
-// Styleguide 1.4.1
+// Styleguide 5.2.1
 
 // styleguide:ignore:start
 // Check to see if Grid settings file is present
@@ -116,13 +116,13 @@ $bitstyles-grid-settings: false !default;
 $bitstyles-grid-gutter: $bitstyles-padding-horizontal !default;
 
 // Define main grid layout
-.#{$bitstyles-namespace}grid {
+.#{$bitstyles-namespace}l-grid {
   @include list-reset();
   margin-left: -$bitstyles-grid-gutter;
 }
 
 // Define individual grid items
-.#{$bitstyles-namespace}grid__item {
+.#{$bitstyles-namespace}l-grid__item {
   display: inline-block;
   width: 100%;
   padding-left: $bitstyles-grid-gutter;
@@ -137,9 +137,9 @@ $bitstyles-grid-gutter: $bitstyles-padding-horizontal !default;
 // grid-item/breakpoints combinations can be used
 //
 // markup:
-// <ul class="grid">
-//   <li class="grid__item grid-6-of-12-small grid-2-of-12-large"><div class="background-grey">6-of-12-small / 2-of-12-large</div></li><!--
-//   --><li class="grid__item grid-6-of-12-small grid-10-of-12-large"><div>6-of-12-small / 10-of-12-large</div></li>
+// <ul class="l-grid">
+//   <li class="l-grid__item grid-6-of-12-small grid-2-of-12-large"><div class="background-grey">6-of-12-small / 2-of-12-large</div></li><!--
+//   --><li class="l-grid__item grid-6-of-12-small grid-10-of-12-large"><div>6-of-12-small / 10-of-12-large</div></li>
 // </ul>
 //
-// Styleguide 1.4.2
+// Styleguide 5.2.2
