@@ -9,6 +9,10 @@
     "max-nesting-depth": 2,
     "declaration-no-important": true,
     "selector-no-id": true,
+    "declaration-block-no-duplicate-properties": true,
+    "no-unknown-animations": true,
+    "selector-no-type": true,
+    "no-descending-specificity": true,
     "declaration-block-properties-order": [
       "position",
       "top",
