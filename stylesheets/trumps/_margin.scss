@@ -6,15 +6,15 @@
 // <p class="{$modifiers}">Some content here</p>
 //
 //                  - Base style
-// .margin--left    - Left margin added.
-// .margin--top     - Top margin added.
-// .margin--right   - Right margin added.
-// .margin--bottom  - Bottom margin added.
+// .t-margin--left    - Left margin added.
+// .t-margin--top     - Top margin added.
+// .t-margin--right   - Right margin added.
+// .t-margin--bottom  - Bottom margin added.
 //
 // Styleguide 3.1
 
 @each $position in (left, top, right, bottom) {
-  .#{$bitstyles-namespace}margin--#{$position} {
+  .#{$bitstyles-namespace}t-margin--#{$position} {
     //styleguide:ignore:start
     margin-#{$position}: $bitstyles-margin;
     //styleguide:ignore:end

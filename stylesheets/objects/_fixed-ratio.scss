@@ -1,23 +1,23 @@
-/** @define fixed-ratio */
+/** @define o-fixed-ratio */
 //
-// Fixed-ratio.
+// Fixed-ratio
 //
 // Enforces an aspect ratio on this element anbd its contents. Default ratio is 16:9, element take 100% width and height matches.
 //
 // markup:
 // <figure>
-//   <div class="fixed-ratio">
-//     <img class="fixed-ratio__inner" src="assets/images/placeholder_16-9.png">
+//   <div class="o-fixed-ratio">
+//     <img class="o-fixed-ratio__inner" src="assets/images/placeholder_16-9.png">
 //   </div>
 //   <figcaption>An image at 16:9 aspect ratio</figcaption>
 // </figure>
 //
 // Styleguide 1.18
 
-.fixed-ratio {
+.o-fixed-ratio {
   @include fixed-ratio;
 }
 
-.fixed-ratio__inner {
+.o-fixed-ratio__inner {
   @include fixed-ratio__inner;
 }

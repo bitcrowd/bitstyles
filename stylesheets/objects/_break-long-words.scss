@@ -1,4 +1,4 @@
-/** @define break-long-words */
+/** @define o-break-long-words */
 //
 // Break long words
 //
@@ -6,10 +6,10 @@
 // Use especially with user-generated content.
 //
 // markup:
-// <p class="break-long-words">LongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshere</p>
+// <p class="o-break-long-words">LongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshere</p>
 //
 // Styleguide 1.8
 
-.break-long-words {
+.o-break-long-words {
   @include break-long-words;
 }

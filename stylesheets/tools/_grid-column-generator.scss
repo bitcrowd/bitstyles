@@ -15,7 +15,7 @@
     // If there is only one column...
     @if ($columns == 1) {
 
-      .#{$bitstyles-namespace}grid-1-of-1#{$breakpoint} {
+      .#{$bitstyles-namespace}l-grid-1-of-1#{$breakpoint} {
         width: 100% !important; /* stylelint-disable-line declaration-no-important */
       }
 
@@ -27,7 +27,7 @@
       @for $i from 1 to ($column-item + 1) {
 
         /* stylelint-disable max-nesting-depth */
-        .#{$bitstyles-namespace}grid-#{$i}-of-#{$column-item}#{$breakpoint} {
+        .#{$bitstyles-namespace}l-grid-#{$i}-of-#{$column-item}#{$breakpoint} {
           width: ($i / $column-item) * 100% !important; /* stylelint-disable-line declaration-no-important */
         }
         /* stylelint-enable max-nesting-depth */

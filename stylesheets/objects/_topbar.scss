@@ -1,11 +1,11 @@
-/** @define topbar */
+/** @define o-topbar */
 //
 // Topbar
 //
 // Fixed-position topbar/menu.
 //
 // markup:
-// <header class="topbar">
+// <header class="o-topbar">
 //   <h1>Topbar content here (menu, logo…)</h1>
 // </header>
 //
@@ -19,7 +19,7 @@ $bitstyles-topbar-settings: false !default;
 }
 // styleguide:ignore:end
 
-.topbar {
+.o-topbar {
   position: fixed;
   top: 0;
   right: 0;

@@ -1,4 +1,4 @@
-/** @define vertical-center */
+/** @define o-vertical-center */
 //
 // Vertical Centre
 //
@@ -6,11 +6,11 @@
 //
 // markup:
 // <div class="background-grey min-height-block">
-//   <p class="vertical-center">Vertically-centred content here</p>
+//   <p class="o-vertical-center">Vertically-centred content here</p>
 // </div>
 //
 // Styleguide 1.12
 
-.vertical-center {
+.o-vertical-center {
   @include vertical-center;
 }

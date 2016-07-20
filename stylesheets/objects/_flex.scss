@@ -1,25 +1,25 @@
-/** @define flex */
+/** @define o-flex */
 //
 // Flex
 //
 // Simple flex layout.
-// Make one of the children `.flex__primary` to make it take as much space as is available.
+// Make one of the children `.o-flex__primary` to make it take as much space as is available.
 //
 // markup:
-// <ul class="flex">
+// <ul class="o-flex">
 //  <li>Some content here</li>
-//  <li class="flex__primary">Some more important content here</li>
+//  <li class="o-flex__primary">Some more important content here</li>
 //  <li>Some content here</li>
 //  <li>Some content here</li>
 // </ul>
 //
 // Styleguide 1.10
 
-.flex {
+.o-flex {
   display: flex;
   align-items: stretch;
 }
 
-.flex__primary {
+.o-flex__primary {
   flex: 1 0 auto;
 }

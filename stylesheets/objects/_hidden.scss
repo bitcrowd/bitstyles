@@ -5,9 +5,9 @@
 // Fully hides an element & its children — does not affect document flow, does not get read by google or screenreaders.
 // Available at every breakpoint defined in `$hidden-breakpoints`.
 //
-// .hidden          - Hide this element always (generally so it can be revealed using JS)
-// .hidden@small    - Hide this content on smallscreens
-// .hidden@large    - Hide this content on larger screens
+// .o-hidden          - Hide this element always (generally so it can be revealed using JS)
+// .o-hidden@small    - Hide this content on smallscreens
+// .o-hidden@large    - Hide this content on larger screens
 //
 // markup:
 // <p>Paragraph 1 content</p>
@@ -26,13 +26,13 @@ $bitstyles-hidden-settings: false !default;
 }
 // styleguide:ignore:end
 
-.hidden {
+.o-hidden {
   @include hidden;
 }
 
 @each $breakpoint in $hidden-breakpoints {
   @include media-query($breakpoint) {
-    .hidden\@#{$breakpoint} {
+    .o-hidden\@#{$breakpoint} {
       @include hidden;
     }
   }

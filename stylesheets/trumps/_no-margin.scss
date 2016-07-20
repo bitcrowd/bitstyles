@@ -6,15 +6,15 @@
 // <p class="{$modifiers}">Some content here</p>
 //
 //                     - Base style
-// .no-margin--left    - Removes left-margin
-// .no-margin--top     - Removes top-margin
-// .no-margin--right   - Removes right-margin
-// .no-margin--bottom  - Removes bottom-margin
+// .t-no-margin--left    - Removes left-margin
+// .t-no-margin--top     - Removes top-margin
+// .t-no-margin--right   - Removes right-margin
+// .t-no-margin--bottom  - Removes bottom-margin
 //
 // Styleguide 3.2
 
 @each $position in (left, top, right, bottom) {
-  .#{$bitstyles-namespace}no-margin--#{$position} {
+  .#{$bitstyles-namespace}t-no-margin--#{$position} {
     //styleguide:ignore:start
     margin-#{$position}: 0;
     //styleguide:ignore:end

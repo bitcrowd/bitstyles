@@ -10,15 +10,15 @@
 //   <li>Item 3</li>
 // </ul>
 //
-// list-reset                 - Remove padding, margin and list-style-type
-// list-reset--bullets-only   - Remove list-style-type only. Does not rely on `list-reset`. Useful if `list-reset` would adversely affect the margin or padding of another component.
+// o-list-reset                 - Remove padding, margin and list-style-type
+// o-list-reset--bullets-only   - Remove list-style-type only. Does not rely on `list-reset`. Useful if `list-reset` would adversely affect the margin or padding of another component.
 //
 // Styleguide 1.19
 
-.list-reset {
+.o-list-reset {
   @include list-reset();
 }
 
-.list-reset--bullets-only {
+.o-list-reset--bullets-only {
   @include list-reset(false);
 }

@@ -1,4 +1,4 @@
-/** @define clearfix */
+/** @define o-clearfix */
 //
 // Clearfix
 //
@@ -7,13 +7,13 @@
 // and will be separated from other content (as cleared elements are).
 //
 // markup:
-// <div class="clearfix background-grey">
+// <div class="o-clearfix background-grey">
 //   <div class="floated-element">Content goes here</div>
 //   <div class="floated-element">Content goes here</div>
 // </div>
 //
 // Styleguide 1.7
 
-.clearfix {
+.o-clearfix {
   @include clearfix;
 }
