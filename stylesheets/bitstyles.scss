@@ -33,7 +33,6 @@
 // Styleguide 2.0
 @import 'tools/build';
 @import 'tools/zindex';
-@import 'tools/rem-sizing';
 @import 'tools/absolute-cover';
 @import 'tools/fixed-ratio';
 @import 'tools/media-query';
@@ -47,6 +46,7 @@
 @import 'tools/list-reset';
 @import 'tools/font-face';
 @import 'tools/grid-column-generator';
+@import 'tools/typography';
 //
 // ******** Add project-specific tools here ********
 //
@@ -104,6 +104,7 @@
 @import 'objects/flex';
 @import 'objects/bordered-header';
 @import 'objects/list-reset';
+@import 'objects/typography';
 //
 // ******** Add project-specific low-level objects here ********
 //

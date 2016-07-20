@@ -1,10 +1,95 @@
+// styleguide:ignore:start
+$bitstyles-typography-settings: false !default;
+
+@if ($bitstyles-typography-settings == false) {
+  @include output-settings-warning(typography);
+}
+// styleguide:ignore:end
+
 html {
   font-family: $bitstyles-font-family-body;
-  font-size: $bitstyles-font-size-base;
+  font-size: $bitstyles-font-size-base-small;
   line-height: 1.5;
 
   .fonts-loaded & {
     font-family: $bitstyles-font-family-body-loaded;
+  }
+}
+
+// Headers
+//
+// Semantic headers, `<h1>` being the most important in a section or page, `<h6>` being the least.
+//
+// markup:
+// <h1>Header 1</h1>
+// <h2>Header 2</h2>
+// <h3>Header 3</h3>
+// <h4>Header 4</h4>
+// <h5>Header 5</h5>
+// <h6>Header 6</h6>
+//
+// Styleguide 4.1
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include generic-heading;
+}
+
+h1 {
+  font-size: $bitstyles-font-size-h1-small;
+}
+
+h2 {
+  font-size: $bitstyles-font-size-h2-small;
+}
+
+h3 {
+  font-size: $bitstyles-font-size-h3-small;
+}
+
+h4 {
+  font-size: $bitstyles-font-size-h4-small;
+}
+
+h5 {
+  font-size: $bitstyles-font-size-h5-small;
+}
+
+h6 {
+  font-size: $bitstyles-font-size-h6-small;
+}
+
+@include media-query($bitstyles-typography-breakpoint) {
+  html {
+    font-size: $bitstyles-font-size-base;
+  }
+
+  h1 {
+    font-size: $bitstyles-font-size-h1;
+  }
+
+  h2 {
+    font-size: $bitstyles-font-size-h2;
+  }
+
+  h3 {
+    font-size: $bitstyles-font-size-h3;
+  }
+
+  h4 {
+    font-size: $bitstyles-font-size-h4;
+  }
+
+  h5 {
+    font-size: $bitstyles-font-size-h5;
+  }
+
+  h6 {
+    font-size: $bitstyles-font-size-h6;
   }
 }
 
@@ -35,36 +120,6 @@ a {
   &:focus {
     color: $bitstyles-color-link-hover;
     text-decoration: underline;
-  }
-}
-
-// Headers
-//
-// Semantic headers, `<h1>` being the most important in a section or page, `<h6>` being the least.
-//
-// markup:
-// <h1>Header 1</h1>
-// <h2>Header 2</h2>
-// <h3>Header 3</h3>
-// <h4>Header 4</h4>
-// <h5>Header 5</h5>
-// <h6>Header 6</h6>
-//
-// Styleguide 4.1
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 $bitstyles-margin;
-  font-family: $bitstyles-font-family-header;
-  font-weight: $bitstyles-font-weight-bold;
-  text-rendering: optimizeLegibility;
-
-  .fonts-loaded & {
-    font-family: $bitstyles-font-family-header-loaded;
   }
 }
 
@@ -104,6 +159,7 @@ address {
 // </dl>
 //
 // Styleguide 4.5
+
 dt {
   font-weight: $bitstyles-font-weight-bold;
 }
