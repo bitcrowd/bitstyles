@@ -3,6 +3,7 @@
 //
 // No styleguide reference.
 
+/* stylelint-disable selector-no-type */
 html {
   box-sizing: $bitstyles-box-sizing;
 }
@@ -12,3 +13,4 @@ html {
 *::after {
   box-sizing: inherit;
 }
+/* stylelint-enable selector-no-type */
