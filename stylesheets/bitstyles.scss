@@ -87,6 +87,7 @@
 @import 'layout/content';
 @import 'layout/grid';
 @import 'layout/grid-columns';
+@import 'layout/topbar';
 
 // Objects
 //
@@ -111,7 +112,6 @@
 @import 'objects/truncate-with-ellipsis';
 @import 'objects/vertical-center';
 @import 'objects/visuallyhidden';
-@import 'objects/topbar';
 @import 'objects/expander';
 @import 'objects/flex';
 @import 'objects/bordered-header';
