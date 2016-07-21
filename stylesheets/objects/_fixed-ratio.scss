@@ -14,10 +14,10 @@
 //
 // Styleguide 1.18
 
-.o-fixed-ratio {
+.#{$bitstyles-namespace}o-fixed-ratio {
   @include fixed-ratio;
 }
 
-.o-fixed-ratio__inner {
+.#{$bitstyles-namespace}o-fixed-ratio__inner {
   @include fixed-ratio__inner;
 }

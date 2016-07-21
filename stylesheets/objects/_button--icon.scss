@@ -26,7 +26,7 @@ $bitstyles-button-icon-settings: false !default;
 }
 // styleguide:ignore:end
 
-.o-button--icon {
+.#{$bitstyles-namespace}o-button--icon {
   padding: $bitstyles-button-icon-padding;
   line-height: 1;
   color: $bitstyles-button-icon-color;

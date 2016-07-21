@@ -11,6 +11,6 @@
 //
 // Styleguide 1.12
 
-.o-vertical-center {
+.#{$bitstyles-namespace}o-vertical-center {
   @include vertical-center;
 }

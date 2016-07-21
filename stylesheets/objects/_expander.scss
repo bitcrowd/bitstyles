@@ -13,26 +13,26 @@
 //
 // Styleguide 1.9
 
-.o-expander-toggle {
-  .o-icon {
+.#{$bitstyles-namespace}o-expander-toggle {
+  .#{$bitstyles-namespace}o-icon {
     transform: rotate(180deg);
     transition: transform $bitstyles-transition-duration $bitstyles-transition-easing;
   }
 
-  &.is-active {
-    .o-icon {
+  &.#{$bitstyles-namespace}is-active {
+    .#{$bitstyles-namespace}o-icon {
       transform: rotate(0deg); /* stylelint-disable-line length-zero-no-unit */
     }
   }
 }
 
-.o-expander-body {
+.#{$bitstyles-namespace}o-expander-body {
   height: auto;
   max-height: 0;
   overflow: hidden;
   transition: max-height $bitstyles-transition-duration-long $bitstyles-transition-easing;
 
-  &.is-active {
+  &.#{$bitstyles-namespace}is-active {
     max-height: 99999rem;
   }
 }

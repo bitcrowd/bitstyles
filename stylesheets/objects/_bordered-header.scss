@@ -17,7 +17,7 @@ $bitstyles-bordered-header-settings: false !default;
 }
 // styleguide:ignore:end
 
-.o-bordered-header {
+.#{$bitstyles-namespace}o-bordered-header {
   display: table;
   width: 100%;
   text-align: center;

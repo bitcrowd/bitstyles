@@ -15,11 +15,11 @@
 //
 // Styleguide 1.10
 
-.o-flex {
+.#{$bitstyles-namespace}o-flex {
   display: flex;
   align-items: stretch;
 }
 
-.o-flex__primary {
+.#{$bitstyles-namespace}o-flex__primary {
   flex: 1 0 auto;
 }

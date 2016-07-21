@@ -26,13 +26,13 @@ $bitstyles-hidden-settings: false !default;
 }
 // styleguide:ignore:end
 
-.o-hidden {
+.#{$bitstyles-namespace}o-hidden {
   @include hidden;
 }
 
 @each $breakpoint in $hidden-breakpoints {
   @include media-query($breakpoint) {
-    .o-hidden\@#{$breakpoint} {
+    .#{$bitstyles-namespace}o-hidden\@#{$breakpoint} {
       @include hidden;
     }
   }

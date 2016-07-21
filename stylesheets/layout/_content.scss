@@ -20,7 +20,7 @@ $bitstyles-content-settings: false !default;
 }
 // styleguide:ignore:end
 
-.l-content {
+.#{$bitstyles-namespace}l-content {
   display: block;
   max-width: $bitstyles-content-max-width;
   padding-right: $bitstyles-content-horizontal-padding;
@@ -31,7 +31,7 @@ $bitstyles-content-settings: false !default;
 }
 
 @include media-query($bitstyles-content-large-breakpoint) {
-  .l-content {
+  .#{$bitstyles-namespace}l-content {
     padding-right: $bitstyles-content-horizontal-padding-large;
     padding-left: $bitstyles-content-horizontal-padding-large;
   }
