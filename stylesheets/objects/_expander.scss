@@ -4,29 +4,29 @@
 // the body is the content you want to be revealed — it starts at zero height,
 // expands to size of content once active.
 //
-// Use the `.button` classes on the `.expander__toggle` to set size & appearance.
+// Use the `.o-button` classes on the `.o-expander__toggle` to set size & appearance.
 //
 // markup:
-// <button class="expander-toggle" aria-expanded="false" aria-controls="expander-0">Show/Hide</button>
+// <button class="o-expander-toggle" aria-expanded="false" aria-controls="expander-0">Show/Hide</button>
 // <p>Other content</p>
-// <div class="expander-body" id="expander-0" aria-hidden="true"><p>Lots of content here…</p><p>…even more content here…</p></div>
+// <div class="o-expander-body" id="expander-0" aria-hidden="true"><p>Lots of content here…</p><p>…even more content here…</p></div>
 //
 // Styleguide 1.9
 
-.expander-toggle {
-  .icon {
+.o-expander-toggle {
+  .o-icon {
     transform: rotate(180deg);
     transition: transform $bitstyles-transition-duration $bitstyles-transition-easing;
   }
 
   &.is-active {
-    .icon {
+    .o-icon {
       transform: rotate(0deg); /* stylelint-disable-line length-zero-no-unit */
     }
   }
 }
 
-.expander-body {
+.o-expander-body {
   height: auto;
   max-height: 0;
   overflow: hidden;

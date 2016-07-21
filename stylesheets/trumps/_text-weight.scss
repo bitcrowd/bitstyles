@@ -1,25 +1,25 @@
 // Font-weight
 //
-// Named `.text-` for consistency with the other text/font-related trumps.
+// Named `.t-text-` for consistency with the other text/font-related trumps.
 //
 // markup:
 // <p class="{$modifiers}">Some content here</p>
 //
 //                         - Base text.
-// .text-weight--light     - Ensure font-weight is light
-// .text-weight--normal    - Ensure font-weight is normal
-// .text-weight--bold      - Ensure font-weight is bold
+// .t-text-weight--light     - Ensure font-weight is light
+// .t-text-weight--normal    - Ensure font-weight is normal
+// .t-text-weight--bold      - Ensure font-weight is bold
 //
 // Styleguide 3.7
 
-.#{$bitstyles-namespace}text-weight--light {
+.#{$bitstyles-namespace}t-text-weight--light {
   font-weight: $bitstyles-font-weight-light;
 }
 
-.#{$bitstyles-namespace}text-weight--normal {
+.#{$bitstyles-namespace}t-text-weight--normal {
   font-weight: $bitstyles-font-weight-normal;
 }
 
-.#{$bitstyles-namespace}text-weight--bold {
+.#{$bitstyles-namespace}t-text-weight--bold {
   font-weight: $bitstyles-font-weight-bold;
 }

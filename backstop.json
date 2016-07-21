@@ -23,7 +23,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button"
+        ".object-section .o-button"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -37,7 +37,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button.pseudo-class-hover"
+        ".object-section .o-button.pseudo-class-hover"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -51,7 +51,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button.pseudo-class-focus"
+        ".object-section .o-button.pseudo-class-focus"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -65,7 +65,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button"
+        ".object-section .o-button"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -79,7 +79,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button.pseudo-class-hover"
+        ".object-section .o-button.pseudo-class-hover"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -93,7 +93,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button.pseudo-class-focus"
+        ".object-section .o-button.pseudo-class-focus"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -107,7 +107,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button"
+        ".object-section .o-button"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -121,7 +121,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button.pseudo-class-hover"
+        ".object-section .o-button.pseudo-class-hover"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -135,7 +135,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button.pseudo-class-focus"
+        ".object-section .o-button.pseudo-class-focus"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -149,7 +149,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button--icon"
+        ".object-section .o-button--icon"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -163,7 +163,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button--icon.pseudo-class-hover"
+        ".object-section .o-button--icon.pseudo-class-hover"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -177,7 +177,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button--icon.pseudo-class-focus"
+        ".object-section .o-button--icon.pseudo-class-focus"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -191,7 +191,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .icon"
+        ".object-section .o-icon"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -205,7 +205,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .icon--small"
+        ".object-section .o-icon--small"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -219,7 +219,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .icon--medium"
+        ".object-section .o-icon--medium"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -233,49 +233,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .icon--large"
-      ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
-      "onReadyScript": ""
-    },
-    {
-      "label": "Grid",
-      "url": "http://localhost:3000/section/1.4.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "selectors": [
-        ".object-section .grid"
-      ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
-      "onReadyScript": ""
-    },
-    {
-      "label": "Grid - responsive",
-      "url": "http://localhost:3000/section/1.4.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "selectors": [
-        ".object-section .grid"
-      ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
-      "onReadyScript": ""
-    },
-    {
-      "label": "Content",
-      "url": "http://localhost:3000/section/1.5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "selectors": [
-        ".object-section .content"
+        ".object-section .o-icon--large"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -289,7 +247,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .topbar"
+        ".object-section .l-topbar"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 100,
@@ -303,7 +261,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .clearfix"
+        ".object-section .o-clearfix"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -317,7 +275,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .break-long-words"
+        ".object-section .o-break-long-words"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -345,7 +303,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .flex"
+        ".object-section .o-flex"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -429,7 +387,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .button"
+        ".object-section .o-button"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -443,7 +401,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .grid-2-of-12"
+        ".object-section .l-grid-2-of-12"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -457,7 +415,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .absolute-cover"
+        ".object-section .o-absolute-cover"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -471,7 +429,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .bordered-header"
+        ".object-section .o-bordered-header"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -485,7 +443,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .fixed-ratio"
+        ".object-section .o-fixed-ratio"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -499,7 +457,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .list-reset"
+        ".object-section .o-list-reset"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -513,7 +471,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .list-reset--bullets-only"
+        ".object-section .o-list-reset--bullets-only"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -1382,6 +1340,62 @@
       "removeSelectors": [],
       "selectors": [
         ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Content",
+      "url": "http://localhost:3000/section/5.1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .l-content"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Grid columns",
+      "url": "http://localhost:3000/section/5.2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Grid layout",
+      "url": "http://localhost:3000/section/5.3.1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .l-grid"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Grid layout - responsive",
+      "url": "http://localhost:3000/section/5.3.2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .l-grid"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,

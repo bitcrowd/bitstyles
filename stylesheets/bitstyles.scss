@@ -74,9 +74,24 @@
 @import 'base/hr';       // FOR TESTING ONLY - Empty of styles
 @import 'base/figure';   // FOR TESTING ONLY - Empty of styles
 
+// Layout
+//
+// Classes that enable the high-level layout of a page.
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 5.0
+@import 'layout/content';
+@import 'layout/grid';
+@import 'layout/grid-columns';
+@import 'layout/topbar';
+
 // Objects
 //
-// Objects, abstractions, and design patterns (e.g. .media, .icon, .button, grid system). Cosmetic-free.
+// Objects, abstractions, and design patterns (e.g. .media, .icon, .button). Cosmetic-free.
 // These are intended to be reused throughout the site, composed together as needed e.g. <div class="button expander-toggle"></div>
 //
 // sg-wrapper:
@@ -88,7 +103,6 @@
 @import 'objects/icon';
 @import 'objects/button';
 @import 'objects/button--icon';
-@import 'objects/grid';
 @import 'objects/absolute-center';
 @import 'objects/absolute-cover';
 @import 'objects/break-long-words';
@@ -98,8 +112,6 @@
 @import 'objects/truncate-with-ellipsis';
 @import 'objects/vertical-center';
 @import 'objects/visuallyhidden';
-@import 'objects/content';
-@import 'objects/topbar';
 @import 'objects/expander';
 @import 'objects/flex';
 @import 'objects/bordered-header';
@@ -130,7 +142,6 @@
 @import 'trumps/padding';
 @import 'trumps/no-margin';
 @import 'trumps/no-padding';
-@import 'trumps/grid-columns';
 //
 // ******** Add project-specific trumps here ********
 //

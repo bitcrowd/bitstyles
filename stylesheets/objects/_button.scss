@@ -1,17 +1,16 @@
-/** @define button */
+/** @define o-button */
 //
 // Button
 //
 // Styleguide 1.1
 
-//
 // Button - generic
 //
 // Produces a larger-than-text hit target. Intended to be an action, not a link — most often a `<button>` rather than `<a href="#">`.
 //
 // markup:
-// <button class="button {$modifiers}">
-//   <span class="button__label">Button Text</span>
+// <button class="o-button {$modifiers}">
+//   <span class="o-button__label">Button Text</span>
 // </button>
 //
 //              - Base state
@@ -28,7 +27,7 @@ $bitstyles-button-settings: false !default;
 }
 // styleguide:ignore:end
 
-.button {
+.o-button {
   position: relative;
   display: inline-block;
   padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
@@ -55,7 +54,7 @@ $bitstyles-button-settings: false !default;
   }
 }
 
-.button__label {
+.o-button__label {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -67,8 +66,8 @@ $bitstyles-button-settings: false !default;
 // text. Source order dictates icon position.
 //
 // markup:
-// <button class="button {$modifiers}">
-//   <svg class="button__icon icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg><span class="button__label">Button Text</span>
+// <button class="o-button {$modifiers}">
+//   <svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg><span class="o-button__label">Button Text</span>
 // </button>
 //
 //              - Base state
@@ -83,8 +82,8 @@ $bitstyles-button-settings: false !default;
 // text. Source order dictates icon position.
 //
 // markup:
-// <button class="button {$modifiers}">
-//   <span class="button__label">Button Text</span><svg class="button__icon icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg>
+// <button class="o-button {$modifiers}">
+//   <span class="o-button__label">Button Text</span><svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg>
 // </button>
 //
 //              - Base state
@@ -93,10 +92,10 @@ $bitstyles-button-settings: false !default;
 //
 // Styleguide 1.1.3
 
-.button__icon + .button__label {
+.o-button__icon + .o-button__label {
   margin-left: $bitstyles-button-icon-spacing;
 }
 
-.button__label + .button__icon {
+.o-button__label + .o-button__icon {
   margin-left: $bitstyles-button-icon-spacing;
 }

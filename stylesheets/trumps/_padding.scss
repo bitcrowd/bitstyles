@@ -6,15 +6,15 @@
 // <div class="{$modifiers}"><p>Some content here</p></div>
 //
 //                   - Base styling
-// .padding--left    - Add left-padding.
-// .padding--top     - Add top-padding.
-// .padding--right   - Add right-padding.
-// .padding--bottom  - Add bottom-padding.
+// .t-padding--left    - Add left-padding.
+// .t-padding--top     - Add top-padding.
+// .t-padding--right   - Add right-padding.
+// .t-padding--bottom  - Add bottom-padding.
 //
 // Styleguide 3.4
 
 @each $position in (left, top, right, bottom) {
-  .#{$bitstyles-namespace}padding--#{$position} {
+  .#{$bitstyles-namespace}t-padding--#{$position} {
     //styleguide:ignore:start
     padding-#{$position}: $bitstyles-margin;
     //styleguide:ignore:end

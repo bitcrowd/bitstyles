@@ -1,16 +1,16 @@
-/** @define absolute-cover */
+/** @define o-absolute-cover */
 //
 // Absolute Cover
 //
 // The element will cover its nearest relatively-positioned parent element from edge to edge.
 //
 // markup:
-// <div class="absolute-cover background-grey">
+// <div class="o-absolute-cover background-grey">
 //   <p>Covering content</p>
 // </div>
 //
 // Styleguide 1.16
 
-.absolute-cover {
+.o-absolute-cover {
   @include absolute-cover;
 }

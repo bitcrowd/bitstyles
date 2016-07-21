@@ -5,8 +5,8 @@
 // or provide a `<span class="visuallyhidden"></span>` as sibling to the icon.
 //
 // markup:
-// <button class="button button--icon {$modifiers}">
-//   <svg class="icon">
+// <button class="o-button o-button--icon {$modifiers}">
+//   <svg class="o-icon">
 //     <title>Twitter logo</title>
 //     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
 //   </svg>
@@ -26,7 +26,7 @@ $bitstyles-button-icon-settings: false !default;
 }
 // styleguide:ignore:end
 
-.button--icon {
+.o-button--icon {
   padding: $bitstyles-button-icon-padding;
   line-height: 1;
   color: $bitstyles-button-icon-color;

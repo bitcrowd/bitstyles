@@ -1,11 +1,11 @@
-/** @define bordered-header */
+/** @define o-bordered-header */
 //
 // Bordered Header
 //
 // Creates equally-sized horizontal lines to the left & right of the element.
 //
 // markup:
-// <h2 class="bordered-header">Bordered header</h2>
+// <h2 class="o-bordered-header">Bordered header</h2>
 //
 // Styleguide 1.17
 
@@ -17,7 +17,7 @@ $bitstyles-bordered-header-settings: false !default;
 }
 // styleguide:ignore:end
 
-.bordered-header {
+.o-bordered-header {
   display: table;
   width: 100%;
   text-align: center;
