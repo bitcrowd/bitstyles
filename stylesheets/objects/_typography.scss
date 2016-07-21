@@ -42,59 +42,59 @@ $bitstyles-typography-settings: false !default;
 }
 
 .#{$bitstyles-namespace}o-h0 {
-  font-size: $bitstyles-font-size-h0-small;
+  @include font-size($bitstyles-font-size-h0-small);
 }
 
 .#{$bitstyles-namespace}o-h1 {
-  font-size: $bitstyles-font-size-h1-small;
+  @include font-size($bitstyles-font-size-h1-small);
 }
 
 .#{$bitstyles-namespace}o-h2 {
-  font-size: $bitstyles-font-size-h2-small;
+  @include font-size($bitstyles-font-size-h2-small);
 }
 
 .#{$bitstyles-namespace}o-h3 {
-  font-size: $bitstyles-font-size-h3-small;
+  @include font-size($bitstyles-font-size-h3-small);
 }
 
 .#{$bitstyles-namespace}o-h4 {
-  font-size: $bitstyles-font-size-h4-small;
+  @include font-size($bitstyles-font-size-h4-small);
 }
 
 .#{$bitstyles-namespace}o-h5 {
-  font-size: $bitstyles-font-size-h5-small;
+  @include font-size($bitstyles-font-size-h5-small);
 }
 
 .#{$bitstyles-namespace}o-h6 {
-  font-size: $bitstyles-font-size-h6-small;
+  @include font-size($bitstyles-font-size-h6-small);
 }
 
 @include media-query($bitstyles-typography-breakpoint) {
   .#{$bitstyles-namespace}o-h0 {
-    font-size: $bitstyles-font-size-h0;
+    @include font-size($bitstyles-font-size-h0, $bitstyles-font-size-base);
   }
 
   .#{$bitstyles-namespace}o-h1 {
-    font-size: $bitstyles-font-size-h1;
+    @include font-size($bitstyles-font-size-h1, $bitstyles-font-size-base);
   }
 
   .#{$bitstyles-namespace}o-h2 {
-    font-size: $bitstyles-font-size-h2;
+    @include font-size($bitstyles-font-size-h2, $bitstyles-font-size-base);
   }
 
   .#{$bitstyles-namespace}o-h3 {
-    font-size: $bitstyles-font-size-h3;
+    @include font-size($bitstyles-font-size-h3, $bitstyles-font-size-base);
   }
 
   .#{$bitstyles-namespace}o-h4 {
-    font-size: $bitstyles-font-size-h4;
+    @include font-size($bitstyles-font-size-h4, $bitstyles-font-size-base);
   }
 
   .#{$bitstyles-namespace}o-h5 {
-    font-size: $bitstyles-font-size-h5;
+    @include font-size($bitstyles-font-size-h5, $bitstyles-font-size-base);
   }
 
   .#{$bitstyles-namespace}o-h6 {
-    font-size: $bitstyles-font-size-h6;
+    @include font-size($bitstyles-font-size-h6, $bitstyles-font-size-base);
   }
 }

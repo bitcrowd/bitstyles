@@ -10,7 +10,7 @@ $bitstyles-typography-settings: false !default;
 
 html {
   font-family: $bitstyles-font-family-body;
-  font-size: $bitstyles-font-size-base-small;
+  font-size: px-to-em($bitstyles-font-size-base-small);
   line-height: 1.5;
 
   .fonts-loaded & {
@@ -42,56 +42,56 @@ h6 {
 }
 
 h1 {
-  font-size: $bitstyles-font-size-h1-small;
+  @include font-size($bitstyles-font-size-h1-small);
 }
 
 h2 {
-  font-size: $bitstyles-font-size-h2-small;
+  @include font-size($bitstyles-font-size-h2-small);
 }
 
 h3 {
-  font-size: $bitstyles-font-size-h3-small;
+  @include font-size($bitstyles-font-size-h3-small);
 }
 
 h4 {
-  font-size: $bitstyles-font-size-h4-small;
+  @include font-size($bitstyles-font-size-h4-small);
 }
 
 h5 {
-  font-size: $bitstyles-font-size-h5-small;
+  @include font-size($bitstyles-font-size-h5-small);
 }
 
 h6 {
-  font-size: $bitstyles-font-size-h6-small;
+  @include font-size($bitstyles-font-size-h6-small);
 }
 
 @include media-query($bitstyles-typography-breakpoint) {
   html {
-    font-size: $bitstyles-font-size-base;
+    font-size: px-to-em($bitstyles-font-size-base);
   }
 
   h1 {
-    font-size: $bitstyles-font-size-h1;
+    @include font-size($bitstyles-font-size-h1, $bitstyles-font-size-base);
   }
 
   h2 {
-    font-size: $bitstyles-font-size-h2;
+    @include font-size($bitstyles-font-size-h2, $bitstyles-font-size-base);
   }
 
   h3 {
-    font-size: $bitstyles-font-size-h3;
+    @include font-size($bitstyles-font-size-h3, $bitstyles-font-size-base);
   }
 
   h4 {
-    font-size: $bitstyles-font-size-h4;
+    @include font-size($bitstyles-font-size-h4, $bitstyles-font-size-base);
   }
 
   h5 {
-    font-size: $bitstyles-font-size-h5;
+    @include font-size($bitstyles-font-size-h5, $bitstyles-font-size-base);
   }
 
   h6 {
-    font-size: $bitstyles-font-size-h6;
+    @include font-size($bitstyles-font-size-h6, $bitstyles-font-size-base);
   }
 }
 

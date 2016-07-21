@@ -1,0 +1,18 @@
+// Px to Rem sizing
+//
+// Converts pixels to rems — use to define font-sizes etc.
+//
+// Styleguide 2.12.1
+
+@function px-to-rem($pixel-size, $root-size: $bitstyles-font-size-base-small) {
+  @return ($pixel-size / $root-size) * 1rem;
+}
+
+// em sizing
+//
+// Converts pixels to ems — use to define font-sizes etc.
+//
+// Styleguide 2.12.2
+@function px-to-em($pixels, $browser-context: $bitstyles-font-size-base-small) {
+  @return ($pixels / $browser-context) + 0em; // stylelint-disable-line length-zero-no-unit
+}
