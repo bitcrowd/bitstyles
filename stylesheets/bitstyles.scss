@@ -78,6 +78,11 @@
 //
 // Classes that enable the high-level layout of a page.
 //
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
 // Styleguide 5.0
 @import 'layout/content';
 @import 'layout/grid';

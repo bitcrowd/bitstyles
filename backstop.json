@@ -242,48 +242,6 @@
       "onReadyScript": ""
     },
     {
-      "label": "Grid",
-      "url": "http://localhost:3000/section/1.4.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "selectors": [
-        ".object-section .grid"
-      ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
-      "onReadyScript": ""
-    },
-    {
-      "label": "Grid - responsive",
-      "url": "http://localhost:3000/section/1.4.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "selectors": [
-        ".object-section .grid"
-      ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
-      "onReadyScript": ""
-    },
-    {
-      "label": "Content",
-      "url": "http://localhost:3000/section/1.5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "selectors": [
-        ".object-section .content"
-      ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
-      "onReadyScript": ""
-    },
-    {
       "label": "Topbar",
       "url": "http://localhost:3000/section/1.6/fullscreen",
       "hideSelectors": [],
@@ -1382,6 +1340,62 @@
       "removeSelectors": [],
       "selectors": [
         ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Content",
+      "url": "http://localhost:3000/section/5.1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .content"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Content",
+      "url": "http://localhost:3000/section/5.2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Grid",
+      "url": "http://localhost:3000/section/5.3.1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .grid"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Grid - responsive",
+      "url": "http://localhost:3000/section/5.3.2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .grid"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
