@@ -16,7 +16,7 @@
     @if ($columns == 1) {
 
       .#{$bitstyles-namespace}l-grid-1-of-1#{$breakpoint} {
-        width: 100% !important; /* stylelint-disable-line declaration-no-important */
+        width: 100%; /* stylelint-disable-line declaration-no-important */
       }
 
     }
@@ -28,7 +28,7 @@
 
         /* stylelint-disable max-nesting-depth */
         .#{$bitstyles-namespace}l-grid-#{$i}-of-#{$column-item}#{$breakpoint} {
-          width: ($i / $column-item) * 100% !important; /* stylelint-disable-line declaration-no-important */
+          width: ($i / $column-item) * 100%; /* stylelint-disable-line declaration-no-important */
         }
         /* stylelint-enable max-nesting-depth */
 
