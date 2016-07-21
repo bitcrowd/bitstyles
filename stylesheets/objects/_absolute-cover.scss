@@ -11,6 +11,6 @@
 //
 // Styleguide 1.16
 
-.o-absolute-cover {
+.#{$bitstyles-namespace}o-absolute-cover {
   @include absolute-cover;
 }

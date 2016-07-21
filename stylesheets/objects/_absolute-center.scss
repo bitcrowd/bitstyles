@@ -11,6 +11,6 @@
 //
 // Styleguide 1.11
 
-.o-absolute-center {
+.#{$bitstyles-namespace}o-absolute-center {
   @include absolute-center;
 }

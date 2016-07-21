@@ -31,70 +31,70 @@ $bitstyles-typography-settings: false !default;
 }
 // styleguide:ignore:end
 
-.o-h0,
-.o-h1,
-.o-h2,
-.o-h3,
-.o-h4,
-.o-h5,
-.o-h6 {
+.#{$bitstyles-namespace}o-h0,
+.#{$bitstyles-namespace}o-h1,
+.#{$bitstyles-namespace}o-h2,
+.#{$bitstyles-namespace}o-h3,
+.#{$bitstyles-namespace}o-h4,
+.#{$bitstyles-namespace}o-h5,
+.#{$bitstyles-namespace}o-h6 {
   @include generic-heading;
 }
 
-.o-h0 {
+.#{$bitstyles-namespace}o-h0 {
   font-size: $bitstyles-font-size-h0-small;
 }
 
-.o-h1 {
+.#{$bitstyles-namespace}o-h1 {
   font-size: $bitstyles-font-size-h1-small;
 }
 
-.o-h2 {
+.#{$bitstyles-namespace}o-h2 {
   font-size: $bitstyles-font-size-h2-small;
 }
 
-.o-h3 {
+.#{$bitstyles-namespace}o-h3 {
   font-size: $bitstyles-font-size-h3-small;
 }
 
-.o-h4 {
+.#{$bitstyles-namespace}o-h4 {
   font-size: $bitstyles-font-size-h4-small;
 }
 
-.o-h5 {
+.#{$bitstyles-namespace}o-h5 {
   font-size: $bitstyles-font-size-h5-small;
 }
 
-.o-h6 {
+.#{$bitstyles-namespace}o-h6 {
   font-size: $bitstyles-font-size-h6-small;
 }
 
 @include media-query($bitstyles-typography-breakpoint) {
-  .o-h0 {
+  .#{$bitstyles-namespace}o-h0 {
     font-size: $bitstyles-font-size-h0;
   }
 
-  .o-h1 {
+  .#{$bitstyles-namespace}o-h1 {
     font-size: $bitstyles-font-size-h1;
   }
 
-  .o-h2 {
+  .#{$bitstyles-namespace}o-h2 {
     font-size: $bitstyles-font-size-h2;
   }
 
-  .o-h3 {
+  .#{$bitstyles-namespace}o-h3 {
     font-size: $bitstyles-font-size-h3;
   }
 
-  .o-h4 {
+  .#{$bitstyles-namespace}o-h4 {
     font-size: $bitstyles-font-size-h4;
   }
 
-  .o-h5 {
+  .#{$bitstyles-namespace}o-h5 {
     font-size: $bitstyles-font-size-h5;
   }
 
-  .o-h6 {
+  .#{$bitstyles-namespace}o-h6 {
     font-size: $bitstyles-font-size-h6;
   }
 }

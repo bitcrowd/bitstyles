@@ -19,7 +19,7 @@ $bitstyles-topbar-settings: false !default;
 }
 // styleguide:ignore:end
 
-.l-topbar {
+.#{$bitstyles-namespace}l-topbar {
   position: fixed;
   top: 0;
   right: 0;

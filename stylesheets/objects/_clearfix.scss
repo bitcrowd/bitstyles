@@ -14,6 +14,6 @@
 //
 // Styleguide 1.7
 
-.o-clearfix {
+.#{$bitstyles-namespace}o-clearfix {
   @include clearfix;
 }

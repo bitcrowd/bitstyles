@@ -10,6 +10,6 @@
 //
 // Styleguide 1.8
 
-.o-break-long-words {
+.#{$bitstyles-namespace}o-break-long-words {
   @include break-long-words;
 }

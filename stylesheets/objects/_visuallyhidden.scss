@@ -23,13 +23,13 @@ $bitstyles-visuallyhidden-settings: false !default;
 }
 // styleguide:ignore:end
 
-.o-visuallyhidden {
+.#{$bitstyles-namespace}o-visuallyhidden {
   @include visuallyhidden;
 }
 
 @each $breakpoint in $visuallyhidden-breakpoints {
   @include media-query($breakpoint) {
-    .o-visuallyhidden\@#{$breakpoint} {
+    .#{$bitstyles-namespace}o-visuallyhidden\@#{$breakpoint} {
       @include visuallyhidden;
     }
   }

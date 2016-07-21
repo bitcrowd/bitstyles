@@ -13,6 +13,6 @@
 //
 // Styleguide 1.15
 
-.o-truncate-with-ellipsis {
+.#{$bitstyles-namespace}o-truncate-with-ellipsis {
   @include truncate-with-ellipsis;
 }

@@ -27,7 +27,7 @@ $bitstyles-icon-settings: false !default;
 }
 // styleguide:ignore:end
 
-.o-icon {
+.#{$bitstyles-namespace}o-icon {
   display: inline-block;
   width: 1em;
   height: 1em;
@@ -45,7 +45,7 @@ $bitstyles-icon-settings: false !default;
   $size: nth($icon-size, 2);
 
   /* postcss-bem-linter: ignore */
-  .o-icon--#{$alias} {
+  .#{$bitstyles-namespace}o-icon--#{$alias} {
     font-size: $size;
   }
 }
