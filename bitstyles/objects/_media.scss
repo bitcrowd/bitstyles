@@ -1,3 +1,4 @@
+/** @define media */
 // Media
 //
 // Nicole Sullivan’s OOCSS media object.
@@ -10,12 +11,12 @@
 //
 // Styleguide 1.21
 
-.o-media {
+.#{$bitstyles-namespace}o-media {
   display: block;
   overflow: hidden;
 }
 
-.o-media__feature {
+.#{$bitstyles-namespace}o-media__feature {
   float: left;
   margin-right: $bitstyles-spacing;
 }

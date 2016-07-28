@@ -37,12 +37,16 @@ gulp.task('build', function compileCss() {
 });
 
 gulp.task('lint:scss', function lintScss() {
+  const ns = '#{\\$bitstyles-namespace}(l-|c-|o-|t-|is-|has-|js-)';
+  const word = '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*';
+  const element = '(?:__' + word + ')?';
+  const modifier = '(?:_' + word + '){0,2}';
+  const attribute = '(?:\\[.+\\])?';
   const stylelint = require('stylelint');
   const bemlint = require('postcss-bem-linter')({
-    preset: 'bem',
-    ignoreSelectors: [
-      '.is-active'
-    ]
+    componentName: /^[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$/,
+    // Double-escaping required!
+    componentSelectors: '^\\.' + ns + '{componentName}' + element + modifier + attribute + '$'
   });
 
   return gulp.src('bitstyles/**/*.scss')
