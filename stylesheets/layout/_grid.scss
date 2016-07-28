@@ -113,7 +113,7 @@ $bitstyles-grid-settings: false !default;
 // styleguide:ignore:end
 
 // Set default gutter
-$bitstyles-grid-gutter: $bitstyles-padding-horizontal !default;
+$bitstyles-grid-gutter: $bitstyles-spacing-horizontal !default;
 
 // Define main grid layout
 .#{$bitstyles-namespace}l-grid {

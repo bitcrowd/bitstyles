@@ -16,7 +16,7 @@
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}t-margin--#{$position} {
     //styleguide:ignore:start
-    margin-#{$position}: $bitstyles-margin;
+    margin-#{$position}: $bitstyles-spacing;
     //styleguide:ignore:end
   }
 }
