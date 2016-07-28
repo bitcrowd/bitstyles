@@ -1,6 +1,3 @@
-$bitstyles-grid-settings: true; // tell grid system we've set some defaults
-$bitstyles-grid-basic: true !default; // generate basic columns without breakpoints
-
 // These column variables can be lists — (10, 12) will give multiple grid systems: every permutation of 10 columns
 // (1/10, 2/10, 3/10… 9/10, 10/10) and 12 columns (1/12, 2/12, 3/12… 11/12, 12/12).
 // We normally only need one grid system (i.e. one set of columns).
@@ -18,3 +15,5 @@ $bitstyles-grid-breakpoints: (
   'small-and-medium',
   'large'
 ) !default;
+
+$bitstyles-grid-gutter: $bitstyles-spacing-horizontal !default;

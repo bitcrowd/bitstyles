@@ -12,13 +12,7 @@
 //
 // Styleguide 5.1
 
-// styleguide:ignore:start
-$bitstyles-content-settings: false !default;
-
-@if ($bitstyles-content-settings == false) {
-  @include output-settings-warning(content);
-}
-// styleguide:ignore:end
+@import 'settings/content';
 
 .#{$bitstyles-namespace}l-content {
   display: block;
