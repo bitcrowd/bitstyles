@@ -1,17 +1,21 @@
 // No-Margins
 //
+// Styleguide 3.2
+
+// No-Margins - individual
+//
 // Remove margins from elements on an ad-hoc basis.
 //
 // markup:
 // <p class="{$modifiers}">Some content here</p>
 //
-//                     - Base style
+//                       - Base style
 // .t-no-margin--left    - Removes left-margin
 // .t-no-margin--top     - Removes top-margin
 // .t-no-margin--right   - Removes right-margin
 // .t-no-margin--bottom  - Removes bottom-margin
 //
-// Styleguide 3.2
+// Styleguide 3.2.1
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}t-no-margin--#{$position} {
@@ -19,4 +23,17 @@
     margin-#{$position}: 0;
     //styleguide:ignore:end
   }
+}
+
+// No-Margins - all sides
+//
+// Add ad-hoc margins to elements.
+//
+// markup:
+// <div class="margin"><p>Some content here.</p></div>
+//
+// Styleguide 3.2.2
+
+.#{$bitstyles-namespace}t-no-margin {
+  margin: 0;
 }
