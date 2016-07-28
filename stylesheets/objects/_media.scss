@@ -1,0 +1,21 @@
+// Media
+//
+// Nicole Sullivan’s OOCSS media object.
+//
+// markup:
+// <div class="o-media">
+//   <img class="o-media__feature" src="assets/images/placeholder_16-9.png"/>
+//   <p>Some text here that sits against the featured image on its left</p>
+// </div>
+//
+// Styleguide 1.21
+
+.o-media {
+  display: block;
+  overflow:hidden;
+}
+
+.o-media__feature {
+  float: left;
+  margin-right: $bitstyles-padding;
+}
