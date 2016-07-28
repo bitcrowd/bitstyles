@@ -1,3 +1,9 @@
+@import 'settings/units';
+@import 'settings/layout';
+@import 'settings/animations';
+@import 'settings/colors';
+@import 'settings/typography';
+
 // Namespacing
 // Defining a namespace will prepend it to every selector and variable name
 $bitstyles-namespace: null !default;

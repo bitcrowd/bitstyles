@@ -1,4 +1,2 @@
-$bitstyles-topbar-settings: true;
-
-$bitstyles-topbar-vertical-padding: $bitstyles-margin;
-$bitstyles-topbar-horizontal-padding: $bitstyles-margin * 2;
+$bitstyles-topbar-vertical-padding: $bitstyles-margin !default;
+$bitstyles-topbar-horizontal-padding: $bitstyles-margin * 2 !default;
