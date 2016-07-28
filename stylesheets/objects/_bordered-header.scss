@@ -9,13 +9,7 @@
 //
 // Styleguide 1.17
 
-// styleguide:ignore:start
-$bitstyles-bordered-header-settings: false !default;
-
-@if ($bitstyles-bordered-header-settings == false) {
-  @include output-settings-warning(bordered-header);
-}
-// styleguide:ignore:end
+@import 'settings/bordered-header';
 
 .#{$bitstyles-namespace}o-bordered-header {
   display: table;

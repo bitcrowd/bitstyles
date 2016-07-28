@@ -23,14 +23,6 @@
 //
 // Styleguide 1.20
 
-// styleguide:ignore:start
-$bitstyles-typography-settings: false !default;
-
-@if ($bitstyles-typography-settings == false) {
-  @include output-settings-warning(typography);
-}
-// styleguide:ignore:end
-
 .#{$bitstyles-namespace}o-h0,
 .#{$bitstyles-namespace}o-h1,
 .#{$bitstyles-namespace}o-h2,

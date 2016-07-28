@@ -103,25 +103,13 @@
 //
 // Styleguide 5.3.1
 
-// styleguide:ignore:start
-// Check to see if Grid settings file is present
-$bitstyles-grid-settings: false !default;
+@import 'settings/grid';
 
-@if ($bitstyles-grid-settings == false) {
-  @include output-settings-warning(grid);
-}
-// styleguide:ignore:end
-
-// Set default gutter
-$bitstyles-grid-gutter: $bitstyles-padding-horizontal !default;
-
-// Define main grid layout
 .#{$bitstyles-namespace}l-grid {
   @include list-reset();
   margin-left: -$bitstyles-grid-gutter;
 }
 
-// Define individual grid items
 .#{$bitstyles-namespace}l-grid__item {
   display: inline-block;
   width: 100%;

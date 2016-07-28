@@ -1,13 +1,4 @@
-// styleguide:ignore:start
-$bitstyles-typography-settings: false !default;
-
-@if ($bitstyles-typography-settings == false) {
-  @include output-settings-warning(typography);
-}
-// styleguide:ignore:end
-
 /* stylelint-disable selector-no-type */
-
 html {
   font-family: $bitstyles-font-family-body;
   font-size: px-to-em($bitstyles-font-size-base-small);

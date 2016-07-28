@@ -19,13 +19,7 @@
 //
 // Styleguide 1.1.1
 
-// styleguide:ignore:start
-$bitstyles-button-settings: false !default;
-
-@if ($bitstyles-button-settings == false) {
-  @include output-settings-warning(button);
-}
-// styleguide:ignore:end
+@import 'settings/button';
 
 .#{$bitstyles-namespace}o-button {
   position: relative;
