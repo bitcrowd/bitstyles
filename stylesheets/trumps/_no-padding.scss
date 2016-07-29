@@ -1,17 +1,21 @@
 // No-Paddings
 //
+// Styleguide 3.3
+
+// No-Paddings - individual
+//
 // Use to remove padding from elements on an ad-hoc basis
 //
 // markup:
 // <p class="{$modifiers}">Some content here</p>
 //
-//                      - Base style
+//                        - Base style
 // .t-no-padding--left    - Removes left padding.
 // .t-no-padding--top     - Removes top padding.
 // .t-no-padding--right   - Removes right padding.
 // .t-no-padding--bottom  - Removes bottom padding.
 //
-// Styleguide 3.3
+// Styleguide 3.3.1
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}t-no-padding--#{$position} {
@@ -19,4 +23,18 @@
     padding-#{$position}: 0;
     //styleguide:ignore:end
   }
+}
+
+
+// No-Paddings - all sides
+//
+// Use to remove padding from elements on an ad-hoc basis
+//
+// Markup:
+// <div class="padding"><p>Some content here.</p></div>
+//
+// Styleguide 3.3.2
+
+.#{$bitstyles-namespace}t-no-padding {
+  padding: 0;
 }

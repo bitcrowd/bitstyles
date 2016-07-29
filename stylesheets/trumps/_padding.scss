@@ -1,17 +1,21 @@
 // Paddings
 //
+// Styleguide 3.4
+
+// Paddings
+//
 // Use to add ad-hoc padding to elements
 //
 // markup:
 // <div class="{$modifiers}"><p>Some content here</p></div>
 //
-//                   - Base styling
+//                     - Base styling
 // .t-padding--left    - Add left-padding.
 // .t-padding--top     - Add top-padding.
 // .t-padding--right   - Add right-padding.
 // .t-padding--bottom  - Add bottom-padding.
 //
-// Styleguide 3.4
+// Styleguide 3.4.1
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}t-padding--#{$position} {
@@ -19,4 +23,17 @@
     padding-#{$position}: $bitstyles-spacing;
     //styleguide:ignore:end
   }
+}
+
+// Padding, all sides
+//
+// Add ad-hoc padding to elements.
+//
+// Markup:
+// <div class="padding"><p>Some content here.</p></div>
+//
+// Styleguide 3.4.2
+
+.#{$bitstyles-namespace}t-padding {
+  padding: $bitstyles-spacing;
 }

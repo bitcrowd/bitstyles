@@ -1,17 +1,21 @@
 // Margins
 //
+// Styleguide 3.1
+
+// Margins - individual
+//
 // Add ad-hoc margins to elements.
 //
 // markup:
 // <p class="{$modifiers}">Some content here</p>
 //
-//                  - Base style
+//                    - Base style
 // .t-margin--left    - Left margin added.
 // .t-margin--top     - Top margin added.
 // .t-margin--right   - Right margin added.
 // .t-margin--bottom  - Bottom margin added.
 //
-// Styleguide 3.1
+// Styleguide 3.1.1
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}t-margin--#{$position} {
@@ -19,4 +23,17 @@
     margin-#{$position}: $bitstyles-spacing;
     //styleguide:ignore:end
   }
+}
+
+// Margins - all sides
+//
+// Add ad-hoc margins to elements.
+//
+// markup:
+// <div class="margin"><p>Some content here.</p></div>
+//
+// Styleguide 3.1.2
+
+.#{$bitstyles-namespace}t-margin {
+  margin: $bitstyles-spacing;
 }
