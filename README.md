@@ -18,7 +18,7 @@ $ bower install git@github.com:bitcrowd/bitstyles.git#v0.2.2-alpha --save
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
 
 ```
-bower_components/bitstyles/stylesheets
+bower_components/bitstyles/bitstyles
 ```
 
 If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
@@ -27,7 +27,7 @@ If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
 gulp.task('stylesheet', function(){
   return gulp.src('app/css/main.scss')
     .pipe(sass({
-      includePaths: ['bower_components/bitstyles/stylesheets']
+      includePaths: ['bower_components/bitstyles/bitstyles']
     }).on('error', sass.logError));
 }
 ```
@@ -35,7 +35,7 @@ gulp.task('stylesheet', function(){
 If you’re using rails, you can add this path to the asset pipeline in `config/application.rb`
 
 ```ruby
-config.assets.paths << 'bower_components/bitstyles/stylesheets'
+config.assets.paths << 'bower_components/bitstyles/bitstyles'
 ```
 
 
@@ -47,7 +47,7 @@ $ npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.2.2-alpha --save
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
 
 ```
-node_modules/bitstyles/stylesheets
+node_modules/bitstyles/bitstyles
 ```
 
 If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
@@ -56,7 +56,7 @@ If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
 gulp.task('stylesheet', function(){
   return gulp.src('app/css/main.scss')
     .pipe(sass({
-      includePaths: ['node_modules/bitstyles/stylesheets']
+      includePaths: ['node_modules/bitstyles/bitstyles']
     }).on('error', sass.logError));
 }
 ```
@@ -64,7 +64,7 @@ gulp.task('stylesheet', function(){
 If you’re using rails, you can add this path to the asset pipeline in `config/application.rb`
 
 ```ruby
-config.assets.paths << 'node_modules/bitstyles/stylesheets'
+config.assets.paths << 'node_modules/bitstyles/bitstyles'
 ```
 
 ### Importing the sass to your project
@@ -100,7 +100,7 @@ To change the css output by the library (e.g. standard margins, typographic scal
 @import 'objects/grid';
 ```
 
-For the complete list of varables you can override, look through the various files in the `stylesheets/settings/` folder.
+For the complete list of varables you can override, look through the various files in the `bitstyles/settings/` folder.
 
 ## Developing Bitstyles
 Bitstyles requires `node v5.7.0`. If you have [nvm](https://github.com/creationix/nvm) installed:

@@ -20,7 +20,7 @@ const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('build', function compileCss() {
-  return gulp.src('stylesheets/bitstyles.scss')
+  return gulp.src('bitstyles/bitstyles.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: [
@@ -45,7 +45,7 @@ gulp.task('lint:scss', function lintScss() {
     ]
   });
 
-  return gulp.src('stylesheets/**/*.scss')
+  return gulp.src('bitstyles/**/*.scss')
     .pipe(postcss([stylelint, bemlint, postcssReporter], { syntax: syntaxScss }));
 });
 
@@ -59,7 +59,7 @@ gulp.task('lint:js', function lintJs() {
 gulp.task('lint', ['lint:scss', 'lint:js']);
 
 gulp.task('styleguide:generate', function styleguideGenerate() {
-  return gulp.src('stylesheets/**/*.scss')
+  return gulp.src('bitstyles/**/*.scss')
     .pipe(styleguide.generate({
       title: 'Bitstyles',
       server: true,
@@ -106,5 +106,5 @@ gulp.task('test:run', function visualRegressionRun(callback) {
 });
 
 gulp.task('watch', function watch() {
-  gulp.watch('stylesheets/**/*.scss', ['lint', 'build']);
+  gulp.watch('bitstyles/**/*.scss', ['lint', 'build']);
 });
