@@ -18,6 +18,8 @@ const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
+const cssstats = require('postcss-cssstats');
+const fs = require('fs');
 
 gulp.task('build', function compileCss() {
   return gulp.src('bitstyles/bitstyles.scss')
@@ -97,7 +99,7 @@ gulp.task('styleguide:assets', function styleguideAssets() {
 
 gulp.task(
   'styleguide',
-  ['styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']
+  ['stats', 'styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']
 );
 
 gulp.task('test:build', function visualRegressionBuild(callback) {
@@ -110,6 +112,49 @@ gulp.task('test:run', function visualRegressionRun(callback) {
     .on('exit', callback);
 });
 
+gulp.task('stats', ['build'], function cssStats() {
+
+  var processors = [
+    cssstats(
+      function(stats) {
+        var gatherStats = "";
+        gatherStats += writeStat("Size", stats.size)
+        gatherStats += writeStat("Size (gzipped)", stats.gzipSize)
+        gatherStats += writeStat("Average specificity", stats.averages.specificity)
+        gatherStats += writeStat("Average rulesize", stats.averages.ruleSize)
+        gatherStats += writeStat("Total selector count", stats.aggregates.selectors)
+        gatherStats += writeStat("Total declaration count", stats.aggregates.declarations)
+        fs.writeFile('bitstyles/stats.txt', gatherStats);
+      }
+    )
+  ]
+
+  return gulp.src('build/bitstyles.css')
+  .pipe(postcss(processors));
+});
+
+gulp.task('stats:console', ['build'], function cssStats() {
+  var processors = [
+    cssstats(
+      function(stats) {
+        console.log(writeStat("Size", stats.size));
+        console.log(writeStat("Size (gzipped)", stats.gzipSize));
+        console.log(writeStat("Average specificity", stats.averages.specificity));
+        console.log(writeStat("Average rulesize", stats.averages.ruleSize));
+        console.log(writeStat("Total selector count", stats.aggregates.selectors));
+        console.log(writeStat("Total declaration count", stats.aggregates.declarations));
+      }
+    )
+  ]
+
+  return gulp.src('build/bitstyles.css')
+  .pipe(postcss(processors));
+});
+
+var writeStat = function(label, value) {
+  return label + ": " + value + "\n";
+}
+
 gulp.task('watch', function watch() {
-  gulp.watch('bitstyles/**/*.scss', ['lint', 'build']);
+  gulp.watch('bitstyles/**/*.scss', ['lint', 'stats']);
 });
