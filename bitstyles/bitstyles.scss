@@ -125,6 +125,11 @@
 //
 // High-specificity overrides and helper classes (e.g. .hidden {}). `!important` exists here.
 //
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
 // Styleguide 3.0
 @import 'trumps/text-weight';
 @import 'trumps/text-align';

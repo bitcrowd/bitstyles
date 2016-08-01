@@ -7,7 +7,9 @@
 // Use to add ad-hoc padding to elements
 //
 // markup:
-// <div class="{$modifiers}"><p>Some content here</p></div>
+// <div class="background-grey">
+//   <div class="{$modifiers}">Some content here.</div>
+// </div>
 //
 //                     - Base styling
 // .t-padding--left    - Add left-padding.
@@ -30,7 +32,9 @@
 // Add ad-hoc padding to elements.
 //
 // Markup:
-// <div class="padding"><p>Some content here.</p></div>
+// <div class="background-grey">
+//   <div class="t-padding">Some content here.</div>
+// </div>
 //
 // Styleguide 3.4.2
 

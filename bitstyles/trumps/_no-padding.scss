@@ -7,7 +7,9 @@
 // Use to remove padding from elements on an ad-hoc basis
 //
 // markup:
-// <p class="{$modifiers}">Some content here</p>
+// <div class="background-grey">
+//   <div class="t-padding {$modifiers}">Some content here</div>
+// </div>
 //
 //                        - Base style
 // .t-no-padding--left    - Removes left padding.
@@ -30,7 +32,9 @@
 // Use to remove padding from elements on an ad-hoc basis
 //
 // Markup:
-// <div class="padding"><p>Some content here.</p></div>
+// <div class="background-grey">
+//   <div class="t-padding t-no-padding">Some content here</div>
+// </div>
 //
 // Styleguide 3.3.2
 
