@@ -18,13 +18,7 @@
 //
 // Styleguide 1.2
 
-// styleguide:ignore:start
-$bitstyles-button-icon-settings: false !default;
-
-@if ($bitstyles-button-icon-settings == false) {
-  @include output-settings-warning(button--icon);
-}
-// styleguide:ignore:end
+@import '../settings/button--icon';
 
 .#{$bitstyles-namespace}o-button--icon {
   padding: $bitstyles-button-icon-padding;

@@ -5,25 +5,12 @@
 // * No CSS output *
 
 //
-// ******** Add overrides for bitstyles settings here ********
+// ******** Add overrides for Bitstyles settings here ********
 //
 @import 'settings/global';
-@import 'settings/units';
-@import 'settings/layout';
-@import 'settings/animations';
-@import 'settings/colors';
-@import 'settings/typography';
-@import 'settings/icon';
-@import 'settings/button';
-@import 'settings/button--icon';
-@import 'settings/grid';
-@import 'settings/hidden';
-@import 'settings/visuallyhidden';
-@import 'settings/content';
-@import 'settings/topbar';
-@import 'settings/bordered-header';
+
 //
-// ******** Add project-specific settings here ********
+// ******** Add settings for your own objects & components here ********
 //
 
 
@@ -34,7 +21,6 @@
 // * No CSS output *
 //
 // Styleguide 2.0
-@import 'tools/build';
 @import 'tools/zindex';
 @import 'tools/absolute-cover';
 @import 'tools/fixed-ratio';

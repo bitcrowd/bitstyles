@@ -11,13 +11,7 @@
 //
 // Styleguide 1.6
 
-// styleguide:ignore:start
-$bitstyles-topbar-settings: false !default;
-
-@if ($bitstyles-topbar-settings == false) {
-  @include output-settings-warning(topbar);
-}
-// styleguide:ignore:end
+@import 'settings/topbar';
 
 .#{$bitstyles-namespace}l-topbar {
   position: fixed;

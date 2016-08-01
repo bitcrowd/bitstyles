@@ -15,13 +15,7 @@
 //
 // Styleguide 1.14
 
-// styleguide:ignore:start
-$bitstyles-visuallyhidden-settings: false !default;
-
-@if ($bitstyles-visuallyhidden-settings == false) {
-  @include output-settings-warning(visuallyhidden);
-}
-// styleguide:ignore:end
+@import '../settings/visuallyhidden';
 
 .#{$bitstyles-namespace}o-visuallyhidden {
   @include visuallyhidden;

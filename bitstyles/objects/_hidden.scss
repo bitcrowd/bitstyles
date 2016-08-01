@@ -18,13 +18,7 @@
 //
 // Styleguide 1.13
 
-// styleguide:ignore:start
-$bitstyles-hidden-settings: false !default;
-
-@if ($bitstyles-hidden-settings == false) {
-  @include output-settings-warning(hidden);
-}
-// styleguide:ignore:end
+@import '../settings/hidden';
 
 .#{$bitstyles-namespace}o-hidden {
   @include hidden;

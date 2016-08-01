@@ -19,13 +19,7 @@
 //
 // Styleguide 1.3
 
-// styleguide:ignore:start
-$bitstyles-icon-settings: false !default;
-
-@if ($bitstyles-icon-settings == false) {
-  @include output-settings-warning(icon);
-}
-// styleguide:ignore:end
+@import '../settings/icon';
 
 .#{$bitstyles-namespace}o-icon {
   display: inline-block;
