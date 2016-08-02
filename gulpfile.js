@@ -20,6 +20,7 @@ const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
 const cssstats = require('postcss-cssstats');
 const fs = require('fs');
+const graph = require('gulp-specificity-graph');
 
 gulp.task('build', function compileCss() {
   return gulp.src('bitstyles/bitstyles.scss')
@@ -133,7 +134,7 @@ gulp.task('stats', ['build'], function cssStats() {
   .pipe(postcss(processors));
 });
 
-gulp.task('stats:console', ['build'], function cssStats() {
+gulp.task('stats:console', ['build'], function cssStatsConsole() {
   var processors = [
     cssstats(
       function(stats) {
@@ -154,6 +155,15 @@ gulp.task('stats:console', ['build'], function cssStats() {
 var writeStat = function(label, value) {
   return label + ": " + value + "\n";
 }
+
+gulp.task('stats:graph', ['build'], function cssGraph() {
+  var graphDir = 'specificity-graph';
+  return gulp.src('build/bitstyles.css')
+  .pipe(graph({
+    'directory': graphDir,
+    'openInBrowser': false
+  }));
+});
 
 gulp.task('watch', function watch() {
   gulp.watch('bitstyles/**/*.scss', ['lint', 'stats']);
