@@ -7,7 +7,7 @@
 // Add ad-hoc margins to elements.
 //
 // markup:
-// <p class="{$modifiers}">Some content here</p>
+// <div class="{$modifiers}"><div class="background-grey">Some content here</div></div>
 //
 //                    - Base style
 // .t-margin--left    - Left margin added.
@@ -30,7 +30,7 @@
 // Add ad-hoc margins to elements.
 //
 // markup:
-// <div class="margin"><p>Some content here.</p></div>
+// <div class="t-margin"><div class="background-grey">Some content here</div></div>
 //
 // Styleguide 3.1.2
 
