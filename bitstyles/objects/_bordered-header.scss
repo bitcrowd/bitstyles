@@ -12,26 +12,28 @@
 @import '../settings/bordered-header';
 
 .#{$bitstyles-namespace}o-bordered-header {
-  display: table;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   text-align: center;
   white-space: nowrap;
 
   &::before,
   &::after {
-    position: relative;
-    top: 0.8em;
-    display: table-cell;
-    width: $bitstyles-bordered-header-horizontal-space;
-    border-top: 1px solid $bitstyles-bordered-header-border-color;
+    display: inline-block;
+    vertical-align: middle;
+    flex-grow: 1;
+    min-width: $bitstyles-bordered-header-line-min-width;
+    border-top: $bitstyles-bordered-header-border;
     content: '';
   }
 
   &::before {
-    left: $bitstyles-bordered-header-horizontal-space;
+    margin-right: $bitstyles-bordered-header-gutter;
   }
 
   &::after {
-    right: $bitstyles-bordered-header-horizontal-space;
+    margin-left: $bitstyles-bordered-header-gutter;
   }
 }
