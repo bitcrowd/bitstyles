@@ -103,7 +103,7 @@
 //
 // Styleguide 5.3.1
 
-@import 'settings/grid';
+@import '../settings/grid';
 
 .#{$bitstyles-namespace}l-grid {
   @include list-reset();
