@@ -22,7 +22,18 @@
     "css",
     "sass"
   ],
-  "author": "Charlie Owen, Darren Cadwallader",
+  "author": {
+    "name": "Bitcrowd GmbH.",
+    "email": "info@bitcrowd.net"
+  },
+  "contributors": [
+    {
+      "name": "Darren Cadwallader"
+    },
+    {
+      "name": "Charlie Owen"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bitcrowd/bitstyles/issues"
@@ -46,5 +57,15 @@
     "sc5-styleguide": "^0.3.45",
     "stylelint": "^7.0.1",
     "stylelint-config-standard": "^11.0.0"
-  }
+  },
+  "files": [
+    "bitstyles/base",
+    "bitstyles/generic",
+    "bitstyles/layout",
+    "bitstyles/objects",
+    "bitstyles/settings",
+    "bitstyles/tools",
+    "bitstyles/trumps",
+    "bitstyles/bitstyles.scss"
+  ]
 }

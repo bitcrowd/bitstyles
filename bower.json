@@ -3,7 +3,8 @@
   "description": "The Bitcrowd CSS library",
   "main": "bitstyles.scss",
   "authors": [
-    "Charlie Owen"
+    "Charlie Owen",
+    "Darren Cadwallader"
   ],
   "license": "ISC",
   "keywords": [
@@ -18,6 +19,14 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "backstop_data",
+    "assets",
+    "styleguide",
+    "build",
+    "package.json",
+    "backstop.json",
+    "gulpfile.json",
+    "bitstyles-dev.scss"
   ]
 }

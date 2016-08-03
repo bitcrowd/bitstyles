@@ -1,0 +1,157 @@
+/* stylelint-disable max-empty-lines */
+
+// Settings
+//
+// Global settings e.g. fixed colors, common typographic styles, common/global sizes
+//
+// * No CSS output *
+
+//
+// ******** Add overrides for Bitstyles settings here ********
+//
+@import 'settings/global';
+
+
+// Tools: Functions & Mixins
+//
+// Mixins and functions. Includes mixins we later use to build objects e.g. at different breakpoints,
+// and some we use only in the background as utilities.
+//
+// * No CSS output *
+//
+// Styleguide 2.0
+
+@import 'tools/zindex';
+@import 'tools/absolute-cover';
+@import 'tools/fixed-ratio';
+@import 'tools/media-query';
+@import 'tools/absolute-center';
+@import 'tools/vertical-center';
+@import 'tools/break-long-words';
+@import 'tools/truncate-with-ellipsis';
+@import 'tools/clearfix';
+@import 'tools/hidden';
+@import 'tools/visuallyhidden';
+@import 'tools/list-reset';
+@import 'tools/font-face';
+@import 'tools/grid-column-generator';
+@import 'tools/typography';
+@import 'tools/typography-conversions';
+//
+// ******** Add your project-specific tools here ********
+//
+
+
+// Generic
+//
+// Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
+
+@import 'generic/box-sizing';
+@import 'generic/normalize';
+
+
+// Base
+//
+// Unclassed elements. (Directly selects elements e.g. `<a>`, `<blockquote>`, `<address>`).
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 4.0
+
+@import 'base/typography';
+@import 'base/images';
+@import 'base/forms';    // FOR TESTING ONLY - Empty of styles
+@import 'base/media';    // FOR TESTING ONLY - Empty of styles
+@import 'base/hr';       // FOR TESTING ONLY - Empty of styles
+@import 'base/figure';   // FOR TESTING ONLY - Empty of styles
+
+
+// Layout
+//
+// Classes that enable the high-level layout of a page.
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 5.0
+
+@import 'layout/content';
+@import 'layout/grid';
+@import 'layout/grid-columns';
+@import 'layout/topbar';
+//
+// ******** Add your project-specific layout objects here ********
+//
+
+
+// Objects
+//
+// Objects, abstractions, and design patterns (e.g. .media, .icon, .button). Cosmetic-free.
+// These are intended to be reused throughout the site, composed together as needed e.g. <div class="button expander-toggle"></div>
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.0
+
+@import 'objects/icon';
+@import 'objects/button';
+@import 'objects/button--icon';
+@import 'objects/absolute-center';
+@import 'objects/absolute-cover';
+@import 'objects/break-long-words';
+@import 'objects/clearfix';
+@import 'objects/fixed-ratio';
+@import 'objects/hidden';
+@import 'objects/truncate-with-ellipsis';
+@import 'objects/vertical-center';
+@import 'objects/visuallyhidden';
+@import 'objects/expander';
+@import 'objects/flex';
+@import 'objects/bordered-header';
+@import 'objects/list-reset';
+@import 'objects/typography';
+@import 'objects/media';
+//
+// ******** Add project-specific low-level objects here ********
+//
+
+
+// Components
+//
+// Chunks of UI e.g. the structure for a page type, a single block of UI composed of smaller objects.
+// Inherently project-specific, hence none in the library.
+//
+// ******** Add project-specific components here ********
+//
+
+
+// Trumps
+//
+// High-specificity overrides and helper classes (e.g. .hidden {}). `!important` exists here.
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 3.0
+
+@import 'trumps/text-weight';
+@import 'trumps/text-align';
+@import 'trumps/text-style';
+@import 'trumps/margin';
+@import 'trumps/padding';
+@import 'trumps/no-margin';
+@import 'trumps/no-padding';
+//
+// ******** Add project-specific trumps here ********
+//
+/* stylelint-enable */
