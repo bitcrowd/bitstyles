@@ -1,3 +1,5 @@
+/* stylelint-disable max-empty-lines */
+
 // Settings
 //
 // Global settings e.g. fixed colors, common typographic styles, common/global sizes
@@ -16,6 +18,8 @@
 // and some we use only in the background as utilities.
 //
 // * No CSS output *
+//
+// Styleguide 2.0
 
 @import 'tools/zindex';
 @import 'tools/absolute-cover';
@@ -49,14 +53,32 @@
 // Base
 //
 // Unclassed elements. (Directly selects elements e.g. `<a>`, `<blockquote>`, `<address>`).
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 4.0
 
 @import 'base/typography';
 @import 'base/images';
+@import 'base/forms';    // FOR TESTING ONLY - Empty of styles
+@import 'base/media';    // FOR TESTING ONLY - Empty of styles
+@import 'base/hr';       // FOR TESTING ONLY - Empty of styles
+@import 'base/figure';   // FOR TESTING ONLY - Empty of styles
 
 
 // Layout
 //
 // Classes that enable the high-level layout of a page.
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 5.0
 
 @import 'layout/content';
 @import 'layout/grid';
@@ -71,6 +93,13 @@
 //
 // Objects, abstractions, and design patterns (e.g. .media, .icon, .button). Cosmetic-free.
 // These are intended to be reused throughout the site, composed together as needed e.g. <div class="button expander-toggle"></div>
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 1.0
 
 @import 'objects/icon';
 @import 'objects/button';
@@ -91,7 +120,7 @@
 @import 'objects/typography';
 @import 'objects/media';
 //
-// ******** Add your project-specific low-level objects here ********
+// ******** Add project-specific low-level objects here ********
 //
 
 
@@ -100,13 +129,20 @@
 // Chunks of UI e.g. the structure for a page type, a single block of UI composed of smaller objects.
 // Inherently project-specific, hence none in the library.
 //
-// ******** Add your project-specific components here ********
+// ******** Add project-specific components here ********
 //
 
 
 // Trumps
 //
 // High-specificity overrides and helper classes (e.g. .hidden {}). `!important` exists here.
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 3.0
 
 @import 'trumps/text-weight';
 @import 'trumps/text-align';
@@ -116,5 +152,6 @@
 @import 'trumps/no-margin';
 @import 'trumps/no-padding';
 //
-// ******** Add your project-specific trumps here ********
+// ******** Add project-specific trumps here ********
 //
+/* stylelint-enable */

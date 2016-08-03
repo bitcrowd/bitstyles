@@ -59,6 +59,13 @@
     "stylelint-config-standard": "^11.0.0"
   },
   "files": [
-    "bitstyles"
+    "bitstyles/base",
+    "bitstyles/generic",
+    "bitstyles/layout",
+    "bitstyles/objects",
+    "bitstyles/settings",
+    "bitstyles/tools",
+    "bitstyles/trumps",
+    "bitstyles/bitstyles.scss"
   ]
 }
