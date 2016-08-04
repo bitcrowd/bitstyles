@@ -21,6 +21,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const cssstats = require('postcss-cssstats');
 const fs = require('fs');
 const graph = require('gulp-specificity-graph');
+const util = require('util');
 
 gulp.task('build', function compileCss() {
   return gulp.src('bitstyles/bitstyles.scss')
@@ -126,6 +127,10 @@ gulp.task('stats', ['build'], function cssStats() {
         gatherStats += writeStat("Total selector count", stats.aggregates.selectors)
         gatherStats += writeStat("Total declaration count", stats.aggregates.declarations)
         fs.writeFile('bitstyles/stats.txt', gatherStats);
+        fs.writeFile('bitstyles/stats-selectors.txt', util.inspect(stats.selectors, { showHidden: true, depth: 6 }));
+        fs.writeFile('bitstyles/stats-rules.txt', util.inspect(stats.rules, { showHidden: true, depth: 5 }));
+        fs.writeFile('bitstyles/stats-declarations.txt', util.inspect(stats.declarations, { showHidden: true, depth: 4 }));
+        fs.writeFile('bitstyles/stats-aggregates.txt', util.inspect(stats.aggregates, { showHidden: true, depth: 6 }));
       }
     )
   ]
