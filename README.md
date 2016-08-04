@@ -11,8 +11,8 @@ or npm registries. You will therefore need to install directly from a tagged
 Github release (not from master), and you will need read access to the repo.
 
 ### Bower
-```
-$ bower install git@github.com:bitcrowd/bitstyles.git#v0.2.2-alpha --save
+```shell
+bower install git@github.com:bitcrowd/bitstyles.git#v0.2.2-alpha --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
@@ -40,8 +40,8 @@ config.assets.paths << 'bower_components/bitstyles/bitstyles'
 
 
 ### npm
-```
-$ npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.2.2-alpha --save
+```shell
+npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.2.2-alpha --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
@@ -67,15 +67,31 @@ If you’re using rails, you can add this path to the asset pipeline in `config/
 config.assets.paths << 'node_modules/bitstyles/bitstyles'
 ```
 
+
+### Rails gem
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'bitstyles'
+```
+
+And then execute:
+```shell
+bundle
+```
+
+Or install it yourself as:
+```shell
+gem install bitstyles
+```
+
 ### Importing the sass to your project
 
-Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Most likely you’ll not need everything in there, so comment-out or delete the lines of objects you don’t need. If there is a corresponding settings file for the object, be sure to comment that out too:
+Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Most likely you’ll not need everything in there, so comment-out or delete the lines of objects you don’t need.
 
 ```scss
-@import 'settings/icon';
-// @import 'settings/button';
-// @import 'settings/button--icon';
-@import 'settings/grid';
+@import 'settings/global';
 
 // …
 
@@ -90,10 +106,7 @@ To change the css output by the library (e.g. standard margins, typographic scal
 @import 'settings/icon-overrides';
 @import 'settings/grid-overrides';
 
-@import 'settings/icon';
-// @import 'settings/button';
-// @import 'settings/button--icon';
-@import 'settings/grid';
+@import 'settings/global';
 
 @import 'objects/icon';
 // @import 'object/button';
@@ -105,20 +118,23 @@ For the complete list of varables you can override, look through the various fil
 ## Developing Bitstyles
 Bitstyles requires `node v5.7.0`. If you have [nvm](https://github.com/creationix/nvm) installed:
 
-```
+```shell
 nvm use
 ```
 will switch to the correct version of nodejs.
 
 Clone this repository, `cd` into the folder created, then install dependencies:
-```
+
+```shell
 npm install
 ```
 
 ### Build
 To ensure your changes do not break the build, run
 
-```gulp watch```
+```shell
+gulp watch
+```
 
 to recompile & lint sass on every change.
 
@@ -126,11 +142,13 @@ to recompile & lint sass on every change.
 ### Installation
 CasperJS & PhantomJS need to be installed globally:
 
-```
+```shell
 npm install -g phantomjs casperjs
 ```
+
 everything else you need is installed with
-```
+
+```shell
 npm install
 ```
 
@@ -142,12 +160,22 @@ If you haven’t added a new object to the `backstop.json` file, you can simply 
 
 Start the styleguide server and leave it running:
 
-```
+After starting the styleguide server (and leaving it running):
+
+```shell
 gulp styleguide
 ```
 
-Then when you are ready to create a PR, run the tests to compare against the initial reference screenshots:
+Create the initial screenshots:
+
+```shell
+npm run test:build
 ```
+
+Then each time you are ready to create a PR, run the tests to compare against the initial reference screenshots:
+
+```shell
+
 npm run test:run
 ```
 
