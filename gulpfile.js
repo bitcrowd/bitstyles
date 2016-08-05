@@ -119,18 +119,19 @@ gulp.task('stats', ['build'], function cssStats() {
   var processors = [
     cssstats(
       function(stats) {
-        var gatherStats = "";
-        gatherStats += writeStat("Size", stats.size)
-        gatherStats += writeStat("Size (gzipped)", stats.gzipSize)
-        gatherStats += writeStat("Average specificity", stats.averages.specificity)
-        gatherStats += writeStat("Average rulesize", stats.averages.ruleSize)
-        gatherStats += writeStat("Total selector count", stats.aggregates.selectors)
-        gatherStats += writeStat("Total declaration count", stats.aggregates.declarations)
-        fs.writeFile('bitstyles/stats.txt', gatherStats);
-        fs.writeFile('bitstyles/stats-selectors.txt', util.inspect(stats.selectors, { showHidden: true, depth: 6 }));
-        fs.writeFile('bitstyles/stats-rules.txt', util.inspect(stats.rules, { showHidden: true, depth: 5 }));
-        fs.writeFile('bitstyles/stats-declarations.txt', util.inspect(stats.declarations, { showHidden: true, depth: 4 }));
-        fs.writeFile('bitstyles/stats-aggregates.txt', util.inspect(stats.aggregates, { showHidden: true, depth: 6 }));
+        var gatherStats = "{\n";
+        gatherStats += writeStat("size", stats.size)
+        gatherStats += writeStat("size_gzipped", stats.gzipSize)
+        gatherStats += writeStat("average_specificity", stats.averages.specificity)
+        gatherStats += writeStat("average_rulesize", stats.averages.ruleSize)
+        gatherStats += writeStat("total_selector_count", stats.aggregates.selectors)
+        gatherStats += writeStat("total_declaration_count", stats.aggregates.declarations)
+        gatherStats += "}";
+        fs.writeFile('bitstyles/stats.json', gatherStats);
+        fs.writeFile('bitstyles/stats-selectors.json', JSON.stringify(stats.selectors, null, 2));
+        fs.writeFile('bitstyles/stats-rules.json', JSON.stringify(stats.rules, null, 2));
+        fs.writeFile('bitstyles/stats-declarations.json', JSON.stringify(stats.declarations, null, 2));
+        fs.writeFile('bitstyles/stats-aggregates.json', JSON.stringify(stats.aggregates, null, 2));
       }
     )
   ]
@@ -157,8 +158,9 @@ gulp.task('stats:console', ['build'], function cssStatsConsole() {
   .pipe(postcss(processors));
 });
 
-var writeStat = function(label, value) {
-  return label + ": " + value + "\n";
+var writeStat = function(label, value, last) {
+  var lastCharacter
+  return '"' + label + '": ' + value + ',\n';
 }
 
 gulp.task('stats:graph', ['build'], function cssGraph() {
