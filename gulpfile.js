@@ -37,6 +37,7 @@ gulp.task('build', function compileCss() {
 });
 
 gulp.task('lint:scss', function lintScss() {
+  /* eslint-disable prefer-template */
   const ns = '#{\\$bitstyles-namespace}(l-|c-|o-|t-|is-|has-|js-)';
   const word = '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*';
   const element = '(?:__' + word + ')?';
@@ -48,7 +49,7 @@ gulp.task('lint:scss', function lintScss() {
     // Double-escaping required!
     componentSelectors: '^\\.' + ns + '{componentName}' + element + modifier + attribute + '$'
   });
-
+  /* eslint-enable prefer-template */
   return gulp.src('bitstyles/**/*.scss')
     .pipe(postcss([stylelint, bemlint, postcssReporter], { syntax: syntaxScss }));
 });
@@ -77,7 +78,7 @@ gulp.task('styleguide:generate', function styleguideGenerate() {
     .pipe(gulp.dest(styleguideOutputPath));
 });
 
-gulp.task('styleguide:applystyles', function styleguideApplystyles() {
+gulp.task('styleguide:applystyles', ['build'], function styleguideApplystyles() {
   return gulp.src([
     'build/bitstyles.css',
     'assets/stylesheets/styleguide-extras.scss'
@@ -96,7 +97,7 @@ gulp.task('styleguide:assets', function styleguideAssets() {
 
 gulp.task(
   'styleguide',
-  ['build', 'styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']
+  ['styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']
 );
 
 gulp.task('test:build', function visualRegressionBuild(callback) {
