@@ -3,6 +3,8 @@ html {
   font-family: $bitstyles-font-family-body;
   font-size: px-to-em($bitstyles-font-size-base-small);
   line-height: 1.5;
+  color: $bitstyles-color-text;
+  background: $bitstyles-color-background;
 
   .fonts-loaded & {
     font-family: $bitstyles-font-family-body-loaded;
