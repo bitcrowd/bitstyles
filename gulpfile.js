@@ -152,6 +152,12 @@ gulp.task('stats:graph', ['build'], function cssGraph() {
   });
 });
 
-gulp.task('watch', function watch() {
+gulp.task('watch:build', function watch() {
   gulp.watch('bitstyles/**/*.scss', ['lint', 'stats']);
 });
+
+gulp.task('watch:styleguide', ['styleguide'], function watch() {
+  gulp.watch('bitstyles/**/*.scss', ['lint', 'stats', 'styleguide']);
+});
+
+gulp.task('default', ['stats']);
