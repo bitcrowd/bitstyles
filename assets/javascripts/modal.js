@@ -1,25 +1,28 @@
-window.addEventListener('styleguide:onRendered', function(event) {
-  "use strict";
+/* jshint devel:true */
+/* global A11yDialog:true */
+/* eslint prefer-arrow-callback: ["error", { "allowNamedFunctions": true }] */
+window.addEventListener('styleguide:onRendered', function initModal() {
+  'use strict';
 
-  var dialogElement = document.getElementById('dialog_1');
+  const dialogElement = document.getElementById('dialog_1');
 
   if (dialogElement === null) {
-    return
+    return;
   }
 
-  var dialog = new A11yDialog(dialogElement);
-  var bodyElement = document.querySelector('body');
-  var cancelButtonElement = document.getElementById('#cancel_button');
-  var okButtonElement = document.getElementById('#ok_button');
+  const dialog = new A11yDialog(dialogElement);
+  const bodyElement = document.querySelector('body');
+  const cancelButtonElement = document.getElementById('#cancel_button');
+  const okButtonElement = document.getElementById('#ok_button');
 
-  var BODY_CLASS = 't-no-overflow';
-  var CANCEL_CLASS = 'c-modal--animation-cancel';
-  var OK_CLASS = 'c-modal--animation-ok';
+  const BODY_CLASS = 't-no-overflow';
+  const CANCEL_CLASS = 'c-modal--animation-cancel';
+  const OK_CLASS = 'c-modal--animation-ok';
 
-  var DIALOG_SHOW_EVENT = 'dialog:show';
-  var DIALOG_HIDE_EVENT = 'dialog:hide';
-  var CLICK_EVENT = 'click';
-  var TRANSITION_END_EVENT = 'transitionend';
+  const DIALOG_SHOW_EVENT = 'dialog:show';
+  const DIALOG_HIDE_EVENT = 'dialog:hide';
+  const CLICK_EVENT = 'click';
+  const TRANSITION_END_EVENT = 'transitionend';
 
   dialogElement.addEventListener(DIALOG_SHOW_EVENT, function dialogShow() {
     bodyElement.classList.add(BODY_CLASS);
@@ -29,10 +32,10 @@ window.addEventListener('styleguide:onRendered', function(event) {
     bodyElement.classList.remove(BODY_CLASS);
   });
 
-  dialogElement.addEventListener(TRANSITION_END_EVENT, function removeAnimationClasses(event) {
+  dialogElement.addEventListener(TRANSITION_END_EVENT, function removeAnimationClasses() {
     // Ensure the element is really not visible — some browsers fire before visibility:hidden,
     // so the modal flies back across the screen.
-    window.setTimeout(function () {
+    window.setTimeout(function delayedRemoveAnimationClasses() {
       dialogElement.classList.remove(OK_CLASS);
       dialogElement.classList.remove(CANCEL_CLASS);
     }, 100);

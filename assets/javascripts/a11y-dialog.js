@@ -1,3 +1,4 @@
+/* eslint-disable */
 (function (global) {
   'use strict';
 
@@ -131,3 +132,4 @@
     global.A11yDialog = A11yDialog;
   }
 }(window));
+/* eslint-enable */
