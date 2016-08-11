@@ -12,6 +12,9 @@
 // Can be closed by clicking the darkened overlay, the close button in the top right (or any button
 // with the `data-a11y-dialog-hide` attribute), or hitting the escape key.
 //
+// Sizing is controlled by the usual layout classes e.g. `.l-content`, except at smaller screensizes
+// where the modal becomes fullwidth.
+//
 // markup:
 //   <main aria-label="Content" id="main" class="l-content">
 //     <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
@@ -42,7 +45,6 @@
 }
 
 .#{$bitstyles-namespace}c-modal__overlay {
-  will-change: $bitstyles-modal-will-change;
   position: fixed;
   top: 0;
   right: 0;
@@ -51,7 +53,9 @@
   z-index: 10;
   background: $bitstyles-modal-overlay-color;
   transition: all $bitstyles-modal-transition-duration $bitstyles-modal-transition-easing;
+  -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
   backface-visibility: hidden;
+  will-change: $bitstyles-modal-will-change;
   cursor: pointer;
 
   [aria-hidden="true"] & {
@@ -61,7 +65,6 @@
 }
 
 .#{$bitstyles-namespace}c-modal__content {
-  will-change: $bitstyles-modal-will-change;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -73,11 +76,13 @@
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   background-color: $bitstyles-modal-background-color;
+  border-radius: $bitstyles-modal-border-radius;
   transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
   transition: all $bitstyles-modal-transition-duration-smallscreen $bitstyles-modal-transition-easing;
   -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
   backface-visibility: hidden;
+  will-change: $bitstyles-modal-will-change;
 
   [aria-hidden="true"] & {
     @include modal-is-hidden;
@@ -86,15 +91,7 @@
   }
 }
 
-@include media-query(small) {
-  .#{$bitstyles-namespace}c-modal__content {
-    [aria-hidden="true"] & {
-      opacity: 1;
-    }
-  }
-}
-
-@include media-query(medium-and-up) {
+@include media-query($bitstyles-modal-breakpoint) {
   .#{$bitstyles-namespace}c-modal__content {
     width: calc(100% - 2 * #{$bitstyles-spacing});
     transition: all $bitstyles-modal-transition-duration $bitstyles-modal-transition-easing, visibility 0 $bitstyles-modal-transition-easing;
@@ -114,7 +111,7 @@
 
 // Modal dialog
 //
-// Needs JS to function. This is a modal overlay which animates in & out.
+// Needs JS to function. This is a modal dialog overlay which animates in & out.
 //
 // As with the standard modal it uses [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog) so it’s really accessible —
 // it requires semantic markup, landmark roles and aria attributes in order to function, and keeps
@@ -125,6 +122,8 @@
 // Can be closed by clicking the darkened overlay, hitting the escape key, or by selecting one of the cancel/ok buttons.
 // Different animations can be defined for each of the options.
 //
+// Sizing is controlled by the usual layout classes e.g. `.l-content`, except at smaller screensizes
+// where the modal becomes fullwidth.
 //
 // markup:
 //   <main aria-label="Content" id="main" class="l-content">

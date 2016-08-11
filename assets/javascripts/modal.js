@@ -2,8 +2,6 @@
 /* global A11yDialog:true */
 /* eslint prefer-arrow-callback: ["error", { "allowNamedFunctions": true }] */
 window.addEventListener('styleguide:onRendered', function initModal() {
-  'use strict';
-
   const dialogElement = document.getElementById('dialog_1');
 
   if (dialogElement === null) {
@@ -33,7 +31,7 @@ window.addEventListener('styleguide:onRendered', function initModal() {
   });
 
   dialogElement.addEventListener(TRANSITION_END_EVENT, function removeAnimationClasses() {
-    // Ensure the element is really not visible — some browsers fire before visibility:hidden,
+    // Ensure the element is really not visible — some browsers fire before visibility == hidden,
     // so the modal flies back across the screen.
     window.setTimeout(function delayedRemoveAnimationClasses() {
       dialogElement.classList.remove(OK_CLASS);
@@ -41,13 +39,17 @@ window.addEventListener('styleguide:onRendered', function initModal() {
     }, 100);
   });
 
-  okButtonElement.addEventListener(CLICK_EVENT, function onOkClick() {
-    dialogElement.classList.add(OK_CLASS);
-    dialog.hide();
-  });
+  if (okButtonElement !== null) {
+    okButtonElement.addEventListener(CLICK_EVENT, function onOkClick() {
+      dialogElement.classList.add(OK_CLASS);
+      dialog.hide();
+    });
+  }
 
-  cancelButtonElement.addEventListener(CLICK_EVENT, function onCancelClick() {
-    dialogElement.classList.add(CANCEL_CLASS);
-    dialog.hide();
-  });
+  if (cancelButtonElement !== null) {
+    cancelButtonElement.addEventListener(CLICK_EVENT, function onCancelClick() {
+      dialogElement.classList.add(CANCEL_CLASS);
+      dialog.hide();
+    });
+  }
 });
