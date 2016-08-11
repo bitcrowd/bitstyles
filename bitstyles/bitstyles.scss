@@ -90,6 +90,7 @@
 // </div>
 //
 // Styleguide 1.0
+<<<<<<< 7073a3e73ad9294c95bda24aa6dd254b34391e85
 @import 'bitstyles/objects/icon';
 @import 'bitstyles/objects/button';
 @import 'bitstyles/objects/button--icon';
@@ -112,14 +113,23 @@
 @import 'bitstyles/objects/error';
 @import 'bitstyles/objects/input';
 @import 'bitstyles/objects/label';
+@import 'bitstyles/objects/link';
 //
 // ******** Add project-specific low-level objects here ********
 //
 
 
-// ******** COMPONENTS
+// Components
+//
 // Chunks of UI e.g. the structure for a page type, a single block of UI composed of smaller objects.
-// Inherently project-specific, hence none in the library.
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <sg-wrapper-content/>
+// </div>
+//
+// Styleguide 6.0
+@import 'bitstyles/components/modal';
 //
 // ******** Add project-specific components here ********
 //

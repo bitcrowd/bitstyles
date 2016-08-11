@@ -1,0 +1,17 @@
+.o-link {
+  padding: 0;
+  background: none;
+  color: $bitstyles-color-link;
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+
+  &:visited {
+    color: $bitstyles-color-link-visited;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-color-link-hover;
+  }
+}
