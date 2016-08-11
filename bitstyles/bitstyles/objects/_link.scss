@@ -1,4 +1,11 @@
-.o-link {
+/* @define Link */
+// Link
+//
+// Mimicking standard anchors e.g. allows a `<button>` to look like a link
+//
+// Styleguide 1.22
+
+.#{$bitstyles-namespace}o-link {
   padding: 0;
   background: none;
   color: $bitstyles-color-link;
