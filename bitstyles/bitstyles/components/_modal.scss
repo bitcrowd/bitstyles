@@ -2,9 +2,15 @@
 // Modal
 //
 // Needs JS to function. This is a modal overlay which animates in & out.
+//
 // Uses [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog) so it’s really accessible —
 // it requires semantic markup, landmark roles and aria attributes in order to function, and keeps
 // those all updated with the component’s current state.
+//
+// Add `data-a11y-dialog-show="dialog_ID"` to a button to make that the trigger to open a modal.
+//
+// Can be closed by clicking the darkened overlay, the close button in the top right (or any button
+// with the `data-a11y-dialog-hide` attribute), or hitting the escape key.
 //
 // markup:
 //   <main aria-label="Content" id="main" class="l-content">
@@ -22,8 +28,6 @@
 //         <button class="o-button c-modal__close" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">
 //           &times;
 //         </button>
-//         <button class="o-button" type="button" id="#cancel_button">Cancel</button>
-//         <button class="o-button" type="button" id="#ok_button">Ok</button>
 //       </div>
 //     </div>
 //   </div>
@@ -107,6 +111,41 @@
   top: $bitstyles-spacing;
   right: $bitstyles-spacing;
 }
+
+// Modal dialog
+//
+// Needs JS to function. This is a modal overlay which animates in & out.
+//
+// As with the standard modal it uses [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog) so it’s really accessible —
+// it requires semantic markup, landmark roles and aria attributes in order to function, and keeps
+// those all updated with the component’s current state.
+//
+// Add `data-a11y-dialog-show="dialog_ID"` to a button to make that the trigger to open a modal.
+//
+// Can be closed by clicking the darkened overlay, hitting the escape key, or by selecting one of the cancel/ok buttons.
+// Different animations can be defined for each of the options.
+//
+//
+// markup:
+//   <main aria-label="Content" id="main" class="l-content">
+//     <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
+//     <p class="t-text-align--center"><button class="o-link" data-a11y-dialog-show="dialog_1">open dialogue</button></p>
+//     <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
+//   </main>
+//   <div class="c-modal" id="dialog_1" aria-hidden="true">
+//     <div class="c-modal__overlay" tabindex="-1" data-a11y-dialog-hide></div>
+//     <div class="l-content c-modal__content" role="dialog" aria-labelledby="dialog-title">
+//       <div role="document">
+//         <h1 class="o-h1" id="dialog-title" tabindex="0">Dialog Title</h1>
+//         <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
+//         <p>Gummies cake topping ice cream dessert. Jelly beans marzipan toffee biscuit cookie lollipop cake pie. Apple pie sweet bonbon candy jujubes. Gummi bears biscuit cheesecake marshmallow chupa chups danish carrot cake. Cookie croissant ice cream bonbon ice cream. Cotton candy halvah bear claw. Pudding apple pie tootsie roll gummi bears halvah icing jelly-o jelly beans. Jujubes lemon drops macaroon wafer tart dragée. Gummies danish lollipop cupcake oat cake. Ice cream candy canes brownie chocolate bar pie macaroon biscuit tootsie roll. Tootsie roll carrot cake fruitcake. Wafer chupa chups jelly beans. Pie cake jujubes caramels wafer.</p>
+//         <button class="o-button" type="button" id="#cancel_button">Cancel</button>
+//         <button class="o-button" type="button" id="#ok_button">Ok</button>
+//       </div>
+//     </div>
+//   </div>
+//
+// Styleguide 6.2
 
 @mixin modal-variation($state) {
   .#{$bitstyles-namespace}c-modal--animation-#{$state} {
