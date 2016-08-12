@@ -3,7 +3,7 @@
 // Helper function to ease usage of media-queries. Uses the breakpoints listed in $breakpoint sass variable.
 //
 // Usage:
-// 
+//
 // `
 // @media-query(breakpoint-name) {
 //    .selector {
@@ -15,23 +15,16 @@
 // Styleguide 2.11
 
 @mixin media-query($mq, $breakpoints: $bitstyles-breakpoints) {
-  $breakpoint-found: false;
 
-  @each $breakpoint in $bitstyles-breakpoints {
-    $alias: nth($breakpoint, 1);
-    $condition: nth($breakpoint, 2);
+  $breakpoint-condition: map-get($breakpoints, $mq);
 
-    @if $mq == $alias and $condition {
-      $breakpoint-found: true;
-
-      @media #{$condition} {
-        @content;
-      }
+  @if ($breakpoint-condition) {
+    @media #{$breakpoint-condition} {
+      @content;
     }
   }
 
-  // If the user specifies a non-exitent alias, send them a warning.
-  @if $breakpoint-found == false {
-    @warn "Oops! Breakpoint ‘#{$mq}’ does not exist.";
+  @else {
+    @error "Oops! Breakpoint ‘#{$mq}’ does not exist.";
   }
 }
