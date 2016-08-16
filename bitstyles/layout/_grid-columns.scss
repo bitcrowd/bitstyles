@@ -22,7 +22,7 @@
 //
 // Styleguide 5.2
 
-@import 'settings/grid';
+@import '../settings/grid';
 @include grid-columns($bitstyles-widths-columns);
 
 @if variable-exists(bitstyles-grid-breakpoints) {

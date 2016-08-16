@@ -11,7 +11,7 @@
 //
 // Styleguide 1.6
 
-@import 'settings/topbar';
+@import '../settings/topbar';
 
 .#{$bitstyles-namespace}l-topbar {
   position: fixed;

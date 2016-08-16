@@ -134,19 +134,40 @@ everything else you need is installed with
 npm install
 ```
 
-### Running
-The project uses a visual regression testing system called [BackstopJS](https://garris.github.io/BackstopJS/) to compare screenshots of each object before & after changes are made.
+### Run tests
+The project uses a visual regression testing system called [BackstopJS](https://garris.github.io/BackstopJS/) to compare screenshots of each object before & after changes are made. For existing objects, if there is no visual difference between the reference images and the newly-generated images, your changes are good. For new objects, create new reference images (see below) and commit them to the repo.
 
-After starting the styleguide server (and leaving it running):
+#### Existing objects
+If you haven’t added a new object to the `backstop.json` file, you can simply run the tests against the already-existing reference images:
+
+Start the styleguide server and leave it running:
+
 ```
 gulp styleguide
 ```
-Create the initial screenshots:
-```
-npm run test:build
-```
-Then each time you are ready to create a PR, run the tests to compare against the initial reference screenshots:
+
+Then when you are ready to create a PR, run the tests to compare against the initial reference screenshots:
 ```
 npm run test:run
 ```
+
 Short results from the comparison will be displayed on the command line, more detail is available at [http://localhost:3001](http://localhost:3001) which should open automatically.
+
+If all tests pass, you’re good to go.
+
+#### New objects
+
+If you add new objects to the `backstop.json`, backstop will complain if you try to run tests without creating reference images for them.
+
+Start the styleguide server and leave it running:
+
+```
+gulp styleguide
+```
+
+Then recreate the reference images:
+```
+npm run test:build
+```
+
+Commit the new reference images and you’re done.
