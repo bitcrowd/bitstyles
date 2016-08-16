@@ -77,7 +77,8 @@ gulp.task('styleguide:generate', function styleguideGenerate() {
       readOnly: true,
       overviewPath: 'README.md',
       extraHead: [
-        '<script src="/assets/javascripts/styleguide-init.js"></script>'
+        '<script src="/assets/javascripts/styleguide-init.js"></script>',
+        '<script src="/assets/javascripts/expander.js"></script>'
       ]
     }))
     .pipe(gulp.dest(styleguideOutputPath));
