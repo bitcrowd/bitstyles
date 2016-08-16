@@ -10,20 +10,20 @@ window.addEventListener('styleguide:onRendered', function initExpander() {
   const HIDDEN_ATTRIBUTE = 'aria-hidden';
   const EXPANDED_ATTRIBUTE = 'aria-expanded';
 
-  let isExpanded = expanderBodyElement.getAttribute(EXPANDED_ATTRIBUTE);
+  var isExpanded = expanderBodyElement.getAttribute(EXPANDED_ATTRIBUTE);
 
   function hideBody() {
     expanderBodyElement.setAttribute(HIDDEN_ATTRIBUTE, true);
     expanderButtonElement.setAttribute(EXPANDED_ATTRIBUTE, false);
-    isExpanded = false;
     expanderButtonElement.focus();
+    isExpanded = false;
   }
 
   function showBody() {
     expanderBodyElement.setAttribute(HIDDEN_ATTRIBUTE, false);
     expanderButtonElement.setAttribute(EXPANDED_ATTRIBUTE, true);
-    isExpanded = true;
     expanderBodyElement.focus();
+    isExpanded = true;
   }
 
   function toggleBody() {
