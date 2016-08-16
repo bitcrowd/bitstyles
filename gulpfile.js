@@ -33,7 +33,7 @@ gulp.task('build', function compileCss() {
       ]
     }).on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer({ browsers: ['last 2 versions'] }),
+      autoprefixer({ browsers: ['last 3 versions'] }),
       cssnano({ safe: true }),
       postcssReporter
     ]))

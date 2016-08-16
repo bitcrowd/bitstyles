@@ -2060,6 +2060,34 @@
       "misMatchThreshold" : 0.1,
       "onBeforeScript": "",
       "onReadyScript": ""
+    },
+    {
+      "label": "Modal Component",
+      "url": "http://localhost:3000/section/6.1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "document"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": "clickLink"
+    },
+    {
+      "label": "Modal Dialog Component",
+      "url": "http://localhost:3000/section/6.2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "document"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": "clickLink"
     }
   ],
   "paths": {
