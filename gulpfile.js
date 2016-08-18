@@ -18,10 +18,11 @@ const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
-const cssstats = require('postcss-cssstats');
 const fs = require('fs');
 const graph = require('gulp-specificity-graph');
-const util = require('util');
+const Parkerstats = require('parker');
+const ParkerstatsMetrics = require('parker/metrics/All');
+const opener = require('opener');
 
 gulp.task('build', function compileCss() {
   return gulp.src('bitstyles/bitstyles.scss')
@@ -115,61 +116,40 @@ gulp.task('test:run', function visualRegressionRun(callback) {
 });
 
 gulp.task('stats', ['build'], function cssStats() {
+  fs.readFile('build/bitstyles.css', function stats(err, data) {
+    if (err) throw err;
 
-  var processors = [
-    cssstats(
-      function(stats) {
-        var gatherStats = "{\n";
-        gatherStats += writeStat("size", stats.size)
-        gatherStats += writeStat("size_gzipped", stats.gzipSize)
-        gatherStats += writeStat("average_specificity", stats.averages.specificity)
-        gatherStats += writeStat("average_rulesize", stats.averages.ruleSize)
-        gatherStats += writeStat("total_selector_count", stats.aggregates.selectors)
-        gatherStats += writeStat("total_declaration_count", stats.aggregates.declarations)
-        gatherStats += "}";
-        fs.writeFile('bitstyles/stats.json', gatherStats);
-        fs.writeFile('bitstyles/stats-selectors.json', JSON.stringify(stats.selectors, null, 2));
-        fs.writeFile('bitstyles/stats-rules.json', JSON.stringify(stats.rules, null, 2));
-        fs.writeFile('bitstyles/stats-declarations.json', JSON.stringify(stats.declarations, null, 2));
-        fs.writeFile('bitstyles/stats-aggregates.json', JSON.stringify(stats.aggregates, null, 2));
-      }
-    )
-  ]
+    const parker = new Parkerstats(ParkerstatsMetrics);
+    const results = parker.run(data.toString());
+    const showResults = JSON.stringify(results, null, ' ');
 
-  return gulp.src('build/bitstyles.css')
-  .pipe(postcss(processors));
+    fs.writeFile('./stats/css.json', showResults);
+  });
 });
 
 gulp.task('stats:console', ['build'], function cssStatsConsole() {
-  var processors = [
-    cssstats(
-      function(stats) {
-        console.log(writeStat("Size", stats.size));
-        console.log(writeStat("Size (gzipped)", stats.gzipSize));
-        console.log(writeStat("Average specificity", stats.averages.specificity));
-        console.log(writeStat("Average rulesize", stats.averages.ruleSize));
-        console.log(writeStat("Total selector count", stats.aggregates.selectors));
-        console.log(writeStat("Total declaration count", stats.aggregates.declarations));
-      }
-    )
-  ]
+  fs.readFile('build/bitstyles.css', function statsConsole(err, data) {
+    if (err) throw err;
 
-  return gulp.src('build/bitstyles.css')
-  .pipe(postcss(processors));
+    const parker = new Parkerstats(ParkerstatsMetrics);
+    const results = parker.run(data.toString());
+    const showResults = JSON.stringify(results, null, ' ');
+
+    /* eslint-disable no-console */
+    console.log(showResults);
+    /* eslint-enable no-console */
+  });
 });
 
-var writeStat = function(label, value, last) {
-  var lastCharacter
-  return '"' + label + '": ' + value + ',\n';
-}
-
 gulp.task('stats:graph', ['build'], function cssGraph() {
-  var graphDir = 'specificity-graph';
+  const graphDir = 'specificity-graph';
   return gulp.src('build/bitstyles.css')
   .pipe(graph({
-    'directory': graphDir,
-    'openInBrowser': false
-  }));
+    directory: graphDir
+  }))
+  .on('end', function() {
+    opener(graphDir + '/index.html');
+  });
 });
 
 gulp.task('watch', function watch() {
