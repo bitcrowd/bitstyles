@@ -2,16 +2,16 @@
 //
 // Form inputs
 //
-// Follows the standard pattern for linear form inputs. For use in data-entry
-// form pages.
+// Average form inputs, following the common linear form inputs pattern.
+// For use in data-entry form pages.
 //
-// Form items should always have HTML `label` associated with them,
-// whether they are used with the wrapping `o-form-item` class or used with
+// Form items should always have a HTML `label` associated with them,
+// whether that is used with the wrapping `o-form-item` class, or used with
 // `o-form-item__label` with an appropiate `for` attribute.
 //
 // Styleguide 1.22
 
-@import '../settings/input';
+@import '../settings/form-item';
 
 .o-form-item {
   display: block;
@@ -49,7 +49,8 @@
   min-width: $bitstyles-input-width-minimum;
   padding: 0.5rem;
   background-color: $bitstyles-input-background;
-  border: 2px solid $bitstyles-input-border;
+  border: 1px solid $bitstyles-input-border;
+  border-radius: $bitstyles-input-border-radius;
   color: $bitstyles-color-text;
 
   &::placeholder {
@@ -94,7 +95,7 @@
 
 .o-form-item__label--for-checkbox {
   display: inline-block;
-  width: calc(100% - (#{$bitstyles-input-checkbox-width} + 0.5rem));
+  width: calc(100% - (#{$bitstyles-input-checkbox-width} + #{$bitstyles-input-checkbox-width-offset}));
   vertical-align: middle;
 }
 
@@ -111,7 +112,7 @@
 //
 // `o-form-item__input--checkbox` can be applied directly to a checkbox input. However,
 // if applied to a wrapping `<span>` then the checkbox will align to the right
-// better when reveresed.
+// when reversed.
 //
 // Markup:
 //    <label class="o-form-item">
@@ -125,4 +126,22 @@
 
 .o-form-item__label + .o-form-item__input--checkbox {
   text-align: right;
+}
+
+// Form inputs - Range
+//
+// Range inputs.
+//
+// Markup:
+//    <label class="o-form-item">
+//      <span class="o-form-item__label">This is labeling text</span>
+//      <input type="range" class="o-form-item__input--range">
+//      <span class="o-form-item__helper">This is additional helper text.</span>
+//      <span class="o-form-item__error">This is error text.</span>
+//    </label>
+//
+// Styleguide 1.22.5
+
+.o-form-item__input--range {
+  min-width: $bitstyles-input-width-minimum;
 }
