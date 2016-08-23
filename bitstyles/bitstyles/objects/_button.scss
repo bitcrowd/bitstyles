@@ -16,6 +16,7 @@
 //              - Base state
 // :hover       - Hover state.
 // :focus       - Focus state.
+// :disabled    - Disabled state.
 //
 // Styleguide 1.1.1
 
@@ -45,6 +46,13 @@
     color: $bitstyles-button-color-hover;
     background: $bitstyles-button-background-color-hover;
     outline: none;
+  }
+
+  &:disabled {
+    background: $bitstyles-button-background-color-disabled;
+    border-color: $bitstyles-button-border-color-disabled;
+    color: $bitstyles-button-color-disabled;
+    cursor: default;
   }
 }
 
