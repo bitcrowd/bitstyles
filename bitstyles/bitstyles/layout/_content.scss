@@ -15,14 +15,8 @@
 @import '../settings/content';
 
 .#{$bitstyles-namespace}l-content {
-  @if ($bitstyles-box-sizing == border-box) {
-    width: 100%;
-  } @else {
-    // styleguide:ignore:start
-    width: calc(100% - #{$bitstyles-content-horizontal-padding * 2});
-    // styleguide:ignore:end
-  }
   display: block;
+  width: 100%;
   max-width: $bitstyles-content-max-width;
   padding-right: $bitstyles-content-horizontal-padding;
   padding-left: $bitstyles-content-horizontal-padding;
