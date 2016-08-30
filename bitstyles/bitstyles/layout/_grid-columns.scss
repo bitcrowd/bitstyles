@@ -26,22 +26,21 @@
 @include grid-columns($bitstyles-widths-columns);
 
 @if variable-exists(bitstyles-grid-breakpoints) {
-  @each $breakpoint in $bitstyles-breakpoints {
-    @each $grid-breakpoint in $bitstyles-grid-breakpoints {
-      $breakpoint-alias: nth($breakpoint, 1);
+  @each $grid-breakpoint-alias in $bitstyles-grid-breakpoints {
+    $breakpoint-condition: map-get($bitstyles-breakpoints, $grid-breakpoint-alias);
 
-      /* stylelint-disable max-nesting-depth */
-      // If the breakpoint is in the breakpoint grid list...
-      @if ($breakpoint-alias == $grid-breakpoint) {
-        // ...then for each breakpoint...
-        @include media-query($breakpoint-alias) {
-          // ..generate grid columns, with the appropiate postfix.
-          @each $i in $bitstyles-widths-columns-responsive {
-            @include grid-columns($i, -#{$breakpoint-alias});
-          }
+    @if ($breakpoint-condition) {
+      @include media-query($grid-breakpoint-alias) {
+        /* stylelint-disable max-nesting-depth */
+        @each $i in $bitstyles-widths-columns-responsive {
+          @include grid-columns($i, -#{$grid-breakpoint-alias});
         }
+        /* stylelint-enable max-nesting-depth */
       }
-      /* stylelint-enable max-nesting-depth */
+    }
+
+    @else {
+      @error "Oops! Breakpoint ‘#{$grid-breakpoint-alias}’ does not exist.";
     }
   }
 }
