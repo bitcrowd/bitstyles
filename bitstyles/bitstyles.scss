@@ -7,7 +7,7 @@
 //
 // ******** Add overrides for Bitstyles settings here ********
 //
-@import 'settings/global';
+@import 'bitstyles/settings/global';
 
 //
 // ******** Add settings for your own objects & components here ********
@@ -21,22 +21,22 @@
 // * No CSS output *
 //
 // Styleguide 2.0
-@import 'tools/zindex';
-@import 'tools/absolute-cover';
-@import 'tools/fixed-ratio';
-@import 'tools/media-query';
-@import 'tools/absolute-center';
-@import 'tools/vertical-center';
-@import 'tools/break-long-words';
-@import 'tools/truncate-with-ellipsis';
-@import 'tools/clearfix';
-@import 'tools/hidden';
-@import 'tools/visuallyhidden';
-@import 'tools/list-reset';
-@import 'tools/font-face';
-@import 'tools/grid-column-generator';
-@import 'tools/typography';
-@import 'tools/typography-conversions';
+@import 'bitstyles/tools/zindex';
+@import 'bitstyles/tools/absolute-cover';
+@import 'bitstyles/tools/fixed-ratio';
+@import 'bitstyles/tools/media-query';
+@import 'bitstyles/tools/absolute-center';
+@import 'bitstyles/tools/vertical-center';
+@import 'bitstyles/tools/break-long-words';
+@import 'bitstyles/tools/truncate-with-ellipsis';
+@import 'bitstyles/tools/clearfix';
+@import 'bitstyles/tools/hidden';
+@import 'bitstyles/tools/visuallyhidden';
+@import 'bitstyles/tools/list-reset';
+@import 'bitstyles/tools/font-face';
+@import 'bitstyles/tools/grid-column-generator';
+@import 'bitstyles/tools/typography';
+@import 'bitstyles/tools/typography-conversions';
 //
 // ******** Add project-specific tools here ********
 //
@@ -44,8 +44,8 @@
 
 // ******** GENERIC
 // Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
-@import 'generic/box-sizing';
-@import 'generic/normalize';
+@import 'bitstyles/generic/box-sizing';
+@import 'bitstyles/generic/normalize';
 
 // Base
 //
@@ -57,12 +57,12 @@
 // </div>
 //
 // Styleguide 4.0
-@import 'base/typography';
-@import 'base/images';
-@import 'base/forms';    // FOR TESTING ONLY - Empty of styles
-@import 'base/media';    // FOR TESTING ONLY - Empty of styles
-@import 'base/hr';       // FOR TESTING ONLY - Empty of styles
-@import 'base/figure';   // FOR TESTING ONLY - Empty of styles
+@import 'bitstyles/base/typography';
+@import 'bitstyles/base/images';
+@import 'bitstyles/base/forms';    // FOR TESTING ONLY - Empty of styles
+@import 'bitstyles/base/media';    // FOR TESTING ONLY - Empty of styles
+@import 'bitstyles/base/hr';       // FOR TESTING ONLY - Empty of styles
+@import 'bitstyles/base/figure';   // FOR TESTING ONLY - Empty of styles
 
 // Layout
 //
@@ -74,10 +74,10 @@
 // </div>
 //
 // Styleguide 5.0
-@import 'layout/content';
-@import 'layout/grid';
-@import 'layout/grid-columns';
-@import 'layout/topbar';
+@import 'bitstyles/layout/content';
+@import 'bitstyles/layout/grid';
+@import 'bitstyles/layout/grid-columns';
+@import 'bitstyles/layout/topbar';
 
 // Objects
 //
@@ -90,24 +90,24 @@
 // </div>
 //
 // Styleguide 1.0
-@import 'objects/icon';
-@import 'objects/button';
-@import 'objects/button--icon';
-@import 'objects/absolute-center';
-@import 'objects/absolute-cover';
-@import 'objects/break-long-words';
-@import 'objects/clearfix';
-@import 'objects/fixed-ratio';
-@import 'objects/hidden';
-@import 'objects/truncate-with-ellipsis';
-@import 'objects/vertical-center';
-@import 'objects/visuallyhidden';
-@import 'objects/expander';
-@import 'objects/flex';
-@import 'objects/bordered-header';
-@import 'objects/list-reset';
-@import 'objects/typography';
-@import 'objects/media';
+@import 'bitstyles/objects/icon';
+@import 'bitstyles/objects/button';
+@import 'bitstyles/objects/button--icon';
+@import 'bitstyles/objects/absolute-center';
+@import 'bitstyles/objects/absolute-cover';
+@import 'bitstyles/objects/break-long-words';
+@import 'bitstyles/objects/clearfix';
+@import 'bitstyles/objects/fixed-ratio';
+@import 'bitstyles/objects/hidden';
+@import 'bitstyles/objects/truncate-with-ellipsis';
+@import 'bitstyles/objects/vertical-center';
+@import 'bitstyles/objects/visuallyhidden';
+@import 'bitstyles/objects/expander';
+@import 'bitstyles/objects/flex';
+@import 'bitstyles/objects/bordered-header';
+@import 'bitstyles/objects/list-reset';
+@import 'bitstyles/objects/typography';
+@import 'bitstyles/objects/media';
 //
 // ******** Add project-specific low-level objects here ********
 //
@@ -131,13 +131,13 @@
 // </div>
 //
 // Styleguide 3.0
-@import 'trumps/text-weight';
-@import 'trumps/text-align';
-@import 'trumps/text-style';
-@import 'trumps/margin';
-@import 'trumps/padding';
-@import 'trumps/no-margin';
-@import 'trumps/no-padding';
+@import 'bitstyles/trumps/text-weight';
+@import 'bitstyles/trumps/text-align';
+@import 'bitstyles/trumps/text-style';
+@import 'bitstyles/trumps/margin';
+@import 'bitstyles/trumps/padding';
+@import 'bitstyles/trumps/no-margin';
+@import 'bitstyles/trumps/no-padding';
 //
 // ******** Add project-specific trumps here ********
 //
