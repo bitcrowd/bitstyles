@@ -18,6 +18,11 @@ const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sourcemaps = require('gulp-sourcemaps');
+const fs = require('fs');
+const graph = require('gulp-specificity-graph');
+const Parkerstats = require('parker');
+const ParkerstatsMetrics = require('parker/metrics/All');
+const opener = require('opener');
 
 gulp.task('build', function compileCss() {
   return gulp.src('bitstyles/bitstyles.scss')
@@ -97,7 +102,7 @@ gulp.task('styleguide:assets', function styleguideAssets() {
 
 gulp.task(
   'styleguide',
-  ['styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']
+  ['stats', 'styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']
 );
 
 gulp.task('test:build', function visualRegressionBuild(callback) {
@@ -110,6 +115,43 @@ gulp.task('test:run', function visualRegressionRun(callback) {
     .on('exit', callback);
 });
 
+gulp.task('stats', ['build'], function cssStats() {
+  fs.readFile('build/bitstyles.css', function stats(err, data) {
+    if (err) throw err;
+
+    const parker = new Parkerstats(ParkerstatsMetrics);
+    const results = parker.run(data.toString());
+    const showResults = JSON.stringify(results, null, ' ');
+
+    fs.writeFile('./stats/css.json', showResults);
+  });
+});
+
+gulp.task('stats:console', ['build'], function cssStatsConsole() {
+  fs.readFile('build/bitstyles.css', function statsConsole(err, data) {
+    if (err) throw err;
+
+    const parker = new Parkerstats(ParkerstatsMetrics);
+    const results = parker.run(data.toString());
+    const showResults = JSON.stringify(results, null, ' ');
+
+    /* eslint-disable no-console */
+    console.log(showResults);
+    /* eslint-enable no-console */
+  });
+});
+
+gulp.task('stats:graph', ['build'], function cssGraph() {
+  const graphDir = 'specificity-graph';
+  return gulp.src('build/bitstyles.css')
+  .pipe(graph({
+    directory: graphDir
+  }))
+  .on('end', function() {
+    opener(graphDir + '/index.html');
+  });
+});
+
 gulp.task('watch', function watch() {
-  gulp.watch('bitstyles/**/*.scss', ['lint', 'build']);
+  gulp.watch('bitstyles/**/*.scss', ['lint', 'stats']);
 });
