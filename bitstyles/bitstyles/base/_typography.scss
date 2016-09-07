@@ -6,7 +6,7 @@ html {
   color: $bitstyles-color-text;
   background: $bitstyles-color-background;
 
-  .fonts-loaded & {
+  &.fonts-loaded {
     font-family: $bitstyles-font-family-body-loaded;
   }
 }
