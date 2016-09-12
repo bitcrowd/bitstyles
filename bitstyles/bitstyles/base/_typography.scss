@@ -60,7 +60,7 @@ h6 {
 
 @include media-query($bitstyles-typography-breakpoint) {
   html {
-    font-size: px-to-em($bitstyles-font-size-base);
+    font-size: px-to-em($bitstyles-font-size-base, $bitstyles-font-size-base);
   }
 
   h1 {
