@@ -2,13 +2,13 @@
 //
 // Error
 //
-// Notification of an error.
+// Notification of an error. Useful for describing form errors.
+//
+// Markup:
+// <p class="o-error">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</p>
 //
 // Styleguide 1.24
 
-$bitstyles-input-border-error: $bitstyles-color-negative !default;
-$bitstyles-input-color-error: $bitstyles-color-negative !default;
-
 .o-error {
-  color: $bitstyles-input-color-error;
+  color: $bitstyles-color-error;
 }

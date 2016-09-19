@@ -1941,7 +1941,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .o-form-item"
+        ".object-section"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -1955,7 +1955,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .o-form-item"
+        ".object-section"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -1969,7 +1969,7 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .o-form-item"
+        ".object-section"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -1978,12 +1978,12 @@
       "onReadyScript": ""
     },
     {
-      "label": "Form input - checkbox, reveresed",
+      "label": "Form input - checkbox, reversed",
       "url": "http://localhost:3000/section/1.22.4/fullscreen",
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .o-form-item"
+        ".object-section"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
@@ -1997,7 +1997,63 @@
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".object-section .o-form-item"
+        ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Form label - Basic",
+      "url": "http://localhost:3000/section/1.23.1/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Form label - Checkbox",
+      "url": "http://localhost:3000/section/1.23.2/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Error",
+      "url": "http://localhost:3000/section/1.24/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Block",
+      "url": "http://localhost:3000/section/1.25/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
