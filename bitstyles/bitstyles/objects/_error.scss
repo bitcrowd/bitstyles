@@ -1,0 +1,14 @@
+/** @define error */
+//
+// Error
+//
+// Notification of an error.
+//
+// Styleguide 1.24
+
+$bitstyles-input-border-error: $bitstyles-color-negative !default;
+$bitstyles-input-color-error: $bitstyles-color-negative !default;
+
+.o-error {
+  color: $bitstyles-input-color-error;
+}
