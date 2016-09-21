@@ -1,6 +1,6 @@
 {
  "total-stylesheets": 1,
- "total-stylesheet-size": 156659,
+ "total-stylesheet-size": 158005,
  "total-media-queries": 5,
  "media-queries": [
   "screen and (min-width:45em)",
@@ -15,10 +15,10 @@
  "identifiers-per-selector": 1.1821305841924399,
  "specificity-per-selector": 8.336769759450172,
  "top-selector-specificity": 30,
- "top-selector-specificity-selector": ".o-expander-toggle.is-active .o-icon",
+ "top-selector-specificity-selector": ".o-expander-toggle[aria-expanded=true] .o-icon",
  "total-id-selectors": 0,
  "total-identifiers": 340,
- "total-declarations": 395,
+ "total-declarations": 396,
  "total-unique-colours": 6,
  "unique-colours": [
   "#FFFF00",
