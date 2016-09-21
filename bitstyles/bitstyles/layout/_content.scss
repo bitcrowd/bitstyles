@@ -16,6 +16,7 @@
 
 .#{$bitstyles-namespace}l-content {
   display: block;
+  width: 100%;
   max-width: $bitstyles-content-max-width;
   padding-right: $bitstyles-content-horizontal-padding;
   padding-left: $bitstyles-content-horizontal-padding;
