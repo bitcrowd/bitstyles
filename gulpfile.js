@@ -80,7 +80,7 @@ gulp.task('styleguide:generate', function styleguideGenerate() {
       extraHead: [
         '<script src="/assets/javascripts/a11y-dialog.js"></script>',
         '<script src="/assets/javascripts/styleguide-init.js"></script>',
-        '<script src="/assets/javascripts/modal.js"></script>'
+        '<script src="/assets/javascripts/modal.js"></script>',
         '<script src="/assets/javascripts/expander.js"></script>'
       ]
     }))
@@ -106,7 +106,7 @@ gulp.task('styleguide:assets', function styleguideAssets() {
 
 gulp.task(
   'styleguide',
-  ['stats', 'styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']
+  ['build', 'styleguide:generate', 'styleguide:applystyles', 'styleguide:assets']
 );
 
 gulp.task('test:build', function visualRegressionBuild(callback) {
@@ -151,8 +151,8 @@ gulp.task('stats:graph', ['build'], function cssGraph() {
   .pipe(graph({
     directory: graphDir
   }))
-  .on('end', function() {
-    opener(graphDir + '/index.html');
+  .on('end', function onGraphEnd() {
+    opener(`${graphDir}/index.html`);
   });
 });
 
@@ -161,7 +161,7 @@ gulp.task('watch:build', function watch() {
 });
 
 gulp.task('watch:styleguide', ['styleguide'], function watch() {
-  gulp.watch('bitstyles/**/*.scss', ['lint', 'stats', 'styleguide']);
+  gulp.watch('bitstyles/**/*.scss', ['lint', 'build', 'styleguide']);
 });
 
 gulp.task('default', ['stats']);
