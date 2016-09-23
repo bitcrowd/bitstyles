@@ -30,6 +30,7 @@
 // Styleguide 1.23.1
 
 .o-label {
+  @include font-size($bitstyles-font-size-base);
   font-weight: $bitstyles-font-weight-bold;
 }
 
@@ -48,6 +49,6 @@
 
 .o-label--for-checkbox {
   display: inline-block;
-  width: calc(100% - (#{$bitstyles-input-checkbox-width} + #{$bitstyles-input-checkbox-width-offset}));
+  width: calc(100% - (#{$bitstyles-input-checkbox-width} + #{$bitstyles-input-checkbox-width-gutter}));
   vertical-align: middle;
 }

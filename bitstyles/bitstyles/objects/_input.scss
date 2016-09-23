@@ -20,15 +20,15 @@
 // Styleguide 1.22.1
 
 .o-input--textual {
-  min-width: $bitstyles-input-width-minimum;
-  padding: 0.5rem;
+  min-width: $bitstyles-input-min-width;
+  padding: $bitstyles-input-padding;
   background-color: $bitstyles-input-background;
-  border: 1px solid $bitstyles-input-border;
+  border: $bitstyles-input-border-width $bitstyles-input-border-style $bitstyles-input-border;
   border-radius: $bitstyles-input-border-radius;
   color: $bitstyles-color-text;
 
   &::placeholder {
-    color: $bitstyles-input-placeholder;
+    color: $bitstyles-input-placeholder-color;
   }
 }
 
@@ -47,7 +47,7 @@
 // Styleguide 1.22.2
 
 .o-input--select {
-  min-width: $bitstyles-input-width-minimum;
+  min-width: $bitstyles-input-min-width;
 }
 
 // Form inputs - Checkbox
@@ -101,5 +101,5 @@
 // Styleguide 1.22.5
 
 .o-input--range {
-  min-width: $bitstyles-input-width-minimum;
+  min-width: $bitstyles-input-min-width;
 }
