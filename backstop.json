@@ -60,20 +60,6 @@
       "onReadyScript": ""
     },
     {
-      "label": "Button, generic - disabled",
-      "url": "http://localhost:3000/section/1.1.1-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "selectors": [
-        ".object-section .o-button.pseudo-class-disabled"
-      ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
-      "onReadyScript": ""
-    },
-    {
       "label": "Button, with icon - default",
       "url": "http://localhost:3000/section/1.1.2-1/fullscreen",
       "hideSelectors": [],
@@ -2054,6 +2040,20 @@
       "removeSelectors": [],
       "selectors": [
         ".object-section"
+      ],
+      "readyEvent": "styleguideRendered",
+      "delay": 20,
+      "misMatchThreshold" : 0.1,
+      "onBeforeScript": "",
+      "onReadyScript": ""
+    },
+    {
+      "label": "Button, generic - disabled",
+      "url": "http://localhost:3000/section/1.1.1-4/fullscreen",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".object-section .o-button.pseudo-class-disabled"
       ],
       "readyEvent": "styleguideRendered",
       "delay": 20,
