@@ -19,7 +19,7 @@
 //
 // Styleguide 1.22.1
 
-.o-input--textual {
+.#{$bitstyles-namespace}o-input--textual {
   min-width: $bitstyles-input-min-width;
   padding: $bitstyles-input-padding;
   background-color: $bitstyles-input-background;
@@ -46,7 +46,7 @@
 //
 // Styleguide 1.22.2
 
-.o-input--select {
+.#{$bitstyles-namespace}o-input--select {
   min-width: $bitstyles-input-min-width;
 }
 
@@ -63,7 +63,7 @@
 //
 // Styleguide 1.22.3
 
-.o-input--checkbox {
+.#{$bitstyles-namespace}o-input--checkbox {
   display: inline-block;
   width: $bitstyles-input-checkbox-width;
   vertical-align: middle;
@@ -86,7 +86,7 @@
 //
 // Styleguide 1.22.4
 
-.o-label + .o-input--checkbox {
+.#{$bitstyles-namespace}o-label + .#{$bitstyles-namespace}o-input--checkbox {
   text-align: right;
 }
 
@@ -100,6 +100,6 @@
 //
 // Styleguide 1.22.5
 
-.o-input--range {
+.#{$bitstyles-namespace}o-input--range {
   min-width: $bitstyles-input-min-width;
 }
