@@ -1,0 +1,27 @@
+/* @define Link */
+// Link
+//
+// Mimicking standard anchors e.g. allows a `<button>` to look like a link
+//
+// Markup:
+// <p>Read our <button class="o-link">Privacy Policy</button>.</p>
+//
+// Styleguide 1.26
+
+.#{$bitstyles-namespace}o-link {
+  padding: 0;
+  background: none;
+  color: $bitstyles-color-link;
+  border: 0;
+  cursor: pointer;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+
+  &:visited {
+    color: $bitstyles-color-link-visited;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-color-link-hover;
+  }
+}

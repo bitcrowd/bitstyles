@@ -39,6 +39,6 @@
 
   &[aria-hidden="false"] {
     max-height: 999rem;
-    max-height: 200vh;
+    max-height: 200vh; // stylelint-disable-line declaration-block-no-duplicate-properties
   }
 }

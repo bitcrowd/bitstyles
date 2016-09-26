@@ -1,5 +1,5 @@
 /* jshint devel:true */
-window.addEventListener('styleguide:onRendered', function initExpander() {
+const initExpander = () => {
   const expanderButtonElement = document.getElementById('expander_button');
 
   if (expanderButtonElement === null) {
@@ -10,7 +10,7 @@ window.addEventListener('styleguide:onRendered', function initExpander() {
   const HIDDEN_ATTRIBUTE = 'aria-hidden';
   const EXPANDED_ATTRIBUTE = 'aria-expanded';
 
-  var isExpanded = expanderBodyElement.getAttribute(EXPANDED_ATTRIBUTE);
+  let isExpanded = expanderBodyElement.getAttribute(EXPANDED_ATTRIBUTE);
 
   function hideBody() {
     expanderBodyElement.setAttribute(HIDDEN_ATTRIBUTE, true);
@@ -35,4 +35,6 @@ window.addEventListener('styleguide:onRendered', function initExpander() {
   }
 
   expanderButtonElement.addEventListener('click', toggleBody);
-});
+};
+
+window.addEventListener('styleguide:onRendered', initExpander);
