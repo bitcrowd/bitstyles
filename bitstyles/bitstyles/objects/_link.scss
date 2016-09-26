@@ -3,7 +3,10 @@
 //
 // Mimicking standard anchors e.g. allows a `<button>` to look like a link
 //
-// Styleguide 1.22
+// Markup:
+// <p>Read our <button class="o-link">Privacy Policy</button>.</p>
+//
+// Styleguide 1.26
 
 .#{$bitstyles-namespace}o-link {
   padding: 0;
