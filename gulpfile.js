@@ -46,7 +46,7 @@ gulp.task('lint:scss', function lintScss() {
   const ns = '#{\\$bitstyles-namespace}(l-|c-|o-|t-|is-|has-|js-)';
   const word = '[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*';
   const element = '(?:__' + word + ')?';
-  const modifier = '(?:_' + word + '){0,2}';
+  const modifier = '(?:--' + word + ')?';
   const attribute = '(?:\\[.+\\])?';
   const stylelint = require('stylelint');
   const bemlint = require('postcss-bem-linter')({
