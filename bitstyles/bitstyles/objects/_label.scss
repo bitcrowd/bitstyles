@@ -29,7 +29,7 @@
 //
 // Styleguide 1.23.1
 
-.o-label {
+.#{$bitstyles-namespace}o-label {
   @include font-size($bitstyles-font-size-base);
   font-weight: $bitstyles-font-weight-bold;
 }
@@ -47,7 +47,7 @@
 //
 // Styleguide 1.23.2
 
-.o-label--for-checkbox {
+.#{$bitstyles-namespace}o-label--for-checkbox {
   display: inline-block;
   width: calc(100% - (#{$bitstyles-input-checkbox-width} + #{$bitstyles-input-checkbox-width-gutter}));
   vertical-align: middle;
