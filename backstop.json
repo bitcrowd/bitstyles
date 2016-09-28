@@ -16,6 +16,8 @@
       "height": 768
     }
   ],
+  "misMatchThreshold" : 0.1,
+  "readyEvent": "styleguideRendered",
   "scenarios": [
     {
       "label": "Button, generic - default",
@@ -2106,16 +2108,8 @@
     {
       "label": "input:disabled",
       "url": "http://localhost:3000/section/1.22.1-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "selectors": [
-        ".object-section"
-      ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
-      "onReadyScript": ""
+      "selectors": [".object-section"],
+      "delay": 20
     }
   ],
   "paths": {
