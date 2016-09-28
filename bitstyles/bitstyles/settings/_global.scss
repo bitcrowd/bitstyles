@@ -49,17 +49,20 @@ $bitstyles-color-gray-70:         #4c4c4c !default;
 $bitstyles-color-gray-80:         #333 !default;
 $bitstyles-color-gray-90:         #191919 !default;
 
-// Colours by usage
-$bitstyles-color-text:            $bitstyles-color-gray-80 !default;
-$bitstyles-color-background:      $bitstyles-color-white !default;
-$bitstyles-color-positive:        #0f0 !default;
-$bitstyles-color-negative:        #f00 !default;
+$bitstyles-colors-theme: (
+  'primary':     $bitstyles-color-gray-70,
+  'secondary':   $bitstyles-color-gray-20,
+  'text':        $bitstyles-color-gray-80,
+  'background':  $bitstyles-color-white,
+  'positive':    #0f0,
+  'negative':    #f00
+) !default;
 
 // Implementations
 $bitstyles-color-link:            $bitstyles-color-gray-50 !default;
 $bitstyles-color-link-visited:    $bitstyles-color-gray-70 !default;
 $bitstyles-color-link-hover:      $bitstyles-color-gray-20 !default;
-$bitstyles-color-error:           $bitstyles-color-negative !default;
+$bitstyles-color-error:           map-get($bitstyles-colors-theme, 'negative') !default;
 
 
 /********* Typography */
