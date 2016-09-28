@@ -4,8 +4,8 @@ $bitstyles-colors-theme: (
   'text':        $bitstyles-color-gray-80,
   'background':  $bitstyles-color-white,
   'positive':    #0f0,
-  'negative':    #f00
+  'error':       #f00
 ) !default;
 
-$foreground-colors: ('primary', 'secondary');
+$foreground-colors: ('primary', 'secondary', 'error');
 $background-colors: ('background', 'secondary');
