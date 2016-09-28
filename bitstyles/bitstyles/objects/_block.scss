@@ -10,5 +10,5 @@
 // Styleguide 1.25
 
 .#{$bitstyles-namespace}o-block {
-  display: block;
+  @include block;
 }

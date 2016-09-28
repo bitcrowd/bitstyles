@@ -16,10 +16,9 @@
 // Styleguide 1.10
 
 .#{$bitstyles-namespace}o-flex {
-  display: flex;
-  align-items: stretch;
+  @include flex;
 }
 
 .#{$bitstyles-namespace}o-flex__primary {
-  flex: 1 0 auto;
+  @include flex__primary;
 }
