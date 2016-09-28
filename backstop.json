@@ -22,2087 +22,1363 @@
     {
       "label": "Button, generic - default",
       "url": "http://localhost:3000/section/1.1.1-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Button, generic - hover",
       "url": "http://localhost:3000/section/1.1.1-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button.pseudo-class-hover"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Button, generic - focus",
       "url": "http://localhost:3000/section/1.1.1-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button.pseudo-class-focus"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Button, with icon - default",
       "url": "http://localhost:3000/section/1.1.2-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Button, with icon - hover",
       "url": "http://localhost:3000/section/1.1.2-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button.pseudo-class-hover"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Button, with icon - focus",
       "url": "http://localhost:3000/section/1.1.3-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button.pseudo-class-focus"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Button, with reversed icon - default",
       "url": "http://localhost:3000/section/1.1.2-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Button, with reversed icon - hover",
       "url": "http://localhost:3000/section/1.1.2-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button.pseudo-class-hover"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Button, with reversed icon - focus",
       "url": "http://localhost:3000/section/1.1.3-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button.pseudo-class-focus"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Icon Buttons - default",
       "url": "http://localhost:3000/section/1.2-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button--icon"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Icon Buttons - hover",
       "url": "http://localhost:3000/section/1.2-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button--icon.pseudo-class-hover"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Icon Buttons - focus",
       "url": "http://localhost:3000/section/1.2-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button--icon.pseudo-class-focus"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Icons - default",
       "url": "http://localhost:3000/section/1.3-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-icon"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Icons - small",
       "url": "http://localhost:3000/section/1.3-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-icon--small"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Icons - medium",
       "url": "http://localhost:3000/section/1.3-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-icon--medium"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Icons - large",
       "url": "http://localhost:3000/section/1.3-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-icon--large"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Topbar",
       "url": "http://localhost:3000/section/1.6/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .l-topbar"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 100,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Clearfix",
       "url": "http://localhost:3000/section/1.7/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-clearfix"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Wordbreak",
       "url": "http://localhost:3000/section/1.8/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-break-long-words"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Expander",
       "url": "http://localhost:3000/section/1.9/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
+      "delay": 21,
       "onReadyScript": "clickButton"
     },
     {
       "label": "Flex",
       "url": "http://localhost:3000/section/1.10/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-flex"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Absolute center",
       "url": "http://localhost:3000/section/1.11/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Vertical center",
       "url": "http://localhost:3000/section/1.12/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Hidden",
       "url": "http://localhost:3000/section/1.13-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Hidden",
       "url": "http://localhost:3000/section/1.13-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Hidden",
       "url": "http://localhost:3000/section/1.13-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Visuallyhidden",
       "url": "http://localhost:3000/section/1.14/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Truncate with ellipsis",
       "url": "http://localhost:3000/section/1.15/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .l-grid-2-of-12"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Absolute cover",
       "url": "http://localhost:3000/section/1.16/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-absolute-cover"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Bordered header",
       "url": "http://localhost:3000/section/1.17/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-bordered-header"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Fixed ratio",
       "url": "http://localhost:3000/section/1.18/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-fixed-ratio"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "List reset",
       "url": "http://localhost:3000/section/1.19-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-list-reset"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "List reset",
       "url": "http://localhost:3000/section/1.19-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-list-reset--bullets-only"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Media object",
       "url": "http://localhost:3000/section/1.21/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-media"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Headers",
       "url": "http://localhost:3000/section/4.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Paragraphs",
       "url": "http://localhost:3000/section/4.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section p"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Links - default",
       "url": "http://localhost:3000/section/4.3-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section a"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Links - hover",
       "url": "http://localhost:3000/section/4.3-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section a.pseudo-class-hover"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Links - focus",
       "url": "http://localhost:3000/section/4.3-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section a.pseudo-class-focus"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Links - visited",
       "url": "http://localhost:3000/section/4.3-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section a.pseudo-class-visited"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Address",
       "url": "http://localhost:3000/section/4.4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section address"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Definition list",
       "url": "http://localhost:3000/section/4.5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section dt"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "List - unordered",
       "url": "http://localhost:3000/section/4.6/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section ul"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "List - ordered",
       "url": "http://localhost:3000/section/4.7/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section ol"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Blockquote",
       "url": "http://localhost:3000/section/4.8/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section blockquote"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "strong",
       "url": "http://localhost:3000/section/4.9.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section strong"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "em",
       "url": "http://localhost:3000/section/4.9.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section em"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "pre",
       "url": "http://localhost:3000/section/4.9.3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section pre"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "code",
       "url": "http://localhost:3000/section/4.9.4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section code"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "kbd",
       "url": "http://localhost:3000/section/4.9.5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section kbd"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "samp",
       "url": "http://localhost:3000/section/4.9.6/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section samp"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "var",
       "url": "http://localhost:3000/section/4.9.7/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section var"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "cite",
       "url": "http://localhost:3000/section/4.9.8/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section cite"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "del",
       "url": "http://localhost:3000/section/4.9.9/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section del"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "abbr",
       "url": "http://localhost:3000/section/4.9.10/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section abbr"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "i",
       "url": "http://localhost:3000/section/4.9.11/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section i"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "b",
       "url": "http://localhost:3000/section/4.9.12/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section b"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "ins",
       "url": "http://localhost:3000/section/4.9.13/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section ins"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "dfn",
       "url": "http://localhost:3000/section/4.9.14/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section dfn"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "small",
       "url": "http://localhost:3000/section/4.9.15/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section small"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "sub",
       "url": "http://localhost:3000/section/4.9.16/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section sub"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "sup",
       "url": "http://localhost:3000/section/4.9.17/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section sup"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "big",
       "url": "http://localhost:3000/section/4.9.18/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section big"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "s",
       "url": "http://localhost:3000/section/4.9.19/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section s"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "strike",
       "url": "http://localhost:3000/section/4.9.20/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section strike"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "q",
       "url": "http://localhost:3000/section/4.9.21/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section q"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "time",
       "url": "http://localhost:3000/section/4.9.22/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section time"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Table",
       "url": "http://localhost:3000/section/4.10/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section table"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Image",
       "url": "http://localhost:3000/section/4.11/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section img"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Horizontal rule",
       "url": "http://localhost:3000/section/4.12/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Figure and caption",
       "url": "http://localhost:3000/section/4.13/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section figure"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - Fieldset",
       "url": "http://localhost:3000/section/4.16.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - text",
       "url": "http://localhost:3000/section/4.16.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - email",
       "url": "http://localhost:3000/section/4.16.3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - number",
       "url": "http://localhost:3000/section/4.16.4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - range",
       "url": "http://localhost:3000/section/4.16.5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - textarea",
       "url": "http://localhost:3000/section/4.16.6/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - select",
       "url": "http://localhost:3000/section/4.16.7/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - label",
       "url": "http://localhost:3000/section/4.16.8/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - radio",
       "url": "http://localhost:3000/section/4.16.9/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - checkbox",
       "url": "http://localhost:3000/section/4.16.10/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - button",
       "url": "http://localhost:3000/section/4.16.11/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - color",
       "url": "http://localhost:3000/section/4.16.12/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - date",
       "url": "http://localhost:3000/section/4.16.13/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - datetime-local",
       "url": "http://localhost:3000/section/4.16.14/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - file",
       "url": "http://localhost:3000/section/4.16.15/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - image",
       "url": "http://localhost:3000/section/4.16.16/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - month",
       "url": "http://localhost:3000/section/4.16.17/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - password",
       "url": "http://localhost:3000/section/4.16.18/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - reset",
       "url": "http://localhost:3000/section/4.16.19/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - search",
       "url": "http://localhost:3000/section/4.16.20/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - submit",
       "url": "http://localhost:3000/section/4.16.21/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
       "misMatchThreshold": 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - tel",
       "url": "http://localhost:3000/section/4.16.22/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - time",
       "url": "http://localhost:3000/section/4.16.23/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - url",
       "url": "http://localhost:3000/section/4.16.24/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form - week",
       "url": "http://localhost:3000/section/4.16.25/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Content",
       "url": "http://localhost:3000/section/5.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .l-content"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Grid columns",
       "url": "http://localhost:3000/section/5.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Grid layout",
       "url": "http://localhost:3000/section/5.3.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .l-grid"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Grid layout - responsive",
       "url": "http://localhost:3000/section/5.3.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .l-grid"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Margin Trumps — base",
       "url": "http://localhost:3000/section/3.1.1-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Margin Trumps — left",
       "url": "http://localhost:3000/section/3.1.1-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Margin Trumps — top",
       "url": "http://localhost:3000/section/3.1.1-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Margin Trumps — right",
       "url": "http://localhost:3000/section/3.1.1-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Margin Trumps — bottom",
       "url": "http://localhost:3000/section/3.1.1-5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Margin Trumps — All",
       "url": "http://localhost:3000/section/3.1.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-margin Trumps — Base",
       "url": "http://localhost:3000/section/3.2.1-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-margin Trumps — Left",
       "url": "http://localhost:3000/section/3.2.1-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-margin Trumps — Top",
       "url": "http://localhost:3000/section/3.2.1-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-margin Trumps — Right",
       "url": "http://localhost:3000/section/3.2.1-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-margin Trumps — Bottom",
       "url": "http://localhost:3000/section/3.2.1-5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-margin Trumps — All",
       "url": "http://localhost:3000/section/3.2.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-padding Trumps — Base",
       "url": "http://localhost:3000/section/3.3.1-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-padding Trumps — Left",
       "url": "http://localhost:3000/section/3.3.1-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-padding Trumps — Top",
       "url": "http://localhost:3000/section/3.3.1-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-padding Trumps — Right",
       "url": "http://localhost:3000/section/3.3.1-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-padding Trumps — Bottom",
       "url": "http://localhost:3000/section/3.3.1-5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "No-padding Trumps — All",
       "url": "http://localhost:3000/section/3.3.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Padding Trumps — Base",
       "url": "http://localhost:3000/section/3.4.1-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Padding Trumps — Left",
       "url": "http://localhost:3000/section/3.4.1-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Padding Trumps — Top",
       "url": "http://localhost:3000/section/3.4.1-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Padding Trumps — Right",
       "url": "http://localhost:3000/section/3.4.1-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Padding Trumps — Bottom",
       "url": "http://localhost:3000/section/3.4.1-5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Padding Trumps — All",
       "url": "http://localhost:3000/section/3.4.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Text-align Trumps — Base",
       "url": "http://localhost:3000/section/3.5-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Text-align Trumps — Left",
       "url": "http://localhost:3000/section/3.5-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Text-align Trumps — Right",
       "url": "http://localhost:3000/section/3.5-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Text-align Trumps — Centre",
       "url": "http://localhost:3000/section/3.5-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Text-align Trumps — Justify",
       "url": "http://localhost:3000/section/3.5-5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Text-style Trumps — Base",
       "url": "http://localhost:3000/section/3.6-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Text-style Trumps — Italic",
       "url": "http://localhost:3000/section/3.6-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Text-style Trumps — Normal",
       "url": "http://localhost:3000/section/3.6-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Font-weight Trumps — Base",
       "url": "http://localhost:3000/section/3.7-1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Font-weight Trumps — Light",
       "url": "http://localhost:3000/section/3.7-2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Font-weight Trumps — Normal",
       "url": "http://localhost:3000/section/3.7-3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Font-weight Trumps — Bold",
       "url": "http://localhost:3000/section/3.7-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form input - textual",
       "url": "http://localhost:3000/section/1.22.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form input - select",
       "url": "http://localhost:3000/section/1.22.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form input - checkbox",
       "url": "http://localhost:3000/section/1.22.3/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form input - checkbox, reversed",
       "url": "http://localhost:3000/section/1.22.4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form input - Range",
       "url": "http://localhost:3000/section/1.22.5/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form label - Basic",
       "url": "http://localhost:3000/section/1.23.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Form label - Checkbox",
       "url": "http://localhost:3000/section/1.23.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Error",
       "url": "http://localhost:3000/section/1.24/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Block",
       "url": "http://localhost:3000/section/1.25/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Button, generic - disabled",
       "url": "http://localhost:3000/section/1.1.1-4/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section .o-button.pseudo-class-disabled"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
       "label": "Modal Component",
       "url": "http://localhost:3000/section/6.1/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         "document"
       ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
+      "delay": 21,
       "onReadyScript": "clickLink"
     },
     {
       "label": "Modal Dialog Component",
       "url": "http://localhost:3000/section/6.2/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         "document"
       ],
-      "readyEvent": "styleguideRendered",
-      "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
+      "delay": 21,
       "onReadyScript": "clickLink"
     },
     {
       "label": "Link",
       "url": "http://localhost:3000/section/1.26/fullscreen",
-      "hideSelectors": [],
-      "removeSelectors": [],
       "selectors": [
         ".object-section"
       ],
-      "readyEvent": "styleguideRendered",
       "delay": 20,
-      "misMatchThreshold" : 0.1,
-      "onBeforeScript": "",
       "onReadyScript": ""
     },
     {
