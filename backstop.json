@@ -1164,14 +1164,6 @@
       "delay": 20
     },
     {
-      "label": "Error",
-      "url": "http://localhost:3000/section/1.24/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
-      "delay": 20
-    },
-    {
       "label": "Block",
       "url": "http://localhost:3000/section/1.25/fullscreen",
       "selectors": [
@@ -1217,6 +1209,36 @@
     {
       "label": "input:disabled",
       "url": "http://localhost:3000/section/1.22.1-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "Color trumps — primary",
+      "url": "http://localhost:3000/section/3.8-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "Color trumps — secondary",
+      "url": "http://localhost:3000/section/3.8-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "Color trumps — error",
+      "url": "http://localhost:3000/section/3.8-4/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "Background-color trumps — background",
+      "url": "http://localhost:3000/section/3.9-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "Background-color trumps — secondary",
+      "url": "http://localhost:3000/section/3.9-3/fullscreen",
       "selectors": [".object-section"],
       "delay": 20
     }

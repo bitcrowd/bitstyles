@@ -12,4 +12,4 @@ $bitstyles-input-padding: 0.5rem !default;
 $bitstyles-input-placeholder-color: $bitstyles-color-gray-50 !default;
 
 $bitstyles-input-background-color-disabled: $bitstyles-color-gray-10 !default;
-$bitstyles-input-color-disabled: $bitstyles-color-text !default;
+$bitstyles-input-color-disabled: map-get($bitstyles-colors-theme, 'text') !default;
