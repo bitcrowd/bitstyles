@@ -11,7 +11,8 @@
 @import 'bitstyles/settings/global.layout';
 @import 'bitstyles/settings/global.breakpoints';
 @import 'bitstyles/settings/global.animation';
-@import 'bitstyles/settings/global.color';
+@import 'bitstyles/settings/global.color-base';
+@import 'bitstyles/settings/global.color-theme';
 @import 'bitstyles/settings/global.typography';
 //
 // ******** Add global settings for your own project here ********
@@ -159,6 +160,7 @@
 @import 'bitstyles/trumps/padding';
 @import 'bitstyles/trumps/no-margin';
 @import 'bitstyles/trumps/no-padding';
+@import 'bitstyles/trumps/color';
 //
 // ******** Add project-specific trumps here ********
 //

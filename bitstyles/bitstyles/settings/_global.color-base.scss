@@ -12,12 +12,3 @@ $bitstyles-color-gray-60:         #666 !default;
 $bitstyles-color-gray-70:         #4c4c4c !default;
 $bitstyles-color-gray-80:         #333 !default;
 $bitstyles-color-gray-90:         #191919 !default;
-
-$bitstyles-colors-theme: (
-  'primary':     $bitstyles-color-gray-70,
-  'secondary':   $bitstyles-color-gray-20,
-  'text':        $bitstyles-color-gray-80,
-  'background':  $bitstyles-color-white,
-  'positive':    #0f0,
-  'negative':    #f00
-) !default;
