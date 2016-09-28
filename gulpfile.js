@@ -17,7 +17,6 @@ const syntaxScss = require('postcss-scss');
 const sass = require('gulp-sass');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const sourcemaps = require('gulp-sourcemaps');
 const fs = require('fs');
 const graph = require('gulp-specificity-graph');
 const Parkerstats = require('parker');
@@ -26,7 +25,6 @@ const opener = require('opener');
 
 gulp.task('build', function compileCss() {
   return gulp.src('bitstyles/bitstyles.scss')
-    .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: [
         './node_modules/'
@@ -37,7 +35,6 @@ gulp.task('build', function compileCss() {
       cssnano({ safe: true }),
       postcssReporter
     ]))
-    .pipe(sourcemaps.write())
     .pipe(gulp.dest('build/'));
 });
 
