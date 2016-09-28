@@ -9,6 +9,8 @@
 //
 // Styleguide 1.24
 
+@import '../settings/error';
+
 .#{$bitstyles-namespace}o-error {
   color: $bitstyles-color-error;
 }

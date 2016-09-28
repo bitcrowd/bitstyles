@@ -88,36 +88,6 @@ h6 {
   }
 }
 
-// Links
-//
-// Standard links.
-//
-// markup:
-// <a href="#"" class="{$modifiers}">Jelly cake marshmallow</a>
-//
-// default        - Default state
-// :hover         - Hover state
-// :focus         - Focus state
-// :visited       - Visited state
-//
-// Styleguide 4.3
-
-a {
-  color: $bitstyles-color-link;
-  text-decoration: none;
-  transition: $bitstyles-link-transition;
-
-  &:visited {
-    color: $bitstyles-color-link-visited;
-  }
-
-  &:hover,
-  &:focus {
-    color: $bitstyles-color-link-hover;
-    text-decoration: underline;
-  }
-}
-
 // Paragraphs
 //
 // A paragraph of text.

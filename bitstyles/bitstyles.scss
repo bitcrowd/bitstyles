@@ -7,10 +7,14 @@
 //
 // ******** Add overrides for Bitstyles settings here ********
 //
-@import 'bitstyles/settings/global';
-
+@import 'bitstyles/settings/global.setup';
+@import 'bitstyles/settings/global.layout';
+@import 'bitstyles/settings/global.breakpoints';
+@import 'bitstyles/settings/global.animation';
+@import 'bitstyles/settings/global.color';
+@import 'bitstyles/settings/global.typography';
 //
-// ******** Add settings for your own objects & components here ********
+// ******** Add global settings for your own project here ********
 //
 
 
@@ -61,6 +65,7 @@
 //
 // Styleguide 4.0
 @import 'bitstyles/base/typography';
+@import 'bitstyles/base/link';
 @import 'bitstyles/base/images';
 @import 'bitstyles/base/forms';    // FOR TESTING ONLY - Empty of styles
 @import 'bitstyles/base/media';    // FOR TESTING ONLY - Empty of styles

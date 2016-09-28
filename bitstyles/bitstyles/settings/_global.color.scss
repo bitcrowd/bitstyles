@@ -1,0 +1,23 @@
+// Monochrome
+$bitstyles-color-black:           #000 !default;
+$bitstyles-color-white:           #fff !default;
+
+// Greys
+$bitstyles-color-gray-10:         #e5e5e5 !default;
+$bitstyles-color-gray-20:         #ccc !default;
+$bitstyles-color-gray-30:         #b2b2b2 !default;
+$bitstyles-color-gray-40:         #999 !default;
+$bitstyles-color-gray-50:         #7f7f7f !default;
+$bitstyles-color-gray-60:         #666 !default;
+$bitstyles-color-gray-70:         #4c4c4c !default;
+$bitstyles-color-gray-80:         #333 !default;
+$bitstyles-color-gray-90:         #191919 !default;
+
+$bitstyles-colors-theme: (
+  'primary':     $bitstyles-color-gray-70,
+  'secondary':   $bitstyles-color-gray-20,
+  'text':        $bitstyles-color-gray-80,
+  'background':  $bitstyles-color-white,
+  'positive':    #0f0,
+  'negative':    #f00
+) !default;
