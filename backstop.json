@@ -25,8 +25,7 @@
       "selectors": [
         ".object-section .o-button"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Button, generic - hover",
@@ -34,8 +33,7 @@
       "selectors": [
         ".object-section .o-button.pseudo-class-hover"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Button, generic - focus",
@@ -43,8 +41,7 @@
       "selectors": [
         ".object-section .o-button.pseudo-class-focus"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Button, with icon - default",
@@ -52,8 +49,7 @@
       "selectors": [
         ".object-section .o-button"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Button, with icon - hover",
@@ -61,8 +57,7 @@
       "selectors": [
         ".object-section .o-button.pseudo-class-hover"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Button, with icon - focus",
@@ -70,8 +65,7 @@
       "selectors": [
         ".object-section .o-button.pseudo-class-focus"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Button, with reversed icon - default",
@@ -79,8 +73,7 @@
       "selectors": [
         ".object-section .o-button"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Button, with reversed icon - hover",
@@ -88,8 +81,7 @@
       "selectors": [
         ".object-section .o-button.pseudo-class-hover"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Button, with reversed icon - focus",
@@ -97,8 +89,7 @@
       "selectors": [
         ".object-section .o-button.pseudo-class-focus"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Icon Buttons - default",
@@ -106,8 +97,7 @@
       "selectors": [
         ".object-section .o-button--icon"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Icon Buttons - hover",
@@ -115,8 +105,7 @@
       "selectors": [
         ".object-section .o-button--icon.pseudo-class-hover"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Icon Buttons - focus",
@@ -124,8 +113,7 @@
       "selectors": [
         ".object-section .o-button--icon.pseudo-class-focus"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Icons - default",
@@ -133,8 +121,7 @@
       "selectors": [
         ".object-section .o-icon"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Icons - small",
@@ -142,8 +129,7 @@
       "selectors": [
         ".object-section .o-icon--small"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Icons - medium",
@@ -151,8 +137,7 @@
       "selectors": [
         ".object-section .o-icon--medium"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Icons - large",
@@ -160,8 +145,7 @@
       "selectors": [
         ".object-section .o-icon--large"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Topbar",
@@ -169,17 +153,14 @@
       "selectors": [
         ".object-section .l-topbar"
       ],
-      "delay": 100,
-      "onReadyScript": ""
-    },
+      "delay": 100},
     {
       "label": "Clearfix",
       "url": "http://localhost:3000/section/1.7/fullscreen",
       "selectors": [
         ".object-section .o-clearfix"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Wordbreak",
@@ -187,8 +168,7 @@
       "selectors": [
         ".object-section .o-break-long-words"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Expander",
@@ -196,7 +176,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 21,
+      "delay": 20,
       "onReadyScript": "clickButton"
     },
     {
@@ -205,8 +185,7 @@
       "selectors": [
         ".object-section .o-flex"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Absolute center",
@@ -214,8 +193,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Vertical center",
@@ -223,8 +201,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Hidden",
@@ -232,8 +209,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Hidden",
@@ -241,8 +217,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Hidden",
@@ -250,8 +225,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Visuallyhidden",
@@ -259,8 +233,7 @@
       "selectors": [
         ".object-section .o-button"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Truncate with ellipsis",
@@ -268,8 +241,7 @@
       "selectors": [
         ".object-section .l-grid-2-of-12"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Absolute cover",
@@ -277,8 +249,7 @@
       "selectors": [
         ".object-section .o-absolute-cover"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Bordered header",
@@ -286,8 +257,7 @@
       "selectors": [
         ".object-section .o-bordered-header"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Fixed ratio",
@@ -295,8 +265,7 @@
       "selectors": [
         ".object-section .o-fixed-ratio"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "List reset",
@@ -304,8 +273,7 @@
       "selectors": [
         ".object-section .o-list-reset"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "List reset",
@@ -313,8 +281,7 @@
       "selectors": [
         ".object-section .o-list-reset--bullets-only"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Media object",
@@ -322,8 +289,7 @@
       "selectors": [
         ".object-section .o-media"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Headers",
@@ -331,8 +297,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Paragraphs",
@@ -340,8 +305,7 @@
       "selectors": [
         ".object-section p"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Links - default",
@@ -349,8 +313,7 @@
       "selectors": [
         ".object-section a"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Links - hover",
@@ -358,8 +321,7 @@
       "selectors": [
         ".object-section a.pseudo-class-hover"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Links - focus",
@@ -367,8 +329,7 @@
       "selectors": [
         ".object-section a.pseudo-class-focus"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Links - visited",
@@ -376,8 +337,7 @@
       "selectors": [
         ".object-section a.pseudo-class-visited"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Address",
@@ -385,8 +345,7 @@
       "selectors": [
         ".object-section address"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Definition list",
@@ -394,8 +353,7 @@
       "selectors": [
         ".object-section dt"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "List - unordered",
@@ -403,8 +361,7 @@
       "selectors": [
         ".object-section ul"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "List - ordered",
@@ -412,8 +369,7 @@
       "selectors": [
         ".object-section ol"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Blockquote",
@@ -421,8 +377,7 @@
       "selectors": [
         ".object-section blockquote"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "strong",
@@ -430,8 +385,7 @@
       "selectors": [
         ".object-section strong"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "em",
@@ -439,8 +393,7 @@
       "selectors": [
         ".object-section em"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "pre",
@@ -448,8 +401,7 @@
       "selectors": [
         ".object-section pre"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "code",
@@ -457,8 +409,7 @@
       "selectors": [
         ".object-section code"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "kbd",
@@ -466,8 +417,7 @@
       "selectors": [
         ".object-section kbd"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "samp",
@@ -475,8 +425,7 @@
       "selectors": [
         ".object-section samp"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "var",
@@ -484,8 +433,7 @@
       "selectors": [
         ".object-section var"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "cite",
@@ -493,8 +441,7 @@
       "selectors": [
         ".object-section cite"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "del",
@@ -502,8 +449,7 @@
       "selectors": [
         ".object-section del"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "abbr",
@@ -511,8 +457,7 @@
       "selectors": [
         ".object-section abbr"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "i",
@@ -520,8 +465,7 @@
       "selectors": [
         ".object-section i"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "b",
@@ -529,8 +473,7 @@
       "selectors": [
         ".object-section b"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "ins",
@@ -538,8 +481,7 @@
       "selectors": [
         ".object-section ins"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "dfn",
@@ -547,8 +489,7 @@
       "selectors": [
         ".object-section dfn"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "small",
@@ -556,8 +497,7 @@
       "selectors": [
         ".object-section small"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "sub",
@@ -565,8 +505,7 @@
       "selectors": [
         ".object-section sub"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "sup",
@@ -574,8 +513,7 @@
       "selectors": [
         ".object-section sup"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "big",
@@ -583,8 +521,7 @@
       "selectors": [
         ".object-section big"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "s",
@@ -592,8 +529,7 @@
       "selectors": [
         ".object-section s"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "strike",
@@ -601,8 +537,7 @@
       "selectors": [
         ".object-section strike"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "q",
@@ -610,8 +545,7 @@
       "selectors": [
         ".object-section q"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "time",
@@ -619,8 +553,7 @@
       "selectors": [
         ".object-section time"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Table",
@@ -628,8 +561,7 @@
       "selectors": [
         ".object-section table"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Image",
@@ -637,8 +569,7 @@
       "selectors": [
         ".object-section img"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Horizontal rule",
@@ -646,8 +577,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Figure and caption",
@@ -655,8 +585,7 @@
       "selectors": [
         ".object-section figure"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form - Fieldset",
@@ -665,9 +594,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - text",
       "url": "http://localhost:3000/section/4.16.2/fullscreen",
@@ -675,9 +602,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - email",
       "url": "http://localhost:3000/section/4.16.3/fullscreen",
@@ -685,9 +610,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - number",
       "url": "http://localhost:3000/section/4.16.4/fullscreen",
@@ -695,9 +618,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - range",
       "url": "http://localhost:3000/section/4.16.5/fullscreen",
@@ -705,9 +626,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - textarea",
       "url": "http://localhost:3000/section/4.16.6/fullscreen",
@@ -715,9 +634,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - select",
       "url": "http://localhost:3000/section/4.16.7/fullscreen",
@@ -725,9 +642,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - label",
       "url": "http://localhost:3000/section/4.16.8/fullscreen",
@@ -735,9 +650,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - radio",
       "url": "http://localhost:3000/section/4.16.9/fullscreen",
@@ -745,9 +658,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - checkbox",
       "url": "http://localhost:3000/section/4.16.10/fullscreen",
@@ -755,9 +666,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - button",
       "url": "http://localhost:3000/section/4.16.11/fullscreen",
@@ -765,9 +674,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - color",
       "url": "http://localhost:3000/section/4.16.12/fullscreen",
@@ -775,9 +682,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - date",
       "url": "http://localhost:3000/section/4.16.13/fullscreen",
@@ -785,9 +690,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - datetime-local",
       "url": "http://localhost:3000/section/4.16.14/fullscreen",
@@ -795,9 +698,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - file",
       "url": "http://localhost:3000/section/4.16.15/fullscreen",
@@ -805,9 +706,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - image",
       "url": "http://localhost:3000/section/4.16.16/fullscreen",
@@ -815,9 +714,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - month",
       "url": "http://localhost:3000/section/4.16.17/fullscreen",
@@ -825,9 +722,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - password",
       "url": "http://localhost:3000/section/4.16.18/fullscreen",
@@ -835,9 +730,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - reset",
       "url": "http://localhost:3000/section/4.16.19/fullscreen",
@@ -845,9 +738,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - search",
       "url": "http://localhost:3000/section/4.16.20/fullscreen",
@@ -855,9 +746,7 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - submit",
       "url": "http://localhost:3000/section/4.16.21/fullscreen",
@@ -865,17 +754,14 @@
         ".object-section"
       ],
       "delay": 20,
-      "misMatchThreshold": 0.1,
-      "onReadyScript": ""
-    },
+      "misMatchThreshold": 0.1},
     {
       "label": "Form - tel",
       "url": "http://localhost:3000/section/4.16.22/fullscreen",
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form - time",
@@ -883,8 +769,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form - url",
@@ -892,8 +777,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form - week",
@@ -901,8 +785,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Content",
@@ -910,8 +793,7 @@
       "selectors": [
         ".object-section .l-content"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Grid columns",
@@ -919,8 +801,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Grid layout",
@@ -928,8 +809,7 @@
       "selectors": [
         ".object-section .l-grid"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Grid layout - responsive",
@@ -937,8 +817,7 @@
       "selectors": [
         ".object-section .l-grid"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Margin Trumps — base",
@@ -946,8 +825,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Margin Trumps — left",
@@ -955,8 +833,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Margin Trumps — top",
@@ -964,8 +841,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Margin Trumps — right",
@@ -973,8 +849,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Margin Trumps — bottom",
@@ -982,8 +857,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Margin Trumps — All",
@@ -991,8 +865,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-margin Trumps — Base",
@@ -1000,8 +873,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-margin Trumps — Left",
@@ -1009,8 +881,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-margin Trumps — Top",
@@ -1018,8 +889,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-margin Trumps — Right",
@@ -1027,8 +897,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-margin Trumps — Bottom",
@@ -1036,8 +905,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-margin Trumps — All",
@@ -1045,8 +913,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-padding Trumps — Base",
@@ -1054,8 +921,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-padding Trumps — Left",
@@ -1063,8 +929,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-padding Trumps — Top",
@@ -1072,8 +937,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-padding Trumps — Right",
@@ -1081,8 +945,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-padding Trumps — Bottom",
@@ -1090,8 +953,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "No-padding Trumps — All",
@@ -1099,8 +961,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Padding Trumps — Base",
@@ -1108,8 +969,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Padding Trumps — Left",
@@ -1117,8 +977,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Padding Trumps — Top",
@@ -1126,8 +985,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Padding Trumps — Right",
@@ -1135,8 +993,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Padding Trumps — Bottom",
@@ -1144,8 +1001,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Padding Trumps — All",
@@ -1153,8 +1009,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Text-align Trumps — Base",
@@ -1162,8 +1017,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Text-align Trumps — Left",
@@ -1171,8 +1025,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Text-align Trumps — Right",
@@ -1180,8 +1033,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Text-align Trumps — Centre",
@@ -1189,8 +1041,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Text-align Trumps — Justify",
@@ -1198,8 +1049,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Text-style Trumps — Base",
@@ -1207,8 +1057,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Text-style Trumps — Italic",
@@ -1216,8 +1065,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Text-style Trumps — Normal",
@@ -1225,8 +1073,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Font-weight Trumps — Base",
@@ -1234,8 +1081,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Font-weight Trumps — Light",
@@ -1243,8 +1089,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Font-weight Trumps — Normal",
@@ -1252,8 +1097,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Font-weight Trumps — Bold",
@@ -1261,8 +1105,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form input - textual",
@@ -1270,8 +1113,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form input - select",
@@ -1279,8 +1121,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form input - checkbox",
@@ -1288,8 +1129,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form input - checkbox, reversed",
@@ -1297,8 +1137,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form input - Range",
@@ -1306,8 +1145,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form label - Basic",
@@ -1315,8 +1153,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Form label - Checkbox",
@@ -1324,8 +1161,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Error",
@@ -1333,8 +1169,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Block",
@@ -1342,8 +1177,7 @@
       "selectors": [
         ".object-section"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Button, generic - disabled",
@@ -1351,8 +1185,7 @@
       "selectors": [
         ".object-section .o-button.pseudo-class-disabled"
       ],
-      "delay": 20,
-      "onReadyScript": ""
+      "delay": 20
     },
     {
       "label": "Modal Component",
@@ -1360,7 +1193,7 @@
       "selectors": [
         "document"
       ],
-      "delay": 21,
+      "delay": 20,
       "onReadyScript": "clickLink"
     },
     {
@@ -1369,7 +1202,7 @@
       "selectors": [
         "document"
       ],
-      "delay": 21,
+      "delay": 20,
       "onReadyScript": "clickLink"
     },
     {
