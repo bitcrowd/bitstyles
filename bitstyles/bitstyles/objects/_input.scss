@@ -14,8 +14,11 @@
 // Markup:
 //    <label class="o-block">
 //      <span class="o-label o-block">This is labeling text</span>
-//      <input type="text" class="o-input--textual" placeholder="Placeholder text">
+//      <input type="text" class="o-input--textual {$modifiers}" placeholder="Placeholder text">
 //    </label>
+//
+//              - default state
+// :disabled    - Disabled state.
 //
 // Styleguide 1.22.1
 
@@ -29,6 +32,12 @@
 
   &::placeholder {
     color: $bitstyles-input-placeholder-color;
+  }
+
+  &:disabled {
+    background: $bitstyles-input-background-color-disabled;
+    color: $bitstyles-input-color-disabled;
+    cursor: default;
   }
 }
 
