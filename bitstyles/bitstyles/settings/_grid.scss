@@ -9,7 +9,7 @@ $bitstyles-widths-columns-responsive: (12) !default;
 // breakpoint.
 // If this is not defined, no responsive breakpoints will be generated.
 $bitstyles-grid-breakpoints: (
-  'medium'
+  'medium-and-up'
 ) !default;
 
 $bitstyles-grid-gutter: $bitstyles-spacing-horizontal !default;
