@@ -1,4 +1,5 @@
 {
+  "id": "bitstyles",
   "viewports": [
     {
       "name": "phone",
@@ -1244,13 +1245,13 @@
     }
   ],
   "paths": {
-    "bitmaps_reference": "../../backstop_data/bitmaps_reference",
-    "bitmaps_test": "../../backstop_data/bitmaps_test",
-    "compare_data": "../../backstop_data/bitmaps_test/compare.json",
-    "casper_scripts": "../../backstop_data/backstop_helpers"
+    "bitmaps_reference": "./backstop_data/bitmaps_reference",
+    "bitmaps_test": "./backstop_data/bitmaps_test",
+    "compare_data": "./backstop_data/bitmaps_test/compare.json",
+    "casper_scripts": "./backstop_data/backstop_helpers"
   },
   "engine": "phantomjs",
-  "report": ["CLI", "browser"],
+  "report": ["CLI"],
   "cliExitOnFail": false,
   "casperFlags": [],
   "debug": false,
