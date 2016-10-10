@@ -1,0 +1,11 @@
+$bitstyles-colors-theme: (
+  'primary':     $bitstyles-color-gray-70,
+  'secondary':   $bitstyles-color-gray-20,
+  'text':        $bitstyles-color-gray-80,
+  'background':  $bitstyles-color-white,
+  'positive':    #0f0,
+  'error':       #f00
+) !default;
+
+$foreground-colors: ('primary', 'secondary', 'error');
+$background-colors: ('background', 'secondary');

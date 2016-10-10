@@ -28,7 +28,7 @@
   background-color: $bitstyles-input-background;
   border: $bitstyles-input-border-width $bitstyles-input-border-style $bitstyles-input-border;
   border-radius: $bitstyles-input-border-radius;
-  color: $bitstyles-color-text;
+  color: map-get($bitstyles-colors-theme, 'text');
 
   &::placeholder {
     color: $bitstyles-input-placeholder-color;

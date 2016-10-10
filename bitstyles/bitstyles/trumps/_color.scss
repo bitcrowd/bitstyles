@@ -1,0 +1,19 @@
+// Foreground Colors
+//
+// Set foreground color. Actual classnames will vary based on colors defined in the $foreground-color variable
+//
+// markup:
+// <p class="{$modifiers}">Some content here</p>
+//
+//                        - Base style, inherits from parent
+// .t-color--primary      - Sets color to whatever is defined as your theme’s primary color.
+// .t-color--secondary    - Sets color to whatever is defined as your theme’s secondary color.
+// .t-color--error        - Sets color to whatever is defined as your theme’s error color.
+//
+// Styleguide 3.8
+
+@each $name in ($foreground-colors) {
+  .t-color--#{$name} {
+    color: map-get($bitstyles-colors-theme, $name);
+  }
+}
