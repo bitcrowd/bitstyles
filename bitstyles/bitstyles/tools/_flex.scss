@@ -1,0 +1,15 @@
+// Flex
+//
+// Simple flex layout.
+// Make one of the children `.o-flex__primary` to make it take as much space as is available.
+//
+// Styleguide 2.17
+
+@mixin flex {
+  display: flex;
+  align-items: stretch;
+}
+
+@mixin flex__primary {
+  flex: 1 0 auto;
+}

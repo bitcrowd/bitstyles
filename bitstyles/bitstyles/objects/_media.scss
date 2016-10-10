@@ -12,11 +12,9 @@
 // Styleguide 1.21
 
 .#{$bitstyles-namespace}o-media {
-  display: block;
-  overflow: hidden;
+  @include media;
 }
 
 .#{$bitstyles-namespace}o-media__feature {
-  float: left;
-  margin-right: $bitstyles-spacing;
+  @include media__feature;
 }
