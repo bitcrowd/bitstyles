@@ -1,4 +1,5 @@
 {
+  "id": "bitstyles",
   "viewports": [
     {
       "name": "phone",
@@ -212,7 +213,7 @@
       "delay": 20
     },
     {
-      "label": "Hidden",
+      "label": "Hidden@small",
       "url": "http://localhost:3000/section/1.13-2/fullscreen",
       "selectors": [
         ".object-section"
@@ -220,7 +221,7 @@
       "delay": 20
     },
     {
-      "label": "Hidden",
+      "label": "Hidden@large",
       "url": "http://localhost:3000/section/1.13-3/fullscreen",
       "selectors": [
         ".object-section"
@@ -1244,13 +1245,13 @@
     }
   ],
   "paths": {
-    "bitmaps_reference": "../../backstop_data/bitmaps_reference",
-    "bitmaps_test": "../../backstop_data/bitmaps_test",
-    "compare_data": "../../backstop_data/bitmaps_test/compare.json",
-    "casper_scripts": "../../backstop_data/backstop_helpers"
+    "bitmaps_reference": "./backstop_data/bitmaps_reference",
+    "bitmaps_test": "./backstop_data/bitmaps_test",
+    "compare_data": "./backstop_data/bitmaps_test/compare.json",
+    "casper_scripts": "./backstop_data/backstop_helpers"
   },
   "engine": "phantomjs",
-  "report": ["CLI", "browser"],
+  "report": ["CLI"],
   "cliExitOnFail": false,
   "casperFlags": [],
   "debug": false,
