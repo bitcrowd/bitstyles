@@ -91,13 +91,20 @@ gem install bitstyles
 Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Most likely you’ll not need everything in there, so comment-out or delete the lines of objects you don’t need.
 
 ```scss
-@import 'settings/global';
+@import 'bitstyles/settings/global.setup';
+@import 'bitstyles/settings/global.layout';
+@import 'bitstyles/settings/global.breakpoints';
+@import 'bitstyles/settings/global.animation';
+@import 'bitstyles/settings/global.color-base';
+@import 'bitstyles/settings/global.color-theme';
+@import 'bitstyles/settings/global.typography';
 
 // …
 
-@import 'objects/icon';
-// @import 'object/button';
-@import 'objects/grid';
+@import 'bitstyles/objects/icon';
+// @import 'bitstyles/object/button';
+// @import 'bitstyles/object/button-icon';
+@import 'bitstyles/objects/absolute-center';
 ```
 
 To change the css output by the library (e.g. standard margins, typographic scale, column count of the grid system…) you must override the variables used to build it. To do this declare any variables with your own values before including the bitstyles settings:
@@ -106,14 +113,21 @@ To change the css output by the library (e.g. standard margins, typographic scal
 @import 'settings/icon-overrides';
 @import 'settings/grid-overrides';
 
-@import 'settings/global';
+@import 'bitstyles/settings/global.setup';
+@import 'bitstyles/settings/global.layout';
+@import 'bitstyles/settings/global.breakpoints';
+@import 'bitstyles/settings/global.animation';
+@import 'bitstyles/settings/global.color-base';
+@import 'bitstyles/settings/global.color-theme';
+@import 'bitstyles/settings/global.typography';
 
-@import 'objects/icon';
-// @import 'object/button';
-@import 'objects/grid';
+@import 'bitstyles/objects/icon';
+// @import 'bitstyles/object/button';
+// @import 'bitstyles/object/button-icon';
+@import 'bitstyles/objects/absolute-center';
 ```
 
-For the complete list of varables you can override, look through the various files in the `bitstyles/settings/` folder.
+For the complete list of variables you can override, look through the various files in the `bitstyles/settings/` folder.
 
 ## Developing Bitstyles
 Bitstyles requires `node v5.7.0`. If you have [nvm](https://github.com/creationix/nvm) installed:
@@ -140,62 +154,60 @@ to recompile & lint sass on every change.
 
 ## Testing
 ### Installation
-CasperJS & PhantomJS need to be installed globally:
+CasperJS, PhantomJS, & BackstopJS all need to be installed globally:
 
 ```shell
-npm install -g phantomjs casperjs
+npm install -g phantomjs casperjs backstopjs
 ```
 
-everything else you need is installed with
+Everything else you need is installed with
 
 ```shell
 npm install
 ```
 
 ### Run tests
-The project uses a visual regression testing system called [BackstopJS](https://garris.github.io/BackstopJS/) to compare screenshots of each object before & after changes are made. For existing objects, if there is no visual difference between the reference images and the newly-generated images, your changes are good. For new objects, create new reference images (see below) and commit them to the repo.
+The project uses the visual regression testing system [BackstopJS](https://garris.github.io/BackstopJS/) to compare screenshots of each object before & after changes are made. For existing objects, if there is no visual difference between the reference images and the newly-generated images, your changes are good. For new objects, create new reference images (see below) and commit them to the repo.
 
 #### Existing objects
 If you haven’t added a new object to the `backstop.json` file, you can simply run the tests against the already-existing reference images:
 
 Start the styleguide server and leave it running:
 
-After starting the styleguide server (and leaving it running):
-
 ```shell
-gulp styleguide
+gulp watch:styleguide
 ```
 
-Create the initial screenshots:
+To test your changes against the known-good reference images (normally done just before creating your PR) run the tests:
 
 ```shell
-npm run test:build
-```
-
-Then each time you are ready to create a PR, run the tests to compare against the initial reference screenshots:
-
-```shell
-
 npm run test:run
 ```
 
-Short results from the comparison will be displayed on the command line, more detail is available at [http://localhost:3001](http://localhost:3001) which should open automatically.
+Short results from the comparison will be displayed on the command line, more detail is available from the in-browser report:
 
-If all tests pass, you’re good to go.
+```shell
+backstop openReport
+```
+
+Then go to [http://localhost:3001](http://localhost:3001).
+
+Once all tests pass, you’re good to go.
 
 #### New objects
 
-If you add new objects to the `backstop.json`, backstop will complain if you try to run tests without creating reference images for them.
+If you add new object scenarios to the `backstop.json`, backstop will complain if you try to run these tests without creating reference images for them.
 
-Start the styleguide server and leave it running:
+Start the styleguide server:
 
-```
-gulp styleguide
+```shell
+gulp watch:styleguide
 ```
 
 Then recreate the reference images:
-```
+
+```shell
 npm run test:build
 ```
 
-Commit the new reference images and you’re done.
+Check the new reference images match what you expect, then commit them and you’re done.
