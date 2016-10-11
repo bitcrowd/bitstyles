@@ -1,0 +1,7 @@
+{
+  "use": ["stylelint", "postcss-reporter"],
+  "input": "bitstyles/bitstyles/**/*.scss",
+  "local-plugins": true,
+  "replace": true,
+  "syntax": "postcss-scss"
+}

@@ -15,28 +15,11 @@ const postcssReporter = reporter({
 const styleguideOutputPath = 'styleguide';
 const syntaxScss = require('postcss-scss');
 const sass = require('gulp-sass');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
 const fs = require('fs');
 const graph = require('gulp-specificity-graph');
 const Parkerstats = require('parker');
 const ParkerstatsMetrics = require('parker/metrics/All');
 const opener = require('opener');
-
-gulp.task('build', function compileCss() {
-  return gulp.src('bitstyles/bitstyles.scss')
-    .pipe(sass({
-      includePaths: [
-        './node_modules/'
-      ]
-    }).on('error', sass.logError))
-    .pipe(postcss([
-      autoprefixer({ browsers: ['last 3 versions'] }),
-      cssnano({ safe: true }),
-      postcssReporter
-    ]))
-    .pipe(gulp.dest('build/'));
-});
 
 gulp.task('lint:scss', function lintScss() {
   /* eslint-disable prefer-template */
