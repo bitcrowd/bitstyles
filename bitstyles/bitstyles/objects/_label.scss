@@ -1,54 +1,15 @@
 /** @define label */
 // Form labels
 //
-// Form labels are visual and can be applied to any element within a `<label>` wrapper element, or be applied directly to a `<label for="">` element. Appropiate blocking classes and margin nullifiers should be used.
+// Default styling for form labels.
 //
 // Markup:
-//    <label class="o-block">
-//      <p class="o-label t-no-margin--bottom">This is label text</p>
-//      <input class="" type="text" placeholder="Placeholder text">
-//    </label>
-//    <div>
-//      <label class="o-label o-block " for="input1">This is label text</label>
-//      <input class="" type="text" id="input1" placeholder="Placeholder text">
-//    </div>
+//   <label class="o-label" for="input_1">This is label text</label>
+//   <input class="o-input--text" type="text" placeholder="Placeholder text" id="input_1" />
 //
 // Styleguide 1.23
 
-@import '../settings/input';
-
-// Form labels - Basic
-//
-// Form label are created with `o-label`.
-//
-// Markup:
-//    <label class="o-block">
-//      <p class="o-label t-no-margin--bottom">This is label text</p>
-//      <input class="" type="text" placeholder="Placeholder text">
-//    </label>
-//
-// Styleguide 1.23.1
-
 .#{$bitstyles-namespace}o-label {
-  @include font-size($bitstyles-font-size-base);
-  font-weight: $bitstyles-font-weight-bold;
-}
-
-// Form labels - Checkbox
-//
-// Checkbox labels require an addition class to prevent wrapping of the label
-// text underneath the checkbox.
-//
-// Markup:
-//    <label class="o-block">
-//      <span class="o-input--checkbox"><input type="checkbox" class=""></span>
-//      <span class="o-label o-label--for-checkbox">This is labeling text. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</span>
-//    </label>
-//
-// Styleguide 1.23.2
-
-.#{$bitstyles-namespace}o-label--for-checkbox {
-  display: inline-block;
-  width: calc(100% - (#{$bitstyles-input-checkbox-width} + #{$bitstyles-input-checkbox-width-gutter}));
-  vertical-align: middle;
+  display: block;
+  margin-bottom: 0;
 }

@@ -1,34 +1,39 @@
 /** @define input */
 // Form inputs
 //
-// Basic styling for input elements. Minimal padding, colours and borders are used to standardise inputs across browsers.
+// Basic styling for input elements. All inputs stretch to fill their parent —
+// their width can be constrained by the parent element.
 //
 // Styleguide 1.22
 
 @import '../settings/input';
 
-// Form inputs - textual
+// Form inputs - text
 //
-// Textual inputs are those that accept a string input. Text, email, number, date.
+// Text inputs are those that accept a string input — text, email, number, date.
 //
 // Markup:
-//    <label class="o-block">
-//      <span class="o-label o-block">This is labeling text</span>
-//      <input type="text" class="o-input--textual {$modifiers}" placeholder="Placeholder text">
-//    </label>
+//   <label class="o-label" for="input_1">This is labeling text</label>
+//   <input type="text" class="o-input o-input--text {$modifiers}" id="input_1" placeholder="Placeholder text" />
+//
 //
 //              - default state
 // :disabled    - Disabled state.
+// :active      - Active/focus state
 //
 // Styleguide 1.22.1
 
-.#{$bitstyles-namespace}o-input--textual {
-  min-width: $bitstyles-input-min-width;
+.#{$bitstyles-namespace}o-input {
+  @include block;
+  width: 100%;
+}
+
+.#{$bitstyles-namespace}o-input--text {
   padding: $bitstyles-input-padding;
   background-color: $bitstyles-input-background;
-  border: $bitstyles-input-border-width $bitstyles-input-border-style $bitstyles-input-border;
+  border: $bitstyles-input-border;
   border-radius: $bitstyles-input-border-radius;
-  color: map-get($bitstyles-colors-theme, 'text');
+  color: $bitstyles-input-color;
 
   &::placeholder {
     color: $bitstyles-input-placeholder-color;
@@ -39,79 +44,39 @@
     color: $bitstyles-input-color-disabled;
     cursor: default;
   }
+
+  &:active,
+  &:focus {
+    border: $bitstyles-input-border-active;
+  }
 }
 
 // Form inputs - Select
 //
 // Markup:
-//    <label class="o-block">
-//      <span class="o-label o-block">This is labeling text</span>
-//      <select name="select" class="o-input--select">
-//        <option value="value1">Value 1</option>
-//        <option value="value2" selected>Value 2</option>
-//        <option value="value3">Value 3</option>
-//      </select>
-//    </label>
+//   <label class="o-label" for="select_1">This is labeling text</label>
+//   <select class="o-input" id="select_1">
+//     <option value="value1">Value 1</option>
+//     <option value="value2" selected>Value 2</option>
+//     <option value="value3">Value 3</option>
+//   </select>
 //
 // Styleguide 1.22.2
 
-.#{$bitstyles-namespace}o-input--select {
-  min-width: $bitstyles-input-min-width;
-}
-
 // Form inputs - Checkbox
 //
-// Checkbox labels require an addition class to prevent wrapping of the label
-// text underneath the checkbox.
-//
 // Markup:
-//    <label class="o-block">
-//      <span class="o-input--checkbox"><input type="checkbox" class=""></span>
-//      <span class="o-label o-label--for-checkbox">This is labeling text. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</span>
+//    <label class="o-label">
+//      <input type="checkbox" class="o-input o-input--checkbox">
+//      This is labeling text. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.
 //    </label>
 //
 // Styleguide 1.22.3
 
 .#{$bitstyles-namespace}o-input--checkbox {
   display: inline-block;
-  width: $bitstyles-input-checkbox-width;
+  width: $bitstyles-input-checkbox-size;
+  height: $bitstyles-input-checkbox-size;
+  margin-right: $bitstyles-input-padding;
   vertical-align: middle;
-}
-
-// Form inputs - Checkbox, reversed
-//
-// Checkboxs can be placed to the right of a label by reversing the HTML order
-// of `o-label` and `o-input--checkbox`.
-//
-// `o-input--checkbox` can be applied directly to a checkbox input. However,
-// if applied to a wrapping `<span>` then the checkbox will align to the right
-// when reversed.
-//
-// Markup:
-//    <label class="o-block">
-//      <span class="o-label o-label--for-checkbox">This is labeling text. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</span>
-//      <span class="o-input--checkbox"><input type="checkbox" class=""></span>
-//    </label>
-//
-// Styleguide 1.22.4
-
-/* postcss-bem-linter: ignore */
-.#{$bitstyles-namespace}o-label + .#{$bitstyles-namespace}o-input--checkbox {
-  text-align: right;
-}
-
-/* postcss-bem-linter: end */
-
-// Form inputs - Range
-//
-// Markup:
-//    <label class="o-block">
-//      <span class="o-label o-block">This is labeling text</span>
-//      <input type="range" class="o-input--range o-block">
-//    </label>
-//
-// Styleguide 1.22.5
-
-.#{$bitstyles-namespace}o-input--range {
-  min-width: $bitstyles-input-min-width;
 }
