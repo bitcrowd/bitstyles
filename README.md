@@ -12,7 +12,7 @@ Github release (not from master), and you will need read access to the repo.
 
 ### Bower
 ```shell
-bower install git@github.com:bitcrowd/bitstyles.git#v0.2.2-alpha --save
+bower install git@github.com:bitcrowd/bitstyles.git#v0.7.4 --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
@@ -32,16 +32,28 @@ gulp.task('stylesheet', function(){
 }
 ```
 
-If you’re using rails, you can add this path to the asset pipeline in `config/application.rb`
+If you’re using Rails 4+, you can add this path to the asset pipeline in `config/initializers/assets.rb` where you see the commmented-out lines
 
 ```ruby
-config.assets.paths << 'bower_components/bitstyles/bitstyles'
+# Add additional assets to the asset load path
+# Rails.application.config.assets.paths << Emoji.images_path
 ```
 
+Add the following:
+
+```ruby
+Rails.application.config.assets.paths << Rails.root.join("bower_components", "bitstyles", "bitstyles")
+```
+
+If you’re using a version of Rails previous to 4, you must instead add the path to the asset pipeline in `config/application.rb`:
+
+```ruby
+config.assets.paths << Rails.root.join("bower_components", "bitstyles", "bitstyles")
+```
 
 ### npm
 ```shell
-npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.2.2-alpha --save
+npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.7.4 --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
@@ -61,12 +73,24 @@ gulp.task('stylesheet', function(){
 }
 ```
 
-If you’re using rails, you can add this path to the asset pipeline in `config/application.rb`
+If you’re using Rails 4+, you can add this path to the asset pipeline in `config/initializers/assets.rb` where you see the commmented-out lines
 
 ```ruby
-config.assets.paths << 'node_modules/bitstyles/bitstyles'
+# Add additional assets to the asset load path
+# Rails.application.config.assets.paths << Emoji.images_path
 ```
 
+Add the following:
+
+```ruby
+Rails.application.config.assets.paths << Rails.root.join("node_modules", "bitstyles", "bitstyles")
+```
+
+If you’re using a version of Rails previous to 4, you must instead add the path to the asset pipeline in `config/application.rb`:
+
+```ruby
+config.assets.paths << Rails.root.join("node_modules", "bitstyles", "bitstyles")
+```
 
 ### Rails gem
 
@@ -88,7 +112,7 @@ gem install bitstyles
 
 ### Importing the sass to your project
 
-Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Most likely you’ll not need everything in there, so comment-out or delete the lines of objects you don’t need.
+Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Most likely you’ll not need everything in there, so comment-out the lines of objects you don’t need:
 
 ```scss
 @import 'settings/global';
