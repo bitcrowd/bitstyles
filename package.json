@@ -7,19 +7,19 @@
   "scripts": {
     "build": "node-sass bitstyles/bitstyles.scss -o build --output-style compact",
     "postbuild": "postcss -c postcss_build.json",
-
     "lint:scss": "postcss -c postcss_lint.json",
     "lint:js": "eslint .",
     "lint": "npm run lint:scss && npm run lint:js",
-
     "test:build": "concurrently --kill-others 'npm run styleguide' 'backstop reference'",
     "test": "concurrently --kill-others 'npm run styleguide' 'backstop test'",
-
     "prestyleguide": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
     "styleguide": "styleguide --kss-source 'bitstyles/**/*.scss' --style-source 'build/bitstyles_styleguide.css' --output 'styleguide' --overviewPath 'README.md' --readOnly --watch --server --disableEncapsulation --title 'bitstyles' --extraHead '<script src=\"/assets/javascripts/a11y-dialog.js\"></script>''<script src=\"/assets/javascripts/styleguide-init.js\"></script>''<script src=\"/assets/javascripts/modal.js\"></script>''<script src=\"/assets/javascripts/expander.js\"></script>'",
-    "watch": "npm run build -- --watch --recursive",
-
-    "clean": "rm -r build/*"
+    "watch": "npm run build && npm run build -- --watch --recursive",
+    "clean": "rm -r build/*",
+    "precss:stats": "npm run build",
+    "css:stats": "parker build/bitstyles.css --format=json > stats/css.json",
+    "precss:graph": "npm run build",
+    "css:graph": "specificity-graph build/bitstyles.css --output stats"
   },
   "repository": {
     "type": "git",
@@ -48,14 +48,11 @@
   "homepage": "https://github.com/bitcrowd/bitstyles#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
+    "concurrently": "^3.1.0",
     "cssnano": "^3.6.2",
     "eslint": "^2.9.0",
     "eslint-config-bitcrowd": "0.0.3",
     "eslint-plugin-import": "^1.6.1",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^2.0.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-specificity-graph": "0.0.1",
     "node-sass": "^3.10.1",
     "opener": "^1.4.1",
     "parker": "0.0.10",
@@ -65,6 +62,7 @@
     "postcss-reporter": "^1.4.1",
     "postcss-scss": "^0.3.1",
     "sc5-styleguide": "^1.2.0",
+    "specificity-graph": "^0.1.7",
     "stylelint": "^7.0.1",
     "stylelint-config-standard": "^11.0.0"
   },
