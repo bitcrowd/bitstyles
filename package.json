@@ -13,10 +13,10 @@
     "lint": "npm run lint:scss && npm run lint:js",
 
     "test:build": "concurrently --kill-others 'npm run styleguide' 'backstop reference'",
-
     "test": "concurrently --kill-others 'npm run styleguide' 'backstop test'",
 
-    "styleguide": "gulp styleguide",
+    "prestyleguide": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
+    "styleguide": "styleguide --kss-source 'bitstyles/**/*.scss' --style-source 'build/bitstyles_styleguide.css' --output 'styleguide' --overviewPath 'README.md' --readOnly --watch --server --disableEncapsulation --title 'bitstyles' --extraHead '<script src=\"/assets/javascripts/a11y-dialog.js\"></script>''<script src=\"/assets/javascripts/styleguide-init.js\"></script>''<script src=\"/assets/javascripts/modal.js\"></script>''<script src=\"/assets/javascripts/expander.js\"></script>'",
     "watch": "gulp watch"
   },
   "repository": {
@@ -62,7 +62,7 @@
     "postcss-cli": "^2.6.0",
     "postcss-reporter": "^1.4.1",
     "postcss-scss": "^0.3.1",
-    "sc5-styleguide": "^0.3.45",
+    "sc5-styleguide": "^1.2.0",
     "stylelint": "^7.0.1",
     "stylelint-config-standard": "^11.0.0"
   },
