@@ -12,10 +12,11 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:scss && npm run lint:js",
 
+    "test:build": "concurrently --kill-others 'npm run styleguide' 'backstop reference'",
+
+    "test": "concurrently --kill-others 'npm run styleguide' 'backstop test'",
 
     "styleguide": "gulp styleguide",
-    "test:build": "gulp test:build",
-    "test:run": "gulp test:run",
     "watch": "gulp watch"
   },
   "repository": {
