@@ -47,14 +47,14 @@
   },
   "homepage": "https://github.com/bitcrowd/bitstyles#readme",
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
+    "autoprefixer": "^6.5.0",
     "concurrently": "^3.1.0",
-    "cssnano": "^3.6.2",
-    "eslint": "^2.9.0",
+    "cssnano": "^3.7.7",
+    "eslint": "^3.7.1",
     "eslint-config-bitcrowd": "0.0.3",
-    "eslint-plugin-import": "^1.6.1",
+    "eslint-config-bitcrowd-base": "^8.0.0",
+    "eslint-plugin-import": "^1.16.0",
     "node-sass": "^3.10.1",
-    "opener": "^1.4.1",
     "parker": "0.0.10",
     "postcss": "^5.2.4",
     "postcss-bem-linter": "^2.6.0",
@@ -63,8 +63,8 @@
     "postcss-scss": "^0.3.1",
     "sc5-styleguide": "^1.2.0",
     "specificity-graph": "^0.1.7",
-    "stylelint": "^7.0.1",
-    "stylelint-config-standard": "^11.0.0"
+    "stylelint": "^7.4.2",
+    "stylelint-config-standard": "^13.0.2"
   },
   "files": [
     "bitstyles"
