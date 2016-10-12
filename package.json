@@ -5,12 +5,14 @@
   "main": "bitstyles.scss",
   "private": true,
   "scripts": {
-    "build:scss": "node-sass bitstyles/bitstyles.scss -o build --output-style compact",
-    "build:process": "postcss -c postcss_build.json",
-    "build": "npm run build:scss && npm run build:process",
+    "build": "node-sass bitstyles/bitstyles.scss -o build --output-style compact",
+    "postbuild": "postcss -c postcss_build.json",
+
     "lint:scss": "postcss -c postcss_lint.json",
-    "lint": "gulp lint:scss lint:js",
-    "lint:js": "gulp lint:js",
+    "lint:js": "eslint .",
+    "lint": "npm run lint:scss && npm run lint:js",
+
+
     "styleguide": "gulp styleguide",
     "test:build": "gulp test:build",
     "test:run": "gulp test:run",
