@@ -7,8 +7,12 @@
     "total-declarations": 445,
     "selectors-per-rule": 1.403061224489796,
     "identifiers-per-selector": 1.2545454545454546,
+    "declarations-per-rule": 2.270408163265306,
     "specificity-per-selector": 8.76,
+    "precise-specificity-per-selector": 214.50545454545454,
     "top-selector-specificity": 30,
+    "precise-top-selector-specificity": 768,
+    "string-top-selector-specificity": "0,3,0",
     "top-selector-specificity-selector": ".o-expander-toggle[aria-expanded=true] .o-expander-toggle__indicator",
     "total-id-selectors": 0,
     "total-unique-colours": 10,
@@ -30,5 +34,10 @@
         "screen and (min-width:45em)",
         "screen and (min-width:64em)",
         "screen and (max-width:44.9375em)"
+    ],
+    "z-indexes": [
+        "1",
+        "10",
+        "20"
     ]
 }

@@ -23,233 +23,175 @@
     {
       "label": "Button, generic - default",
       "url": "http://localhost:3000/section/1.1.1-1/fullscreen",
-      "selectors": [
-        ".object-section .o-button"
-      ],
+      "selectors": [".object-section .o-button"],
       "delay": 20
     },
     {
       "label": "Button, generic - hover",
       "url": "http://localhost:3000/section/1.1.1-2/fullscreen",
-      "selectors": [
-        ".object-section .o-button.pseudo-class-hover"
-      ],
+      "selectors": [".object-section .o-button.pseudo-class-hover"],
       "delay": 20
     },
     {
       "label": "Button, generic - focus",
       "url": "http://localhost:3000/section/1.1.1-3/fullscreen",
-      "selectors": [
-        ".object-section .o-button.pseudo-class-focus"
-      ],
+      "selectors": [".object-section .o-button.pseudo-class-focus"],
       "delay": 20
     },
     {
       "label": "Button, with icon - default",
       "url": "http://localhost:3000/section/1.1.2-1/fullscreen",
-      "selectors": [
-        ".object-section .o-button"
-      ],
+      "selectors": [".object-section .o-button"],
       "delay": 20
     },
     {
       "label": "Button, with icon - hover",
       "url": "http://localhost:3000/section/1.1.2-2/fullscreen",
-      "selectors": [
-        ".object-section .o-button.pseudo-class-hover"
-      ],
+      "selectors": [".object-section .o-button.pseudo-class-hover"],
       "delay": 20
     },
     {
       "label": "Button, with icon - focus",
       "url": "http://localhost:3000/section/1.1.3-3/fullscreen",
-      "selectors": [
-        ".object-section .o-button.pseudo-class-focus"
-      ],
+      "selectors": [".object-section .o-button.pseudo-class-focus"],
       "delay": 20
     },
     {
       "label": "Button, with reversed icon - default",
       "url": "http://localhost:3000/section/1.1.2-1/fullscreen",
-      "selectors": [
-        ".object-section .o-button"
-      ],
+      "selectors": [".object-section .o-button"],
       "delay": 20
     },
     {
       "label": "Button, with reversed icon - hover",
       "url": "http://localhost:3000/section/1.1.2-2/fullscreen",
-      "selectors": [
-        ".object-section .o-button.pseudo-class-hover"
-      ],
+      "selectors": [".object-section .o-button.pseudo-class-hover"],
       "delay": 20
     },
     {
       "label": "Button, with reversed icon - focus",
       "url": "http://localhost:3000/section/1.1.3-3/fullscreen",
-      "selectors": [
-        ".object-section .o-button.pseudo-class-focus"
-      ],
+      "selectors": [".object-section .o-button.pseudo-class-focus"],
       "delay": 20
     },
     {
       "label": "Icon Buttons - default",
       "url": "http://localhost:3000/section/1.2-1/fullscreen",
-      "selectors": [
-        ".object-section .o-button--icon"
-      ],
+      "selectors": [".object-section .o-button--icon"],
       "delay": 20
     },
     {
       "label": "Icon Buttons - hover",
       "url": "http://localhost:3000/section/1.2-2/fullscreen",
-      "selectors": [
-        ".object-section .o-button--icon.pseudo-class-hover"
-      ],
+      "selectors": [".object-section .o-button--icon.pseudo-class-hover"],
       "delay": 20
     },
     {
       "label": "Icon Buttons - focus",
       "url": "http://localhost:3000/section/1.2-3/fullscreen",
-      "selectors": [
-        ".object-section .o-button--icon.pseudo-class-focus"
-      ],
+      "selectors": [".object-section .o-button--icon.pseudo-class-focus"],
       "delay": 20
     },
     {
       "label": "Icons - default",
       "url": "http://localhost:3000/section/1.3-1/fullscreen",
-      "selectors": [
-        ".object-section .o-icon"
-      ],
+      "selectors": [".object-section .o-icon"],
       "delay": 20
     },
     {
       "label": "Icons - small",
       "url": "http://localhost:3000/section/1.3-2/fullscreen",
-      "selectors": [
-        ".object-section .o-icon--small"
-      ],
+      "selectors": [".object-section .o-icon--small"],
       "delay": 20
     },
     {
       "label": "Icons - medium",
       "url": "http://localhost:3000/section/1.3-3/fullscreen",
-      "selectors": [
-        ".object-section .o-icon--medium"
-      ],
+      "selectors": [".object-section .o-icon--medium"],
       "delay": 20
     },
     {
       "label": "Icons - large",
       "url": "http://localhost:3000/section/1.3-4/fullscreen",
-      "selectors": [
-        ".object-section .o-icon--large"
-      ],
+      "selectors": [".object-section .o-icon--large"],
       "delay": 20
     },
     {
       "label": "Topbar",
       "url": "http://localhost:3000/section/1.6/fullscreen",
-      "selectors": [
-        ".object-section .l-topbar"
-      ],
+      "selectors": [".object-section .l-topbar"],
       "delay": 100},
     {
       "label": "Clearfix",
       "url": "http://localhost:3000/section/1.7/fullscreen",
-      "selectors": [
-        ".object-section .o-clearfix"
-      ],
+      "selectors": [".object-section .o-clearfix"],
       "delay": 20
     },
     {
       "label": "Wordbreak",
       "url": "http://localhost:3000/section/1.8/fullscreen",
-      "selectors": [
-        ".object-section .o-break-long-words"
-      ],
+      "selectors": [".object-section .o-break-long-words"],
       "delay": 20
     },
     {
       "label": "Expander",
       "url": "http://localhost:3000/section/1.9/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20,
       "onReadyScript": "clickButton"
     },
     {
       "label": "Flex",
       "url": "http://localhost:3000/section/1.10/fullscreen",
-      "selectors": [
-        ".object-section .o-flex"
-      ],
+      "selectors": [".object-section .o-flex"],
       "delay": 20
     },
     {
       "label": "Absolute center",
       "url": "http://localhost:3000/section/1.11/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
       "label": "Vertical center",
       "url": "http://localhost:3000/section/1.12/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
       "label": "Hidden",
       "url": "http://localhost:3000/section/1.13-1/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
       "label": "Hidden@small",
       "url": "http://localhost:3000/section/1.13-2/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
       "label": "Hidden@large",
       "url": "http://localhost:3000/section/1.13-3/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
       "label": "Visuallyhidden",
       "url": "http://localhost:3000/section/1.14/fullscreen",
-      "selectors": [
-        ".object-section .o-button"
-      ],
+      "selectors": [".object-section .o-button"],
       "delay": 20
     },
     {
       "label": "Truncate with ellipsis",
       "url": "http://localhost:3000/section/1.15/fullscreen",
-      "selectors": [
-        ".object-section .l-grid-2-of-12"
-      ],
+      "selectors": [".object-section .l-grid-2-of-12"],
       "delay": 20
     },
     {
       "label": "Absolute cover",
       "url": "http://localhost:3000/section/1.16/fullscreen",
-      "selectors": [
-        ".object-section .o-absolute-cover"
-      ],
+      "selectors": [".object-section .o-absolute-cover"],
       "delay": 20
     },
     {
@@ -351,9 +293,7 @@
     {
       "label": "Definition list",
       "url": "http://localhost:3000/section/4.5/fullscreen",
-      "selectors": [
-        ".object-section dt"
-      ],
+      "selectors": [".object-section dl"],
       "delay": 20
     },
     {
@@ -583,9 +523,7 @@
     {
       "label": "Figure and caption",
       "url": "http://localhost:3000/section/4.13/fullscreen",
-      "selectors": [
-        ".object-section figure"
-      ],
+      "selectors": [".object-section figure"],
       "delay": 20
     },
     {
@@ -807,17 +745,13 @@
     {
       "label": "Grid layout",
       "url": "http://localhost:3000/section/5.3.1/fullscreen",
-      "selectors": [
-        ".object-section .l-grid"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
       "label": "Grid layout - responsive",
       "url": "http://localhost:3000/section/5.3.2/fullscreen",
-      "selectors": [
-        ".object-section .l-grid"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
@@ -1143,45 +1077,34 @@
     {
       "label": "Block",
       "url": "http://localhost:3000/section/1.25/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
       "label": "Button, generic - disabled",
       "url": "http://localhost:3000/section/1.1.1-4/fullscreen",
-      "selectors": [
-        ".object-section .o-button.pseudo-class-disabled"
-      ],
+      "selectors": [".object-section .o-button.pseudo-class-disabled"],
       "delay": 20
     },
     {
       "label": "Modal Component",
       "url": "http://localhost:3000/section/6.1/fullscreen",
-      "selectors": [
-        "document"
-      ],
+      "selectors": ["document"],
       "delay": 20,
       "onReadyScript": "clickLink"
     },
     {
       "label": "Modal Dialog Component",
       "url": "http://localhost:3000/section/6.2/fullscreen",
-      "selectors": [
-        "document"
-      ],
+      "selectors": ["document"],
       "delay": 20,
       "onReadyScript": "clickLink"
     },
     {
       "label": "Link",
       "url": "http://localhost:3000/section/1.26/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
-      "delay": 20,
-      "onReadyScript": ""
+      "selectors": [".object-section"],
+      "delay": 20
     },
     {
       "label": "input:disabled",
