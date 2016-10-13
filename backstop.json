@@ -1227,7 +1227,7 @@
     "casper_scripts": "./backstop_data/backstop_helpers"
   },
   "engine": "phantomjs",
-  "report": ["CLI"],
+  "report": ["browser"],
   "cliExitOnFail": false,
   "casperFlags": [],
   "debug": false,
