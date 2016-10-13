@@ -87,7 +87,7 @@ gulp.task('styleguide:generate', function styleguideGenerate() {
 gulp.task('styleguide:applystyles', ['build'], function styleguideApplystyles() {
   return gulp.src([
     'build/bitstyles.css',
-    'assets/stylesheets/styleguide-extras.scss'
+    'styleguide/assets/stylesheets/styleguide-extras.scss'
   ])
   .pipe(sass({
     errLogToConsole: true

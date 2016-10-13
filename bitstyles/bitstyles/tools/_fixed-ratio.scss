@@ -19,6 +19,7 @@
 
 @mixin fixed-ratio__inner {
   @include absolute-cover;
+
   display: block;
   width: 100%;
   height: auto;
