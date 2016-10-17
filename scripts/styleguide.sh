@@ -10,4 +10,7 @@ styleguide \
   --server \
   --disableEncapsulation \
   --title 'bitstyles' \
-  --extraHead '<script src="/assets/javascripts/a11y-dialog.js"></script>''<script src="/assets/javascripts/styleguide-init.js"></script>''<script src="/assets/javascripts/modal.js"></script>''<script src="/assets/javascripts/expander.js"></script>'
+  --extraHead '<script src="/assets/javascripts/a11y-dialog.js"></script>' \
+  --extraHead '<script src="/assets/javascripts/styleguide-init.js"></script>' \
+  --extraHead '<script src="/assets/javascripts/modal.js"></script>' \
+  --extraHead '<script src="/assets/javascripts/expander.js"></script>' \
