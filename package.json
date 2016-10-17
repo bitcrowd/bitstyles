@@ -12,6 +12,7 @@
     "lint": "npm run lint:scss && npm run lint:js",
     "test:build": "backstop reference",
     "test": "backstop test",
+    "checks": "npm run lint && npm run test",
     "prestyleguide": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
     "styleguide": "scripts/styleguide.sh",
     "watch": "npm run build && npm run build -- --watch --recursive",
