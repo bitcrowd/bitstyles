@@ -4,11 +4,16 @@
 // the body is the content you want to be revealed — it starts at zero height,
 // expands to size of content once active.
 //
-// Use the `.o-button` classes on the `.o-expander__toggle` to set size & appearance.
+// Use the `.o-button` classes on the `.o-expander-toggle` to set size & appearance.
 //
 // markup:
 // <p>
-//   <button class="o-expander-toggle o-button" aria-expanded="false" aria-controls="expander-0" id="expander_button">Toggle content</button>
+//   <button class="o-expander-toggle o-button" aria-expanded="false" aria-controls="expander-0" id="expander_button">
+//     Toggle content
+//     <svg class="o-icon o-expander-toggle__indicator">
+//       <use xlink:href="assets/images/icons.svg#icon-arrow-up"></use>
+//     </svg>
+//   </button>
 // </p>
 // <p>Other content</p>
 // <div class="o-expander-body" id="expander-0" aria-hidden="true">
@@ -18,16 +23,12 @@
 //
 // Styleguide 1.9
 
-.#{$bitstyles-namespace}o-expander-toggle {
-  .#{$bitstyles-namespace}o-icon {
-    transform: rotate(180deg);
-    transition: transform $bitstyles-transition-duration $bitstyles-transition-easing;
-  }
+.#{$bitstyles-namespace}o-expander-toggle__indicator {
+  transform: rotate(180deg);
+  transition: transform $bitstyles-transition-duration $bitstyles-transition-easing;
 
-  &[aria-expanded="true"] {
-    .#{$bitstyles-namespace}o-icon {
-      transform: rotate(0deg); /* stylelint-disable-line length-zero-no-unit */
-    }
+  .#{$bitstyles-namespace}o-expander-toggle[aria-expanded="true"] & {
+    transform: rotate(0deg); /* stylelint-disable-line length-zero-no-unit */
   }
 }
 
