@@ -11,7 +11,14 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:scss && npm run lint:js",
     "test:build": "backstop reference",
-    "test": "backstop test",
+    "test": "npm run test:base && npm run test:layout && npm run test:objects",
+
+    "test:base": "backstop test --configPath=backstop_tests/base.json",
+    "test:objects": "backstop test --configPath=backstop_tests/objects.json",
+    "test:layout": "backstop test --configPath=backstop_tests/layout.json",
+    "test:components": "backstop test --configPath=backstop_tests/components.json",
+    "test:trumps": "backstop test --configPath=backstop_tests/trumps.json",
+
     "checks": "npm run lint && npm run test",
     "prestyleguide": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
     "styleguide": "scripts/styleguide.sh",
