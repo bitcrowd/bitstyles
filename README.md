@@ -171,10 +171,16 @@ npm install
 To ensure your changes do not break the build, run
 
 ```shell
-gulp watch
+npm run watch
 ```
 
-to recompile & lint sass on every change.
+to recompile sass on every change.
+
+For a single one-off build, run
+
+```shell
+npm run build
+```
 
 ## Testing
 ### Installation
@@ -182,12 +188,6 @@ CasperJS, PhantomJS, & BackstopJS all need to be installed globally:
 
 ```shell
 npm install -g phantomjs casperjs backstopjs
-```
-
-Everything else you need is installed with
-
-```shell
-npm install
 ```
 
 ### Run tests
@@ -199,13 +199,13 @@ If you haven’t added a new object to the `backstop.json` file, you can simply 
 Start the styleguide server and leave it running:
 
 ```shell
-gulp watch:styleguide
+npm run styleguide
 ```
 
-To test your changes against the known-good reference images (normally done just before creating your PR) run the tests:
+To test your changes against the known-good reference images run the tests:
 
 ```shell
-npm run test:run
+npm run test
 ```
 
 Short results from the comparison will be displayed on the command line, more detail is available from the in-browser report:
@@ -216,6 +216,20 @@ backstop openReport
 
 Then go to [http://localhost:3001](http://localhost:3001).
 
+### Before you create your PR
+
+Start up the styleguide (see the section below on testing for more information on this):
+
+```shell
+npm run styleguide
+```
+
+…then run the checks:
+
+```shell
+npm run checks
+```
+
 Once all tests pass, you’re good to go.
 
 #### New objects
@@ -225,7 +239,7 @@ If you add new object scenarios to the `backstop.json`, backstop will complain i
 Start the styleguide server:
 
 ```shell
-gulp watch:styleguide
+npm run styleguide
 ```
 
 Then recreate the reference images:
