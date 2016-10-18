@@ -1,0 +1,284 @@
+{
+  "id": "trumps",
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "misMatchThreshold" : 0.1,
+  "readyEvent": "styleguideRendered",
+  "scenarios": [
+    {
+      "label": "margin",
+      "url": "http://localhost:3000/section/3.1.1-1/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "margin — left",
+      "url": "http://localhost:3000/section/3.1.1-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "margin — top",
+      "url": "http://localhost:3000/section/3.1.1-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "margin — right",
+      "url": "http://localhost:3000/section/3.1.1-4/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "margin — bottom",
+      "url": "http://localhost:3000/section/3.1.1-5/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "margin — all",
+      "url": "http://localhost:3000/section/3.1.2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-margin",
+      "url": "http://localhost:3000/section/3.2.1-1/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-margin — left",
+      "url": "http://localhost:3000/section/3.2.1-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-margin — top",
+      "url": "http://localhost:3000/section/3.2.1-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-margin — right",
+      "url": "http://localhost:3000/section/3.2.1-4/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-margin — bottom",
+      "url": "http://localhost:3000/section/3.2.1-5/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-margin — all",
+      "url": "http://localhost:3000/section/3.2.2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-padding — base",
+      "url": "http://localhost:3000/section/3.3.1-1/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-padding — left",
+      "url": "http://localhost:3000/section/3.3.1-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-padding — top",
+      "url": "http://localhost:3000/section/3.3.1-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-padding — right",
+      "url": "http://localhost:3000/section/3.3.1-4/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-padding — bottom",
+      "url": "http://localhost:3000/section/3.3.1-5/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "no-padding — all",
+      "url": "http://localhost:3000/section/3.3.2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "padding — base",
+      "url": "http://localhost:3000/section/3.4.1-1/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "padding — left",
+      "url": "http://localhost:3000/section/3.4.1-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "padding — top",
+      "url": "http://localhost:3000/section/3.4.1-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "padding — right",
+      "url": "http://localhost:3000/section/3.4.1-4/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "padding — bottom",
+      "url": "http://localhost:3000/section/3.4.1-5/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "padding — all",
+      "url": "http://localhost:3000/section/3.4.2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "text-align - base",
+      "url": "http://localhost:3000/section/3.5-1/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "text-align — left",
+      "url": "http://localhost:3000/section/3.5-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "text-align — right",
+      "url": "http://localhost:3000/section/3.5-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "text-align — centre",
+      "url": "http://localhost:3000/section/3.5-4/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "text-align — justify",
+      "url": "http://localhost:3000/section/3.5-5/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "text-style — base",
+      "url": "http://localhost:3000/section/3.6-1/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "text-style — italic",
+      "url": "http://localhost:3000/section/3.6-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "text-style — normal",
+      "url": "http://localhost:3000/section/3.6-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "font-weight — base",
+      "url": "http://localhost:3000/section/3.7-1/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "font-weight — light",
+      "url": "http://localhost:3000/section/3.7-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "font-weight — normal",
+      "url": "http://localhost:3000/section/3.7-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "font-weight — bold",
+      "url": "http://localhost:3000/section/3.7-4/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "color — primary",
+      "url": "http://localhost:3000/section/3.8-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "color — secondary",
+      "url": "http://localhost:3000/section/3.8-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "color — error",
+      "url": "http://localhost:3000/section/3.8-4/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "background-color — background",
+      "url": "http://localhost:3000/section/3.9-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "background-color — secondary",
+      "url": "http://localhost:3000/section/3.9-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "./backstop_data/bitmaps_reference/trumps",
+    "bitmaps_test": "./backstop_data/bitmaps_test/trumps",
+    "compare_data": "./backstop_data/bitmaps_test/compare.trumps.json",
+    "casper_scripts": "./backstop_data/backstop_helpers",
+    "html_report": "backstop_data/html_report/trumps",
+    "ci_report": "backstop_data/ci_report/trumps"
+  },
+  "engine": "phantomjs",
+  "report": ["browser", "CI"],
+  "cliExitOnFail": false,
+  "casperFlags": [],
+  "debug": false,
+  "port": 3001
+}

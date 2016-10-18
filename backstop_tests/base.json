@@ -21,506 +21,388 @@
   "readyEvent": "styleguideRendered",
   "scenarios": [
     {
-      "label": "Headers",
+      "label": "h",
       "url": "http://localhost:3000/section/4.1/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Paragraphs",
+      "label": "p",
       "url": "http://localhost:3000/section/4.2/fullscreen",
-      "selectors": [
-        ".object-section p"
-      ],
+      "selectors": [".object-section p"],
       "delay": 20
     },
     {
-      "label": "Links - default",
+      "label": "a [default]",
       "url": "http://localhost:3000/section/4.3-1/fullscreen",
-      "selectors": [
-        ".object-section a"
-      ],
+      "selectors": [".object-section a"],
       "delay": 20
     },
     {
-      "label": "Links - hover",
+      "label": "a [hover]",
       "url": "http://localhost:3000/section/4.3-2/fullscreen",
-      "selectors": [
-        ".object-section a.pseudo-class-hover"
-      ],
+      "selectors": [".object-section a.pseudo-class-hover"],
       "delay": 20
     },
     {
-      "label": "Links - focus",
+      "label": "a [focus]",
       "url": "http://localhost:3000/section/4.3-3/fullscreen",
-      "selectors": [
-        ".object-section a.pseudo-class-focus"
-      ],
+      "selectors": [".object-section a.pseudo-class-focus"],
       "delay": 20
     },
     {
-      "label": "Links - visited",
+      "label": "a [visited]",
       "url": "http://localhost:3000/section/4.3-4/fullscreen",
-      "selectors": [
-        ".object-section a.pseudo-class-visited"
-      ],
+      "selectors": [".object-section a.pseudo-class-visited"],
       "delay": 20
     },
     {
-      "label": "Address",
+      "label": "address",
       "url": "http://localhost:3000/section/4.4/fullscreen",
-      "selectors": [
-        ".object-section address"
-      ],
+      "selectors": [".object-section address"],
       "delay": 20
     },
     {
-      "label": "Definition list",
+      "label": "dl",
       "url": "http://localhost:3000/section/4.5/fullscreen",
       "selectors": [".object-section dl"],
       "delay": 20
     },
     {
-      "label": "List - unordered",
+      "label": "list [unordered]",
       "url": "http://localhost:3000/section/4.6/fullscreen",
-      "selectors": [
-        ".object-section ul"
-      ],
+      "selectors": [".object-section ul"],
       "delay": 20
     },
     {
-      "label": "List - ordered",
+      "label": "list [ordered]",
       "url": "http://localhost:3000/section/4.7/fullscreen",
-      "selectors": [
-        ".object-section ol"
-      ],
+      "selectors": [".object-section ol"],
       "delay": 20
     },
     {
-      "label": "Blockquote",
+      "label": "blockquote",
       "url": "http://localhost:3000/section/4.8/fullscreen",
-      "selectors": [
-        ".object-section blockquote"
-      ],
+      "selectors": [".object-section blockquote"],
       "delay": 20
     },
     {
       "label": "strong",
       "url": "http://localhost:3000/section/4.9.1/fullscreen",
-      "selectors": [
-        ".object-section strong"
-      ],
+      "selectors": [".object-section strong"],
       "delay": 20
     },
     {
       "label": "em",
       "url": "http://localhost:3000/section/4.9.2/fullscreen",
-      "selectors": [
-        ".object-section em"
-      ],
+      "selectors": [".object-section em"],
       "delay": 20
     },
     {
       "label": "pre",
       "url": "http://localhost:3000/section/4.9.3/fullscreen",
-      "selectors": [
-        ".object-section pre"
-      ],
+      "selectors": [".object-section pre"],
       "delay": 20
     },
     {
       "label": "code",
       "url": "http://localhost:3000/section/4.9.4/fullscreen",
-      "selectors": [
-        ".object-section code"
-      ],
+      "selectors": [".object-section code"],
       "delay": 20
     },
     {
       "label": "kbd",
       "url": "http://localhost:3000/section/4.9.5/fullscreen",
-      "selectors": [
-        ".object-section kbd"
-      ],
+      "selectors": [".object-section kbd"],
       "delay": 20
     },
     {
       "label": "samp",
       "url": "http://localhost:3000/section/4.9.6/fullscreen",
-      "selectors": [
-        ".object-section samp"
-      ],
+      "selectors": [".object-section samp"],
       "delay": 20
     },
     {
       "label": "var",
       "url": "http://localhost:3000/section/4.9.7/fullscreen",
-      "selectors": [
-        ".object-section var"
-      ],
+      "selectors": [".object-section var"],
       "delay": 20
     },
     {
       "label": "cite",
       "url": "http://localhost:3000/section/4.9.8/fullscreen",
-      "selectors": [
-        ".object-section cite"
-      ],
+      "selectors": [".object-section cite"],
       "delay": 20
     },
     {
       "label": "del",
       "url": "http://localhost:3000/section/4.9.9/fullscreen",
-      "selectors": [
-        ".object-section del"
-      ],
+      "selectors": [".object-section del"],
       "delay": 20
     },
     {
       "label": "abbr",
       "url": "http://localhost:3000/section/4.9.10/fullscreen",
-      "selectors": [
-        ".object-section abbr"
-      ],
+      "selectors": [".object-section abbr"],
       "delay": 20
     },
     {
       "label": "i",
       "url": "http://localhost:3000/section/4.9.11/fullscreen",
-      "selectors": [
-        ".object-section i"
-      ],
+      "selectors": [".object-section i"],
       "delay": 20
     },
     {
       "label": "b",
       "url": "http://localhost:3000/section/4.9.12/fullscreen",
-      "selectors": [
-        ".object-section b"
-      ],
+      "selectors": [".object-section b"],
       "delay": 20
     },
     {
       "label": "ins",
       "url": "http://localhost:3000/section/4.9.13/fullscreen",
-      "selectors": [
-        ".object-section ins"
-      ],
+      "selectors": [".object-section ins"],
       "delay": 20
     },
     {
       "label": "dfn",
       "url": "http://localhost:3000/section/4.9.14/fullscreen",
-      "selectors": [
-        ".object-section dfn"
-      ],
+      "selectors": [".object-section dfn"],
       "delay": 20
     },
     {
       "label": "small",
       "url": "http://localhost:3000/section/4.9.15/fullscreen",
-      "selectors": [
-        ".object-section small"
-      ],
+      "selectors": [".object-section small"],
       "delay": 20
     },
     {
       "label": "sub",
       "url": "http://localhost:3000/section/4.9.16/fullscreen",
-      "selectors": [
-        ".object-section sub"
-      ],
+      "selectors": [".object-section sub"],
       "delay": 20
     },
     {
       "label": "sup",
       "url": "http://localhost:3000/section/4.9.17/fullscreen",
-      "selectors": [
-        ".object-section sup"
-      ],
+      "selectors": [".object-section sup"],
       "delay": 20
     },
     {
       "label": "big",
       "url": "http://localhost:3000/section/4.9.18/fullscreen",
-      "selectors": [
-        ".object-section big"
-      ],
+      "selectors": [".object-section big"],
       "delay": 20
     },
     {
       "label": "s",
       "url": "http://localhost:3000/section/4.9.19/fullscreen",
-      "selectors": [
-        ".object-section s"
-      ],
+      "selectors": [".object-section s"],
       "delay": 20
     },
     {
       "label": "strike",
       "url": "http://localhost:3000/section/4.9.20/fullscreen",
-      "selectors": [
-        ".object-section strike"
-      ],
+      "selectors": [".object-section strike"],
       "delay": 20
     },
     {
       "label": "q",
       "url": "http://localhost:3000/section/4.9.21/fullscreen",
-      "selectors": [
-        ".object-section q"
-      ],
+      "selectors": [".object-section q"],
       "delay": 20
     },
     {
       "label": "time",
       "url": "http://localhost:3000/section/4.9.22/fullscreen",
-      "selectors": [
-        ".object-section time"
-      ],
+      "selectors": [".object-section time"],
       "delay": 20
     },
     {
-      "label": "Table",
+      "label": "table",
       "url": "http://localhost:3000/section/4.10/fullscreen",
-      "selectors": [
-        ".object-section table"
-      ],
+      "selectors": [".object-section table"],
       "delay": 20
     },
     {
-      "label": "Image",
+      "label": "img",
       "url": "http://localhost:3000/section/4.11/fullscreen",
-      "selectors": [
-        ".object-section img"
-      ],
+      "selectors": [".object-section img"],
       "delay": 20
     },
     {
-      "label": "Horizontal rule",
+      "label": "hr",
       "url": "http://localhost:3000/section/4.12/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Figure and caption",
+      "label": "figure",
       "url": "http://localhost:3000/section/4.13/fullscreen",
       "selectors": [".object-section figure"],
       "delay": 20
     },
     {
-      "label": "Form - Fieldset",
+      "label": "fieldset",
       "url": "http://localhost:3000/section/4.16.1/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20,
       "misMatchThreshold": 0.1},
     {
-      "label": "Form - text",
+      "label": "input - text",
       "url": "http://localhost:3000/section/4.16.2/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - email",
+      "label": "input - email",
       "url": "http://localhost:3000/section/4.16.3/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - number",
+      "label": "input - number",
       "url": "http://localhost:3000/section/4.16.4/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - range",
+      "label": "input - range",
       "url": "http://localhost:3000/section/4.16.5/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - textarea",
+      "label": "textarea",
       "url": "http://localhost:3000/section/4.16.6/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - select",
+      "label": "select",
       "url": "http://localhost:3000/section/4.16.7/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - label",
+      "label": "label",
       "url": "http://localhost:3000/section/4.16.8/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - radio",
+      "label": "input - radio",
       "url": "http://localhost:3000/section/4.16.9/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - checkbox",
+      "label": "input - checkbox",
       "url": "http://localhost:3000/section/4.16.10/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - button",
+      "label": "button",
       "url": "http://localhost:3000/section/4.16.11/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - color",
+      "label": "input - color",
       "url": "http://localhost:3000/section/4.16.12/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - date",
+      "label": "input - date",
       "url": "http://localhost:3000/section/4.16.13/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - datetime-local",
+      "label": "input - datetime-local",
       "url": "http://localhost:3000/section/4.16.14/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - file",
+      "label": "input - file",
       "url": "http://localhost:3000/section/4.16.15/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - image",
+      "label": "input - image",
       "url": "http://localhost:3000/section/4.16.16/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - month",
+      "label": "input - month",
       "url": "http://localhost:3000/section/4.16.17/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - password",
+      "label": "input - password",
       "url": "http://localhost:3000/section/4.16.18/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - reset",
+      "label": "input - reset",
       "url": "http://localhost:3000/section/4.16.19/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - search",
+      "label": "input - search",
       "url": "http://localhost:3000/section/4.16.20/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - submit",
+      "label": "input - submit",
       "url": "http://localhost:3000/section/4.16.21/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - tel",
+      "label": "input - tel",
       "url": "http://localhost:3000/section/4.16.22/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - time",
+      "label": "input - time",
       "url": "http://localhost:3000/section/4.16.23/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - url",
+      "label": "input - url",
       "url": "http://localhost:3000/section/4.16.24/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Form - week",
+      "label": "input - week",
       "url": "http://localhost:3000/section/4.16.25/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     }
   ],
   "paths": {
-    "bitmaps_reference": "./backstop_data/bitmaps_reference",
-    "bitmaps_test": "./backstop_data/bitmaps_test",
-    "compare_data": "./backstop_data/bitmaps_test/compare.json",
-    "casper_scripts": "./backstop_data/backstop_helpers"
+    "bitmaps_reference": "./backstop_data/bitmaps_reference/base",
+    "bitmaps_test": "./backstop_data/bitmaps_test/base",
+    "compare_data": "./backstop_data/bitmaps_test/compare.base.json",
+    "casper_scripts": "./backstop_data/backstop_helpers",
+    "html_report": "backstop_data/html_report/base",
+    "ci_report": "backstop_data/ci_report/base"
   },
   "engine": "phantomjs",
-  "report": ["browser"],
+  "report": ["browser", "CI"],
   "cliExitOnFail": false,
   "casperFlags": [],
   "debug": false,

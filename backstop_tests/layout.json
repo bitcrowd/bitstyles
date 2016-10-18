@@ -21,42 +21,46 @@
   "readyEvent": "styleguideRendered",
   "scenarios": [
     {
-      "label": "Content",
+      "label": "content",
       "url": "http://localhost:3000/section/5.1/fullscreen",
-      "selectors": [
-        ".object-section .l-content"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Grid columns",
+      "label": "grid columns",
       "url": "http://localhost:3000/section/5.2/fullscreen",
-      "selectors": [
-        ".object-section"
-      ],
+      "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Grid layout",
+      "label": "grid layout",
       "url": "http://localhost:3000/section/5.3.1/fullscreen",
       "selectors": [".object-section"],
       "delay": 20
     },
     {
-      "label": "Grid layout - responsive",
+      "label": "grid layout - responsive",
       "url": "http://localhost:3000/section/5.3.2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "input [disabled]",
+      "url": "http://localhost:3000/section/1.22.1-2/fullscreen",
       "selectors": [".object-section"],
       "delay": 20
     }
   ],
   "paths": {
-    "bitmaps_reference": "./backstop_data/bitmaps_reference",
-    "bitmaps_test": "./backstop_data/bitmaps_test",
-    "compare_data": "./backstop_data/bitmaps_test/compare.json",
-    "casper_scripts": "./backstop_data/backstop_helpers"
+    "bitmaps_reference": "./backstop_data/bitmaps_reference/layout",
+    "bitmaps_test": "./backstop_data/bitmaps_test/layout",
+    "compare_data": "./backstop_data/bitmaps_test/compare.layout.json",
+    "casper_scripts": "./backstop_data/backstop_helpers",
+    "html_report": "backstop_data/html_report/layout",
+    "ci_report": "backstop_data/ci_report/layout"
   },
   "engine": "phantomjs",
-  "report": ["browser"],
+  "report": ["browser", "CI"],
   "cliExitOnFail": false,
   "casperFlags": [],
   "debug": false,

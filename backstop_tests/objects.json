@@ -1,0 +1,286 @@
+{
+  "id": "objects",
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "misMatchThreshold" : 0.1,
+  "readyEvent": "styleguideRendered",
+  "scenarios": [
+    {
+      "label": "button",
+      "url": "http://localhost:3000/section/1.1.1-1/fullscreen",
+      "selectors": [".object-section .o-button"],
+      "delay": 20
+    },
+    {
+      "label": "button [hover]",
+      "url": "http://localhost:3000/section/1.1.1-2/fullscreen",
+      "selectors": [".object-section .o-button.pseudo-class-hover"],
+      "delay": 20
+    },
+    {
+      "label": "button [focus]",
+      "url": "http://localhost:3000/section/1.1.1-3/fullscreen",
+      "selectors": [".object-section .o-button.pseudo-class-focus"],
+      "delay": 20
+    },
+    {
+      "label": "button [disabled]",
+      "url": "http://localhost:3000/section/1.1.1-4/fullscreen",
+      "selectors": [".object-section .o-button.pseudo-class-disabled"],
+      "delay": 20
+    },
+    {
+      "label": "button with icon",
+      "url": "http://localhost:3000/section/1.1.2-1/fullscreen",
+      "selectors": [".object-section .o-button"],
+      "delay": 20
+    },
+    {
+      "label": "button with icon [hover]",
+      "url": "http://localhost:3000/section/1.1.2-2/fullscreen",
+      "selectors": [".object-section .o-button.pseudo-class-hover"],
+      "delay": 20
+    },
+    {
+      "label": "button with icon [focus]",
+      "url": "http://localhost:3000/section/1.1.3-3/fullscreen",
+      "selectors": [".object-section .o-button.pseudo-class-focus"],
+      "delay": 20
+    },
+    {
+      "label": "button reversed icon",
+      "url": "http://localhost:3000/section/1.1.2-1/fullscreen",
+      "selectors": [".object-section .o-button"],
+      "delay": 20
+    },
+    {
+      "label": "button reversed icon [hover]",
+      "url": "http://localhost:3000/section/1.1.2-2/fullscreen",
+      "selectors": [".object-section .o-button.pseudo-class-hover"],
+      "delay": 20
+    },
+    {
+      "label": "button reversed icon [focus]",
+      "url": "http://localhost:3000/section/1.1.3-3/fullscreen",
+      "selectors": [".object-section .o-button.pseudo-class-focus"],
+      "delay": 20
+    },
+    {
+      "label": "icon button",
+      "url": "http://localhost:3000/section/1.2-1/fullscreen",
+      "selectors": [".object-section .o-button--icon"],
+      "delay": 20
+    },
+    {
+      "label": "icon button [hover]",
+      "url": "http://localhost:3000/section/1.2-2/fullscreen",
+      "selectors": [".object-section .o-button--icon.pseudo-class-hover"],
+      "delay": 20
+    },
+    {
+      "label": "icon button [focus]",
+      "url": "http://localhost:3000/section/1.2-3/fullscreen",
+      "selectors": [".object-section .o-button--icon.pseudo-class-focus"],
+      "delay": 20
+    },
+    {
+      "label": "icon - default",
+      "url": "http://localhost:3000/section/1.3-1/fullscreen",
+      "selectors": [".object-section .o-icon"],
+      "delay": 20
+    },
+    {
+      "label": "icon - small",
+      "url": "http://localhost:3000/section/1.3-2/fullscreen",
+      "selectors": [".object-section .o-icon--small"],
+      "delay": 20
+    },
+    {
+      "label": "icon - medium",
+      "url": "http://localhost:3000/section/1.3-3/fullscreen",
+      "selectors": [".object-section .o-icon--medium"],
+      "delay": 20
+    },
+    {
+      "label": "icon - large",
+      "url": "http://localhost:3000/section/1.3-4/fullscreen",
+      "selectors": [".object-section .o-icon--large"],
+      "delay": 20
+    },
+    {
+      "label": "topbar",
+      "url": "http://localhost:3000/section/1.6/fullscreen",
+      "selectors": [".object-section .l-topbar"],
+      "delay": 100},
+    {
+      "label": "clearfix",
+      "url": "http://localhost:3000/section/1.7/fullscreen",
+      "selectors": [".object-section .o-clearfix"],
+      "delay": 20
+    },
+    {
+      "label": "wordbreak",
+      "url": "http://localhost:3000/section/1.8/fullscreen",
+      "selectors": [".object-section .o-break-long-words"],
+      "delay": 20
+    },
+    {
+      "label": "expander",
+      "url": "http://localhost:3000/section/1.9/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20,
+      "onReadyScript": "clickButton"
+    },
+    {
+      "label": "flex",
+      "url": "http://localhost:3000/section/1.10/fullscreen",
+      "selectors": [".object-section .o-flex"],
+      "delay": 20
+    },
+    {
+      "label": "absolute center",
+      "url": "http://localhost:3000/section/1.11/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "vertical center",
+      "url": "http://localhost:3000/section/1.12/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "hidden",
+      "url": "http://localhost:3000/section/1.13-1/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "hidden@small",
+      "url": "http://localhost:3000/section/1.13-2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "hidden@large",
+      "url": "http://localhost:3000/section/1.13-3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "visuallyhidden",
+      "url": "http://localhost:3000/section/1.14/fullscreen",
+      "selectors": [".object-section .o-button"],
+      "delay": 20
+    },
+    {
+      "label": "truncate with ellipsis",
+      "url": "http://localhost:3000/section/1.15/fullscreen",
+      "selectors": [".object-section .l-grid-2-of-12"],
+      "delay": 20
+    },
+    {
+      "label": "absolute cover",
+      "url": "http://localhost:3000/section/1.16/fullscreen",
+      "selectors": [".object-section .o-absolute-cover"],
+      "delay": 20
+    },
+    {
+      "label": "bordered header",
+      "url": "http://localhost:3000/section/1.17/fullscreen",
+      "selectors": [".object-section .o-bordered-header"],
+      "delay": 20
+    },
+    {
+      "label": "fixed ratio",
+      "url": "http://localhost:3000/section/1.18/fullscreen",
+      "selectors": [".object-section .o-fixed-ratio"],
+      "delay": 20
+    },
+    {
+      "label": "list - reset",
+      "url": "http://localhost:3000/section/1.19-1/fullscreen",
+      "selectors": [".object-section .o-list-reset"],
+      "delay": 20
+    },
+    {
+      "label": "list - reset bullets only",
+      "url": "http://localhost:3000/section/1.19-2/fullscreen",
+      "selectors": [".object-section .o-list-reset--bullets-only"],
+      "delay": 20
+    },
+    {
+      "label": "media",
+      "url": "http://localhost:3000/section/1.21/fullscreen",
+      "selectors": [".object-section .o-media"],
+      "delay": 20
+    },
+    {
+      "label": "input - text",
+      "url": "http://localhost:3000/section/1.22.1/fullscreen",
+      "selectors": [
+        ".object-section"
+      ],
+      "delay": 20
+    },
+    {
+      "label": "input - select",
+      "url": "http://localhost:3000/section/1.22.2/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "input - checkbox",
+      "url": "http://localhost:3000/section/1.22.3/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "label",
+      "url": "http://localhost:3000/section/1.23/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "block",
+      "url": "http://localhost:3000/section/1.25/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    },
+    {
+      "label": "link",
+      "url": "http://localhost:3000/section/1.26/fullscreen",
+      "selectors": [".object-section"],
+      "delay": 20
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "./backstop_data/bitmaps_reference/objects",
+    "bitmaps_test": "./backstop_data/bitmaps_test/objects",
+    "compare_data": "./backstop_data/bitmaps_test/compare.objects.json",
+    "casper_scripts": "./backstop_data/backstop_helpers",
+    "html_report": "backstop_data/html_report/objects",
+    "ci_report": "backstop_data/ci_report/objects"
+  },
+  "engine": "phantomjs",
+  "report": ["browser", "CI"],
+  "cliExitOnFail": false,
+  "casperFlags": [],
+  "debug": false,
+  "port": 3001
+}
