@@ -1,24 +1,20 @@
-# Summary
+### Summary
+
 Fixes # .
 
-# Changes
-
-The following changes are proposed in this pull request:
+The following changes are contained in this pull request:
 - x
 - y
 - z
 
-# Checklist
-
-Have any **object** or **trumps** components been updated? (delete this if not)
+### Changes to objects & trumps
 
 - [ ] Styleguide documentation has been updated.
 - [ ] `backstop.json` file has been updated
-- [ ] `gulp test:build` script has been sucessfully run and new/changed images committed
-- [ ] `gulp stats` script run and updated `stats/css.json` commited
+- [ ] `npm run test:build` script has been sucessfully run and new/changed images committed
+- [ ] `npm run stats` script run and updated `stats/css.json` commited
 
-Has **linting** and **testing** been conducted?
+### Linting and testing
 
-- [ ] `gulp test:run` script has been run and visual tests pass
-- [ ] `gulp lint:scss` script has been run without errors
-- [ ] `gulp lint:js` script has been run without errors
+- [ ] `npm run test` script has been run and visual tests pass
+- [ ] `npm run checks` script has been run without errors

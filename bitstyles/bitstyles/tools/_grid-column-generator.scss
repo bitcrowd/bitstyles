@@ -14,27 +14,20 @@
 
     // If there is only one column...
     @if ($columns == 1) {
-
       .#{$bitstyles-namespace}l-grid-1-of-1#{$breakpoint} {
         width: 100%; /* stylelint-disable-line declaration-no-important */
       }
-
     }
 
     @else {
-
       // For each column create the appropiate class
       @for $i from 1 to ($column-item + 1) {
-
         /* stylelint-disable max-nesting-depth */
         .#{$bitstyles-namespace}l-grid-#{$i}-of-#{$column-item}#{$breakpoint} {
           width: ($i / $column-item) * 100%; /* stylelint-disable-line declaration-no-important */
         }
         /* stylelint-enable max-nesting-depth */
-
       }
-
     }
-
   }
 }

@@ -1,0 +1,11 @@
+{
+  "use": ["stylelint", "postcss-bem-linter", "postcss-reporter"],
+  "input": "bitstyles/bitstyles/**/*.scss",
+  "local-plugins": true,
+  "replace": true,
+  "syntax": "postcss-scss",
+  "postcss-bem-linter": {
+    "componentName": "^[a-zA-Z0-9-]+$",
+    "componentSelectors": "\\.#{\\$bitstyles-namespace}(l-|c-|o-|t-|is-|has-|js-){componentName}(?:__[a-zA-Z0-9-]+)?(?:--[a-zA-Z0-9-]+)?(?:\\[.+\\])?"
+  }
+}
