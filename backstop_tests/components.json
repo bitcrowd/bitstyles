@@ -19,19 +19,16 @@
   ],
   "misMatchThreshold" : 0.1,
   "readyEvent": "styleguideRendered",
+  "fileNameTemplate": "{configId}_{scenarioLabel}_{viewportLabel}",
   "scenarios": [
     {
       "label": "modal",
       "url": "http://localhost:3000/section/6.1/fullscreen",
-      "selectors": ["document"],
-      "delay": 20,
       "onReadyScript": "clickLink"
     },
     {
       "label": "modal - dialog",
       "url": "http://localhost:3000/section/6.2/fullscreen",
-      "selectors": ["document"],
-      "delay": 20,
       "onReadyScript": "clickLink"
     }
   ],
