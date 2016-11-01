@@ -1,0 +1,59 @@
+{
+  "id": "layout",
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "misMatchThreshold" : 0.1,
+  "readyEvent": "styleguideRendered",
+  "fileNameTemplate": "{configId}_{scenarioLabel}_{viewportLabel}",
+  "scenarios": [
+    {
+      "label": "content",
+      "url": "http://localhost:3000/section/5.1/fullscreen",
+      "selectors": [".object-section"]
+    },
+    {
+      "label": "grid columns",
+      "url": "http://localhost:3000/section/5.2/fullscreen",
+      "selectors": [".object-section"]
+    },
+    {
+      "label": "grid layout",
+      "url": "http://localhost:3000/section/5.3.1/fullscreen",
+      "selectors": [".object-section"]
+    },
+    {
+      "label": "grid layout - responsive",
+      "url": "http://localhost:3000/section/5.3.2/fullscreen",
+      "selectors": [".object-section"]
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "./backstop_data/bitmaps_reference/layout",
+    "bitmaps_test": "./backstop_data/bitmaps_test/layout",
+    "compare_data": "./backstop_data/bitmaps_test/compare.layout.json",
+    "casper_scripts": "./backstop_data/backstop_helpers",
+    "html_report": "backstop_data/html_report/layout",
+    "ci_report": "backstop_data/ci_report/layout"
+  },
+  "engine": "phantomjs",
+  "report": ["browser", "CI"],
+  "cliExitOnFail": false,
+  "casperFlags": [],
+  "debug": false,
+  "port": 3001
+}
