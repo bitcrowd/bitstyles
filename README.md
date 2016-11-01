@@ -12,7 +12,7 @@ Github release (not from master), and you will need read access to the repo.
 
 ### Bower
 ```shell
-bower install git@github.com:bitcrowd/bitstyles.git#v0.7.4 --save
+bower install git@github.com:bitcrowd/bitstyles.git#0.7.5 --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
@@ -53,7 +53,7 @@ config.assets.paths << Rails.root.join("bower_components", "bitstyles", "bitstyl
 
 ### npm
 ```shell
-npm install git+ssh://github.com/bitcrowd/bitstyles.git#v0.7.4 --save
+npm install git+ssh://github.com/bitcrowd/bitstyles.git#0.7.5 --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
