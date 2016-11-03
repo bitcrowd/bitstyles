@@ -1,6 +1,6 @@
 {
   "use": ["stylelint", "postcss-bem-linter", "postcss-reporter"],
-  "input": "bitstyles/bitstyles/**/*.scss",
+  "input": "./scss/**/*.scss",
   "local-plugins": true,
   "replace": true,
   "syntax": "postcss-scss",

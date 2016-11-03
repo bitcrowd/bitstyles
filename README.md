@@ -18,7 +18,7 @@ bower install git@github.com:bitcrowd/bitstyles.git#0.7.5 --save
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
 
 ```
-bower_components/bitstyles/bitstyles
+bower_components/bitstyles/scss
 ```
 
 If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
@@ -27,7 +27,7 @@ If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
 gulp.task('stylesheet', function(){
   return gulp.src('app/css/main.scss')
     .pipe(sass({
-      includePaths: ['bower_components/bitstyles/bitstyles']
+      includePaths: ['bower_components/bitstyles/scss']
     }).on('error', sass.logError));
 }
 ```
@@ -59,7 +59,7 @@ npm install git+ssh://github.com/bitcrowd/bitstyles.git#0.7.5 --save
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
 
 ```
-node_modules/bitstyles/bitstyles
+node_modules/bitstyles/scss
 ```
 
 If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
@@ -68,7 +68,7 @@ If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
 gulp.task('stylesheet', function(){
   return gulp.src('app/css/main.scss')
     .pipe(sass({
-      includePaths: ['node_modules/bitstyles/bitstyles']
+      includePaths: ['node_modules/bitstyles/scss']
     }).on('error', sass.logError));
 }
 ```
