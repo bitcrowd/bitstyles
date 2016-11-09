@@ -1,7 +1,7 @@
 #!/bin/sh
 
 styleguide \
-  --kss-source 'bitstyles/**/*.scss' \
+  --kss-source 'scss/**/*.scss' \
   --style-source 'build/bitstyles_styleguide.css' \
   --output 'styleguide' \
   --overviewPath 'README.md' \

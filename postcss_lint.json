@@ -1,8 +1,8 @@
 {
   "use": ["stylelint", "postcss-bem-linter", "postcss-reporter"],
-  "input": "bitstyles/bitstyles/**/*.scss",
+  "input": "./scss/**/*.scss",
+  "dir": "./tmp/",
   "local-plugins": true,
-  "replace": true,
   "syntax": "postcss-scss",
   "postcss-bem-linter": {
     "componentName": "^[a-zA-Z0-9-]+$",

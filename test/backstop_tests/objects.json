@@ -234,12 +234,12 @@
     }
   ],
   "paths": {
-    "bitmaps_reference": "./backstop_data/bitmaps_reference/objects",
-    "bitmaps_test": "./backstop_data/bitmaps_test/objects",
-    "compare_data": "./backstop_data/bitmaps_test/compare.objects.json",
-    "casper_scripts": "./backstop_data/backstop_helpers",
-    "html_report": "backstop_data/html_report/objects",
-    "ci_report": "backstop_data/ci_report/objects"
+    "bitmaps_reference": "test/backstop_data/bitmaps_reference/objects",
+    "bitmaps_test": "test/backstop_data/bitmaps_test/objects",
+    "compare_data": "test/backstop_data/bitmaps_test/compare.objects.json",
+    "casper_scripts": "test/backstop_data/backstop_helpers",
+    "html_report": "test/backstop_data/html_report/objects",
+    "ci_report": "test/backstop_data/ci_report/objects"
   },
   "engine": "phantomjs",
   "report": ["browser", "CI"],

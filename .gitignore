@@ -1,9 +1,7 @@
 .sass-cache
 node_modules
-bitmaps_test
 .npm
 npm-debug.log*
-specificity-graph
 /.bundle/
 /.yardoc
 /Gemfile.lock
@@ -15,5 +13,7 @@ specificity-graph
 /tmp/
 
 styleguide/*
-backstop_data/html_report/
-backstop_data/ci_report/
+bitmaps_test
+html_report
+ci_report
+specificity_graph
