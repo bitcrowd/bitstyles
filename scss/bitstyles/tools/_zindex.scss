@@ -1,27 +1,42 @@
 // Z-index
 //
-// This mixin allows you to assign z-index values in a stacking context of
-// your choice.
+// This mixin helps you assign z-index values in a conrolled manner, avoiding
+// situations where you specify ever-escalating z-indices.
+//
 // Solves problems outlined at:
 // <http://philipwalton.com/articles/what-no-one-told-you-about-z-index/>
 //
-// Define a global variable (such as $globalz). Assign to it a sass list of
-// stacking contexts.
-// $globalz: stackcontext1;
-// or
-// $globalz: stackcontext1,stackcontext2,stackcontext3;
+// Define a global variable consisting of a sass list of names
+// `$globalz: block__element-name-bottom, block__element-name-top;`
+//
 // Items further to the right are higher in the stack.
 //
-// Now when you assign a zindex in your Sass, you can choose which stacking
-// context it will be assigned to.
-// .class {
-//   z-index: z($globalz, stackcontext1);
+// Now when you assign a zindex in your Sass, you can use its name to specify where it
+// sits in the z-index stacking order.
+//
+// ```scss
+// .block__element-name-bottom {
+//   z-index: z($globalz, block__element-name-bottom);
 // }
 //
-// The function will then loop through each item, in each stacking context, and
-// assign it a z-index value, based on its declared order in your Sass.
+// .block__element-name-top {
+//   z-index: z($globalz, block__element-name-top);
+// }
+// ```
 //
-// Styleguide 2.10
+// outputs:
+//
+// ```css
+// .block__element-name-bottom {
+//   z-index: 1;
+// }
+//
+// .block__element-name-top {
+//   z-index: 2;
+// }
+// ```
+//
+// Styleguide 1.19
 
 @function z($list, $element) {
   $z-index: index($list, $element);

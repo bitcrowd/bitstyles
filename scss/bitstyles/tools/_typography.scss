@@ -1,3 +1,13 @@
+// Typographic helpers
+//
+// Styleguide 1.15
+
+// Generic heading
+//
+// Shared styles for heading elements, and object classes that match headings.
+//
+// Styleguide 1.15.1
+
 @mixin generic-heading {
   margin: 0 0 $bitstyles-spacing;
   font-family: $bitstyles-font-family-header;
@@ -8,6 +18,12 @@
     font-family: $bitstyles-font-family-header-loaded;
   }
 }
+
+// Font-size helper
+//
+// Sets font-size using `rem`s with `px` fallback
+//
+// Styleguide 1.15.2
 
 @mixin font-size($pixel-size, $browser-context: $bitstyles-font-size-base-small) {
   /* stylelint-disable declaration-block-no-duplicate-properties */

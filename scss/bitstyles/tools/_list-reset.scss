@@ -5,7 +5,7 @@
 //
 // Optional parameters to prevent removal of margins and padding.
 //
-// Styleguide 2.13
+// Styleguide 1.10
 
 @mixin list-reset($spacing: true) {
   @if $spacing {
