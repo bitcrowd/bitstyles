@@ -51,10 +51,10 @@
   }
 
   &:disabled {
-    background: $bitstyles-button-background-color-disabled;
-    border-color: $bitstyles-button-border-color-disabled;
     color: $bitstyles-button-color-disabled;
     cursor: default;
+    background: $bitstyles-button-background-color-disabled;
+    border-color: $bitstyles-button-border-color-disabled;
   }
 }
 

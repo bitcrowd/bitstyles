@@ -31,19 +31,19 @@
 
 .#{$bitstyles-namespace}o-input--text {
   padding: $bitstyles-input-padding;
+  color: $bitstyles-input-color;
   background-color: $bitstyles-input-background;
   border: $bitstyles-input-border;
   border-radius: $bitstyles-input-border-radius;
-  color: $bitstyles-input-color;
 
   &::placeholder {
     color: $bitstyles-input-placeholder-color;
   }
 
   &:disabled {
-    background: $bitstyles-input-background-color-disabled;
     color: $bitstyles-input-color-disabled;
     cursor: default;
+    background: $bitstyles-input-background-color-disabled;
   }
 
   &:active,
