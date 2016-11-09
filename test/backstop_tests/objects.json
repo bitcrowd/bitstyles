@@ -122,12 +122,6 @@
       "selectors": [".object-section .o-break-long-words"]
     },
     {
-      "label": "expander",
-      "url": "http://localhost:3000/section/1.9/fullscreen",
-      "selectors": [".object-section"],
-      "onReadyScript": "clickButton"
-    },
-    {
       "label": "flex",
       "url": "http://localhost:3000/section/1.10/fullscreen",
       "selectors": [".object-section .o-flex"]
