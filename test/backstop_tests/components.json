@@ -30,6 +30,12 @@
       "label": "modal - dialog",
       "url": "http://localhost:3000/section/6.2/fullscreen",
       "onReadyScript": "clickLink"
+    },
+    {
+      "label": "expander",
+      "url": "http://localhost:3000/section/6.3/fullscreen",
+      "selectors": [".object-section"],
+      "onReadyScript": "clickButton"
     }
   ],
   "paths": {
