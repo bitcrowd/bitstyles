@@ -23,7 +23,7 @@ html {
 // <h5>Header 5</h5>
 // <h6>Header 6</h6>
 //
-// Styleguide 4.1
+// Styleguide 2.8
 
 h1,
 h2,
@@ -95,7 +95,7 @@ h6 {
 // markup:
 // <p>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
 //
-// Styleguide 4.2
+// Styleguide 2.9
 
 p {
   margin: 0 0 $bitstyles-spacing;
@@ -108,7 +108,8 @@ p {
 // markup:
 // <address>Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</address
 //
-// Styleguide 4.4
+// Styleguide 2.10
+
 address {
   font-style: normal;
 }
@@ -123,7 +124,7 @@ address {
 //   <dd>Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon.</dd>
 // </dl>
 //
-// Styleguide 4.5
+// Styleguide 2.11
 
 dt {
   font-weight: $bitstyles-font-weight-bold;
@@ -140,7 +141,7 @@ dt {
 //   <li>Gummies cheesecake oat cake sugar.</li>
 // </ul>
 //
-// Styleguide 4.6
+// Styleguide 2.12
 
 // List - Ordered
 //
@@ -153,7 +154,7 @@ dt {
 //   <li>Gummies cheesecake oat cake sugar.</li>
 // </ol>
 //
-// Styleguide 4.7
+// Styleguide 2.12
 
 // Blockquote
 //
@@ -162,167 +163,167 @@ dt {
 // markup:
 // <blockquote>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly</blockquote>
 //
-// Styleguide 4.8
+// Styleguide 2.12
 
 // Typographic styles
 //
 // Inline elements that have a default typographic representation in a browser.
 //
-// Styleguide 4.9
+// Styleguide 2.13
 
 // strong
 //
 // markup:
 // <strong>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly</strong>
 //
-// Styleguide 4.9.1
+// Styleguide 2.13.1
 
 // em
 //
 // markup:
 // <em>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</em>
 //
-// Styleguide 4.9.2
+// Styleguide 2.13.2
 
 // pre
 //
 // markup:
 // <pre>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</pre>
 //
-// Styleguide 4.9.3
+// Styleguide 2.13.3
 
 // code
 //
 // markup:
 // <code>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</code>
 //
-// Styleguide 4.9.4
+// Styleguide 2.13.4
 
 // kbd
 //
 // markup:
 // <kbd>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</kbd>
 //
-// Styleguide 4.9.5
+// Styleguide 2.13.5
 
 // samp
 //
 // markup:
 // <samp>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</samp>
 //
-// Styleguide 4.9.6
+// Styleguide 2.13.6
 
 // var
 //
 // markup:
 // <var>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</var>
 //
-// Styleguide 4.9.7
+// Styleguide 2.13.7
 
 // cite
 //
 // markup:
 // <cite>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</cite>
 //
-// Styleguide 4.9.8
+// Styleguide 2.13.8
 
 // del
 //
 // markup:
 // <del>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</del>
 //
-// Styleguide 4.9.9
+// Styleguide 2.13.9
 
 // abbr
 //
 // markup:
 // <abbr>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</abbr>
 //
-// Styleguide 4.9.10
+// Styleguide 2.13.10
 
 // i
 //
 // markup:
 // <i>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</i>
 //
-// Styleguide 4.9.11
+// Styleguide 2.13.11
 
 // b
 //
 // markup:
 // <b>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</b>
 //
-// Styleguide 4.9.12
+// Styleguide 2.13.12
 
 // ins
 //
 // markup:
 // <ins>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</ins>
 //
-// Styleguide 4.9.13
+// Styleguide 2.13.13
 
 // dfn
 //
 // markup:
 // <dfn>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</dfn>
 //
-// Styleguide 4.9.14
+// Styleguide 2.13.14
 
 // small
 //
 // markup:
 // <small>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</small>
 //
-// Styleguide 4.9.15
+// Styleguide 2.13.15
 
 // sub
 //
 // markup:
 // <sub>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</sub>
 //
-// Styleguide 4.9.16
+// Styleguide 2.13.16
 
 // sup
 //
 // markup:
 // <sup>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</sup>
 //
-// Styleguide 4.9.17
+// Styleguide 2.13.17
 
 // big
 //
 // markup:
 // <big>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</big>
 //
-// Styleguide 4.9.18
+// Styleguide 2.13.18
 
 // s
 //
 // markup:
 // <s>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</s>
 //
-// Styleguide 4.9.19
+// Styleguide 2.13.19
 
 // strike
 //
 // markup:
 // <strike>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</strike>
 //
-// Styleguide 4.9.20
+// Styleguide 2.13.20
 
 // q
 //
 // markup:
 // <q>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</q>
 //
-// Styleguide 4.9.21
+// Styleguide 2.13.21
 
 // time
 //
 // markup:
 // <time>20:57</time>
 //
-// Styleguide 4.9.22
+// Styleguide 2.13.22
 
 // Table
 //
@@ -349,6 +350,6 @@ dt {
 //   </tbody>
 // </table>
 //
-// Styleguide 4.10
+// Styleguide 2.14
 
 /* stylelint-enable selector-no-type */
