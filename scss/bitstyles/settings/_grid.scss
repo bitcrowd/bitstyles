@@ -1,15 +1,1 @@
-// These column variables can be lists — (10, 12) will give multiple grid systems: every permutation of 10 columns
-// (1/10, 2/10, 3/10… 9/10, 10/10) and 12 columns (1/12, 2/12, 3/12… 11/12, 12/12).
-// We normally only need one grid system (i.e. one set of columns).
-$bitstyles-widths-columns: (12) !default;
-$bitstyles-widths-columns-responsive: (12) !default;
-
-// If a breakpoint is defined here and the name matches one defined in
-// settings/layout, layout/grid-columns will generate a grid layout for that
-// breakpoint.
-// If this is not defined, no responsive breakpoints will be generated.
-$bitstyles-grid-breakpoints: (
-  'medium-and-up'
-) !default;
-
 $bitstyles-grid-gutter: $bitstyles-spacing-horizontal !default;
