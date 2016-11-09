@@ -1,103 +1,106 @@
-// Grid Layouts
+// Grid Systems
 //
-// **IMPORTANT!** This layout module requires the following files:
-// - `layout/grid-columns`
-// - `tools/grid-column-generator`
+// Responsive grid system using inline-block (no floats, no flexbox).
+// Note this means whitespace is important. If necessary, use html comments between
+// each `.grid__item` to remove any whitespace, otherwise the browser will display
+// a small gap between grid items.
+//
+// Each grid item needs the class `.l-grid__item` and a width class. With current defaults,
+// the widths create a 12-column system e.g. 1-of-12, 2-of-12, 3-of-12 … 11-of-12, 12-of-12.
+//
+// Dependencies:
+// - `layout/width`
+// - `tools/width`
 //
 // Styleguide 5.3
 
-// Grid layout - basic
+// Grid system — base
 //
-// Responsive grid using a inline-block grid system (no floats, no flexbox). Note this means whitespace is important
-// — use html comments between each `.grid__item` to remove any whitespace otherwise the browser will display them as a small gap!
-//
-// Each column needs the class `.grid__item` and a width class. With current defaults,
-// the widths create a 12-column system e.g. 1-of-12, 2-of-12, 3-of-12…, 11-of-12.
-//
+// Proportional widths but not responsive.
 //
 // markup:
 // <ul class="l-grid">
-//    <li class="l-grid__item l-grid-1-of-12">
+//    <li class="l-grid__item l-width--1-of-12">
 //        <div class="background-grey">1-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-11-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--11-of-12">
 //        <div>11-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-2-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--2-of-12">
 //        <div class="background-grey">2-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-10-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--10-of-12">
 //        <div>10-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-3-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--3-of-12">
 //        <div class="background-grey">3-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-9-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--9-of-12">
 //        <div>9-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-4-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--4-of-12">
 //        <div class="background-grey">4-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-8-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--8-of-12">
 //        <div>8-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-5-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--5-of-12">
 //        <div class="background-grey">5-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-7-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--7-of-12">
 //        <div>7-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-6-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--6-of-12">
 //        <div class="background-grey">6-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-6-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--6-of-12">
 //        <div>6-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-7-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--7-of-12">
 //        <div class="background-grey">7-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-5-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--5-of-12">
 //        <div>5-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-8-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--8-of-12">
 //        <div class="background-grey">8-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-4-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--4-of-12">
 //        <div>4-of-12</div>
 //     </li><!--
-// --><li class="l-grid__item l-grid-9-of-12">
+// --><li class="l-grid__item l-width--9-of-12">
 //        <div class="background-grey">9-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-3-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--3-of-12">
 //        <div>3-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-10-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--10-of-12">
 //        <div class="background-grey">10-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-2-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--2-of-12">
 //        <div>2-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-11-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--11-of-12">
 //        <div class="background-grey">11-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-1-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--1-of-12">
 //        <div>1-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-12-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--12-of-12">
 //        <div class="background-grey">12-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-3-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--3-of-12">
 //        <div class="background-grey">3-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-3-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--3-of-12">
 //        <div>3-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-3-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--3-of-12">
 //        <div class="background-grey">3-of-12</div>
-//      </li><!--
-// --><li class="l-grid__item l-grid-3-of-12">
+//    </li><!--
+// --><li class="l-grid__item l-width--3-of-12">
 //        <div>3-of-12</div>
-//      </li>
+//    </li>
 // </ul>
 //
 // Styleguide 5.3.1
@@ -118,16 +121,28 @@
   vertical-align: top;
 }
 
-// Grid layout - responsive
+// Grid system - responsive
 //
-// Grids can also be used responsively. Append the name of a breakpoint to the
-// end of a grid item to have it activate only at that breakpoint. Multiple
-// l-grid-item/breakpoints combinations can be used
+// The grid system can also be used responsively. Append the name of a breakpoint
+// to the end of a width class to have it activate only at that breakpoint. Multiple
+// l-width--item/breakpoints combinations can be used to define a grid item’s width
+// at various breakpoints (for all breakpoints you define in `$bitstyles-widths-breakpoints`).
+//
+// This is commonly used to set a default mobile-first width of `.l-width--12-of-12`
+// and a larger-screen width of e.g. `.l-width--4-of-12-medium-and-up` for a
+// three-column layout that becomes a single-column stack on small screens.
 //
 // markup:
 // <ul class="l-grid">
-//   <li class="l-grid__item l-grid-6-of-12 l-grid-10-of-12-medium-and-up"><div class="background-grey">6-of-12 / 10-of-12-medium-and-up</div></li><!--
-//   --><li class="l-grid__item l-grid-6-of-12 l-grid-2-of-12-medium-and-up"><div>6-of-12 / 2-of-12-medium-and-up</div></li>
+//   <li class="l-grid__item l-width--12-of-12 l-width--4-of-12-medium-and-up">
+//     <div class="background-grey">6-of-12 / 2-of-12-medium-and-up</div>
+//   </li><!--
+//--><li class="l-grid__item l-width--12-of-12 l-width--4-of-12-medium-and-up">
+//     <div>6-of-12 / 2-of-12-medium-and-up</div>
+//   </li><!--
+//--><li class="l-grid__item l-width--12-of-12 l-width--4-of-12-medium-and-up">
+//     <div class="background-grey">6-of-12 / 2-of-12-medium-and-up</div>
+//   </li>
 // </ul>
 //
 // Styleguide 5.3.2

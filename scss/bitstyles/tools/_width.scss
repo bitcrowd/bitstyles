@@ -1,0 +1,30 @@
+// Widths
+//
+// Pass in a list of one or more fractions that you need a row split into e.g. if you need
+// to split some rows into 10 sections and others into 12 sections, call the width mixin
+// with:
+//
+// `$fractions: (10, 12)`
+//
+// From that this mixin will generate width classes in the format:
+//
+// `.l-width--1-of-10` through to `.l-width--10-of-10` and
+// `.l-width--1-of-12` through to `.l-width--12-of-12`
+//
+// Normally it’s best to set the `$bitstyles-widths` and
+// `$bitstyles-widths-breakpoints` variables, and then let the sass in `layout/width`
+// generate your width classes at various breakpoints (see the layout section on widths).
+//
+// Styleguide 2.14
+
+@mixin width($fractions, $breakpoint: null) {
+  @each $fraction in $fractions {
+    @for $index from 1 through $fraction {
+      /* stylelint-disable max-nesting-depth */
+      .#{$bitstyles-namespace}l-width--#{$index}-of-#{$fraction}#{$breakpoint} {
+        width: ($index / $fraction) * 100%; /* stylelint-disable-line declaration-no-important */
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+}
