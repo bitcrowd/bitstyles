@@ -333,12 +333,12 @@
     }
   ],
   "paths": {
-    "bitmaps_reference": "./backstop_data/bitmaps_reference/base",
-    "bitmaps_test": "./backstop_data/bitmaps_test/base",
-    "compare_data": "./backstop_data/bitmaps_test/compare.base.json",
-    "casper_scripts": "./backstop_data/backstop_helpers",
-    "html_report": "backstop_data/html_report/base",
-    "ci_report": "backstop_data/ci_report/base"
+    "bitmaps_reference": "test/backstop_data/bitmaps_reference/base",
+    "bitmaps_test": "test/backstop_data/bitmaps_test/base",
+    "compare_data": "test/backstop_data/bitmaps_test/compare.base.json",
+    "casper_scripts": "test/backstop_data/backstop_helpers",
+    "html_report": "test/backstop_data/html_report/base",
+    "ci_report": "test/backstop_data/ci_report/base"
   },
   "engine": "phantomjs",
   "report": ["browser", "CI"],

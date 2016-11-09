@@ -228,12 +228,12 @@
     }
   ],
   "paths": {
-    "bitmaps_reference": "./backstop_data/bitmaps_reference/trumps",
-    "bitmaps_test": "./backstop_data/bitmaps_test/trumps",
-    "compare_data": "./backstop_data/bitmaps_test/compare.trumps.json",
-    "casper_scripts": "./backstop_data/backstop_helpers",
-    "html_report": "backstop_data/html_report/trumps",
-    "ci_report": "backstop_data/ci_report/trumps"
+    "bitmaps_reference": "test/backstop_data/bitmaps_reference/trumps",
+    "bitmaps_test": "test/backstop_data/bitmaps_test/trumps",
+    "compare_data": "test/backstop_data/bitmaps_test/compare.trumps.json",
+    "casper_scripts": "test/backstop_data/backstop_helpers",
+    "html_report": "test/backstop_data/html_report/trumps",
+    "ci_report": "test/backstop_data/ci_report/trumps"
   },
   "engine": "phantomjs",
   "report": ["browser", "CI"],
