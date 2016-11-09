@@ -10,7 +10,7 @@
 // .t-text-style--italic    - Italicise text.
 // .t-text-style--normal    - De-italicise text.
 //
-// Styleguide 3.6
+// Styleguide 6.8
 
 @each $style in (italic, normal) {
   .#{$bitstyles-namespace}t-text-style--#{$style} {

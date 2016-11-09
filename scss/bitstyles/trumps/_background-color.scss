@@ -9,7 +9,7 @@
 // .t-background-color--background   - Sets color to whatever is defined as your theme’s primary color.
 // .t-background-color--secondary    - Sets color to whatever is defined as your theme’s secondary color.
 //
-// Styleguide 3.9
+// Styleguide 6.1
 
 @each $name in ($background-colors) {
   .t-background-color--#{$name} {

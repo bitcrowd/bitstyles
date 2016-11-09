@@ -2,7 +2,7 @@
 //
 // Button
 //
-// Styleguide 1.1
+// Styleguide 4.7
 
 // Button - generic
 //
@@ -18,7 +18,7 @@
 // :focus       - Focus state.
 // :disabled    - Disabled state.
 //
-// Styleguide 4.7
+// Styleguide 4.7.1
 
 @import '../settings/button';
 
@@ -76,7 +76,7 @@
 // :hover       - Hover state.
 // :focus       - Focus state.
 //
-// Styleguide 1.1.2
+// Styleguide 4.7.2
 
 // Button - with icon, reversed
 //
@@ -92,7 +92,7 @@
 // :hover       - Hover state.
 // :focus       - Focus state.
 //
-// Styleguide 1.1.3
+// Styleguide 4.7.3
 
 .#{$bitstyles-namespace}o-button__icon + .#{$bitstyles-namespace}o-button__label {
   margin-left: $bitstyles-button-icon-spacing;
