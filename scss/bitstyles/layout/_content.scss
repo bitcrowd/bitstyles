@@ -2,8 +2,9 @@
 //
 // Content
 //
-// Semi-fixed-width centred content wrapper. Takes full width available up to a maximum,
-// at which point width stays the same. Always remains centred.
+// A generic wrapper for content, this ensures that there is always whitespace
+// at the edges of the viewport. It spans the full width of the screen, up to a
+// maximum set by `$bitstyles-content-max-width`, and remains centred.
 //
 // markup:
 // <div class="l-content">

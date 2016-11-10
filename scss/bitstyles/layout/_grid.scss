@@ -1,12 +1,16 @@
 // Grid Systems
 //
-// Responsive grid system using inline-block (no floats, no flexbox).
+// Responsive html grid system using inline-block (no floats, no clearfix, no flexbox).
 // Note this means whitespace is important. If necessary, use html comments between
 // each `.grid__item` to remove any whitespace, otherwise the browser will display
 // a small gap between grid items.
 //
-// Each grid item needs the class `.l-grid__item` and a width class. With current defaults,
-// the widths create a 12-column system e.g. 1-of-12, 2-of-12, 3-of-12 … 11-of-12, 12-of-12.
+// As it’s an HTML grid system (not CSS), add some wrapping elements to create rows
+// and columns (see example markup below). Each of these grid items needs the class
+// `.l-grid__item` and a width class. With current defaults, the widths provided
+// include a 12-column system e.g. 1-of-12, 2-of-12, 3-of-12 … 11-of-12, 12-of-12.
+//
+// Grids can be nested.
 //
 // Dependencies:
 // - `layout/width`
@@ -16,7 +20,8 @@
 
 // Grid system — base
 //
-// Proportional widths but not responsive.
+// In the base grid system, columns are of proportional widths (percentage of
+// the full width) but not responsive.
 //
 // markup:
 // <ul class="l-grid">
@@ -124,9 +129,10 @@
 // Grid system - responsive
 //
 // The grid system can also be used responsively. Append the name of a breakpoint
-// to the end of a width class to have it activate only at that breakpoint. Multiple
+// to the width class to have it activate only at that breakpoint. Multiple
 // l-width--item/breakpoints combinations can be used to define a grid item’s width
-// at various breakpoints (for all breakpoints you define in `$bitstyles-widths-breakpoints`).
+// at various breakpoints (for all the breakpoints you define in the
+// `$bitstyles-widths-breakpoints` Sass list).
 //
 // This is commonly used to set a default mobile-first width of `.l-width--12-of-12`
 // and a larger-screen width of e.g. `.l-width--4-of-12-medium-and-up` for a

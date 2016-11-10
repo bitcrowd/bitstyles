@@ -21,9 +21,11 @@
 
 // Tools: Functions & Mixins
 //
-// Mixins and functions. Includes mixins we later use to build objects e.g. at different breakpoints,
-// and some we use only in the background as utilities.
-// * No CSS output *
+// Mixins and functions. Includes mixins we later use to build objects
+// e.g. at different breakpoints, and some we use only in the background as
+// utilities.
+//
+// **No CSS output**
 //
 // Styleguide 1.0
 @import 'bitstyles/tools/zindex';
@@ -57,7 +59,8 @@
 
 // Base
 //
-// Unclassed elements. (Directly selects elements e.g. `<a>`, `<blockquote>`, `<address>`).
+// Unclassed elements. Directly styles elements
+// e.g. `<a>`, `<blockquote>`, `<address>`.
 //
 // sg-wrapper:
 // <div class="object-section">
@@ -75,7 +78,7 @@
 
 // Layout
 //
-// Classes that enable the high-level layout of a page.
+// Classes that create the high-level layout of a page.
 //
 // sg-wrapper:
 // <div class="object-section">
@@ -90,8 +93,11 @@
 
 // Objects
 //
-// Objects, abstractions, and design patterns (e.g. .media, .icon, .button). Cosmetic-free.
-// These are intended to be reused throughout the site, composed together as needed e.g. <div class="button expander-toggle"></div>
+// Objects, abstractions, and design patterns (e.g. .o-media, .o-icon, .o-button).
+// Relatively cosmetic-free, these are intended to be reused throughout the site
+// and composed together as needed.
+//
+// e.g. `<button class="o-button o-truncate-with-ellipsis"></button>`
 //
 // sg-wrapper:
 // <div class="object-section">
@@ -127,7 +133,11 @@
 
 // Components
 //
-// Chunks of UI e.g. the structure for a page type, a single block of UI composed of smaller objects.
+// Chunks of UI and structure for a reusable page element containing smaller
+// objects e.g. a header or sidebar element.
+//
+// These are commonly project-specific so bitstyles only includes a few very
+// generally-used components such as modals.
 //
 // sg-wrapper:
 // <div class="object-section">
@@ -144,7 +154,10 @@
 
 // Trumps
 //
-// High-specificity overrides and helper classes (e.g. .hidden {}). `!important` exists here.
+// High-specificity overrides and helper classes for creating exceptions to an
+// object or component’s standard styles e.g. `.t-margin--left`.
+//
+// `!important` sometimes exists here, and that’s ok.
 //
 // sg-wrapper:
 // <div class="object-section">
