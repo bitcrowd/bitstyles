@@ -1,12 +1,14 @@
 /** @define button */
 //
-// Button
+// Generic button.
 //
 // Styleguide 4.7
 
 // Button - generic
 //
-// Produces a larger-than-text hit target. Intended to be an action, not a link — most often a `<button>` rather than `<a href="#">`.
+// Produces a larger-than-text hit target. Intended to be an action,
+// not a link — most often a `<button>` rather than `<a href="…">` (and never
+// `<a href="#">`).
 //
 // markup:
 // <button class="o-button {$modifiers}">
@@ -69,7 +71,10 @@
 //
 // markup:
 // <button class="o-button {$modifiers}">
-//   <svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg><span class="o-button__label">Button Text</span>
+//   <svg class="o-button__icon o-icon">
+//     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
+//   </svg>
+//   <span class="o-button__label">Button Text</span>
 // </button>
 //
 //              - Base state
@@ -85,7 +90,10 @@
 //
 // markup:
 // <button class="o-button {$modifiers}">
-//   <span class="o-button__label">Button Text</span><svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg>
+//   <span class="o-button__label">Button Text</span>
+//   <svg class="o-button__icon o-icon">
+//     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
+//   </svg>
 // </button>
 //
 //              - Base state

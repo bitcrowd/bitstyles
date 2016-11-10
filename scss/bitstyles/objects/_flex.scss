@@ -2,7 +2,7 @@
 //
 // Flex
 //
-// Simple flex layout.
+// A simple flex layout.
 // Make one of the children `.o-flex__primary` to make it take as much space as is available.
 //
 // markup:
@@ -13,7 +13,7 @@
 //  <li>Some content here</li>
 // </ul>
 //
-// Styleguide 4.11
+// Styleguide 4.10
 
 .#{$bitstyles-namespace}o-flex {
   @include flex;

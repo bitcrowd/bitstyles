@@ -4,7 +4,7 @@
 // Basic styling for input elements. All inputs stretch to fill their parent —
 // their width can be constrained by the parent element.
 //
-// Styleguide 4.14
+// Styleguide 4.13
 
 @import '../settings/input';
 
@@ -21,7 +21,7 @@
 // :disabled    - Disabled state.
 // :active      - Active/focus state
 //
-// Styleguide 4.14.1
+// Styleguide 4.13.1
 
 .#{$bitstyles-namespace}o-input {
   @include block;
@@ -62,7 +62,7 @@
 //     <option value="value3">Value 3</option>
 //   </select>
 //
-// Styleguide 4.14.2
+// Styleguide 4.13.2
 
 // Form inputs - Checkbox
 //
@@ -72,7 +72,7 @@
 //      This is labeling text. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.
 //    </label>
 //
-// Styleguide 4.14.3
+// Styleguide 4.13.3
 
 .#{$bitstyles-namespace}o-input--checkbox {
   display: inline-block;

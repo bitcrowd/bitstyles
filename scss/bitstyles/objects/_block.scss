@@ -2,7 +2,8 @@
 //
 // Block
 //
-// Display an element as a block.
+// Forces and element to display as a block, when it otherwise may be `inline`/
+// `inline-block`. This can be used to force an element onto a ‘new line’.
 //
 // Markup:
 // <span class="o-block background-grey">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</span>
