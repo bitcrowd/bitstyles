@@ -70,12 +70,7 @@
 // text. Source order dictates icon position.
 //
 // markup:
-// <button class="o-button {$modifiers}">
-//   <svg class="o-button__icon o-icon">
-//     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
-//   </svg>
-//   <span class="o-button__label">Button Text</span>
-// </button>
+// <button class="o-button {$modifiers}"><svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg><span class="o-button__label">Button Text</span></button>
 //
 //              - Base state
 // :hover       - Hover state.
@@ -89,12 +84,7 @@
 // text. Source order dictates icon position.
 //
 // markup:
-// <button class="o-button {$modifiers}">
-//   <span class="o-button__label">Button Text</span>
-//   <svg class="o-button__icon o-icon">
-//     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
-//   </svg>
-// </button>
+// <button class="o-button {$modifiers}"><span class="o-button__label">Button Text</span><svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg></button>
 //
 //              - Base state
 // :hover       - Hover state.
