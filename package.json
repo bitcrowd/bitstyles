@@ -1,9 +1,8 @@
 {
   "name": "bitstyles",
-  "version": "0.7.5",
+  "version": "0.8.0",
   "description": "The Bitcrowd CSS library",
   "main": "bitstyles.scss",
-  "private": true,
   "scripts": {
     "build": "node-sass scss/bitstyles.scss -o build --output-style compact",
     "postbuild": "postcss -c postcss_build.json",
