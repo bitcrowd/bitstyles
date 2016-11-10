@@ -1,12 +1,13 @@
 // Text Align
 //
-// Overide text-align on an element
+// Overide text-align on an element.
+//
 // Named `.t-text-` for consistency with the other text/font-related trumps.
 //
 // markup:
 // <p class="{$modifiers}">Some content here</p>
 //
-//                      - Base text
+//                        - Base text
 // .t-text-align--left    - Align text left
 // .t-text-align--right   - Align text right.
 // .t-text-align--center  - Centre align text.

@@ -1,6 +1,8 @@
 // Background Colors
 //
-// Set background color. Actual classnames will vary based on colors defined in the $foreground-color variable
+// Set background color. Define which colours you require in the `$background-colors`
+// Sass list, using the names of the colours as defined in `$bitstyles-colors-theme`.
+// Default value is `background, secondary`.
 //
 // markup:
 // <p class="{$modifiers}">Some content here</p>
