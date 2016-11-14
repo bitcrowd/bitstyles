@@ -4,7 +4,7 @@
 //
 // Hide an element visually while leaving it readable & accessible by google & screenreaders.
 // Use to give more complete & understandable labels for UI e.g. display only 'next' on a button,
-// but use `.visuallyhidden` to hide a span containing a more descriptive label.
+// but use `.o-visuallyhidden` to hide a span containing a more descriptive label.
 // Available at every breakpoint set in `$visuallyhidden-breakpoints`.
 //
 // markup:
@@ -13,7 +13,7 @@
 //   <span class="o-visuallyhidden">articles</span>
 // </button>
 //
-// Styleguide 1.14
+// Styleguide 4.22
 
 @import '../settings/visuallyhidden';
 

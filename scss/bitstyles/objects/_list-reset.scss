@@ -14,7 +14,7 @@
 // o-list-reset                 - Remove padding, margin and list-style-type
 // o-list-reset--bullets-only   - Remove list-style-type only. Does not rely on `list-reset`. Useful if `list-reset` would adversely affect the margin or padding of another component.
 //
-// Styleguide 1.19
+// Styleguide 4.16
 
 .#{$bitstyles-namespace}o-list-reset {
   @include list-reset();

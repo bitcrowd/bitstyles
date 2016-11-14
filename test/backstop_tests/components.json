@@ -23,17 +23,17 @@
   "scenarios": [
     {
       "label": "modal",
-      "url": "http://localhost:3000/section/6.1/fullscreen",
+      "url": "http://localhost:3000/section/5.2/fullscreen",
       "onReadyScript": "clickLink"
     },
     {
       "label": "modal - dialog",
-      "url": "http://localhost:3000/section/6.2/fullscreen",
+      "url": "http://localhost:3000/section/5.3/fullscreen",
       "onReadyScript": "clickLink"
     },
     {
       "label": "expander",
-      "url": "http://localhost:3000/section/6.3/fullscreen",
+      "url": "http://localhost:3000/section/5.1/fullscreen",
       "selectors": [".object-section"],
       "onReadyScript": "clickButton"
     }

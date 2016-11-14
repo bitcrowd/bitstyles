@@ -1,8 +1,9 @@
 // Icon Button
 //
 // A specialised button type — (visible) content is intended to be only an icon.
-// Specify the svg `<title>` when `<use>`ing the icon element so the button has valid text to use as button label (see example markup),
-// or provide a `<span class="visuallyhidden"></span>` as sibling to the icon.
+// Specify the svg `<title>` when `<use>`ing the icon element so the button has
+// valid text to use as button label (see example markup), or provide a
+// `<span class="visuallyhidden"></span>` as sibling to the icon.
 //
 // markup:
 // <button class="o-button o-button--icon {$modifiers}">
@@ -16,7 +17,7 @@
 // :hover        - Hover state.
 // :focus        - Focus state.
 //
-// Styleguide 1.2
+// Styleguide 4.6
 
 @import '../settings/button--icon';
 

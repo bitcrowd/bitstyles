@@ -4,7 +4,7 @@
 //
 // ```@include webfont(Roboto, italic, 700, 'fonts/roboto-bold-italic');```
 //
-// Styleguide 2.15
+// Styleguide 1.8
 
 @mixin webfont($font-family, $font-style, $font-weight, $font-url) {
   @font-face {

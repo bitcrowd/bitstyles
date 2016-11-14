@@ -2,13 +2,14 @@
 //
 // Break long words
 //
-// A cross-browser friendly emthod of ensuring no words exceed the width of the container.
-// Use especially with user-generated content.
+// A cross-browser friendly method of ensuring no words exceed the width of the
+// container. Commonly used to ensure user-generated content doesn’t break or
+// overflow your page layout.
 //
 // markup:
 // <p class="o-break-long-words">LongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshere</p>
 //
-// Styleguide 1.8
+// Styleguide 4.5
 
 .#{$bitstyles-namespace}o-break-long-words {
   @include break-long-words;

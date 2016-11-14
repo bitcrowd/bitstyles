@@ -2,14 +2,16 @@
 //
 // Topbar
 //
-// Fixed-position topbar/menu.
+// A fixed-position element that sticks to the top of the viewport (and is hence
+// broken here — best viewed in the styleguide’s fullscreen view), and spans
+// its full width. Commonly used to contain site navigation, logo etc.
 //
 // markup:
 // <header class="l-topbar">
 //   <h1>Topbar content here (menu, logo…)</h1>
 // </header>
 //
-// Styleguide 1.6
+// Styleguide 3.3
 
 @import '../settings/topbar';
 

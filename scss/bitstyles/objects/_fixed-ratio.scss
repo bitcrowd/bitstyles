@@ -2,7 +2,8 @@
 //
 // Fixed-ratio
 //
-// Enforces an aspect ratio on this element anbd its contents. Default ratio is 16:9, element take 100% width and height matches.
+// Enforces an aspect ratio on this element anbd its contents. Default ratio is
+// 16:9 — the element takes 100% width, then the height matches.
 //
 // markup:
 // <figure>
@@ -12,7 +13,7 @@
 //   <figcaption>An image at 16:9 aspect ratio</figcaption>
 // </figure>
 //
-// Styleguide 1.18
+// Styleguide 4.9
 
 .#{$bitstyles-namespace}o-fixed-ratio {
   @include fixed-ratio;

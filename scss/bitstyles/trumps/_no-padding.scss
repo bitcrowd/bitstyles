@@ -1,10 +1,10 @@
 // No-Paddings
 //
-// Styleguide 3.3
+// Styleguide 6.5
 
 // No-Paddings - individual
 //
-// Use to remove padding from elements on an ad-hoc basis
+// Use to slectively remove padding from elements on an ad-hoc basis.
 //
 // markup:
 // <div class="background-grey">
@@ -17,7 +17,7 @@
 // .t-no-padding--right   - Removes right padding.
 // .t-no-padding--bottom  - Removes bottom padding.
 //
-// Styleguide 3.3.1
+// Styleguide 6.5.1
 
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}t-no-padding--#{$position} {
@@ -29,14 +29,14 @@
 
 // No-Paddings - all sides
 //
-// Use to remove padding from elements on an ad-hoc basis
+// Use to remove all padding from an element on an ad-hoc basis.
 //
 // Markup:
 // <div class="background-grey">
 //   <div class="t-padding t-no-padding">Some content here</div>
 // </div>
 //
-// Styleguide 3.3.2
+// Styleguide 6.5.2
 
 .#{$bitstyles-namespace}t-no-padding {
   padding: 0;

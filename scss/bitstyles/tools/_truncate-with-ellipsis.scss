@@ -3,7 +3,7 @@
 // If an element is single-line inline or inline-block, this will truncate its content
 // and display an ellipsis (…) at the end of the line.
 //
-// Styleguide 2.9
+// Styleguide 1.13
 
 @mixin truncate-with-ellipsis($truncation-boundary: 100%) {
   max-width: $truncation-boundary;

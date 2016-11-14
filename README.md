@@ -11,7 +11,7 @@ or npm registries. You will therefore need to install directly from a tagged
 Github release (not from master), and you will need read access to the repo.
 
 ### Bower
-```shell
+```sh
 bower install git@github.com:bitcrowd/bitstyles.git#0.7.5 --save
 ```
 
@@ -52,7 +52,7 @@ config.assets.paths << Rails.root.join("bower_components", "bitstyles", "bitstyl
 ```
 
 ### npm
-```shell
+```sh
 npm install git+ssh://github.com/bitcrowd/bitstyles.git#0.7.5 --save
 ```
 
@@ -101,12 +101,12 @@ gem 'bitstyles'
 ```
 
 And then execute:
-```shell
+```sh
 bundle
 ```
 
 Or install it yourself as:
-```shell
+```sh
 gem install bitstyles
 ```
 
@@ -156,21 +156,21 @@ For the complete list of variables you can override, look through the various fi
 ## Developing Bitstyles
 Bitstyles requires `node v5.7.0`. If you have [nvm](https://github.com/creationix/nvm) installed:
 
-```shell
+```sh
 nvm use
 ```
 will switch to the correct version of nodejs.
 
 Clone this repository, `cd` into the folder created, then install dependencies:
 
-```shell
+```sh
 npm install
 ```
 
 ### Build
 To ensure your changes do not break the build, run
 
-```shell
+```sh
 npm run watch
 ```
 
@@ -178,7 +178,7 @@ to recompile sass on every change.
 
 For a single one-off build, run
 
-```shell
+```sh
 npm run build
 ```
 
@@ -186,7 +186,7 @@ npm run build
 ### Installation
 CasperJS, PhantomJS, & BackstopJS all need to be installed globally:
 
-```shell
+```sh
 npm install -g phantomjs casperjs backstopjs
 ```
 
@@ -198,19 +198,19 @@ If you haven’t added a new object to the `backstop.json` file, you can simply 
 
 Start the styleguide server and leave it running:
 
-```shell
+```sh
 npm run styleguide
 ```
 
 To test your changes against the known-good reference images run the tests:
 
-```shell
+```sh
 npm run test
 ```
 
 Short results from the comparison will be displayed on the command line, more detail is available from the in-browser report:
 
-```shell
+```sh
 backstop openReport
 ```
 
@@ -220,13 +220,13 @@ Then go to [http://localhost:3001](http://localhost:3001).
 
 Start up the styleguide (see the section below on testing for more information on this):
 
-```shell
+```sh
 npm run styleguide
 ```
 
 …then run the checks:
 
-```shell
+```sh
 npm run checks
 ```
 
@@ -238,13 +238,13 @@ If you add new object scenarios to the `backstop.json`, backstop will complain i
 
 Start the styleguide server:
 
-```shell
+```sh
 npm run styleguide
 ```
 
 Then recreate the reference images:
 
-```shell
+```sh
 npm run test:build
 ```
 

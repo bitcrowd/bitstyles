@@ -1,5 +1,7 @@
 // Font-weight
 //
+// Override font-weight of an element.
+//
 // Named `.t-text-` for consistency with the other text/font-related trumps.
 //
 // markup:
@@ -10,7 +12,7 @@
 // .t-text-weight--normal    - Ensure font-weight is normal
 // .t-text-weight--bold      - Ensure font-weight is bold
 //
-// Styleguide 3.7
+// Styleguide 6.9
 
 .#{$bitstyles-namespace}t-text-weight--light {
   font-weight: $bitstyles-font-weight-light;

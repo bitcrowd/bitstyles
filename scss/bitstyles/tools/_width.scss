@@ -15,7 +15,7 @@
 // `$bitstyles-widths-breakpoints` variables, and then let the sass in `layout/width`
 // generate your width classes at various breakpoints (see the layout section on widths).
 //
-// Styleguide 2.14
+// Styleguide 1.18
 
 @mixin width($fractions, $breakpoint: null) {
   @each $fraction in $fractions {

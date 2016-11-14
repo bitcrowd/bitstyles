@@ -2,9 +2,12 @@
 //
 // Icons
 //
-// We use an svg-based icon system. All icons are present as symbols within `icons.svg`, and are used by embedding svg tags (see example markup).
-// Provide a `<title>` element at the point an icon is used to ensure there is some text content (equivalent to the alt property on `<img>`s.)
-// Set icon sizes by overiding the `$bitstyles-icon-sizes` map (see settings file). Default icon size is the same as surrounding text i.e. `1em`.
+// We use an svg-based icon system. All icons are present as symbols within
+// `icons.svg`, and are used by embedding svg tags (see example markup).
+// Provide a `<title>` element at the point an icon is used to ensure there is
+// some text content (equivalent to the alt property on `<img>`s.)
+// Set icon sizes by overiding the `$bitstyles-icon-sizes` map (see settings file).
+// The default icon size is the same as surrounding text i.e. `1em`.
 //
 // markup:
 // <svg class="o-icon {$modifiers}">
@@ -12,12 +15,12 @@
 //   <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
 // </svg>
 //
-// default          - Base size, matches font-size of parent element.
+//                    - Base size, matches font-size of parent element.
 // .o-icon--small     - Small icon (given default vars).
 // .o-icon--medium    - Medium icon (given default vars).
 // .o-icon--large     - Large icon (given default vars).
 //
-// Styleguide 1.3
+// Styleguide 4.12
 
 @import '../settings/icon';
 

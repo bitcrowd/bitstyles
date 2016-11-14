@@ -21,11 +21,13 @@
 
 // Tools: Functions & Mixins
 //
-// Mixins and functions. Includes mixins we later use to build objects e.g. at different breakpoints,
-// and some we use only in the background as utilities.
-// * No CSS output *
+// Mixins and functions. Includes mixins we later use to build objects
+// e.g. at different breakpoints, and some we use only in the background as
+// utilities.
 //
-// Styleguide 2.0
+// **No CSS output**
+//
+// Styleguide 1.0
 @import 'bitstyles/tools/zindex';
 @import 'bitstyles/tools/absolute-cover';
 @import 'bitstyles/tools/fixed-ratio';
@@ -57,14 +59,15 @@
 
 // Base
 //
-// Unclassed elements. (Directly selects elements e.g. `<a>`, `<blockquote>`, `<address>`).
+// Unclassed elements. Directly styles elements
+// e.g. `<a>`, `<blockquote>`, `<address>`.
 //
 // sg-wrapper:
 // <div class="object-section">
 //   <sg-wrapper-content/>
 // </div>
 //
-// Styleguide 4.0
+// Styleguide 2.0
 @import 'bitstyles/base/typography';
 @import 'bitstyles/base/link';
 @import 'bitstyles/base/images';
@@ -75,14 +78,14 @@
 
 // Layout
 //
-// Classes that enable the high-level layout of a page.
+// Classes that create the high-level layout of a page.
 //
 // sg-wrapper:
 // <div class="object-section">
 //   <sg-wrapper-content/>
 // </div>
 //
-// Styleguide 5.0
+// Styleguide 3.0
 @import 'bitstyles/layout/content';
 @import 'bitstyles/layout/grid';
 @import 'bitstyles/layout/width';
@@ -90,15 +93,18 @@
 
 // Objects
 //
-// Objects, abstractions, and design patterns (e.g. .media, .icon, .button). Cosmetic-free.
-// These are intended to be reused throughout the site, composed together as needed e.g. <div class="button expander-toggle"></div>
+// Objects, abstractions, and design patterns (e.g. .o-media, .o-icon, .o-button).
+// Relatively cosmetic-free, these are intended to be reused throughout the site
+// and composed together as needed.
+//
+// e.g. `<button class="o-button o-truncate-with-ellipsis"></button>`
 //
 // sg-wrapper:
 // <div class="object-section">
 //   <sg-wrapper-content/>
 // </div>
 //
-// Styleguide 1.0
+// Styleguide 4.0
 @import 'bitstyles/objects/icon';
 @import 'bitstyles/objects/button';
 @import 'bitstyles/objects/button--icon';
@@ -127,14 +133,18 @@
 
 // Components
 //
-// Chunks of UI e.g. the structure for a page type, a single block of UI composed of smaller objects.
+// Chunks of UI and structure for a reusable page element containing smaller
+// objects e.g. a header or sidebar element.
+//
+// These are commonly project-specific so bitstyles only includes a few very
+// generally-used components such as modals.
 //
 // sg-wrapper:
 // <div class="object-section">
 //   <sg-wrapper-content/>
 // </div>
 //
-// Styleguide 6.0
+// Styleguide 5.0
 @import 'bitstyles/components/modal';
 @import 'bitstyles/components/expander';
 //
@@ -144,14 +154,17 @@
 
 // Trumps
 //
-// High-specificity overrides and helper classes (e.g. .hidden {}). `!important` exists here.
+// High-specificity overrides and helper classes for creating exceptions to an
+// object or component’s standard styles e.g. `.t-margin--left`.
+//
+// `!important` sometimes exists here, and that’s ok.
 //
 // sg-wrapper:
 // <div class="object-section">
 //   <sg-wrapper-content/>
 // </div>
 //
-// Styleguide 3.0
+// Styleguide 6.0
 @import 'bitstyles/trumps/text-weight';
 @import 'bitstyles/trumps/text-align';
 @import 'bitstyles/trumps/text-style';
