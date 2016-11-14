@@ -12,10 +12,10 @@
 
 .#{$bitstyles-namespace}o-link {
   padding: 0;
-  background: none;
   color: $bitstyles-color-link;
-  border: 0;
   cursor: pointer;
+  background: none;
+  border: 0;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
   &:visited {

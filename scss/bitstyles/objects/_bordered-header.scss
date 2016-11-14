@@ -23,9 +23,9 @@
   &::before,
   &::after {
     display: inline-block;
+    min-width: $bitstyles-bordered-header-line-min-width;
     vertical-align: middle;
     flex-grow: 1;
-    min-width: $bitstyles-bordered-header-line-min-width;
     border-top: $bitstyles-bordered-header-border;
     content: '';
   }

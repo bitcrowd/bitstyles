@@ -51,12 +51,12 @@
   bottom: 0;
   left: 0;
   z-index: 10;
+  cursor: pointer;
   background: $bitstyles-modal-overlay-color;
   transition: all $bitstyles-modal-transition-duration $bitstyles-modal-transition-easing;
   -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
   backface-visibility: hidden;
   will-change: $bitstyles-modal-will-change;
-  cursor: pointer;
 
   [aria-hidden="true"] & {
     @include modal-is-hidden;
