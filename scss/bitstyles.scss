@@ -28,25 +28,7 @@
 // **No CSS output**
 //
 // Styleguide 1.0
-@import 'bitstyles/tools/zindex';
-@import 'bitstyles/tools/absolute-cover';
-@import 'bitstyles/tools/fixed-ratio';
-@import 'bitstyles/tools/media-query';
-@import 'bitstyles/tools/absolute-center';
-@import 'bitstyles/tools/vertical-center';
-@import 'bitstyles/tools/break-long-words';
-@import 'bitstyles/tools/truncate-with-ellipsis';
-@import 'bitstyles/tools/clearfix';
-@import 'bitstyles/tools/hidden';
-@import 'bitstyles/tools/visuallyhidden';
-@import 'bitstyles/tools/list-reset';
-@import 'bitstyles/tools/font-face';
-@import 'bitstyles/tools/width';
-@import 'bitstyles/tools/typography';
-@import 'bitstyles/tools/typography-conversions';
-@import 'bitstyles/tools/block';
-@import 'bitstyles/tools/flex';
-@import 'bitstyles/tools/media';
+@import 'bitstyles/tools/all';
 //
 // ******** Add project-specific tools here ********
 //
@@ -54,8 +36,7 @@
 
 // ******** GENERIC
 // Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
-@import 'bitstyles/generic/box-sizing';
-@import 'bitstyles/generic/normalize';
+@import 'bitstyles/generic/all';
 
 // Base
 //
@@ -68,13 +49,7 @@
 // </div>
 //
 // Styleguide 2.0
-@import 'bitstyles/base/typography';
-@import 'bitstyles/base/link';
-@import 'bitstyles/base/images';
-@import 'bitstyles/base/forms';    // FOR TESTING ONLY - Empty of styles
-@import 'bitstyles/base/media';    // FOR TESTING ONLY - Empty of styles
-@import 'bitstyles/base/hr';       // FOR TESTING ONLY - Empty of styles
-@import 'bitstyles/base/figure';   // FOR TESTING ONLY - Empty of styles
+@import 'bitstyles/base/all';
 
 // Layout
 //
