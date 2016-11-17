@@ -1,0 +1,15 @@
+cache:
+  directories:
+    - node_modules
+rvm:
+  - 2.2
+install:
+  - gem uninstall bundler
+  - gem install bundler --version '1.12'
+before_script:
+  - nvm install 6.9.1
+  - nvm use 6.9.1
+  - npm install
+script:
+  - npm run lint
+  - npm run build
