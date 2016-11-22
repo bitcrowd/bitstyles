@@ -57,7 +57,7 @@ config.assets.paths << Rails.root.join("bower_components", "bitstyles", "bitstyl
 
 ### npm
 ```sh
-npm install bitstyles.git --save
+npm install bitstyles --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
