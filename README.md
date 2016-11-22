@@ -9,15 +9,11 @@ A developing collection of CSS styles and helpers, for use in Bitcrowd projects.
 
 ## Using Bitstyles in a project
 
-Bitstyles can be added to your project via [npm](https://www.npmjs.com/) or [Bower](http://bower.io/), as each project demands.
-
-The source repository is currently private, and is not registered with the Bower
-or npm registries. You will therefore need to install directly from a tagged
-Github release (not from master), and you will need read access to the repo.
+Bitstyles can be added to your project via [npm](https://www.npmjs.com/), [Bower](https://bower.io), or [RubyGems](https://rubygems.org).
 
 ### Bower
 ```sh
-bower install git@github.com:bitcrowd/bitstyles.git#0.7.5 --save
+bower install bitstyles --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
@@ -58,7 +54,7 @@ config.assets.paths << Rails.root.join("bower_components", "bitstyles", "bitstyl
 
 ### npm
 ```sh
-npm install git+ssh://github.com/bitcrowd/bitstyles.git#0.7.5 --save
+npm install bitstyles.git --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
