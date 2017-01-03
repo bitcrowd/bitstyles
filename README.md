@@ -15,6 +15,7 @@ A collection of CSS objects and helpers. See the [Bitcrowd frontend styleguide](
 Bitstyles can be added to your project via [npm](https://www.npmjs.com/), [Bower](https://bower.io), or [RubyGems](https://rubygems.org).
 
 ### Bower
+
 ```sh
 bower install bitstyles --save
 ```
@@ -56,6 +57,7 @@ config.assets.paths << Rails.root.join("bower_components", "bitstyles", "bitstyl
 ```
 
 ### npm
+
 ```sh
 npm install bitstyles --save
 ```
@@ -115,6 +117,7 @@ gem install bitstyles
 ```
 
 ### Install an unpublished version
+
 If you need to install a version of bitstyles that’s so far unpublished (e.g. there’s a bugfix or feature that’s not in a published package yet), you can use the following:
 
 ```sh
@@ -165,6 +168,7 @@ To change the css output by the library (e.g. standard margins, typographic scal
 For the complete list of variables you can override, look through the various files in the `bitstyles/settings/` folder.
 
 ## Contributing
+
 Bitstyles requires `node v5.7.0` or higher. If you have [nvm](https://github.com/creationix/nvm) installed:
 
 ```sh
@@ -181,6 +185,7 @@ npm install
 ```
 
 ### Build
+
 To ensure your changes do not break the build, run
 
 ```sh
@@ -196,7 +201,9 @@ npm run build
 ```
 
 ## Testing
+
 ### Installation
+
 CasperJS, PhantomJS, & BackstopJS all need to be installed globally:
 
 ```sh
@@ -204,9 +211,11 @@ npm install -g phantomjs casperjs backstopjs
 ```
 
 ### Run tests
+
 The project uses the visual regression testing system [BackstopJS](https://garris.github.io/BackstopJS/) to compare screenshots of each object before & after changes are made. For existing objects, if there is no visual difference between the reference images and the newly-generated images, your changes are good. For new objects, create new reference images (see below) and commit them to the repo.
 
 #### Existing objects
+
 If you haven’t added a new object to the `backstop.json` file, you can simply run the tests against the already-existing reference images:
 
 Start the styleguide server and leave it running:
