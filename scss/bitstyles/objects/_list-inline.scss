@@ -1,0 +1,23 @@
+/** @define list-inline */
+//
+// List inline
+//
+// Display a series of items inline. Often used to display a list of links (anchors wrapped in `<li>`s)
+// in a row next to each other
+//
+// markup:
+// <ul class="o-list-inline">
+//   <li class="o-list-inline__item"><a href="#">link one</a></li>
+//   <li class="o-list-inline__item"><a href="#">link two</a></li>
+//   <li class="o-list-inline__item"><a href="#">link three</a></li>
+// </ul>
+//
+// Styleguide 4.16
+
+.#{$bitstyles-namespace}o-list-inline {
+  list-style: none;
+}
+
+.#{$bitstyles-namespace}o-list-inline__item {
+  display: inline;
+}
