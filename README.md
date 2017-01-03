@@ -5,10 +5,19 @@
 [![bower version](https://badge.fury.io/bo/bitstyles.svg)](https://badge.fury.io/bo/bitstyles)
 [![Gem Version](https://badge.fury.io/rb/bitstyles.svg)](https://badge.fury.io/rb/bitstyles)
 
-A collection of CSS objects and helpers. See the [Bitcrowd frontend styleguide](https://github.com/bitcrowd/frontend) for details of the principles on which this collection is built. The TL;DR: it’s a variation of the BEMATOMICOOCSS methodology:
+A collection of tiny Sass CSS objects and helpers, Bitstyles is intended to be used by reasonably CSS- & HTML-aware frontend developers. This is no simple drop-in solution to skin a website, like [Bootstrap](http://getbootstrap.com) or [Foundation](http://foundation.zurb.com), rather a collection of focused object-classes, each defining just a single visual aspect. By using these simple building blocks in your HTML, it’s possible to construct complex layouts without repeating CSS.
+
+For a certain set of elements in your UI, this strategy of applying multiple atomic classes eventually becomes untenable. This is generally for one of two reasons:
+- the elements are very often-repeated, so using one class instead of many would reduce chances of inconsistency or errors e.g. buttons, cards
+- the number of object classes on an element becomes unreadable in the HTML. This often also results in the appearance of the element becoming hard to reason about just from the HTML source, negating a large advantage of this approach in the first place.
+
+For components which match these criteria it may make more sense to create component classes in your project to compose several of the simpler object classes (and whatever styling you may need on top). For this reason, all the object classes are also provided as Sass mixins — `@include` them in your own Sass components as needed.
+
+Again unlike Bootstrap and Foundation, there are no javascript widgets or plugins included in Bitstyles.
+
+See the [Bitcrowd frontend styleguide](https://github.com/bitcrowd/frontend) for more details of the technical principles on which Bitstyles is built. The TL;DR: it’s a variation of the BEMATOMICOOCSS methodology:
 - BEM naming convention
 - Atomic CSS-inspired, the object classes aim to provide most functionality needed to create whichever layout or UI you need. Trump classes create the exceptions that inevitably occur.
-- When multiple object classes on an element just don’t make much sense any more (too many classes becomes unreadable), or the element is a repeated and consistent part of your UI, all the object classes are provided as Sass mixins for you to create your own components.
 
 ## Using Bitstyles in a project
 
