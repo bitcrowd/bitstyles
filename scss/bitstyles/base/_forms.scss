@@ -1,3 +1,4 @@
+// stylelint-disable selector-no-type
 // Forms
 //
 // Styleguide 2.2
@@ -43,6 +44,10 @@
 // <textarea>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</textarea>
 //
 // Styleguide 2.2.6
+
+textarea {
+  resize: vertical;
+}
 
 // select
 //
