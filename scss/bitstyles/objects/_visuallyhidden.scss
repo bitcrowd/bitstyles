@@ -5,7 +5,7 @@
 // Hide an element visually while leaving it readable & accessible by google & screenreaders.
 // Use to give more complete & understandable labels for UI e.g. display only 'next' on a button,
 // but use `.o-visuallyhidden` to hide a span containing a more descriptive label.
-// Available at every breakpoint set in `$visuallyhidden-breakpoints`.
+// Available at every breakpoint set in `$bitstyles-visuallyhidden-breakpoints`.
 //
 // markup:
 // <button class="o-button">
@@ -21,7 +21,7 @@
   @include visuallyhidden;
 }
 
-@each $breakpoint in $visuallyhidden-breakpoints {
+@each $breakpoint in $bitstyles-visuallyhidden-breakpoints {
   @include media-query($breakpoint) {
     .#{$bitstyles-namespace}o-visuallyhidden\@#{$breakpoint} {
       @include visuallyhidden;
