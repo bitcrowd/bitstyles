@@ -1,18 +1,20 @@
 // Visuallyhidden
 //
-// Hides an element, but leaves it still readable by screenreaders & google.
+// Hide an element visually while leaving it readable & accessible by search engines & screenreaders.
+// Use to give more complete & understandable labels for UI, or to help explain aspects of,
+// or connections between, content that may otherwise only be visually apparent.
 //
 // Styleguide 1.17
 
 @mixin visuallyhidden {
-  /* stylelint-disable declaration-no-important */
-  position: absolute !important;
-  /* stylelint-enable declaration-no-important */
+  position: absolute !important; // stylelint-disable-line declaration-no-important
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
   border: 0;
 }
