@@ -5,19 +5,19 @@
 [![bower version](https://badge.fury.io/bo/bitstyles.svg)](https://badge.fury.io/bo/bitstyles)
 [![Gem Version](https://badge.fury.io/rb/bitstyles.svg)](https://badge.fury.io/rb/bitstyles)
 
-A developing collection of CSS styles and helpers, for use in Bitcrowd projects.
+A collection of CSS objects and helpers. See the [Bitcrowd frontend styleguide](https://github.com/bitcrowd/frontend) for details of the principles on which this collection is built. The TL;DR: it’s a variation of the BEMATOMICOOCSS methodology:
+- BEM naming convention
+- Atomic CSS-inspired, the object classes aim to provide most functionality needed to create whichever layout or UI you need. Trump classes create the exceptions that inevitably occur.
+- When multiple object classes on an element just don’t make much sense any more (too many classes becomes unreadable), or the element is a repeated and consistent part of your UI, all the object classes are provided as Sass mixins for you to create your own components.
 
 ## Using Bitstyles in a project
 
-Bitstyles can be added to your project via [npm](https://www.npmjs.com/) or [Bower](http://bower.io/), as each project demands.
-
-The source repository is currently private, and is not registered with the Bower
-or npm registries. You will therefore need to install directly from a tagged
-Github release (not from master), and you will need read access to the repo.
+Bitstyles can be added to your project via [npm](https://www.npmjs.com/), [Bower](https://bower.io), or [RubyGems](https://rubygems.org).
 
 ### Bower
+
 ```sh
-bower install git@github.com:bitcrowd/bitstyles.git#0.7.5 --save
+bower install bitstyles --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
@@ -57,8 +57,9 @@ config.assets.paths << Rails.root.join("bower_components", "bitstyles", "bitstyl
 ```
 
 ### npm
+
 ```sh
-npm install git+ssh://github.com/bitcrowd/bitstyles.git#0.7.5 --save
+npm install bitstyles --save
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
@@ -115,6 +116,14 @@ Or install it yourself as:
 gem install bitstyles
 ```
 
+### Install an unpublished version
+
+If you need to install a version of bitstyles that’s so far unpublished (e.g. there’s a bugfix or feature that’s not in a published package yet), you can use the following:
+
+```sh
+npm install --save git+https://github.com/bitcrowd/bitstyles.git#master
+```
+
 ### Importing the sass to your project
 
 Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Most likely you’ll not need everything in there, so comment-out the lines of objects you don’t need:
@@ -158,8 +167,9 @@ To change the css output by the library (e.g. standard margins, typographic scal
 
 For the complete list of variables you can override, look through the various files in the `bitstyles/settings/` folder.
 
-## Developing Bitstyles
-Bitstyles requires `node v5.7.0`. If you have [nvm](https://github.com/creationix/nvm) installed:
+## Contributing
+
+Bitstyles requires `node v5.7.0` or higher. If you have [nvm](https://github.com/creationix/nvm) installed:
 
 ```sh
 nvm use
@@ -169,10 +179,13 @@ will switch to the correct version of nodejs.
 Clone this repository, `cd` into the folder created, then install dependencies:
 
 ```sh
+git clone https://github.com/bitcrowd/bitstyles.git
+cd bitstyles
 npm install
 ```
 
 ### Build
+
 To ensure your changes do not break the build, run
 
 ```sh
@@ -188,7 +201,9 @@ npm run build
 ```
 
 ## Testing
+
 ### Installation
+
 CasperJS, PhantomJS, & BackstopJS all need to be installed globally:
 
 ```sh
@@ -196,9 +211,11 @@ npm install -g phantomjs casperjs backstopjs
 ```
 
 ### Run tests
+
 The project uses the visual regression testing system [BackstopJS](https://garris.github.io/BackstopJS/) to compare screenshots of each object before & after changes are made. For existing objects, if there is no visual difference between the reference images and the newly-generated images, your changes are good. For new objects, create new reference images (see below) and commit them to the repo.
 
 #### Existing objects
+
 If you haven’t added a new object to the `backstop.json` file, you can simply run the tests against the already-existing reference images:
 
 Start the styleguide server and leave it running:
@@ -213,13 +230,7 @@ To test your changes against the known-good reference images run the tests:
 npm run test
 ```
 
-Short results from the comparison will be displayed on the command line, more detail is available from the in-browser report:
-
-```sh
-backstop openReport
-```
-
-Then go to [http://localhost:3001](http://localhost:3001).
+Results from the comparison will be displayed in your browser in an automatically-opened window.
 
 ### Before you create your PR
 
@@ -233,6 +244,12 @@ npm run styleguide
 
 ```sh
 npm run checks
+```
+
+If you’ve made changes to the Sass source, also update the stats:
+
+```sh
+npm run css:stats
 ```
 
 Once all tests pass, you’re good to go.
