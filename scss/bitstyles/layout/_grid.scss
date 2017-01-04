@@ -135,19 +135,19 @@
 // `$bitstyles-widths-breakpoints` Sass list).
 //
 // This is commonly used to set a default mobile-first width of `.l-width--12-of-12`
-// and a larger-screen width of e.g. `.l-width--4-of-12-medium-and-up` for a
+// and a larger-screen width of e.g. `.l-width--4-of-12@medium` for a
 // three-column layout that becomes a single-column stack on small screens.
 //
 // markup:
 // <ul class="l-grid">
-//   <li class="l-grid__item l-width--12-of-12 l-width--4-of-12-medium-and-up">
-//     <div class="background-grey">6-of-12 / 2-of-12-medium-and-up</div>
+//   <li class="l-grid__item l-width--12-of-12 l-width--4-of-12@medium">
+//     <div class="background-grey">12-of-12 / 4-of-12@medium</div>
 //   </li><!--
-//--><li class="l-grid__item l-width--12-of-12 l-width--4-of-12-medium-and-up">
-//     <div>6-of-12 / 2-of-12-medium-and-up</div>
+//--><li class="l-grid__item l-width--12-of-12 l-width--4-of-12@medium">
+//     <div>12-of-12 / 4-of-12@medium</div>
 //   </li><!--
-//--><li class="l-grid__item l-width--12-of-12 l-width--4-of-12-medium-and-up">
-//     <div class="background-grey">6-of-12 / 2-of-12-medium-and-up</div>
+//--><li class="l-grid__item l-width--12-of-12 l-width--4-of-12@medium">
+//     <div class="background-grey">12-of-12 / 4-of-12@medium</div>
 //   </li>
 // </ul>
 //

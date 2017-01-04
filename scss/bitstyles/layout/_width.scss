@@ -11,10 +11,10 @@
 // `.l-width--1-of-12` … `.l-width--12-of-12`.
 //
 // If you define `$bitstyles-widths-breakpoints` to contain the names of one or more
-// breakpoints (defaults to just `medium-and-up`), widths will also be created
+// breakpoints (defaults to just `medium`), widths will also be created
 // for those breakpoints:
 //
-// `.l-width--4-of-12-medium-and-up`
+// `.l-width--4-of-12-medium`
 //
 // See the section on grid systems for an example of this.
 //
@@ -42,7 +42,7 @@
 @each $width-breakpoint in $bitstyles-widths-breakpoints {
   @include media-query($width-breakpoint) {
     @each $i in $bitstyles-widths {
-      @include width($i, -#{$width-breakpoint});
+      @include width($i, \@#{$width-breakpoint});
     }
   }
 }

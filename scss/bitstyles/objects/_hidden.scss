@@ -6,9 +6,9 @@
 // not get read by google or screenreaders. Available at every breakpoint defined
 // in `$bitstyles-hidden-breakpoints`.
 //
-// .o-hidden          - Hide this element always (generally so it can be revealed using JS)
-// .o-hidden@small    - Hide this content on smallscreens
-// .o-hidden@large    - Hide this content on larger screens
+// .o-hidden               - Hide this element always (generally so it can be revealed using JS)
+// .o-hidden@small-only    - Hide this content on smallscreens
+// .o-hidden@large         - Hide this content on larger screens
 //
 // markup:
 // <p>Paragraph 1 content</p>
