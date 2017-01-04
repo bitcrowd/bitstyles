@@ -4,7 +4,7 @@
 //
 // Fully hides an element & its children — does not affect document flow, does
 // not get read by google or screenreaders. Available at every breakpoint defined
-// in `$hidden-breakpoints`.
+// in `$bitstyles-hidden-breakpoints`.
 //
 // .o-hidden          - Hide this element always (generally so it can be revealed using JS)
 // .o-hidden@small    - Hide this content on smallscreens
@@ -25,7 +25,7 @@
   @include hidden;
 }
 
-@each $breakpoint in $hidden-breakpoints {
+@each $breakpoint in $bitstyles-hidden-breakpoints {
   @include media-query($breakpoint) {
     .#{$bitstyles-namespace}o-hidden\@#{$breakpoint} {
       @include hidden;
