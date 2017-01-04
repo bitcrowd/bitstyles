@@ -1,10 +1,31 @@
 // Fixed Ratio
 //
-// An element that has intrinsic shape — width will be 100%, height will be limited to keep 16:9 aspect ratio.
+// An element that has intrinsic shape — width will be 100%, height will be limited
+// to keep your aspect ratio. Pass in width & height parameters to set your aspect
+// ratio.
+//
+// Use the `fixed-ratio--variant` mixin to create modifier classes with ratios
+// different to your base class.
+//
+// e.g.
+//
+// ```scss
+// .o-fixed-ratio {
+//   @include fixed-ratio(16, 9);
+// }
+//
+// .o-fixed-ratio--16-10 {
+//   @include fixed-ratio--variant(16, 10);
+// }
+//
+// .o-fixed-ratio--square {
+//   @include fixed-ratio--variant(10, 10);
+// }
+// ```
 //
 // Styleguide 1.6
 
-@mixin fixed-ratio {
+@mixin fixed-ratio($width, $height) {
   position: relative;
   display: block;
   width: 100%;
@@ -12,9 +33,19 @@
 
   &::before {
     display: block;
-    padding-top: 56.25%;
+    padding-top: percentage-aspect-ratio($width, $height);
     content: '';
   }
+}
+
+@mixin fixed-ratio--variant($width, $height) {
+  &::before {
+    padding-top: percentage-aspect-ratio($width, $height);
+  }
+}
+
+@function percentage-aspect-ratio($width, $height) {
+  @return percentage($height / $width);
 }
 
 @mixin fixed-ratio__inner {
