@@ -1,7 +1,7 @@
 // Background Colors
 //
 // Set background color. Define which colours you require in the `$background-colors`
-// Sass list, using the names of the colours as defined in `$bitstyles-colors-theme`.
+// Sass list, using the names of the colours as defined in `$bitstyles-palette`.
 // Default value is `background, secondary`.
 //
 // markup:
@@ -15,6 +15,6 @@
 
 @each $name in ($background-colors) {
   .t-background-color--#{$name} {
-    background-color: map-get($bitstyles-colors-theme, $name);
+    background-color: color($name);
   }
 }

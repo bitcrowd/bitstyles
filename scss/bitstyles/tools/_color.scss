@@ -1,0 +1,9 @@
+@function color($color) {
+  @if map-has-key($bitstyles-palette, $color) {
+    @return map-get($bitstyles-palette, $color);
+  }
+
+  @else {
+    @error "Oops! Color ‘#{$color}’ does not exist.";
+  }
+}
