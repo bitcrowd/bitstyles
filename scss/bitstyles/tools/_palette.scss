@@ -1,0 +1,28 @@
+// Palette
+//
+// Returns requested colours from the global `$bitstyles-palette` map.
+// e.g. color: palette('text');
+//
+// @param $color  Base colour within the palette
+//
+// @param $tone   Optional. Variant of the colour e.g. 'base', light', 'dark'. Defaults to `base`.
+//
+// Styleguide 1.20
+
+@function palette($color, $tone: 'base') {
+  @if map-has-key($bitstyles-palette, $color) {
+    $palette: map-get($bitstyles-palette, $color);
+
+    @if map-has-key($palette, $tone) {
+      @return map-get($palette, $tone);
+    }
+
+    @else {
+      @error "Oops! Color/tone ‘#{$color}/#{$tone}’ does not exist.";
+    }
+  }
+
+  @else {
+    @error "Oops! Color ‘#{$color}’ does not exist.";
+  }
+}

@@ -16,6 +16,6 @@
 
 @each $name in ($foreground-colors) {
   .t-color--#{$name} {
-    color: color($name);
+    color: palette($name);
   }
 }
