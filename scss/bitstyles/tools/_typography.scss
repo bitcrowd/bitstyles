@@ -14,8 +14,10 @@
   font-weight: $bitstyles-font-weight-bold;
   text-rendering: optimizeLegibility;
 
-  .fonts-loaded & {
-    font-family: $bitstyles-font-family-header-loaded;
+  @if $bitstyles-font-family-header-loaded != $bitstyles-font-family-header {
+    .fonts-loaded & {
+      font-family: $bitstyles-font-family-header-loaded;
+    }
   }
 }
 
@@ -25,9 +27,62 @@
 //
 // Styleguide 1.15.2
 
-@mixin font-size($pixel-size, $browser-context: $bitstyles-font-size-base-small) {
+@mixin set-font-size($pixel-size, $browser-context: $bitstyles-font-size-base-small) {
   /* stylelint-disable declaration-block-no-duplicate-properties */
   font-size: $pixel-size;
   font-size: px-to-rem($pixel-size, $browser-context);
   /* stylelint-enable declaration-block-no-duplicate-properties */
+}
+
+// Gets the font-size for an element at a viewport size as defined in `settings/_global.typography.scss`
+@function font-size($media-query, $element) {
+  @if map-has-key($bitstyles-font-sizes, $media-query) {
+    $font-sizes: map-get($bitstyles-font-sizes, $media-query);
+
+    @if map-has-key($font-sizes, $element) {
+      @return map-get($font-sizes, $element);
+    }
+
+    @else {
+      @error "Oops! No font-size defined for ‘#{$element}’ at ‘#{$media-query}’ viewports.";
+    }
+  }
+
+  @else {
+    @error "Oops! No font-sizes defined at ‘#{$media-query}’ viewports.";
+  }
+}
+
+@mixin generate-font-sizes($elements, $prefix: '') {
+  @each $media-query in $bitstyles-font-sizes {
+    $media-query-name: nth($media-query, 1);
+    $font-sizes: nth($media-query, 2);
+    $base-size: map-get($font-sizes, 'html');
+
+    @if $media-query-name == 'base' {
+      @include output-font-sizes('base', $elements, $base-size, $prefix);
+    }
+
+    @else {
+      @include media-query($media-query-name) {
+        @include output-font-sizes($media-query-name, $elements, $base-size, $prefix);
+      }
+    }
+  }
+}
+
+@mixin output-font-sizes($media-query, $elements, $base-size, $prefix) {
+  @each $element in ($elements) {
+    $font-size: font-size($media-query, $element);
+
+    #{$prefix}#{$element} {
+      @if nth($element, 1) == 'html' {
+        @include set-font-size($font-size);
+      }
+
+      @else {
+        @include set-font-size($font-size, $base-size);
+      }
+    }
+  }
 }

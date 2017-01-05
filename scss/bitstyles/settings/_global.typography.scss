@@ -7,22 +7,28 @@ $bitstyles-font-weight-light: 300 !default;
 $bitstyles-font-weight-normal: 400 !default;
 $bitstyles-font-weight-bold: 700 !default;
 
-$bitstyles-typography-breakpoint: medium !default;
-
 $bitstyles-font-size-base-small: 16px !default;
-$bitstyles-font-size-h0-small: 32px !default;
-$bitstyles-font-size-h1-small: 24px !default;
-$bitstyles-font-size-h2-small: 20px !default;
-$bitstyles-font-size-h3-small: 18px !default;
-$bitstyles-font-size-h4-small: $bitstyles-font-size-base-small !default;
-$bitstyles-font-size-h5-small: $bitstyles-font-size-base-small !default;
-$bitstyles-font-size-h6-small: $bitstyles-font-size-base-small !default;
-
 $bitstyles-font-size-base: 18px !default;
-$bitstyles-font-size-h0: 86px !default;
-$bitstyles-font-size-h1: 40px !default;
-$bitstyles-font-size-h2: 28px !default;
-$bitstyles-font-size-h3: 20px !default;
-$bitstyles-font-size-h4: $bitstyles-font-size-base !default;
-$bitstyles-font-size-h5: $bitstyles-font-size-base !default;
-$bitstyles-font-size-h6: $bitstyles-font-size-base !default;
+
+$bitstyles-font-sizes: (
+  'base': (
+    'html': $bitstyles-font-size-base-small,
+    'h0': 32px,
+    'h1': 24px,
+    'h2': 20px,
+    'h3': 18px,
+    'h4': $bitstyles-font-size-base-small,
+    'h5': $bitstyles-font-size-base-small,
+    'h6': $bitstyles-font-size-base-small
+  ),
+  'medium': (
+    'html': $bitstyles-font-size-base,
+    'h0': 86px,
+    'h1': 40px,
+    'h2': 28px,
+    'h3': 20px,
+    'h4': $bitstyles-font-size-base,
+    'h5': $bitstyles-font-size-base,
+    'h6': $bitstyles-font-size-base
+  )
+) !default;
