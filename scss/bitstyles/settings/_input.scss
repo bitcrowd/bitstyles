@@ -1,5 +1,5 @@
 $bitstyles-input-color: palette('text') !default;
-$bitstyles-input-padding: $bitstyles-spacing / 2 !default;
+$bitstyles-input-padding: size('small') !default;
 $bitstyles-input-border: 1px solid $bitstyles-color-gray-30 !default;
 $bitstyles-input-border-radius: 5px !default;
 $bitstyles-input-border-active: 1px solid $bitstyles-color-gray-50 !default;
@@ -9,4 +9,4 @@ $bitstyles-input-placeholder-color: $bitstyles-color-gray-50 !default;
 $bitstyles-input-background-color-disabled: $bitstyles-color-gray-10 !default;
 $bitstyles-input-color-disabled: palette('text') !default;
 
-$bitstyles-input-checkbox-size: 1rem;
+$bitstyles-input-checkbox-size: size('base');

@@ -1,0 +1,9 @@
+@function size($size) {
+  @if map-has-key($bitstyles-sizes, $size) {
+    @return map-get($bitstyles-sizes, $size);
+  }
+
+  @else {
+    @error "Oops! Size ‘#{$size}’ does not exist.";
+  }
+}
