@@ -34,54 +34,83 @@
   /* stylelint-enable declaration-block-no-duplicate-properties */
 }
 
-// Gets the font-size for an element at a viewport size as defined in `settings/_global.typography.scss`
-@function font-size($media-query, $element) {
-  @if map-has-key($bitstyles-font-sizes, $media-query) {
-    $font-sizes: map-get($bitstyles-font-sizes, $media-query);
+// Font-size generator
+//
+// Set font-sizes in the map `$bitstyles-font-sizes` e.g.
+// ```scss
+// $bitstyles-font-sizes: (
+//   'base': (
+//     'html': $bitstyles-font-size-base-small,
+//     'h0': 32px,
+//     'h1': 24px,
+//     'h2': 20px,
+//     'h3': 18px,
+//     'h4': $bitstyles-font-size-base-small,
+//     'h5': $bitstyles-font-size-base-small,
+//     'h6': $bitstyles-font-size-base-small
+//   ),
+//   'medium-and-up': (
+//     'html': $bitstyles-font-size-base,
+//     'h0': 86px,
+//     'h1': 40px,
+//     'h2': 28px,
+//     'h3': 20px,
+//     'h4': $bitstyles-font-size-base,
+//     'h5': $bitstyles-font-size-base,
+//     'h6': $bitstyles-font-size-base
+//   )
+// );
+// ```
+//
+// `base` is a reserved word, and results in font-sizes being output without an enclosing media query.
+//
+// @param $subset Provide a list of element names for which to output font-sizes.
+//
+// @param $prefix Provide a string that will be prepended to the element name. Can include `.` to output classnames instead of elements.
+//
+// Styleguide 1.15.3
 
-    @if map-has-key($font-sizes, $element) {
-      @return map-get($font-sizes, $element);
-    }
-
-    @else {
-      @error "Oops! No font-size defined for ‘#{$element}’ at ‘#{$media-query}’ viewports.";
-    }
-  }
-
-  @else {
-    @error "Oops! No font-sizes defined at ‘#{$media-query}’ viewports.";
-  }
-}
-
-@mixin generate-font-sizes($elements, $prefix: '') {
+@mixin generate-font-sizes($prefix: '', $subset: ()) {
   @each $media-query in $bitstyles-font-sizes {
     $media-query-name: nth($media-query, 1);
     $font-sizes: nth($media-query, 2);
-    $base-size: map-get($font-sizes, 'html');
 
+    // Don’t wrap base classes in a media-query
     @if $media-query-name == 'base' {
-      @include output-font-sizes('base', $elements, $base-size, $prefix);
+      @include output-font-sizes($font-sizes, $prefix, $subset);
     }
 
     @else {
       @include media-query($media-query-name) {
-        @include output-font-sizes($media-query-name, $elements, $base-size, $prefix);
+        @include output-font-sizes($font-sizes, $prefix, $subset);
       }
     }
   }
 }
 
-@mixin output-font-sizes($media-query, $elements, $base-size, $prefix) {
-  @each $element in ($elements) {
-    $font-size: font-size($media-query, $element);
+@mixin output-font-sizes($font-sizes, $prefix, $subset) {
+  $base-size: $bitstyles-font-size-base-small;
 
-    #{$prefix}#{$element} {
-      @if nth($element, 1) == 'html' {
-        @include set-font-size($font-size);
-      }
+  @if map-has-key($font-sizes, 'html') {
+    $base-size: map-get($font-sizes, 'html');
+  }
 
-      @else {
-        @include set-font-size($font-size, $base-size);
+  @each $element in ($font-sizes) {
+    $element-name: nth($element, 1);
+    $font-size: nth($element, 2);
+
+    @if (length($subset) == 0) or (index($subset, $element-name)) {
+      #{$bitstyles-namespace}#{$prefix}#{$element-name} {
+        /* stylelint-disable max-nesting-depth */
+        @if $element-name == 'html' {
+          // Base font-size must be relative to browser default, not itself!
+          @include set-font-size($font-size);
+        }
+
+        @else {
+          @include set-font-size($font-size, $base-size);
+        }
+        /* stylelint-enable max-nesting-depth */
       }
     }
   }

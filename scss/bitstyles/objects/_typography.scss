@@ -33,4 +33,4 @@
   @include generic-heading;
 }
 
-@include generate-font-sizes((h0, h1, h2, h3, h4, h5, h6), '.o-');
+@include generate-font-sizes('.o-', (h0, h1, h2, h3, h4, h5, h6));
