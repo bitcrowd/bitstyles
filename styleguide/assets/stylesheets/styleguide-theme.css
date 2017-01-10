@@ -1,0 +1,63 @@
+@media screen and (min-width: 45em) {
+  html {
+    font-size: 1.125em;
+  }
+}
+
+code {
+  background: #e4e4e4;
+  border-radius: 0.1em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+.html,
+.hljs {
+  padding: 0;
+  background: #f8f8f8;
+}
+
+p.sg,
+.sg.sg-section-header h1 .sg-section-source {
+  font-size: 1rem;
+}
+
+a.sg,
+input.sg,
+.sg.sg-top-nav-menu li,
+.sg.sg-design .sg-handle,
+.sg.sg-label a,
+.sg.sg-footer,
+.sg.sg-label,
+li.sg,
+.sg.sg-section .sg.modifier-list {
+  font-size: inherit;
+}
+
+.sg.sg-design .sg-handle {
+  left: 2.5em;
+  height: 2.5em;
+}
+
+.sg.sg-section-header {
+  border-radius: 0;
+}
+
+.sg-section-header + .sg.sg-section-partial {
+  background: #e4e4e4;
+}
+
+.sg.sg-section .sg.sg-section-partial {
+  border: 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.sg-section + .sg-section {
+  margin-top: 4rem;
+}
+
+.sg.sg-footer {
+  background: #e4e4e4;
+  border: 0;
+  margin: 0;
+}
