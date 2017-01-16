@@ -1,3 +1,16 @@
+// Size
+//
+// Returns requested size/length from the global `$bitstyles-sizes` map.
+//
+// e.g. `padding: size('small');`
+//
+// Default naming of sizes: `base`, `small`, `large` (suggested: `x-small`,
+// `xx-small` etc. for further variants)
+//
+// @param $size  name of the standardised size required.
+//
+// Styleguide 1.21
+
 @function size($size) {
   @if map-has-key($bitstyles-sizes, $size) {
     @return map-get($bitstyles-sizes, $size);
