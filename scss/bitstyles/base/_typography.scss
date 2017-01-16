@@ -3,8 +3,8 @@ html {
   font-family: $bitstyles-font-family-body;
   font-size: px-to-em($bitstyles-font-size-base-small);
   line-height: 1.5;
-  color: map-get($bitstyles-colors-theme, 'text');
-  background: map-get($bitstyles-colors-theme, 'background');
+  color: palette('text');
+  background: palette('background');
 
   &.fonts-loaded {
     font-family: $bitstyles-font-family-body-loaded;
