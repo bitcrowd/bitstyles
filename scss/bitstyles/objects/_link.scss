@@ -22,5 +22,6 @@
 
   padding: 0;
   border: 0;
+  transition: $bitstyles-link-transition;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 }
