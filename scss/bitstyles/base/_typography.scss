@@ -1,7 +1,7 @@
 /* stylelint-disable selector-no-type */
 html {
   font-family: $bitstyles-font-family-body;
-  line-height: 1.5;
+  line-height: $bitstyles-line-height-base;
   color: palette('text');
   background: palette('background');
 
