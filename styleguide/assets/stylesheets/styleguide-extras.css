@@ -19,3 +19,8 @@
 .fixed-height-block {
   height: 10em;
 }
+
+.new-render-context {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
