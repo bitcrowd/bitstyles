@@ -35,22 +35,22 @@
     {
       "label": "a [default]",
       "url": "http://localhost:3000/section/2.5-1/fullscreen",
-      "selectors": [".object-section a"]
+      "selectors": [".object-section"]
     },
     {
       "label": "a [hover]",
       "url": "http://localhost:3000/section/2.5-2/fullscreen",
-      "selectors": [".object-section a.pseudo-class-hover"]
+      "selectors": [".object-section"]
     },
     {
       "label": "a [focus]",
       "url": "http://localhost:3000/section/2.5-3/fullscreen",
-      "selectors": [".object-section a.pseudo-class-focus"]
+      "selectors": [".object-section"]
     },
     {
       "label": "a [visited]",
       "url": "http://localhost:3000/section/2.5-4/fullscreen",
-      "selectors": [".object-section a.pseudo-class-visited"]
+      "selectors": [".object-section"]
     },
     {
       "label": "address",
