@@ -18,6 +18,7 @@
 
 .fixed-height-block {
   height: 10em;
+  overflow-y: auto;
 }
 
 .new-render-context {

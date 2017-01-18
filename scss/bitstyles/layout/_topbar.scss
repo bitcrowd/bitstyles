@@ -2,16 +2,19 @@
 //
 // Topbar
 //
-// A fixed-position element that sticks to the top of the viewport (and is hence
-// broken here — best viewed in the styleguide’s fullscreen view), and spans
+// A fixed-position element that sticks to the top of the viewport, and spans
 // its full width. Commonly used to contain site navigation, logo etc.
+// Note that as it’s fixed, the main content element will need padding at the top
+// to ensure it’s not obscured by the topbar.
 //
 // markup:
-// <div class="new-render-context fixed-height-block">
+// <div class="fixed-height-block new-render-context">
 //   <header class="l-topbar">
-//     <h1>Topbar content here (menu, logo…)</h1>
+//     <h1 class="o-h2 t-no-margin">Logo, menu, search, and other important nav</h1>
 //   </header>
-//   <div class="min-height-block background-grey">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</div>
+//   <div class="fixed-height-block">
+//     <div class="min-height-block background-grey">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</div>
+//   </div>
 // </div>
 //
 // Styleguide 3.3
@@ -25,6 +28,10 @@
   left: 0;
   z-index: z($bitstyles-global-z, topbar);
   padding: $bitstyles-topbar-vertical-padding $bitstyles-topbar-horizontal-padding;
-  transition: background-color $bitstyles-transition-duration $bitstyles-transition-easing, transform 0.3s $bitstyles-transition-easing;
+  color: $bitstyles-topbar-color;
+  background-color: $bitstyles-topbar-background-color;
+  transition:
+    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
+    transform 0.3s $bitstyles-transition-easing;
   backface-visibility: hidden;
 }
