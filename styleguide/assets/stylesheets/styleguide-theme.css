@@ -14,12 +14,21 @@ code {
 .html,
 .hljs {
   padding: 0;
-  background: #f8f8f8;
+  background: #efefef;
+}
+
+html {
+  background-color: #f9f9f9;
+}
+
+.sg.sg-header .sg-title h1 {
+  color: #5787DE;
 }
 
 p.sg,
 .sg.sg-section-header h1 .sg-section-source {
   font-size: 1rem;
+  float: none;
 }
 
 a.sg,
@@ -43,6 +52,14 @@ li.sg,
   border-radius: 0;
 }
 
+.sg.sg-section .sg.sg-code-listing {
+  background-color: #efefef;
+}
+
+.sg.sg-section .fa-link {
+  display: none;
+}
+
 .sg-section-header + .sg.sg-section-partial {
   background: #e4e4e4;
 }
@@ -57,7 +74,13 @@ li.sg,
 }
 
 .sg.sg-footer {
-  background: #e4e4e4;
+  background: transparent;
   border: 0;
   margin: 0;
+}
+
+.sg.sg-top-nav-menu li:hover ul li a,
+.sg.sg-top-nav-menu li ul li a.active {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
