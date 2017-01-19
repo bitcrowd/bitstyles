@@ -17,9 +17,10 @@
       "height": 768
     }
   ],
-  "misMatchThreshold" : 0.1,
+  "misMatchThreshold" : 0.15,
   "readyEvent": "styleguideRendered",
   "fileNameTemplate": "{configId}_{scenarioLabel}_{viewportLabel}",
+  "onReadyScript": "onLoad",
   "scenarios": [
     {
       "label": "h",
