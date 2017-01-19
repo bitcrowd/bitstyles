@@ -1,0 +1,93 @@
+@media screen and (min-width: 45em) {
+  p.sg,
+  .sg.sg-section-header h1 .sg-section-source,
+  .sg.sg-top-nav-menu li,
+  .sg-search-container,
+  .sg-code-listing {
+    font-size: 1.125rem;
+  }
+}
+
+.hljs {
+  background: #e4e4e4;
+  border-radius: 0.1em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+.html,
+.hljs {
+  padding: 0;
+  background: #efefef;
+}
+
+html {
+  background-color: #f9f9f9;
+}
+
+.sg.sg-header .sg-title h1 {
+  color: #5787DE;
+}
+
+p.sg,
+.sg.sg-section-header h1 .sg-section-source {
+  float: none;
+}
+
+a.sg,
+input.sg,
+.sg.sg-design .sg-handle,
+.sg.sg-label a,
+.sg.sg-footer,
+.sg.sg-label,
+li.sg,
+.sg.sg-section .sg.modifier-list {
+  font-size: inherit;
+}
+
+.sg.sg-design .sg-handle {
+  left: 2.5em;
+  height: 2.5em;
+}
+
+.sg.sg-section-header {
+  border-radius: 0;
+}
+
+.sg.sg-section .fa-link {
+  display: none;
+}
+
+.sg-section-header + .sg.sg-section-partial {
+  background: #e4e4e4;
+}
+
+.sg.sg-section .sg.sg-section-partial {
+  background: #fff;
+  border: 0;
+}
+
+.sg.sg-section .sg.sg-section-partial:nth-of-type(1) {
+  background: 0;
+}
+
+.sg.sg-section .sg.sg-code-listing {
+  background-color: #efefef;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.sg-section + .sg-section {
+  margin-top: 4rem;
+}
+
+.sg.sg-footer {
+  background: transparent;
+  border: 0;
+  margin: 0;
+}
+
+.sg.sg-top-nav-menu li ul li a {
+  color: #5787DE;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
