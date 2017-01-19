@@ -73,8 +73,8 @@
   width: 100%;
   height: 100%;
   max-height: 100vh;
-  padding-top: $bitstyles-spacing;
-  padding-bottom: $bitstyles-spacing;
+  padding-top: $bitstyles-modal-padding;
+  padding-bottom: $bitstyles-modal-padding;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   background-color: $bitstyles-modal-background-color;
@@ -96,7 +96,7 @@
 
 @include media-query($bitstyles-modal-breakpoint) {
   .#{$bitstyles-namespace}c-modal__content {
-    width: calc(100% - 2 * #{$bitstyles-spacing});
+    width: calc(100% - 2 * #{$bitstyles-modal-padding});
     height: auto;
     transition: all $bitstyles-modal-transition-duration $bitstyles-modal-transition-easing, visibility 0 $bitstyles-modal-transition-easing;
 
@@ -109,8 +109,8 @@
 
 .#{$bitstyles-namespace}c-modal__close {
   position: absolute;
-  top: $bitstyles-spacing;
-  right: $bitstyles-spacing;
+  top: $bitstyles-modal-padding;
+  right: $bitstyles-modal-padding;
 }
 
 // Modal dialog

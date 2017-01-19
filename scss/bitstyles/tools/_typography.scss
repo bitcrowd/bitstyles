@@ -9,7 +9,7 @@
 // Styleguide 1.15.1
 
 @mixin generic-heading {
-  margin: 0 0 $bitstyles-spacing;
+  margin: 0 0 spacing('base');
   font-family: $bitstyles-font-family-header;
   font-weight: $bitstyles-font-weight-bold;
   text-rendering: optimizeLegibility;

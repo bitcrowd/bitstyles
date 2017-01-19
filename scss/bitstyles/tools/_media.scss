@@ -11,5 +11,5 @@
 
 @mixin media__feature {
   float: left;
-  margin-right: $bitstyles-spacing;
+  margin-right: spacing('base');
 }
