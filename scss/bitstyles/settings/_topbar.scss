@@ -1,2 +1,4 @@
-$bitstyles-topbar-vertical-padding: $bitstyles-spacing !default;
-$bitstyles-topbar-horizontal-padding: $bitstyles-spacing * 2 !default;
+$bitstyles-topbar-vertical-padding: $bitstyles-spacing / 2 !default;
+$bitstyles-topbar-horizontal-padding: $bitstyles-spacing !default;
+$bitstyles-topbar-color: inherit !default;
+$bitstyles-topbar-background-color: $bitstyles-color-white !default;
