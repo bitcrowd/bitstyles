@@ -2,7 +2,7 @@ $bitstyles-global-z: topbar !default;
 $bitstyles-border-radius-round: 9999rem !default;
 
 $bitstyles-spacing: 1rem !default;
-$bitstyles-sizes: (
+$bitstyles-spacing-sizes: (
   'base': $bitstyles-spacing,
   'small': $bitstyles-spacing / 2,
   'large': $bitstyles-spacing * 2

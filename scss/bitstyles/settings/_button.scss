@@ -15,4 +15,4 @@ $bitstyles-button-border-radius: 0.25rem !default;
 
 $bitstyles-button-transition: color $bitstyles-transition-duration $bitstyles-transition-easing, background-color $bitstyles-transition-duration $bitstyles-transition-easing !default;
 
-$bitstyles-button-icon-spacing: size('small') !default;
+$bitstyles-button-icon-spacing: spacing('small') !default;

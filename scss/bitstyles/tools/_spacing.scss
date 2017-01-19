@@ -1,0 +1,22 @@
+// Spacing
+//
+// Returns requested size/length from the global `$bitstyles-spacing-sizes` map.
+//
+// e.g. `padding: spacing('small');`
+//
+// Default naming of sizes: `base`, `small`, `large` (suggested: `x-small`,
+// `xx-small` etc. for further variants)
+//
+// @param $spacing-size  name of the standardised size required.
+//
+// Styleguide 1.21
+
+@function spacing($spacing-size) {
+  @if map-has-key($bitstyles-spacing-sizes, $spacing-size) {
+    @return map-get($bitstyles-spacing-sizes, $spacing-size);
+  }
+
+  @else {
+    @error "Oops! Spacing size ‘#{$spacing-size}’ does not exist.";
+  }
+}

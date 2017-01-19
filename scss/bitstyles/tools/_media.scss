@@ -11,5 +11,5 @@
 
 @mixin media__feature {
   float: left;
-  margin-right: size('base');
+  margin-right: spacing('base');
 }
