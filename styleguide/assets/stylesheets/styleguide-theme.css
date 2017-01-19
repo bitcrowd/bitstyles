@@ -1,10 +1,14 @@
 @media screen and (min-width: 45em) {
-  html {
-    font-size: 1.125em;
+  p.sg,
+  .sg.sg-section-header h1 .sg-section-source,
+  .sg.sg-top-nav-menu li,
+  .sg-search-container,
+  .sg-code-listing {
+    font-size: 1.125rem;
   }
 }
 
-code {
+.hljs {
   background: #e4e4e4;
   border-radius: 0.1em;
   padding-left: 0.2em;
@@ -27,13 +31,11 @@ html {
 
 p.sg,
 .sg.sg-section-header h1 .sg-section-source {
-  font-size: 1rem;
   float: none;
 }
 
 a.sg,
 input.sg,
-.sg.sg-top-nav-menu li,
 .sg.sg-design .sg-handle,
 .sg.sg-label a,
 .sg.sg-footer,
@@ -52,10 +54,6 @@ li.sg,
   border-radius: 0;
 }
 
-.sg.sg-section .sg.sg-code-listing {
-  background-color: #efefef;
-}
-
 .sg.sg-section .fa-link {
   display: none;
 }
@@ -65,7 +63,16 @@ li.sg,
 }
 
 .sg.sg-section .sg.sg-section-partial {
+  background: #fff;
   border: 0;
+}
+
+.sg.sg-section .sg.sg-section-partial:nth-of-type(1) {
+  background: 0;
+}
+
+.sg.sg-section .sg.sg-code-listing {
+  background-color: #efefef;
   border-bottom: 1px solid #e4e4e4;
 }
 
