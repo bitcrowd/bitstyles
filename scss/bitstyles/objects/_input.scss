@@ -1,8 +1,8 @@
 /** @define input */
 // Form inputs
 //
-// Basic styling for input elements. All inputs stretch to fill their parent —
-// their width can be constrained by the parent element.
+// **Base styling for input elements**.
+// All inputs stretch to fill their parent — their width is constrained by the parent element.
 //
 // Styleguide 4.13
 
@@ -10,7 +10,9 @@
 
 // Form inputs - text
 //
-// Text inputs are those that accept a string input — text, email, number, date.
+// **All inputs that accept a string input e.g. text, email, number, date**
+//
+// Includes styles for focus, active & disabled states.
 //
 // Markup:
 //   <label class="o-label" for="input_1">This is labeling text</label>
@@ -54,6 +56,8 @@
 
 // Form inputs - Select
 //
+// Base styling for select elements. Not much can be done here, sadly.
+//
 // Markup:
 //   <label class="o-label" for="select_1">This is labeling text</label>
 //   <select class="o-input" id="select_1">
@@ -65,6 +69,9 @@
 // Styleguide 4.13.2
 
 // Form inputs - Checkbox
+//
+// Base styling for checkboxes. Not much can be done here, but size and spacing
+// are set.
 //
 // Markup:
 //    <label class="o-label">

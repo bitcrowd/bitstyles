@@ -2,12 +2,20 @@
 //
 // Icons
 //
-// We use an svg-based icon system. All icons are present as symbols within
+// **SVG icon system**.
+//
+// All icons are present as symbols within
 // `icons.svg`, and are used by embedding svg tags (see example markup).
-// Provide a `<title>` element at the point an icon is used to ensure there is
-// some text content (equivalent to the alt property on `<img>`s.)
-// Set icon sizes by overiding the `$bitstyles-icon-sizes` map (see settings file).
-// The default icon size is the same as surrounding text i.e. `1em`.
+// Icons should be accompanied by some machine-readable text for accessibility &
+// SEO purposes. If there is to be no such text (e.g. based on design mockups),
+// provide an alternative:
+// - provide a `<title>` element containing text, next to the `<use>` element
+// - Next to the `<svg>` element place a `<span class="o-visuallyhidden">` containing descriptive text
+//
+// Set icon sizes by overiding the `$bitstyles-icon-sizes` list (see `settings/_icon.scss`) e.g.
+// ``$bitstyles-icon-sizes: ('small' 2rem, 'medium' 4rem, 'large' 8rem);`
+//
+// The base icon size is the same as surrounding text i.e. `1em`.
 //
 // markup:
 // <svg class="o-icon {$modifiers}">
