@@ -91,3 +91,9 @@ li.sg,
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 }
+
+.section-fullscreen .section-markup-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+}

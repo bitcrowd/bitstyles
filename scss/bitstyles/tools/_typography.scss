@@ -14,8 +14,10 @@
   font-weight: $bitstyles-font-weight-bold;
   text-rendering: optimizeLegibility;
 
-  .fonts-loaded & {
-    font-family: $bitstyles-font-family-header-loaded;
+  @if $bitstyles-font-family-header-loaded != $bitstyles-font-family-header {
+    .fonts-loaded & {
+      font-family: $bitstyles-font-family-header-loaded;
+    }
   }
 }
 
@@ -25,9 +27,91 @@
 //
 // Styleguide 1.15.2
 
-@mixin font-size($pixel-size, $browser-context: $bitstyles-font-size-base-small) {
+@mixin set-font-size($pixel-size, $browser-context: $bitstyles-font-size-base-small) {
   /* stylelint-disable declaration-block-no-duplicate-properties */
   font-size: $pixel-size;
   font-size: px-to-rem($pixel-size, $browser-context);
   /* stylelint-enable declaration-block-no-duplicate-properties */
+}
+
+// Font-size generator
+//
+// Set font-sizes in the map `$bitstyles-font-sizes` e.g.
+// ```scss
+// $bitstyles-font-sizes: (
+//   'base': (
+//     'html': $bitstyles-font-size-base-small,
+//     'h0': 32px,
+//     'h1': 24px,
+//     'h2': 20px,
+//     'h3': 18px,
+//     'h4': $bitstyles-font-size-base-small,
+//     'h5': $bitstyles-font-size-base-small,
+//     'h6': $bitstyles-font-size-base-small
+//   ),
+//   'medium-and-up': (
+//     'html': $bitstyles-font-size-base,
+//     'h0': 86px,
+//     'h1': 40px,
+//     'h2': 28px,
+//     'h3': 20px,
+//     'h4': $bitstyles-font-size-base,
+//     'h5': $bitstyles-font-size-base,
+//     'h6': $bitstyles-font-size-base
+//   )
+// );
+// ```
+//
+// `base` is a reserved word, and results in font-sizes being output without an enclosing media query.
+//
+// @param $subset Provide a list of element names for which to output font-sizes.
+//
+// @param $prefix Provide a string that will be prepended to the element name. Can include `.` to output classnames instead of elements.
+//
+// Styleguide 1.15.3
+
+@mixin generate-font-sizes($prefix: '', $subset: ()) {
+  @each $media-query in $bitstyles-font-sizes {
+    $media-query-name: nth($media-query, 1);
+    $font-sizes: nth($media-query, 2);
+
+    // Don’t wrap base classes in a media-query
+    @if $media-query-name == 'base' {
+      @include output-font-sizes($font-sizes, $prefix, $subset);
+    }
+
+    @else {
+      @include media-query($media-query-name) {
+        @include output-font-sizes($font-sizes, $prefix, $subset);
+      }
+    }
+  }
+}
+
+@mixin output-font-sizes($font-sizes, $prefix, $subset) {
+  $base-size: $bitstyles-font-size-base-small;
+
+  @if map-has-key($font-sizes, 'html') {
+    $base-size: map-get($font-sizes, 'html');
+  }
+
+  @each $element in ($font-sizes) {
+    $element-name: nth($element, 1);
+    $font-size: nth($element, 2);
+
+    @if (length($subset) == 0) or (index($subset, $element-name)) {
+      #{$bitstyles-namespace}#{$prefix}#{$element-name} {
+        /* stylelint-disable max-nesting-depth */
+        @if $element-name == 'html' {
+          // Base font-size must be relative to browser default, not itself!
+          @include set-font-size($font-size);
+        }
+
+        @else {
+          @include set-font-size($font-size, $base-size);
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+    }
+  }
 }

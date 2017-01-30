@@ -1,8 +1,7 @@
 /* stylelint-disable selector-no-type */
 html {
   font-family: $bitstyles-font-family-body;
-  font-size: px-to-em($bitstyles-font-size-base-small);
-  line-height: 1.5;
+  line-height: $bitstyles-line-height-base;
   color: palette('text');
   background: palette('background');
 
@@ -34,59 +33,7 @@ h6 {
   @include generic-heading;
 }
 
-h1 {
-  @include font-size($bitstyles-font-size-h1-small);
-}
-
-h2 {
-  @include font-size($bitstyles-font-size-h2-small);
-}
-
-h3 {
-  @include font-size($bitstyles-font-size-h3-small);
-}
-
-h4 {
-  @include font-size($bitstyles-font-size-h4-small);
-}
-
-h5 {
-  @include font-size($bitstyles-font-size-h5-small);
-}
-
-h6 {
-  @include font-size($bitstyles-font-size-h6-small);
-}
-
-@include media-query($bitstyles-typography-breakpoint) {
-  html {
-    font-size: px-to-em($bitstyles-font-size-base, $bitstyles-font-size-base);
-  }
-
-  h1 {
-    @include font-size($bitstyles-font-size-h1, $bitstyles-font-size-base);
-  }
-
-  h2 {
-    @include font-size($bitstyles-font-size-h2, $bitstyles-font-size-base);
-  }
-
-  h3 {
-    @include font-size($bitstyles-font-size-h3, $bitstyles-font-size-base);
-  }
-
-  h4 {
-    @include font-size($bitstyles-font-size-h4, $bitstyles-font-size-base);
-  }
-
-  h5 {
-    @include font-size($bitstyles-font-size-h5, $bitstyles-font-size-base);
-  }
-
-  h6 {
-    @include font-size($bitstyles-font-size-h6, $bitstyles-font-size-base);
-  }
-}
+@include generate-font-sizes('', (html, h1, h2, h3, h4, h5, h6));
 
 // Paragraphs
 //
