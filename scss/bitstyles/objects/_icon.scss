@@ -35,12 +35,9 @@
   fill: currentColor;
 }
 
-@each $icon-size in $bitstyles-icon-sizes {
-  $alias: nth($icon-size, 1);
-  $size: nth($icon-size, 2);
-
+@each $icon-size-alias, $icon-size-size in $bitstyles-icon-sizes {
   /* postcss-bem-linter: ignore */
-  .#{$bitstyles-namespace}o-icon--#{$alias} {
-    font-size: $size;
+  .#{$bitstyles-namespace}o-icon--#{$icon-size-alias} {
+    font-size: $icon-size-size;
   }
 }

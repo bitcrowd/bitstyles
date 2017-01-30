@@ -71,10 +71,7 @@
 // Styleguide 1.15.3
 
 @mixin generate-font-sizes($prefix: '', $subset: ()) {
-  @each $media-query in $bitstyles-font-sizes {
-    $media-query-name: nth($media-query, 1);
-    $font-sizes: nth($media-query, 2);
-
+  @each $media-query-name, $font-sizes in $bitstyles-font-sizes {
     // Don’t wrap base classes in a media-query
     @if $media-query-name == 'base' {
       @include output-font-sizes($font-sizes, $prefix, $subset);
@@ -95,10 +92,7 @@
     $base-size: map-get($font-sizes, 'html');
   }
 
-  @each $element in ($font-sizes) {
-    $element-name: nth($element, 1);
-    $font-size: nth($element, 2);
-
+  @each $element-name, $font-size in ($font-sizes) {
     @if (length($subset) == 0) or (index($subset, $element-name)) {
       #{$bitstyles-namespace}#{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
