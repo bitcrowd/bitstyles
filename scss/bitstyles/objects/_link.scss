@@ -11,19 +11,9 @@
 @import '../settings/link';
 
 .#{$bitstyles-namespace}o-link {
+  @include link;
+
   padding: 0;
-  color: $bitstyles-color-link;
-  cursor: pointer;
-  background: none;
   border: 0;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
-
-  &:visited {
-    color: $bitstyles-color-link-visited;
-  }
-
-  &:hover,
-  &:focus {
-    color: $bitstyles-color-link-hover;
-  }
 }
