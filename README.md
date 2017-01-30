@@ -190,8 +190,10 @@ Clone this repository, `cd` into the folder created, then install dependencies:
 ```sh
 git clone https://github.com/bitcrowd/bitstyles.git
 cd bitstyles
-npm install
+yarn
 ```
+
+It is recommended to use [yarn](https://yarnpkg.com/en/docs/install) instead of `npm install` to ensure version consistency across dependencies.
 
 ### Build
 
