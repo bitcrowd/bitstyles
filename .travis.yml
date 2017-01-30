@@ -1,15 +1,19 @@
 cache:
+  yarn: true
   directories:
     - node_modules
-rvm:
-  - 2.2
+language: node_js
+sudo: false
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+node_js:
+  - "6.9"
 install:
   - gem uninstall bundler
   - gem install bundler --version '1.12'
 before_script:
-  - nvm install 6.9.1
-  - nvm use 6.9.1
-  - npm install
+  - yarn
 script:
   - npm run lint
   - npm run build
