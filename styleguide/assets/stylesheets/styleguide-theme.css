@@ -8,7 +8,7 @@
   }
 }
 
-code {
+:not(.object-section) > code {
   background: #d9d9d9;
   border-radius: 0.1em;
   padding-left: 0.2em;

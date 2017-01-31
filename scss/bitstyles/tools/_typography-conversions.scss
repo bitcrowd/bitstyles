@@ -1,6 +1,12 @@
 // Px to Rem sizing
 //
-// Converts pixels to rems — use to define font-sizes etc.
+// **Converts pixels to rems**.
+//
+// Used to define font-sizes (within the `set-font-size` and other mixins).
+//
+// @param $pixel-size  CSS dimension in `px` units. The font-size required, in pixels.
+//
+// @param $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
 //
 // Styleguide 1.14.1
 
@@ -8,11 +14,18 @@
   @return ($pixel-size / $root-size) * 1rem;
 }
 
-// em sizing
+// Px to em sizing
 //
-// Converts pixels to ems — use to define font-sizes etc.
+// **Converts pixels to ems**
+//
+// Used to define font-sizes (within the `set-font-size` and other mixins).
+//
+// @param $pixel-size  CSS dimension in `px` units. The font-size required, in pixels.
+//
+// @param $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
 //
 // Styleguide 1.14.2
-@function px-to-em($pixels, $browser-context: $bitstyles-font-size-base-small) {
-  @return ($pixels / $browser-context) + 0em; // stylelint-disable-line length-zero-no-unit
+
+@function px-to-em($pixel-size, $root-size: $bitstyles-font-size-base-small) {
+  @return ($pixel-size / $root-size) + 0em; // stylelint-disable-line length-zero-no-unit
 }

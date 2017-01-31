@@ -70,13 +70,14 @@
 
 // Button - with icon
 //
-// **The same base button can contain an optional decorative icon**. Here it’s placed before the
-// text. Source order dictates icon position.
+// **The same base button can contain an optional decorative icon**.
+//
+// Here it’s placed before the text. Source order dictates icon position. There must be no whitespace between the icon and text — can be achieved using comments as shown here.
 //
 // markup:
 // <button class="o-button {$modifiers}">
-//   <svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg>
-//   <span class="o-button__label">Button Text</span>
+//   <svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg><!--
+//   --><span class="o-button__label">Button Text</span>
 // </button>
 //
 //              - Base state
@@ -92,8 +93,8 @@
 //
 // markup:
 // <button class="o-button {$modifiers}">
-//   <span class="o-button__label">Button Text</span>
-//   <svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg>
+//   <span class="o-button__label">Button Text</span><!--
+//   --><svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg>
 // </button>
 //
 //              - Base state

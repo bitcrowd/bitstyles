@@ -15,7 +15,6 @@
 //
 // Dependencies:
 // - `layout/width`
-// - `tools/width`
 //
 // Styleguide 3.2
 
@@ -141,8 +140,8 @@
 // To do this, append the name of a breakpoint
 // to the width class to have it activate only at that breakpoint e.g.
 // `.l-width--12-of-12.l-width--6-of-12@medium` to create an element that’s
-// fullwidth for all screens except those larger than `medium`. Multiple
-// l-width--item/breakpoints combinations can be used to define a grid item’s width
+// fullwidth for all screens, then becomes half width for `medium`-screens and larger.
+// Multiple l-width--item/breakpoints combinations can be used to define a grid item’s width
 // at several breakpoints (for all the breakpoints defined in the
 // `$bitstyles-widths-breakpoints` Sass list).
 //

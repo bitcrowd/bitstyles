@@ -1,7 +1,12 @@
 // Absolute Center
 //
-// Vertically & horizontally centred element.
-// Absolutely positioned, so centred relative to nearest relatively-positioned parent.
+// **Centres an element vertically & horizontally**, relative to its closest non-statically
+// positioned parent element.
+//
+// This mixin makes use of `position: absolute`
+// so the element is no longer in the document flow and has no width or height as
+// far as the parent element is concerned — the parent element must instead provide
+// the dimensions for this to align itself to.
 //
 // Styleguide 1.1
 
