@@ -1,10 +1,13 @@
 // Expander
 //
-// Needs JS to function. The toggle is an interactive element of some kind (button, link),
-// the body is the content you want to be revealed — it starts at zero height,
-// expands to size of content once active.
+// **Expand or contract to show or hide a longer piece of text**
 //
-// Use the `.o-button` classes on the `.c-expander-toggle` to set size & appearance.
+// This needs JS to function. The `toggle` should be a button element with some meaningful text,
+// the `body` is the content you want to be revealed — it starts at zero height,
+// expanding to the size of its content once active.
+//
+// Use the `.o-button` classes on the `.c-expander-toggle` to ensure consistency
+// with other button elements.
 //
 // markup:
 // <p>
