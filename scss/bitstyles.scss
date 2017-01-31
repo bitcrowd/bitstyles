@@ -1,6 +1,9 @@
 /* stylelint-disable max-empty-lines */
 // SETTINGS
-// Global settings & settings for each object below (if needed).
+// **Global settings**.
+//
+// These are just the variables required at a global level. Settings for each layout,
+// object, and component class are imported within those respective Sass files.
 //
 // * No CSS output *
 
@@ -21,9 +24,10 @@
 
 // Tools: Functions & Mixins
 //
-// Mixins and functions. Includes mixins we later use to build objects
-// e.g. at different breakpoints, and some we use only in the background as
-// utilities.
+// **Mixins and functions**.
+//
+// Includes mixins we later use to build objects e.g. at different breakpoints,
+// and some we use only in the background as utilities.
 //
 // **No CSS output**
 //
@@ -35,13 +39,13 @@
 
 
 // ******** GENERIC
-// Low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
+// These are the low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
 @import 'bitstyles/generic/all';
 
 // Base
 //
-// Unclassed elements. Directly styles elements
-// e.g. `<a>`, `<blockquote>`, `<address>`.
+// Here we’re styling unclassed html elements directly  e.g. `<a>`, `<blockquote>`
+// `<address>`.
 //
 // sg-wrapper:
 // <div class="object-section">
@@ -53,7 +57,12 @@
 
 // Layout
 //
-// Classes that create the high-level layout of a page.
+// **Create the high-level layout of a page**.
+//
+// Classes that take care of common layouts e.g. centred page content with some
+// padding at the sides so content doesn’t hit viewport edges, HTML grid system.
+//
+// Layout classes should be selectively imported.
 //
 // sg-wrapper:
 // <div class="object-section">
@@ -68,11 +77,16 @@
 
 // Objects
 //
-// Objects, abstractions, and design patterns (e.g. .o-media, .o-icon, .o-button).
-// Relatively cosmetic-free, these are intended to be reused throughout the site
+// **Objects, abstractions, and design patterns**
+// (e.g. .o-media, .o-icon, .o-button).
+//
+// Relatively cosmetic-free (colours can be specified by overriding relevant variables),
+// the object classes are layout patterns intended to be reused throughout the site
 // and composed together as needed.
 //
-// e.g. `<button class="o-button o-truncate-with-ellipsis"></button>`
+// e.g. `<button class="o-button o-truncate-with-ellipsis"></button>` to create
+// a clickable button with interactive states, a large click area, and button-y
+// appearance, that also truncates its text when it’s too long for the button width.
 //
 // sg-wrapper:
 // <div class="object-section">
@@ -110,10 +124,11 @@
 
 // Components
 //
-// Chunks of UI and structure for a reusable page element containing smaller
-// objects e.g. a header or sidebar element.
+// **Chunks of UI and structure for a reusable page element**
 //
-// These are commonly project-specific so bitstyles only includes a few very
+// Normally containing containing smaller objects e.g. a header or sidebar element.
+//
+// These are quite project-specific so bitstyles only includes a few very
 // generally-used components such as modals.
 //
 // sg-wrapper:
@@ -131,10 +146,12 @@
 
 // Trumps
 //
-// High-specificity overrides and helper classes for creating exceptions to an
-// object or component’s standard styles e.g. `.t-margin--left`.
+// **High-specificity overrides and helper classes**
+// These can bed to create exceptions to an object or component’s standard styles
+// e.g. `.t-margin--left` to add margin to an element that would otherwise have
+// margin set to zero.
 //
-// `!important` sometimes exists here, and that’s ok.
+// `!important` sometimes exists here, and that’s ok as no styles should follow this section.
 //
 // sg-wrapper:
 // <div class="object-section">
