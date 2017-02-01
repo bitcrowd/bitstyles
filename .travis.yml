@@ -13,7 +13,7 @@ install:
   - gem uninstall bundler
   - gem install bundler --version '1.12'
   - yarn
+  - npm install -g phantomjs casperjs backstopjs
 script:
-  - npm run lint
-  - npm run build
   - npm run styleguide:build
+  - npm run checks

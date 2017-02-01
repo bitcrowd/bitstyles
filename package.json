@@ -10,6 +10,8 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:scss && npm run lint:js",
 
+    "test": "scripts/visual-regression-tests.sh",
+
     "test:build": "npm run test:build:base; npm run test:build:objects; npm run test:build:layout; npm run test:build:components; npm run test:build:trumps",
     "test:build:base": "backstop reference --configPath=test/backstop_tests/base.json",
     "test:build:objects": "backstop reference --configPath=test/backstop_tests/objects.json",
@@ -17,12 +19,13 @@
     "test:build:components": "backstop reference --configPath=test/backstop_tests/components.json",
     "test:build:trumps": "backstop reference --configPath=test/backstop_tests/trumps.json",
 
-    "test": "npm run test:base; npm run test:layout; npm run test:objects; npm run test:components; npm run test:trumps",
-    "test:base": "backstop test --configPath=test/backstop_tests/base.json",
-    "test:objects": "backstop test --configPath=test/backstop_tests/objects.json",
-    "test:layout": "backstop test --configPath=test/backstop_tests/layout.json",
-    "test:components": "backstop test --configPath=test/backstop_tests/components.json",
-    "test:trumps": "backstop test --configPath=test/backstop_tests/trumps.json",
+    "test:compare": "npm run test:compare:base; npm run test:compare:layout; npm run test:compare:objects; npm run test:compare:components; npm run test:compare:trumps",
+
+    "test:compare:base": "backstop test --configPath=test/backstop_tests/base.json",
+    "test:compare:objects": "backstop test --configPath=test/backstop_tests/objects.json",
+    "test:compare:layout": "backstop test --configPath=test/backstop_tests/layout.json",
+    "test:compare:components": "backstop test --configPath=test/backstop_tests/components.json",
+    "test:compare:trumps": "backstop test --configPath=test/backstop_tests/trumps.json",
 
     "checks": "npm run lint && npm run css:stats && npm run test",
 
