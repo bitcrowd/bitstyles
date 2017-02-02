@@ -17,6 +17,7 @@ yarn
 npm run styleguide &
 sleep 10
 npm run test:build
+echo `ps aux | grep '[s]tyleguide'`
 kill $(ps aux | grep '[s]tyleguide' | awk '{print $2}')
 
 # copy then delete the new reference images
@@ -28,4 +29,5 @@ rm -rf $temp_folder
 npm run styleguide &
 sleep 10
 npm run test:compare
+echo `ps aux | grep '[s]tyleguide'`
 kill $(ps aux | grep '[s]tyleguide' | awk '{print $2}')
