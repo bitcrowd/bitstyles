@@ -1,0 +1,24 @@
+/* @define Link */
+// Link
+//
+// Styling for all links.
+//
+// Styleguide 1.22
+
+@mixin link {
+  color: $bitstyles-color-link;
+  text-decoration: inherit;
+  cursor: pointer;
+  background: $bitstyles-background-color-link;
+  transition: $bitstyles-link-transition;
+
+  &:visited {
+    color: $bitstyles-color-link-visited;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-color-link-hover;
+    text-decoration: $bitstyles-text-decoration-link-hover;
+  }
+}

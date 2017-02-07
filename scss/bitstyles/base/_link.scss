@@ -16,17 +16,5 @@
 @import '../settings/link';
 
 a {
-  color: $bitstyles-color-link;
-  text-decoration: none;
-  transition: $bitstyles-link-transition;
-
-  &:visited {
-    color: $bitstyles-color-link-visited;
-  }
-
-  &:hover,
-  &:focus {
-    color: $bitstyles-color-link-hover;
-    text-decoration: underline;
-  }
+  @include link;
 }
