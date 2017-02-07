@@ -2,9 +2,11 @@
 //
 // Hidden
 //
-// Fully hides an element & its children — does not affect document flow, does
-// not get read by google or screenreaders. Available at every breakpoint defined
-// in `$bitstyles-hidden-breakpoints`.
+// **Hidden from everyone — you, search engines, screenreaders…**
+//
+// Fully hides an element & its children — it will be taken out of the document
+// flow, and will therefore not be read by google or screenreaders. Available at
+// every breakpoint defined in `$bitstyles-hidden-breakpoints`.
 //
 // .o-hidden               - Hide this element always (generally so it can be revealed using JS)
 // .o-hidden@small-only    - Hide this content on smallscreens

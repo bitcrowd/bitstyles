@@ -2,17 +2,25 @@
 //
 // Fixed-ratio
 //
-// Enforces an aspect ratio on this element and its contents — the element takes
-// 100% width, then the height is set to the keep the element at the specified ratio.
-// Default ratio is defined in `$fixed-ratio-default-ratio`.
+// **Enforces an aspect ratio on this element and its contents**.
+//
+// The element takes 100% width, then the height is set to the keep the element
+// at the specified ratio. Default ratio is defined as 16:9 in the Sass map
+// `$fixed-ratio-default-ratio` under the keys `width` and `height` e.g.
+// `$fixed-ratio-default-ratio: ('width': 10, 'height': 20)`
 //
 // markup:
-// <figure>
-//   <div class="o-fixed-ratio">
-//     <img class="o-fixed-ratio__inner" src="assets/images/placeholder_16-9.png">
-//   </div>
-//   <figcaption>An image at 16:9 aspect ratio</figcaption>
-// </figure>
+// <div class="o-fixed-ratio">
+//   <img class="o-fixed-ratio__inner" src="assets/images/placeholder_16-9.png">
+// </div>
+//
+// sg-wrapper:
+// <div class="object-section">
+//   <figure>
+//     <sg-wrapper-content/>
+//     <figcaption>An image at 16:9 aspect ratio</figcaption>
+//   </figure>
+// </div>
 //
 // Styleguide 4.9
 

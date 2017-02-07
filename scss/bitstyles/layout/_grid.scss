@@ -1,12 +1,13 @@
 // Grid Systems
 //
-// Responsive html grid system using inline-block (no floats, no clearfix, no flexbox).
-// Note this means whitespace is important. If necessary, use html comments between
-// each `.grid__item` to remove any whitespace, otherwise the browser will display
-// a small gap between grid items.
+// **A responsive html grid system using inline-block** (no floats, no clearfix, no flexbox).
 //
-// As it’s an HTML grid system (not CSS), add some wrapping elements to create rows
-// and columns (see example markup below). Each of these grid items needs the class
+// Note this means *whitespace is important*. If necessary, use html comments between
+// each `.l-grid__item` to remove any whitespace (see the markup example below),
+// otherwise the browser will display a small gap between grid items.
+//
+// As it’s an HTML grid system (not CSS), some wrapping elements are needed to create rows
+// and columns (again see the markup in the examples below). Each of these grid items needs the class
 // `.l-grid__item` and a width class. With current defaults, the widths provided
 // include a 12-column system e.g. 1-of-12, 2-of-12, 3-of-12 … 11-of-12, 12-of-12.
 //
@@ -14,14 +15,19 @@
 //
 // Dependencies:
 // - `layout/width`
-// - `tools/width`
 //
 // Styleguide 3.2
 
 // Grid system — base
 //
-// In the base grid system, columns are of proportional widths (percentage of
-// the full width) but not responsive.
+// **In the base grid system, columns are of proportional widths (a percentage of
+// the full width) but not responsive**.
+//
+// This means e.g. they cannot change from being 3-column
+// on larger screens, to one column stacked on small screens (if you can, try
+// resizing your browser window to see that the number of columns in the example
+// below doesn’t change). See the Responsive Grid below for information on how
+// to make your grid responsive.
 //
 // markup:
 // <ul class="l-grid">
@@ -128,10 +134,15 @@
 
 // Grid system - responsive
 //
-// The grid system can also be used responsively. Append the name of a breakpoint
-// to the width class to have it activate only at that breakpoint. Multiple
-// l-width--item/breakpoints combinations can be used to define a grid item’s width
-// at various breakpoints (for all the breakpoints you define in the
+// **The grid system can also be used responsively — setting different widths for an
+// element based on the viewport size**.
+//
+// To do this, append the name of a breakpoint
+// to the width class to have it activate only at that breakpoint e.g.
+// `.l-width--12-of-12.l-width--6-of-12@medium` to create an element that’s
+// fullwidth for all screens, then becomes half width for `medium`-screens and larger.
+// Multiple l-width--item/breakpoints combinations can be used to define a grid item’s width
+// at several breakpoints (for all the breakpoints defined in the
 // `$bitstyles-widths-breakpoints` Sass list).
 //
 // This is commonly used to set a default mobile-first width of `.l-width--12-of-12`
@@ -140,14 +151,20 @@
 //
 // markup:
 // <ul class="l-grid">
-//   <li class="l-grid__item l-width--12-of-12 l-width--4-of-12@medium">
-//     <div class="background-grey">12-of-12 / 4-of-12@medium</div>
+//   <li class="l-grid__item l-width--6-of-12 l-width--4-of-12@medium">
+//     <div class="background-grey">6-of-12 / 4-of-12@medium</div>
 //   </li><!--
-//--><li class="l-grid__item l-width--12-of-12 l-width--4-of-12@medium">
-//     <div>12-of-12 / 4-of-12@medium</div>
+//--><li class="l-grid__item l-width--6-of-12 l-width--4-of-12@medium">
+//     <div>6-of-12 / 4-of-12@medium</div>
 //   </li><!--
-//--><li class="l-grid__item l-width--12-of-12 l-width--4-of-12@medium">
-//     <div class="background-grey">12-of-12 / 4-of-12@medium</div>
+//--><li class="l-grid__item l-width--6-of-12 l-width--4-of-12@medium">
+//     <div class="background-grey">6-of-12 / 4-of-12@medium</div>
+//   </li><!--
+//--><li class="l-grid__item l-width--12-of-12 l-width--6-of-12@medium">
+//     <div class="background-grey">12-of-12 / 6-of-12@medium</div>
+//   </li><!--
+//--><li class="l-grid__item l-width--12-of-12 l-width--6-of-12@medium">
+//     <div>12-of-12 / 6-of-12@medium</div>
 //   </li>
 // </ul>
 //

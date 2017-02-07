@@ -1,7 +1,8 @@
 // Z-index
 //
-// This mixin helps you assign z-index values in a controlled manner, avoiding
-// situations where you specify ever-escalating z-indices.
+// **Assign z-index values in a controlled manner**
+//
+// Avoid situations where you specify ever-escalating z-indices.
 //
 // Solves problems outlined at:
 // <http://philipwalton.com/articles/what-no-one-told-you-about-z-index/>
@@ -35,6 +36,10 @@
 //   z-index: 2;
 // }
 // ```
+//
+// @param {List} $list  A list of strings in order of their z-index stacking order.
+//
+// @param {String} $lement The element for which you need the z-index level.
 //
 // Styleguide 1.19
 

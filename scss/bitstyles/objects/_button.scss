@@ -1,13 +1,17 @@
 /** @define button */
 //
-// Generic button.
+// Buttons
+//
+// **Buttons perform actions (they’re not links, nor navigation)**, and are ideally a `<button>`
+// element. Sometimes out of technical necessity this class can be applied to `<a>` elements
+// but beware — that’s code smell…
 //
 // Styleguide 4.7
 
 // Button - generic
 //
-// Produces a larger-than-text hit target. Intended to be an action,
-// not a link — most often a `<button>` rather than `<a href="…">` (and never
+// **Produces a larger-than-text hit target**. Intended to be an action,
+// not a link, therefore most often a `<button>` rather than `<a href="…">` (and never
 // `<a href="#">`).
 //
 // markup:
@@ -66,11 +70,15 @@
 
 // Button - with icon
 //
-// A button can be used with an optional decorative icon, placed before the
-// text. Source order dictates icon position.
+// **The same base button can contain an optional decorative icon**.
+//
+// Here it’s placed before the text. Source order dictates icon position. There must be no whitespace between the icon and text — can be achieved using comments as shown here.
 //
 // markup:
-// <button class="o-button {$modifiers}"><svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg><span class="o-button__label">Button Text</span></button>
+// <button class="o-button {$modifiers}">
+//   <svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg><!--
+//   --><span class="o-button__label">Button Text</span>
+// </button>
 //
 //              - Base state
 // :hover       - Hover state.
@@ -80,11 +88,14 @@
 
 // Button - with icon, reversed
 //
-// A button can be used with an optional decorative icon, placed before the
+// **The same base button can contain an optional decorative icon**. Here it’s placed after the
 // text. Source order dictates icon position.
 //
 // markup:
-// <button class="o-button {$modifiers}"><span class="o-button__label">Button Text</span><svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg></button>
+// <button class="o-button {$modifiers}">
+//   <span class="o-button__label">Button Text</span><!--
+//   --><svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg>
+// </button>
 //
 //              - Base state
 // :hover       - Hover state.

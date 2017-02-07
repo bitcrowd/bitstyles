@@ -1,19 +1,24 @@
 /* @define modal */
 // Modal
 //
-// Needs JS to function. This is a modal overlay which animates in & out.
+// **An accessible modal overlay which animates in & out**
 //
-// Uses [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog) so it’s really accessible —
-// it requires semantic markup, landmark roles and aria attributes in order to function, and keeps
-// those all updated with the component’s current state.
+// This needs JS to function.
 //
-// Add `data-a11y-dialog-show="dialog_ID"` to a button to make that the trigger to open a modal.
+// Set modal size using the usual layout classes e.g. `.l-content`. At smaller screensizes
+// the modal becomes fullwidth.
 //
-// Can be closed by clicking the darkened overlay, the close button in the top right (or any button
-// with the `data-a11y-dialog-hide` attribute), or hitting the escape key.
+// The example here uses [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog)
+// so it’s really accessible — it requires semantic markup, landmark roles and aria
+// attributes in order to function, and keeps those all updated with the component’s
+// current state. The basic layout & appearance styles should still function even if you’re using
+// a different JS modal component.
 //
-// Sizing is controlled by the usual layout classes e.g. `.l-content`, except at smaller screensizes
-// where the modal becomes fullwidth.
+// If you’re using A11y-dialog:
+// - Add `data-a11y-dialog-show="dialog_ID"` to a button to make that the trigger
+// to open a modal (change the id attribute to be unique!).
+// - Closed the modal by clicking the darkened overlay, the close button in the top right (or any button
+// in the modal’s content which you give the `data-a11y-dialog-hide` attribute), or hitting the escape key.
 //
 // markup:
 //   <main aria-label="Content" id="main" class="l-content">
@@ -115,19 +120,29 @@
 
 // Modal dialog
 //
-// Needs JS to function. This is a modal dialog overlay which animates in & out.
+// **An accessible modal overlay which animates in & out**
 //
-// As with the standard modal it uses [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog) so it’s really accessible —
-// it requires semantic markup, landmark roles and aria attributes in order to function, and keeps
-// those all updated with the component’s current state.
+// This needs JS to function.
 //
-// Add `data-a11y-dialog-show="dialog_ID"` to a button to make that the trigger to open a modal.
+// Set modal size using the usual layout classes e.g. `.l-content`. At smaller screensizes
+// the modal becomes fullwidth.
 //
-// Can be closed by clicking the darkened overlay, hitting the escape key, or by selecting one of the cancel/ok buttons.
-// Different animations can be defined for each of the options.
+// As with the standard modal we’re using [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog)
+// so it’s really accessible — it requires semantic markup, landmark roles and aria
+// attributes in order to function, and keeps those all updated with the component’s
+// current state. The basic layout & appearance styles should still function even if you’re using
+// a different JS modal component.
 //
-// Sizing is controlled by the usual layout classes e.g. `.l-content`, except at smaller screensizes
-// where the modal becomes fullwidth.
+// Using the `modal-variation` mixin we can provide different animations depending
+// on which of several buttons in the modal content the user clicks. Here we have
+// ‘cancel’ and ‘ok’ buttons, with animations to emphasise the meaning of the chosen action
+// (use JS to add the correct class to the modal element based on which button is clicked).
+//
+// If you’re using A11y-dialog:
+// - Add `data-a11y-dialog-show="dialog_ID"` to a button to make that the trigger
+// to open a modal (change the id attribute to be unique!).
+// - Closed the modal by clicking the darkened overlay, the close button in the top right (or any button
+// in the modal’s content which you give the `data-a11y-dialog-hide` attribute), or hitting the escape key.
 //
 // markup:
 //   <main aria-label="Content" id="main" class="l-content">

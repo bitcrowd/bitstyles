@@ -1,6 +1,12 @@
 // Absolute Cover
 //
-// An element that covers its nearest relatively-positioned parent from edge to edge.
+// **An element that covers its parent element from edge to edge** — vertically and
+// horizontally — **regardless of how it may stretch**.
+//
+// Not recommended for images, media etc. (elements width inherent dimensions) due
+// to that. This is most commonly used for container elements.
+//
+// @param {Number} $distance  CSS dimension with unit. Distance from the edges of the closest parent element with non-static positioning.
 //
 // Styleguide 1.2
 

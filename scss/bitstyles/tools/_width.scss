@@ -1,5 +1,10 @@
 // Widths
 //
+// **Generate the widths used in e.g. the grid system**.
+//
+// This should not be needed within projects — it’s for internal use. If you need
+// to define widths within your project, look to [layout/widths](/section/3.4).
+//
 // Pass in a list of one or more fractions that you need a row split into e.g. if you need
 // to split some rows into 10 sections and others into 12 sections, call the width mixin
 // with:
@@ -14,6 +19,10 @@
 // Normally it’s best to set the `$bitstyles-widths` and
 // `$bitstyles-widths-breakpoints` variables, and then let the sass in `layout/width`
 // generate your width classes at various breakpoints (see the layout section on widths).
+//
+// @param {List} $fractions  A list of one or more unitless numbers defining how may columns to define e.g. (12, 16) outputs a 12-column grid and a 16-column grid.
+//
+// @param {String} $breakpoint  Optional. The breakpoint at which this width applies. Defaults to none. Any breakpoint named should be defined in `$bitstyles-breakpoints`.
 //
 // Styleguide 1.18
 

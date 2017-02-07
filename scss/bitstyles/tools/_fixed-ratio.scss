@@ -1,5 +1,7 @@
 // Fixed Ratio
 //
+// **Enforces an aspect ratio on this element and its contents**.
+//
 // An element that has intrinsic shape — width will be 100%, height will be limited
 // to keep your aspect ratio. Pass in width & height parameters to set your aspect
 // ratio.
@@ -22,6 +24,10 @@
 //   @include fixed-ratio--variant(10, 10);
 // }
 // ```
+//
+// @param {Number} $width  Unitless number. Sets the width of the element.
+//
+// @param {Number} $height  Unitless number. Sets the height of the element.
 //
 // Styleguide 1.6
 

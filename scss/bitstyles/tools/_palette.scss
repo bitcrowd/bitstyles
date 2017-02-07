@@ -1,11 +1,11 @@
 // Palette
 //
-// Returns requested colours from the global `$bitstyles-palette` map.
-// e.g. color: palette('text');
+// **Returns requested colours from the global `$bitstyles-palette` map.**
+// e.g. `color: palette('text');`
 //
-// @param $color  Base colour within the palette
+// @param {String} $color  Base colour within the palette
 //
-// @param $tone   Optional. Variant of the colour e.g. 'base', light', 'dark'. Defaults to `base`.
+// @param {String} $tone   Optional. Variant of the colour e.g. 'base', light', 'dark'. Defaults to `base`.
 //
 // Styleguide 1.20
 

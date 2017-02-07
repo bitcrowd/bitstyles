@@ -2,15 +2,19 @@
 //
 // Flex
 //
-// A simple flex layout.
-// Make one of the children `.o-flex__primary` to make it take as much space as is available.
+// **Basic flex layout**.
+//
+// Apply to an element to simply make its children share the available width e.g.
+// a list of links in a menu.
+// Make one of the children `.o-flex__primary` to make it take as much space as is
+// available i.e. all the horizontal space left after its siblings take the minimum width they need.
 //
 // markup:
-// <ul class="o-flex">
-//  <li>Some content here</li>
-//  <li class="o-flex__primary">Some more important content here</li>
-//  <li>Some content here</li>
-//  <li>Some content here</li>
+// <ul class="o-flex o-list-reset">
+//  <li>List item one</li>
+//  <li class="o-flex__primary">Important content here</li>
+//  <li>List item three</li>
+//  <li>List item four</li>
 // </ul>
 //
 // Styleguide 4.10

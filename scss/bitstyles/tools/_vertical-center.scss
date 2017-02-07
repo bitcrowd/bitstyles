@@ -1,6 +1,9 @@
 // Vertical Center
 //
-// Vertically centres an element relative to its parent.
+// **Centres an element vertically (not horizontally)**
+//
+// Centres the element vertically, relative to its closest positioned parent.
+// Uses absolute positioning, therefore the element will be outside the document flow.
 //
 // Styleguide 1.16
 

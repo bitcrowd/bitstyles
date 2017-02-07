@@ -1,8 +1,17 @@
 // Webfont
 //
-// Helper mixin to output a widely cross-browser-compatible `@font-face` declaration.
+// Helper mixin to output a widely cross-browser-compatible `@font-face` declaration
+// for importing webfonts.
 //
 // ```@include webfont(Roboto, italic, 700, 'fonts/roboto-bold-italic');```
+//
+// @param {String} $font-family  The name by which this font will be referred to.
+//
+// @param {String} $font-style  The `font-style` of the font you’re defining e.g. `normal`, `italic`.
+//
+// @param {String} $font-weight  The `font-weight` of the font you’re defining e.g. `100`, `400`, `bold`.
+//
+// @param {String} $font-url  The location at which the font assets can be found. Expects `.eot`, `.woff2`, `.woff`, and `.ttf` versions to exist there.
 //
 // Styleguide 1.8
 

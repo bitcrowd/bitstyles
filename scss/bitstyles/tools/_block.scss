@@ -1,6 +1,9 @@
 // Block
 //
-// Display an element as a block.
+// **Forces an element to display as a block**, when it otherwise may be `inline`/
+// `inline-block`. This can be used to force an inline element onto a ‘new line’,
+// but also has implications for an element’s size (block elements expand horizontally
+// to the available width).
 //
 // Styleguide 1.3
 

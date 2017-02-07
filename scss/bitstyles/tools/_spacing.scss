@@ -1,13 +1,13 @@
 // Spacing
 //
-// Returns requested size/length from the global `$bitstyles-spacing-sizes` map.
+// **Returns requested size/length from the global `$bitstyles-spacing-sizes` map**.
 //
 // e.g. `padding: spacing('small');`
 //
 // Default naming of sizes: `base`, `small`, `large` (suggested: `x-small`,
 // `xx-small` etc. for further variants)
 //
-// @param $spacing-size  name of the standardised size required.
+// @param {String} $spacing-size  Name of the standardised size required, as defined in the map `$bitstyles-spacing-sizes`.
 //
 // Styleguide 1.21
 

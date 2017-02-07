@@ -2,9 +2,10 @@
 //
 // Truncate with ellipsis
 //
-// Truncates text with an ellipsis (…). Parent element needs a set or limited width.
+// **When text content is wider than parent width, truncate text with an ellipsis (…).**
+// The parent element needs a set or limited width.
 // Note the exact algorithm is defined per browser and is of varying quality
-// — you may loose a couple of characters just to display an ellipsis instead.
+// — you may lose a couple of characters just to display an ellipsis instead.
 //
 // markup:
 // <div class="l-width--2-of-12 background-grey">

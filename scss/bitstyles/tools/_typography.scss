@@ -4,7 +4,7 @@
 
 // Generic heading
 //
-// Shared styles for heading elements, and object classes that match headings.
+// **Shared styles for heading elements**
 //
 // Styleguide 1.15.1
 
@@ -23,20 +23,29 @@
 
 // Font-size helper
 //
-// Sets font-size using `rem`s with `px` fallback
+// **Standarised method to set font-size**.
+//
+// Sets font-sizes using `rem`s with `px` fallback.
+//
+// @param {Number} $pixel-size  CSS dimension in `px` units. The font-size required, in pixels.
+//
+// @param {Number} $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
 //
 // Styleguide 1.15.2
 
-@mixin set-font-size($pixel-size, $browser-context: $bitstyles-font-size-base-small) {
+@mixin set-font-size($pixel-size, $root-size: $bitstyles-font-size-base-small) {
   /* stylelint-disable declaration-block-no-duplicate-properties */
   font-size: $pixel-size;
-  font-size: px-to-rem($pixel-size, $browser-context);
+  font-size: px-to-rem($pixel-size, $root-size);
   /* stylelint-enable declaration-block-no-duplicate-properties */
 }
 
 // Font-size generator
 //
-// Set font-sizes in the map `$bitstyles-font-sizes` e.g.
+// **Generate your typographic scale**
+//
+// Set your font-sizes in the map `$bitstyles-font-sizes` e.g.
+//
 // ```scss
 // $bitstyles-font-sizes: (
 //   'base': (
@@ -62,11 +71,15 @@
 // );
 // ```
 //
+// Use `px` to define font-sizes, the output will specify `rem`s with a `px` fallback.
+//
 // `base` is a reserved word, and results in font-sizes being output without an enclosing media query.
 //
-// @param $subset Provide a list of element names for which to output font-sizes.
+// The media-query names used should be defined in `$bitstyles-breakpoints`.
 //
-// @param $prefix Provide a string that will be prepended to the element name. Can include `.` to output classnames instead of elements.
+// @param {String} $prefix  Optional. Provide a string that will be prepended to the element name. Can include `.` to output classname selectors instead of elements.
+//
+// @param {List} $subset  Optional. Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in `$bitstyles-font-sizes`.
 //
 // Styleguide 1.15.3
 
@@ -84,6 +97,18 @@
     }
   }
 }
+
+// Output font sizes
+//
+// **Private mixin**
+//
+// Used to output font-sizes from a map of font-sizes in `element-name: font-size` pairs.
+//
+// @param {Map} $font-sizes  A map of font-sizes in `element-name: font-size` pairs. See `$bitstyles-font-sizes` for an example.
+//
+// @param {String} $prefix  A string to prefix to the ouput selector.
+//
+// @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 
 @mixin output-font-sizes($font-sizes, $prefix, $subset) {
   $base-size: $bitstyles-font-size-base-small;

@@ -2,9 +2,12 @@
 //
 // Content
 //
-// A generic wrapper for content, this ensures that there is always whitespace
-// at the edges of the viewport. It spans the full width of the screen, up to a
-// maximum set by `$bitstyles-content-max-width`, and remains centred.
+// **A generic wrapper for content with side padding and a maximum width**.
+//
+// This layout object ensures:
+// - there is always whitespace at the sides of the viewport; content will never touch the edge.
+// - content spans the full width of the screen, up to a maximum set by `$bitstyles-content-max-width`
+// - content remains centred within its parent element.
 //
 // markup:
 // <div class="l-content">

@@ -1,22 +1,29 @@
 // Media Query
 //
-// Helper function to ease usage of media-queries. Uses the breakpoints listed in $breakpoint sass variable.
+// **Helper function to ease usage of media-queries**.
+//
+// By default it uses the breakpoints listed in `$bitstyles-breakpoints` sass variable,
+// but you can also pass in a list as a parameter.
 //
 // Usage:
 //
-// `
+// ```scss
 // @media-query(breakpoint-name) {
 //    .selector {
 //       …styles here…
 //    }
 // }
-// `
+// ```
+//
+// @param {String} $media-query-name  Name of the media query you’re referring to, as defined in the $breakpoints parameter (see below).
+//
+// @param {Map} $breakpoints  Optional. A map of breakpoints. By default `$bitstyles-breakpoints` will be used, but if you pass in another list of breakpoints, that will be used instead.
 //
 // Styleguide 1.11
 
-@mixin media-query($mq, $breakpoints: $bitstyles-breakpoints) {
+@mixin media-query($media-query-name, $breakpoints: $bitstyles-breakpoints) {
 
-  $breakpoint-condition: map-get($breakpoints, $mq);
+  $breakpoint-condition: map-get($breakpoints, $media-query-name);
 
   @if ($breakpoint-condition) {
     @media #{$breakpoint-condition} {
@@ -25,6 +32,6 @@
   }
 
   @else {
-    @error "Oops! Breakpoint ‘#{$mq}’ does not exist.";
+    @error "Oops! Breakpoint ‘#{$media-query-name}’ does not exist.";
   }
 }

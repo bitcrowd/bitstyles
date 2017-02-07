@@ -1,14 +1,17 @@
 // Icon Button
 //
+// **A button with only an icon as visible content.**
+//
 // A specialised button type — (visible) content is intended to be only an icon.
+// Commonly used for share buttons (facebook, twitter etc.).
 // Specify the svg `<title>` when `<use>`ing the icon element so the button has
 // valid text to use as button label (see example markup), or provide a
-// `<span class="visuallyhidden"></span>` as sibling to the icon.
+// [visuallyhidden](/section/4.22) element containing descriptive text as sibling to the icon.
 //
 // markup:
 // <button class="o-button o-button--icon {$modifiers}">
 //   <svg class="o-icon">
-//     <title>Twitter logo</title>
+//     <title>Share on twitter</title>
 //     <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
 //   </svg>
 // </button>
