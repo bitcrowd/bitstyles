@@ -126,7 +126,7 @@
 //
 // **Chunks of UI and structure for a reusable page element**
 //
-// Normally containing containing smaller objects e.g. a header or sidebar element.
+// Normally containing smaller objects e.g. a header or sidebar element.
 //
 // These are quite project-specific so bitstyles only includes a few very
 // generally-used components such as modals.
@@ -147,7 +147,7 @@
 // Trumps
 //
 // **High-specificity overrides and helper classes**
-// These can bed to create exceptions to an object or component’s standard styles
+// These can be used to create exceptions to an object or component’s standard styles
 // e.g. `.t-margin--left` to add margin to an element that would otherwise have
 // margin set to zero.
 //

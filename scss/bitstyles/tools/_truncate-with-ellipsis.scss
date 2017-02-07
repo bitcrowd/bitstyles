@@ -3,7 +3,7 @@
 // **When text content is wider than parent width, truncate text with an ellipsis (…).**
 // The parent element needs a set or limited width.
 // Note the exact algorithm is defined per browser and is of varying quality
-// — you may loose a couple of characters just to display an ellipsis instead.
+// — you may lose a couple of characters just to display an ellipsis instead.
 //
 // @param {Number} $truncation-boundary  CSS dimension with unit. Define the maximum allowed width of the element, before its text content will be truncated. Defaults to `100%`, so the element will fill its parent but no more.
 //
