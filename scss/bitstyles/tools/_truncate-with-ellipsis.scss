@@ -5,7 +5,7 @@
 // Note the exact algorithm is defined per browser and is of varying quality
 // — you may loose a couple of characters just to display an ellipsis instead.
 //
-// @param $truncation-boundary  CSS dimension with unit. Define the maximum allowed width of the element, before its text content will be truncated. Defaults to `100%`, so the element will fill its parent but no more.
+// @param {Number} $truncation-boundary  CSS dimension with unit. Define the maximum allowed width of the element, before its text content will be truncated. Defaults to `100%`, so the element will fill its parent but no more.
 //
 // Styleguide 1.13
 

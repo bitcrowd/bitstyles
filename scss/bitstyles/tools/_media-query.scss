@@ -15,9 +15,9 @@
 // }
 // ```
 //
-// @param $media-query-name  String. Name of the media query you’re referring to, as defined in the $breakpoints parameter (see below).
+// @param {String} $media-query-name  Name of the media query you’re referring to, as defined in the $breakpoints parameter (see below).
 //
-// @param $breakpoints  Map, optional. A map of breakpoints. By default `$bitstyles-breakpoints` will be used, but if you pass in another list of breakpoints, that will be used instead.
+// @param {Map} $breakpoints  Optional. A map of breakpoints. By default `$bitstyles-breakpoints` will be used, but if you pass in another list of breakpoints, that will be used instead.
 //
 // Styleguide 1.11
 

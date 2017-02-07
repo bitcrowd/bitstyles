@@ -20,9 +20,9 @@
 // `$bitstyles-widths-breakpoints` variables, and then let the sass in `layout/width`
 // generate your width classes at various breakpoints (see the layout section on widths).
 //
-// @param $fractions  List. A list of one or more unitless numbers defining how may columns to define e.g. (12, 16) outputs a 12-column grid and a 16-column grid.
+// @param {List} $fractions  A list of one or more unitless numbers defining how may columns to define e.g. (12, 16) outputs a 12-column grid and a 16-column grid.
 //
-// @param $breakpoint  String, optional. The breakpoint at which this width applies. Defaults to none. Any breakpoint named should be defined in `$bitstyles-breakpoints`.
+// @param {String} $breakpoint  Optional. The breakpoint at which this width applies. Defaults to none. Any breakpoint named should be defined in `$bitstyles-breakpoints`.
 //
 // Styleguide 1.18
 
