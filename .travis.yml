@@ -12,8 +12,8 @@ node_js:
 install:
   - gem uninstall bundler
   - gem install bundler --version '1.12'
-before_script:
   - yarn
 script:
   - npm run lint
   - npm run build
+  - npm run styleguide:build
