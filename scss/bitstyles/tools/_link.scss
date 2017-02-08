@@ -8,7 +8,7 @@
 @mixin link {
   color: $bitstyles-color-link;
   text-decoration: $bitstyles-text-decoration-link;
-  text-decoration-skip: ink;
+  text-decoration-skip: $bitstyles-text-decoration-skip-link;
   cursor: pointer;
   background: $bitstyles-background-color-link;
   transition: $bitstyles-link-transition;
