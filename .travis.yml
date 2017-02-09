@@ -2,6 +2,7 @@ cache:
   yarn: true
   directories:
     - node_modules
+    - test/backstop_data
 language: node_js
 sudo: false
 before_install:
@@ -13,7 +14,7 @@ install:
   - gem uninstall bundler
   - gem install bundler --version '1.12'
   - yarn
-  - npm install -g phantomjs casperjs backstopjs
+  - npm install -g phantomjs-prebuilt casperjs backstopjs
 script:
   - npm run styleguide:build
   - npm run checks
