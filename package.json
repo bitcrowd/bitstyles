@@ -25,10 +25,15 @@
     "test:trumps": "backstop test --configPath=test/backstop_tests/trumps.json",
 
     "checks": "npm run lint && npm run css:stats && npm run test",
+
     "prestyleguide": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
-    "styleguide": "scripts/styleguide.sh",
+    "styleguide": "scripts/styleguide-server",
+    "prestyleguide:build": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
+    "styleguide:build": "scripts/styleguide-build",
+
     "watch": "npm run build && npm run build -- --watch --recursive",
     "clean": "rimraf build/*",
+
     "precss:stats": "npm run build",
     "css:stats": "parker build/bitstyles.css --format=json > test/css-stats.json",
     "precss:graph": "npm run build",
