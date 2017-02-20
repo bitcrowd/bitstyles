@@ -6,8 +6,6 @@ styleguide \
   --output 'styleguide' \
   --overviewPath 'README.md' \
   --readOnly \
-  --watch \
-  --server \
   --disableEncapsulation \
   --title 'bitstyles' \
   --customColors "styleguide/assets/stylesheets/styleguide-colors.css" \
@@ -18,3 +16,4 @@ styleguide \
   --extraHead '<script src="/assets/javascripts/expander.js"></script>' \
   --extraHead '<script src="/assets/javascripts/object-fit-polyfill.js"></script>' \
   --extraHead '<link rel="stylesheet" type="text/css" href="/assets/stylesheets/styleguide-theme.css">' \
+  "$@"

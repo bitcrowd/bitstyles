@@ -26,10 +26,10 @@
 
     "checks": "npm run lint && npm run css:stats && npm run test",
 
-    "prestyleguide:server": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
-    "styleguide:server": "scripts/styleguide-server.sh",
+    "prestyleguide": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
+    "styleguide": "scripts/styleguide-server",
     "prestyleguide:build": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
-    "styleguide:build": "scripts/styleguide-build.sh",
+    "styleguide:build": "scripts/styleguide-build",
 
     "watch": "npm run build && npm run build -- --watch --recursive",
     "clean": "rimraf build/*",
