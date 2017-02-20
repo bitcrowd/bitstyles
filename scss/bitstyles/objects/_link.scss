@@ -8,7 +8,12 @@
 // but is sometimes necessary.
 //
 // Markup:
-// <button class="o-link">Privacy Policy</button>
+// <button class="o-link {$modifiers}">Privacy Policy</button>
+//
+//                - Default state
+// :hover         - Hover state
+// :focus         - Focus state
+// :visited       - Visited state
 //
 // sg-wrapper:
 // <p>Read our <sg-wrapper-content/>.</p>
@@ -22,5 +27,6 @@
 
   padding: 0;
   border: 0;
+  transition: $bitstyles-link-transition;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 }

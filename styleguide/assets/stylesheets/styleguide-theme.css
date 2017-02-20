@@ -8,7 +8,7 @@
   }
 }
 
-:not(.object-section) > code {
+:not(.object-section) > code:not(.html):not(.css) {
   background: #d9d9d9;
   border-radius: 0.1em;
   padding-left: 0.2em;
@@ -21,8 +21,6 @@
 .hljs {
   padding: 0;
   background: #efefef;
-  -webkit-user-select: auto;
-  user-select: auto;
 }
 
 html {

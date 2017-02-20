@@ -223,8 +223,23 @@
       "selectors": [".object-section"]
     },
     {
-      "label": "link",
-      "url": "http://localhost:3000/section/4.15/fullscreen",
+      "label": "link [default]",
+      "url": "http://localhost:3000/section/4.15-1/fullscreen",
+      "selectors": [".object-section"]
+    },
+    {
+      "label": "link [hover]",
+      "url": "http://localhost:3000/section/4.15-2/fullscreen",
+      "selectors": [".object-section"]
+    },
+    {
+      "label": "link [focus]",
+      "url": "http://localhost:3000/section/4.15-3/fullscreen",
+      "selectors": [".object-section"]
+    },
+    {
+      "label": "link [visited]",
+      "url": "http://localhost:3000/section/4.15-4/fullscreen",
       "selectors": [".object-section"]
     },
     {
