@@ -21,25 +21,29 @@ master_revision=`git rev-parse master`
 # If there’s no local copy of reference images, or if they’re from an older
 # version of master, we generate new reference images
 if [ ! -f $cache_file ] || [ $master_revision != $(<$cache_file) ]; then
+  echo "Generating reference images"
   yarn
 
-  # Generate reference images
   npm run styleguide &
+  styleguide_PGID=$( ps -o pgid "$!" | grep [0-9] | tr -d ' ' )
   sleep 10
   npm run test:build
-  kill $(ps aux | grep '[s]tyleguide' | awk '{print $2}')
+  echo "styleguide pgid: $styleguide_PGID"
+  kill -TERM -- -$styleguide_PGID
 
-  # Copy the new reference images up into the current branch, then delete these
+  # Copy the new reference images up into the current branch
+  ls ../test/backstop_data/bitmaps_reference/
   cp -r ./test/backstop_data/bitmaps_reference/ ../test/backstop_data/bitmaps_reference/
   echo $master_revision > $cache_file
 fi
 
 cd ../
 
-# Generate test images
+echo "Generating comparison images"
 npm run styleguide &
+styleguide_PGID=$( ps -o pgid "$!" | grep [0-9] | tr -d ' ' )
 sleep 10
 npm run test:compare
-kill $(ps aux | grep '[s]tyleguide' | awk '{print $2}')
+kill -TERM -- -$styleguide_PGID
 
 cleanup

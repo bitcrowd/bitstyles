@@ -342,7 +342,7 @@
     "ci_report": "test/backstop_data/ci_report/base"
   },
   "engine": "phantomjs",
-  "report": ["browser", "CI"],
+  "report": ["browser"],
   "cliExitOnFail": false,
   "casperFlags": [],
   "debug": false,
