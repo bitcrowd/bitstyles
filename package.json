@@ -19,7 +19,7 @@
     "test:build:components": "backstop reference --configPath=test/backstop_tests/components.json",
     "test:build:trumps": "backstop reference --configPath=test/backstop_tests/trumps.json",
 
-    "test:compare": "npm run test:compare:base; npm run test:compare:layout; npm run test:compare:objects; npm run test:compare:components; npm run test:compare:trumps",
+    "test:compare": "npm run test:compare:base && npm run test:compare:layout && npm run test:compare:objects && npm run test:compare:components && npm run test:compare:trumps",
 
     "test:compare:base": "backstop test --configPath=test/backstop_tests/base.json",
     "test:compare:objects": "backstop test --configPath=test/backstop_tests/objects.json",
