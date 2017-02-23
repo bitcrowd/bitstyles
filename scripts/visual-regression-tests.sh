@@ -17,7 +17,7 @@ kill_children() {
 
   # kill it
   if [ "$pid" != $$ ]; then
-    kill -0 "$pid" && kill -9 "$pid"
+    kill -0 "$pid" && kill "$pid"
   fi
 }
 
@@ -58,6 +58,8 @@ npm run styleguide &
 styleguide_PID=$!
 sleep $styleguide_startup_delay
 npm run test:compare
+compare_result=$?
 
 kill_children $styleguide_PID
 cleanup
+exit $compare_result
