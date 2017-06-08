@@ -25,102 +25,102 @@
     {
       "label": "button",
       "url": "http://localhost:3000/section/4.7.1-1/fullscreen",
-      "selectors": [".object-section .o-button"]
+      "selectors": [".object-section"]
     },
     {
       "label": "button [hover]",
       "url": "http://localhost:3000/section/4.7.1-2/fullscreen",
-      "selectors": [".object-section .o-button.pseudo-class-hover"]
+      "selectors": [".object-section"]
     },
     {
       "label": "button [focus]",
       "url": "http://localhost:3000/section/4.7.1-3/fullscreen",
-      "selectors": [".object-section .o-button.pseudo-class-focus"]
+      "selectors": [".object-section"]
     },
     {
       "label": "button [disabled]",
       "url": "http://localhost:3000/section/4.7.1-4/fullscreen",
-      "selectors": [".object-section .o-button.pseudo-class-disabled"]
+      "selectors": [".object-section"]
     },
     {
       "label": "button with icon",
       "url": "http://localhost:3000/section/4.7.2-1/fullscreen",
-      "selectors": [".object-section .o-button"]
+      "selectors": [".object-section"]
     },
     {
       "label": "button with icon [hover]",
       "url": "http://localhost:3000/section/4.7.2-2/fullscreen",
-      "selectors": [".object-section .o-button.pseudo-class-hover"]
+      "selectors": [".object-section"]
     },
     {
       "label": "button with icon [focus]",
       "url": "http://localhost:3000/section/4.7.3-3/fullscreen",
-      "selectors": [".object-section .o-button.pseudo-class-focus"]
+      "selectors": [".object-section"]
     },
     {
       "label": "button reversed icon",
       "url": "http://localhost:3000/section/4.7.2-1/fullscreen",
-      "selectors": [".object-section .o-button"]
+      "selectors": [".object-section"]
     },
     {
       "label": "button reversed icon [hover]",
       "url": "http://localhost:3000/section/4.7.2-2/fullscreen",
-      "selectors": [".object-section .o-button.pseudo-class-hover"]
+      "selectors": [".object-section"]
     },
     {
       "label": "button reversed icon [focus]",
       "url": "http://localhost:3000/section/4.7.3-3/fullscreen",
-      "selectors": [".object-section .o-button.pseudo-class-focus"]
+      "selectors": [".object-section"]
     },
     {
       "label": "icon button",
       "url": "http://localhost:3000/section/4.6-1/fullscreen",
-      "selectors": [".object-section .o-button--icon"]
+      "selectors": [".object-section"]
     },
     {
       "label": "icon button [hover]",
       "url": "http://localhost:3000/section/4.6-2/fullscreen",
-      "selectors": [".object-section .o-button--icon.pseudo-class-hover"]
+      "selectors": [".object-section"]
     },
     {
       "label": "icon button [focus]",
       "url": "http://localhost:3000/section/4.6-3/fullscreen",
-      "selectors": [".object-section .o-button--icon.pseudo-class-focus"]
+      "selectors": [".object-section"]
     },
     {
       "label": "icon - default",
       "url": "http://localhost:3000/section/4.12-1/fullscreen",
-      "selectors": [".object-section .o-icon"]
+      "selectors": [".object-section"]
     },
     {
       "label": "icon - small",
       "url": "http://localhost:3000/section/4.12-2/fullscreen",
-      "selectors": [".object-section .o-icon--small"]
+      "selectors": [".object-section"]
     },
     {
       "label": "icon - medium",
       "url": "http://localhost:3000/section/4.12-3/fullscreen",
-      "selectors": [".object-section .o-icon--medium"]
+      "selectors": [".object-section"]
     },
     {
       "label": "icon - large",
       "url": "http://localhost:3000/section/4.12-4/fullscreen",
-      "selectors": [".object-section .o-icon--large"]
+      "selectors": [".object-section"]
     },
     {
       "label": "clearfix",
       "url": "http://localhost:3000/section/4.8/fullscreen",
-      "selectors": [".object-section .o-clearfix"]
+      "selectors": [".object-section"]
     },
     {
       "label": "wordbreak",
       "url": "http://localhost:3000/section/4.5/fullscreen",
-      "selectors": [".object-section .o-break-long-words"]
+      "selectors": [".object-section"]
     },
     {
       "label": "flex",
       "url": "http://localhost:3000/section/4.10/fullscreen",
-      "selectors": [".object-section .o-flex"]
+      "selectors": [".object-section"]
     },
     {
       "label": "absolute center",
@@ -150,27 +150,27 @@
     {
       "label": "visuallyhidden",
       "url": "http://localhost:3000/section/4.22/fullscreen",
-      "selectors": [".object-section .o-button"]
+      "selectors": [".object-section"]
     },
     {
       "label": "truncate with ellipsis",
       "url": "http://localhost:3000/section/4.19/fullscreen",
-      "selectors": [".object-section .l-width--2-of-12"]
+      "selectors": [".object-section"]
     },
     {
       "label": "absolute cover",
       "url": "http://localhost:3000/section/4.2/fullscreen",
-      "selectors": [".object-section .o-absolute-cover"]
+      "selectors": [".object-section"]
     },
     {
       "label": "bordered header",
       "url": "http://localhost:3000/section/4.4/fullscreen",
-      "selectors": [".object-section .o-bordered-header"]
+      "selectors": [".object-section"]
     },
     {
       "label": "fixed ratio",
       "url": "http://localhost:3000/section/4.9/fullscreen",
-      "selectors": [".object-section .o-fixed-ratio"]
+      "selectors": [".object-section"]
     },
     {
       "label": "list - inline",
@@ -180,17 +180,17 @@
     {
       "label": "list - reset",
       "url": "http://localhost:3000/section/4.17-1/fullscreen",
-      "selectors": [".object-section .o-list-reset"]
+      "selectors": [".object-section"]
     },
     {
       "label": "list - reset bullets only",
       "url": "http://localhost:3000/section/4.17-2/fullscreen",
-      "selectors": [".object-section .o-list-reset--bullets-only"]
+      "selectors": [".object-section"]
     },
     {
       "label": "media",
       "url": "http://localhost:3000/section/4.18/fullscreen",
-      "selectors": [".object-section .o-media"]
+      "selectors": [".object-section"]
     },
     {
       "label": "input - text",
