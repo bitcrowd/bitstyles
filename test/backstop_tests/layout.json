@@ -57,7 +57,7 @@
     "ci_report": "test/backstop_data/ci_report/layout"
   },
   "engine": "phantomjs",
-  "report": ["browser", "CI"],
+  "report": ["CI"],
   "cliExitOnFail": false,
   "casperFlags": [],
   "debug": false,
