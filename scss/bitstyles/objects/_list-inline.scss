@@ -10,17 +10,18 @@
 //
 // markup:
 // <ul class="o-list-inline">
-//   <li class="o-list-inline__item"><a href="#one">link one</a></li>
-//   <li class="o-list-inline__item"><a href="#two">link two</a></li>
-//   <li class="o-list-inline__item"><a href="#three">link three</a></li>
+//   <li><a href="#one">link one</a></li>
+//   <li><a href="#two">link two</a></li>
+//   <li><a href="#three">link three</a></li>
 // </ul>
 //
 // Styleguide 4.16
 
 .#{$bitstyles-namespace}o-list-inline {
   list-style: none;
-}
 
-.#{$bitstyles-namespace}o-list-inline__item {
-  display: inline;
+  /* postcss-bem-linter: ignore */
+  > * {
+    display: inline;
+  }
 }
