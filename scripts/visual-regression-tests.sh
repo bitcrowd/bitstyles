@@ -35,6 +35,7 @@ master_revision=$(git rev-parse master)
 
 echo "Master revision: $master_revision"
 echo "Cached revision: $(cat $cache_file)"
+
 # If there’s no local copy of reference images, or if they’re from an older
 # version of master, we generate new reference images
 if [ ! -f $cache_file ] || [ "$master_revision" != "$(cat $cache_file)" ]; then
