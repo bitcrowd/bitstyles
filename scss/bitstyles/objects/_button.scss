@@ -18,6 +18,9 @@
 // <button class="o-button {$modifiers}">
 //   <span class="o-button__label">Button Text</span>
 // </button>
+// <a href="#" class="o-button {$modifiers}">
+//   <span class="o-button__label">Button Text</span>
+// </a>
 //
 //              - Base state
 // :hover       - Hover state.
@@ -37,6 +40,7 @@
   font: inherit;
   color: $bitstyles-button-color;
   text-align: center;
+  text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
   background: $bitstyles-button-background-color;
@@ -47,9 +51,14 @@
   user-select: none;
   touch-action: manipulation;
 
+  &:visited {
+    color: $bitstyles-button-color;
+  }
+
   &:hover,
   &:focus {
     color: $bitstyles-button-color-hover;
+    text-decoration: none;
     background: $bitstyles-button-background-color-hover;
     outline: none;
   }
