@@ -122,8 +122,7 @@
       #{$bitstyles-namespace}#{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
         @if $element-name == 'html' {
-          // Base font-size must be relative to browser default, not itself!
-          @include set-font-size($font-size);
+          font-size: $font-size;
         }
 
         @else {
