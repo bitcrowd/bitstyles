@@ -15,7 +15,7 @@
     "watch": "npm run build && npm run build -- --watch --recursive",
     "clean": "rimraf build/*",
     "precss:stats": "npm run build",
-    "css:stats": "parker build/bitstyles.css --format=json > test/css-stats.json",
+    "css:stats": "analyze-css --file build/bitstyles.css --pretty > test/css-stats.json",
     "precss:graph": "npm run build",
     "css:graph": "specificity-graph build/bitstyles.css --output test/specificity_graph/"
   },
