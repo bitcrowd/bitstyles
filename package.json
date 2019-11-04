@@ -10,7 +10,7 @@
     "build": "node-sass scss/bitstyles.scss -o build --output-style compact",
     "lint:scss": "stylelint scss/**/*.scss --syntax scss",
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
-    "lint": "npm run lint:scss && npm run lint:js",
+    "lint": "npm run lint:scss",
     "checks": "npm run lint && npm run css:stats",
     "watch": "npm run build && npm run build -- --watch --recursive",
     "clean": "rimraf build/*",
