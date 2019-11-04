@@ -13,5 +13,4 @@ node_js:
 install:
   - yarn
 script:
-  - npm run styleguide:build
   - npm run checks
