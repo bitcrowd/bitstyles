@@ -1,5 +1,6 @@
+/* eslint-env browser */
 module.exports = function(casper) {
-  casper.evaluate(function() {
+  casper.evaluate(() => {
     document.body.style['-webkit-font-smoothing'] = 'none';
-  })
-}
+  });
+};

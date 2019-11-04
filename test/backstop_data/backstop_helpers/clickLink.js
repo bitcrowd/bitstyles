@@ -6,4 +6,4 @@ module.exports = function(casper) {
 
   casper.click('.o-link');
   casper.wait(TRANSITION_DURATION);
-}
+};
