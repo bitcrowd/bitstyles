@@ -1,7 +1,7 @@
 {
   "use": ["autoprefixer", "cssnano"],
-  "input": "build/bitstyles.css",
-  "output": "build/bitstyles.css",
+  "input": "./build/bitstyles.css",
+  "output": "./build/bitstyles.css",
   "local-plugins": true,
   "autoprefixer": {
     "browsers": ["last 3 versions"]
