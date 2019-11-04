@@ -1,3 +1,8 @@
 {
-  "extends": "stylelint-config-bitcrowd"
+  "extends": "stylelint-config-bitcrowd",
+  "rules": {
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": ["else", "include", "mixin", "if", "each", "function", "return", "error", "for", "warn"]
+    }]
+  }
 }

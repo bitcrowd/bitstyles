@@ -20,7 +20,6 @@
 .#{$bitstyles-namespace}o-list-inline {
   list-style: none;
 
-  /* postcss-bem-linter: ignore */
   > * {
     display: inline;
   }
