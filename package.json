@@ -3,9 +3,6 @@
   "version": "0.9.2",
   "description": "The Bitcrowd CSS library",
   "main": "bitstyles.scss",
-  "engines": {
-    "node": "11.10.1"
-  },
   "scripts": {
     "build": "node-sass scss/bitstyles.scss -o build --output-style compact",
     "lint:scss": "stylelint scss/**/*.scss --syntax scss",
