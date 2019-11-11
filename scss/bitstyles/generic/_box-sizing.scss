@@ -3,7 +3,7 @@
 //
 // No styleguide reference.
 
-/* stylelint-disable selector-no-type */
+/* stylelint-disable selector-max-type */
 html {
   box-sizing: border-box;
 }
@@ -13,4 +13,4 @@ html {
 *::after {
   box-sizing: inherit;
 }
-/* stylelint-enable selector-no-type */
+/* stylelint-enable selector-max-type */

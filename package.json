@@ -1,44 +1,18 @@
 {
   "name": "bitstyles",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "The Bitcrowd CSS library",
   "main": "bitstyles.scss",
   "scripts": {
     "build": "node-sass scss/bitstyles.scss -o build --output-style compact",
-    "postbuild": "postcss -c postcss_build.json",
-    "lint:scss": "postcss -c postcss_lint.json",
-    "lint:js": "eslint .",
-    "lint": "npm run lint:scss && npm run lint:js",
-
-    "test": "scripts/visual-regression-tests.sh",
-
-    "test:build": "npm run test:build:base; npm run test:build:objects; npm run test:build:layout; npm run test:build:components; npm run test:build:trumps",
-    "test:build:base": "backstop reference --configPath=test/backstop_tests/base.json",
-    "test:build:objects": "backstop reference --configPath=test/backstop_tests/objects.json",
-    "test:build:layout": "backstop reference --configPath=test/backstop_tests/layout.json",
-    "test:build:components": "backstop reference --configPath=test/backstop_tests/components.json",
-    "test:build:trumps": "backstop reference --configPath=test/backstop_tests/trumps.json",
-
-    "test:compare": "npm run test:compare:base && npm run test:compare:layout && npm run test:compare:objects && npm run test:compare:components && npm run test:compare:trumps",
-
-    "test:compare:base": "backstop test --configPath=test/backstop_tests/base.json",
-    "test:compare:objects": "backstop test --configPath=test/backstop_tests/objects.json",
-    "test:compare:layout": "backstop test --configPath=test/backstop_tests/layout.json",
-    "test:compare:components": "backstop test --configPath=test/backstop_tests/components.json",
-    "test:compare:trumps": "backstop test --configPath=test/backstop_tests/trumps.json",
-
-    "checks": "npm run lint && npm run css:stats && npm run test",
-
-    "prestyleguide": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
-    "styleguide": "scripts/styleguide-server",
-    "prestyleguide:build": "npm run build && cat build/bitstyles.css styleguide/assets/stylesheets/styleguide-extras.css > build/bitstyles_styleguide.css",
-    "styleguide:build": "scripts/styleguide-build",
-
+    "lint:scss": "stylelint scss/**/*.scss --syntax scss",
+    "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
+    "lint": "npm run lint:scss",
+    "checks": "npm run lint && npm run css:stats",
     "watch": "npm run build && npm run build -- --watch --recursive",
     "clean": "rimraf build/*",
-
     "precss:stats": "npm run build",
-    "css:stats": "parker build/bitstyles.css --format=json > test/css-stats.json",
+    "css:stats": "analyze-css --file build/bitstyles.css --pretty > test/css-stats.json",
     "precss:graph": "npm run build",
     "css:graph": "specificity-graph build/bitstyles.css --output test/specificity_graph/"
   },
@@ -68,25 +42,24 @@
   },
   "homepage": "https://github.com/bitcrowd/bitstyles#readme",
   "devDependencies": {
-    "autoprefixer": "^6.6.1",
-    "cssnano": "^3.10.0",
-    "eslint": "^3.13.1",
-    "eslint-config-bitcrowd-base": "^8.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "node-sass": "^4.3.0",
-    "parker": "1.0.0-alpha.0",
-    "postcss": "^5.2.10",
-    "postcss-bem-linter": "^2.6.0",
-    "postcss-cli": "^2.6.0",
-    "postcss-reporter": "^3.0.0",
-    "postcss-scss": "^0.4.0",
-    "rimraf": "^2.5.4",
-    "sc5-styleguide": "^1.5.0",
+    "analyze-css": "^0.12.7",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
     "specificity-graph": "^0.1.7",
-    "stylelint": "^7.7.1",
-    "stylelint-config-bitcrowd": "^1.1.0"
+    "stylelint": "^11.1.1",
+    "stylelint-config-bitcrowd": "^2.0.1"
   },
   "files": [
     "scss"
-  ]
+  ],
+  "dependencies": {}
 }

@@ -44,7 +44,6 @@
 }
 
 @each $icon-size-alias, $icon-size-size in $bitstyles-icon-sizes {
-  /* postcss-bem-linter: ignore */
   .#{$bitstyles-namespace}o-icon--#{$icon-size-alias} {
     font-size: $icon-size-size;
   }
