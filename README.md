@@ -150,4 +150,4 @@ npm run build
 
 ## Testing
 
-Previously this project used a custom-made visual regression testing system. The dependencies used have sadly become abandoned in the years since, so they have been removed (encouraged by the Github security auditing feature that went live).
+Previously this project used a custom-made visual regression testing system. The dependencies used have sadly become abandoned in the years since, so they have been removed (encouraged by the Github security auditing feature that went live). there is an issue open to find a suitable replacement: [https://github.com/bitcrowd/bitstyles/issues/298](https://github.com/bitcrowd/bitstyles/issues/298)
