@@ -1,4 +1,3 @@
-/* @define Link */
 // Link
 //
 // Styling for all links.
@@ -7,7 +6,7 @@
 @mixin link {
   color: $bitstyles-color-link;
   text-decoration: $bitstyles-text-decoration-link;
-  text-decoration-skip: $bitstyles-text-decoration-skip-link;
+  text-decoration-skip-ink: auto;
   cursor: pointer;
   background: $bitstyles-background-color-link;
   transition: $bitstyles-link-transition;
