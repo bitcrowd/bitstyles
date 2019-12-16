@@ -8,6 +8,10 @@
 //
 // * No CSS output *
 //
+// Styleguide Settings
+//
+// Weight: 1
+//
 // ******** Add overrides for Bitstyles settings here ********
 //
 @import 'bitstyles/settings/global.setup';
@@ -31,6 +35,10 @@
 //
 // **No CSS output**
 //
+// Styleguide Tools
+//
+// Weight: 2
+//
 @import 'bitstyles/tools/all';
 //
 // ******** Add project-specific tools here ********
@@ -40,12 +48,21 @@
 // Generic
 //
 // These are the low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
+//
+// Styleguide Generic
+//
+// Weight: 3
+//
 @import 'bitstyles/generic/all';
 
 // Base
 //
 // Here we’re styling unclassed html elements directly  e.g. `<a>`, `<blockquote>`
 // `<address>`.
+//
+// Styleguide Base
+//
+// Weight: 4
 //
 @import 'bitstyles/base/all';
 
@@ -57,6 +74,10 @@
 // padding at the sides so content doesn’t hit viewport edges, HTML grid system.
 //
 // Layout classes should be selectively imported.
+//
+// Styleguide Layout
+//
+// Weight: 5
 //
 @import 'bitstyles/layout/content';
 @import 'bitstyles/layout/grid';
@@ -75,6 +96,10 @@
 // e.g. `<button class="o-button o-truncate-with-ellipsis"></button>` to create
 // a clickable button with interactive states, a large click area, and button-y
 // appearance, that also truncates its text when it’s too long for the button width.
+//
+// Styleguide Objects
+//
+// Weight: 6
 //
 @import 'bitstyles/objects/icon';
 @import 'bitstyles/objects/button';
@@ -114,6 +139,10 @@
 // These are quite project-specific so bitstyles only includes a few very
 // generally-used components such as modals.
 //
+// Styleguide Components
+//
+// Weight: 7
+//
 @import 'bitstyles/components/modal';
 @import 'bitstyles/components/expander';
 //
@@ -129,6 +158,10 @@
 // margin set to zero.
 //
 // `!important` sometimes exists here, and that’s ok as no styles should follow this section.
+//
+// Styleguide Trumps
+//
+// Weight: 8
 //
 @import 'bitstyles/trumps/text-weight';
 @import 'bitstyles/trumps/text-align';
