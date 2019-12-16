@@ -41,7 +41,7 @@
 //
 // @param {String} $lement The element for which you need the z-index level.
 //
-// Styleguide 1.19
+// Styleguide Tools.z
 
 @function z($list, $element) {
   $z-index: index($list, $element);

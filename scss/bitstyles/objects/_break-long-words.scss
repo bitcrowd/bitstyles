@@ -11,7 +11,7 @@
 // markup:
 // <p class="o-break-long-words">LongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshere</p>
 //
-// Styleguide 4.5
+// Styleguide Objects.break-long-words
 
 .#{$bitstyles-namespace}o-break-long-words {
   @include break-long-words;

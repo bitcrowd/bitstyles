@@ -1,12 +1,12 @@
 /* stylelint-disable max-empty-lines */
-// SETTINGS
-// **Global settings**.
+// Settings
+//
+// Global settings
 //
 // These are just the variables required at a global level. Settings for each layout,
 // object, and component class are imported within those respective Sass files.
 //
 // * No CSS output *
-
 //
 // ******** Add overrides for Bitstyles settings here ********
 //
@@ -31,14 +31,14 @@
 //
 // **No CSS output**
 //
-// Styleguide 1.0
 @import 'bitstyles/tools/all';
 //
 // ******** Add project-specific tools here ********
 //
 
 
-// ******** GENERIC
+// Generic
+//
 // These are the low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
 @import 'bitstyles/generic/all';
 
@@ -47,12 +47,6 @@
 // Here we’re styling unclassed html elements directly  e.g. `<a>`, `<blockquote>`
 // `<address>`.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 2.0
 @import 'bitstyles/base/all';
 
 // Layout
@@ -64,12 +58,6 @@
 //
 // Layout classes should be selectively imported.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 3.0
 @import 'bitstyles/layout/content';
 @import 'bitstyles/layout/grid';
 @import 'bitstyles/layout/width';
@@ -88,12 +76,6 @@
 // a clickable button with interactive states, a large click area, and button-y
 // appearance, that also truncates its text when it’s too long for the button width.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 4.0
 @import 'bitstyles/objects/icon';
 @import 'bitstyles/objects/button';
 @import 'bitstyles/objects/button--icon';
@@ -132,12 +114,6 @@
 // These are quite project-specific so bitstyles only includes a few very
 // generally-used components such as modals.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 5.0
 @import 'bitstyles/components/modal';
 @import 'bitstyles/components/expander';
 //
@@ -154,12 +130,6 @@
 //
 // `!important` sometimes exists here, and that’s ok as no styles should follow this section.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 6.0
 @import 'bitstyles/trumps/text-weight';
 @import 'bitstyles/trumps/text-align';
 @import 'bitstyles/trumps/text-style';

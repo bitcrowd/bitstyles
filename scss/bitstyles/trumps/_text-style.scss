@@ -12,7 +12,7 @@
 // .t-text-style--italic    - Italicise text.
 // .t-text-style--normal    - De-italicise text.
 //
-// Styleguide 6.8
+// Styleguide Trumps.text-style
 
 @each $style in (italic, normal) {
   .#{$bitstyles-namespace}t-text-style--#{$style} {

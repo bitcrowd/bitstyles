@@ -1,12 +1,8 @@
-// Typographic helpers
-//
-// Styleguide 1.15
-
 // Generic heading
 //
 // **Shared styles for heading elements**
 //
-// Styleguide 1.15.1
+// Styleguide Tools.generic-heading
 
 @mixin generic-heading {
   margin: 0 0 spacing('base');
@@ -31,7 +27,7 @@
 //
 // @param {Number} $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
 //
-// Styleguide 1.15.2
+// Styleguide Tools.set-font-size
 
 @mixin set-font-size($pixel-size, $root-size: $bitstyles-font-size-base-small) {
   /* stylelint-disable declaration-block-no-duplicate-properties */
@@ -81,7 +77,7 @@
 //
 // @param {List} $subset  Optional. Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in `$bitstyles-font-sizes`.
 //
-// Styleguide 1.15.3
+// Styleguide Tools.generate-font-sizes
 
 @mixin generate-font-sizes($prefix: '', $subset: ()) {
   @each $media-query-name, $font-sizes in $bitstyles-font-sizes {
@@ -109,6 +105,8 @@
 // @param {String} $prefix  A string to prefix to the ouput selector.
 //
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
+//
+// Styleguide Tools.output-font-sizes
 
 @mixin output-font-sizes($font-sizes, $prefix, $subset) {
   $base-size: $bitstyles-font-size-base-small;

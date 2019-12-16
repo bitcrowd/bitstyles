@@ -8,7 +8,7 @@
 //
 // @param {Number} $distance  CSS dimension with unit. Distance from the edges of the closest parent element with non-static positioning.
 //
-// Styleguide 1.2
+// Styleguide Tools.absolute-cover
 
 @mixin absolute-cover($distance: 0) {
   position: absolute;

@@ -13,12 +13,7 @@
 //   <p>Covering content</p>
 // </div>
 //
-// sg-wrapper:
-// <div class="min-height-block">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 4.2
+// Styleguide Objects.absolute-cover
 
 .#{$bitstyles-namespace}o-absolute-cover {
   @include absolute-cover;

@@ -6,7 +6,7 @@
 // element. Sometimes out of technical necessity this class can be applied to `<a>` elements
 // but beware — that’s code smell…
 //
-// Styleguide 4.7
+// Styleguide Objects.button
 
 // Button - generic
 //
@@ -27,7 +27,7 @@
 // :focus       - Focus state.
 // :disabled    - Disabled state.
 //
-// Styleguide 4.7.1
+// Styleguide Objects.button.base
 
 @import '../settings/button';
 
@@ -93,7 +93,7 @@
 // :hover       - Hover state.
 // :focus       - Focus state.
 //
-// Styleguide 4.7.2
+// Styleguide Objects.button.with-icon
 
 // Button - with icon, reversed
 //
@@ -110,7 +110,7 @@
 // :hover       - Hover state.
 // :focus       - Focus state.
 //
-// Styleguide 4.7.3
+// Styleguide Objects.button.with-icon-reversed
 
 .#{$bitstyles-namespace}o-button__icon + .#{$bitstyles-namespace}o-button__label {
   margin-left: $bitstyles-button-icon-spacing;

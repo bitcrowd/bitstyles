@@ -15,7 +15,7 @@
 // .t-color--secondary    - Sets color to whatever is defined as your theme’s secondary color.
 // .t-color--error        - Sets color to whatever is defined as your theme’s error color.
 //
-// Styleguide 6.2
+// Styleguide Trumps.color
 
 @each $name in ($foreground-colors) {
   .t-color--#{$name} {

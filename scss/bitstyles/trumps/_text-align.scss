@@ -11,7 +11,7 @@
 // .t-text-align--center  - Centre align text.
 // .t-text-align--justify - Justify text.
 //
-// Styleguide 6.7
+// Styleguide Trumps.text-align
 
 @each $position in (left, right, center, justify) {
   .#{$bitstyles-namespace}t-text-align--#{$position} {
