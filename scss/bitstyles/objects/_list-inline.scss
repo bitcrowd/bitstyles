@@ -1,22 +1,3 @@
-/** @define list-inline */
-//
-// List inline
-//
-// **Display a list of items inline**.
-//
-// Wherever a list is useful semantically but the default vertical-stack layout
-// for bullet points isn’t correct, this object is useful. Often used to display
-// a list of links (anchors wrapped in `<li>`s) in a row next to each other.
-//
-// markup:
-// <ul class="o-list-inline">
-//   <li><a href="#one">link one</a></li>
-//   <li><a href="#two">link two</a></li>
-//   <li><a href="#three">link three</a></li>
-// </ul>
-//
-// Styleguide Objects.list-inline
-
 .#{$bitstyles-namespace}o-list-inline {
   list-style: none;
 

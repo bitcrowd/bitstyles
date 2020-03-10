@@ -1,14 +1,4 @@
 /** @define label */
-// Form labels
-//
-// **Default styling for form labels**.
-//
-// Markup:
-//   <label class="o-label" for="input_1">This is label text</label>
-//   <input class="o-input o-input--text" type="text" placeholder="Placeholder text" id="input_1" />
-//
-// Styleguide Objects.label
-
 .#{$bitstyles-namespace}o-label {
   display: block;
   margin-bottom: 0;

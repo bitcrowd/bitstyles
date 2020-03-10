@@ -1,35 +1,3 @@
-/** @define icon */
-//
-// Icons
-//
-// **SVG icon system**.
-//
-// All icons are present as symbols within
-// `icons.svg`, and are used by embedding svg tags (see example markup).
-// Icons should be accompanied by some machine-readable text for accessibility &
-// SEO purposes. If there is to be no such text (e.g. based on design mockups),
-// provide an alternative:
-// - provide a `<title>` element containing text, next to the `<use>` element
-// - Next to the `<svg>` element place a `<span class="o-visuallyhidden">` containing descriptive text
-//
-// Set icon sizes by overiding the `$bitstyles-icon-sizes` list (see `settings/_icon.scss`) e.g.
-// ``$bitstyles-icon-sizes: ('small' 2rem, 'medium' 4rem, 'large' 8rem);`
-//
-// The base icon size is the same as surrounding text i.e. `1em`.
-//
-// markup:
-// <svg class="o-icon {$modifiers}">
-//   <title>Twitter logo</title>
-//   <use xlink:href="assets/images/icons.svg#icon-twitter"></use>
-// </svg>
-//
-//                    - Base size, matches font-size of parent element.
-// .o-icon--small     - Small icon (given default vars).
-// .o-icon--medium    - Medium icon (given default vars).
-// .o-icon--large     - Large icon (given default vars).
-//
-// Styleguide Objects.icon
-
 @import '../settings/icon';
 
 .#{$bitstyles-namespace}o-icon {

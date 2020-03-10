@@ -1,23 +1,3 @@
-/** @define media */
-// Media
-//
-// **[Nicole Sullivan’s OOCSS media object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)**.
-//
-// Contains a ‘feature’ element floated left e.g. a small user image. All other content
-// (perhaps the user’s comment) flows around it to the right. The feature element
-// should have either implicit size (like an image or video element), or have width set.
-//
-// If the feature element is as wide as the viewport, any adjacent content will drop drown
-// below it instead of ranging right.
-//
-// markup:
-// <div class="o-media">
-//   <img class="o-media__feature" src="assets/images/placeholder_16-9.png"/>
-//   <p>Some text here that sits against the featured image on its left</p>
-// </div>
-//
-// Styleguide Objects.media
-
 .#{$bitstyles-namespace}o-media {
   @include media;
 }

@@ -1,16 +1,3 @@
-// Object-fit Cover
-//
-// Any element with inherent size (e.g. an `<img>`) will expand to fill the available space
-// while maintaining their aspect ratio. One dimension will overflow its parent as needed
-// in order to fill the other dimension.
-//
-// markup:
-//  <div class="fixed-height-block">
-//    <img class="o-object-cover" src="assets/images/placeholder_16-9.png">
-//  </div>
-//
-// Styleguide Objects.object-cover
-
 .o-object-cover {
   display: block;
   width: 100%;

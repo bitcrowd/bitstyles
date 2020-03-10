@@ -1,20 +1,3 @@
-/** @define absolute-cover */
-//
-// Absolute Cover
-//
-// **An element that covers its parent element from edge to edge** — vertically and
-// horizontally — **regardless of how it may stretch**.
-//
-// Not recommended for images, media etc. (elements width inherent dimensions) due
-// to that. This is most commonly used for container elements.
-//
-// markup:
-// <div class="o-absolute-cover background-grey">
-//   <p>Covering content</p>
-// </div>
-//
-// Styleguide Objects.absolute-cover
-
 .#{$bitstyles-namespace}o-absolute-cover {
   @include absolute-cover;
 }

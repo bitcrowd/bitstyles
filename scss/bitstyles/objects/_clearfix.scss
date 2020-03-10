@@ -1,22 +1,3 @@
-/** @define clearfix */
-//
-// Clearfix
-//
-// **Cleanup after `float`ed elements**.
-//
-// Force an element to behave as if its floated children have an element after them
-// with `clear: both`. The element will therefore be of the correct height (including
-// backgrounds etc.) instead of collapsing on the floated children, and will be correctly separated
-// from the following content, as cleared elements are.
-//
-// markup:
-// <div class="o-clearfix background-grey">
-//   <div class="floated-element">Content goes here</div>
-//   <div class="floated-element">Content goes here</div>
-// </div>
-//
-// Styleguide Objects.clearfix
-
 .#{$bitstyles-namespace}o-clearfix {
   @include clearfix;
 }

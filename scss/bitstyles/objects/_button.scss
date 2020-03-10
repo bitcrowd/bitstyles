@@ -1,34 +1,3 @@
-/** @define button */
-//
-// Buttons
-//
-// **Buttons perform actions (they’re not links, nor navigation)**, and are ideally a `<button>`
-// element. Sometimes out of technical necessity this class can be applied to `<a>` elements
-// but beware — that’s code smell…
-//
-// Styleguide Objects.button
-
-// Button - generic
-//
-// **Produces a larger-than-text hit target**. Intended to be an action,
-// not a link, therefore most often a `<button>` rather than `<a href="…">` (and never
-// `<a href="#">`).
-//
-// markup:
-// <button class="o-button {$modifiers}">
-//   <span class="o-button__label">Button Text</span>
-// </button>
-// <a href="#" class="o-button {$modifiers}">
-//   <span class="o-button__label">Button Text</span>
-// </a>
-//
-//              - Base state
-// :hover       - Hover state.
-// :focus       - Focus state.
-// :disabled    - Disabled state.
-//
-// Styleguide Objects.button.base
-
 @import '../settings/button';
 
 .#{$bitstyles-namespace}o-button {
@@ -76,41 +45,6 @@
   display: inline-block;
   vertical-align: middle;
 }
-
-// Button - with icon
-//
-// **The same base button can contain an optional decorative icon**.
-//
-// Here it’s placed before the text. Source order dictates icon position. There must be no whitespace between the icon and text — can be achieved using comments as shown here.
-//
-// markup:
-// <button class="o-button {$modifiers}">
-//   <svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg><!--
-//   --><span class="o-button__label">Button Text</span>
-// </button>
-//
-//              - Base state
-// :hover       - Hover state.
-// :focus       - Focus state.
-//
-// Styleguide Objects.button.with-icon
-
-// Button - with icon, reversed
-//
-// **The same base button can contain an optional decorative icon**. Here it’s placed after the
-// text. Source order dictates icon position.
-//
-// markup:
-// <button class="o-button {$modifiers}">
-//   <span class="o-button__label">Button Text</span><!--
-//   --><svg class="o-button__icon o-icon"><use xlink:href="assets/images/icons.svg#icon-twitter"></use></svg>
-// </button>
-//
-//              - Base state
-// :hover       - Hover state.
-// :focus       - Focus state.
-//
-// Styleguide Objects.button.with-icon-reversed
 
 .#{$bitstyles-namespace}o-button__icon + .#{$bitstyles-namespace}o-button__label {
   margin-left: $bitstyles-button-icon-spacing;
