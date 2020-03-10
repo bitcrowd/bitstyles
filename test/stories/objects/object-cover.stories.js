@@ -1,4 +1,13 @@
-export default { title: 'Objects/Object cover' };
+import Readme from './object-cover.md';
+
+export default {
+  title: 'Objects/Object cover',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const objectCover = () => `
   <div style="height: 10rem">

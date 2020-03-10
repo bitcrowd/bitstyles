@@ -1,4 +1,13 @@
-export default { title: 'Objects/Truncate with Ellipsis' };
+import Readme from './truncate-with-ellipsis.md';
+
+export default {
+  title: 'Objects/Truncate with Ellipsis',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const truncateWithEllipsis = () => `
   <div class="l-width--2-of-12 background-grey">

@@ -1,4 +1,13 @@
-export default { title: 'Objects/Overflow' };
+import Readme from './overflow.md';
+
+export default {
+  title: 'Objects/Overflow',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const overflow = () => `
   <div class="o-overflow" style="height: 10rem">
