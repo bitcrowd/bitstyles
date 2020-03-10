@@ -1,4 +1,13 @@
-export default { title: 'Objects/Flex' };
+import Readme from './flex.md';
+
+export default {
+  title: 'Objects/Flex',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const flex = () => `
   <ul class="o-flex o-list-reset">

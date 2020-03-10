@@ -1,4 +1,13 @@
-export default { title: 'Objects/List Inline' };
+import Readme from './list-inline.md';
+
+export default {
+  title: 'Objects/List Inline',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const listInline = () => `
   <ul class="o-list-inline">

@@ -1,4 +1,13 @@
-export default { title: 'Objects/Icon' };
+import Readme from './icon.md';
+
+export default {
+  title: 'Objects/Icon',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const icon = () => `
   <svg class="o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">

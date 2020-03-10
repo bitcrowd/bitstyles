@@ -1,4 +1,13 @@
-export default { title: 'Objects/Button--icon' };
+import Readme from './button--icon.md';
+
+export default {
+  title: 'Objects/Button--icon',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const buttonIcon = () => `
   <button class="o-button o-button--icon">

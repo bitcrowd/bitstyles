@@ -1,4 +1,13 @@
-export default { title: 'Objects/Button' };
+import Readme from './button.md';
+
+export default {
+  title: 'Objects/Button',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const buttonElement = () => `
   <button class="o-button {$modifiers}">

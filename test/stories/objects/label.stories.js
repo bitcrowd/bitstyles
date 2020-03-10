@@ -1,4 +1,13 @@
-export default { title: 'Objects/Label' };
+import Readme from './label.md';
+
+export default {
+  title: 'Objects/Label',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const label = () => `
   <label class="o-label" for="input_1">This is label text</label>

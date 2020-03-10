@@ -1,4 +1,13 @@
-export default { title: 'Objects/Clearfix' };
+import Readme from './clearfix.md';
+
+export default {
+  title: 'Objects/Clearfix',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const clearfix = () => `
   <div class="o-clearfix background-grey">

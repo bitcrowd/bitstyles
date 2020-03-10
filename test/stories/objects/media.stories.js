@@ -1,4 +1,13 @@
-export default { title: 'Objects/Media' };
+import Readme from './media.md';
+
+export default {
+  title: 'Objects/Media',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const media = () => `
   <div class="o-media">
