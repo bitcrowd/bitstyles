@@ -11,7 +11,7 @@
     "checks": "npm run lint && npm run css:stats",
     "watch": "npm run build && npm run build -- --watch --recursive",
     "clean": "rimraf build/*",
-    "storybook": "start-storybook",
+    "storybook": "npm run watch & start-storybook",
     "precss:stats": "npm run build",
     "css:stats": "analyze-css --file build/bitstyles.css --pretty > test/css-stats.json",
     "precss:graph": "npm run build",
