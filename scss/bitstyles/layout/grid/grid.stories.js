@@ -1,4 +1,13 @@
-export default { title: 'Layout/Grid' };
+import Readme from './grid.md';
+
+export default {
+  title: 'Layout/Grid',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const grid = () => `
   <ul class="l-grid">

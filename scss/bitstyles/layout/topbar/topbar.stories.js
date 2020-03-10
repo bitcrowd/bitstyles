@@ -1,4 +1,13 @@
-export default { title: 'Layout/Topbar' };
+import Readme from './topbar.md';
+
+export default {
+  title: 'Layout/Topbar',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const topbar = () => `
   <header class="l-topbar">

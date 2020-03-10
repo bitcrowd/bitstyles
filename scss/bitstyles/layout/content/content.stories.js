@@ -1,4 +1,13 @@
-export default { title: 'Layout/Content' };
+import Readme from './content.md';
+
+export default {
+  title: 'Layout/Content',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const content = () => `
   <div class="l-content">

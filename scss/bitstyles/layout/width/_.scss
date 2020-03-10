@@ -1,0 +1,11 @@
+@import '../../settings/width';
+
+@include width($bitstyles-widths);
+
+@each $width-breakpoint in $bitstyles-widths-breakpoints {
+  @include media-query($width-breakpoint) {
+    @each $i in $bitstyles-widths {
+      @include width($i, \@#{$width-breakpoint});
+    }
+  }
+}
