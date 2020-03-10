@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['../test/stories/**/*.stories.js'],
+  stories: ['../scss/bitstyles/**/*.stories.js'],
   addons: [
     'storybook-readme/register',
   ],

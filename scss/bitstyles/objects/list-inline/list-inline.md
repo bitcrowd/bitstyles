@@ -1,4 +1,4 @@
-#List inline
+# List inline
 
 ## Display a list of items inline
 

@@ -1,4 +1,4 @@
-Block
+# Block
 
 ## Forces an element to display as a block
 

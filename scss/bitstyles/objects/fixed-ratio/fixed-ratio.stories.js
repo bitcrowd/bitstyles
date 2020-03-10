@@ -1,4 +1,4 @@
-import Readme from './fixed-Ratio.md';
+import Readme from './fixed-ratio.md';
 
 export default {
   title: 'Objects/Fixed-Ratio',
