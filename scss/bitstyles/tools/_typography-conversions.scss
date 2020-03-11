@@ -8,7 +8,6 @@
 //
 // @param {Number} $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
 //
-// Styleguide Tools.px-to-rem
 
 @function px-to-rem($pixel-size, $root-size: $bitstyles-font-size-base-small) {
   @return ($pixel-size / $root-size) * 1rem;
@@ -24,7 +23,6 @@
 //
 // @param {Number} $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
 //
-// Styleguide Tools.px-to-em
 
 @function px-to-em($pixel-size, $root-size: $bitstyles-font-size-base-small) {
   @return ($pixel-size / $root-size) + 0em; // stylelint-disable-line length-zero-no-unit

@@ -1,5 +1,6 @@
 /* stylelint-disable max-empty-lines */
-// Settings
+//
+// Settings ////////////////////////////////////
 //
 // Global settings
 //
@@ -7,10 +8,6 @@
 // object, and component class are imported within those respective Sass files.
 //
 // * No CSS output *
-//
-// Styleguide Settings
-//
-// Weight: 1
 //
 // ******** Add overrides for Bitstyles settings here ********
 //
@@ -25,8 +22,8 @@
 // ******** Add global settings for your own project here ********
 //
 
-
-// Tools: Functions & Mixins
+//
+// Tools ////////////////////////////////////
 //
 // **Mixins and functions**.
 //
@@ -35,38 +32,27 @@
 //
 // **No CSS output**
 //
-// Styleguide Tools
-//
-// Weight: 2
-//
 @import 'bitstyles/tools/all';
 //
 // ******** Add project-specific tools here ********
 //
 
-
-// Generic
+//
+// Generic ////////////////////////////////////
 //
 // These are the low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
 //
-// Styleguide Generic
-//
-// Weight: 3
-//
 @import 'bitstyles/generic/all';
 
-// Base
+// Base ////////////////////////////////////
 //
 // Here we’re styling unclassed html elements directly  e.g. `<a>`, `<blockquote>`
 // `<address>`.
 //
-// Styleguide Base
-//
-// Weight: 4
-//
 @import 'bitstyles/base/all';
 
-// Layout
+//
+// Layout ////////////////////////////////////
 //
 // **Create the high-level layout of a page**.
 //
@@ -75,16 +61,13 @@
 //
 // Layout classes should be selectively imported.
 //
-// Styleguide Layout
-//
-// Weight: 5
-//
 @import 'bitstyles/layout/content/';
 @import 'bitstyles/layout/grid/';
 @import 'bitstyles/layout/width/';
 @import 'bitstyles/layout/topbar/';
 
-// Objects
+//
+// Objects ////////////////////////////////////
 //
 // **Objects, abstractions, and design patterns**
 // (e.g. .o-media, .o-icon, .o-button).
@@ -96,10 +79,6 @@
 // e.g. `<button class="o-button o-truncate-with-ellipsis"></button>` to create
 // a clickable button with interactive states, a large click area, and button-y
 // appearance, that also truncates its text when it’s too long for the button width.
-//
-// Styleguide Objects
-//
-// Weight: 6
 //
 @import 'bitstyles/objects/icon/';
 @import 'bitstyles/objects/button/';
@@ -129,8 +108,8 @@
 // ******** Add project-specific low-level objects here ********
 //
 
-
-// Components
+//
+// Components ////////////////////////////////////
 //
 // **Chunks of UI and structure for a reusable page element**
 //
@@ -139,18 +118,14 @@
 // These are quite project-specific so bitstyles only includes a few very
 // generally-used components such as modals.
 //
-// Styleguide Components
-//
-// Weight: 7
-//
 @import 'bitstyles/components/modal';
 @import 'bitstyles/components/expander';
 //
 // ******** Add project-specific components here ********
 //
 
-
-// Trumps
+//
+// Trumps ////////////////////////////////////
 //
 // **High-specificity overrides and helper classes**
 // These can be used to create exceptions to an object or component’s standard styles
@@ -158,10 +133,6 @@
 // margin set to zero.
 //
 // `!important` sometimes exists here, and that’s ok as no styles should follow this section.
-//
-// Styleguide Trumps
-//
-// Weight: 8
 //
 @import 'bitstyles/trumps/text-weight/';
 @import 'bitstyles/trumps/text-align/';

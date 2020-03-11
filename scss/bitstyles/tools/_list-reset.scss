@@ -9,7 +9,6 @@
 //
 // @param {Bool} $spacing  If true, all default margins & padding will removed, as well as the list’s bullets.
 //
-// Styleguide Tools.list-reset
 
 @mixin list-reset($spacing: true) {
   @if $spacing {

@@ -9,7 +9,6 @@
 //
 // @param {String} $spacing-size  Name of the standardised size required, as defined in the map `$bitstyles-spacing-sizes`.
 //
-// Styleguide Tools.spacing
 
 @function spacing($spacing-size) {
   @if map-has-key($bitstyles-spacing-sizes, $spacing-size) {
