@@ -1,21 +1,3 @@
-// No-Paddings
-//
-// **Remove padding from elements on an ad-hoc basis**.
-//
-// markup:
-// <div class="background-grey">
-//   <div class="t-padding {$modifiers}">Some content here</div>
-// </div>
-//
-//                        - Base style
-// .t-no-padding--left    - Removes left padding.
-// .t-no-padding--top     - Removes top padding.
-// .t-no-padding--right   - Removes right padding.
-// .t-no-padding--bottom  - Removes bottom padding.
-// .t-no-padding          - Removes all padding.
-//
-// Styleguide Trumps.no-padding
-
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}t-no-padding--#{$position} {
     padding-#{$position}: 0;

@@ -10,7 +10,7 @@ export default {
 };
 
 export const clearfix = () => `
-  <div class="o-clearfix background-grey">
+  <div class="o-clearfix t-background-color--secondary">
     <div class="floated-element">Content goes here</div>
     <div class="floated-element">Content goes here</div>
   </div>

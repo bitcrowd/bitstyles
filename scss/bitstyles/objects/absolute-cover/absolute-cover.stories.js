@@ -10,7 +10,7 @@ export default {
 };
 
 export const absoluteCover = () => `
-  <div class="o-absolute-cover background-grey">
+  <div class="o-absolute-cover t-background-color--secondary">
     <p>Covering content</p>
   </div>
 `;

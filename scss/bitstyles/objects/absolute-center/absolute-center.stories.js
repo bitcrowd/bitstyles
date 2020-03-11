@@ -10,7 +10,7 @@ export default {
 };
 
 export const absoluteCenter = () => `
-  <div class="background-grey min-height-block">
+  <div class="t-background-color--secondary min-height-block">
     <p class="o-absolute-center">Centered content</p>
   </div>
 `;

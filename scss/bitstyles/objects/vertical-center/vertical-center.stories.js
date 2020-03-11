@@ -10,7 +10,7 @@ export default {
 };
 
 export const headings = () => `
-  <div class="background-grey">
+  <div class="t-background-color--secondary">
     <p class="o-vertical-center">Vertically-centered content here</p>
   </div>
 `;
