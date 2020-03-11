@@ -1,4 +1,4 @@
-import Readme from './no-padding.md';
+import Readme from './padding.md';
 
 export default {
   title: 'Trumps/No padding',
