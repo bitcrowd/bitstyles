@@ -1,0 +1,5 @@
+@each $style in (italic, normal) {
+  .#{$bitstyles-namespace}t-text-style--#{$style} {
+    font-style: $style;
+  }
+}
