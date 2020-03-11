@@ -8,7 +8,8 @@ As it’s an HTML grid system (not CSS), some wrapping elements are needed to cr
 
 Grids can be nested.
 
-Dependencies:
+### Dependencies
+
 - `layout/width`
 
 ## Grid system — base

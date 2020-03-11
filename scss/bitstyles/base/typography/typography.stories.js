@@ -1,4 +1,13 @@
-export default { title: 'Base/Typography' };
+import Readme from './typography.md';
+
+export default {
+  title: 'Base/Typography',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const headings = () => `
   <h1>Jelly cake marshmallow</h1>

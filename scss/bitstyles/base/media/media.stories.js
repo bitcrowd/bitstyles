@@ -1,4 +1,13 @@
-export default { title: 'Base/Media' };
+import Readme from './media.md';
+
+export default {
+  title: 'Base/Media',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const video = () => `
   <video width="640" height="360" controls="true" >

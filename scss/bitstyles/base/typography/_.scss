@@ -1,0 +1,36 @@
+/* stylelint-disable selector-max-type */
+html {
+  font-family: $bitstyles-font-family-body;
+  line-height: $bitstyles-line-height-base;
+  color: palette('text');
+  background: palette('background');
+
+  &.fonts-loaded {
+    font-family: $bitstyles-font-family-body-loaded;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include generic-heading;
+}
+
+@include generate-font-sizes('', (html, h1, h2, h3, h4, h5, h6));
+
+p {
+  margin: 0 0 spacing('base');
+}
+
+address {
+  font-style: normal;
+}
+
+dt {
+  font-weight: $bitstyles-font-weight-bold;
+}
+
+/* stylelint-enable selector-max-type */

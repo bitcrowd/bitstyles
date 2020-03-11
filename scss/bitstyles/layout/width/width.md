@@ -15,6 +15,7 @@ If you define the `$bitstyles-widths-breakpoints` Sass list to contain the names
 
 This allows you to create an element that is displayed at different sizes based on viewport size. See the section on responsive grid systems for an example of the most common uses for this.
 
-Requires:
+### Dependencies
+
 - `settings/widths`
 - `tools/widths`

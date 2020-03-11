@@ -1,4 +1,13 @@
-export default { title: 'Base/Forms' };
+import Readme from './forms.md';
+
+export default {
+  title: 'Base/Forms',
+  parameters: {
+    readme: {
+      sidebar: Readme,
+    },
+  },
+};
 
 export const fieldset = () => `
   <fieldset><legend>Fieldset</legend></fieldset>
