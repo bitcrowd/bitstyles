@@ -22,7 +22,7 @@ See the [Bitcrowd frontend styleguide](https://github.com/bitcrowd/frontend) for
 Bitstyles can be added to your project via [npm](https://www.npmjs.com/).
 
 ```sh
-npm install bitstyles --save
+yarn add bitstyles
 ```
 
 Once installed, you need to provide your sass installation with the path for bitstyles’ sass. This should be:
@@ -66,7 +66,7 @@ config.assets.paths << Rails.root.join("node_modules", "bitstyles", "bitstyles")
 If you need to install a version of bitstyles that’s so far unpublished (e.g. there’s a bugfix or feature that’s not in a published package yet), you can use the following:
 
 ```sh
-npm install --save git+https://github.com/bitcrowd/bitstyles.git#master
+yarn add git+https://github.com/bitcrowd/bitstyles.git#master
 ```
 
 ### Importing the sass to your project
@@ -84,10 +84,10 @@ Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your proj
 
 // …
 
-@import 'bitstyles/objects/icon';
-// @import 'bitstyles/object/button';
-// @import 'bitstyles/object/button-icon';
-@import 'bitstyles/objects/absolute-center';
+@import 'bitstyles/objects/icon/';
+// @import 'bitstyles/object/button/';
+// @import 'bitstyles/object/button-icon/';
+@import 'bitstyles/objects/absolute-center/';
 ```
 
 To change the css output by the library (e.g. standard margins, typographic scale, column count of the grid system…) you must override the variables used to build it. To do this declare any variables with your own values before including the bitstyles settings:
@@ -104,10 +104,10 @@ To change the css output by the library (e.g. standard margins, typographic scal
 @import 'bitstyles/settings/global.color-theme';
 @import 'bitstyles/settings/global.typography';
 
-@import 'bitstyles/objects/icon';
-// @import 'bitstyles/object/button';
-// @import 'bitstyles/object/button-icon';
-@import 'bitstyles/objects/absolute-center';
+@import 'bitstyles/objects/icon/';
+// @import 'bitstyles/object/button/';
+// @import 'bitstyles/object/button-icon/';
+@import 'bitstyles/objects/absolute-center/';
 ```
 
 For the complete list of variables you can override, look through the various files in the `bitstyles/settings/` folder.
@@ -137,7 +137,7 @@ It is recommended to use [yarn](https://yarnpkg.com/en/docs/install) instead of 
 To ensure your changes do not break the build, run
 
 ```sh
-npm run watch
+yarn watch
 ```
 
 to recompile sass on every change.
@@ -145,8 +145,20 @@ to recompile sass on every change.
 For a single one-off build, run
 
 ```sh
-npm run build
+yarn build
 ```
+
+## Component library
+
+We use [storybookjs](https://storybook.js.org) to provide a single navigable library of the classes in bitstyles, and the associated documentation.
+
+Run:
+
+```sh
+yarn storybook
+```
+
+Storybook will automatically open in a new tab in your default browser on a random port.
 
 ## Testing
 

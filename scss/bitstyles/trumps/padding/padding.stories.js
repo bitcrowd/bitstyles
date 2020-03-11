@@ -1,7 +1,7 @@
 import Readme from './padding.md';
 
 export default {
-  title: 'Trumps/No padding',
+  title: 'Trumps/Padding',
   parameters: {
     readme: {
       sidebar: Readme,
