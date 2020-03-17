@@ -116,11 +116,11 @@
       #{$bitstyles-namespace}#{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
         @if $element-name == 'html' {
-          font-size: $font-size;
+          font-size: px-to-rem($font-size, 16px);
         }
 
         @else {
-          @include set-font-size($font-size, $base-size);
+          font-size: px-to-rem($font-size, $base-size);
         }
         /* stylelint-enable max-nesting-depth */
       }
