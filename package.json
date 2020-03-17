@@ -8,7 +8,7 @@
     "postbuild": "postcss build/bitstyles.css --output build/bitstyles.css",
     "lint:scss": "stylelint scss/**/*.scss --syntax scss",
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
-    "lint": "yarn lint:scss",
+    "lint": "yarn lint:scss && yarn lint:js",
     "checks": "yarn lint && yarn css:stats",
     "watch": "yarn build && yarn build -- --watch --recursive",
     "clean": "rimraf build/*",
