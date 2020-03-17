@@ -1,5 +1,5 @@
 {
-  "generator": "analyze-css v0.12.7",
+  "generator": "analyze-css v0.12.8",
   "metrics": {
     "base64Length": 0,
     "redundantBodySelectors": 0,
@@ -19,7 +19,7 @@
     "notMinified": 1,
     "multiClassesSelectors": 0,
     "parsingErrors": 0,
-    "oldPropertyPrefixes": 0,
+    "oldPropertyPrefixes": 3,
     "propertyResets": 0,
     "qualifiedSelectors": 1,
     "specificityIdAvg": 0,
@@ -40,6 +40,11 @@
     "declarations": 465
   },
   "offenders": {
+    "oldPropertyPrefixes": [
+      "html { -ms-text-size-adjust: 100% } // prefix is no longer supported @ 12:41",
+      "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 12:77",
+      "a { -webkit-text-decoration-skip: objects } // was required by iOS Safari 11, Safari NaN and earlier @ 35:44"
+    ],
     "duplicatedProperties": [
       "abbr[title] {text-decoration: underline dotted} @ 42:80",
       "h1 {font-size: 1.5rem} @ 145:131",
