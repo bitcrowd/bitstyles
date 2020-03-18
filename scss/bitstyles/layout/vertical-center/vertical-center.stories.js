@@ -1,7 +1,7 @@
 import Readme from './vertical-center.md';
 
 export default {
-  title: 'Objects/Vertical Center',
+  title: 'Layout/Vertical Center',
   parameters: {
     readme: {
       sidebar: Readme,
@@ -11,6 +11,6 @@ export default {
 
 export const headings = () => `
   <div class="t-background-color--secondary">
-    <p class="o-vertical-center">Vertically-centered content here</p>
+    <p class="l-vertical-center">Vertically-centered content here</p>
   </div>
 `;
