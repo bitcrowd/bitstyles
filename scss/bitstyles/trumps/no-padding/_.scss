@@ -1,0 +1,9 @@
+@each $position in (left, top, right, bottom) {
+  .#{$bitstyles-namespace}t-no-padding--#{$position} {
+    padding-#{$position}: 0;
+  }
+}
+
+.#{$bitstyles-namespace}t-no-padding {
+  padding: 0;
+}

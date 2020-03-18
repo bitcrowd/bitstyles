@@ -13,7 +13,6 @@
 //
 // @param {String} $font-url  The location at which the font assets can be found. Expects `.eot`, `.woff2`, `.woff`, and `.ttf` versions to exist there.
 //
-// Styleguide 1.8
 
 @mixin webfont($font-family, $font-style, $font-weight, $font-url) {
   @font-face {

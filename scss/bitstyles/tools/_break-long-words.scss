@@ -6,7 +6,6 @@
 // container. Commonly used to ensure user-generated content doesn’t break or
 // overflow your page layout.
 //
-// Styleguide 1.4
 
 @mixin break-long-words {
   overflow-wrap: break-word;

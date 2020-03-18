@@ -1,0 +1,11 @@
+.#{$bitstyles-namespace}o-h0,
+.#{$bitstyles-namespace}o-h1,
+.#{$bitstyles-namespace}o-h2,
+.#{$bitstyles-namespace}o-h3,
+.#{$bitstyles-namespace}o-h4,
+.#{$bitstyles-namespace}o-h5,
+.#{$bitstyles-namespace}o-h6 {
+  @include generic-heading;
+}
+
+@include generate-font-sizes('.o-', (h0, h1, h2, h3, h4, h5, h6));

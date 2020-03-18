@@ -7,7 +7,6 @@
 // backgrounds etc.) instead of collapsing on the floated children, and will be correctly separated
 // from the following content, as cleared elements are.
 //
-// Styleguide 1.5
 
 @mixin clearfix {
   &::after {

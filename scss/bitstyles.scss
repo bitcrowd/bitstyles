@@ -1,12 +1,13 @@
 /* stylelint-disable max-empty-lines */
-// SETTINGS
-// **Global settings**.
+//
+// Settings ////////////////////////////////////
+//
+// Global settings
 //
 // These are just the variables required at a global level. Settings for each layout,
 // object, and component class are imported within those respective Sass files.
 //
 // * No CSS output *
-
 //
 // ******** Add overrides for Bitstyles settings here ********
 //
@@ -21,8 +22,8 @@
 // ******** Add global settings for your own project here ********
 //
 
-
-// Tools: Functions & Mixins
+//
+// Tools ////////////////////////////////////
 //
 // **Mixins and functions**.
 //
@@ -31,31 +32,27 @@
 //
 // **No CSS output**
 //
-// Styleguide 1.0
 @import 'bitstyles/tools/all';
 //
 // ******** Add project-specific tools here ********
 //
 
-
-// ******** GENERIC
+//
+// Generic ////////////////////////////////////
+//
 // These are the low-specificity, far-reaching rulesets (e.g. resets, normalise.css, box-sizing).
+//
 @import 'bitstyles/generic/all';
 
-// Base
+// Base ////////////////////////////////////
 //
 // Here we’re styling unclassed html elements directly  e.g. `<a>`, `<blockquote>`
 // `<address>`.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 2.0
 @import 'bitstyles/base/all';
 
-// Layout
+//
+// Layout ////////////////////////////////////
 //
 // **Create the high-level layout of a page**.
 //
@@ -64,18 +61,13 @@
 //
 // Layout classes should be selectively imported.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 3.0
-@import 'bitstyles/layout/content';
-@import 'bitstyles/layout/grid';
-@import 'bitstyles/layout/width';
-@import 'bitstyles/layout/topbar';
+@import 'bitstyles/layout/content/';
+@import 'bitstyles/layout/grid/';
+@import 'bitstyles/layout/width/';
+@import 'bitstyles/layout/topbar/';
 
-// Objects
+//
+// Objects ////////////////////////////////////
 //
 // **Objects, abstractions, and design patterns**
 // (e.g. .o-media, .o-icon, .o-button).
@@ -88,42 +80,36 @@
 // a clickable button with interactive states, a large click area, and button-y
 // appearance, that also truncates its text when it’s too long for the button width.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 4.0
-@import 'bitstyles/objects/icon';
-@import 'bitstyles/objects/button';
-@import 'bitstyles/objects/button--icon';
-@import 'bitstyles/objects/absolute-center';
-@import 'bitstyles/objects/absolute-cover';
-@import 'bitstyles/objects/break-long-words';
-@import 'bitstyles/objects/clearfix';
-@import 'bitstyles/objects/fixed-ratio';
-@import 'bitstyles/objects/hidden';
-@import 'bitstyles/objects/truncate-with-ellipsis';
-@import 'bitstyles/objects/vertical-center';
-@import 'bitstyles/objects/visuallyhidden';
-@import 'bitstyles/objects/flex';
-@import 'bitstyles/objects/bordered-header';
-@import 'bitstyles/objects/list-inline';
-@import 'bitstyles/objects/list-reset';
-@import 'bitstyles/objects/typography';
-@import 'bitstyles/objects/media';
-@import 'bitstyles/objects/block';
-@import 'bitstyles/objects/input';
-@import 'bitstyles/objects/label';
-@import 'bitstyles/objects/link';
-@import 'bitstyles/objects/overflow';
-@import 'bitstyles/objects/object-cover';
+@import 'bitstyles/objects/icon/';
+@import 'bitstyles/objects/button/';
+@import 'bitstyles/objects/button--icon/';
+@import 'bitstyles/objects/absolute-center/';
+@import 'bitstyles/objects/absolute-cover/';
+@import 'bitstyles/objects/break-long-words/';
+@import 'bitstyles/objects/clearfix/';
+@import 'bitstyles/objects/fixed-ratio/';
+@import 'bitstyles/objects/hidden/';
+@import 'bitstyles/objects/truncate-with-ellipsis/';
+@import 'bitstyles/objects/vertical-center/';
+@import 'bitstyles/objects/visuallyhidden/';
+@import 'bitstyles/objects/flex/';
+@import 'bitstyles/objects/bordered-header/';
+@import 'bitstyles/objects/list-inline/';
+@import 'bitstyles/objects/list-reset/';
+@import 'bitstyles/objects/typography/';
+@import 'bitstyles/objects/media/';
+@import 'bitstyles/objects/block/';
+@import 'bitstyles/objects/input/';
+@import 'bitstyles/objects/label/';
+@import 'bitstyles/objects/link/';
+@import 'bitstyles/objects/overflow/';
+@import 'bitstyles/objects/object-cover/';
 //
 // ******** Add project-specific low-level objects here ********
 //
 
-
-// Components
+//
+// Components ////////////////////////////////////
 //
 // **Chunks of UI and structure for a reusable page element**
 //
@@ -132,20 +118,14 @@
 // These are quite project-specific so bitstyles only includes a few very
 // generally-used components such as modals.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 5.0
 @import 'bitstyles/components/modal';
 @import 'bitstyles/components/expander';
 //
 // ******** Add project-specific components here ********
 //
 
-
-// Trumps
+//
+// Trumps ////////////////////////////////////
 //
 // **High-specificity overrides and helper classes**
 // These can be used to create exceptions to an object or component’s standard styles
@@ -154,21 +134,15 @@
 //
 // `!important` sometimes exists here, and that’s ok as no styles should follow this section.
 //
-// sg-wrapper:
-// <div class="object-section">
-//   <sg-wrapper-content/>
-// </div>
-//
-// Styleguide 6.0
-@import 'bitstyles/trumps/text-weight';
-@import 'bitstyles/trumps/text-align';
-@import 'bitstyles/trumps/text-style';
-@import 'bitstyles/trumps/margin';
-@import 'bitstyles/trumps/padding';
-@import 'bitstyles/trumps/no-margin';
-@import 'bitstyles/trumps/no-padding';
-@import 'bitstyles/trumps/color';
-@import 'bitstyles/trumps/background-color';
+@import 'bitstyles/trumps/text-weight/';
+@import 'bitstyles/trumps/text-align/';
+@import 'bitstyles/trumps/text-style/';
+@import 'bitstyles/trumps/margin/';
+@import 'bitstyles/trumps/padding/';
+@import 'bitstyles/trumps/no-margin/';
+@import 'bitstyles/trumps/no-padding/';
+@import 'bitstyles/trumps/color/';
+@import 'bitstyles/trumps/background-color/';
 //
 // ******** Add project-specific trumps here ********
 //

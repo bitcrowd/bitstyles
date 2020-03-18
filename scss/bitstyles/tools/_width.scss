@@ -24,7 +24,6 @@
 //
 // @param {String} $breakpoint  Optional. The breakpoint at which this width applies. Defaults to none. Any breakpoint named should be defined in `$bitstyles-breakpoints`.
 //
-// Styleguide 1.18
 
 @mixin width($fractions, $breakpoint: null) {
   @each $fraction in $fractions {

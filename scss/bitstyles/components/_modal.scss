@@ -40,7 +40,6 @@
 //     </div>
 //   </div>
 //
-// Styleguide 5.2
 
 @import '../settings/modal';
 
@@ -163,7 +162,6 @@
 //     </div>
 //   </div>
 //
-// Styleguide 5.3
 
 @mixin modal-variation($state) {
   .#{$bitstyles-namespace}c-modal--animation-#{$state} {

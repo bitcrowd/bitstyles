@@ -7,7 +7,6 @@
 //
 // @param {String} $tone   Optional. Variant of the colour e.g. 'base', light', 'dark'. Defaults to `base`.
 //
-// Styleguide 1.20
 
 @function palette($color, $tone: 'base') {
   @if map-has-key($bitstyles-palette, $color) {

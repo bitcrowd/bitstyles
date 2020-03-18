@@ -1,0 +1,7 @@
+.#{$bitstyles-namespace}o-flex {
+  @include flex;
+}
+
+.#{$bitstyles-namespace}o-flex__primary {
+  @include flex__primary;
+}

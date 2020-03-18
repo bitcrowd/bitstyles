@@ -1,0 +1,7 @@
+.#{$bitstyles-namespace}o-media {
+  @include media;
+}
+
+.#{$bitstyles-namespace}o-media__feature {
+  @include media__feature;
+}

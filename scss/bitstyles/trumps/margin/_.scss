@@ -1,0 +1,9 @@
+@each $position in (left, top, right, bottom) {
+  .#{$bitstyles-namespace}t-margin--#{$position} {
+    margin-#{$position}: $bitstyles-spacing;
+  }
+}
+
+.#{$bitstyles-namespace}t-margin {
+  margin: $bitstyles-spacing;
+}

@@ -1,0 +1,10 @@
+@import '../../settings/button--icon';
+
+.#{$bitstyles-namespace}o-button--icon {
+  padding: $bitstyles-button-icon-padding;
+  line-height: 1;
+  color: $bitstyles-button-icon-color;
+  background-color: $bitstyles-button-icon-background-color;
+  border: $bitstyles-button-icon-border;
+  border-radius: $bitstyles-button-icon-border-radius;
+}

@@ -5,7 +5,6 @@
 // Centres the element vertically, relative to its closest positioned parent.
 // Uses absolute positioning, therefore the element will be outside the document flow.
 //
-// Styleguide 1.16
 
 @mixin vertical-center {
   position: absolute;
