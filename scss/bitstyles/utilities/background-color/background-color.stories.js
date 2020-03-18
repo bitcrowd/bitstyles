@@ -1,7 +1,7 @@
 import Readme from './background-color.md';
 
 export default {
-  title: 'Trumps/Background color',
+  title: 'Utilities/Background color',
   parameters: {
     readme: {
       sidebar: Readme,
@@ -10,9 +10,9 @@ export default {
 };
 
 export const backgroundColorBackground = () => `
-  <p class="t-background-color--background">Some content here</p>
+  <p class="u-background-color--background">Some content here</p>
 `;
 
 export const backgroundColorSecondary = () => `
-  <p class="t-background-color--secondary">Some content here</p>
+  <p class="u-background-color--secondary">Some content here</p>
 `;

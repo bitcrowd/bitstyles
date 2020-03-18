@@ -1,5 +1,5 @@
 @each $name in ($foreground-colors) {
-  .t-color--#{$name} {
+  .u-color--#{$name} {
     color: palette($name);
   }
 }
