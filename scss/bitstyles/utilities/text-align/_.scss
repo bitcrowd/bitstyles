@@ -1,5 +1,5 @@
 @each $position in (left, right, center, justify) {
-  .#{$bitstyles-namespace}t-text-align--#{$position} {
+  .#{$bitstyles-namespace}u-text-align--#{$position} {
     text-align: $position;
   }
 }

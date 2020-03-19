@@ -1,7 +1,7 @@
 import Readme from './text-style.md';
 
 export default {
-  title: 'Trumps/Text style',
+  title: 'Utilities/Text style',
   parameters: {
     readme: {
       sidebar: Readme,
@@ -10,9 +10,9 @@ export default {
 };
 
 export const textStyleItalic = () => `
-  <p class="t-text-style--italic">Some content here</p>
+  <p class="u-text-style--italic">Some content here</p>
 `;
 
 export const textStyleNomal = () => `
-  <p class="t-text-style--normal">Some content here</p>
+  <p class="u-text-style--normal">Some content here</p>
 `;

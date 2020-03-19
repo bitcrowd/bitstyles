@@ -10,7 +10,7 @@ export default {
 };
 
 export const truncateWithEllipsis = () => `
-  <div class="l-width--2-of-12 t-background-color--secondary">
+  <div class="l-width--2-of-12 u-background-color--secondary">
     <p class="o-truncate-with-ellipsis">Truncated content goes here</p>
   </div>
 `;

@@ -15,7 +15,7 @@ Again unlike Bootstrap and Foundation, there are no javascript widgets or plugin
 
 See the [Bitcrowd frontend styleguide](https://github.com/bitcrowd/frontend) for more details of the technical principles on which Bitstyles is built. The TL;DR: it’s a variation of the BEMATOMICOOCSS methodology:
 - BEM naming convention
-- Atomic CSS-inspired, the object classes aim to provide most functionality needed to create whichever layout or UI you need. Trump classes create the exceptions that inevitably occur.
+- Atomic CSS-inspired, the object classes aim to provide most functionality needed to create whichever layout or UI you need. Utility classes create the exceptions that inevitably occur.
 
 ## Using Bitstyles in a project
 

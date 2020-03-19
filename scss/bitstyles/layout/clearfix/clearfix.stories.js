@@ -11,7 +11,7 @@ export default {
 
 export const clearfix = () => `
   <div>
-    <div class="l-clearfix t-background-color--secondary">
+    <div class="l-clearfix u-background-color--secondary">
       <div class="l-clearfix" style="float: left;">Floated content here</div>
       <div class="l-clearfix" style="float: left;">Floated content here</div>
     </div>

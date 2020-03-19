@@ -10,5 +10,5 @@ export default {
 };
 
 export const block = () => `
-  <span class="l-block t-background-color--secondary">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</span>
+  <span class="l-block u-background-color--secondary">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</span>
 `;
