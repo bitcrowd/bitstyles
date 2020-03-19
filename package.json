@@ -5,9 +5,10 @@
   "main": "bitstyles.scss",
   "scripts": {
     "build": "node-sass scss/bitstyles.scss -o build --output-style compact",
+    "postbuild": "postcss build/bitstyles.css --output build/bitstyles.css",
     "lint:scss": "stylelint scss/**/*.scss --syntax scss",
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
-    "lint": "yarn lint:scss",
+    "lint": "yarn lint:scss && yarn lint:js",
     "checks": "yarn lint && yarn css:stats",
     "watch": "yarn build && yarn build -- --watch --recursive",
     "clean": "rimraf build/*",
@@ -47,7 +48,9 @@
     "@storybook/addons": "^5.3.14",
     "@storybook/html": "^5.3.14",
     "analyze-css": "^0.12.7",
+    "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
+    "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
@@ -57,6 +60,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "node-sass": "^4.12.0",
+    "postcss-cli": "^7.1.0",
     "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "specificity-graph": "^0.1.7",
@@ -66,5 +70,8 @@
   },
   "files": [
     "scss"
+  ],
+  "browserslist": [
+    "defaults"
   ]
 }

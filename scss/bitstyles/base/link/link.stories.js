@@ -10,5 +10,5 @@ export default {
 };
 
 export const link = () => `
-  <a href="#"">Jelly cake marshmallow</a>
+  <a href="#">Jelly cake marshmallow</a>
 `;
