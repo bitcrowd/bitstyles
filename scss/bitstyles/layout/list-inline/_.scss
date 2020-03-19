@@ -1,0 +1,7 @@
+.#{$bitstyles-namespace}l-list-inline {
+  list-style: none;
+
+  > * {
+    display: inline;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../settings/fixed-ratio';
+
+.#{$bitstyles-namespace}l-fixed-ratio {
+  @include fixed-ratio(
+    map-get($fixed-ratio-default-ratio, 'width'),
+    map-get($fixed-ratio-default-ratio, 'height')
+  );
+}
+
+.#{$bitstyles-namespace}l-fixed-ratio__inner {
+  @include fixed-ratio__inner;
+}
