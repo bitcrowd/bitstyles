@@ -9,7 +9,7 @@
     "commentsLength": 72,
     "complexSelectors": 0,
     "duplicatedSelectors": 5,
-    "duplicatedProperties": 21,
+    "duplicatedProperties": 3,
     "emptyRules": 0,
     "expressions": 0,
     "oldIEFixes": 0,
@@ -35,59 +35,41 @@
     "selectorsById": 0,
     "selectorsByPseudo": 44,
     "selectorsByTag": 92,
-    "length": 12742,
+    "length": 12476,
     "rules": 202,
-    "declarations": 455
+    "declarations": 437
   },
   "offenders": {
     "oldPropertyPrefixes": [
       "html { -ms-text-size-adjust: 100% } // prefix is no longer supported @ 2:105",
       "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:131",
       "a { -webkit-text-decoration-skip: objects } // was required by iOS Safari 11, Safari NaN and earlier @ 2:461",
-      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2965",
-      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5465",
-      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:9156"
+      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2849",
+      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5349",
+      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:8890"
     ],
     "duplicatedProperties": [
       "abbr[title] {text-decoration: underline dotted} @ 2:629",
       "b, strong {font-weight: bolder} @ 2:691",
-      "h1 {font-size: 1.5rem} @ 2:2519",
-      "h2 {font-size: 1.25rem} @ 2:2554",
-      "h3 {font-size: 1.125rem} @ 2:2590",
-      "h4, h5, h6 {font-size: 1rem} @ 2:2633",
-      "h1 {font-size: 2.22222rem} @ 2:2721",
-      "h2 {font-size: 1.55556rem} @ 2:2760",
-      "h3 {font-size: 1.11111rem} @ 2:2799",
-      "h4, h5, h6 {font-size: 1rem} @ 2:2844",
-      ".o-h0 {font-size: 2rem} @ 2:7905",
-      ".o-h1 {font-size: 1.5rem} @ 2:7941",
-      ".o-h2 {font-size: 1.25rem} @ 2:7979",
-      ".o-h3 {font-size: 1.125rem} @ 2:8018",
-      ".o-h4, .o-h5, .o-h6 {font-size: 1rem} @ 2:8070",
-      ".o-h0 {font-size: 4.77778rem} @ 2:8141",
-      ".o-h1 {font-size: 2.22222rem} @ 2:8183",
-      ".o-h2 {font-size: 1.55556rem} @ 2:8225",
-      ".o-h3 {font-size: 1.11111rem} @ 2:8267",
-      ".o-h4, .o-h5, .o-h6 {font-size: 1rem} @ 2:8321",
-      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:11464"
+      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:11198"
     ],
     "qualifiedSelectors": [
       "html.fonts-loaded @ 2:2323"
     ],
     "mediaQueries": [
-      "@media screen and (min-width:45em) (5 rules) @ 2:2648",
-      "@media screen and (min-width:64em) (1 rules) @ 2:3386",
-      "@media screen and (min-width:45em) (12 rules) @ 2:4020",
-      "@media screen and (max-width:44.9375em) (1 rules) @ 2:6629",
-      "@media screen and (min-width:64em) (1 rules) @ 2:6715",
-      "@media screen and (min-width:45em) (5 rules) @ 2:8085",
-      "@media screen and (min-width:45em) (2 rules) @ 2:10595"
+      "@media screen and (min-width:45em) (5 rules) @ 2:2588",
+      "@media screen and (min-width:64em) (1 rules) @ 2:3270",
+      "@media screen and (min-width:45em) (12 rules) @ 2:3904",
+      "@media screen and (max-width:44.9375em) (1 rules) @ 2:6513",
+      "@media screen and (min-width:64em) (1 rules) @ 2:6599",
+      "@media screen and (min-width:45em) (5 rules) @ 2:7894",
+      "@media screen and (min-width:45em) (2 rules) @ 2:10329"
     ],
     "importants": [
-      ".o-hidden {display: none!important} @ 2:6606",
-      ".o-hidden\\@small-only {display: none!important} @ 2:6691",
-      ".o-hidden\\@large {display: none!important} @ 2:6767",
-      ".o-visuallyhidden {position: absolute!important} @ 2:6980"
+      ".o-hidden {display: none!important} @ 2:6490",
+      ".o-hidden\\@small-only {display: none!important} @ 2:6575",
+      ".o-hidden\\@large {display: none!important} @ 2:6651",
+      ".o-visuallyhidden {position: absolute!important} @ 2:6864"
     ],
     "colors": [
       "#7f7f7f (8 times)",
