@@ -25,19 +25,19 @@
     "specificityIdAvg": 0,
     "specificityIdTotal": 0,
     "specificityClassAvg": 0.78,
-    "specificityClassTotal": 209,
-    "specificityTagAvg": 0.42,
+    "specificityClassTotal": 211,
+    "specificityTagAvg": 0.41,
     "specificityTagTotal": 112,
-    "selectors": 268,
-    "selectorLengthAvg": 1.037313432835821,
+    "selectors": 270,
+    "selectorLengthAvg": 1.037037037037037,
     "selectorsByAttribute": 25,
-    "selectorsByClass": 162,
+    "selectorsByClass": 164,
     "selectorsById": 0,
     "selectorsByPseudo": 44,
     "selectorsByTag": 90,
-    "length": 12435,
-    "rules": 201,
-    "declarations": 437
+    "length": 12462,
+    "rules": 203,
+    "declarations": 438
   },
   "offenders": {
     "oldPropertyPrefixes": [
@@ -45,28 +45,28 @@
       "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:108",
       "a { -webkit-text-decoration-skip: objects } // was required by iOS Safari 11, Safari NaN and earlier @ 2:438",
       "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2798",
-      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:6205",
-      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:8972"
+      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:6232",
+      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:8999"
     ],
     "duplicatedProperties": [
       "abbr[title] {text-decoration: underline dotted} @ 2:606",
       "b, strong {font-weight: bolder} @ 2:668",
-      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:11157"
+      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:11184"
     ],
     "mediaQueries": [
       "@media screen and (min-width:45em) (5 rules) @ 2:2537",
       "@media screen and (min-width:64em) (1 rules) @ 2:3219",
       "@media screen and (min-width:45em) (12 rules) @ 2:3853",
-      "@media screen and (max-width:44.9375em) (1 rules) @ 2:6901",
-      "@media screen and (min-width:64em) (1 rules) @ 2:6987",
-      "@media screen and (min-width:45em) (5 rules) @ 2:7984",
-      "@media screen and (min-width:45em) (2 rules) @ 2:10288"
+      "@media screen and (max-width:44.9375em) (1 rules) @ 2:6928",
+      "@media screen and (min-width:64em) (1 rules) @ 2:7014",
+      "@media screen and (min-width:45em) (5 rules) @ 2:8011",
+      "@media screen and (min-width:45em) (2 rules) @ 2:10315"
     ],
     "importants": [
-      ".o-hidden {display: none!important} @ 2:6878",
-      ".o-hidden\\@small-only {display: none!important} @ 2:6963",
-      ".o-hidden\\@large {display: none!important} @ 2:7039",
-      ".o-visuallyhidden {position: absolute!important} @ 2:7180"
+      ".o-hidden {display: none!important} @ 2:6905",
+      ".o-hidden\\@small-only {display: none!important} @ 2:6990",
+      ".o-hidden\\@large {display: none!important} @ 2:7066",
+      ".o-visuallyhidden {position: absolute!important} @ 2:7207"
     ],
     "colors": [
       "#7f7f7f (8 times)",
