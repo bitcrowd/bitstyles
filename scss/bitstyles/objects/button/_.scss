@@ -1,49 +1,11 @@
 @import '../../settings/button';
 
 .#{$bitstyles-namespace}o-button {
-  position: relative;
-  display: inline-block;
-  padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
-  margin: 0;
-  overflow: visible;
-  font: inherit;
-  color: $bitstyles-button-color;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  background: $bitstyles-button-background-color;
-  border: $bitstyles-button-border;
-  border-radius: $bitstyles-button-border-radius;
-  transition: $bitstyles-button-transition;
-  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
-  user-select: none;
-  touch-action: manipulation;
-
-  &:visited {
-    color: $bitstyles-button-color;
-  }
-
-  &:hover,
-  &:focus {
-    color: $bitstyles-button-color-hover;
-    text-decoration: none;
-    background: $bitstyles-button-background-color-hover;
-    outline: none;
-  }
-
-  &:disabled {
-    color: $bitstyles-button-color-disabled;
-    cursor: default;
-    background: $bitstyles-button-background-color-disabled;
-    border-color: $bitstyles-button-border-color-disabled;
-  }
+  @include button;
 }
 
 .#{$bitstyles-namespace}o-button__label {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
+  @include button__label;
 }
 
 .#{$bitstyles-namespace}o-button__icon + .#{$bitstyles-namespace}o-button__label {
