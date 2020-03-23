@@ -1,3 +1,3 @@
-.l-object-cover {
+.#{$bitstyles-namespace}l-object-cover {
   @include object-cover;
 }
