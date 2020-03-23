@@ -9,7 +9,13 @@
     "lint:scss": "stylelint scss/**/*.scss --syntax scss",
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
     "lint": "yarn lint:scss && yarn lint:js",
-    "test": "backstop reference --configPath=test/backstop_tests/base.json",
+
+    "test:setup:base": "backstop reference --configPath=test/backstop_tests/base.json",
+    "test:compare:base": "backstop test --configPath=test/backstop_tests/base.json",
+
+    "test:setup": "yarn test:setup:base",
+    "test:compare": "yarn test:compare:base",
+
     "checks": "yarn lint && yarn css:stats",
     "watch": "yarn build && yarn build --watch --recursive",
     "clean": "rimraf build/*",

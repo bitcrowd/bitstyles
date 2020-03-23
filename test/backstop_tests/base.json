@@ -27,7 +27,11 @@
     "html_report": "test/backstop_data/html_report/base",
     "ci_report": "test/backstop_data/ci_report/base"
   },
-  "report": ["CI"],
+  "report": ["HTML"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
   "debug": false,
   "port": 6006,
   "scenarios": [
