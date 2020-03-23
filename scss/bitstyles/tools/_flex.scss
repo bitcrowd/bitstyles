@@ -13,6 +13,14 @@
   align-items: stretch;
 }
 
+@mixin flex--wrap {
+  flex-wrap: wrap;
+}
+
 @mixin flex__primary {
-  flex: 1 0 auto;
+  flex-grow: 1;
+}
+
+@mixin flex__no-shrink {
+  flex-shrink: 0;
 }

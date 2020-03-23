@@ -2,6 +2,14 @@
   @include flex;
 }
 
+.#{$bitstyles-namespace}l-flex--wrap {
+  @include flex--wrap;
+}
+
 .#{$bitstyles-namespace}l-flex__primary {
   @include flex__primary;
+}
+
+.#{$bitstyles-namespace}l-flex__no-shrink {
+  @include flex__no-shrink;
 }
