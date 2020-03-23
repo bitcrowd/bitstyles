@@ -11,19 +11,18 @@
 //
 // @param {String} $font-weight  The `font-weight` of the font you’re defining e.g. `100`, `400`, `bold`.
 //
-// @param {String} $font-url  The location at which the font assets can be found. Expects `.eot`, `.woff2`, `.woff`, and `.ttf` versions to exist there.
+// @param {String} $font-url  The location at which the font assets can be found. Expects `.woff2` and `.woff` versions to exist there.
 //
+// @param {String} $font-display  The `font-display` property, defaults to `fallback`.
 
-@mixin webfont($font-family, $font-style, $font-weight, $font-url) {
+@mixin webfont($font-family, $font-style, $font-weight, $font-url, $font-display: fallback) {
   @font-face {
     font-family: $font-family;
     font-style: $font-style;
     font-weight: $font-weight;
-    src: font-url('#{$font-url}.eot');
+    font-display: $font-display;
     src:
-      font-url('#{$font-url}.eot?#iefix') format('embedded-opentype'),
       font-url('#{$font-url}.woff2') format('woff2'),
-      font-url('#{$font-url}.woff') format('woff'),
-      font-url('#{$font-url}.ttf') format('truetype');
+      font-url('#{$font-url}.woff') format('woff');
   }
 }

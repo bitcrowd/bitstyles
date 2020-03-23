@@ -8,12 +8,6 @@
   font-family: $bitstyles-font-family-header;
   font-weight: $bitstyles-font-weight-bold;
   text-rendering: optimizeLegibility;
-
-  @if $bitstyles-font-family-header-loaded != $bitstyles-font-family-header {
-    .fonts-loaded & {
-      font-family: $bitstyles-font-family-header-loaded;
-    }
-  }
 }
 
 // Font-size helper

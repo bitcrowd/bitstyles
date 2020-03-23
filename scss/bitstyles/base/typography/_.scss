@@ -4,10 +4,6 @@ html {
   line-height: $bitstyles-line-height-base;
   color: palette('text');
   background: palette('background');
-
-  &.fonts-loaded {
-    font-family: $bitstyles-font-family-body-loaded;
-  }
 }
 
 h1,
