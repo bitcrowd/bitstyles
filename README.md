@@ -158,7 +158,11 @@ Run:
 yarn storybook
 ```
 
-Storybook will automatically open in a new tab in your default browser on a random port.
+Storybook will automatically open in a new tab in your default browser on port 6006:
+
+```sh
+open https://localhost:6006/
+```
 
 ## Testing
 
