@@ -1,19 +1,5 @@
 @import '../../settings/content';
 
 .#{$bitstyles-namespace}l-content {
-  display: block;
-  width: 100%;
-  max-width: $bitstyles-content-max-width;
-  padding-right: $bitstyles-content-horizontal-padding;
-  padding-left: $bitstyles-content-horizontal-padding;
-  margin-right: auto;
-  margin-left: auto;
-  transition: padding $bitstyles-transition-duration $bitstyles-transition-easing;
-}
-
-@include media-query($bitstyles-content-large-breakpoint) {
-  .#{$bitstyles-namespace}l-content {
-    padding-right: $bitstyles-content-horizontal-padding-large;
-    padding-left: $bitstyles-content-horizontal-padding-large;
-  }
+  @include content;
 }

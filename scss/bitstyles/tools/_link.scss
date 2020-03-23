@@ -5,12 +5,12 @@
 
 @mixin link {
   padding: 0;
-  border: 0;
   color: $bitstyles-color-link;
   text-decoration: $bitstyles-text-decoration-link;
   text-decoration-skip-ink: auto;
   cursor: pointer;
   background: $bitstyles-background-color-link;
+  border: 0;
   transition: $bitstyles-link-transition;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
