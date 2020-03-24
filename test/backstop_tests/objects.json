@@ -31,7 +31,17 @@
   "report": ["CI"],
   "engine": "puppeteer",
   "engineOptions": {
-    "args": ["--no-sandbox"]
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-gpu",
+      "--force-device-scale-factor=1",
+      "--disable-infobars=true",
+      "--hide-scrollbars",
+      "--disable-dev-shm-usage",
+      "--shm-size 512mb",
+      "--cap-add=SYS_ADMIN"
+    ]
   },
   "debug": false,
   "port": 6006,
