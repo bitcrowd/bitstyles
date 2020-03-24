@@ -1,0 +1,30 @@
+@mixin input--text {
+  padding: $bitstyles-input-padding;
+  color: $bitstyles-input-color;
+  background-color: $bitstyles-input-background;
+  border: $bitstyles-input-border;
+  border-radius: $bitstyles-input-border-radius;
+
+  &::placeholder {
+    color: $bitstyles-input-placeholder-color;
+  }
+
+  &:disabled {
+    color: $bitstyles-input-color-disabled;
+    cursor: default;
+    background: $bitstyles-input-background-color-disabled;
+  }
+
+  &:active,
+  &:focus {
+    border: $bitstyles-input-border-active;
+  }
+}
+
+@mixin input--checkbox {
+  display: inline-block;
+  width: $bitstyles-input-checkbox-size;
+  height: $bitstyles-input-checkbox-size;
+  margin-right: $bitstyles-input-padding;
+  vertical-align: middle;
+}

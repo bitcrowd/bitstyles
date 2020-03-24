@@ -1,5 +1,4 @@
 /** @define label */
 .#{$bitstyles-namespace}o-label {
-  display: block;
-  margin-bottom: 0;
+  @include label;
 }

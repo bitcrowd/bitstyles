@@ -2,8 +2,4 @@
 
 .#{$bitstyles-namespace}o-link {
   @include link;
-
-  padding: 0;
-  border: 0;
-  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 }

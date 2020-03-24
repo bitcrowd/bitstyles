@@ -1,15 +1,9 @@
 @import '../../settings/grid';
 
 .#{$bitstyles-namespace}l-grid {
-  @include list-reset();
-
-  margin-left: -$bitstyles-grid-gutter;
+  @include grid();
 }
 
 .#{$bitstyles-namespace}l-grid__item {
-  display: inline-block;
-  width: 100%;
-  padding-left: $bitstyles-grid-gutter;
-  vertical-align: top;
-  box-sizing: border-box;
+  @include grid__item();
 }

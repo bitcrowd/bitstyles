@@ -1,0 +1,7 @@
+@mixin list-inline {
+  list-style: none;
+
+  > * {
+    display: inline;
+  }
+}

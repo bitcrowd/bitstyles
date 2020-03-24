@@ -1,6 +1,3 @@
-.l-object-cover {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.#{$bitstyles-namespace}l-object-cover {
+  @include object-cover;
 }

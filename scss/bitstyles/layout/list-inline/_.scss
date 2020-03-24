@@ -1,7 +1,3 @@
 .#{$bitstyles-namespace}l-list-inline {
-  list-style: none;
-
-  > * {
-    display: inline;
-  }
+  @include list-inline;
 }
