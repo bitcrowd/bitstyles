@@ -9,7 +9,7 @@ export default {
   },
 };
 
-export const headings = () => `
+export const verticalCenter = () => `
   <div class="u-background-color--secondary">
     <p class="l-vertical-center">Vertically-centered content here</p>
   </div>

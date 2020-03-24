@@ -1,0 +1,135 @@
+{
+  "id": "layout",
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "misMatchThreshold" : 0.15,
+  "requireSameDimensions": true,
+  "fileNameTemplate": "{configId}_{scenarioLabel}_{viewportLabel}",
+  "paths": {
+    "bitmaps_reference": "test/backstop_data/bitmaps_reference/layout",
+    "bitmaps_test": "test/backstop_data/bitmaps_test/layout",
+    "compare_data": "test/backstop_data/bitmaps_test/compare.layout.json",
+    "casper_scripts": "test/backstop_data/backstop_helpers",
+    "html_report": "test/backstop_data/html_report/layout",
+    "ci_report": "test/backstop_data/ci_report/layout"
+  },
+  "report": ["HTML"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "debug": false,
+  "port": 6006,
+  "scenarios": [
+    {
+      "label": "absolute-center",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-absolute-center--absolute-center",
+      "selectors": ["body"]
+    },
+    {
+      "label": "absolute-cover",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-absolute-cover--absolute-cover",
+      "selectors": [".l-absolute-cover"]
+    },
+    {
+      "label": "block",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-block--block",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "clearfix",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-clearfix--clearfix",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "content",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-content--content",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "fixed-ratio",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-fixed-ratio--fixed-ratio",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "flex - flex",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-flex--flex",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "flex - flex with long content",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-flex--flex-with-long-content",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "flex - flex wrap with long content",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-flex--flex-wrap-with-long-content",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "flex - flex wrap with intrinsic width content",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-flex--flex-wrap-with-intrinsic-width-content",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "flex - flex with intrinsic width content",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-flex--flex-with-intrinsic-width-content",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "grid system - base",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-grid--grid",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "grid system - responsive",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-grid--grid-responsive",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "list inline",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-list-inline--list-inline",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "media",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-media--media",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "object cover",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-object-cover--object-cover",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "topbar",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-topbar--topbar",
+      "selectors": [".l-topbar"]
+    },
+    {
+      "label": "vertical center",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-vertical-center--vertical-center",
+      "selectors": ["body"]
+    },
+    {
+      "label": "width",
+      "url": "http://host.docker.internal:6006/iframe.html?id=layout-width--width",
+      "selectors": ["#root"]
+    }
+  ]
+}
