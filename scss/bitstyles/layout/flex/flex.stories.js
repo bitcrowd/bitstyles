@@ -39,18 +39,18 @@ export const flexWrapWithLongContent = () => `
 
 export const flexWrapWithIntrinsicWidthContent = () => `
   <ul class="l-flex l-flex--wrap o-list-reset">
-    <li><img src="${dummyImage}" width="300" height="300" class="l-block" /></li>
+    <li><img src="${dummyImage}" width="300" height="300" class="l-block" alt="Content with intrinsic width" /></li>
     <li class="l-flex__primary u-background-color--secondary">Important content here</li>
-    <li><img src="${dummyImage}" width="300" height="300" class="l-block" /></li>
-    <li><img src="${dummyImage}" width="300" height="300" class="l-block" /></li>
+    <li><img src="${dummyImage}" width="300" height="300" class="l-block" alt="Content with intrinsic width" /></li>
+    <li><img src="${dummyImage}" width="300" height="300" class="l-block" alt="Content with intrinsic width" /></li>
   </ul>
 `;
 
 export const flexWithIntrinsicWidthContent = () => `
   <ul class="l-flex o-list-reset">
-    <li><img src="${dummyImage}" width="300" height="300" class="l-block" /></li>
+    <li><img src="${dummyImage}" width="300" height="300" class="l-block" alt="Content with intrinsic width" /></li>
     <li class="l-flex__primary u-background-color--secondary">Important content here</li>
-    <li><img src="${dummyImage}" width="300" height="300" class="l-block" /></li>
-    <li><img src="${dummyImage}" width="300" height="300" class="l-block" /></li>
+    <li><img src="${dummyImage}" width="300" height="300" class="l-block" alt="Content with intrinsic width" /></li>
+    <li><img src="${dummyImage}" width="300" height="300" class="l-block" alt="Content with intrinsic width" /></li>
   </ul>
 `;

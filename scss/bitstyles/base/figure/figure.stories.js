@@ -12,7 +12,7 @@ export default {
 
 export const figure = () => `
   <figure>
-   <img src="${dummyImage}">
+   <img src="${dummyImage}" width="200" height="300" alt="">
    <figcaption>Pudding chocolate jujubes fruitcake caramels</figcaption>
   </figure>
 `;
