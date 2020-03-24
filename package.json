@@ -10,18 +10,22 @@
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
     "lint": "yarn lint:scss && yarn lint:js",
 
+    "test": "scripts/visual-regression-tests.sh",
+
     "test:setup:base": "backstop reference --configPath=test/backstop_tests/base.json --docker",
     "test:setup:layout": "backstop reference --configPath=test/backstop_tests/layout.json --docker",
     "test:setup:objects": "backstop reference --configPath=test/backstop_tests/objects.json --docker",
+    "test:setup:utilities": "backstop reference --configPath=test/backstop_tests/utilities.json --docker",
 
     "test:compare:base": "backstop test --configPath=test/backstop_tests/base.json --docker",
     "test:compare:layout": "backstop test --configPath=test/backstop_tests/layout.json --docker",
     "test:compare:objects": "backstop test --configPath=test/backstop_tests/objects.json --docker",
+    "test:compare:utilities": "backstop test --configPath=test/backstop_tests/utilities.json --docker",
 
-    "test:setup": "yarn test:setup:base && yarn test:setup:layout && yarn test:setup:objects",
-    "test:compare": "yarn test:compare:base && yarn test:compare:layout && yarn test:compare:objects",
+    "test:setup": "yarn test:setup:base && yarn test:setup:layout && yarn test:setup:objects && yarn test:setup:utilities",
+    "test:compare": "yarn test:compare:base && yarn test:compare:layout && yarn test:compare:objects && yarn test:compare:utilities",
 
-    "checks": "yarn lint && yarn css:stats",
+    "checks": "yarn lint && yarn test && yarn css:stats",
     "watch": "yarn build && yarn build --watch --recursive",
     "clean": "rimraf build/*",
     "storybook": "yarn watch & start-storybook --port 6006",
@@ -84,6 +88,9 @@
   "files": [
     "scss"
   ],
+  "engines": {
+    "node" : ">=12.13.0"
+  },
   "browserslist": [
     "defaults"
   ]

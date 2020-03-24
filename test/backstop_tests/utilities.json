@@ -1,0 +1,211 @@
+{
+  "id": "utilities",
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "misMatchThreshold" : 0.15,
+  "requireSameDimensions": true,
+  "fileNameTemplate": "{configId}_{scenarioLabel}_{viewportLabel}",
+  "paths": {
+    "bitmaps_reference": "test/backstop_data/bitmaps_reference/utilities",
+    "bitmaps_test": "test/backstop_data/bitmaps_test/utilities",
+    "compare_data": "test/backstop_data/bitmaps_test/compare.utilities.json",
+    "casper_scripts": "test/backstop_data/backstop_helpers",
+    "html_report": "test/backstop_data/html_report/utilities",
+    "ci_report": "test/backstop_data/ci_report/utilities"
+  },
+  "report": ["CI"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "debug": false,
+  "port": 6006,
+  "cliExitOnFail": false,
+  "scenarios": [
+    {
+      "label": "background-color — background",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-background-color--background-color-background",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "background-color — secondary",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-background-color--background-color-secondary",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "color — primary",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-color--color-primary",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "color — secondary",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-color--color-secondary",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "color — error",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-color--color-error",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "margin — top",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-margin--margin-top",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "margin — right",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-margin--margin-right",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "margin — bottom",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-margin--margin-bottom",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "margin — left",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-margin--margin-left",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "margin — all",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-margin--margin",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-margin — top",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-margin--no-margin-top",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-margin — right",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-margin--no-margin-right",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-margin — bottom",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-margin--no-margin-bottom",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-margin — left",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-margin--no-margin-left",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-margin — all",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-margin--no-margin",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-padding — top",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-padding--no-padding-top",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-padding — right",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-padding--no-padding-right",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-padding — bottom",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-padding--no-padding-bottom",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-padding — left",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-padding--no-padding-left",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "no-padding — all",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-no-padding--no-padding",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "padding — top",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-padding--padding-top",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "padding — right",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-padding--padding-right",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "padding — bottom",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-padding--padding-bottom",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "padding — left",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-padding--padding-left",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "padding — all",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-padding--padding",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "text-align — left",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-text-align--text-align-left",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "text-align — right",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-text-align--text-align-right",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "text-align — center",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-text-align--text-align-center",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "text-align — justify",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-text-align--text-align-justify",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "text-style — italic",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-text-style--text-style-italic",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "text-style — normal",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-text-style--text-style-normal",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "text-weight — light",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-text-weight--text-weight-light",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "text-weight — normal",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-text-weight--text-weight-normal",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "text-weight — bold",
+      "url": "http://host.docker.internal:6006/iframe.html?id=utilities-text-weight--text-weight-bold",
+      "selectors": ["#root"]
+    }
+  ]
+}

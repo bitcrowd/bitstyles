@@ -28,13 +28,14 @@
     "html_report": "test/backstop_data/html_report/objects",
     "ci_report": "test/backstop_data/ci_report/objects"
   },
-  "report": ["HTML"],
+  "report": ["CI"],
   "engine": "puppeteer",
   "engineOptions": {
     "args": ["--no-sandbox"]
   },
   "debug": false,
   "port": 6006,
+  "cliExitOnFail": false,
   "scenarios": [
     {
       "label": "bordered header",

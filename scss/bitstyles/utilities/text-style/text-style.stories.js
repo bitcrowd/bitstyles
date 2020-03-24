@@ -13,6 +13,6 @@ export const textStyleItalic = () => `
   <p class="u-text-style--italic">Some content here</p>
 `;
 
-export const textStyleNomal = () => `
+export const textStyleNormal = () => `
   <p class="u-text-style--normal">Some content here</p>
 `;
