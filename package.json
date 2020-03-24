@@ -11,7 +11,7 @@
     "lint": "yarn lint:scss && yarn lint:js",
 
     "test:setup:base": "backstop reference --configPath=test/backstop_tests/base.json",
-    "test:compare:base": "backstop test --configPath=test/backstop_tests/base.json",
+    "test:compare:base": "backstop test --configPath=test/backstop_tests/base.json --docker",
 
     "test:setup": "yarn test:setup:base",
     "test:compare": "yarn test:compare:base",
