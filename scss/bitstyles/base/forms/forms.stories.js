@@ -1,4 +1,5 @@
 import Readme from './forms.md';
+import dummyImage from '../../../../test/assets/images/placeholder-100x100.svg';
 
 export default {
   title: 'Base/Forms',
@@ -82,7 +83,14 @@ export const inputFile = () => `
 `;
 
 export const inputImage = () => `
-  <input type="image" src="https://placekitten.com/100/100" alt="Image">
+  <input
+    type="image"
+    src="${dummyImage}"
+    alt="Image"
+    width="100"
+    height="100"
+    alt="This element is rarely used these days, as you can style buttons with CSS now. It still requires an alt attribute, like a normal image"
+  >
 `;
 
 export const inputPassword = () => `

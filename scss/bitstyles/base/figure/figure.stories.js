@@ -1,4 +1,5 @@
 import Readme from './figure.md';
+import dummyImage from '../../../../test/assets/images/placeholder-200x300.svg';
 
 export default {
   title: 'Base/Figure',
@@ -11,7 +12,7 @@ export default {
 
 export const figure = () => `
   <figure>
-   <img src="https://placekitten.com/200/300">
-   <figcaption>A portrait of a kitten</figcaption>
+   <img src="${dummyImage}">
+   <figcaption>Pudding chocolate jujubes fruitcake caramels</figcaption>
   </figure>
 `;

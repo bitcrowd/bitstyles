@@ -1,4 +1,5 @@
 import Readme from './images.md';
+import dummyImage from '../../../../test/assets/images/placeholder-200x300.svg';
 
 export default {
   title: 'Base/Images',
@@ -10,5 +11,10 @@ export default {
 };
 
 export const img = () => `
-  <img src="https://placekitten.com/200/300" alt="Always include an alt attribute, even if it’s empty />
+  <img
+    src="${dummyImage}"
+    alt="Always include an alt attribute, even if it’s empty"
+    width="200"
+    height="300"
+  />
 `;
