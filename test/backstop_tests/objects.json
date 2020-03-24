@@ -1,0 +1,185 @@
+{
+  "id": "objects",
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "name": "tablet_v",
+      "width": 568,
+      "height": 1024
+    },
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "misMatchThreshold" : 0.15,
+  "requireSameDimensions": true,
+  "fileNameTemplate": "{configId}_{scenarioLabel}_{viewportLabel}",
+  "paths": {
+    "bitmaps_reference": "test/backstop_data/bitmaps_reference/objects",
+    "bitmaps_test": "test/backstop_data/bitmaps_test/objects",
+    "compare_data": "test/backstop_data/bitmaps_test/compare.objects.json",
+    "casper_scripts": "test/backstop_data/backstop_helpers",
+    "html_report": "test/backstop_data/html_report/objects",
+    "ci_report": "test/backstop_data/ci_report/objects"
+  },
+  "report": ["HTML"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "debug": false,
+  "port": 6006,
+  "scenarios": [
+    {
+      "label": "bordered header",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-bordered-header--bordered-header",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "break long words",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-break-long-words--break-long-words",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "button--icon (button)",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-button-icon--button-icon-button-element",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "button--icon (anchor)",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-button-icon--button-icon-anchor-element",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "button--icon [disabled]",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-button-icon--button-icon-disabled",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "button (button)",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-button--button-element",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "button (anchor)",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-button--button-anchor-element",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "button [disabled]",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-button--button-disabled",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "button with icon",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-button--button-with-icon",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "button with icon reversed",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-button--button-with-icon-reversed",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "hidden",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-hidden--hidden",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "hidden@small-only",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-hidden--hidden-at-small-only",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "hidden@large",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-hidden--hidden-at-large",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "icon - default",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-icon--icon",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "icon - small",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-icon--icon-small",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "icon - medium",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-icon--icon-medium",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "icon - large",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-icon--icon-large",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "input",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-input--input",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "input - text",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-input--input-text",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "input - text [disabled]",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-input--input-text-disabled",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "input - checkbox",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-input--input-checkbox",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "label",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-label--label",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "link",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-link--link",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "list - reset",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-list-reset--list-reset",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "list - reset bullets only",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-list-reset--list-reset-bullets-only",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "overflow",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-overflow--overflow",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "truncate with ellipsis",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-truncate-with-ellipsis--truncate-with-ellipsis",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "typography",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-typography--headings",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "visuallyhidden",
+      "url": "http://host.docker.internal:6006/iframe.html?id=objects-visuallyhidden--visuallyhidden",
+      "selectors": ["#root"]
+    }
+  ]
+}
