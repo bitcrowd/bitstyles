@@ -42,7 +42,7 @@
     },
     {
       "label": "p",
-      "url": "http://localhost:6006/iframe.html?id=base-typography--p",
+      "url": "http://localhost:6006/iframe.html?id=base-typography--paragraph",
       "selectors": ["#root"]
     },
     {
@@ -107,7 +107,7 @@
     },
     {
       "label": "var",
-      "url": "http://localhost:6006/iframe.html?id=base-typography--var",
+      "url": "http://localhost:6006/iframe.html?id=base-typography--var-el",
       "selectors": ["#root"]
     },
     {
@@ -192,7 +192,7 @@
     },
     {
       "label": "img",
-      "url": "http://localhost:6006/iframe.html?id=base-img--img",
+      "url": "http://localhost:6006/iframe.html?id=base-images--img",
       "selectors": ["#root"]
     },
     {
@@ -212,17 +212,17 @@
     },
     {
       "label": "input - text",
-      "url": "http://localhost:6006/iframe.html?id=base-forms--fieldset",
-      "selectors": ["#root"]
-    },
-    {
-      "label": "input - email",
       "url": "http://localhost:6006/iframe.html?id=base-forms--input-text",
       "selectors": ["#root"]
     },
     {
-      "label": "input - number",
+      "label": "input - email",
       "url": "http://localhost:6006/iframe.html?id=base-forms--input-email",
+      "selectors": ["#root"]
+    },
+    {
+      "label": "input - number",
+      "url": "http://localhost:6006/iframe.html?id=base-forms--input-number",
       "selectors": ["#root"]
     },
     {
@@ -272,7 +272,7 @@
     },
     {
       "label": "input - datetime-local",
-      "url": "http://localhost:6006/iframe.html?id=base-forms--input-datetime-local",
+      "url": "http://localhost:6006/iframe.html?id=base-forms--input-date-time-local",
       "selectors": ["#root"]
     },
     {

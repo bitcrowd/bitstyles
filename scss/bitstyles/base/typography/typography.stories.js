@@ -19,7 +19,7 @@ export const headings = () => `
 `;
 
 export const paragraph = () => `
-  <p>Jelly cake marshmallow</p>
+  <p>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
 `;
 
 export const address = () => `
@@ -57,75 +57,75 @@ export const blockquote = () => `
 `;
 
 export const cite = () => `
-  <cite>Jelly cake marshmallow</cite>
+  <cite>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</cite>
 `;
 
 export const strong = () => `
-  <strong>Jelly cake marshmallow</strong>
+  <strong>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</strong>
 `;
 
 export const em = () => `
-  <em>Jelly cake marshmallow</em>
+  <em>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</em>
 `;
 
 export const i = () => `
-  <i>Jelly cake marshmallow</i>
+  <i>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</i>
 `;
 
 export const b = () => `
-  <b>Jelly cake marshmallow</b>
+  <b>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</b>
 `;
 
 export const small = () => `
-  <small>Jelly cake marshmallow</small>
+  <small>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</small>
 `;
 
 export const big = () => `
-  <big>Jelly cake marshmallow</big>
+  <big>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</big>
 `;
 
 export const sub = () => `
-  <sub>Jelly cake marshmallow</sub>
+  <sub>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</sub>
 `;
 
 export const sup = () => `
-  <sup>Jelly cake marshmallow</sup>
+  <sup>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</sup>
 `;
 
 export const abbr = () => `
-  <abbr>Jelly cake marshmallow</abbr>
+  <abbr>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</abbr>
 `;
 
 export const pre = () => `
-  <pre>Jelly cake marshmallow</pre>
+  <pre>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</pre>
 `;
 
 export const code = () => `
-  <code>Jelly cake marshmallow</code>
+  <code>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</code>
 `;
 
 export const q = () => `
-  <q>Jelly cake marshmallow</q>
+  <q>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</q>
 `;
 
 export const strike = () => `
-  <strike>Jelly cake marshmallow</strike>
+  <strike>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</strike>
 `;
 
 export const time = () => `
-  <time>Jelly cake marshmallow</time>
+  <time datetime="20:57">20:57</time>
 `;
 
 export const kbd = () => `
-  <kbd>Jelly cake marshmallow</kbd>
+  <kbd>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</kbd>
 `;
 
 export const samp = () => `
-  <samp>Jelly cake marshmallow</samp>
+  <samp>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</samp>
 `;
 
 export const varEl = () => `
-  <var>Jelly cake marshmallow</var>
+  <var>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</var>
 `;
 
 varEl.story = {
@@ -133,19 +133,19 @@ varEl.story = {
 };
 
 export const ins = () => `
-  <ins>Jelly cake marshmallow</ins>
+  <ins>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</ins>
 `;
 
 export const del = () => `
-  <del>Jelly cake marshmallow</del>
+  <del>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</del>
 `;
 
 export const dfn = () => `
-  <dfn>Jelly cake marshmallow</dfn>
+  <dfn>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</dfn>
 `;
 
 export const s = () => `
-  <s>Jelly cake marshmallow</s>
+  <s>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</s>
 `;
 
 export const table = () => `
