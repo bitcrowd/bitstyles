@@ -4,6 +4,7 @@ html {
   line-height: $bitstyles-line-height-base;
   color: palette('text');
   background: palette('background');
+  -webkit-text-size-adjust: 100%;
 }
 
 h1,
