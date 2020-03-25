@@ -3,8 +3,8 @@ html {
   font-family: $bitstyles-font-family-body;
   line-height: $bitstyles-line-height-base;
   color: palette('text');
+  -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
   background: palette('background');
-  -webkit-text-size-adjust: 100%;
 }
 
 h1,
