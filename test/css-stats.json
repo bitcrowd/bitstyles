@@ -8,7 +8,7 @@
     "comments": 1,
     "commentsLength": 72,
     "complexSelectors": 0,
-    "duplicatedSelectors": 3,
+    "duplicatedSelectors": 2,
     "duplicatedProperties": 2,
     "emptyRules": 0,
     "expressions": 0,
@@ -24,46 +24,46 @@
     "qualifiedSelectors": 0,
     "specificityIdAvg": 0,
     "specificityIdTotal": 0,
-    "specificityClassAvg": 0.84,
+    "specificityClassAvg": 0.78,
     "specificityClassTotal": 206,
-    "specificityTagAvg": 0.35,
-    "specificityTagTotal": 85,
-    "selectors": 244,
-    "selectorLengthAvg": 1.0368852459016393,
+    "specificityTagAvg": 0.4,
+    "specificityTagTotal": 105,
+    "selectors": 264,
+    "selectorLengthAvg": 1.0340909090909092,
     "selectorsByAttribute": 24,
     "selectorsByClass": 164,
     "selectorsById": 0,
     "selectorsByPseudo": 38,
-    "selectorsByTag": 65,
-    "length": 11982,
+    "selectorsByTag": 85,
+    "length": 12091,
     "rules": 193,
     "declarations": 426
   },
   "offenders": {
     "duplicatedProperties": [
-      "abbr[title] {text-decoration: underline dotted} @ 2:291",
-      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:10704"
+      "abbr[title] {text-decoration: underline dotted} @ 2:277",
+      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:10813"
     ],
     "oldPropertyPrefixes": [
-      "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:1754",
-      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2285",
-      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5752",
-      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:8529"
+      "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:1863",
+      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2394",
+      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5861",
+      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:8638"
     ],
     "mediaQueries": [
-      "@media screen and (min-width:45em) (5 rules) @ 2:2014",
-      "@media screen and (min-width:64em) (1 rules) @ 2:2739",
-      "@media screen and (min-width:45em) (12 rules) @ 2:3373",
-      "@media screen and (max-width:44.9375em) (1 rules) @ 2:6448",
-      "@media screen and (min-width:64em) (1 rules) @ 2:6534",
-      "@media screen and (min-width:45em) (5 rules) @ 2:7531",
-      "@media screen and (min-width:45em) (2 rules) @ 2:9835"
+      "@media screen and (min-width:45em) (5 rules) @ 2:2123",
+      "@media screen and (min-width:64em) (1 rules) @ 2:2848",
+      "@media screen and (min-width:45em) (12 rules) @ 2:3482",
+      "@media screen and (max-width:44.9375em) (1 rules) @ 2:6557",
+      "@media screen and (min-width:64em) (1 rules) @ 2:6643",
+      "@media screen and (min-width:45em) (5 rules) @ 2:7640",
+      "@media screen and (min-width:45em) (2 rules) @ 2:9944"
     ],
     "importants": [
-      ".o-hidden {display: none!important} @ 2:6425",
-      ".o-hidden\\@small-only {display: none!important} @ 2:6510",
-      ".o-hidden\\@large {display: none!important} @ 2:6586",
-      ".o-visuallyhidden {position: absolute!important} @ 2:6727"
+      ".o-hidden {display: none!important} @ 2:6534",
+      ".o-hidden\\@small-only {display: none!important} @ 2:6619",
+      ".o-hidden\\@large {display: none!important} @ 2:6695",
+      ".o-visuallyhidden {position: absolute!important} @ 2:6836"
     ],
     "colors": [
       "#7f7f7f (8 times)",
@@ -79,7 +79,6 @@
     ],
     "duplicatedSelectors": [
       "html (3 times)",
-      "img (2 times)",
       "textarea (2 times)"
     ]
   }
