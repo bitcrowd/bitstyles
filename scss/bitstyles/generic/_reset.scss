@@ -1,0 +1,29 @@
+/* stylelint-disable selector-max-type */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+button,
+input,
+select {
+  margin: 0;
+}
+
+iframe,
+img {
+  border-style: none;
+}
+/* stylelint-enable selector-max-type */
