@@ -2,6 +2,7 @@
 @import '../../settings/button';
 @import '../../settings/fieldset';
 @import '../../settings/select';
+@import '../../settings/checkbox';
 
 /* stylelint-disable selector-max-type */
 
@@ -48,7 +49,17 @@ button {
   height: calc(#{$bitstyles-line-height-base * 1em} + #{$bitstyles-input-padding * 2});
 }
 
-select {
-  @include select;
+@supports (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none) {
+  select {
+    @include select;
+  }
+
+  [type="checkbox"] {
+    @include checkbox;
+  }
+
+  [type="radio"] {
+    @include radio;
+  }
 }
 /* stylelint-enable selector-max-type */

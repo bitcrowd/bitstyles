@@ -7,6 +7,7 @@
   line-height: inherit;
   color: $bitstyles-select-color;
   text-overflow: ellipsis;
+  cursor: pointer;
   background-color: $bitstyles-select-background-color;
   background-image: $bitstyles-select-background-image;
   background-position: right 0.75em top 50%;
@@ -18,22 +19,10 @@
     color $bitstyles-transition-duration $bitstyles-transition-easing,
     background-color $bitstyles-transition-duration $bitstyles-transition-easing,
     border $bitstyles-transition-duration $bitstyles-transition-easing;
-  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   appearance: none;
-  cursor: pointer;
 
   &::-ms-expand {
     display: none;
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 2rem;
-    width: 2px;
-    height: 2rem;
-    background-color: #f00;
   }
 
   &:hover {
@@ -54,9 +43,9 @@
 
   &[disabled] {
     color: $bitstyles-select-color-disabled;
+    cursor: default;
     background-color: $bitstyles-select-background-color-disabled;
     background-image: $bitstyles-select-background-image-disabled;
     border: $bitstyles-select-border-disabled;
-    cursor: default;
   }
 }

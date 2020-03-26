@@ -1,0 +1,99 @@
+//
+// Base styles ////////////////////////////////////////
+$bitstyles-radio-border-radius: $bitstyles-border-radius-round;
+
+//
+// Base colors ////////////////////////////////////////
+$bitstyles-radio-color: palette('text', 'light');
+$bitstyles-radio-background-color: palette('background');
+$bitstyles-radio-border: 2px solid;
+
+//
+// Hover colors ////////////////////////////////////////
+$bitstyles-radio-color-hover: palette('primary');
+$bitstyles-radio-background-color-hover: palette('background');
+$bitstyles-radio-border-hover: 2px solid;
+
+//
+// Checked colors ////////////////////////////////////////
+$bitstyles-radio-color-checked: palette('primary');
+$bitstyles-radio-background-color-checked: palette('background');
+$bitstyles-radio-border-checked: 2px solid palette('primary');
+
+//
+// Disabled colors ////////////////////////////////////////
+$bitstyles-radio-color-disabled: palette('text', 'light');
+$bitstyles-radio-background-color-disabled: palette('background', 'dark');
+$bitstyles-radio-border-disabled: 2px solid;
+
+//
+// Disabled-checked colors ////////////////////////////////////////
+$bitstyles-radio-color-disabled-checked: palette('text', 'light');
+$bitstyles-radio-background-color-disabled-checked: palette('background', 'dark');
+$bitstyles-radio-border-disabled-checked: 2px solid;
+
+@mixin radio {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color: $bitstyles-radio-color;
+  cursor: pointer;
+  background-color: $bitstyles-radio-background-color;
+  border: $bitstyles-radio-border;
+  border-radius: $bitstyles-radio-border-radius;
+  transition:
+    color $bitstyles-transition-duration $bitstyles-transition-easing,
+    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
+    border $bitstyles-transition-duration $bitstyles-transition-easing;
+  appearance: none;
+
+  &::after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $bitstyles-radio-color-checked;
+    border-radius: $bitstyles-radio-border-radius;
+    content: '';
+    opacity: 0;
+    transform: scale(0.5);
+    transition:
+      opacity $bitstyles-transition-duration $bitstyles-transition-easing,
+      transform $bitstyles-transition-duration $bitstyles-transition-easing;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-radio-color-hover;
+    background-color: $bitstyles-radio-background-color-hover;
+    border: $bitstyles-radio-border-hover;
+    outline: none;
+  }
+
+  &:checked {
+    color: $bitstyles-radio-color-checked;
+    background-color: $bitstyles-radio-background-color-checked;
+    border: $bitstyles-radio-border-checked;
+
+    &::after {
+      opacity: 1;
+      transform: scale(0.7);
+    }
+  }
+
+  &[disabled] {
+    color: $bitstyles-radio-color-disabled;
+    background-color: $bitstyles-radio-background-color-disabled;
+    border: $bitstyles-radio-border-disabled;
+
+    &:checked {
+      color: $bitstyles-radio-color-disabled-checked;
+      background-color: $bitstyles-radio-background-color-disabled-checked;
+      border: $bitstyles-radio-border-disabled-checked;
+    }
+
+    &::after {
+      background: $bitstyles-radio-color-disabled-checked;
+    }
+  }
+}

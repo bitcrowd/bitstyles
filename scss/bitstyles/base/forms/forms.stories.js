@@ -61,8 +61,32 @@ export const inputRadio = () => `
   <input type="radio">
 `;
 
+export const inputRadioDisabled = () => `
+  <input type="radio" disabled>
+`;
+
+export const inputRadioChecked = () => `
+  <input type="radio" checked>
+`;
+
+export const inputRadioCheckedDisabled = () => `
+  <input type="radio" checked disabled>
+`;
+
 export const inputCheckbox = () => `
   <input type="checkbox">
+`;
+
+export const inputCheckboxDisabled = () => `
+  <input type="checkbox" disabled>
+`;
+
+export const inputCheckboxChecked = () => `
+  <input type="checkbox" checked>
+`;
+
+export const inputCheckboxDisabledChecked = () => `
+  <input type="checkbox" disabled checked>
 `;
 
 export const inputButton = () => `
