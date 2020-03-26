@@ -30,7 +30,7 @@ export const label = () => `
 `;
 
 export const inputText = () => `
-  <input type="text" placeholder="Jelly cake marshmallow">
+  <input type="text" class="o-input--text" placeholder="Jelly cake marshmallow">
 `;
 
 export const inputEmail = () => `

@@ -1,0 +1,22 @@
+$bitstyles-fieldset-border: none !default;
+$bitstyles-fieldset-border-radius: spacing('x-small');
+$bitstyles-fieldset-background: palette('secondary');
+$bitstyles-legend-background-color: palette('background', 'dark');
+$bitstyles-legend-border: none;
+$bitstyles-legend-border-radius: spacing('xx-small');
+
+@mixin fieldset {
+  border: $bitstyles-fieldset-border;
+  border-radius: $bitstyles-fieldset-border-radius;
+  background-color: $bitstyles-fieldset-background;
+}
+
+@mixin legend {
+  padding: 0 spacing('x-small');
+  background-color: $bitstyles-legend-background-color;
+  border: $bitstyles-legend-border;
+  border-radius: $bitstyles-legend-border-radius;
+  position: relative;
+  top: 1rem;
+  margin-bottom: 1rem;
+}

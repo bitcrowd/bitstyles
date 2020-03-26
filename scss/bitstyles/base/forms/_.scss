@@ -1,5 +1,48 @@
+@import '../../settings/input';
+@import '../../settings/button';
+
 /* stylelint-disable selector-max-type */
+
+fieldset {
+  @include fieldset;
+}
+
+legend {
+  @include legend;
+}
+
 textarea {
   resize: vertical;
+}
+
+/*
+ * Selects all the text-like input types. We’re avoiding using e.g. `input[type="text"]` as it means we cannot use a single class later on
+ */
+[type="text"],
+[type="email"],
+[type="number"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="url"],
+textarea {
+  @include input;
+  @include input--text;
+}
+
+[type="button"],
+[type="submit"],
+[type="reset"],
+button {
+  @include button;
+}
+
+[type="color"] {
+  height: calc(#{$bitstyles-line-height-base * 1em} + #{$bitstyles-input-padding * 2});
 }
 /* stylelint-enable selector-max-type */

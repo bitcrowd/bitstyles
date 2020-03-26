@@ -1,9 +1,7 @@
 @import '../../settings/input';
 
 .#{$bitstyles-namespace}o-input {
-  @include block;
-
-  width: 100%;
+  @include input;
 }
 
 .#{$bitstyles-namespace}o-input--text {

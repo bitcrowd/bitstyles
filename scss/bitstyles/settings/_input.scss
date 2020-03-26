@@ -1,7 +1,7 @@
 $bitstyles-input-color: palette('text') !default;
 $bitstyles-input-padding: spacing('small') !default;
 $bitstyles-input-border: 1px solid $bitstyles-color-gray-30 !default;
-$bitstyles-input-border-radius: 5px !default;
+$bitstyles-input-border-radius: spacing('xx-small') !default;
 $bitstyles-input-border-active: 1px solid $bitstyles-color-gray-50 !default;
 $bitstyles-input-background: $bitstyles-color-white !default;
 $bitstyles-input-placeholder-color: $bitstyles-color-gray-50 !default;

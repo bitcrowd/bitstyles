@@ -1,3 +1,9 @@
+@mixin input {
+  @include block;
+
+  width: 100%;
+}
+
 @mixin input--text {
   padding: $bitstyles-input-padding;
   color: $bitstyles-input-color;
