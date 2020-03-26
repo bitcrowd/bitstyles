@@ -33,6 +33,10 @@ export const inputText = () => `
   <input type="text" class="o-input--text" placeholder="Jelly cake marshmallow">
 `;
 
+export const inputTextDisabled = () => `
+  <input type="text" class="o-input--text" disabled placeholder="Jelly cake marshmallow">
+`;
+
 export const inputEmail = () => `
   <input type="email" placeholder="jellycake@marshmallow.com">
 `;

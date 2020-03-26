@@ -1,10 +1,10 @@
-$bitstyles-color-primary: $bitstyles-color-gray-70 !default;
+$bitstyles-color-primary: #0ab3bf !default;
 $bitstyles-color-secondary: $bitstyles-color-gray-20 !default;
 $bitstyles-color-text: $bitstyles-color-gray-80 !default;
 $bitstyles-color-background: $bitstyles-color-white !default;
 $bitstyles-color-positive: #0f0 !default;
 $bitstyles-color-negative: #f00 !default;
-$bitstyles-color-tone-factor: 8% !default;
+$bitstyles-color-tone-factor: 10% !default;
 
 // Colour palette. Each colour has variants (each needs at least the `base`), defined
 // in its child map. Naming: `base`, `light`, `lighter`, `dark`, `darker`
