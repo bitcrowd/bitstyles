@@ -3,5 +3,15 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
 module.exports = {
-  plugins: [autoprefixer, cssnano({ safe: true })],
+  plugins: [
+    autoprefixer,
+    cssnano({
+      preset: [
+        'default',
+        {
+          mergeRules: false,
+        },
+      ],
+    }),
+  ],
 };
