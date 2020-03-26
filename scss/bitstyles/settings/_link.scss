@@ -1,7 +1,7 @@
 $bitstyles-background-color-link: none !default;
-$bitstyles-color-link:            $bitstyles-color-gray-50 !default;
-$bitstyles-color-link-visited:    $bitstyles-color-gray-70 !default;
-$bitstyles-color-link-hover:      $bitstyles-color-gray-20 !default;
+$bitstyles-color-link:            palette('primary') !default;
+$bitstyles-color-link-visited:    palette('primary', 'light') !default;
+$bitstyles-color-link-hover:      palette('primary', 'dark') !default;
 $bitstyles-link-transition: color $bitstyles-transition-duration $bitstyles-transition-easing !default;
 $bitstyles-text-decoration-link:       underline !default;
 $bitstyles-text-decoration-link-hover: underline !default;

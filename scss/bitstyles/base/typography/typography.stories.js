@@ -19,17 +19,21 @@ export const headings = () => `
 `;
 
 export const paragraph = () => `
-  <p>Jelly cake marshmallow</p>
+  <p>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
 `;
 
 export const address = () => `
-  <address>Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</address>
+  <address>
+    Address line 1<br/>
+    Chupa chups marzipan<br/>
+    10999 Berlin
+  </address>
 `;
 
 export const dl = () => `
  <dl>
    <dt>Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon.</dt>
-   <dd>Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon.</dd>
+   <dd>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</dd>
  </dl>
 `;
 
@@ -51,7 +55,7 @@ export const ListOrdered = () => `
 
 export const blockquote = () => `
 <blockquote>
-  <p>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly
+  <p>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly</p>
   <cite>Jelly cake marshmallow</cite>
 </blockquote>
 `;
@@ -128,10 +132,6 @@ export const varEl = () => `
   <var>Jelly cake marshmallow</var>
 `;
 
-varEl.story = {
-  name: 'var',
-};
-
 export const ins = () => `
   <ins>Jelly cake marshmallow</ins>
 `;
@@ -153,19 +153,27 @@ export const table = () => `
     <caption>Awesome caption</caption>
     <thead>
       <tr>
-        <th>Header content 1</th>
-        <th>Header content 2</th>
+        <th scope="col">Header content 1</th>
+        <th scope="col">Header content 1</th>
+        <th scope="col">Header content 2</th>
       </tr>
     </thead>
     <tfoot>
       <tr>
         <td>Footer content 1</td>
         <td>Footer content 2</td>
+        <td>Footer content 2</td>
       </tr>
     </tfoot>
     <tbody>
       <tr>
-        <td>Body content 1</td>
+        <th scope="row">Row title</th>
+        <td>Body content 1. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat.</td>
+        <td>Body content 2</td>
+      </tr>
+      <tr>
+        <th scope="row">Row title</th>
+        <td>Body content 1. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat.</td>
         <td>Body content 2</td>
       </tr>
     </tbody>

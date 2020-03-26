@@ -30,4 +30,39 @@ dt {
   font-weight: $bitstyles-font-weight-bold;
 }
 
+table {
+  max-width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+caption {
+  padding-left: spacing('small');
+  margin-bottom: spacing('small');
+  text-align: left;
+}
+
+td,
+th {
+  padding: spacing('small') spacing('small');
+  line-height: 1;
+  border-bottom: 1px solid palette('background', 'dark');
+}
+
+thead {
+  th {
+    background-color: palette('background');
+    white-space: pre;
+    border-bottom: 1px solid palette('background', 'dark');
+    padding-bottom: spacing('base');
+  }
+}
+
+tfoot {
+  td,
+  th {
+    padding-top: spacing('base');
+    border: 0;
+  }
+}
 /* stylelint-enable selector-max-type */

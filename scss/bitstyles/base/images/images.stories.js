@@ -10,5 +10,5 @@ export default {
 };
 
 export const img = () => `
-  <img src="https://placekitten.com/200/300" alt="Always include an alt attribute, even if it’s empty />
+  <img src="https://placekitten.com/200/300" alt="Always include an alt attribute, even if it’s empty" />
 `;
