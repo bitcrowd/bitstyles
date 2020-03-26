@@ -19,6 +19,10 @@ textarea {
   resize: vertical;
 }
 
+input {
+  @include input-placeholder;
+}
+
 /*
  * Selects all the text-like input types. We’re avoiding using e.g. `input[type="text"]` as it means we cannot use a single class later on
  */

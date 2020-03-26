@@ -15,12 +15,6 @@
   border: $bitstyles-input-border;
   border-radius: $bitstyles-input-border-radius;
 
-  &::placeholder {
-    font-style: italic;
-    color: $bitstyles-input-placeholder-color;
-    opacity: 1;
-  }
-
   &:disabled {
     color: $bitstyles-input-color-disabled;
     cursor: default;
@@ -39,6 +33,14 @@
     background-color: $bitstyles-input-background-active;
     border: $bitstyles-input-border-active;
     outline: none;
+  }
+}
+
+@mixin input-placeholder {
+  &::placeholder {
+    font-style: italic;
+    color: $bitstyles-input-placeholder-color;
+    opacity: 1;
   }
 }
 
