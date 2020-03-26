@@ -1,6 +1,7 @@
 @import '../../settings/input';
 @import '../../settings/button';
 @import '../../settings/fieldset';
+@import '../../settings/select';
 
 /* stylelint-disable selector-max-type */
 
@@ -45,5 +46,9 @@ button {
 
 [type="color"] {
   height: calc(#{$bitstyles-line-height-base * 1em} + #{$bitstyles-input-padding * 2});
+}
+
+select {
+  @include select;
 }
 /* stylelint-enable selector-max-type */

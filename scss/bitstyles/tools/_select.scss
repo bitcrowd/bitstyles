@@ -1,0 +1,62 @@
+@mixin select {
+  display: block;
+  width: 100%;
+  padding: $bitstyles-select-padding-vertical ($bitstyles-select-padding-horizontal * 2) $bitstyles-select-padding-vertical $bitstyles-select-padding-horizontal;
+  overflow: hidden;
+  font: inherit;
+  line-height: inherit;
+  color: $bitstyles-select-color;
+  text-overflow: ellipsis;
+  background-color: $bitstyles-select-background-color;
+  background-image: $bitstyles-select-background-image;
+  background-position: right 0.75em top 50%;
+  background-repeat: no-repeat;
+  background-size: 1em;
+  border: $bitstyles-select-border;
+  border-radius: $bitstyles-select-border-radius;
+  transition:
+    color $bitstyles-transition-duration $bitstyles-transition-easing,
+    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
+    border $bitstyles-transition-duration $bitstyles-transition-easing;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+  appearance: none;
+  cursor: pointer;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 2rem;
+    width: 2px;
+    height: 2rem;
+    background-color: #f00;
+  }
+
+  &:hover {
+    color: $bitstyles-select-color-hover;
+    background-color: $bitstyles-select-background-color-hover;
+    background-image: $bitstyles-select-background-image-hover;
+    border: $bitstyles-select-border-hover;
+  }
+
+  &:focus,
+  &:active {
+    color: $bitstyles-select-color-active;
+    background-color: $bitstyles-select-background-color-active;
+    background-image: $bitstyles-select-background-image-active;
+    border: $bitstyles-select-border-active;
+    outline: none;
+  }
+
+  &[disabled] {
+    color: $bitstyles-select-color-disabled;
+    background-color: $bitstyles-select-background-color-disabled;
+    background-image: $bitstyles-select-background-image-disabled;
+    border: $bitstyles-select-border-disabled;
+    cursor: default;
+  }
+}

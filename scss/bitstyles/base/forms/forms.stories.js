@@ -19,6 +19,14 @@ export const textarea = () => `
 
 export const select = () => `
   <select>
+    <option value="value1" selected>Long option text to see some truncation especially in smaller viewports</option>
+    <option value="value2">Value 2</option>
+    <option value="value3">Value 3</option>
+  </select>
+`;
+
+export const selectDisabled = () => `
+  <select disabled>
     <option value="value1" selected>Value 1</option>
     <option value="value2">Value 2</option>
     <option value="value3">Value 3</option>
