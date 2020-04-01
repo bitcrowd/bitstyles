@@ -6,6 +6,10 @@
   @include flex--wrap;
 }
 
+.#{$bitstyles-namespace}l-flex--align-center {
+  align-items: center;
+}
+
 .#{$bitstyles-namespace}l-flex__primary {
   @include flex__primary;
 }

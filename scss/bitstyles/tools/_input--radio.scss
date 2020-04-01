@@ -1,18 +1,8 @@
-@mixin radio {
-  position: relative;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+@mixin input--radio {
   color: $bitstyles-radio-color;
-  cursor: pointer;
   background-color: $bitstyles-radio-background-color;
   border: $bitstyles-radio-border;
   border-radius: $bitstyles-radio-border-radius;
-  transition:
-    color $bitstyles-transition-duration $bitstyles-transition-easing,
-    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
-    border $bitstyles-transition-duration $bitstyles-transition-easing;
-  appearance: none;
 
   &::after {
     display: block;

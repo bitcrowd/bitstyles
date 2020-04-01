@@ -1,14 +1,28 @@
 @mixin input {
-  @include block;
-
-  width: 100%;
   transition:
     color $bitstyles-transition-duration $bitstyles-transition-easing,
     background-color $bitstyles-transition-duration $bitstyles-transition-easing,
     border $bitstyles-transition-duration $bitstyles-transition-easing;
 }
 
+@mixin input--checkbox-radio {
+  @include input;
+
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: $bitstyles-input-padding;
+  vertical-align: middle;
+  cursor: pointer;
+  appearance: none;
+}
+
 @mixin input--text {
+  @include block;
+  @include input;
+
+  width: 100%;
   padding: $bitstyles-input-padding;
   color: $bitstyles-input-color;
   background-color: $bitstyles-input-background;
@@ -42,12 +56,4 @@
     color: $bitstyles-input-placeholder-color;
     opacity: 1;
   }
-}
-
-@mixin input--checkbox {
-  display: inline-block;
-  width: $bitstyles-input-checkbox-size;
-  height: $bitstyles-input-checkbox-size;
-  margin-right: $bitstyles-input-padding;
-  vertical-align: middle;
 }

@@ -1,18 +1,8 @@
-@mixin checkbox {
-  position: relative;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+@mixin input--checkbox {
   color: $bitstyles-checkbox-color;
-  cursor: pointer;
   background-color: $bitstyles-checkbox-background-color;
   border: $bitstyles-checkbox-border;
   border-radius: $bitstyles-checkbox-border-radius;
-  transition:
-    color $bitstyles-transition-duration $bitstyles-transition-easing,
-    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
-    border $bitstyles-transition-duration $bitstyles-transition-easing;
-  appearance: none;
 
   &:hover,
   &:focus {

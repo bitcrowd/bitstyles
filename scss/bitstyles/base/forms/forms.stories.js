@@ -14,7 +14,7 @@ export const fieldset = () => `
 `;
 
 export const textarea = () => `
-  <textarea>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</textarea>
+  <textarea placeholder="Placeholder text">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</textarea>
 `;
 
 export const select = () => `
@@ -33,16 +33,44 @@ export const selectDisabled = () => `
   </select>
 `;
 
+export const inputTextWithLabel = () => `
+  <label class="o-label" for="input_1">This is labeling text</label>
+  <input type="text" id="input_1" placeholder="Placeholder text" />
+`;
+
+export const inputTextWithLabelDisabled = () => `
+  <label class="o-label" for="input_1">This is labeling text for a disabled input</label>
+  <input type="text" disabled id="input_1" placeholder="Placeholder text" />
+`;
+
+export const inputCheckboxWithLabel = () => `
+  <label for="input_1" class="l-flex l-flex--align-center">
+    <input type="checkbox" id="input_1" />
+    <span class="o-label">This is labeling text</span>
+  </label>
+`;
+
+export const inputRadiosWithLabel = () => `
+  <label for="input_1" class="l-flex l-flex--align-center">
+    <input type="radio" id="input_1" name="radio-group_1" />
+    <span class="o-label">This is labeling text</span>
+  </label>
+  <label for="input_2" class="l-flex l-flex--align-center">
+    <input type="radio" id="input_2" name="radio-group_1" />
+    <span class="o-label">This is labeling text</span>
+  </label>
+`;
+
 export const label = () => `
   <label>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</label>
 `;
 
 export const inputText = () => `
-  <input type="text" class="o-input--text" placeholder="Jelly cake marshmallow">
+  <input type="text" placeholder="Jelly cake marshmallow">
 `;
 
 export const inputTextDisabled = () => `
-  <input type="text" class="o-input--text" disabled placeholder="Jelly cake marshmallow">
+  <input type="text" disabled placeholder="Jelly cake marshmallow">
 `;
 
 export const inputEmail = () => `

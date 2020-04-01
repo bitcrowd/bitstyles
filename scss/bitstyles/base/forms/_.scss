@@ -15,12 +15,11 @@ legend {
   @include legend;
 }
 
-textarea {
-  resize: vertical;
-}
-
+textarea,
 input {
   @include input-placeholder;
+
+  resize: vertical;
 }
 
 /*
@@ -39,7 +38,6 @@ input {
 [type="time"],
 [type="url"],
 textarea {
-  @include input;
   @include input--text;
 }
 
@@ -59,12 +57,17 @@ button {
     @include select;
   }
 
+  [type="checkbox"],
+  [type="radio"] {
+    @include input--checkbox-radio;
+  }
+
   [type="checkbox"] {
-    @include checkbox;
+    @include input--checkbox;
   }
 
   [type="radio"] {
-    @include radio;
+    @include input--radio;
   }
 }
 /* stylelint-enable selector-max-type */
