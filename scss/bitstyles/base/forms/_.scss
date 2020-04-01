@@ -15,6 +15,10 @@ legend {
   @include legend;
 }
 
+label {
+  @include label;
+}
+
 textarea,
 input {
   @include input-placeholder;

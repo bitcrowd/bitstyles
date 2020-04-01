@@ -34,35 +34,42 @@ export const selectDisabled = () => `
 `;
 
 export const inputTextWithLabel = () => `
-  <label class="o-label" for="input_1">This is labeling text</label>
-  <input type="text" id="input_1" placeholder="Placeholder text" />
+  <label for="input_1">
+    <span>This is labeling text</span>
+    <input type="text" id="input_1" placeholder="Placeholder text" />
+  </label>
 `;
 
 export const inputTextWithLabelDisabled = () => `
-  <label class="o-label" for="input_1">This is labeling text for a disabled input</label>
-  <input type="text" disabled id="input_1" placeholder="Placeholder text" />
+  <label for="input_1">
+    <span>This is labeling text for a disabled input</span>
+    <input type="text" disabled id="input_1" placeholder="Placeholder text" />
+  </label>
 `;
 
 export const inputCheckboxWithLabel = () => `
   <label for="input_1" class="l-flex l-flex--align-center">
     <input type="checkbox" id="input_1" />
-    <span class="o-label">This is labeling text</span>
+    <span>This is labeling text</span>
   </label>
 `;
 
 export const inputRadiosWithLabel = () => `
   <label for="input_1" class="l-flex l-flex--align-center">
     <input type="radio" id="input_1" name="radio-group_1" />
-    <span class="o-label">This is labeling text</span>
+    <span>This is labeling text</span>
   </label>
   <label for="input_2" class="l-flex l-flex--align-center">
     <input type="radio" id="input_2" name="radio-group_1" />
-    <span class="o-label">This is labeling text</span>
+    <span>This is labeling text</span>
   </label>
 `;
 
 export const label = () => `
-  <label>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</label>
+  <label for="input_1">
+    <span>This is label text</span>
+    <input type="text" placeholder="Placeholder text" id="input_1" />
+  </label>
 `;
 
 export const inputText = () => `

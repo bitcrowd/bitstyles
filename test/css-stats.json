@@ -25,46 +25,46 @@
     "specificityIdAvg": 0,
     "specificityIdTotal": 0,
     "specificityClassAvg": 0.96,
-    "specificityClassTotal": 349,
-    "specificityTagAvg": 0.37,
-    "specificityTagTotal": 136,
+    "specificityClassTotal": 348,
+    "specificityTagAvg": 0.38,
+    "specificityTagTotal": 137,
     "selectors": 363,
     "selectorLengthAvg": 1.024793388429752,
     "selectorsByAttribute": 106,
-    "selectorsByClass": 154,
+    "selectorsByClass": 153,
     "selectorsById": 0,
     "selectorsByPseudo": 113,
-    "selectorsByTag": 112,
-    "length": 19213,
+    "selectorsByTag": 113,
+    "length": 19210,
     "rules": 214,
     "declarations": 502
   },
   "offenders": {
     "duplicatedProperties": [
       "abbr[title] {text-decoration: underline dotted} @ 2:277",
-      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:17935"
+      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:17932"
     ],
     "oldPropertyPrefixes": [
       "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:1876",
       "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2529",
-      "[type=button], [type=reset], [type=submit], button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5470",
-      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:13412",
-      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:15757"
+      "[type=button], [type=reset], [type=submit], button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5521",
+      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:13463",
+      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:15754"
     ],
     "mediaQueries": [
       "@media screen and (min-width:45em) (7 rules) @ 2:2166",
-      "@media screen and (min-width:64em) (1 rules) @ 2:10392",
-      "@media screen and (min-width:45em) (12 rules) @ 2:11026",
-      "@media screen and (max-width:44.9375em) (1 rules) @ 2:14222",
-      "@media screen and (min-width:64em) (1 rules) @ 2:14308",
-      "@media screen and (min-width:45em) (7 rules) @ 2:15335",
-      "@media screen and (min-width:45em) (2 rules) @ 2:17066"
+      "@media screen and (min-width:64em) (1 rules) @ 2:10443",
+      "@media screen and (min-width:45em) (12 rules) @ 2:11077",
+      "@media screen and (max-width:44.9375em) (1 rules) @ 2:14273",
+      "@media screen and (min-width:64em) (1 rules) @ 2:14359",
+      "@media screen and (min-width:45em) (7 rules) @ 2:15386",
+      "@media screen and (min-width:45em) (2 rules) @ 2:17063"
     ],
     "importants": [
-      ".o-hidden {display: none!important} @ 2:14199",
-      ".o-hidden\\@small-only {display: none!important} @ 2:14284",
-      ".o-hidden\\@large {display: none!important} @ 2:14360",
-      ".o-visuallyhidden {position: absolute!important} @ 2:14501"
+      ".o-hidden {display: none!important} @ 2:14250",
+      ".o-hidden\\@small-only {display: none!important} @ 2:14335",
+      ".o-hidden\\@large {display: none!important} @ 2:14411",
+      ".o-visuallyhidden {position: absolute!important} @ 2:14552"
     ],
     "colors": [
       "#ffffff (13 times)",
