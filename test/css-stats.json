@@ -8,7 +8,7 @@
     "comments": 1,
     "commentsLength": 72,
     "complexSelectors": 0,
-    "duplicatedSelectors": 5,
+    "duplicatedSelectors": 4,
     "duplicatedProperties": 2,
     "emptyRules": 0,
     "expressions": 0,
@@ -24,60 +24,60 @@
     "qualifiedSelectors": 0,
     "specificityIdAvg": 0,
     "specificityIdTotal": 0,
-    "specificityClassAvg": 0.99,
-    "specificityClassTotal": 358,
-    "specificityTagAvg": 0.35,
-    "specificityTagTotal": 125,
-    "selectors": 362,
-    "selectorLengthAvg": 1.0248618784530388,
+    "specificityClassAvg": 0.96,
+    "specificityClassTotal": 349,
+    "specificityTagAvg": 0.37,
+    "specificityTagTotal": 136,
+    "selectors": 363,
+    "selectorLengthAvg": 1.024793388429752,
     "selectorsByAttribute": 106,
-    "selectorsByClass": 160,
+    "selectorsByClass": 154,
     "selectorsById": 0,
-    "selectorsByPseudo": 112,
-    "selectorsByTag": 105,
-    "length": 19694,
-    "rules": 218,
-    "declarations": 520
+    "selectorsByPseudo": 113,
+    "selectorsByTag": 112,
+    "length": 19213,
+    "rules": 214,
+    "declarations": 502
   },
   "offenders": {
     "duplicatedProperties": [
       "abbr[title] {text-decoration: underline dotted} @ 2:277",
-      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:18416"
+      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:17935"
     ],
     "oldPropertyPrefixes": [
       "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:1876",
-      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2467",
-      "[type=button], [type=reset], [type=submit], button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5251",
-      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:13310",
-      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:16241"
+      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2529",
+      "[type=button], [type=reset], [type=submit], button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5470",
+      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:13412",
+      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:15757"
     ],
     "mediaQueries": [
       "@media screen and (min-width:45em) (7 rules) @ 2:2166",
-      "@media screen and (min-width:64em) (1 rules) @ 2:10331",
-      "@media screen and (min-width:45em) (12 rules) @ 2:10965",
-      "@media screen and (max-width:44.9375em) (1 rules) @ 2:14120",
-      "@media screen and (min-width:64em) (1 rules) @ 2:14206",
-      "@media screen and (min-width:45em) (7 rules) @ 2:15233",
-      "@media screen and (min-width:45em) (2 rules) @ 2:17547"
+      "@media screen and (min-width:64em) (1 rules) @ 2:10392",
+      "@media screen and (min-width:45em) (12 rules) @ 2:11026",
+      "@media screen and (max-width:44.9375em) (1 rules) @ 2:14222",
+      "@media screen and (min-width:64em) (1 rules) @ 2:14308",
+      "@media screen and (min-width:45em) (7 rules) @ 2:15335",
+      "@media screen and (min-width:45em) (2 rules) @ 2:17066"
     ],
     "importants": [
-      ".o-hidden {display: none!important} @ 2:14097",
-      ".o-hidden\\@small-only {display: none!important} @ 2:14182",
-      ".o-hidden\\@large {display: none!important} @ 2:14258",
-      ".o-visuallyhidden {position: absolute!important} @ 2:14399"
+      ".o-hidden {display: none!important} @ 2:14199",
+      ".o-hidden\\@small-only {display: none!important} @ 2:14284",
+      ".o-hidden\\@large {display: none!important} @ 2:14360",
+      ".o-visuallyhidden {position: absolute!important} @ 2:14501"
     ],
     "colors": [
-      "#ffffff (16 times)",
-      "#0ab3bf (11 times)",
-      "#7f7f7f (7 times)",
-      "#333333 (6 times)",
-      "#cccccc (5 times)",
-      "#4d4d4d (5 times)",
-      "#4c4c4c (4 times)",
-      "#e6e6e6 (2 times)",
-      "#0de0ef (2 times)",
-      "#07868f (2 times)",
+      "#ffffff (13 times)",
+      "#0ab3bf (9 times)",
+      "#7f7f7f (5 times)",
+      "#333333 (4 times)",
+      "#0de0ef (4 times)",
+      "#07868f (4 times)",
+      "#4d4d4d (4 times)",
+      "#cccccc (3 times)",
+      "#4c4c4c (2 times)",
       "#b2b2b2 (2 times)",
+      "#e6e6e6 (1 times)",
       "#000000 (1 times)",
       "rgba(0,0,0,0.7) (1 times)",
       "#d9d9d9 (1 times)"
@@ -86,8 +86,7 @@
       "html (3 times)",
       "[type=button], [type=reset], [type=submit], button (2 times)",
       "fieldset (2 times)",
-      "legend (2 times)",
-      "textarea (2 times)"
+      "legend (2 times)"
     ]
   }
 }
