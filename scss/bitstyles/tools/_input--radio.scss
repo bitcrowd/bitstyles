@@ -1,0 +1,55 @@
+@mixin input--radio {
+  color: $bitstyles-radio-color;
+  background-color: $bitstyles-radio-background-color;
+  border: $bitstyles-radio-border;
+  border-radius: $bitstyles-radio-border-radius;
+
+  &::after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $bitstyles-radio-color-checked;
+    border-radius: $bitstyles-radio-border-radius;
+    content: '';
+    opacity: 0;
+    transform: scale(0.5);
+    transition:
+      opacity $bitstyles-transition-duration $bitstyles-transition-easing,
+      transform $bitstyles-transition-duration $bitstyles-transition-easing;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-radio-color-hover;
+    background-color: $bitstyles-radio-background-color-hover;
+    border: $bitstyles-radio-border-hover;
+    outline: none;
+  }
+
+  &:checked {
+    color: $bitstyles-radio-color-checked;
+    background-color: $bitstyles-radio-background-color-checked;
+    border: $bitstyles-radio-border-checked;
+
+    &::after {
+      opacity: 1;
+      transform: scale(0.7);
+    }
+  }
+
+  &[disabled] {
+    color: $bitstyles-radio-color-disabled;
+    background-color: $bitstyles-radio-background-color-disabled;
+    border: $bitstyles-radio-border-disabled;
+
+    &:checked {
+      color: $bitstyles-radio-color-disabled-checked;
+      background-color: $bitstyles-radio-background-color-disabled-checked;
+      border: $bitstyles-radio-border-disabled-checked;
+    }
+
+    &::after {
+      background: $bitstyles-radio-color-disabled-checked;
+    }
+  }
+}

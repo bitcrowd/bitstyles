@@ -4,11 +4,11 @@
     "base64Length": 0,
     "redundantBodySelectors": 0,
     "redundantChildNodesSelectors": 0,
-    "colors": 10,
+    "colors": 14,
     "comments": 1,
     "commentsLength": 72,
     "complexSelectors": 0,
-    "duplicatedSelectors": 2,
+    "duplicatedSelectors": 4,
     "duplicatedProperties": 2,
     "emptyRules": 0,
     "expressions": 0,
@@ -19,67 +19,74 @@
     "notMinified": 1,
     "multiClassesSelectors": 0,
     "parsingErrors": 0,
-    "oldPropertyPrefixes": 4,
+    "oldPropertyPrefixes": 5,
     "propertyResets": 0,
     "qualifiedSelectors": 0,
     "specificityIdAvg": 0,
     "specificityIdTotal": 0,
-    "specificityClassAvg": 0.78,
-    "specificityClassTotal": 206,
-    "specificityTagAvg": 0.4,
-    "specificityTagTotal": 105,
-    "selectors": 264,
-    "selectorLengthAvg": 1.0340909090909092,
-    "selectorsByAttribute": 24,
-    "selectorsByClass": 164,
+    "specificityClassAvg": 0.96,
+    "specificityClassTotal": 348,
+    "specificityTagAvg": 0.38,
+    "specificityTagTotal": 137,
+    "selectors": 363,
+    "selectorLengthAvg": 1.024793388429752,
+    "selectorsByAttribute": 106,
+    "selectorsByClass": 153,
     "selectorsById": 0,
-    "selectorsByPseudo": 38,
-    "selectorsByTag": 85,
-    "length": 12091,
-    "rules": 193,
-    "declarations": 426
+    "selectorsByPseudo": 113,
+    "selectorsByTag": 113,
+    "length": 19210,
+    "rules": 214,
+    "declarations": 502
   },
   "offenders": {
     "duplicatedProperties": [
       "abbr[title] {text-decoration: underline dotted} @ 2:277",
-      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:10813"
+      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:17932"
     ],
     "oldPropertyPrefixes": [
-      "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:1863",
-      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2394",
-      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5861",
-      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:8638"
+      "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:1876",
+      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2529",
+      "[type=button], [type=reset], [type=submit], button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5521",
+      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:13463",
+      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:15754"
     ],
     "mediaQueries": [
-      "@media screen and (min-width:45em) (5 rules) @ 2:2123",
-      "@media screen and (min-width:64em) (1 rules) @ 2:2848",
-      "@media screen and (min-width:45em) (12 rules) @ 2:3482",
-      "@media screen and (max-width:44.9375em) (1 rules) @ 2:6557",
-      "@media screen and (min-width:64em) (1 rules) @ 2:6643",
-      "@media screen and (min-width:45em) (5 rules) @ 2:7640",
-      "@media screen and (min-width:45em) (2 rules) @ 2:9944"
+      "@media screen and (min-width:45em) (7 rules) @ 2:2166",
+      "@media screen and (min-width:64em) (1 rules) @ 2:10443",
+      "@media screen and (min-width:45em) (12 rules) @ 2:11077",
+      "@media screen and (max-width:44.9375em) (1 rules) @ 2:14273",
+      "@media screen and (min-width:64em) (1 rules) @ 2:14359",
+      "@media screen and (min-width:45em) (7 rules) @ 2:15386",
+      "@media screen and (min-width:45em) (2 rules) @ 2:17063"
     ],
     "importants": [
-      ".o-hidden {display: none!important} @ 2:6534",
-      ".o-hidden\\@small-only {display: none!important} @ 2:6619",
-      ".o-hidden\\@large {display: none!important} @ 2:6695",
-      ".o-visuallyhidden {position: absolute!important} @ 2:6836"
+      ".o-hidden {display: none!important} @ 2:14250",
+      ".o-hidden\\@small-only {display: none!important} @ 2:14335",
+      ".o-hidden\\@large {display: none!important} @ 2:14411",
+      ".o-visuallyhidden {position: absolute!important} @ 2:14552"
     ],
     "colors": [
-      "#7f7f7f (8 times)",
-      "#ffffff (7 times)",
-      "#cccccc (5 times)",
-      "#4c4c4c (4 times)",
-      "#333333 (3 times)",
-      "#000000 (3 times)",
-      "#b2b2b2 (3 times)",
-      "#e5e5e5 (1 times)",
+      "#ffffff (13 times)",
+      "#0ab3bf (9 times)",
+      "#7f7f7f (5 times)",
+      "#333333 (4 times)",
+      "#0de0ef (4 times)",
+      "#07868f (4 times)",
+      "#4d4d4d (4 times)",
+      "#cccccc (3 times)",
+      "#4c4c4c (2 times)",
+      "#b2b2b2 (2 times)",
+      "#e6e6e6 (1 times)",
+      "#000000 (1 times)",
       "rgba(0,0,0,0.7) (1 times)",
       "#d9d9d9 (1 times)"
     ],
     "duplicatedSelectors": [
       "html (3 times)",
-      "textarea (2 times)"
+      "[type=button], [type=reset], [type=submit], button (2 times)",
+      "fieldset (2 times)",
+      "legend (2 times)"
     ]
   }
 }

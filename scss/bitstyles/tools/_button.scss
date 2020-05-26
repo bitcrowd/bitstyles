@@ -27,14 +27,21 @@
     color: $bitstyles-button-color-hover;
     text-decoration: none;
     background: $bitstyles-button-background-color-hover;
+    border: $bitstyles-button-border-hover;
     outline: none;
+  }
+
+  &:active {
+    color: $bitstyles-button-color-active;
+    background: $bitstyles-button-background-color-active;
+    border: $bitstyles-button-border-active;
   }
 
   &:disabled {
     color: $bitstyles-button-color-disabled;
     cursor: default;
     background: $bitstyles-button-background-color-disabled;
-    border-color: $bitstyles-button-border-color-disabled;
+    border: $bitstyles-button-border-disabled;
   }
 }
 

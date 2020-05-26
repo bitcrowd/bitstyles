@@ -1,0 +1,13 @@
+@mixin fieldset {
+  background-color: $bitstyles-fieldset-background;
+  border: $bitstyles-fieldset-border;
+  border-radius: $bitstyles-fieldset-border-radius;
+}
+
+@mixin legend {
+  padding: 0 spacing('small');
+  color: $bitstyles-legend-color;
+  background-color: $bitstyles-legend-background-color;
+  border: $bitstyles-legend-border;
+  border-radius: $bitstyles-legend-border-radius;
+}

@@ -1,4 +1,6 @@
 @mixin label {
-  display: block;
+  @include block;
+
   margin-bottom: 0;
+  cursor: pointer;
 }

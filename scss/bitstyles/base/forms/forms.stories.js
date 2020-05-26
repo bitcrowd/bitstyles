@@ -14,23 +14,70 @@ export const fieldset = () => `
 `;
 
 export const textarea = () => `
-  <textarea>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</textarea>
+  <textarea placeholder="Placeholder text">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</textarea>
 `;
 
 export const select = () => `
   <select>
+    <option value="value1" selected>Long option text to see some truncation especially in smaller viewports</option>
+    <option value="value2">Value 2</option>
+    <option value="value3">Value 3</option>
+  </select>
+`;
+
+export const selectDisabled = () => `
+  <select disabled>
     <option value="value1" selected>Value 1</option>
     <option value="value2">Value 2</option>
     <option value="value3">Value 3</option>
   </select>
 `;
 
+export const inputTextWithLabel = () => `
+  <label for="input_1">
+    <span>This is labeling text</span>
+    <input type="text" id="input_1" placeholder="Placeholder text" />
+  </label>
+`;
+
+export const inputTextWithLabelDisabled = () => `
+  <label for="input_1">
+    <span>This is labeling text for a disabled input</span>
+    <input type="text" disabled id="input_1" placeholder="Placeholder text" />
+  </label>
+`;
+
+export const inputCheckboxWithLabel = () => `
+  <label for="input_1" class="l-flex l-flex--align-center">
+    <input type="checkbox" id="input_1" />
+    <span>This is labeling text</span>
+  </label>
+`;
+
+export const inputRadiosWithLabel = () => `
+  <label for="input_1" class="l-flex l-flex--align-center">
+    <input type="radio" id="input_1" name="radio-group_1" />
+    <span>This is labeling text</span>
+  </label>
+  <label for="input_2" class="l-flex l-flex--align-center">
+    <input type="radio" id="input_2" name="radio-group_1" />
+    <span>This is labeling text</span>
+  </label>
+`;
+
 export const label = () => `
-  <label>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</label>
+  <label for="input_1">
+    <span>This is label text</span>
+    <input type="text" placeholder="Placeholder text" id="input_1" />
+  </label>
 `;
 
 export const inputText = () => `
   <input type="text" placeholder="Jelly cake marshmallow">
+`;
+
+export const inputTextDisabled = () => `
+  <input type="text" disabled placeholder="Jelly cake marshmallow">
 `;
 
 export const inputEmail = () => `
@@ -49,8 +96,32 @@ export const inputRadio = () => `
   <input type="radio">
 `;
 
+export const inputRadioDisabled = () => `
+  <input type="radio" disabled>
+`;
+
+export const inputRadioChecked = () => `
+  <input type="radio" checked>
+`;
+
+export const inputRadioCheckedDisabled = () => `
+  <input type="radio" checked disabled>
+`;
+
 export const inputCheckbox = () => `
   <input type="checkbox">
+`;
+
+export const inputCheckboxDisabled = () => `
+  <input type="checkbox" disabled>
+`;
+
+export const inputCheckboxChecked = () => `
+  <input type="checkbox" checked>
+`;
+
+export const inputCheckboxDisabledChecked = () => `
+  <input type="checkbox" disabled checked>
 `;
 
 export const inputButton = () => `

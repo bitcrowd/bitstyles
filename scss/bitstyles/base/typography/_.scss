@@ -30,4 +30,9 @@ dt {
   font-weight: $bitstyles-font-weight-bold;
 }
 
+table {
+  max-width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
 /* stylelint-enable selector-max-type */

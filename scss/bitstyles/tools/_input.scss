@@ -1,30 +1,59 @@
+@mixin input {
+  transition:
+    color $bitstyles-transition-duration $bitstyles-transition-easing,
+    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
+    border $bitstyles-transition-duration $bitstyles-transition-easing;
+}
+
+@mixin input--checkbox-radio {
+  @include input;
+
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: $bitstyles-input-padding;
+  vertical-align: middle;
+  cursor: pointer;
+  appearance: none;
+}
+
 @mixin input--text {
+  @include block;
+  @include input;
+
+  width: 100%;
   padding: $bitstyles-input-padding;
   color: $bitstyles-input-color;
   background-color: $bitstyles-input-background;
   border: $bitstyles-input-border;
   border-radius: $bitstyles-input-border-radius;
 
-  &::placeholder {
-    color: $bitstyles-input-placeholder-color;
-  }
-
   &:disabled {
     color: $bitstyles-input-color-disabled;
     cursor: default;
-    background: $bitstyles-input-background-color-disabled;
+    background: $bitstyles-input-background-disabled;
+  }
+
+  &:hover {
+    color: $bitstyles-input-color-hover;
+    background-color: $bitstyles-input-background-hover;
+    border: $bitstyles-input-border-hover;
   }
 
   &:active,
   &:focus {
+    color: $bitstyles-input-color-active;
+    background-color: $bitstyles-input-background-active;
     border: $bitstyles-input-border-active;
+    outline: none;
   }
 }
 
-@mixin input--checkbox {
-  display: inline-block;
-  width: $bitstyles-input-checkbox-size;
-  height: $bitstyles-input-checkbox-size;
-  margin-right: $bitstyles-input-padding;
-  vertical-align: middle;
+@mixin input-placeholder {
+  &::placeholder {
+    font-style: italic;
+    color: $bitstyles-input-placeholder-color;
+    opacity: 1;
+  }
 }
