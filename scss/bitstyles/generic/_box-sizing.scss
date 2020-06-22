@@ -3,7 +3,12 @@
 
 /* stylelint-disable selector-max-type */
 html {
+  height: 100%;
   box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
 }
 
 *,
