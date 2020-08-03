@@ -33,3 +33,10 @@ $bitstyles-input-background-active: $bitstyles-color-white !default;
 $bitstyles-input-background-disabled: palette('background', 'dark') !default;
 $bitstyles-input-color-disabled: palette('text') !default;
 $bitstyles-input-border-disabled: 2px solid palette('text', 'light') !default;
+
+//
+// Invalid colors ////////////////////////////////////////
+
+$input-color-invalid: palette('error') !default;
+$input-background-color-invalid: $bitstyles-color-white !default;
+$input-border-color-invalid: palette('error') !default;

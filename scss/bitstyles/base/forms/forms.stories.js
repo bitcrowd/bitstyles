@@ -47,6 +47,13 @@ export const inputTextWithLabelDisabled = () => `
   </label>
 `;
 
+export const inputTextWithLabelInvalid = () => `
+  <label for="input_1">
+    <span>This is labeling text for an invalid input (once you enter invalid data)</span>
+    <input type="number" id="input_1" placeholder="Enter some text into this number input" />
+  </label>
+`;
+
 export const inputCheckboxWithLabel = () => `
   <label for="input_1" class="l-flex l-flex--align-center">
     <input type="checkbox" id="input_1" />

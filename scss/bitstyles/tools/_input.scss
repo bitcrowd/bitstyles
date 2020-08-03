@@ -48,6 +48,12 @@
     border: $bitstyles-input-border-active;
     outline: none;
   }
+
+  &:invalid {
+    color: $input-color-invalid;
+    background-color: $input-background-color-invalid;
+    border-color: $input-border-color-invalid;
+  }
 }
 
 @mixin input-placeholder {
