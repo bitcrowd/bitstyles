@@ -56,14 +56,14 @@ button {
   height: calc(#{$bitstyles-line-height-base * 1em} + #{$bitstyles-input-padding * 2});
 }
 
+[type="checkbox"],
+[type="radio"] {
+  @include input--checkbox-radio;
+}
+
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none) {
   select {
     @include select;
-  }
-
-  [type="checkbox"],
-  [type="radio"] {
-    @include input--checkbox-radio;
   }
 
   [type="checkbox"] {
