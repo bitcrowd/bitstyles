@@ -5,7 +5,7 @@
 }
 
 @mixin legend {
-  padding: 0 spacing('small');
+  padding: 0 spacing('s');
   color: $bitstyles-legend-color;
   background-color: $bitstyles-legend-background-color;
   border: $bitstyles-legend-border;

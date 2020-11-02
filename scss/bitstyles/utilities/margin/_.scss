@@ -1,9 +1,9 @@
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}u-margin--#{$position} {
-    margin-#{$position}: $bitstyles-spacing;
+    margin-#{$position}: spacing('m');
   }
 }
 
 .#{$bitstyles-namespace}u-margin {
-  margin: $bitstyles-spacing;
+  margin: spacing('m');
 }

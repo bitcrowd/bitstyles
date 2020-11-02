@@ -1,9 +1,9 @@
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}u-padding--#{$position} {
-    padding-#{$position}: $bitstyles-spacing;
+    padding-#{$position}: spacing('m');
   }
 }
 
 .#{$bitstyles-namespace}u-padding {
-  padding: $bitstyles-spacing;
+  padding: spacing('m');
 }

@@ -4,7 +4,7 @@
 //
 
 @mixin generic-heading {
-  margin: 0 0 spacing('base');
+  margin: 0 0 spacing('m');
   font-family: $bitstyles-font-family-header;
   font-weight: $bitstyles-font-weight-bold;
   text-rendering: optimizeLegibility;

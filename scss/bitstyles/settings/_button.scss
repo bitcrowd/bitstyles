@@ -1,13 +1,13 @@
 //
 // Base styles ////////////////////////////////////////
 
-$bitstyles-button-padding-vertical: spacing('small') !default;
-$bitstyles-button-padding-horizontal: spacing('base') !default;
-$bitstyles-button-border-radius: spacing('xx-small') !default;
+$bitstyles-button-padding-vertical: spacing('s') !default;
+$bitstyles-button-padding-horizontal: spacing('m') !default;
+$bitstyles-button-border-radius: spacing('xxs') !default;
 $bitstyles-button-transition:
   color $bitstyles-transition-duration $bitstyles-transition-easing,
   background-color $bitstyles-transition-duration $bitstyles-transition-easing !default;
-$bitstyles-button-icon-spacing: spacing('small') !default;
+$bitstyles-button-icon-spacing: spacing('s') !default;
 
 //
 // Base colors ////////////////////////////////////////
