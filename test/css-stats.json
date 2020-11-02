@@ -5,8 +5,8 @@
     "redundantBodySelectors": 0,
     "redundantChildNodesSelectors": 0,
     "colors": 15,
-    "comments": 1,
-    "commentsLength": 72,
+    "comments": 2,
+    "commentsLength": 109,
     "complexSelectors": 0,
     "duplicatedSelectors": 5,
     "duplicatedProperties": 2,
@@ -16,7 +16,7 @@
     "imports": 0,
     "importants": 4,
     "mediaQueries": 7,
-    "notMinified": 1,
+    "notMinified": 0,
     "multiClassesSelectors": 0,
     "parsingErrors": 0,
     "oldPropertyPrefixes": 9,
@@ -35,40 +35,40 @@
     "selectorsById": 0,
     "selectorsByPseudo": 124,
     "selectorsByTag": 113,
-    "length": 19382,
+    "length": 19537,
     "rules": 216,
     "declarations": 515
   },
   "offenders": {
     "duplicatedProperties": [
-      "abbr[title] {text-decoration: underline dotted} @ 2:277",
-      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:17683"
+      "abbr[title] {text-decoration: underline dotted} @ 1:373",
+      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 1:17893"
     ],
     "oldPropertyPrefixes": [
-      "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:1876",
-      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:2529",
-      "[type=button], [type=reset], [type=submit], button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5742",
-      "[type=checkbox], [type=radio] { -moz-appearance: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:6780",
-      ".l-topbar { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 2:11939",
-      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:13611",
-      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:15505",
-      ".c-modal__overlay { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 2:16011",
-      ".c-modal__content { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 2:16555"
+      "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 1:1972",
+      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 1:2640",
+      "[type=button], [type=reset], [type=submit], button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 1:5853",
+      "[type=checkbox], [type=radio] { -moz-appearance: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 1:6891",
+      ".l-topbar { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 1:12129",
+      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 1:13801",
+      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 1:15715",
+      ".c-modal__overlay { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 1:16221",
+      ".c-modal__content { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 1:16765"
     ],
     "mediaQueries": [
-      "@media screen and (min-width:45em) (7 rules) @ 2:2166",
-      "@media screen and (min-width:64em) (1 rules) @ 2:10664",
-      "@media screen and (min-width:45em) (12 rules) @ 2:11298",
-      "@media screen and (min-width:45em) (7 rules) @ 2:15137",
-      "@media screen and (min-width:45em) (2 rules) @ 2:16814",
-      "@media screen and (max-width:44.9375em) (1 rules) @ 2:19137",
-      "@media screen and (min-width:64em) (1 rules) @ 2:19214"
+      "@media screen and (min-width:45em) (7 rules) @ 1:2262",
+      "@media screen and (min-width:64em) (1 rules) @ 1:10774",
+      "@media screen and (min-width:45em) (12 rules) @ 1:11448",
+      "@media screen and (min-width:45em) (7 rules) @ 1:15327",
+      "@media screen and (min-width:45em) (2 rules) @ 1:17024",
+      "@media screen and (max-width:44.9375em) (1 rules) @ 1:19347",
+      "@media screen and (min-width:64em) (1 rules) @ 1:19424"
     ],
     "importants": [
-      ".u-visuallyhidden {position: absolute!important} @ 2:18920",
-      ".u-hidden {display: none!important} @ 2:19114",
-      ".u-hidden\\@s {display: none!important} @ 2:19190",
-      ".u-hidden\\@l {display: none!important} @ 2:19262"
+      ".u-visuallyhidden {position: absolute!important} @ 1:19130",
+      ".u-hidden {display: none!important} @ 1:19324",
+      ".u-hidden\\@s {display: none!important} @ 1:19400",
+      ".u-hidden\\@l {display: none!important} @ 1:19472"
     ],
     "colors": [
       "#ffffff (14 times)",
