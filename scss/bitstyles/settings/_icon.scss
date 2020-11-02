@@ -1,5 +1,5 @@
 $bitstyles-icon-sizes: (
-  'small':     1rem,
-  'medium':    2rem,
-  'large':     3rem
+  'small':     spacing('m'),
+  'medium':    spacing('m') * 2,
+  'large':     spacing('m') * 3
 ) !default;
