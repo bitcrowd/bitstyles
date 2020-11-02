@@ -1,13 +1,15 @@
 @mixin button {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
   padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
   margin: 0;
   overflow: visible;
   font: inherit;
   text-align: center;
   text-decoration: none;
-  vertical-align: middle;
+  white-space: nowrap;
   cursor: pointer;
   border-radius: $bitstyles-button-border-radius;
   transition: $bitstyles-button-transition;

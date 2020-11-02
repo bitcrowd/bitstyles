@@ -1,5 +1,34 @@
-$bitstyles-button-icon-padding: spacing('m') !default;
-$bitstyles-button-icon-color: $bitstyles-color-white !default;
-$bitstyles-button-icon-background-color: $bitstyles-color-black !default;
-$bitstyles-button-icon-border: 0 !default;
+//
+// Base styles ////////////////////////////////////////
+
+$bitstyles-button-icon-padding-vertical: spacing('m') !default;
+$bitstyles-button-icon-padding-horizontal: spacing('m') !default;
+
+//
+// Base colors ////////////////////////////////////////
+
+$bitstyles-button-icon-color: palette('text') !default;
+$bitstyles-button-icon-background-color: transparent !default;
+$bitstyles-button-icon-border: 2px solid palette('text') !default;
 $bitstyles-button-icon-border-radius: $bitstyles-border-radius-round !default;
+
+//
+// Hover colors ////////////////////////////////////////
+
+$bitstyles-button-icon-color-hover: $bitstyles-color-white !default;
+$bitstyles-button-icon-background-color-hover: palette('text') !default;
+$bitstyles-button-icon-border-hover: 2px solid palette('text') !default;
+
+//
+// Active colors ////////////////////////////////////////
+
+$bitstyles-button-icon-color-active: $bitstyles-color-white !default;
+$bitstyles-button-icon-background-color-active: palette('primary') !default;
+$bitstyles-button-icon-border-active: 2px solid palette('primary') !default;
+
+//
+// Disabled colors ////////////////////////////////////////
+
+$bitstyles-button-icon-color-disabled: palette('text', 'light') !default;
+$bitstyles-button-icon-background-color-disabled: transparent !default;
+$bitstyles-button-icon-border-disabled: 2px solid palette('text', 'light') !default;

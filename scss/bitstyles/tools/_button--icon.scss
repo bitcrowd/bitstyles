@@ -1,8 +1,30 @@
 @mixin button--icon {
-  padding: $bitstyles-button-icon-padding;
-  line-height: 1;
-  color: $bitstyles-button-icon-color;
-  background-color: $bitstyles-button-icon-background-color;
-  border: $bitstyles-button-icon-border;
+  padding: $bitstyles-button-icon-padding-vertical $bitstyles-button-icon-padding-horizontal;
   border-radius: $bitstyles-button-icon-border-radius;
+
+  &,
+  &:visited {
+    color: $bitstyles-button-icon-color;
+    background-color: $bitstyles-button-icon-background-color;
+    border: $bitstyles-button-icon-border;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-button-icon-color-hover;
+    background: $bitstyles-button-icon-background-color-hover;
+    border: $bitstyles-button-icon-border-hover;
+  }
+
+  &:active {
+    color: $bitstyles-button-icon-color-active;
+    background: $bitstyles-button-icon-background-color-active;
+    border: $bitstyles-button-icon-border-active;
+  }
+
+  &:disabled {
+    color: $bitstyles-button-icon-color-disabled;
+    background: $bitstyles-button-icon-background-color-disabled;
+    border: $bitstyles-button-icon-border-disabled;
+  }
 }
