@@ -22,8 +22,8 @@ This means e.g. they cannot change from being 3-column on larger screens, to one
 
 ### The grid system can also be used responsively — setting different widths for an element based on the viewport size
 
-To do this, append the name of a breakpoint to the width class to have it activate only at that breakpoint e.g. `.l-width--12-of-12.l-width--6-of-12@medium` to create an element that’s fullwidth for all screens, then becomes half width for `medium`-screens and larger.
+To do this, append the name of a breakpoint to the width class to have it activate only at that breakpoint e.g. `.l-width--12-of-12.l-width--6-of-12@m` to create an element that’s fullwidth for all viewports, then becomes half width for `m`-sized viewports and larger.
 
 Multiple l-width--item/breakpoints combinations can be used to define a grid item’s width at several breakpoints (for all the breakpoints defined in the `$bitstyles-widths-breakpoints` Sass list).
 
-This is commonly used to set a default mobile-first width of `.l-width--12-of-12` and a larger-screen width of e.g. `.l-width--4-of-12@medium` for a three-column layout that becomes a single-column stack on small screens.
+This is commonly used to set a default mobile-first width of `.l-width--12-of-12` and a larger-screen width of e.g. `.l-width--4-of-12@m` for a three-column layout that becomes a single-column stack on small viewports.

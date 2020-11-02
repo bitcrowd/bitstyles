@@ -35,14 +35,14 @@
     "selectorsById": 0,
     "selectorsByPseudo": 124,
     "selectorsByTag": 113,
-    "length": 19395,
+    "length": 19382,
     "rules": 216,
     "declarations": 515
   },
   "offenders": {
     "duplicatedProperties": [
       "abbr[title] {text-decoration: underline dotted} @ 2:277",
-      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:17696"
+      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 2:17683"
     ],
     "oldPropertyPrefixes": [
       "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 2:1876",
@@ -50,25 +50,25 @@
       "[type=button], [type=reset], [type=submit], button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:5742",
       "[type=checkbox], [type=radio] { -moz-appearance: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:6780",
       ".l-topbar { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 2:11939",
-      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:13624",
-      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:15518",
-      ".c-modal__overlay { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 2:16024",
-      ".c-modal__content { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 2:16568"
+      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 2:13611",
+      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 2:15505",
+      ".c-modal__overlay { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 2:16011",
+      ".c-modal__content { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari 11 and earlier @ 2:16555"
     ],
     "mediaQueries": [
       "@media screen and (min-width:45em) (7 rules) @ 2:2166",
       "@media screen and (min-width:64em) (1 rules) @ 2:10664",
       "@media screen and (min-width:45em) (12 rules) @ 2:11298",
-      "@media screen and (min-width:45em) (7 rules) @ 2:15150",
-      "@media screen and (min-width:45em) (2 rules) @ 2:16827",
-      "@media screen and (max-width:44.9375em) (1 rules) @ 2:19150",
-      "@media screen and (min-width:64em) (1 rules) @ 2:19227"
+      "@media screen and (min-width:45em) (7 rules) @ 2:15137",
+      "@media screen and (min-width:45em) (2 rules) @ 2:16814",
+      "@media screen and (max-width:44.9375em) (1 rules) @ 2:19137",
+      "@media screen and (min-width:64em) (1 rules) @ 2:19214"
     ],
     "importants": [
-      ".u-visuallyhidden {position: absolute!important} @ 2:18933",
-      ".u-hidden {display: none!important} @ 2:19127",
-      ".u-hidden\\@s {display: none!important} @ 2:19203",
-      ".u-hidden\\@l {display: none!important} @ 2:19275"
+      ".u-visuallyhidden {position: absolute!important} @ 2:18920",
+      ".u-hidden {display: none!important} @ 2:19114",
+      ".u-hidden\\@s {display: none!important} @ 2:19190",
+      ".u-hidden\\@l {display: none!important} @ 2:19262"
     ],
     "colors": [
       "#ffffff (14 times)",

@@ -8,9 +8,9 @@ Set icon sizes by overiding the `$bitstyles-icon-sizes` list (see `settings/_ico
 
 ```scss
 $bitstyles-icon-sizes: (
-  'small' 2rem,
-  'medium' 4rem,
-  'large' 8rem
+  's' 2rem,
+  'm' 4rem,
+  'l' 8rem
 );
 ```
 
