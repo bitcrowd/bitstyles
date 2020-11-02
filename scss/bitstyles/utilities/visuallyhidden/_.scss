@@ -1,12 +1,12 @@
 @import '../../settings/visuallyhidden';
 
-.#{$bitstyles-namespace}o-visuallyhidden {
+.#{$bitstyles-namespace}u-visuallyhidden {
   @include visuallyhidden;
 }
 
 @each $breakpoint in $bitstyles-visuallyhidden-breakpoints {
   @include media-query($breakpoint) {
-    .#{$bitstyles-namespace}o-visuallyhidden\@#{$breakpoint} {
+    .#{$bitstyles-namespace}u-visuallyhidden\@#{$breakpoint} {
       @include visuallyhidden;
     }
   }

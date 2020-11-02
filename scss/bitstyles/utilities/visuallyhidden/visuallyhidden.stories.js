@@ -12,6 +12,6 @@ export default {
 export const visuallyhidden = () => `
   <button class="o-button">
     <span class="o-button__label">Next</span>
-    <span class="o-visuallyhidden">articles</span>
+    <span class="u-visuallyhidden">articles</span>
   </button>
 `;
