@@ -7,6 +7,7 @@
     color: $bitstyles-button-icon-color;
     background-color: $bitstyles-button-icon-background-color;
     border: $bitstyles-button-icon-border;
+    box-shadow: $bitstyles-button-icon-box-shadow;
   }
 
   &:hover,
@@ -14,17 +15,20 @@
     color: $bitstyles-button-icon-color-hover;
     background: $bitstyles-button-icon-background-color-hover;
     border: $bitstyles-button-icon-border-hover;
+    box-shadow: $bitstyles-button-icon-box-shadow-hover;
   }
 
   &:active {
     color: $bitstyles-button-icon-color-active;
     background: $bitstyles-button-icon-background-color-active;
     border: $bitstyles-button-icon-border-active;
+    box-shadow: $bitstyles-button-icon-box-shadow-active;
   }
 
   &:disabled {
     color: $bitstyles-button-icon-color-disabled;
     background: $bitstyles-button-icon-background-color-disabled;
     border: $bitstyles-button-icon-border-disabled;
+    box-shadow: $bitstyles-button-icon-box-shadow-disabled;
   }
 }
