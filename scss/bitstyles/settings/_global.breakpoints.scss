@@ -3,10 +3,10 @@ $bitstyles-breakpoint-small-medium-boundary:     45em !default;
 $bitstyles-breakpoint-medium-large-boundary:     64em !default;
 
 $bitstyles-breakpoints: (
-  'small-only':          'screen and (max-width: #{$bitstyles-breakpoint-small-medium-boundary - $bitstyles-breakpoint-boundary-width})',
-  'medium':              'screen and (min-width: #{$bitstyles-breakpoint-small-medium-boundary})',
-  'large':               'screen and (min-width: #{$bitstyles-breakpoint-medium-large-boundary})',
-  'hidpi':               '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)',
-  'landscape':           'all and (orientation:landscape)',
-  'portrait':            'all and (orientation:portrait)'
+  's':                  'screen and (max-width: #{$bitstyles-breakpoint-small-medium-boundary - $bitstyles-breakpoint-boundary-width})',
+  'm':                  'screen and (min-width: #{$bitstyles-breakpoint-small-medium-boundary})',
+  'l':                  'screen and (min-width: #{$bitstyles-breakpoint-medium-large-boundary})',
+  'hidpi':              '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)',
+  'landscape':          'all and (orientation:landscape)',
+  'portrait':           'all and (orientation:portrait)'
 ) !default;

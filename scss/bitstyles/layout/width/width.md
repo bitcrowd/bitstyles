@@ -9,9 +9,9 @@ Set the `$bitstyles-widths` variable to define how many columns you need. To cre
 - `.l-width--1-of-10` … `.l-width--10-of-10`
 - `.l-width--1-of-12` … `.l-width--12-of-12`.
 
-If you define the `$bitstyles-widths-breakpoints` Sass list to contain the names of one or more breakpoints (it defaults to just `medium`), widths will also be created that apply only at those breakpoints:
+If you define the `$bitstyles-widths-breakpoints` Sass list to contain the names of one or more breakpoints (it defaults to just `m`), widths will also be created that apply only at those breakpoints:
 
-`.l-width--1-of-12@medium`…
+`.l-width--1-of-12@m`…
 
 This allows you to create an element that is displayed at different sizes based on viewport size. See the section on responsive grid systems for an example of the most common uses for this.
 
