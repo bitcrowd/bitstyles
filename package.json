@@ -12,7 +12,7 @@
     "checks": "yarn lint && yarn css:stats",
     "watch": "yarn build && yarn build --watch",
     "clean": "rimraf build/*",
-    "storybook": "yarn watch & start-storybook -p 6006 --no-dll",
+    "storybook": "start-storybook -p 6006 --no-dll",
     "precss:stats": "yarn build",
     "css:stats": "analyze-css --file build/bitstyles.css --pretty > test/css-stats.json",
     "precss:graph": "yarn build",

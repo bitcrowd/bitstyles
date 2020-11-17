@@ -1,0 +1,17 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Break long words" />
+
+# Break long words
+
+## Forces text content within an element to break if longer than the element is wide
+
+A cross-browser friendly method of ensuring no words exceed the width of the container. Commonly used to ensure user-generated content doesn’t break or overflow your page layout.
+
+<Canvas>
+  <Story name="Break long words">
+    {`
+      <p class="o-break-long-words">LongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshere</p>
+    `}
+  </Story>
+</Canvas>

@@ -1,0 +1,52 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Icon" />
+
+# Icons
+
+## SVG icon system
+
+Icons are implemented using inline SVG where possible (see example markup). They must be accompanied by some machine-readable text for accessibility & SEO purposes. If there is to be no such text visible (e.g. based on design mockups), provide an alternative next to the `<svg>` element using a `<span class="o-visuallyhidden">` containing descriptive text.
+
+Set icon sizes by overiding the `$bitstyles-icon-sizes` list (see `settings/_icon.scss`) e.g.
+
+```scss
+$bitstyles-icon-sizes: (
+  's' 2rem,
+  'm' 4rem,
+  'l' 8rem
+);
+```
+
+The base icon size is the same as surrounding text i.e. `1em`.
+
+<Canvas>
+  <Story name="Icon">
+    {`
+      <svg class="o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+      </svg>
+    `}
+  </Story>
+  <Story name="Small icon">
+    {`
+      <svg class="o-icon o-icon--small" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+      </svg>
+    `}
+  </Story>
+  <Story name="Medium icon">
+    {`
+      <svg class="o-icon o-icon--medium" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+      </svg>
+    `}
+  </Story>
+  <Story name="Large icon">
+    {`
+      <svg class="o-icon o-icon--large" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+      </svg>
+    `}
+  </Story>
+</Canvas>
