@@ -1,0 +1,64 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Button" />
+
+# Buttons
+
+## Buttons perform actions
+
+They’re not links nor navigation, and are ideally a `<button>`. For technical reasons, things which we consider “buttons” are actually implemented by navigating to a page (e.g. a CRUD system) so this class is often applied to `<a>` elements.
+
+## Button
+
+All the buttons produce a larger-than-text hit target, and by default react to `:hover`, `:focus`, `:active`, and `:disabled`. Visited states are not shown even if the button is an anchor, as “visited” doesn’t make sense for an action.
+
+<Canvas>
+  <Story name="Button Element">
+    {`
+      <button class="o-button">
+        <span class="o-button__label">Button element</span>
+      </button>
+    `}
+  </Story>
+  <Story name="Button (Disabled)">
+    {`
+      <button disabled class="o-button">
+        <span class="o-button__label">Button element</span>
+      </button>
+    `}
+  </Story>
+  <Story name="Anchor Element">
+    {`
+      <a href="#" class="o-button">
+        <span class="o-button__label">Anchor element</span>
+      </a>
+    `}
+  </Story>
+  <Story name="Anchor Element (visited)">
+    {`
+      <a href="http://localhost:6006/" class="o-button">
+        <span class="o-button__label">Visited anchor element</span>
+      </a>
+    `}
+  </Story>
+  <Story name="Button with Icon">
+    {`
+      <button class="o-button">
+        <svg class="o-button__icon o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+          <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+        </svg>
+        <span class="o-button__label">Button with icon</span>
+      </button>
+    `}
+  </Story>
+  <Story name="Button with Icon (reversed)">
+    {`
+      <button class="o-button}">
+        <span class="o-button__label">Reversed button with icon</span>
+        <svg class="o-button__icon o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+          <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+        </svg>
+      </button>
+    `}
+  </Story>
+</Canvas>

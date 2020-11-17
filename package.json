@@ -12,11 +12,12 @@
     "checks": "yarn lint && yarn css:stats",
     "watch": "yarn build && yarn build --watch",
     "clean": "rimraf build/*",
-    "storybook": "yarn watch & start-storybook --port 6006",
+    "storybook": "yarn watch & start-storybook -p 6006 --no-dll",
     "precss:stats": "yarn build",
     "css:stats": "analyze-css --file build/bitstyles.css --pretty > test/css-stats.json",
     "precss:graph": "yarn build",
-    "css:graph": "specificity-graph build/bitstyles.css --output test/specificity_graph/"
+    "css:graph": "specificity-graph build/bitstyles.css --output test/specificity_graph/",
+    "build-storybook": "build-storybook --no-dll"
   },
   "repository": {
     "type": "git",
@@ -45,11 +46,13 @@
   "homepage": "https://github.com/bitcrowd/bitstyles#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
-    "@storybook/addons": "^6.0.28",
+    "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-links": "^6.0.28",
     "@storybook/html": "^6.0.28",
     "analyze-css": "^0.12.9",
     "autoprefixer": "^9.8.0",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.1.0",
     "cssnano": "^4.1.10",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -61,10 +64,12 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "postcss-cli": "^7.1.1",
     "prettier": "^1.18.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
     "rimraf": "^3.0.0",
-    "sass": "^1.28.0",
+    "sass": "^1.29.0",
     "specificity-graph": "^0.1.7",
-    "storybook-readme": "^5.0.8",
     "stylelint": "^13.5.0",
     "stylelint-config-bitcrowd": "^4.0.0"
   },
@@ -73,5 +78,6 @@
   ],
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "dependencies": {}
 }
