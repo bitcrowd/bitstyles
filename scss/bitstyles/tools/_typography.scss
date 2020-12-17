@@ -4,7 +4,7 @@
 //
 
 @mixin generic-heading {
-  margin: 0 0 spacing('base');
+  margin: 0 0 spacing('m');
   font-family: $bitstyles-font-family-header;
   font-weight: $bitstyles-font-weight-bold;
   text-rendering: optimizeLegibility;
@@ -46,7 +46,7 @@
 //     'h5': $bitstyles-font-size-base-small,
 //     'h6': $bitstyles-font-size-base-small
 //   ),
-//   'medium-and-up': (
+//   'm': (
 //     'html': $bitstyles-font-size-base,
 //     'h0': 86px,
 //     'h1': 40px,

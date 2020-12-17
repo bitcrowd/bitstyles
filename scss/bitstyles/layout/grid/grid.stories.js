@@ -97,20 +97,20 @@ export const grid = () => `
 
 export const gridResponsive = () => `
   <ul class="l-grid">
-    <li class="l-grid__item l-width--6-of-12 l-width--4-of-12@medium">
-      <div class="u-background-color--secondary">6-of-12 / 4-of-12@medium</div>
+    <li class="l-grid__item l-width--6-of-12 l-width--4-of-12@m">
+      <div class="u-background-color--secondary">6-of-12 / 4-of-12@m</div>
     </li><!--
-    --><li class="l-grid__item l-width--6-of-12 l-width--4-of-12@medium">
-      <div>6-of-12 / 4-of-12@medium</div>
+    --><li class="l-grid__item l-width--6-of-12 l-width--4-of-12@m">
+      <div>6-of-12 / 4-of-12@m</div>
     </li><!--
-    --><li class="l-grid__item l-width--6-of-12 l-width--4-of-12@medium">
-      <div class="u-background-color--secondary">6-of-12 / 4-of-12@medium</div>
+    --><li class="l-grid__item l-width--6-of-12 l-width--4-of-12@m">
+      <div class="u-background-color--secondary">6-of-12 / 4-of-12@m</div>
     </li><!--
-    --><li class="l-grid__item l-width--12-of-12 l-width--6-of-12@medium">
-      <div class="u-background-color--secondary">12-of-12 / 6-of-12@medium</div>
+    --><li class="l-grid__item l-width--12-of-12 l-width--6-of-12@m">
+      <div class="u-background-color--secondary">12-of-12 / 6-of-12@m</div>
     </li><!--
-    --><li class="l-grid__item l-width--12-of-12 l-width--6-of-12@medium">
-      <div>12-of-12 / 6-of-12@medium</div>
+    --><li class="l-grid__item l-width--12-of-12 l-width--6-of-12@m">
+      <div>12-of-12 / 6-of-12@m</div>
     </li>
   </ul>
 `;
