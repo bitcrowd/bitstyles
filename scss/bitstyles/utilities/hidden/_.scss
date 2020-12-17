@@ -1,12 +1,12 @@
 @import '../../settings/hidden';
 
-.#{$bitstyles-namespace}o-hidden {
+.#{$bitstyles-namespace}u-hidden {
   @include hidden;
 }
 
 @each $breakpoint in $bitstyles-hidden-breakpoints {
   @include media-query($breakpoint) {
-    .#{$bitstyles-namespace}o-hidden\@#{$breakpoint} {
+    .#{$bitstyles-namespace}u-hidden\@#{$breakpoint} {
       @include hidden;
     }
   }
