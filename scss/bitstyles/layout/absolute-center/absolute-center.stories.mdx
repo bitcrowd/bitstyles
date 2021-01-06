@@ -1,0 +1,20 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Layout/Absolute center" />
+
+# Absolute Center
+
+Centres an element vertically & horizontally, relative to its closest non-statically positioned parent element (non-static most-likely means `position: relative`, but also `position: absolute`).
+
+As this class makes use of `position: absolute`, the element is no longer in the document flow and has no width or height as far as the parent element is concerned — the parent element must instead provide the dimensions for the `.l-absolute-center` to align to.
+
+<Canvas>
+  <Story name="Absolute center">
+    {`
+      <div class="u-background-color--secondary min-height-block">
+        <p class="l-absolute-center">Centered content</p>
+      </div>
+    `}
+  </Story>
+</Canvas>
+

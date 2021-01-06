@@ -1,5 +1,0 @@
-# Clearfix
-
-## Cleanup after `float`ed elements
-
-Force an element to behave as if its floated children have an element after them with `clear: both`. The element will therefore be of the correct height (including backgrounds etc.) instead of collapsing on the floated children, and will be correctly separated from the following content, as cleared elements are.

@@ -1,0 +1,17 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Layout/Absolute cover" />
+
+# Absolute Cover
+
+An element that covers its closest non-statically positioned parent element (non-static most-likely means `position: relative`, but also `position: absolute`) from edge to edge. However large or small, and of any width/height ratio, so this may not be suitable for images, media etc. (any elements with intrinsic dimensions that would look weird stretched).
+
+<Canvas>
+  <Story name="Absolute cover">
+    {`
+      <div class="l-absolute-cover u-background-color--secondary">
+        <p>Covering content</p>
+      </div>
+    `}
+  </Story>
+</Canvas>
