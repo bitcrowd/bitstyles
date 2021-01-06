@@ -1,6 +1,6 @@
 {
   "name": "bitstyles",
-  "version": "0.10.3",
+  "version": "1.0.0a",
   "description": "The Bitcrowd CSS library",
   "main": "bitstyles.scss",
   "scripts": {
@@ -12,12 +12,12 @@
     "checks": "yarn lint && yarn css:stats",
     "watch": "yarn build && yarn build --watch",
     "clean": "rimraf build/*",
-    "storybook": "start-storybook -p 6006 --no-dll",
+    "storybook": "start-storybook -p 6006",
     "precss:stats": "yarn build",
     "css:stats": "analyze-css --file build/bitstyles.css --pretty > test/css-stats.json",
     "precss:graph": "yarn build",
     "css:graph": "specificity-graph build/bitstyles.css --output test/specificity_graph/",
-    "build-storybook": "build-storybook --no-dll"
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -34,9 +34,6 @@
   "contributors": [
     {
       "name": "Darren Cadwallader"
-    },
-    {
-      "name": "Charlie Owen"
     }
   ],
   "license": "ISC",
@@ -46,10 +43,10 @@
   "homepage": "https://github.com/bitcrowd/bitstyles#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
-    "@storybook/addon-actions": "^6.0.28",
-    "@storybook/addon-essentials": "^6.0.28",
-    "@storybook/addon-links": "^6.0.28",
-    "@storybook/html": "^6.0.28",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/html": "^6.1.11",
     "analyze-css": "^0.12.9",
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.1.0",

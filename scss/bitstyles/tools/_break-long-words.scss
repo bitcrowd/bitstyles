@@ -1,4 +1,4 @@
-// Break long words
+// Break text
 //
 // **Forces text content within an element to break if longer than the element is wide.**.
 //
@@ -7,7 +7,7 @@
 // overflow your page layout.
 //
 
-@mixin break-long-words {
+@mixin break-text {
   overflow-wrap: break-word;
   word-break: break-word; // all 3 are required for cross-browser reasonablness. Without, some browsers force-break *everything*
   word-wrap: break-word;

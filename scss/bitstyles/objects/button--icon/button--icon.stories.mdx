@@ -8,7 +8,10 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 A specialised button type where the visible content is intended to be only an icon. Commonly used for `+`, `<`, and `>` buttons, share buttons (facebook, twitter etc.).
 
-Always provide a `title` attribute, and a `visuallyhidden` span containing descriptive text next to the icon so the button has valid text to use as button label (see examples). This dictates whether people with visual impairments (whether temporary or permanent) can use our UIs.
+Always provide:
+
+- **a `title` attribute**. When a user hovers their pointer over the button, they’ll be told what it does (icons alone are not always clear).
+- **a `visuallyhidden` label** containing descriptive text next to the icon, so the button will have valid text to use as button label (see examples). This dictates whether people with visual impairments (whether temporary or permanent) can use our UIs.
 
 <Canvas>
   <Story name="Button element">
@@ -31,7 +34,7 @@ Always provide a `title` attribute, and a `visuallyhidden` span containing descr
       </button>
     `}
   </Story>
-  <Story name="Anchor element">
+  <Story name="Anchor element as button">
     {`
       <a href="#" class="o-button o-button--icon" title="Anchor element">
         <svg class="o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +44,7 @@ Always provide a `title` attribute, and a `visuallyhidden` span containing descr
       </a>
     `}
   </Story>
-  <Story name="Visited anchor element">
+  <Story name="Anchor element as button (visited)">
     {`
       <a href="#" class="o-button o-button--icon" title="Visited anchor element">
         <svg class="o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">

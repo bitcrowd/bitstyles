@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 ## Buttons perform actions
 
-They’re not links nor navigation, and are ideally a `<button>`. For technical reasons, things which we consider “buttons” are actually implemented by navigating to a page (e.g. a CRUD system) so this class is often applied to `<a>` elements.
+The button classes are used to make an interactive element look like a “button” to the user, and should ideally perform an action rather a navigation. For historical and technical reasons, things which we consider “actions” are actually implemented by navigating to a page (e.g. a CRUD system) so this class is often applied to `<a>` elements. Ideally though (and definitely if you’re working on a JS app) use a real `<button>` element.
 
 ## Button
 
@@ -15,14 +15,14 @@ All the buttons produce a larger-than-text hit target, and by default react to `
 <Canvas>
   <Story name="Button Element">
     {`
-      <button class="o-button">
+      <button class="o-button" type="button">
         <span class="o-button__label">Button element</span>
       </button>
     `}
   </Story>
   <Story name="Button (Disabled)">
     {`
-      <button disabled class="o-button">
+      <button disabled class="o-button" type="button">
         <span class="o-button__label">Button element</span>
       </button>
     `}
@@ -41,10 +41,19 @@ All the buttons produce a larger-than-text hit target, and by default react to `
       </a>
     `}
   </Story>
+</Canvas>
+
+## Buttons with icons and text
+
+**Note**: if you want a button with _only_ an icon, go look at `button--icon`
+
+These are buttons containing a visible text label next to an icon. The order of text/icon is dictated by the order of the elements, you do not need to add a class to change it.
+
+<Canvas>
   <Story name="Button with Icon">
     {`
-      <button class="o-button">
-        <svg class="o-button__icon o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+      <button class="o-button" type="button">
+        <svg class="o-button__icon o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
           <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
         </svg>
         <span class="o-button__label">Button with icon</span>
@@ -53,9 +62,9 @@ All the buttons produce a larger-than-text hit target, and by default react to `
   </Story>
   <Story name="Button with Icon (reversed)">
     {`
-      <button class="o-button}">
+      <button class="o-button" type="button">
         <span class="o-button__label">Reversed button with icon</span>
-        <svg class="o-button__icon o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <svg class="o-button__icon o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
           <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
         </svg>
       </button>
