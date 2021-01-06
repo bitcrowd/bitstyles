@@ -1,0 +1,21 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/List reset" />
+
+# List reset
+
+## Removes the default margin, padding and bullets
+
+This makes `<ul>`s much more usable as a semantic container, without it creating styling issues due to browser defaults intended for bullet lists in text documents.
+
+<Canvas>
+  <Story name="List reset">
+    {`
+      <ul class="o-list-reset">
+        <li><a href="#one">link one</a></li>
+        <li><a href="#two">link two</a></li>
+        <li><a href="#three">link three</a></li>
+      </ul>
+    `}
+  </Story>
+</Canvas>

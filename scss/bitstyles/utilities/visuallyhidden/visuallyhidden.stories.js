@@ -1,7 +1,7 @@
 import Readme from './visuallyhidden.md';
 
 export default {
-  title: 'Objects/Visuallyhidden',
+  title: 'Utilities/Visuallyhidden',
   parameters: {
     readme: {
       sidebar: Readme,

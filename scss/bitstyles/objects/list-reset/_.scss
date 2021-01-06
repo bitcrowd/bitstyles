@@ -1,7 +1,3 @@
 .#{$bitstyles-namespace}o-list-reset {
   @include list-reset();
 }
-
-.#{$bitstyles-namespace}o-list-reset--bullets-only {
-  @include list-reset(false);
-}

@@ -8,7 +8,7 @@
 // @param {Number} $truncation-boundary  CSS dimension with unit. Define the maximum allowed width of the element, before its text content will be truncated. Defaults to `100%`, so the element will fill its parent but no more.
 //
 
-@mixin truncate-with-ellipsis($truncation-boundary: 100%) {
+@mixin truncate($truncation-boundary: 100%) {
   max-width: $truncation-boundary;
   overflow: hidden;
   text-overflow: ellipsis;
