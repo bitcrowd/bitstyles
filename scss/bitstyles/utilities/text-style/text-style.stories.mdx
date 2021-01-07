@@ -1,0 +1,26 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/Text style" />
+
+# Text Style
+
+Set text-style on an element.
+
+Named `u-text-` for consistency with the other text/font-related utilities (despite the CSS property being called `font-style`).
+
+<Canvas isColumn>
+  <Story name="text-style--italic">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-text-style--italic">u-text-style--italic. Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</div>
+      </div>
+    `}
+  </Story>
+  <Story name="text-style--normal">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-text-style--normal">u-text-style--normal. Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
