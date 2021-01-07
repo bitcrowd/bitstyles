@@ -1,5 +1,0 @@
-# Media
-
-## Audio
-
-## Video
