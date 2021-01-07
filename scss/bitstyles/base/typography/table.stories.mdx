@@ -1,0 +1,45 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Base/Typography/Table" />
+
+# Typography
+
+## Table
+
+Some default styling for tables.
+
+<Canvas>
+  <Story name="Table">
+    {`
+      <table>
+        <caption>Describe the table contents</caption>
+        <thead>
+          <tr>
+            <th scope="col">Header content 1</th>
+            <th scope="col">Header content 1</th>
+            <th scope="col">Header content 2</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td>Footer content 1</td>
+            <td>Footer content 2</td>
+            <td>Footer content 2</td>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <th scope="row">Row title</th>
+            <td>Body content 1. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat.</td>
+            <td>Body content 2</td>
+          </tr>
+          <tr>
+            <th scope="row">Row title</th>
+            <td>Body content 1. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat.</td>
+            <td>Body content 2</td>
+          </tr>
+        </tbody>
+      </table>
+    `}
+  </Story>
+</Canvas>

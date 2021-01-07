@@ -1,0 +1,55 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Base/Typography/Lists" />
+
+# Typography
+
+## Definition list
+
+Used to define terms, in term/definition pairs similar to a dictionary. A `<dl>` is a great choice when you have e.g. some information about a user or other entity to display.
+
+<Canvas>
+  <Story name="dl">
+    {`
+      <dl>
+        <div>
+          <dt>Name</dt>
+          <dd>Jelly Marshmallow</dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd>jelly@marshmallow.com</dd>
+        </div>
+      </dl>
+    `}
+  </Story>
+</Canvas>
+
+
+## List - Unordered
+
+<Canvas>
+  <Story name="ul">
+    {`
+      <ul>
+        <li>Jelly marshmallow</li>
+        <li>Gingerbread lemon</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+
+## List - Ordered
+
+<Canvas>
+  <Story name="ol">
+    {`
+      <ol>
+        <li>Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+      </ol>
+    `}
+  </Story>
+</Canvas>
