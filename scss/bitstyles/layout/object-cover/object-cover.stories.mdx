@@ -1,0 +1,19 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Layout/Object cover" />
+
+# Object-fit Cover
+
+Any element with inherent size (e.g. an `<img>`) will expand to fill the available space while maintaining their aspect ratio. One dimension will overflow its parent as needed in order to fill the other dimension.
+
+The example uses an inline style to restrict one dimension, to mimic the real-world case that one of the dimensions is constrained by your layout. Resize the viewport to see how the image is resized but not stretched.
+
+<Canvas>
+  <Story name="Object cover">
+    {`
+      <div style="height: 10rem">
+        <img class="l-object-cover" src="https://placekitten.com/200/300">
+      </div>
+    `}
+  </Story>
+</Canvas>
