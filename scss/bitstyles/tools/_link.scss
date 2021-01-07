@@ -22,8 +22,8 @@
   &:hover,
   &:focus {
     color: $bitstyles-color-link-hover;
+    text-decoration: $bitstyles-text-decoration-link-hover;
     background: $bitstyles-background-color-link-hover;
     box-shadow: none;
-    text-decoration: $bitstyles-text-decoration-link-hover;
   }
 }
