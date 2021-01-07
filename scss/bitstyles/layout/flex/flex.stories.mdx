@@ -4,20 +4,36 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Flex
 
-## Basic flex layout
+**Resize your viewport to best see the effects of these examples**
 
-**Resize your viewport for these examples**
+**Also note that some of these examples will cause horizontal scrollbars at some viewport widths**. Your approach to dealing with that issue will depend on your content, but probably `.l-flex--wrap` will be first place to look (see below).
+
+## Basic flex layout
 
 Apply `.l-flex` to an element to make its children share the available width e.g. a list of links in a menu.
 
-Give it the `.l-flex--wrap` too, if the content is a list of elements with intrinsic or fixed size e.g. a list of buttons, icons, or images. The result will mean the elements are allowed to flow onto the next line when there’s not enough space for them to be adjacent (note this will not work with elements that take all available space, e.g. paragraphs of text).
+These examples show how that base flex layout behaves with different content. The second of each of the example blocks shows the same layout, but with one of the children being given the `l-flex__primary` class, and the third shows one given `.l-flex__no-shrink`.
 
-Make one of the children `.l-flex__primary` to make it take all available space left over. If there is no space left over, it becomes the same size as its siblings.
+Make one of the children `.l-flex__primary` to make it take any available space that’s left over. If there is no space left over, it becomes the same size as its siblings.
 
 Apply `.l-flex__no-shrink` to a flex-child to stop it being crushed when there is not enough space for it and its siblings. This is useful with elements which have intrinsic size (e.g. images, icons), or that need to remain fully-sized (e.g. buttons).
 
-<Canvas>
+### Little text content
+
+These first examples show the layouts with a small amount of text content.
+
+<Canvas isColumn>
   <Story name="Flex">
+    {`
+      <ul class="l-flex o-list-reset">
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="Flex, with primary child">
     {`
       <ul class="l-flex o-list-reset">
         <li>List item one</li>
@@ -27,16 +43,99 @@ Apply `.l-flex__no-shrink` to a flex-child to stop it being crushed when there i
       </ul>
     `}
   </Story>
+  <Story name="Flex, with no-shrink child">
+    {`
+      <ul class="l-flex o-list-reset">
+        <li>List item one</li>
+        <li class="l-flex__no-shrink"><button type="button">Don’t shrink me</button></li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+### Lots of text content
+
+These next examples show how the same layouts behave with long text content.
+
+<Canvas isColumn>
   <Story name="Flex with long content">
     {`
       <ul class="l-flex o-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
-        <li class="l-flex__primary u-background-color--secondary">Important content here - Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
       </ul>
     `}
   </Story>
+  <Story name="Flex with long content, with primary child">
+    {`
+      <ul class="l-flex o-list-reset">
+        <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li class="l-flex__primary u-background-color--secondary">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="Flex with long content, with no-shrink child">
+    {`
+      <ul class="l-flex o-list-reset">
+        <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li class="l-flex__no-shrink u-background-color--secondary">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+### Media content
+
+And this time the same layouts, with images as content (any element with intrinsic width will behave in this way).
+
+<Canvas isColumn>
+  <Story name="Flex with intrinsic-width content">
+    {`
+      <ul class="l-flex o-list-reset">
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+      </ul>
+    `}
+  </Story>
+  <Story name="Flex with intrinsic-width content, with primary child">
+    {`
+      <ul class="l-flex o-list-reset">
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li class="l-flex__primary u-background-color--secondary"><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+      </ul>
+    `}
+  </Story>
+  <Story name="Flex with intrinsic-width content, with no-shrink child">
+    {`
+      <ul class="l-flex o-list-reset">
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li class="l-flex__no-shrink u-background-color--secondary"><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Flex wrap
+
+Give the flex parent `.l-flex--wrap` too, if you want the children to wrap onto a new line when they run of space. This can be a good thing to do when you have a list of elements with intrinsic or fixed size e.g. a list of buttons, icons, or images. The result will mean the elements are allowed to flow onto the next line when there’s not enough space for them to be adjacent.
+
+Note this layout may not be so useful with elements that take all available space, like long paragraphs of text. It’s often great for buttons and images though.
+
+<Canvas isColumn>
   <Story name="Flex wrap with long content">
     {`
       <ul class="l-flex l-flex--wrap o-list-reset">
@@ -44,16 +143,6 @@ Apply `.l-flex__no-shrink` to a flex-child to stop it being crushed when there i
         <li class="l-flex__primary u-background-color--secondary">Important content here - Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
-      </ul>
-    `}
-  </Story>
-  <Story name="Flex with intrinsic-width content">
-    {`
-      <ul class="l-flex o-list-reset">
-        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
-        <li class="l-flex__primary u-background-color--secondary">Important content here</li>
-        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
-        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
       </ul>
     `}
   </Story>
@@ -67,7 +156,14 @@ Apply `.l-flex__no-shrink` to a flex-child to stop it being crushed when there i
       </ul>
     `}
   </Story>
-  <Story name="Flex with allign center">
+</Canvas>
+
+## Align center
+
+Apply `.l-flex--align-center` to the flex parent when you want all the elements to align to each others’ vertical center.
+
+<Canvas>
+  <Story name="Flex with align center">
     {`
       <ul class="l-flex l-flex--align-center o-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>

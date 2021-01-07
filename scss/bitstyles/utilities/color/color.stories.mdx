@@ -1,0 +1,27 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/Color" />
+
+# Color
+
+## Override foreground colors
+
+Define which foreground colours you require in the `$foreground-colors` Sass list, using the names of the colours as defined in `$bitstyles-palette`. Default value is `background, secondary` as both those colours are defined in the default palette.
+
+<Canvas>
+  <Story name="Primary">
+    {`
+      <div class="u-color--primary">Some content here</div>
+    `}
+  </Story>
+  <Story name="Secondary">
+    {`
+      <div class="u-color--secondary">Some content here</div>
+    `}
+  </Story>
+  <Story name="Error">
+    {`
+      <div class="u-color--error">Some content here</div>
+    `}
+  </Story>
+</Canvas>
