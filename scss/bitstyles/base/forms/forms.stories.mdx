@@ -1,0 +1,206 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Base/Forms" />
+
+# Forms
+
+## Fieldset
+
+<Canvas>
+  <Story name="Fieldset">
+    {`
+      <fieldset><legend>Fieldset</legend></fieldset>
+    `}
+  </Story>
+</Canvas>
+
+
+## Inputs and labels
+
+Inputs can be siblings or children of their associated label, as you prefer. Different frameworks may favor different styles, but for most inputs it makes little difference in terms of semantics & usability.
+
+The exception is for radios & checkboxes (see below), which should always be a child of their label to make the click/tap target larger. It’s therefore common practice to wrap all inputs this way, for consistsency.
+
+Take a look at [Base/Inputs](/?path=/docs/base-inputs--input-text) for a complete list of inputs.
+
+### Text inputs
+
+This includes all standard `type="text"` inputs, plus all the text-based inputs such as `email`, and inputs which do not have a different representation on the current OS/browser combination. Right now that includes `tel` on desktop environments, but not mobile, and `date` on some desktop browsers but not others (and no mobile).
+
+<Canvas isColumn>
+  <Story name="Input and label (siblings)">
+    {`
+      <label for="input_a1">This is labeling text</label>
+      <input type="text" placeholder="Placeholder text" id="input_a1" />
+    `}
+  </Story>
+  <Story name="Input and label (wrapped)">
+    {`
+      <label for="input_a2">
+        This is labeling text
+        <input type="text" placeholder="Placeholder text" id="input_a2" />
+      </label>
+    `}
+  </Story>
+  <Story name="Input and label (wrapped, disabled)">
+    {`
+      <label for="input_a3">
+        This is labeling text
+        <input disabled type="text" placeholder="Placeholder text" id="input_a3" />
+      </label>
+    `}
+  </Story>
+  <Story name="Input and label (wrapped, invalid)">
+    {`
+      <label for="input_a4">
+        <span>This is labeling text for an invalid input (once you enter invalid data)</span>
+        <input type="number" id="input_a4" placeholder="Enter some text into this number input" />
+      </label>
+    `}
+  </Story>
+</Canvas>
+
+
+## Checkboxes
+
+<Canvas isColumn>
+  <Story name="Checkbox and label">
+    {`
+      <label for="input_b1" class="l-flex l-flex--align-center">
+        <input type="checkbox" id="input_b1" />
+        <span>This is labeling text</span>
+      </label>
+      <label for="input_b2" class="l-flex l-flex--align-center">
+        <input type="checkbox" id="input_b2" checked />
+        <span>This is labeling text</span>
+      </label>
+    `}
+  </Story>
+  <Story name="Checkbox and label (disabled)">
+    {`
+      <label for="input_b3" class="l-flex l-flex--align-center">
+        <input type="checkbox" id="input_b3" disabled />
+        <span>This is labeling text</span>
+      </label>
+      <label for="input_b4" class="l-flex l-flex--align-center">
+        <input type="checkbox" id="input_b4" checked disabled />
+        <span>This is labeling text</span>
+      </label>
+    `}
+  </Story>
+</Canvas>
+
+
+## Radios
+
+<Canvas isColumn>
+  <Story name="Radio and label">
+    {`
+      <label for="input_c1" class="l-flex l-flex--align-center">
+        <input type="radio" id="input_c1" name="radio-group_c1" value="true" />
+        <span>This is labeling text</span>
+      </label>
+      <label for="input_c2" class="l-flex l-flex--align-center">
+        <input type="radio" id="input_c2" name="radio-group_c1" value="false" checked />
+        <span>This is labeling text</span>
+      </label>
+    `}
+  </Story>
+  <Story name="Radio and label (disabled)">
+    {`
+      <label for="input_c3" class="l-flex l-flex--align-center">
+        <input type="radio" id="input_c3" name="radio-group_c2" value="true" disabled />
+        <span>This is labeling text</span>
+      </label>
+      <label for="input_c4" class="l-flex l-flex--align-center">
+        <input type="radio" id="input_c4" name="radio-group_c2" value="false" checked disabled />
+        <span>This is labeling text</span>
+      </label>
+    `}
+  </Story>
+</Canvas>
+
+
+## Selects
+
+<Canvas isColumn>
+  <Story name="Select and label">
+    {`
+      <label for="input_d1">
+        This is labeling text
+        <select id="input_d1">
+          <option value="value1" selected>Value 1</option>
+          <option value="value2">Value 2</option>
+          <option value="value3">Value 3</option>
+        </select>
+      </label>
+    `}
+  </Story>
+  <Story name="Select and label (disabled)">
+    {`
+      <label for="input_d2">
+        This is labeling text
+        <select id="input_d2" disabled>
+          <option value="value1" selected>Value 1</option>
+          <option value="value2">Value 2</option>
+          <option value="value3">Value 3</option>
+        </select>
+      </label>
+    `}
+  </Story>
+</Canvas>
+
+
+## Textareas
+
+<Canvas isColumn>
+  <Story name="Textarea and label">
+    {`
+      <label for="input_e1">
+        This is labeling text
+        <textarea rows="5" cols="30" placeholder="Placeholder text" id="input_e1">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</textarea>
+      </label>
+    `}
+  </Story>
+  <Story name="Textarea and label (disabled)">
+    {`
+      <label for="input_e2">
+        This is labeling text
+        <textarea id="input_e2" rows="5" cols="30" placeholder="Placeholder text" disabled>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</textarea>
+      </label>
+    `}
+  </Story>
+</Canvas>
+
+
+## Example login form
+
+When using form elements in a form, they should be wrapped in a list element, as all the elements are related to each other. This also gives the opportunity to apply some layout, such as adding space between elements.
+
+Form elements will take 100% of the available width, so you’ll likely want to use a grid or flex layout system to make that more readable and usable.
+
+<Canvas isColumn>
+  <Story name="Example login form">
+    {`
+      <form>
+        <ul class="o-list-reset">
+          <li class="u-margin--bottom">
+            <label>
+              Name
+              <input type="text" autocomplete="name" />
+            </label>
+          </li>
+          <li class="u-margin--bottom">
+            <label>
+              Password
+              <input type="password" autocomplete="password" />
+            </label>
+          </li>
+          <li>
+            <button type="submit">Login</button>
+          </li>
+        </ul>
+      </form>
+    `}
+  </Story>
+</Canvas>

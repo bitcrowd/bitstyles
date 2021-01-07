@@ -1,0 +1,392 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Base/Inputs" />
+
+# Base input types
+
+Here are the various inputs, textareas & selects. They’re presented here for completeness, and so they’re available for testing purposes.
+
+You may find [Base/Forms](/?path=/docs/base-forms--fieldset) more informative.
+
+## Input - text
+
+<Canvas isColumn>
+  <Story name="Input - text">
+    {`
+      <input type="text" placeholder="Jelly cake marshmallow">
+    `}
+  </Story>
+  <Story name="Input - text (disabled)">
+    {`
+      <input type="text" placeholder="Jelly cake marshmallow" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - email
+
+<Canvas isColumn>
+  <Story name="Input - email">
+    {`
+      <input type="email" placeholder="jellycake@marshmallow.com">
+    `}
+  </Story>
+  <Story name="Input - email (disabled)">
+    {`
+      <input type="email" placeholder="jellycake@marshmallow.com" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - number
+
+<Canvas isColumn>
+  <Story name="Input - number">
+    {`
+      <input type="number" placeholder="123456789">
+    `}
+  </Story>
+  <Story name="Input - number (disabled)">
+    {`
+      <input type="number" placeholder="123456789" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - range
+
+<Canvas isColumn>
+  <Story name="Input - range">
+    {`
+      <input type="range" min="0" max="10" step="1">
+    `}
+  </Story>
+  <Story name="Input - range (disabled)">
+    {`
+      <input type="range" min="0" max="10" step="1" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Textarea
+
+<Canvas isColumn>
+  <Story name="Textarea">
+    {`
+      <textarea rows="5" cols="30" placeholder="Placeholder text">Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</textarea>
+    `}
+  </Story>
+  <Story name="Textarea (disabled)">
+    {`
+      <textarea rows="5" cols="30" placeholder="Placeholder text" disabled>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer.</textarea>
+    `}
+  </Story>
+</Canvas>
+
+## Select
+
+<Canvas isColumn>
+  <Story name="Select">
+    {`
+      <select>
+        <option value="value1" selected>Long option text to see some truncation especially in smaller viewports</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
+    `}
+  </Story>
+  <Story name="Select (disabled)">
+    {`
+      <select disabled>
+        <option value="value1" selected>Long option text to see some truncation especially in smaller viewports</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
+    `}
+  </Story>
+</Canvas>
+
+## Label
+
+<Canvas isColumn>
+  <Story name="Label">
+    {`
+      <label for="input">This is label text</label>
+    `}
+  </Story>
+</Canvas>
+
+## Input - radio
+
+<Canvas isColumn>
+  <Story name="Input - radio">
+    {`
+      <input type="radio">
+    `}
+  </Story>
+  <Story name="Input - radio (disabled)">
+    {`
+      <input type="radio" disabled>
+    `}
+  </Story>
+  <Story name="Input - radio (checked)">
+    {`
+      <input type="radio" checked>
+    `}
+  </Story>
+  <Story name="Input - radio (checked, disabled)">
+    {`
+      <input type="radio" checked disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - checkbox
+
+<Canvas isColumn>
+  <Story name="Input - checkbox">
+    {`
+      <input type="checkbox">
+    `}
+  </Story>
+  <Story name="Input - checkbox (disabled)">
+    {`
+      <input type="checkbox" disabled>
+    `}
+  </Story>
+  <Story name="Input - checkbox (checked)">
+    {`
+      <input type="checkbox" checked>
+    `}
+  </Story>
+  <Story name="Input - checkbox (checked, disabled">
+    {`
+      <input type="checkbox" checked disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - button
+
+<Canvas isColumn>
+  <Story name="Input - button">
+    {`
+      <input type="button" value="Button">
+    `}
+  </Story>
+  <Story name="Input - button (disabled)">
+    {`
+      <input type="button" value="Button" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - color
+
+<Canvas isColumn>
+  <Story name="Input - color">
+    {`
+      <input type="color">
+    `}
+  </Story>
+  <Story name="Input - color (disabled)">
+    {`
+      <input type="color" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - date
+
+<Canvas isColumn>
+  <Story name="Input - date">
+    {`
+      <input type="date">
+    `}
+  </Story>
+  <Story name="Input - date (disabled)">
+    {`
+      <input type="date" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - datetime-local
+
+<Canvas isColumn>
+  <Story name="Input - datetime-local">
+    {`
+      <input type="datetime-local">
+    `}
+  </Story>
+  <Story name="Input - datetime-local (disabled)">
+    {`
+      <input type="datetime-local" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - file
+
+<Canvas isColumn>
+  <Story name="Input - file">
+    {`
+      <input type="file">
+    `}
+  </Story>
+  <Story name="Input - file (disabled)">
+    {`
+      <input type="file" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - image
+
+<Canvas isColumn>
+  <Story name="Input - image">
+    {`
+      <input type="image" src="https://placekitten.com/100/100" alt="Image">
+    `}
+  </Story>
+  <Story name="Input - image (disabled)">
+    {`
+      <input type="image" src="https://placekitten.com/100/100" alt="Image" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - month
+
+<Canvas isColumn>
+  <Story name="Input - month">
+    {`
+      <input type="month">
+    `}
+  </Story>
+  <Story name="Input - month (disabled)">
+    {`
+      <input type="month" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - week
+
+<Canvas isColumn>
+  <Story name="Input - week">
+    {`
+      <input type="week">
+    `}
+  </Story>
+  <Story name="Input - week (disabled)">
+    {`
+      <input type="week" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - password
+
+<Canvas isColumn>
+  <Story name="Input - password">
+    {`
+      <input type="password" value="Password">
+    `}
+  </Story>
+  <Story name="Input - password (disabled)">
+    {`
+      <input type="password" value="Password" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - reset
+
+<Canvas isColumn>
+  <Story name="Input - reset">
+    {`
+      <input type="reset">
+    `}
+  </Story>
+  <Story name="Input - reset (disabled)">
+    {`
+      <input type="reset" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - search
+
+<Canvas isColumn>
+  <Story name="Input - search">
+    {`
+      <input type="search">
+    `}
+  </Story>
+  <Story name="Input - search (disabled)">
+    {`
+      <input type="search" (disabled)>
+    `}
+  </Story>
+</Canvas>
+
+## Input - submit
+
+<Canvas isColumn>
+  <Story name="Input - submit">
+    {`
+      <input type="submit" value="Submit">
+    `}
+  </Story>
+  <Story name="Input - submit (disabled)">
+    {`
+      <input type="submit" value="Submit" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - tel
+
+<Canvas isColumn>
+  <Story name="Input - tel">
+    {`
+      <input type="tel">
+    `}
+  </Story>
+  <Story name="Input - tel (disabled)">
+    {`
+      <input type="tel" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - time
+
+<Canvas isColumn>
+  <Story name="Input - time">
+    {`
+      <input type="time">
+    `}
+  </Story>
+  <Story name="Input - time (disabled)">
+    {`
+      <input type="time" disabled>
+    `}
+  </Story>
+</Canvas>
+
+## Input - url
+
+<Canvas isColumn>
+  <Story name="Input - url">
+    {`
+      <input type="url">
+    `}
+  </Story>
+  <Story name="Input - url (disabled)">
+    {`
+      <input type="url" disabled>
+    `}
+  </Story>
+</Canvas>
