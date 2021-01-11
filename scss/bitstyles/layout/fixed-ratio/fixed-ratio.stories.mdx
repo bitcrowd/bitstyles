@@ -4,9 +4,9 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Fixed-ratio
 
-## Enforces an aspect ratio on this element and its contents
+Enforce an aspect ratio on this element and its contents.
 
-The element takes 100% width, then the height is set to the keep the element at the specified ratio. Default ratio is defined as 16:9 in the Sass map `$fixed-ratio-default-ratio`, under the keys `width` and `height` e.g.
+The fixed-ratio element takes 100% of its parent element’s width, then the height is set so the element will maintain the specified ratio. The default ratio is 16:9, defined in the Sass map `$fixed-ratio-default-ratio` under the keys `width` and `height` e.g.
 
 ```scss
 $fixed-ratio-default-ratio: (
@@ -14,6 +14,8 @@ $fixed-ratio-default-ratio: (
   'height': 9
 )
 ```
+
+No content may overflow this container.
 
 <Canvas>
   <Story name="Fixed ratio">

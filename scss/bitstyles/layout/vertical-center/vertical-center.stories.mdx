@@ -8,13 +8,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Centers the element vertically, relative to its closest positioned parent.
 
-Uses absolute positioning, therefore the element will be outside the document flow.
+As this class uses absolute positioning, the element will be outside the document flow, and will have no inherent size — the parent element will need to specify its own height e.g. through being part of a flex layout.
 
 <Canvas>
   <Story name="Vertical center">
     {`
-      <div class="u-background-color--secondary">
-        <p class="l-vertical-center">Vertically-centered content here</p>
+      <div class="u-background-color--secondary" style="min-height: 10rem;">
+        <div class="l-vertical-center">Vertically-centered content here</div>
       </div>
     `}
   </Story>

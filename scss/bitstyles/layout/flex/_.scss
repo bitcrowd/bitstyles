@@ -6,6 +6,10 @@
   @include flex--wrap;
 }
 
+.#{$bitstyles-namespace}l-flex--col {
+  flex-direction: column;
+}
+
 .#{$bitstyles-namespace}l-flex--align-center {
   align-items: center;
 }
