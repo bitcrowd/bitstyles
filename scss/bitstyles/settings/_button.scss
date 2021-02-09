@@ -15,25 +15,25 @@ $bitstyles-button-icon-spacing: spacing('s') !default;
 // Base colors ////////////////////////////////////////
 
 $bitstyles-button-color: $bitstyles-color-white !default;
-$bitstyles-button-background-color: palette('primary', 'light') !default;
+$bitstyles-button-background-color: palette('brand-1', '30') !default;
 $bitstyles-button-border: none !default;
-$bitstyles-button-box-shadow: 0 0 spacing('m') rgba(palette('primary', 'light'), 0.3) !default;
+$bitstyles-button-box-shadow: 0 0 spacing('m') rgba(palette('brand-1', '30'), 0.3) !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
 $bitstyles-button-color-hover: $bitstyles-color-white !default;
-$bitstyles-button-background-color-hover: palette('primary') !default;
+$bitstyles-button-background-color-hover: palette('brand-1') !default;
 $bitstyles-button-border-hover: none !default;
-$bitstyles-button-box-shadow-hover: 0 0 spacing('l') rgba(palette('primary'), 0.3) !default;
+$bitstyles-button-box-shadow-hover: 0 0 spacing('l') rgba(palette('brand-1'), 0.3) !default;
 
 //
 // Active colors ////////////////////////////////////////
 
 $bitstyles-button-color-active: $bitstyles-color-white !default;
-$bitstyles-button-background-color-active: palette('primary', 'dark') !default;
+$bitstyles-button-background-color-active: palette('brand-1', '100') !default;
 $bitstyles-button-border-active: none !default;
-$bitstyles-button-box-shadow-active: 0 0 spacing('s') rgba(palette('primary', 'dark'), 0.3) !default;
+$bitstyles-button-box-shadow-active: 0 0 spacing('s') rgba(palette('brand-1', '100'), 0.3) !default;
 
 //
 // Disabled colors ////////////////////////////////////////

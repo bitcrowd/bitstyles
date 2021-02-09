@@ -4,31 +4,31 @@ $bitstyles-checkbox-border-radius: spacing('xxs') !default;
 
 //
 // Base colors ////////////////////////////////////////
-$bitstyles-checkbox-color: palette('text', 'light') !default;
+$bitstyles-checkbox-color: palette('text', '80') !default;
 $bitstyles-checkbox-background-color: palette('background') !default;
 $bitstyles-checkbox-border: 2px solid !default;
 
 //
 // Hover colors ////////////////////////////////////////
-$bitstyles-checkbox-color-hover: palette('primary') !default;
+$bitstyles-checkbox-color-hover: palette('brand-1') !default;
 $bitstyles-checkbox-background-color-hover: palette('background') !default;
 $bitstyles-checkbox-border-hover: 2px solid !default;
 
 //
 // Checked colors ////////////////////////////////////////
 $bitstyles-checkbox-color-checked: palette('background') !default;
-$bitstyles-checkbox-background-color-checked: palette('primary') !default;
-$bitstyles-checkbox-border-checked: 2px solid palette('primary') !default;
+$bitstyles-checkbox-background-color-checked: palette('brand-1') !default;
+$bitstyles-checkbox-border-checked: 2px solid palette('brand-1') !default;
 $bitstyles-checkbox-background-image-checked: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#ffffff' d='m83.07 11.71-44.41 44.59-21.73-21.81-15.93 15.99 37.65 37.81 60.35-60.59z'/%3E%3C/svg%3E") !default;
 
 //
 // Disabled colors ////////////////////////////////////////
-$bitstyles-checkbox-color-disabled: palette('text', 'light') !default;
-$bitstyles-checkbox-background-color-disabled: palette('background', 'dark') !default;
+$bitstyles-checkbox-color-disabled: palette('text', '80') !default;
+$bitstyles-checkbox-background-color-disabled: palette('white', '30') !default;
 $bitstyles-checkbox-border-disabled: 2px solid !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
-$bitstyles-checkbox-color-disabled-checked: palette('text', 'light') !default;
-$bitstyles-checkbox-background-color-disabled-checked: palette('background', 'dark') !default;
-$bitstyles-checkbox-border-disabled-checked: 2px solid palette('background', 'dark') !default;
+$bitstyles-checkbox-color-disabled-checked: palette('text', '80') !default;
+$bitstyles-checkbox-background-color-disabled-checked: palette('white', '30') !default;
+$bitstyles-checkbox-border-disabled-checked: 2px solid palette('white', '30') !default;

@@ -1,47 +1,119 @@
-$bitstyles-color-primary: #0ab3bf !default;
-$bitstyles-color-secondary: $bitstyles-color-gray-20 !default;
-$bitstyles-color-text: $bitstyles-color-gray-80 !default;
-$bitstyles-color-background: $bitstyles-color-white !default;
-$bitstyles-color-positive: #0f0 !default;
-$bitstyles-color-negative: #fe881e !default;
-$bitstyles-color-tone-factor: 10% !default;
-
 // Colour palette. Each colour has variants (each needs at least the `base`), defined
 // in its child map. Naming: `base`, `light`, `lighter`, `dark`, `darker`
 // Use Sass map functions to merge in extra colour maps in your project, or re-define
 // the whole map.
-$bitstyles-palette: (
-  'primary': (
-    'base': $bitstyles-color-primary,
-    'light': lighten($bitstyles-color-primary, $bitstyles-color-tone-factor),
-    'dark': darken($bitstyles-color-primary, $bitstyles-color-tone-factor)
+$bitstyles-color-tone-factor: 10% !default;
+
+$color-palette: (
+  'black': (
+    '100': $bitstyles-base-color-black,
+    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 10%),
+    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 20%),
+    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 30%),
+    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 40%),
+    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 50%),
+    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 60%),
+    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 70%),
+    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 80%),
+    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 90%),
+    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 95%),
   ),
-  'secondary': (
-    'base': $bitstyles-color-secondary,
-    'light': lighten($bitstyles-color-secondary, $bitstyles-color-tone-factor),
-    'dark': darken($bitstyles-color-secondary, $bitstyles-color-tone-factor)
+  'white': (
+    '100': $bitstyles-base-color-white,
+    '90': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 10%),
+    '80': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 20%),
+    '70': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 30%),
+    '60': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 40%),
+    '50': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 50%),
+    '40': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 60%),
+    '30': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 70%),
+    '20': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 80%),
+    '10': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 90%),
+    '5': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 95%),
   ),
   'text': (
-    'base': $bitstyles-color-text,
-    'light': lighten($bitstyles-color-text, $bitstyles-color-tone-factor),
-    'dark': darken($bitstyles-color-text, $bitstyles-color-tone-factor)
+    '100': $bitstyles-base-color-text,
+    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 10%),
+    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 20%),
+    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 30%),
+    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 40%),
+    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 50%),
+    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 60%),
+    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 70%),
+    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 80%),
+    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 90%),
+    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 95%),
   ),
   'background': (
-    'base': $bitstyles-color-background,
-    'light': lighten($bitstyles-color-background, $bitstyles-color-tone-factor),
-    'dark': darken($bitstyles-color-background, $bitstyles-color-tone-factor)
+    '100': $bitstyles-base-color-background,
+    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 10%),
+    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 20%),
+    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 30%),
+    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 40%),
+    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 50%),
+    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 60%),
+    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 70%),
+    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 80%),
+    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 90%),
+    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 95%),
   ),
-  'positive': (
-    'base': $bitstyles-color-positive,
-    'light': lighten($bitstyles-color-positive, $bitstyles-color-tone-factor),
-    'dark': darken($bitstyles-color-positive, $bitstyles-color-tone-factor)
+  'brand-1': (
+    '100': $bitstyles-base-color-brand-1,
+    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 10%),
+    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 20%),
+    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 30%),
+    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 40%),
+    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 50%),
+    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 60%),
+    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 70%),
+    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 80%),
+    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 90%),
+    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 95%),
   ),
-  'error': (
-    'base': $bitstyles-color-negative,
-    'light': lighten($bitstyles-color-negative, $bitstyles-color-tone-factor),
-    'dark': darken($bitstyles-color-negative, $bitstyles-color-tone-factor)
-  )
-) !default;
+  'highlight': (
+    '100': $bitstyles-base-color-highlight,
+    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 10%),
+    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 20%),
+    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 30%),
+    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 40%),
+    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 50%),
+    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 60%),
+    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 70%),
+    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 80%),
+    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 90%),
+    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 95%),
+  ),
+  'danger': (
+    '100': $bitstyles-base-color-danger,
+    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 10%),
+    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 20%),
+    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 30%),
+    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 40%),
+    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 50%),
+    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 60%),
+    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 70%),
+    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 80%),
+    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 90%),
+    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 95%),
+  ),
+  'warning': (
+    '100': $bitstyles-base-color-warning,
+    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 10%),
+    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 20%),
+    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 30%),
+    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 40%),
+    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 50%),
+    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 60%),
+    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 70%),
+    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 80%),
+    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 90%),
+    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 95%),
+  ),
+);
 
-$foreground-colors: ('primary', 'secondary', 'error') !default;
-$background-colors: ('background', 'secondary') !default;
+$foreground-colors: (
+  'white': palette('white', '100'),
+);
+$background-colors: (
+  'black-80': palette('black', '80'),
+);

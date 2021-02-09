@@ -25,9 +25,9 @@ $bitstyles-button-icon-box-shadow-hover: 0 0 spacing('m') rgba(palette('text'), 
 // Active colors ////////////////////////////////////////
 
 $bitstyles-button-icon-color-active: $bitstyles-color-white !default;
-$bitstyles-button-icon-background-color-active: palette('primary') !default;
-$bitstyles-button-icon-border-active: 2px solid palette('primary') !default;
-$bitstyles-button-icon-box-shadow-active: 0 0 spacing('m') rgba(palette('primary'), 0.3) !default;
+$bitstyles-button-icon-background-color-active: palette('brand-1') !default;
+$bitstyles-button-icon-border-active: 2px solid palette('brand-1') !default;
+$bitstyles-button-icon-box-shadow-active: 0 0 spacing('m') rgba(palette('brand-1'), 0.3) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
