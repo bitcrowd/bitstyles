@@ -10,8 +10,8 @@
 
 // stylelint-disable at-rule-no-unknown
 @function palette($color, $percent: '100') {
-  @if map-has-key($color-palette, $color) {
-    $palette: map-get($color-palette, $color);
+  @if map-has-key($bitstyles-color-palette, $color) {
+    $palette: map-get($bitstyles-color-palette, $color);
 
     @if map-has-key($palette, $percent) {
       @return map-get($palette, $percent);

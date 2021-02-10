@@ -4,7 +4,7 @@
 // the whole map.
 $bitstyles-color-tone-factor: 10% !default;
 
-$color-palette: (
+$bitstyles-color-palette: (
   'black': (
     '100': $bitstyles-base-color-black,
     '90': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 10%),
@@ -109,13 +109,4 @@ $color-palette: (
     '10': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 90%),
     '5': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 95%),
   ),
-);
-
-$foreground-colors: (
-  'white': palette('white', '100'),
-);
-$background-colors: (
-  'black-80': palette('black', '80'),
-  'background': palette('background'),
-  'secondary': palette('brand-2')
-);
+) !default;

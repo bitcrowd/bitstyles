@@ -1,5 +1,7 @@
-@each $name in ($background-colors) {
-  .#{$bitstyles-namespace}u-background-color--#{$name} {
-    background-color: palette($name);
+@import './settings';
+
+@each $variant, $color in ($background-colors) {
+  .#{$bitstyles-namespace}u-bg--#{$variant} {
+    background-color: $color;
   }
 }

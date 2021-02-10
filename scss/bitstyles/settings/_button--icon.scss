@@ -8,7 +8,7 @@ $bitstyles-button-icon-padding-horizontal: spacing('m') !default;
 // Base colors ////////////////////////////////////////
 
 $bitstyles-button-icon-color: palette('text') !default;
-$bitstyles-button-icon-background-color: $bitstyles-color-white !default;
+$bitstyles-button-icon-background-color: palette('white') !default;
 $bitstyles-button-icon-border: 2px solid palette('text') !default;
 $bitstyles-button-icon-border-radius: $bitstyles-border-radius-round !default;
 $bitstyles-button-icon-box-shadow: 0 0 spacing('m') rgba(palette('text'), 0.1) !default;
@@ -16,7 +16,7 @@ $bitstyles-button-icon-box-shadow: 0 0 spacing('m') rgba(palette('text'), 0.1) !
 //
 // Hover colors ////////////////////////////////////////
 
-$bitstyles-button-icon-color-hover: $bitstyles-color-white !default;
+$bitstyles-button-icon-color-hover: palette('white') !default;
 $bitstyles-button-icon-background-color-hover: palette('text') !default;
 $bitstyles-button-icon-border-hover: 2px solid palette('text') !default;
 $bitstyles-button-icon-box-shadow-hover: 0 0 spacing('m') rgba(palette('text'), 0.3) !default;
@@ -24,7 +24,7 @@ $bitstyles-button-icon-box-shadow-hover: 0 0 spacing('m') rgba(palette('text'), 
 //
 // Active colors ////////////////////////////////////////
 
-$bitstyles-button-icon-color-active: $bitstyles-color-white !default;
+$bitstyles-button-icon-color-active: palette('white') !default;
 $bitstyles-button-icon-background-color-active: palette('brand-1') !default;
 $bitstyles-button-icon-border-active: 2px solid palette('brand-1') !default;
 $bitstyles-button-icon-box-shadow-active: 0 0 spacing('m') rgba(palette('brand-1'), 0.3) !default;
@@ -32,7 +32,7 @@ $bitstyles-button-icon-box-shadow-active: 0 0 spacing('m') rgba(palette('brand-1
 //
 // Disabled colors ////////////////////////////////////////
 
-$bitstyles-button-icon-color-disabled: $bitstyles-color-gray-50 !default;
+$bitstyles-button-icon-color-disabled: palette('black', '50') !default;
 $bitstyles-button-icon-background-color-disabled: transparent !default;
-$bitstyles-button-icon-border-disabled: 2px solid $bitstyles-color-gray-50 !default;
+$bitstyles-button-icon-border-disabled: 2px solid palette('black', '50') !default;
 $bitstyles-button-icon-box-shadow-disabled: none !default;
