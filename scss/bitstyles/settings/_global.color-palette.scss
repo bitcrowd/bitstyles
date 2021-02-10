@@ -70,18 +70,18 @@ $color-palette: (
     '10': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 90%),
     '5': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 95%),
   ),
-  'highlight': (
-    '100': $bitstyles-base-color-highlight,
-    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 10%),
-    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 20%),
-    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 30%),
-    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 40%),
-    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 50%),
-    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 60%),
-    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 70%),
-    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 80%),
-    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 90%),
-    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-highlight, 95%),
+  'brand-2': (
+    '100': $bitstyles-base-color-brand-2,
+    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 10%),
+    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 20%),
+    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 30%),
+    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 40%),
+    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 50%),
+    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 60%),
+    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 70%),
+    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 80%),
+    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 90%),
+    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 95%),
   ),
   'danger': (
     '100': $bitstyles-base-color-danger,
@@ -116,4 +116,6 @@ $foreground-colors: (
 );
 $background-colors: (
   'black-80': palette('black', '80'),
+  'background': palette('background'),
+  'secondary': palette('brand-2')
 );

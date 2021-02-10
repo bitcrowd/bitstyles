@@ -15,10 +15,14 @@
 
     @if map-has-key($palette, $percent) {
       @return map-get($palette, $percent);
-    } @else {
+    }
+
+    @else {
       @error "Oops! Color/percentage ‘#{$color}/#{$percent}’ does not exist.";
     }
-  } @else {
+  }
+
+  @else {
     @error "Oops! Color ‘#{$color}’ does not exist.";
   }
 }
