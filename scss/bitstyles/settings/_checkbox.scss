@@ -4,7 +4,7 @@ $bitstyles-checkbox-border-radius: spacing('xxs') !default;
 
 //
 // Base colors ////////////////////////////////////////
-$bitstyles-checkbox-color: palette('text', '80') !default;
+$bitstyles-checkbox-color: palette('black', '80') !default;
 $bitstyles-checkbox-background-color: palette('background') !default;
 $bitstyles-checkbox-border: 2px solid !default;
 
@@ -23,12 +23,12 @@ $bitstyles-checkbox-background-image-checked: url("data:image/svg+xml,%3Csvg wid
 
 //
 // Disabled colors ////////////////////////////////////////
-$bitstyles-checkbox-color-disabled: palette('text', '80') !default;
-$bitstyles-checkbox-background-color-disabled: palette('white', '30') !default;
+$bitstyles-checkbox-color-disabled: palette('black', '40') !default;
+$bitstyles-checkbox-background-color-disabled: palette('black', '20') !default;
 $bitstyles-checkbox-border-disabled: 2px solid !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
 $bitstyles-checkbox-color-disabled-checked: palette('text', '80') !default;
-$bitstyles-checkbox-background-color-disabled-checked: palette('white', '30') !default;
-$bitstyles-checkbox-border-disabled-checked: 2px solid palette('white', '30') !default;
+$bitstyles-checkbox-background-color-disabled-checked: palette('black', '30') !default;
+$bitstyles-checkbox-border-disabled-checked: 2px solid palette('black', '30') !default;

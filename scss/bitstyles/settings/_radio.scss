@@ -22,12 +22,12 @@ $bitstyles-radio-border-checked: 2px solid palette('brand-1') !default;
 
 //
 // Disabled colors ////////////////////////////////////////
-$bitstyles-radio-color-disabled: palette('text', '80') !default;
-$bitstyles-radio-background-color-disabled: palette('white', '30') !default;
+$bitstyles-radio-color-disabled: palette('black', '40') !default;
+$bitstyles-radio-background-color-disabled: palette('black', '20') !default;
 $bitstyles-radio-border-disabled: 2px solid !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
-$bitstyles-radio-color-disabled-checked: palette('text', '80') !default;
-$bitstyles-radio-background-color-disabled-checked: palette('white', '30') !default;
+$bitstyles-radio-color-disabled-checked: palette('black', '40') !default;
+$bitstyles-radio-background-color-disabled-checked: palette('black', '20') !default;
 $bitstyles-radio-border-disabled-checked: 2px solid !default;
