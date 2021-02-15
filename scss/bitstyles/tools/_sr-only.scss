@@ -1,4 +1,4 @@
-// Visuallyhidden
+// sr-only
 //
 // **Hide an element visually while leaving it readable & accessible by search engines & screenreaders**
 //
@@ -6,7 +6,7 @@
 // connections between content that may otherwise only be visually apparent.
 //
 
-@mixin visuallyhidden {
+@mixin sr-only {
   position: absolute !important; // stylelint-disable-line declaration-no-important
   width: 1px;
   height: 1px;

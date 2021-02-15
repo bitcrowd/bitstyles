@@ -1,0 +1,13 @@
+@import './settings';
+
+.#{$bitstyles-namespace}u-sr-only {
+  @include sr-only;
+}
+
+@each $breakpoint in $bitstyles-sr-only-breakpoints {
+  @include media-query($breakpoint) {
+    .#{$bitstyles-namespace}u-sr-only\@#{$breakpoint} {
+      @include sr-only;
+    }
+  }
+}

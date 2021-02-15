@@ -2,7 +2,9 @@
 
 .o-badge {
   display: inline-flex;
+  align-items: center;
   padding: $bitstyle-badge-padding-vertical $bitstyle-badge-padding-horizontal;
+  white-space: nowrap;
   border-radius: $bitstyles-border-radius-round;
 }
 

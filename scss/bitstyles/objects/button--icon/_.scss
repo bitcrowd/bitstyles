@@ -1,41 +1,36 @@
-@import '../../settings/button--icon';
 @import './settings';
 
 .#{$bitstyles-namespace}o-button--icon {
-  @include button--icon;
-}
+  padding: $bitstyles-button-icon-padding-vertical $bitstyles-button-icon-padding-horizontal;
+  border-radius: $bitstyles-button-icon-border-radius;
 
-.o-button--icon-reversed {
   &,
   &:visited {
-    color: var(--button-fg, $bitstyles-button-icon-reversed-color);
-    background: var(--button-bg, $bitstyles-button-icon-reversed-background-color);
-    border: $bitstyles-button-icon-reversed-border;
-    box-shadow: $bitstyles-button-icon-reversed-box-shadow;
+    color: $bitstyles-button-icon-color;
+    background-color: $bitstyles-button-icon-background-color;
+    border: $bitstyles-button-icon-border;
+    box-shadow: $bitstyles-button-icon-box-shadow;
   }
 
   &:hover,
   &:focus {
-    color: var(--button-fg-hover, $bitstyles-button-icon-reversed-color-hover);
-    text-decoration: none;
-    background: var(--button-bg-hover, $bitstyles-button-icon-reversed-background-color-hover);
-    border: $bitstyles-button-icon-reversed-border-hover;
-    outline: none;
-    box-shadow: $bitstyles-button-icon-reversed-box-shadow-hover;
+    color: $bitstyles-button-icon-color-hover;
+    background: $bitstyles-button-icon-background-color-hover;
+    border: $bitstyles-button-icon-border-hover;
+    box-shadow: $bitstyles-button-icon-box-shadow-hover;
   }
 
   &:active {
-    color: $bitstyles-button-icon-reversed-color-active;
-    background: $bitstyles-button-icon-reversed-background-color-active;
-    border: $bitstyles-button-icon-reversed-border-active;
-    box-shadow: $bitstyles-button-icon-reversed-box-shadow-active;
+    color: $bitstyles-button-icon-color-active;
+    background: $bitstyles-button-icon-background-color-active;
+    border: $bitstyles-button-icon-border-active;
+    box-shadow: $bitstyles-button-icon-box-shadow-active;
   }
 
   &:disabled {
-    color: $bitstyles-button-icon-reversed-color-disabled;
-    cursor: default;
-    background: $bitstyles-button-icon-reversed-background-color-disabled;
-    border: $bitstyles-button-icon-reversed-border-disabled;
-    box-shadow: $bitstyles-button-icon-reversed-box-shadow-disabled;
+    color: $bitstyles-button-icon-color-disabled;
+    background: $bitstyles-button-icon-background-color-disabled;
+    border: $bitstyles-button-icon-border-disabled;
+    box-shadow: $bitstyles-button-icon-box-shadow-disabled;
   }
 }
