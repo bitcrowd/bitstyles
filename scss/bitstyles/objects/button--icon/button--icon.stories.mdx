@@ -44,7 +44,7 @@ Here’s the same button in the disabled state:
   </Story>
 </Canvas>
 
-This last shows there’s no visual difference when using an anchor element. Note there’s no disabled state for such buttons, as that doesn’t really exist in the HTML spec. The second button here is visited, showing there’s no visual difference:
+This shows there’s no visual difference when using an anchor element. Note there’s no disabled state for such buttons, as that doesn’t really exist in the HTML spec. The second button here is visited, showing there’s no visual difference:
 
 <Canvas>
   <Story name="Anchor element as button">
@@ -65,6 +65,35 @@ This last shows there’s no visual difference when using an anchor element. Not
         </svg>
         <span class="u-visuallyhidden">Anchor element (visited)</span>
       </a>
+    `}
+  </Story>
+</Canvas>
+
+On dark backgrounds, use the `button--icon-reversed` variant.
+
+<Canvas>
+  <Story name="Button--icon-reversed">
+    {`
+      <div class="u-bg--gray-90 u-padding-m">
+        <button class="o-button o-button--icon o-button--icon-reversed" title="button-label">
+          <svg class="o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+          </svg>
+          <span class="u-visuallyhidden">button-label</span>
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Button--icon-reversed [disabled]">
+    {`
+      <div class="u-bg--gray-90 u-padding-m">
+        <button class="o-button o-button--icon o-button--icon-reversed" title="button-label">
+          <svg class="o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+          </svg>
+          <span class="u-visuallyhidden">button-label</span>
+        </a>
+      </div>
     `}
   </Story>
 </Canvas>

@@ -1,11 +1,15 @@
-.#{$bitstyles-namespace}u-text-weight--light {
+.#{$bitstyles-namespace}u-text--light {
   font-weight: $bitstyles-font-weight-light;
 }
 
-.#{$bitstyles-namespace}u-text-weight--normal {
+.#{$bitstyles-namespace}u-text--normal {
   font-weight: $bitstyles-font-weight-normal;
 }
 
-.#{$bitstyles-namespace}u-text-weight--bold {
+.#{$bitstyles-namespace}u-text--medium {
+  font-weight: $bitstyles-font-weight-medium;
+}
+
+.#{$bitstyles-namespace}u-text--bold {
   font-weight: $bitstyles-font-weight-bold;
 }

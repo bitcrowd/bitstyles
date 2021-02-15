@@ -1,0 +1,24 @@
+@import './settings';
+
+.o-badge {
+  display: inline-flex;
+  padding: $bitstyle-badge-padding-vertical $bitstyle-badge-padding-horizontal;
+  border-radius: $bitstyles-border-radius-round;
+}
+
+@each $variant in ('gray', 'danger', 'brand-1', 'brand-2') {
+  .o-badge--#{$variant} {
+    --button-fg: #{palette($variant, $bitstyle-badge-color)};
+    --button-bg: #{palette($variant, $bitstyle-badge-background-color)};
+    --button-fg-hover: #{palette($variant, $bitstyle-badge-background-color)};
+    --button-bg-hover: #{palette($variant, $bitstyle-badge-color)};
+
+    color: palette($variant, $bitstyle-badge-color);
+    background-color: palette($variant, $bitstyle-badge-background-color);
+  }
+}
+
+.o-badge__button {
+  margin-right: -#{spacing('s') + spacing('xs')};
+  margin-left: spacing('xs');
+}

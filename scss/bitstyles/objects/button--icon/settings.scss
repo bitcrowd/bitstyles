@@ -7,32 +7,70 @@ $bitstyles-button-icon-padding-horizontal: spacing('m') !default;
 //
 // Base colors ////////////////////////////////////////
 
-$bitstyles-button-icon-color: palette('text') !default;
-$bitstyles-button-icon-background-color: palette('white') !default;
-$bitstyles-button-icon-border: 2px solid palette('text') !default;
-$bitstyles-button-icon-border-radius: $bitstyles-border-radius-round !default;
-$bitstyles-button-icon-box-shadow: 0 0 spacing('m') rgba(palette('text'), 0.1) !default;
+$bitstyles-button-icon-color: palette('gray', '50') !default;
+$bitstyles-button-icon-background-color: palette('gray', '5') !default;
+$bitstyles-button-icon-border: none !default;
+$bitstyles-button-icon-border-radius: spacing('s') !default;
+$bitstyles-button-icon-box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$bitstyles-button-icon-color-hover: palette('white') !default;
-$bitstyles-button-icon-background-color-hover: palette('text') !default;
-$bitstyles-button-icon-border-hover: 2px solid palette('text') !default;
-$bitstyles-button-icon-box-shadow-hover: 0 0 spacing('m') rgba(palette('text'), 0.3) !default;
+$bitstyles-button-icon-color-hover: palette('gray', '80') !default;
+$bitstyles-button-icon-background-color-hover: palette('gray', '10') !default;
+$bitstyles-button-icon-border-hover: none !default;
+$bitstyles-button-icon-box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
 
 $bitstyles-button-icon-color-active: palette('white') !default;
-$bitstyles-button-icon-background-color-active: palette('brand-1') !default;
-$bitstyles-button-icon-border-active: 2px solid palette('brand-1') !default;
-$bitstyles-button-icon-box-shadow-active: 0 0 spacing('m') rgba(palette('brand-1'), 0.3) !default;
+$bitstyles-button-icon-background-color-active: palette('brand-1', '100') !default;
+$bitstyles-button-icon-border-active: none !default;
+$bitstyles-button-icon-box-shadow-active: none !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$bitstyles-button-icon-color-disabled: palette('black', '50') !default;
-$bitstyles-button-icon-background-color-disabled: transparent !default;
-$bitstyles-button-icon-border-disabled: 2px solid palette('black', '50') !default;
+$bitstyles-button-icon-color-disabled: palette('gray', '20') !default;
+$bitstyles-button-icon-background-color-disabled: palette('gray', '1') !default;
+$bitstyles-button-icon-border-disabled: none !default;
 $bitstyles-button-icon-box-shadow-disabled: none !default;
+//
+// Base styles ////////////////////////////////////////
+
+$bitstyles-button-icon-reversed-padding-vertical: spacing('m') !default;
+$bitstyles-button-icon-reversed-padding-horizontal: spacing('m') !default;
+
+//
+// Base colors ////////////////////////////////////////
+
+$bitstyles-button-icon-reversed-color: palette('gray', '20') !default;
+$bitstyles-button-icon-reversed-background-color: transparent !default;
+$bitstyles-button-icon-reversed-border: none !default;
+$bitstyles-button-icon-reversed-border-radius: spacing('s') !default;
+$bitstyles-button-icon-reversed-box-shadow: none !default;
+
+//
+// Hover colors ////////////////////////////////////////
+
+$bitstyles-button-icon-reversed-color-hover: palette('white') !default;
+$bitstyles-button-icon-reversed-background-color-hover: palette('gray', '80') !default;
+$bitstyles-button-icon-reversed-border-hover: none !default;
+$bitstyles-button-icon-reversed-box-shadow-hover: none !default;
+
+//
+// Active colors ////////////////////////////////////////
+
+$bitstyles-button-icon-reversed-color-active: palette('white') !default;
+$bitstyles-button-icon-reversed-background-color-active: palette('gray', '80') !default;
+$bitstyles-button-icon-reversed-border-active: none !default;
+$bitstyles-button-icon-reversed-box-shadow-active: none !default;
+
+//
+// Disabled colors ////////////////////////////////////////
+
+$bitstyles-button-icon-reversed-color-disabled: palette('black', '50') !default;
+$bitstyles-button-icon-reversed-background-color-disabled: transparent !default;
+$bitstyles-button-icon-reversed-border-disabled: none !default;
+$bitstyles-button-icon-reversed-box-shadow-disabled: none !default;

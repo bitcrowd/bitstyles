@@ -1,0 +1,7 @@
+@import './settings';
+
+.o-button--small {
+  padding: $bitstyles-button-small-padding / 2 $bitstyles-button-small-padding;
+  min-height: 0;
+  border-radius: $bitstyles-button-small-border-radius;
+}
