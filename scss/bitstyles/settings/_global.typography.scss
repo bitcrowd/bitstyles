@@ -10,6 +10,7 @@ $bitstyles-font-size-base-small: 16px !default;
 $bitstyles-font-size-base: 18px !default;
 
 $bitstyles-line-height-base: 1.5 !default;
+$bitstyles-line-height-min: 1.25 !default;
 
 $bitstyles-font-sizes: (
   'base': (
@@ -20,7 +21,7 @@ $bitstyles-font-sizes: (
     'h3': 18px,
     'h4': $bitstyles-font-size-base-small,
     'h5': $bitstyles-font-size-base-small,
-    'h6': $bitstyles-font-size-base-small
+    'h6': 16px
   ),
   'm': (
     'html': $bitstyles-font-size-base,
