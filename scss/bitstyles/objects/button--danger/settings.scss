@@ -1,0 +1,41 @@
+//
+// Base styles ////////////////////////////////////////
+
+$bitstyles-button-danger-border-radius: spacing('s') !default;
+$bitstyles-button-danger-transition:
+  color $bitstyles-transition-duration $bitstyles-transition-easing,
+  background-color $bitstyles-transition-duration $bitstyles-transition-easing,
+  border $bitstyles-transition-duration $bitstyles-transition-easing,
+  box-shadow $bitstyles-transition-duration $bitstyles-transition-easing !default;
+
+//
+// Base colors ////////////////////////////////////////
+
+$bitstyles-button-danger-color: palette('white') !default;
+$bitstyles-button-danger-background-color: palette('brand-1', '80') !default;
+$bitstyles-button-danger-border: none !default;
+$bitstyles-button-danger-box-shadow: 0 0 spacing('s') rgba(palette('brand-2', '80'), 0.3) !default;
+
+//
+// Hover colors ////////////////////////////////////////
+
+$bitstyles-button-danger-color-hover: palette('white') !default;
+$bitstyles-button-danger-background-color-hover: palette('danger', '100') !default;
+$bitstyles-button-danger-border-hover: none !default;
+$bitstyles-button-danger-box-shadow-hover: 0 0 spacing('m') rgba(palette('danger', '100'), 0.3) !default;
+
+//
+// Active colors ////////////////////////////////////////
+
+$bitstyles-button-danger-color-active: palette('white') !default;
+$bitstyles-button-danger-background-color-active: palette('danger', '100') !default;
+$bitstyles-button-danger-border-active: none !default;
+$bitstyles-button-danger-box-shadow-active: 0 0 spacing('xs') rgba(palette('danger', '100'), 0.3) !default;
+
+//
+// Disabled colors ////////////////////////////////////////
+
+$bitstyles-button-danger-color-disabled: palette('black', '50') !default;
+$bitstyles-button-danger-background-color-disabled: palette('black', '10') !default;
+$bitstyles-button-danger-border-disabled: none !default;
+$bitstyles-button-danger-box-shadow-disabled: none !default;
