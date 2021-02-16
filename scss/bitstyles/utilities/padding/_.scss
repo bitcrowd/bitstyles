@@ -1,9 +1,17 @@
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}u-padding--#{$position} {
-    padding-#{$position}: spacing('m');
+    @each $size in ('0', 'xs', 's', 'm', 'l') {
+      .#{$bitstyles-namespace}u-padding-#{$size}--#{$position} {
+        padding-#{$position}: spacing($size);
+      }
+    }
   }
 }
 
-.#{$bitstyles-namespace}u-padding {
+.#{$bitstyles-namespace}u-padding-m {
   padding: spacing('m');
+}
+
+.#{$bitstyles-namespace}u-padding-0 {
+  padding: 0;
 }

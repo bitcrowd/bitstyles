@@ -1,9 +1,0 @@
-@each $position in (left, top, right, bottom) {
-  .#{$bitstyles-namespace}u-no-margin--#{$position} {
-    margin-#{$position}: 0;
-  }
-}
-
-.#{$bitstyles-namespace}u-no-margin {
-  margin: 0;
-}
