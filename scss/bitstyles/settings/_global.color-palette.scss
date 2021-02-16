@@ -41,6 +41,7 @@ $bitstyles-color-palette: (
     '40': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 60%), $bitstyles-base-color-brand-1, 90%),
     '30': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 70%), $bitstyles-base-color-brand-1, 90%),
     '20': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 80%), $bitstyles-base-color-brand-1, 90%),
+    '10': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 90%), $bitstyles-base-color-brand-1, 90%),
     '5': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 95%), $bitstyles-base-color-brand-1, 95%),
     '1': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 99%), $bitstyles-base-color-brand-1, 95%),
   ),
