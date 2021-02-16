@@ -3,11 +3,14 @@ $bitstyles-border-radius-round: 9999rem !default;
 
 $bitstyles-spacing-base: 1rem !default;
 $bitstyles-spacing-sizes: (
-  'xxs': $bitstyles-spacing-base / 8,
-  'xs': $bitstyles-spacing-base / 4,
-  's': $bitstyles-spacing-base / 2,
+  '0': 0,
+  'xxxs': $bitstyles-spacing-base / 8,
+  'xxs': $bitstyles-spacing-base / 4,
+  'xs': $bitstyles-spacing-base / 2,
+  's': $bitstyles-spacing-base - ($bitstyles-spacing-base / 4),
   'm': $bitstyles-spacing-base,
-  'l': $bitstyles-spacing-base * 2,
-  'xl': $bitstyles-spacing-base * 4,
-  'xxl': $bitstyles-spacing-base * 8
+  'l': $bitstyles-spacing-base + ($bitstyles-spacing-base / 4),
+  'xl': $bitstyles-spacing-base * 2,
+  'xxl': $bitstyles-spacing-base * 4,
+  'xxxl': $bitstyles-spacing-base * 8
 ) !default;

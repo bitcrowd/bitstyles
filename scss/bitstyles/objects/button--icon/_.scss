@@ -33,4 +33,8 @@
     border: $bitstyles-button-icon-border-disabled;
     box-shadow: $bitstyles-button-icon-box-shadow-disabled;
   }
+
+  .o-button__icon {
+    margin: 0;
+  }
 }

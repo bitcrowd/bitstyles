@@ -1,0 +1,21 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Button--dropdown" />
+
+# Nav Button
+
+A button object that looks like a link in your main navigation (and must be an acnhor element), but has the niceties of our button classes.
+
+Here’s a base nav button. Note that it expects to be rendered on a dark background. Most likely this will be a navbar.
+
+<Canvas>
+  <Story name="Button--dropdown">
+    {`
+      <div class="u-bg--black-80 u-padding-m">
+        <a href="/" class="o-button o-button--nav">
+          Dashboard
+        </a>
+      </div>
+    `}
+  </Story>
+</Canvas>

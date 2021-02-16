@@ -8,16 +8,6 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Icons are implemented using inline SVG where possible (see example markup). They must be accompanied by some machine-readable text for accessibility & SEO purposes. If there is to be no such text visible (e.g. based on design mockups), provide an alternative next to the `<svg>` element using a `<span class="u-sr-only">` containing descriptive text.
 
-Set icon sizes by overiding the `$bitstyles-icon-sizes` list (see `settings/_icon.scss`) e.g.
-
-```scss
-$bitstyles-icon-sizes: (
-  's' 2rem,
-  'm' 4rem,
-  'l' 8rem
-);
-```
-
 The base icon size inherits from the surrounding text i.e. `1em`.
 
 <Canvas isColumn>
@@ -30,8 +20,8 @@ The base icon size inherits from the surrounding text i.e. `1em`.
   </Story>
   <Story name="Icon with adjacent text">
     {`
-      <div class="l-flex l-flex--align-center">
-        <svg class="o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+      <div class="l-flex l-items-center">
+        <svg class="o-icon u-margin-m--right" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
           <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
         </svg>
         <span>This is standard-sized text</span>
