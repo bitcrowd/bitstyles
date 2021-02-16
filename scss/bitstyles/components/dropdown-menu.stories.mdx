@@ -1,0 +1,59 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import logoLarge from '../../../test/assets/images/logoLarge.svg';
+import logoSmall from '../../../test/assets/images/logoSmall.svg';
+
+<Meta title="Components/Dropdown menu" />
+
+# Navbar
+
+A top-level navigation container, with two sections separated to the left & right. the left-hand side is commonly used for a logo and links, the right-hand side for user account menu, and global search.
+
+<Canvas>
+  <Story name="Dropdown menu">
+    {`
+      <div class="l-relative" style="min-height:20rem;">
+        <button type="button" class="o-button o-button--dropdown o-h6" aria-controls="dropdown-1" aria-expanded="true">
+          <span class="o-button__label">Account</span>
+          <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+          </svg>
+        </button>
+        <ul class="o-dropdown o-overflow o-list-reset u-margin-s--top" aria-hidden="false">
+          <li>
+            <a href="/" class="o-button o-button--menu o-h6">
+              <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+              </svg>
+              <span class="o-button__label">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu o-h6">
+              <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+              </svg>
+              <span class="o-button__label">Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu o-h6">
+              <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+              </svg>
+              <span class="o-button__label">Privacy</span>
+            </a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu o-h6">
+              <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+              </svg>
+              <span class="o-button__label">Sign out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
