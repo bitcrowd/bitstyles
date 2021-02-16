@@ -1,0 +1,86 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Button--nav" />
+
+# Nav Button
+
+A button object that looks like a link in your main navigation (and must be an acnhor element), but has the niceties of our button classes.
+
+Here’s a base nav button. Note that it expects to be rendered on a dark background. Most likely this will be a navbar.
+
+<Canvas>
+  <Story name="Button--nav">
+    {`
+      <div class="u-bg--black-80 u-padding-m">
+        <a href="/" class="o-button o-button--nav">
+          Dashboard
+        </a>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+One of the links may well be a link to the current page, and should be given an aria-current attribute: `aria-current="page"`:
+
+<Canvas>
+  <Story name="Button--nav [aria-current]">
+    {`
+      <div class="u-bg--black-80 u-padding-m">
+        <a href="/" class="o-button o-button--nav" aria-current="page">
+          Dashboard
+        </a>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+It’s rare to have only one link, so here’s how it looks with multiple:
+
+<Canvas>
+  <Story name="Button--nav list">
+    {`
+      <div class="u-bg--black-80 u-padding-m">
+        <ul class="o-list-reset l-flex">
+          <li class="u-margin-s--right">
+            <a href="/" class="o-button o-button--nav">
+              Dashboard
+            </a>
+          </li>
+          <li class="u-margin-s--right">
+            <a href="/" class="o-button o-button--nav">
+              Members
+            </a>
+          </li>
+          <li class="u-margin-s--right">
+            <a href="/" class="o-button o-button--nav">
+              Pages
+            </a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+  <Story name="Button--nav list current page">
+    {`
+      <div class="u-bg--black-80 u-padding-m">
+        <ul class="o-list-reset l-flex">
+          <li class="u-margin-s--right">
+            <a href="/" class="o-button o-button--nav" aria-current="page">
+              Dashboard
+            </a>
+          </li>
+          <li class="u-margin-s--right">
+            <a href="/" class="o-button o-button--nav">
+              Members
+            </a>
+          </li>
+          <li class="u-margin-s--right">
+            <a href="/" class="o-button o-button--nav">
+              Pages
+            </a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
