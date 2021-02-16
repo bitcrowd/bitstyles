@@ -1,4 +1,4 @@
-@import '../../settings/fixed-ratio';
+@import './settings';
 
 .#{$bitstyles-namespace}l-fixed-ratio {
   @include fixed-ratio(

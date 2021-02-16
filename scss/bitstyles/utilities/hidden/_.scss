@@ -1,4 +1,4 @@
-@import '../../settings/hidden';
+@import './settings';
 
 .#{$bitstyles-namespace}u-hidden {
   @include hidden;

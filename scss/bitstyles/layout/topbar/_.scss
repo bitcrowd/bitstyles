@@ -1,4 +1,4 @@
-@import '../../settings/topbar';
+@import './settings';
 
 .#{$bitstyles-namespace}l-topbar {
   @include topbar;

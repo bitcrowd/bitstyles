@@ -1,9 +1,8 @@
-@import '../../settings/input';
-@import '../../settings/button';
-@import '../../settings/fieldset';
-@import '../../settings/select';
-@import '../../settings/checkbox';
-@import '../../settings/radio';
+@import './settings-input';
+@import './settings-fieldset';
+@import './settings-select';
+@import './settings-checkbox';
+@import './settings-radio';
 
 /* stylelint-disable selector-max-type */
 
@@ -43,13 +42,6 @@ input {
 [type="url"],
 textarea {
   @include input--text;
-}
-
-[type="button"],
-[type="submit"],
-[type="reset"],
-button {
-  @include button;
 }
 
 [type="color"] {
