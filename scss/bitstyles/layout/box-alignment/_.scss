@@ -1,0 +1,15 @@
+.#{$bitstyles-namespace}l-justify-between {
+  justify-content: space-between;
+}
+
+.l-items-center {
+  align-items: center;
+}
+
+.l-items-start {
+  align-items: flex-start;
+}
+
+.l-items-end {
+  align-items: flex-end;
+}
