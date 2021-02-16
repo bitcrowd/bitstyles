@@ -1,0 +1,19 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Truncate" />
+
+# Truncate
+
+When text content is wider than parent width, truncate text with an ellipsis (…). Use this when your text content is of unknown width, or its container is flexible, and often narrow. The text will be limited to a single line.
+
+Note the exact algorithm is defined per browser and is of varying quality — you may lose a couple of characters that would’ve fit, just to display an ellipsis in their place instead.
+
+<Canvas>
+  <Story name="Truncate">
+    {`
+      <div class="l-width--2-of-12 u-background-color--secondary">
+        <p class="o-truncate">Truncated content goes here</p>
+      </div>
+    `}
+  </Story>
+</Canvas>

@@ -32,7 +32,7 @@ $bitstyles-button-icon-box-shadow-active: 0 0 spacing('m') rgba(palette('primary
 //
 // Disabled colors ////////////////////////////////////////
 
-$bitstyles-button-icon-color-disabled: palette('text', 'light') !default;
+$bitstyles-button-icon-color-disabled: $bitstyles-color-gray-50 !default;
 $bitstyles-button-icon-background-color-disabled: transparent !default;
-$bitstyles-button-icon-border-disabled: 2px solid palette('text', 'light') !default;
+$bitstyles-button-icon-border-disabled: 2px solid $bitstyles-color-gray-50 !default;
 $bitstyles-button-icon-box-shadow-disabled: none !default;

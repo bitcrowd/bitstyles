@@ -1,0 +1,17 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Break text" />
+
+# Break text
+
+## Force text to break when too long
+
+Ensure no words exceed the width of the container. Commonly used to ensure user-generated content doesn’t break or overflow your page layout, even if it contains no whitespace or punctuation.
+
+<Canvas>
+  <Story name="Break text">
+    {`
+      <p class="o-break-text">LongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshereLongcontentwithnolinebreaksgoeshere</p>
+    `}
+  </Story>
+</Canvas>

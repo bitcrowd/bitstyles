@@ -1,0 +1,45 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/No padding" />
+
+# No padding
+
+Remove padding from an element.
+
+<Canvas>
+  <Story name="no-padding">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding u-no-padding">u-no-padding</div>
+      </div>
+    `}
+  </Story>
+  <Story name="no-padding--top">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding u-no-padding--top">u-no-padding--top</div>
+      </div>
+    `}
+  </Story>
+  <Story name="no-padding--right">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding u-no-padding--right">u-no-padding--right</div>
+      </div>
+    `}
+  </Story>
+  <Story name="no-padding--bottom">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding u-no-padding--bottom">u-no-padding--bottom</div>
+      </div>
+    `}
+  </Story>
+  <Story name="no-padding--left">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding u-no-padding--left">u-no-padding--left</div>
+      </div>
+    `}
+  </Story>
+</Canvas>

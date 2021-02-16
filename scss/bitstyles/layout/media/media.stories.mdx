@@ -1,0 +1,26 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Layout/Media" />
+
+# Media
+
+This is [Nicole Sullivan’s OOCSS media object](http:www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/).
+
+The “media object” is a combination of image & text — it contains an element floated left (the “feature”) e.g. a small user image. All other content (perhaps the user’s name, or a comment) flows around it to the right.
+
+The feature element should have either implicit size (like an image or video element), or you should set an explicit width. If it’s as wide as the viewport, the adjacent content will drop drown below it instead of ranging right.
+
+As this layout is achieved using CSS floats, the content will wrap underneath the featured image if it’s long enough (or the image is small enough).
+
+This class is in most cases superceded by the flex classes, except in instances where you need the float behavior of text wrapping underneath the image.
+
+<Canvas>
+  <Story name="Media">
+    {`
+      <div class="l-media">
+        <img class="l-media__feature" src="https://placekitten.com/300/300"/>
+        <p>Some text here that sits against the featured image on its left</p>
+      </div>
+    `}
+  </Story>
+</Canvas>

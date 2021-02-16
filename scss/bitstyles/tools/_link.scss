@@ -11,6 +11,7 @@
   cursor: pointer;
   background: $bitstyles-background-color-link;
   border: 0;
+  box-shadow: none;
   transition: $bitstyles-link-transition;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
@@ -22,5 +23,7 @@
   &:focus {
     color: $bitstyles-color-link-hover;
     text-decoration: $bitstyles-text-decoration-link-hover;
+    background: $bitstyles-background-color-link-hover;
+    box-shadow: none;
   }
 }

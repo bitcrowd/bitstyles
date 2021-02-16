@@ -1,3 +1,0 @@
-# Links
-
-Standard links.

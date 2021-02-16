@@ -1,0 +1,45 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/Hidden" />
+
+# Hidden
+
+## Hidden from everyone — you, search engines, screenreaders…
+
+Fully hides an element & its children — it will be taken out of the document flow, and will not be read by search engines or screenreaders. If you need an element & its children to _always_ be hidden like this, you probably want to use the `hidden` HTML attribute, but if you need to hide elements selectively based on viewport size (which cannot be done with the attribute), this class is your friend, as it’s available at every breakpoint defined in `$bitstyles-hidden-breakpoints`.
+
+### Always hidden
+
+<Canvas>
+  <Story name="Hidden">
+    {`
+      <p>Paragraph 1 content</p>
+      <p class="u-hidden">Paragraph 2 content, always hidden</p>
+      <p>Paragraph 3 content</p>
+    `}
+  </Story>
+</Canvas>
+
+A paragraph is hidden on small viewports.
+
+<Canvas>
+  <Story name="Hidden (small only)">
+    {`
+      <p>Paragraph 1 content</p>
+      <p class="u-hidden@s">Paragraph 2 content, hidden on small viewports</p>
+      <p>Paragraph 3 content</p>
+    `}
+  </Story>
+</Canvas>
+
+A paragraph is hidden on large viewports.
+
+<Canvas>
+  <Story name="Hidden (large)">
+    {`
+      <p>Paragraph 1 content</p>
+      <p class="u-hidden@l">Paragraph 2 content, hidden on large viewports</p>
+      <p>Paragraph 3 content</p>
+    `}
+  </Story>
+</Canvas>

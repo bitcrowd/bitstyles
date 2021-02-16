@@ -1,0 +1,32 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Base/Media" />
+
+# Media
+
+## Video
+
+<Canvas>
+  <Story name="Video">
+    {`
+      <video width="640" height="360" controls="true" >
+        <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
+        <source src="http://clips.vorwaerts-gmbh.de/VfE.webm" type="video/webm">
+        <source src="http://clips.vorwaerts-gmbh.de/VfE.ogv" type="video/ogg">
+      </video>
+    `}
+  </Story>
+</Canvas>
+
+
+## Audio
+
+<Canvas>
+  <Story name="Audio">
+    {`
+      <audio controls>
+        <source src="https://ia800607.us.archive.org/28/items/NasaAudioHighlightReels/Apollo10Highlights.mp3" type="audio/mpeg">
+      </audio>
+    `}
+  </Story>
+</Canvas>

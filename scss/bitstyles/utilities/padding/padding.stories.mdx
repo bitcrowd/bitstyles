@@ -1,0 +1,45 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/Padding" />
+
+# Padding
+
+Set padding on an element.
+
+<Canvas>
+  <Story name="padding">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding">u-padding</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding--top">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding--top">u-padding--top</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding--right">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding--right">u-padding--right</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding--bottom">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding--bottom">u-padding--bottom</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding--left">
+    {`
+      <div class="u-background-color--secondary u-padding">
+        <div class="u-background-color--background u-padding--left">u-padding--left</div>
+      </div>
+    `}
+  </Story>
+</Canvas>

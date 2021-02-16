@@ -1,6 +1,10 @@
 module.exports = {
-  stories: ['../scss/bitstyles/**/*.stories.js'],
-  addons: [
-    'storybook-readme/register',
+  "stories": [
+    "../scss/**/*.stories.mdx",
+    "../scss/**/*.stories.@(js|jsx|ts|tsx)"
   ],
-};
+  "addons": [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials"
+  ]
+}
