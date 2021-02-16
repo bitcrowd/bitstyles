@@ -1,0 +1,23 @@
+@import './settings';
+
+.o-avatar {
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  border-radius: $bitstyles-border-radius-round;
+
+  /* stylelint-disable selector-max-type */
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  /* stylelint-enable selector-max-type */
+}
+
+@each $size-alias, $size in $bitstyles-avatar-sizes {
+  .o-avatar--#{$size-alias} {
+    width: $size;
+    height: $size;
+  }
+}
