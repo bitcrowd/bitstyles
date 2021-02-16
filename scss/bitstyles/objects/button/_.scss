@@ -5,7 +5,7 @@
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  min-height: $bitstyles-button-padding-vertical  * 2 + 1.8rem;
+  min-height: calc(#{$bitstyles-button-padding-vertical  * 2} + 1em);
   padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
   margin: 0;
   overflow: visible;
