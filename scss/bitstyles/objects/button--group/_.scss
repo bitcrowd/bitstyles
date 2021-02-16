@@ -1,0 +1,82 @@
+@import './settings';
+
+.o-button--grouped-container {
+  border-radius: $bitstyles-button-grouped-border-radius;
+  box-shadow: $bitstyles-button-grouped-container-box-shadow;
+}
+
+.o-button--grouped {
+  border-radius: 0;
+
+  &,
+  &:visited {
+    color: $bitstyles-button-grouped-color;
+    background: $bitstyles-button-grouped-background-color;
+    border: $bitstyles-button-grouped-border;
+    border-right: 0;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-button-grouped-color-hover;
+    text-decoration: none;
+    background: $bitstyles-button-grouped-background-color-hover;
+    border: $bitstyles-button-grouped-border-hover;
+    border-right: 0;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:active {
+    color: $bitstyles-button-grouped-color-active;
+    background: $bitstyles-button-grouped-background-color-active;
+    border: $bitstyles-button-grouped-border-active;
+    border-right: 0;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    color: $bitstyles-button-grouped-color-disabled;
+    cursor: default;
+    background: $bitstyles-button-grouped-background-color-disabled;
+    border: $bitstyles-button-grouped-border-disabled;
+    border-right: 0;
+    box-shadow: none;
+  }
+
+  &[aria-pressed="true"] {
+    color: $bitstyles-button-grouped-color-pressed;
+    background: $bitstyles-button-grouped-background-color-pressed;
+    border: $bitstyles-button-grouped-border-pressed;
+    border-right: 0;
+  }
+}
+
+.o-button--grouped__first {
+  border-bottom-left-radius: $bitstyles-button-grouped-border-radius;
+  border-top-left-radius: $bitstyles-button-grouped-border-radius;
+}
+
+.o-button--grouped__last {
+  border-top-right-radius: $bitstyles-button-grouped-border-radius;
+  border-bottom-right-radius: $bitstyles-button-grouped-border-radius;
+
+  &,
+  &:visited {
+    border-right: $bitstyles-button-grouped-border;
+  }
+
+  &:hover,
+  &:focus {
+    border-right: $bitstyles-button-grouped-border-hover;
+  }
+
+  &:active {
+    border-right: $bitstyles-button-grouped-border-active;
+  }
+
+  &[aria-pressed="true"] {
+    border-right: $bitstyles-button-grouped-border-pressed;
+  }
+}

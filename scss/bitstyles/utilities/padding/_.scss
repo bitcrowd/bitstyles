@@ -1,6 +1,8 @@
+@import './settings';
+
 @each $position in (left, top, right, bottom) {
   .#{$bitstyles-namespace}u-padding--#{$position} {
-    @each $size in ('0', 'xs', 's', 'm', 'l') {
+    @each $size in $bitstyles-padding-sizes {
       .#{$bitstyles-namespace}u-padding-#{$size}--#{$position} {
         padding-#{$position}: spacing($size);
       }

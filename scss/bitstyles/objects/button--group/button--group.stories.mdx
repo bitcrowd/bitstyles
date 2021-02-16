@@ -1,0 +1,45 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Button--grouped" />
+
+# Grouped Buttons
+
+A set of buttons that will appear to be joined to other `.o-button--grouped`s siblings.
+
+There are three button components: first, last, and middle.
+
+<Canvas>
+  <Story name="Button--grouped__first">
+    {`
+      <button type="button" class="o-button o-button--grouped o-button--grouped__first">
+        First
+      </button>
+    `}
+  </Story>
+  <Story name="Button--grouped">
+    {`
+      <button type="button" class="o-button o-button--grouped">
+        Middle
+      </button>
+    `}
+  </Story>
+  <Story name="Button--grouped__last">
+    {`
+      <button type="button" class="o-button o-button--grouped o-button--grouped__last">
+        Last
+      </button>
+    `}
+  </Story>
+</Canvas>
+
+When you’re representing state in the UI, use the `aria-pressed="true"` attribute to indicate the currently-pressed button.
+
+<Canvas>
+  <Story name="Button--grouped [aria-pressed]">
+    {`
+      <button type="button" class="o-button o-button--grouped o-h6">
+        Pressed
+      </button>
+    `}
+  </Story>
+</Canvas>
