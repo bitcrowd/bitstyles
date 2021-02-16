@@ -3,20 +3,20 @@
 .o-badge {
   display: inline-flex;
   align-items: center;
-  padding: $bitstyle-badge-padding-vertical $bitstyle-badge-padding-horizontal;
+  padding: $bitstyles-badge-padding-vertical $bitstyles-badge-padding-horizontal;
   white-space: nowrap;
   border-radius: $bitstyles-border-radius-round;
 }
 
-@each $variant in ('gray', 'danger', 'brand-1', 'brand-2') {
+@each $variant in ($bitstyles-badge-variants) {
   .o-badge--#{$variant} {
-    --button-fg: #{palette($variant, $bitstyle-badge-color)};
-    --button-bg: #{palette($variant, $bitstyle-badge-background-color)};
-    --button-fg-hover: #{palette($variant, $bitstyle-badge-background-color)};
-    --button-bg-hover: #{palette($variant, $bitstyle-badge-color)};
+    --button-fg: #{palette($variant, $bitstyles-badge-color)};
+    --button-bg: #{palette($variant, $bitstyles-badge-background-color)};
+    --button-fg-hover: #{palette($variant, $bitstyles-badge-background-color)};
+    --button-bg-hover: #{palette($variant, $bitstyles-badge-color)};
 
-    color: palette($variant, $bitstyle-badge-color);
-    background-color: palette($variant, $bitstyle-badge-background-color);
+    color: palette($variant, $bitstyles-badge-color);
+    background-color: palette($variant, $bitstyles-badge-background-color);
   }
 }
 
