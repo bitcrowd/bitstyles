@@ -18,7 +18,7 @@ A top-level navigation container, with two sections separated to the left & righ
             <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
           </svg>
         </button>
-        <ul class="o-dropdown o-overflow o-list-reset u-margin-s--top" aria-hidden="false">
+        <ul class="o-dropdown o-overflow o-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-1">
           <li>
             <a href="/" class="o-button o-button--menu o-h6">
               <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -50,6 +50,58 @@ A top-level navigation container, with two sections separated to the left & righ
                 <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
               </svg>
               <span class="o-button__label">Sign out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+You can include non-link content in the menu too:
+
+<Canvas>
+  <Story name="Dropdown with non-button/link content">
+    {`
+      <div class="l-relative" style="height: 20rem; width: 30rem">
+        <button type="button" class="o-button o-button--dropdown o-h6" aria-controls="dropdown-1" aria-expanded="true">
+          <span class="o-button__label">Account</span>
+          <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+          </svg>
+        </button>
+        <ul class="o-dropdown o-overflow o-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-1">
+          <li>
+            <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right l-flex o-h6">
+              <div class="o-button__avatar o-avatar o-avatar--l l-flex__shrink-0 l-flex l-items-center">
+                <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+              </div>
+              <div class="o-button__label l-flex l-flex--col l-items-start">
+                <span>Signed in as</span>
+                <span>Username</span>
+              </div>
+            </div>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu o-h6">
+              Settings
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu o-h6">
+              Help
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu o-h6">
+              Privacy
+            </a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu o-h6">
+              Sign out
             </a>
           </li>
         </ul>
