@@ -1,23 +1,24 @@
 // Palette
 //
-// **Returns requested colours from the global `$bitstyles-palette` map.**
+// **Returns requested colours from the global `$palette` map.**
 // e.g. `color: palette('text');`
 //
 // @param {String} $color  Base colour within the palette
 //
-// @param {String} $tone   Optional. Variant of the colour e.g. 'base', light', 'dark'. Defaults to `base`.
+// @param {String} $percent   Optional. Percentage of the color to mix with white. Defaults to `100%` (fuly the specified color, no white)
 //
 
-@function palette($color, $tone: 'base') {
-  @if map-has-key($bitstyles-palette, $color) {
-    $palette: map-get($bitstyles-palette, $color);
+// stylelint-disable at-rule-no-unknown
+@function palette($color, $percent: '100') {
+  @if map-has-key($bitstyles-color-palette, $color) {
+    $palette: map-get($bitstyles-color-palette, $color);
 
-    @if map-has-key($palette, $tone) {
-      @return map-get($palette, $tone);
+    @if map-has-key($palette, $percent) {
+      @return map-get($palette, $percent);
     }
 
     @else {
-      @error "Oops! Color/tone ‘#{$color}/#{$tone}’ does not exist.";
+      @error "Oops! Color/percentage ‘#{$color}/#{$percent}’ does not exist.";
     }
   }
 
@@ -25,3 +26,4 @@
     @error "Oops! Color ‘#{$color}’ does not exist.";
   }
 }
+// stylelint-enable at-rule-no-unknown

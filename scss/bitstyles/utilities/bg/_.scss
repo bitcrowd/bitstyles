@@ -1,0 +1,7 @@
+@import './settings';
+
+@each $variant, $color in ($background-colors) {
+  .#{$bitstyles-namespace}u-bg--#{$variant} {
+    background-color: $color;
+  }
+}

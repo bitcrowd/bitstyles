@@ -1,5 +1,0 @@
-@each $name in ($foreground-colors) {
-  .#{$bitstyles-namespace}u-color--#{$name} {
-    color: palette($name);
-  }
-}

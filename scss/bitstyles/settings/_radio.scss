@@ -4,30 +4,30 @@ $bitstyles-radio-border-radius: $bitstyles-border-radius-round !default;
 
 //
 // Base colors ////////////////////////////////////////
-$bitstyles-radio-color: palette('text', 'light') !default;
+$bitstyles-radio-color: palette('text', '80') !default;
 $bitstyles-radio-background-color: palette('background') !default;
 $bitstyles-radio-border: 2px solid !default;
 
 //
 // Hover colors ////////////////////////////////////////
-$bitstyles-radio-color-hover: palette('primary') !default;
+$bitstyles-radio-color-hover: palette('brand-1') !default;
 $bitstyles-radio-background-color-hover: palette('background') !default;
 $bitstyles-radio-border-hover: 2px solid !default;
 
 //
 // Checked colors ////////////////////////////////////////
-$bitstyles-radio-color-checked: palette('primary') !default;
+$bitstyles-radio-color-checked: palette('brand-1') !default;
 $bitstyles-radio-background-color-checked: palette('background') !default;
-$bitstyles-radio-border-checked: 2px solid palette('primary') !default;
+$bitstyles-radio-border-checked: 2px solid palette('brand-1') !default;
 
 //
 // Disabled colors ////////////////////////////////////////
-$bitstyles-radio-color-disabled: palette('text', 'light') !default;
-$bitstyles-radio-background-color-disabled: palette('background', 'dark') !default;
+$bitstyles-radio-color-disabled: palette('black', '40') !default;
+$bitstyles-radio-background-color-disabled: palette('black', '20') !default;
 $bitstyles-radio-border-disabled: 2px solid !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
-$bitstyles-radio-color-disabled-checked: palette('text', 'light') !default;
-$bitstyles-radio-background-color-disabled-checked: palette('background', 'dark') !default;
+$bitstyles-radio-color-disabled-checked: palette('black', '40') !default;
+$bitstyles-radio-background-color-disabled-checked: palette('black', '20') !default;
 $bitstyles-radio-border-disabled-checked: 2px solid !default;

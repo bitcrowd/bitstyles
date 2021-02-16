@@ -29,12 +29,6 @@
   border: $bitstyles-input-border;
   border-radius: $bitstyles-input-border-radius;
 
-  &:disabled {
-    color: $bitstyles-input-color-disabled;
-    cursor: default;
-    background: $bitstyles-input-background-disabled;
-  }
-
   &:hover {
     color: $bitstyles-input-color-hover;
     background-color: $bitstyles-input-background-hover;
@@ -50,9 +44,16 @@
   }
 
   &:invalid {
-    color: $input-color-invalid;
-    background-color: $input-background-color-invalid;
-    border-color: $input-border-color-invalid;
+    color: $bitstyles-input-color-invalid;
+    background-color: $bitstyles-input-background-color-invalid;
+    border-color: $bitstyles-input-border-color-invalid;
+  }
+
+  &:disabled {
+    color: $bitstyles-input-color-disabled;
+    cursor: default;
+    background: $bitstyles-input-background-disabled;
+    border: $bitstyles-input-border-disabled;
   }
 }
 
