@@ -4,7 +4,12 @@
   height: 1em;
   font-size: 1em;
   vertical-align: middle;
+  flex-shrink: 0;
   outline: none;
-  transition: fill $bitstyles-transition-duration $bitstyles-transition-easing, stroke $bitstyles-transition-duration $bitstyles-transition-easing, background-color $bitstyles-transition-duration $bitstyles-transition-easing, transform $bitstyles-transition-duration $bitstyles-transition-easing;
+  transition:
+    fill $bitstyles-transition-duration $bitstyles-transition-easing,
+    stroke $bitstyles-transition-duration $bitstyles-transition-easing,
+    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
+    transform $bitstyles-transition-duration $bitstyles-transition-easing;
   fill: currentColor;
 }
