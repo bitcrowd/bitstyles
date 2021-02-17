@@ -7,12 +7,78 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 A button for your main navigation that’s rendered full-width, ideal for the “off-screen-canvas” (or “hamburger”) menu on small screens.
 
 <Canvas>
-  <Story name="Button--nav">
+  <Story name="Button--nav-large">
     {`
       <div class="u-bg--black-80 u-padding-m">
         <a href="/" class="o-button o-button--nav-large">
           Dashboard
         </a>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+
+One of the links may well be a link to the current page, and should be given an aria-current attribute: `aria-current="page"`:
+
+<Canvas>
+  <Story name="Button--nav-large [aria-current]">
+    {`
+      <div class="u-bg--gray-90 u-padding-m">
+        <a href="/" class="o-button o-button--nav-large" aria-current="page">
+          Dashboard
+        </a>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+It’s rare to have only one link, so here’s how it looks with multiple:
+
+<Canvas isColumn>
+  <Story name="Button--nav-large list">
+    {`
+      <div class="u-bg--gray-90 u-padding-m">
+        <ul class="o-list-reset l-flex l-flex--col">
+          <li class="u-margin-s--bottom">
+            <a href="/" class="o-button o-button--nav-large">
+              Dashboard
+            </a>
+          </li>
+          <li class="u-margin-s--bottom">
+            <a href="/" class="o-button o-button--nav-large">
+              Members
+            </a>
+          </li>
+          <li class="u-margin-s--bottom">
+            <a href="/" class="o-button o-button--nav-large">
+              Pages
+            </a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+  <Story name="Button--nav-large list current page">
+    {`
+      <div class="u-bg--gray-90 u-padding-m">
+        <ul class="o-list-reset l-flex l-flex--col">
+          <li class="u-margin-s--bottom">
+            <a href="/" class="o-button o-button--nav-large" aria-current="page">
+              Dashboard
+            </a>
+          </li>
+          <li class="u-margin-s--bottom">
+            <a href="/" class="o-button o-button--nav-large">
+              Members
+            </a>
+          </li>
+          <li class="u-margin-s--bottom">
+            <a href="/" class="o-button o-button--nav-large">
+              Pages
+            </a>
+          </li>
+        </ul>
       </div>
     `}
   </Story>
