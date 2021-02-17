@@ -1,4 +1,4 @@
-@import '../../settings/grid';
+@import './settings';
 
 .#{$bitstyles-namespace}l-grid {
   @include grid();

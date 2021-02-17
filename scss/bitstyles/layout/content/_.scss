@@ -1,4 +1,4 @@
-@import '../../settings/content';
+@import './settings';
 
 .#{$bitstyles-namespace}l-content {
   @include content;

@@ -1,4 +1,4 @@
-@import '../../settings/bordered-header';
+@import './settings';
 
 .#{$bitstyles-namespace}o-bordered-header {
   @include bordered-header;

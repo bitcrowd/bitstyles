@@ -1,4 +1,4 @@
-@import '../../settings/button';
+@import './settings';
 
 .#{$bitstyles-namespace}o-button {
   @include button;
