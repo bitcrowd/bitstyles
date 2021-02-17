@@ -19,7 +19,7 @@ A top-level navigation container, with two sections separated to the left & righ
             <div class="u-hidden u-block@l">
               <ul class="l-flex o-list-reset">
                 <li class="u-margin-m--right">
-                  <a href="/" class="o-button o-button--nav" aria-current="page">Team</a>
+                  <a href="/" class="o-button o-button--nav">Team</a>
                 </li>
                 <li class="u-margin-m--right">
                   <a href="/" class="o-button o-button--nav">Projects</a>
@@ -31,7 +31,7 @@ A top-level navigation container, with two sections separated to the left & righ
             </div>
           </div>
           <div class="u-hidden u-block@l">
-            <a href="/" class="o-button o-button--nav">
+            <a href="/" class="o-button o-button--nav" aria-current="page">
               <span class="o-button__label">Jane Dobermann</span>
               <div class="o-button__icon o-avatar">
                 <img src="https://placekitten.com/100/150" width="46" height="92" alt="Username’s avatar" class="o-avatar" />
@@ -47,7 +47,15 @@ A top-level navigation container, with two sections separated to the left & righ
             </button>
             <ul class="l-flex l-flex--col o-list-reset c-navbar u-padding-s u-bg--gray-90" id="navbar-1">
               <li class="u-margin-s--bottom">
-                <a href="/" class="o-button o-button--nav-large" aria-current="page">Team</a>
+                <a href="/" class="o-button o-button--nav-large" aria-current="page">
+                  <div class="o-button__icon o-avatar">
+                    <img src="https://placekitten.com/100/150" width="46" height="92" alt="Username’s avatar" class="o-avatar" />
+                  </div>
+                  <span class="o-button__label">Jane Dobermann</span>
+                </a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="o-button o-button--nav-large">Team</a>
               </li>
               <li class="u-margin-s--bottom">
                 <a href="/" class="o-button o-button--nav-large">Projects</a>
