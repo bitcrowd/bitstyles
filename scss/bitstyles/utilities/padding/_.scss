@@ -5,6 +5,7 @@
     .#{$bitstyles-namespace}u-padding-#{$size} {
       padding: spacing($size);
     }
+
     .#{$bitstyles-namespace}u-padding-#{$size}--#{$position} {
       padding-#{$position}: spacing($size);
     }

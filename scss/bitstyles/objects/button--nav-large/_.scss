@@ -1,0 +1,47 @@
+@import './settings';
+
+.o-button--nav-large {
+  display: flex;
+  padding: $bitstyles-button-nav-large-padding-vertical $bitstyles-button-nav-large-padding-horizontal;
+  border-radius: $bitstyles-button-nav-large-border-radius;
+
+  &,
+  &:visited {
+    color: $bitstyles-button-nav-large-color;
+    background: $bitstyles-button-nav-large-background-color;
+    border-bottom: $bitstyles-button-nav-large-border;
+    box-shadow: $bitstyles-button-nav-large-box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-button-nav-large-color-hover;
+    text-decoration: none;
+    background: $bitstyles-button-nav-large-background-color-hover;
+    border-bottom: $bitstyles-button-nav-large-border-hover;
+    outline: none;
+    box-shadow: $bitstyles-button-nav-large-box-shadow-hover;
+  }
+
+  &:active {
+    color: $bitstyles-button-nav-large-color-active;
+    background: $bitstyles-button-nav-large-background-color-active;
+    border-bottom: $bitstyles-button-nav-large-border-active;
+    box-shadow: $bitstyles-button-nav-large-box-shadow-active;
+  }
+
+  &[aria-current] {
+    color: $bitstyles-button-nav-large-color-current;
+    background: $bitstyles-button-nav-large-background-color-current;
+    border-bottom: $bitstyles-button-nav-large-border-current;
+    box-shadow: $bitstyles-button-nav-large-box-shadow-current;
+  }
+
+  &:disabled {
+    color: $bitstyles-button-nav-large-color-disabled;
+    cursor: default;
+    background: $bitstyles-button-nav-large-background-color-disabled;
+    border-bottom: $bitstyles-button-nav-large-border-disabled;
+    box-shadow: $bitstyles-button-nav-large-box-shadow-disabled;
+  }
+}
