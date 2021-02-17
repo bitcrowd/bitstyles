@@ -1,0 +1,51 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import logoLarge from '../../../test/assets/images/logoLarge.svg';
+import logoSmall from '../../../test/assets/images/logoSmall.svg';
+
+<Meta title="Components/Navbar" />
+
+# Navbar
+
+A top-level navigation container, with two sections separated to the left & right. the left-hand side is commonly used for a logo and links, the right-hand side for user account menu, and global search.
+
+<Canvas>
+  <Story name="Navbar">
+    {`
+      <nav class="u-bg--gray-90 u-padding-s--top u-padding-s--bottom">
+        <div class="l-content l-flex l-justify-between l-items-center l-flex--wrap">
+          <div class="l-flex l-items-center">
+            <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="l-flex__shrink-0 u-margin-l--right u-hidden u-block@l" />
+            <img src="${logoSmall}" width="50" height="50" alt="Company logo" class="l-flex__shrink-0 u-margin-l--right u-hidden@l" />
+            <div class="u-hidden u-block@l">
+              <ul class="l-flex o-list-reset">
+                <li class="u-margin-m--right">
+                  <a href="/" class="o-button o-button--nav" aria-current="page">Team</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="o-button o-button--nav">Projects</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="o-button o-button--nav">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-hidden u-block@l">
+            <a href="/" class="o-link o-link--reversed l-flex l-items-center">
+              <span class="u-margin-s--right">Jane Dobermann</span>
+              <div class="o-avatar">
+                <img src="https://placekitten.com/100/150" width="46" height="92" alt="Username’s avatar" class="o-avatar" />
+              </div>
+            </a>
+          </div>
+          <div class="u-hidden@l">
+            <button class="o-button o-button--icon o-button--icon-reversed" title="Toggle menu">
+              <svg class="o-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M6.64,14.23H93.36A5.63,5.63,0,0,1,99,19.86h0a5.63,5.63,0,0,1-5.64,5.64H6.64A5.63,5.63,0,0,1,1,19.86H1A5.63,5.63,0,0,1,6.64,14.23Zm0,30.14H93.36A5.63,5.63,0,0,1,99,50h0a5.63,5.63,0,0,1-5.64,5.63H6.64A5.63,5.63,0,0,1,1,50H1a5.64,5.64,0,0,1,5.63-5.64Zm0,30.13H93.36A5.63,5.63,0,0,1,99,80.13h0a5.63,5.63,0,0,1-5.64,5.64H6.64A5.63,5.63,0,0,1,1,80.13H1A5.63,5.63,0,0,1,6.63,74.5Z"/></svg>
+              <span class="u-sr-only">Toggle menu</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    `}
+  </Story>
+</Canvas>
