@@ -4,12 +4,15 @@
   position: absolute;
   z-index: 1;
   width: 15rem;
+  max-width: 100%;
   max-height: $bitstyles-dropdown-max-height;
   padding: $bitstyles-dropdown-separator-spacing 0;
   background-color: $bitstyles-dropdown-background-color;
   border: $bitstyles-dropdown-border;
   border-radius: $bitstyles-dropdown-border-radius;
   box-shadow: $bitstyles-dropdown-box-shadow;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   [role="separator"] {
     margin: $bitstyles-dropdown-separator-spacing 0;
