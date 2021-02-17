@@ -1,0 +1,40 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components/Tabs" />
+
+# Tabs
+
+A group of buttons aligned horizontally, collapsing onto a new row when there’s not enough space in their container for them all.
+
+<Canvas isColumn>
+  <Story name="Tabs">
+    {`
+      <ul class="o-list-reset l-flex l-flex--wrap l-items-center o-button--group-container u-margin-m--bottom" role="tablist" aria-label="Patient data sections">
+        <li>
+          <button class="o-button o-button--grouped o-button--grouped__first o-h6" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
+            Personal details
+          </button>
+        </li>
+        <li>
+          <button class="o-button o-button--grouped o-h6" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="0">
+            Anamnese
+          </button>
+        </li>
+        <li>
+          <button class="o-button o-button--grouped o-h6 o-button--grouped__last" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="0">
+            Appointment history
+          </button>
+        </li>
+      </ul>
+      <div id="tab-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+        <p>Content for the first panel</p>
+      </div>
+      <div id="tab-panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+        <p>Content for the first panel</p>
+      </div>
+      <div id="tab-panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+        <p>Content for the first panel</p>
+      </div>
+    `}
+  </Story>
+</Canvas>
