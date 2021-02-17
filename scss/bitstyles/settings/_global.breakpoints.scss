@@ -1,6 +1,6 @@
 $bitstyles-breakpoint-boundary-width:            0.0625em !default;
-$bitstyles-breakpoint-small-medium-boundary:     45em !default;
-$bitstyles-breakpoint-medium-large-boundary:     64em !default;
+$bitstyles-breakpoint-small-medium-boundary:     30em !default;
+$bitstyles-breakpoint-medium-large-boundary:     55em !default;
 
 $bitstyles-breakpoints: (
   's':                  'screen and (max-width: #{$bitstyles-breakpoint-small-medium-boundary - $bitstyles-breakpoint-boundary-width})',

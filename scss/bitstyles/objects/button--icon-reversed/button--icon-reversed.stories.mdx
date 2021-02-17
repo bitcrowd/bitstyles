@@ -1,0 +1,34 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Button--icon-reversed" />
+
+# Icon Button (reversed)
+
+A variant of the standard `.o-button--icon`, intended to be used on dark backgrounds.
+
+<Canvas>
+  <Story name="Button--icon-reversed">
+    {`
+      <div class="u-bg--gray-90 u-padding-m">
+        <button class="o-button o-button--icon o-button--icon-reversed" title="button-label">
+          <svg class="o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+          </svg>
+          <span class="u-sr-only">button-label</span>
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Button--icon-reversed [disabled]">
+    {`
+      <div class="u-bg--gray-90 u-padding-m">
+        <button class="o-button o-button--icon o-button--icon-reversed" title="button-label" disabled>
+          <svg class="o-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+          </svg>
+          <span class="u-sr-only">button-label</span>
+        </a>
+      </div>
+    `}
+  </Story>
+</Canvas>

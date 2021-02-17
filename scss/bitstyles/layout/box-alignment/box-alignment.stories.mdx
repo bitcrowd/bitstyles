@@ -1,0 +1,66 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Layout/Box alignment" />
+
+# Box alignment
+
+Flex and Grid share many alignment properties — they’re grouped together as “Box alignment”. These will have no effect on elements to which you haven’t given one of those classes (`.l-flex`, `.l-grid`).
+
+## Items
+
+### Center
+
+Set `align-items` to center to align each flex child to their vertical center:
+
+<Canvas>
+  <Story name="items-center">
+    {`
+      <ul class="o-list-reset l-flex l-items-center u-fg--white">
+        <li class="u-padding-m">
+          <div class="u-bg--gray-20 u-padding-m" style="height: 10rem;">
+            elements of different height
+          </div>
+        </li>
+        <li class="u-padding-m">
+          <div class="u-bg--gray-20 u-padding-m" style="height: 15rem;">
+            elements of different height
+          </div>
+        </li>
+        <li class="u-padding-m">
+          <div class="u-bg--gray-20 u-padding-m" style="height: 12rem;">
+            elements of different height
+          </div>
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+
+### End
+
+Set `align-items` to center to align each flex child to their vertical end:
+
+<Canvas>
+  <Story name="items-end">
+    {`
+      <ul class="o-list-reset l-flex l-items-end u-fg--white">
+        <li class="u-padding-m">
+          <div class="u-bg--gray-20 u-padding-m" style="height: 10rem;">
+            elements of different height
+          </div>
+        </li>
+        <li class="u-padding-m">
+          <div class="u-bg--gray-20 u-padding-m" style="height: 15rem;">
+            elements of different height
+          </div>
+        </li>
+        <li class="u-padding-m">
+          <div class="u-bg--gray-20 u-padding-m" style="height: 12rem;">
+            elements of different height
+          </div>
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>

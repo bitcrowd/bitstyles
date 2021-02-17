@@ -168,10 +168,10 @@ This flex layout is ideal for laying out buttons in a row — perhaps actions at
   <Story name="Flex wrap for buttons">
     {`
       <ul class="l-flex l-flex--wrap o-list-reset">
-        <li class="u-margin--right u-margin--bottom"><button type="button">An action</button></li>
-        <li class="u-margin--right u-margin--bottom"><button type="button">Another action</button></li>
-        <li class="u-margin--right u-margin--bottom"><button type="button">A longer-named action</button></li>
-        <li class="u-margin--right u-margin--bottom"><button type="button">Action</button></li>
+        <li class="u-margin-m--right u-margin-m--bottom"><button type="button">An action</button></li>
+        <li class="u-margin-m--right u-margin-m--bottom"><button type="button">Another action</button></li>
+        <li class="u-margin-m--right u-margin-m--bottom"><button type="button">A longer-named action</button></li>
+        <li class="u-margin-m--right u-margin-m--bottom"><button type="button">Action</button></li>
       </ul>
     `}
   </Story>
@@ -179,12 +179,12 @@ This flex layout is ideal for laying out buttons in a row — perhaps actions at
 
 ## Align center
 
-Apply `.l-flex--align-center` to the flex parent when you want all the elements to align to each others’ vertical center.
+Apply `.l-items-center` to the flex parent when you want all the elements to align to each others’ vertical center.
 
 <Canvas>
   <Story name="Flex with align center">
     {`
-      <ul class="l-flex l-flex--align-center o-list-reset">
+      <ul class="l-flex l-items-center o-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
         <li class="l-flex__primary u-bg--brand-2">Important content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
@@ -214,12 +214,12 @@ Flex defaults to laying out children in horizontal rows. To layout items vertica
 
 ## Flex column with align-center
 
-The flex classes can be combined: use `.l-flex--align-center` with `.l-flex--col` to get a centered column.
+The flex classes can be combined: use `.l-items-center` with `.l-flex--col` to get a centered column.
 
 <Canvas>
   <Story name="Flex col with align center">
     {`
-      <ul class="l-flex l-flex--col l-flex--align-center o-list-reset">
+      <ul class="l-flex l-flex--col l-items-center o-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
         <li>Text content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>

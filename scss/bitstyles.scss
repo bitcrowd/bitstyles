@@ -41,6 +41,7 @@
 @import 'bitstyles/layout/list-inline/';
 @import 'bitstyles/layout/object-cover/';
 @import 'bitstyles/layout/clearfix/';
+@import 'bitstyles/layout/box-alignment/';
 
 //
 // Objects //////////////////////////////////////
@@ -49,7 +50,9 @@
 @import 'bitstyles/objects/button/';
 @import 'bitstyles/objects/button--danger/';
 @import 'bitstyles/objects/button--icon/';
+@import 'bitstyles/objects/button--icon-reversed/';
 @import 'bitstyles/objects/button--nav/';
+@import 'bitstyles/objects/button--small/';
 @import 'bitstyles/objects/break-text/';
 @import 'bitstyles/objects/truncate/';
 @import 'bitstyles/objects/bordered-header/';
@@ -58,6 +61,7 @@
 @import 'bitstyles/objects/link/';
 @import 'bitstyles/objects/overflow/';
 @import 'bitstyles/objects/avatar/';
+@import 'bitstyles/objects/badge/';
 
 //
 // Components ///////////////////////////////////
@@ -68,14 +72,11 @@
 //
 // Utilities ////////////////////////////////////
 
-@import 'bitstyles/utilities/text-weight/';
-@import 'bitstyles/utilities/text-align/';
-@import 'bitstyles/utilities/text-style/';
+@import 'bitstyles/utilities/text/';
+@import 'bitstyles/utilities/font/';
 @import 'bitstyles/utilities/margin/';
 @import 'bitstyles/utilities/padding/';
-@import 'bitstyles/utilities/no-margin/';
-@import 'bitstyles/utilities/no-padding/';
 @import 'bitstyles/utilities/fg/';
 @import 'bitstyles/utilities/bg/';
-@import 'bitstyles/utilities/visuallyhidden/';
+@import 'bitstyles/utilities/sr-only/';
 @import 'bitstyles/utilities/hidden/';

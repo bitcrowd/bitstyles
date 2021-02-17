@@ -66,11 +66,11 @@ This includes all standard `type="text"` inputs, plus all the text-based inputs 
 <Canvas isColumn>
   <Story name="Checkbox and label">
     {`
-      <label for="input_b1" class="l-flex l-flex--align-center">
+      <label for="input_b1" class="l-flex l-items-center">
         <input type="checkbox" id="input_b1" />
         <span>This is labeling text</span>
       </label>
-      <label for="input_b2" class="l-flex l-flex--align-center">
+      <label for="input_b2" class="l-flex l-items-center">
         <input type="checkbox" id="input_b2" checked />
         <span>This is labeling text</span>
       </label>
@@ -78,11 +78,11 @@ This includes all standard `type="text"` inputs, plus all the text-based inputs 
   </Story>
   <Story name="Checkbox and label (disabled)">
     {`
-      <label for="input_b3" class="l-flex l-flex--align-center">
+      <label for="input_b3" class="l-flex l-items-center">
         <input type="checkbox" id="input_b3" disabled />
         <span>This is labeling text</span>
       </label>
-      <label for="input_b4" class="l-flex l-flex--align-center">
+      <label for="input_b4" class="l-flex l-items-center">
         <input type="checkbox" id="input_b4" checked disabled />
         <span>This is labeling text</span>
       </label>
@@ -96,11 +96,11 @@ This includes all standard `type="text"` inputs, plus all the text-based inputs 
 <Canvas isColumn>
   <Story name="Radio and label">
     {`
-      <label for="input_c1" class="l-flex l-flex--align-center">
+      <label for="input_c1" class="l-flex l-items-center">
         <input type="radio" id="input_c1" name="radio-group_c1" value="true" />
         <span>This is labeling text</span>
       </label>
-      <label for="input_c2" class="l-flex l-flex--align-center">
+      <label for="input_c2" class="l-flex l-items-center">
         <input type="radio" id="input_c2" name="radio-group_c1" value="false" checked />
         <span>This is labeling text</span>
       </label>
@@ -108,11 +108,11 @@ This includes all standard `type="text"` inputs, plus all the text-based inputs 
   </Story>
   <Story name="Radio and label (disabled)">
     {`
-      <label for="input_c3" class="l-flex l-flex--align-center">
+      <label for="input_c3" class="l-flex l-items-center">
         <input type="radio" id="input_c3" name="radio-group_c2" value="true" disabled />
         <span>This is labeling text</span>
       </label>
-      <label for="input_c4" class="l-flex l-flex--align-center">
+      <label for="input_c4" class="l-flex l-items-center">
         <input type="radio" id="input_c4" name="radio-group_c2" value="false" checked disabled />
         <span>This is labeling text</span>
       </label>
@@ -184,13 +184,13 @@ Form elements will take 100% of the available width, so you’ll likely want to 
     {`
       <form>
         <ul class="o-list-reset">
-          <li class="u-margin--bottom">
+          <li class="u-margin-m--bottom">
             <label>
               Name
               <input type="text" autocomplete="name" />
             </label>
           </li>
-          <li class="u-margin--bottom">
+          <li class="u-margin-m--bottom">
             <label>
               Password
               <input type="password" autocomplete="password" />
