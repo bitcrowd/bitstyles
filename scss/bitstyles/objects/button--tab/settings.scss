@@ -1,0 +1,47 @@
+//
+// Base styles ////////////////////////////////////////
+
+$bitstyles-button-tab-border-radius: 0 !default;
+$bitstyles-button-tab-transition:
+  color $bitstyles-transition-duration $bitstyles-transition-easing,
+  border $bitstyles-transition-duration $bitstyles-transition-easing !default;
+
+//
+// Base colors ////////////////////////////////////////
+
+$bitstyles-button-tab-color: palette('gray', '60') !default;
+$bitstyles-button-tab-background-color: transparent !default;
+$bitstyles-button-tab-border-color: transparent !default;
+$bitstyles-button-tab-box-shadow: none !default;
+
+//
+// Hover colors ////////////////////////////////////////
+
+$bitstyles-button-tab-color-hover: palette('brand-1', '90') !default;
+$bitstyles-button-tab-background-color-hover: transparent !default;
+$bitstyles-button-tab-border-color-hover: transparent !default;
+$bitstyles-button-tab-box-shadow-hover: none !default;
+
+//
+// Active colors ////////////////////////////////////////
+
+$bitstyles-button-tab-color-active: palette('brand-1', '90') !default;
+$bitstyles-button-tab-background-color-active: transparent !default;
+$bitstyles-button-tab-border-color-active: palette('brand-1', '90') !default;
+$bitstyles-button-tab-box-shadow-active: none !default;
+
+//
+// Selected colors ////////////////////////////////////////
+
+$bitstyles-button-tab-color-selected: palette('gray', '90') !default;
+$bitstyles-button-tab-background-color-selected: transparent !default;
+$bitstyles-button-tab-border-color-selected: palette('brand-1', '90') !default;
+$bitstyles-button-tab-box-shadow-selected: none !default;
+
+//
+// Disabled colors ////////////////////////////////////////
+
+$bitstyles-button-tab-color-disabled: palette('black', '50') !default;
+$bitstyles-button-tab-background-color-disabled: palette('black', '10') !default;
+$bitstyles-button-tab-border-color-disabled: transparent !default;
+$bitstyles-button-tab-box-shadow-disabled: none !default;

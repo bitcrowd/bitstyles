@@ -45,8 +45,7 @@
     box-shadow: none;
   }
 
-  &[aria-pressed="true"],
-  &[aria-selected="true"] {
+  &[aria-pressed="true"] {
     color: $bitstyles-button-grouped-color-pressed;
     background: $bitstyles-button-grouped-background-color-pressed;
     border: $bitstyles-button-grouped-border-pressed;

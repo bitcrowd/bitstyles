@@ -10,31 +10,19 @@ A set of buttons that switch between modes, such as a calendar-view selection.
   <Story name="Button--mode">
     {`
       <div class="o-button--mode-group">
-        <button type="button" class="o-button o-button--grouped o-button--grouped__first">
-          First
+        <button type="button" class="o-button o-button--mode u-h6">
+          Mode 1
         </button>
       </div>
     `}
   </Story>
-  <Story name="Button--mode list">
+  <Story name="Button--mode [pressed]">
     {`
-      <ul class="o-list-reset o-button--mode-group l-flex u-padding-xs u-bg--gray-90">
-        <li class="u-margin-xs--right">
-          <button type="button" class="o-button o-button--mode u-h6">
-            Day
-          </button>
-        </li>
-        <li class="u-margin-xs--right">
-          <button type="button" class="o-button o-button--mode u-h6">
-            Week
-          </button>
-        </li>
-        <li>
-          <button type="button" class="o-button o-button--mode u-h6">
-            Month
-          </button>
-        </li>
-      </ul>
+      <div class="o-button--mode-group">
+        <button type="button" class="o-button o-button--mode u-h6" aria-pressed="true">
+          Mode 1 [pressed]
+        </button>
+      </div>
     `}
   </Story>
 </Canvas>

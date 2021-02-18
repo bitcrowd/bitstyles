@@ -4,36 +4,49 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Tabs
 
-A group of buttons aligned horizontally, collapsing onto a new row when there’s not enough space in their container for them all.
+The full tab UI uses a list of `.o-button--tabs` for the tabs, with minimal styling of the tabpanels themselves — they are just containers for the content you need to render inside.
+
+Take note of all the aria attributes that tie the tabs to their tabpanels, and vice versa. These will be needed for keyboard & screenreader users, and for the JS that will control the tab UI (not yet provided).
+
+Also note the differences in attributes of selected/deselected tabs (`aria-selected` is switched) and selected/deselected tabpanels (`hidden` attribute is added/removed).
 
 <Canvas isColumn>
   <Story name="Tabs">
     {`
-      <ul class="o-list-reset l-flex l-flex--wrap l-items-center o-button--group-container u-margin-m--bottom" role="tablist" aria-label="Patient data sections">
-        <li>
-          <button class="o-button o-button--grouped o-button--grouped__first o-h6" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
-            Personal details
-          </button>
-        </li>
-        <li>
-          <button class="o-button o-button--grouped o-h6" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="0">
-            Anamnese
-          </button>
-        </li>
-        <li>
-          <button class="o-button o-button--grouped o-h6 o-button--grouped__last" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="0">
-            Appointment history
-          </button>
-        </li>
-      </ul>
-      <div id="tab-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
-        <p>Content for the first panel</p>
+      <div class="u-bg--gray-5 u-padding-xl--top">
+        <div class="l-content">
+          <ul class="o-list-reset l-flex l-flex--wrap l-items-end o-button--tab-container u-margin-m--bottom" role="tablist" aria-label="Patient data">
+            <li class="u-margin-s--right">
+              <button class="o-button o-button--tab" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
+                Personal details
+              </button>
+            </li>
+            <li class="u-margin-s--right">
+              <button class="o-button o-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="-1">
+                Anamnese
+              </button>
+            </li>
+            <li class="u-margin-s--right">
+              <button class="o-button o-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="-1">
+                Appointment history
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div id="tab-panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
-        <p>Content for the first panel</p>
-      </div>
-      <div id="tab-panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
-        <p>Content for the first panel</p>
+      <div class="l-content u-padding--top">
+        <div id="tab-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" class="u-outline-0">
+          <h2 class="u-sr-only">Personal details</h2>
+          <p>Tiramisu pie marshmallow jujubes brownie jelly beans cheesecake. Oat cake cake topping chocolate pie jujubes cupcake. Tart liquorice sugar plum sweet.</p>
+        </div>
+        <div id="tab-panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden class="u-outline-0">
+          <h2 class="u-sr-only">Anamnese</h2>
+          <p>Tiramisu pie marshmallow jujubes brownie jelly beans cheesecake. Oat cake cake topping chocolate pie jujubes cupcake. Tart liquorice sugar plum sweet.</p>
+        </div>
+        <div id="tab-panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden class="u-outline-0">
+          <h2 class="u-sr-only">Appointment history</h2>
+          <p>Tiramisu pie marshmallow jujubes brownie jelly beans cheesecake. Oat cake cake topping chocolate pie jujubes cupcake. Tart liquorice sugar plum sweet.</p>
+        </div>
       </div>
     `}
   </Story>

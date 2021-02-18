@@ -31,11 +31,11 @@
     box-shadow: $bitstyles-button-mode-box-shadow-active;
   }
 
-  &[aria-pressed="true"],
-  &[aria-selected="true"] {
+  &[aria-pressed="true"] {
     color: $bitstyles-button-mode-color-pressed;
     background: $bitstyles-button-mode-background-color-pressed;
     border: $bitstyles-button-mode-border-pressed;
+    box-shadow: $bitstyles-button-mode-box-shadow-pressed;
   }
 
   &:disabled {

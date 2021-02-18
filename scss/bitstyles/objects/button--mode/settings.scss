@@ -33,7 +33,7 @@ $bitstyles-button-mode-box-shadow-hover: 0 0 spacing('m') rgba(palette('brand-1'
 $bitstyles-button-mode-color-active: palette('white') !default;
 $bitstyles-button-mode-background-color-active: palette('brand-2', '100') !default;
 $bitstyles-button-mode-border-active: none !default;
-$bitstyles-button-mode-box-shadow-active: 0 0 spacing('s') rgba(palette('brand-1', '100'), 0.3) !default;
+$bitstyles-button-mode-box-shadow-active: 0 0 spacing('xs') rgba(palette('brand-1', '100'), 0.1) !default;
 
 //
 // Pressed colors ////////////////////////////////////////
@@ -41,7 +41,7 @@ $bitstyles-button-mode-box-shadow-active: 0 0 spacing('s') rgba(palette('brand-1
 $bitstyles-button-mode-color-pressed: palette('gray', '80') !default;
 $bitstyles-button-mode-background-color-pressed: palette('white', '100') !default;
 $bitstyles-button-mode-border-pressed: none !default;
-$bitstyles-button-mode-box-shadow-pressed: 0 0 spacing('s') rgba(palette('brand-1', '100'), 0.3) !default;
+$bitstyles-button-mode-box-shadow-pressed: 0 0 spacing('s') rgba(palette('brand-1', '100'), 0.1) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
