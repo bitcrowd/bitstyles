@@ -2,9 +2,11 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 <Meta title="Components/Dropdown menu" />
 
-# Navbar
+# Dropdown menu
 
-A top-level navigation container, with two sections separated to the left & right. The left-hand side is commonly used for a logo and links, the right-hand side for user account menu and global search.
+A button that when clicked reveals a floating menu of links. This is a combination of an `.o-button--dropdown` as the button that is clicked to show/hide the menu, an `.o-dropdown` menu that’s the container for a series of `.o-button--menu` sub-items.
+
+For the sake of clarity, the examples shown here are all presented with the menus already visible, but when you’re using them in a project the `.o-dropdown` must get the class `.u-hidden`. The component requires JS (not yet provided) to remove/add that class when the user clicks the `.o-button--dropdown`.
 
 <Canvas>
   <Story name="Dropdown menu">
