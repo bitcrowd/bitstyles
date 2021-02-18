@@ -43,10 +43,10 @@
   "homepage": "https://github.com/bitcrowd/bitstyles#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
-    "@storybook/addon-actions": "^6.1.11",
-    "@storybook/addon-essentials": "^6.1.11",
-    "@storybook/addon-links": "^6.1.11",
-    "@storybook/html": "^6.1.11",
+    "@storybook/addon-actions": "^6.1.18",
+    "@storybook/addon-essentials": "^6.1.18",
+    "@storybook/addon-links": "^6.1.18",
+    "@storybook/html": "^6.1.18",
     "analyze-css": "^0.12.9",
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.1.0",
@@ -59,16 +59,18 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "postcss": "^7",
     "postcss-cli": "^7.1.1",
     "prettier": "^1.18.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
     "rimraf": "^3.0.0",
-    "sass": "^1.29.0",
+    "sass": "^1.32.7",
     "specificity-graph": "^0.1.7",
     "stylelint": "^13.5.0",
-    "stylelint-config-bitcrowd": "^4.0.0"
+    "stylelint-config-bitcrowd": "^4.0.0",
+    "webpack": "^5.22.0"
   },
   "files": [
     "scss"
