@@ -1,0 +1,70 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components/Page header" />
+
+# Page header
+
+
+
+<Canvas isColumn>
+  <Story name="Page header">
+    {`
+      <article>
+        <header class="u-bg--gray-5 u-padding-l--top">
+          <div class="l-content">
+            <ol class="c-breadcrumbs u-h6 o-list-reset l-flex l-flex--wrap l-items-center">
+              <li class="u-margin-xs--right l-flex l-items-center">
+                <a href="/">Main section</a>
+              </li>
+              <li class="u-margin-xs--right l-flex l-items-center">
+                <svg class="o-icon o-icon--m u-fg--gray-30 u-margin-xs--right" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M32.83,97.22a6.07,6.07,0,1,1-8.59-8.58L58.59,54.29a6.07,6.07,0,0,0,0-8.58L24.24,11.36a6.07,6.07,0,1,1,8.59-8.58L75.76,45.71a6.07,6.07,0,0,1,0,8.58Z" fill-rule="evenodd"/>
+                </svg>
+                <a href="/">Sub section</a>
+              </li>
+              <li class="u-margin-xs--right l-flex l-items-center">
+                <svg class="o-icon o-icon--m u-fg--gray-30 u-margin-xs--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+                  <path d="M32.83,97.22a6.07,6.07,0,1,1-8.59-8.58L58.59,54.29a6.07,6.07,0,0,0,0-8.58L24.24,11.36a6.07,6.07,0,1,1,8.59-8.58L75.76,45.71a6.07,6.07,0,0,1,0,8.58Z" fill-rule="evenodd"/>
+                </svg>
+                <a href="/">Sub page</a>
+              </li>
+            </ol>
+            <div class="l-flex l-justify-between l-flex--wrap l-items-center">
+              <div class="l-flex l-items-center">
+                <h1 class="u-margin-0--bottom u-margin-m--right">Resource name/ID</h1>
+                <span class="o-badge o-badge--gray">Published</span>
+              </div>
+              <ul class="o-list-reset l-flex">
+                <li class="u-margin-s--right">
+                  <a href="/" class="o-button o-button--dropdown">Move…</a>
+                </li>
+                <li>
+                  <a href="/" class="o-button">Edit</a>
+                </li>
+              </ul>
+            </div>
+            <div class="u-padding-xl--top">
+              <ul class="o-list-reset l-flex l-flex--wrap l-items-end o-button--tab-container u-margin-m--bottom" role="tablist" aria-label="Patient data">
+                <li class="u-margin-s--right">
+                  <button class="o-button o-button--tab" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
+                    Personal details
+                  </button>
+                </li>
+                <li class="u-margin-s--right">
+                  <button class="o-button o-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="-1">
+                    Anamnese
+                  </button>
+                </li>
+                <li class="u-margin-s--right">
+                  <button class="o-button o-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="-1">
+                    Appointment history
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+      </article>
+    `}
+  </Story>
+</Canvas>
