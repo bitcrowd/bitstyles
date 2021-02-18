@@ -4,10 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Block
 
-Force an element to `display: block`:
-
-- override a default-inline/flow element like a `<span>`
-- override `u-hidden` at a specific breakpoint
+Force an element to `display: block`. This could be to override a default-inline/flow element like a `<span>`:
 
 
 <Canvas>
@@ -16,11 +13,12 @@ Force an element to `display: block`:
       <span>Span 1 content</span>
       <span class="u-block">Span 2 content, display: block</span>
       <span>Span 3 content</span>
+      <span>Span 4 content</span>
     `}
   </Story>
 </Canvas>
 
-Use `.u-hidden` to “remove” an element from the page, then use a breakpoint-limited version of `.u-block` to reveal it at certain screensizes.
+Another use is to add `.u-hidden` to “remove” an element from the page, then use a breakpoint-limited version of `.u-block` to reveal it at certain screensizes:
 
 <Canvas isColumn>
   <Story name="Block (small only)">

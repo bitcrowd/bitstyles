@@ -14,12 +14,6 @@
   flex-direction: column;
 }
 
-@include media-query('l') {
-  .l-flex\@l {
-    display: flex;
-  }
-}
-
 .#{$bitstyles-namespace}l-flex__grow-1 {
   flex-grow: 1;
 }
