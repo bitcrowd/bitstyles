@@ -1,13 +1,13 @@
 @import './settings';
 
 .#{$bitstyles-namespace}u-hidden {
-  @include hidden;
+  display: none;
 }
 
 @each $breakpoint in $bitstyles-hidden-breakpoints {
   @include media-query($breakpoint) {
     .#{$bitstyles-namespace}u-hidden\@#{$breakpoint} {
-      @include hidden;
+      display: none;
     }
   }
 }

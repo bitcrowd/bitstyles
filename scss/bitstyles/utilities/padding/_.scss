@@ -5,14 +5,11 @@
     .#{$bitstyles-namespace}u-padding-#{$size} {
       padding: spacing($size);
     }
+
     .#{$bitstyles-namespace}u-padding-#{$size}--#{$position} {
       padding-#{$position}: spacing($size);
     }
   }
-}
-
-.#{$bitstyles-namespace}u-padding-m {
-  padding: spacing('m');
 }
 
 .#{$bitstyles-namespace}u-padding-0 {
