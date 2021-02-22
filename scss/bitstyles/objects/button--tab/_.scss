@@ -53,7 +53,6 @@
   }
 
   &[aria-selected="true"] {
-    font-weight: $bitstyles-font-weight-medium;
     color: $bitstyles-button-tab-color-selected;
     background: $bitstyles-button-tab-background-color-selected;
     box-shadow: $bitstyles-button-tab-box-shadow-selected;

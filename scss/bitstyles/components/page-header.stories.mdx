@@ -30,33 +30,35 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
               </li>
             </ol>
             <div class="l-flex l-justify-between l-flex--wrap l-items-center">
-              <div class="l-flex l-items-center">
-                <h1 class="u-margin-0--bottom u-margin-m--right">Resource name/ID</h1>
-                <span class="o-badge o-badge--gray">Published</span>
+              <div class="l-flex l-flex--wrap l-items-center">
+                <h1 class="u-margin-m--right o-break-text">Resource name/ID</h1>
+                <div class="l-flex__shrink-0 u-margin-m--bottom">
+                  <span class="o-badge o-badge--gray u-font--medium">Published</span>
+                </div>
               </div>
-              <ul class="o-list-reset l-flex">
-                <li class="u-margin-s--right">
+              <ul class="o-list-reset l-flex l-flex--wrap">
+                <li class="u-margin-s--right u-margin-m--bottom">
                   <a href="/" class="o-button o-button--dropdown">Move…</a>
                 </li>
-                <li>
+                <li class="u-margin-m--bottom">
                   <a href="/" class="o-button">Edit</a>
                 </li>
               </ul>
             </div>
             <div class="u-padding-xl--top">
-              <ul class="o-list-reset l-flex l-flex--wrap l-items-end o-button--tab-container u-margin-m--bottom" role="tablist" aria-label="Patient data">
+              <ul class="o-list-reset l-flex o-overflow--x l-items-end o-button--tab-container u-margin-m--bottom" role="tablist" aria-label="Patient data">
                 <li class="u-margin-s--right">
                   <button class="o-button o-button--tab" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
                     Personal details
                   </button>
                 </li>
                 <li class="u-margin-s--right">
-                  <button class="o-button o-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="-1">
+                  <button class="o-button o-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="0">
                     Anamnese
                   </button>
                 </li>
                 <li class="u-margin-s--right">
-                  <button class="o-button o-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="-1">
+                  <button class="o-button o-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="0">
                     Appointment history
                   </button>
                 </li>

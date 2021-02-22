@@ -5,6 +5,7 @@
 
 @mixin link {
   padding: 0;
+  font-weight: $bitstyles-font-weight-medium;
   color: $bitstyles-color-link;
   text-decoration: $bitstyles-text-decoration-link;
   text-decoration-skip-ink: auto;

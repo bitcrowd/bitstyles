@@ -1,6 +1,5 @@
 @import './settings';
 
-
 @each $size in $bitstyles-margin-sizes {
   .#{$bitstyles-namespace}u-margin-#{$size} {
     margin: spacing($size);

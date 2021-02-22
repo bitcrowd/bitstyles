@@ -1,3 +1,7 @@
-.#{$bitstyles-namespace}o-overflow {
-  @include overflow;
+.#{$bitstyles-namespace}o-overflow--y {
+  @include overflow-y;
+}
+
+.#{$bitstyles-namespace}o-overflow--x {
+  @include overflow-x;
 }
