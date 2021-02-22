@@ -5,6 +5,11 @@
     padding: spacing($size);
   }
 
+  .u-padding-#{$size}--y {
+    padding-top: spacing($size);
+    padding-bottom: spacing($size);
+  }
+
   @each $position in ('left', 'top', 'right', 'bottom') {
     .#{$bitstyles-namespace}u-padding-#{$size}--#{$position} {
       padding-#{$position}: spacing($size);

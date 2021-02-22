@@ -1,9 +1,21 @@
 @import './settings';
 
 .#{$bitstyles-namespace}l-grid {
-  @include grid();
+  display: grid;
+  grid-gap: $bitstyles-grid-gap;
 }
 
-.#{$bitstyles-namespace}l-grid__item {
-  @include grid__item();
+@include media-query('m') {
+  .#{$bitstyles-namespace}l-grid\@m {
+    display: grid;
+    grid-gap: $bitstyles-grid-gap;
+  }
+}
+
+.#{$bitstyles-namespace}l-grid--3-col {
+  grid-template-columns: repeat(3, minmax(10px, 1fr));
+}
+
+.l-grid__col-span-2 {
+  grid-column: span 2 / span 2;
 }
