@@ -13,7 +13,7 @@
 }
 
 .#{$bitstyles-namespace}l-grid--3-col {
-  grid-template-columns: repeat(3, minmax(10px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .l-grid__col-span-2 {
