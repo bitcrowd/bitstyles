@@ -4,7 +4,7 @@
     "base64Length": 0,
     "redundantBodySelectors": 0,
     "redundantChildNodesSelectors": 0,
-    "colors": 37,
+    "colors": 39,
     "comments": 2,
     "commentsLength": 109,
     "complexSelectors": 0,
@@ -25,58 +25,58 @@
     "specificityIdAvg": 0,
     "specificityIdTotal": 0,
     "specificityClassAvg": 1.08,
-    "specificityClassTotal": 505,
+    "specificityClassTotal": 506,
     "specificityTagAvg": 0.27,
     "specificityTagTotal": 125,
-    "selectors": 469,
-    "selectorLengthAvg": 1.023454157782516,
+    "selectors": 470,
+    "selectorLengthAvg": 1.023404255319149,
     "selectorsByAttribute": 104,
-    "selectorsByClass": 275,
+    "selectorsByClass": 276,
     "selectorsById": 0,
     "selectorsByPseudo": 145,
     "selectorsByTag": 105,
-    "length": 26589,
-    "rules": 319,
-    "declarations": 780
+    "length": 26620,
+    "rules": 320,
+    "declarations": 782
   },
   "offenders": {
     "duplicatedProperties": [
       "abbr[title] {text-decoration: underline dotted} @ 1:373",
-      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 1:22870"
+      ".c-expander-body[aria-hidden=false] {max-height: 200vh} @ 1:22872"
     ],
     "oldPropertyPrefixes": [
       "html { -webkit-text-size-adjust: 100% } // was required by UC Browser for Android 11.4, iOS Safari 11 and earlier @ 1:1973",
-      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 1:2653",
-      "[type=checkbox], [type=radio] { -moz-appearance: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 1:5767",
-      ".l-topbar { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari NaN and earlier @ 1:10985",
-      ".o-button { -webkit-user-select: none } // was required by QQ Browser 1.2, UC Browser for Android 11.4, Android Browser 4.4, Chrome 53, iOS Safari 11, Opera 40, Safari NaN, Samsung Internet 6.2 and earlier @ 1:12935",
-      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 1:12960",
-      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 1:19355",
-      ".c-modal__overlay { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari NaN and earlier @ 1:21192",
-      ".c-modal__content { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari NaN and earlier @ 1:21738",
-      ".u-sr-only { -webkit-clip-path: inset(50%) } // was required by QQ Browser 1.2, UC Browser for Android 11.4, Android Browser 4.4, Chrome 54, iOS Safari 11, Opera 41, Safari NaN, Samsung Internet 6.2 and earlier @ 1:26104"
+      "a { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 1:2648",
+      "[type=checkbox], [type=radio] { -moz-appearance: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 1:5762",
+      ".l-topbar { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari NaN and earlier @ 1:10980",
+      ".o-button { -webkit-user-select: none } // was required by QQ Browser 1.2, UC Browser for Android 11.4, Android Browser 4.4, Chrome 53, iOS Safari 11, Opera 40, Safari NaN, Samsung Internet 6.2 and earlier @ 1:12942",
+      ".o-button { -moz-user-select: none } // was required by Firefox for Android 57, Firefox 60 and earlier @ 1:12967",
+      ".o-link { -webkit-text-decoration-skip: ink } // was required by iOS Safari 11, Safari NaN and earlier @ 1:19357",
+      ".c-modal__overlay { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari NaN and earlier @ 1:21194",
+      ".c-modal__content { -webkit-backface-visibility: hidden } // was required by UC Browser for Android 11.4, Android Browser 4.4, Chrome 35, iOS Safari 11, Opera 22, Safari NaN and earlier @ 1:21740",
+      ".u-sr-only { -webkit-clip-path: inset(50%) } // was required by QQ Browser 1.2, UC Browser for Android 11.4, Android Browser 4.4, Chrome 54, iOS Safari 11, Opera 41, Safari NaN, Samsung Internet 6.2 and earlier @ 1:26135"
     ],
     "mediaQueries": [
       "@media screen and (min-width:30em) (7 rules) @ 1:2264",
-      "@media screen and (min-width:55em) (1 rules) @ 1:9627",
-      "@media screen and (min-width:30em) (12 rules) @ 1:10303",
-      "@media screen and (min-width:30em) (2 rules) @ 1:21997",
-      "@media screen and (min-width:30em) (7 rules) @ 1:23432",
-      "@media screen and (max-width:29.9375em) (1 rules) @ 1:26205",
-      "@media screen and (min-width:55em) (1 rules) @ 1:26272",
-      "@media screen and (max-width:29.9375em) (1 rules) @ 1:26357",
-      "@media screen and (min-width:30em) (1 rules) @ 1:26424",
-      "@media screen and (min-width:55em) (1 rules) @ 1:26486"
+      "@media screen and (min-width:55em) (1 rules) @ 1:9622",
+      "@media screen and (min-width:30em) (12 rules) @ 1:10298",
+      "@media screen and (min-width:30em) (2 rules) @ 1:21999",
+      "@media screen and (min-width:30em) (7 rules) @ 1:23434",
+      "@media screen and (max-width:29.9375em) (1 rules) @ 1:26236",
+      "@media screen and (min-width:55em) (1 rules) @ 1:26303",
+      "@media screen and (max-width:29.9375em) (1 rules) @ 1:26388",
+      "@media screen and (min-width:30em) (1 rules) @ 1:26455",
+      "@media screen and (min-width:55em) (1 rules) @ 1:26517"
     ],
     "multiClassesSelectors": [
-      ".o-button--icon.o-button--small @ 1:16472"
+      ".o-button--icon.o-button--small @ 1:16479"
     ],
     "importants": [
-      ".u-sr-only {position: absolute!important} @ 1:25998"
+      ".u-sr-only {position: absolute!important} @ 1:26029"
     ],
     "colors": [
       "#ffffff (29 times)",
-      "#000dff (13 times)",
+      "#000dff (11 times)",
       "#2e2f47 (11 times)",
       "#cfd0e9 (11 times)",
       "#ffaa00 (9 times)",
@@ -95,6 +95,7 @@
       "#e6e7ff (3 times)",
       "#ffbb33 (3 times)",
       "#fff7e6 (3 times)",
+      "#666eff (2 times)",
       "rgba(0,13,255,0.3) (2 times)",
       "#e82915 (2 times)",
       "rgba(232,41,21,0.3) (2 times)",
@@ -111,6 +112,7 @@
       "rgba(0,0,0,0.7) (1 times)",
       "#d9d9d9 (1 times)",
       "#8a8ba3 (1 times)",
+      "#a1a2bb (1 times)",
       "#171931 (1 times)"
     ],
     "duplicatedSelectors": [
