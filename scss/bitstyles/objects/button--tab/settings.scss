@@ -2,6 +2,7 @@
 // Base styles ////////////////////////////////////////
 
 $bitstyles-button-tab-border-radius: 0 !default;
+$bitstyles-button-tab-border-width: spacing('xxs');
 $bitstyles-button-tab-transition:
   color $bitstyles-transition-duration $bitstyles-transition-easing,
   border $bitstyles-transition-duration $bitstyles-transition-easing !default;

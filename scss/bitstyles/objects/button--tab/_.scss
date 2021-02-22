@@ -21,7 +21,7 @@
       right: $bitstyles-button-padding-horizontal;
       bottom: 0;
       left: $bitstyles-button-padding-horizontal;
-      height: spacing('xxs') / 2;
+      height: $bitstyles-button-tab-border-width;
       background-color: $bitstyles-button-tab-border-color;
       border-radius: $bitstyles-border-radius-round;
       content: '';

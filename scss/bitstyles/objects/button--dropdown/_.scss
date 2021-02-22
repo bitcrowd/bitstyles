@@ -26,6 +26,13 @@
     box-shadow: $bitstyles-button-dropdown-box-shadow-active;
   }
 
+  &[aria-expanded="true"] {
+    color: $bitstyles-button-dropdown-color-expanded;
+    background: $bitstyles-button-dropdown-background-color-expanded;
+    border: $bitstyles-button-dropdown-border-expanded;
+    box-shadow: $bitstyles-button-dropdown-box-shadow-expanded;
+  }
+
   &:disabled {
     color: $bitstyles-button-dropdown-color-disabled;
     cursor: default;

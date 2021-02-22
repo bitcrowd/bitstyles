@@ -18,8 +18,8 @@ $bitstyles-button-dropdown-box-shadow: 0 0 spacing('xs') rgba(palette('brand-1',
 //
 // Hover colors ////////////////////////////////////////
 
-$bitstyles-button-dropdown-color-hover: palette('gray', '80') !default;
-$bitstyles-button-dropdown-background-color-hover: palette('gray', '1') !default;
+$bitstyles-button-dropdown-color-hover: palette('gray', '90') !default;
+$bitstyles-button-dropdown-background-color-hover: palette('white', '100') !default;
 $bitstyles-button-dropdown-border-hover: 1px solid palette('gray', '10') !default;
 $bitstyles-button-dropdown-box-shadow-hover: 0 0 spacing('xs') rgba(palette('brand-1'), 0.1) !default;
 
@@ -30,6 +30,14 @@ $bitstyles-button-dropdown-color-active: palette('white') !default;
 $bitstyles-button-dropdown-background-color-active: palette('brand-2', '100') !default;
 $bitstyles-button-dropdown-border-active: 1px solid palette('brand-2', '100') !default;
 $bitstyles-button-dropdown-box-shadow-active: 0 0 spacing('xs') rgba(palette('brand-2', '100'), 0.3) !default;
+
+//
+// Expanded colors ////////////////////////////////////////
+
+$bitstyles-button-dropdown-color-expanded: palette('white') !default;
+$bitstyles-button-dropdown-background-color-expanded: palette('brand-2', '100') !default;
+$bitstyles-button-dropdown-border-expanded: 1px solid palette('brand-2', '100') !default;
+$bitstyles-button-dropdown-box-shadow-expanded: 0 0 spacing('xs') rgba(palette('brand-2', '100'), 0.3) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
