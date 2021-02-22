@@ -5,13 +5,6 @@
   grid-gap: $bitstyles-grid-gap;
 }
 
-@include media-query('m') {
-  .#{$bitstyles-namespace}l-grid\@m {
-    display: grid;
-    grid-gap: $bitstyles-grid-gap;
-  }
-}
-
 .#{$bitstyles-namespace}l-grid--3-col {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -22,4 +15,15 @@
 
 .l-grid__col-start-2 {
   grid-column: span 2 / span 2;
+}
+
+@include media-query('m') {
+  .#{$bitstyles-namespace}l-grid\@m {
+    display: grid;
+    grid-gap: $bitstyles-grid-gap;
+  }
+
+  .#{$bitstyles-namespace}l-grid--3-col\@m {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
