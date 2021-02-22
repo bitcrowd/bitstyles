@@ -1,0 +1,22 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Layout/Relative" />
+
+# Relative
+
+Gives the element `position: relative`.
+
+<Canvas>
+  <Story name="Relative">
+    {`
+      <div style="position:relative">
+        <div class="u-bg--gray-20 u-padding-xl" style="height: 10rem;">
+          <p style="position: absolute;top: 0; left: 0;">No relative parent</p>
+          <div class="l-relative u-bg--background" style="min-height:2rem;">
+            <p style="position: absolute; top: 0; left: 0;">With relative parent</p>
+          </div>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>

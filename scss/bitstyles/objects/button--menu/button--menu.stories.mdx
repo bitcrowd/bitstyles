@@ -1,0 +1,27 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Button--menu" />
+
+# Button--menu
+
+A menu item, likely to be rendered inside a dropdown menu.
+
+<Canvas isColumn>
+  <Story name="Button--menu">
+    {`
+      <a href="/" class="o-button o-button--menu u-h6">
+        Menu item
+      </a>
+    `}
+  </Story>
+  <Story name="Button--menu with icon">
+    {`
+      <a href="/" class="o-button o-button--menu u-h6">
+        <svg class="o-button__icon o-icon o-icon--m" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+          <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+        </svg>
+        <span class="o-button__label">Menu item</span>
+      </a>
+    `}
+  </Story>
+</Canvas>

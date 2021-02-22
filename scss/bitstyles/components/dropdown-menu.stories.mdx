@@ -1,0 +1,163 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Components/Dropdown menu" />
+
+# Dropdown menu
+
+A button that when clicked reveals a floating menu of links. This is a combination of an `.o-button--dropdown` as the button that is clicked to show/hide the menu, an `.o-dropdown` menu that’s the container for a series of `.o-button--menu` sub-items.
+
+For the sake of clarity, the examples shown here are all presented with the menus already visible, but when you’re using them in a project the `.o-dropdown` must get the class `.u-hidden`. The component requires JS (not yet provided) to remove/add that class when the user clicks the `.o-button--dropdown`.
+
+<Canvas>
+  <Story name="Dropdown menu">
+    {`
+      <div class="l-relative" style="min-height:15rem;">
+        <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="dropdown-1" aria-expanded="true">
+          <span class="o-button__label">Account</span>
+          <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+          </svg>
+        </button>
+        <ul class="o-dropdown o-overflow o-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-1">
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+              </svg>
+              <span class="o-button__label">Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+              </svg>
+              <span class="o-button__label">Help</span>
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+              </svg>
+              <span class="o-button__label">Privacy</span>
+            </a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+              </svg>
+              <span class="o-button__label">Sign out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+The structure can be a little simpler if your menu items do not need icons. Here we’ve also added a link to the user’s profile (with their avatar) at the top of the menu.
+
+<Canvas>
+  <Story name="Dropdown with avatar user-profile link">
+    {`
+      <div class="l-relative" style="min-height:15rem;">
+        <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="dropdown-1" aria-expanded="true">
+          <span class="o-button__label">Account</span>
+          <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+          </svg>
+        </button>
+        <ul class="o-dropdown o-overflow o-list-reset u-margin-s--top">
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              <div class="o-button__avatar o-avatar o-avatar--l l-flex__shrink-0 l-flex l-items-center">
+                <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+              </div>
+              <div class="o-button__label l-flex l-flex--col l-items-start">
+                <span>Signed in as</span>
+                <span>Username</span>
+              </div>
+            </a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Settings
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Help
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Privacy
+            </a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Sign out
+            </a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+You can include non-link content in the menu too — this version of the avatar is not a link to a profile page, but is informing the user which account is currently signed-in.
+
+<Canvas>
+  <Story name="Dropdown with non-button/link content">
+    {`
+      <div class="l-relative" style="height: 15rem">
+        <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="dropdown-1" aria-expanded="true">
+          <span class="o-button__label">Account</span>
+          <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+          </svg>
+        </button>
+        <ul class="o-dropdown o-overflow o-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-1">
+          <li>
+            <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right l-flex l-items-center u-h6 u-line-height--min">
+              <div class="o-avatar o-avatar--l l-flex__shrink-0 l-flex l-items-center u-margin-s--right">
+                <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+              </div>
+              <div class="l-flex l-flex--col l-items-start">
+                <span class="u-fg--gray-40">Signed in as</span>
+                <span>Username</span>
+              </div>
+            </div>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Settings
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Help
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Privacy
+            </a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Sign out
+            </a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>

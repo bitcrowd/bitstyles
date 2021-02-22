@@ -55,12 +55,7 @@
   }
 }
 
-.#{$bitstyles-namespace}o-button__label {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-}
-
+.o-button__avatar,
 .#{$bitstyles-namespace}o-button__icon {
   margin-right: $bitstyles-button-icon-spacing;
   margin-left: -$bitstyles-button-icon-spacing / 4;

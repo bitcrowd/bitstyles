@@ -2,6 +2,9 @@
 
 @each $position in (left, top, right, bottom) {
   @each $size in $bitstyles-padding-sizes {
+    .#{$bitstyles-namespace}u-padding-#{$size} {
+      padding: spacing($size);
+    }
     .#{$bitstyles-namespace}u-padding-#{$size}--#{$position} {
       padding-#{$position}: spacing($size);
     }

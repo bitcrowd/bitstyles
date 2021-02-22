@@ -1,0 +1,26 @@
+//
+// Base styles ////////////////////////////////////////
+
+$bitstyles-button-menu-padding-vertical: spacing('s') !default;
+$bitstyles-button-menu-padding-horizontal: spacing('m') !default;
+
+//
+// Base colors ////////////////////////////////////////
+
+$bitstyles-button-menu-color: palette('gray', '60') !default;
+$bitstyles-button-menu-background-color: palette('white', '100') !default;
+$bitstyles-button-menu-border: 0 !default;
+
+//
+// Hover colors ////////////////////////////////////////
+
+$bitstyles-button-menu-color-hover: palette('gray', '80') !default;
+$bitstyles-button-menu-background-color-hover: palette('gray', '1') !default;
+$bitstyles-button-menu-border-hover: 0 !default;
+
+//
+// Active colors ////////////////////////////////////////
+
+$bitstyles-button-menu-color-active: palette('white') !default;
+$bitstyles-button-menu-background-color-active: palette('brand-2', '100') !default;
+$bitstyles-button-menu-border-active: 0 !default;

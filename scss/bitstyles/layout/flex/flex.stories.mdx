@@ -14,11 +14,11 @@ Flex has become the prefered method for laying out app UI, and in many cases als
 
 Apply `.l-flex` to an element to make its children share the available width e.g. a list of links in a menu.
 
-These examples show how that base flex layout behaves with different content. The second of each of the example blocks shows the same layout, but with one of the children being given the `l-flex__primary` class, and the third shows one given `.l-flex__no-shrink`.
+These examples show how that base flex layout behaves with different content. The second of each of the example blocks shows the same layout, but with one of the children being given the `l-flex__primary` class, and the third shows one given `.l-flex__shrink-0`.
 
 Make one of the children `.l-flex__primary` to make it take any available space that’s left over. If there is no space left over, it becomes the same size as its siblings.
 
-Apply `.l-flex__no-shrink` to a flex-child to stop it being crushed when there is not enough space for it and its siblings. This is useful with elements which have intrinsic size (e.g. images, icons), or that need to remain fully-sized (e.g. buttons).
+Apply `.l-flex__shrink-0` to a flex-child to stop it being crushed when there is not enough space for it and its siblings. This is useful with elements which have intrinsic size (e.g. images, icons), or that need to remain fully-sized (e.g. buttons).
 
 ### Little text content
 
@@ -49,7 +49,7 @@ These first examples show the layouts with a small amount of text content.
     {`
       <ul class="l-flex o-list-reset">
         <li>List item one</li>
-        <li class="l-flex__no-shrink"><button type="button">Don’t shrink me</button></li>
+        <li class="l-flex__shrink-0"><button type="button">Don’t shrink me</button></li>
         <li>List item three</li>
         <li>List item four</li>
       </ul>
@@ -86,7 +86,7 @@ These next examples show how the same layouts behave with long text content.
     {`
       <ul class="l-flex o-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
-        <li class="l-flex__no-shrink u-bg--brand-2">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li class="l-flex__shrink-0 u-bg--brand-2">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
       </ul>
@@ -123,7 +123,7 @@ And this time the same layouts, with images as content (any element with intrins
     {`
       <ul class="l-flex o-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
-        <li class="l-flex__no-shrink u-bg--brand-2"><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
+        <li class="l-flex__shrink-0 u-bg--brand-2"><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="l-block" /></li>
       </ul>
