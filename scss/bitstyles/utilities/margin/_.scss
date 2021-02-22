@@ -18,14 +18,16 @@
 }
 
 @each $breakpoint in $bitstyles-margin-breakpoints {
-  @each $size in $bitstyles-margin-sizes {
-    .#{$bitstyles-namespace}u-margin-#{$size}\@#{$breakpoint} {
-      margin: spacing($size);
-    }
+  @include media-query($breakpoint) {
+    @each $size in $bitstyles-margin-sizes {
+      .#{$bitstyles-namespace}u-margin-#{$size}\@#{$breakpoint} {
+        margin: spacing($size);
+      }
 
-    @each $position in ('left', 'top', 'right', 'bottom') {
-      .#{$bitstyles-namespace}u-margin-#{$size}--#{$position}\@#{$breakpoint} {
-        margin-#{$position}: spacing($size);
+      @each $position in ('left', 'top', 'right', 'bottom') {
+        .#{$bitstyles-namespace}u-margin-#{$size}--#{$position}\@#{$breakpoint} {
+          margin-#{$position}: spacing($size);
+        }
       }
     }
   }
