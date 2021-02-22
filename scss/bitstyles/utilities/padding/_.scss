@@ -1,17 +1,13 @@
 @import './settings';
 
-@each $position in (left, top, right, bottom) {
-  @each $size in $bitstyles-padding-sizes {
-    .#{$bitstyles-namespace}u-padding-#{$size} {
-      padding: spacing($size);
-    }
+@each $size in $bitstyles-padding-sizes {
+  .#{$bitstyles-namespace}u-padding-#{$size} {
+    padding: spacing($size);
+  }
 
+  @each $position in ('left', 'top', 'right', 'bottom') {
     .#{$bitstyles-namespace}u-padding-#{$size}--#{$position} {
       padding-#{$position}: spacing($size);
     }
   }
-}
-
-.#{$bitstyles-namespace}u-padding-0 {
-  padding: 0;
 }

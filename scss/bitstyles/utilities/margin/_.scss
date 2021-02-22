@@ -1,11 +1,12 @@
 @import './settings';
 
-@each $position in (left, top, right, bottom) {
-  @each $size in $bitstyles-margin-sizes {
-    .#{$bitstyles-namespace}u-margin-#{$size} {
-      margin: spacing($size);
-    }
 
+@each $size in $bitstyles-margin-sizes {
+  .#{$bitstyles-namespace}u-margin-#{$size} {
+    margin: spacing($size);
+  }
+
+  @each $position in ('left', 'top', 'right', 'bottom') {
     .#{$bitstyles-namespace}u-margin-#{$size}--#{$position} {
       margin-#{$position}: spacing($size);
     }
