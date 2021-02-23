@@ -26,9 +26,13 @@
 }
 
 @include media-query('m') {
+  .#{$bitstyles-namespace}l-grid {
+    grid-gap: $bitstyles-grid-gap-m;
+  }
+
   .#{$bitstyles-namespace}l-grid\@m {
     display: grid;
-    grid-gap: $bitstyles-grid-gap;
+    grid-gap: $bitstyles-grid-gap-m;
   }
 
   .#{$bitstyles-namespace}l-grid--2-col\@m {

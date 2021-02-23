@@ -1,15 +1,13 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="Components/button-groups" />
+<Meta title="Components/Button groups" />
 
 # Button Groups
 
-## Inline buttons
-
 A group of buttons aligned horizontally, collapsing onto a new row when there’s not enough space in their container for them all.
 
-<Canvas isColumn>
-  <Story name="Inline buttons">
+<Canvas>
+  <Story name="Button group">
     {`
       <ul class="o-list-reset l-flex l-flex--wrap l-items-center">
         <li class="u-margin-xs--right">
@@ -27,7 +25,7 @@ A group of buttons aligned horizontally, collapsing onto a new row when there’
 </Canvas>
 
 <Canvas>
-  <Story name="Inline buttons with icons">
+  <Story name="Button group with icons">
     {`
       <ul class="o-list-reset l-flex l-flex--wrap l-items-center">
         <li class="l-flex u-margin-xs--right">
@@ -52,142 +50,6 @@ A group of buttons aligned horizontally, collapsing onto a new row when there’
               <path d="M88.11,6.44h-19L63.61,1H36.39L30.94,6.44h-19V17.33H88.11M17.33,88.11A10.92,10.92,0,0,0,28.22,99H71.78A10.92,10.92,0,0,0,82.67,88.11V22.78H17.33Z"/>
             </svg>
             <span class="o-button__label">Delete</span>
-          </button>
-        </li>
-      </ul>
-    `}
-  </Story>
-</Canvas>
-
-## Joined buttons
-
-For a series of buttons that are very directly related e.g.
-
-- plus/minus
-- next/previous
-- pagination buttons
-
-<Canvas>
-  <Story name="Joined buttons - icons">
-    {`
-      <ul class="o-list-reset l-flex l-flex--inline l-items-stretch o-button--grouped-container">
-        <li class="l-flex">
-          <button class="o-button o-button--icon o-button--grouped o-button--grouped__first" type="button">
-            <svg class="o-button__icon o-icon o-icon--m" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-              <path d="M99,44V56H1V44Z" fill-rule="evenodd"/>
-            </svg>
-            <span class="u-sr-only">minus</span>
-          </button>
-        </li>
-        <li class="l-flex">
-          <button class="o-button o-button--icon o-button--grouped o-button--grouped__last" type="button">
-            <svg class="o-button__icon o-icon o-icon--m" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-              <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
-            </svg>
-            <span class="u-sr-only">plus</span>
-          </button>
-        </li>
-      </ul>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="Joined buttons - icons 2">
-    {`
-      <ul class="o-list-reset l-flex l-flex--inline l-items-stretch o-button--grouped-container">
-        <li class="l-flex">
-          <button class="o-button o-button--icon o-button--grouped o-button--grouped__first" type="button">
-            <svg class="o-button__icon o-icon o-icon--m" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-              <path d="M67.17,2.78a6.07,6.07,0,0,1,8.59,8.58h0L41.41,45.71a6.07,6.07,0,0,0,0,8.58L75.76,88.64a6.07,6.07,0,1,1-8.59,8.58L24.24,54.29a6.07,6.07,0,0,1,0-8.58Z" fill-rule="evenodd"/>
-            </svg>
-            <span class="u-sr-only">previous</span>
-          </button>
-        </li>
-        <li class="l-flex">
-          <button class="o-button o-button--icon o-button--grouped o-button--grouped__last" type="button">
-            <svg class="o-button__icon o-icon o-icon--m" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-              <path d="M32.83,97.22a6.07,6.07,0,1,1-8.59-8.58L58.59,54.29a6.07,6.07,0,0,0,0-8.58L24.24,11.36a6.07,6.07,0,1,1,8.59-8.58L75.76,45.71a6.07,6.07,0,0,1,0,8.58Z" fill-rule="evenodd"/>
-            </svg>
-            <span class="u-sr-only">next</span>
-          </button>
-        </li>
-      </ul>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="Joined buttons - pagination">
-    {`
-      <ul class="o-list-reset l-flex l-flex--inline l-items-stretch o-button--grouped-container">
-        <li class="l-flex">
-          <a href="/" class="o-button o-button--icon o-button--grouped o-button--grouped__first">
-            <svg class="o-button__icon o-icon o-icon--m" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-              <path d="M67.17,2.78a6.07,6.07,0,0,1,8.59,8.58h0L41.41,45.71a6.07,6.07,0,0,0,0,8.58L75.76,88.64a6.07,6.07,0,1,1-8.59,8.58L24.24,54.29a6.07,6.07,0,0,1,0-8.58Z" fill-rule="evenodd"/>
-            </svg>
-            <span class="u-sr-only">previous</span>
-          </a>
-        </li>
-        <li class="l-flex">
-          <a href="/" class="o-button o-button--grouped u-h6">
-            1
-          </a>
-        </li>
-        <li class="l-flex">
-          <a href="/" class="o-button o-button--grouped u-h6">
-            2
-          </a>
-        </li>
-        <li class="l-flex">
-          <a href="/" class="o-button o-button--grouped u-h6">
-            3
-          </a>
-        </li>
-        <li class="l-flex">
-          <a href="/" class="o-button o-button--grouped u-h6">
-            4
-          </a>
-        </li>
-        <li class="l-flex">
-          <a href="/" class="o-button o-button--icon o-button--grouped o-button--grouped__last">
-            <svg class="o-button__icon o-icon o-icon--m" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-              <path d="M32.83,97.22a6.07,6.07,0,1,1-8.59-8.58L58.59,54.29a6.07,6.07,0,0,0,0-8.58L24.24,11.36a6.07,6.07,0,1,1,8.59-8.58L75.76,45.71a6.07,6.07,0,0,1,0,8.58Z" fill-rule="evenodd"/>
-            </svg>
-            <span class="u-sr-only">next</span>
-          </a>
-        </li>
-      </ul>
-    `}
-  </Story>
-</Canvas>
-
-## Mode buttons
-
-A series of buttons to switch between modes of a view. In the example below, the user is shown the list of available modes, and which is currently-selected, in a calendar view.
-
-<Canvas>
-  <Story name="Mode buttons">
-    {`
-      <ul class="o-list-reset l-flex l-flex--inline l-items-stretch l-items-center o-button--mode-container u-padding-xs u-bg--gray-20">
-        <li class="u-margin-xs--right">
-          <button class="o-button o-button--mode u-h6" type="button">
-            Year
-          </button>
-        </li>
-        <li class="u-margin-xs--right">
-          <button class="o-button o-button--mode u-h6" type="button">
-            Month
-          </button>
-        </li>
-        <li class="u-margin-xs--right">
-          <button class="o-button o-button--mode u-h6" type="button">
-            Week
-          </button>
-        </li>
-        <li>
-          <button class="o-button o-button--mode u-h6" type="button" aria-pressed="true">
-            Day
           </button>
         </li>
       </ul>
