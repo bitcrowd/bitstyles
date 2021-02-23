@@ -7,6 +7,7 @@ $bitstyles-color-tone-factor: 10% !default;
 $bitstyles-color-palette: (
   'black': (
     '100': $bitstyles-base-color-black,
+    '95': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 5%),
     '90': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 10%),
     '80': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 20%),
     '70': mix($bitstyles-base-color-white, $bitstyles-base-color-black, 30%),
@@ -20,6 +21,7 @@ $bitstyles-color-palette: (
   ),
   'white': (
     '100': $bitstyles-base-color-white,
+    '95': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 5%),
     '90': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 10%),
     '80': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 20%),
     '70': mix($bitstyles-base-color-black, $bitstyles-base-color-white, 30%),
@@ -33,6 +35,7 @@ $bitstyles-color-palette: (
   ),
   'gray': (
     '100': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 0%), $bitstyles-base-color-brand-1, 90%),
+    '95': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 5%), $bitstyles-base-color-brand-1, 90%),
     '90': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 10%), $bitstyles-base-color-brand-1, 90%),
     '80': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 20%), $bitstyles-base-color-brand-1, 90%),
     '70': mix(mix($bitstyles-base-color-white, $bitstyles-base-color-black, 30%), $bitstyles-base-color-brand-1, 90%),
@@ -47,6 +50,7 @@ $bitstyles-color-palette: (
   ),
   'text': (
     '100': $bitstyles-base-color-text,
+    '95': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 5%),
     '90': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 10%),
     '80': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 20%),
     '70': mix($bitstyles-base-color-white, $bitstyles-base-color-text, 30%),
@@ -60,6 +64,7 @@ $bitstyles-color-palette: (
   ),
   'background': (
     '100': $bitstyles-base-color-background,
+    '95': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 5%),
     '90': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 10%),
     '80': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 20%),
     '70': mix($bitstyles-base-color-white, $bitstyles-base-color-background, 30%),
@@ -73,6 +78,7 @@ $bitstyles-color-palette: (
   ),
   'brand-1': (
     '100': $bitstyles-base-color-brand-1,
+    '95': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 5%),
     '90': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 10%),
     '80': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 20%),
     '70': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-1, 30%),
@@ -86,6 +92,7 @@ $bitstyles-color-palette: (
   ),
   'brand-2': (
     '100': $bitstyles-base-color-brand-2,
+    '95': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 5%),
     '90': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 10%),
     '80': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 20%),
     '70': mix($bitstyles-base-color-white, $bitstyles-base-color-brand-2, 30%),
@@ -99,6 +106,7 @@ $bitstyles-color-palette: (
   ),
   'danger': (
     '100': $bitstyles-base-color-danger,
+    '95': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 5%),
     '90': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 10%),
     '80': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 20%),
     '70': mix($bitstyles-base-color-white, $bitstyles-base-color-danger, 30%),
@@ -112,6 +120,7 @@ $bitstyles-color-palette: (
   ),
   'warning': (
     '100': $bitstyles-base-color-warning,
+    '95': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 5%),
     '90': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 10%),
     '80': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 20%),
     '70': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 30%),

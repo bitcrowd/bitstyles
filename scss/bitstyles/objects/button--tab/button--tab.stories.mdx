@@ -1,0 +1,24 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Objects/Button--tab" />
+
+# Tab Buttons
+
+Buttons for selecting which of several tabpanels will be shown. There are several aria-attributes here that will need to be tied to the tabpanels, and you should use a background color behind the tabs — see the [tab examples](/?path=/story/components-tabs--tabs) for both.
+
+<Canvas>
+  <Story name="Button--tab">
+    {`
+      <button class="o-button o-button--tab u-h6" type="button" role="tab" aria-selected="false" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
+        Tab 1
+      </button>
+    `}
+  </Story>
+   <Story name="Button--tab [selected]">
+    {`
+      <button class="o-button o-button--tab u-h6" type="button" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
+        Tab 1
+      </button>
+    `}
+  </Story>
+</Canvas>

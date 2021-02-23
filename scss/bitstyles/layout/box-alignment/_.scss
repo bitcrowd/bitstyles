@@ -2,14 +2,22 @@
   justify-content: space-between;
 }
 
-.l-items-center {
+.#{$bitstyles-namespace}l-items-center {
   align-items: center;
 }
 
-.l-items-start {
+.#{$bitstyles-namespace}l-items-start {
   align-items: flex-start;
 }
 
-.l-items-end {
+.#{$bitstyles-namespace}l-items-end {
   align-items: flex-end;
+}
+
+.#{$bitstyles-namespace}l-items-stretch {
+  align-items: stretch;
+}
+
+.#{$bitstyles-namespace}l-items-baseline {
+  align-items: baseline;
 }

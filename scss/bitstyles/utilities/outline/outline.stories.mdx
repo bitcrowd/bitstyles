@@ -1,0 +1,16 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/Outline" />
+
+# Outline
+
+In _rare_ occassions it’s valid to hide the outline an element would get when it’s focused. An example is a tabpanel or a modal element — we pass the focus to the element so that keyboard & screenreader users can move on smoothly to access the content they just clicked in order see, but we do not need the outline to indicate that. The blue outline is intended to indicate to the user that the focus is on an interactive element.
+
+<Canvas>
+  <Story name="outline-0">
+    {`
+      <p tabindex="-1" class="u-outline-0">Click me, I won’t get an outline</p>
+      <p tabindex="-1">Click me, I will get an outline</p>
+    `}
+  </Story>
+</Canvas>
