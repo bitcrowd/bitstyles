@@ -1,0 +1,23 @@
+@import './settings';
+
+.o-table {
+  width: 100%;
+  white-space: nowrap;
+
+  th {
+    padding: spacing('xs') spacing('m');
+    border-bottom: $bitstyles-table-border;
+    background: rgba(palette('gray', '1'), 0.1)
+  }
+
+  td {
+    padding: spacing('m');
+    border-bottom: $bitstyles-table-border;
+  }
+
+  tr:last-child {
+    td {
+      border: 0;
+    }
+  }
+}

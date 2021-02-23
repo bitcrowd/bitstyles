@@ -1,0 +1,55 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Organisms/Table" />
+
+# Table
+
+<Canvas isColumn>
+  <Story name="Table">
+    {`
+      <table class="a-card o-table u-h6">
+        <caption class="u-sr-only">Describe the table content here</caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Status</th>
+            <th scope="col"><span class="u-sr-only">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Croissant B. Gummies</td>
+            <td>croissant.gummies@gmx.de</td>
+            <td><span class="a-badge a-badge--positive">Confirmed</span></td>
+            <td class="u-text--right">
+              <ul class="u-list-reset u-flex u-flex--wrap u-flex--inline">
+                <li class="u-margin-s--right">
+                  <a href="/" class="a-button">Edit</a>
+                </li>
+                <li>
+                  <a href="/" class="a-button a-button--danger">Delete</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Croissant B. Gummies</td>
+            <td>croissant.gummies@gmx.de</td>
+            <td><span class="a-badge a-badge--positive">Confirmed</span></td>
+            <td class="u-text--right">
+              <ul class="u-list-reset u-flex u-flex--wrap u-flex--inline">
+                <li class="u-margin-s--right">
+                  <a href="/" class="a-button">Edit</a>
+                </li>
+                <li>
+                  <a href="/" class="a-button a-button--danger">Delete</a>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    `}
+  </Story>
+</Canvas>

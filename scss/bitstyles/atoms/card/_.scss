@@ -2,4 +2,5 @@
   padding: spacing('m');
   border-radius: spacing('m');
   box-shadow: 0 0 spacing('s') rgba(palette('gray', '100'), 0.1);
+  overflow: hidden;
 }
