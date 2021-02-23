@@ -8,18 +8,14 @@
 // something to scroll.
 //
 
-// (1) Fixes bug in safari that causes the scrollbars to appear behind some content within the overflow element.
-
 @mixin overflow-y {
   max-height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
-  transform: translateZ(0); // (1)
 }
 
 @mixin overflow-x {
   max-width: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
-  transform: translateZ(0); // (1)
 }
