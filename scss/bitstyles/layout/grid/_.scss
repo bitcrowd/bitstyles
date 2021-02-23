@@ -5,16 +5,24 @@
   grid-gap: $bitstyles-grid-gap;
 }
 
+.#{$bitstyles-namespace}l-grid--2-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .#{$bitstyles-namespace}l-grid--3-col {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.l-grid__col-span-2 {
+.#{$bitstyles-namespace}l-grid__col-span-2 {
   grid-column: span 2 / span 2;
 }
 
-.l-grid__col-start-2 {
-  grid-column: span 2 / span 2;
+.#{$bitstyles-namespace}l-grid__col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.#{$bitstyles-namespace}l-grid__col-1 {
+  grid-column: 1;
 }
 
 @include media-query('m') {
@@ -23,7 +31,23 @@
     grid-gap: $bitstyles-grid-gap;
   }
 
+  .#{$bitstyles-namespace}l-grid--2-col\@m {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .#{$bitstyles-namespace}l-grid--3-col\@m {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .#{$bitstyles-namespace}l-grid__col-span-2\@m {
+    grid-column: span 2 / span 2;
+  }
+
+  .#{$bitstyles-namespace}l-grid__col-span-3\@m {
+    grid-column: span 3 / span 3;
+  }
+
+  .#{$bitstyles-namespace}l-grid__col-1\@m {
+    grid-column: 1;
   }
 }

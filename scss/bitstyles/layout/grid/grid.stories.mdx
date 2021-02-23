@@ -2,143 +2,183 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 <Meta title="Layout/Grid" />
 
-# Grid Systems
+# Grid
 
-A responsive html grid system using inline-block.
+A responsive CSS grid system. Grids can be nested as much as you need.
 
-Note that for technical reasons, **whitespace is important**. If necessary, use html comments between each `.l-grid__item` to remove any whitespace (see the markup example below), otherwise the browser will display a small gap between grid items.
-
-This is an HTML grid system (not a CSS Grid system), so some wrapping elements are needed to create rows and columns (see the markup in the examples below). Each of these grid items needs the class `.l-grid__item` and almost always a width class (if you do not specify a width, the grid item will default to 100% width). With current defaults, the widths provided include a 12-column system e.g. 1-of-12, 2-of-12, 3-of-12 … 11-of-12, 12-of-12.
-
-Grids can be nested.
-
-### Dependencies
-
-- `layout/width`
-
-## Grid system — base
-
-In the base grid system, columns are of proportional widths (a percentage of the full width) but not responsive — that percentage doesn’t change when the viewport does.
-
-This means they cannot change from being 3-column on larger screens, to one  stacked column on small screens (if you can, try resizing your browser window to see that the number of columns in the example below doesn’t change). See the Responsive Grid below for information on how to make your grid responsive.
+Giving an element the base class `.l-grid` alone will not create the columns you probably want — see the example below. The grid children have some space between them, but otherwise they behave like block elements.
 
 <Canvas>
-  <Story name="Grid">
+  <Story name="l-grid">
     {`
-      <ul class="l-grid">
-        <li class="l-grid__item l-width--1-of-12">
-          <div class="u-bg--brand-2">1-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--11-of-12">
-          <div>11-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--2-of-12">
-          <div class="u-bg--brand-2">2-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--10-of-12">
-          <div>10-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--3-of-12">
-          <div class="u-bg--brand-2">3-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--9-of-12">
-          <div>9-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--4-of-12">
-          <div class="u-bg--brand-2">4-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--8-of-12">
-          <div>8-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--5-of-12">
-          <div class="u-bg--brand-2">5-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--7-of-12">
-          <div>7-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--6-of-12">
-          <div class="u-bg--brand-2">6-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--6-of-12">
-          <div>6-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--7-of-12">
-          <div class="u-bg--brand-2">7-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--5-of-12">
-          <div>5-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--8-of-12">
-          <div class="u-bg--brand-2">8-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--4-of-12">
-          <div>4-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--9-of-12">
-          <div class="u-bg--brand-2">9-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--3-of-12">
-          <div>3-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--10-of-12">
-          <div class="u-bg--brand-2">10-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--2-of-12">
-          <div>2-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--11-of-12">
-          <div class="u-bg--brand-2">11-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--1-of-12">
-          <div>1-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--12-of-12">
-          <div class="u-bg--brand-2">12-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--3-of-12">
-          <div class="u-bg--brand-2">3-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--3-of-12">
-          <div>3-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--3-of-12">
-          <div class="u-bg--brand-2">3-of-12</div>
-        </li><!--
-        --><li class="l-grid__item l-width--3-of-12">
-          <div>3-of-12</div>
-        </li>
+      <div class="l-grid u-padding-m u-bg--gray-10">
+        <div class="u-bg--background u-padding-m o-card">Grid child 1</div>
+        <div class="u-bg--background u-padding-m o-card">Grid child 2</div>
+        <div class="u-bg--background u-padding-m o-card">Grid child 3</div>
+        <div class="u-bg--background u-padding-m o-card">Grid child 4</div>
+        <div class="u-bg--background u-padding-m o-card">Grid child 5</div>
+        <div class="u-bg--background u-padding-m o-card">Grid child 6</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+If you’re rendering a list of related items, use a list element (could be a `<ul>` or `<ol>`) with the class `.o-list-reset`. This describes your content better, and will be announced to screenreader users as something like `List of six items, first item: <first item>`.
+
+<Canvas>
+  <Story name="l-grid (list)">
+    {`
+      <ul class="l-grid o-list-reset u-padding-m u-bg--gray-10">
+        <li class="u-bg--background u-padding-m o-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
       </ul>
     `}
   </Story>
 </Canvas>
 
-## Grid system - responsive
+## Columns
 
-The grid system can be made responsive, allowing you to specify different widths for an element, based on the viewport size.
+Most likely you’ll want to also add a grid-column class, to layout the grid children next to each other.
 
-To do this, append the name of a breakpoint to the width class to have it activate only at that breakpoint e.g. `.l-width--12-of-12.l-width--6-of-12@m` creates an element that’s fullwidth for all viewports, then becomes half width for `m`-sized viewports and larger. This is commonly used to create a layout of 100%-width grid items stacked vertically on smaller viewports, changing to e.g. a three-column layout on larger viewport sizes.
-
-Multiple width/breakpoint combinations can be used to define a grid item’s width at several breakpoints (for all the breakpoints defined in the `$bitstyles-widths-breakpoints` Sass list).
-
-<Canvas>
-  <Story name="Responsive grid">
+<Canvas isColumn>
+  <Story name="l-grid--2-col">
     {`
-      <ul class="l-grid">
-        <li class="l-grid__item l-width--6-of-12 l-width--4-of-12@m">
-          <div class="u-bg--brand-2">6-of-12 / 4-of-12@m</div>
-        </li><!--
-        --><li class="l-grid__item l-width--6-of-12 l-width--4-of-12@m">
-          <div>6-of-12 / 4-of-12@m</div>
-        </li><!--
-        --><li class="l-grid__item l-width--6-of-12 l-width--4-of-12@m">
-          <div class="u-bg--brand-2">6-of-12 / 4-of-12@m</div>
-        </li><!--
-        --><li class="l-grid__item l-width--12-of-12 l-width--6-of-12@m">
-          <div class="u-bg--brand-2">12-of-12 / 6-of-12@m</div>
-        </li><!--
-        --><li class="l-grid__item l-width--12-of-12 l-width--6-of-12@m">
-          <div>12-of-12 / 6-of-12@m</div>
-        </li>
+      <ul class="l-grid l-grid--2-col u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--background u-padding-m o-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="l-grid--3-col">
+    {`
+      <ul class="l-grid l-grid--3-col u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--background u-padding-m o-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+### Responsive columns
+
+Column classes can be applied at specific breakpoints using the `@breakpoint` suffix on the class e.g. `l-grid--3-col@m`. This can be used to acheive a single column layout on small screens, which will break into columns when there’s enough space.
+
+<Canvas isColumn>
+  <Story name="l-grid--2-col@m">
+    {`
+      <ul class="l-grid l-grid--2-col@m u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--background u-padding-m o-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="l-grid--3-col@m">
+    {`
+      <ul class="l-grid l-grid--3-col@m u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--background u-padding-m o-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+For some layouts, you’ll want to allow some of the grid children a little more space. You can do this using `.l-grid__col-span-2` and `.l-grid__col-span-3`, both of which are available `@m`. Note that using these classes can break the grid layout if the `span` class on the child is not applied at the same breakpoint as the grid.
+
+<Canvas isColumn>
+  <Story name="l-grid__col-span-2">
+    {`
+      <ul class="l-grid l-grid--2-col u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--brand-2 u-padding-m o-card l-grid__col-span-2">Grid child 1, span 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="l-grid__col-span-2@m">
+    {`
+      <ul class="l-grid l-grid--2-col@m u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--brand-2 u-padding-m o-card l-grid__col-span-2@m">Grid child 1, span 2 @m</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="l-grid__col-span-3">
+    {`
+      <ul class="l-grid l-grid--3-col u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--brand-2 u-padding-m o-card l-grid__col-span-3">Grid child 1, span 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="l-grid__col-span-3@m">
+    {`
+      <ul class="l-grid l-grid--3-col@m u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--brand-2 u-padding-m o-card l-grid__col-span-3@m">Grid child 1, span 3 @m</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+You can specify that a grid child should start a row using `.l-grid__col-1`.
+
+<Canvas isColumn>
+  <Story name="l-grid__col-1">
+    {`
+      <ul class="l-grid l-grid--3-col u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--background u-padding-m o-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--brand-2 u-padding-m o-card l-grid__col-1">Grid child 3, col-1</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="l-grid__col-1@m">
+    {`
+      <ul class="l-grid l-grid--3-col@m u-padding-m u-bg--gray-10 o-list-reset">
+        <li class="u-bg--background u-padding-m o-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 2</li>
+        <li class="u-bg--brand-2 u-padding-m o-card l-grid__col-1@m">Grid child 3, col-1</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m o-card">Grid child 6</li>
       </ul>
     `}
   </Story>
