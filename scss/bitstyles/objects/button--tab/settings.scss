@@ -2,6 +2,7 @@
 // Base styles ////////////////////////////////////////
 
 $bitstyles-button-tab-border-radius: 0 !default;
+$bitstyles-button-tab-border-width: spacing('xxs');
 $bitstyles-button-tab-transition:
   color $bitstyles-transition-duration $bitstyles-transition-easing,
   border $bitstyles-transition-duration $bitstyles-transition-easing !default;
@@ -17,9 +18,9 @@ $bitstyles-button-tab-box-shadow: none !default;
 //
 // Hover colors ////////////////////////////////////////
 
-$bitstyles-button-tab-color-hover: palette('brand-1', '90') !default;
+$bitstyles-button-tab-color-hover: palette('brand-1', '70') !default;
 $bitstyles-button-tab-background-color-hover: transparent !default;
-$bitstyles-button-tab-border-color-hover: transparent !default;
+$bitstyles-button-tab-border-color-hover: palette('brand-1', '70') !default;
 $bitstyles-button-tab-box-shadow-hover: none !default;
 
 //

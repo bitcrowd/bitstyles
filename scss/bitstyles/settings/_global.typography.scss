@@ -1,5 +1,7 @@
-$bitstyles-font-family-header: sans-serif !default;
-$bitstyles-font-family-body: sans-serif !default;
+/* stylelint-disable value-keyword-case */
+$bitstyles-font-family-header: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$bitstyles-font-family-body: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+/* stylelint-enable value-keyword-case */
 
 $bitstyles-font-weight-light: 300 !default;
 $bitstyles-font-weight-normal: 400 !default;

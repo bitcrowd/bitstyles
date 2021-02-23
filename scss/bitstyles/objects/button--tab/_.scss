@@ -21,7 +21,7 @@
       right: $bitstyles-button-padding-horizontal;
       bottom: 0;
       left: $bitstyles-button-padding-horizontal;
-      height: spacing('xxs') / 2;
+      height: $bitstyles-button-tab-border-width;
       background-color: $bitstyles-button-tab-border-color;
       border-radius: $bitstyles-border-radius-round;
       content: '';
@@ -53,7 +53,6 @@
   }
 
   &[aria-selected="true"] {
-    font-weight: $bitstyles-font-weight-medium;
     color: $bitstyles-button-tab-color-selected;
     background: $bitstyles-button-tab-background-color-selected;
     box-shadow: $bitstyles-button-tab-box-shadow-selected;
