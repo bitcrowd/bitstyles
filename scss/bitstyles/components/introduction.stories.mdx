@@ -12,6 +12,7 @@ import pageHeaderThumb from '../../../test/assets/images/page-header.svg';
 import badgeThumb from '../../../test/assets/images/badge.svg';
 import descriptionListThumb from '../../../test/assets/images/description-list.svg';
 import statThumb from '../../../test/assets/images/stat.svg';
+import dropdownThumb from '../../../test/assets/images/dropdown.svg';
 
 <Meta title="Introduction" />
 
@@ -31,8 +32,12 @@ import statThumb from '../../../test/assets/images/stat.svg';
       margin-bottom: 0.8rem;
     }
 
+    .u-margin-xl--top {
+      margin-top: 1.8rem;
+    }
+
     .sbdocs-h2 {
-      margin-top: 4rem;
+      margin-top: 6rem;
       border: 0;
     }
   `}
@@ -44,9 +49,9 @@ import statThumb from '../../../test/assets/images/stat.svg';
 
 Large chunks of navigation at various levels.
 
-<ul class="o-list-reset l-grid@m l-grid--3-col@m">
+<ul class="o-list-reset l-grid@m l-grid--3-col@m u-margin-xl--top">
   <li>
-    <a class="u-block" href="/?path=/docs/components-navbar--navbar">
+    <a class="u-block" href="/?path=/docs/ui-navigation-navbar--navbar">
       <div class="o-card u-padding-0 u-margin-m--bottom">
         <img src={navbarThumb} alt="" class="u-block" width="160" height="90" />
       </div>
@@ -55,7 +60,7 @@ Large chunks of navigation at various levels.
     <p>Main navigation for the app</p>
   </li>
   <li>
-    <a class="u-block" href="/?path=/docs/components-tabs--tabs">
+    <a class="u-block" href="/?path=/docs/ui-navigation-tabs--tabs">
       <div class="o-card u-padding-0 u-margin-m--bottom">
         <img src={tabsThumb} alt="" class="u-block" width="160" height="90" />
       </div>
@@ -64,7 +69,7 @@ Large chunks of navigation at various levels.
     <p>Tabbed interface for navigating subscreens of a resource</p>
   </li>
   <li>
-    <a class="u-block" href="/?path=/docs/components-breadcrumbs--breadcrumbs">
+    <a class="u-block" href="/?path=/docs/ui-navigation-breadcrumbs--breadcrumbs">
       <div class="o-card u-padding-0 u-margin-m--bottom">
         <img src={breadcrumbsThumb} alt="" class="u-block" width="160" height="90" />
       </div>
@@ -72,15 +77,24 @@ Large chunks of navigation at various levels.
     </a>
     <p>Show the user where they are, and how to get back</p>
   </li>
+  <li>
+    <a class="u-block" href="/?path=/docs/ui-navigation-dropdown-menu--dropdown-menu">
+      <div class="o-card u-padding-0 u-margin-m--bottom">
+        <img src={dropdownThumb} alt="" class="u-block" width="160" height="90" />
+      </div>
+      <span>Dropdown menu</span>
+    </a>
+    <p>Hide complexity to keep the UI clear, but still quickly accessible</p>
+  </li>
 </ul>
 
 ## Page Content
 
 Some larger chunks of the content for each page.
 
-<ul class="o-list-reset l-grid@m l-grid--3-col@m">
+<ul class="o-list-reset l-grid@m l-grid--3-col@m u-margin-xl--top">
   <li>
-    <a class="u-block" href="/?path=/docs/components-page-header--page-header">
+    <a class="u-block" href="/?path=/docs/ui-content-page-header--page-header">
       <div class="o-card u-padding-0 u-margin-m--bottom">
         <img src={pageHeaderThumb} alt="" class="u-block" width="160" height="90" />
       </div>
@@ -94,7 +108,7 @@ Some larger chunks of the content for each page.
 
 Various buttons, and some methods to arrange them together.
 
-<ul class="o-list-reset l-grid@m l-grid--3-col@m">
+<ul class="o-list-reset l-grid@m l-grid--3-col@m u-margin-xl--top">
   <li>
     <a class="u-block" href="/?path=/docs/objects-button--button-element">
       <div class="o-card u-padding-0 u-margin-m--bottom">
@@ -123,7 +137,7 @@ Various buttons, and some methods to arrange them together.
     <p>A destructive button, warns the user on hover.</p>
   </li>
   <li>
-    <a class="u-block" href="/?path=/docs/components-button-groups--button-group">
+    <a class="u-block" href="/?path=/docs/ui-buttons-button-groups--button-group">
       <div class="o-card u-padding-0 u-margin-m--bottom">
         <img src={buttonGroupThumb} alt="" class="u-block" width="160" height="90" />
       </div>
@@ -132,7 +146,7 @@ Various buttons, and some methods to arrange them together.
     <p>Some loosely-connected collections of actions</p>
   </li>
   <li>
-    <a class="u-block" href="/?path=/docs/components-joined-buttons--joined-buttons-icons">
+    <a class="u-block" href="/?path=/docs/ui-buttons-joined-buttons--joined-buttons-icons">
       <div class="o-card u-padding-0 u-margin-m--bottom">
         <img src={joinedButtonThumb} alt="" class="u-block" width="160" height="90" />
       </div>
@@ -141,7 +155,7 @@ Various buttons, and some methods to arrange them together.
     <p>Tightly-coupled buttons such as next/previous, pagination</p>
   </li>
   <li>
-    <a class="u-block" href="/?path=/docs/components-mode-switch-buttons--mode-switch-buttons">
+    <a class="u-block" href="/?path=/docs/ui-buttons-mode-switch-buttons--mode-switch-buttons">
       <div class="o-card u-padding-0 u-margin-m--bottom">
         <img src={buttonModeThumb} alt="" class="u-block" width="160" height="90" />
       </div>
@@ -153,9 +167,11 @@ Various buttons, and some methods to arrange them together.
 
 ## Data
 
-<ul class="o-list-reset l-grid@m l-grid--3-col@m">
+Organize and highlight the information the user has come to see.
+
+<ul class="o-list-reset l-grid@m l-grid--3-col@m u-margin-xl--top">
   <li>
-    <a class="u-block" href="/?path=/docs/components-description-list--dl">
+    <a class="u-block" href="/?path=/docs/ui-data-description-list--dl">
       <div class="o-card u-padding-0 u-margin-m--bottom">
         <img src={descriptionListThumb} alt="" class="u-block" width="160" height="90" />
       </div>
@@ -164,7 +180,7 @@ Various buttons, and some methods to arrange them together.
     <p>Render key-value pairs in a structured, clear, and readable way</p>
   </li>
   <li>
-    <a class="u-block" href="/?path=/docs/components-stats--stats-with-change-indicators">
+    <a class="u-block" href="/?path=/docs/ui-data-stats--stats-with-change-indicators">
       <div class="o-card u-padding-0 u-margin-m--bottom">
         <img src={statThumb} alt="" class="u-block" width="160" height="90" />
       </div>
