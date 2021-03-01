@@ -13,15 +13,15 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.#{$bitstyles-namespace}u-grid__cou-span-2 {
+.#{$bitstyles-namespace}u-grid__col-span-2 {
   grid-column: span 2 / span 2;
 }
 
-.#{$bitstyles-namespace}u-grid__cou-span-3 {
+.#{$bitstyles-namespace}u-grid__col-span-3 {
   grid-column: span 3 / span 3;
 }
 
-.#{$bitstyles-namespace}u-grid__cou-1 {
+.#{$bitstyles-namespace}u-grid__col-1 {
   grid-column: 1;
 }
 
@@ -43,15 +43,15 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .#{$bitstyles-namespace}u-grid__cou-span-2\@m {
+  .#{$bitstyles-namespace}u-grid__col-span-2\@m {
     grid-column: span 2 / span 2;
   }
 
-  .#{$bitstyles-namespace}u-grid__cou-span-3\@m {
+  .#{$bitstyles-namespace}u-grid__col-span-3\@m {
     grid-column: span 3 / span 3;
   }
 
-  .#{$bitstyles-namespace}u-grid__cou-1\@m {
+  .#{$bitstyles-namespace}u-grid__col-1\@m {
     grid-column: 1;
   }
 }

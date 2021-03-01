@@ -102,13 +102,13 @@ Column classes can be applied at specific breakpoints using the `@breakpoint` su
   </Story>
 </Canvas>
 
-For some layouts, you’ll want to allow some of the grid children a little more space. You can do this using `.u-grid__cou-span-2` and `.u-grid__cou-span-3`, both of which are available `@m`. Note that using these classes can break the grid layout if the `span` class on the child is not applied at the same breakpoint as the grid.
+For some layouts, you’ll want to allow some of the grid children a little more space. You can do this using `.u-grid__col-span-2` and `.u-grid__col-span-3`, both of which are available `@m`. Note that using these classes can break the grid layout if the `span` class on the child is not applied at the same breakpoint as the grid.
 
 <Canvas isColumn>
-  <Story name="u-grid__cou-span-2">
+  <Story name="u-grid__col-span-2">
     {`
       <ul class="u-grid u-grid--2-col u-padding-m u-bg--gray-10 u-list-reset">
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__cou-span-2">Grid child 1, span 2</li>
+        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-span-2">Grid child 1, span 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
@@ -117,10 +117,10 @@ For some layouts, you’ll want to allow some of the grid children a little more
       </ul>
     `}
   </Story>
-  <Story name="u-grid__cou-span-2@m">
+  <Story name="u-grid__col-span-2@m">
     {`
       <ul class="u-grid u-grid--2-col@m u-padding-m u-bg--gray-10 u-list-reset">
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__cou-span-2@m">Grid child 1, span 2 @m</li>
+        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-span-2@m">Grid child 1, span 2 @m</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
@@ -129,10 +129,10 @@ For some layouts, you’ll want to allow some of the grid children a little more
       </ul>
     `}
   </Story>
-  <Story name="u-grid__cou-span-3">
+  <Story name="u-grid__col-span-3">
     {`
       <ul class="u-grid u-grid--3-col u-padding-m u-bg--gray-10 u-list-reset">
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__cou-span-3">Grid child 1, span 3</li>
+        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-span-3">Grid child 1, span 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
@@ -141,10 +141,10 @@ For some layouts, you’ll want to allow some of the grid children a little more
       </ul>
     `}
   </Story>
-  <Story name="u-grid__cou-span-3@m">
+  <Story name="u-grid__col-span-3@m">
     {`
       <ul class="u-grid u-grid--3-col@m u-padding-m u-bg--gray-10 u-list-reset">
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__cou-span-3@m">Grid child 1, span 3 @m</li>
+        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-span-3@m">Grid child 1, span 3 @m</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
@@ -155,27 +155,27 @@ For some layouts, you’ll want to allow some of the grid children a little more
   </Story>
 </Canvas>
 
-You can specify that a grid child should start a row using `.u-grid__cou-1`.
+You can specify that a grid child should start a row using `.u-grid__col-1`.
 
 <Canvas isColumn>
-  <Story name="u-grid__cou-1">
+  <Story name="u-grid__col-1">
     {`
       <ul class="u-grid u-grid--3-col u-padding-m u-bg--gray-10 u-list-reset">
         <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__cou-1">Grid child 3, cou-1</li>
+        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-1">Grid child 3, cou-1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 5</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 6</li>
       </ul>
     `}
   </Story>
-  <Story name="u-grid__cou-1@m">
+  <Story name="u-grid__col-1@m">
     {`
       <ul class="u-grid u-grid--3-col@m u-padding-m u-bg--gray-10 u-list-reset">
         <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__cou-1@m">Grid child 3, cou-1</li>
+        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-1@m">Grid child 3, cou-1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 5</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 6</li>
