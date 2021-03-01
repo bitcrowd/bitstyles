@@ -5,16 +5,16 @@
 
   /* stylelint-disable selector-max-type */
   th {
-    padding: spacing('xs') spacing('m');
-    color: palette('gray', '70');
+    padding: $bitstyles-table-padding-vertical-th $bitstyles-table-padding-horizontal;
+    color: $bitstyles-table-color-th;
     white-space: nowrap;
-    background: palette('background', '95');
+    background: $bitstyles-table-background-color-th;
     border-bottom: $bitstyles-table-border;
   }
 
   td {
-    padding: spacing('m');
-    background: palette('background');
+    padding: $bitstyles-table-padding-vertical-td $bitstyles-table-padding-horizontal;
+    background: $bitstyles-table-background-color-td;
     border-bottom: $bitstyles-table-border;
   }
 
