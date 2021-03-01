@@ -17,7 +17,9 @@
     "css:stats": "analyze-css --file build/bitstyles.css --pretty > test/css-stats.json",
     "precss:graph": "yarn build",
     "css:graph": "specificity-graph build/bitstyles.css --output test/specificity_graph/",
-    "build-storybook": "build-storybook"
+    "build-storybook": "yarn build && build-storybook",
+    "predeploy-storybook": "yarn build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "repository": {
     "type": "git",
@@ -43,10 +45,10 @@
   "homepage": "https://github.com/bitcrowd/bitstyles#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
-    "@storybook/addon-actions": "^6.1.18",
-    "@storybook/addon-essentials": "^6.1.18",
-    "@storybook/addon-links": "^6.1.18",
-    "@storybook/html": "^6.1.18",
+    "@storybook/addon-actions": "^6.1.20",
+    "@storybook/addon-essentials": "^6.1.20",
+    "@storybook/addon-links": "^6.1.20",
+    "@storybook/html": "^6.1.20",
     "analyze-css": "^0.12.9",
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.1.0",
@@ -59,6 +61,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "gh-pages": "^3.1.0",
     "postcss": "^7",
     "postcss-cli": "^7.1.1",
     "prettier": "^1.18.2",
