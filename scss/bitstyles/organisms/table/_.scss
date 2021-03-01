@@ -2,16 +2,19 @@
 
 .o-table {
   width: 100%;
-  white-space: nowrap;
 
+  /* stylelint-disable selector-max-type */
   th {
     padding: spacing('xs') spacing('m');
+    color: palette('gray', '70');
+    white-space: nowrap;
+    background: palette('background', '95');
     border-bottom: $bitstyles-table-border;
-    background: rgba(palette('gray', '1'), 0.1)
   }
 
   td {
     padding: spacing('m');
+    background: palette('background');
     border-bottom: $bitstyles-table-border;
   }
 
@@ -20,4 +23,5 @@
       border: 0;
     }
   }
+  /* stylelint-enable selector-max-type */
 }
