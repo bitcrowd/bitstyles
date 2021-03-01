@@ -1,6 +1,6 @@
 @import './settings';
 
-.#{$bitstyles-namespace}o-button--icon {
+.#{$bitstyles-namespace}a-button--icon {
   padding: $bitstyles-button-icon-padding-vertical $bitstyles-button-icon-padding-horizontal;
   border-radius: $bitstyles-button-icon-border-radius;
 
@@ -34,7 +34,7 @@
     box-shadow: $bitstyles-button-icon-box-shadow-disabled;
   }
 
-  .o-button__icon {
+  .a-button__icon {
     margin: 0;
   }
 }

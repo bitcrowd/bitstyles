@@ -1,6 +1,6 @@
 @import './settings';
 
-.#{$bitstyles-namespace}o-button--icon-reversed {
+.#{$bitstyles-namespace}a-button--icon-reversed {
   &,
   &:visited {
     color: var(--button-fg, $bitstyles-button-icon-reversed-color);

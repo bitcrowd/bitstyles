@@ -6,14 +6,14 @@
 // the `body` is the content you want to be revealed — it starts at zero height,
 // expanding to the size of its content once active.
 //
-// Use the `.o-button` classes on the `.c-expander-toggle` to ensure consistency
+// Use the `.a-button` classes on the `.c-expander-toggle` to ensure consistency
 // with other button elements.
 //
 // markup:
 // <p>
-//   <button class="c-expander-toggle o-button" aria-expanded="false" aria-controls="expander-0" id="expander_button">
+//   <button class="c-expander-toggle a-button" aria-expanded="false" aria-controls="expander-0" id="expander_button">
 //     Toggle content
-//     <svg class="o-icon c-expander-toggle__indicator">
+//     <svg class="a-icon c-expander-toggle__indicator">
 //       <use xlink:href="assets/images/icons.svg#icon-arrow-up"></use>
 //     </svg>
 //   </button>

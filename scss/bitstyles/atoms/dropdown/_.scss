@@ -1,6 +1,6 @@
 @import './settings';
 
-.o-dropdown {
+.a-dropdown {
   position: absolute;
   z-index: 1;
   width: min-content;
@@ -25,12 +25,12 @@
   }
 }
 
-.o-dropdown--reverse {
+.a-dropdown--reverse {
   right: 0;
 }
 
 @include media-query('s') {
-  .o-dropdown {
+  .a-dropdown {
     right: spacing('m');
     left: spacing('m');
     width: calc(100vw - #{spacing('m') * 2});

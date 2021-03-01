@@ -4,28 +4,28 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Grouped Buttons
 
-A set of buttons that will appear to be joined to other `.o-button--grouped`s siblings.
+A set of buttons that will appear to be joined to other `.a-button--grouped`s siblings.
 
 There are three button components: first, last, and middle.
 
 <Canvas>
   <Story name="Button--grouped__first">
     {`
-      <button type="button" class="o-button o-button--grouped o-button--grouped__first">
+      <button type="button" class="a-button a-button--grouped a-button--grouped__first">
         First
       </button>
     `}
   </Story>
   <Story name="Button--grouped">
     {`
-      <button type="button" class="o-button o-button--grouped">
+      <button type="button" class="a-button a-button--grouped">
         Middle
       </button>
     `}
   </Story>
   <Story name="Button--grouped__last">
     {`
-      <button type="button" class="o-button o-button--grouped o-button--grouped__last">
+      <button type="button" class="a-button a-button--grouped a-button--grouped__last">
         Last
       </button>
     `}
@@ -37,7 +37,7 @@ When you’re representing state in the UI, use the `aria-pressed="true"` attrib
 <Canvas>
   <Story name="Button--grouped [aria-pressed]">
     {`
-      <button type="button" class="o-button o-button--grouped u-h6" aria-pressed="true">
+      <button type="button" class="a-button a-button--grouped u-h6" aria-pressed="true">
         Pressed
       </button>
     `}

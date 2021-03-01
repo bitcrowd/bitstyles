@@ -1,6 +1,6 @@
 @import './settings';
 
-.o-badge {
+.a-badge {
   display: inline-flex;
   align-items: center;
   padding: $bitstyles-badge-padding-vertical $bitstyles-badge-padding-horizontal;
@@ -9,7 +9,7 @@
 }
 
 @each $variant in ($bitstyles-badge-variants) {
-  .o-badge--#{$variant} {
+  .a-badge--#{$variant} {
     --button-fg: #{palette($variant, $bitstyles-badge-color)};
     --button-bg: #{palette($variant, $bitstyles-badge-background-color)};
     --button-fg-hover: #{palette($variant, $bitstyles-badge-background-color)};
@@ -20,7 +20,7 @@
   }
 }
 
-.o-badge__button {
+.a-badge__button {
   margin-right: -#{spacing('s')};
   margin-left: spacing('xs');
 }

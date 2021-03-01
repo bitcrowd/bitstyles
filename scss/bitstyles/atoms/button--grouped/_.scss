@@ -1,11 +1,11 @@
 @import './settings';
 
-.o-button--grouped-container {
+.a-button--grouped-container {
   border-radius: $bitstyles-button-grouped-border-radius;
   box-shadow: $bitstyles-button-grouped-container-box-shadow;
 }
 
-.o-button--grouped {
+.a-button--grouped {
   border-radius: 0;
 
   &,
@@ -53,12 +53,12 @@
   }
 }
 
-.o-button--grouped__first {
+.a-button--grouped__first {
   border-bottom-left-radius: $bitstyles-button-grouped-border-radius;
   border-top-left-radius: $bitstyles-button-grouped-border-radius;
 }
 
-.o-button--grouped__last {
+.a-button--grouped__last {
   border-top-right-radius: $bitstyles-button-grouped-border-radius;
   border-bottom-right-radius: $bitstyles-button-grouped-border-radius;
 

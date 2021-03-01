@@ -1,6 +1,6 @@
 @import './settings';
 
-.#{$bitstyles-namespace}o-button {
+.#{$bitstyles-namespace}a-button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -56,13 +56,13 @@
   }
 }
 
-.o-button__avatar,
-.#{$bitstyles-namespace}o-button__icon {
+.a-button__avatar,
+.#{$bitstyles-namespace}a-button__icon {
   margin-right: $bitstyles-button-icon-spacing;
   margin-left: -$bitstyles-button-icon-spacing / 4;
 }
 
-.#{$bitstyles-namespace}o-button__label + .#{$bitstyles-namespace}o-button__icon {
+.#{$bitstyles-namespace}a-button__label + .#{$bitstyles-namespace}a-button__icon {
   margin-right: -$bitstyles-button-icon-spacing / 4;
   margin-left: $bitstyles-button-icon-spacing;
 }

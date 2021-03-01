@@ -1,11 +1,11 @@
 @import './settings';
 
-.o-button--small {
+.a-button--small {
   min-height: spacing('l');
   padding: $bitstyles-button-small-padding-vertical $bitstyles-button-small-padding-horizontal;
   border-radius: $bitstyles-button-small-border-radius;
 
-  &.o-button--icon {
+  &.a-button--icon {
     padding: $bitstyles-button-small-padding-horizontal / 2;
   }
 }

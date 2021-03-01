@@ -1,6 +1,6 @@
 @import './settings';
 
-.o-avatar {
+.a-avatar {
   width: 2em;
   height: 2em;
   overflow: hidden;
@@ -16,7 +16,7 @@
 }
 
 @each $size-alias, $size in $bitstyles-avatar-sizes {
-  .o-avatar--#{$size-alias} {
+  .a-avatar--#{$size-alias} {
     width: $size;
     height: $size;
   }
