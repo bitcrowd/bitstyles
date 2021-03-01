@@ -171,36 +171,3 @@ This includes all standard `type="text"` inputs, plus all the text-based inputs 
     `}
   </Story>
 </Canvas>
-
-
-## Example login form
-
-When using form elements in a form, they should be wrapped in a list element, as all the elements are related to each other. This also gives the opportunity to apply some layout, such as adding space between elements.
-
-Form elements will take 100% of the available width, so you’ll likely want to use a grid or flex layout system to make that more readable and usable.
-
-<Canvas isColumn>
-  <Story name="Example login form">
-    {`
-      <form>
-        <ul class="u-list-reset">
-          <li class="u-margin-m--bottom">
-            <label>
-              Name
-              <input type="text" autocomplete="name" />
-            </label>
-          </li>
-          <li class="u-margin-m--bottom">
-            <label>
-              Password
-              <input type="password" autocomplete="password" />
-            </label>
-          </li>
-          <li>
-            <button type="submit">Login</button>
-          </li>
-        </ul>
-      </form>
-    `}
-  </Story>
-</Canvas>

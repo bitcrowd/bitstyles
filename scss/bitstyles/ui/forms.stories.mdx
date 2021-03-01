@@ -1,0 +1,38 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="UI/Forms" />
+
+# Forms
+
+**See inputs & labels for examples of using inputs of various types.**
+
+When using form elements in a form, they should always be wrapped in a list element, as this indicates to the user that all the elements are closely related to each other. This also gives us the opportunity to apply some layout, such as adding space between elements.
+
+Form elements will take 100% of the available width, so you’ll likely want to constrain them within a grid or flex layout system to make that more readable and usable.
+
+Here are some examples using the grid utility classes to create common form layouts.
+
+## Login form
+
+<Canvas>
+  <Story name="Login form">
+    {`
+      <div class="u-grid u-grid--3-col@m">
+        <form method="POST" action="">
+          <ul class="u-list-reset">
+            <li class="u-margin-m--bottom">
+              <label for="email">Email</label>
+              <input id="email" type="email" autocomplete="email" />
+            </li>
+            <li class="u-margin-m--bottom">
+              <label for="password">Password</label>
+              <input id="password" type="password" autocomplete="password" />
+              <a href="/">Forgot password?</a>
+            </li>
+          </ul>
+          <button type="submit" class="a-button">Login</button>
+        </form>
+      </div>
+    `}
+  </Story>
+</Canvas>
