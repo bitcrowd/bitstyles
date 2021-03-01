@@ -5,9 +5,9 @@
     margin: spacing($size);
   }
 
-  .u-padding-#{$size}--y {
-    padding-top: spacing($size);
-    padding-bottom: spacing($size);
+  .u-margin-#{$size}--y {
+    margin-top: spacing($size);
+    margin-bottom: spacing($size);
   }
 
   @each $position in ('left', 'top', 'right', 'bottom') {

@@ -1,6 +1,6 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="UI/Dropdown menu" />
+<Meta title="UI/Navigation/Dropdown menu" />
 
 # Dropdown menu
 
@@ -158,6 +158,60 @@ You can include non-link content in the menu too — this version of the avatar 
           </li>
         </ul>
       </div>
+    `}
+  </Story>
+</Canvas>
+
+When you know the menu will be at the right edge of the viewport, give your dropdown `.o-dropdown--reverse` to align the menu flush to the right.
+
+<Canvas>
+  <Story name="Dropdown, reverse-aligned">
+    {`
+    <div class="l-flex l-justify-end">
+      <div class="l-relative" style="height: 15rem">
+        <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="dropdown-3" aria-expanded="true">
+          <span class="o-button__label">Account</span>
+          <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+          </svg>
+        </button>
+        <ul class="o-dropdown o-dropdown--reverse o-overflow o-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-3">
+          <li>
+            <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right l-flex l-items-center u-h6 u-line-height--min">
+              <div class="o-avatar o-avatar--l l-flex__shrink-0 l-flex l-items-center u-margin-s--right">
+                <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+              </div>
+              <div class="l-flex__shrink-0 l-flex l-flex--col l-items-start">
+                <span class="u-fg--gray-40">Signed in as</span>
+                <span>Username</span>
+              </div>
+            </div>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Settings
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Help
+            </a>
+          </li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Privacy
+            </a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="o-button o-button--menu u-h6">
+              Sign out
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     `}
   </Story>
 </Canvas>

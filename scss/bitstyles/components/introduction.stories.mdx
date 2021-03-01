@@ -18,6 +18,21 @@ import dropdownThumb from '../../../test/assets/images/dropdown.svg';
 
 <style>
   {`
+
+    img[width] {
+      width: auto;
+    }
+
+    img[width][height] {
+      height: auto;
+    }
+
+    img[src$=".svg"] {
+      width: 100%;
+      height: auto;
+      max-width: none;
+    }
+
     .o-list-reset {
       list-style-type: none;
       margin: 0;
