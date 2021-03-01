@@ -1,0 +1,37 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Atoms/Button--dropdown" />
+
+# Dropdown Button
+
+A button that controls the visibilty of another component, normally a dropdown menu or similar. As well as some visual differences to a normal button (as they perform different actions) there are some aria attributes to ensure the button is connected to the element it controls.
+
+When using this component:
+
+- replace the `aria-controls` attribute’s value with the actual ID of the element it’s controlling
+- update the `aria-expanded` attribute when the user clicks this button to show/hide that other element. Set it to `true` or `false` to reflect its current state.
+
+<Canvas>
+  <Story name="Button--dropdown">
+    {`
+        <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="element-id" aria-expanded="false">
+          <span class="o-button__label">Account</span>
+          <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Button--dropdown [expanded]">
+    {`
+        <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="element-id" aria-expanded="true">
+          <span class="o-button__label">Account</span>
+          <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>

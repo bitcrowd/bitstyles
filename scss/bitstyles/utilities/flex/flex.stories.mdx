@@ -27,7 +27,7 @@ These first examples show the layouts with a small amount of text content.
 <Canvas isColumn>
   <Story name="Flex">
     {`
-      <ul class="u-flex o-list-reset">
+      <ul class="u-flex u-list-reset">
         <li>List item one</li>
         <li>List item two</li>
         <li>List item three</li>
@@ -37,7 +37,7 @@ These first examples show the layouts with a small amount of text content.
   </Story>
   <Story name="Flex, with grow-1 child">
     {`
-      <ul class="u-flex o-list-reset">
+      <ul class="u-flex u-list-reset">
         <li>List item one</li>
         <li class="u-flex__grow-1 u-bg--brand-2">Important content here</li>
         <li>List item three</li>
@@ -47,7 +47,7 @@ These first examples show the layouts with a small amount of text content.
   </Story>
   <Story name="Flex, with no-shrink child">
     {`
-      <ul class="u-flex o-list-reset">
+      <ul class="u-flex u-list-reset">
         <li>List item one</li>
         <li class="u-flex__shrink-0"><button type="button">Don’t shrink me</button></li>
         <li>List item three</li>
@@ -64,7 +64,7 @@ These next examples show how the same layouts behave with long text content.
 <Canvas isColumn>
   <Story name="Flex with long content">
     {`
-      <ul class="u-flex o-list-reset">
+      <ul class="u-flex u-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
@@ -74,7 +74,7 @@ These next examples show how the same layouts behave with long text content.
   </Story>
   <Story name="Flex with long content, with primary child">
     {`
-      <ul class="u-flex o-list-reset">
+      <ul class="u-flex u-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li class="u-flex__grow-1 u-bg--brand-2">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
@@ -84,7 +84,7 @@ These next examples show how the same layouts behave with long text content.
   </Story>
   <Story name="Flex with long content, with no-shrink child">
     {`
-      <ul class="u-flex o-list-reset">
+      <ul class="u-flex u-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li class="u-flex__shrink-0 u-bg--brand-2">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
@@ -101,7 +101,7 @@ And this time the same layouts, with images as content (any element with intrins
 <Canvas isColumn>
   <Story name="Flex with intrinsic-width content">
     {`
-      <ul class="u-flex o-list-reset">
+      <ul class="u-flex u-list-reset">
         <li>
           <img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" />
         </li>
@@ -119,7 +119,7 @@ And this time the same layouts, with images as content (any element with intrins
   </Story>
   <Story name="Flex with intrinsic-width content, with primary child">
     {`
-      <ul class="u-flex o-list-reset">
+      <ul class="u-flex u-list-reset">
         <li>
           <img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" />
         </li>
@@ -137,7 +137,7 @@ And this time the same layouts, with images as content (any element with intrins
   </Story>
   <Story name="Flex with intrinsic-width content, with no-shrink child">
     {`
-      <ul class="u-flex o-list-reset">
+      <ul class="u-flex u-list-reset">
         <li>
           <img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" />
         </li>
@@ -164,7 +164,7 @@ Note this layout may not be so useful with elements that take all available spac
 <Canvas isColumn>
   <Story name="Flex wrap with long content">
     {`
-      <ul class="u-flex u-flex--wrap o-list-reset">
+      <ul class="u-flex u-flex--wrap u-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li class="u-flex__grow-1 u-bg--brand-2">Important content here - Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
@@ -174,7 +174,7 @@ Note this layout may not be so useful with elements that take all available spac
   </Story>
   <Story name="Flex wrap with intrinsic-width content">
     {`
-      <ul class="u-flex u-flex--wrap o-list-reset">
+      <ul class="u-flex u-flex--wrap u-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
         <li class="u-flex__grow-1 u-bg--brand-2">Important content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
@@ -191,7 +191,7 @@ This flex layout is ideal for laying out buttons in a row — perhaps actions at
 <Canvas>
   <Story name="Flex wrap for buttons">
     {`
-      <ul class="u-flex u-flex--wrap o-list-reset">
+      <ul class="u-flex u-flex--wrap u-list-reset">
         <li class="u-margin-m--right u-margin-m--bottom"><button type="button">An action</button></li>
         <li class="u-margin-m--right u-margin-m--bottom"><button type="button">Another action</button></li>
         <li class="u-margin-m--right u-margin-m--bottom"><button type="button">A longer-named action</button></li>
@@ -208,7 +208,7 @@ Apply `.u-items-center` to the flex parent when you want all the elements to ali
 <Canvas>
   <Story name="Flex with align center">
     {`
-      <ul class="u-flex u-items-center o-list-reset">
+      <ul class="u-flex u-items-center u-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
         <li class="u-flex__grow-1 u-bg--brand-2">Important content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
@@ -226,7 +226,7 @@ Flex defaults to laying out children in horizontal rows. To layout items vertica
 <Canvas>
   <Story name="Flex col">
     {`
-      <ul class="u-flex u-flex--col o-list-reset">
+      <ul class="u-flex u-flex--col u-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
         <li>Text content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
@@ -243,7 +243,7 @@ The flex classes can be combined: use `.u-items-center` with `.u-flex--col` to g
 <Canvas>
   <Story name="Flex col with align center">
     {`
-      <ul class="u-flex u-flex--col u-items-center o-list-reset">
+      <ul class="u-flex u-flex--col u-items-center u-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
         <li>Text content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>

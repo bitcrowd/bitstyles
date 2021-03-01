@@ -1,0 +1,7 @@
+.#{$bitstyles-namespace}u-overflow--y {
+  @include overflow-y;
+}
+
+.#{$bitstyles-namespace}u-overflow--x {
+  @include overflow-x;
+}

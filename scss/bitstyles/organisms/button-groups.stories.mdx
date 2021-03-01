@@ -1,0 +1,58 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="UI/Buttons/Button groups" />
+
+# Button Groups
+
+A group of buttons aligned horizontally, collapsing onto a new row when there’s not enough space in their container for them all.
+
+<Canvas>
+  <Story name="Button group">
+    {`
+      <ul class="u-list-reset l-flex l-flex--wrap l-items-center">
+        <li class="u-margin-xs--right">
+          <button class="o-button u-h6" type="button">Show</button>
+        </li>
+        <li class="u-margin-xs--right">
+          <button class="o-button u-h6" type="button">Edit</button>
+        </li>
+        <li class="u-margin-xs--right">
+          <button class="o-button o-button--danger u-h6" type="button">Delete</button>
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Button group with icons">
+    {`
+      <ul class="u-list-reset l-flex l-flex--wrap l-items-center">
+        <li class="l-flex u-margin-xs--right">
+          <button class="o-button u-h6" type="button">
+            <svg class="o-button__icon o-icon o-icon-m" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+            </svg>
+            <span class="o-button__label">Show</span>
+          </button>
+        </li>
+        <li class="l-flex u-margin-xs--right">
+          <button class="o-button u-h6" type="button">
+            <svg class="o-button__icon o-icon o-icon-m" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-hidden="true">
+              <path d="M97.41,23a5.43,5.43,0,0,0,0-7.68L84.67,2.59a5.43,5.43,0,0,0-7.68,0l-10,10L87.39,33M1,78.59V99H21.41L81.62,38.74,61.21,18.32Z"/>
+            </svg>
+            <span class="o-button__label">Edit</span>
+          </button>
+        </li>
+        <li class="l-flex u-margin-xs--right">
+          <button class="o-button o-button--danger u-h6" type="button">
+            <svg class="o-button__icon o-icon o-icon--m" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-hidden="true">
+              <path d="M88.11,6.44h-19L63.61,1H36.39L30.94,6.44h-19V17.33H88.11M17.33,88.11A10.92,10.92,0,0,0,28.22,99H71.78A10.92,10.92,0,0,0,82.67,88.11V22.78H17.33Z"/>
+            </svg>
+            <span class="o-button__label">Delete</span>
+          </button>
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>

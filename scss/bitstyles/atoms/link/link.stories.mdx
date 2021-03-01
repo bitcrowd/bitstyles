@@ -1,0 +1,17 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Atoms/Link" />
+
+# Link
+
+Mimic the appearance of standard anchor elements. This allows other interactive elements (e.g. `<button>`) to visually match your links.
+
+This is generally a bad practice — if it looks like a link, it should be a link — but it’s sometimes necessary for technical reasons, especially when building a JS app e.g. an element shouldn’t be a link because no url change occurs (this could be when displaying a modal, or cancelling an action).
+
+<Canvas>
+  <Story name="Link">
+    {`
+      <button class="o-link" type="button">I’m a button element</button>
+    `}
+  </Story>
+</Canvas>

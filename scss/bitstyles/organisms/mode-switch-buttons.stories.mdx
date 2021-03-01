@@ -1,0 +1,36 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="UI/Buttons/Mode-switch buttons" />
+
+# Mode-switch buttons
+
+A series of buttons to switch between modes of a view. In the example below, the user is shown the list of available modes, and which is currently-selected, in a calendar view.
+
+<Canvas>
+  <Story name="Mode-switch buttons">
+    {`
+      <ul class="u-list-reset l-flex l-flex--inline l-items-stretch l-items-center o-button--mode-container u-padding-xs u-bg--gray-20">
+        <li class="u-margin-xs--right">
+          <button class="o-button o-button--mode u-h6" type="button">
+            Year
+          </button>
+        </li>
+        <li class="u-margin-xs--right">
+          <button class="o-button o-button--mode u-h6" type="button">
+            Month
+          </button>
+        </li>
+        <li class="u-margin-xs--right">
+          <button class="o-button o-button--mode u-h6" type="button">
+            Week
+          </button>
+        </li>
+        <li>
+          <button class="o-button o-button--mode u-h6" type="button" aria-pressed="true">
+            Day
+          </button>
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>

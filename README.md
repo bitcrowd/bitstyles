@@ -84,10 +84,10 @@ Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your proj
 
 // …
 
-@import 'bitstyles/objects/icon/';
+@import 'bitstyles/atomsicon/';
 // @import 'bitstyles/object/button/';
 // @import 'bitstyles/object/button-icon/';
-@import 'bitstyles/objects/absolute-center/';
+@import 'bitstyles/atomsabsolute-center/';
 ```
 
 To change the css output by the library (e.g. standard margins, typographic scale, column count of the grid system…) you must override the variables used to build it. To do this declare any variables with your own values before including the bitstyles settings:
@@ -104,10 +104,10 @@ To change the css output by the library (e.g. standard margins, typographic scal
 @import 'bitstyles/settings/global.color-theme';
 @import 'bitstyles/settings/global.typography';
 
-@import 'bitstyles/objects/icon/';
+@import 'bitstyles/atomsicon/';
 // @import 'bitstyles/object/button/';
 // @import 'bitstyles/object/button-icon/';
-@import 'bitstyles/objects/absolute-center/';
+@import 'bitstyles/atomsabsolute-center/';
 ```
 
 For the complete list of variables you can override, look through the various files in the `bitstyles/settings/` folder.
