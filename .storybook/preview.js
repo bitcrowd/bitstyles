@@ -4,7 +4,7 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   options: {
     storySort: {
-      order: ['Introduction', ['Navigation', 'Content', 'Buttons', 'Data'], 'UI', 'Generic', 'Base', 'Layout', 'Objects', 'Components', 'Utilities'],
+      order: ['Introduction', 'UI', ['Navigation', 'Content', 'Buttons', 'Data'], 'Generic', 'Base', 'Atoms', 'Organisms', 'Utilities'],
     },
   },
 }

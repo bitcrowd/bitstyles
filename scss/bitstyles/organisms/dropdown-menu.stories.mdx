@@ -11,7 +11,7 @@ For the sake of clarity, the examples shown here are all presented with the menu
 <Canvas>
   <Story name="Dropdown menu">
     {`
-      <div class="l-relative" style="min-height:15rem;">
+      <div class="u-relative" style="min-height:15rem;">
         <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="dropdown-1" aria-expanded="true">
           <span class="o-button__label">Account</span>
           <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -63,7 +63,7 @@ The structure can be a little simpler if your menu items do not need icons. Here
 <Canvas>
   <Story name="Dropdown with avatar user-profile link">
     {`
-      <div class="l-relative" style="min-height:15rem;">
+      <div class="u-relative" style="min-height:15rem;">
         <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="dropdown-2" aria-expanded="true">
           <span class="o-button__label">Account</span>
           <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -73,10 +73,10 @@ The structure can be a little simpler if your menu items do not need icons. Here
         <ul class="o-dropdown u-overflow--y u-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-2">
           <li>
             <a href="/" class="o-button o-button--menu u-h6">
-              <div class="o-button__avatar o-avatar o-avatar--l l-flex__shrink-0 l-flex l-items-center">
+              <div class="o-button__avatar o-avatar o-avatar--l u-flex__shrink-0 u-flex u-items-center">
                 <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
               </div>
-              <div class="o-button__label l-flex l-flex--col l-items-start">
+              <div class="o-button__label u-flex u-flex--col u-items-start">
                 <span>Signed in as</span>
                 <span>Username</span>
               </div>
@@ -115,7 +115,7 @@ You can include non-link content in the menu too — this version of the avatar 
 <Canvas>
   <Story name="Dropdown with non-button/link content">
     {`
-      <div class="l-relative" style="height: 15rem">
+      <div class="u-relative" style="height: 15rem">
         <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="dropdown-3" aria-expanded="true">
           <span class="o-button__label">Account</span>
           <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -124,11 +124,11 @@ You can include non-link content in the menu too — this version of the avatar 
         </button>
         <ul class="o-dropdown u-overflow--y u-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-3">
           <li>
-            <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right l-flex l-items-center u-h6 u-line-height--min">
-              <div class="o-avatar o-avatar--l l-flex__shrink-0 l-flex l-items-center u-margin-s--right">
+            <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right u-flex u-items-center u-h6 u-line-height--min">
+              <div class="o-avatar o-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s--right">
                 <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
               </div>
-              <div class="l-flex__shrink-0 l-flex l-flex--col l-items-start">
+              <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
                 <span class="u-fg--gray-40">Signed in as</span>
                 <span>Username</span>
               </div>
@@ -167,8 +167,8 @@ When you know the menu will be at the right edge of the viewport, give your drop
 <Canvas>
   <Story name="Dropdown, reverse-aligned">
     {`
-    <div class="l-flex l-justify-end">
-      <div class="l-relative" style="height: 15rem">
+    <div class="u-flex u-justify-end">
+      <div class="u-relative" style="height: 15rem">
         <button type="button" class="o-button o-button--dropdown u-h6" aria-controls="dropdown-3" aria-expanded="true">
           <span class="o-button__label">Account</span>
           <svg class="o-button__icon o-icon o-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -177,11 +177,11 @@ When you know the menu will be at the right edge of the viewport, give your drop
         </button>
         <ul class="o-dropdown o-dropdown--reverse u-overflow--y u-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-3">
           <li>
-            <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right l-flex l-items-center u-h6 u-line-height--min">
-              <div class="o-avatar o-avatar--l l-flex__shrink-0 l-flex l-items-center u-margin-s--right">
+            <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right u-flex u-items-center u-h6 u-line-height--min">
+              <div class="o-avatar o-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s--right">
                 <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
               </div>
-              <div class="l-flex__shrink-0 l-flex l-flex--col l-items-start">
+              <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
                 <span class="u-fg--gray-40">Signed in as</span>
                 <span>Username</span>
               </div>
