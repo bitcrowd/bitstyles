@@ -1,0 +1,23 @@
+.#{$bitstyles-namespace}u-flex {
+  display: flex;
+}
+
+.#{$bitstyles-namespace}u-flex--inline {
+  display: inline-flex;
+}
+
+.#{$bitstyles-namespace}u-flex--wrap {
+  flex-wrap: wrap;
+}
+
+.#{$bitstyles-namespace}u-flex--col {
+  flex-direction: column;
+}
+
+.#{$bitstyles-namespace}u-flex__grow-1 {
+  flex-grow: 1;
+}
+
+.#{$bitstyles-namespace}u-flex__shrink-0 {
+  flex-shrink: 0;
+}

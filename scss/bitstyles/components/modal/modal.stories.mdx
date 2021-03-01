@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 **Needs JS to function**
 
-Set modal size using the usual layout classes e.g. `.l-content`. At smaller screensizes the modal becomes fullwidth.
+Set modal size using the usual layout classes e.g. `.o-content`. At smaller screensizes the modal becomes fullwidth.
 
 The example here uses [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog) so it’s accessible for keyboard users, screenreader users etc. — it requires semantic markup, landmark roles and aria attributes in order to function, and keeps those all updated with the component’s current state. The basic layout & appearance styles should still function even if you’re using a different JS modal component.
 
@@ -18,14 +18,14 @@ If you’re using A11y-dialog:
 <Canvas>
   <Story name="Modal">
     {`
-      <main aria-label="Content" id="main" class="l-content">
+      <main aria-label="Content" id="main" class="o-content">
         <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
         <p class="u-text--center"><button class="o-link" data-a11y-dialog-show="dialog_1">open dialogue</button></p>
         <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
       </main>
       <div class="c-modal" id="dialog_1" aria-hidden="true">
         <div class="c-modal__overlay" tabindex="-1" data-a11y-dialog-hide></div>
-        <div class="l-content c-modal__content" role="dialog" aria-labelledby="dialog-title">
+        <div class="o-content c-modal__content" role="dialog" aria-labelledby="dialog-title">
           <div role="document">
             <h1 class="u-h1" id="dialog-title" tabindex="0">Dialog Title</h1>
             <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
@@ -47,7 +47,7 @@ Using the `modal-variation` mixin we can provide different animations depending 
 <Canvas>
   <Story name="Modal dialog">
     {`
-    <main aria-label="Content" id="main" class="l-content">
+    <main aria-label="Content" id="main" class="o-content">
       <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
       <p class="u-text--center">
         <button class="o-link" data-a11y-dialog-show="dialog_1">open dialogue</button>
@@ -56,7 +56,7 @@ Using the `modal-variation` mixin we can provide different animations depending 
     </main>
     <div class="c-modal" id="dialog_1" aria-hidden="true">
       <div class="c-modal__overlay" tabindex="-1" data-a11y-dialog-hide></div>
-      <div class="l-content c-modal__content" role="dialog" aria-labelledby="dialog-title">
+      <div class="o-content c-modal__content" role="dialog" aria-labelledby="dialog-title">
         <div role="document">
           <h1 class="u-h1" id="dialog-title" tabindex="0">Dialog Title</h1>
           <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
