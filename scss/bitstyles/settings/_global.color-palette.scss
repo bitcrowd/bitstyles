@@ -132,4 +132,18 @@ $bitstyles-color-palette: (
     '10': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 90%),
     '5': mix($bitstyles-base-color-white, $bitstyles-base-color-warning, 95%),
   ),
+  'positive': (
+    '100': $bitstyles-base-color-positive,
+    '95': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 5%),
+    '90': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 10%),
+    '80': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 20%),
+    '70': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 30%),
+    '60': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 40%),
+    '50': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 50%),
+    '40': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 60%),
+    '30': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 70%),
+    '20': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 80%),
+    '10': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 90%),
+    '5': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 95%),
+  ),
 ) !default;

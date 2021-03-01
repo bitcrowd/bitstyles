@@ -5,9 +5,30 @@
     margin: spacing($size);
   }
 
+  .u-padding-#{$size}--y {
+    padding-top: spacing($size);
+    padding-bottom: spacing($size);
+  }
+
   @each $position in ('left', 'top', 'right', 'bottom') {
     .#{$bitstyles-namespace}u-margin-#{$size}--#{$position} {
       margin-#{$position}: spacing($size);
+    }
+  }
+}
+
+@each $breakpoint in $bitstyles-margin-breakpoints {
+  @include media-query($breakpoint) {
+    @each $size in $bitstyles-margin-sizes {
+      .#{$bitstyles-namespace}u-margin-#{$size}\@#{$breakpoint} {
+        margin: spacing($size);
+      }
+
+      @each $position in ('left', 'top', 'right', 'bottom') {
+        .#{$bitstyles-namespace}u-margin-#{$size}--#{$position}\@#{$breakpoint} {
+          margin-#{$position}: spacing($size);
+        }
+      }
     }
   }
 }
