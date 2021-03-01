@@ -1,13 +1,13 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="Atoms/Button--nav-large" />
+<Meta title="Atoms/Button/Nav-large" />
 
 # Large Nav Button
 
 A button for your main navigation that’s rendered full-width, ideal for the “off-screen-canvas” (or “hamburger”) menu on small screens.
 
 <Canvas>
-  <Story name="Button--nav-large">
+  <Story name="Nav-large">
     {`
       <a href="/" class="a-button a-button--nav-large">
         Dashboard
@@ -20,7 +20,7 @@ A button for your main navigation that’s rendered full-width, ideal for the �
 One of the links may well be a link to the current page, and should be given an aria-current attribute: `aria-current="page"`:
 
 <Canvas>
-  <Story name="Button--nav-large [aria-current]">
+  <Story name="Nav-large [aria-current]">
     {`
       <a href="/" class="a-button a-button--nav-large" aria-current="page">
         Dashboard
@@ -32,7 +32,7 @@ One of the links may well be a link to the current page, and should be given an 
 It’s rare to have only one link, so here’s how it looks with multiple:
 
 <Canvas isColumn>
-  <Story name="Button--nav-large list">
+  <Story name="Nav-large list">
     {`
       <ul class="u-list-reset u-flex u-flex--col">
         <li class="u-margin-s--bottom">
@@ -53,7 +53,7 @@ It’s rare to have only one link, so here’s how it looks with multiple:
       </ul>
     `}
   </Story>
-  <Story name="Button--nav-large list current page">
+  <Story name="Nav-large list current page">
     {`
       <ul class="u-list-reset u-flex u-flex--col">
         <li class="u-margin-s--bottom">

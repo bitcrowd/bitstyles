@@ -1,6 +1,6 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="Atoms/Button--dropdown" />
+<Meta title="Atoms/Button/Dropdown" />
 
 # Dropdown Button
 
@@ -12,7 +12,7 @@ When using this component:
 - update the `aria-expanded` attribute when the user clicks this button to show/hide that other element. Set it to `true` or `false` to reflect its current state.
 
 <Canvas>
-  <Story name="Button--dropdown">
+  <Story name="Dropdown">
     {`
         <button type="button" class="a-button a-button--dropdown u-h6" aria-controls="element-id" aria-expanded="false">
           <span class="a-button__label">Account</span>
@@ -23,7 +23,7 @@ When using this component:
       </div>
     `}
   </Story>
-  <Story name="Button--dropdown [expanded]">
+  <Story name="Dropdown [expanded]">
     {`
         <button type="button" class="a-button a-button--dropdown u-h6" aria-controls="element-id" aria-expanded="true">
           <span class="a-button__label">Account</span>
