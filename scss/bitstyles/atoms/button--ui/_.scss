@@ -1,0 +1,42 @@
+@import './settings';
+
+.a-button--ui {
+  &,
+  &:visited {
+    color: $bitstyles-button-ui-color;
+    background: $bitstyles-button-ui-background-color;
+    border: $bitstyles-button-ui-border;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-button-ui-color-hover;
+    text-decoration: none;
+    background: $bitstyles-button-ui-background-color-hover;
+    border: $bitstyles-button-ui-border-hover;
+    box-shadow: none;
+  }
+
+  &:active {
+    color: $bitstyles-button-ui-color-active;
+    background: $bitstyles-button-ui-background-color-active;
+    border: $bitstyles-button-ui-border-active;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    color: $bitstyles-button-ui-color-disabled;
+    cursor: default;
+    background: $bitstyles-button-ui-background-color-disabled;
+    border: $bitstyles-button-ui-border-disabled;
+    box-shadow: none;
+  }
+
+  &[aria-pressed="true"],
+  &[aria-expanded="true"] {
+    color: $bitstyles-button-ui-color-pressed;
+    background: $bitstyles-button-ui-background-color-pressed;
+    border: $bitstyles-button-ui-border-pressed;
+  }
+}

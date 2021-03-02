@@ -22,7 +22,7 @@ A standard login form with
       <div class="a-content a-content--small">
         <form class="a-card u-padding-xl u-grid__col-2@m" method="POST" action="">
           <h3>Login</h3>
-          <ul class="u-list-reset u-margin-xl--bottom">
+          <ul class="a-list-reset u-margin-xl--bottom">
             <li class="u-margin-m--bottom">
               <label for="email">Email</label>
               <input id="email" type="email" autocomplete="email" />
@@ -35,7 +35,7 @@ A standard login form with
               </div>
             </li>
           </ul>
-          <ul class="u-list-reset u-flex u-items-center">
+          <ul class="a-list-reset u-flex u-items-center">
             <li class="u-margin-xl--right">
               <button type="submit" class="a-button u-h3">Login</button>
             </li>
@@ -55,7 +55,7 @@ A standard login form with
       <div class="a-content a-content--small">
         <form class="a-card u-padding-xl u-grid__col-2" method="POST" action="">
           <h3>Login</h3>
-          <ul class="u-list-reset u-margin-xl--bottom">
+          <ul class="a-list-reset u-margin-xl--bottom">
             <li class="u-margin-m--bottom">
               <label for="email">Email</label>
               <input id="email" type="email" autocomplete="email" aria-invalid="true" aria-describedby="email-help-text" />
@@ -70,7 +70,7 @@ A standard login form with
               </div>
             </li>
           </ul>
-          <ul class="u-list-reset u-flex u-items-center">
+          <ul class="a-list-reset u-flex u-items-center">
             <li class="u-margin-xl--right">
               <button type="submit" class="a-button u-h3">Login</button>
             </li>
@@ -92,7 +92,7 @@ A standard login form with
       <div class="a-content a-content--small">
         <form class="a-card u-padding-xl u-grid__col-2" method="POST" action="">
           <h3>Create an account</h3>
-          <ul class="u-list-reset u-margin-xl--bottom">
+          <ul class="a-list-reset u-margin-xl--bottom">
             <li class="u-margin-m--bottom">
               <label for="email">Email</label>
               <input id="email" type="email" autocomplete="email" />
@@ -106,7 +106,7 @@ A standard login form with
               <input id="confirm_password" type="password" autocomplete="new-password" />
             </li>
           </ul>
-          <ul class="u-list-reset u-flex u-items-center">
+          <ul class="a-list-reset u-flex u-items-center">
             <li class="u-margin-xl--right">
               <button type="submit" class="a-button u-h3">Create account</button>
             </li>
@@ -116,6 +116,37 @@ A standard login form with
           </ul>
         </form>
       </div>
+    `}
+  </Story>
+</Canvas>
+
+## Search form
+
+<Canvas>
+  <Story name="Search form">
+    {`
+    <form role="search" action="" method="POST" class="u-flex o-ui-group">
+      <label for="search" class="u-sr-only">Search users</label>
+      <input type="search" id="search" placeholder="Username or email…" class="u-flex__grow-1 u-round-0--tr u-round-0--br o-ui-group__item" />
+      <button type="submit" class="a-button a-button--ui o-ui-group__item o-ui-group__last u-round-0--tl u-round-0--bl">Search</button>
+    </form>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Search form with icon button">
+    {`
+    <form role="search" action="" method="POST" class="u-flex o-ui-group">
+      <label for="search" class="u-sr-only">Search users</label>
+      <input type="search" id="search" placeholder="Username or email…" class="u-flex__grow-1 o-ui-group__item u-round-0--tr u-round-0--br" />
+      <button type="submit" class="a-button a-button--ui o-ui-group__item o-ui-group__last u-round-0--tl u-round-0--bl" title="Search users">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="a-icon" aria-hidden="true">
+          <path d="M71.67,61.33A38.66,38.66,0,1,0,61.33,71.67L88.66,99,99,88.66ZM59.26,59.26a27.73,27.73,0,1,1,0-39.21h0A27.8,27.8,0,0,1,59.26,59.26Z"/>
+        </svg>
+        <span class="u-sr-only">Search</span>
+      </button>
+    </form>
     `}
   </Story>
 </Canvas>

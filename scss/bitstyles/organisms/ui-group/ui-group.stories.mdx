@@ -1,0 +1,25 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Organisms/UI group" />
+
+# Button group
+
+A list of links charting the user’s place in the site structure. The title of the current page should be in an `<h1>` on the page, so it isn’t needed here.
+
+<Canvas isColumn>
+  <Story name="UI group - buttons">
+    {`
+      <ul class="o-ui-group u-flex u-flex--inline a-list-reset">
+        <li>
+          <button type="button" class="a-button a-button--ui o-ui-group__item u-round-0--tr u-round-0--br">First</button>
+        </li>
+        <li>
+          <button type="button" class="a-button a-button--ui o-ui-group__item u-round-0">Middle</button>
+        </li>
+        <li>
+          <button type="button" class="a-button a-button--ui u-round-0--tl u-round-0--bl">Last</button>
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>

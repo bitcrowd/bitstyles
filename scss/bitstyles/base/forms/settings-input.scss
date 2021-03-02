@@ -10,7 +10,7 @@ $bitstyles-input-checkbox-size: spacing('m') !default;
 // Base colors ////////////////////////////////////////
 
 $bitstyles-input-color: palette('text') !default;
-$bitstyles-input-border: 2px solid palette('gray', '30') !default;
+$bitstyles-input-border: 2px solid palette('gray', '10') !default;
 $bitstyles-input-background: palette('white') !default;
 $bitstyles-input-box-shadow: 0 0 spacing('xs') rgba(palette('gray', '90'), 0.05);
 
