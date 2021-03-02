@@ -16,3 +16,24 @@
     }
   }
 }
+
+@each $breakpoint in $bitstyles-padding-breakpoints {
+  @include media-query($breakpoint) {
+    @each $size in $bitstyles-padding-sizes {
+      .#{$bitstyles-namespace}u-padding-#{$size}\@#{$breakpoint} {
+        padding: spacing($size);
+      }
+
+      .u-padding-#{$size}--y\@#{$breakpoint} {
+        padding-top: spacing($size);
+        padding-bottom: spacing($size);
+      }
+
+      @each $position in ('left', 'top', 'right', 'bottom') {
+        .#{$bitstyles-namespace}u-padding-#{$size}--#{$position}\@#{$breakpoint} {
+          padding-#{$position}: spacing($size);
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,17 @@
+@import './settings';
+
 .a-card {
-  padding: spacing('m');
+  padding: $bitstyles-card-padding;
   overflow: hidden;
-  border-radius: spacing('m');
-  box-shadow: 0 0 spacing('s') rgba(palette('gray', '100'), 0.1);
+  border-radius: $bitstyles-card-border-radius;
+  box-shadow: $bitstyles-card-box-shadow;
+}
+
+@include media-query('m') {
+  .a-card\@m {
+    padding: $bitstyles-card-padding;
+    overflow: hidden;
+    border-radius: $bitstyles-card-border-radius;
+    box-shadow: $bitstyles-card-box-shadow;
+  }
 }
