@@ -1,6 +1,6 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="UI/Forms" />
+<Meta title="UI/Data/Forms" />
 
 # Forms
 
@@ -13,8 +13,6 @@ Form elements will take 100% of the available width, so you’ll likely want to 
 Here are some examples using the grid utility classes to create common form layouts.
 
 ## Login form
-
-A standard login form with
 
 <Canvas>
   <Story name="Login form">
@@ -48,6 +46,14 @@ A standard login form with
     `}
   </Story>
 </Canvas>
+
+## Login form with errors
+
+When a user submits a form without fulfilling all the requirements (e.g. some required fields are empty, or fields have malformed data entered):
+
+- add the `aria-invalid="true"` attribute to the input
+- add a sibling element containing a description of what went wrong
+- Connect that sibling element to the input by adding an `aria-describedby="hint-element-id"` attribute to the input, and `id="hint-element-id"` (choose your own id!) to the hint’s element
 
 <Canvas>
   <Story name="Login form with errors">
@@ -86,6 +92,8 @@ A standard login form with
 
 ## Sign up form
 
+This form has the commonly-required fields for creating an account. Note the wording “Create account” — it’s easier to distinguish from “signin/login”. `autocomplete` attributes allow the user’s password manager to create secure login credentials.
+
 <Canvas>
   <Story name="Sign up form">
     {`
@@ -120,7 +128,81 @@ A standard login form with
   </Story>
 </Canvas>
 
+## User profile
+
+For a more complex form, `.u-grid--6-col@m` allows for fields of different sizes on larger screens.
+
+<Canvas>
+  <Story name="User profile form">
+    {`
+      <form action="" method="POST" class="a-content">
+        <h2>Profile</h2>
+        <div class="a-card@m u-padding-xl@m u-padding-xl--bottom u-margin-xl--bottom">
+          <fieldset>
+            <legend class="u-h3 u-font--bold">Account details</legend>
+            <ul class="a-list-reset u-grid u-grid--6-col@m">
+              <li class="u-grid__col-span-4@m u-grid__col-span-3@l">
+                <label for="name">Name</label>
+                <input id="name" type="text" autocomplete="name" value="Jon Doe" />
+              </li>
+              <li class="u-grid__col-1@m u-grid__col-1@l u-grid__col-span-4@m u-grid__col-span-3@l">
+                <label for="email">Email</label>
+                <input id="email" type="text" autocomplete="email" value="jon.doe@gmx.de" />
+              </li>
+              <li class="u-grid__col-1@m u-grid__col-1@l u-grid__col-span-2@m u-grid__col-span-1@l">
+                <label for="type">Account type</label>
+                <select id="type">
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="a-card@m u-padding-xl@m u-padding-xl--bottom u-margin-xl--bottom">
+          <fieldset>
+            <legend class="u-h3 u-font--bold">Address</legend>
+            <ul class="a-list-reset u-grid u-grid--6-col@m">
+              <li class="u-grid__col-span-3@m">
+                <label for="street">Street</label>
+                <input id="street" type="text" autocomplete="address-line1" />
+              </li>
+              <li class="u-grid__col-span-2@m u-grid__col-span-1@l">
+                <label for="house">House number</label>
+                <input id="house" type="text" />
+              </li>
+              <li class="u-grid__col-1@m u-grid__col-1@l u-grid__col-span-3@m u-grid__col-span-2@l">
+                <label for="city">City</label>
+                <input id="city" type="text" autocomplete="address-line2" />
+              </li>
+              <li class="u-grid__col-span-3@m u-grid__col-span-2@l">
+                <label for="country">Country</label>
+                <input id="country" type="text" autocomplete="country-name" />
+              </li>
+              <li class="u-grid__col-span-3@m u-grid__col-span-2@l">
+                <label for="postal-code">Postal code</label>
+                <input id="postal-code" type="text" autocomplete="postal-code" />
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <ul class="a-list-reset u-flex u-items-center">
+          <li class="u-margin-l--right">
+            <button type="submit" class="a-button">Save changes</button>
+          </li>
+          <li>
+            <a href="/"> or cancel</a>
+          </li>
+        </ul>
+      </form>
+    `}
+  </Story>
+</Canvas>
+
 ## Search form
+
+The `role="search"` attribute highlights this functionality for screenreader users
+. The label element is present, but visually hidden using `.u-sr-only`.
 
 <Canvas>
   <Story name="Search form">

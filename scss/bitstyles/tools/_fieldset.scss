@@ -1,11 +1,12 @@
 @mixin fieldset {
+  padding: $bitstyles-fieldset-padding;
   background-color: $bitstyles-fieldset-background;
   border: $bitstyles-fieldset-border;
   border-radius: $bitstyles-fieldset-border-radius;
 }
 
 @mixin legend {
-  padding: 0 spacing('s');
+  padding: $bitstyles-legend-padding;
   color: $bitstyles-legend-color;
   background-color: $bitstyles-legend-background-color;
   border: $bitstyles-legend-border;
