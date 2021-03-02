@@ -23,7 +23,6 @@
   @include input;
 
   width: 100%;
-  max-width: 20em;
   padding: $bitstyles-input-padding;
   color: $bitstyles-input-color;
   font-weight: $bitstyles-font-weight-medium;
@@ -48,7 +47,8 @@
     box-shadow: $bitstyles-input-box-shadow-active;
   }
 
-  &:invalid {
+  &:invalid,
+  &[aria-invalid="true"] {
     color: $bitstyles-input-color-invalid;
     background-color: $bitstyles-input-background-color-invalid;
     border-color: $bitstyles-input-border-color-invalid;

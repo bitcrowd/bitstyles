@@ -14,12 +14,15 @@ Here are some examples using the grid utility classes to create common form layo
 
 ## Login form
 
+A standard login form with
+
 <Canvas>
   <Story name="Login form">
     {`
-      <div class="u-grid u-grid--3-col@m">
-        <form method="POST" action="">
-          <ul class="u-list-reset u-margin-l--bottom">
+      <div class="a-content a-content--small">
+        <form class="a-card u-padding-xl u-grid__col-2@m" method="POST" action="">
+          <h3>Sign in</h3>
+          <ul class="u-list-reset u-margin-xl--bottom">
             <li class="u-margin-m--bottom">
               <label for="email">Email</label>
               <input id="email" type="email" autocomplete="email" />
@@ -27,12 +30,49 @@ Here are some examples using the grid utility classes to create common form layo
             <li class="u-margin-m--bottom u-flex u-flex--col">
               <label for="password">Password</label>
               <input id="password" type="password" autocomplete="password" class="u-margin-xs--bottom" />
-              <a href="/" class="u-self-end">Forgot password?</a>
+              <div class="u-flex u-justify-end">
+                <a href="/">Forgot password?</a>
+              </div>
             </li>
           </ul>
           <ul class="u-list-reset u-flex u-items-center">
             <li class="u-margin-xl--right">
-              <button type="submit" class="a-button">Login</button>
+              <button type="submit" class="a-button u-h3">Sign in</button>
+            </li>
+            <li>
+              <a href="/">or sign up</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Login form with errors">
+    {`
+      <div class="a-content a-content--small">
+        <form class="a-card u-padding-xl u-grid__col-2" method="POST" action="">
+          <h3>Sign in</h3>
+          <ul class="u-list-reset u-margin-xl--bottom">
+            <li class="u-margin-m--bottom">
+              <label for="email">Email</label>
+              <input id="email" type="email" autocomplete="email" aria-invalid="true" aria-describedby="email-help-text" />
+              <span id="email-help-text" class="u-fg--warning u-margin-xs--top">Missing email address</span>
+            </li>
+            <li class="u-margin-m--bottom u-flex u-flex--col">
+              <label for="password">Password</label>
+              <input id="password" type="password" autocomplete="password" aria-invalid="true" aria-describedby="password-help-text" />
+              <div class="u-flex u-justify-between">
+                <span id="password-help-text" class="u-fg--warning u-margin-xs--top">Incorrect password</span>
+                <a href="/" class="u-self-end">Forgot password?</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="u-list-reset u-flex u-items-center">
+            <li class="u-margin-xl--right">
+              <button type="submit" class="a-button u-h3">Sign in</button>
             </li>
             <li>
               <a href="/">or sign up</a>

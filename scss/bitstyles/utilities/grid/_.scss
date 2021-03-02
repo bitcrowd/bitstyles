@@ -25,6 +25,10 @@
   grid-column: 1;
 }
 
+.#{$bitstyles-namespace}u-grid__col-2 {
+  grid-column: 2;
+}
+
 @include media-query('m') {
   .#{$bitstyles-namespace}u-grid {
     grid-gap: $bitstyles-grid-gap-m;
@@ -53,5 +57,9 @@
 
   .#{$bitstyles-namespace}u-grid__col-1\@m {
     grid-column: 1;
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-2\@m {
+    grid-column: 2;
   }
 }

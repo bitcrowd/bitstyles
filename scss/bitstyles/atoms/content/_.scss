@@ -3,3 +3,7 @@
 .#{$bitstyles-namespace}a-content {
   @include content;
 }
+
+.#{$bitstyles-namespace}a-content--small {
+  max-width: $bitstyles-content-max-width-small;
+}
