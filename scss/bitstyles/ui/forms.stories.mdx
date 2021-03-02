@@ -21,7 +21,7 @@ A standard login form with
     {`
       <div class="a-content a-content--small">
         <form class="a-card u-padding-xl u-grid__col-2@m" method="POST" action="">
-          <h3>Sign in</h3>
+          <h3>Login</h3>
           <ul class="u-list-reset u-margin-xl--bottom">
             <li class="u-margin-m--bottom">
               <label for="email">Email</label>
@@ -29,15 +29,15 @@ A standard login form with
             </li>
             <li class="u-margin-m--bottom u-flex u-flex--col">
               <label for="password">Password</label>
-              <input id="password" type="password" autocomplete="password" class="u-margin-xs--bottom" />
-              <div class="u-flex u-justify-end">
+              <input id="password" type="password" autocomplete="current-password" />
+              <div class="u-flex u-justify-end u-margin-xs--top">
                 <a href="/">Forgot password?</a>
               </div>
             </li>
           </ul>
           <ul class="u-list-reset u-flex u-items-center">
             <li class="u-margin-xl--right">
-              <button type="submit" class="a-button u-h3">Sign in</button>
+              <button type="submit" class="a-button u-h3">Login</button>
             </li>
             <li>
               <a href="/">or sign up</a>
@@ -54,7 +54,7 @@ A standard login form with
     {`
       <div class="a-content a-content--small">
         <form class="a-card u-padding-xl u-grid__col-2" method="POST" action="">
-          <h3>Sign in</h3>
+          <h3>Login</h3>
           <ul class="u-list-reset u-margin-xl--bottom">
             <li class="u-margin-m--bottom">
               <label for="email">Email</label>
@@ -63,19 +63,55 @@ A standard login form with
             </li>
             <li class="u-margin-m--bottom u-flex u-flex--col">
               <label for="password">Password</label>
-              <input id="password" type="password" autocomplete="password" aria-invalid="true" aria-describedby="password-help-text" />
-              <div class="u-flex u-justify-between">
-                <span id="password-help-text" class="u-fg--warning u-margin-xs--top">Incorrect password</span>
-                <a href="/" class="u-self-end">Forgot password?</a>
+              <input id="password" type="password" autocomplete="current-password" aria-invalid="true" aria-describedby="password-help-text" />
+              <div class="u-flex u-justify-between u-margin-xs--top">
+                <span id="password-help-text" class="u-fg--warning">Incorrect password</span>
+                <a href="/">Forgot password?</a>
               </div>
             </li>
           </ul>
           <ul class="u-list-reset u-flex u-items-center">
             <li class="u-margin-xl--right">
-              <button type="submit" class="a-button u-h3">Sign in</button>
+              <button type="submit" class="a-button u-h3">Login</button>
             </li>
             <li>
               <a href="/">or sign up</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Sign up form
+
+<Canvas>
+  <Story name="Sign up form">
+    {`
+      <div class="a-content a-content--small">
+        <form class="a-card u-padding-xl u-grid__col-2" method="POST" action="">
+          <h3>Create an account</h3>
+          <ul class="u-list-reset u-margin-xl--bottom">
+            <li class="u-margin-m--bottom">
+              <label for="email">Email</label>
+              <input id="email" type="email" autocomplete="email" />
+            </li>
+            <li class="u-margin-m--bottom">
+              <label for="password">Password</label>
+              <input id="new-password" type="password" autocomplete="new-password" />
+            </li>
+            <li class="u-margin-m--bottom">
+              <label for="confirm_password">Confirm password</label>
+              <input id="confirm_password" type="password" autocomplete="new-password" />
+            </li>
+          </ul>
+          <ul class="u-list-reset u-flex u-items-center">
+            <li class="u-margin-xl--right">
+              <button type="submit" class="a-button u-h3">Create account</button>
+            </li>
+            <li>
+              <a href="/">or login</a>
             </li>
           </ul>
         </form>
