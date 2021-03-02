@@ -1,0 +1,34 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="UI/Data/Description list" />
+
+# Description list
+
+A list of term/description pairs, used to display any set of key-value pairs. It’s totally valid to have multiple descriptions for a single term though — this can handle glossaries or dictionaries, where a single entry can have multiple values.
+
+<Canvas isColumn>
+  <Story name="Description list">
+    {`
+      <div class="a-content">
+        <div class="u-padding-m--y u-padding-m@m">
+          <h3 class="u-margin-0">Section title</h3>
+          <p class="u-fg--gray-50 u-h6">Cookie croissant jujubes tart. Jelly beans marshmallow cake apple pie. Sweet carrot cake marshmallow bonbon gummies lollipop bear claw.</p>
+        </div>
+        <dl class="a-dl">
+          <div class="a-dl__item u-grid@m u-grid--3-col u-padding-m--y u-padding-m@m">
+            <dt class="u-font--medium u-h6 u-fg--gray-50 u-margin-xs--bottom@s">Full name</dt>
+            <dd class="u-grid__col-span-2">Muffin Gummies</dd>
+          </div>
+          <div class="a-dl__item u-grid@m u-grid--3-col u-padding-m--y u-padding-m@m">
+            <dt class="u-font--medium u-h6 u-fg--gray-50 u-margin-xs--bottom@s">Email</dt>
+            <dd class="u-grid__col-span-2">cupcake@tiramisu.com</dd>
+          </div>
+          <div class="a-dl__item u-grid@m u-grid--3-col u-padding-m--y u-padding-m@m">
+            <dt class="u-font--medium u-h6 u-fg--gray-50 u-margin-xs--bottom@s">Description</dt>
+            <dd class="u-grid__col-span-2">Muffin gummies tart fruitcake gummi bears chocolate bar. Jujubes candy macaroon topping dessert biscuit topping sugar plum sesame snaps. Chocolate donut cake tootsie roll donut biscuit caramels sugar plum jelly beans. Dessert dragée jelly-o gummi bears sweet halvah soufflé.</dd>
+          </div>
+        </dl>
+      </div>
+    `}
+  </Story>
+</Canvas>

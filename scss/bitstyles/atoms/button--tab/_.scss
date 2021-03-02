@@ -1,0 +1,75 @@
+@import './settings';
+
+.a-button--tab-container {
+  & > *:first-child {
+    margin-left: -$bitstyles-button-padding-horizontal;
+  }
+}
+
+.a-button--tab {
+  position: relative;
+  border-radius: $bitstyles-button-tab-border-radius;
+
+  &,
+  &:visited {
+    color: $bitstyles-button-tab-color;
+    background: $bitstyles-button-tab-background-color;
+    box-shadow: $bitstyles-button-tab-box-shadow;
+
+    &::after {
+      position: absolute;
+      right: $bitstyles-button-padding-horizontal;
+      bottom: 0;
+      left: $bitstyles-button-padding-horizontal;
+      height: $bitstyles-button-tab-border-width;
+      background-color: $bitstyles-button-tab-border-color;
+      border-radius: $bitstyles-border-radius-round;
+      content: '';
+      transition: background-color $bitstyles-transition-duration $bitstyles-transition-easing;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-button-tab-color-hover;
+    text-decoration: none;
+    background: $bitstyles-button-tab-background-color-hover;
+    outline: none;
+    box-shadow: $bitstyles-button-tab-box-shadow-hover;
+
+    &::after {
+      background-color: $bitstyles-button-tab-border-color-hover;
+    }
+  }
+
+  &:active {
+    color: $bitstyles-button-tab-color-active;
+    background: $bitstyles-button-tab-background-color-active;
+    box-shadow: $bitstyles-button-tab-box-shadow-active;
+
+    &::after {
+      background-color: $bitstyles-button-tab-border-color-active;
+    }
+  }
+
+  &[aria-selected="true"] {
+    color: $bitstyles-button-tab-color-selected;
+    background: $bitstyles-button-tab-background-color-selected;
+    box-shadow: $bitstyles-button-tab-box-shadow-selected;
+
+    &::after {
+      background-color: $bitstyles-button-tab-border-color-selected;
+    }
+  }
+
+  &:disabled {
+    color: $bitstyles-button-tab-color-disabled;
+    cursor: default;
+    background: $bitstyles-button-tab-background-color-disabled;
+    box-shadow: $bitstyles-button-tab-box-shadow-disabled;
+
+    &::after {
+      background-color: $bitstyles-button-tab-border-color-disabled;
+    }
+  }
+}

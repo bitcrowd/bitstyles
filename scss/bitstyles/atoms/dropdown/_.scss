@@ -1,0 +1,39 @@
+@import './settings';
+
+.a-dropdown {
+  position: absolute;
+  z-index: 1;
+  width: min-content;
+  max-width: 90vw;
+  max-height: $bitstyles-dropdown-max-height;
+  min-width: 12rem;
+  padding: $bitstyles-dropdown-separator-spacing 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $bitstyles-dropdown-background-color;
+  border: $bitstyles-dropdown-border;
+  border-radius: $bitstyles-dropdown-border-radius;
+  box-shadow: $bitstyles-dropdown-box-shadow;
+
+  [role="separator"] {
+    margin: $bitstyles-dropdown-separator-spacing 0;
+    border-top: 1px solid $bitstyles-dropdown-separator-border;
+  }
+
+  &[aria-hidden="false"] {
+    border: $bitstyles-dropdown-border-active;
+  }
+}
+
+.a-dropdown--reverse {
+  right: 0;
+}
+
+@include media-query('s') {
+  .a-dropdown {
+    right: spacing('m');
+    left: spacing('m');
+    width: calc(100vw - #{spacing('m') * 2});
+    max-width: 100vw;
+  }
+}

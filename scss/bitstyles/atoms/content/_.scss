@@ -1,0 +1,5 @@
+@import './settings';
+
+.#{$bitstyles-namespace}a-content {
+  @include content;
+}

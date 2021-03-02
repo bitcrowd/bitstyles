@@ -1,9 +1,0 @@
-.o-dl {
-  border-top: 1px solid palette('gray', '5');
-}
-
-@include media-query('m') {
-  .o-dl__item {
-    border-bottom: 1px solid palette('gray', '5');
-  }
-}

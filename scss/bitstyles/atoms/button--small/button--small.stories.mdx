@@ -1,0 +1,27 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Atoms/Button/Small" />
+
+# Small Button
+
+A smaller variant of the standard buttons.
+
+<Canvas>
+  <Story name="Small">
+    {`
+      <button class="a-button a-button--small u-h6">
+        Dashboard
+      </button>
+    `}
+  </Story>
+  <Story name="Small button--icon">
+    {`
+      <button class="a-button a-button--icon a-button--small">
+        <svg class="a-button__icon a-icon a-icon--s" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+          <path d="M99,44V56H1V44Z" fill-rule="evenodd"/>
+        </svg>
+        <span class="u-sr-only">Remove</span>
+      </button>
+    `}
+  </Story>
+</Canvas>

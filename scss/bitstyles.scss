@@ -25,57 +25,37 @@
 @import 'bitstyles/base/all';
 
 //
-// Layout ///////////////////////////////////////
+// Atoms //////////////////////////////////////
 
-@import 'bitstyles/layout/content/';
-@import 'bitstyles/layout/grid/';
-@import 'bitstyles/layout/topbar/';
-@import 'bitstyles/layout/absolute-center/';
-@import 'bitstyles/layout/vertical-center/';
-@import 'bitstyles/layout/absolute-cover/';
-@import 'bitstyles/layout/flex/';
-@import 'bitstyles/layout/media/';
-@import 'bitstyles/layout/fixed-ratio/';
-@import 'bitstyles/layout/list-inline/';
-@import 'bitstyles/layout/object-cover/';
-@import 'bitstyles/layout/clearfix/';
-@import 'bitstyles/layout/box-alignment/';
-@import 'bitstyles/layout/relative/';
-
-//
-// Objects //////////////////////////////////////
-
-@import 'bitstyles/objects/icon/';
-@import 'bitstyles/objects/button/';
-@import 'bitstyles/objects/button--danger/';
-@import 'bitstyles/objects/button--icon/';
-@import 'bitstyles/objects/button--icon-reversed/';
-@import 'bitstyles/objects/button--nav/';
-@import 'bitstyles/objects/button--nav-large/';
-@import 'bitstyles/objects/button--small/';
-@import 'bitstyles/objects/button--grouped/';
-@import 'bitstyles/objects/button--dropdown/';
-@import 'bitstyles/objects/button--menu/';
-@import 'bitstyles/objects/button--mode/';
-@import 'bitstyles/objects/button--tab/';
-@import 'bitstyles/objects/break-text/';
-@import 'bitstyles/objects/truncate/';
-@import 'bitstyles/objects/bordered-header/';
-@import 'bitstyles/objects/list-reset/';
-@import 'bitstyles/objects/link/';
-@import 'bitstyles/objects/overflow/';
-@import 'bitstyles/objects/avatar/';
-@import 'bitstyles/objects/badge/';
-@import 'bitstyles/objects/dropdown/';
-@import 'bitstyles/objects/dl/';
-@import 'bitstyles/objects/card/';
+@import 'bitstyles/atoms/icon/';
+@import 'bitstyles/atoms/button/';
+@import 'bitstyles/atoms/button--danger/';
+@import 'bitstyles/atoms/button--icon/';
+@import 'bitstyles/atoms/button--icon-reversed/';
+@import 'bitstyles/atoms/button--nav/';
+@import 'bitstyles/atoms/button--nav-large/';
+@import 'bitstyles/atoms/button--small/';
+@import 'bitstyles/atoms/button--grouped/';
+@import 'bitstyles/atoms/button--dropdown/';
+@import 'bitstyles/atoms/button--menu/';
+@import 'bitstyles/atoms/button--mode/';
+@import 'bitstyles/atoms/button--tab/';
+@import 'bitstyles/atoms/bordered-header/';
+@import 'bitstyles/atoms/link/';
+@import 'bitstyles/atoms/avatar/';
+@import 'bitstyles/atoms/badge/';
+@import 'bitstyles/atoms/dropdown/';
+@import 'bitstyles/atoms/dl/';
+@import 'bitstyles/atoms/card/';
+@import 'bitstyles/atoms/content/';
+@import 'bitstyles/atoms/topbar/';
 
 //
-// Components ///////////////////////////////////
+// Organisms ///////////////////////////////////
 
-@import 'bitstyles/components/modal/';
-@import 'bitstyles/components/expander';
-@import 'bitstyles/components/navbar/';
+@import 'bitstyles/organisms/modal/';
+@import 'bitstyles/organisms/expander';
+@import 'bitstyles/organisms/navbar/';
 
 //
 // Utilities ////////////////////////////////////
@@ -84,11 +64,24 @@
 @import 'bitstyles/utilities/font/';
 @import 'bitstyles/utilities/typography/';
 @import 'bitstyles/utilities/line-height/';
-@import 'bitstyles/utilities/margin/';
-@import 'bitstyles/utilities/padding/';
 @import 'bitstyles/utilities/fg/';
 @import 'bitstyles/utilities/bg/';
+@import 'bitstyles/utilities/absolute-center/';
+@import 'bitstyles/utilities/absolute-cover/';
+@import 'bitstyles/utilities/overflow/';
+@import 'bitstyles/utilities/outline/';
+@import 'bitstyles/utilities/list-reset/';
+@import 'bitstyles/utilities/break-text/';
+@import 'bitstyles/utilities/truncate/';
+@import 'bitstyles/utilities/fixed-ratio/';
+@import 'bitstyles/utilities/object-cover/';
+@import 'bitstyles/utilities/clearfix/';
+@import 'bitstyles/utilities/box-alignment/';
+@import 'bitstyles/utilities/relative/';
 @import 'bitstyles/utilities/sr-only/';
 @import 'bitstyles/utilities/hidden/';
 @import 'bitstyles/utilities/block/';
-@import 'bitstyles/utilities/outline/';
+@import 'bitstyles/utilities/flex/';
+@import 'bitstyles/utilities/grid/';
+@import 'bitstyles/utilities/margin/';
+@import 'bitstyles/utilities/padding/';

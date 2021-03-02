@@ -1,0 +1,25 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/Clearfix" />
+
+# Clearfix
+
+## Cleanup after `float`ed elements
+
+Forces an element to behave as if its floated children have an element after them with `clear: both`. The element will therefore be of the correct height (including backgrounds etc.) instead of collapsing on the floated children, and will be correctly separated from the following content, as cleared elements are.
+
+Only useful when floats are used in your layout, which is likely only when a page has article-like content, as most modern app layout is achieved using flex or grid.
+
+<Canvas>
+  <Story name="Clearfix">
+    {`
+      <div>
+        <div class="u-clearfix u-bg--brand-2">
+          <div style="float: left; border: 1px solid #f00">Floated content here</div>
+          <div style="float: left; border: 1px solid #00f">Floated content here</div>
+        </div>
+        <p>This content is cleared (try removing the clearfix class above, in your browser’s web inspector)</p>
+      </div>
+    `}
+  </Story>
+</Canvas>

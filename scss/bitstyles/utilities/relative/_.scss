@@ -1,0 +1,9 @@
+.u-relative {
+  position: relative;
+}
+
+@include media-query('m') {
+  .u-relative\@m {
+    position: relative;
+  }
+}

@@ -1,0 +1,5 @@
+@import '../../settings/link';
+
+.#{$bitstyles-namespace}a-link {
+  @include link;
+}

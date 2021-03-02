@@ -1,0 +1,77 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Atoms/Button/Nav-large" />
+
+# Large Nav Button
+
+A button for your main navigation that’s rendered full-width, ideal for the “off-screen-canvas” (or “hamburger”) menu on small screens.
+
+<Canvas>
+  <Story name="Nav-large">
+    {`
+      <a href="/" class="a-button a-button--nav-large">
+        Dashboard
+      </a>
+    `}
+  </Story>
+</Canvas>
+
+
+One of the links may well be a link to the current page, and should be given an aria-current attribute: `aria-current="page"`:
+
+<Canvas>
+  <Story name="Nav-large [aria-current]">
+    {`
+      <a href="/" class="a-button a-button--nav-large" aria-current="page">
+        Dashboard
+      </a>
+    `}
+  </Story>
+</Canvas>
+
+It’s rare to have only one link, so here’s how it looks with multiple:
+
+<Canvas isColumn>
+  <Story name="Nav-large list">
+    {`
+      <ul class="u-list-reset u-flex u-flex--col">
+        <li class="u-margin-s--bottom">
+          <a href="/" class="a-button a-button--nav-large">
+            Dashboard
+          </a>
+        </li>
+        <li class="u-margin-s--bottom">
+          <a href="/" class="a-button a-button--nav-large">
+            Members
+          </a>
+        </li>
+        <li class="u-margin-s--bottom">
+          <a href="/" class="a-button a-button--nav-large">
+            Pages
+          </a>
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="Nav-large list current page">
+    {`
+      <ul class="u-list-reset u-flex u-flex--col">
+        <li class="u-margin-s--bottom">
+          <a href="/" class="a-button a-button--nav-large" aria-current="page">
+            Dashboard
+          </a>
+        </li>
+        <li class="u-margin-s--bottom">
+          <a href="/" class="a-button a-button--nav-large">
+            Members
+          </a>
+        </li>
+        <li class="u-margin-s--bottom">
+          <a href="/" class="a-button a-button--nav-large">
+            Pages
+          </a>
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>

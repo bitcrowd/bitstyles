@@ -1,0 +1,46 @@
+@import './settings';
+
+.a-button--nav {
+  padding: $bitstyles-button-nav-padding-vertical $bitstyles-button-nav-padding-horizontal;
+  border-radius: $bitstyles-button-nav-border-radius;
+
+  &,
+  &:visited {
+    color: $bitstyles-button-nav-color;
+    background: $bitstyles-button-nav-background-color;
+    border: $bitstyles-button-nav-border;
+    box-shadow: $bitstyles-button-nav-box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-button-nav-color-hover;
+    text-decoration: none;
+    background: $bitstyles-button-nav-background-color-hover;
+    border: $bitstyles-button-nav-border-hover;
+    outline: none;
+    box-shadow: $bitstyles-button-nav-box-shadow-hover;
+  }
+
+  &:active {
+    color: $bitstyles-button-nav-color-active;
+    background: $bitstyles-button-nav-background-color-active;
+    border: $bitstyles-button-nav-border-active;
+    box-shadow: $bitstyles-button-nav-box-shadow-active;
+  }
+
+  &[aria-current] {
+    color: $bitstyles-button-nav-color-current;
+    background: $bitstyles-button-nav-background-color-current;
+    border: $bitstyles-button-nav-border-current;
+    box-shadow: $bitstyles-button-nav-box-shadow-current;
+  }
+
+  &:disabled {
+    color: $bitstyles-button-nav-color-disabled;
+    cursor: default;
+    background: $bitstyles-button-nav-background-color-disabled;
+    border: $bitstyles-button-nav-border-disabled;
+    box-shadow: $bitstyles-button-nav-box-shadow-disabled;
+  }
+}

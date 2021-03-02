@@ -1,0 +1,54 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Atoms/Card" />
+
+# Card
+
+A content wrapper that sections and subtly highlights a chunk of content. The default, small version is ideal for smaller chunks.
+
+<Canvas>
+  <Story name="Card">
+    {`
+    <div class="u-grid u-grid--3-col@m">
+      <article class="a-card">
+        <h3>Recent activity</h3>
+        <ul class="u-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+      <article class="a-card">
+        <h3>Recent activity</h3>
+        <ul class="u-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+      <article class="a-card">
+        <h3>Recent activity</h3>
+        <ul class="u-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+    </div>
+    `}
+  </Story>
+</Canvas>
+
+
+For larger blocks of content, use a padding utility class to give the content more space to breathe:
+
+<Canvas>
+  <Story name="Card [padding-m]">
+    {`
+      <article class="a-card u-padding-xl">
+        <h3>Recent activity</h3>
+        <ul class="u-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+          <li>User one changed title to “In progress” [8 mins ago]</li>
+          <li>User one changed date to 01.01.2021 [3 days ago]</li>
+          <li>User one changed date to 01.01.2021 [5 weeks ago]</li>
+          <li>User one changed date to 01.01.2021 [1 month ago]</li>
+        </ul>
+      </article>
+    `}
+  </Story>
+</Canvas>

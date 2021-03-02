@@ -1,9 +1,0 @@
-.l-relative {
-  position: relative;
-}
-
-@include media-query('m') {
-  .l-relative\@m {
-    position: relative;
-  }
-}

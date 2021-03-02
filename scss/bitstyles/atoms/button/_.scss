@@ -1,0 +1,68 @@
+@import './settings';
+
+.#{$bitstyles-namespace}a-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-height: calc(#{$bitstyles-button-padding-vertical  * 2} + 1em);
+  padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
+  margin: 0;
+  overflow: visible;
+  font: inherit;
+  font-weight: $bitstyles-font-weight-medium;
+  line-height: $bitstyles-line-height-min;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: $bitstyles-button-border-radius;
+  transition: $bitstyles-button-transition;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+  user-select: none;
+  touch-action: manipulation;
+
+  &,
+  &:visited {
+    color: $bitstyles-button-color;
+    background: $bitstyles-button-background-color;
+    border: $bitstyles-button-border;
+    box-shadow: $bitstyles-button-box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: $bitstyles-button-color-hover;
+    text-decoration: none;
+    background: $bitstyles-button-background-color-hover;
+    border: $bitstyles-button-border-hover;
+    outline: none;
+    box-shadow: $bitstyles-button-box-shadow-hover;
+  }
+
+  &:active {
+    color: $bitstyles-button-color-active;
+    background: $bitstyles-button-background-color-active;
+    border: $bitstyles-button-border-active;
+    box-shadow: $bitstyles-button-box-shadow-active;
+  }
+
+  &:disabled {
+    color: $bitstyles-button-color-disabled;
+    cursor: default;
+    background: $bitstyles-button-background-color-disabled;
+    border: $bitstyles-button-border-disabled;
+    box-shadow: $bitstyles-button-box-shadow-disabled;
+  }
+}
+
+.a-button__avatar,
+.#{$bitstyles-namespace}a-button__icon {
+  margin-right: $bitstyles-button-icon-spacing;
+  margin-left: -$bitstyles-button-icon-spacing / 4;
+}
+
+.#{$bitstyles-namespace}a-button__label + .#{$bitstyles-namespace}a-button__icon {
+  margin-right: -$bitstyles-button-icon-spacing / 4;
+  margin-left: $bitstyles-button-icon-spacing;
+}
