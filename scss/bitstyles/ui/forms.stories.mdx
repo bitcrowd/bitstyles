@@ -19,18 +19,25 @@ Here are some examples using the grid utility classes to create common form layo
     {`
       <div class="u-grid u-grid--3-col@m">
         <form method="POST" action="">
-          <ul class="u-list-reset">
+          <ul class="u-list-reset u-margin-l--bottom">
             <li class="u-margin-m--bottom">
               <label for="email">Email</label>
               <input id="email" type="email" autocomplete="email" />
             </li>
-            <li class="u-margin-m--bottom">
+            <li class="u-margin-m--bottom u-flex u-flex--col">
               <label for="password">Password</label>
-              <input id="password" type="password" autocomplete="password" />
-              <a href="/">Forgot password?</a>
+              <input id="password" type="password" autocomplete="password" class="u-margin-xs--bottom" />
+              <a href="/" class="u-self-end">Forgot password?</a>
             </li>
           </ul>
-          <button type="submit" class="a-button">Login</button>
+          <ul class="u-list-reset u-flex u-items-center">
+            <li class="u-margin-xl--right">
+              <button type="submit" class="a-button">Login</button>
+            </li>
+            <li>
+              <a href="/">or sign up</a>
+            </li>
+          </ul>
         </form>
       </div>
     `}
