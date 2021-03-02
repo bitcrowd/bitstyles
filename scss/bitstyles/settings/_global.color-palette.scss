@@ -64,7 +64,7 @@ $bitstyles-color-palette: (
   ),
   'background': (
     '100': $bitstyles-base-color-background,
-    '95': mix($bitstyles-base-color-brand-1, $bitstyles-base-color-background, 3%),
+    '95': mix($bitstyles-base-color-brand-1, $bitstyles-base-color-background, 3%), // this is 3% because the linear scale doesn’t output linear visual results
     '90': mix($bitstyles-base-color-brand-1, $bitstyles-base-color-background, 10%),
     '80': mix($bitstyles-base-color-brand-1, $bitstyles-base-color-background, 20%),
     '70': mix($bitstyles-base-color-brand-1, $bitstyles-base-color-background, 30%),
