@@ -24,4 +24,8 @@
     }
   }
   /* stylelint-enable selector-max-type */
+
+  .o-table__actions {
+    padding-right: $bitstyles-table-padding-vertical-td;
+  }
 }
