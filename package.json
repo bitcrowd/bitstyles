@@ -17,7 +17,7 @@
     "css:stats": "analyze-css --file build/bitstyles.css --pretty > test/css-stats.json",
     "precss:graph": "yarn build",
     "css:graph": "specificity-graph build/bitstyles.css --output test/specificity_graph/",
-    "build-storybook": "build-storybook"
+    "build-storybook": "yarn build && build-storybook"
   },
   "repository": {
     "type": "git",
@@ -43,10 +43,10 @@
   "homepage": "https://github.com/bitcrowd/bitstyles#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
-    "@storybook/addon-actions": "^6.1.18",
-    "@storybook/addon-essentials": "^6.1.18",
-    "@storybook/addon-links": "^6.1.18",
-    "@storybook/html": "^6.1.18",
+    "@storybook/addon-actions": "^6.1.20",
+    "@storybook/addon-essentials": "^6.1.20",
+    "@storybook/addon-links": "^6.1.20",
+    "@storybook/html": "^6.1.20",
     "analyze-css": "^0.12.9",
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.1.0",

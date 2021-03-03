@@ -5,7 +5,16 @@
 
 A collection of tiny Sass CSS objects and helpers, Bitstyles is intended to be used by reasonably CSS- & HTML-aware frontend developers. This is no simple drop-in solution to skin a website, like [Bootstrap](http://getbootstrap.com) or [Foundation](http://foundation.zurb.com), rather a collection of focused object-classes, each defining just a single visual aspect. By using these simple building blocks in your HTML, it’s possible to construct complex layouts without repeating CSS.
 
-For a certain set of elements in your UI, this strategy of applying multiple atomic classes eventually becomes untenable. This is generally for one of two reasons:
+There is now a layer of complex components built on top of the low-level classes, see the documentation below.
+
+## Documentation
+
+For the full documentation, visit [https://bitcrowd.github.io/bitstyles/](https://bitcrowd.github.io/bitstyles/)
+
+## Introduction
+
+For a certain set of elements in your UI, the strategy of applying multiple atomic classes eventually becomes untenable. This is generally for one of two reasons:
+
 - the elements are very often-repeated, so using one class instead of many would reduce chances of inconsistency or errors e.g. buttons, cards
 - the number of object classes on an element becomes unreadable in the HTML. This often also results in the appearance of the element becoming hard to reason about just from the HTML source, negating a large advantage of this approach in the first place.
 
@@ -84,10 +93,10 @@ Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your proj
 
 // …
 
-@import 'bitstyles/atomsicon/';
-// @import 'bitstyles/object/button/';
-// @import 'bitstyles/object/button-icon/';
-@import 'bitstyles/atomsabsolute-center/';
+@import 'bitstyles/atoms/icon/';
+// @import 'bitstyles/atoms/button/';
+// @import 'bitstyles/atoms/button-icon/';
+@import 'bitstyles/atoms/absolute-center/';
 ```
 
 To change the css output by the library (e.g. standard margins, typographic scale, column count of the grid system…) you must override the variables used to build it. To do this declare any variables with your own values before including the bitstyles settings:
@@ -104,10 +113,10 @@ To change the css output by the library (e.g. standard margins, typographic scal
 @import 'bitstyles/settings/global.color-theme';
 @import 'bitstyles/settings/global.typography';
 
-@import 'bitstyles/atomsicon/';
-// @import 'bitstyles/object/button/';
-// @import 'bitstyles/object/button-icon/';
-@import 'bitstyles/atomsabsolute-center/';
+@import 'bitstyles/atoms/icon/';
+// @import 'bitstyles/atoms/button/';
+// @import 'bitstyles/atoms/button-icon/';
+@import 'bitstyles/atoms/absolute-center/';
 ```
 
 For the complete list of variables you can override, look through the various files in the `bitstyles/settings/` folder.
@@ -159,6 +168,10 @@ yarn storybook
 ```
 
 Storybook will automatically open in a new tab in your default browser on a random port.
+
+## Deploying storybook documentation
+
+The storybook documentation is automatically deployed when a branch is merged to `main`.
 
 ## Testing
 
