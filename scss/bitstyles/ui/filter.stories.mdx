@@ -1,0 +1,81 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="UI/Data/Filtering" />
+
+# Filtering
+
+<Canvas>
+  <Story name="Filtering">
+    {`
+      <div style="min-height:15rem;">
+        <div class="u-flex">
+          <div class="u-relative">
+            <button type="button" class="a-button a-button--icon u-margin-m--right" title="Add filter" aria-controls="dropdown-1" aria-expanded="true">
+              <span class="u-sr-only">Add filter</span>
+              <svg class="a-icon a-icon--l" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M53.75,68a3.75,3.75,0,0,1,0,7.5h-7.5a3.75,3.75,0,0,1,0-7.5h7.5ZM65,49.25a3.75,3.75,0,0,1,0,7.5H35a3.75,3.75,0,0,1,0-7.5H65ZM76.25,30.5a3.75,3.75,0,0,1,0,7.5H23.75a3.75,3.75,0,0,1,0-7.5h52.5ZM50,8A42,42,0,1,1,8,50,42,42,0,0,1,50,8m0-7A49,49,0,1,0,99,50,49,49,0,0,0,50,1Z"/>
+              </svg>
+            </button>
+            <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-1">
+              <li>
+                <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                  <input type="radio" name="status" />
+                  Invited
+                </label>
+              </li>
+              <li>
+                <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                  <input type="radio" name="status" />
+                  Activated
+                </label>
+              </li>
+              <li>
+                <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                  <input type="radio" name="status" />
+                  Banned
+                </label>
+              </li>
+              <li role="separator"></li>
+              <li>
+                <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                  <input type="radio" name="capacity" />
+                  Capacity
+                </label>
+              </li>
+              <li>
+                <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                  <input type="radio" name="capacity" />
+                  No capacity
+                </label>
+              </li>
+            </ul>
+          </div>
+          <ul class="a-list-reset u-flex u-items-stretch u-flex--wrap u-items-center">
+            <li class="u-flex u-items-stretch u-margin-s--right">
+              <span class="a-badge a-badge--gray u-h6 u-font--medium">
+                Filter 1
+                <button class="a-button a-button--icon a-button--icon-reversed a-button--small a-badge__button" type="button">
+                  <svg class="a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path d="M80.41,88.89,50,58.49,19.59,88.89l-8.48-8.48L41.51,50,11.11,19.59l8.48-8.48L50,41.51l30.41-30.4,8.48,8.48L58.49,50l30.4,30.41Z" fill-rule="evenodd" aria-hidden="true" />
+                  </svg>
+                  <span class="u-sr-only">Remove</span>
+                </button>
+              </span>
+            </li>
+            <li class="u-flex u-items-stretch">
+              <span class="a-badge a-badge--gray u-h6 u-font--medium">
+                Filter 2
+                <button class="a-button a-button--icon a-button--icon-reversed a-button--small a-badge__button" type="button">
+                  <svg class="a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path d="M80.41,88.89,50,58.49,19.59,88.89l-8.48-8.48L41.51,50,11.11,19.59l8.48-8.48L50,41.51l30.41-30.4,8.48,8.48L58.49,50l30.4,30.41Z" fill-rule="evenodd" aria-hidden="true" />
+                  </svg>
+                  <span class="u-sr-only">Remove</span>
+                </button>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
