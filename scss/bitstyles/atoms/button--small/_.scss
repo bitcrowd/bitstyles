@@ -3,9 +3,9 @@
 .a-button--small {
   min-height: spacing('xl');
   padding: $bitstyles-button-small-padding-vertical $bitstyles-button-small-padding-horizontal;
-  border-radius: $bitstyles-button-small-border-radius;
 
   &.a-button--icon {
     padding: $bitstyles-button-small-padding-horizontal / 2;
+    border-radius: $bitstyles-button-small-border-radius;
   }
 }

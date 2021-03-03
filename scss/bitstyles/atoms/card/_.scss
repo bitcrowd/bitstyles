@@ -1,5 +1,6 @@
 .a-card {
   padding: spacing('m');
+  overflow: hidden;
   border-radius: spacing('m');
   box-shadow: 0 0 spacing('s') rgba(palette('gray', '100'), 0.1);
 }

@@ -1,0 +1,31 @@
+@import './settings';
+
+.o-table {
+  width: 100%;
+
+  /* stylelint-disable selector-max-type */
+  th {
+    padding: $bitstyles-table-padding-vertical-th $bitstyles-table-padding-horizontal;
+    color: $bitstyles-table-color-th;
+    white-space: nowrap;
+    background: $bitstyles-table-background-color-th;
+    border-bottom: $bitstyles-table-border;
+  }
+
+  td {
+    padding: $bitstyles-table-padding-vertical-td $bitstyles-table-padding-horizontal;
+    background: $bitstyles-table-background-color-td;
+    border-bottom: $bitstyles-table-border;
+  }
+
+  tr:last-child {
+    td {
+      border: 0;
+    }
+  }
+  /* stylelint-enable selector-max-type */
+
+  .o-table__actions {
+    padding-right: $bitstyles-table-padding-vertical-td;
+  }
+}
