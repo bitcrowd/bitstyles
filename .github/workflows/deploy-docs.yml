@@ -1,6 +1,7 @@
 name: Deploy to GitHub Pages
 on:
-  push:
+  release:
+    types: [published]
     branches:
       - main
     paths: ["scss/**"]
