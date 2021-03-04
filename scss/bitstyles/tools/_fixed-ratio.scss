@@ -12,15 +12,15 @@
 // e.g.
 //
 // ```scss
-// .o-fixed-ratio {
+// .u-fixed-ratio {
 //   @include fixed-ratio(16, 9);
 // }
 //
-// .o-fixed-ratio--16-10 {
+// .u-fixed-ratio--16-10 {
 //   @include fixed-ratio--variant(16, 10);
 // }
 //
-// .o-fixed-ratio--square {
+// .u-fixed-ratio--square {
 //   @include fixed-ratio--variant(10, 10);
 // }
 // ```
