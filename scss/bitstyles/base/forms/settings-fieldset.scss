@@ -1,7 +1,9 @@
-$bitstyles-fieldset-border: 2px solid palette('text', '80') !default;
+$bitstyles-fieldset-padding: 0 !default;
+$bitstyles-fieldset-border: 0 !default;
 $bitstyles-fieldset-border-radius: 0 !default;
 $bitstyles-fieldset-background: transparent !default;
+$bitstyles-legend-padding: 0 0 spacing('m') !default;
 $bitstyles-legend-background-color: transparent !default;
-$bitstyles-legend-border: 2px solid palette('text', '80') !default;
+$bitstyles-legend-border: 0 !default;
 $bitstyles-legend-border-radius: 0 !default;
-$bitstyles-legend-color: palette('text') !default;
+$bitstyles-legend-color: inherit !default;

@@ -1,0 +1,61 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Atoms/Button/UI" />
+
+# UI Buttons
+
+Buttons that look more like native UI than the other color-branded buttons, intended to be used for actions that do not need to be highlighted, such as pagination.
+
+
+<Canvas>
+  <Story name="UI">
+    {`
+      <button type="button" class="a-button a-button--ui u-h6">
+        First
+      </button>
+    `}
+  </Story>
+</Canvas>
+
+The same buttons are used for dropdown menus
+
+<Canvas>
+  <Story name="Dropdown">
+    {`
+      <button type="button" class="a-button a-button--ui u-h6" aria-controls="element-id" aria-expanded="false">
+        <span class="a-button__label">Account</span>
+        <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+        </svg>
+      </button>
+    `}
+  </Story>
+</Canvas>
+
+
+When you’re representing state in the UI, use the `aria-pressed="true"` attribute to indicate the currently-pressed button.
+
+<Canvas>
+  <Story name="UI [aria-pressed]">
+    {`
+      <button type="button" class="a-button a-button--ui u-h6" aria-pressed="true">
+        Pressed
+      </button>
+    `}
+  </Story>
+</Canvas>
+
+When using the buttons for dropdown menus, add the `aria-expanded` attribute.
+
+<Canvas>
+  <Story name="Dropdown [expanded]">
+    {`
+      <button type="button" class="a-button a-button--ui u-h6" aria-controls="element-id" aria-expanded="true">
+        <span class="a-button__label">Account</span>
+        <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+        </svg>
+      </button>
+    `}
+  </Story>
+</Canvas>

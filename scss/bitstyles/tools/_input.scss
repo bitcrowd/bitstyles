@@ -24,15 +24,18 @@
 
   width: 100%;
   padding: $bitstyles-input-padding;
+  font-weight: $bitstyles-font-weight-medium;
   color: $bitstyles-input-color;
   background-color: $bitstyles-input-background;
   border: $bitstyles-input-border;
   border-radius: $bitstyles-input-border-radius;
+  box-shadow: $bitstyles-input-box-shadow;
 
   &:hover {
     color: $bitstyles-input-color-hover;
     background-color: $bitstyles-input-background-hover;
     border: $bitstyles-input-border-hover;
+    box-shadow: $bitstyles-input-box-shadow-hover;
   }
 
   &:active,
@@ -41,12 +44,15 @@
     background-color: $bitstyles-input-background-active;
     border: $bitstyles-input-border-active;
     outline: none;
+    box-shadow: $bitstyles-input-box-shadow-active;
   }
 
-  &:invalid {
+  &:invalid,
+  &[aria-invalid="true"] {
     color: $bitstyles-input-color-invalid;
     background-color: $bitstyles-input-background-color-invalid;
     border-color: $bitstyles-input-border-color-invalid;
+    box-shadow: $bitstyles-input-box-shadow-invalid;
   }
 
   &:disabled {
@@ -54,6 +60,7 @@
     cursor: default;
     background: $bitstyles-input-background-disabled;
     border: $bitstyles-input-border-disabled;
+    box-shadow: $bitstyles-input-box-shadow-disabled;
   }
 }
 

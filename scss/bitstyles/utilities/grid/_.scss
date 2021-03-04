@@ -13,6 +13,14 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.#{$bitstyles-namespace}u-grid--6-col {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.#{$bitstyles-namespace}u-grid__col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
 .#{$bitstyles-namespace}u-grid__col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -21,8 +29,16 @@
   grid-column: span 3 / span 3;
 }
 
+.#{$bitstyles-namespace}u-grid__col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
 .#{$bitstyles-namespace}u-grid__col-1 {
-  grid-column: 1;
+  grid-column-start: 1;
+}
+
+.#{$bitstyles-namespace}u-grid__col-2 {
+  grid-column-start: 2;
 }
 
 @include media-query('m') {
@@ -43,6 +59,14 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .#{$bitstyles-namespace}u-grid--6-col\@m {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-span-1\@m {
+    grid-column: span 1 / span 1;
+  }
+
   .#{$bitstyles-namespace}u-grid__col-span-2\@m {
     grid-column: span 2 / span 2;
   }
@@ -51,7 +75,62 @@
     grid-column: span 3 / span 3;
   }
 
+  .#{$bitstyles-namespace}u-grid__col-span-4\@m {
+    grid-column: span 4 / span 4;
+  }
+
   .#{$bitstyles-namespace}u-grid__col-1\@m {
-    grid-column: 1;
+    grid-column-start: 1;
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-2\@m {
+    grid-column-start: 2;
+  }
+}
+
+@include media-query('l') {
+  .#{$bitstyles-namespace}u-grid {
+    grid-gap: $bitstyles-grid-gap-l;
+  }
+
+  .#{$bitstyles-namespace}u-grid\@l {
+    display: grid;
+    grid-gap: $bitstyles-grid-gap-l;
+  }
+
+  .#{$bitstyles-namespace}u-grid--2-col\@l {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .#{$bitstyles-namespace}u-grid--3-col\@l {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .#{$bitstyles-namespace}u-grid--6-col\@l {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-span-1\@l {
+    grid-column: span 1 / span 1;
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-span-2\@l {
+    grid-column: span 2 / span 2;
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-span-3\@l {
+    grid-column: span 3 / span 3;
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-span-4\@l {
+    grid-column: span 4 / span 4;
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-1\@l {
+    grid-column-start: 1;
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-2\@l {
+    grid-column-start: 2;
   }
 }
