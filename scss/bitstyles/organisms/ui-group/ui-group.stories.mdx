@@ -2,11 +2,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 <Meta title="Organisms/UI group" />
 
-# Button group
+# UI group
 
-A list of links charting the user’s place in the site structure. The title of the current page should be in an `<h1>` on the page, so it isn’t needed here.
+A collection of interactive elements that are closely-related can be visually bound together.
 
-<Canvas isColumn>
+Commonly, this layout is used for buttons.
+
+<Canvas>
   <Story name="UI group - buttons">
     {`
       <ul class="o-ui-group u-flex u-flex--inline a-list-reset">
@@ -18,6 +20,24 @@ A list of links charting the user’s place in the site structure. The title of 
         </li>
         <li>
           <button type="button" class="a-button a-button--ui u-round-0--tl u-round-0--bl">Last</button>
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+The `ui-group` is also used for grouping inputs & buttons:
+
+<Canvas>
+  <Story name="UI group - input & button">
+    {`
+      <ul class="o-ui-group u-flex u-flex--inline a-list-reset">
+        <li class="u-flex">
+          <label for="search_users" class="u-sr-only">Search users</label>
+          <input type="search" id="search_users" class="o-ui-group__item u-round-0--tr u-round-0--br" />
+        </li>
+        <li class="u-flex">
+          <button type="button" class="a-button a-button--ui u-round-0--tl u-round-0--bl">Search</button>
         </li>
       </ul>
     `}

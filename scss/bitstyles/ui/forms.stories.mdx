@@ -55,6 +55,8 @@ When a user submits a form without fulfilling all the requirements (e.g. some re
 - add a sibling element containing a description of what went wrong
 - Connect that sibling element to the input by adding an `aria-describedby="hint-element-id"` attribute to the input, and `id="hint-element-id"` (choose your own id!) to the hint’s element
 
+The `aria-describedby` attribute accepts a space-separated list of IDs, so if an input is already “described by” a short hint on requirements for filling it out, you can add your element with the error description, and append its ID to the `aria-describedby` attribute. Conversely, multiple inputs might be described by the same element, though normally each input would get its own hint or error notification so that the two are visually close.
+
 <Canvas>
   <Story name="Login form with errors">
     {`
