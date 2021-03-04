@@ -26,6 +26,13 @@ $bitstyles-select-background-color-active: transparent !default;
 $bitstyles-select-background-image-active: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{$bitstyles-select-color-active}' d='M52.8,68.9,86.32,36a4,4,0,0,0-2.8-6.86h-67A4,4,0,0,0,13.68,36L47.2,68.9A4,4,0,0,0,52.8,68.9Z'/%3E%3C/svg%3E") !default;
 
 //
+// Invalid styles ////////////////////////////////////////
+$bitstyles-select-color-invalid: palette('warning') !default;
+$bitstyles-select-border-invalid: 2px solid palette('warning') !default;
+$bitstyles-select-background-color-invalid: palette('white') !default;
+$bitstyles-select-background-image-invalid: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{$bitstyles-select-color-invalid}' d='M52.8,68.9,86.32,36a4,4,0,0,0-2.8-6.86h-67A4,4,0,0,0,13.68,36L47.2,68.9A4,4,0,0,0,52.8,68.9Z'/%3E%3C/svg%3E") !default;
+
+//
 // Disabled styles ////////////////////////////////////////
 $bitstyles-select-color-disabled: palette('black', '40') !default;
 $bitstyles-select-border-disabled: 2px solid !default;
