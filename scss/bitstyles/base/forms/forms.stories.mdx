@@ -126,31 +126,27 @@ This includes all standard `type="text"` inputs, plus all the text-based inputs 
 <Canvas isColumn>
   <Story name="Select and label">
     {`
-      <label for="input_d1">
-        This is labeling text
-        <select id="input_d1">
-          <option value="value1" selected>Value 1</option>
-          <option value="value2">Value 2</option>
-          <option value="value3">Value 3</option>
-        </select>
-      </label>
+      <label for="input_d1">Select</label>
+      <select id="input_d1">
+        <option value="value1" selected>Value 1</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
     `}
   </Story>
   <Story name="Select and label (disabled)">
     {`
-      <label for="input_d2">
-        This is labeling text
-        <select id="input_d2" disabled>
-          <option value="value1" selected>Value 1</option>
-          <option value="value2">Value 2</option>
-          <option value="value3">Value 3</option>
-        </select>
-      </label>
+      <label for="input_d2">Disabled select</label>
+      <select id="input_d2" disabled>
+        <option value="value1" selected>Value 1</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
     `}
   </Story>
   <Story name="Select and label (invalid)">
     {`
-      <label for="input_d2">Label</label>
+      <label for="input_d2">Invalid select</label>
       <select required>
         <option value="" disabled hidden selected>Please select</option>
         <option value="value2">Value 2</option>
