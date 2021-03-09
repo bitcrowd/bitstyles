@@ -1,34 +1,36 @@
 @use "sass:list";
 
-@if (list.index($bitstyles-webfont-variants, 'normal')) {
-  @include webfont(
-    $bitstyles-font-family-webfont,
-    normal,
-    $bitstyles-font-weight-normal,
-    $bitstyles-webfont-font-url
-  );
-}
-@if (list.index($bitstyles-webfont-variants, 'italic')) {
-  @include webfont(
-    $bitstyles-font-family-webfont,
-    italic,
-    $bitstyles-font-weight-normal,
-    $bitstyles-webfont-font-url
-  );
-}
-@if (list.index($bitstyles-webfont-variants, 'medium')) {
-  @include webfont(
-    $bitstyles-font-family-webfont,
-    normal,
-    $bitstyles-font-weight-medium,
-    $bitstyles-webfont-font-url
-  );
-}
-@if (list.index($bitstyles-webfont-variants, 'bold')) {
-  @include webfont(
-    $bitstyles-font-family-webfont,
-    normal,
-    $bitstyles-font-weight-bold,
-    $bitstyles-webfont-font-url
-  );
+@if ($bitstyles-webfont-font-url) {
+  @if (list.index($bitstyles-webfont-variants, 'normal')) {
+    @include webfont(
+      $bitstyles-font-family-webfont,
+      normal,
+      $bitstyles-font-weight-normal,
+      $bitstyles-webfont-font-url
+    );
+  }
+  @if (list.index($bitstyles-webfont-variants, 'italic')) {
+    @include webfont(
+      $bitstyles-font-family-webfont,
+      italic,
+      $bitstyles-font-weight-normal,
+      $bitstyles-webfont-font-url
+    );
+  }
+  @if (list.index($bitstyles-webfont-variants, 'medium')) {
+    @include webfont(
+      $bitstyles-font-family-webfont,
+      normal,
+      $bitstyles-font-weight-medium,
+      $bitstyles-webfont-font-url
+    );
+  }
+  @if (list.index($bitstyles-webfont-variants, 'bold')) {
+    @include webfont(
+      $bitstyles-font-family-webfont,
+      normal,
+      $bitstyles-font-weight-bold,
+      $bitstyles-webfont-font-url
+    );
+  }
 }

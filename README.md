@@ -3,13 +3,13 @@
 [![Build Status](https://travis-ci.org/bitcrowd/bitstyles.svg?branch=master)](https://travis-ci.org/bitcrowd/bitstyles)
 [![npm version](https://badge.fury.io/js/bitstyles.svg)](https://badge.fury.io/js/bitstyles)
 
-A collection of tiny Sass CSS objects and helpers, Bitstyles is intended to be used by reasonably CSS- & HTML-aware frontend developers. This is no simple drop-in solution to skin a website, like [Bootstrap](http://getbootstrap.com) or [Foundation](http://foundation.zurb.com), rather a collection of focused object-classes, each defining just a single visual aspect. By using these simple building blocks in your HTML, it’s possible to construct complex layouts without repeating CSS.
-
-There is now a layer of complex components built on top of the low-level classes, see the documentation below.
-
 ## Documentation
 
-For the full documentation, visit [https://bitcrowd.github.io/bitstyles/](https://bitcrowd.github.io/bitstyles/)
+For the full documentation, visit [https://bitcrowd.github.io/bitstyles/](https://bitcrowd.github.io/bitstyles/).
+
+A collection of tiny Sass CSS objects and helpers, Bitstyles is intended to be used by reasonably CSS- & HTML-aware frontend developers. This is no simple drop-in solution to skin a website, rather a collection of focused object-classes, each defining just a single visual aspect. By using these simple building blocks in your HTML, it’s possible to construct complex layouts without repeating CSS.
+
+There is a layer of more complex components built using of the low-level classes — see the `UI` layer in the documentation linked above — that provides examples of many common structures needed for admin interfaces.
 
 ## Introduction
 
@@ -23,10 +23,11 @@ For components which match these criteria it may make more sense to create compo
 Again unlike Bootstrap and Foundation, there are no javascript widgets or plugins included in Bitstyles.
 
 See the [Bitcrowd frontend styleguide](https://github.com/bitcrowd/frontend) for more details of the technical principles on which Bitstyles is built. The TL;DR: it’s a variation of the BEMATOMICOOCSS methodology:
+
 - BEM naming convention
 - Atomic CSS-inspired, the object classes aim to provide most functionality needed to create whichever layout or UI you need. Utility classes create the exceptions that inevitably occur.
 
-## Using Bitstyles in a project
+## Using Bitstyles
 
 Bitstyles can be added to your project via [npm](https://www.npmjs.com/).
 
@@ -38,17 +39,6 @@ Once installed, you need to provide your sass installation with the path for bit
 
 ```
 node_modules/bitstyles/scss
-```
-
-If you’re using gulp-sass, you can provide this path when `pipe`ing to sass:
-
-```javascript
-gulp.task('stylesheet', function(){
-  return gulp.src('app/css/main.scss')
-    .pipe(sass({
-      includePaths: ['node_modules/bitstyles/scss']
-    }).on('error', sass.logError));
-}
 ```
 
 If you’re using Rails 4+, you can add this path to the asset pipeline in `config/initializers/assets.rb` where you see the commmented-out lines
@@ -64,32 +54,35 @@ Add the following:
 Rails.application.config.assets.paths << Rails.root.join("node_modules", "bitstyles", "bitstyles")
 ```
 
-If you’re using a version of Rails previous to 4, you must instead add the path to the asset pipeline in `config/application.rb`:
-
-```ruby
-config.assets.paths << Rails.root.join("node_modules", "bitstyles", "bitstyles")
-```
-
-### Install an unpublished version
-
-If you need to install a version of bitstyles that’s so far unpublished (e.g. there’s a bugfix or feature that’s not in a published package yet), you can use the following:
-
-```sh
-yarn add git+https://github.com/bitcrowd/bitstyles.git#master
-```
-
 ### Importing the sass to your project
 
-Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Most likely you’ll not need everything in there, so comment-out the lines of objects you don’t need:
+For the simplest case where you don’t need to add any CSS component classes, you can import bitstyles and be done:
 
 ```scss
-@import 'bitstyles/settings/global.setup';
-@import 'bitstyles/settings/global.layout';
-@import 'bitstyles/settings/global.breakpoints';
-@import 'bitstyles/settings/global.animation';
-@import 'bitstyles/settings/global.color-base';
-@import 'bitstyles/settings/global.color-theme';
-@import 'bitstyles/settings/global.typography';
+@import '~bitstyles/scss/bitstyles.scss';
+```
+
+#### Override variables
+
+It’s very likely that you’ll need to set your own colors and fonts. Do this by importing your variables before you import bitstyles:
+
+```scss
+@import 'path/to/local-overrides.scss';
+@import '~bitstyles/scss/bitstyles.scss';
+```
+
+For the complete list of global variables you can override, look through the various files in the `bitstyles/settings/` folder.
+
+Each atom, molecule, organism, and utility class also have their own variables that can be overridden, to be found in the `settings.scss` file in the respective component’s folder.
+
+#### Adding your own components
+
+If you need to add your own custom component CSS (i.e. not a component built using the utility classes), you’ll need to insert your components in the middle of bitstyles. This is because CSS is a source order-dependent language.
+
+First, copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Optionally, if you’ll not need all the components in there, comment-out the lines of atoms, molecules and organisms you don’t need:
+
+```scss
+@import 'bitstyles/settings/all';
 
 // …
 
@@ -99,31 +92,31 @@ Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your proj
 @import 'bitstyles/atoms/absolute-center/';
 ```
 
-To change the css output by the library (e.g. standard margins, typographic scale, column count of the grid system…) you must override the variables used to build it. To do this declare any variables with your own values before including the bitstyles settings:
+When you add your own components, import their CSS in one of the component sections — either atoms, molecules, or organisms. The source order is then preserved, and the utility classes will still override the CSS that comes before them:
 
 ```scss
-@import 'settings/icon-overrides';
-@import 'settings/grid-overrides';
+@import 'bitstyles/settings/all';
 
-@import 'bitstyles/settings/global.setup';
-@import 'bitstyles/settings/global.layout';
-@import 'bitstyles/settings/global.breakpoints';
-@import 'bitstyles/settings/global.animation';
-@import 'bitstyles/settings/global.color-base';
-@import 'bitstyles/settings/global.color-theme';
-@import 'bitstyles/settings/global.typography';
+// …
 
 @import 'bitstyles/atoms/icon/';
-// @import 'bitstyles/atoms/button/';
-// @import 'bitstyles/atoms/button-icon/';
-@import 'bitstyles/atoms/absolute-center/';
-```
+@import 'bitstyles/atoms/button/';
 
-For the complete list of variables you can override, look through the various files in the `bitstyles/settings/` folder.
+//  …
+
+@import 'local/atoms/my-new-atom';
+
+@import 'bitstyles/organisms/modal/';
+@import 'bitstyles/organisms/navbar/';
+
+// …
+
+@import 'local/organisms/my-new-organism';
+```
 
 ## Contributing
 
-Bitstyles requires `node v5.7.0` or higher. If you have [nvm](https://github.com/creationix/nvm) installed:
+Bitstyles requires `node v14.15.5` or higher. If you have [nvm](https://github.com/creationix/nvm) installed:
 
 ```sh
 nvm use
