@@ -12,7 +12,8 @@ $bitstyles-button-tab-transition:
 
 $bitstyles-button-tab-color: palette('gray', '60') !default;
 $bitstyles-button-tab-background-color: transparent !default;
-$bitstyles-button-tab-border-color: transparent !default;
+$bitstyles-button-tab-indicator-color: transparent !default;
+$bitstyles-button-tab-border: 2px solid transparent !default;
 $bitstyles-button-tab-box-shadow: none !default;
 
 //
@@ -20,7 +21,8 @@ $bitstyles-button-tab-box-shadow: none !default;
 
 $bitstyles-button-tab-color-hover: palette('brand-1', '70') !default;
 $bitstyles-button-tab-background-color-hover: transparent !default;
-$bitstyles-button-tab-border-color-hover: palette('brand-1', '70') !default;
+$bitstyles-button-tab-indicator-color-hover: palette('brand-1', '70') !default;
+$bitstyles-button-tab-border-hover: 2px solid transparent !default;
 $bitstyles-button-tab-box-shadow-hover: none !default;
 
 //
@@ -28,7 +30,8 @@ $bitstyles-button-tab-box-shadow-hover: none !default;
 
 $bitstyles-button-tab-color-active: palette('brand-1', '90') !default;
 $bitstyles-button-tab-background-color-active: transparent !default;
-$bitstyles-button-tab-border-color-active: palette('brand-1', '90') !default;
+$bitstyles-button-tab-indicator-color-active: palette('brand-1', '90') !default;
+$bitstyles-button-tab-border-active: 2px solid transparent !default;
 $bitstyles-button-tab-box-shadow-active: none !default;
 
 //
@@ -36,7 +39,7 @@ $bitstyles-button-tab-box-shadow-active: none !default;
 
 $bitstyles-button-tab-color-selected: palette('gray', '90') !default;
 $bitstyles-button-tab-background-color-selected: transparent !default;
-$bitstyles-button-tab-border-color-selected: palette('brand-1', '90') !default;
+$bitstyles-button-tab-indicator-color-selected: palette('brand-1', '90') !default;
 $bitstyles-button-tab-box-shadow-selected: none !default;
 
 //
@@ -44,5 +47,6 @@ $bitstyles-button-tab-box-shadow-selected: none !default;
 
 $bitstyles-button-tab-color-disabled: palette('black', '50') !default;
 $bitstyles-button-tab-background-color-disabled: palette('black', '10') !default;
-$bitstyles-button-tab-border-color-disabled: transparent !default;
+$bitstyles-button-tab-indicator-color-disabled: transparent !default;
+$bitstyles-button-tab-border-disabled: 2px solid transparent !default;
 $bitstyles-button-tab-box-shadow-disabled: none !default;
