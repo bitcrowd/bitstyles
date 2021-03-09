@@ -24,7 +24,7 @@ $bitstyles-button-box-shadow: 0 0 spacing('xs') rgba(palette('brand-1', '80'), 0
 
 $bitstyles-button-color-hover: palette('white') !default;
 $bitstyles-button-background-color-hover: palette('brand-1') !default;
-$bitstyles-button-border-hover: 2px solid palette('brand-1') !default;
+$bitstyles-button-border-color-hover: palette('brand-1') !default;
 $bitstyles-button-box-shadow-hover: 0 0 spacing('s') rgba(palette('brand-1'), 0.2) !default;
 
 //
@@ -32,7 +32,7 @@ $bitstyles-button-box-shadow-hover: 0 0 spacing('s') rgba(palette('brand-1'), 0.
 
 $bitstyles-button-color-active: palette('white') !default;
 $bitstyles-button-background-color-active: palette('brand-2', '100') !default;
-$bitstyles-button-border-active: 2px solid palette('brand-2', '100') !default;
+$bitstyles-button-border-color-active: palette('brand-2', '100')  !default;
 $bitstyles-button-box-shadow-active: 0 0 spacing('s') rgba(palette('brand-1', '100'), 0.3) !default;
 
 //
@@ -40,5 +40,5 @@ $bitstyles-button-box-shadow-active: 0 0 spacing('s') rgba(palette('brand-1', '1
 
 $bitstyles-button-color-disabled: palette('black', '50') !default;
 $bitstyles-button-background-color-disabled: palette('black', '10') !default;
-$bitstyles-button-border-disabled: 2px solid palette('black', '10') !default;
+$bitstyles-button-border-color-disabled: palette('black', '10')  !default;
 $bitstyles-button-box-shadow-disabled: none !default;
