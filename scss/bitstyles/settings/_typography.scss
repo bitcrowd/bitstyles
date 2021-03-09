@@ -1,15 +1,15 @@
-@use "sass:list";
+@use "sass:list"; // stylelint-disable at-rule-no-unknown
 
+/* stylelint-disable value-keyword-case */
 $bitstyles-font-family-webfont: 'Nunito' !default;
 $bitstyles-webfont-font-url: '../test/assets/fonts/nunito-v16-latin-regular' !default;
 $bitstyles-webfont-variants: ('normal', 'italic', 'medium', 'bold') !default;
 $bitstyles-font-family-header-stack: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol") !default;
 $bitstyles-font-family-body-stack: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol") !default;
+/* stylelint-enable value-keyword-case */
 
-/* stylelint-disable value-keyword-case */
 $bitstyles-font-family-header: list.join($bitstyles-font-family-webfont, $bitstyles-font-family-header-stack) !default;
 $bitstyles-font-family-body: list.join($bitstyles-font-family-webfont, $bitstyles-font-family-body-stack) !default;
-/* stylelint-enable value-keyword-case */
 
 $bitstyles-font-weight-light: 300 !default;
 $bitstyles-font-weight-normal: 400 !default;

@@ -1,5 +1,6 @@
-@use "sass:list";
+@use "sass:list"; // stylelint-disable at-rule-no-unknown
 
+/* stylelint-disable at-rule-empty-line-before */
 @if ($bitstyles-webfont-font-url) {
   @if (list.index($bitstyles-webfont-variants, 'normal')) {
     @include webfont(
@@ -9,6 +10,7 @@
       $bitstyles-webfont-font-url
     );
   }
+
   @if (list.index($bitstyles-webfont-variants, 'italic')) {
     @include webfont(
       $bitstyles-font-family-webfont,
@@ -17,6 +19,7 @@
       $bitstyles-webfont-font-url
     );
   }
+
   @if (list.index($bitstyles-webfont-variants, 'medium')) {
     @include webfont(
       $bitstyles-font-family-webfont,
@@ -34,3 +37,4 @@
     );
   }
 }
+/* stylelint-enable at-rule-empty-line-before */
