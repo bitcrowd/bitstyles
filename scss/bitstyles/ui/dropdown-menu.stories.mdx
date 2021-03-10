@@ -12,48 +12,50 @@ For the sake of clarity, the examples shown here are all presented with the menu
 <Canvas>
   <Story name="Dropdown menu">
     {`
-      <div class="u-relative" style="min-height:15rem;">
-        <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-1" aria-expanded="true">
-          <span class="a-button__label">Account</span>
-          <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <use xlink:href="${icons}#icon-caret-down"></use>
-          </svg>
-        </button>
-        <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-1">
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <use xlink:href="${icons}#icon-plus"></use>
-              </svg>
-              <span class="a-button__label">Settings</span>
-            </a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <use xlink:href="${icons}#icon-plus"></use>
-              </svg>
-              <span class="a-button__label">Help</span>
-            </a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <use xlink:href="${icons}#icon-plus"></use>
-              </svg>
-              <span class="a-button__label">Privacy</span>
-            </a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <use xlink:href="${icons}#icon-plus"></use>
-              </svg>
-              <span class="a-button__label">Sign out</span>
-            </a>
-          </li>
-        </ul>
+      <div style="min-height:15rem;">
+        <div class="u-relative">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-1" aria-expanded="true">
+            <span class="a-button__label">Account</span>
+            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-caret-down"></use>
+            </svg>
+          </button>
+          <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-1">
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <use xlink:href="${icons}#icon-plus"></use>
+                </svg>
+                <span class="a-button__label">Settings</span>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <use xlink:href="${icons}#icon-plus"></use>
+                </svg>
+                <span class="a-button__label">Help</span>
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <use xlink:href="${icons}#icon-plus"></use>
+                </svg>
+                <span class="a-button__label">Privacy</span>
+              </a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <use xlink:href="${icons}#icon-plus"></use>
+                </svg>
+                <span class="a-button__label">Sign out</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     `}
   </Story>
@@ -64,48 +66,50 @@ The structure can be a little simpler if your menu items do not need icons. Here
 <Canvas>
   <Story name="Dropdown with avatar user-profile link">
     {`
-      <div class="u-relative" style="min-height:15rem;">
-        <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-2" aria-expanded="true">
-          <span class="a-button__label">Account</span>
-          <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <use xlink:href="${icons}#icon-caret-down"></use>
-          </svg>
-        </button>
-        <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-2">
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              <div class="a-button__avatar a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center">
-                <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
-              </div>
-              <div class="a-button__label u-flex u-flex--col u-items-start">
-                <span>Signed in as</span>
-                <span>Username</span>
-              </div>
-            </a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Settings
-            </a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Help
-            </a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Privacy
-            </a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Sign out
-            </a>
-          </li>
-        </ul>
+      <div style="min-height:15rem;">
+        <div class="u-relative">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-2" aria-expanded="true">
+            <span class="a-button__label">Account</span>
+            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-caret-down"></use>
+            </svg>
+          </button>
+          <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-2">
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                <div class="a-button__avatar a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center">
+                  <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+                </div>
+                <div class="a-button__label u-flex u-flex--col u-items-start">
+                  <span>Signed in as</span>
+                  <span>Username</span>
+                </div>
+              </a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Help
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Privacy
+              </a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Sign out
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     `}
   </Story>
@@ -116,48 +120,50 @@ You can include non-link content in the menu too — this version of the avatar 
 <Canvas>
   <Story name="Dropdown with non-button/link content">
     {`
-      <div class="u-relative" style="height: 15rem">
-        <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
-          <span class="a-button__label">Account</span>
-          <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <use xlink:href="${icons}#icon-caret-down"></use>
-          </svg>
-        </button>
-        <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-3">
-          <li>
-            <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right u-flex u-items-center u-h6 u-line-height--min">
-              <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s--right">
-                <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+      <div style="min-height:15rem;">
+        <div class="u-relative">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
+            <span class="a-button__label">Account</span>
+            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-caret-down"></use>
+            </svg>
+          </button>
+          <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-3">
+            <li>
+              <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right u-flex u-items-center u-h6 u-line-height--min">
+                <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s--right">
+                  <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+                </div>
+                <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
+                  <span class="u-fg--gray-40">Signed in as</span>
+                  <span>Username</span>
+                </div>
               </div>
-              <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
-                <span class="u-fg--gray-40">Signed in as</span>
-                <span>Username</span>
-              </div>
-            </div>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Settings
-            </a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Help
-            </a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Privacy
-            </a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Sign out
-            </a>
-          </li>
-        </ul>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Help
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Privacy
+              </a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Sign out
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     `}
   </Story>
@@ -168,51 +174,51 @@ When you know the menu will be at the right edge of the viewport, give your drop
 <Canvas>
   <Story name="Dropdown, reverse-aligned">
     {`
-    <div class="u-flex u-justify-end">
-      <div class="u-relative" style="height: 15rem">
-        <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
-          <span class="a-button__label">Account</span>
-          <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <use xlink:href="${icons}#icon-caret-down"></use>
-          </svg>
-        </button>
-        <ul class="a-dropdown a-dropdown--reverse u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-3">
-          <li>
-            <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right u-flex u-items-center u-h6 u-line-height--min">
-              <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s--right">
-                <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+      <div style="height: 15rem">
+        <div class="u-relative u-flex u-justify-end" >
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
+            <span class="a-button__label">Account</span>
+            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-caret-down"></use>
+            </svg>
+          </button>
+          <ul class="a-dropdown a-dropdown--reverse u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-3">
+            <li>
+              <div class="u-padding-xs--top u-padding-xs--bottom u-padding-s--left u-padding-s--right u-flex u-items-center u-h6 u-line-height--min">
+                <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s--right">
+                  <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+                </div>
+                <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
+                  <span class="u-fg--gray-40">Signed in as</span>
+                  <span>Username</span>
+                </div>
               </div>
-              <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
-                <span class="u-fg--gray-40">Signed in as</span>
-                <span>Username</span>
-              </div>
-            </div>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Settings
-            </a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Help
-            </a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Privacy
-            </a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--menu u-h6">
-              Sign out
-            </a>
-          </li>
-        </ul>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Help
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Privacy
+              </a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Sign out
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
     `}
   </Story>
 </Canvas>
