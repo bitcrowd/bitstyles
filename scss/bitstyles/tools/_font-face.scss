@@ -13,16 +13,16 @@
 //
 // @param {String} $font-url  The location at which the font assets can be found. Expects `.woff2` and `.woff` versions to exist there.
 //
-// @param {String} $font-display  The `font-display` property, defaults to `fallback`.
+// @param {String} $font-display  The `font-display` property, defaults to `swap`.
 
-@mixin webfont($font-family, $font-style, $font-weight, $font-url, $font-display: fallback) {
+@mixin webfont($font-family, $font-style, $font-weight, $font-url, $font-display: swap) {
   @font-face {
     font-family: $font-family;
     font-style: $font-style;
     font-weight: $font-weight;
     font-display: $font-display;
     src:
-      font-url('#{$font-url}.woff2') format('woff2'),
-      font-url('#{$font-url}.woff') format('woff');
+      url('#{$font-url}.woff2') format('woff2'),
+      url('#{$font-url}.woff') format('woff');
   }
 }

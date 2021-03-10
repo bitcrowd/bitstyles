@@ -1,39 +1,40 @@
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: $bitstyles-font-weight-normal;
-  font-display: swap;
-  src:
-    url('../test/assets/fonts/nunito-v16-latin-regular.woff2') format('woff2'),
-    url('../test/assets/fonts/nunito-v16-latin-regular.woff') format('woff');
-}
+@use "sass:list"; // stylelint-disable at-rule-no-unknown
 
-@font-face {
-  font-family: "Nunito";
-  font-style: italic;
-  font-weight: $bitstyles-font-weight-normal;
-  font-display: swap;
-  src:
-    url('../test/assets/fonts/nunito-v16-latin-italic.woff2') format('woff2'),
-    url('../test/assets/fonts/nunito-v16-latin-italic.woff') format('woff');
-}
+/* stylelint-disable at-rule-empty-line-before */
+@if ($bitstyles-webfont-font-url) {
+  @if (list.index($bitstyles-webfont-variants, 'normal')) {
+    @include webfont(
+      $bitstyles-font-family-webfont,
+      normal,
+      $bitstyles-font-weight-normal,
+      $bitstyles-webfont-font-url
+    );
+  }
 
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: $bitstyles-font-weight-medium;
-  font-display: swap;
-  src:
-    url('../test/assets/fonts/nunito-v16-latin-600.woff2') format('woff2'),
-    url('../test/assets/fonts/nunito-v16-latin-600.woff') format('woff');
-}
+  @if (list.index($bitstyles-webfont-variants, 'italic')) {
+    @include webfont(
+      $bitstyles-font-family-webfont,
+      italic,
+      $bitstyles-font-weight-normal,
+      $bitstyles-webfont-font-url
+    );
+  }
 
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: $bitstyles-font-weight-bold;
-  font-display: swap;
-  src:
-    url('../test/assets/fonts/nunito-v16-latin-800.woff2') format('woff2'),
-    url('../test/assets/fonts/nunito-v16-latin-800.woff') format('woff');
+  @if (list.index($bitstyles-webfont-variants, 'medium')) {
+    @include webfont(
+      $bitstyles-font-family-webfont,
+      normal,
+      $bitstyles-font-weight-medium,
+      $bitstyles-webfont-font-url
+    );
+  }
+  @if (list.index($bitstyles-webfont-variants, 'bold')) {
+    @include webfont(
+      $bitstyles-font-family-webfont,
+      normal,
+      $bitstyles-font-weight-bold,
+      $bitstyles-webfont-font-url
+    );
+  }
 }
+/* stylelint-enable at-rule-empty-line-before */
