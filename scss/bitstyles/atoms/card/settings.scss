@@ -1,3 +1,6 @@
 $bitstyles-card-padding: spacing('m') !default;
 $bitstyles-card-border-radius: spacing('m') !default;
-$bitstyles-card-box-shadow: 0 0 spacing('s') rgba(palette('gray', '100'), 0.1) !default;
+$bitstyles-card-box-shadow:
+  0 spacing('xxxs') spacing('s') rgba(palette('brand-1', '90'), 0.1),
+  0 spacing('xxxs') spacing('xxs') rgba(palette('gray', '90'), 0.04),
+  0 0 spacing('xxxs') rgba(palette('gray', '90'), 0.1) !default;
