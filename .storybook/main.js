@@ -5,6 +5,7 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
+    "@storybook/addon-a11y",
     {
       name: "@storybook/addon-essentials",
       options: {
