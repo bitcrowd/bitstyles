@@ -14,8 +14,8 @@
   &:visited {
     color: $bitstyles-button-tab-color;
     background: $bitstyles-button-tab-background-color;
-    box-shadow: $bitstyles-button-tab-box-shadow;
     border: $bitstyles-button-tab-border;
+    box-shadow: $bitstyles-button-tab-box-shadow;
 
     &::after {
       position: absolute;
@@ -34,8 +34,8 @@
   &:focus {
     color: $bitstyles-button-tab-color-hover;
     text-decoration: none;
-    border: $bitstyles-button-tab-border-hover;
     background: $bitstyles-button-tab-background-color-hover;
+    border: $bitstyles-button-tab-border-hover;
     outline: none;
     box-shadow: $bitstyles-button-tab-box-shadow-hover;
 
@@ -46,8 +46,8 @@
 
   &:active {
     color: $bitstyles-button-tab-color-active;
-    border: $bitstyles-button-tab-border-active;
     background: $bitstyles-button-tab-background-color-active;
+    border: $bitstyles-button-tab-border-active;
     box-shadow: $bitstyles-button-tab-box-shadow-active;
 
     &::after {
@@ -68,8 +68,8 @@
   &:disabled {
     color: $bitstyles-button-tab-color-disabled;
     cursor: default;
-    border: $bitstyles-button-tab-border-disabled;
     background: $bitstyles-button-tab-background-color-disabled;
+    border: $bitstyles-button-tab-border-disabled;
     box-shadow: $bitstyles-button-tab-box-shadow-disabled;
 
     &::after {
