@@ -1,7 +1,7 @@
 @mixin input--radio {
   color: $bitstyles-radio-color;
   background-color: $bitstyles-radio-background-color;
-  border: $bitstyles-radio-border;
+  border: $bitstyles-radio-border-width solid $bitstyles-radio-border-color;
   border-radius: $bitstyles-radio-border-radius;
 
   &::after {
@@ -22,14 +22,14 @@
   &:focus {
     color: $bitstyles-radio-color-hover;
     background-color: $bitstyles-radio-background-color-hover;
-    border: $bitstyles-radio-border-hover;
+    border-color: $bitstyles-radio-border-color-hover;
     outline: none;
   }
 
   &:checked {
     color: $bitstyles-radio-color-checked;
     background-color: $bitstyles-radio-background-color-checked;
-    border: $bitstyles-radio-border-checked;
+    border-color: $bitstyles-radio-border-color-checked;
 
     &::after {
       opacity: 1;
@@ -40,12 +40,12 @@
   &[disabled] {
     color: $bitstyles-radio-color-disabled;
     background-color: $bitstyles-radio-background-color-disabled;
-    border: $bitstyles-radio-border-disabled;
+    border-color: $bitstyles-radio-border-color-disabled;
 
     &:checked {
       color: $bitstyles-radio-color-disabled-checked;
       background-color: $bitstyles-radio-background-color-disabled-checked;
-      border: $bitstyles-radio-border-disabled-checked;
+      border-color: $bitstyles-radio-border-color-disabled-checked;
     }
 
     &::after {

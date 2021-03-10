@@ -27,14 +27,14 @@
   font-weight: $bitstyles-font-weight-medium;
   color: $bitstyles-input-color;
   background-color: $bitstyles-input-background;
-  border: $bitstyles-input-border;
+  border: $bitstyles-input-border-width solid $bitstyles-input-border-color;
   border-radius: $bitstyles-input-border-radius;
   box-shadow: $bitstyles-input-box-shadow;
 
   &:hover {
     color: $bitstyles-input-color-hover;
     background-color: $bitstyles-input-background-hover;
-    border: $bitstyles-input-border-hover;
+    border-color: $bitstyles-input-border-color-hover;
     box-shadow: $bitstyles-input-box-shadow-hover;
   }
 
@@ -42,7 +42,7 @@
   &:focus {
     color: $bitstyles-input-color-active;
     background-color: $bitstyles-input-background-active;
-    border: $bitstyles-input-border-active;
+    border-color: $bitstyles-input-border-color-active;
     outline: none;
     box-shadow: $bitstyles-input-box-shadow-active;
   }
@@ -59,7 +59,7 @@
     color: $bitstyles-input-color-disabled;
     cursor: default;
     background: $bitstyles-input-background-disabled;
-    border: $bitstyles-input-border-disabled;
+    border-color: $bitstyles-input-border-color-disabled;
     box-shadow: $bitstyles-input-box-shadow-disabled;
   }
 }
