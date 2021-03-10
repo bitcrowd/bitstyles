@@ -21,3 +21,9 @@
 .#{$bitstyles-namespace}u-flex__shrink-0 {
   flex-shrink: 0;
 }
+
+@include media-query('m') {
+  .#{$bitstyles-namespace}u-flex\@m {
+    display: flex;
+  }
+}

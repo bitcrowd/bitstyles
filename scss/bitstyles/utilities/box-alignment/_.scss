@@ -29,3 +29,13 @@
 .#{$bitstyles-namespace}u-self-end {
   align-self: flex-end;
 }
+
+@include media-query('m') {
+  .#{$bitstyles-namespace}u-justify-between\@m {
+    justify-content: space-between;
+  }
+
+  .#{$bitstyles-namespace}u-items-center\@m {
+    align-items: center;
+  }
+}

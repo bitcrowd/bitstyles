@@ -14,6 +14,7 @@
   &:visited {
     color: $bitstyles-button-tab-color;
     background: $bitstyles-button-tab-background-color;
+    border: $bitstyles-button-tab-border;
     box-shadow: $bitstyles-button-tab-box-shadow;
 
     &::after {
@@ -22,7 +23,7 @@
       bottom: 0;
       left: $bitstyles-button-padding-horizontal;
       height: $bitstyles-button-tab-border-width;
-      background-color: $bitstyles-button-tab-border-color;
+      background-color: $bitstyles-button-tab-indicator-color;
       border-radius: $bitstyles-border-radius-round;
       content: '';
       transition: background-color $bitstyles-transition-duration $bitstyles-transition-easing;
@@ -34,21 +35,23 @@
     color: $bitstyles-button-tab-color-hover;
     text-decoration: none;
     background: $bitstyles-button-tab-background-color-hover;
+    border: $bitstyles-button-tab-border-hover;
     outline: none;
     box-shadow: $bitstyles-button-tab-box-shadow-hover;
 
     &::after {
-      background-color: $bitstyles-button-tab-border-color-hover;
+      background-color: $bitstyles-button-tab-indicator-color-hover;
     }
   }
 
   &:active {
     color: $bitstyles-button-tab-color-active;
     background: $bitstyles-button-tab-background-color-active;
+    border: $bitstyles-button-tab-border-active;
     box-shadow: $bitstyles-button-tab-box-shadow-active;
 
     &::after {
-      background-color: $bitstyles-button-tab-border-color-active;
+      background-color: $bitstyles-button-tab-indicator-color-active;
     }
   }
 
@@ -58,7 +61,7 @@
     box-shadow: $bitstyles-button-tab-box-shadow-selected;
 
     &::after {
-      background-color: $bitstyles-button-tab-border-color-selected;
+      background-color: $bitstyles-button-tab-indicator-color-selected;
     }
   }
 
@@ -66,10 +69,11 @@
     color: $bitstyles-button-tab-color-disabled;
     cursor: default;
     background: $bitstyles-button-tab-background-color-disabled;
+    border: $bitstyles-button-tab-border-disabled;
     box-shadow: $bitstyles-button-tab-box-shadow-disabled;
 
     &::after {
-      background-color: $bitstyles-button-tab-border-color-disabled;
+      background-color: $bitstyles-button-tab-indicator-color-disabled;
     }
   }
 }
