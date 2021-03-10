@@ -4,12 +4,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Notifications
 
-Keep the user informed of what’s happening.
+Notifications are presented in an element with `aria-live="polite"`, which should exist in the DOM only once, and should be always present. You can insert content on the client side or server side. The browser will watch the element for changes in content and will announce (to assistive technology like a screenreader) any changes after it completes it’s current task.
 
 <Canvas>
   <Story id="organisms-notification-center--notification-center" />
 </Canvas>
 
+Some notifications may require or enable further actions by the user — add buttons underneath the text content for this.
 
 <Canvas>
   <Story name="Notification dialog">
