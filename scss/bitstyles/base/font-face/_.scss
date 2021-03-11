@@ -7,7 +7,7 @@
       $bitstyles-font-family-webfont,
       normal,
       $bitstyles-font-weight-normal,
-      $bitstyles-webfont-font-url
+      #{$bitstyles-webfont-font-url + '-' + $bitstyles-font-weight-normal}
     );
   }
 
@@ -16,7 +16,7 @@
       $bitstyles-font-family-webfont,
       italic,
       $bitstyles-font-weight-normal,
-      $bitstyles-webfont-font-url
+      #{$bitstyles-webfont-font-url + '-italic'}
     );
   }
 
@@ -25,7 +25,7 @@
       $bitstyles-font-family-webfont,
       normal,
       $bitstyles-font-weight-medium,
-      $bitstyles-webfont-font-url
+      #{$bitstyles-webfont-font-url + '-' + $bitstyles-font-weight-medium}
     );
   }
   @if (list.index($bitstyles-webfont-variants, 'bold')) {
@@ -33,7 +33,7 @@
       $bitstyles-font-family-webfont,
       normal,
       $bitstyles-font-weight-bold,
-      $bitstyles-webfont-font-url
+      #{$bitstyles-webfont-font-url + '-' + $bitstyles-font-weight-bold}
     );
   }
 }
