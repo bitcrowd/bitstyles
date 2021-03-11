@@ -33,7 +33,7 @@ $bitstyles-input-box-shadow-active: 0 0 spacing('xxs') rgba(palette('brand-1', '
 //
 // Disabled colors ////////////////////////////////////////
 
-$bitstyles-input-background-disabled: palette('black', '20') !default;
+$bitstyles-input-background-disabled: palette('black', '10') !default;
 $bitstyles-input-color-disabled: palette('text') !default;
 $bitstyles-input-border-disabled: 2px solid palette('black', '20') !default;
 $bitstyles-input-box-shadow-disabled: none;

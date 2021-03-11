@@ -104,6 +104,15 @@ You may find [Base/Forms](/?path=/docs/base-forms--fieldset) more informative.
       </select>
     `}
   </Story>
+  <Story name="Select (invalid)">
+    {`
+      <select required>
+        <option value="" disabled hidden selected>Please select</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
+    `}
+  </Story>
 </Canvas>
 
 ## Label

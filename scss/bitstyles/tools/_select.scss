@@ -41,6 +41,13 @@
     outline: none;
   }
 
+  &:invalid {
+    color: $bitstyles-select-color-invalid;
+    background-color: $bitstyles-select-background-color-invalid;
+    background-image: $bitstyles-select-background-image-invalid;
+    border: $bitstyles-select-border-invalid;
+  }
+
   &[disabled] {
     color: $bitstyles-select-color-disabled;
     cursor: default;
