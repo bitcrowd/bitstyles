@@ -2,7 +2,7 @@
 
 .#{$bitstyles-namespace}a-button {
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   flex-shrink: 0;
   min-height: calc(#{$bitstyles-button-padding-vertical  * 2} + 1em);
