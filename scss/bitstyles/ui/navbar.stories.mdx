@@ -1,0 +1,115 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import logoLarge from '../../../test/assets/images/logoLarge.svg';
+import logoSmall from '../../../test/assets/images/logoSmall.svg';
+
+<Meta title="UI/Navigation/Navbar" />
+
+# Navbar
+
+A top-level navigation container, with two sections separated to the left & right. The left-hand side is commonly used for a logo and links, the right-hand side for user account menu and global search.
+
+<Canvas>
+  <Story name="Navbar">
+    {`
+      <nav class="u-bg--gray-80 u-padding-s--top u-padding-s--bottom u-relative">
+        <div class="a-content u-flex u-justify-between u-items-center u-flex--wrap">
+          <div class="u-flex u-items-center">
+            <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-l--right u-hidden u-block@l" />
+            <img src="${logoSmall}" width="50" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-l--right u-hidden@l" />
+            <div class="u-hidden u-block@l">
+              <ul class="u-flex a-list-reset">
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Team</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Projects</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-hidden u-block@l">
+            <a href="/" class="a-button a-button--nav" aria-current="page">
+              <span class="a-button__label">Jane Dobermann</span>
+              <div class="a-button__icon a-avatar">
+                <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
+              </div>
+            </a>
+          </div>
+          <div class="u-hidden@l">
+            <button class="a-button a-button--icon a-button--icon-reversed" title="Toggle menu" aria-controls="navbar-1" aria-expanded="true">
+              <svg class="a-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M6.64,14.23H93.36A5.63,5.63,0,0,1,99,19.86h0a5.63,5.63,0,0,1-5.64,5.64H6.64A5.63,5.63,0,0,1,1,19.86H1A5.63,5.63,0,0,1,6.64,14.23Zm0,30.14H93.36A5.63,5.63,0,0,1,99,50h0a5.63,5.63,0,0,1-5.64,5.63H6.64A5.63,5.63,0,0,1,1,50H1a5.64,5.64,0,0,1,5.63-5.64Zm0,30.13H93.36A5.63,5.63,0,0,1,99,80.13h0a5.63,5.63,0,0,1-5.64,5.64H6.64A5.63,5.63,0,0,1,1,80.13H1A5.63,5.63,0,0,1,6.63,74.5Z"/>
+              </svg>
+              <span class="u-sr-only">Toggle menu</span>
+            </button>
+            <ul class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80" id="navbar-1">
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large" aria-current="page">
+                  <div class="a-button__icon a-avatar">
+                    <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
+                  </div>
+                  <span class="a-button__label">Jane Dobermann</span>
+                </a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Team</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Projects</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Sidebar">
+    {`
+      <div class="u-flex u-height-100vh">
+        <nav class="u-flex__shrink-0 u-bg--gray-80 u-padding-m--y">
+          <div class="u-padding-m--bottom u-padding-xl--left u-padding-xl--right">
+            <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex__shrink-0" />
+          </div>
+          <ul class="a-list-reset u-flex u-flex--col u-padding-s--right u-padding-s--left">
+            <li class="u-margin-s--bottom">
+              <a href="/" class="a-button a-button--nav-large">
+                <svg class="a-icon a-icon--l u-margin-s--right" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M93.79,98H64.38a4.17,4.17,0,0,1-4.17-4.17V66.68H39.79V93.79A4.17,4.17,0,0,1,35.66,98H6.21A4.17,4.17,0,0,1,2,93.87V43.79a4.18,4.18,0,0,1,1.5-3.21L47.29,3a4.17,4.17,0,0,1,5.43,0L96.5,40.58A4.26,4.26,0,0,1,98,43.79V93.74A4.17,4.17,0,0,1,93.92,98Z"/>
+                </svg>
+                Dashboard
+              </a>
+            </li>
+            <li class="u-margin-s--bottom">
+              <a href="/" class="a-button a-button--nav-large">
+                <svg class="a-icon a-icon--l u-margin-s--right" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M93.79,98H64.38a4.17,4.17,0,0,1-4.17-4.17V66.68H39.79V93.79A4.17,4.17,0,0,1,35.66,98H6.21A4.17,4.17,0,0,1,2,93.87V43.79a4.18,4.18,0,0,1,1.5-3.21L47.29,3a4.17,4.17,0,0,1,5.43,0L96.5,40.58A4.26,4.26,0,0,1,98,43.79V93.74A4.17,4.17,0,0,1,93.92,98Z"/>
+                </svg>
+                Accounts
+              </a>
+            </li>
+            <li class="u-margin-s--bottom">
+              <a href="/" class="a-button a-button--nav-large">
+                <svg class="a-icon a-icon--l u-margin-s--right" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M93.79,98H64.38a4.17,4.17,0,0,1-4.17-4.17V66.68H39.79V93.79A4.17,4.17,0,0,1,35.66,98H6.21A4.17,4.17,0,0,1,2,93.87V43.79a4.18,4.18,0,0,1,1.5-3.21L47.29,3a4.17,4.17,0,0,1,5.43,0L96.5,40.58A4.26,4.26,0,0,1,98,43.79V93.74A4.17,4.17,0,0,1,93.92,98Z"/>
+                </svg>
+                Bookings
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <main class="u-flex__grow u-padding-m">
+          <h1>Main content</h1>
+        </main>
+      </div>
+    `}
+  </Story>
+</Canvas>
