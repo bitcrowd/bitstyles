@@ -1,40 +1,10 @@
 @use "sass:list"; // stylelint-disable at-rule-no-unknown
 
-/* stylelint-disable at-rule-empty-line-before */
-@if ($bitstyles-webfont-font-url) {
-  @if (list.index($bitstyles-webfont-variants, 'normal')) {
-    @include webfont(
-      $bitstyles-font-family-webfont,
-      normal,
-      $bitstyles-font-weight-normal,
-      #{$bitstyles-webfont-font-url + '-' + $bitstyles-font-weight-normal}
-    );
-  }
-
-  @if (list.index($bitstyles-webfont-variants, 'italic')) {
-    @include webfont(
-      $bitstyles-font-family-webfont,
-      italic,
-      $bitstyles-font-weight-normal,
-      #{$bitstyles-webfont-font-url + '-italic'}
-    );
-  }
-
-  @if (list.index($bitstyles-webfont-variants, 'medium')) {
-    @include webfont(
-      $bitstyles-font-family-webfont,
-      normal,
-      $bitstyles-font-weight-medium,
-      #{$bitstyles-webfont-font-url + '-' + $bitstyles-font-weight-medium}
-    );
-  }
-  @if (list.index($bitstyles-webfont-variants, 'bold')) {
-    @include webfont(
-      $bitstyles-font-family-webfont,
-      normal,
-      $bitstyles-font-weight-bold,
-      #{$bitstyles-webfont-font-url + '-' + $bitstyles-font-weight-bold}
-    );
-  }
+@each $webfont-variant, $webfont-variant-settings in $bitstyles-webfont-variants {
+  @include webfont(
+    map-get($webfont-variant-settings, 'font-family'),
+    map-get($webfont-variant-settings, 'font-style'),
+    map-get($webfont-variant-settings, 'font-weight'),
+    map-get($webfont-variant-settings, 'url'),
+  );
 }
-/* stylelint-enable at-rule-empty-line-before */
