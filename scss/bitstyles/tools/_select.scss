@@ -13,7 +13,7 @@
   background-position: right 0.75em top 50%;
   background-repeat: no-repeat;
   background-size: 1em;
-  border: $bitstyles-select-border;
+  border: $bitstyles-select-border-width solid $bitstyles-select-border-color;
   border-radius: $bitstyles-select-border-radius;
   transition:
     color $bitstyles-transition-duration $bitstyles-transition-easing,
@@ -29,7 +29,7 @@
     color: $bitstyles-select-color-hover;
     background-color: $bitstyles-select-background-color-hover;
     background-image: $bitstyles-select-background-image-hover;
-    border: $bitstyles-select-border-hover;
+    border-color: $bitstyles-select-border-color-hover;
   }
 
   &:focus,
@@ -37,7 +37,7 @@
     color: $bitstyles-select-color-active;
     background-color: $bitstyles-select-background-color-active;
     background-image: $bitstyles-select-background-image-active;
-    border: $bitstyles-select-border-active;
+    border-color: $bitstyles-select-border-color-active;
     outline: none;
   }
 
@@ -53,6 +53,6 @@
     cursor: default;
     background-color: $bitstyles-select-background-color-disabled;
     background-image: $bitstyles-select-background-image-disabled;
-    border: $bitstyles-select-border-disabled;
+    border-color: $bitstyles-select-border-color-disabled;
   }
 }

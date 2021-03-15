@@ -5,7 +5,7 @@
   &:visited {
     color: $bitstyles-button-danger-color;
     background: $bitstyles-button-danger-background-color;
-    border: $bitstyles-button-danger-border;
+    border-color: $bitstyles-button-danger-border-color;
     box-shadow: $bitstyles-button-danger-box-shadow;
   }
 
@@ -14,7 +14,7 @@
     color: $bitstyles-button-danger-color-hover;
     text-decoration: none;
     background: $bitstyles-button-danger-background-color-hover;
-    border: $bitstyles-button-danger-border-hover;
+    border-color: $bitstyles-button-danger-border-color-hover;
     outline: none;
     box-shadow: $bitstyles-button-danger-box-shadow-hover;
   }
@@ -22,7 +22,7 @@
   &:active {
     color: $bitstyles-button-danger-color-active;
     background: $bitstyles-button-danger-background-color-active;
-    border: $bitstyles-button-danger-border-active;
+    border-color: $bitstyles-button-danger-border-color-active;
     box-shadow: $bitstyles-button-danger-box-shadow-active;
   }
 
@@ -30,7 +30,7 @@
     color: $bitstyles-button-danger-color-disabled;
     cursor: default;
     background: $bitstyles-button-danger-background-color-disabled;
-    border: $bitstyles-button-danger-border-disabled;
+    border-color: $bitstyles-button-danger-border-color-disabled;
     box-shadow: $bitstyles-button-danger-box-shadow-disabled;
   }
 }

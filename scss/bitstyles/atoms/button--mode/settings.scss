@@ -16,7 +16,7 @@ $bitstyles-button-mode-icon-spacing: spacing('s') !default;
 
 $bitstyles-button-mode-color: palette('gray', '90') !default;
 $bitstyles-button-mode-background-color: transparent !default;
-$bitstyles-button-mode-border: none !default;
+$bitstyles-button-mode-border-color: transparent !default;
 $bitstyles-button-mode-box-shadow: none !default;
 
 //
@@ -24,7 +24,7 @@ $bitstyles-button-mode-box-shadow: none !default;
 
 $bitstyles-button-mode-color-hover: palette('gray', '90') !default;
 $bitstyles-button-mode-background-color-hover: palette('white', '95') !default;
-$bitstyles-button-mode-border-hover: none !default;
+$bitstyles-button-mode-border-color-hover: palette('white', '95') !default;
 $bitstyles-button-mode-box-shadow-hover: 0 0 spacing('m') rgba(palette('brand-1'), 0.1) !default;
 
 //
@@ -32,7 +32,7 @@ $bitstyles-button-mode-box-shadow-hover: 0 0 spacing('m') rgba(palette('brand-1'
 
 $bitstyles-button-mode-color-active: palette('white') !default;
 $bitstyles-button-mode-background-color-active: palette('brand-2', '100') !default;
-$bitstyles-button-mode-border-active: none !default;
+$bitstyles-button-mode-border-color-active: palette('brand-2', '100') !default;
 $bitstyles-button-mode-box-shadow-active: 0 0 spacing('xs') rgba(palette('brand-1', '100'), 0.1) !default;
 
 //
@@ -40,7 +40,7 @@ $bitstyles-button-mode-box-shadow-active: 0 0 spacing('xs') rgba(palette('brand-
 
 $bitstyles-button-mode-color-pressed: palette('gray', '80') !default;
 $bitstyles-button-mode-background-color-pressed: palette('white', '100') !default;
-$bitstyles-button-mode-border-pressed: none !default;
+$bitstyles-button-mode-border-color-pressed: palette('white', '100') !default;
 $bitstyles-button-mode-box-shadow-pressed: 0 0 spacing('s') rgba(palette('brand-1', '100'), 0.1) !default;
 
 //
@@ -48,5 +48,5 @@ $bitstyles-button-mode-box-shadow-pressed: 0 0 spacing('s') rgba(palette('brand-
 
 $bitstyles-button-mode-color-disabled: palette('black', '50') !default;
 $bitstyles-button-mode-background-color-disabled: palette('black', '10') !default;
-$bitstyles-button-mode-border-disabled: none !default;
+$bitstyles-button-mode-border-color-disabled: palette('black', '10') !default;
 $bitstyles-button-mode-box-shadow-disabled: none !default;

@@ -9,7 +9,7 @@ $bitstyles-button-icon-reversed-padding-horizontal: spacing('m') !default;
 
 $bitstyles-button-icon-reversed-color: palette('gray', '20') !default;
 $bitstyles-button-icon-reversed-background-color: transparent !default;
-$bitstyles-button-icon-reversed-border: none !default;
+$bitstyles-button-icon-reversed-border-color: transparent !default;
 $bitstyles-button-icon-reversed-border-radius: spacing('s') !default;
 $bitstyles-button-icon-reversed-box-shadow: none !default;
 
@@ -18,7 +18,7 @@ $bitstyles-button-icon-reversed-box-shadow: none !default;
 
 $bitstyles-button-icon-reversed-color-hover: palette('white') !default;
 $bitstyles-button-icon-reversed-background-color-hover: palette('gray', '80') !default;
-$bitstyles-button-icon-reversed-border-hover: none !default;
+$bitstyles-button-icon-reversed-border-color-hover: palette('gray', '80') !default;
 $bitstyles-button-icon-reversed-box-shadow-hover: none !default;
 
 //
@@ -26,7 +26,7 @@ $bitstyles-button-icon-reversed-box-shadow-hover: none !default;
 
 $bitstyles-button-icon-reversed-color-active: palette('white') !default;
 $bitstyles-button-icon-reversed-background-color-active: palette('gray', '80') !default;
-$bitstyles-button-icon-reversed-border-active: none !default;
+$bitstyles-button-icon-reversed-border-color-active: palette('gray', '80') !default;
 $bitstyles-button-icon-reversed-box-shadow-active: none !default;
 
 //
@@ -34,5 +34,5 @@ $bitstyles-button-icon-reversed-box-shadow-active: none !default;
 
 $bitstyles-button-icon-reversed-color-disabled: palette('black', '50') !default;
 $bitstyles-button-icon-reversed-background-color-disabled: transparent !default;
-$bitstyles-button-icon-reversed-border-disabled: none !default;
+$bitstyles-button-icon-reversed-border-color-disabled: transparent !default;
 $bitstyles-button-icon-reversed-box-shadow-disabled: none !default;

@@ -1,14 +1,14 @@
 @mixin input--checkbox {
   color: $bitstyles-checkbox-color;
   background-color: $bitstyles-checkbox-background-color;
-  border: $bitstyles-checkbox-border;
+  border: $bitstyles-checkbox-border-width solid $bitstyles-checkbox-border-color;
   border-radius: $bitstyles-checkbox-border-radius;
 
   &:hover,
   &:focus {
     color: $bitstyles-checkbox-color-hover;
     background-color: $bitstyles-checkbox-background-color-hover;
-    border: $bitstyles-checkbox-border-hover;
+    border-color: $bitstyles-checkbox-border-color-hover;
     outline: none;
   }
 
@@ -29,7 +29,7 @@
   &:checked {
     color: $bitstyles-checkbox-color-checked;
     background-color: $bitstyles-checkbox-background-color-checked;
-    border: $bitstyles-checkbox-border-checked;
+    border-color: $bitstyles-checkbox-border-color-checked;
 
     &::after {
       opacity: 1;
@@ -40,12 +40,12 @@
   &[disabled] {
     color: $bitstyles-checkbox-color-disabled;
     background-color: $bitstyles-checkbox-background-color-disabled;
-    border: $bitstyles-checkbox-border-disabled;
+    border-color: $bitstyles-checkbox-border-color-disabled;
 
     &:checked {
       color: $bitstyles-checkbox-color-disabled-checked;
       background-color: $bitstyles-checkbox-background-color-disabled-checked;
-      border: $bitstyles-checkbox-border-disabled-checked;
+      border-color: $bitstyles-checkbox-border-color-disabled-checked;
     }
   }
 }

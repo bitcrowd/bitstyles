@@ -5,7 +5,7 @@
   &:visited {
     color: $bitstyles-button-ui-color;
     background: $bitstyles-button-ui-background-color;
-    border: $bitstyles-button-ui-border;
+    border-color: $bitstyles-button-ui-border-color;
     box-shadow: none;
   }
 
@@ -14,14 +14,14 @@
     color: $bitstyles-button-ui-color-hover;
     text-decoration: none;
     background: $bitstyles-button-ui-background-color-hover;
-    border: $bitstyles-button-ui-border-hover;
+    border-color: $bitstyles-button-ui-border-color-hover;
     box-shadow: none;
   }
 
   &:active {
     color: $bitstyles-button-ui-color-active;
     background: $bitstyles-button-ui-background-color-active;
-    border: $bitstyles-button-ui-border-active;
+    border-color: $bitstyles-button-ui-border-color-active;
     box-shadow: none;
   }
 
@@ -29,7 +29,7 @@
     color: $bitstyles-button-ui-color-disabled;
     cursor: default;
     background: $bitstyles-button-ui-background-color-disabled;
-    border: $bitstyles-button-ui-border-disabled;
+    border-color: $bitstyles-button-ui-border-color-disabled;
     box-shadow: none;
   }
 
@@ -37,6 +37,6 @@
   &[aria-expanded="true"] {
     color: $bitstyles-button-ui-color-pressed;
     background: $bitstyles-button-ui-background-color-pressed;
-    border: $bitstyles-button-ui-border-pressed;
+    border-color: $bitstyles-button-ui-border-color-pressed;
   }
 }

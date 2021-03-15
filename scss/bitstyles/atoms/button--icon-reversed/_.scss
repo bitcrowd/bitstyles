@@ -5,7 +5,7 @@
   &:visited {
     color: var(--button-fg, $bitstyles-button-icon-reversed-color);
     background: var(--button-bg, $bitstyles-button-icon-reversed-background-color);
-    border: $bitstyles-button-icon-reversed-border;
+    border-color: $bitstyles-button-icon-reversed-border-color;
     box-shadow: $bitstyles-button-icon-reversed-box-shadow;
   }
 
@@ -14,7 +14,7 @@
     color: var(--button-fg-hover, $bitstyles-button-icon-reversed-color-hover);
     text-decoration: none;
     background: var(--button-bg-hover, $bitstyles-button-icon-reversed-background-color-hover);
-    border: $bitstyles-button-icon-reversed-border-hover;
+    border-color: $bitstyles-button-icon-reversed-border-color-hover;
     outline: none;
     box-shadow: $bitstyles-button-icon-reversed-box-shadow-hover;
   }
@@ -22,7 +22,7 @@
   &:active {
     color: $bitstyles-button-icon-reversed-color-active;
     background: $bitstyles-button-icon-reversed-background-color-active;
-    border: $bitstyles-button-icon-reversed-border-active;
+    border-color: $bitstyles-button-icon-reversed-border-color-active;
     box-shadow: $bitstyles-button-icon-reversed-box-shadow-active;
   }
 
@@ -30,7 +30,7 @@
     color: $bitstyles-button-icon-reversed-color-disabled;
     cursor: default;
     background: $bitstyles-button-icon-reversed-background-color-disabled;
-    border: $bitstyles-button-icon-reversed-border-disabled;
+    border-color: $bitstyles-button-icon-reversed-border-color-disabled;
     box-shadow: $bitstyles-button-icon-reversed-box-shadow-disabled;
   }
 }

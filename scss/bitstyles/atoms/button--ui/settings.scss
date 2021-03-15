@@ -12,32 +12,32 @@ $bitstyles-button-ui-transition:
 
 $bitstyles-button-ui-color: palette('gray', '60') !default;
 $bitstyles-button-ui-background-color: palette('gray', '1') !default;
-$bitstyles-button-ui-border: 2px solid palette('gray', '40') !default;
+$bitstyles-button-ui-border-color: palette('gray', '40') !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
 $bitstyles-button-ui-color-hover: palette('gray', '80') !default;
 $bitstyles-button-ui-background-color-hover: palette('gray', '10') !default;
-$bitstyles-button-ui-border-hover: 2px solid palette('gray', '60') !default;
+$bitstyles-button-ui-border-color-hover: palette('gray', '60') !default;
 
 //
 // Active colors ////////////////////////////////////////
 
 $bitstyles-button-ui-color-active: palette('white') !default;
 $bitstyles-button-ui-background-color-active: palette('brand-2', '100') !default;
-$bitstyles-button-ui-border-active: 2px solid palette('brand-2', '100') !default;
+$bitstyles-button-ui-border-color-active: palette('brand-2', '100') !default;
 
 //
 // Pressed colors ////////////////////////////////////////
 
 $bitstyles-button-ui-color-pressed: palette('gray', '90') !default;
 $bitstyles-button-ui-background-color-pressed: palette('brand-2', '100') !default;
-$bitstyles-button-ui-border-pressed: 2px solid palette('brand-2', '100') !default;
+$bitstyles-button-ui-border-color-pressed: palette('brand-2', '100') !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
 $bitstyles-button-ui-color-disabled: palette('black', '50') !default;
 $bitstyles-button-ui-background-color-disabled: palette('black', '10') !default;
-$bitstyles-button-ui-border-disabled: 2px solid palette('gray', '5') !default;
+$bitstyles-button-ui-border-color-disabled: palette('gray', '5') !default;

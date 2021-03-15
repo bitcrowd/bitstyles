@@ -15,7 +15,7 @@ $bitstyles-button-nav-transition:
 
 $bitstyles-button-nav-color: palette('gray', '20') !default;
 $bitstyles-button-nav-background-color: transparent !default;
-$bitstyles-button-nav-border: none !default;
+$bitstyles-button-nav-border-color: transparent !default;
 $bitstyles-button-nav-box-shadow: none !default;
 
 //
@@ -23,7 +23,7 @@ $bitstyles-button-nav-box-shadow: none !default;
 
 $bitstyles-button-nav-color-hover: palette('white') !default;
 $bitstyles-button-nav-background-color-hover: palette('gray', '60') !default;
-$bitstyles-button-nav-border-hover: none !default;
+$bitstyles-button-nav-border-color-hover: palette('gray', '60') !default;
 $bitstyles-button-nav-box-shadow-hover: 0 0 spacing('l') rgba(palette('black', '100'), 0.3) !default;
 
 //
@@ -31,7 +31,7 @@ $bitstyles-button-nav-box-shadow-hover: 0 0 spacing('l') rgba(palette('black', '
 
 $bitstyles-button-nav-color-active: palette('white') !default;
 $bitstyles-button-nav-background-color-active: palette('brand-1', '100') !default;
-$bitstyles-button-nav-border-active: none !default;
+$bitstyles-button-nav-border-color-active: palette('brand-1', '100') !default;
 $bitstyles-button-nav-box-shadow-active: 0 0 spacing('xs') rgba(palette('black', '100'), 0.3) !default;
 
 //
@@ -39,7 +39,7 @@ $bitstyles-button-nav-box-shadow-active: 0 0 spacing('xs') rgba(palette('black',
 
 $bitstyles-button-nav-color-disabled: palette('black', '50') !default;
 $bitstyles-button-nav-background-color-disabled: palette('black', '10') !default;
-$bitstyles-button-nav-border-disabled: none !default;
+$bitstyles-button-nav-border-color-disabled: palette('black', '10') !default;
 $bitstyles-button-nav-box-shadow-disabled: none !default;
 
 //
@@ -47,5 +47,5 @@ $bitstyles-button-nav-box-shadow-disabled: none !default;
 
 $bitstyles-button-nav-color-current: palette('white', '100') !default;
 $bitstyles-button-nav-background-color-current: palette('gray', '100') !default;
-$bitstyles-button-nav-border-current: none !default;
+$bitstyles-button-nav-border-color-current: palette('gray', '100') !default;
 $bitstyles-button-nav-box-shadow-current: none !default;
