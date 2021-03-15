@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="UI/Notifications" />
+
+# Notifications
+
+Notifications are presented in an element with `aria-live="polite"`, which should exist in the DOM only once, and should be always present. You can insert content on the client side or server side. The browser will watch the element for changes in content and will announce (to assistive technology like a screenreader) any changes after it completes it’s current task.
+
+<Canvas>
+  <Story id="organisms-notification-center--notification-center" />
+</Canvas>
+
+Some notifications may require or enable further actions by the user — add buttons underneath the text content for this.
+
+<Canvas>
+  <Story name="Notification dialog">
+    {`
+     <div style="position: relative; z-index:0; transform: translate3d(0,0,0); min-height: 15rem">
+        <div class="o-notification-center a-content a-content--s u-margin-0" aria-live="polite">
+          <article class="a-card u-padding-l u-flex u-items-start">
+            <div class="u-flex__shrink-0 a-badge a-badge--positive u-padding-s u-margin-m--right">
+              <svg class="a-icon a-icon--xl" viewBox="0 0 100 100" width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.15,19.23a9.32,9.32,0,0,0-6.76,2.35A9.3,9.3,0,0,0,1,28.35v43.3a9.14,9.14,0,0,0,2.39,6.73,9.45,9.45,0,0,0,6.83,2.39h79.7a9.24,9.24,0,0,0,6.73-2.42A9.42,9.42,0,0,0,99,71.54V28.24a9.16,9.16,0,0,0-2.35-6.66A9.16,9.16,0,0,0,90,19.23ZM91.74,24,52.31,55.91a4.65,4.65,0,0,1-4.62,0L8.3,24C35.19,23.81,69.37,23.81,91.74,24ZM5.59,27.64,33,49.86,5.66,73.11C5.55,57.28,5.56,42,5.59,27.64Zm88.82,0c0,15.54,0,31.5-.11,45.47L67,49.86ZM36.61,52.78c3,2.39,6,4.9,8.94,7.23a9.89,9.89,0,0,0,8.9,0c3-2.33,6-4.82,8.94-7.23L90.85,76.17c-27.18.06-57.1,0-81.7,0Z"/>
+              </svg>
+            </div>
+            <div>
+              <h2 class="u-h5 u-margin-0">Password update request sent</h2>
+              <p class="u-h6">We sent you an email. Please click the link inside to confirm your new password</p>
+              <ul class="a-list-reset u-flex">
+                <li class="u-margin-s--right">
+                  <button type="button" class="a-button u-h6">OK</button>
+                </li>
+                <li>
+                  <button type="button" class="a-button a-button--ui u-h6">Cancel request</button>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>

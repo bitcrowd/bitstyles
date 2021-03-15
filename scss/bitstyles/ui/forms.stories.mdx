@@ -17,7 +17,7 @@ Here are some examples using the grid utility classes to create common form layo
 <Canvas>
   <Story name="Login form">
     {`
-      <div class="a-content a-content--small">
+      <div class="a-content a-content--s">
         <form class="a-card@m u-padding-xl@m" method="POST" action="">
           <h3>Login</h3>
           <ul class="a-list-reset u-margin-xl--bottom">
@@ -60,8 +60,16 @@ The `aria-describedby` attribute accepts a space-separated list of IDs, so if an
 <Canvas>
   <Story name="Login form with errors">
     {`
-      <div class="a-content a-content--small">
+      <div class="a-content a-content--s">
         <form class="a-card@m u-padding-xl@m" method="POST" action="">
+          <div class="u-padding-l--y u-margin-neg-m u-margin-neg-xl@m u-margin-l--bottom@m a-flash a-flash--warning" role="alert">
+            <div class="a-content u-flex u-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true">
+                <path d="M42.21,10.33,1.59,80.67a9,9,0,0,0,7.79,13.5H90.62a9,9,0,0,0,7.79-13.5L57.79,10.33A9,9,0,0,0,42.21,10.33Z" fill-rule="evenodd"/><path d="M49.72,71.15a5.5,5.5,0,1,1-5.49,5.5A5.5,5.5,0,0,1,49.72,71.15Zm3.93-10.44V25.82a3.93,3.93,0,0,0-7.85,0V60.71a3.93,3.93,0,0,0,7.85,0Z" fill="#fff"/>
+              </svg>
+              There was a problem logging in
+            </div>
+          </div>
           <h3>Login</h3>
           <ul class="a-list-reset u-margin-xl--bottom">
             <li class="u-margin-m--bottom">
@@ -99,7 +107,7 @@ This form has the commonly-required fields for creating an account. Note the wor
 <Canvas>
   <Story name="Sign up form">
     {`
-      <div class="a-content a-content--small">
+      <div class="a-content a-content--s">
         <form class="a-card@m u-padding-xl@m" method="POST" action="">
           <h3>Create an account</h3>
           <ul class="a-list-reset u-margin-xl--bottom">
