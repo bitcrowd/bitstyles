@@ -5,6 +5,10 @@
     margin: spacing($size);
   }
 
+  .u-margin-neg-#{$size} {
+    margin: -#{spacing($size)};
+  }
+
   .u-margin-#{$size}--y {
     margin-top: spacing($size);
     margin-bottom: spacing($size);
@@ -23,7 +27,15 @@
       .#{$bitstyles-namespace}u-margin-#{$size}\@#{$breakpoint} {
         margin: spacing($size);
       }
+    }
 
+    @each $size in $bitstyles-margin-sizes {
+      .u-margin-neg-#{$size}\@#{$breakpoint} {
+        margin: -#{spacing($size)};
+      }
+    }
+
+    @each $size in $bitstyles-margin-sizes {
       @each $position in ('left', 'top', 'right', 'bottom') {
         .#{$bitstyles-namespace}u-margin-#{$size}--#{$position}\@#{$breakpoint} {
           margin-#{$position}: spacing($size);

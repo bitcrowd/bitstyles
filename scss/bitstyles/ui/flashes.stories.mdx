@@ -1,0 +1,66 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="UI/Flashes" />
+
+# Flashes
+
+Inform the user of a global or important event, such as may happen after a page reload. There are several variants, which use color, iconography, and html attributes to indicate severity.
+
+<Canvas isColumn>
+  <Story name="Flash (brand-1)">
+    {`
+      <div class="u-padding-m--y a-flash--brand-1" aria-live="polite">
+        <div class="a-content u-flex u-items-center u-font--medium">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true">
+            <circle cx="50.1" cy="50.1" r="49"/><path d="M65.2,70.48H54.56V36.9A4.56,4.56,0,0,0,50,32.34h0a4.78,4.78,0,0,0-.76.08,4.9,4.9,0,0,0-.76-.08H39.36a4.56,4.56,0,1,0,0,9.12h6.08v29H34.8a4.56,4.56,0,0,0,0,9.12H65.2a4.56,4.56,0,0,0,0-9.12h0M54.68,24.54a4.94,4.94,0,1,1-4.94-4.94A4.95,4.95,0,0,1,54.68,24.54Z" fill="#fff"/>
+          </svg>
+          Something you may be interested to hear
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="Flash (positive)">
+    {`
+      <div class="u-padding-m--y a-flash--positive" aria-live="polite">
+        <div class="a-content u-flex u-items-center u-font--medium">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true">
+            <circle cx="50.1" cy="50.1" r="49"/><path d="M42.88,71.69,80.93,33.48a3.68,3.68,0,0,0,0-5.18h0a3.69,3.69,0,0,0-5.2,0L44.53,59.63,40.28,63.9,36,59.63,24.27,47.82a3.67,3.67,0,0,0-5.2,0h0a3.68,3.68,0,0,0,0,5.18L37.67,71.69A3.68,3.68,0,0,0,42.88,71.69Z" fill="#fff"/>
+          </svg>
+          Changes successfully saved
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="Flash (warning)">
+    {`
+      <div class="u-padding-m--y a-flash--warning" aria-live="polite">
+        <div class="a-content u-flex u-items-center u-font--medium">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true">
+            <circle cx="50.1" cy="50.1" r="49"/><path d="M56.25,56.37a6,6,0,0,0-3.93,5.75V64.9a3.36,3.36,0,0,1-6.71,0V62.11a12.6,12.6,0,0,1,8.24-12A13.6,13.6,0,0,0,49,23.84a13.45,13.45,0,0,0-11.3,6l0,0-.45.8a3.38,3.38,0,0,1-2.91,1.67,3.31,3.31,0,0,1-1.68-.45,3.36,3.36,0,0,1-1.22-4.59A20.31,20.31,0,1,1,56.25,56.37ZM49,73.38a4.86,4.86,0,1,0,4.86,4.86A4.87,4.87,0,0,0,49,73.38Z" fill="#fff" fill-rule="evenodd"/>
+          </svg>
+          Login not successful, please try that again
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="Flash (danger)">
+    {`
+      <div class="u-padding-m--y a-flash--danger" role="alert">
+        <div class="a-content u-flex u-items-center u-font--medium">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true">
+            <path d="M42.21,10.33,1.59,80.67a9,9,0,0,0,7.79,13.5H90.62a9,9,0,0,0,7.79-13.5L57.79,10.33A9,9,0,0,0,42.21,10.33Z" fill-rule="evenodd"/><path d="M49.72,71.15a5.5,5.5,0,1,1-5.49,5.5A5.5,5.5,0,0,1,49.72,71.15Zm3.93-10.44V25.82a3.93,3.93,0,0,0-7.85,0V60.71a3.93,3.93,0,0,0,7.85,0Z" fill="#fff"/>
+          </svg>
+          An error occured, please contact an admin
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Flashes in forms
+
+If a flash is used to give feedback to a form submission, place the flash close to the form in the HTML, and visually.
+
+<Canvas>
+  <Story id="ui-data-forms--login-form-with-errors" />
+</Canvas>
