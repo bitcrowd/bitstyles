@@ -1,9 +1,11 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 import icons from '../../../test/assets/images/icons.svg';
 
-<Meta title="UI/Icons" />
+<Meta title="UI/Data/Icons" />
 
 # Icons
+
+Icons must always be `aria-hidden` and have some text content as a near-sibling that expresses the same as the icon. That text can be given the `u-sr-only` class to hide it from sight, if needed.
 
 The included SVG icons can be used in two ways:
 
@@ -165,4 +167,20 @@ The included SVG icons can be used in two ways:
       </svg>
     `}
   </Story>
+</Canvas>
+
+## Icon sizes
+
+By default, icons inherit their size from the surrounding text i.e. `width: 1em; height: 1em`. Use the modifier classes `a-icon--<size>` to override this:
+
+- `.a-icon--s`
+- `.a-icon--m`
+- `.a-icon--l`
+- `.a-icon--xl`
+
+<Canvas>
+  <Story id="atoms-icon--small-icon"/>
+  <Story id="atoms-icon--medium-icon"/>
+  <Story id="atoms-icon--large-icon"/>
+  <Story id="atoms-icon--x-large-icon"/>
 </Canvas>
