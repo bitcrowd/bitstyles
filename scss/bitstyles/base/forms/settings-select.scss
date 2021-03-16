@@ -10,32 +10,32 @@ $bitstyles-select-color: palette('gray', '60') !default;
 $bitstyles-select-border-width: spacing('xxxs');
 $bitstyles-select-border-color: palette('gray', '40') !default;
 $bitstyles-select-background-color: transparent !default;
-$bitstyles-select-background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('gray', '60')}' d='M52.8,68.9,86.32,36a4,4,0,0,0-2.8-6.86h-67A4,4,0,0,0,13.68,36L47.2,68.9A4,4,0,0,0,52.8,68.9Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('gray', '60')}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Hover styles ////////////////////////////////////////
 $bitstyles-select-color-hover: palette('gray', '80') !default;
 $bitstyles-select-border-color-hover: palette('gray', '80') !default;
 $bitstyles-select-background-color-hover: palette('gray', '1') !default;
-$bitstyles-select-background-image-hover: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{$bitstyles-select-color-hover}' d='M52.8,68.9,86.32,36a4,4,0,0,0-2.8-6.86h-67A4,4,0,0,0,13.68,36L47.2,68.9A4,4,0,0,0,52.8,68.9Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image-hover: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{$bitstyles-select-color-hover}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Active styles ////////////////////////////////////////
 $bitstyles-select-color-active: palette('gray', '80') !default;
 $bitstyles-select-border-color-active: palette('gray', '80') !default;
 $bitstyles-select-background-color-active: transparent !default;
-$bitstyles-select-background-image-active: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('gray', '80')}' d='M52.8,68.9,86.32,36a4,4,0,0,0-2.8-6.86h-67A4,4,0,0,0,13.68,36L47.2,68.9A4,4,0,0,0,52.8,68.9Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image-active: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('gray', '80')}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Invalid styles ////////////////////////////////////////
 $bitstyles-select-color-invalid: palette('warning') !default;
 $bitstyles-select-border-invalid: 2px solid palette('warning') !default;
 $bitstyles-select-background-color-invalid: palette('white') !default;
-$bitstyles-select-background-image-invalid: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('warning')}' d='M52.8,68.9,86.32,36a4,4,0,0,0-2.8-6.86h-67A4,4,0,0,0,13.68,36L47.2,68.9A4,4,0,0,0,52.8,68.9Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image-invalid: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('warning')}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Disabled styles ////////////////////////////////////////
 $bitstyles-select-color-disabled: palette('text') !default;
 $bitstyles-select-border-color-disabled: 2px solid palette('black', '20') !default;
 $bitstyles-select-background-color-disabled: palette('black', '10') !default;
-$bitstyles-select-background-image-disabled: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('gray', '50')}' d='M52.8,68.9,86.32,36a4,4,0,0,0-2.8-6.86h-67A4,4,0,0,0,13.68,36L47.2,68.9A4,4,0,0,0,52.8,68.9Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image-disabled: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('gray', '50')}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
