@@ -1,6 +1,7 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 import logoLarge from '../../../../test/assets/images/logoLarge.svg';
 import logoSmall from '../../../../test/assets/images/logoSmall.svg';
+import icons from '../../../../test/assets/images/icons.svg';
 
 <Meta title="UI/Navigation/Navbar" />
 
@@ -40,8 +41,8 @@ A top-level navigation container, with two sections separated to the left & righ
           </div>
           <div class="u-hidden@l">
             <button class="a-button a-button--icon a-button--icon-reversed" title="Toggle menu" aria-controls="navbar-1" aria-expanded="true">
-              <svg class="a-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <path d="M6.64,14.23H93.36A5.63,5.63,0,0,1,99,19.86h0a5.63,5.63,0,0,1-5.64,5.64H6.64A5.63,5.63,0,0,1,1,19.86H1A5.63,5.63,0,0,1,6.64,14.23Zm0,30.14H93.36A5.63,5.63,0,0,1,99,50h0a5.63,5.63,0,0,1-5.64,5.63H6.64A5.63,5.63,0,0,1,1,50H1a5.64,5.64,0,0,1,5.63-5.64Zm0,30.13H93.36A5.63,5.63,0,0,1,99,80.13h0a5.63,5.63,0,0,1-5.64,5.64H6.64A5.63,5.63,0,0,1,1,80.13H1A5.63,5.63,0,0,1,6.63,74.5Z"/>
+              <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-hamburger"></use>
               </svg>
               <span class="u-sr-only">Toggle menu</span>
             </button>

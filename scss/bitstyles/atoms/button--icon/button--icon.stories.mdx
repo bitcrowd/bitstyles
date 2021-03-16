@@ -1,4 +1,5 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import icons from '../../../../test/assets/images/icons.svg';
 
 <Meta title="Atoms/Button/Icon" />
 
@@ -18,8 +19,8 @@ Here’s a base icon button:
   <Story name="Button element">
     {`
       <button class="a-button a-button--icon" title="Button element">
-        <svg class="a-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-          <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+        <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
+          <use xlink:href="${icons}#icon-plus"></use>
         </svg>
         <span class="u-sr-only">Button element</span>
       </button>
@@ -33,8 +34,8 @@ Here’s the same button in the disabled state:
   <Story name="Button element (disabled)">
     {`
       <button disabled class="a-button a-button--icon" title="Button element (disabled)">
-        <svg class="a-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-          <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+        <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
+          <use xlink:href="${icons}#icon-plus"></use>
         </svg>
         <span class="u-sr-only">Button element (disabled)</span>
       </button>
@@ -48,8 +49,8 @@ This shows there’s no visual difference when using an anchor element. Note the
   <Story name="Anchor element as button">
     {`
       <a href="#" class="a-button a-button--icon" title="Anchor element">
-        <svg class="a-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-          <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+        <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
+          <use xlink:href="${icons}#icon-plus"></use>
         </svg>
         <span class="u-sr-only">Anchor element</span>
       </a>
@@ -58,8 +59,8 @@ This shows there’s no visual difference when using an anchor element. Note the
   <Story name="Anchor element as button (visited)">
     {`
       <a href="/" class="a-button a-button--icon" title="Anchor element (visited)">
-        <svg class="a-icon" viewBox="0 0 100 100" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-          <path d="m55.94 1.03v43h43v12h-43v43h-12v-43h-43v-12h43v-43z" fill-rule="evenodd"/>
+        <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
+          <use xlink:href="${icons}#icon-plus"></use>
         </svg>
         <span class="u-sr-only">Anchor element (visited)</span>
       </a>

@@ -1,0 +1,186 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import icons from '../../../test/assets/images/icons.svg';
+
+<Meta title="UI/Data/Icons" />
+
+# Icons
+
+Icons must always be `aria-hidden` and have some text content as a near-sibling that expresses the same as the icon. That text can be given the `u-sr-only` class to hide it from sight, if needed.
+
+The included SVG icons can be used in two ways:
+
+- \[Recommended\] Host it as a normal image `.svg` file, then reference specific icons inside with SVG `<use>` elements
+- Inlined into the top of the HTML and hidden, then referenced with SVG `<use>` elements
+
+<Canvas>
+  <Story name="Check">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-check"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Cross">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-cross"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Plus">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-plus"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Minus">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-minus"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Caret-up">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-caret-up"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Caret-right">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-caret-right"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Caret-down">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-caret-down"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Caret-left">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-caret-left"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Hamburger">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-hamburger"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Filter">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-filter"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Home">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-home"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Mail">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-mail"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Info-circle">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-info-circle"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Question-circle">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-question-circle"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Check-circle">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-check-circle"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Exclamation">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-exclamation"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Pencil">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-pencil"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Bin">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-bin"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Search">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-search"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Storage">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-storage"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Transit">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-transit"></use>
+      </svg>
+    `}
+  </Story>
+  <Story name="Inbox">
+    {`
+      <svg width="14" height="14" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <use xlink:href="${icons}#icon-inbox"></use>
+      </svg>
+    `}
+  </Story>
+</Canvas>
+
+## Icon sizes
+
+By default, icons inherit their size from the surrounding text i.e. `width: 1em; height: 1em`. Use the modifier classes `a-icon--<size>` to override this:
+
+- `.a-icon--s`
+- `.a-icon--m`
+- `.a-icon--l`
+- `.a-icon--xl`
+
+<Canvas>
+  <Story id="atoms-icon--small-icon"/>
+  <Story id="atoms-icon--medium-icon"/>
+  <Story id="atoms-icon--large-icon"/>
+  <Story id="atoms-icon--x-large-icon"/>
+</Canvas>
