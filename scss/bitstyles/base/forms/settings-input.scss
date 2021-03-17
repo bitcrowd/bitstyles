@@ -1,7 +1,7 @@
 //
 // Base styles ////////////////////////////////////////
 
-$bitstyles-input-padding: spacing('s') !default;
+$bitstyles-input-padding: spacing('xs') !default;
 $bitstyles-input-border-radius: spacing('xs') !default;
 $bitstyles-input-placeholder-color: palette('gray', '50') !default;
 $bitstyles-input-checkbox-size: spacing('m') !default;
@@ -11,7 +11,7 @@ $bitstyles-input-checkbox-size: spacing('m') !default;
 
 $bitstyles-input-color: palette('text') !default;
 $bitstyles-input-border-width: spacing('xxxs');
-$bitstyles-input-border-color: palette('gray', '40') !default;
+$bitstyles-input-border-color: palette('gray', '10') !default;
 $bitstyles-input-background: palette('white') !default;
 $bitstyles-input-box-shadow: 0 0 spacing('xs') rgba(palette('gray', '90'), 0.05);
 
