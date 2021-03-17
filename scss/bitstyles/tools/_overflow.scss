@@ -9,13 +9,11 @@
 //
 
 @mixin overflow-y {
-  max-height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
 }
 
 @mixin overflow-x {
-  max-width: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
 }

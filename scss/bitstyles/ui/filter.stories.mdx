@@ -1,0 +1,187 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="UI/Data/Filtering" />
+
+# Filtering
+
+## Filter by fixed-value categories
+
+When a user wants to filter a list of objects by fields which have a limited number of set values, present them with a group of checkboxes to choose from. To keep the UI clear, they can be hidden within a well-labelled dropdown menu.
+
+<Canvas>
+  <Story name="Filter by preset values">
+    {`
+      <div style="min-height: 15rem;">
+        <form action="" method="POST" class="u-flex u-items-center" role="search">
+          <h3 class="u-sr-only">Filter results</h3>
+          <ul class="a-list-reset u-flex">
+            <li class="u-relative u-margin-xs--right">
+              <button type="button" class="a-button a-button--ui" title="Filter by category" aria-controls="dropdown-1" aria-expanded="false">
+                <span class="u-sr-only">Filter by</span>
+                <span class="a-button__label">Account type: Admin</span>
+                <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+                </svg>
+              </button>
+            </li>
+            <li class="u-relative">
+              <button type="button" class="a-button a-button--ui u-margin-m--right" title="Add filter" aria-controls="dropdown-1" aria-expanded="true">
+                <span class="u-sr-only">Filter by</span>
+                <span class="a-button__label">Account status: All</span>
+                <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+                </svg>
+              </button>
+              <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-1">
+                <li>
+                  <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                    <input type="checkbox" name="all" checked />
+                    All
+                  </label>
+                </li>
+                <li role="separator"></li>
+                <li>
+                  <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                    <input type="checkbox" name="invited" checked />
+                    Invited
+                  </label>
+                </li>
+                <li>
+                  <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                    <input type="checkbox" name="activated" checked />
+                    Activated
+                  </label>
+                </li>
+                <li>
+                  <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                    <input type="checkbox" name="banned" checked />
+                    Banned
+                  </label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button class="a-button u-sr-only" type="submit">Apply filter</button>
+        </form>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Free text filters
+
+Some fields such as names and emails will need to be filtered by user-entered free text. Use a dropdown menu to allow the user to narrow down their search by category.
+
+<Canvas isColumn>
+  <Story name="Filter by free text">
+    {`
+      <form action="" method="POST" role="search">
+        <h3 class="u-sr-only">Filter results</h3>
+        <ul class="o-ui-group u-flex a-list-reset">
+          <li class="u-flex">
+            <label for="search_users" class="u-sr-only">Search users</label>
+            <input type="search" id="search_users" class="o-ui-group__item u-round-0--tr u-round-0--br" placeholder="Search users…" />
+          </li>
+          <li class="u-flex u-relative">
+            <button type="button" class="a-button a-button--ui u-round-0--tl u-round-0--bl">
+              <span class="a-button__label">Email</span>
+              <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+                <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <button class="a-button u-sr-only" type="submit">Apply filter</button>
+      </form>
+    `}
+  </Story>
+  <Story name="Filter by free text, dropdown active">
+    {`
+      <div style="min-height: 10rem">
+        <form action="" method="POST" role="search">
+          <h3 class="u-sr-only">Filter results</h3>
+          <ul class="o-ui-group u-flex a-list-reset">
+            <li class="u-flex">
+              <label for="search_users" class="u-sr-only">Search users</label>
+              <input type="search" id="search_users" class="o-ui-group__item u-round-0--tr u-round-0--br" placeholder="Search users…" />
+            </li>
+            <li class="u-flex u-relative">
+              <button type="button" class="a-button a-button--ui u-round-0--tl u-round-0--bl" aria-controls="dropdown-1" aria-expanded="true">
+                <span class="u-sr-only">Filter field:</span>
+                <span class="a-button__label">All</span>
+                <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+                  <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+                </svg>
+              </button>
+              <ul class="a-dropdown a-dropdown--reverse u-overflow--y a-list-reset u-margin-s--top" aria-hidden="false" id="dropdown-1">
+                <li>
+                  <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                    <input type="checkbox" name="all" checked />
+                    All
+                  </label>
+                </li>
+                <li role="separator"></li>
+                <li>
+                  <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                    <input type="checkbox" name="user_email" checked />
+                    Email
+                  </label>
+                </li>
+                <li>
+                  <label class="a-button a-button--menu u-h6 u-flex u-items-center">
+                    <input type="checkbox" name="user_name" checked />
+                    Name
+                  </label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button class="a-button u-sr-only" type="submit">Apply filter</button>
+        </form>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Multiple filters
+
+When giving the user filters by category and free text, place the free text search field first.
+
+<Canvas>
+  <Story name="Filter by free text and categories">
+    {`
+      <form action="" method="POST" role="search">
+        <h3 class="u-sr-only">Filter results</h3>
+        <ul class="a-list-reset u-flex u-items-center">
+          <li class="u-margin-xs--right">
+            <ul class="o-ui-group u-flex a-list-reset">
+              <li class="u-flex">
+                <label for="search_users" class="u-sr-only">Search users</label>
+                <input type="search" id="search_users" class="o-ui-group__item u-round-0--tr u-round-0--br" placeholder="Search users…" />
+              </li>
+              <li class="u-flex u-relative">
+                <button type="button" class="a-button a-button--ui u-round-0--tl u-round-0--bl" aria-controls="dropdown-1" aria-expanded="false">
+                  <span class="u-sr-only">Filter field:</span>
+                  <span class="a-button__label">All</span>
+                  <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+                    <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <button type="button" class="a-button a-button--ui" title="Filter by category" aria-controls="dropdown-1" aria-expanded="false">
+              <span class="u-sr-only">Filter by</span>
+              <span class="a-button__label">Account type: Admin</span>
+              <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <button class="a-button u-sr-only" type="submit">Apply filter</button>
+      </form>
+    `}
+  </Story>
+</Canvas>
