@@ -19,10 +19,6 @@
     margin: $bitstyles-dropdown-separator-spacing 0;
     border-top: 1px solid $bitstyles-dropdown-separator-border;
   }
-
-  &[aria-hidden="false"] {
-    border: $bitstyles-dropdown-border-active;
-  }
 }
 
 .a-dropdown--reverse {

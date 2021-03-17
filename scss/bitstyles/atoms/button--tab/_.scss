@@ -56,7 +56,8 @@
     }
   }
 
-  &[aria-selected="true"] {
+  &[aria-selected="true"],
+  &[aria-current] {
     color: $bitstyles-button-tab-color-selected;
     background: $bitstyles-button-tab-background-color-selected;
     box-shadow: $bitstyles-button-tab-box-shadow-selected;

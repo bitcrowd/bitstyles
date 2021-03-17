@@ -31,7 +31,8 @@
     box-shadow: $bitstyles-button-nav-large-box-shadow-active;
   }
 
-  &[aria-current] {
+  &[aria-current],
+  &[aria-expanded="true"] {
     color: $bitstyles-button-nav-large-color-current;
     background: $bitstyles-button-nav-large-background-color-current;
     border: $bitstyles-button-nav-large-border-current;

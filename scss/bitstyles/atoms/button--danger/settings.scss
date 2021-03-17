@@ -1,21 +1,4 @@
 //
-// Base styles ////////////////////////////////////////
-
-$bitstyles-button-danger-transition:
-  color $bitstyles-transition-duration $bitstyles-transition-easing,
-  background-color $bitstyles-transition-duration $bitstyles-transition-easing,
-  border $bitstyles-transition-duration $bitstyles-transition-easing,
-  box-shadow $bitstyles-transition-duration $bitstyles-transition-easing !default;
-
-//
-// Base colors ////////////////////////////////////////
-
-$bitstyles-button-danger-color: palette('white') !default;
-$bitstyles-button-danger-background-color: palette('brand-1', '80') !default;
-$bitstyles-button-danger-border-color: palette('brand-1', '80') !default;
-$bitstyles-button-danger-box-shadow: 0 0 spacing('s') rgba(palette('brand-2', '80'), 0.3) !default;
-
-//
 // Hover colors ////////////////////////////////////////
 
 $bitstyles-button-danger-color-hover: palette('white') !default;

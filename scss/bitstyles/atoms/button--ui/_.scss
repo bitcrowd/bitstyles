@@ -33,7 +33,8 @@
   }
 
   &[aria-pressed="true"],
-  &[aria-expanded="true"] {
+  &[aria-expanded="true"],
+  &[aria-current] {
     color: $bitstyles-button-ui-color-pressed;
     background: $bitstyles-button-ui-background-color-pressed;
     border-color: $bitstyles-button-ui-border-color-pressed;
