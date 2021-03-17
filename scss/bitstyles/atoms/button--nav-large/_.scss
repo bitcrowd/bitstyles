@@ -3,14 +3,13 @@
 .a-button--nav-large {
   display: flex;
   padding: $bitstyles-button-nav-large-padding-vertical $bitstyles-button-nav-large-padding-horizontal;
-  border: 0;
   border-radius: $bitstyles-button-nav-large-border-radius;
 
   &,
   &:visited {
     color: $bitstyles-button-nav-large-color;
     background: $bitstyles-button-nav-large-background-color;
-    border: $bitstyles-button-nav-large-border;
+    border-color: $bitstyles-button-nav-large-border-color;
     box-shadow: $bitstyles-button-nav-large-box-shadow;
   }
 
@@ -19,7 +18,7 @@
     color: $bitstyles-button-nav-large-color-hover;
     text-decoration: none;
     background: $bitstyles-button-nav-large-background-color-hover;
-    border: $bitstyles-button-nav-large-border-hover;
+    border-color: $bitstyles-button-nav-large-border-color-hover;
     outline: none;
     box-shadow: $bitstyles-button-nav-large-box-shadow-hover;
   }
@@ -27,14 +26,15 @@
   &:active {
     color: $bitstyles-button-nav-large-color-active;
     background: $bitstyles-button-nav-large-background-color-active;
-    border: $bitstyles-button-nav-large-border-active;
+    border-color: $bitstyles-button-nav-large-border-color-active;
     box-shadow: $bitstyles-button-nav-large-box-shadow-active;
   }
 
-  &[aria-current] {
+  &[aria-current],
+  &[aria-expanded="true"] {
     color: $bitstyles-button-nav-large-color-current;
     background: $bitstyles-button-nav-large-background-color-current;
-    border: $bitstyles-button-nav-large-border-current;
+    border-color: $bitstyles-button-nav-large-border-color-current;
     box-shadow: $bitstyles-button-nav-large-box-shadow-current;
   }
 
@@ -42,7 +42,7 @@
     color: $bitstyles-button-nav-large-color-disabled;
     cursor: default;
     background: $bitstyles-button-nav-large-background-color-disabled;
-    border: $bitstyles-button-nav-large-border-disabled;
+    border: $bitstyles-button-nav-large-border-color-disabled;
     box-shadow: $bitstyles-button-nav-large-box-shadow-disabled;
   }
 }

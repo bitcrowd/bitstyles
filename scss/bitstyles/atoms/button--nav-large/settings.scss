@@ -14,23 +14,23 @@ $bitstyles-button-nav-large-transition:
 
 $bitstyles-button-nav-large-color: palette('gray', '5') !default;
 $bitstyles-button-nav-large-background-color: palette('gray', '80') !default;
-$bitstyles-button-nav-large-border: none !default;
+$bitstyles-button-nav-large-border-color: palette('gray', '80') !default;
 $bitstyles-button-nav-large-box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
 $bitstyles-button-nav-large-color-hover: palette('white') !default;
-$bitstyles-button-nav-large-background-color-hover: palette('gray', '70') !default;
-$bitstyles-button-nav-large-border-hover: none !default;
+$bitstyles-button-nav-large-background-color-hover: palette('gray', '60') !default;
+$bitstyles-button-nav-large-border-color-hover: palette('gray', '60') !default;
 $bitstyles-button-nav-large-box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$bitstyles-button-nav-large-color-active: palette('white') !default;
-$bitstyles-button-nav-large-background-color-active: palette('brand-1', '70') !default;
-$bitstyles-button-nav-large-border-active: none !default;
+$bitstyles-button-nav-large-color-active: palette('text') !default;
+$bitstyles-button-nav-large-background-color-active: palette('gray', '10') !default;
+$bitstyles-button-nav-large-border-color-active: palette('gray', '10') !default;
 $bitstyles-button-nav-large-box-shadow-active: none !default;
 
 //
@@ -38,7 +38,7 @@ $bitstyles-button-nav-large-box-shadow-active: none !default;
 
 $bitstyles-button-nav-large-color-disabled: palette('black', '50') !default;
 $bitstyles-button-nav-large-background-color-disabled: palette('black', '10') !default;
-$bitstyles-button-nav-large-border-disabled: none !default;
+$bitstyles-button-nav-large-border-color-disabled: palette('black', '10') !default;
 $bitstyles-button-nav-large-box-shadow-disabled: none !default;
 
 //
@@ -46,5 +46,5 @@ $bitstyles-button-nav-large-box-shadow-disabled: none !default;
 
 $bitstyles-button-nav-large-color-current: palette('white', '100') !default;
 $bitstyles-button-nav-large-background-color-current: palette('gray', '100') !default;
-$bitstyles-button-nav-large-border-current: none !default;
+$bitstyles-button-nav-large-border-color-current: palette('gray', '100') !default;
 $bitstyles-button-nav-large-box-shadow-current: none !default;

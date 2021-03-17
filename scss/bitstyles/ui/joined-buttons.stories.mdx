@@ -61,6 +61,8 @@ For a series of buttons that are very directly related e.g.
   </Story>
 </Canvas>
 
+Mark the current page in a series of pagination buttons, by giving the link the `aria-current="page"` attribute.
+
 <Canvas>
   <Story name="Joined buttons - pagination">
     {`
@@ -79,7 +81,7 @@ For a series of buttons that are very directly related e.g.
           </a>
         </li>
         <li class="u-flex">
-          <a href="/" class="a-button a-button--ui o-ui-group__item u-round-0 u-h6">
+          <a href="/" class="a-button a-button--ui o-ui-group__item u-round-0 u-h6" aria-current="page">
             2
           </a>
         </li>

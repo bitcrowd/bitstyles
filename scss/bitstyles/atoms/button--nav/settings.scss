@@ -29,9 +29,9 @@ $bitstyles-button-nav-box-shadow-hover: 0 0 spacing('l') rgba(palette('black', '
 //
 // Active colors ////////////////////////////////////////
 
-$bitstyles-button-nav-color-active: palette('white') !default;
-$bitstyles-button-nav-background-color-active: palette('brand-1', '100') !default;
-$bitstyles-button-nav-border-color-active: palette('brand-1', '100') !default;
+$bitstyles-button-nav-color-active: palette('text') !default;
+$bitstyles-button-nav-background-color-active: palette('gray', '10') !default;
+$bitstyles-button-nav-border-color-active: palette('gray', '10') !default;
 $bitstyles-button-nav-box-shadow-active: 0 0 spacing('xs') rgba(palette('black', '100'), 0.3) !default;
 
 //
@@ -46,6 +46,6 @@ $bitstyles-button-nav-box-shadow-disabled: none !default;
 // Current colors ////////////////////////////////////////
 
 $bitstyles-button-nav-color-current: palette('white', '100') !default;
-$bitstyles-button-nav-background-color-current: palette('gray', '100') !default;
-$bitstyles-button-nav-border-color-current: palette('gray', '100') !default;
+$bitstyles-button-nav-background-color-current: palette('black', '100') !default;
+$bitstyles-button-nav-border-color-current: palette('gray', '80') !default;
 $bitstyles-button-nav-box-shadow-current: none !default;
