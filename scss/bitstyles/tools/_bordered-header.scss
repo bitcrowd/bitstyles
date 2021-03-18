@@ -1,7 +1,7 @@
 @mixin bordered-header() {
   display: grid;
   grid-template-columns: auto minmax(1px, 1fr);
-  grid-gap: spacing('m');
+  grid-gap: $bitstyles-bordered-header-gutter;
   align-items: center;
   width: 100%;
 
