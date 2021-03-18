@@ -4,7 +4,7 @@ html {
   line-height: $bitstyles-line-height-base;
   color: palette('text');
   -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
-  background: palette('background');
+  background: palette('background', '95');
 }
 
 h1,

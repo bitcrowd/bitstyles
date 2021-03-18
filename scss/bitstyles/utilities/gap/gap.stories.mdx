@@ -1,0 +1,22 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/Gap" />
+
+# Gap
+
+The gap classes specify gaps on your grid elements — space between each grid item, but no space around them (you need to handle the space outside yourself).
+
+<Canvas>
+  <Story name="u-gap-m">
+    {`
+      <div class="u-grid u-padding-m u-gap-m u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">Grid child 1</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 2</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 3</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 4</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 5</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 6</div>
+      </div>
+    `}
+  </Story>
+</Canvas>

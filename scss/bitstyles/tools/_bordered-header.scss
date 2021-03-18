@@ -1,26 +1,12 @@
 @mixin bordered-header() {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(1px, 1fr);
+  grid-gap: spacing('m');
   align-items: center;
-  justify-content: center;
   width: 100%;
-  text-align: center;
-  white-space: nowrap;
 
-  &::before,
   &::after {
-    display: inline-block;
-    min-width: $bitstyles-bordered-header-line-min-width;
-    vertical-align: middle;
-    flex-grow: 1;
     border-top: $bitstyles-bordered-header-border;
     content: '';
-  }
-
-  &::before {
-    margin-right: $bitstyles-bordered-header-gutter;
-  }
-
-  &::after {
-    margin-left: $bitstyles-bordered-header-gutter;
   }
 }
