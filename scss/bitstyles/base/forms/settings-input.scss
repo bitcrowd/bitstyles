@@ -20,14 +20,14 @@ $bitstyles-input-box-shadow: 0 0 spacing('xs') rgba(palette('gray', '90'), 0.05)
 
 $bitstyles-input-background-hover: palette('gray', '1') !default;
 $bitstyles-input-color-hover: palette('gray', '70') !default;
-$bitstyles-input-border-color-hover: 2px solid palette('gray', '60') !default;
+$bitstyles-input-border-color-hover: palette('gray', '60') !default;
 $bitstyles-input-box-shadow-hover: 0 0 spacing('s') rgba(palette('brand-1', '90'), 0.05);
 
 //
 // Active colors ////////////////////////////////////////
 
 $bitstyles-input-color-active: palette('gray', '80') !default;
-$bitstyles-input-border-color-active: 2px solid palette('gray', '80') !default;
+$bitstyles-input-border-color-active: palette('gray', '80') !default;
 $bitstyles-input-background-active: palette('white') !default;
 $bitstyles-input-box-shadow-active: 0 0 spacing('xxs') rgba(palette('brand-1', '90'), 0.15);
 
@@ -36,7 +36,7 @@ $bitstyles-input-box-shadow-active: 0 0 spacing('xxs') rgba(palette('brand-1', '
 
 $bitstyles-input-background-disabled: palette('black', '10') !default;
 $bitstyles-input-color-disabled: palette('text') !default;
-$bitstyles-input-border-color-disabled: 2px solid palette('black', '20') !default;
+$bitstyles-input-border-color-disabled: palette('black', '20') !default;
 $bitstyles-input-box-shadow-disabled: none;
 
 //

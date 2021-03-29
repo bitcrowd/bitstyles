@@ -2,7 +2,6 @@
 
 .#{$bitstyles-namespace}u-grid {
   display: grid;
-  grid-gap: $bitstyles-grid-gap;
 }
 
 .#{$bitstyles-namespace}u-grid--2-col {
@@ -42,13 +41,8 @@
 }
 
 @include media-query('m') {
-  .#{$bitstyles-namespace}u-grid {
-    grid-gap: $bitstyles-grid-gap-m;
-  }
-
   .#{$bitstyles-namespace}u-grid\@m {
     display: grid;
-    grid-gap: $bitstyles-grid-gap-m;
   }
 
   .#{$bitstyles-namespace}u-grid--2-col\@m {
@@ -86,16 +80,15 @@
   .#{$bitstyles-namespace}u-grid__col-2\@m {
     grid-column-start: 2;
   }
+
+  .#{$bitstyles-namespace}u-grid__col-3\@m {
+    grid-column-start: 3;
+  }
 }
 
 @include media-query('l') {
-  .#{$bitstyles-namespace}u-grid {
-    grid-gap: $bitstyles-grid-gap-l;
-  }
-
   .#{$bitstyles-namespace}u-grid\@l {
     display: grid;
-    grid-gap: $bitstyles-grid-gap-l;
   }
 
   .#{$bitstyles-namespace}u-grid--2-col\@l {
@@ -132,5 +125,9 @@
 
   .#{$bitstyles-namespace}u-grid__col-2\@l {
     grid-column-start: 2;
+  }
+
+  .#{$bitstyles-namespace}u-grid__col-3\@l {
+    grid-column-start: 3;
   }
 }

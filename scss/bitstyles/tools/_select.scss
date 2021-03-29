@@ -4,7 +4,7 @@
   padding: $bitstyles-select-padding-vertical ($bitstyles-select-padding-horizontal * 2) $bitstyles-select-padding-vertical $bitstyles-select-padding-horizontal;
   overflow: hidden;
   font: inherit;
-  line-height: inherit;
+  line-height: $bitstyles-line-height-min;
   color: $bitstyles-select-color;
   text-overflow: ellipsis;
   cursor: pointer;
@@ -45,7 +45,7 @@
     color: $bitstyles-select-color-invalid;
     background-color: $bitstyles-select-background-color-invalid;
     background-image: $bitstyles-select-background-image-invalid;
-    border: $bitstyles-select-border-invalid;
+    border: $bitstyles-select-border-color-invalid;
   }
 
   &[disabled] {

@@ -1,3 +1,2 @@
-$bitstyles-bordered-header-line-min-width: 20% !default;
-$bitstyles-bordered-header-gutter: 1em !default;
-$bitstyles-bordered-header-border: 1px solid palette('black', '20') !default;
+$bitstyles-bordered-header-gutter: spacing('m') !default;
+$bitstyles-bordered-header-border: spacing('xxxs') solid palette('gray', '10') !default;
