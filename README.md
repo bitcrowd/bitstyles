@@ -107,7 +107,7 @@ When adding your own custom component CSS (i.e. not a component built using the 
 
 ## Contributing
 
-Bitstyles requires `node v14.15.5` or higher. If you have [nvm](https://github.com/creationix/nvm) installed:
+Bitstyles requires `node v14.16.0` or higher. If you have [nvm](https://github.com/creationix/nvm) installed:
 
 ```sh
 nvm use
