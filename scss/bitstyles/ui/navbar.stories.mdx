@@ -186,3 +186,57 @@ This navbar is only intended to hold a few link to the main sections of your sit
     `}
   </Story>
 </Canvas>
+
+
+## Sidebar
+
+A vertical navbar that can make better use of screenspace in some circumstnces, and is capable of containing more links confortably.
+
+<Canvas>
+   <Story name="Sidebar">
+     {`
+        <div class="u-flex u-height-100vh">
+          <nav class="a-sidebar u-flex__shrink-0 u-bg--gray-80 u-padding-m--top u-flex u-flex--col">
+            <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-m--left u-margin-m--right u-margin-m--bottom" />
+            <ul class="u-flex__grow-1 a-list-reset u-flex u-flex--col u-items-stretch u-padding-xs--right u-padding-xs--left">
+              <li class="u-margin-xs--bottom u-flex">
+                <a href="/" class="a-button a-button--nav u-flex__grow-1">
+                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s--right u-margin-neg-xxs--left" aria-hidden="true" focusable="false">
+                    <use xlink:href="${icons}#icon-home"></use>
+                  </svg>
+                  Dashboard
+                </a>
+              </li>
+              <li class="u-margin-xs--bottom u-flex">
+                <a href="/" class="a-button a-button--nav u-flex__grow-1" aria-current="page">
+                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s--right u-margin-neg-xxs--left" aria-hidden="true" focusable="false">
+                    <use xlink:href="${icons}#icon-home"></use>
+                  </svg>
+                  Accounts
+                </a>
+              </li>
+              <li class="u-margin-xs--bottom u-flex">
+                <a href="/" class="a-button a-button--nav u-flex__grow-1">
+                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s--right u-margin-neg-xxs--left" aria-hidden="true" focusable="false">
+                    <use xlink:href="${icons}#icon-home"></use>
+                  </svg>
+                  Bookings
+                </a>
+              </li>
+            </ul>
+            <div class="u-flex__shrink-0 u-padding-xs--y u-margin-xs--left u-margin-xs--right u-border--top">
+              <a href="/" class="a-button a-button--nav-large">
+                <div class="a-button__icon a-avatar">
+                  <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
+                </div>
+                <span class="a-button__label">Jane Dobermann</span>
+              </a>
+            </div>
+          </nav>
+          <main class="u-flex__grow u-padding-xl">
+            <h1>Main content</h1>
+          </main>
+        </div>
+     `}
+   </Story>
+ </Canvas>

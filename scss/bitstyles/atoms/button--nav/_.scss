@@ -45,3 +45,8 @@
     box-shadow: $bitstyles-button-nav-box-shadow-disabled;
   }
 }
+
+.a-button-nav__icon  {
+  margin-right: $bitstyles-button-nav-padding-horizontal;
+  margin-left: -#{$bitstyles-button-nav-padding-horizontal / 4};
+}
