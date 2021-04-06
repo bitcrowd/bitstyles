@@ -306,3 +306,31 @@ The `role="search"` attribute highlights this functionality for screenreader use
     `}
   </Story>
 </Canvas>
+
+## Form with select, input, & button
+
+The heights of selects, inputs, and buttons should all match, allowing them to be placed side by side.
+
+<Canvas>
+  <Story name="Select input and button">
+    {`
+    <form role="search" action="" method="POST" class="u-flex">
+      <ul class="a-list-reset u-flex u-items-end">
+        <li class="u-margin-xs--right">
+          <label for="filter">Search users</label>
+          <input type="search" id="filter" placeholder="Username or email…" />
+        </li>
+        <li class="u-margin-xs--right">
+          <select id="type">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </li>
+        <li>
+          <button type="submit" class="a-button a-button--ui">Search</button>
+        </li>
+      </ul>
+    </form>
+    `}
+  </Story>
+</Canvas>

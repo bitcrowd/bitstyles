@@ -23,7 +23,8 @@
   @include input;
 
   width: 100%;
-  padding: $bitstyles-input-padding;
+  padding: ($bitstyles-input-padding - $bitstyles-input-border-width / 2) $bitstyles-input-padding;
+  font: inherit;
   line-height: $bitstyles-line-height-min;
   color: $bitstyles-input-color;
   background-color: $bitstyles-input-background;
