@@ -17,3 +17,9 @@
 .#{$bitstyles-namespace}u-items-baseline {
   align-items: baseline;
 }
+
+@include media-query('m') {
+  .#{$bitstyles-namespace}u-items-center\@m {
+    align-items: center;
+  }
+}
