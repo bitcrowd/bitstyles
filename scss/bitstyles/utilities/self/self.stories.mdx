@@ -1,0 +1,32 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/align-self" />
+
+# Align-self
+
+Flex and Grid share many alignment properties. These will have no effect on elements to which you haven’t given one of those classes (`.u-flex`, `.u-grid`).
+
+## End
+
+Set `align-self` to align a flex child to the flex end:
+
+<Canvas>
+  <Story name="self-end">
+    {`
+      <ul class="a-list-reset u-flex u-items-start u-fg--white">
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20 u-self-end" style="height: 10rem;">
+          Elements of different height.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>

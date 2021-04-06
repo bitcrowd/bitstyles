@@ -1,0 +1,45 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/justify-items" />
+
+# Justify-items
+
+Flex and Grid share many alignment properties. These will have no effect on elements to which you haven’t given one of those classes (`.u-flex`, `.u-grid`).
+
+### Between
+
+Set `justify-content` to align flex children to the edges on the cross-axis. This only affects layout when the elements are less wide than the available width:
+
+<Canvas>
+  <Story name="justify-between">
+    {`
+      <ul class="a-list-reset u-flex u-justify-between u-fg--white" style="min-height:10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Elements which leave space.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Elements which leave space.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+### End
+
+Set `justify-content` to align flex children to the end on the cross-axis. This only affects layout when the elements are less wide than the available width:
+
+<Canvas>
+  <Story name="justify-end">
+    {`
+      <ul class="a-list-reset u-flex u-justify-end u-fg--white" style="min-height:10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Elements which leave space.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Elements which leave space.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
