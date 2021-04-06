@@ -16,20 +16,14 @@ Set `align-items` to center to align each flex child to their vertical center:
   <Story name="items-center">
     {`
       <ul class="a-list-reset u-flex u-items-center u-fg--white">
-        <li class="u-padding-m">
-          <div class="u-bg--gray-20 u-padding-m" style="height: 10rem;">
-            elements of different height
-          </div>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
+          Elements of different height.
         </li>
-        <li class="u-padding-m">
-          <div class="u-bg--gray-20 u-padding-m" style="height: 15rem;">
-            elements of different height
-          </div>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
+          Elements of different height.
         </li>
-        <li class="u-padding-m">
-          <div class="u-bg--gray-20 u-padding-m" style="height: 12rem;">
-            elements of different height
-          </div>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
+          Elements of different height.
         </li>
       </ul>
     `}
@@ -39,26 +33,154 @@ Set `align-items` to center to align each flex child to their vertical center:
 
 ### End
 
-Set `align-items` to center to align each flex child to their vertical end:
+Set `align-items` to end to align each flex child to their vertical end:
 
 <Canvas>
   <Story name="items-end">
     {`
       <ul class="a-list-reset u-flex u-items-end u-fg--white">
-        <li class="u-padding-m">
-          <div class="u-bg--gray-20 u-padding-m" style="height: 10rem;">
-            elements of different height
-          </div>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
+          Elements of different height.
         </li>
-        <li class="u-padding-m">
-          <div class="u-bg--gray-20 u-padding-m" style="height: 15rem;">
-            elements of different height
-          </div>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
+          Elements of different height.
         </li>
-        <li class="u-padding-m">
-          <div class="u-bg--gray-20 u-padding-m" style="height: 12rem;">
-            elements of different height
-          </div>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
+          Elements of different height.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+### Start
+
+Set `align-items` to start to align each flex child to their vertical start:
+
+<Canvas>
+  <Story name="items-start">
+    {`
+      <ul class="a-list-reset u-flex u-items-start u-fg--white">
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
+          Elements of different height.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+### Stretch
+
+Set `align-items` to stretch each flex child on their vertical axis:
+
+<Canvas>
+  <Story name="items-stretch">
+    {`
+      <ul class="a-list-reset u-flex u-items-stretch u-fg--white" style="min-height: 10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="flex-basis: 33%">
+          Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="flex-basis: 33%">
+          Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o. Danish sesame snaps chocolate cake chocolate bar croissant liquorice jelly topping.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="flex-basis: 33%">
+          Elements with different amounts of content.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+### BASELINE
+
+Set `align-items` to align each flex child to the baseline:
+
+<Canvas>
+  <Story name="items-baseline">
+    {`
+      <ul class="a-list-reset u-flex u-items-baseline u-fg--white">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Elements with different padding top & bottom.
+        </li>
+        <li class="u-margin-m u-padding-m u-padding-xl--y u-bg--gray-20">
+          Elements with different padding top & bottom.
+        </li>
+        <li class="u-margin-m u-padding-m--left u-padding-m--right u-padding-xl--bottom u-bg--gray-20">
+          Elements with different padding top & bottom.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Self
+
+### End
+
+Set `align-self` to align a flex child to the flex end:
+
+<Canvas>
+  <Story name="self-end">
+    {`
+      <ul class="a-list-reset u-flex u-items-start u-fg--white">
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20 u-self-end" style="height: 10rem;">
+          Elements of different height.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+
+## Justify
+
+### Between
+
+Set `justify-content` to align flex children to the edges on the cross-axis. This only affects layout when the elements are less wide than the available width:
+
+<Canvas>
+  <Story name="justify-between">
+    {`
+      <ul class="a-list-reset u-flex u-justify-between u-fg--white" style="min-height:10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Elements which leave space.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Elements which leave space.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+### End
+
+Set `justify-content` to align flex children to the end on the cross-axis. This only affects layout when the elements are less wide than the available width:
+
+<Canvas>
+  <Story name="justify-end">
+    {`
+      <ul class="a-list-reset u-flex u-justify-end u-fg--white" style="min-height:10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Elements which leave space.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Elements which leave space.
         </li>
       </ul>
     `}
