@@ -1,4 +1,5 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import icons from '../../../../test/assets/images/icons.svg';
 
 <Meta title="UI/Modal" />
 
@@ -10,25 +11,36 @@ Set modal size using the usual layout classes e.g. `.a-content`. At smaller scre
 
 Modals are a common UI component that needs Javascript — use a suitable package for your project. [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog) is a great example of what to look for. The package needs to be keyboard navigable, trap focus, add and remove aria-hidden attributes, respond to click on the overlay behind it, stop scrolling of the main content, and present a close button with some text content for screenreaders.
 
+
+## Informational
+
+You may want to inform the user of the success or failure of an action, give a little explanatory text, and provide a button to dismiss the modal.
+
 <Canvas>
-  <Story name="Modal">
+  <Story name="Informational modal" inline={false} height="80vh">
     {`
-      <main aria-label="Content" id="main" class="a-content">
+      <main id="main" class="a-content">
         <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
         <p class="u-text--center"><button class="a-link" data-a11y-dialog-show="dialog_1">open dialogue</button></p>
         <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
       </main>
-      <div class="c-modal" id="dialog_1" aria-hidden="false">
-        <div class="c-modal__overlay" tabindex="-1" data-a11y-dialog-hide></div>
-        <div class="a-content c-modal__content a-card u-padding-xl" role="dialog" aria-labelledby="dialog-title">
-          <div role="document">
-            <h1 class="u-h1" id="dialog-title" tabindex="0">Dialog Title</h1>
-            <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
-            <p>Gummies cake topping ice cream dessert. Jelly beans marzipan toffee biscuit cookie lollipop cake pie. Apple pie sweet bonbon candy jujubes. Gummi bears biscuit cheesecake marshmallow chupa chups danish carrot cake. Cookie croissant ice cream bonbon ice cream. Cotton candy halvah bear claw. Pudding apple pie tootsie roll gummi bears halvah icing jelly-o jelly beans. Jujubes lemon drops macaroon wafer tart dragée. Gummies danish lollipop cupcake oat cake. Ice cream candy canes brownie chocolate bar pie macaroon biscuit tootsie roll. Tootsie roll carrot cake fruitcake. Wafer chupa chups jelly beans. Pie cake jujubes caramels wafer.</p>
-            <button class="a-button c-modal__close" type="button" data-a11y-dialog-hide aria-label="Close this dialog window">
-              &times;
-            </button>
+      <div class="c-modal" id="dialog_1" aria-hidden="false" aria-labelledby="dialog-title">
+        <div class="c-modal__overlay" tabindex="-1" data-a11y-dialog-hide title="Close modal"></div>
+        <div class="a-content a-content--s c-modal__content a-card u-padding-xl@m u-padding-l u-flex u-flex--col" role="document">
+          <div class="u-flex u-flex--col u-items-center">
+            <div class="a-badge a-badge--positive u-padding-m u-margin-s--bottom">
+              <svg width="18" height="18" class="a-icon a-icon--xl" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <use xlink:href="${icons}#icon-check"></use>
+              </svg>
+            </div>
+            <h1 class="u-flex__shrink-0 u-h2" id="dialog-title" tabindex="0">Confirmation email sent</h1>
           </div>
+          <div class="u-flex__grow-1 u-overflow--y u-fg--gray-50 u-text--center">
+            <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread.</p>
+          </div>
+          <button class="u-flex__shrink-0 u-margin-l--top a-button" type="button" data-a11y-dialog-hide>
+            Continue
+          </button>
         </div>
       </div>
     `}
@@ -37,26 +49,34 @@ Modals are a common UI component that needs Javascript — use a suitable packag
 
 ## Modal dialog
 
-Using the `modal-variation` mixin we can provide different animations depending on which of several buttons in the modal content the user clicks. Here we have ‘cancel’ and ‘ok’ buttons, with animations to emphasise the meaning of the chosen action (use JS to add the correct class to the modal element based on which button is clicked).
+If you have multiple options for the user, present them with any information they may need in order to decide, and as few options as possible.
 
 <Canvas>
-  <Story name="Modal dialog">
+  <Story name="Modal dialog" inline={false} height="80vh">
     {`
-    <main aria-label="Content" id="main" class="a-content">
+    <main id="main" class="a-content">
       <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
       <p class="u-text--center">
         <button class="a-link" data-a11y-dialog-show="dialog_1">open dialogue</button>
       </p>
       <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
     </main>
-    <div class="c-modal" id="dialog_1" aria-hidden="false">
-      <div class="c-modal__overlay" tabindex="-1" data-a11y-dialog-hide></div>
-      <div class="a-content a-content--s c-modal__content a-card u-padding-xl" role="dialog" aria-labelledby="dialog-title">
-        <div role="document">
-          <h1 class="u-h1" id="dialog-title" tabindex="0">Dialog Title</h1>
-          <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
-          <button class="a-button" type="button" id="#cancel_button">Cancel</button>
-          <button class="a-button" type="button" id="#ok_button">Ok</button>
+    <div class="c-modal" id="dialog_1" aria-hidden="false" aria-labelledby="dialog-title">
+      <div class="c-modal__overlay" tabindex="-1" title="Close modal" data-a11y-dialog-hide></div>
+      <div class="a-content a-content--m c-modal__content a-card u-padding-l u-padding-xl@m u-flex u-flex--col" role="document">
+        <header class="u-flex__shrink-0 u-flex u-items-center">
+          <h1 class="u-h2 u-flex__shrink-0 u-margin-0" id="dialog-title" tabindex="0">Dialog Title</h1>
+        </header>
+        <div class="u-flex__grow-1 u-overflow--y">
+          <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake.</p>
+          <ul class="a-list-reset u-grid u-grid--2-col@m u-margin-l--top">
+            <li class="u-margin-xl--right">
+              <button class="a-link" type="button">Cancel</button>
+            </li>
+            <li>
+              <button class="a-button" type="button">Ok</button>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

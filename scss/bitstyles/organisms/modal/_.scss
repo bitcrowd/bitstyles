@@ -31,11 +31,9 @@
   top: 50%;
   left: 50%;
   z-index: 20;
-  width: 100%;
-  height: 100%;
-  max-height: 100vh;
-  padding-top: $bitstyles-modal-padding;
-  padding-bottom: $bitstyles-modal-padding;
+  width: calc(100% - 2 * #{$bitstyles-modal-padding});
+  height: auto;
+  max-height: calc(100vh - 2 * #{$bitstyles-modal-padding});
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   background-color: $bitstyles-modal-background-color;
@@ -56,8 +54,6 @@
 
 @include media-query($bitstyles-modal-breakpoint) {
   .#{$bitstyles-namespace}c-modal__content {
-    width: calc(100% - 2 * #{$bitstyles-modal-padding});
-    height: auto;
     transition: all $bitstyles-modal-transition-duration $bitstyles-modal-transition-easing, visibility 0 $bitstyles-modal-transition-easing;
 
     [aria-hidden="true"] & {
@@ -65,12 +61,6 @@
       transition: all $bitstyles-modal-transition-duration $bitstyles-modal-transition-easing, visibility 0 $bitstyles-modal-transition-easing $bitstyles-modal-transition-duration;
     }
   }
-}
-
-.#{$bitstyles-namespace}c-modal__close {
-  position: absolute;
-  top: $bitstyles-modal-padding;
-  right: $bitstyles-modal-padding;
 }
 
 @mixin modal-variation($state) {
