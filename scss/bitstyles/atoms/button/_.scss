@@ -6,6 +6,7 @@
   align-items: center;
   flex-shrink: 0;
   min-height: calc(#{$bitstyles-button-padding-vertical  * 2} + 1em);
+  max-width: 100%;
   padding: $bitstyles-button-padding-vertical $bitstyles-button-padding-horizontal;
   margin: 0;
   overflow: visible;
