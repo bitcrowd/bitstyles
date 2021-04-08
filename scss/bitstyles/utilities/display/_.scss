@@ -1,0 +1,17 @@
+@import './settings';
+
+@each $classname, $value in ($display-types) {
+  .#{$bitstyles-namespace}u-#{$classname} {
+    display: #{$value};
+  }
+}
+
+@each $breakpoint in $bitstyles-display-types-breakpoints {
+  @include media-query($breakpoint) {
+    @each $classname, $value in ($display-types) {
+      .#{$bitstyles-namespace}u-#{$classname}\@#{$breakpoint} {
+        display: #{$value};
+      }
+    }
+  }
+}

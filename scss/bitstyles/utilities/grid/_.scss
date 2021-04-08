@@ -1,9 +1,3 @@
-@import './settings';
-
-.#{$bitstyles-namespace}u-grid {
-  display: grid;
-}
-
 .#{$bitstyles-namespace}u-grid--2-col {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -41,10 +35,6 @@
 }
 
 @include media-query('m') {
-  .#{$bitstyles-namespace}u-grid\@m {
-    display: grid;
-  }
-
   .#{$bitstyles-namespace}u-grid--2-col\@m {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -87,10 +77,6 @@
 }
 
 @include media-query('l') {
-  .#{$bitstyles-namespace}u-grid\@l {
-    display: grid;
-  }
-
   .#{$bitstyles-namespace}u-grid--2-col\@l {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

@@ -1,0 +1,183 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/display" />
+
+# Display
+
+Apply display types to an element. These are often paired with [flex](/docs/utilities-flex--flex-with-grow-1-child) or [grid](/docs/utilities-grid--u-grid) classes, or used to show/hide content based on viewport size.
+
+<Canvas>
+  <Story name="block">
+    {`
+      <span>Span 1 content</span>
+      <span class="u-block">Span 2 content, display: block</span>
+      <span>Span 3 content</span>
+      <span>Span 4 content</span>
+    `}
+  </Story>
+  <Story name="flex">
+    {`
+      <ul class="u-flex a-list-reset">
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="u-grid">
+    {`
+      <div class="u-grid u-gap-m u-padding-m u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">Grid child 1</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 2</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 3</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 4</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 5</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="hidden">
+    {`
+      <p>Paragraph 1 content</p>
+      <p class="u-hidden">Paragraph 2 content, always hidden</p>
+      <p>Paragraph 3 content</p>
+    `}
+  </Story>
+  <Story name="inline-flex">
+    {`
+      <ul class="u-flex a-list-reset">
+        <li>List item one</li>
+        <li>List item two</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Breakpoints
+
+These classes are all available at breakpoints.
+
+<Canvas>
+  <Story name="hidden@s">
+    {`
+      <p>Paragraph 1 content</p>
+      <p class="u-hidden@s">Paragraph 2 content, hidden on small viewports</p>
+      <p>Paragraph 3 content</p>
+    `}
+  </Story>
+  <Story name="hidden@m">
+    {`
+      <p>Paragraph 1 content</p>
+      <p class="u-hidden@m">Paragraph 2 content, hidden on small viewports</p>
+      <p>Paragraph 3 content</p>
+    `}
+  </Story>
+  <Story name="hidden@l">
+    {`
+      <p>Paragraph 1 content</p>
+      <p class="u-hidden@l">Paragraph 2 content, hidden on small viewports</p>
+      <p>Paragraph 3 content</p>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="block@s">
+    {`
+      <span>Span 1 content</span>
+      <span class="u-block@s">Span 2 content, display: block</span>
+      <span>Span 3 content</span>
+      <span>Span 4 content</span>
+    `}
+  </Story>
+  <Story name="block@m">
+    {`
+      <span>Span 1 content</span>
+      <span class="u-block@m">Span 2 content, display: block</span>
+      <span>Span 3 content</span>
+      <span>Span 4 content</span>
+    `}
+  </Story>
+  <Story name="block@l">
+    {`
+      <span>Span 1 content</span>
+      <span class="u-block@l">Span 2 content, display: block</span>
+      <span>Span 3 content</span>
+      <span>Span 4 content</span>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Flex">
+    {`
+      <ul class="u-flex a-list-reset">
+        <li>List item one</li>
+        <li>Important content here</li>
+        <li>List item three</li>
+        <li>List item four</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="u-grid@s">
+    {`
+      <div class="u-grid@s u-gap-m u-padding-m u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">Grid child 1</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 2</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 3</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 4</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 5</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-grid@m">
+    {`
+      <div class="u-grid@m u-gap-m u-padding-m u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">Grid child 1</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 2</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 3</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 4</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 5</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-grid@l">
+    {`
+      <div class="u-grid@l u-gap-m u-padding-m u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">Grid child 1</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 2</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 3</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 4</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 5</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 6</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+Another use is to add `.u-hidden` to “remove” an element from the page, then use a breakpoint-limited version of `.u-block` to reveal it at certain screensizes:
+
+<Canvas isColumn>
+  <Story name="Show only @s">
+    {`
+      <p>Paragraph 1 content</p>
+      <p class="u-hidden u-block@s">Paragraph 2 content, only shown on @s viewports</p>
+      <p>Paragraph 3 content</p>
+    `}
+  </Story>
+  <Story name="Show only @m">
+    {`
+      <p>Paragraph 1 content</p>
+      <p class="u-hidden u-block@m">Paragraph 2 content, only shown on @m viewports</p>
+      <p>Paragraph 3 content</p>
+    `}
+  </Story>
+</Canvas>
