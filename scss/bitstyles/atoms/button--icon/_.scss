@@ -27,7 +27,8 @@
     box-shadow: $bitstyles-button-icon-box-shadow-active;
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     color: $bitstyles-button-icon-color-disabled;
     background: $bitstyles-button-icon-background-color-disabled;
     border-color: $bitstyles-button-icon-border-color-disabled;

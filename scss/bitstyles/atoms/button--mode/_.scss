@@ -38,9 +38,9 @@
     box-shadow: $bitstyles-button-mode-box-shadow-pressed;
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     color: $bitstyles-button-mode-color-disabled;
-    cursor: default;
     background: $bitstyles-button-mode-background-color-disabled;
     border-color: $bitstyles-button-mode-border-color-disabled;
     box-shadow: $bitstyles-button-mode-box-shadow-disabled;

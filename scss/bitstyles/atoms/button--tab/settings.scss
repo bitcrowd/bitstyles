@@ -45,8 +45,8 @@ $bitstyles-button-tab-box-shadow-selected: none !default;
 //
 // Disabled colors ////////////////////////////////////////
 
-$bitstyles-button-tab-color-disabled: palette('black', '50') !default;
-$bitstyles-button-tab-background-color-disabled: palette('black', '10') !default;
+$bitstyles-button-tab-color-disabled: palette('gray', '30') !default;
+$bitstyles-button-tab-background-color-disabled: transparent !default;
 $bitstyles-button-tab-indicator-color-disabled: transparent !default;
 $bitstyles-button-tab-border-disabled: 2px solid transparent !default;
 $bitstyles-button-tab-box-shadow-disabled: none !default;

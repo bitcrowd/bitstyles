@@ -16,10 +16,8 @@
   &:hover,
   &:focus {
     color: $bitstyles-button-nav-large-color-hover;
-    text-decoration: none;
     background: $bitstyles-button-nav-large-background-color-hover;
     border-color: $bitstyles-button-nav-large-border-color-hover;
-    outline: none;
     box-shadow: $bitstyles-button-nav-large-box-shadow-hover;
   }
 
@@ -38,9 +36,9 @@
     box-shadow: $bitstyles-button-nav-large-box-shadow-current;
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     color: $bitstyles-button-nav-large-color-disabled;
-    cursor: default;
     background: $bitstyles-button-nav-large-background-color-disabled;
     border: $bitstyles-button-nav-large-border-color-disabled;
     box-shadow: $bitstyles-button-nav-large-box-shadow-disabled;
