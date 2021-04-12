@@ -1,0 +1,17 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/height" />
+
+# Height
+
+Force an element’s height regardless of the content.
+
+<Canvas>
+  <Story name="100vh">
+    {`
+      <div class="u-height-100vh u-bg--gray-10">
+        This element will take the height of the viewport, regardless how much content.
+      </div>
+    `}
+  </Story>
+</Canvas>

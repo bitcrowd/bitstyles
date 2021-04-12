@@ -32,3 +32,9 @@
     display: flex;
   }
 }
+
+@include media-query('l') {
+  .#{$bitstyles-namespace}u-flex\@l {
+    display: flex;
+  }
+}
