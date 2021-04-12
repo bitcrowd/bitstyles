@@ -7,51 +7,73 @@ import icons from '../../../test/assets/images/icons.svg';
 
 Inform the user of a global or important event, such as may happen after a page reload. There are several variants, which use color, iconography, and html attributes to indicate severity.
 
+<details class="u-margin-xl--y">
+  <summary class="u-h4 u-font--medium">Examples use</summary>
+  <ul>
+    <li><a href="/docs/atoms-content--content">a-content</a></li>
+    <li><a href="/docs/atoms-flash--flash-brand-1">a-flash</a></li>
+    <li><a href="/docs/atoms-icon--icon">a-icon</a></li>
+    <li><a href="/docs/atoms-list-reset--list-reset">a-list-reset</a></li>
+    <li><a href="/docs/utilities-flex--flex">u-flex</a></li>
+    <li><a href="/docs/utilities-box-alignment--items-center">u-items-center</a></li>
+    <li><a href="/docs/utilities-font--font-medium">u-font</a></li>
+    <li><a href="/docs/utilities-margin--margin-m">u-margin</a></li>
+  </ul>
+</details>
+
 <Canvas isColumn>
   <Story name="Flash (brand-1)">
     {`
-      <div class="u-padding-l--y a-flash--brand-1" aria-live="polite">
-        <div class="a-content u-flex u-items-center u-font--medium">
-          <svg width="14" height="14" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <use xlink:href="${icons}#icon-info-circle"></use>
-          </svg>
-          Something you may be interested to hear
+      <div aria-live="polite">
+        <div class="u-padding-l--y a-flash--brand-1">
+          <div class="a-content u-flex u-items-center u-font--medium">
+            <svg width="14" height="14" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-info-circle"></use>
+            </svg>
+            Something you may be interested to hear
+          </div>
         </div>
       </div>
     `}
   </Story>
   <Story name="Flash (positive)">
     {`
-      <div class="u-padding-l--y a-flash--positive" aria-live="polite">
-        <div class="a-content u-flex u-items-center u-font--medium">
-          <svg width="14" height="14" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <use xlink:href="${icons}#icon-check-circle"></use>
-          </svg>
-          Changes successfully saved
+      <div aria-live="polite">
+        <div class="u-padding-l--y a-flash--positive" aria-live="polite">
+          <div class="a-content u-flex u-items-center u-font--medium">
+            <svg width="14" height="14" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-check-circle"></use>
+            </svg>
+            Changes successfully saved
+          </div>
         </div>
       </div>
     `}
   </Story>
   <Story name="Flash (warning)">
     {`
-      <div class="u-padding-l--y a-flash--warning" aria-live="polite">
-        <div class="a-content u-flex u-items-center u-font--medium">
-          <svg width="14" height="14" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <use xlink:href="${icons}#icon-question-circle"></use>
-          </svg>
-          Login not successful, please try that again
+      <div aria-live="polite">
+        <div class="u-padding-l--y a-flash--warning" aria-live="polite">
+          <div class="a-content u-flex u-items-center u-font--medium">
+            <svg width="14" height="14" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-question-circle"></use>
+            </svg>
+            Login not successful, please try that again
+          </div>
         </div>
       </div>
     `}
   </Story>
   <Story name="Flash (danger)">
     {`
-      <div class="u-padding-l--y a-flash--danger" role="alert">
-        <div class="a-content u-flex u-items-center u-font--medium">
-          <svg width="14" height="14" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <use xlink:href="${icons}#icon-exclamation"></use>
-          </svg>
-          An error occured, please contact an admin
+      <div aria-live="polite">
+        <div class="u-padding-l--y a-flash--danger" role="alert">
+          <div class="a-content u-flex u-items-center u-font--medium">
+            <svg width="14" height="14" class="a-icon a-icon--l u-flex__shrink-0 u-margin-m--right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-exclamation"></use>
+            </svg>
+            An error occured, please contact an admin
+          </div>
         </div>
       </div>
     `}

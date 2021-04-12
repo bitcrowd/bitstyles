@@ -1,0 +1,97 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import logoLarge from '../../../test/assets/images/logoLarge.svg';
+import logoSmall from '../../../test/assets/images/logoSmall.svg';
+import icons from '../../../test/assets/images/icons.svg';
+
+<Meta title="UI/Navigation/Navbar" />
+
+# Navbar
+
+A top-level navigation container, with two sections separated to the left & right. The left-hand side is commonly used for a logo and links, the right-hand side for user account menu and global search.
+
+Give the active link the `aria-current="page"` attribute.
+
+<details class="u-margin-xl--y">
+  <summary class="u-h4 u-font--medium">Examples use</summary>
+  <ul>
+    <li><a href="/docs/atoms-avatar--avatar">a-avatar</a></li>
+    <li><a href="/docs/atoms-button-base--button-element">a-button</a></li>
+    <li><a href="/docs/atoms-button-icon--button-element">a-button--icon</a></li>
+    <li><a href="/docs/atoms-button-icon-reversed--icon-reversed">a-button--icon-reversed</a></li>
+    <li><a href="/docs/atoms-button-nav--nav">a-button--nav</a></li>
+    <li><a href="/docs/atoms-button-nav-large--nav-large">a-button--nav-large</a></li>
+    <li><a href="/docs/atoms-content--content">a-content</a></li>
+    <li><a href="/docs/atoms-icon--icon">a-icon</a></li>
+    <li><a href="/docs/atoms-list-reset--list-reset">a-list-reset</a></li>
+    <li><a href="/docs/utilities-background-color--gray-80">u-bg</a></li>
+    <li><a href="/docs/utilities-flex--flex">u-flex</a></li>
+    <li><a href="/docs/utilities-hidden--hidden">u-hidden</a></li>
+    <li><a href="/docs/utilities-box-alignment--items-center">u-items-center</a></li>
+    <li><a href="/docs/utilities-margin--margin-m">u-margin</a></li>
+    <li><a href="/docs/utilities-padding--padding-m">u-padding</a></li>
+    <li><a href="/docs/utilities-relative--relative">u-relative</a></li>
+  </ul>
+</details>
+
+<Canvas>
+  <Story name="Navbar">
+    {`
+      <nav class="u-bg--gray-80 u-padding-s--top u-padding-s--bottom u-relative">
+        <div class="a-content u-flex u-justify-between u-items-center u-flex--wrap">
+          <div class="u-flex u-items-center">
+            <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-l--right u-hidden u-block@l" />
+            <img src="${logoSmall}" width="50" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-l--right u-hidden@l" />
+            <div class="u-hidden u-block@l">
+              <ul class="u-flex a-list-reset">
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav" aria-current="page">Team</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Projects</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Dashboard</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-hidden u-block@l">
+            <a href="/" class="a-button a-button--nav">
+              <span class="a-button__label">Jane Dobermann</span>
+              <div class="a-button__icon a-avatar">
+                <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
+              </div>
+            </a>
+          </div>
+          <div class="u-hidden@l">
+            <button class="a-button a-button--icon a-button--icon-reversed" title="Toggle menu" aria-controls="navbar-1" aria-expanded="true">
+              <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-hamburger"></use>
+              </svg>
+              <span class="u-sr-only">Toggle menu</span>
+            </button>
+            <ul class="u-flex u-flex--col a-list-reset c-navbar u-padding-s u-bg--gray-80" id="navbar-1">
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">
+                  <div class="a-button__icon a-avatar">
+                    <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
+                  </div>
+                  <span class="a-button__label">Jane Dobermann</span>
+                </a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large" aria-current="page">Team</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Projects</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    `}
+  </Story>
+</Canvas>

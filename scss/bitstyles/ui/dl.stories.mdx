@@ -6,6 +6,21 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 A list of term/description pairs, used to display any set of key-value pairs. It’s totally valid to have multiple descriptions for a single term though — this can handle glossaries or dictionaries, where a single entry can have multiple values.
 
+<details class="u-margin-xl--y">
+  <summary class="u-h4 u-font--medium">Examples use</summary>
+  <ul>
+    <li><a href="/docs/atoms-content--content">a-content</a></li>
+    <li><a href="/docs/atoms-dl--dl">a-dl</a></li>
+    <li><a href="/docs/utilities-typography--typography">u-h6</a></li>
+    <li><a href="/docs/utilities-color--brand-1">u-fg</a></li>
+    <li><a href="/docs/utilities-font--font-medium">u-font</a></li>
+    <li><a href="/docs/utilities-gap--u-gap-m">u-gap</a></li>
+    <li><a href="/docs/utilities-grid--u-grid">u-grid</a></li>
+    <li><a href="/docs/utilities-margin--margin-m">u-margin</a></li>
+    <li><a href="/docs/utilities-padding--padding-m">u-padding</a></li>
+  </ul>
+</details>
+
 <Canvas isColumn>
   <Story name="Description list">
     {`
@@ -15,15 +30,15 @@ A list of term/description pairs, used to display any set of key-value pairs. It
           <p class="u-fg--gray-50 u-h6">Cookie croissant jujubes tart. Jelly beans marshmallow cake apple pie. Sweet carrot cake marshmallow bonbon gummies lollipop bear claw.</p>
         </div>
         <dl class="a-dl">
-          <div class="a-dl__item u-grid@m u-grid--3-col u-padding-m--y u-padding-m@m">
+          <div class="a-dl__item u-grid@m u-grid--3-col u-gap-m u-padding-m--y u-padding-m@m">
             <dt class="u-font--medium u-h6 u-fg--gray-50 u-margin-xs--bottom@s">Full name</dt>
             <dd class="u-grid__col-span-2">Muffin Gummies</dd>
           </div>
-          <div class="a-dl__item u-grid@m u-grid--3-col u-padding-m--y u-padding-m@m">
+          <div class="a-dl__item u-grid@m u-grid--3-col u-gap-m u-padding-m--y u-padding-m@m">
             <dt class="u-font--medium u-h6 u-fg--gray-50 u-margin-xs--bottom@s">Email</dt>
             <dd class="u-grid__col-span-2">cupcake@tiramisu.com</dd>
           </div>
-          <div class="a-dl__item u-grid@m u-grid--3-col u-padding-m--y u-padding-m@m">
+          <div class="a-dl__item u-grid@m u-grid--3-col u-gap-m u-padding-m--y u-padding-m@m">
             <dt class="u-font--medium u-h6 u-fg--gray-50 u-margin-xs--bottom@s">Description</dt>
             <dd class="u-grid__col-span-2">Muffin gummies tart fruitcake gummi bears chocolate bar. Jujubes candy macaroon topping dessert biscuit topping sugar plum sesame snaps. Chocolate donut cake tootsie roll donut biscuit caramels sugar plum jelly beans. Dessert dragée jelly-o gummi bears sweet halvah soufflé.</dd>
           </div>

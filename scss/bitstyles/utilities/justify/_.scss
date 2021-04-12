@@ -1,0 +1,13 @@
+.#{$bitstyles-namespace}u-justify-between {
+  justify-content: space-between;
+}
+
+.#{$bitstyles-namespace}u-justify-end {
+  justify-content: flex-end;
+}
+
+@include media-query('m') {
+  .#{$bitstyles-namespace}u-justify-between\@m {
+    justify-content: space-between;
+  }
+}

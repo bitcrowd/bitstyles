@@ -13,6 +13,24 @@ Form elements will take 100% of the available width, so you’ll likely want to 
 
 Here are some examples using the grid utility classes to create common form layouts.
 
+<details class="u-margin-xl--y">
+  <summary class="u-h4 u-font--medium">Examples use</summary>
+  <ul>
+    <li><a href="/docs/atoms-card--card">a-card</a></li>
+    <li><a href="/docs/atoms-content--content">a-content</a></li>
+    <li><a href="/docs/atoms-flash--flash-brand-1">a-flash</a></li>
+    <li><a href="/docs/atoms-icon--icon">a-icon</a></li>
+    <li><a href="/docs/atoms-list-reset--list-reset">a-list-reset</a></li>
+    <li><a href="/docs/utilities-color--brand-1">u-fg</a></li>
+    <li><a href="/docs/utilities-flex--flex">u-flex</a></li>
+    <li><a href="/docs/utilities-font--font-medium">u-font</a></li>
+    <li><a href="/docs/utilities-box-alignment--items-center">u-items-center</a></li>
+    <li><a href="/docs/utilities-box-alignment--justify-end">u-justify</a></li>
+    <li><a href="/docs/utilities-margin--margin-m">u-margin</a></li>
+    <li><a href="/docs/utilities-padding--padding-m">u-padding</a></li>
+  </ul>
+</details>
+
 ## Login form
 
 <Canvas>
@@ -140,7 +158,7 @@ This form has the commonly-required fields for creating an account. Note the wor
 
 ## Complex, multi-section form
 
-For a more complex form, `.u-grid--6-col@m` allows for fields of different sizes on larger screens. Combine it width fieldsets, legends, and the [bordered-header](/?path=/docs/atoms-bordered-header--bordered-header) atom.
+For a more complex form, `.u-grid--6-col@m` allows for fields of different sizes on larger screens. Combine it width fieldsets, legends, and the [bordered-header](/docs/atoms-bordered-header--bordered-header) atom.
 
 <Canvas>
   <Story name="Complex, multi-section form">
@@ -151,7 +169,7 @@ For a more complex form, `.u-grid--6-col@m` allows for fields of different sizes
           <div class="a-bordered-header u-margin-xl--bottom">
             <legend class="u-h3 u-font--bold">Account details</legend>
           </div>
-          <div class="u-grid u-gap-m u-grid--6-col@l">
+          <div class="u-grid u-gap-m u-grid--6-col@l u-gap-m">
             <ul class="a-list-reset u-grid__col-3@l u-grid u-gap-m u-grid--6-col@m u-grid__col-span-4@l">
               <li class="u-grid__col-span-4@m u-grid__col-1@m u-grid__col-span-3@l">
                 <label for="name">Name</label>
@@ -179,7 +197,7 @@ For a more complex form, `.u-grid--6-col@m` allows for fields of different sizes
             <div class="u-grid__col-span-2@l">
               <p class="u-h6 u-fg--gray-50 u-padding-l--y@l u-padding-xl--right@m">Some intro text can go here, to describe this section</p>
             </div>
-            <ul class="a-list-reset u-grid__col-3@l u-grid__col-span-4@l u-grid u-gap-m u-grid--6-col@m">
+            <ul class="a-list-reset u-grid__col-3@l u-grid__col-span-4@l u-grid u-gap-m u-grid--6-col@m u-gap-m">
               <li class="u-grid__col-span-4@m u-grid__col-span-3@l">
                 <label for="street">Street</label>
                 <input id="street" type="text" autocomplete="address-line1" />
@@ -203,7 +221,7 @@ For a more complex form, `.u-grid--6-col@m` allows for fields of different sizes
             </ul>
           <div>
         </fieldset>
-        <div class="u-grid u-gap-m u-grid--6-col@l u-margin-xl--bottom">
+        <div class="u-grid u-gap-m u-grid--6-col@l u-gap-m u-margin-xl--bottom">
           <ul class="a-list-reset u-flex u-items-center u-grid__col-3@l u-grid__col-span-4@l">
             <li class="u-margin-l--right">
               <button type="submit" class="a-button">Save changes</button>
@@ -284,6 +302,34 @@ The `role="search"` attribute highlights this functionality for screenreader use
         </svg>
         <span class="u-sr-only">Search</span>
       </button>
+    </form>
+    `}
+  </Story>
+</Canvas>
+
+## Form with select, input, & button
+
+The heights of selects, inputs, and buttons should all match, allowing them to be placed side by side.
+
+<Canvas>
+  <Story name="Select input and button">
+    {`
+    <form role="search" action="" method="POST" class="u-flex">
+      <ul class="a-list-reset u-flex u-items-end">
+        <li class="u-margin-xs--right">
+          <label for="filter">Search users</label>
+          <input type="search" id="filter" placeholder="Username or email…" />
+        </li>
+        <li class="u-margin-xs--right">
+          <select id="type">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </li>
+        <li>
+          <button type="submit" class="a-button a-button--ui">Search</button>
+        </li>
+      </ul>
     </form>
     `}
   </Story>

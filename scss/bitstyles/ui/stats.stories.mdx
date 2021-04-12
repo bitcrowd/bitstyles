@@ -9,11 +9,30 @@ Highlight a few statistics that will be important to the user as soon as they ar
 
 Highlighting a few statistics presents us the opportunity to give context and increase rapid understanding. This example indicates the direction of change over time for each statistic.
 
+<details class="u-margin-xl--y">
+  <summary class="u-h4 u-font--medium">Examples use</summary>
+  <ul>
+    <li><a href="/docs/atoms-badge--badge">a-badge</a></li>
+    <li><a href="/docs/utilities-color--gray-50">u-fg</a></li>
+    <li><a href="/docs/utilities-flex--flex">u-flex</a></li>
+    <li><a href="/docs/utilities-font--font-medium">u-font</a></li>
+    <li><a href="/docs/utilities-gap--u-gap-m">u-gap</a></li>
+    <li><a href="/docs/utilities-grid--u-grid">u-grid</a></li>
+    <li><a href="/docs/atoms-icon--icon">a-icon</a></li>
+    <li><a href="/docs/utilities-typography--typography">u-h6</a></li>
+    <li><a href="/docs/utilities-box-alignment--items-center">u-items-center</a></li>
+    <li><a href="/docs/utilities-line-height--u-line-height-min">u-line-height</a></li>
+    <li><a href="/docs/utilities-margin--margin-m">u-margin</a></li>
+    <li><a href="/docs/utilities-padding--padding-m">u-padding</a></li>
+    <li><a href="/docs/utilities-sr-only--sr-only">u-sr-only</a></li>
+  </ul>
+</details>
+
 <Canvas>
   <Story name="Stats (with change indicators)">
     {`
       <div class="a-content">
-        <dl class="u-grid u-grid--3-col@m">
+        <dl class="u-grid u-grid--3-col@m u-gap-m">
           <div class="a-card u-flex u-items-center">
             <div class="u-flex--shrink-0 u-margin-s--right">
               <div class="a-badge a-badge--danger u-padding-l">
@@ -68,7 +87,7 @@ As in this next example, the change indicators could be replaced by static icono
   <Story name="Stats (with iconography)">
     {`
       <div class="a-content">
-        <dl class="u-grid u-grid--3-col@m">
+        <dl class="u-grid u-grid--3-col@m u-gap-m">
           <div class="a-card u-flex u-items-center">
             <div class="u-flex--shrink-0 u-margin-s--right">
               <div class="a-badge a-badge--danger u-padding-m">
@@ -121,7 +140,7 @@ The simplest form (but least easily-digestible for the user) shows some text-onl
   <Story name="Stats (simple)">
     {`
       <div class="a-content">
-        <dl class="u-grid u-grid--3-col@m">
+        <dl class="u-grid u-grid--3-col@m u-gap-m">
           <div class="a-card">
             <dt class="u-font--medium u-h6 u-fg--gray-50">In storage</dt>
             <dd class="u-h2 u-font--bold u-line-height--min">104</dd>
