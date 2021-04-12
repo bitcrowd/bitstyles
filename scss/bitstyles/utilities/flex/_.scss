@@ -22,6 +22,11 @@
   flex-shrink: 0;
 }
 
+.#{$bitstyles-namespace}u-flex__shrink-1 {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
 @include media-query('m') {
   .#{$bitstyles-namespace}u-flex\@m {
     display: flex;

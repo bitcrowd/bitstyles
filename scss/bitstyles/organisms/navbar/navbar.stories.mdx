@@ -7,14 +7,14 @@ import icons from '../../../../test/assets/images/icons.svg';
 
 # Navbar
 
-A top-level navigation container, with two sections separated to the left & right. The left-hand side is commonly used for a logo and links, the right-hand side for user account menu and global search.
+A top-level navigation container, this organism is only responsible for the layout of the small-viewport version of your main navigation. The layout of the menu on larger viewports, location of logo, show/hide etc. is all up to you (see [the UI layer NavBar component](/docs/ui-navigation-navbar--navbar) for an example).
 
 <Canvas>
   <Story name="Navbar">
     {`
       <div style="min-height:25rem;">
         <div class="u-relative">
-          <ul class="u-flex u-flex--col a-list-reset c-navbar u-padding-s u-bg--gray-80" id="navbar-1">
+          <ul class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80" id="navbar-1">
             <li class="u-margin-s--bottom">
               <a href="/" class="a-button a-button--nav-large" aria-current="page">Team</a>
             </li>

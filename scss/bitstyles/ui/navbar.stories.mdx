@@ -37,11 +37,11 @@ Give the active link the `aria-current="page"` attribute.
   <Story name="Navbar">
     {`
       <nav class="u-bg--gray-80 u-padding-s--top u-padding-s--bottom u-relative">
-        <div class="a-content u-flex u-justify-between u-items-center u-flex--wrap">
-          <div class="u-flex u-items-center">
+        <div class="u-padding-m--x u-flex u-justify-between u-items-center u-flex--wrap">
+          <div class="u-flex__shrink-1 u-flex u-items-center">
             <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-l--right u-hidden u-block@l" />
             <img src="${logoSmall}" width="50" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-l--right u-hidden@l" />
-            <div class="u-hidden u-block@l">
+            <div class="u-hidden u-block@l u-flex__shrink-1 u-overflow--x">
               <ul class="u-flex a-list-reset">
                 <li class="u-margin-m--right">
                   <a href="/" class="a-button a-button--nav" aria-current="page">Team</a>
@@ -70,7 +70,7 @@ Give the active link the `aria-current="page"` attribute.
               </svg>
               <span class="u-sr-only">Toggle menu</span>
             </button>
-            <ul class="u-flex u-flex--col a-list-reset c-navbar u-padding-s u-bg--gray-80" id="navbar-1">
+            <ul class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80" id="navbar-1">
               <li class="u-margin-s--bottom">
                 <a href="/" class="a-button a-button--nav-large">
                   <div class="a-button__icon a-avatar">
@@ -87,6 +87,97 @@ Give the active link the `aria-current="page"` attribute.
               </li>
               <li class="u-margin-s--bottom">
                 <a href="/" class="a-button a-button--nav-large">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    `}
+  </Story>
+</Canvas>
+
+## Handling large numbers of links
+
+This navbar is only intended to hold a few link to the main sections of your site. If you absolutely must have more links than can be easily handled, the navbar will scroll:
+
+<Canvas>
+  <Story name="Navbar with many links">
+    {`
+      <nav class="u-bg--gray-80 u-padding-s--top u-padding-s--bottom u-relative">
+        <div class="u-padding-m--x u-flex u-justify-between u-items-center">
+          <div class="u-flex__shrink-1 u-flex u-items-center">
+            <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-l--right u-hidden u-block@l" />
+            <img src="${logoSmall}" width="50" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-l--right u-hidden@l" />
+            <div class="u-hidden u-block@l u-flex__shrink-1 u-overflow--x">
+              <ul class="u-flex a-list-reset">
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav" aria-current="page">Team</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Projects</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Dashboard</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Customers</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Privacy policies</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Bookings</a>
+                </li>
+                <li class="u-margin-m--right">
+                  <a href="/" class="a-button a-button--nav">Sales</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-hidden u-block@l u-flex__shrink-0">
+            <a href="/" class="a-button a-button--nav">
+              <span class="a-button__label">Jane Dobermann</span>
+              <div class="a-button__icon a-avatar">
+                <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
+              </div>
+            </a>
+          </div>
+          <div class="u-hidden@l">
+            <button class="a-button a-button--icon a-button--icon-reversed" title="Toggle menu" aria-controls="navbar-1" aria-expanded="true">
+              <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-hamburger"></use>
+              </svg>
+              <span class="u-sr-only">Toggle menu</span>
+            </button>
+            <ul class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80" id="navbar-1">
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">
+                  <div class="a-button__icon a-avatar">
+                    <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
+                  </div>
+                  <span class="a-button__label">Jane Dobermann</span>
+                </a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large" aria-current="page">Team</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Projects</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Dashboard</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Customers</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Privacy policies</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Bookings</a>
+              </li>
+              <li class="u-margin-s--bottom">
+                <a href="/" class="a-button a-button--nav-large">Sales</a>
               </li>
             </ul>
           </div>

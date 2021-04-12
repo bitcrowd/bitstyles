@@ -5,6 +5,11 @@
     padding: spacing($size);
   }
 
+  .u-padding-#{$size}--x {
+    padding-right: spacing($size);
+    padding-left: spacing($size);
+  }
+
   .u-padding-#{$size}--y {
     padding-top: spacing($size);
     padding-bottom: spacing($size);
