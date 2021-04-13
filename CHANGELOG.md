@@ -29,7 +29,6 @@
 - A filter component for applying free-text filters
 - An new icon page in our documentation, giving examples of all the icons used in our documentation
 
-
 ## Changed
 
 - `.a-button--danger` no longer overrides base colors (only does so on hover/focus etc.), so you can use it in conjunction with other button types to make them “dangerous”
@@ -64,7 +63,7 @@
 
 - `.u-border` utility classes
 - Storybook documentation now includes the `a11y-addon` for in-browser checking of some a11y low-hanging fruit
-- Select elements can now display different border-color, background-color etc when they are invalid. There are examples showing how to correctly markup invalid selects (it is quite specific due to browser implementations)
+- `select` elements can now display different border-color, background-color etc when they are invalid. There are examples showing how to correctly markup invalid `select`s (it is quite specific due to browser implementations)
 - There’s a new section-heading component in the documentation, with variants containing buttons
 - Flex and box-alignment classes are now available at various breakpoints
 
@@ -98,15 +97,14 @@
 
 ## Added
 
-- new navbar organism
-- new table organism
-- new badge atom
-- new avatar atom
-- new dropdown (menu) atom
+- new `.o-navbar` organism
+- new `.o-table` organism
+- new `.a-badge` atom
+- new `.a-avatar` atom
+- new `.a-dropdown` (menu) atom
 - new collection of button types
-- new card atom for sectioning or highlighting content
-- new `dl` atom
-
+- new `.a-card` atom for sectioning or highlighting content
+- new `.a-dl` atom
 
 ## Changed
 
@@ -114,8 +112,6 @@
 - all documentation and stories are converted to the MDX format
 - build Sass with the now-canonical dart-sass instead of node-sass
 - labels, inputs, textareas, and selects are selected by element name instead of a classname. If you have `.input--text` classnames on your elements, they should be removed
-
-
 
 ## Breaking
 
