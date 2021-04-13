@@ -63,7 +63,7 @@
 ## Added
 
 - `.u-border` utility classes
-- Storybok documentation now includes the `a11y-addon` for in-browser checking of some a11y low-hanging fruit
+- Storybook documentation now includes the `a11y-addon` for in-browser checking of some a11y low-hanging fruit
 - Select elements can now display different border-color, background-color etc when they are invalid. There are examples showing how to correctly markup invalid selects (it is quite specific due to browser implementations)
 - There’s a new section-heading component in the documentation, with variants containing buttons
 - Flex and box-alignment classes are now available at various breakpoints
@@ -72,7 +72,7 @@
 
 - `.a-button--tab` indicator color is now set by a specific `$bitstyles-button-tab-border-color` sass variable instead of using the border variable. Borders can now be set on `a-button--tab`s, whereas before they could not (by default they’re all transparent, so there will be no visual change)
 - Webfonts are now imported using a base URL and several variants specified in $bitstyles-webfont-variants. The filenames of the webfont files need to match the convention `${base-url}-${variant}.${woff|woff2}`
-- As per the current state of AT interpretation of forms, examples of select element usage now place the label as sibling to (not parent of) the select. If you were using the previous structure, please switch
+- As per the current state of Assistive Technology’s interpretation of forms, examples of select element usage now place the label as sibling to (not parent of) the select. If you were using the previous structure, please switch
 
 # [1.0.1] - 2021-03-04
 
@@ -88,7 +88,6 @@
 
 ## Changed
 
-- Uses github actions to deploy our storybook to github pages
 - Specifies the newly-published documentation as our homepage
 
 ## Breaking
