@@ -26,11 +26,6 @@ Here’s a base icon button:
       </button>
     `}
   </Story>
-</Canvas>
-
-Here’s the same button in the disabled state:
-
-<Canvas>
   <Story name="Button element (disabled)">
     {`
       <button disabled class="a-button a-button--icon" title="Button element (disabled)">
@@ -42,8 +37,6 @@ Here’s the same button in the disabled state:
     `}
   </Story>
 </Canvas>
-
-This shows there’s no visual difference when using an anchor element. Note there’s no disabled state for such buttons, as that doesn’t really exist in the HTML spec. The second button here is visited, showing there’s no visual difference:
 
 <Canvas>
   <Story name="Anchor element as button">
@@ -63,6 +56,16 @@ This shows there’s no visual difference when using an anchor element. Note the
           <use xlink:href="${icons}#icon-plus"></use>
         </svg>
         <span class="u-sr-only">Anchor element (visited)</span>
+      </a>
+    `}
+  </Story>
+  <Story name="Anchor element as button (disabled)">
+    {`
+      <a href="/" class="a-button a-button--icon" title="Anchor element (disabled)" aria-disabled="true">
+        <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
+          <use xlink:href="${icons}#icon-plus"></use>
+        </svg>
+        <span class="u-sr-only">Anchor element (disabled)</span>
       </a>
     `}
   </Story>

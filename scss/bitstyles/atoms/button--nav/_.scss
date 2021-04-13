@@ -15,10 +15,8 @@
   &:hover,
   &:focus {
     color: $bitstyles-button-nav-color-hover;
-    text-decoration: none;
     background: $bitstyles-button-nav-background-color-hover;
     border-color: $bitstyles-button-nav-border-color-hover;
-    outline: none;
     box-shadow: $bitstyles-button-nav-box-shadow-hover;
   }
 
@@ -37,9 +35,9 @@
     box-shadow: $bitstyles-button-nav-box-shadow-current;
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     color: $bitstyles-button-nav-color-disabled;
-    cursor: default;
     background: $bitstyles-button-nav-background-color-disabled;
     border-color: $bitstyles-button-nav-border-color-disabled;
     box-shadow: $bitstyles-button-nav-box-shadow-disabled;

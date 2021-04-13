@@ -11,23 +11,29 @@
     color: $bitstyles-button-menu-color;
     background: $bitstyles-button-menu-background-color;
     border-color: $bitstyles-button-menu-border-color;
-    box-shadow: none;
+    box-shadow: $bitstyles-button-menu-box-shadow;
   }
 
   &:hover,
   &:focus {
     color: $bitstyles-button-menu-color-hover;
-    text-decoration: none;
     background: $bitstyles-button-menu-background-color-hover;
     border-color: $bitstyles-button-menu-border-color-hover;
-    outline: none;
-    box-shadow: none;
+    box-shadow: $bitstyles-button-menu-box-shadow-hover;
   }
 
   &:active {
     color: $bitstyles-button-menu-color-active;
     background: $bitstyles-button-menu-background-color-active;
     border-color: $bitstyles-button-menu-border-color-active;
-    box-shadow: none;
+    box-shadow: $bitstyles-button-menu-box-shadow-active;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: $bitstyles-button-menu-color-disabled;
+    background: $bitstyles-button-menu-background-color-disabled;
+    border-color: $bitstyles-button-menu-border-color-disabled;
+    box-shadow: $bitstyles-button-menu-box-shadow-disabled;
   }
 }

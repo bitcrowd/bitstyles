@@ -4,10 +4,8 @@
   &:hover,
   &:focus {
     color: $bitstyles-button-danger-color-hover;
-    text-decoration: none;
     background: $bitstyles-button-danger-background-color-hover;
     border-color: $bitstyles-button-danger-border-color-hover;
-    outline: none;
     box-shadow: $bitstyles-button-danger-box-shadow-hover;
   }
 
@@ -18,9 +16,9 @@
     box-shadow: $bitstyles-button-danger-box-shadow-active;
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     color: $bitstyles-button-danger-color-disabled;
-    cursor: default;
     background: $bitstyles-button-danger-background-color-disabled;
     border-color: $bitstyles-button-danger-border-color-disabled;
     box-shadow: $bitstyles-button-danger-box-shadow-disabled;

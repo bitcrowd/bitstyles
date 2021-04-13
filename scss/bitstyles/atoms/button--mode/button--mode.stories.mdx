@@ -4,9 +4,9 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Mode Buttons
 
-A set of buttons that switch between modes, such as a calendar-view selection.
+A set of buttons that switch between modes, such as a calendar-view selection. Here are the individual buttons, for an example of how to use these, see the [mode-switch](/docs/ui-buttons-mode-switch-buttons--mode-switch-buttons) example in the UI layer.
 
-<Canvas isColumn>
+<Canvas>
   <Story name="Mode">
     {`
       <div class="a-button--mode-container">
@@ -22,6 +22,45 @@ A set of buttons that switch between modes, such as a calendar-view selection.
         <button type="button" class="a-button a-button--mode u-h6" aria-pressed="true">
           Mode 1 [pressed]
         </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Mode [disabled]">
+    {`
+      <div class="a-button--mode-container">
+        <button type="button" class="a-button a-button--mode u-h6" disabled>
+          Mode 1 [disabled]
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Mode anchor">
+    {`
+      <div class="a-button--mode-container">
+        <a href="/" class="a-button a-button--mode u-h6">
+          Mode 1
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Mode anchor [pressed]">
+    {`
+      <div class="a-button--mode-container">
+        <a href="/" class="a-button a-button--mode u-h6" aria-pressed="true">
+          Mode 1 [pressed]
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Mode anchor [disabled]">
+    {`
+      <div class="a-button--mode-container">
+        <a href="/" class="a-button a-button--mode u-h6" aria-disabled="true">
+          Mode 1 [disabled]
+        </a>
       </div>
     `}
   </Story>

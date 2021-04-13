@@ -10,6 +10,7 @@ $bitstyles-button-menu-padding-horizontal: spacing('m') !default;
 $bitstyles-button-menu-color: palette('gray', '60') !default;
 $bitstyles-button-menu-background-color: palette('white', '100') !default;
 $bitstyles-button-menu-border-color: palette('white', '100') !default;
+$bitstyles-button-menu-box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
@@ -17,6 +18,7 @@ $bitstyles-button-menu-border-color: palette('white', '100') !default;
 $bitstyles-button-menu-color-hover: palette('gray', '80') !default;
 $bitstyles-button-menu-background-color-hover: palette('gray', '1') !default;
 $bitstyles-button-menu-border-color-hover: palette('gray', '1') !default;
+$bitstyles-button-menu-box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
@@ -24,3 +26,12 @@ $bitstyles-button-menu-border-color-hover: palette('gray', '1') !default;
 $bitstyles-button-menu-color-active: palette('white') !default;
 $bitstyles-button-menu-background-color-active: palette('brand-2', '100') !default;
 $bitstyles-button-menu-border-color-active: palette('brand-2', '100') !default;
+$bitstyles-button-menu-box-shadow-active: none !default;
+
+//
+// Disabled colors ////////////////////////////////////////
+
+$bitstyles-button-menu-color-disabled: palette('gray', '30') !default;
+$bitstyles-button-menu-background-color-disabled: transparent !default;
+$bitstyles-button-menu-border-color-disabled: transparent !default;
+$bitstyles-button-menu-box-shadow-disabled: none !default;

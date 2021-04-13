@@ -38,8 +38,8 @@ $bitstyles-button-nav-box-shadow-active: 0 0 spacing('xs') rgba(palette('black',
 // Disabled colors ////////////////////////////////////////
 
 $bitstyles-button-nav-color-disabled: palette('black', '50') !default;
-$bitstyles-button-nav-background-color-disabled: palette('black', '10') !default;
-$bitstyles-button-nav-border-color-disabled: palette('black', '10') !default;
+$bitstyles-button-nav-background-color-disabled: transparent !default;
+$bitstyles-button-nav-border-color-disabled: transparent !default;
 $bitstyles-button-nav-box-shadow-disabled: none !default;
 
 //

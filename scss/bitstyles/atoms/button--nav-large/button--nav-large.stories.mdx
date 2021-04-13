@@ -6,7 +6,9 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 A button for your main navigation that’s rendered full-width, ideal for the “off-screen-canvas” (or “hamburger”) menu on small screens.
 
-<Canvas>
+One of the links may well be a link to the current page, and should be given an aria-current attribute: `aria-current="page"`.
+
+<Canvas isColumn>
   <Story name="Nav-large">
     {`
       <a href="/" class="a-button a-button--nav-large">
@@ -14,17 +16,42 @@ A button for your main navigation that’s rendered full-width, ideal for the �
       </a>
     `}
   </Story>
-</Canvas>
-
-
-One of the links may well be a link to the current page, and should be given an aria-current attribute: `aria-current="page"`:
-
-<Canvas>
   <Story name="Nav-large [aria-current]">
     {`
       <a href="/" class="a-button a-button--nav-large" aria-current="page">
         Dashboard
       </a>
+    `}
+  </Story>
+  <Story name="Nav-large [disabled]">
+    {`
+      <a href="/" class="a-button a-button--nav-large" aria-disabled="true">
+        Dashboard
+      </a>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas isColumn>
+  <Story name="Nav-large button">
+    {`
+      <button type="button" class="a-button a-button--nav-large">
+        Dashboard
+      </button>
+    `}
+  </Story>
+  <Story name="Nav-large button [aria-current]">
+    {`
+      <button type="button" class="a-button a-button--nav-large" aria-current="page">
+        Dashboard
+      </button>
+    `}
+  </Story>
+  <Story name="Nav-large button [disabled]">
+    {`
+      <button type="button" class="a-button a-button--nav-large" disabled>
+        Dashboard
+      </button>
     `}
   </Story>
 </Canvas>

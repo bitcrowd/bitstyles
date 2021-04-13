@@ -12,10 +12,8 @@
   &:hover,
   &:focus {
     color: var(--button-fg-hover, $bitstyles-button-icon-reversed-color-hover);
-    text-decoration: none;
     background: var(--button-bg-hover, $bitstyles-button-icon-reversed-background-color-hover);
     border-color: $bitstyles-button-icon-reversed-border-color-hover;
-    outline: none;
     box-shadow: $bitstyles-button-icon-reversed-box-shadow-hover;
   }
 
@@ -26,9 +24,9 @@
     box-shadow: $bitstyles-button-icon-reversed-box-shadow-active;
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     color: $bitstyles-button-icon-reversed-color-disabled;
-    cursor: default;
     background: $bitstyles-button-icon-reversed-background-color-disabled;
     border-color: $bitstyles-button-icon-reversed-border-color-disabled;
     box-shadow: $bitstyles-button-icon-reversed-box-shadow-disabled;
