@@ -13,6 +13,7 @@
 - Updated the modal component visual styles, and added examples for dialogs, alerts, and informational modals
 - Breadcrumbs & pagination components are now wrapped in labelled `<nav>` elements
 - Imports of Sass partials are now alphabetized within each layer
+- Navbar component (largescreen version) now scrolls instead of wrapping when the links inside take up more space than available
 
 ## Fixed
 
