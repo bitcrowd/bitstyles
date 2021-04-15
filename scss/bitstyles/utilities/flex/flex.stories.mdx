@@ -25,16 +25,6 @@ Apply `.u-flex__shrink-0` to a flex-child to stop it being crushed when there is
 These first examples show the layouts with a small amount of text content.
 
 <Canvas isColumn>
-  <Story name="Flex">
-    {`
-      <ul class="u-flex a-list-reset">
-        <li>List item one</li>
-        <li>List item two</li>
-        <li>List item three</li>
-        <li>List item four</li>
-      </ul>
-    `}
-  </Story>
   <Story name="Flex, with grow-1 child">
     {`
       <ul class="u-flex a-list-reset">
@@ -200,24 +190,6 @@ This flex layout is ideal for laying out buttons in a row — perhaps actions at
     `}
   </Story>
 </Canvas>
-
-## Align center
-
-Apply `.u-items-center` to the flex parent when you want all the elements to align to each others’ vertical center.
-
-<Canvas>
-  <Story name="Flex with align center">
-    {`
-      <ul class="u-flex u-items-center a-list-reset">
-        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
-        <li class="u-flex__grow-1 u-bg--brand-2">Important content here</li>
-        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
-        <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
-      </ul>
-    `}
-  </Story>
-</Canvas>
-
 
 ## Flex column
 
