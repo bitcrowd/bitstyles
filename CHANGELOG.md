@@ -1,3 +1,10 @@
+# Unreleased
+
+## Changed
+
+- Webfonts are now included in the release
+
+
 # [1.0.6] - 2021-03-31
 
 ## Changed
