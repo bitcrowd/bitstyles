@@ -2,6 +2,7 @@
 
 .a-button--nav {
   padding: $bitstyles-button-nav-padding-vertical $bitstyles-button-nav-padding-horizontal;
+  justify-content: flex-start;
   border-radius: $bitstyles-button-nav-border-radius;
 
   &,

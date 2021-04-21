@@ -2,6 +2,7 @@
 
 .#{$bitstyles-namespace}a-button--icon {
   padding: $bitstyles-button-icon-padding-vertical $bitstyles-button-icon-padding-horizontal;
+  justify-content: flex-start;
   border-radius: $bitstyles-button-icon-border-radius;
 
   &,

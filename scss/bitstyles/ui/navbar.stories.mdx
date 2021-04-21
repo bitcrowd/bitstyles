@@ -34,7 +34,7 @@ Give the active link the `aria-current="page"` attribute.
 </details>
 
 <Canvas>
-  <Story name="Navbar">
+  <Story name="Navbar" inline={false} height="80vh">
     {`
       <nav class="u-bg--gray-80 u-padding-s--top u-padding-s--bottom u-relative">
         <div class="u-padding-m--x u-flex u-justify-between u-items-center u-flex--wrap">
@@ -101,7 +101,7 @@ Give the active link the `aria-current="page"` attribute.
 This navbar is only intended to hold a few link to the main sections of your site. If you absolutely must have more links than can be easily handled, the navbar will scroll:
 
 <Canvas>
-  <Story name="Navbar with many links">
+  <Story name="Navbar with many links" inline={false} height="80vh">
     {`
       <nav class="u-bg--gray-80 u-padding-s--top u-padding-s--bottom u-relative">
         <div class="u-padding-m--x u-flex u-justify-between u-items-center">
@@ -190,10 +190,10 @@ This navbar is only intended to hold a few link to the main sections of your sit
 
 ## Sidebar
 
-A vertical navbar that can make better use of screenspace in some circumstnces, and is capable of containing more links confortably.
+A vertical navbar that can make better use of screenspace in some circumstances, and is capable of containing more links confortably.
 
 <Canvas>
-   <Story name="Sidebar">
+   <Story name="Sidebar" inline={false} height="80vh">
      {`
         <div class="u-flex u-height-100vh">
           <nav class="u-flex">
@@ -266,7 +266,7 @@ A vertical navbar that can make better use of screenspace in some circumstnces, 
                 </a>
               </div>
             </div>
-            <div class="o-sidebar--small u-bg--gray-80 u-flex u-flex--col">
+            <div class="o-sidebar--small u-bg--gray-80 u-flex u-flex--col u-hidden@l">
               <button class="u-flex__shrink-0 a-button a-button--icon a-button--icon-reversed u-margin-xxs--left" title="Toggle menu" aria-controls="navbar-1" aria-expanded="true">
                 <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
                   <use xlink:href="${icons}#icon-hamburger"></use>

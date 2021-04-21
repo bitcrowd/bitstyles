@@ -4,6 +4,7 @@
   display: flex;
   min-height: 0;
   padding: $bitstyles-button-menu-padding-vertical $bitstyles-button-menu-padding-horizontal;
+  justify-content: flex-start;
   border-radius: 0;
 
   &,
