@@ -3,6 +3,11 @@
 ## Changed
 
 - Webfonts are now included in the release
+- [Docs] Navbar examples are now in iframes of fixed height, so the examples are clearly visible in docs view
+
+## Fixed
+
+- `a-button--nav` and `a-button--nav-large` are no longer centered
 
 
 # [1.0.6] - 2021-03-31
