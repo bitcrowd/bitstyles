@@ -12,29 +12,28 @@ $bitstyles-webfont-variants: (
     'font-family': 'Nunito',
     'font-style': normal,
     'font-weight': $bitstyles-font-weight-normal,
-    'url': '../test/assets/fonts/nunito-v16-latin-400'
+    'url': '../assets/fonts/nunito-v16-latin-400'
   ),
   'italic': (
     'font-family': 'Nunito',
     'font-style': italic,
     'font-weight': $bitstyles-font-weight-normal,
-    'url': '../test/assets/fonts/nunito-v16-latin-italic'
+    'url': '../assets/fonts/nunito-v16-latin-italic'
   ),
   'medium': (
     'font-family': 'Nunito',
     'font-style': normal,
     'font-weight': $bitstyles-font-weight-medium,
-    'url': '../test/assets/fonts/nunito-v16-latin-600'
+    'url': '../assets/fonts/nunito-v16-latin-600'
   ),
   'bold': (
     'font-family': 'Nunito',
     'font-style': normal,
     'font-weight': $bitstyles-font-weight-bold,
-    'url': '../test/assets/fonts/nunito-v16-latin-800'
+    'url': '../assets/fonts/nunito-v16-latin-800'
   )
 ) !default;
 
-$bitstyles-webfont-font-url: '../test/assets/fonts/nunito-v16-latin' !default;
 $bitstyles-font-family-header-stack: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol") !default;
 $bitstyles-font-family-body-stack: (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol") !default;
 /* stylelint-enable value-keyword-case */
