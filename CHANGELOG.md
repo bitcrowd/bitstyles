@@ -1,14 +1,27 @@
-# Unreleased
+# [1.1.0] - 2021-04-15
+
+## Added
+
+- New component in UI layer: sidebar
+- Added this changelog
 
 ## Changed
 
-- Webfonts are now included in the release
+- [Docs] Improved documentation: added links to classes used in the storybook examples
 - [Docs] Navbar examples are now in iframes of fixed height, so the examples are clearly visible in docs view
+- Webfonts are now included in the release
+- Updated the modal component visual styles, and added examples for dialogs, alerts, and informational modals
+- Breadcrumbs & pagination components are now wrapped in labelled `<nav>` elements
+- Imports of Sass partials are now alphabetized within each layer
+- Navbar component (largescreen version) now scrolls instead of wrapping when the links inside take up more space than available
 
 ## Fixed
 
 - `a-button--nav` and `a-button--nav-large` are no longer centered
 
+## Breaking
+
+- Node version bumped to LTS (14.16.0)
 
 # [1.0.6] - 2021-03-31
 
