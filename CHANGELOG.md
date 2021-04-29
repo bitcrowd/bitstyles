@@ -1,3 +1,18 @@
+# Unreleased
+
+## Added
+
+- More aspects of the sidebar organism can now be specified in Sass variables
+
+## Changed
+
+- Sidebar examples now include the closed state, so that it can be seen on  small-viewports
+
+## Breaking
+
+- Sidebar Sass variables have been renamed, so if you were using or overriding those variables in your project, you’ll need to rename `$sidebar-width` -to `$bitstyles-sidebar-large-width`
+
+
 # [1.1.0] - 2021-04-15
 
 ## Added
