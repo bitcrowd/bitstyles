@@ -1,1 +1,6 @@
-$sidebar-width: 15rem;
+$bitstyles-sidebar-large-width: 15rem;
+$bitstyles-sidebar-small-width: 80vw;
+$bitstyles-sidebar-small-box-shadow:
+  spacing('m') 0 spacing('l') rgba(palette('brand-1', '100'), 0.1),
+  spacing('l') 0 spacing('m') rgba(palette('gray', '90'), 0.07),
+  0 0 spacing('xl') rgba(palette('gray', '90'), 0.1) !default;
