@@ -9,10 +9,15 @@
 
 - Sidebar examples now include the closed state, so that it can be seen on  small-viewports
 
+## Fixed
+
+- Every classname is now prefixed with `$$bitstyles-namespace`, if specified
+
 ## Breaking
 
 - Sidebar Sass variables have been renamed, so if you were using or overriding those variables in your project, you’ll need to rename `$sidebar-width` to `$bitstyles-sidebar-large-width`
 - Renames `.a-dropdown--reverse` to `.a-dropdown--right`
+- Classnames for the modal component are now prefixed with `.o-` instead of `.c-`, you’ll need to update `c-modal__overlay` to `o-modal__overlay`, and `c-modal__content` to `o-modal__content`
 
 # [1.1.0] - 2021-04-15
 
