@@ -1,6 +1,6 @@
 @import './settings';
 
-.a-button--nav-large {
+.#{$bitstyles-namespace}a-button--nav-large {
   display: flex;
   padding: $bitstyles-button-nav-large-padding-vertical $bitstyles-button-nav-large-padding-horizontal;
   justify-content: flex-start;

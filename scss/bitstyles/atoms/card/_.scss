@@ -1,6 +1,6 @@
 @import './settings';
 
-.a-card {
+.#{$bitstyles-namespace}a-card {
   padding: $bitstyles-card-padding;
   overflow: hidden;
   border-radius: $bitstyles-card-border-radius;
@@ -8,7 +8,7 @@
 }
 
 @include media-query('m') {
-  .a-card\@m {
+  .#{$bitstyles-namespace}a-card\@m {
     padding: $bitstyles-card-padding;
     overflow: hidden;
     border-radius: $bitstyles-card-border-radius;

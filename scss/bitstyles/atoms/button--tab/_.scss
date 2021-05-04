@@ -1,12 +1,12 @@
 @import './settings';
 
-.a-button--tab-container {
+.#{$bitstyles-namespace}a-button--tab-container {
   & > *:first-child {
     margin-left: -$bitstyles-button-padding-horizontal;
   }
 }
 
-.a-button--tab {
+.#{$bitstyles-namespace}a-button--tab {
   position: relative;
   border: 0;
   border-radius: $bitstyles-button-tab-border-radius;

@@ -1,6 +1,6 @@
 @import './settings';
 
-.a-button--ui {
+.#{$bitstyles-namespace}a-button--ui {
   &,
   &:visited {
     color: $bitstyles-button-ui-color;

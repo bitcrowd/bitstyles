@@ -36,7 +36,7 @@
     box-shadow: $bitstyles-button-icon-box-shadow-disabled;
   }
 
-  .a-button__icon {
+  .#{$bitstyles-namespace}a-button__icon {
     margin: 0;
   }
 }
