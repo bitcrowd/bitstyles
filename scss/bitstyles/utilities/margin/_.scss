@@ -5,11 +5,11 @@
     margin: spacing($size);
   }
 
-  .u-margin-neg-#{$size} {
+  .#{$bitstyles-namespace}u-margin-neg-#{$size} {
     margin: -#{spacing($size)};
   }
 
-  .u-margin-#{$size}--y {
+  .#{$bitstyles-namespace}u-margin-#{$size}--y {
     margin-top: spacing($size);
     margin-bottom: spacing($size);
   }
@@ -19,7 +19,7 @@
       margin-#{$position}: spacing($size);
     }
 
-    .u-margin-neg-#{$size}--#{$position} {
+    .#{$bitstyles-namespace}u-margin-neg-#{$size}--#{$position} {
       margin-#{$position}: -#{spacing($size)};
     }
   }
@@ -34,7 +34,7 @@
     }
 
     @each $size in $bitstyles-margin-sizes {
-      .u-margin-neg-#{$size}\@#{$breakpoint} {
+      .#{$bitstyles-namespace}u-margin-neg-#{$size}\@#{$breakpoint} {
         margin: -#{spacing($size)};
       }
     }
