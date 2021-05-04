@@ -6,11 +6,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 A floating container for a list of links.
 
-<Canvas isColumn>
-  <Story name="Dropdown">
+## Left alignment (default)
+
+<Canvas>
+  <Story name="Dropdown" inline={false} height="20rem">
     {`
       <div class="u-relative" style="height: 10rem; width: 30rem">
-        <ul class="a-dropdown u-overflow--y a-list-reset">
+        <ul class="a-dropdown u-overflow--y a-list-reset" aria-hidden="false">
           <li>
             <a href="/" class="a-button a-button--menu u-h6">Settings</a>
           </li>
@@ -28,10 +30,68 @@ A floating container for a list of links.
       </div>
     `}
   </Story>
-  <Story name="Dropdown [active]">
+</Canvas>
+
+## Right alignment
+
+<Canvas>
+  <Story name="Dropdown--right" inline={false} height="20rem">
     {`
-      <div class="u-relative" style="height: 10rem; width: 30rem">
-        <ul class="a-dropdown u-overflow--y a-list-reset" aria-hidden="false">
+      <div class="u-relative" style="height: 10rem; width: 100%">
+        <ul class="a-dropdown a-dropdown--right u-overflow--y a-list-reset" aria-hidden="false">
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Settings</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Help</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Privacy</a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Sign out</a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Top alignment
+
+<Canvas>
+  <Story name="Dropdown--top" inline={false} height="20rem">
+    {`
+      <div class="u-relative u-flex" style="height: 10rem; width: 100%">
+        <ul class="a-dropdown a-dropdown--top u-overflow--y a-list-reset" aria-hidden="false">
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Settings</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Help</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Privacy</a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Sign out</a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+
+## Top-right alignment
+
+<Canvas>
+  <Story name="Dropdown--top dropdown--right" inline={false} height="20rem">
+    {`
+      <div class="u-relative u-flex" style="height: 10rem; width: 100%">
+        <ul class="a-dropdown a-dropdown--top a-dropdown--right u-overflow--y a-list-reset" aria-hidden="false">
           <li>
             <a href="/" class="a-button a-button--menu u-h6">Settings</a>
           </li>

@@ -22,8 +22,13 @@
   }
 }
 
-.a-dropdown--reverse {
+.a-dropdown--right {
   right: 0;
+}
+
+.a-dropdown--top {
+  top: auto;
+  bottom: 100%;
 }
 
 @include media-query('s') {

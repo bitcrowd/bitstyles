@@ -3,6 +3,7 @@
 ## Added
 
 - More aspects of the sidebar organism can now be specified in Sass variables
+- `a-dropdown--top` variant of dropdown component
 
 ## Changed
 
@@ -10,8 +11,8 @@
 
 ## Breaking
 
-- Sidebar Sass variables have been renamed, so if you were using or overriding those variables in your project, you’ll need to rename `$sidebar-width` -to `$bitstyles-sidebar-large-width`
-
+- Sidebar Sass variables have been renamed, so if you were using or overriding those variables in your project, you’ll need to rename `$sidebar-width` to `$bitstyles-sidebar-large-width`
+- Renames `.a-dropdown--reverse` to `.a-dropdown--right`
 
 # [1.1.0] - 2021-04-15
 
