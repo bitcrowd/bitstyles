@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 A floating container for a list of links.
 
-## Left-alignment (default)
+## Left alignment (default)
 
 <Canvas>
   <Story name="Dropdown" inline={false} height="20rem">
@@ -32,7 +32,7 @@ A floating container for a list of links.
   </Story>
 </Canvas>
 
-## Right-alignment
+## Right alignment
 
 <Canvas>
   <Story name="Dropdown--right" inline={false} height="20rem">
@@ -58,13 +58,40 @@ A floating container for a list of links.
   </Story>
 </Canvas>
 
-## Top-alignment
+## Top alignment
 
 <Canvas>
   <Story name="Dropdown--top" inline={false} height="20rem">
     {`
       <div class="u-relative u-flex" style="height: 10rem; width: 100%">
         <ul class="a-dropdown a-dropdown--top u-overflow--y a-list-reset" aria-hidden="false">
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Settings</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Help</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Privacy</a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Sign out</a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+
+## Top-right alignment
+
+<Canvas>
+  <Story name="Dropdown--top dropdown--right" inline={false} height="20rem">
+    {`
+      <div class="u-relative u-flex" style="height: 10rem; width: 100%">
+        <ul class="a-dropdown a-dropdown--top a-dropdown--right u-overflow--y a-list-reset" aria-hidden="false">
           <li>
             <a href="/" class="a-button a-button--menu u-h6">Settings</a>
           </li>
