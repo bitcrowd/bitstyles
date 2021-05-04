@@ -7,6 +7,5 @@ The following changes are contained in this pull request:
 
 Delete if not applicable:
 
-- [ ] Styleguide documentation has been updated.
-- [ ] Changed tests in any of the `backstop_tests/` test suites.
-- [ ] Changed the visual appearance of object(s), or changed the tests? `npm run test:build` script has been successfully run and new/changed images checked visually for correctness and committed.
+- [ ] Storybook documentation has been updated
+- [ ] Your changes have been added to the `unreleased` section of [CHANGELOG.md](../CHANGELOG.md)
