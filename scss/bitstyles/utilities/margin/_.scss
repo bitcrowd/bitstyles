@@ -18,6 +18,10 @@
     .#{$bitstyles-namespace}u-margin-#{$size}--#{$position} {
       margin-#{$position}: spacing($size);
     }
+
+    .u-margin-neg-#{$size}--#{$position} {
+      margin-#{$position}: -#{spacing($size)};
+    }
   }
 }
 
