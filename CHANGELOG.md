@@ -1,4 +1,4 @@
-# [1.2.0] - 2021-05-04
+# [[1.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.2.0) - 2021-05-04
 
 ## Added
 
@@ -14,7 +14,7 @@
 - Sidebar Sass variables have been renamed, so if you were using or overriding those variables in your project, you’ll need to rename `$sidebar-width` to `$bitstyles-sidebar-large-width`
 - Renames `.a-dropdown--reverse` to `.a-dropdown--right`
 
-# [1.1.0] - 2021-04-15
+# [[1.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.1.0) - 2021-04-15
 
 ## Added
 
@@ -39,13 +39,13 @@
 
 - Node version bumped to LTS (14.16.0)
 
-# [1.0.6] - 2021-03-31
+# [[1.0.6]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.0.6) - 2021-03-31
 
 ## Changed
 
 - The releases now contain compiled CSS. The CSS is also available at [https://cdn.jsdelivr.net/npm/bitstyles@1.0.6/build/bitstyles.css](https://cdn.jsdelivr.net/npm/bitstyles@1.0.6/build/bitstyles.css). [#436] Add npmignore file (#437).
 
-# [1.0.5] - 2021-03-29
+# [[1.0.5]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.0.5) - 2021-03-29
 
 ## Changed
 
@@ -62,7 +62,7 @@
 
 - `.u-grid` classes no longer set `grid-gap`. Responsibility for `grid-gap` has been moved to `.u-gap`. You’ll need to add relevant grid-gap classes to your grid elements. Adding `.u-gap-m` to all your grid containers will result in an equivalent layout as before this change
 
-# [1.0.4] - 2021-03-17
+# [[1.0.4]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.0.4) - 2021-03-17
 
 ## Added
 
@@ -84,7 +84,7 @@
 
 - The `overflow-x` and `overflow-y` mixins no longer set the max width and height respectively. If you were making direct use of the mixins, you’ll need to add max widths or heights to your CSS, as needed.
 
-# [1.0.3] - 2021-03-15
+# [[1.0.3]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.0.3) - 2021-03-15
 
 ## Added
 
@@ -98,7 +98,7 @@
 - Input elements now only alter the base style’s `border-color`, not the shorthand `border`, to ensure equal heights and consistent appearance
 - Simplifies the way we import webfonts, and allows easier setup and overriding, using a more explicit `$bitstyles-webfont-variants` nested map. Filenames no longer need to match the previous format, though it’s advised
 
-# [1.0.2] - 2021-03-11
+# [[1.0.2]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.0.2) - 2021-03-11
 
 ## Added
 
@@ -114,7 +114,7 @@
 - Webfonts are now imported using a base URL and several variants specified in $bitstyles-webfont-variants. The filenames of the webfont files need to match the convention `${base-url}-${variant}.${woff|woff2}`
 - As per the current state of Assistive Technology’s interpretation of forms, examples of select element usage now place the label as sibling to (not parent of) the select. If you were using the previous structure, please switch
 
-# [1.0.1] - 2021-03-04
+# [[1.0.1]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.0.1) - 2021-03-04
 
 ## Added
 
@@ -134,7 +134,7 @@
 
 - `.u-list-reset` is replaced with `.a-list-reset`. You’ll need to update your usage, and check instances where you use other classes on the same element, as the location of this class in the source order has changed
 
-# [1.0.0] - 2021-03-04
+# [[1.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.0.0) - 2021-03-04
 
 ## Added
 
