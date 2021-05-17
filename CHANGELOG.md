@@ -1,3 +1,9 @@
+# Unreleased
+
+## Added
+
+- Dropdown atom has a new variant `.a-dropdown--full-width` that causes the dropdown to span the full width of its nearest `position: relative` parent element. Combinable with `a-dropdown--top`
+
 # [[1.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.2.0) - 2021-05-04
 
 ## Added
