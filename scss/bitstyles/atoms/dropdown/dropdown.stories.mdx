@@ -110,3 +110,59 @@ A floating container for a list of links.
     `}
   </Story>
 </Canvas>
+
+## Full-width
+
+Sometimes you need your dropdown to fill the width of the container.
+
+### Full-width bottom
+
+<Canvas>
+  <Story name="Dropdown--bottom dropdown--full" inline={false} height="20rem">
+    {`
+      <div class="u-relative u-flex" style="height: 10rem; width: 100%">
+        <ul class="a-dropdown a-dropdown--full-width u-overflow--y a-list-reset" aria-hidden="false">
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Settings</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Help</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Privacy</a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Sign out</a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Full-width top
+
+<Canvas>
+  <Story name="Dropdown--top dropdown--full" inline={false} height="20rem">
+    {`
+      <div class="u-relative u-flex" style="height: 10rem; width: 100%">
+        <ul class="a-dropdown a-dropdown--top a-dropdown--full-width u-overflow--y a-list-reset" aria-hidden="false">
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Settings</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Help</a>
+          </li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Privacy</a>
+          </li>
+          <li role="separator"></li>
+          <li>
+            <a href="/" class="a-button a-button--menu u-h6">Sign out</a>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+</Canvas>
