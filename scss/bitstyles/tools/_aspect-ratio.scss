@@ -1,0 +1,42 @@
+// Aspect Ratio
+//
+// **Enforces an aspect ratio on this element and its contents**.
+//
+// An element that has intrinsic shape — width will be 100%, height will be limited
+// to keep your aspect ratio. Pass in width & height parameters to set your aspect
+// ratio.
+//
+// e.g.
+//
+// ```scss
+// .u-aspect-ratio--16-10 {
+//   @include aspect-ratio(16, 10);
+// }
+//
+// .u-aspect-ratio--1-1 {
+//   @include aspect-ratio(1, 1);
+// }
+// ```
+//
+// @param {Number} $width  Unitless number. Sets the width of the element.
+//
+// @param {Number} $height  Unitless number. Sets the height of the element.
+//
+
+@mixin aspect-ratio($width, $height) {
+  aspect-ratio: $width / $height;
+
+  @supports not (aspect-ratio: $width / $height) {
+    &::before {
+      float: left;
+      padding-top: percentage($height / $width);
+      content: '';
+    }
+
+    &::after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+  }
+}

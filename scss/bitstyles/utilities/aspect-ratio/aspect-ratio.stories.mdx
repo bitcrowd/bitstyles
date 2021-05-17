@@ -1,0 +1,32 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/aspect-ratio" />
+
+# Fixed-ratio
+
+Enforce an aspect ratio on this element and its contents.
+
+The aspect-ratio element takes 100% of its parent element’s width, then the height is set so the element will maintain the specified ratio. The default ratios inclue only 16:9, defined in the Sass map `$bitstyles-aspect-ratios` under the keys `width` and `height` e.g.
+
+```scss
+$bitstyles-aspect-ratios: (
+  "16-9": (
+    'width': 16,
+    'height': 9
+  )
+)
+```
+
+No content may overflow this element.
+
+<Canvas>
+  <Story name="aspect-ratio">
+    {`
+      <div class="u-aspect-ratio--16-9">
+        <div class="u-aspect-ratio__inner u-bg--brand-2">
+          <div class="u-absolute-center u-text--center">16:9 <span class="u-block">(try resizing)</span></div>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
