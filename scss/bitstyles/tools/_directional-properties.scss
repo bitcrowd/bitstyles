@@ -1,0 +1,52 @@
+@use "sass:list";
+@use "sass:string";
+
+@function remove($list, $value) {
+  $result: ();
+
+  @for $i from 1 through list.length($list) {
+    @if nth($list, $i) != $value {
+      $result: list.append($result, nth($list, $i));
+    }
+  }
+
+  @return $result;
+}
+
+@function get-classname($classname-elements) {
+  $classname: null;
+  $classname-elements: remove($classname-elements, null);
+
+  @for $i from 1 through list.length($classname-elements) {
+    $classname-element: list.nth($classname-elements, $i);
+
+    @if $classname-element != '' and $classname-element != null {
+      $classname: if($i == 1, $classname-element,'#{$classname}#{unquote('-')}#{$classname-element}');
+    }
+  }
+
+  @return $classname;
+}
+
+@mixin output-directional-property($property-name, $property-values, $breakpoint-suffix: '') {
+  @each $size in map-get($property-values, 'sizes') {
+    @each $direction-name, $direction-properties in map-get($property-values, 'directions') {
+      $classname: get-classname(($bitstyles-namespace, 'u', $property-name, $size, $direction-name));
+
+      .#{$classname}#{$breakpoint-suffix} {
+        @each $direction in $direction-properties {
+          #{string.unquote('#{$property-name}#{$direction}')}: spacing($size);
+        }
+      }
+
+      @if $size != '0' {
+        $classname: get-classname(($bitstyles-namespace, 'u', $property-name, 'neg', $size, $direction-name));
+        .#{$classname}#{$breakpoint-suffix} {
+          @each $direction in $direction-properties {
+            #{string.unquote('#{$property-name}#{$direction}')}: -#{spacing($size)};
+          }
+        }
+      }
+    }
+  }
+}
