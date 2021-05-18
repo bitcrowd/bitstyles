@@ -1,13 +1,29 @@
-$bitstyles-margins: (
-  'directions': (
-    '': null,
-    'top': ('top'),
-    'right': ('right'),
-    'bottom': ('bottom'),
-    'left': ('left'),
-    'y': ('top', 'bottom'),
-    'x': ('right', 'left')
+$bitstyles-margin-sizes: (
+  'positive': (
+    '0': 0,
+    'xxs': spacing('xxs'),
+    'xs': spacing('xs'),
+    's': spacing('s'),
+    'm': spacing('m'),
+    'l': spacing('l'),
+    'xl': spacing('xl')
   ),
-  'sizes': ('0', 'xxs', 'xs', 's', 'm', 'l', 'xl'),
-  'breakpoints': ('base', 's', 'm')
+  'negative': (
+    'xxs': spacing('xxs'),
+    'xs': spacing('xs'),
+    's': spacing('s'),
+    'm': spacing('m'),
+    'l': spacing('l'),
+    'xl': spacing('xl')
+  )
+) !default;
+$bitstyles-margin-breakpoints: ('base', 's', 'm') !default;
+$bitstyles-margin-directions: (
+  '': null,
+  'top': ('top'),
+  'right': ('right'),
+  'bottom': ('bottom'),
+  'left': ('left'),
+  'x': ('right', 'left'),
+  'y': ('top', 'bottom')
 ) !default;
