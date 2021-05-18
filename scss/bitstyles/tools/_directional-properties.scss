@@ -13,37 +13,46 @@
   @return $result;
 }
 
-@function get-classname($classname-elements) {
+@function get-classname($classname-items) {
   $classname: null;
-  $classname-elements: remove($classname-elements, null);
+  $classname-items: remove($classname-items, null);
 
-  @for $i from 1 through list.length($classname-elements) {
-    $classname-element: list.nth($classname-elements, $i);
+  @for $i from 1 through list.length($classname-items) {
+    $classname-item: list.nth($classname-items, $i);
 
-    @if $classname-element != '' and $classname-element != null {
-      $classname: if($i == 1, $classname-element,'#{$classname}#{unquote('-')}#{$classname-element}');
+    @if $classname-item != '' and $classname-item != null {
+      $classname: if($i == 1, $classname-item, '#{$classname}#{unquote('-')}#{$classname-item}');
     }
   }
 
   @return $classname;
 }
 
-@mixin output-directional-property($property-name, $property-values, $breakpoint-suffix: '') {
-  @each $size in map-get($property-values, 'sizes') {
-    @each $direction-name, $direction-properties in map-get($property-values, 'directions') {
-      $classname: get-classname(($bitstyles-namespace, 'u', $property-name, $size, $direction-name));
+@mixin output-directional-property(
+  $name,
+  $sizes,
+  $directions,
+  $breakpoint-suffix: ''
+) {
+  @each $size in $sizes {
+    @each $direction-name, $direction-values in $directions {
+      $classname: get-classname(($bitstyles-namespace, 'u', $name, $size, $direction-name));
 
       .#{$classname}#{$breakpoint-suffix} {
-        @each $direction in $direction-properties {
-          #{string.unquote('#{$property-name}#{$direction}')}: spacing($size);
+        @each $direction in $direction-values {
+          $property: if($direction, '#{$name}-#{$direction}', $name);
+
+          #{$property}: spacing($size);
         }
       }
 
       @if $size != '0' {
-        $classname: get-classname(($bitstyles-namespace, 'u', $property-name, 'neg', $size, $direction-name));
+        $classname: get-classname(($bitstyles-namespace, 'u', $name, 'neg', $size, $direction-name));
         .#{$classname}#{$breakpoint-suffix} {
-          @each $direction in $direction-properties {
-            #{string.unquote('#{$property-name}#{$direction}')}: -#{spacing($size)};
+          @each $direction in $direction-values {
+            $property: if($direction, '#{$name}-#{$direction}', $name);
+
+            #{$property}: -#{spacing($size)};
           }
         }
       }

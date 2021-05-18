@@ -1,13 +1,25 @@
 @import './settings';
 
-@each $breakpoint-alias, $margins in $bitstyles-margins {
+$sizes: map-get($bitstyles-margins, 'sizes');
+$directions: map-get($bitstyles-margins, 'directions');
+
+@each $breakpoint-alias in map-get($bitstyles-margins, 'breakpoints') {
   @if $breakpoint-alias == 'base' {
-    @include output-directional-property('margin', $margins);
+    @include output-directional-property(
+      $name: 'margin',
+      $sizes: $sizes,
+      $directions: $directions
+    );
   }
 
   @else {
     @include media-query($breakpoint-alias) {
-      @include output-directional-property('margin', $margins, $breakpoint-suffix: '\\\@#{$breakpoint-alias}');
+      @include output-directional-property(
+        $name: 'margin',
+        $sizes: $sizes,
+        $directions: $directions,
+        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      );
     }
   }
 }

@@ -1,38 +1,13 @@
 $bitstyles-margins: (
-  'base': (
-    'sizes': ('0', 'xxs', 'xs', 's', 'm', 'l', 'xl'),
-    'directions': (
-      '': null,
-      'top': ('-top'),
-      'right': ('-right'),
-      'bottom': ('-bottom'),
-      'left': ('-left'),
-      'y': ('-top', '-bottom'),
-      'x': ('-right', '-left')
-    )
+  'directions': (
+    '': null,
+    'top': ('top'),
+    'right': ('right'),
+    'bottom': ('bottom'),
+    'left': ('left'),
+    'y': ('top', 'bottom'),
+    'x': ('right', 'left')
   ),
-  's': (
-    'sizes': ('0', 'xxs', 'xs', 's', 'm', 'l', 'xl'),
-    'directions': (
-      '': null,
-      'top': ('-top'),
-      'right': ('-right'),
-      'bottom': ('-bottom'),
-      'left': ('-left'),
-      'y': ('-top', '-bottom'),
-      'x': ('-right', '-left')
-    )
-  ),
-  'm': (
-    'sizes': ('0', 'xxs', 'xs', 's', 'm', 'l', 'xl'),
-    'directions': (
-      '': null,
-      'top': ('-top'),
-      'right': ('-right'),
-      'bottom': ('-bottom'),
-      'left': ('-left'),
-      'y': ('-top', '-bottom'),
-      'x': ('-right', '-left')
-    )
-  )
+  'sizes': ('0', 'xxs', 'xs', 's', 'm', 'l', 'xl'),
+  'breakpoints': ('base', 's', 'm')
 ) !default;
