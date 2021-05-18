@@ -2,19 +2,58 @@
 
 @import './settings';
 
-@mixin output-margins($margins, $breakpoint-suffix: '') {
-  @each $size in map-get($map: $margins, $key: 'sizes') {
-    @each $direction-name, $direction-properties in map-get($map: $margins, $key: 'directions') {
-      .#{$bitstyles-namespace}u-margin-#{$size}--#{$direction-name}#{$breakpoint-suffix} {
+@function remove($list, $value) {
+  $result: ();
+
+  @for $i from 1 through length($list) {
+    @if nth($list, $i) != $value {
+      $result: append($result, nth($list, $i));
+    }
+  }
+
+  @return $result;
+}
+
+@function get-classname($classname-elements) {
+  $classname: null;
+  $classname-elements: remove($classname-elements, null);
+  @debug $classname-elements;
+
+  @for $i from 1 through length($classname-elements) {
+    $classname-element: nth($classname-elements, $i);
+
+    @if $classname-element != '' and $classname-element != null {
+      @debug $classname-element;
+      @if $i == 1 {
+        $classname: $classname-element;
+      }
+
+      @else {
+        $classname: '#{$classname}#{unquote('-')}#{$classname-element}';
+      }
+    }
+  }
+
+  @return $classname;
+}
+
+@mixin output-directional-property($property-name, $property-values, $breakpoint-suffix: '') {
+  @each $size in map-get($property-values, 'sizes') {
+
+    @each $direction-name, $direction-properties in map-get($property-values, 'directions') {
+      $classname: get-classname(($bitstyles-namespace, 'u', $property-name, $size, $direction-name));
+
+      .#{$classname}#{$breakpoint-suffix} {
         @each $direction in $direction-properties {
-          #{string.unquote('margin#{$direction}')}: spacing($size);
+          #{string.unquote('#{$property-name}#{$direction}')}: spacing($size);
         }
       }
 
       @if $size != '0' {
-        .#{$bitstyles-namespace}u-margin-neg-#{$size}--#{$direction-name}#{$breakpoint-suffix} {
+        $classname: get-classname(($bitstyles-namespace, 'u', $property-name, 'neg', $size, $direction-name));
+        .#{$classname}#{$breakpoint-suffix} {
           @each $direction in $direction-properties {
-            #{string.unquote('margin#{$direction}')}: -#{spacing($size)};
+            #{string.unquote('#{$property-name}#{$direction}')}: -#{spacing($size)};
           }
         }
       }
@@ -24,12 +63,12 @@
 
 @each $breakpoint-alias, $margins in $bitstyles-margins {
   @if $breakpoint-alias == 'base' {
-    @include output-margins($margins);
+    @include output-directional-property('margin', $margins);
   }
 
   @else {
     @include media-query($breakpoint-alias) {
-      @include output-margins($margins, $breakpoint-suffix: '\\\@#{$breakpoint-alias}');
+      @include output-directional-property('margin', $margins, $breakpoint-suffix: '\\\@#{$breakpoint-alias}');
     }
   }
 }
