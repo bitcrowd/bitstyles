@@ -1,2 +1,38 @@
-$bitstyles-margin-sizes: ('0', 'xxs', 'xs', 's', 'm', 'l', 'xl') !default;
-$bitstyles-margin-breakpoints: ('s', 'm') !default;
+$bitstyles-margins: (
+  'base': (
+    'sizes': ('0', 'xxs', 'xs', 's', 'm', 'l', 'xl'),
+    'directions': (
+      '': (),
+      'top': ('-top'),
+      'right': ('-right'),
+      'bottom': ('-bottom'),
+      'left': ('-left'),
+      'y': ('-top', '-bottom'),
+      'x': ('-right', '-left')
+    )
+  ),
+  's': (
+    'sizes': ('0', 'xxs', 'xs', 's', 'm', 'l', 'xl'),
+    'directions': (
+      '': (),
+      'top': ('-top'),
+      'right': ('-right'),
+      'bottom': ('-bottom'),
+      'left': ('-left'),
+      'y': ('-top', '-bottom'),
+      'x': ('-right', '-left')
+    )
+  ),
+  'm': (
+    'sizes': ('0', 'xxs', 'xs', 's', 'm', 'l', 'xl'),
+    'directions': (
+      '': (),
+      'top': ('-top'),
+      'right': ('-right'),
+      'bottom': ('-bottom'),
+      'left': ('-left'),
+      'y': ('-top', '-bottom'),
+      'x': ('-right', '-left')
+    )
+  )
+) !default;
