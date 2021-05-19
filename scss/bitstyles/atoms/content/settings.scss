@@ -8,5 +8,6 @@ $bitstyles-content-max-width: (
 $bitstyles-content-max-width-base: 'm' !default;
 $bitstyles-content-padding: (
   'base':  spacing('m'),
-  'l': spacing('l')
+  'l': spacing('l'),
+  'xl': spacing('xl')
 ) !default;
