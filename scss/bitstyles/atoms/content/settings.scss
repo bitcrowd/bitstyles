@@ -1,6 +1,12 @@
-$bitstyles-content-max-width-s: 25rem !default;
-$bitstyles-content-max-width-m: 35rem !default;
-$bitstyles-content-max-width: 65rem !default;
-$bitstyles-content-horizontal-padding: spacing('m') !default;
-$bitstyles-content-horizontal-padding-large: spacing('l') !default;
-$bitstyles-content-large-breakpoint: 'l' !default; // The breakpoint at which we implement the above horizontal-padding value.
+$bitstyles-content-max-width: (
+  'xs': 25rem,
+  's': 35rem,
+  'm': 65rem,
+  'l': 85rem,
+  'full': 100%
+) !default;
+$bitstyles-content-max-width-base: 'm' !default;
+$bitstyles-content-padding: (
+  'base':  spacing('m'),
+  'l': spacing('l')
+) !default;
