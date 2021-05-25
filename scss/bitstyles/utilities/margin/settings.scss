@@ -9,12 +9,12 @@ $bitstyles-margin-sizes: (
     'xl': spacing('xl')
   ),
   'negative': (
-    'xxs': spacing('xxs'),
-    'xs': spacing('xs'),
-    's': spacing('s'),
-    'm': spacing('m'),
-    'l': spacing('l'),
-    'xl': spacing('xl')
+    'xxs': -#{spacing('xxs')},
+    'xs': -#{spacing('xs')},
+    's': -#{spacing('s')},
+    'm': -#{spacing('m')},
+    'l': -#{spacing('l')},
+    'xl': -#{spacing('xl')}
   )
 ) !default;
 $bitstyles-margin-breakpoints: ('base', 's', 'm') !default;

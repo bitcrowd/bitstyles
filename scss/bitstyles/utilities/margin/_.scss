@@ -2,13 +2,13 @@
 
 @each $breakpoint-alias in $bitstyles-margin-breakpoints {
   @if $breakpoint-alias == 'base' {
-    @include output-directional-property(
+    @include output-directional-properties(
       $property-name: 'margin',
       $classname-root: 'margin',
       $values: map-get($bitstyles-margin-sizes, 'positive'),
       $directions: $bitstyles-margin-directions
     );
-    @include output-directional-property(
+    @include output-directional-properties(
       $property-name: 'margin',
       $classname-root: 'margin-neg',
       $values: map-get($bitstyles-margin-sizes, 'negative'),
@@ -18,14 +18,14 @@
 
   @else {
     @include media-query($breakpoint-alias) {
-      @include output-directional-property(
+      @include output-directional-properties(
         $property-name: 'margin',
         $classname-root: 'margin',
         $values: map-get($bitstyles-margin-sizes, 'positive'),
         $directions: $bitstyles-margin-directions,
         $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
       );
-      @include output-directional-property(
+      @include output-directional-properties(
         $property-name: 'margin',
         $classname-root: 'margin-neg',
         $values: map-get($bitstyles-margin-sizes, 'negative'),
