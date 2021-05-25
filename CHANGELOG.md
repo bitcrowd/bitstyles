@@ -12,11 +12,8 @@
 - You can now override the sizes the margin & padding utility classes are output for, using `$bitstyles-margin-sizes` and `$bitstyles-padding-sizes` respectively
 - Border utility classes are now available at all four directions, and on a per-color basis. Currectly only `gray-10` and `gray-70`, this can now be customized using sass variables.
 - Border utility classes can now be available at breakpoints by overriding the `$bitstyles-border-breakpoints` variable
-
-## Breaking
-
-- The double-dashes have been removed from the `.u-margin` and `.u-padding` classes (e.g. `.u-margin-m--top`). To migrate, replace the `--` in the classnames with `-`
-- The `.u-border--top` `.u-border--bottom` classes have been replaced with `.u-border-gray-70-top` and `.u-border-gray-10-bottom` respectively
+- Default breakpoints now include `xl`, for ultra-widescreens
+- `.a-content` max-width and padding is now customisable use Sass variables, and by default now includes a 100% option
 
 ## Fixed
 
@@ -24,9 +21,12 @@
 
 ## Breaking
 
+- The double-dashes have been removed from the `.u-margin` and `.u-padding` classes (e.g. `.u-margin-m--top`). To migrate, replace the `--` in the classnames with `-`
+- The `.u-border--top` `.u-border--bottom` classes have been replaced with `.u-border-gray-70-top` and `.u-border-gray-10-bottom` respectively
 - `.u-fixed-ratio` is renamed `.u-aspect-ratio`, and the double-dashes are replaced with single. Please rename all uses e.g. `.u-fixed-ratio--16-9` becomes `.u-aspect-ratio-16-9`
 - `.u-fixed-ratio__inner` has been removed, and is no longer necessary. To migrate, move other classes that may be on that element to the `.u-fixed-ratio` element, and remove the `.u-fixed-ratio__inner` element
 - Now requires version `^1.34.0` of `dart-sass`, in order to use the new `Math.div` function, and remove all the division using `/` characters.
+- Removes the `content` mixin. If you need the `content` functionality, use the `.a-content` classname instead (it’s customisable using Sass variables, see the settings.scss file)
 
 # [[1.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.2.0) - 2021-05-04
 
