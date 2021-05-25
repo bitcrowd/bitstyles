@@ -10,10 +10,13 @@
 - Gap sizes can now be specified, and the class suffixes named, using a Sass variable
 - You can now override which directions the margin and padding utility classes are output for (`top`, `bottom`, etc.), and what those classes are named independently of the CSS property, using `$bitstyles-margin-directions` and `$bitstyles-padding-directions` respectively
 - You can now override the sizes the margin & padding utility classes are output for, using `$bitstyles-margin-sizes` and `$bitstyles-padding-sizes` respectively
+- Border utility classes are now available at all four directions, and on a per-color basis. Currectly only `gray-10` and `gray-70`, this can now be customized using sass variables.
+- Border utility classes can now be available at breakpoints by overriding the `$bitstyles-border-breakpoints` variable
 
 ## Breaking
 
 - The double-dashes have been removed from the `.u-margin` and `.u-padding` classes (e.g. `.u-margin-m--top`). To migrate, replace the `--` in the classnames with `-`
+- The `.u-border--top` `.u-border--bottom` classes have been replaced with `.u-border-gray-70-top` and `.u-border-gray-10-bottom` respectively
 
 ## Breaking
 
