@@ -4,7 +4,90 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Padding
 
-Set padding on an element.
+Apply padding of a specified size and direction.
+
+Available combinable variations:
+
+- `0`, `xs`, `s`, `m`, `l`, `xl`, `xxl` sizes
+- `top`, `right`, `bottom`, `left`, `x`, `y` directions
+- `@m` and `@l` breakpoint suffixes.
+
+<Canvas>
+  <Story name="padding-xs">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xs">u-padding-xs</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xs-top">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xs-top">u-padding-xs-top</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xs-right">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xs-right">u-padding-xs-right</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xs-bottom">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xs-bottom">u-padding-xs-bottom</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xs-left">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xs-left">u-padding-xs-left</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+
+<Canvas>
+  <Story name="padding-s">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-s">u-padding-s</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-s-top">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-s-top">u-padding-s-top</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-s-right">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-s-right">u-padding-s-right</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-s-bottom">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-s-bottom">u-padding-s-bottom</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-s-left">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-s-left">u-padding-s-left</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
 
 <Canvas>
   <Story name="padding-m">
@@ -14,38 +97,107 @@ Set padding on an element.
       </div>
     `}
   </Story>
-  <Story name="padding-0">
+  <Story name="padding-m-top">
     {`
-      <div class="u-bg--brand-2 u-padding-0">
-        <div class="u-bg--background u-padding-0">u-padding-0</div>
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-m-top">u-padding-m-top</div>
       </div>
     `}
   </Story>
-  <Story name="padding--m-top">
+  <Story name="padding-m-right">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-padding-m--top">u-padding-m--top</div>
+        <div class="u-bg--background u-padding-m-right">u-padding-m-right</div>
       </div>
     `}
   </Story>
-  <Story name="padding--m-right">
+  <Story name="padding-m-bottom">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-padding-m--right">u-padding--m-right</div>
+        <div class="u-bg--background u-padding-m-bottom">u-padding-m-bottom</div>
       </div>
     `}
   </Story>
-  <Story name="padding--m-bottom">
+  <Story name="padding-m-left">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-padding--m-bottom">u-padding--m-bottom</div>
+        <div class="u-bg--background u-padding-m-left">u-padding-m-left</div>
       </div>
     `}
   </Story>
-  <Story name="padding--m-left">
+</Canvas>
+
+<Canvas>
+  <Story name="padding-l">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-padding-m--left">u-padding-m--left</div>
+        <div class="u-bg--background u-padding-l">u-padding-l</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-l-top">
+    {`
+      <div class="u-bg--brand-2 u-padding-l">
+        <div class="u-bg--background u-padding-l-top">u-padding-l-top</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-l-right">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-l-right">u-padding-l-right</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-l-bottom">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-l-bottom">u-padding-l-bottom</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-l-left">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-l-left">u-padding-l-left</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="padding-xl">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl">u-padding-xl</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xl-top">
+    {`
+      <div class="u-bg--brand-2 u-padding-l">
+        <div class="u-bg--background u-padding-xl-top">u-padding-xl-top</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xl-right">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl-right">u-padding-xl-right</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xl-bottom">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl-bottom">u-padding-xl-bottom</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xl-left">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl-left">u-padding-xl-left</div>
       </div>
     `}
   </Story>

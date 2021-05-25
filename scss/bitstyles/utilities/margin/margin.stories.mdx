@@ -6,6 +6,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Apply margins of a specified size and direction.
 
+Available combinable variations:
+
+- `0`, `xxs`, `xs`, `s`, `m`, `l`, `xl` sizes
+- `neg` for negative margins
+- `top`, `right`, `bottom`, `left`, `x`, `y` directions
+- `@s` and `@m` breakpoint suffixes
+
 <Canvas>
   <Story name="margin-0">
     {`
@@ -39,6 +46,20 @@ Apply margins of a specified size and direction.
     {`
       <div class="u-bg--brand-2 u-padding-m">
         <div class="u-bg--background u-margin-0-left">u-margin-0-left</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-0-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-0-x">u-margin-0-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-0-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-0-y">u-margin-0-y</div>
       </div>
     `}
   </Story>
@@ -80,6 +101,20 @@ Apply margins of a specified size and direction.
       </div>
     `}
   </Story>
+  <Story name="margin-xxs-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xxs-x">u-margin-xxs-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xxs-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xxs-y">u-margin-xxs-y</div>
+      </div>
+    `}
+  </Story>
 </Canvas>
 
 <Canvas>
@@ -118,6 +153,20 @@ Apply margins of a specified size and direction.
       </div>
     `}
   </Story>
+  <Story name="margin-xs-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xs-x">u-margin-xs-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xs-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xs-y">u-margin-xs-y</div>
+      </div>
+    `}
+  </Story>
 </Canvas>
 
 <Canvas>
@@ -153,6 +202,20 @@ Apply margins of a specified size and direction.
     {`
       <div class="u-bg--brand-2 u-padding-m">
         <div class="u-bg--background u-margin-s-left">u-margin-s-left</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-s-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-s-x">u-margin-s-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-s-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-s-y">u-margin-s-y</div>
       </div>
     `}
   </Story>
@@ -195,6 +258,20 @@ Apply margins of a specified size and direction.
       </div>
     `}
   </Story>
+  <Story name="margin-m-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-m-x">u-margin-m-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-m-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-m-y">u-margin-m-y</div>
+      </div>
+    `}
+  </Story>
 </Canvas>
 
 <Canvas>
@@ -233,6 +310,20 @@ Apply margins of a specified size and direction.
       </div>
     `}
   </Story>
+  <Story name="margin-l-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xs-x">u-margin-l-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-l-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-l-y">u-margin-l-y</div>
+      </div>
+    `}
+  </Story>
 </Canvas>
 
 <Canvas>
@@ -268,6 +359,20 @@ Apply margins of a specified size and direction.
     {`
       <div class="u-bg--brand-2 u-padding-m">
         <div class="u-bg--background u-margin-xl-left">u-margin-xl-left</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xl-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl-x">u-margin-xl-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xl-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl-y">u-margin-xl-y</div>
       </div>
     `}
   </Story>
@@ -313,6 +418,20 @@ The same margin sizes (assuming default configuration) are available in negative
       </div>
     `}
   </Story>
+  <Story name="margin-neg-xxs-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xxs-x">u-margin-neg-xxs-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-xxs-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xxs-y">u-margin-neg-xxs-y</div>
+      </div>
+    `}
+  </Story>
 </Canvas>
 
 <Canvas>
@@ -348,6 +467,20 @@ The same margin sizes (assuming default configuration) are available in negative
     {`
       <div class="u-bg--brand-2 u-padding-m">
         <div class="u-bg--background u-margin-neg-xs-left">u-margin-neg-xs-left</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-xs-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xs-x">u-margin-neg-xs-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-xs-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xs-y">u-margin-neg-xs-y</div>
       </div>
     `}
   </Story>
@@ -389,8 +522,21 @@ The same margin sizes (assuming default configuration) are available in negative
       </div>
     `}
   </Story>
+  <Story name="margin-neg-s-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-s-x">u-margin-neg-s-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-s-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-s-y">u-margin-neg-s-y</div>
+      </div>
+    `}
+  </Story>
 </Canvas>
-
 
 <Canvas>
   <Story name="margin-neg-m">
@@ -425,6 +571,20 @@ The same margin sizes (assuming default configuration) are available in negative
     {`
       <div class="u-bg--brand-2 u-padding-m">
         <div class="u-bg--background u-margin-neg-m-left">u-margin-neg-m-left</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-m-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-m-x">u-margin-neg-m-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-m-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-m-y">u-margin-neg-m-y</div>
       </div>
     `}
   </Story>
@@ -466,6 +626,20 @@ The same margin sizes (assuming default configuration) are available in negative
       </div>
     `}
   </Story>
+  <Story name="margin-neg-l-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-l-x">u-margin-neg-l-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-l-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-l-y">u-margin-neg-l-y</div>
+      </div>
+    `}
+  </Story>
 </Canvas>
 
 <Canvas>
@@ -501,6 +675,20 @@ The same margin sizes (assuming default configuration) are available in negative
     {`
       <div class="u-bg--brand-2 u-padding-m">
         <div class="u-bg--background u-margin-neg-xl-left">u-margin-neg-xl-left</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-xl-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xl-x">u-margin-neg-xl-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-xl-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xl-y">u-margin-neg-xl-y</div>
       </div>
     `}
   </Story>
