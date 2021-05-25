@@ -5,7 +5,7 @@
     @include output-directional-property(
       $property-name: 'padding',
       $classname-root: 'padding',
-      $sizes: map-get($bitstyles-padding-sizes, 'positive'),
+      $values: map-get($bitstyles-padding-sizes, 'positive'),
       $directions: $bitstyles-padding-directions
     );
   }
@@ -15,7 +15,7 @@
       @include output-directional-property(
         $property-name: 'padding',
         $classname-root: 'padding',
-        $sizes: map-get($bitstyles-padding-sizes, 'positive'),
+        $values: map-get($bitstyles-padding-sizes, 'positive'),
         $directions: $bitstyles-padding-directions,
         $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
       );

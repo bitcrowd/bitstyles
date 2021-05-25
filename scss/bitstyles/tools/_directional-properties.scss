@@ -28,28 +28,28 @@
   @return $classname;
 }
 
-@mixin output-property-directions($direction-values, $name, $size) {
+@mixin output-property-directions($direction-values, $name, $value) {
   @each $direction in $direction-values {
     $property: if($direction, '#{$name}-#{$direction}', $name);
 
-    #{$property}: $size;
+    #{$property}: $value;
   }
 }
 
 @mixin output-directional-property(
   $property-name,
   $classname-root,
-  $sizes,
+  $values,
   $directions,
   $breakpoint-suffix: ''
 ) {
-  @each $size-alias, $size-value in $sizes {
+  @each $alias, $value in $values {
     @each $direction-name, $direction-values in $directions {
       $classname: get-classname(
         ($bitstyles-namespace,
         'u',
         $classname-root,
-        $size-alias,
+        $alias,
         $direction-name
       )
     );
@@ -58,7 +58,7 @@
         @include output-property-directions(
           $direction-values: $direction-values,
           $name: $property-name,
-          $size: $size-value
+          $value: $value
         );
       }
     }

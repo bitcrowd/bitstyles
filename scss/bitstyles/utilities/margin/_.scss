@@ -5,13 +5,13 @@
     @include output-directional-property(
       $property-name: 'margin',
       $classname-root: 'margin',
-      $sizes: map-get($bitstyles-margin-sizes, 'positive'),
+      $values: map-get($bitstyles-margin-sizes, 'positive'),
       $directions: $bitstyles-margin-directions
     );
     @include output-directional-property(
       $property-name: 'margin',
       $classname-root: 'margin-neg',
-      $sizes: map-get($bitstyles-margin-sizes, 'negative'),
+      $values: map-get($bitstyles-margin-sizes, 'negative'),
       $directions: $bitstyles-margin-directions
     );
   }
@@ -21,14 +21,14 @@
       @include output-directional-property(
         $property-name: 'margin',
         $classname-root: 'margin',
-        $sizes: map-get($bitstyles-margin-sizes, 'positive'),
+        $values: map-get($bitstyles-margin-sizes, 'positive'),
         $directions: $bitstyles-margin-directions,
         $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
       );
       @include output-directional-property(
         $property-name: 'margin',
         $classname-root: 'margin-neg',
-        $sizes: map-get($bitstyles-margin-sizes, 'negative'),
+        $values: map-get($bitstyles-margin-sizes, 'negative'),
         $directions: $bitstyles-margin-directions,
         $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
       );
