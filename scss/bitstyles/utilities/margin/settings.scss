@@ -17,7 +17,7 @@ $bitstyles-margin-sizes: (
     'xl': -#{spacing('xl')}
   )
 ) !default;
-$bitstyles-margin-breakpoints: ('base', 's', 'm') !default;
+$bitstyles-margin-breakpoints: ('base', 's', 'm', 'xl') !default;
 $bitstyles-margin-directions: (
   '': null,
   'top': ('top'),
