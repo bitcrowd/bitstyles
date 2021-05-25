@@ -2,7 +2,7 @@
 
 @each $breakpoint-alias in $bitstyles-border-breakpoints {
   @if $breakpoint-alias == 'base' {
-    @include output-directional-property(
+    @include output-directional-properties(
       $property-name: 'border',
       $classname-root: 'border',
       $values: $bitstyles-border-colors,
@@ -12,7 +12,7 @@
 
   @else {
     @include media-query($breakpoint-alias) {
-      @include output-directional-property(
+      @include output-directional-properties(
         $property-name: 'border',
         $classname-root: 'border',
         $values: $bitstyles-border-colors,
