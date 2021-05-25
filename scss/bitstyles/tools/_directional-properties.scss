@@ -65,13 +65,14 @@
   @each $alias, $value in $values {
     @each $direction-name, $direction-values in $directions {
       $classname: get-classname(
-        ($bitstyles-namespace,
-        'u',
-        $classname-root,
-        $alias,
-        $direction-name
-      )
-    );
+        (
+          $bitstyles-namespace,
+          'u',
+          $classname-root,
+          $alias,
+          $direction-name
+        )
+      );
 
       .#{$classname}#{$breakpoint-suffix} {
         @include output-property-directions(
