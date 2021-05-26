@@ -11,7 +11,7 @@
 
 ## Breaking
 
-- `.u-fixed-ratio` is renamed `.u-aspect-ratio`, please rename all uses
+- `.u-fixed-ratio` is renamed `.u-aspect-ratio`, and the double-dashes are replaced with single. Please rename all uses e.g. `.u-fixed-ratio--16-9` becomes `.u-aspect-ratio-16-9`
 - `.u-fixed-ratio__inner` has been removed, and is no longer necessary. To migrate, move other classes that may be on that element to the `.u-fixed-ratio` element, and remove the `.u-fixed-ratio__inner` element
 
 # [[1.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.2.0) - 2021-05-04
