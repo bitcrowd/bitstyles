@@ -4,14 +4,33 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Margin
 
-Apply margins of a specified size and direction.
+Apply margins of a specified size and direction to an element.
 
-Available combinable variations:
+With default configuration, the margins are available in sizes `0`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, with negative-margin variations of each. This can be configured by overriding `$bitstyles-margin-sizes` e.g.
 
-- `0`, `xxs`, `xs`, `s`, `m`, `l`, `xl` sizes
-- `neg` for negative margins
-- `top`, `right`, `bottom`, `left`, `x`, `y` directions
-- `@s` and `@m` breakpoint suffixes
+```scss
+$bitstyles-margin-sizes: (
+  'positive': (
+    '0': 0,
+    'xxs': spacing('xxs'),
+    'xs': spacing('xs'),
+    's': spacing('s'),
+    'm': spacing('m'),
+    'l': spacing('l'),
+    'xl': spacing('xl')
+  ),
+  'negative': (
+    'xxs': -#{spacing('xxs')},
+    'xs': -#{spacing('xs')},
+    's': -#{spacing('s')},
+    'm': -#{spacing('m')},
+    'l': -#{spacing('l')},
+    'xl': -#{spacing('xl')}
+  )
+);
+```
+
+## Margin sizes
 
 <Canvas>
   <Story name="margin-0">
@@ -21,51 +40,6 @@ Available combinable variations:
       </div>
     `}
   </Story>
-  <Story name="margin-0-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-0-top">u-margin-0-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-0-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-0-right">u-margin-0-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-0-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-0-bottom">u-margin-0-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-0-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-0-left">u-margin-0-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-0-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-0-x">u-margin-0-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-0-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-0-y">u-margin-0-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
   <Story name="margin-xxs">
     {`
       <div class="u-bg--brand-2 u-padding-m">
@@ -73,51 +47,6 @@ Available combinable variations:
       </div>
     `}
   </Story>
-  <Story name="margin-xxs-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xxs-top">u-margin-xxs-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xxs-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xxs-right">u-margin-xxs-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xxs-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xxs-bottom">u-margin-xxs-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xxs-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xxs-left">u-margin-xxs-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xxs-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xxs-x">u-margin-xxs-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xxs-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xxs-y">u-margin-xxs-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
   <Story name="margin-xs">
     {`
       <div class="u-bg--brand-2 u-padding-m">
@@ -125,51 +54,6 @@ Available combinable variations:
       </div>
     `}
   </Story>
-  <Story name="margin-xs-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xs-top">u-margin-xs-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xs-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xs-right">u-margin-xs-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xs-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xs-bottom">u-margin-xs-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xs-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xs-left">u-margin-xs-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xs-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xs-x">u-margin-xs-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-xs-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xs-y">u-margin-xs-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
   <Story name="margin-s">
     {`
       <div class="u-bg--brand-2 u-padding-m">
@@ -177,52 +61,6 @@ Available combinable variations:
       </div>
     `}
   </Story>
-  <Story name="margin-s-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-s-top">u-margin-s-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-s-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-s-right">u-margin-s-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-s-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-s-bottom">u-margin-s-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-s-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-s-left">u-margin-s-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-s-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-s-x">u-margin-s-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-s-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-s-y">u-margin-s-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-
-<Canvas>
   <Story name="margin-m">
     {`
       <div class="u-bg--brand-2 u-padding-m">
@@ -230,51 +68,6 @@ Available combinable variations:
       </div>
     `}
   </Story>
-  <Story name="margin-m-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m-top">u-margin-m-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-m-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m-right">u-margin-m-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-m-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m-bottom">u-margin-m-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-m-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m-left">u-margin-m-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-m-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m-x">u-margin-m-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-m-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m-y">u-margin-m-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
   <Story name="margin-l">
     {`
       <div class="u-bg--brand-2 u-padding-m">
@@ -282,51 +75,6 @@ Available combinable variations:
       </div>
     `}
   </Story>
-  <Story name="margin-l-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-l-top">u-margin-l-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-l-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-l-right">u-margin-l-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-l-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-l-bottom">u-margin-l-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-l-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-l-left">u-margin-l-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-l-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-xs-x">u-margin-l-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-l-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-l-y">u-margin-l-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
   <Story name="margin-xl">
     {`
       <div class="u-bg--brand-2 u-padding-m">
@@ -334,6 +82,76 @@ Available combinable variations:
       </div>
     `}
   </Story>
+</Canvas>
+
+## Negative margin sizes
+
+<Canvas>
+  <Story name="margin-neg-xxs">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xxs">u-margin-neg-xxs</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-xs">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xs">u-margin-neg-xs</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-s">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-s">u-margin-neg-s</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-m">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-m">u-margin-neg-m</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-l">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-l">u-margin-neg-l</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-xl">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xl">u-margin-neg-xl</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Directional margins
+
+Every margin size (negative and positive) is also available directed at the single sides `top`, `right`, `bottom`, `left`, and the double directions `x` and `y`.
+
+This can be customised by overriding `$bitstyles-margin-directions` e.g.
+
+```scss
+$bitstyles-margin-directions: (
+  '': null,
+  'top': ('top'),
+  'right': ('right'),
+  'bottom': ('bottom'),
+  'left': ('left'),
+  'x': ('right', 'left'),
+  'y': ('top', 'bottom')
+);
+```
+
+The `'': null` entry is needed to render the margin classes with no directional modifiers.
+
+<Canvas>
   <Story name="margin-xl-top">
     {`
       <div class="u-bg--brand-2 u-padding-m">
@@ -378,317 +196,28 @@ Available combinable variations:
   </Story>
 </Canvas>
 
-## Negative margins
+## Responsive margins
 
-The same margin sizes (assuming default configuration) are available in negative, excluding the `0` margins.
+All the margins are also available at the `@s` and `@m` breakpoint suffixes. To customise this, override `$bitstyles-margin-breakpoints` e.g.
 
-<Canvas>
-  <Story name="margin-neg-xxs">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xxs">u-margin-neg-xxs</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xxs-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xxs-top">u-margin-neg-xxs-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xxs-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xxs-right">u-margin-neg-xxs-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xxs-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xxs-bottom">u-margin-neg-xxs-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xxs-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xxs-left">u-margin-neg-xxs-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xxs-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xxs-x">u-margin-neg-xxs-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xxs-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xxs-y">u-margin-neg-xxs-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
+```scss
+$bitstyles-margin-breakpoints: ('base', 's', 'm');
+```
+
+If you remove `base`, margin classes will not be output without a breakpoint.
 
 <Canvas>
-  <Story name="margin-neg-xs">
+  <Story name="margin-xl@s">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xs">u-margin-neg-xs</div>
+        <div class="u-bg--background u-margin-xl@s">u-margin-xl@s</div>
       </div>
     `}
   </Story>
-  <Story name="margin-neg-xs-top">
+  <Story name="margin-xl@m">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xs-top">u-margin-neg-xs-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xs-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xs-right">u-margin-neg-xs-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xs-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xs-bottom">u-margin-neg-xs-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xs-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xs-left">u-margin-neg-xs-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xs-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xs-x">u-margin-neg-xs-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xs-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xs-y">u-margin-neg-xs-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="margin-neg-s">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-s">u-margin-neg-s</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-s-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-s-top">u-margin-neg-s-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-s-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-s-right">u-margin-neg-s-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-s-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-s-bottom">u-margin-neg-s-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-s-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-s-left">u-margin-neg-s-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-s-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-s-x">u-margin-neg-s-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-s-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-s-y">u-margin-neg-s-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="margin-neg-m">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-m">u-margin-neg-m</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-m-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-m-top">u-margin-neg-m-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-m-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-m-right">u-margin-neg-m-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-m-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-m-bottom">u-margin-neg-m-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-m-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-m-left">u-margin-neg-m-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-m-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-m-x">u-margin-neg-m-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-m-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-m-y">u-margin-neg-m-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="margin-neg-l">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-l">u-margin-neg-l</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-l-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-l-top">u-margin-neg-l-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-l-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-l-right">u-margin-neg-l-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-l-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-l-bottom">u-margin-neg-l-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-l-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-l-left">u-margin-neg-l-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-l-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-l-x">u-margin-neg-l-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-l-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-l-y">u-margin-neg-l-y</div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="margin-neg-xl">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xl">u-margin-neg-xl</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xl-top">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xl-top">u-margin-neg-xl-top</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xl-right">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xl-right">u-margin-neg-xl-right</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xl-bottom">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xl-bottom">u-margin-neg-xl-bottom</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xl-left">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xl-left">u-margin-neg-xl-left</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xl-x">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xl-x">u-margin-neg-xl-x</div>
-      </div>
-    `}
-  </Story>
-  <Story name="margin-neg-xl-y">
-    {`
-      <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-neg-xl-y">u-margin-neg-xl-y</div>
+        <div class="u-bg--background u-margin-xl@m">u-margin-xl@m</div>
       </div>
     `}
   </Story>
