@@ -1,6 +1,12 @@
 @use "sass:list";
 @use "sass:string";
 
+/*
+ * Removes a value from a list
+ *
+ * @param $list The list from which to remove values
+ * @param $value The value to remove from the list. Values that occur multiple times will all be removed
+ */
 @function remove($list, $value) {
   $result: ();
 
