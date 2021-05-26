@@ -9,7 +9,7 @@ $bitstyles-padding-sizes: (
     'xxl': spacing('xxl')
   )
 ) !default;
-$bitstyles-padding-breakpoints: ('base', 'm', 'l', 'xl') !default;
+$bitstyles-padding-breakpoints: ('base', 'm', 'l') !default;
 $bitstyles-padding-directions: (
   '': null,
   'top': ('top'),
