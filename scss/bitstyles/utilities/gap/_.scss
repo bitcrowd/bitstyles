@@ -1,3 +1,7 @@
-.#{$bitstyles-namespace}u-gap-m {
-  gap: spacing('m');
+@import './settings';
+
+@each $gap-size-alias, $gap-size in ($bitstyles-gap-sizes) {
+  .#{$bitstyles-namespace}u-gap-#{$gap-size-alias} {
+    gap: $gap-size;
+  }
 }

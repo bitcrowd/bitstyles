@@ -6,10 +6,42 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 The gap classes specify gaps on your grid elements — space between each grid item, but no space around them (you need to handle the space outside yourself).
 
+By default, `s`, `m`, and `l` sizes are available. This can be customized by overriding `$bitstyles-gap-sizes` e.g.
+
+```scss
+$bitstyles-gap-sizes: (
+  'my-gap-size': 5rem
+);
+```
+
 <Canvas>
+  <Story name="u-gap-s">
+    {`
+      <div class="u-grid u-padding-m u-gap-s u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">Grid child 1</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 2</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 3</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 4</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 5</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 6</div>
+      </div>
+    `}
+  </Story>
   <Story name="u-gap-m">
     {`
       <div class="u-grid u-padding-m u-gap-m u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">Grid child 1</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 2</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 3</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 4</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 5</div>
+        <div class="u-bg--background u-padding-m a-card">Grid child 6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-gap-l">
+    {`
+      <div class="u-grid u-padding-m u-gap-l u-bg--gray-10">
         <div class="u-bg--background u-padding-m a-card">Grid child 1</div>
         <div class="u-bg--background u-padding-m a-card">Grid child 2</div>
         <div class="u-bg--background u-padding-m a-card">Grid child 3</div>
