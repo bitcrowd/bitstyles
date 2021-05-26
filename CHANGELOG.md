@@ -11,7 +11,7 @@
 
 ## Fixed
 
-- Every classname is now prefixed with `$$bitstyles-namespace`, if specified
+- Every classname is now prefixed with `$bitstyles-namespace`, if specified
 
 ## Breaking
 
