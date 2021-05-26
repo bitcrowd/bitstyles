@@ -1,9 +1,9 @@
-.u-relative {
+.#{$bitstyles-namespace}u-relative {
   position: relative;
 }
 
 @include media-query('m') {
-  .u-relative\@m {
+  .#{$bitstyles-namespace}u-relative\@m {
     position: relative;
   }
 }

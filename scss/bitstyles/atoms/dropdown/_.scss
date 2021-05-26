@@ -1,6 +1,6 @@
 @import './settings';
 
-.a-dropdown {
+.#{$bitstyles-namespace}a-dropdown {
   position: absolute;
   top: 100%;
   z-index: 1;
@@ -22,11 +22,11 @@
   }
 }
 
-.a-dropdown--right {
+.#{$bitstyles-namespace}a-dropdown--right {
   right: 0;
 }
 
-.a-dropdown--top {
+.#{$bitstyles-namespace}a-dropdown--top {
   top: auto;
   bottom: 100%;
 }
@@ -39,7 +39,7 @@
 }
 
 @include media-query('s') {
-  .a-dropdown {
+  .#{$bitstyles-namespace}a-dropdown {
     right: spacing('m');
     left: spacing('m');
     width: calc(100vw - #{spacing('m') * 2});

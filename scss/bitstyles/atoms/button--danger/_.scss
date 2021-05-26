@@ -1,6 +1,6 @@
 @import './settings';
 
-.a-button--danger {
+.#{$bitstyles-namespace}a-button--danger {
   &:hover,
   &:focus {
     color: $bitstyles-button-danger-color-hover;

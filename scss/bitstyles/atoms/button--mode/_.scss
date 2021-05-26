@@ -1,10 +1,10 @@
 @import './settings.scss';
 
-.a-button--mode-container {
+.#{$bitstyles-namespace}a-button--mode-container {
   border-radius: spacing('s');
 }
 
-.a-button--mode {
+.#{$bitstyles-namespace}a-button--mode {
   padding-top: 0;
   padding-bottom: 0;
 

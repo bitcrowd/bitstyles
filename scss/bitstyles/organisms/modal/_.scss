@@ -5,7 +5,7 @@
   visibility: hidden;
 }
 
-.#{$bitstyles-namespace}c-modal__overlay {
+.#{$bitstyles-namespace}o-modal__overlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -26,7 +26,7 @@
   }
 }
 
-.#{$bitstyles-namespace}c-modal__content {
+.#{$bitstyles-namespace}o-modal__content {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -53,7 +53,7 @@
 }
 
 @include media-query($bitstyles-modal-breakpoint) {
-  .#{$bitstyles-namespace}c-modal__content {
+  .#{$bitstyles-namespace}o-modal__content {
     transition: all $bitstyles-modal-transition-duration $bitstyles-modal-transition-easing, visibility 0 $bitstyles-modal-transition-easing;
 
     [aria-hidden="true"] & {
@@ -64,9 +64,9 @@
 }
 
 @mixin modal-variation($state) {
-  .#{$bitstyles-namespace}c-modal--animation-#{$state} {
+  .#{$bitstyles-namespace}o-modal--animation-#{$state} {
     &[aria-hidden="true"] {
-      .#{$bitstyles-namespace}c-modal__content {
+      .#{$bitstyles-namespace}o-modal__content {
         @content;
       }
     }

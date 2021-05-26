@@ -59,7 +59,7 @@
   }
 }
 
-.a-button__avatar,
+.#{$bitstyles-namespace}a-button__avatar,
 .#{$bitstyles-namespace}a-button__icon {
   margin-right: $bitstyles-button-icon-spacing;
   margin-left: -$bitstyles-button-icon-spacing / 4;

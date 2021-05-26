@@ -1,6 +1,6 @@
 @import './settings';
 
-.a-button--nav {
+.#{$bitstyles-namespace}a-button--nav {
   padding: $bitstyles-button-nav-padding-vertical $bitstyles-button-nav-padding-horizontal;
   justify-content: flex-start;
   border-radius: $bitstyles-button-nav-border-radius;
@@ -45,7 +45,7 @@
   }
 }
 
-.a-button-nav__icon {
+.#{$bitstyles-namespace}a-button-nav__icon {
   margin-right: $bitstyles-button-nav-padding-horizontal;
   margin-left: -#{$bitstyles-button-nav-padding-horizontal / 4};
 }

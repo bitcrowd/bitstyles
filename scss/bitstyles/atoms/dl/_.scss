@@ -1,9 +1,9 @@
-.a-dl {
+.#{$bitstyles-namespace}a-dl {
   border-top: 1px solid palette('gray', '5');
 }
 
 @include media-query('m') {
-  .a-dl__item {
+  .#{$bitstyles-namespace}a-dl__item {
     border-bottom: 1px solid palette('gray', '5');
   }
 }

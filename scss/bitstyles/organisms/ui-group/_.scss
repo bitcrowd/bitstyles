@@ -1,18 +1,18 @@
 @import './settings';
 
-.o-ui-group {
+.#{$bitstyles-namespace}o-ui-group {
   border-radius: $bitstyles-ui-group-border-radius;
   box-shadow: $bitstyles-ui-group-box-shadow;
 }
 
-.o-ui-group__item {
+.#{$bitstyles-namespace}o-ui-group__item {
   box-shadow: none;
 
   &,
   &:hover,
   &:active,
   &:focus {
-    &:not(.o-ui-group__last) {
+    &:not(.#{$bitstyles-namespace}o-ui-group__last) {
       border-right: 0;
     }
   }

@@ -1,6 +1,6 @@
 @import './settings';
 
-.o-table {
+.#{$bitstyles-namespace}o-table {
   width: 100%;
 
   /* stylelint-disable selector-max-type */
@@ -25,7 +25,7 @@
   }
   /* stylelint-enable selector-max-type */
 
-  .o-table__actions {
+  .#{$bitstyles-namespace}o-table__actions {
     padding-right: $bitstyles-table-padding-vertical-td;
   }
 }

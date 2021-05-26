@@ -1,10 +1,10 @@
 @import './settings';
 
-.o-sidebar--large {
+.#{$bitstyles-namespace}o-sidebar--large {
   width: $bitstyles-sidebar-large-width;
 }
 
-.o-sidebar--small {
+.#{$bitstyles-namespace}o-sidebar--small {
   position: fixed;
   top: 0;
   bottom: 0;
