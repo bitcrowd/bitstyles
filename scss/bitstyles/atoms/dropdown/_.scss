@@ -40,9 +40,8 @@
 
 @include media-query('s') {
   .#{$bitstyles-namespace}a-dropdown {
-    right: spacing('m');
-    left: spacing('m');
-    width: calc(100vw - #{spacing('m') * 2});
-    max-width: 100vw;
+    right: 0;
+    left: 0;
+    width: 100%;
   }
 }

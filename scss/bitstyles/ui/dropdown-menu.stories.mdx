@@ -7,7 +7,7 @@ import icons from '../../../assets/images/icons.svg';
 
 A button that when clicked reveals a floating menu of links. This is a combination of an `.a-button--ui` as the button that is clicked to show/hide the menu, an `.a-dropdown` menu that’s the container for a series of `.a-button--menu` sub-items.
 
-For the sake of clarity, the examples shown here are all presented with the menus already visible, but when you’re using them in a project the `.a-dropdown` must get the class `.u-hidden`. The component requires JS (not yet provided) to remove/add that class when the user clicks the `.a-button--ui`.
+The component requires JS to show and hide the `ul`, and update the aria attributes when the user clicks the `.a-button--ui`.
 
 <details class="u-margin-xl-y">
   <summary class="u-h4 u-font--medium">Examples use</summary>
@@ -29,18 +29,25 @@ For the sake of clarity, the examples shown here are all presented with the menu
   </ul>
 </details>
 
+## Default
+
+These examples show various contents for the dropdown menus — what you put in it is up to you, but things to note are:
+
+- the `<li role="separator"></li>` that provide visual and semantic sepearators
+- the standard menu items are likely to be created using `.a-button.a-button--menu`
+
 <Canvas>
-  <Story name="Dropdown menu" inline={false} height="20rem">
+  <Story name="Dropdown menu">
     {`
-      <div style="min-height:15rem;">
-        <div class="u-relative">
-          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-1" aria-expanded="true">
+      <div style="min-height:20rem;">
+        <div class="u-relative" x-data="{ dropdownOpen: false }">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-1" @click="dropdownOpen = !dropdownOpen" :aria-expanded="dropdownOpen">
             <span class="a-button__label">Account</span>
             <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
-          <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s-top" aria-hidden="false" id="dropdown-1">
+          <ul x-show="dropdownOpen" @click.away="dropdownOpen = false" class="a-dropdown u-overflow--y a-list-reset u-margin-s-top" :aria-hidden="!dropdownOpen" id="dropdown-1">
             <li>
               <a href="/" class="a-button a-button--menu u-h6">
                 <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -79,22 +86,17 @@ For the sake of clarity, the examples shown here are all presented with the menu
       </div>
     `}
   </Story>
-</Canvas>
-
-The structure can be a little simpler if your menu items do not need icons. Here we’ve also added a link to the user’s profile (with their avatar) at the top of the menu.
-
-<Canvas>
-  <Story name="Dropdown with avatar user-profile link" inline={false} height="20rem">
+  <Story name="Dropdown with avatar user-profile link">
     {`
-      <div style="min-height:15rem;">
-        <div class="u-relative">
-          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-2" aria-expanded="true">
+      <div style="min-height:20rem;">
+        <div class="u-relative" x-data="{ dropdownOpen: false }">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-2" @click="dropdownOpen = !dropdownOpen" :aria-expanded="dropdownOpen">
             <span class="a-button__label">Account</span>
             <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
-          <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s-top" aria-hidden="false" id="dropdown-2">
+          <ul x-show="dropdownOpen" @click.away="dropdownOpen = false" class="a-dropdown u-overflow--y a-list-reset u-margin-s-top" :aria-hidden="!dropdownOpen" id="dropdown-2">
             <li>
               <a href="/" class="a-button a-button--menu u-h6">
                 <div class="a-button__avatar a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center">
@@ -133,22 +135,17 @@ The structure can be a little simpler if your menu items do not need icons. Here
       </div>
     `}
   </Story>
-</Canvas>
-
-You can include non-link content in the menu too — this version of the avatar is not a link to a profile page, but is informing the user which account is currently signed-in.
-
-<Canvas>
-  <Story name="Dropdown with non-button/link content" inline={false} height="20rem">
+  <Story name="Dropdown with non-button/link content">
     {`
-      <div style="min-height:15rem;">
-        <div class="u-relative">
-          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
+      <div style="min-height:20rem;">
+        <div class="u-relative" x-data="{ dropdownOpen: false }">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" @click="dropdownOpen = !dropdownOpen" :aria-expanded="dropdownOpen">
             <span class="a-button__label">Account</span>
             <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
-          <ul class="a-dropdown u-overflow--y a-list-reset u-margin-s-top" aria-hidden="false" id="dropdown-3">
+          <ul x-show="dropdownOpen" @click.away="dropdownOpen = false" class="a-dropdown u-overflow--y a-list-reset u-margin-s-top" :aria-hidden="!dropdownOpen" id="dropdown-3">
             <li>
               <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
                 <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
@@ -189,20 +186,28 @@ You can include non-link content in the menu too — this version of the avatar 
   </Story>
 </Canvas>
 
-When you know the menu will be at the right edge of the viewport, give your dropdown `.a-dropdown--right` to align the menu flush to the right.
+## Directional
+
+The default dropdowns are aligned to the left edge of their relative parent, underneath their sibing button. Sometimes this will result in the dropdown being cut off, or extending beyond the screen’s edge. For these cases the following directional variations are available:
+
+- `.a-dropdown--top`
+- `.a-dropdown--right`
+- `.a-dropdown--fullwidth`
+
+These can be combined.
 
 <Canvas>
-  <Story name="Dropdown, right-aligned" inline={false} height="20rem">
+  <Story name="dropdown--right" inline={false} height="20rem">
     {`
       <div style="height: 15rem">
-        <div class="u-relative u-flex u-justify-end">
-          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
+        <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" @click="dropdownOpen = !dropdownOpen" :aria-expanded="dropdownOpen">
             <span class="a-button__label">Account</span>
             <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
-          <ul class="a-dropdown a-dropdown--right u-overflow--y a-list-reset u-margin-s-top" aria-hidden="false" id="dropdown-3">
+          <ul x-show="dropdownOpen" @click.away="dropdownOpen = false" class="a-dropdown a-dropdown--right u-overflow--y a-list-reset u-margin-s-top"  :aria-hidden="!dropdownOpen" id="dropdown-3">
             <li>
               <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
                 <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
@@ -243,188 +248,177 @@ When you know the menu will be at the right edge of the viewport, give your drop
   </Story>
 </Canvas>
 
-Give your dropdown the `.a-dropdown--top` class you need the menu to appear above the button (e.g. your dropdown is pinned to the bottom of your layout)
+<Canvas>
+  <Story name="dropdown-top" inline={false} height="20rem">
+    {`
+      <div style="height: 15rem" class="u-flex u-flex--col>
+        <div class="u-flex__grow-1"></div>
+        <div class="u-relative" x-data="{ dropdownOpen: false }">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" @click="dropdownOpen = !dropdownOpen" :aria-expanded="dropdownOpen">
+            <span class="a-button__label">Account</span>
+            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-caret-down"></use>
+            </svg>
+          </button>
+          <ul x-show="dropdownOpen" @click.away="dropdownOpen = false" class="a-dropdown a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom" :aria-hidden="!dropdownOpen" id="dropdown-3">
+            <li>
+              <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
+                <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
+                  <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+                </div>
+                <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
+                  <span class="u-fg--gray-40">Signed in as</span>
+                  <span>Username</span>
+                </div>
+              </div>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Help
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Privacy
+              </a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Sign out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
 
 <Canvas>
-  <Story name="Dropdown, top-aligned" inline={false} height="20rem">
+  <Story name="dropdown--top dropdown--right" inline={false} height="20rem">
+    {`
+      <div style="height: 15rem" class="u-flex u-flex--col">
+        <div class="u-flex__grow-1"></div>
+        <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" @click="dropdownOpen = !dropdownOpen" :aria-expanded="dropdownOpen">
+            <span class="a-button__label">Account</span>
+            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-caret-down"></use>
+            </svg>
+          </button>
+          <ul x-show="dropdownOpen" @click.away="dropdownOpen = false" class="a-dropdown a-dropdown--top a-dropdown--right u-overflow--y a-list-reset u-margin-s-bottom" :aria-hidden="!dropdownOpen" id="dropdown-3">
+            <li>
+              <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
+                <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
+                  <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+                </div>
+                <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
+                  <span class="u-fg--gray-40">Signed in as</span>
+                  <span>Username</span>
+                </div>
+              </div>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Help
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Privacy
+              </a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Sign out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="dropdown--full-width" inline={false} height="20rem">
+    {`
+      <div style="height: 15rem" class="u-flex u-flex--col">
+        <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" @click="dropdownOpen = !dropdownOpen" :aria-expanded="dropdownOpen">
+            <span class="a-button__label">Account</span>
+            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <use xlink:href="${icons}#icon-caret-down"></use>
+            </svg>
+          </button>
+          <ul x-show="dropdownOpen" @click.away="dropdownOpen = false" class="a-dropdown a-dropdown--full-width u-overflow--y a-list-reset u-margin-s-top" :aria-hidden="!dropdownOpen" id="dropdown-3">
+            <li>
+              <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
+                <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
+                  <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
+                </div>
+                <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
+                  <span class="u-fg--gray-40">Signed in as</span>
+                  <span>Username</span>
+                </div>
+              </div>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Settings
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Help
+              </a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Privacy
+              </a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--menu u-h6">
+                Sign out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="dropdown--full-width dropdown--top" inline={false} height="20rem">
     {`
       <div style="height: 20rem" class="u-flex u-flex--col">
         <div class="u-flex__grow-1"></div>
-        <div class="u-relative">
-          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
+        <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
+          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" @click="dropdownOpen = !dropdownOpen" :aria-expanded="dropdownOpen">
             <span class="a-button__label">Account</span>
             <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
-          <ul class="a-dropdown a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom" aria-hidden="false" id="dropdown-3">
-            <li>
-              <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
-                <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
-                  <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
-                </div>
-                <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
-                  <span class="u-fg--gray-40">Signed in as</span>
-                  <span>Username</span>
-                </div>
-              </div>
-            </li>
-            <li role="separator"></li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Settings
-              </a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Help
-              </a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Privacy
-              </a>
-            </li>
-            <li role="separator"></li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Sign out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-You can also combine `.a-dropdown--top` with `.a-dropdown--right`:
-
-<Canvas>
-  <Story name="Dropdown, top-right aligned" inline={false} height="20rem">
-    {`
-      <div style="height: 20rem" class="u-flex u-flex--col">
-        <div class="u-flex__grow-1"></div>
-        <div class="u-relative u-flex u-justify-end">
-          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
-            <span class="a-button__label">Account</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-caret-down"></use>
-            </svg>
-          </button>
-          <ul class="a-dropdown a-dropdown--top a-dropdown--right u-overflow--y a-list-reset u-margin-s-bottom" aria-hidden="false" id="dropdown-3">
-            <li>
-              <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
-                <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
-                  <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
-                </div>
-                <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
-                  <span class="u-fg--gray-40">Signed in as</span>
-                  <span>Username</span>
-                </div>
-              </div>
-            </li>
-            <li role="separator"></li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Settings
-              </a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Help
-              </a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Privacy
-              </a>
-            </li>
-            <li role="separator"></li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Sign out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-
-## Full-width dropdowns
-
-Sometimes you need your dropdown to fill the width of the container.
-
-<Canvas>
-  <Story name="Dropdown, full-width" inline={false} height="20rem">
-    {`
-      <div style="height: 20rem" class="u-flex u-flex--col">
-        <div class="u-relative u-flex u-justify-end">
-          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
-            <span class="a-button__label">Account</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-caret-down"></use>
-            </svg>
-          </button>
-          <ul class="a-dropdown a-dropdown--full-width u-overflow--y a-list-reset u-margin-s-bottom" aria-hidden="false" id="dropdown-3">
-            <li>
-              <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
-                <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
-                  <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
-                </div>
-                <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
-                  <span class="u-fg--gray-40">Signed in as</span>
-                  <span>Username</span>
-                </div>
-              </div>
-            </li>
-            <li role="separator"></li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Settings
-              </a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Help
-              </a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Privacy
-              </a>
-            </li>
-            <li role="separator"></li>
-            <li>
-              <a href="/" class="a-button a-button--menu u-h6">
-                Sign out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-`.a-dropdown--full-width` can also be combined with `a-dropdown--top`:
-
-<Canvas>
-  <Story name="Dropdown, full-width top" inline={false} height="20rem">
-    {`
-      <div style="height: 20rem" class="u-flex u-flex--col">
-        <div class="u-flex__grow-1"></div>
-        <div class="u-relative u-flex u-justify-end">
-          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" aria-expanded="true">
-            <span class="a-button__label">Account</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-caret-down"></use>
-            </svg>
-          </button>
-          <ul class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom" aria-hidden="false" id="dropdown-3">
+          <ul x-show="dropdownOpen" @click.away="dropdownOpen = false" class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom" :aria-hidden="!dropdownOpen" id="dropdown-3">
             <li>
               <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
                 <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
