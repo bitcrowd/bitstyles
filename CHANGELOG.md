@@ -9,7 +9,7 @@
 - Dropdown atom has a new variant `.a-dropdown--full-width` that causes the dropdown to span the full width of its nearest `position: relative` parent element. Combinable with `a-dropdown--top`
 - Gap sizes can now be specified, and the class suffixes named, using a Sass variable
 
-# [1.2.0] - 2021-05-04
+# [[1.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.2.0) - 2021-05-04
 
 ## Added
 
