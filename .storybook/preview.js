@@ -1,4 +1,5 @@
 import '../build/bitstyles.css';
+import 'alpinejs';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
