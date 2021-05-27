@@ -2597,6 +2597,13 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+a11y-dialog@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/a11y-dialog/-/a11y-dialog-7.1.0.tgz#48819aa83cf094ee906f50b88fbc040f4c7fcf9f"
+  integrity sha512-l4aDY7mI50J6ykqcqQKuk3YDrmxUX65r3h11zem2+gvbQgZssYdQtd3DhLcChc7kk+Pkh3xOJsaTKGfFUjvUqg==
+  dependencies:
+    focusable-selectors "^0.3.0"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -5731,6 +5738,11 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
+
+focusable-selectors@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/focusable-selectors/-/focusable-selectors-0.3.0.tgz#0cf0c617c0f130b3d421be6787acb95b0b4936c4"
+  integrity sha512-R3zJNkDh17VnJZVFtMI3JGoUF8Zld55MKrfiHEjhVAN0+BXxYnjiyMkvAHoLNVs4jvJjjbT9O9c3QInrDZiBOA==
 
 for-in@^1.0.2:
   version "1.0.2"
