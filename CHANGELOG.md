@@ -13,7 +13,7 @@
 - Border utility classes are now available at all four directions, and on a per-color basis. Currectly only `gray-10` and `gray-70`, this can now be customized using sass variables.
 - Border utility classes can now be available at breakpoints by overriding the `$bitstyles-border-breakpoints` variable
 - Default breakpoints now include `xl`, for ultra-widescreens
-- `.a-content` max-width and padding is now customisable use Sass variables, and by default now includes a 100% option
+- `.a-content` max-width and padding is now customisable using Sass variables, and by default now includes a 100% option
 
 ## Fixed
 
