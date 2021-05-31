@@ -1,0 +1,35 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/aspect-ratio" />
+
+# Fixed-ratio
+
+Enforce an aspect ratio on this element and its contents.
+
+The aspect-ratio element takes 100% of its parent element’s width, then the height is set so the element will maintain the specified ratio. The default ratios inclue 1:1, and 16:9. These are defined in the Sass map `$bitstyles-aspect-ratios` under the keys `width` and `height` e.g.
+
+```scss
+$bitstyles-aspect-ratios: (
+  "16-9": (
+    'width': 16,
+    'height': 9
+  )
+);
+```
+
+<Canvas isColumn>
+  <Story name="aspect-ratio-1-1">
+    {`
+      <div class="u-aspect-ratio-1-1 u-bg--brand-2 u-relative">
+        <div class="u-absolute-center u-text--center">1:1 <span class="u-block">(try resizing)</span></div>
+      </div>
+    `}
+  </Story>
+  <Story name="aspect-ratio-16-9">
+    {`
+      <div class="u-aspect-ratio-16-9 u-bg--brand-2 u-relative">
+        <div class="u-absolute-center u-text--center">16:9 <span class="u-block">(try resizing)</span></div>
+      </div>
+    `}
+  </Story>
+</Canvas>
