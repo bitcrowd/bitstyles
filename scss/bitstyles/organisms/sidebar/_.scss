@@ -12,4 +12,17 @@
   z-index: 1;
   width: $bitstyles-sidebar-small-width;
   box-shadow: $bitstyles-sidebar-small-box-shadow;
+
+  &.is-transitioning {
+    will-change: $bitstyles-sidebar-transition-properties;
+    transition: $bitstyles-sidebar-transition-properties $bitstyles-sidebar-transition-easing $bitstyles-sidebar-transition-duration;
+  }
+
+  &.is-off-screen {
+    transform: translateX(-100%);
+  }
+
+  &.is-on-screen {
+    transform: none;
+  }
 }

@@ -7,7 +7,32 @@ import icons from '../../../assets/images/icons.svg';
 
 # Sidebar
 
-A vertical navbar that can make better use of screenspace in some circumstances, and is capable of containing more links confortably.
+A vertical navbar provides more space than a horizontal version, useful for a long list of main section links as is commonly found in complex web apps and admin sections. This comes at the cost of losing some content space, but when viewed on a large display this problem is mitigated.
+
+Uses a fullwidth dropdown to fit with no overlap.
+
+<details class="u-margin-xl--y">
+  <summary class="u-h4 u-font--medium">Examples use</summary>
+  <ul>
+    <li><a href="/docs/atoms-avatar--avatar">a-avatar</a></li>
+    <li><a href="/docs/atoms-button-menu--menu">a-button--menu</a></li>
+    <li><a href="/docs/atoms-button-nav--nav">a-button--nav</a></li>
+    <li><a href="/docs/atoms-dropdown--dropdown">a-dropdown</a></li>
+    <li><a href="/docs/atoms-icon--icon">a-icon</a></li>
+    <li><a href="/docs/atoms-list-reset--list-reset">a-list-reset</a></li>
+    <li><a href="/docs/organisms-sidebar--sidebar">o-sidebar</a></li>
+    <li><a href="/docs/utilities-border--border-bottom">u-border</a></li>
+    <li><a href="/docs/utilities-typography--typography">u-h6</a></li>
+    <li><a href="/docs/utilities-flex--flex">u-flex</a></li>
+    <li><a href="/docs/utilities-box-alignment--items-center">u-items-center</a></li>
+    <li><a href="/docs/utilities-background-color--background">u-bg</a></li>
+    <li><a href="/docs/utilities-margin--margin-m">u-margin</a></li>
+    <li><a href="/docs/utilities-padding--padding-m">u-padding</a></li>
+    <li><a href="/docs/utilities-relative--relative">u-relative</a></li>
+    <li><a href="/docs/utilities-sr-only--sr-only">u-sr-only</a></li>
+    <li><a href="/docs/utilities-truncate--truncate">u-truncate</a></li>
+  </ul>
+</details>
 
 <Canvas>
    <Story name="Sidebar" inline={false} height="80vh">
@@ -74,16 +99,61 @@ A vertical navbar that can make better use of screenspace in some circumstances,
                 </a>
               </li>
             </ul>
-            <div class="u-flex__shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-70-top">
-              <a href="/" class="a-button a-button--nav-large">
+            <div class="u-flex__shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-70-top u-relative u-flex u-flex--col" x-data="{ dropdownOpen: false }">
+              <button
+                type="button"
+                class="a-button a-button--nav-large"
+                aria-controls="dropdown-3"
+                @click="dropdownOpen = !dropdownOpen"
+                :aria-expanded="dropdownOpen"
+              >
                 <div class="a-button__icon a-avatar">
-                  <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
+                  <img src="https://placekitten.com/100/150" width="36" height="54" alt="Jane Dobermann’s avatar" class="a-avatar" />
                 </div>
                 <span class="a-button__label">Jane Dobermann</span>
-              </a>
+              </button>
+              <ul
+                class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom"
+                x-show="dropdownOpen"
+                @click.away="dropdownOpen = false"
+                :aria-hidden="!dropdownOpen"
+                id="dropdown-3"
+              >
+                <li>
+                  <a href="/" class="a-button a-button--menu u-h6">
+                    Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="/" class="a-button a-button--menu u-h6">
+                    Help
+                  </a>
+                </li>
+                <li>
+                  <a href="/" class="a-button a-button--menu u-h6">
+                    Privacy
+                  </a>
+                </li>
+                <li role="separator"></li>
+                <li>
+                  <a href="/" class="a-button a-button--menu u-h6">
+                    Sign out
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div x-show="sidebarOpen" @click.away="sidebarOpen = false" class="o-sidebar--small u-bg--gray-80 u-flex u-flex--col u-hidden@l">
+          <div
+            x-show="sidebarOpen"
+            @click.away="sidebarOpen = false"
+            class="o-sidebar--small u-bg--gray-80 u-flex u-flex--col u-hidden@l"
+            x-transition:enter="is-transitioning"
+            x-transition:enter-start="is-off-screen"
+            x-transition:enter-end="is-on-screen"
+            x-transition:leave="is-transitioning"
+            x-transition:leave-start="is-on-screen"
+            x-transition:leave-end="is-off-screen"
+          >
             <button class="u-flex__shrink-0 a-button a-button--icon a-button--icon-reversed u-margin-xxs-left" title="Close menu" aria-controls="navbar-1" aria-expanded="sidebarOpen" @click="sidebarOpen = false">
               <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
                 <use xlink:href="${icons}#icon-cross"></use>
@@ -161,212 +231,6 @@ A vertical navbar that can make better use of screenspace in some circumstances,
         <main class="u-flex__grow-1 u-padding-xxl-left@l u-padding-xl-right@l u-padding-xl-bottom u-padding-m u-overflow--y">
           <div class="u-flex u-items-center u-margin-m-bottom">
             <button class="u-flex__shrink-0 u-margin-neg-m-left a-button a-button--icon a-button--icon-reversed u-margin-xs-right u-hidden@l" title="Open menu" aria-controls="navbar-1" aria-expanded="sidebarOpen" @click="sidebarOpen = true">
-              <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
-                <use xlink:href="${icons}#icon-hamburger"></use>
-              </svg>
-              <span class="u-sr-only">Open menu</span>
-            </button>
-            <h1 class="u-margin-0">Projects</h1>
-          </div>
-          <p>Cotton candy chupa chups gummi bears cupcake candy canes sweet gummi bears macaroon lollipop. Danish toffee cheesecake chocolate bar jelly-o chocolate cake. Candy canes gummi bears pie fruitcake candy canes powder cheesecake. Jelly marshmallow marzipan apple pie jelly cupcake. Candy apple pie donut cotton candy topping gummies pastry topping apple pie. Gummies ice cream cookie pudding caramels candy canes pie. Ice cream macaroon halvah pastry lemon drops cheesecake. Chocolate cake croissant marzipan gummi bears topping brownie. Donut cookie pie muffin sesame snaps. Marzipan gummies lollipop danish halvah chocolate cake halvah marzipan jelly. Donut cheesecake gummies macaroon tootsie roll croissant. Powder chupa chups icing.</p>
-          <p>Cheesecake dragée cake chocolate bar oat cake. Muffin bear claw apple pie topping carrot cake pie sugar plum. Carrot cake croissant fruitcake. Toffee cotton candy cotton candy jelly-o liquorice. Croissant sugar plum sweet roll. Topping halvah jelly croissant sweet roll chocolate bar. Sesame snaps sweet roll tart. Cake chocolate bar caramels. Macaroon ice cream candy canes croissant. Pastry marzipan macaroon. Soufflé sweet chupa chups caramels. Soufflé candy sweet. Biscuit biscuit caramels wafer pudding jujubes.</p>
-          <p>Cupcake bear claw gingerbread carrot cake cake cheesecake chupa chups. Sesame snaps pudding muffin chocolate. Chupa chups soufflé jujubes dragée. Marshmallow bonbon caramels gummi bears marzipan apple pie. Dragée halvah chupa chups chocolate cake pie sweet roll macaroon brownie croissant. Ice cream fruitcake gummies. Candy canes wafer dragée gummi bears. Pudding ice cream chocolate bar. Chocolate bar donut jelly-o lemon drops brownie topping. Caramels pudding macaroon chocolate gingerbread cheesecake. Danish jelly-o liquorice biscuit oat cake dessert icing. Pudding chocolate bar tiramisu marshmallow. Jelly-o donut pudding chocolate. Pie pie chocolate bar apple pie chocolate cake croissant caramels.</p>
-          <p>Chocolate jelly-o wafer. Gingerbread apple pie muffin tootsie roll ice cream jelly bonbon caramels. Wafer gummi bears pudding. Pudding cotton candy pie croissant cookie. Gummies jelly wafer chocolate. Fruitcake cake gummies cupcake gummies. Sugar plum chupa chups chocolate cake macaroon cupcake dessert. Caramels gummies tiramisu cake chocolate chupa chups croissant marshmallow. Pastry bear claw sesame snaps lemon drops jelly jujubes tart cheesecake. Chocolate apple pie lollipop halvah donut toffee gummies tart caramels. Carrot cake macaroon biscuit wafer jujubes. Cake candy canes cupcake chupa chups chocolate cake wafer powder. Marzipan wafer pudding toffee pastry.</p>
-        </main>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-## Sidebar with open dropdown menu
-
-<Canvas>
-   <Story name="Sidebar [open dropdown]" inline={false} height="80vh">
-    {`
-      <div class="u-flex u-height-100vh">
-        <nav class="u-flex">
-          <div class="u-hidden o-sidebar--large u-flex__shrink-0 u-bg--gray-80 u-padding-m-top u-flex@l u-flex--col">
-            <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex__shrink-0 u-margin-m-left u-margin-m-right u-margin-m-bottom" />
-            <ul class="u-flex__grow-1 u-flex__shrink-1 u-overflow--y a-list-reset u-flex u-flex--col u-items-stretch u-padding-xs-right u-padding-xs-left">
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-home"></use>
-                  </svg>
-                  Dashboard
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1" aria-current="page">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-filter"></use>
-                  </svg>
-                  Projects
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-mail"></use>
-                  </svg>
-                  Team
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-check"></use>
-                  </svg>
-                  Customers
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-pencil"></use>
-                  </svg>
-                  <span class="u-truncate">Privacy policies has a long title</span>
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-bin"></use>
-                  </svg>
-                  Bookings
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-search"></use>
-                  </svg>
-                  Sales
-                </a>
-              </li>
-            </ul>
-            <div class="u-flex__shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-70-top u-relative u-flex u-flex--col">
-              <button type="button" class="a-button a-button--nav-large" aria-controls="dropdown-3" aria-expanded="true">
-                <div class="a-button__icon a-avatar">
-                  <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
-                </div>
-                <span class="a-button__label">Jane Dobermann</span>
-              </button>
-              <ul class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom" aria-hidden="false" id="dropdown-3">
-                <li>
-                  <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
-                    <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
-                      <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
-                    </div>
-                    <div class="u-flex__shrink-0 u-flex u-flex--col u-items-start">
-                      <span class="u-fg--gray-40">Signed in as</span>
-                      <span>Username</span>
-                    </div>
-                  </div>
-                </li>
-                <li role="separator"></li>
-                <li>
-                  <a href="/" class="a-button a-button--menu u-h6">
-                    Settings
-                  </a>
-                </li>
-                <li>
-                  <a href="/" class="a-button a-button--menu u-h6">
-                    Help
-                  </a>
-                </li>
-                <li>
-                  <a href="/" class="a-button a-button--menu u-h6">
-                    Privacy
-                  </a>
-                </li>
-                <li role="separator"></li>
-                <li>
-                  <a href="/" class="a-button a-button--menu u-h6">
-                    Sign out
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="o-sidebar--small u-bg--gray-80 u-flex u-flex--col u-hidden">
-            <button class="u-flex__shrink-0 a-button a-button--icon a-button--icon-reversed u-margin-xxs-left" title="Close menu" aria-controls="navbar-1" aria-expanded="true">
-              <svg width="16" height="16" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
-                <use xlink:href="${icons}#icon-cross"></use>
-              </svg>
-              <span class="u-sr-only">Close menu</span>
-            </button>
-            <ul class="u-flex__grow-1 u-flex__shrink-1 u-overflow--y a-list-reset u-flex u-flex--col u-items-stretch u-padding-xs-right u-padding-xs-left">
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-home"></use>
-                  </svg>
-                  Dashboard
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1" aria-current="page">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-filter"></use>
-                  </svg>
-                  Projects
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-mail"></use>
-                  </svg>
-                  Team
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-check"></use>
-                  </svg>
-                  Customers
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-pencil"></use>
-                  </svg>
-                  <span class="u-truncate">Privacy policies has a long title</span>
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-bin"></use>
-                  </svg>
-                  Bookings
-                </a>
-              </li>
-              <li class="u-margin-xs-bottom u-flex">
-                <a href="/" class="a-button a-button--nav u-flex__grow-1">
-                  <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
-                    <use xlink:href="${icons}#icon-search"></use>
-                  </svg>
-                  Sales
-                </a>
-              </li>
-            </ul>
-            <div class="u-flex__shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-70-top">
-              <a href="/" class="a-button a-button--nav-large">
-                <div class="a-button__icon a-avatar">
-                  <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
-                </div>
-                <span class="a-button__label">Jane Dobermann</span>
-              </a>
-            </div>
-          </div>
-        </nav>
-        <main class="u-flex__grow-1 u-padding-xxl-left@l u-padding-xl-right@l u-padding-xl-bottom u-padding-m u-overflow--y">
-          <div class="u-flex u-items-center u-margin-m-bottom">
-            <button class="u-flex__shrink-0 u-margin-neg-m-left a-button a-button--icon a-button--icon-reversed u-margin-xs-right u-hidden@l" title="Open menu" aria-controls="navbar-1" aria-expanded="true">
               <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
                 <use xlink:href="${icons}#icon-hamburger"></use>
               </svg>

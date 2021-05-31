@@ -412,13 +412,25 @@ These can be combined.
       <div style="height: 20rem" class="u-flex u-flex--col">
         <div class="u-flex__grow-1"></div>
         <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
-          <button type="button" class="a-button a-button--ui u-h6" aria-controls="dropdown-3" @click="dropdownOpen = !dropdownOpen" :aria-expanded="dropdownOpen">
+          <button
+            type="button"
+            class="a-button a-button--ui u-h6"
+            aria-controls="dropdown-3"
+            @click="dropdownOpen = !dropdownOpen"
+            :aria-expanded="dropdownOpen"
+          >
             <span class="a-button__label">Account</span>
             <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
-          <ul x-show="dropdownOpen" @click.away="dropdownOpen = false" class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom" :aria-hidden="!dropdownOpen" id="dropdown-3">
+          <ul
+            x-show="dropdownOpen"
+            @click.away="dropdownOpen = false"
+            :aria-hidden="!dropdownOpen"
+            class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom"
+            id="dropdown-3"
+          >
             <li>
               <div class="u-padding-xs-top u-padding-xs-bottom u-padding-s-left u-padding-s-right u-flex u-items-center u-h6 u-line-height--min">
                 <div class="a-avatar a-avatar--l u-flex__shrink-0 u-flex u-items-center u-margin-s-right">
