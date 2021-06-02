@@ -1,7 +1,22 @@
+@import './settings';
+
 .#{$bitstyles-namespace}o-navbar {
   position: absolute;
   top: 100%;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
+
+  &.is-transitioning {
+    will-change: $bitstyles-navbar-will-change;
+    transition: $bitstyles-navbar-transition;
+  }
+
+  @each $state-alias, $state-properties in $bitstyles-navbar-states {
+    &.is-#{$state-alias} {
+      @each $state-property, $state-value in $state-properties {
+        #{$state-property}: $state-value;
+      }
+    }
+  }
 }

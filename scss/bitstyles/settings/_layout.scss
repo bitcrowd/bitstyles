@@ -1,6 +1,6 @@
 @use "sass:math";
 
-$bitstyles-global-z: topbar !default;
+$bitstyles-global-z: ('topbar') !default;
 $bitstyles-border-radius-round: 9999rem !default;
 
 $bitstyles-spacing-base: 0.8rem !default;
