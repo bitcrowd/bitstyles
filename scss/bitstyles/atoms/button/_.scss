@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import './settings';
 
 .#{$bitstyles-namespace}a-button {
@@ -62,10 +64,10 @@
 .#{$bitstyles-namespace}a-button__avatar,
 .#{$bitstyles-namespace}a-button__icon {
   margin-right: $bitstyles-button-icon-spacing;
-  margin-left: -$bitstyles-button-icon-spacing / 4;
+  margin-left: math.div(-$bitstyles-button-icon-spacing, 4);
 }
 
 .#{$bitstyles-namespace}a-button__label + .#{$bitstyles-namespace}a-button__icon {
-  margin-right: -$bitstyles-button-icon-spacing / 4;
+  margin-right: math.div(-$bitstyles-button-icon-spacing, 4);
   margin-left: $bitstyles-button-icon-spacing;
 }
