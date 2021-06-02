@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Px to Rem sizing
 //
 // **Converts pixels to rems**.
@@ -10,7 +12,7 @@
 //
 
 @function px-to-rem($pixel-size, $root-size: $bitstyles-font-size-base-small) {
-  @return ($pixel-size / $root-size) * 1rem;
+  @return math.div($pixel-size, $root-size) * 1rem;
 }
 
 // Px to em sizing
@@ -25,5 +27,5 @@
 //
 
 @function px-to-em($pixel-size, $root-size: $bitstyles-font-size-base-small) {
-  @return ($pixel-size / $root-size) + 0em; // stylelint-disable-line length-zero-no-unit
+  @return math.div($pixel-size, $root-size) + 0em; // stylelint-disable-line length-zero-no-unit
 }

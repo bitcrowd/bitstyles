@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin input--checkbox {
   color: $bitstyles-checkbox-color;
   background-color: $bitstyles-checkbox-background-color;
@@ -22,8 +24,8 @@
     opacity: 0;
     transform: scale(0.7);
     transition:
-      opacity ($bitstyles-transition-duration / 2) $bitstyles-transition-duration $bitstyles-transition-easing,
-      transform ($bitstyles-transition-duration / 2) $bitstyles-transition-duration $bitstyles-transition-easing;
+      opacity math.div($bitstyles-transition-duration, 2) $bitstyles-transition-duration $bitstyles-transition-easing,
+      transform math.div($bitstyles-transition-duration, 2) $bitstyles-transition-duration $bitstyles-transition-easing;
   }
 
   &:checked {

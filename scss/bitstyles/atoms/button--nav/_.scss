@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import './settings';
 
 .#{$bitstyles-namespace}a-button--nav {
@@ -47,5 +49,5 @@
 
 .#{$bitstyles-namespace}a-button-nav__icon {
   margin-right: $bitstyles-button-nav-padding-horizontal;
-  margin-left: -#{$bitstyles-button-nav-padding-horizontal / 4};
+  margin-left: -#{math.div($bitstyles-button-nav-padding-horizontal, 4)};
 }

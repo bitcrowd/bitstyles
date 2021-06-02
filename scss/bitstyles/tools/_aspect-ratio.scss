@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "sass:math";
+
 // Aspect Ratio
 //
 // **Enforces an aspect ratio on this element and its contents**.
@@ -24,12 +27,12 @@
 //
 
 @mixin aspect-ratio($width, $height) {
-  aspect-ratio: #{$width} / #{$height};
+  aspect-ratio: list.slash($width, $height);
 
-  @supports not (aspect-ratio: #{$width} / #{$height}) {
+  @supports not (aspect-ratio: list.slash($width, $height)) {
     &::before {
       float: left;
-      padding-top: percentage($height / $width);
+      padding-top: percentage(math.div($height, $width));
       content: '';
     }
 

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin input {
   transition:
     color $bitstyles-transition-duration $bitstyles-transition-easing,
@@ -23,7 +25,7 @@
   @include input;
 
   width: 100%;
-  padding: ($bitstyles-input-padding - $bitstyles-input-border-width / 2) $bitstyles-input-padding;
+  padding: ($bitstyles-input-padding - math.div($bitstyles-input-border-width, 2)) $bitstyles-input-padding;
   font: inherit;
   line-height: $bitstyles-line-height-min;
   color: $bitstyles-input-color;
