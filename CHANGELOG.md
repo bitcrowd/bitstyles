@@ -9,6 +9,10 @@
 - Dropdown atom has a new variant `.a-dropdown--full-width` that causes the dropdown to span the full width of its nearest `position: relative` parent element. Combinable with `a-dropdown--top`
 - Gap sizes can now be specified, and the class suffixes named, using a Sass variable
 
+## Fixed
+
+- The checkbox checkmark is now correctly centered, and only rendered once
+
 ## Breaking
 
 - `.u-fixed-ratio` is renamed `.u-aspect-ratio`, and the double-dashes are replaced with single. Please rename all uses e.g. `.u-fixed-ratio--16-9` becomes `.u-aspect-ratio-16-9`
