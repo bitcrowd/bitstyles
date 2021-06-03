@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Z (z-index)
 
-Sets the z-index. By default, only `.u-z-1` is available. Note that you need to set a position other than the default `static` (probably either using `u-relative`, or by using component-level custom CSS to set `position: absolute`, `sticky`, or `fixed`).
+Sets the z-index. By default, only `.u-z-1` is available. Note that you need to set a position other than the default `static` (probably either using `u-relative`, or by using component-level custom CSS to set `position: absolute`, `sticky`, or `fixed`), as otherwise CSS `z-index` has no effect.
 
 <Canvas>
   <Story name="z">
@@ -16,3 +16,17 @@ Sets the z-index. By default, only `.u-z-1` is available. Note that you need to 
 
 ## Customization
 
+The available z-indexes can be customized by overriding the `$bitstyles-z-index` variable:
+
+```scss
+$bitstyles-z-index: (
+  '1': 1,
+  'modal': 10
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-z-index-breakpoints` variable:
+
+ ```scss
+ $bitstyles-z-index-breakpoints: ('base', 's', 'm', 'xl');
+ ```
