@@ -16,8 +16,9 @@
 - `.a-content` max-width and padding is now customisable using Sass variables, and by default now includes a 100% option
 - A new `.u-z` utility class for setting `z-index`
 - New examples of full app layouts
-- `u-grid` classes are available at the `xl` breakpoint
 - Margin utility classes now include `auto` as a size
+- `.u-grid-cols` classes are available at the `xl` breakpoint
+- All `.u-grid-cols`, `.u-col-span`, and `.u-col-start` classes are now specified using Sass variables, and can therefore be overridden
 
 ## Fixed
 
@@ -33,6 +34,10 @@
 - Now requires version `^1.34.0` of `dart-sass`, in order to use the new `Math.div` function, and remove all the division using `/` characters.
 - Removes the `content` mixin. If you need the `content` functionality, use the `.a-content` classname instead (it’s customisable using Sass variables, see the settings.scss file)
 - `.u-flex--inline` has been renamed `.u-inline-flex` to match the name of the display property, and is no longer a variant of `.u-flex`, but can be used alone. Where `.u-flex--inline` is paired with `.u-flex` remove the latter, and rename it to `.u-inline-flex`
+- All `.u-grid--x-col` classes, where `x` is a number, have been renamed to `u-grid-cols-x`
+- All `.u-grid__col-span-x` classes, where `x` is a number, have been renamed to `.u-col-span-x`
+- All `.u-grid__col-x` classes, where `x` is a number, have been renamed to `.u-col-start-x`
+
 
 # [[1.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.2.0) - 2021-05-04
 
