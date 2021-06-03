@@ -55,6 +55,8 @@
 }
 
 /*
+ * Outputs a classname with CSS properties, intended for directional CSS properties i.e. those which accept `-top`, `-right` etc. suffixes.
+ *
  * @param $property-name The name of the CSS property to be specified e.g. `margin`
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
