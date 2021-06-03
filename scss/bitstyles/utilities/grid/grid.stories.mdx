@@ -47,9 +47,9 @@ If you’re rendering a list of related items, use a list element (could be a `<
 Most likely you’ll want to also add a grid-column class, to layout the grid children next to each other.
 
 <Canvas isColumn>
-  <Story name="u-grid--2-col">
+  <Story name="u-grid-cols-2">
     {`
-      <ul class="u-grid u-gap-m u-grid--2-col u-padding-m u-bg--gray-10 a-list-reset">
+      <ul class="u-grid u-gap-m u-grid-cols-2 u-padding-m u-bg--gray-10 a-list-reset">
         <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
@@ -59,9 +59,9 @@ Most likely you’ll want to also add a grid-column class, to layout the grid ch
       </ul>
     `}
   </Story>
-  <Story name="u-grid--3-col">
+  <Story name="u-grid-cols-3">
     {`
-      <ul class="u-grid u-gap-m u-grid--3-col u-padding-m u-bg--gray-10 a-list-reset">
+      <ul class="u-grid u-gap-m u-grid-cols-3 u-padding-m u-bg--gray-10 a-list-reset">
         <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
@@ -75,12 +75,12 @@ Most likely you’ll want to also add a grid-column class, to layout the grid ch
 
 ### Responsive columns
 
-Column classes can be applied at specific breakpoints using the `@breakpoint` suffix on the class e.g. `u-grid--3-col@m`. This can be used to achieve a single column layout on small screens, which will break into columns when there’s enough space.
+Column classes can be applied at specific breakpoints using the `@breakpoint` suffix on the class e.g. `u-grid-cols-3@m`. This can be used to achieve a single column layout on small screens, which will break into columns when there’s enough space.
 
 <Canvas isColumn>
-  <Story name="u-grid--2-col@m">
+  <Story name="u-grid-cols-2@m">
     {`
-      <ul class="u-grid u-gap-m u-grid--2-col@m u-padding-m u-bg--gray-10 a-list-reset">
+      <ul class="u-grid u-gap-m u-grid-cols-2@m u-padding-m u-bg--gray-10 a-list-reset">
         <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
@@ -90,9 +90,9 @@ Column classes can be applied at specific breakpoints using the `@breakpoint` su
       </ul>
     `}
   </Story>
-  <Story name="u-grid--3-col@m">
+  <Story name="u-grid-cols-3@m">
     {`
-      <ul class="u-grid u-gap-m u-grid--3-col@m u-padding-m u-bg--gray-10 a-list-reset">
+      <ul class="u-grid u-gap-m u-grid-cols-3@m u-padding-m u-bg--gray-10 a-list-reset">
         <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
@@ -104,13 +104,13 @@ Column classes can be applied at specific breakpoints using the `@breakpoint` su
   </Story>
 </Canvas>
 
-For some layouts, you’ll want to allow some of the grid children a little more space. You can do this using `.u-grid__col-span-2` and `.u-grid__col-span-3`, both of which are available `@m`. Note that using these classes can break the grid layout if the `span` class on the child is not applied at the same breakpoint as the grid.
+For some layouts, you’ll want to allow some of the grid children a little more space. You can do this using `.u-col-span-2` and `.u-col-span-3`, both of which are available `@m`. Note that using these classes can break the grid layout if the `span` class on the child is not applied at the same breakpoint as the grid.
 
 <Canvas isColumn>
-  <Story name="u-grid__col-span-2">
+  <Story name="u-col-span-2">
     {`
-      <ul class="u-grid u-gap-m u-grid--2-col u-padding-m u-bg--gray-10 a-list-reset">
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-span-2">Grid child 1, span 2</li>
+      <ul class="u-grid u-gap-m u-grid-cols-2 u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--brand-2 u-padding-m a-card u-col-span-2">Grid child 1, span 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
@@ -119,10 +119,10 @@ For some layouts, you’ll want to allow some of the grid children a little more
       </ul>
     `}
   </Story>
-  <Story name="u-grid__col-span-2@m">
+  <Story name="u-col-span-2@m">
     {`
-      <ul class="u-grid u-gap-m u-grid--2-col@m u-padding-m u-bg--gray-10 a-list-reset">
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-span-2@m">Grid child 1, span 2 @m</li>
+      <ul class="u-grid u-gap-m u-grid-cols-2@m u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--brand-2 u-padding-m a-card u-col-span-2@m">Grid child 1, span 2 @m</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
@@ -131,10 +131,10 @@ For some layouts, you’ll want to allow some of the grid children a little more
       </ul>
     `}
   </Story>
-  <Story name="u-grid__col-span-3">
+  <Story name="u-col-span-3">
     {`
-      <ul class="u-grid u-gap-m u-grid--3-col u-padding-m u-bg--gray-10 a-list-reset">
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-span-3">Grid child 1, span 3</li>
+      <ul class="u-grid u-gap-m u-grid-cols-3 u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--brand-2 u-padding-m a-card u-col-span-3">Grid child 1, span 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
@@ -143,10 +143,10 @@ For some layouts, you’ll want to allow some of the grid children a little more
       </ul>
     `}
   </Story>
-  <Story name="u-grid__col-span-3@m">
+  <Story name="u-col-span-3@m">
     {`
-      <ul class="u-grid u-gap-m u-grid--3-col@m u-padding-m u-bg--gray-10 a-list-reset">
-        <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-span-3@m">Grid child 1, span 3 @m</li>
+      <ul class="u-grid u-gap-m u-grid-cols-3@m u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--brand-2 u-padding-m a-card u-col-span-3@m">Grid child 1, span 3 @m</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
@@ -162,7 +162,7 @@ You can specify that a grid child should start a row using `.u-grid__col-1`.
 <Canvas isColumn>
   <Story name="u-grid__col-1">
     {`
-      <ul class="u-grid u-gap-m u-grid--3-col u-padding-m u-bg--gray-10 a-list-reset">
+      <ul class="u-grid u-gap-m u-grid-cols-3 u-padding-m u-bg--gray-10 a-list-reset">
         <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-1">Grid child 3, col-1</li>
@@ -174,7 +174,7 @@ You can specify that a grid child should start a row using `.u-grid__col-1`.
   </Story>
   <Story name="u-grid__col-1@m">
     {`
-      <ul class="u-grid u-gap-m u-grid--3-col@m u-padding-m u-bg--gray-10 a-list-reset">
+      <ul class="u-grid u-gap-m u-grid-cols-3@m u-padding-m u-bg--gray-10 a-list-reset">
         <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
         <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg--brand-2 u-padding-m a-card u-grid__col-1@m">Grid child 3, col-1</li>

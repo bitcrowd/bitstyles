@@ -1,29 +1,24 @@
-.#{$bitstyles-namespace}u-grid--2-col {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
+@import './settings';
 
-.#{$bitstyles-namespace}u-grid--3-col {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
+@each $breakpoint-alias in $bitstyles-grid-template-columns-breakpoints {
+  @if $breakpoint-alias == 'base' {
+    @include output-properties(
+      $property-name: 'grid-template-columns',
+      $classname-root: 'grid-cols',
+      $values: $bitstyles-grid-template-columns
+    );
+  }
 
-.#{$bitstyles-namespace}u-grid--6-col {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.#{$bitstyles-namespace}u-grid__col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
-.#{$bitstyles-namespace}u-grid__col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
-.#{$bitstyles-namespace}u-grid__col-span-3 {
-  grid-column: span 3 / span 3;
-}
-
-.#{$bitstyles-namespace}u-grid__col-span-4 {
-  grid-column: span 4 / span 4;
+  @else {
+    @include media-query($breakpoint-alias) {
+      @include output-properties(
+        $property-name: 'grid-template-columns',
+        $classname-root: 'grid-cols',
+        $values: $bitstyles-grid-template-columns,
+        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      );
+    }
+  }
 }
 
 .#{$bitstyles-namespace}u-grid__col-1 {
@@ -35,34 +30,6 @@
 }
 
 @include media-query('m') {
-  .#{$bitstyles-namespace}u-grid--2-col\@m {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .#{$bitstyles-namespace}u-grid--3-col\@m {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .#{$bitstyles-namespace}u-grid--6-col\@m {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-1\@m {
-    grid-column: span 1 / span 1;
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-2\@m {
-    grid-column: span 2 / span 2;
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-3\@m {
-    grid-column: span 3 / span 3;
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-4\@m {
-    grid-column: span 4 / span 4;
-  }
-
   .#{$bitstyles-namespace}u-grid__col-1\@m {
     grid-column-start: 1;
   }
@@ -77,33 +44,6 @@
 }
 
 @include media-query('l') {
-  .#{$bitstyles-namespace}u-grid--2-col\@l {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .#{$bitstyles-namespace}u-grid--3-col\@l {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .#{$bitstyles-namespace}u-grid--6-col\@l {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-1\@l {
-    grid-column: span 1 / span 1;
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-2\@l {
-    grid-column: span 2 / span 2;
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-3\@l {
-    grid-column: span 3 / span 3;
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-4\@l {
-    grid-column: span 4 / span 4;
-  }
 
   .#{$bitstyles-namespace}u-grid__col-1\@l {
     grid-column-start: 1;
@@ -119,33 +59,6 @@
 }
 
 @include media-query('xl') {
-  .#{$bitstyles-namespace}u-grid--2-col\@xl {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .#{$bitstyles-namespace}u-grid--3-col\@xl {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .#{$bitstyles-namespace}u-grid--6-col\@xl {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-1\@xl {
-    grid-column: span 1 / span 1;
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-2\@xl {
-    grid-column: span 2 / span 2;
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-3\@xl {
-    grid-column: span 3 / span 3;
-  }
-
-  .#{$bitstyles-namespace}u-grid__col-span-4\@xl {
-    grid-column: span 4 / span 4;
-  }
 
   .#{$bitstyles-namespace}u-grid__col-1\@xl {
     grid-column-start: 1;
