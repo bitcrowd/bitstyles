@@ -91,7 +91,6 @@
   }
 }
 
-
 /*
  * Outputs a classname with CSS properties, intended for CSS properties that do not have directional variants.
  *
@@ -100,7 +99,7 @@
  * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
  * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
  */
- @mixin output-properties(
+@mixin output-properties(
   $property-name,
   $classname-root,
   $values,
