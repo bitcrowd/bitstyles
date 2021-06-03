@@ -14,15 +14,17 @@
   box-shadow: $bitstyles-sidebar-small-box-shadow;
 
   &.is-transitioning {
-    will-change: $bitstyles-sidebar-transition-properties;
-    transition: $bitstyles-sidebar-transition-properties $bitstyles-sidebar-transition-easing $bitstyles-sidebar-transition-duration;
+    transition: $bitstyles-sidebar-transition;
+    will-change: $bitstyles-sidebar-will-change;
   }
 
-  &.is-off-screen {
-    transform: translateX(-100%);
-  }
-
-  &.is-on-screen {
-    transform: none;
+  @each $state-alias, $state-properties in $bitstyles-sidebar-states {
+    &.is-#{$state-alias} {
+      /* stylelint-disable max-nesting-depth */
+      @each $state-property, $state-value in $state-properties {
+        #{$state-property}: $state-value;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
   }
 }

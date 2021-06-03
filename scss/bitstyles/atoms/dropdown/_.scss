@@ -20,6 +20,21 @@
     margin: $bitstyles-dropdown-separator-spacing 0;
     border-top: 1px solid $bitstyles-dropdown-separator-border;
   }
+
+  &.is-transitioning {
+    transition: $bitstyles-dropdown-transition;
+    will-change: $bitstyles-dropdown-will-change;
+  }
+
+  @each $state-alias, $state-properties in $bitstyles-dropdown-states {
+    &.is-#{$state-alias} {
+      /* stylelint-disable max-nesting-depth */
+      @each $state-property, $state-value in $state-properties {
+        #{$state-property}: $state-value;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
 }
 
 .#{$bitstyles-namespace}a-dropdown--right {

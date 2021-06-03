@@ -5,18 +5,19 @@
   top: 100%;
   right: 0;
   left: 0;
-  z-index: -1;
 
   &.is-transitioning {
-    will-change: $bitstyles-navbar-will-change;
     transition: $bitstyles-navbar-transition;
+    will-change: $bitstyles-navbar-will-change;
   }
 
   @each $state-alias, $state-properties in $bitstyles-navbar-states {
     &.is-#{$state-alias} {
+      /* stylelint-disable max-nesting-depth */
       @each $state-property, $state-value in $state-properties {
         #{$state-property}: $state-value;
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 }

@@ -157,7 +157,13 @@ Uses a fullwidth dropdown to fit with no overlap.
             x-transition:leave-start="is-on-screen"
             x-transition:leave-end="is-off-screen"
           >
-            <button class="u-flex__shrink-0 a-button a-button--icon a-button--icon-reversed u-margin-xxs-left" title="Close menu" aria-controls="navbar-1" aria-expanded="sidebarOpen" @click="sidebarOpen = false">
+            <button
+              class="u-flex__shrink-0 a-button a-button--icon a-button--icon-reversed u-margin-xxs-left"
+              title="Close menu"
+              aria-controls="navbar-1"
+              aria-expanded="sidebarOpen"
+              @click="sidebarOpen = false"
+            >
               <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
                 <use xlink:href="${icons}#icon-cross"></use>
               </svg>
@@ -221,13 +227,51 @@ Uses a fullwidth dropdown to fit with no overlap.
                 </a>
               </li>
             </ul>
-            <div class="u-flex__shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-70-top">
-              <a href="/" class="a-button a-button--nav-large">
+            <div
+              class="u-flex__shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-70-top u-relative"
+              x-data="{ dropdownOpen: false }"
+            >
+              <button
+                type="button"
+                class="a-button a-button--nav-large"
+                aria-controls="dropdown-4"
+                @click="dropdownOpen = !dropdownOpen"
+                :aria-expanded="dropdownOpen"
+              >
                 <div class="a-button__icon a-avatar">
-                  <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
+                  <img src="https://placekitten.com/100/150" width="36" height="54" alt="Jane Dobermann’s avatar" class="a-avatar" />
                 </div>
                 <span class="a-button__label">Jane Dobermann</span>
-              </a>
+              </button>
+              <ul
+                class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom"
+                x-show="dropdownOpen"
+                @click.away="dropdownOpen = false"
+                :aria-hidden="!dropdownOpen"
+                id="dropdown-4"
+              >
+                <li>
+                  <a href="/" class="a-button a-button--menu u-h6">
+                    Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="/" class="a-button a-button--menu u-h6">
+                    Help
+                  </a>
+                </li>
+                <li>
+                  <a href="/" class="a-button a-button--menu u-h6">
+                    Privacy
+                  </a>
+                </li>
+                <li role="separator"></li>
+                <li>
+                  <a href="/" class="a-button a-button--menu u-h6">
+                    Sign out
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </nav>

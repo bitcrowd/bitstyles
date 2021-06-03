@@ -2,6 +2,7 @@
 
 .#{$bitstyles-namespace}a-button--nav-large {
   display: flex;
+  width: 100%;
   padding: $bitstyles-button-nav-large-padding-vertical $bitstyles-button-nav-large-padding-horizontal;
   justify-content: flex-start;
   border-radius: $bitstyles-button-nav-large-border-radius;
