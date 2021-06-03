@@ -18,6 +18,10 @@
 - The double-dashes have been removed from the `.u-margin` and `.u-padding` classes (e.g. `.u-margin-m--top`). To migrate, replace the `--` in the classnames with `-`
 - The `.u-border--top` `.u-border--bottom` classes have been replaced with `.u-border-gray-70-top` and `.u-border-gray-10-bottom` respectively
 
+## Fixed
+
+- The checkbox checkmark is now correctly centered, and only rendered once
+
 ## Breaking
 
 - `.u-fixed-ratio` is renamed `.u-aspect-ratio`, and the double-dashes are replaced with single. Please rename all uses e.g. `.u-fixed-ratio--16-9` becomes `.u-aspect-ratio-16-9`
