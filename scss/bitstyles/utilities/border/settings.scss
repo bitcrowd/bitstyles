@@ -1,0 +1,14 @@
+$bitstyles-border-colors: (
+  'gray-70': 1px solid palette('gray', '70'),
+  'gray-10': 1px solid palette('gray', '10'),
+) !default;
+$bitstyles-border-breakpoints: ('base') !default;
+$bitstyles-border-directions: (
+  '': null,
+  'top': ('top'),
+  'right': ('right'),
+  'bottom': ('bottom'),
+  'left': ('left'),
+  'x': ('left', 'right'),
+  'y': ('top', 'bottom')
+) !default;
