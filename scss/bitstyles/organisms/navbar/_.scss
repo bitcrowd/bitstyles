@@ -6,9 +6,11 @@
   right: 0;
   left: 0;
 
-  &.is-transitioning {
-    transition: $bitstyles-navbar-transition;
-    will-change: $bitstyles-navbar-will-change;
+  @include media-query('motion-ok') {
+    &.is-transitioning {
+      transition: $bitstyles-navbar-transition;
+      will-change: $bitstyles-navbar-will-change;
+    }
   }
 
   @each $state-alias, $state-properties in $bitstyles-navbar-states {

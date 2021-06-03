@@ -13,9 +13,11 @@
   width: $bitstyles-sidebar-small-width;
   box-shadow: $bitstyles-sidebar-small-box-shadow;
 
-  &.is-transitioning {
-    transition: $bitstyles-sidebar-transition;
-    will-change: $bitstyles-sidebar-will-change;
+  @include media-query('motion-ok') {
+    &.is-transitioning {
+      transition: $bitstyles-sidebar-transition;
+      will-change: $bitstyles-sidebar-will-change;
+    }
   }
 
   @each $state-alias, $state-properties in $bitstyles-sidebar-states {

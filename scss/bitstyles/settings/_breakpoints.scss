@@ -10,5 +10,6 @@ $bitstyles-breakpoints: (
   'xl':                 'screen and (min-width: #{$bitstyles-breakpoint-l-xl-boundary})',
   'hidpi':              '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)',
   'landscape':          'all and (orientation:landscape)',
-  'portrait':           'all and (orientation:portrait)'
+  'portrait':           'all and (orientation:portrait)',
+  'motion-ok':          'screen and (prefers-reduced-motion: no-preference)'
 ) !default;
