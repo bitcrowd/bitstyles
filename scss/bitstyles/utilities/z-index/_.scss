@@ -1,0 +1,7 @@
+@import './settings';
+
+@each $z-index-alias, $z-index-value in $bitstyles-z-index {
+  .#{$bitstyles-namespace}u-z-#{$z-index-alias} {
+    z-index: $z-index-value;
+  }
+}

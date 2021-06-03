@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/z" />
+
+# Z (z-index)
+
+Sets the z-index. By default, only `.u-z-1` is available. Note that you need to set a position other than the default `static` (probably either using `u-relative`, or by using component-level custom CSS to set `position: absolute`, `sticky`, or `fixed`).
+
+<Canvas>
+  <Story name="z">
+    {`
+      <div class="u-relative u-z-1">.u-z-1</div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
