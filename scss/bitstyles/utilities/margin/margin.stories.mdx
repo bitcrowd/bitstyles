@@ -4,7 +4,63 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Margin
 
+Apply margins of a specified size and direction to an element.
+
+With default configuration, the margins are available in sizes `0`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, with negative-margin variations of each. This can be configured by overriding `$bitstyles-margin-sizes` e.g.
+
+```scss
+$bitstyles-margin-sizes: (
+  'positive': (
+    '0': 0,
+    'xxs': spacing('xxs'),
+    'xs': spacing('xs'),
+    's': spacing('s'),
+    'm': spacing('m'),
+    'l': spacing('l'),
+    'xl': spacing('xl')
+  ),
+  'negative': (
+    'xxs': -#{spacing('xxs')},
+    'xs': -#{spacing('xs')},
+    's': -#{spacing('s')},
+    'm': -#{spacing('m')},
+    'l': -#{spacing('l')},
+    'xl': -#{spacing('xl')}
+  )
+);
+```
+
+## Margin sizes
+
 <Canvas>
+  <Story name="margin-0">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-0">u-margin-0</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xxs">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xxs">u-margin-xxs</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xs">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xs">u-margin-xs</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-s">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-s">u-margin-s</div>
+      </div>
+    `}
+  </Story>
   <Story name="margin-m">
     {`
       <div class="u-bg--brand-2 u-padding-m">
@@ -12,38 +68,157 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
       </div>
     `}
   </Story>
-  <Story name="margin-0">
+  <Story name="margin-l">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <p class="u-bg--background u-margin-0">u-margin-0</p>
+        <div class="u-bg--background u-margin-l">u-margin-l</div>
       </div>
     `}
   </Story>
-  <Story name="margin-m--top">
+  <Story name="margin-xl">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m--top">u-margin-m--top</div>
+        <div class="u-bg--background u-margin-xl">u-margin-xl</div>
       </div>
     `}
   </Story>
-  <Story name="margin-m--right">
+</Canvas>
+
+## Negative margin sizes
+
+<Canvas>
+  <Story name="margin-neg-xxs">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m--right">u-margin-m--right</div>
+        <div class="u-bg--background u-margin-neg-xxs">u-margin-neg-xxs</div>
       </div>
     `}
   </Story>
-  <Story name="margin-m--bottom">
+  <Story name="margin-neg-xs">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m--bottom">u-margin-m--bottom</div>
+        <div class="u-bg--background u-margin-neg-xs">u-margin-neg-xs</div>
       </div>
     `}
   </Story>
-  <Story name="margin-m--left">
+  <Story name="margin-neg-s">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-margin-m--left">u-margin-m--left</div>
+        <div class="u-bg--background u-margin-neg-s">u-margin-neg-s</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-m">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-m">u-margin-neg-m</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-l">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-l">u-margin-neg-l</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-xl">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-neg-xl">u-margin-neg-xl</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Directional margins
+
+Every margin size (negative and positive) is also available directed at the single sides `top`, `right`, `bottom`, `left`, and the double directions `x` and `y`.
+
+This can be customised by overriding `$bitstyles-margin-directions` e.g.
+
+```scss
+$bitstyles-margin-directions: (
+  '': null,
+  'top': ('top'),
+  'right': ('right'),
+  'bottom': ('bottom'),
+  'left': ('left'),
+  'x': ('right', 'left'),
+  'y': ('top', 'bottom')
+);
+```
+
+The `'': null` entry is needed to render the margin classes with no directional modifiers.
+
+<Canvas>
+  <Story id="utilities-margin--margin-xl" />
+  <Story name="margin-xl-top">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl-top">u-margin-xl-top</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xl-right">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl-right">u-margin-xl-right</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xl-bottom">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl-bottom">u-margin-xl-bottom</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xl-left">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl-left">u-margin-xl-left</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xl-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl-x">u-margin-xl-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xl-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl-y">u-margin-xl-y</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Responsive margins
+
+All the margins are also available at the `@s` and `@m` breakpoint suffixes. To customise this, override `$bitstyles-margin-breakpoints` e.g.
+
+```scss
+$bitstyles-margin-breakpoints: ('base', 's', 'm');
+```
+
+If you remove `base`, margin classes will not be output without a breakpoint.
+
+<Canvas>
+  <Story name="margin-xl@s">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl@s">u-margin-xl@s</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-xl@m">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-margin-xl@m">u-margin-xl@m</div>
       </div>
     `}
   </Story>

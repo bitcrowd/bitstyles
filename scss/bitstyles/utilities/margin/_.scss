@@ -1,50 +1,37 @@
 @import './settings';
 
-@each $size in $bitstyles-margin-sizes {
-  .#{$bitstyles-namespace}u-margin-#{$size} {
-    margin: spacing($size);
+@each $breakpoint-alias in $bitstyles-margin-breakpoints {
+  @if $breakpoint-alias == 'base' {
+    @include output-directional-properties(
+      $property-name: 'margin',
+      $classname-root: 'margin',
+      $values: map-get($bitstyles-margin-sizes, 'positive'),
+      $directions: $bitstyles-margin-directions
+    );
+    @include output-directional-properties(
+      $property-name: 'margin',
+      $classname-root: 'margin-neg',
+      $values: map-get($bitstyles-margin-sizes, 'negative'),
+      $directions: $bitstyles-margin-directions
+    );
   }
 
-  .#{$bitstyles-namespace}u-margin-neg-#{$size} {
-    margin: -#{spacing($size)};
-  }
-
-  .#{$bitstyles-namespace}u-margin-#{$size}--y {
-    margin-top: spacing($size);
-    margin-bottom: spacing($size);
-  }
-
-  @each $position in ('left', 'top', 'right', 'bottom') {
-    .#{$bitstyles-namespace}u-margin-#{$size}--#{$position} {
-      margin-#{$position}: spacing($size);
-    }
-
-    .#{$bitstyles-namespace}u-margin-neg-#{$size}--#{$position} {
-      margin-#{$position}: -#{spacing($size)};
-    }
-  }
-}
-
-@each $breakpoint in $bitstyles-margin-breakpoints {
-  @include media-query($breakpoint) {
-    @each $size in $bitstyles-margin-sizes {
-      .#{$bitstyles-namespace}u-margin-#{$size}\@#{$breakpoint} {
-        margin: spacing($size);
-      }
-    }
-
-    @each $size in $bitstyles-margin-sizes {
-      .#{$bitstyles-namespace}u-margin-neg-#{$size}\@#{$breakpoint} {
-        margin: -#{spacing($size)};
-      }
-    }
-
-    @each $size in $bitstyles-margin-sizes {
-      @each $position in ('left', 'top', 'right', 'bottom') {
-        .#{$bitstyles-namespace}u-margin-#{$size}--#{$position}\@#{$breakpoint} {
-          margin-#{$position}: spacing($size);
-        }
-      }
+  @else {
+    @include media-query($breakpoint-alias) {
+      @include output-directional-properties(
+        $property-name: 'margin',
+        $classname-root: 'margin',
+        $values: map-get($bitstyles-margin-sizes, 'positive'),
+        $directions: $bitstyles-margin-directions,
+        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      );
+      @include output-directional-properties(
+        $property-name: 'margin',
+        $classname-root: 'margin-neg',
+        $values: map-get($bitstyles-margin-sizes, 'negative'),
+        $directions: $bitstyles-margin-directions,
+        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      );
     }
   }
 }

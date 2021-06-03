@@ -1,2 +1,21 @@
-$bitstyles-padding-sizes: ('0', 'xs', 's', 'm', 'l', 'xl', 'xxl') !default;
-$bitstyles-padding-breakpoints: ('m', 'l') !default;
+$bitstyles-padding-sizes: (
+  'positive': (
+    '0': 0,
+    'xs': spacing('xs'),
+    's': spacing('s'),
+    'm': spacing('m'),
+    'l': spacing('l'),
+    'xl': spacing('xl'),
+    'xxl': spacing('xxl')
+  )
+) !default;
+$bitstyles-padding-breakpoints: ('base', 'm', 'l') !default;
+$bitstyles-padding-directions: (
+  '': null,
+  'top': ('top'),
+  'right': ('right'),
+  'bottom': ('bottom'),
+  'left': ('left'),
+  'x': ('right', 'left'),
+  'y': ('top', 'bottom')
+) !default;

@@ -1,0 +1,92 @@
+@use "sass:list";
+@use "sass:string";
+
+/*
+ * Removes a value from a list
+ *
+ * @param $list The list from which to remove values
+ * @param $value The value to remove from the list. Values that occur multiple times will all be removed
+ */
+@function remove($list, $value) {
+  $result: ();
+
+  @for $i from 1 through list.length($list) {
+    @if nth($list, $i) != $value {
+      $result: list.append($result, nth($list, $i));
+    }
+  }
+
+  @return $result;
+}
+
+/*
+ * Returns a classname suitable for a utility class, by joining strings with dash characters
+ *
+ * @param $classname-items An ordered list of strings to be joined with dashes to form the classname
+ */
+@function get-classname($classname-items) {
+  $classname: null;
+  $classname-items: remove($classname-items, null);
+
+  @for $i from 1 through list.length($classname-items) {
+    $classname-item: list.nth($classname-items, $i);
+
+    @if $classname-item != '' and $classname-item != null {
+      $classname: if($i == 1, $classname-item, '#{$classname}#{unquote('-')}#{$classname-item}');
+    }
+  }
+
+  @return $classname;
+}
+
+/*
+ * While most utility classes output a single CSS property, some (e.g. `.u-margin-m-x`) need to output several directions of the same property. This mixin iterates over the list that it’s passed, and outputs the property for each direction.
+ *
+ * @param $direction-values A list of CSS property directions
+ * @param $name The name of the CSS property e.g. `margin`
+ * @param $value The value to assign the property (the same value will be used for each direction specified)
+ */
+@mixin output-property-directions($direction-values, $name, $value) {
+  @each $direction in $direction-values {
+    $property: if($direction, '#{$name}-#{$direction}', $name);
+
+    #{$property}: $value;
+  }
+}
+
+/*
+ * @param $property-name The name of the CSS property to be specified e.g. `margin`
+ * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
+ * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
+ * @param $directions A map of name/value pairs, where the name will form part of the classname, and the list of values will be form part of the CSS property e.g. ('left': ('left'), 'x': ('left', 'right'))
+ * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
+ */
+@mixin output-directional-properties(
+  $property-name,
+  $classname-root,
+  $values,
+  $directions,
+  $breakpoint-suffix: ''
+) {
+  @each $alias, $value in $values {
+    @each $direction-name, $direction-values in $directions {
+      $classname: get-classname(
+        (
+          $bitstyles-namespace,
+          'u',
+          $classname-root,
+          $alias,
+          $direction-name
+        )
+      );
+
+      .#{$classname}#{$breakpoint-suffix} {
+        @include output-property-directions(
+          $direction-values: $direction-values,
+          $name: $property-name,
+          $value: $value
+        );
+      }
+    }
+  }
+}

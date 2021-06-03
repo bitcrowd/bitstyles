@@ -4,9 +4,48 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Padding
 
-Set padding on an element.
+Apply padding of a specified size and direction to an element.
+
+With default configuration, the padding classes are available in sizes `0`, `xs`, `s`, `m`, `l`, `xl`, `xxl`. This can be configured by overriding `$bitstyles-padding-sizes` e.g.
+
+```scss
+$bitstyles-padding-sizes: (
+  'positive': (
+    '0': 0,
+    'xs': spacing('xs'),
+    's': spacing('s'),
+    'm': spacing('m'),
+    'l': spacing('l'),
+    'xl': spacing('xl'),
+    'xxl': spacing('xl')
+  )
+);
+```
+
+## Padding sizes
 
 <Canvas>
+  <Story name="padding-0">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-0">u-padding-0</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xs">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xs">u-padding-xs</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-s">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-s">u-padding-s</div>
+      </div>
+    `}
+  </Story>
   <Story name="padding-m">
     {`
       <div class="u-bg--brand-2 u-padding-m">
@@ -14,38 +53,117 @@ Set padding on an element.
       </div>
     `}
   </Story>
-  <Story name="padding-0">
+  <Story name="padding-l">
     {`
-      <div class="u-bg--brand-2 u-padding-0">
-        <div class="u-bg--background u-padding-0">u-padding-0</div>
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-l">u-padding-l</div>
       </div>
     `}
   </Story>
-  <Story name="padding--m-top">
+  <Story name="padding-xl">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-padding-m--top">u-padding-m--top</div>
+        <div class="u-bg--background u-padding-xl">u-padding-xl</div>
       </div>
     `}
   </Story>
-  <Story name="padding--m-right">
+  <Story name="padding-xxl">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-padding-m--right">u-padding--m-right</div>
+        <div class="u-bg--background u-padding-xxl">u-padding-xxl</div>
       </div>
     `}
   </Story>
-  <Story name="padding--m-bottom">
+</Canvas>
+
+## Directional padding
+
+Every padding size is also available directed at the single sides `top`, `right`, `bottom`, `left`, and the double directions `x` and `y`.
+
+This can be customised by overriding `$bitstyles-padding-directions` e.g.
+
+```scss
+$bitstyles-padding-directions: (
+  '': null,
+  'top': ('top'),
+  'right': ('right'),
+  'bottom': ('bottom'),
+  'left': ('left'),
+  'x': ('right', 'left'),
+  'y': ('top', 'bottom')
+);
+```
+
+The `'': null` entry is needed to render the padding classes with no directional modifiers.
+
+<Canvas>
+  <Story id="utilities-padding--padding-xl" />
+  <Story name="padding-xl-top">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-padding--m-bottom">u-padding--m-bottom</div>
+        <div class="u-bg--background u-padding-xl-top">u-padding-xl-top</div>
       </div>
     `}
   </Story>
-  <Story name="padding--m-left">
+  <Story name="padding-xl-right">
     {`
       <div class="u-bg--brand-2 u-padding-m">
-        <div class="u-bg--background u-padding-m--left">u-padding-m--left</div>
+        <div class="u-bg--background u-padding-xl-right">u-padding-xl-right</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xl-bottom">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl-bottom">u-padding-xl-bottom</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xl-left">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl-left">u-padding-xl-left</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xl-x">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl-x">u-padding-xl-x</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xl-y">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl-y">u-padding-xl-y</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Responsive padding
+
+All the padding classes are also available at the `@m` and `@l` breakpoint suffixes. To customise this, override `$bitstyles-padding-breakpoints` e.g.
+
+```scss
+$bitstyles-padding-breakpoints: ('base', 'm', 'l');
+```
+
+If you remove `base`, padding classes will not be output without a breakpoint.
+
+<Canvas>
+  <Story name="padding-xl@m">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl@m">u-padding-xl@m</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-xl@l">
+    {`
+      <div class="u-bg--brand-2 u-padding-m">
+        <div class="u-bg--background u-padding-xl@l">u-padding-xl@l</div>
       </div>
     `}
   </Story>

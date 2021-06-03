@@ -8,6 +8,12 @@
 
 - Dropdown atom has a new variant `.a-dropdown--full-width` that causes the dropdown to span the full width of its nearest `position: relative` parent element. Combinable with `a-dropdown--top`
 - Gap sizes can now be specified, and the class suffixes named, using a Sass variable
+- You can now override which directions the margin and padding utility classes are output for (`top`, `bottom`, etc.), and what those classes are named independently of the CSS property, using `$bitstyles-margin-directions` and `$bitstyles-padding-directions` respectively
+- You can now override the sizes the margin & padding utility classes are output for, using `$bitstyles-margin-sizes` and `$bitstyles-padding-sizes` respectively
+
+## Breaking
+
+- The double-dashes have been removed from the `.u-margin` and `.u-padding` classes (e.g. `.u-margin-m--top`). To migrate, replace the `--` in the classnames with `-`
 
 ## Breaking
 
