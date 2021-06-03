@@ -2,7 +2,7 @@
 
 ## Added
 
-- We have a new media-query available in the global map: `motion-ok`. This applies when the user has not set a preference to reduce motion in their UIs, and allows a no-motion-first approach to animations
+- We have a new media-query available in `$bitstyles-breakpoints`: `motion-ok`. It’s available using the `media-query` mixin, and applies when the user has not set a preference to reduce motion in their UIs, allowing a no-motion-first approach to animations
 - All dropdown, sidebar, and navbar examples in our storybook documentation have JS behaviour using alpinejs
 - Modal behavior is implemented using `a11y-dialog`
 
@@ -31,10 +31,6 @@
 - New examples of full app layouts
 - `u-grid` classes are available at the `xl` breakpoint
 - Margin utility classes now include `auto` as a size
-
-## Fixed
-
-- The checkbox checkmark is now correctly centered, and only rendered once
 
 ## Breaking
 
