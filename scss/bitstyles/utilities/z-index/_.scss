@@ -1,0 +1,22 @@
+@import './settings';
+
+@each $breakpoint-alias in $bitstyles-z-index-breakpoints {
+  @if $breakpoint-alias == 'base' {
+    @include output-properties(
+      $property-name: 'z-index',
+      $classname-root: 'z',
+      $values: $bitstyles-z-index
+    );
+  }
+
+  @else {
+    @include media-query($breakpoint-alias) {
+      @include output-properties(
+        $property-name: 'z-index',
+        $classname-root: 'z',
+        $values: $bitstyles-z-index,
+        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      );
+    }
+  }
+}
