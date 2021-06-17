@@ -157,3 +157,8 @@ $bitstyles-color-palette: (
     '1': mix($bitstyles-base-color-white, $bitstyles-base-color-positive, 99%),
   ),
 ) !default;
+
+:export {
+  gray100: palette('gray', '100');
+  gray90: palette('gray', '0');
+}
