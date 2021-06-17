@@ -15,6 +15,7 @@
 - Default breakpoints now include `xl`, for ultra-widescreens
 - `.a-content` max-width and padding is now customisable using Sass variables, and by default now includes a 100% option
 - A new `.u-z` utility class for setting `z-index`
+- Margin utility classes now include `auto` as a size
 
 ## Fixed
 
