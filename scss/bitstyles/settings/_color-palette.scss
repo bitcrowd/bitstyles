@@ -1,7 +1,5 @@
-// Colour palette. Each colour has variants (each needs at least the `base`), defined
-// in its child map. Naming: `base`, `light`, `lighter`, `dark`, `darker`
-// Use Sass map functions to merge in extra colour maps in your project, or re-define
-// the whole map.
+// Use Sass map functions to merge in extra colour maps in your project, or re-define the whole map.
+
 $bitstyles-grays-brand-color: $bitstyles-base-color-brand-1 !default;
 $bitstyles-grays-brand-color-mix: 5% !default;
 
@@ -159,6 +157,18 @@ $bitstyles-color-palette: (
 ) !default;
 
 :export {
-  gray100: palette('gray', '100');
-  gray90: palette('gray', '0');
-}
+  gray: {
+    \100: palette('gray', '100');
+    \90: palette('gray', '90');
+    \80: palette('gray', '80');
+    \70: palette('gray', '70');
+    \60: palette('gray', '60');
+    \50: palette('gray', '50');
+    \40: palette('gray', '40');
+    \30: palette('gray', '30');
+    \20: palette('gray', '20');
+    \10: palette('gray', '10');
+    \5: palette('gray', '5');
+    \1: palette('gray', '1');
+  };
+};

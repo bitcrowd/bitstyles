@@ -1,6 +1,6 @@
-import '../build/bitstyles.css';
 import 'alpinejs';
 import 'a11y-dialog';
+import '../scss/bitstyles.scss';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
