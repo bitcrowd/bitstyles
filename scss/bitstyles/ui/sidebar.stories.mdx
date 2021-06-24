@@ -11,6 +11,10 @@ A vertical navbar provides more space than a horizontal version, useful for a lo
 
 Uses a fullwidth dropdown to fit with no overlap.
 
+<div class="u-bg--gray-10 u-padding-m-x u-padding-xs-y">
+  <p>These examples use AlpineJS for the behavior. If you’re using a different JS package, replace the blocks of html attributes starting with `x-`, and with `@click`.</p>
+</div>
+
 <details class="u-margin-xl-y">
   <summary class="u-h4 u-font--medium">Examples use</summary>
   <ul>
@@ -117,10 +121,16 @@ Uses a fullwidth dropdown to fit with no overlap.
               </button>
               <ul
                 class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom"
+                id="dropdown-3"
                 x-show="dropdownOpen"
+                x-transition:enter="is-transitioning"
+                x-transition:enter-start="is-off-screen"
+                x-transition:enter-end="is-on-screen"
+                x-transition:leave="is-transitioning"
+                x-transition:leave-start="is-on-screen"
+                x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
                 :aria-hidden="!dropdownOpen"
-                id="dropdown-3"
               >
                 <li>
                   <a href="/" class="a-button a-button--menu u-h6">
@@ -147,9 +157,9 @@ Uses a fullwidth dropdown to fit with no overlap.
             </div>
           </div>
           <div
+            class="o-sidebar--small u-bg--gray-80 u-flex u-flex--col u-hidden@l"
             x-show="sidebarOpen"
             @click.away="sidebarOpen = false"
-            class="o-sidebar--small u-bg--gray-80 u-flex u-flex--col u-hidden@l"
             x-transition:enter="is-transitioning"
             x-transition:enter-start="is-off-screen"
             x-transition:enter-end="is-on-screen"
@@ -244,11 +254,11 @@ Uses a fullwidth dropdown to fit with no overlap.
                 <span class="a-button__label">Jane Dobermann</span>
               </button>
               <ul
-                class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom"
                 x-show="dropdownOpen"
                 @click.away="dropdownOpen = false"
                 :aria-hidden="!dropdownOpen"
                 id="dropdown-4"
+                class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom"
               >
                 <li>
                   <a href="/" class="a-button a-button--menu u-h6">
@@ -277,7 +287,13 @@ Uses a fullwidth dropdown to fit with no overlap.
         </nav>
         <main class="u-flex__grow-1 u-padding-xxl-left@l u-padding-xl-right@l u-padding-xl-bottom u-padding-m u-overflow--y">
           <div class="u-flex u-items-center u-margin-m-bottom">
-            <button class="u-flex__shrink-0 u-margin-neg-m-left a-button a-button--icon a-button--icon-reversed u-margin-xs-right u-hidden@l" title="Open menu" aria-controls="navbar-1" aria-expanded="sidebarOpen" @click="sidebarOpen = true">
+            <button
+              class="u-flex__shrink-0 u-margin-neg-m-left a-button a-button--icon a-button--icon-reversed u-margin-xs-right u-hidden@l"
+              title="Open menu"
+              aria-controls="navbar-1"
+              aria-expanded="sidebarOpen"
+              @click="sidebarOpen = true"
+            >
               <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
                 <use xlink:href="${icons}#icon-hamburger"></use>
               </svg>

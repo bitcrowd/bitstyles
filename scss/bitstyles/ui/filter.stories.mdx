@@ -8,6 +8,10 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 When a user wants to filter a list of objects by fields which have a limited number of set values, present them with a group of checkboxes to choose from. To keep the UI clear, they can be hidden within a well-labelled dropdown menu.
 
+<div class="u-bg--gray-10 u-padding-m-x u-padding-xs-y">
+  <p>These examples use AlpineJS for the behavior. If you’re using a different JS package, replace the blocks of html attributes starting with `x-`, and with `@click`.</p>
+</div>
+
 <details class="u-margin-xl-y">
   <summary class="u-h4 u-font--medium">Examples use</summary>
   <ul>
@@ -51,7 +55,6 @@ When a user wants to filter a list of objects by fields which have a limited num
                 </svg>
               </button>
               <ul
-                class="a-dropdown a-dropdown--right u-overflow--y a-list-reset u-margin-s-top"
                 x-show="dropdownOpen"
                 x-transition:enter="is-transitioning"
                 x-transition:enter-start="is-off-screen"
@@ -61,6 +64,7 @@ When a user wants to filter a list of objects by fields which have a limited num
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
                 :aria-hidden="!dropdownOpen"
+                class="a-dropdown a-dropdown--right u-overflow--y a-list-reset u-margin-s-top"
                 id="dropdown-1"
               >
                 <li>
@@ -105,7 +109,6 @@ When a user wants to filter a list of objects by fields which have a limited num
                 </svg>
               </button>
               <ul
-                class="a-dropdown a-dropdown--right u-overflow--y a-list-reset u-margin-s-top"
                 x-show="dropdownOpen"
                 x-transition:enter="is-transitioning"
                 x-transition:enter-start="is-off-screen"
@@ -115,6 +118,7 @@ When a user wants to filter a list of objects by fields which have a limited num
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
                 :aria-hidden="!dropdownOpen"
+                class="a-dropdown a-dropdown--right u-overflow--y a-list-reset u-margin-s-top"
                 id="dropdown-2"
               >
                 <li>

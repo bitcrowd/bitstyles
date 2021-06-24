@@ -11,6 +11,10 @@ A top-level navigation container, with two sections separated to the left & righ
 
 Give the active link the `aria-current="page"` attribute.
 
+<div class="u-bg--gray-10 u-padding-m-x u-padding-xs-y">
+  <p>These examples use AlpineJS for the behavior. If you’re using a different JS package, replace the blocks of html attributes starting with `x-`, and with `@click`.</p>
+</div>
+
 <details class="u-margin-xl-y">
   <summary class="u-h4 u-font--medium">Examples use</summary>
   <ul>
@@ -77,7 +81,8 @@ Give the active link the `aria-current="page"` attribute.
               <span class="u-sr-only">Toggle menu</span>
             </button>
             <ul
-              class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80" id="navbar-1"
+              class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80"
+              id="navbar-1"
               x-show="navbarOpen"
               @click.away="navbarOpen = false"
               :aria-hidden="!navbarOpen"
