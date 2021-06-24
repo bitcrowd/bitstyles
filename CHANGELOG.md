@@ -2,7 +2,7 @@
 
 ## Added
 
-- We have a new media-query available in `$bitstyles-breakpoints`: `motion-ok`. It’s available using the `media-query` mixin, and applies when the user has not set a preference to reduce motion in their UIs, allowing a no-motion-first approach to animations
+- We have a new media-query available in `$bitstyles-breakpoints`: `motion-ok`. It’s available using the `media-query` mixin, and applies when the user has not set a preference to reduce motion in their UIs, allowing a [no-motion-first](https://tatianamac.com/posts/prefers-reduced-motion/) approach to animations
 - All dropdown, sidebar, and navbar examples in our storybook documentation have JS behaviour using alpinejs
 - Modal behavior is implemented using `a11y-dialog`
 
