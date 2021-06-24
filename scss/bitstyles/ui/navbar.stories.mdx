@@ -11,6 +11,10 @@ A top-level navigation container, with two sections separated to the left & righ
 
 Give the active link the `aria-current="page"` attribute.
 
+<div class="u-bg--gray-10 u-padding-m-x u-padding-xs-y">
+  <p>These examples use AlpineJS for the behavior. If you’re using a different JS package, replace the blocks of html attributes starting with `x-`, and with `@click`.</p>
+</div>
+
 <details class="u-margin-xl-y">
   <summary class="u-h4 u-font--medium">Examples use</summary>
   <ul>
@@ -63,14 +67,32 @@ Give the active link the `aria-current="page"` attribute.
               </div>
             </a>
           </div>
-          <div class="u-hidden@l">
-            <button class="a-button a-button--icon a-button--icon-reversed" title="Toggle menu" aria-controls="navbar-1" aria-expanded="true">
+          <div class="u-hidden@l" x-data="{ navbarOpen: false }">
+            <button
+              class="a-button a-button--icon a-button--icon-reversed"
+              title="Toggle menu"
+              aria-controls="navbar-1"
+              @click="navbarOpen = !navbarOpen"
+              :aria-expanded="navbarOpen"
+            >
               <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
                 <use xlink:href="${icons}#icon-hamburger"></use>
               </svg>
               <span class="u-sr-only">Toggle menu</span>
             </button>
-            <ul class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80" id="navbar-1">
+            <ul
+              class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80"
+              id="navbar-1"
+              x-show="navbarOpen"
+              @click.away="navbarOpen = false"
+              :aria-hidden="!navbarOpen"
+              x-transition:enter="is-transitioning"
+              x-transition:enter-start="is-off-screen"
+              x-transition:enter-end="is-on-screen"
+              x-transition:leave="is-transitioning"
+              x-transition:leave-start="is-on-screen"
+              x-transition:leave-end="is-off-screen"
+            >
               <li class="u-margin-s-bottom">
                 <a href="/" class="a-button a-button--nav-large">
                   <div class="a-button__icon a-avatar">
@@ -98,7 +120,7 @@ Give the active link the `aria-current="page"` attribute.
 
 ## Handling large numbers of links
 
-This navbar is only intended to hold a few link to the main sections of your site. If you absolutely must have more links than can be easily handled, the navbar will scroll:
+This navbar is only intended to hold a few link to the main sections of your site. If you absolutely must have more links than can be easily handled, the navbar will scroll. Once your list of top-level sections becomes very long, you may want to look at the [UI/Sidebar](/docs/ui-navigation-sidebar--sidebar) pattern instead.
 
 <Canvas>
   <Story name="Navbar with many links" inline={false} height="80vh">
@@ -142,14 +164,32 @@ This navbar is only intended to hold a few link to the main sections of your sit
               </div>
             </a>
           </div>
-          <div class="u-hidden@l">
-            <button class="a-button a-button--icon a-button--icon-reversed" title="Toggle menu" aria-controls="navbar-1" aria-expanded="true">
+          <div class="u-hidden@l" x-data="{ navbarOpen: false }">
+            <button
+              class="a-button a-button--icon a-button--icon-reversed"
+              title="Toggle menu"
+              aria-controls="navbar-1"
+              @click="navbarOpen = !navbarOpen"
+              :aria-expanded="navbarOpen"
+            >
               <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
                 <use xlink:href="${icons}#icon-hamburger"></use>
               </svg>
               <span class="u-sr-only">Toggle menu</span>
             </button>
-            <ul class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80" id="navbar-1">
+            <ul
+              class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80"
+              id="navbar-1"
+              x-show="navbarOpen"
+              @click.away="navbarOpen = false"
+              :aria-hidden="!navbarOpen"
+              x-transition:enter="is-transitioning"
+              x-transition:enter-start="is-off-screen"
+              x-transition:enter-end="is-on-screen"
+              x-transition:leave="is-transitioning"
+              x-transition:leave-start="is-on-screen"
+              x-transition:leave-end="is-off-screen"
+            >
               <li class="u-margin-s-bottom">
                 <a href="/" class="a-button a-button--nav-large">
                   <div class="a-button__icon a-avatar">

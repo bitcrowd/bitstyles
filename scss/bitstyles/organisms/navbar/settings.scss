@@ -1,0 +1,12 @@
+$bitstyles-navbar-transition: opacity 0.2s ease-in, transform 0.12s ease-in !default;
+$bitstyles-navbar-will-change: opacity, transform !default;
+$bitstyles-navbar-states: (
+  "off-screen": (
+    "opacity": 0,
+    "transform": translateY(-7%)
+  ),
+  "on-screen": (
+    "opacity": 1,
+    "transform": none
+  )
+) !default;

@@ -12,4 +12,21 @@
   z-index: 1;
   width: $bitstyles-sidebar-small-width;
   box-shadow: $bitstyles-sidebar-small-box-shadow;
+
+  @include media-query('motion-ok') {
+    &.is-transitioning {
+      transition: $bitstyles-sidebar-transition;
+      will-change: $bitstyles-sidebar-will-change;
+    }
+  }
+
+  @each $state-alias, $state-properties in $bitstyles-sidebar-states {
+    &.is-#{$state-alias} {
+      /* stylelint-disable max-nesting-depth */
+      @each $state-property, $state-value in $state-properties {
+        #{$state-property}: $state-value;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
 }

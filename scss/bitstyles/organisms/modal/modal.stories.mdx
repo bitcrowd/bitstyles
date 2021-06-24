@@ -9,12 +9,15 @@ import icons from '../../../../assets/images/icons.svg';
 
 Set modal size using the usual layout classes e.g. `.a-content`. At smaller screensizes the modal becomes fullwidth.
 
-Modals are a common UI component that needs Javascript — use a suitable package for your project. [A11y-dialog.js](https://github.com/edenspiekermann/a11y-dialog) is a great example of what to look for. The package needs to be keyboard navigable, trap focus, add and remove aria-hidden attributes, respond to click on the overlay behind it, stop scrolling of the main content, and present a close button with some text content for screenreaders.
+Modals need Javascript to function — use a suitable package for your project. The examples here use [A11y-dialog.js](https://github.com/KittyGiraudel/a11y-dialog) as it provides all the functionality you’d expect from a modal, including:
 
+- keyboard navigability
+- focus trapping
+- relevant aria attributes
 
 ## Informational
 
-You may want to inform the user of the success or failure of an action, give a little explanatory text, and provide a button to dismiss the modal.
+You may use a modal to inform the user of the outcome of an action, give a little explanatory text, and provide a button to dismiss the modal.
 
 <Canvas>
   <Story name="Informational modal" inline={false} height="80vh">
@@ -24,8 +27,8 @@ You may want to inform the user of the success or failure of an action, give a l
         <p class="u-text--center"><button class="a-link" data-a11y-dialog-show="dialog_1">open dialogue</button></p>
         <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
       </main>
-      <div class="o-modal" id="dialog_1" aria-hidden="false" aria-labelledby="dialog-title">
-        <div class="o-modal__overlay" tabindex="-1" data-a11y-dialog-hide title="Close modal"></div>
+      <div class="o-modal" data-a11y-dialog="dialog_1" aria-hidden="true" aria-labelledby="dialog-title">
+        <div class="o-modal__overlay" data-a11y-dialog-hide title="Close modal"></div>
         <div class="a-content a-content--s o-modal__content a-card u-padding-xl@m u-padding-l u-flex u-flex--col" role="document">
           <header class="u-flex u-flex--col u-items-center">
             <div class="a-badge a-badge--positive u-padding-m u-margin-s-bottom">
@@ -49,7 +52,7 @@ You may want to inform the user of the success or failure of an action, give a l
 
 ## Modal dialog
 
-If you have multiple options for the user, present them with any information they may need in order to decide, and as few options as possible.
+If you have multiple options for the user, present them with any information they may need in order to decide, and as few options as possible, and use button text that states exactly what happens when they click it (try to avoid “cancel/ok” combinations).
 
 <Canvas>
   <Story name="Modal dialog" inline={false} height="80vh">
@@ -61,7 +64,7 @@ If you have multiple options for the user, present them with any information the
       </p>
       <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
     </main>
-    <div class="o-modal" id="dialog_1" aria-hidden="false" aria-labelledby="dialog-title">
+    <div class="o-modal" data-a11y-dialog="dialog_1" aria-hidden="true" aria-labelledby="dialog-title">
       <div class="o-modal__overlay" tabindex="-1" title="Close modal" data-a11y-dialog-hide></div>
       <div class="a-content a-content--s o-modal__content a-card u-padding-xl@m u-padding-l u-flex u-flex--col" role="document">
         <header class="u-flex u-flex--col u-items-center">
@@ -77,7 +80,7 @@ If you have multiple options for the user, present them with any information the
         </div>
         <ul class="a-list-reset u-grid u-grid--2-col@m u-gap-m u-items-center u-margin-l-top">
           <li class="u-flex u-flex--col">
-            <button class="a-button a-button--ui" type="button">Cancel</button>
+            <button class="a-button a-button--ui" type="button" data-a11y-dialog-hide>Cancel</button>
           </li>
           <li class="u-flex u-flex--col">
             <button class="a-button" type="button">Send</button>
@@ -91,7 +94,7 @@ If you have multiple options for the user, present them with any information the
 
 ## Modal with long text
 
-Sometimes you just need to dump a load of text on the user, such as for legal documentation. Best avoided, but sometimes unavoidable. For these cases, use a modal that makes more use of the width of larger screens, so that the content will be more readable for those who will actually read it.
+Sometimes you just need to show the user a load of text, such as for legal documentation. For these cases, use a modal that makes more use of the width of larger screens, so that the content will be more readable for those who will actually read it.
 
 <Canvas>
   <Story name="Modal with long text" inline={false} height="80vh">
@@ -103,7 +106,7 @@ Sometimes you just need to dump a load of text on the user, such as for legal do
       </p>
       <p>Icing powder pie jelly beans soufflé biscuit cupcake fruitcake. Jelly beans bear claw candy canes. Chupa chups gingerbread dessert gingerbread jelly-o icing topping. Marshmallow tiramisu tiramisu cheesecake. Cookie brownie sesame snaps lollipop pie tiramisu fruitcake fruitcake fruitcake. Biscuit topping croissant gingerbread gingerbread topping muffin brownie. Jelly toffee danish fruitcake. Liquorice fruitcake bonbon. Bear claw pudding bonbon jujubes. Danish icing sweet. Biscuit jelly marzipan pie tart. Sugar plum danish gingerbread powder cupcake ice cream sugar plum. Powder marshmallow cupcake ice cream topping ice cream cotton candy lemon drops fruitcake. Chocolate cake wafer jelly beans cupcake lemon drops.</p>
     </main>
-    <div class="o-modal" id="dialog_1" aria-hidden="false" aria-labelledby="dialog-title">
+    <div class="o-modal" data-a11y-dialog="dialog_1" aria-hidden="true" aria-labelledby="dialog-title">
       <div class="o-modal__overlay" tabindex="-1" title="Close modal" data-a11y-dialog-hide></div>
       <div class="a-content a-content--m o-modal__content a-card u-padding-xl@m u-padding-l u-flex u-flex--col" role="document">
         <header class="u-flex u-flex--col u-items-center">

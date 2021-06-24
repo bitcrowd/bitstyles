@@ -1,3 +1,19 @@
+# Unreleased
+
+## Added
+
+- We have a new media-query available in `$bitstyles-breakpoints`: `motion-ok`. It’s available using the `media-query` mixin, and applies when the user has not set a preference to reduce motion in their UIs, allowing a [no-motion-first](https://tatianamac.com/posts/prefers-reduced-motion/) approach to animations
+- All dropdown, sidebar, and navbar examples in our storybook documentation have JS behaviour using alpinejs
+- Modal behavior is implemented using `a11y-dialog`
+
+## Changed
+
+- The `topbar` atom is now not fixed by default. Set the variable `$bitstyles-topbar-position` to `fixed` to replace that behavior
+
+## Breaking
+
+- The `topbar` atom no longer sets a background and foreground color, and the corresponding variables (`$bitstyles-topbar-color` and `$bitstyles-topbar-background-color`) have been removed. If you were using that functionality, use the `u-fg` and `u-bg` utility classes instead
+
 # [[1.3.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.3.0) - 2021-06-17
 
 ## Changed
