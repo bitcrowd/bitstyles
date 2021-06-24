@@ -17,6 +17,7 @@
 - A new `.u-z` utility class for setting `z-index`
 - New examples of full app layouts
 - `u-grid` classes are available at the `xl` breakpoint
+- Margin utility classes now include `auto` as a size
 
 ## Fixed
 

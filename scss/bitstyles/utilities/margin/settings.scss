@@ -6,7 +6,8 @@ $bitstyles-margin-sizes: (
     's': spacing('s'),
     'm': spacing('m'),
     'l': spacing('l'),
-    'xl': spacing('xl')
+    'xl': spacing('xl'),
+    'auto': auto
   ),
   'negative': (
     'xxs': -#{spacing('xxs')},
