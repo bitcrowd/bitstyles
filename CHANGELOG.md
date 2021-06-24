@@ -15,6 +15,8 @@
 - Default breakpoints now include `xl`, for ultra-widescreens
 - `.a-content` max-width and padding is now customisable using Sass variables, and by default now includes a 100% option
 - A new `.u-z` utility class for setting `z-index`
+- New examples of full app layouts
+- `u-grid` classes are available at the `xl` breakpoint
 - Margin utility classes now include `auto` as a size
 
 ## Fixed
@@ -27,8 +29,10 @@
 - The `.u-border--top` `.u-border--bottom` classes have been replaced with `.u-border-gray-70-top` and `.u-border-gray-10-bottom` respectively
 - `.u-fixed-ratio` is renamed `.u-aspect-ratio`, and the double-dashes are replaced with single. Please rename all uses e.g. `.u-fixed-ratio--16-9` becomes `.u-aspect-ratio-16-9`
 - `.u-fixed-ratio__inner` has been removed, and is no longer necessary. To migrate, move other classes that may be on that element to the `.u-fixed-ratio` element, and remove the `.u-fixed-ratio__inner` element
+- If you were relying on `.u-fixed-ratio` applying non-static positioning, you’ll need to apply `.u-relative` or `.u-absolute` to the `.u-aspect-ratio` element
 - Now requires version `^1.34.0` of `dart-sass`, in order to use the new `Math.div` function, and remove all the division using `/` characters.
 - Removes the `content` mixin. If you need the `content` functionality, use the `.a-content` classname instead (it’s customisable using Sass variables, see the settings.scss file)
+- `.u-flex--inline` has been renamed `.u-inline-flex` to match the name of the display property, and is no longer a variant of `.u-flex`, but can be used alone. Where `.u-flex--inline` is paired with `.u-flex` remove the latter, and rename it to `.u-inline-flex`
 
 # [[1.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.2.0) - 2021-05-04
 
