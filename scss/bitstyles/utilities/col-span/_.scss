@@ -1,0 +1,22 @@
+@import './settings';
+
+@each $breakpoint-alias in $bitstyles-col-span-breakpoints {
+  @if $breakpoint-alias == 'base' {
+    @include output-properties(
+      $property-name: 'grid-column',
+      $classname-root: 'col-span',
+      $values: $bitstyles-col-span
+    );
+  }
+
+  @else {
+    @include media-query($breakpoint-alias) {
+      @include output-properties(
+        $property-name: 'grid-column',
+        $classname-root: 'col-span',
+        $values: $bitstyles-col-span,
+        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      );
+    }
+  }
+}

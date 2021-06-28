@@ -1,0 +1,22 @@
+@import './settings';
+
+@each $breakpoint-alias in $bitstyles-grid-template-columns-breakpoints {
+  @if $breakpoint-alias == 'base' {
+    @include output-properties(
+      $property-name: 'grid-template-columns',
+      $classname-root: 'grid-cols',
+      $values: $bitstyles-grid-template-columns
+    );
+  }
+
+  @else {
+    @include media-query($breakpoint-alias) {
+      @include output-properties(
+        $property-name: 'grid-template-columns',
+        $classname-root: 'grid-cols',
+        $values: $bitstyles-grid-template-columns,
+        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      );
+    }
+  }
+}

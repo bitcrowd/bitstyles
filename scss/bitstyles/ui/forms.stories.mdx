@@ -158,7 +158,7 @@ This form has the commonly-required fields for creating an account. Note the wor
 
 ## Complex, multi-section form
 
-For a more complex form, `.u-grid--6-col@m` allows for fields of different sizes on larger screens. Combine it width fieldsets, legends, and the [bordered-header](/docs/atoms-bordered-header--bordered-header) atom.
+For a more complex form, `.u-grid-cols-6@m` allows for fields of different sizes on larger screens. Combine it width fieldsets, legends, and the [bordered-header](/docs/atoms-bordered-header--bordered-header) atom.
 
 <Canvas>
   <Story name="Complex, multi-section form">
@@ -169,17 +169,17 @@ For a more complex form, `.u-grid--6-col@m` allows for fields of different sizes
           <div class="a-bordered-header u-margin-xl-bottom">
             <legend class="u-h3 u-font--bold">Account details</legend>
           </div>
-          <div class="u-grid u-gap-m u-grid--6-col@l u-gap-m">
-            <ul class="a-list-reset u-grid__col-3@l u-grid u-gap-m u-grid--6-col@m u-grid__col-span-4@l">
-              <li class="u-grid__col-span-4@m u-grid__col-1@m u-grid__col-span-3@l">
+          <div class="u-grid u-gap-m u-grid-cols-6@l u-gap-m">
+            <ul class="a-list-reset u-col-start-3@l u-grid u-gap-m u-grid-cols-6@m u-col-span-4@l">
+              <li class="u-col-span-4@m u-col-start-1@m u-col-span-3@l">
                 <label for="name">Name</label>
                 <input id="name" type="text" autocomplete="name" value="Jon Doe" />
               </li>
-              <li class="u-grid__col-span-4@m u-grid__col-1@m u-grid__col-span-3@l">
+              <li class="u-col-span-4@m u-col-start-1@m u-col-span-3@l">
                 <label for="email">Email</label>
                 <input id="email" type="text" autocomplete="email" value="jon.doe@gmx.de" />
               </li>
-              <li class="u-grid__col-1@m u-grid__col-span-2@m">
+              <li class="u-col-start-1@m u-col-span-2@m">
                 <label for="type">Account type</label>
                 <select id="type">
                   <option value="user">User</option>
@@ -193,36 +193,36 @@ For a more complex form, `.u-grid--6-col@m` allows for fields of different sizes
           <div class="a-bordered-header u-margin-xl-bottom">
             <legend class="u-h3 u-font--bold a-bordered-header">Address</legend>
           </div>
-          <div class="u-grid u-gap-m u-grid--6-col@l">
-            <div class="u-grid__col-span-2@l">
+          <div class="u-grid u-gap-m u-grid-cols-6@l">
+            <div class="u-col-span-2@l">
               <p class="u-h6 u-fg--gray-50 u-padding-l-y@l u-padding-xl-right@m">Some intro text can go here, to describe this section</p>
             </div>
-            <ul class="a-list-reset u-grid__col-3@l u-grid__col-span-4@l u-grid u-gap-m u-grid--6-col@m u-gap-m">
-              <li class="u-grid__col-span-4@m u-grid__col-span-3@l">
+            <ul class="a-list-reset u-col-start-3@l u-col-span-4@l u-grid u-gap-m u-grid-cols-6@m u-gap-m">
+              <li class="u-col-span-4@m u-col-span-3@l">
                 <label for="street">Street</label>
                 <input id="street" type="text" autocomplete="address-line1" />
               </li>
-              <li class="u-grid__col-span-2@m u-grid__col-span-1@l">
+              <li class="u-col-span-2@m u-col-span-1@l">
                 <label for="house">House Nr.</label>
                 <input id="house" type="text" />
               </li>
-              <li class="u-grid__col-1@m u-grid__col-1@l u-grid__col-span-3@m">
+              <li class="u-col-start-1@m u-col-start-1@l u-col-span-3@m">
                 <label for="city">City</label>
                 <input id="city" type="text" autocomplete="address-line2" />
               </li>
-              <li class="u-grid__col-span-3@m">
+              <li class="u-col-span-3@m">
                 <label for="country">Country</label>
                 <input id="country" type="text" autocomplete="country-name" />
               </li>
-              <li class="u-grid__col-span-2@m">
+              <li class="u-col-span-2@m">
                 <label for="postal-code">Postal code</label>
                 <input id="postal-code" type="text" autocomplete="postal-code" />
               </li>
             </ul>
           <div>
         </fieldset>
-        <div class="u-grid u-gap-m u-grid--6-col@l u-gap-m u-margin-xl-bottom">
-          <ul class="a-list-reset u-flex u-items-center u-grid__col-3@l u-grid__col-span-4@l">
+        <div class="u-grid u-gap-m u-grid-cols-6@l u-gap-m u-margin-xl-bottom">
+          <ul class="a-list-reset u-flex u-items-center u-col-start-3@l u-col-span-4@l">
             <li class="u-margin-l-right">
               <button type="submit" class="a-button">Save changes</button>
             </li>
@@ -246,13 +246,13 @@ Some forms are always going to be small and simple, with just a few text inputs 
       <form action="" method="POST" class="a-content">
         <fieldset>
           <legend class="u-sr-only">User LKJHAS786SGLKJHAFGO7YEGKJBF</legend>
-          <div class="u-grid u-gap-m u-grid--6-col@l u-margin-xl-bottom">
-            <ul class="a-list-reset u-grid u-gap-m u-grid--6-col@m u-grid__col-span-4@l">
-              <li class="u-grid__col-span-4@m u-grid__col-1@m">
+          <div class="u-grid u-gap-m u-grid-cols-6@l u-margin-xl-bottom">
+            <ul class="a-list-reset u-grid u-gap-m u-grid-cols-6@m u-col-span-4@l">
+              <li class="u-col-span-4@m u-col-start-1@m">
                 <label for="name">Name</label>
                 <input id="name" type="text" autocomplete="name" value="Jon Doe" />
               </li>
-              <li class="u-grid__col-span-4@m u-grid__col-1@m">
+              <li class="u-col-span-4@m u-col-start-1@m">
                 <label for="email">Email</label>
                 <input id="email" type="text" autocomplete="email" value="jon.doe@gmx.de" />
               </li>

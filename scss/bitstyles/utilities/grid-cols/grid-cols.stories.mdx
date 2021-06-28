@@ -1,0 +1,161 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/grid-cols" />
+
+# Grid
+
+A responsive CSS grid system. Grids can be nested as much as you need.
+
+Giving an element the base class `.u-grid` alone will not create the columns you probably want — see the example below. The grid children have some space between them, but otherwise they behave like block elements.
+
+The grid classes are only rarely used without the [gap](/docs/utilities-gap--u-gap-m) utilities, as you normally want some space between items, and gap achieves that with no mathematics required.
+
+<Canvas>
+  <Story name="u-grid">
+    {`
+      <div class="u-grid u-gap-m u-padding-m u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">1-column grid, child 1</div>
+        <div class="u-bg--background u-padding-m a-card">1-column grid, child 2</div>
+        <div class="u-bg--background u-padding-m a-card">1-column grid, child 3</div>
+        <div class="u-bg--background u-padding-m a-card">1-column grid, child 4</div>
+        <div class="u-bg--background u-padding-m a-card">1-column grid, child 5</div>
+        <div class="u-bg--background u-padding-m a-card">1-column grid, child 6</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+If you’re rendering a list of related items, use a list element (could be a `<ul>` or `<ol>`) with the class `.a-list-reset`. This describes your content better, and will be announced to screenreader users as something like `List of six items, first item: <first item>`.
+
+<Canvas>
+  <Story name="u-grid (list)">
+    {`
+      <ul class="u-grid u-gap-m a-list-reset u-padding-m u-bg--gray-10">
+        <li class="u-bg--background u-padding-m a-card">1-column grid, child 1</li>
+        <li class="u-bg--background u-padding-m a-card">1-column grid, child 2</li>
+        <li class="u-bg--background u-padding-m a-card">1-column grid, child 3</li>
+        <li class="u-bg--background u-padding-m a-card">1-column grid, child 4</li>
+        <li class="u-bg--background u-padding-m a-card">1-column grid, child 5</li>
+        <li class="u-bg--background u-padding-m a-card">1-column grid, child 6</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Columns
+
+Most likely you’ll want to also add a grid-column class, to layout the grid children next to each other.
+
+<Canvas isColumn>
+  <Story name="u-grid-cols-2">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-2 u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--background u-padding-m a-card">2-column grid, child 1</li>
+        <li class="u-bg--background u-padding-m a-card">2-column grid, child 2</li>
+        <li class="u-bg--background u-padding-m a-card">2-column grid, child 3</li>
+        <li class="u-bg--background u-padding-m a-card">2-column grid, child 4</li>
+        <li class="u-bg--background u-padding-m a-card">2-column grid, child 5</li>
+        <li class="u-bg--background u-padding-m a-card">2-column grid, child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="u-grid-cols-3">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-3 u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--background u-padding-m a-card">3-column grid, child 1</li>
+        <li class="u-bg--background u-padding-m a-card">3-column grid, child 2</li>
+        <li class="u-bg--background u-padding-m a-card">3-column grid, child 3</li>
+        <li class="u-bg--background u-padding-m a-card">3-column grid, child 4</li>
+        <li class="u-bg--background u-padding-m a-card">3-column grid, child 5</li>
+        <li class="u-bg--background u-padding-m a-card">3-column grid, child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="u-grid-cols-4">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-4 u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--background u-padding-m a-card">4-column grid, child 1</li>
+        <li class="u-bg--background u-padding-m a-card">4-column grid, child 2</li>
+        <li class="u-bg--background u-padding-m a-card">4-column grid, child 3</li>
+        <li class="u-bg--background u-padding-m a-card">4-column grid, child 4</li>
+        <li class="u-bg--background u-padding-m a-card">4-column grid, child 5</li>
+        <li class="u-bg--background u-padding-m a-card">4-column grid, child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="u-grid-cols-6">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-6 u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--background u-padding-m a-card">6-column grid, child 1</li>
+        <li class="u-bg--background u-padding-m a-card">6-column grid, child 2</li>
+        <li class="u-bg--background u-padding-m a-card">6-column grid, child 3</li>
+        <li class="u-bg--background u-padding-m a-card">6-column grid, child 4</li>
+        <li class="u-bg--background u-padding-m a-card">6-column grid, child 5</li>
+        <li class="u-bg--background u-padding-m a-card">6-column grid, child 6</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+### Responsive columns
+
+Column classes are available at `s`, `m`, and `xl` breakpoints using the suffix on the class e.g. `u-grid-cols-3@m`. This can be used to achieve a single column layout on small screens, which will break into columns when there’s enough space.
+
+<Canvas isColumn>
+  <Story name="u-grid-cols-3@s">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-3@s u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="u-grid-cols-3@m">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-3@m u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="u-grid-cols-3@xl">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-3@m u-padding-m u-bg--gray-10 a-list-reset">
+        <li class="u-bg--background u-padding-m a-card">Grid child 1</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 2</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 3</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 4</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 5</li>
+        <li class="u-bg--background u-padding-m a-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The available grid column counts can be customized by overriding the `$bitstyles-grid-template-columns` Sass variable. This accepts everything you can use with the CSS `grid-template-columns` property:
+
+```scss
+$bitstyles-grid-template-columns: (
+  '2': repeat(2, minmax(0, 1fr)),
+  '3': repeat(3, minmax(0, 1fr)),
+  '4': repeat(4, minmax(0, 1fr)),
+  '6': repeat(6, minmax(0, 1fr)),
+  'magazine': 20rem, 1fr, 10%, 2fr
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-grid-template-columns-breakpoints` variable:
+
+```scss
+$bitstyles-grid-template-columns-breakpoints: ('base', 's', 'm', 'xl');
+```
