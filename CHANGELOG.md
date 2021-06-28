@@ -38,7 +38,6 @@
 - All `.u-grid__col-span-x` classes, where `x` is a number, have been renamed to `.u-col-span-x`
 - All `.u-grid__col-x` classes, where `x` is a number, have been renamed to `.u-col-start-x`
 
-
 # [[1.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.2.0) - 2021-05-04
 
 ## Added
