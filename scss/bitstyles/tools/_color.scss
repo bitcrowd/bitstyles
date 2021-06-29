@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "sass:math";
+@use '../settings/color-base';
+
+@function generate-palette($base-color, $mix-color, $percentages) {
+  $color-map: ();
+
+  @each $percentage in $percentages {
+    $color-map: map.merge($color-map, ('#{$percentage}': mix(color-base.$white, color-base.$brand-2, 100% - percentage(math.div($percentage, 100)))));
+  }
+
+  @return $color-map;
+}
