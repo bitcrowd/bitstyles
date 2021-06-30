@@ -69,24 +69,3 @@ $bitstyles-color-palette: (
     $percentages: $bitstyles-color-mix-percentages
   ),
 ) !default;
-
-/* stylelint-disable selector-pseudo-class-no-unknown, no-extra-semicolons */
-:export {
-  colorPalette: {
-    gray: {
-      \"100\": map-get($bitstyles-color-palette, 'gray', '100');
-      \"90\": map-get($bitstyles-color-palette, 'gray', '90');
-      \"80\": map-get($bitstyles-color-palette, 'gray', '80');
-      \"70\": map-get($bitstyles-color-palette, 'gray', '70');
-      \"60\": map-get($bitstyles-color-palette, 'gray', '60');
-      \"50\": map-get($bitstyles-color-palette, 'gray', '50');
-      \"40\": map-get($bitstyles-color-palette, 'gray', '40');
-      \"30\": map-get($bitstyles-color-palette, 'gray', '30');
-      \"20\": map-get($bitstyles-color-palette, 'gray', '20');
-      \"10\": map-get($bitstyles-color-palette, 'gray', '10');
-      \"5\": map-get($bitstyles-color-palette, 'gray', '5');
-      \"1\": map-get($bitstyles-color-palette, 'gray', '1');
-    }
-  }
-};
-/* stylelint-enable selector-pseudo-class-no-unknown, no-extra-semicolons */
