@@ -48,9 +48,19 @@ $bitstyles-color-palette: (
     $mix-color: color-base.$white,
     $percentages: $bitstyles-color-mix-percentages
   ),
+  'brand-1-shades': color.generate-palette(
+    $base-color: color-base.$brand-1,
+    $mix-color: color-base.$black,
+    $percentages: $bitstyles-color-mix-percentages
+  ),
   'brand-2': color.generate-palette(
     $base-color: color-base.$brand-2,
     $mix-color: color-base.$white,
+    $percentages: $bitstyles-color-mix-percentages
+  ),
+  'brand-2-shades': color.generate-palette(
+    $base-color: color-base.$brand-2,
+    $mix-color: color-base.$black,
     $percentages: $bitstyles-color-mix-percentages
   ),
   'danger': color.generate-palette(
@@ -58,14 +68,29 @@ $bitstyles-color-palette: (
     $mix-color: color-base.$white,
     $percentages: $bitstyles-color-mix-percentages
   ),
+  'danger-shades': color.generate-palette(
+    $base-color: color-base.$danger,
+    $mix-color: color-base.$black,
+    $percentages: $bitstyles-color-mix-percentages
+  ),
   'warning': color.generate-palette(
     $base-color: color-base.$warning,
     $mix-color: color-base.$white,
     $percentages: $bitstyles-color-mix-percentages
   ),
+  'warning-shades': color.generate-palette(
+    $base-color: color-base.$warning,
+    $mix-color: color-base.$black,
+    $percentages: $bitstyles-color-mix-percentages
+  ),
   'positive': color.generate-palette(
     $base-color: color-base.$positive,
     $mix-color: color-base.$white,
+    $percentages: $bitstyles-color-mix-percentages
+  ),
+  'positive-shades': color.generate-palette(
+    $base-color: color-base.$positive,
+    $mix-color: color-base.$black,
     $percentages: $bitstyles-color-mix-percentages
   ),
 ) !default;
