@@ -69,5 +69,3 @@ $bitstyles-color-palette: (
     $percentages: $bitstyles-color-mix-percentages
   ),
 ) !default;
-
-@debug map-get($bitstyles-color-palette, 'gray');
