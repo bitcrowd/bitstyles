@@ -4,18 +4,18 @@
 // Use Sass map functions to merge in extra colour maps in your project, or re-define the whole map.
 
 $bitstyles-grays-hint-color: color-base.$brand-1 !default;
-$bitstyles-grays-hint-color-mix: 5% !default;
+$bitstyles-grays-hint-color-mix: 10% !default;
 $bitstyles-color-mix-percentages: (1, 2, 3, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 97, 98, 99, 100) !default;
 
 $bitstyles-color-palette: (
   'black': color.generate-palette(
-    $base-color: color-base.$white,
-    $mix-color: color-base.$black,
+    $base-color: color-base.$black,
+    $mix-color: color-base.$white,
     $percentages: $bitstyles-color-mix-percentages
   ),
   'white': color.generate-palette(
-    $base-color: color-base.$black,
-    $mix-color: color-base.$white,
+    $base-color: color-base.$white,
+    $mix-color: color-base.$black,
     $percentages: $bitstyles-color-mix-percentages
   ),
   'gray': (
@@ -34,40 +34,40 @@ $bitstyles-color-palette: (
     '1': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 99%), $bitstyles-grays-hint-color-mix),
   ),
   'text': color.generate-palette(
-    $base-color: color-base.$white,
-    $mix-color: color-base.$text,
+    $base-color: color-base.$text,
+    $mix-color: color-base.$white,
     $percentages: $bitstyles-color-mix-percentages
   ),
   'background': color.generate-palette(
-    $base-color: color-base.$white,
-    $mix-color: color-base.$background,
-    $percentages: $bitstyles-color-mix-percentages
-  ),
-  'brand-1': color.generate-palette(
-    $base-color: color-base.$white,
+    $base-color: color-base.$background,
     $mix-color: color-base.$brand-1,
     $percentages: $bitstyles-color-mix-percentages
   ),
+  'brand-1': color.generate-palette(
+    $base-color: color-base.$brand-1,
+    $mix-color: color-base.$white,
+    $percentages: $bitstyles-color-mix-percentages
+  ),
   'brand-2': color.generate-palette(
-    $base-color: color-base.$white,
-    $mix-color: color-base.$brand-2,
+    $base-color: color-base.$brand-2,
+    $mix-color: color-base.$white,
     $percentages: $bitstyles-color-mix-percentages
   ),
   'danger': color.generate-palette(
-    $base-color: color-base.$white,
-    $mix-color: color-base.$danger,
+    $base-color: color-base.$danger,
+    $mix-color: color-base.$white,
     $percentages: $bitstyles-color-mix-percentages
   ),
   'warning': color.generate-palette(
-    $base-color: color-base.$white,
-    $mix-color: color-base.$warning,
+    $base-color: color-base.$warning,
+    $mix-color: color-base.$white,
     $percentages: $bitstyles-color-mix-percentages
   ),
   'positive': color.generate-palette(
-    $base-color: color-base.$white,
-    $mix-color: color-base.$positive,
+    $base-color: color-base.$positive,
+    $mix-color: color-base.$white,
     $percentages: $bitstyles-color-mix-percentages
   ),
 ) !default;
 
-@debug $bitstyles-color-palette;
+@debug map-get($bitstyles-color-palette, 'gray');
