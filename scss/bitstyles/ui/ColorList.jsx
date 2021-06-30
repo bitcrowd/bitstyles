@@ -1,25 +1,26 @@
 import { React } from 'react';
-import colors from '../settings/_color-palette.scss';
+import colorPalette from '../settings/_color-palette.scss';
 
 const ColorList = () => {
+  console.debug(colorPalette);
   return (
-    <ul>
-      {Object.keys(colors).map(color => (
-        <li>
-          <span
-            style={{
-              backgroundColor: colors[color],
-              display: 'block',
-              height: '4em',
-              marginBottom: '0.3em',
-              borderRadius: '5px',
-              border: '1px solid lightgray',
-            }}
-          />
-          <span>{color}</span>
-          <span>{colors[color]}</span>
-        </li>
-      ))}
+    <ul className="u-flex a-list-reset">
+      {Object.keys(colorPalette).map(color => {
+        console.debug(color);
+        return (
+          <li className="u-flex__shrink-1">
+            <div
+              style={{
+                backgroundColor: colorPalette[color],
+                display: 'block',
+                height: '4em',
+              }}
+            />
+            <div>{color}</div>
+            <small>{colorPalette[color]}</small>
+          </li>
+        );
+      })}
     </ul>
   );
 };

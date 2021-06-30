@@ -21,7 +21,21 @@ module.exports = {
     // Make whatever fine-grained changes you need
     config.module.rules.push({
       test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
+      use: [{
+        loader: "style-loader"
+      },
+      {
+        loader: "css-loader",
+        options: {
+          importLoaders: 1,
+          modules: {
+            compileType: "icss"
+          }
+        }
+      },
+      {
+        loader: "sass-loader"
+      }],
       include: path.resolve(__dirname, '../'),
     });
 
