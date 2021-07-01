@@ -3,6 +3,8 @@
 
 $bitstyles-input-padding: spacing('xs') !default;
 $bitstyles-input-border-radius: spacing('xs') !default;
+$bitstyles-input-placeholder-font-style: italic !default;
+$bitstyles-input-placeholder-font-weight: $bitstyles-font-weight-normal !default;
 $bitstyles-input-placeholder-color: palette('gray', '50') !default;
 $bitstyles-input-checkbox-size: spacing('m') !default;
 
