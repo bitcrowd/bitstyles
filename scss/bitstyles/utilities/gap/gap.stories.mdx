@@ -6,14 +6,6 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 The gap classes specify gaps on your grid elements — space between each grid item, but no space around them (you need to handle the space outside yourself).
 
-By default, `s`, `m`, and `l` sizes are available. This can be customized by overriding `$bitstyles-gap-sizes` e.g.
-
-```scss
-$bitstyles-gap-sizes: (
-  'my-gap-size': 5rem
-);
-```
-
 <Canvas>
   <Story name="u-gap-s">
     {`
@@ -52,3 +44,51 @@ $bitstyles-gap-sizes: (
     `}
   </Story>
 </Canvas>
+
+### Responsive gaps
+
+Gap classes are available at `m` and `xl` breakpoints using the suffix on the class e.g. `u-gap-l@m`.
+
+<Canvas isColumn>
+  <Story name="u-gap-s@m">
+    {`
+      <div class="u-grid u-padding-m u-gap-s@m u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@m, Grid child 1</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@m, Grid child 2</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@m, Grid child 3</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@m, Grid child 4</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@m, Grid child 5</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@m, Grid child 6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-gap-s@xl">
+    {`
+      <div class="u-grid u-padding-m u-gap-s@xl u-bg--gray-10">
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@xl, Grid child 1</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@xl, Grid child 2</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@xl, Grid child 3</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@xl, Grid child 4</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@xl, Grid child 5</div>
+        <div class="u-bg--background u-padding-m a-card">u-gap-s@xl, Grid child 6</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+Sizes `s`, `m`, and `l` are available by default. This can be customized by overriding `$bitstyles-gap-sizes` e.g.
+
+```scss
+$bitstyles-gap-sizes: (
+  'my-gap-size': 5rem
+);
+```
+
+The breakpoints these classes are available at can be customised too, by changing the named breakpoints:
+
+```scss
+$bitstyles-gap-breakpoints: ('base', 'm', 'xl');
+```
+

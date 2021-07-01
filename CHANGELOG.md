@@ -1,3 +1,9 @@
+# Unreleased
+
+## Added
+
+- The `.u-gap` classes are now available at `m` and `xl` breakpoints
+
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
 
 ## Added
