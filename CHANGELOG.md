@@ -1,3 +1,9 @@
+# Unreleased
+
+## Added
+
+- The breakpoints at which `.a-card` is output can now be specified with the `$bitstyles-card-breakpoints` Sass variable. Default is at `m`, and `l` breakpoints
+
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
 
 ## Added
