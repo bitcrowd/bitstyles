@@ -103,10 +103,8 @@ $bitstyles-color-palette: (
 /* stylelint-disable selector-pseudo-class-no-unknown, max-nesting-depth */
 :export {
   @each $name, $color-palette in $bitstyles-color-palette {
-    #{$name}: {
-      @each $color-name, $color-value in $color-palette {
-        #{$color-name}: #{$color-value};
-      }
+    @each $color-name, $color-value in $color-palette {
+      #{$name}#{'.'}#{$color-name}: #{$color-value};
     }
   }
 }

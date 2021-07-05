@@ -8,7 +8,7 @@ export const parameters = {
   previewTabs: { 'storybook/docs/panel': { index: -1 } },
   options: {
     storySort: {
-      order: ['Introduction', 'UI', ['Navigation', 'Content', 'Buttons', 'Data'], 'Atoms', 'Utilities', 'Organisms', 'Base' ],
+      order: ['Introduction', 'Design Tokens', 'UI', ['Navigation', 'Content', 'Buttons', 'Data'], 'Atoms', 'Utilities', 'Organisms', 'Base' ],
     },
   },
 }
