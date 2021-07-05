@@ -17,7 +17,7 @@
     "css:stats": "analyze-css --file build/bitstyles.css --pretty > test/css-stats.json",
     "precss:graph": "yarn build",
     "css:graph": "specificity-graph build/bitstyles.css --output test/specificity_graph/",
-    "build-storybook": "yarn build && build-storybook -s ./build"
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
