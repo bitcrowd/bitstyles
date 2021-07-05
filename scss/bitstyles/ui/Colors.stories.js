@@ -53,9 +53,9 @@ const ColorPalette = () => {
         .map(palette => {
           const name = Object.keys(palette)[0].split('.')[0];
           return `
-          <li class="u-margin-xl-bottom u-flex u-items-center">
+          <li class="u-margin-xl-bottom u-flex u-items-end">
             <h3
-              class="u-margin-bottom-0 u-margin-m-right u-text--right"
+              class="u-margin-0-bottom u-margin-m-right u-text--right u-line-height--min"
               style="min-width: 9rem"
             >
               ${name}
