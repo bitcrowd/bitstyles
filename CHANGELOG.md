@@ -5,6 +5,8 @@
 - Added `$bitstyles-grays-hint-color-mix` and `$bitstyles-grays-hint-color` variables to allow control over how the `gray` color palette is generated
 - Added `$bitstyles-color-mix-percentages` list variable, giving control over which percentage intervals are generated in each color’s palette
 - There’s now the `generate-palette($base-color, $mix-color, $percentages)` function to automate generating palettes of individual colors
+- Inputs’ placeholder text font-weight and font-style can now be customized using `$bitstyles-input-placeholder-font-weight` and `$bitstyles-input-placeholder-font-style` variables respectively
+- The `.u-gap` classes are now available at `m` and `xl` breakpoints
 
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
 
