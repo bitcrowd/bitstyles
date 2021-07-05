@@ -3,3 +3,4 @@ $bitstyles-gap-sizes: (
   'm': spacing('l'),
   'l': spacing('xl')
 ) !default;
+$bitstyles-gap-breakpoints: ('base', 'm', 'xl') !default;
