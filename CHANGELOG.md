@@ -9,6 +9,7 @@
 - Color scales based on the semantic colors (`brand-1`, `warning` etc.)  are now available in shades as well as tints (`brand-1-shades`, `warning-shades` etc.)
 - Inputs’ placeholder text font-weight and font-style can now be customized using `$bitstyles-input-placeholder-font-weight` and `$bitstyles-input-placeholder-font-style` variables respectively
 - The `.u-gap` classes are now available at `m` and `xl` breakpoints
+- The `.u-align`, `.u-self`, and `.u-justify` sets of utility classes are now all  available at `m` breakpoint. The available breakpoints can be customized
 
 ## Changed
 
