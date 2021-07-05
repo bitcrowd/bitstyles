@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "sass:math";
+
+// Generate palette
+//
+// **Generates a Sass map of colors. Each color is a `name: color` pair, with the name being the percentage as a string (one for each of the percentages in the list you pass in), and the color being the mix-color mixed into the base-color to that percentage.
+//
+// @param {String} $base-color  Base colour into which the other color will be mixed
+//
+// @param {String} $mix-color  The color to mix into the base color at different percentages
+//
+// @param {list} $percentages  A list of decmial values representing the percentages at which the mix-color will be mixed into the base-color
+
+@function generate-palette($base-color, $mix-color, $percentages) {
+  $color-map: ();
+
+  @each $percentage in $percentages {
+    $color-map: map.merge($color-map, ('#{$percentage}': mix($mix-color, $base-color, 100% - percentage(math.div($percentage, 100)))));
+  }
+
+  @return $color-map;
+}
+
+// Palette
+//
+// **Returns requested colours from the global `$palette` map.**
+// e.g. `color: palette('text');`
+//
+// @param {String} $color  Base colour within the palette
+//
+// @param {String} $percent   Optional. Percentage of the color to mix with white. Defaults to `100%` (fuly the specified color, no white)
+//
+
+// stylelint-disable at-rule-no-unknown
+@function palette($color, $percent: '100') {
+  @if map-has-key($bitstyles-color-palette, $color) {
+    $palette: map-get($bitstyles-color-palette, $color);
+
+    @if map-has-key($palette, $percent) {
+      @return map-get($palette, $percent);
+    }
+
+    @else {
+      @error "Oops! Color/percentage ‘#{$color}/#{$percent}’ does not exist.";
+    }
+  }
+
+  @else {
+    @error "Oops! Color ‘#{$color}’ does not exist.";
+  }
+}
+// stylelint-enable at-rule-no-unknown

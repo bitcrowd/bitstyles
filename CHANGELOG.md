@@ -2,8 +2,17 @@
 
 ## Added
 
+- Added `$bitstyles-grays-hint-color-mix` and `$bitstyles-grays-hint-color` variables to allow control over how the `gray` color palette is generated
+- Added `$bitstyles-color-mix-percentages` list variable, giving control over which percentage intervals are generated in each color’s palette
+- There’s now the `generate-palette($base-color, $mix-color, $percentages)` function to automate generating palettes of individual colors
+- Default color scales are now generated with colors at more percentage mixes: `1, 2, 3, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 97, 98, 99, 100`
+- Color scales based on the semantic colors (`brand-1`, `warning` etc.)  are now available in shades as well as tints (`brand-1-shades`, `warning-shades` etc.)
 - Inputs’ placeholder text font-weight and font-style can now be customized using `$bitstyles-input-placeholder-font-weight` and `$bitstyles-input-placeholder-font-style` variables respectively
 - The `.u-gap` classes are now available at `m` and `xl` breakpoints
+
+## Changed
+
+- Background color of the `html` element is now the `background` color at 100% instead of 95%
 
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
 
