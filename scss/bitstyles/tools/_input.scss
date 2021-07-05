@@ -69,7 +69,8 @@
 
 @mixin input-placeholder {
   &::placeholder {
-    font-style: italic;
+    font-style: $bitstyles-input-placeholder-font-style;
+    font-weight: $bitstyles-input-placeholder-font-weight;
     color: $bitstyles-input-placeholder-color;
     opacity: 1;
   }

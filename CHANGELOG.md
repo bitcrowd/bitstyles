@@ -2,6 +2,7 @@
 
 ## Added
 
+- Inputs’ placeholder text font-weight and font-style can now be customized using `$bitstyles-input-placeholder-font-weight` and `$bitstyles-input-placeholder-font-style` variables respectively
 - The `.u-gap` classes are now available at `m` and `xl` breakpoints
 
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
