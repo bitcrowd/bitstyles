@@ -5,19 +5,16 @@
   $classname-root: 'flex',
   $values: $bitstyles-flex-wrap
 );
-
 @include output-properties(
   $property-name: 'flex-direction',
   $classname-root: 'flex',
   $values: $bitstyles-flex-direction
 );
-
 @include output-properties(
   $property-name: 'flex-grow',
   $classname-root: 'flex-grow',
   $values: $bitstyles-flex-grow
 );
-
 @include output-properties(
   $property-name: 'flex-shrink',
   $classname-root: 'flex-shrink',

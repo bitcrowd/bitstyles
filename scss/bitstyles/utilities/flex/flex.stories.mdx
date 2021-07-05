@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 **Resize your viewport** to best view these examples, or view the examples in the canvas instead of here in the docs.
 
-**Some of these examples will cause horizontal scrollbars** at some viewport widths. That’s deliberate and important — your approach to dealing with that issue will depend on your content, but probably `.u-flex--wrap` will be among the first places to look (see below).
+**Some of these examples will cause horizontal scrollbars** at some viewport widths. That’s deliberate and important — your approach to dealing with that issue will depend on your content, but probably `.u-flex-wrap` will be among the first places to look (see below).
 
 Flex has become the prefered method for laying out app UI, and in many cases also for content in an article/content context. Probably the only instance that’s not true is when you can assume browser support for CSS Grid, which gives developers control over layout in two axis. These flex layout classes cover the most common usecases, they should be extended as needed.
 
@@ -62,7 +62,7 @@ These next examples show how the same layouts behave with long text content.
       </ul>
     `}
   </Story>
-  <Story name="Flex with long content, with primary child">
+  <Story name="Flex with long content, with grow-1 child">
     {`
       <ul class="u-flex a-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
@@ -72,7 +72,7 @@ These next examples show how the same layouts behave with long text content.
       </ul>
     `}
   </Story>
-  <Story name="Flex with long content, with no-shrink child">
+  <Story name="Flex with long content, with shrink-0 child">
     {`
       <ul class="u-flex a-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
@@ -107,7 +107,7 @@ And this time the same layouts, with images as content (any element with intrins
       </ul>
     `}
   </Story>
-  <Story name="Flex with intrinsic-width content, with primary child">
+  <Story name="Flex with intrinsic-width content, with grow-1 child">
     {`
       <ul class="u-flex a-list-reset">
         <li>
@@ -125,7 +125,7 @@ And this time the same layouts, with images as content (any element with intrins
       </ul>
     `}
   </Story>
-  <Story name="Flex with intrinsic-width content, with no-shrink child">
+  <Story name="Flex with intrinsic-width content, with shrink-0 child">
     {`
       <ul class="u-flex a-list-reset">
         <li>
@@ -147,14 +147,14 @@ And this time the same layouts, with images as content (any element with intrins
 
 ## Flex wrap
 
-Give the flex parent `.u-flex--wrap` too, if you want the children to wrap onto a new line when they run of space. This can be a good thing to do when you have a list of elements with intrinsic or fixed size e.g. a list of buttons, icons, or images. The result will mean the elements are allowed to flow onto the next line when there’s not enough space for them to be adjacent.
+Give the flex parent `.u-flex-wrap` too, if you want the children to wrap onto a new line when they run of space. This can be a good thing to do when you have a list of elements with intrinsic or fixed size e.g. a list of buttons, icons, or images. The result will mean the elements are allowed to flow onto the next line when there’s not enough space for them to be adjacent.
 
 Note this layout may not be so useful with elements that take all available space, like long paragraphs of text. It’s often great for buttons and images though.
 
 <Canvas isColumn>
   <Story name="Flex wrap with long content">
     {`
-      <ul class="u-flex u-flex--wrap a-list-reset">
+      <ul class="u-flex u-flex-wrap a-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li class="u-flex-grow-1 u-bg--brand-2">Important content here - Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
@@ -164,7 +164,7 @@ Note this layout may not be so useful with elements that take all available spac
   </Story>
   <Story name="Flex wrap with intrinsic-width content">
     {`
-      <ul class="u-flex u-flex--wrap a-list-reset">
+      <ul class="u-flex u-flex-wrap a-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
         <li class="u-flex-grow-1 u-bg--brand-2">Important content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
@@ -181,7 +181,7 @@ This flex layout is ideal for laying out buttons in a row — perhaps actions at
 <Canvas>
   <Story name="Flex wrap for buttons">
     {`
-      <ul class="u-flex u-flex--wrap a-list-reset">
+      <ul class="u-flex u-flex-wrap a-list-reset">
         <li class="u-margin-m-right u-margin-m-bottom"><button type="button">An action</button></li>
         <li class="u-margin-m-right u-margin-m-bottom"><button type="button">Another action</button></li>
         <li class="u-margin-m-right u-margin-m-bottom"><button type="button">A longer-named action</button></li>
@@ -193,12 +193,12 @@ This flex layout is ideal for laying out buttons in a row — perhaps actions at
 
 ## Flex column
 
-Flex defaults to laying out children in horizontal rows. To layout items vertically in columns, use `.u-flex--col`.
+Flex defaults to laying out children in horizontal rows. To layout items vertically in columns, use `.u-flex-col`.
 
 <Canvas>
   <Story name="Flex col">
     {`
-      <ul class="u-flex u-flex--col a-list-reset">
+      <ul class="u-flex u-flex-col a-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
         <li>Text content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
@@ -210,12 +210,12 @@ Flex defaults to laying out children in horizontal rows. To layout items vertica
 
 ## Flex column with align-center
 
-The flex classes can be combined: use `.u-items-center` with `.u-flex--col` to get a centered column.
+The flex classes can be combined: use `.u-items-center` with `.u-flex-col` to get a centered column.
 
 <Canvas>
   <Story name="Flex col with align center">
     {`
-      <ul class="u-flex u-flex--col u-items-center a-list-reset">
+      <ul class="u-flex u-flex-col u-items-center a-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
         <li>Text content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>

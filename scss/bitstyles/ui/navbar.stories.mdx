@@ -41,7 +41,7 @@ Give the active link the `aria-current="page"` attribute.
   <Story name="Navbar" inline={false} height="80vh">
     {`
       <nav class="u-bg--gray-80 u-padding-s-top u-padding-s-bottom u-relative">
-        <div class="u-padding-m-x u-flex u-justify-between u-items-center u-flex--wrap">
+        <div class="u-padding-m-x u-flex u-justify-between u-items-center u-flex-wrap">
           <div class="u-flex-shrink-1 u-flex u-items-center">
             <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex-shrink-0 u-margin-l-right u-hidden u-block@l" />
             <img src="${logoSmall}" width="50" height="50" alt="Company logo" class="u-flex-shrink-0 u-margin-l-right u-hidden@l" />
@@ -81,7 +81,7 @@ Give the active link the `aria-current="page"` attribute.
               <span class="u-sr-only">Toggle menu</span>
             </button>
             <ul
-              class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80"
+              class="u-flex u-flex-col a-list-reset o-navbar u-padding-s u-bg--gray-80"
               id="navbar-1"
               x-show="navbarOpen"
               @click.away="navbarOpen = false"
@@ -178,7 +178,7 @@ This navbar is only intended to hold a few link to the main sections of your sit
               <span class="u-sr-only">Toggle menu</span>
             </button>
             <ul
-              class="u-flex u-flex--col a-list-reset o-navbar u-padding-s u-bg--gray-80"
+              class="u-flex u-flex-col a-list-reset o-navbar u-padding-s u-bg--gray-80"
               id="navbar-1"
               x-show="navbarOpen"
               @click.away="navbarOpen = false"

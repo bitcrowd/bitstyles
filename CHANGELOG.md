@@ -10,7 +10,8 @@
 - Inputs’ placeholder text font-weight and font-style can now be customized using `$bitstyles-input-placeholder-font-weight` and `$bitstyles-input-placeholder-font-style` variables respectively
 - The `.u-gap` classes are now available at `m` and `xl` breakpoints
 - The `.u-align`, `.u-self`, and `.u-justify` sets of utility classes are now all  available at `m` breakpoint. The available breakpoints can be customized
-- The various `u-flex-` classes are now available at the `m` breakpoint. the available breakpoints can be customized by overriding `$bitstyles-flex-breakpoints`
+- The various `.u-flex-` classes are now available at the `m` breakpoint. the available breakpoints can be customized by overriding `$bitstyles-flex-breakpoints`
+- Adds `.u-flex-nowrap` and `.u-flex-row` classes
 
 ## Changed
 
@@ -27,6 +28,8 @@
 - Renamed `u-flex__shrink-1` to `u-flex-shrink-1`
 - Renamed `u-flex-grow-0` to `u-flex-grow-0`
 - Renamed `u-flex-grow-1` to `u-flex-grow-1`
+- Renamed `u-flex--wrap` to `u-flex-wrap`
+- Renamed `u-flex-col` to `u-flex-col`
 
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
 
