@@ -7,25 +7,21 @@
   box-shadow: $bitstyles-card-box-shadow;
 }
 
+@include output-block(
+  $object-level: 'a',
+  $classname-root: 'card'
+) {
+  @include card;
+}
+
 @each $breakpoint-alias in $bitstyles-card-breakpoints {
-  @if $breakpoint-alias == 'base' {
+  @include media-query($breakpoint-alias) {
     @include output-block(
       $object-level: 'a',
-      $classname-root: 'card'
+      $classname-root: 'card',
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     ) {
       @include card;
-    }
-  }
-
-  @else {
-    @include media-query($breakpoint-alias) {
-      @include output-block(
-        $object-level: 'a',
-        $classname-root: 'card',
-        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-      ) {
-        @include card;
-      }
     }
   }
 }

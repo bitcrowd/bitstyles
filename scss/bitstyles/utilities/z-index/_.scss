@@ -1,22 +1,18 @@
 @import './settings';
 
+@include output-properties(
+  $property-name: 'z-index',
+  $classname-root: 'z',
+  $values: $bitstyles-z-index
+);
+
 @each $breakpoint-alias in $bitstyles-z-index-breakpoints {
-  @if $breakpoint-alias == 'base' {
+  @include media-query($breakpoint-alias) {
     @include output-properties(
       $property-name: 'z-index',
       $classname-root: 'z',
-      $values: $bitstyles-z-index
+      $values: $bitstyles-z-index,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );
-  }
-
-  @else {
-    @include media-query($breakpoint-alias) {
-      @include output-properties(
-        $property-name: 'z-index',
-        $classname-root: 'z',
-        $values: $bitstyles-z-index,
-        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-      );
-    }
   }
 }
