@@ -29,7 +29,7 @@
 - Renamed `u-flex-grow-0` to `u-flex-grow-0`
 - Renamed `u-flex-grow-1` to `u-flex-grow-1`
 - Renamed `u-flex--wrap` to `u-flex-wrap`
-- Renamed `u-flex-col` to `u-flex-col`
+- Renamed `u-flex--col` to `u-flex-col`
 
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
 
