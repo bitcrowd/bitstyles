@@ -1,37 +1,42 @@
 import colorPalette from '../settings/_color-palette.scss';
 
+const ColorItem = (label, color) => {
+  return `
+    <li style="background-color: ${color};">
+      <div
+        style="
+          width: 100%; min-height:4rem;
+        "
+      ></div>
+      <span
+        class="u-bg--white u-padding-xxs-x u-margin-xxs-left"
+        style="
+          font-size: 10px;
+        "
+      >
+        ${label}
+      </span>
+    </li>
+  `;
+}
+
 const ColorRow = ({ palette }) => {
   return `
-    <ul class="u-flex__grow-1 u-grid a-list-reset" style="grid-template-columns: repeat(18, 1fr)">
+    <ul class="u-flex__grow-1 u-grid a-list-reset" style="grid-template-columns: repeat(${
+      Object.keys(palette).length
+    }, 1fr)">
       ${Object.keys(palette)
         .map(color => {
-          const colorParts = color.split('-');
-          const colorName = colorParts[colorParts.length - 1];
-          return `
-          <li style="background-color: ${colorPalette[color]};">
-            <div
-              style="
-                width: 100%;aspect-ratio: 1 / 1;
-              "
-            ></div>
-            <div
-              style="
-                font-size: 10px;
-                transform: rotateZ(90deg);
-                transform-origin: 0 100%;
-              "
-            >
-              ${colorName}
-            </div>
-          </li>
-        `;
+          const colorNameParts = color.split('.');
+          const colorName = colorNameParts[colorNameParts.length - 1];
+          return ColorItem(colorName, colorPalette[color]);
         })
         .join('')}
     </ul>
   `;
 };
 
-const ColorList = () => {
+const ColorPalette = () => {
   const values = Object.values(colorPalette);
   const final = [];
   let counter = 0;
@@ -52,7 +57,7 @@ const ColorList = () => {
     <ul class="a-list-reset u-grid u-gap-l">
       ${final
         .map(palette => {
-          const name = Object.keys(palette)[0].split('-')[0];
+          const name = Object.keys(palette)[0].split('.')[0];
           return `
           <li class="u-margin-xl-bottom u-flex u-items-center">
             <h3
@@ -70,9 +75,9 @@ const ColorList = () => {
     `;
 };
 
-export { ColorList };
+export { ColorPalette };
 
 export default {
-  title: 'UI/ColorList',
-  component: ColorList,
+  title: 'Design Tokens/Colors',
+  component: ColorPalette,
 };
