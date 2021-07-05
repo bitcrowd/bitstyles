@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "sass:map";
 @use "sass:math";
 
@@ -11,11 +12,11 @@
 //
 // @param {list} $percentages  A list of decmial values representing the percentages at which the mix-color will be mixed into the base-color
 
-@function generate-palette($base-color, $mix-color, $percentages) {
+@function generate-palette($base-color, $percentages) {
   $color-map: ();
 
   @each $percentage in $percentages {
-    $color-map: map.merge($color-map, ('#{$percentage}': mix($mix-color, $base-color, 100% - percentage(math.div($percentage, 100)))));
+    $color-map: map.merge($color-map, ('#{$percentage}': color.scale($base-color, $lightness: percentage(math.div($percentage, 100)))));
   }
 
   @return $color-map;
@@ -24,7 +25,7 @@
 // Palette
 //
 // **Returns requested colours from the global `$palette` map.**
-// e.g. `color: palette('text');`
+// e.g. `color: palette('text', '0');`
 //
 // @param {String} $color  Base colour within the palette
 //
@@ -32,7 +33,7 @@
 //
 
 // stylelint-disable at-rule-no-unknown
-@function palette($color, $percent: '100') {
+@function palette($color, $percent: '0') {
   @if map-has-key($bitstyles-color-palette, $color) {
     $palette: map-get($bitstyles-color-palette, $color);
 
