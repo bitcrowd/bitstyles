@@ -14,6 +14,10 @@
 
 - Background color of the `html` element is now the `background` color at 100% instead of 95%
 
+## Docs
+
+- Adds a `Design Tokens` section to the storybook, and lists all available colors
+
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
 
 ## Added

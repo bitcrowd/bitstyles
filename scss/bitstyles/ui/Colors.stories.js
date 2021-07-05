@@ -3,16 +3,10 @@ import colorPalette from '../settings/_color-palette.scss';
 const ColorItem = (label, color) => {
   return `
     <li style="background-color: ${color};">
-      <div
-        style="
-          width: 100%; min-height:4rem;
-        "
-      ></div>
+      <div style="min-height:4rem;"></div>
       <span
         class="u-bg--white u-padding-xxs-x u-margin-xxs-left"
-        style="
-          font-size: 10px;
-        "
+        style="font-size: 10px;"
       >
         ${label}
       </span>
