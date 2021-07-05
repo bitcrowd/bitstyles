@@ -99,13 +99,3 @@ $bitstyles-color-palette: (
     $percentages: $bitstyles-color-mix-percentages
   ),
 ) !default;
-
-/* stylelint-disable selector-pseudo-class-no-unknown, max-nesting-depth */
-:export {
-  @each $name, $color-palette in $bitstyles-color-palette {
-    @each $color-name, $color-value in $color-palette {
-      #{$name}#{'.'}#{$color-name}: #{$color-value};
-    }
-  }
-}
-/* stylelint-enable selector-pseudo-class-no-unknown, max-nesting-depth */

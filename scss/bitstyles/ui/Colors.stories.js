@@ -1,4 +1,4 @@
-import colorPalette from '../settings/_color-palette.scss';
+import colorPalette from '../exports/_color-palette.scss';
 
 const ColorItem = (label, color) => {
   return `
