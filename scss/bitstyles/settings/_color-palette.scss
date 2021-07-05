@@ -3,12 +3,18 @@
 
 // Use Sass map functions to merge in extra colour maps in your project, or re-define the whole map.
 
+$bitstyles-grays-hint-color: color-base.$brand-1 !default;
+$bitstyles-grays-hint-color-mix: 10% !default;
+
 $bitstyles-color-palette: (
+  'text': (
+    '0': map-get(color-base.$palette, 'grayscale', '-50'),
+  ),
   'brand-1': (
     '-2': map-get(color-base.$palette, 'brand-1', '-50'),
     '-1': map-get(color-base.$palette, 'brand-1', '-20'),
     '0': map-get(color-base.$palette, 'brand-1', '0'),
-    '1': map-get(color-base.$palette, 'brand-1', '20'),
+    '1': map-get(color-base.$palette, 'brand-1', '10'),
     '2': map-get(color-base.$palette, 'brand-1', '40'),
   ),
   'brand-2': (
@@ -17,23 +23,6 @@ $bitstyles-color-palette: (
     '0': map-get(color-base.$palette, 'brand-2', '0'),
     '1': map-get(color-base.$palette, 'brand-2', '20'),
     '2': map-get(color-base.$palette, 'brand-2', '70'),
-  ),
-  'text': (
-    '-2': map-get(color-base.$palette, 'grayScale', '-50'),
-    '-1': map-get(color-base.$palette, 'grayScale', '-20'),
-    '0': map-get(color-base.$palette, 'grayScale', '0'),
-    '1': map-get(color-base.$palette, 'grayScale', '20'),
-    '2': map-get(color-base.$palette, 'grayScale', '70'),
-  ),
-  'hintedGray': (
-    '-3': map-get(color-base.$palette, 'hintedGrayscale', '-90'),
-    '-2': map-get(color-base.$palette, 'hintedGrayscale', '-80'),
-    '-1': map-get(color-base.$palette, 'hintedGrayscale', '-20'),
-    '0': map-get(color-base.$palette, 'hintedGrayscale', '0'),
-    '1': map-get(color-base.$palette, 'hintedGrayscale', '20'),
-    '2': map-get(color-base.$palette, 'hintedGrayscale', '60'),
-    '3': map-get(color-base.$palette, 'hintedGrayscale', '70'),
-    '4': map-get(color-base.$palette, 'hintedGrayscale', '80'),
   ),
   'warning': (
     '-2': map-get(color-base.$palette, 'orange', '-50'),
@@ -62,5 +51,50 @@ $bitstyles-color-palette: (
     '0': map-get(color-base.$palette, 'background', '0'),
     '1': map-get(color-base.$palette, 'background', '10'),
     '2': map-get(color-base.$palette, 'background', '70'),
+  ),
+  'grayscale': color.generate-palette(
+    $base-color: color-base.$mid-gray,
+    $percentages: color-base.$bitstyles-color-mix-percentages
+  ),
+  'hintedGrayscale': (
+    '-100': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -100%), $bitstyles-grays-hint-color-mix),
+    '-99': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -99%), $bitstyles-grays-hint-color-mix),
+    '-98': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -98%), $bitstyles-grays-hint-color-mix),
+    '-97': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -97%), $bitstyles-grays-hint-color-mix),
+    '-95': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -95%), $bitstyles-grays-hint-color-mix),
+    '-90': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -90%), $bitstyles-grays-hint-color-mix),
+    '-80': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -80%), $bitstyles-grays-hint-color-mix),
+    '-70': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -70%), $bitstyles-grays-hint-color-mix),
+    '-60': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -60%), $bitstyles-grays-hint-color-mix),
+    '-50': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -50%), $bitstyles-grays-hint-color-mix),
+    '-40': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -40%), $bitstyles-grays-hint-color-mix),
+    '-30': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -30%), $bitstyles-grays-hint-color-mix),
+    '-20': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -20%), $bitstyles-grays-hint-color-mix),
+    '-10': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -10%), $bitstyles-grays-hint-color-mix),
+    '-5': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -5%), $bitstyles-grays-hint-color-mix),
+    '-3': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -3%), $bitstyles-grays-hint-color-mix),
+    '-2': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -2%), $bitstyles-grays-hint-color-mix),
+    '-1': mix($bitstyles-grays-hint-color, scale-color(color-base.$white, $lightness: -1%), $bitstyles-grays-hint-color-mix),
+    '0': mix(scale-color($bitstyles-grays-hint-color, $lightness: 0%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '1': mix(scale-color($bitstyles-grays-hint-color, $lightness: 1%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '2': mix(scale-color($bitstyles-grays-hint-color, $lightness: 2%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '3': mix(scale-color($bitstyles-grays-hint-color, $lightness: 3%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '5': mix(scale-color($bitstyles-grays-hint-color, $lightness: 5%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '10': mix(scale-color($bitstyles-grays-hint-color, $lightness: 10%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '20': mix(scale-color($bitstyles-grays-hint-color, $lightness: 20%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '30': mix(scale-color($bitstyles-grays-hint-color, $lightness: 30%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '40': mix(scale-color($bitstyles-grays-hint-color, $lightness: 40%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '50': mix(scale-color($bitstyles-grays-hint-color, $lightness: 50%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '60': mix(scale-color($bitstyles-grays-hint-color, $lightness: 60%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '70': mix(scale-color($bitstyles-grays-hint-color, $lightness: 70%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '80': mix(scale-color($bitstyles-grays-hint-color, $lightness: 80%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '90': mix(scale-color($bitstyles-grays-hint-color, $lightness: 90%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '95': mix(scale-color($bitstyles-grays-hint-color, $lightness: 95%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '97': mix(scale-color($bitstyles-grays-hint-color, $lightness: 97%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '98': mix(scale-color($bitstyles-grays-hint-color, $lightness: 98%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '99': mix(scale-color($bitstyles-grays-hint-color, $lightness: 99%), color-base.$white, $bitstyles-grays-hint-color-mix),
+    '100': mix(scale-color($bitstyles-grays-hint-color, $lightness: 100%), color-base.$white, $bitstyles-grays-hint-color-mix),
   )
 ) !default;
+
+@debug $bitstyles-color-palette;

@@ -5,25 +5,25 @@ $bitstyles-input-padding: spacing('xs') !default;
 $bitstyles-input-border-radius: spacing('xs') !default;
 $bitstyles-input-placeholder-font-style: italic !default;
 $bitstyles-input-placeholder-font-weight: $bitstyles-font-weight-normal !default;
-$bitstyles-input-placeholder-color: palette('gray', '50') !default;
+$bitstyles-input-placeholder-color: palette('hintedGrayscale', '-50') !default;
 $bitstyles-input-checkbox-size: spacing('m') !default;
 
 //
 // Base colors ////////////////////////////////////////
 
-$bitstyles-input-color: palette('text') !default;
+$bitstyles-input-color: palette('text', '0') !default;
 $bitstyles-input-border-width: spacing('xxxs');
-$bitstyles-input-border-color: palette('gray', '10') !default;
+$bitstyles-input-border-color: palette('hintedGrayscale', '-10') !default;
 $bitstyles-input-background: palette('white') !default;
-$bitstyles-input-box-shadow: 0 0 spacing('xs') rgba(palette('gray', '90'), 0.05);
+$bitstyles-input-box-shadow: 0 0 spacing('xs') rgba(palette('hintedGrayscale', '-90'), 0.05);
 
 //
 // Hover colors ////////////////////////////////////////
 
-$bitstyles-input-background-hover: palette('gray', '1') !default;
-$bitstyles-input-color-hover: palette('gray', '70') !default;
-$bitstyles-input-border-color-hover: palette('gray', '60') !default;
-$bitstyles-input-box-shadow-hover: 0 0 spacing('s') rgba(palette('brand-1', '90'), 0.05);
+$bitstyles-input-background-hover: palette('hintedGrayscale', '-1') !default;
+$bitstyles-input-color-hover: palette('hintedGrayscale', '-70') !default;
+$bitstyles-input-border-color-hover: palette('hintedGrayscale', '-60') !default;
+$bitstyles-input-box-shadow-hover: 0 0 spacing('s') rgba(palette('brand-1', '10'), 0.05);
 
 //
 // Active colors ////////////////////////////////////////
