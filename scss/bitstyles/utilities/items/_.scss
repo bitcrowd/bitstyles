@@ -1,25 +1,18 @@
-.#{$bitstyles-namespace}u-items-center {
-  align-items: center;
-}
+@import 'settings';
 
-.#{$bitstyles-namespace}u-items-start {
-  align-items: flex-start;
-}
+@include output-properties(
+  $property-name: 'align-items',
+  $classname-root: 'items',
+  $values: $bitstyles-items
+);
 
-.#{$bitstyles-namespace}u-items-end {
-  align-items: flex-end;
-}
-
-.#{$bitstyles-namespace}u-items-stretch {
-  align-items: stretch;
-}
-
-.#{$bitstyles-namespace}u-items-baseline {
-  align-items: baseline;
-}
-
-@include media-query('m') {
-  .#{$bitstyles-namespace}u-items-center\@m {
-    align-items: center;
+@each $breakpoint-alias in $bitstyles-items-breakpoints {
+  @include media-query($breakpoint-alias) {
+    @include output-properties(
+      $property-name: 'align-items',
+      $classname-root: 'items',
+      $values: $bitstyles-items,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
   }
 }
