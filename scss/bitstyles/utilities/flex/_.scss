@@ -1,20 +1,54 @@
-.#{$bitstyles-namespace}u-flex--wrap {
-  flex-wrap: wrap;
-}
+@import 'settings';
 
-.#{$bitstyles-namespace}u-flex--col {
-  flex-direction: column;
-}
+@include output-properties(
+  $property-name: 'flex-wrap',
+  $classname-root: 'flex',
+  $values: $bitstyles-flex-wrap
+);
 
-.#{$bitstyles-namespace}u-flex__grow-1 {
-  flex-grow: 1;
-}
+@include output-properties(
+  $property-name: 'flex-direction',
+  $classname-root: 'flex',
+  $values: $bitstyles-flex-direction
+);
 
-.#{$bitstyles-namespace}u-flex__shrink-0 {
-  flex-shrink: 0;
-}
+@include output-properties(
+  $property-name: 'flex-grow',
+  $classname-root: 'flex-grow',
+  $values: $bitstyles-flex-grow
+);
 
-.#{$bitstyles-namespace}u-flex__shrink-1 {
-  flex-shrink: 1;
-  min-width: 0;
+@include output-properties(
+  $property-name: 'flex-shrink',
+  $classname-root: 'flex-shrink',
+  $values: $bitstyles-flex-shrink
+);
+
+@each $breakpoint-alias in $bitstyles-flex-breakpoints {
+  @include media-query($breakpoint-alias) {
+    @include output-properties(
+      $property-name: 'flex-wrap',
+      $classname-root: 'flex',
+      $values: $bitstyles-flex-wrap,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+    @include output-properties(
+      $property-name: 'flex-direction',
+      $classname-root: 'flex',
+      $values: $bitstyles-flex-direction,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+    @include output-properties(
+      $property-name: 'flex-grow',
+      $classname-root: 'flex-grow',
+      $values: $bitstyles-flex-grow,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+    @include output-properties(
+      $property-name: 'flex-shrink',
+      $classname-root: 'flex-shrink',
+      $values: $bitstyles-flex-shrink,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
 }

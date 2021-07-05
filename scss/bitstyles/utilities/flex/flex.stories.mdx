@@ -14,11 +14,11 @@ Flex has become the prefered method for laying out app UI, and in many cases als
 
 Apply `.u-flex` to an element to make its children share the available width e.g. a list of links in a menu.
 
-These examples show how that base flex layout behaves with different content. The second of each of the example blocks shows the same layout, but with one of the children being given the `u-flex__grow-1` class, and the third shows one given `.u-flex__shrink-0`.
+These examples show how that base flex layout behaves with different content. The second of each of the example blocks shows the same layout, but with one of the children being given the `u-flex-grow-1` class, and the third shows one given `.u-flex-shrink-0`.
 
-Make one of the children `.u-flex__grow-1` to make it take any available space that’s left over. If there is no space left over, it becomes the same size as its siblings.
+Make one of the children `.u-flex-grow-1` to make it take any available space that’s left over. If there is no space left over, it becomes the same size as its siblings.
 
-Apply `.u-flex__shrink-0` to a flex-child to stop it being crushed when there is not enough space for it and its siblings. This is useful with elements which have intrinsic size (e.g. images, icons), or that need to remain fully-sized (e.g. buttons).
+Apply `.u-flex-shrink-0` to a flex-child to stop it being crushed when there is not enough space for it and its siblings. This is useful with elements which have intrinsic size (e.g. images, icons), or that need to remain fully-sized (e.g. buttons).
 
 ### Little text content
 
@@ -29,7 +29,7 @@ These first examples show the layouts with a small amount of text content.
     {`
       <ul class="u-flex a-list-reset">
         <li>List item one</li>
-        <li class="u-flex__grow-1 u-bg--brand-2">Important content here</li>
+        <li class="u-flex-grow-1 u-bg--brand-2">Important content here</li>
         <li>List item three</li>
         <li>List item four</li>
       </ul>
@@ -39,7 +39,7 @@ These first examples show the layouts with a small amount of text content.
     {`
       <ul class="u-flex a-list-reset">
         <li>List item one</li>
-        <li class="u-flex__shrink-0"><button type="button">Don’t shrink me</button></li>
+        <li class="u-flex-shrink-0"><button type="button">Don’t shrink me</button></li>
         <li>List item three</li>
         <li>List item four</li>
       </ul>
@@ -66,7 +66,7 @@ These next examples show how the same layouts behave with long text content.
     {`
       <ul class="u-flex a-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
-        <li class="u-flex__grow-1 u-bg--brand-2">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li class="u-flex-grow-1 u-bg--brand-2">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
       </ul>
@@ -76,7 +76,7 @@ These next examples show how the same layouts behave with long text content.
     {`
       <ul class="u-flex a-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
-        <li class="u-flex__shrink-0 u-bg--brand-2">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li class="u-flex-shrink-0 u-bg--brand-2">Important content here. Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
       </ul>
@@ -113,7 +113,7 @@ And this time the same layouts, with images as content (any element with intrins
         <li>
           <img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" />
         </li>
-        <li class="u-flex__grow-1 u-bg--brand-2">
+        <li class="u-flex-grow-1 u-bg--brand-2">
           <img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" />
         </li>
         <li>
@@ -131,7 +131,7 @@ And this time the same layouts, with images as content (any element with intrins
         <li>
           <img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" />
         </li>
-        <li class="u-flex__shrink-0 u-bg--brand-2">
+        <li class="u-flex-shrink-0 u-bg--brand-2">
           <img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" />
         </li>
         <li>
@@ -156,7 +156,7 @@ Note this layout may not be so useful with elements that take all available spac
     {`
       <ul class="u-flex u-flex--wrap a-list-reset">
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
-        <li class="u-flex__grow-1 u-bg--brand-2">Important content here - Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
+        <li class="u-flex-grow-1 u-bg--brand-2">Important content here - Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
         <li>Gingerbread topping tart. Bear claw cake icing cotton candy cheesecake biscuit pudding. Macaroon gummi bears chocolate bar lollipop. Caramels marzipan halvah fruitcake chocolate cake cake tart pudding. Bonbon sweet roll fruitcake soufflé topping fruitcake sesame snaps muffin. Pudding dragée marzipan ice cream topping chocolate cake fruitcake bear claw muffin.</li>
       </ul>
@@ -166,7 +166,7 @@ Note this layout may not be so useful with elements that take all available spac
     {`
       <ul class="u-flex u-flex--wrap a-list-reset">
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
-        <li class="u-flex__grow-1 u-bg--brand-2">Important content here</li>
+        <li class="u-flex-grow-1 u-bg--brand-2">Important content here</li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
         <li><img src="https://placekitten.com/300/300" width="300" height="300" class="u-block" /></li>
       </ul>
