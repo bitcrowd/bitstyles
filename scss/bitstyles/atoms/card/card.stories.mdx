@@ -52,3 +52,49 @@ For larger blocks of content, use a padding utility class to give the content mo
     `}
   </Story>
 </Canvas>
+
+## Responsive
+
+The `.a-card` classes are available at `m` and `l` breakpoints by default.
+
+<Canvas>
+  <Story name="a-card@m">
+    {`
+      <article class="a-card@m">
+        <h3>Recent activity (a-card@m)</h3>
+        <ul class="a-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+    `}
+  </Story>
+  <Story name="a-card@l">
+    {`
+      <article class="a-card@l">
+        <h3>Recent activity (a-card@l)</h3>
+        <ul class="a-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+Card appearance can be customized by overriding the following variables:
+
+```scss
+$bitstyles-card-padding: spacing('m');
+$bitstyles-card-border-radius: spacing('m');
+$bitstyles-card-box-shadow:
+  0 spacing('xs') spacing('m') rgba(palette('brand-1', '100'), 0.1),
+  0 spacing('xxxs') spacing('xxs') rgba(palette('gray', '90'), 0.04),
+  0 0 spacing('xxs') rgba(palette('gray', '90'), 0.1);
+```
+
+The breakpoints the cards are available at can be customized by overriding the `$bitstyles-card-breakpoints` variable:
+
+ ```scss
+ $bitstyles-card-breakpoints: ('m', 'l');
+ ```

@@ -1,22 +1,18 @@
 @import './settings';
 
+@include output-properties(
+  $property-name: 'gap',
+  $classname-root: 'gap',
+  $values: $bitstyles-gap-sizes
+);
+
 @each $breakpoint-alias in $bitstyles-gap-breakpoints {
-  @if $breakpoint-alias == 'base' {
+  @include media-query($breakpoint-alias) {
     @include output-properties(
       $property-name: 'gap',
       $classname-root: 'gap',
-      $values: $bitstyles-gap-sizes
+      $values: $bitstyles-gap-sizes,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );
-  }
-
-  @else {
-    @include media-query($breakpoint-alias) {
-      @include output-properties(
-        $property-name: 'gap',
-        $classname-root: 'gap',
-        $values: $bitstyles-gap-sizes,
-        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-      );
-    }
   }
 }

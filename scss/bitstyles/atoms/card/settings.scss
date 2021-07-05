@@ -4,3 +4,4 @@ $bitstyles-card-box-shadow:
   0 spacing('xs') spacing('m') rgba(palette('brand-1', '100'), 0.1),
   0 spacing('xxxs') spacing('xxs') rgba(palette('gray', '90'), 0.04),
   0 0 spacing('xxs') rgba(palette('gray', '90'), 0.1) !default;
+$bitstyles-card-breakpoints: ('m', 'l') !default;

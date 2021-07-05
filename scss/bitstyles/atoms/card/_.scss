@@ -1,17 +1,27 @@
 @import './settings';
 
-.#{$bitstyles-namespace}a-card {
+@mixin card {
   padding: $bitstyles-card-padding;
   overflow: hidden;
   border-radius: $bitstyles-card-border-radius;
   box-shadow: $bitstyles-card-box-shadow;
 }
 
-@include media-query('m') {
-  .#{$bitstyles-namespace}a-card\@m {
-    padding: $bitstyles-card-padding;
-    overflow: hidden;
-    border-radius: $bitstyles-card-border-radius;
-    box-shadow: $bitstyles-card-box-shadow;
+@include output-block(
+  $object-level: 'a',
+  $classname-root: 'card'
+) {
+  @include card;
+}
+
+@each $breakpoint-alias in $bitstyles-card-breakpoints {
+  @include media-query($breakpoint-alias) {
+    @include output-block(
+      $object-level: 'a',
+      $classname-root: 'card',
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    ) {
+      @include card;
+    }
   }
 }

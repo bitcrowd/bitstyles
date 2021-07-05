@@ -122,3 +122,21 @@
     }
   }
 }
+
+@mixin output-block(
+  $object-level,
+  $classname-root,
+  $breakpoint-suffix: ''
+) {
+  $classname: get-classname(
+    (
+      $bitstyles-namespace,
+      $object-level,
+      $classname-root,
+    )
+  );
+
+  .#{$classname}#{$breakpoint-suffix} {
+    @content;
+  }
+}
