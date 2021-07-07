@@ -35,16 +35,15 @@ const ColorPalette = () => {
   const final = [];
   let counter = 0;
   let portion = {};
-  let key;
 
-  for (key in colorPalette) {
+  Object.keys(colorPalette).map(key => {
     if (counter !== 0 && counter % 18 === 0) {
       final.push(portion);
       portion = {};
     }
     portion[key] = values[counter];
     counter += 1;
-  }
+  });
   final.push(portion);
 
   return `
