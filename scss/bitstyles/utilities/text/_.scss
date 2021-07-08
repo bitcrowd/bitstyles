@@ -1,5 +1,13 @@
+@import 'settings';
+
 @each $position in ('left', 'right', 'center', 'justify') {
   .#{$bitstyles-namespace}u-text--#{$position} {
     text-align: #{$position};
   }
 }
+
+@include generate-font-sizes(
+  '.#{$bitstyles-namespace}u-text-',
+  ('xxxl', 'xxl', 'xl', 'l', 'm', 's', 'xs'),
+  $bitstyles-text-scale
+);

@@ -46,13 +46,13 @@ $bitstyles-font-size-base-small: 16px !default;
 $bitstyles-font-size-base: 18px !default;
 $bitstyles-font-ratio: 1.2 !default;
 $bitstyles-font-sizes: (
-  -2: 'xs',
-  -1: 's',
-  0: 'm',
-  1: 'l',
-  2: 'xl',
-  3: 'xxl',
-  4: 'xxxl',
+  -2: 'h6',
+  -1: 'h5',
+  0: 'h4',
+  1: 'h3',
+  2: 'h2',
+  3: 'h1',
+  4: 'h0',
 ) !default;
 
 $bitstyles-line-height-base: 1.5 !default;

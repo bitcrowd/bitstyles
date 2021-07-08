@@ -4,6 +4,8 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Text
 
+## Text-align
+
 Set text-align properties on an element.
 
 <Canvas isColumn>
@@ -33,6 +35,53 @@ Set text-align properties on an element.
       <div class="u-bg--brand-2 u-padding-m">
         <div class="u-bg--background u-text--justify">u-text--justify. Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</div>
       </div>
+    `}
+  </Story>
+</Canvas>
+
+## Font-sizes
+
+Typographic classes that apply font-sizes from the typographic scale. These are useful mainly in two cases:
+
+- when your visual design calls for a specific font-size, but following the correct order of HTML `<h>` elements would result in a different size
+- when you need to apply a specific font-size to some other element, such as a button
+
+Note the `.u-h0` has been added as an additional layer above `.u-h1`, use it to acheive extra-large ‘hero’ text.
+
+<Canvas>
+  <Story name="u-text-xxxl">
+    {`
+      <span class="u-text-xxxl">.u-text-xxxl</span>
+    `}
+  </Story>
+  <Story name="u-text-xxl">
+    {`
+      <span class="u-text-xxl">.u-text-xxl</span>
+    `}
+  </Story>
+  <Story name="u-text-xl">
+    {`
+      <span class="u-text-xl">h3.u-text-xl</span>
+    `}
+  </Story>
+  <Story name="u-text-l">
+    {`
+      <span class="u-text-l">.u-text-l</span>
+    `}
+  </Story>
+  <Story name="u-text-m">
+    {`
+      <span class="u-text-m">.u-text-m</span>
+    `}
+  </Story>
+  <Story name="u-text-s">
+    {`
+      <span class="u-text-s">.u-text-s</span>
+    `}
+  </Story>
+  <Story name="u-text-xs">
+    {`
+      <span class="u-text-xs">.u-text-xs</span>
     `}
   </Story>
 </Canvas>

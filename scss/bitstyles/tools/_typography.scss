@@ -73,8 +73,8 @@
 // @param {List} $subset  Optional. Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in `$bitstyles-font-sizes`.
 //
 
-@mixin generate-font-sizes($prefix: '', $subset: ()) {
-  @each $media-query-name, $font-sizes in $bitstyles-typographic-scale {
+@mixin generate-font-sizes($prefix: '', $subset: (), $typographic-scale: $bitstyles-typographic-scale) {
+  @each $media-query-name, $font-sizes in $typographic-scale {
     // Don’t wrap base classes in a media-query
     @if $media-query-name == 'base' {
       @include output-font-sizes($font-sizes, $prefix, $subset);
