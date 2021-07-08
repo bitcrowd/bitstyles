@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use 'sass:math';
+
 // Generic heading
 //
 // **Shared styles for heading elements**
@@ -71,7 +74,7 @@
 //
 
 @mixin generate-font-sizes($prefix: '', $subset: ()) {
-  @each $media-query-name, $font-sizes in $bitstyles-font-sizes {
+  @each $media-query-name, $font-sizes in $bitstyles-typographic-scale {
     // Don’t wrap base classes in a media-query
     @if $media-query-name == 'base' {
       @include output-font-sizes($font-sizes, $prefix, $subset);
@@ -121,3 +124,15 @@
     }
   }
 }
+
+// f(n) = f0 * $ratio ^ n
+@function generate-typographic-scale($base-font-size, $ratio, $sizes) {
+  $font-size-map: ();
+
+  @each $size-value, $size-name in $sizes {
+    $font-size: $base-font-size * math.pow($ratio, $size-value);
+    $font-size-map: map.merge($font-size-map, ('#{$size-name}': $font-size));
+  }
+
+  @return $font-size-map;
+};

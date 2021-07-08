@@ -1,0 +1,83 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Typography" />
+
+# Typography
+
+The typographic scale is independent of the HTML element you may use for the content in question — `u-h3` can be applied to a `<span>` just as well as a `<h1>`, for example. This allows you freedom to use the headings in correct semantic order when the visual deign you’re building doesn’t match the logical order of your heading structure.
+
+<Canvas isColumn>
+  <Story name="text-xxxl">
+    {`
+      <span class="u-text-xxxl">Title.u-h0</span>
+    `}
+  </Story>
+  <Story name="text-xxl">
+    {`
+      <span class="u-text-xxl">Title.u-h1</span>
+    `}
+  </Story>
+  <Story name="text-xl">
+    {`
+      <span class="u-text-xl">Title.u-h2</span>
+    `}
+  </Story>
+  <Story name="text-l">
+    {`
+      <span class="u-text-l">Title.u-h3</span>
+    `}
+  </Story>
+  <Story name="text-m">
+    {`
+      <span class="u-text-m">Title.u-h4</span>
+    `}
+  </Story>
+  <Story name="text-s">
+    {`
+      <span class="u-text-s">Title.u-h5</span>
+    `}
+  </Story>
+  <Story name="text-xs">
+    {`
+      <span class="u-text-xs">Title.u-h6</span>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The typographic scale can be customized by overriding the base font-size, as that’s used to generate the other font-sizes:
+
+```scss
+$bitstyles-font-size-base-small: 16px;
+$bitstyles-font-size-base: 18px;
+```
+
+Note that while these are specified in `px` units, the output CSS will use `rem`.
+
+If the designs you’re implementing follow a different typographic scale, you can instead override the font-sizes at every point, and for each breakpoint. By default, the scale is altered at the `m` breakpoint, to better-fit screensizes:
+
+```scss
+$bitstyles-font-sizes: (
+  'base': (
+    'html': $bitstyles-font-size-base-small,
+    'h0': 32px,
+    'h1': 24px,
+    'h2': 20px,
+    'h3': 18px,
+    'h4': $bitstyles-font-size-base-small,
+    'h5': $bitstyles-font-size-base-small,
+    'h6': 16px
+  ),
+  'm': (
+    'html': $bitstyles-font-size-base,
+    'h0': 86px,
+    'h1': 40px,
+    'h2': 28px,
+    'h3': 20px,
+    'h4': $bitstyles-font-size-base,
+    'h5': $bitstyles-font-size-base,
+    'h6': 16px
+  )
+);
+```
