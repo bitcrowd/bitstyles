@@ -30,36 +30,36 @@ The typographic scale is independent of the HTML element you may use for the con
 The typographic scale can be customized by overriding the base font-size, and the ratio used to calculate each successive font-size:
 
 ```scss
-$bitstyles-font-size-base-small: 16px;
-$bitstyles-font-size-base: 18px;
+$bitstyles-font-size-base: (
+  'base': 16px,
+  'm': 18px
+);
 $bitstyles-font-ratio: 1.2;
 ```
 
 Note that while these are specified in `px` units, the output CSS will use the equivalent `rem`, for accessibility reasons.
 
-You can also customize the names of the font-sizes (e.g. `xl`, `large`, `5`), and their point on the typographic scale. With this you can skip points of the scale, or place a point at a non-integer position, allowing you to distort the linear ratio if needed.
-
-If the designs you’re implementing follow a different typographic scale — one not linearly-computable with a ratio/multiplier — you can instead manually specify the font-sizes at every point, and for each breakpoint. By default, the scale is altered to better-fit screensizes at the `m` breakpoint, but you can use any of the defined breakpoints:
+If the designs you’re implementing follow a different typographic scale — one not linearly-computable with a ratio/multiplier — you can instead manually specify the font-sizes at every point, and for each breakpoint. Note that the zero-index is your base font-size. By default, the scale is altered to better-fit screensizes at the `m` breakpoint, but you can use any of the defined breakpoints:
 
 ```scss
-$bitstyles-font-sizes: (
+$bitstyles-typographic-scale: (
   'base': (
-    'xxxl': 32px,
-    'xxl': 24px,
-    'xl': 20px,
-    'l': 18px,
-    'm': $bitstyles-font-size-base-small,
-    's': $bitstyles-font-size-base-small,
-    'xs': 16px
+    '4': 32px,
+    '3': 24px,
+    '2': 20px,
+    '1': 18px,
+    '0': $bitstyles-font-size-base-small,
+    '-1': $bitstyles-font-size-base-small,
+    '-2': 16px
   ),
   'm': (
-    'xxxl': 86px,
-    'xxl': 40px,
-    'xl': 28px,
-    'l': 20px,
-    'm': $bitstyles-font-size-base,
-    's': $bitstyles-font-size-base,
-    'xs': 16px
+    '4': 86px,
+    '3': 40px,
+    '2': 28px,
+    '1': 20px,
+    '0': $bitstyles-font-size-base,
+    '-1': $bitstyles-font-size-base,
+    '-2': 16px
   )
 );
 ```

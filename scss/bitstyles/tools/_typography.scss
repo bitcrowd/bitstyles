@@ -121,8 +121,8 @@
   }
 }
 
-/* f(n) = f0 * $ratio ^ n
- *
+/*
+ * f(n) = f0 * $ratio ^ n
  */
 @function generate-typographic-scale($base-font-size, $ratio, $indices) {
   $font-size-map: ();
