@@ -16,7 +16,19 @@ h6 {
   @include generic-heading;
 }
 
-@include generate-font-sizes('', ('h1', 'h2', 'h3', 'h4', 'h5', 'h6'));
+$bitstyles-base-font-sizes: (
+  -2: 'h6',
+  -1: 'h5',
+  0: 'h4',
+  1: 'h3',
+  2: 'h2',
+  3: 'h1',
+) !default;
+
+@include generate-font-sizes(
+  $selector-prefix: '',
+  $indices: $bitstyles-base-font-sizes
+);
 
 p {
   margin: 0 0 spacing('m');

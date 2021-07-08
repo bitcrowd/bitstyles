@@ -6,42 +6,23 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 The typographic scale is independent of the HTML element you may use for the content in question — `u-text-xs` can be applied to a `<span>` just as well as a `<h1>`, for example. This allows you freedom to use the headings in correct semantic order when the visual design you’re building doesn’t match the logically-dictated order of your heading structure.
 
-<Canvas isColumn>
-  <Story name="text-xxxl">
-    {`
-      <span class="u-text-xxxl">Title.u-text-xxxl</span>
-    `}
-  </Story>
-  <Story name="text-xxl">
-    {`
-      <span class="u-text-xxl">Title.u-text-xxl</span>
-    `}
-  </Story>
-  <Story name="text-xl">
-    {`
-      <span class="u-text-xl">Title.u-text-xl</span>
-    `}
-  </Story>
-  <Story name="text-l">
-    {`
-      <span class="u-text-l">Title.u-text-l</span>
-    `}
-  </Story>
-  <Story name="text-m">
-    {`
-      <span class="u-text-m">Title.u-text-m</span>
-    `}
-  </Story>
-  <Story name="text-s">
-    {`
-      <span class="u-text-s">Title.u-text-s</span>
-    `}
-  </Story>
-  <Story name="text-xs">
-    {`
-      <span class="u-text-xs">Title.u-text-xs</span>
-    `}
-  </Story>
+<Canvas>
+  <Story id="utilities-text--u-text-xxxl" />
+  <Story id="utilities-text--u-text-xxl" />
+  <Story id="utilities-text--u-text-xl" />
+  <Story id="utilities-text--u-text-l" />
+  <Story id="utilities-text--u-text-m" />
+  <Story id="utilities-text--u-text-s" />
+  <Story id="utilities-text--u-text-xs" />
+</Canvas>
+
+<Canvas>
+  <Story id="base-typography-headings--h-1" />
+  <Story id="base-typography-headings--h-2" />
+  <Story id="base-typography-headings--h-3" />
+  <Story id="base-typography-headings--h-4" />
+  <Story id="base-typography-headings--h-5" />
+  <Story id="base-typography-headings--h-6" />
 </Canvas>
 
 ## Customization

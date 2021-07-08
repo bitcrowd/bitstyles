@@ -7,7 +7,6 @@
 }
 
 @include generate-font-sizes(
-  '.#{$bitstyles-namespace}u-text-',
-  ('xxxl', 'xxl', 'xl', 'l', 'm', 's', 'xs'),
-  $bitstyles-text-scale
+  $selector-prefix: '.#{$bitstyles-namespace}u-text-',
+  $indices: $bitstyles-text-font-sizes
 );

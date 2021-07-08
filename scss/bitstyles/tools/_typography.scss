@@ -73,16 +73,26 @@
 // @param {List} $subset  Optional. Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in `$bitstyles-font-sizes`.
 //
 
-@mixin generate-font-sizes($prefix: '', $subset: (), $typographic-scale: $bitstyles-typographic-scale) {
-  @each $media-query-name, $font-sizes in $typographic-scale {
+@mixin generate-font-sizes($selector-prefix: '', $indices) {
+  @each $media-query-name, $global-font-sizes in $bitstyles-typographic-scale {
     // Don’t wrap base classes in a media-query
     @if $media-query-name == 'base' {
-      @include output-font-sizes($font-sizes, $prefix, $subset);
+      @include output-font-sizes(
+        $font-sizes: $global-font-sizes,
+        $indices: $indices,
+        $selector-prefix: $selector-prefix,
+        $media-query-name: $media-query-name
+      );
     }
 
     @else {
       @include media-query($media-query-name) {
-        @include output-font-sizes($font-sizes, $prefix, $subset);
+        @include output-font-sizes(
+          $font-sizes: $global-font-sizes,
+          $indices: $indices,
+          $selector-prefix: $selector-prefix,
+          $media-query-name: $media-query-name
+        );
       }
     }
   }
@@ -101,38 +111,26 @@
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 //
 
-@mixin output-font-sizes($font-sizes, $prefix, $subset) {
-  $base-size: $bitstyles-font-size-base-small;
+@mixin output-font-sizes($font-sizes, $indices, $selector-prefix, $media-query-name) {
+  $base-size: map-get($bitstyles-font-size-base, $media-query-name);
 
-  @if map-has-key($font-sizes, 'html') {
-    $base-size: map-get($font-sizes, 'html');
-  }
-
-  @each $element-name, $font-size in ($font-sizes) {
-    @if (length($subset) == 0) or (index($subset, $element-name)) {
-      #{$bitstyles-namespace}#{$prefix}#{$element-name} {
-        /* stylelint-disable max-nesting-depth */
-        @if $element-name == 'html' {
-          font-size: px-to-rem($font-size, 16px);
-        }
-
-        @else {
-          font-size: px-to-rem($font-size, $base-size);
-        }
-        /* stylelint-enable max-nesting-depth */
-      }
+  @each $index, $element-name in ($indices) {
+    #{$selector-prefix}#{$element-name} {
+      font-size: px-to-rem(map-get($font-sizes, '#{$index}'), $base-size);
     }
   }
 }
 
-// f(n) = f0 * $ratio ^ n
-@function generate-typographic-scale($base-font-size, $ratio, $sizes) {
+/* f(n) = f0 * $ratio ^ n
+ *
+ */
+@function generate-typographic-scale($base-font-size, $ratio, $indices) {
   $font-size-map: ();
 
-  @each $size-value, $size-name in $sizes {
-    $font-size: $base-font-size * math.pow($ratio, $size-value);
-    $font-size-map: map.merge($font-size-map, ('#{$size-name}': $font-size));
+  @each $index in $indices {
+    $font-size: $base-font-size * math.pow($ratio, $index);
+    $font-size-map: map.merge($font-size-map, ('#{$index}': $font-size));
   }
 
   @return $font-size-map;
-};
+}

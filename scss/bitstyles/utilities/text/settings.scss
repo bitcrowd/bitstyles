@@ -1,6 +1,4 @@
-@use '../../tools/typography';
-
-$bitstyles-text-sizes: (
+$bitstyles-text-font-sizes: (
   -2: 'xs',
   -1: 's',
   0: 'm',
@@ -9,18 +7,3 @@ $bitstyles-text-sizes: (
   3: 'xxl',
   4: 'xxxl',
 ) !default;
-
-$bitstyles-text-scale: (
-  'base': typography.generate-typographic-scale(
-    $base-font-size: $bitstyles-font-size-base-small,
-    $ratio: $bitstyles-font-ratio,
-    $sizes: $bitstyles-text-sizes
-  ),
-  'm': typography.generate-typographic-scale(
-    $base-font-size: $bitstyles-font-size-base,
-    $ratio: $bitstyles-font-ratio,
-    $sizes: $bitstyles-text-sizes
-  )
-) !default;
-
-@debug $bitstyles-text-scale;
