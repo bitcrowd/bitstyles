@@ -4,32 +4,32 @@
 .#{setup.$namespace}a-button--icon-reversed {
   &,
   &:visited {
-    color: var(--button-fg, settings.$button-icon-reversed-color);
-    background: var(--button-bg, settings.$button-icon-reversed-background-color);
-    border-color: settings.$button-icon-reversed-border-color;
-    box-shadow: settings.$button-icon-reversed-box-shadow;
+    color: var(--button-fg, settings.$color);
+    background: var(--button-bg, settings.$background-color);
+    border-color: settings.$border-color;
+    box-shadow: settings.$box-shadow;
   }
 
   &:hover,
   &:focus {
-    color: var(--button-fg-hover, settings.$button-icon-reversed-color-hover);
-    background: var(--button-bg-hover, settings.$button-icon-reversed-background-color-hover);
-    border-color: settings.$button-icon-reversed-border-color-hover;
-    box-shadow: settings.$button-icon-reversed-box-shadow-hover;
+    color: var(--button-fg-hover, settings.$color-hover);
+    background: var(--button-bg-hover, settings.$background-color-hover);
+    border-color: settings.$border-color-hover;
+    box-shadow: settings.$box-shadow-hover;
   }
 
   &:active {
-    color: settings.$button-icon-reversed-color-active;
-    background: settings.$button-icon-reversed-background-color-active;
-    border-color: settings.$button-icon-reversed-border-color-active;
-    box-shadow: settings.$button-icon-reversed-box-shadow-active;
+    color: settings.$color-active;
+    background: settings.$background-color-active;
+    border-color: settings.$border-color-active;
+    box-shadow: settings.$box-shadow-active;
   }
 
   &:disabled,
   &[aria-disabled="true"] {
-    color: settings.$button-icon-reversed-color-disabled;
-    background: settings.$button-icon-reversed-background-color-disabled;
-    border-color: settings.$button-icon-reversed-border-color-disabled;
-    box-shadow: settings.$button-icon-reversed-box-shadow-disabled;
+    color: settings.$color-disabled;
+    background: settings.$background-color-disabled;
+    border-color: settings.$border-color-disabled;
+    box-shadow: settings.$box-shadow-disabled;
   }
 }

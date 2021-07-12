@@ -4,23 +4,23 @@
 //
 // Hover colors ////////////////////////////////////////
 
-$button-danger-color-hover: palette.get('white') !default;
-$button-danger-background-color-hover: palette.get('danger', '100') !default;
-$button-danger-border-color-hover: palette.get('danger', '100') !default;
-$button-danger-box-shadow-hover: 0 0 spacing.spacing('m') rgba(palette.get('danger', '100'), 0.3) !default;
+$color-hover: palette.get('white') !default;
+$background-color-hover: palette.get('danger', '100') !default;
+$border-color-hover: palette.get('danger', '100') !default;
+$box-shadow-hover: 0 0 spacing.spacing('m') rgba(palette.get('danger', '100'), 0.3) !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$button-danger-color-active: palette.get('white') !default;
-$button-danger-background-color-active: palette.get('danger', '100') !default;
-$button-danger-border-color-active: palette.get('danger', '100') !default;
-$button-danger-box-shadow-active: 0 0 spacing.spacing('xs') rgba(palette.get('danger', '100'), 0.3) !default;
+$color-active: palette.get('white') !default;
+$background-color-active: palette.get('danger', '100') !default;
+$border-color-active: palette.get('danger', '100') !default;
+$box-shadow-active: 0 0 spacing.spacing('xs') rgba(palette.get('danger', '100'), 0.3) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$button-danger-color-disabled: palette.get('black', '50') !default;
-$button-danger-background-color-disabled: palette.get('black', '10') !default;
-$button-danger-border-color-disabled: palette.get('black', '10') !default;
-$button-danger-box-shadow-disabled: none !default;
+$color-disabled: palette.get('black', '50') !default;
+$background-color-disabled: palette.get('black', '10') !default;
+$border-color-disabled: palette.get('black', '10') !default;
+$box-shadow-disabled: none !default;

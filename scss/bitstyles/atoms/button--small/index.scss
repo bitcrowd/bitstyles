@@ -6,10 +6,10 @@
 
 .#{setup.$namespace}a-button--small {
   min-height: spacing.spacing('xl');
-  padding: settings.$button-small-padding-vertical settings.$button-small-padding-horizontal;
+  padding: settings.$padding-vertical settings.$padding-horizontal;
 
   &.#{setup.$namespace}a-button--icon {
-    padding: math.div(settings.$button-small-padding-horizontal, 2);
-    border-radius: settings.$button-small-border-radius;
+    padding: math.div(settings.$padding-horizontal, 2);
+    border-radius: settings.$border-radius;
   }
 }

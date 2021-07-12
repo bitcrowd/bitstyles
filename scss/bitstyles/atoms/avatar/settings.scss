@@ -1,6 +1,6 @@
 @use "../../tools/spacing";
 
-$avatar-sizes: (
+$sizes: (
   'm': spacing.spacing('xl'),
   'l': spacing.spacing('xl') + spacing.spacing('m'),
 );

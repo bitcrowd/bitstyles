@@ -12,12 +12,12 @@
 
 .#{setup.$namespace}a-content {
   width: 100%;
-  max-width: map.get(settings.$content-max-width, settings.$content-max-width-base);
+  max-width: map.get(settings.$max-width, settings.$max-width-base);
   margin-right: auto;
   margin-left: auto;
   transition: padding animation.$transition-duration animation.$transition-easing;
 
-  @each $breakpoint-alias, $padding-value in settings.$content-padding {
+  @each $breakpoint-alias, $padding-value in settings.$padding {
     @if $breakpoint-alias == 'base' {
       @include content-padding($padding-value);
     }
@@ -32,7 +32,7 @@
   }
 }
 
-@each $max-width-alias, $max-width-value in settings.$content-max-width {
+@each $max-width-alias, $max-width-value in settings.$max-width {
   .#{setup.$namespace}a-content--#{$max-width-alias} {
     max-width: $max-width-value;
   }

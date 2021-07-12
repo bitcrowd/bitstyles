@@ -4,38 +4,38 @@
 //
 // Base styles ////////////////////////////////////////
 
-$button-icon-padding-vertical: spacing.spacing('m') !default;
-$button-icon-padding-horizontal: spacing.spacing('m') !default;
+$padding-vertical: spacing.spacing('m') !default;
+$padding-horizontal: spacing.spacing('m') !default;
 
 //
 // Base colors ////////////////////////////////////////
 
-$button-icon-color: palette.get('gray', '50') !default;
-$button-icon-background-color: palette.get('gray', '5') !default;
-$button-icon-border-color: palette.get('gray', '5') !default;
-$button-icon-border-radius: spacing.spacing('s') !default;
-$button-icon-box-shadow: none !default;
+$color: palette.get('gray', '50') !default;
+$background-color: palette.get('gray', '5') !default;
+$border-color: palette.get('gray', '5') !default;
+$border-radius: spacing.spacing('s') !default;
+$box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$button-icon-color-hover: palette.get('gray', '80') !default;
-$button-icon-background-color-hover: palette.get('gray', '10') !default;
-$button-icon-border-color-hover: palette.get('gray', '10') !default;
-$button-icon-box-shadow-hover: none !default;
+$color-hover: palette.get('gray', '80') !default;
+$background-color-hover: palette.get('gray', '10') !default;
+$border-color-hover: palette.get('gray', '10') !default;
+$box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$button-icon-color-active: palette.get('white') !default;
-$button-icon-background-color-active: palette.get('brand-1', '100') !default;
-$button-icon-border-color-active: palette.get('brand-1', '100') !default;
-$button-icon-box-shadow-active: none !default;
+$color-active: palette.get('white') !default;
+$background-color-active: palette.get('brand-1', '100') !default;
+$border-color-active: palette.get('brand-1', '100') !default;
+$box-shadow-active: none !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$button-icon-color-disabled: palette.get('gray', '20') !default;
-$button-icon-background-color-disabled: palette.get('gray', '1') !default;
-$button-icon-border-color-disabled: palette.get('gray', '1') !default;
-$button-icon-box-shadow-disabled: none !default;
+$color-disabled: palette.get('gray', '20') !default;
+$background-color-disabled: palette.get('gray', '1') !default;
+$border-color-disabled: palette.get('gray', '1') !default;
+$box-shadow-disabled: none !default;

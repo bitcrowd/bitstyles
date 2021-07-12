@@ -5,10 +5,10 @@
 //
 // Base styles ////////////////////////////////////////
 
-$button-nav-padding-vertical: spacing.spacing('xs') !default;
-$button-nav-padding-horizontal: spacing.spacing('m') !default;
-$button-nav-border-radius: spacing.spacing('xs') !default;
-$button-nav-transition:
+$padding-vertical: spacing.spacing('xs') !default;
+$padding-horizontal: spacing.spacing('m') !default;
+$border-radius: spacing.spacing('xs') !default;
+$transition:
   color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing,
@@ -17,39 +17,39 @@ $button-nav-transition:
 //
 // Base colors ////////////////////////////////////////
 
-$button-nav-color: palette.get('gray', '20') !default;
-$button-nav-background-color: transparent !default;
-$button-nav-border-color: transparent !default;
-$button-nav-box-shadow: none !default;
+$color: palette.get('gray', '20') !default;
+$background-color: transparent !default;
+$border-color: transparent !default;
+$box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$button-nav-color-hover: palette.get('white') !default;
-$button-nav-background-color-hover: palette.get('gray', '60') !default;
-$button-nav-border-color-hover: palette.get('gray', '60') !default;
-$button-nav-box-shadow-hover: 0 0 spacing.spacing('l') rgba(palette.get('black', '100'), 0.3) !default;
+$color-hover: palette.get('white') !default;
+$background-color-hover: palette.get('gray', '60') !default;
+$border-color-hover: palette.get('gray', '60') !default;
+$box-shadow-hover: 0 0 spacing.spacing('l') rgba(palette.get('black', '100'), 0.3) !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$button-nav-color-active: palette.get('text') !default;
-$button-nav-background-color-active: palette.get('gray', '10') !default;
-$button-nav-border-color-active: palette.get('gray', '10') !default;
-$button-nav-box-shadow-active: 0 0 spacing.spacing('xs') rgba(palette.get('black', '100'), 0.3) !default;
+$color-active: palette.get('text') !default;
+$background-color-active: palette.get('gray', '10') !default;
+$border-color-active: palette.get('gray', '10') !default;
+$box-shadow-active: 0 0 spacing.spacing('xs') rgba(palette.get('black', '100'), 0.3) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$button-nav-color-disabled: palette.get('black', '50') !default;
-$button-nav-background-color-disabled: transparent !default;
-$button-nav-border-color-disabled: transparent !default;
-$button-nav-box-shadow-disabled: none !default;
+$color-disabled: palette.get('black', '50') !default;
+$background-color-disabled: transparent !default;
+$border-color-disabled: transparent !default;
+$box-shadow-disabled: none !default;
 
 //
 // Current colors ////////////////////////////////////////
 
-$button-nav-color-current: palette.get('white', '100') !default;
-$button-nav-background-color-current: palette.get('black', '100') !default;
-$button-nav-border-color-current: palette.get('gray', '80') !default;
-$button-nav-box-shadow-current: none !default;
+$color-current: palette.get('white', '100') !default;
+$background-color-current: palette.get('black', '100') !default;
+$border-color-current: palette.get('gray', '80') !default;
+$box-shadow-current: none !default;

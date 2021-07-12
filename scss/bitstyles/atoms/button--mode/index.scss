@@ -12,39 +12,39 @@
 
   &,
   &:visited {
-    color: settings.$button-mode-color;
-    background: settings.$button-mode-background-color;
-    border-color: settings.$button-mode-border-color;
-    box-shadow: settings.$button-mode-box-shadow;
+    color: settings.$color;
+    background: settings.$background-color;
+    border-color: settings.$border-color;
+    box-shadow: settings.$box-shadow;
   }
 
   &:hover,
   &:focus {
-    color: settings.$button-mode-color-hover;
-    background: settings.$button-mode-background-color-hover;
-    border-color: settings.$button-mode-border-color-hover;
-    box-shadow: settings.$button-mode-box-shadow-hover;
+    color: settings.$color-hover;
+    background: settings.$background-color-hover;
+    border-color: settings.$border-color-hover;
+    box-shadow: settings.$box-shadow-hover;
   }
 
   &:active {
-    color: settings.$button-mode-color-active;
-    background: settings.$button-mode-background-color-active;
-    border-color: settings.$button-mode-border-color-active;
-    box-shadow: settings.$button-mode-box-shadow-active;
+    color: settings.$color-active;
+    background: settings.$background-color-active;
+    border-color: settings.$border-color-active;
+    box-shadow: settings.$box-shadow-active;
   }
 
   &[aria-pressed="true"] {
-    color: settings.$button-mode-color-pressed;
-    background: settings.$button-mode-background-color-pressed;
-    border-color: settings.$button-mode-border-color-pressed;
-    box-shadow: settings.$button-mode-box-shadow-pressed;
+    color: settings.$color-pressed;
+    background: settings.$background-color-pressed;
+    border-color: settings.$border-color-pressed;
+    box-shadow: settings.$box-shadow-pressed;
   }
 
   &:disabled,
   &[aria-disabled="true"] {
-    color: settings.$button-mode-color-disabled;
-    background: settings.$button-mode-background-color-disabled;
-    border-color: settings.$button-mode-border-color-disabled;
-    box-shadow: settings.$button-mode-box-shadow-disabled;
+    color: settings.$color-disabled;
+    background: settings.$background-color-disabled;
+    border-color: settings.$border-color-disabled;
+    box-shadow: settings.$box-shadow-disabled;
   }
 }

@@ -1,7 +1,7 @@
 @use "../../settings/layout";
 @use "../../tools/spacing";
 
-$button-small-padding-vertical: spacing.spacing('xs');
-$button-small-padding-horizontal: spacing.spacing('m');
-$button-small-box-shadow: 0 0 spacing.spacing('xs') currentColor;
-$button-small-border-radius: layout.$border-radius-round;
+$padding-vertical: spacing.spacing('xs');
+$padding-horizontal: spacing.spacing('m');
+$box-shadow: 0 0 spacing.spacing('xs') currentColor;
+$border-radius: layout.$border-radius-round;

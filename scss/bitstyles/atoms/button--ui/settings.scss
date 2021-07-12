@@ -5,8 +5,8 @@
 //
 // Base styles ////////////////////////////////////////
 
-$button-ui-border-radius: spacing.spacing('s') !default;
-$button-ui-transition:
+$border-radius: spacing.spacing('s') !default;
+$transition:
   color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing !default;
@@ -14,39 +14,39 @@ $button-ui-transition:
 //
 // Base colors ////////////////////////////////////////
 
-$button-ui-color: palette.get('gray', '60') !default;
-$button-ui-background-color: palette.get('gray', '1') !default;
-$button-ui-border-color: palette.get('gray', '10') !default;
-$button-ui-box-shadow: none !default;
+$color: palette.get('gray', '60') !default;
+$background-color: palette.get('gray', '1') !default;
+$border-color: palette.get('gray', '10') !default;
+$box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$button-ui-color-hover: palette.get('gray', '80') !default;
-$button-ui-background-color-hover: palette.get('gray', '10') !default;
-$button-ui-border-color-hover: palette.get('gray', '20') !default;
-$button-ui-box-shadow-hover: none !default;
+$color-hover: palette.get('gray', '80') !default;
+$background-color-hover: palette.get('gray', '10') !default;
+$border-color-hover: palette.get('gray', '20') !default;
+$box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$button-ui-color-active: palette.get('white') !default;
-$button-ui-background-color-active: palette.get('brand-2', '100') !default;
-$button-ui-border-color-active: palette.get('brand-2', '100') !default;
-$button-ui-box-shadow-active: none !default;
+$color-active: palette.get('white') !default;
+$background-color-active: palette.get('brand-2', '100') !default;
+$border-color-active: palette.get('brand-2', '100') !default;
+$box-shadow-active: none !default;
 
 //
 // Pressed colors ////////////////////////////////////////
 
-$button-ui-color-pressed: palette.get('gray', '90') !default;
-$button-ui-background-color-pressed: palette.get('brand-2', '100') !default;
-$button-ui-border-color-pressed: palette.get('brand-2', '100') !default;
-$button-ui-box-shadow-pressed: none !default;
+$color-pressed: palette.get('gray', '90') !default;
+$background-color-pressed: palette.get('brand-2', '100') !default;
+$border-color-pressed: palette.get('brand-2', '100') !default;
+$box-shadow-pressed: none !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$button-ui-color-disabled: palette.get('gray', '10') !default;
-$button-ui-background-color-disabled: rgba(palette.get('gray', '1'), 0.5) !default;
-$button-ui-border-color-disabled: palette.get('gray', '10') !default;
-$button-ui-box-shadow-disabled: none !default;
+$color-disabled: palette.get('gray', '10') !default;
+$background-color-disabled: rgba(palette.get('gray', '1'), 0.5) !default;
+$border-color-disabled: palette.get('gray', '10') !default;
+$box-shadow-disabled: none !default;
