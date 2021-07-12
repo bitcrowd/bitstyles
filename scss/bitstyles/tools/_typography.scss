@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // Generic heading
 //
 // **Shared styles for heading elements**
@@ -101,8 +103,8 @@
 @mixin output-font-sizes($font-sizes, $prefix, $subset) {
   $base-size: $bitstyles-font-size-base-small;
 
-  @if map-has-key($font-sizes, 'html') {
-    $base-size: map-get($font-sizes, 'html');
+  @if map.has-key($font-sizes, 'html') {
+    $base-size: map.get($font-sizes, 'html');
   }
 
   @each $element-name, $font-size in ($font-sizes) {

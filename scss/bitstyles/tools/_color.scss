@@ -34,7 +34,6 @@
 // @param {String} $percent   Optional. Percentage of the color to mix with white. Defaults to `100%` (fuly the specified color, no white)
 //
 
-// stylelint-disable at-rule-no-unknown
 @function palette($color, $percent: '100') {
   @if map.has-key($bitstyles-color-palette, $color) {
     $palette: map.get($bitstyles-color-palette, $color);
@@ -52,7 +51,6 @@
     @error "Oops! Color ‘#{$color}’ does not exist.";
   }
 }
-// stylelint-enable at-rule-no-unknown
 
 @function url-encode-color($color) {
   @if meta.type-of($color) == 'color' and string.index(#{$color}, '#') == 1 {
