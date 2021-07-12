@@ -1,7 +1,43 @@
 import colorPalette from '../exports/_color-palette.scss';
 
-const ColorItem = (label, color) => {
-  return `
+/*
+ * Variables in our Sass are exported via webpack in the form
+ * {
+ *   background.1: "#fff",
+ *   background.2: "#eee",
+ *   …
+ *   black.1: "000",
+ *   …
+ * }
+ * This function converts it to an array:
+ * [
+ *   {background.1: "#fff", background.2: "#eee", …}
+ *   …
+ *   {black.1: "#000", …}
+ *   …
+ * ]
+ */
+const objectToChunkedArray = (object, chunkSize) => {
+  const values = Object.values(object);
+  const array = [];
+  let counter = 0;
+  let portion = {};
+
+  // eslint-disable-next-line array-callback-return
+  Object.keys(object).map(key => {
+    if (counter !== 0 && counter % chunkSize === 0) {
+      array.push(portion);
+      portion = {};
+    }
+    portion[key] = values[counter];
+    counter += 1;
+  });
+  array.push(portion);
+  return array;
+};
+
+const ColorItem = (label, color) =>
+  `
     <li style="background-color: ${color};">
       <div style="min-height:4rem;"></div>
       <span
@@ -12,10 +48,9 @@ const ColorItem = (label, color) => {
       </span>
     </li>
   `;
-}
 
-const ColorRow = ({ palette }) => {
-  return `
+const ColorRow = ({ palette }) =>
+  `
     <ul class="u-flex__grow-1 u-grid a-list-reset" style="grid-template-columns: repeat(${
       Object.keys(palette).length
     }, 1fr)">
@@ -28,27 +63,11 @@ const ColorRow = ({ palette }) => {
         .join('')}
     </ul>
   `;
-};
 
-const ColorPalette = () => {
-  const values = Object.values(colorPalette);
-  const final = [];
-  let counter = 0;
-  let portion = {};
-
-  Object.keys(colorPalette).map(key => {
-    if (counter !== 0 && counter % 18 === 0) {
-      final.push(portion);
-      portion = {};
-    }
-    portion[key] = values[counter];
-    counter += 1;
-  });
-  final.push(portion);
-
-  return `
+const ColorPalette = () =>
+  `
     <ul class="a-list-reset u-grid u-gap-l">
-      ${final
+      ${objectToChunkedArray(colorPalette, 18)
         .map(palette => {
           const name = Object.keys(palette)[0].split('.')[0];
           return `
@@ -65,8 +84,7 @@ const ColorPalette = () => {
         })
         .join('')}
     </ul>
-    `;
-};
+  `;
 
 export { ColorPalette };
 
