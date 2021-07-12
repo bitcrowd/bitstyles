@@ -1,0 +1,53 @@
+@use 'settings';
+@use "../../tools/directional-properties";
+@use "../../tools/media-query";
+
+@include directional-properties.output-properties(
+  $property-name: 'flex-wrap',
+  $classname-root: 'flex',
+  $values: settings.$flex-wrap
+);
+@include directional-properties.output-properties(
+  $property-name: 'flex-direction',
+  $classname-root: 'flex',
+  $values: settings.$flex-direction
+);
+@include directional-properties.output-properties(
+  $property-name: 'flex-grow',
+  $classname-root: 'flex-grow',
+  $values: settings.$flex-grow
+);
+@include directional-properties.output-properties(
+  $property-name: 'flex-shrink',
+  $classname-root: 'flex-shrink',
+  $values: settings.$flex-shrink
+);
+
+@each $breakpoint-alias in settings.$flex-breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-properties(
+      $property-name: 'flex-wrap',
+      $classname-root: 'flex',
+      $values: settings.$flex-wrap,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+    @include directional-properties.output-properties(
+      $property-name: 'flex-direction',
+      $classname-root: 'flex',
+      $values: settings.$flex-direction,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+    @include directional-properties.output-properties(
+      $property-name: 'flex-grow',
+      $classname-root: 'flex-grow',
+      $values: settings.$flex-grow,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+    @include directional-properties.output-properties(
+      $property-name: 'flex-shrink',
+      $classname-root: 'flex-shrink',
+      $values: settings.$flex-shrink,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

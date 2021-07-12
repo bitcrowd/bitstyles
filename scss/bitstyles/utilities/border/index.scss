@@ -1,0 +1,22 @@
+@use './settings';
+@use "../../tools/directional-properties";
+@use "../../tools/media-query";
+
+@include directional-properties.output-directional-properties(
+  $property-name: 'border',
+  $classname-root: 'border',
+  $values: settings.$border-colors,
+  $directions: settings.$border-directions
+);
+
+@each $breakpoint-alias in settings.$border-breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-directional-properties(
+      $property-name: 'border',
+      $classname-root: 'border',
+      $values: settings.$border-colors,
+      $directions: settings.$border-directions,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

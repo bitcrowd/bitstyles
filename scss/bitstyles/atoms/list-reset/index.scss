@@ -1,0 +1,6 @@
+@use "../../settings/setup";
+@use "../../tools/list-reset";
+
+.#{setup.$namespace}a-list-reset {
+  @include list-reset.list-reset();
+}

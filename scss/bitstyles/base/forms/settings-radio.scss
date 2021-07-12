@@ -1,34 +1,38 @@
+@use "../../settings/layout";
+@use "../../tools/palette";
+@use "../../tools/spacing";
+
 //
 // Base styles ////////////////////////////////////////
-$bitstyles-radio-border-radius: $bitstyles-border-radius-round !default;
+$radio-border-radius: layout.$border-radius-round !default;
 
 //
 // Base colors ////////////////////////////////////////
-$bitstyles-radio-color: palette('text', '80') !default;
-$bitstyles-radio-background-color: palette('white') !default;
-$bitstyles-radio-border-width: spacing('xxxs') !default;
-$bitstyles-radio-border-color: palette('text', '80') !default;
+$radio-color: palette.get('text', '80') !default;
+$radio-background-color: palette.get('white') !default;
+$radio-border-width: spacing.spacing('xxxs') !default;
+$radio-border-color: palette.get('text', '80') !default;
 
 //
 // Hover colors ////////////////////////////////////////
-$bitstyles-radio-color-hover: palette('brand-1') !default;
-$bitstyles-radio-background-color-hover: palette('white') !default;
-$bitstyles-radio-border-color-hover: palette('brand-1') !default;
+$radio-color-hover: palette.get('brand-1') !default;
+$radio-background-color-hover: palette.get('white') !default;
+$radio-border-color-hover: palette.get('brand-1') !default;
 
 //
 // Checked colors ////////////////////////////////////////
-$bitstyles-radio-color-checked: palette('brand-1') !default;
-$bitstyles-radio-background-color-checked: palette('white') !default;
-$bitstyles-radio-border-color-checked: palette('brand-1') !default;
+$radio-color-checked: palette.get('brand-1') !default;
+$radio-background-color-checked: palette.get('white') !default;
+$radio-border-color-checked: palette.get('brand-1') !default;
 
 //
 // Disabled colors ////////////////////////////////////////
-$bitstyles-radio-color-disabled: palette('black', '40') !default;
-$bitstyles-radio-background-color-disabled: palette('black', '20') !default;
-$bitstyles-radio-border-color-disabled: palette('black', '40') !default;
+$radio-color-disabled: palette.get('black', '40') !default;
+$radio-background-color-disabled: palette.get('black', '20') !default;
+$radio-border-color-disabled: palette.get('black', '40') !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
-$bitstyles-radio-color-disabled-checked: palette('black', '40') !default;
-$bitstyles-radio-background-color-disabled-checked: palette('black', '20') !default;
-$bitstyles-radio-border-color-disabled-checked: palette('black', '40') !default;
+$radio-color-disabled-checked: palette.get('black', '40') !default;
+$radio-background-color-disabled-checked: palette.get('black', '20') !default;
+$radio-border-color-disabled-checked: palette.get('black', '40') !default;

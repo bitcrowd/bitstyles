@@ -1,7 +1,10 @@
-$bitstyles-card-padding: spacing('m') !default;
-$bitstyles-card-border-radius: spacing('m') !default;
-$bitstyles-card-box-shadow:
-  0 spacing('xs') spacing('m') rgba(palette('brand-1', '100'), 0.1),
-  0 spacing('xxxs') spacing('xxs') rgba(palette('gray', '90'), 0.04),
-  0 0 spacing('xxs') rgba(palette('gray', '90'), 0.1) !default;
-$bitstyles-card-breakpoints: ('m', 'l') !default;
+@use "../../tools/palette";
+@use "../../tools/spacing";
+
+$card-padding: spacing.spacing('m') !default;
+$card-border-radius: spacing.spacing('m') !default;
+$card-box-shadow:
+  0 spacing.spacing('xs') spacing.spacing('m') rgba(palette.get('brand-1', '100'), 0.1),
+  0 spacing.spacing('xxxs') spacing.spacing('xxs') rgba(palette.get('gray', '90'), 0.04),
+  0 0 spacing.spacing('xxs') rgba(palette.get('gray', '90'), 0.1) !default;
+$card-breakpoints: ('m', 'l') !default;

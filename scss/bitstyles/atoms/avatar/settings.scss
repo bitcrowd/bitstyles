@@ -1,4 +1,6 @@
-$bitstyles-avatar-sizes: (
-  'm': spacing('xl'),
-  'l': spacing('xl') + spacing('m'),
+@use "../../tools/spacing";
+
+$avatar-sizes: (
+  'm': spacing.spacing('xl'),
+  'l': spacing.spacing('xl') + spacing.spacing('m'),
 );

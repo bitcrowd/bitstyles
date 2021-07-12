@@ -1,0 +1,49 @@
+@use './settings';
+@use "../../settings/setup";
+
+.#{setup.$namespace}a-button--nav-large {
+  display: flex;
+  width: 100%;
+  padding: settings.$button-nav-large-padding-vertical settings.$button-nav-large-padding-horizontal;
+  justify-content: flex-start;
+  border-radius: settings.$button-nav-large-border-radius;
+
+  &,
+  &:visited {
+    color: settings.$button-nav-large-color;
+    background: settings.$button-nav-large-background-color;
+    border-color: settings.$button-nav-large-border-color;
+    box-shadow: settings.$button-nav-large-box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: settings.$button-nav-large-color-hover;
+    background: settings.$button-nav-large-background-color-hover;
+    border-color: settings.$button-nav-large-border-color-hover;
+    box-shadow: settings.$button-nav-large-box-shadow-hover;
+  }
+
+  &:active {
+    color: settings.$button-nav-large-color-active;
+    background: settings.$button-nav-large-background-color-active;
+    border-color: settings.$button-nav-large-border-color-active;
+    box-shadow: settings.$button-nav-large-box-shadow-active;
+  }
+
+  &[aria-current],
+  &[aria-expanded="true"] {
+    color: settings.$button-nav-large-color-current;
+    background: settings.$button-nav-large-background-color-current;
+    border-color: settings.$button-nav-large-border-color-current;
+    box-shadow: settings.$button-nav-large-box-shadow-current;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$button-nav-large-color-disabled;
+    background: settings.$button-nav-large-background-color-disabled;
+    border: settings.$button-nav-large-border-color-disabled;
+    box-shadow: settings.$button-nav-large-box-shadow-disabled;
+  }
+}

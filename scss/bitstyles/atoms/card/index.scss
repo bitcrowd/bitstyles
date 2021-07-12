@@ -1,0 +1,29 @@
+@use './settings';
+@use "../../tools/directional-properties";
+@use "../../tools/media-query";
+
+@mixin card {
+  padding: settings.$card-padding;
+  overflow: hidden;
+  border-radius: settings.$card-border-radius;
+  box-shadow: settings.$card-box-shadow;
+}
+
+@include directional-properties.output-block(
+  $object-level: 'a',
+  $classname-root: 'card'
+) {
+  @include card;
+}
+
+@each $breakpoint-alias in settings.$card-breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-block(
+      $object-level: 'a',
+      $classname-root: 'card',
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    ) {
+      @include card;
+    }
+  }
+}

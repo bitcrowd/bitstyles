@@ -1,0 +1,7 @@
+@use "../../settings/setup";
+
+.#{setup.$namespace}u-outline-0 {
+  &:focus {
+    outline: none;
+  }
+}

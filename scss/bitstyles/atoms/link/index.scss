@@ -1,0 +1,7 @@
+@use '../../settings/link' as link2;
+@use "../../settings/setup";
+@use "../../tools/link";
+
+.#{setup.$namespace}a-link {
+  @include link.link;
+}

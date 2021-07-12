@@ -1,11 +1,11 @@
 @use 'sass:color';
 
-$bitstyles-color-black: #000 !default;
-$bitstyles-color-white: #fff !default;
-$bitstyles-color-brand-1: #000dff !default;
-$bitstyles-color-brand-2: #fa0 !default;
-$bitstyles-color-text: #333 !default;
-$bitstyles-color-background: color.mix($bitstyles-color-white, $bitstyles-color-brand-1, 97%) !default;
-$bitstyles-color-positive: #50a802 !default;
-$bitstyles-color-danger: #e82915 !default;
-$bitstyles-color-warning: #fe881e !default;
+$color-black: #000 !default;
+$color-white: #fff !default;
+$color-brand-1: #000dff !default;
+$color-brand-2: #fa0 !default;
+$color-text: #333 !default;
+$color-background: color.mix($color-white, $color-brand-1, 97%) !default;
+$color-positive: #50a802 !default;
+$color-danger: #e82915 !default;
+$color-warning: #fe881e !default;

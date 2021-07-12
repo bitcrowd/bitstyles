@@ -1,0 +1,41 @@
+@use './settings';
+@use "../../settings/setup";
+
+.#{setup.$namespace}a-button--menu {
+  display: flex;
+  min-height: 0;
+  padding: settings.$button-menu-padding-vertical settings.$button-menu-padding-horizontal;
+  justify-content: flex-start;
+  border-radius: 0;
+
+  &,
+  &:visited {
+    color: settings.$button-menu-color;
+    background: settings.$button-menu-background-color;
+    border-color: settings.$button-menu-border-color;
+    box-shadow: settings.$button-menu-box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: settings.$button-menu-color-hover;
+    background: settings.$button-menu-background-color-hover;
+    border-color: settings.$button-menu-border-color-hover;
+    box-shadow: settings.$button-menu-box-shadow-hover;
+  }
+
+  &:active {
+    color: settings.$button-menu-color-active;
+    background: settings.$button-menu-background-color-active;
+    border-color: settings.$button-menu-border-color-active;
+    box-shadow: settings.$button-menu-box-shadow-active;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$button-menu-color-disabled;
+    background: settings.$button-menu-background-color-disabled;
+    border-color: settings.$button-menu-border-color-disabled;
+    box-shadow: settings.$button-menu-box-shadow-disabled;
+  }
+}

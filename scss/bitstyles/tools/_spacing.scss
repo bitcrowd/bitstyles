@@ -1,3 +1,5 @@
+@use "../settings/layout";
+
 @use 'sass:map';
 
 // Spacing
@@ -13,8 +15,8 @@
 //
 
 @function spacing($spacing-size) {
-  @if map.has-key($bitstyles-spacing-sizes, $spacing-size) {
-    @return map.get($bitstyles-spacing-sizes, $spacing-size);
+  @if map.has-key(layout.$spacing-sizes, $spacing-size) {
+    @return map.get(layout.$spacing-sizes, $spacing-size);
   }
 
   @else {

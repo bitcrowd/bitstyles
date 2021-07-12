@@ -1,3 +1,5 @@
+@use "../settings/breakpoints";
+
 @use 'sass:map';
 
 // Media Query
@@ -22,7 +24,7 @@
 // @param {Map} $breakpoints  Optional. A map of breakpoints. By default `$bitstyles-breakpoints` will be used, but if you pass in another list of breakpoints, that will be used instead.
 //
 
-@mixin media-query($media-query-name, $breakpoints: $bitstyles-breakpoints) {
+@mixin media-query($media-query-name, $breakpoints: breakpoints.$breakpoints) {
 
   $breakpoint-condition: map.get($breakpoints, $media-query-name);
 

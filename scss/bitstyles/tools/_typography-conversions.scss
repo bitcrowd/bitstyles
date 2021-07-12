@@ -1,3 +1,5 @@
+@use "../settings/typography";
+
 @use 'sass:math';
 
 // Px to Rem sizing
@@ -11,7 +13,7 @@
 // @param {Number} $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
 //
 
-@function px-to-rem($pixel-size, $root-size: $bitstyles-font-size-base-small) {
+@function px-to-rem($pixel-size, $root-size: typography.$font-size-base-small) {
   @return math.div($pixel-size, $root-size) * 1rem;
 }
 
@@ -26,6 +28,6 @@
 // @param {Number} $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
 //
 
-@function px-to-em($pixel-size, $root-size: $bitstyles-font-size-base-small) {
+@function px-to-em($pixel-size, $root-size: typography.$font-size-base-small) {
   @return math.div($pixel-size, $root-size) + 0em; // stylelint-disable-line length-zero-no-unit
 }

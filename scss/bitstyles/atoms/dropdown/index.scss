@@ -1,0 +1,66 @@
+@use './settings';
+@use "../../settings/setup";
+@use "../../tools/media-query";
+
+.#{setup.$namespace}a-dropdown {
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: min-content;
+  max-width: 90vw;
+  max-height: settings.$dropdown-max-height;
+  min-width: 12rem;
+  padding: settings.$dropdown-separator-spacing 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: settings.$dropdown-background-color;
+  border: settings.$dropdown-border;
+  border-radius: settings.$dropdown-border-radius;
+  box-shadow: settings.$dropdown-box-shadow;
+
+  [role="separator"] {
+    margin: settings.$dropdown-separator-spacing 0;
+    border-top: 1px solid settings.$dropdown-separator-border;
+  }
+
+  @include media-query.media-query('motion-ok') {
+    &.is-transitioning {
+      transition: settings.$dropdown-transition;
+      will-change: settings.$dropdown-will-change;
+    }
+  }
+
+  @each $state-alias, $state-properties in settings.$dropdown-states {
+    &.is-#{$state-alias} {
+      /* stylelint-disable max-nesting-depth */
+      @each $state-property, $state-value in $state-properties {
+        #{$state-property}: $state-value;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+}
+
+.#{setup.$namespace}a-dropdown--right {
+  right: 0;
+}
+
+.#{setup.$namespace}a-dropdown--top {
+  top: auto;
+  bottom: 100%;
+}
+
+.a-dropdown--full-width {
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+}
+
+@include media-query.media-query('s') {
+  .#{setup.$namespace}a-dropdown {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}

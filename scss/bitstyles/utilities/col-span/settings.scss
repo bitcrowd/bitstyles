@@ -1,4 +1,4 @@
-$bitstyles-col-span: (
+$col-span: (
   '1': span 1 / span 1,
   '2': span 2 / span 2,
   '3': span 3 / span 3,
@@ -6,4 +6,4 @@ $bitstyles-col-span: (
   '5': span 5 / span 5,
   '6': span 6 / span 6
 ) !default;
-$bitstyles-col-span-breakpoints: ('s', 'm', 'xl') !default;
+$col-span-breakpoints: ('s', 'm', 'xl') !default;

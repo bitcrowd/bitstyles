@@ -1,0 +1,12 @@
+@use "../../settings/setup";
+@use "../../tools/media-query";
+
+.#{setup.$namespace}u-relative {
+  position: relative;
+}
+
+@include media-query.media-query('m') {
+  .#{setup.$namespace}u-relative\@m {
+    position: relative;
+  }
+}

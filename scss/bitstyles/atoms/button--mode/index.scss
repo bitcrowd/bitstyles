@@ -1,0 +1,50 @@
+@use './settings.scss';
+@use "../../settings/setup";
+@use "../../tools/spacing";
+
+.#{setup.$namespace}a-button--mode-container {
+  border-radius: spacing.spacing('s');
+}
+
+.#{setup.$namespace}a-button--mode {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &,
+  &:visited {
+    color: settings.$button-mode-color;
+    background: settings.$button-mode-background-color;
+    border-color: settings.$button-mode-border-color;
+    box-shadow: settings.$button-mode-box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: settings.$button-mode-color-hover;
+    background: settings.$button-mode-background-color-hover;
+    border-color: settings.$button-mode-border-color-hover;
+    box-shadow: settings.$button-mode-box-shadow-hover;
+  }
+
+  &:active {
+    color: settings.$button-mode-color-active;
+    background: settings.$button-mode-background-color-active;
+    border-color: settings.$button-mode-border-color-active;
+    box-shadow: settings.$button-mode-box-shadow-active;
+  }
+
+  &[aria-pressed="true"] {
+    color: settings.$button-mode-color-pressed;
+    background: settings.$button-mode-background-color-pressed;
+    border-color: settings.$button-mode-border-color-pressed;
+    box-shadow: settings.$button-mode-box-shadow-pressed;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$button-mode-color-disabled;
+    background: settings.$button-mode-background-color-disabled;
+    border-color: settings.$button-mode-border-color-disabled;
+    box-shadow: settings.$button-mode-box-shadow-disabled;
+  }
+}

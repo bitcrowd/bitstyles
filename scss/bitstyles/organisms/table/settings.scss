@@ -1,7 +1,10 @@
-$bitstyles-table-border: 1px solid palette('gray', '5') !default;
-$bitstyles-table-padding-horizontal: spacing('m') !default;
-$bitstyles-table-padding-vertical-td: spacing('s') !default;
-$bitstyles-table-padding-vertical-th: spacing('xxs') !default;
-$bitstyles-table-background-color-td: palette('white') !default;
-$bitstyles-table-color-th: palette('gray', '70') !default;
-$bitstyles-table-background-color-th: palette('background') !default;
+@use "../../tools/palette";
+@use "../../tools/spacing";
+
+$table-border: 1px solid palette.get('gray', '5') !default;
+$table-padding-horizontal: spacing.spacing('m') !default;
+$table-padding-vertical-td: spacing.spacing('s') !default;
+$table-padding-vertical-th: spacing.spacing('xxs') !default;
+$table-background-color-td: palette.get('white') !default;
+$table-color-th: palette.get('gray', '70') !default;
+$table-background-color-th: palette.get('background') !default;

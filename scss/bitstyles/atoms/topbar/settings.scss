@@ -1,4 +1,8 @@
-$bitstyles-topbar-position: relative !default;
-$bitstyles-topbar-vertical-padding: spacing('s') !default;
-$bitstyles-topbar-horizontal-padding: spacing('m') !default;
-$bitstyles-topbar-z-index: z($bitstyles-global-z, 'topbar') !default;
+@use '../../tools/spacing';
+@use '../../tools/zindex';
+@use '../../settings/layout';
+
+$topbar-position: relative !default;
+$topbar-vertical-padding: spacing.spacing('s') !default;
+$topbar-horizontal-padding: spacing.spacing('m') !default;
+$topbar-z-index: zindex.z(layout.$global-z, 'topbar') !default;

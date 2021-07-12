@@ -1,0 +1,75 @@
+@use 'sass:math';
+
+@use './settings';
+@use "../../settings/setup";
+@use "../../settings/typography";
+
+.#{setup.$namespace}a-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: calc(#{settings.$button-padding-vertical  * 2} + 1em);
+  padding: settings.$button-padding-vertical settings.$button-padding-horizontal;
+  margin: 0;
+  overflow: visible;
+  font: inherit;
+  font-weight: typography.$font-weight-normal;
+  line-height: typography.$line-height-min;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: settings.$button-border-radius;
+  transition: settings.$button-transition;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+  user-select: none;
+  touch-action: manipulation;
+
+  &,
+  &:visited {
+    color: settings.$button-color;
+    background: settings.$button-background-color;
+    border: settings.$button-border-width solid settings.$button-border-color;
+    box-shadow: settings.$button-box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: settings.$button-color-hover;
+    text-decoration: none;
+    background: settings.$button-background-color-hover;
+    border-color: settings.$button-border-color-hover;
+    outline: none;
+    box-shadow: settings.$button-box-shadow-hover;
+  }
+
+  &:active {
+    color: settings.$button-color-active;
+    background: settings.$button-background-color-active;
+    border-color: settings.$button-border-color-active;
+    box-shadow: settings.$button-box-shadow-active;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$button-color-disabled;
+    cursor: not-allowed;
+    background: settings.$button-background-color-disabled;
+    border-color: settings.$button-border-color-disabled;
+    box-shadow: settings.$button-box-shadow-disabled;
+  }
+}
+
+.#{setup.$namespace}a-button__avatar,
+.#{setup.$namespace}a-button__icon {
+  margin-right: settings.$button-icon-spacing;
+  margin-left: math.div(-(settings.$button-icon-spacing), 4);
+}
+
+.#{setup.$namespace}a-button__label + .#{setup.$namespace}a-button__icon {
+  margin-right: math.div(-(settings.$button-icon-spacing), 4);
+  margin-left: settings.$button-icon-spacing;
+}

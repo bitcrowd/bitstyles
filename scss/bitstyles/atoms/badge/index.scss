@@ -1,0 +1,30 @@
+@use './settings';
+@use "../../settings/layout";
+@use "../../settings/setup";
+@use "../../tools/palette";
+@use "../../tools/spacing";
+
+.#{setup.$namespace}a-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: settings.$badge-padding-vertical settings.$badge-padding-horizontal;
+  white-space: nowrap;
+  border-radius: layout.$border-radius-round;
+}
+
+@each $variant in (settings.$badge-variants) {
+  .#{setup.$namespace}a-badge--#{$variant} {
+    --button-fg: #{palette.get($variant, settings.$badge-color)};
+    --button-bg: #{palette.get($variant, settings.$badge-background-color)};
+    --button-fg-hover: #{palette.get($variant, settings.$badge-background-color)};
+    --button-bg-hover: #{palette.get($variant, settings.$badge-color)};
+
+    color: palette.get($variant, settings.$badge-color);
+    background-color: palette.get($variant, settings.$badge-background-color);
+  }
+}
+
+.#{setup.$namespace}a-badge__button {
+  margin-right: -#{spacing.spacing('s')};
+  margin-left: spacing.spacing('xs');
+}

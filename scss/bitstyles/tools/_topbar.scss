@@ -1,8 +1,10 @@
+@use "../atoms/topbar/settings";
+
 @mixin topbar {
-  position: $bitstyles-topbar-position;
+  position: settings.$topbar-position;
   top: 0;
   right: 0;
   left: 0;
-  z-index: $bitstyles-topbar-z-index;
-  padding: $bitstyles-topbar-vertical-padding $bitstyles-topbar-horizontal-padding;
+  z-index: settings.$topbar-z-index;
+  padding: settings.$topbar-vertical-padding settings.$topbar-horizontal-padding;
 }

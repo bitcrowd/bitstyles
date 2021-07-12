@@ -1,2 +1,4 @@
-$bitstyles-figure-font-style: italic !default;
-$bitstyles-figure-color: palette('text', '80') !default;
+@use "../../tools/palette";
+
+$figure-font-style: italic !default;
+$figure-color: palette.get('text', '80') !default;

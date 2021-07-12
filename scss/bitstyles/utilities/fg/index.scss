@@ -1,0 +1,8 @@
+@use './settings';
+@use "../../settings/setup";
+
+@each $variant, $color in (settings.$foreground-colors) {
+  .#{setup.$namespace}u-fg--#{$variant} {
+    color: $color;
+  }
+}

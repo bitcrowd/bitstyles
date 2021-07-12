@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use '../settings/color-palette';
+
+// Palette
+//
+// **Returns requested colours from the global `$palette` map.**
+// e.g. `color: palette('text');`
+//
+// @param {String} $color  Base colour within the palette
+//
+// @param {String} $percent   Optional. Percentage of the color to mix with white. Defaults to `100%` (fuly the specified color, no white)
+//
+
+@function get($color, $percent: '100') {
+  @if map.has-key(color-palette.$color-palette, $color) {
+    $palette: map.get(color-palette.$color-palette, $color);
+
+    @if map.has-key($palette, $percent) {
+      @return map.get($palette, $percent);
+    }
+
+    @else {
+      @error "Oops! Color/percentage ‘#{$color}/#{$percent}’ does not exist.";
+    }
+  }
+
+  @else {
+    @error "Oops! Color ‘#{$color}’ does not exist.";
+  }
+}

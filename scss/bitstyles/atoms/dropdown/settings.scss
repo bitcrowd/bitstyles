@@ -1,13 +1,16 @@
-$bitstyles-dropdown-max-height: 20rem;
-$bitstyles-dropdown-border-radius: spacing('xs');
-$bitstyles-dropdown-border: 2px solid palette('brand-2', '100');
-$bitstyles-dropdown-background-color: palette('white', '100');
-$bitstyles-dropdown-box-shadow: 0 0 spacing('m') rgba(palette('gray', '80'), 0.1);
-$bitstyles-dropdown-separator-border: 1px solid palette('gray', '1');
-$bitstyles-dropdown-separator-spacing: spacing('xxs');
-$bitstyles-dropdown-transition: opacity 0.12s ease-in !default;
-$bitstyles-dropdown-will-change: opacity !default;
-$bitstyles-dropdown-states: (
+@use "../../tools/palette";
+@use "../../tools/spacing";
+
+$dropdown-max-height: 20rem;
+$dropdown-border-radius: spacing.spacing('xs');
+$dropdown-border: 2px solid palette.get('brand-2', '100');
+$dropdown-background-color: palette.get('white', '100');
+$dropdown-box-shadow: 0 0 spacing.spacing('m') rgba(palette.get('gray', '80'), 0.1);
+$dropdown-separator-border: 1px solid palette.get('gray', '1');
+$dropdown-separator-spacing: spacing.spacing('xxs');
+$dropdown-transition: opacity 0.12s ease-in !default;
+$dropdown-will-change: opacity !default;
+$dropdown-states: (
   "off-screen": (
     "opacity": 0
   ),

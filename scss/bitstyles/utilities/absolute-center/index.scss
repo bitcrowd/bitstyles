@@ -1,0 +1,6 @@
+@use "../../settings/setup";
+@use "../../tools/absolute-center";
+
+.#{setup.$namespace}u-absolute-center {
+  @include absolute-center.absolute-center;
+}

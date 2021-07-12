@@ -1,0 +1,6 @@
+@use "../../settings/setup";
+@use "../../tools/absolute-cover";
+
+.#{setup.$namespace}u-absolute-cover {
+  @include absolute-cover.absolute-cover;
+}
