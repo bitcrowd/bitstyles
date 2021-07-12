@@ -1,14 +1,14 @@
 @use "../../tools/spacing";
 
-$content-max-width: (
+$max-width: (
   'xs': 25rem,
   's': 35rem,
   'm': 65rem,
   'l': 85rem,
   'full': 100%
 ) !default;
-$content-max-width-base: 'm' !default;
-$content-padding: (
+$max-width-base: 'm' !default;
+$padding: (
   'base':  spacing.spacing('m'),
   'l': spacing.spacing('l'),
   'xl': spacing.spacing('xl')

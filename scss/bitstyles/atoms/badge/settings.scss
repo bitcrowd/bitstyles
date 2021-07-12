@@ -1,7 +1,7 @@
 @use "../../tools/spacing";
 
-$badge-padding-vertical: spacing.spacing('xxs') !default;
-$badge-padding-horizontal: spacing.spacing('m') !default;
-$badge-color: '80' !default;
-$badge-background-color: '10' !default;
-$badge-variants: ('gray', 'danger', 'brand-1', 'brand-2', 'positive') !default;
+$padding-vertical: spacing.spacing('xxs') !default;
+$padding-horizontal: spacing.spacing('m') !default;
+$color: '80' !default;
+$background-color: '10' !default;
+$variants: ('gray', 'danger', 'brand-1', 'brand-2', 'positive') !default;

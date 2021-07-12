@@ -2,39 +2,39 @@
 @use "../../settings/setup";
 
 .#{setup.$namespace}a-button--icon {
-  padding: settings.$button-icon-padding-vertical settings.$button-icon-padding-horizontal;
+  padding: settings.$padding-vertical settings.$padding-horizontal;
   justify-content: flex-start;
-  border-radius: settings.$button-icon-border-radius;
+  border-radius: settings.$border-radius;
 
   &,
   &:visited {
-    color: settings.$button-icon-color;
-    background-color: settings.$button-icon-background-color;
-    border-color: settings.$button-icon-border-color;
-    box-shadow: settings.$button-icon-box-shadow;
+    color: settings.$color;
+    background-color: settings.$background-color;
+    border-color: settings.$border-color;
+    box-shadow: settings.$box-shadow;
   }
 
   &:hover,
   &:focus {
-    color: settings.$button-icon-color-hover;
-    background: settings.$button-icon-background-color-hover;
-    border-color: settings.$button-icon-border-color-hover;
-    box-shadow: settings.$button-icon-box-shadow-hover;
+    color: settings.$color-hover;
+    background: settings.$background-color-hover;
+    border-color: settings.$border-color-hover;
+    box-shadow: settings.$box-shadow-hover;
   }
 
   &:active {
-    color: settings.$button-icon-color-active;
-    background: settings.$button-icon-background-color-active;
-    border-color: settings.$button-icon-border-color-active;
-    box-shadow: settings.$button-icon-box-shadow-active;
+    color: settings.$color-active;
+    background: settings.$background-color-active;
+    border-color: settings.$border-color-active;
+    box-shadow: settings.$box-shadow-active;
   }
 
   &:disabled,
   &[aria-disabled="true"] {
-    color: settings.$button-icon-color-disabled;
-    background: settings.$button-icon-background-color-disabled;
-    border-color: settings.$button-icon-border-color-disabled;
-    box-shadow: settings.$button-icon-box-shadow-disabled;
+    color: settings.$color-disabled;
+    background: settings.$background-color-disabled;
+    border-color: settings.$border-color-disabled;
+    box-shadow: settings.$box-shadow-disabled;
   }
 
   .#{setup.$namespace}a-button__icon {

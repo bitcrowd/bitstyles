@@ -5,10 +5,10 @@
 //
 // Base styles ////////////////////////////////////////
 
-$button-nav-large-padding-vertical: spacing.spacing('l') !default;
-$button-nav-large-padding-horizontal: spacing.spacing('l') !default;
-$button-nav-large-border-radius: spacing.spacing('s') !default;
-$button-nav-large-transition:
+$padding-vertical: spacing.spacing('l') !default;
+$padding-horizontal: spacing.spacing('l') !default;
+$border-radius: spacing.spacing('s') !default;
+$transition:
   color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing !default;
@@ -16,39 +16,39 @@ $button-nav-large-transition:
 //
 // Base colors ////////////////////////////////////////
 
-$button-nav-large-color: palette.get('gray', '5') !default;
-$button-nav-large-background-color: palette.get('gray', '80') !default;
-$button-nav-large-border-color: palette.get('gray', '80') !default;
-$button-nav-large-box-shadow: none !default;
+$color: palette.get('gray', '5') !default;
+$background-color: palette.get('gray', '80') !default;
+$border-color: palette.get('gray', '80') !default;
+$box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$button-nav-large-color-hover: palette.get('white') !default;
-$button-nav-large-background-color-hover: palette.get('gray', '60') !default;
-$button-nav-large-border-color-hover: palette.get('gray', '60') !default;
-$button-nav-large-box-shadow-hover: none !default;
+$color-hover: palette.get('white') !default;
+$background-color-hover: palette.get('gray', '60') !default;
+$border-color-hover: palette.get('gray', '60') !default;
+$box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$button-nav-large-color-active: palette.get('text') !default;
-$button-nav-large-background-color-active: palette.get('gray', '10') !default;
-$button-nav-large-border-color-active: palette.get('gray', '10') !default;
-$button-nav-large-box-shadow-active: none !default;
+$color-active: palette.get('text') !default;
+$background-color-active: palette.get('gray', '10') !default;
+$border-color-active: palette.get('gray', '10') !default;
+$box-shadow-active: none !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$button-nav-large-color-disabled: palette.get('black', '50') !default;
-$button-nav-large-background-color-disabled: palette.get('black', '10') !default;
-$button-nav-large-border-color-disabled: palette.get('black', '10') !default;
-$button-nav-large-box-shadow-disabled: none !default;
+$color-disabled: palette.get('black', '50') !default;
+$background-color-disabled: palette.get('black', '10') !default;
+$border-color-disabled: palette.get('black', '10') !default;
+$box-shadow-disabled: none !default;
 
 //
 // Current colors ////////////////////////////////////////
 
-$button-nav-large-color-current: palette.get('white', '100') !default;
-$button-nav-large-background-color-current: palette.get('gray', '100') !default;
-$button-nav-large-border-color-current: palette.get('gray', '100') !default;
-$button-nav-large-box-shadow-current: none !default;
+$color-current: palette.get('white', '100') !default;
+$background-color-current: palette.get('gray', '100') !default;
+$border-color-current: palette.get('gray', '100') !default;
+$box-shadow-current: none !default;

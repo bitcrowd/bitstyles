@@ -2,9 +2,9 @@
 @use "../../settings/setup";
 @use "../../tools/palette";
 
-@each $variant in (settings.$flash-variants) {
+@each $variant in (settings.$variants) {
   .#{setup.$namespace}a-flash--#{$variant} {
-    color: palette.get($variant, settings.$flash-color);
-    background-color: palette.get($variant, settings.$flash-background-color);
+    color: palette.get($variant, settings.$color);
+    background-color: palette.get($variant, settings.$background-color);
   }
 }

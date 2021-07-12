@@ -1,7 +1,15 @@
 @use './settings';
 @use "../../settings/setup";
-@use "../../tools/bordered-header";
 
 .#{setup.$namespace}a-bordered-header {
-  @include bordered-header.bordered-header;
+  display: grid;
+  grid-template-columns: auto minmax(1px, 1fr);
+  grid-gap: settings.$gutter;
+  align-items: center;
+  width: 100%;
+
+  &::after {
+    border-top: settings.$border;
+    content: '';
+  }
 }

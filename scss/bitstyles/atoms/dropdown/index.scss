@@ -8,29 +8,29 @@
   z-index: 1;
   width: min-content;
   max-width: 90vw;
-  max-height: settings.$dropdown-max-height;
+  max-height: settings.$max-height;
   min-width: 12rem;
-  padding: settings.$dropdown-separator-spacing 0;
+  padding: settings.$separator-spacing 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: settings.$dropdown-background-color;
-  border: settings.$dropdown-border;
-  border-radius: settings.$dropdown-border-radius;
-  box-shadow: settings.$dropdown-box-shadow;
+  background-color: settings.$background-color;
+  border: settings.$border;
+  border-radius: settings.$border-radius;
+  box-shadow: settings.$box-shadow;
 
   [role="separator"] {
-    margin: settings.$dropdown-separator-spacing 0;
-    border-top: 1px solid settings.$dropdown-separator-border;
+    margin: settings.$separator-spacing 0;
+    border-top: 1px solid settings.$separator-border;
   }
 
   @include media-query.media-query('motion-ok') {
     &.is-transitioning {
-      transition: settings.$dropdown-transition;
-      will-change: settings.$dropdown-will-change;
+      transition: settings.$transition;
+      will-change: settings.$will-change;
     }
   }
 
-  @each $state-alias, $state-properties in settings.$dropdown-states {
+  @each $state-alias, $state-properties in settings.$states {
     &.is-#{$state-alias} {
       /* stylelint-disable max-nesting-depth */
       @each $state-property, $state-value in $state-properties {

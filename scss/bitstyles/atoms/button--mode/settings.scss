@@ -5,52 +5,52 @@
 //
 // Base styles ////////////////////////////////////////
 
-$button-mode-padding-vertical: spacing.spacing('s') !default;
-$button-mode-padding-horizontal: spacing.spacing('m') !default;
-$button-mode-border-radius: spacing.spacing('xs') !default;
-$button-mode-transition:
+$padding-vertical: spacing.spacing('s') !default;
+$padding-horizontal: spacing.spacing('m') !default;
+$border-radius: spacing.spacing('xs') !default;
+$transition:
   color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing !default;
-$button-mode-icon-spacing: spacing.spacing('s') !default;
+$icon-spacing: spacing.spacing('s') !default;
 
 //
 // Base colors ////////////////////////////////////////
 
-$button-mode-color: palette.get('gray', '90') !default;
-$button-mode-background-color: transparent !default;
-$button-mode-border-color: transparent !default;
-$button-mode-box-shadow: none !default;
+$color: palette.get('gray', '90') !default;
+$background-color: transparent !default;
+$border-color: transparent !default;
+$box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$button-mode-color-hover: palette.get('gray', '90') !default;
-$button-mode-background-color-hover: palette.get('white', '95') !default;
-$button-mode-border-color-hover: palette.get('white', '95') !default;
-$button-mode-box-shadow-hover: 0 0 spacing.spacing('m') rgba(palette.get('brand-1'), 0.1) !default;
+$color-hover: palette.get('gray', '90') !default;
+$background-color-hover: palette.get('white', '95') !default;
+$border-color-hover: palette.get('white', '95') !default;
+$box-shadow-hover: 0 0 spacing.spacing('m') rgba(palette.get('brand-1'), 0.1) !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$button-mode-color-active: palette.get('white') !default;
-$button-mode-background-color-active: palette.get('brand-2', '100') !default;
-$button-mode-border-color-active: palette.get('brand-2', '100') !default;
-$button-mode-box-shadow-active: 0 0 spacing.spacing('xs') rgba(palette.get('brand-1', '100'), 0.1) !default;
+$color-active: palette.get('white') !default;
+$background-color-active: palette.get('brand-2', '100') !default;
+$border-color-active: palette.get('brand-2', '100') !default;
+$box-shadow-active: 0 0 spacing.spacing('xs') rgba(palette.get('brand-1', '100'), 0.1) !default;
 
 //
 // Pressed colors ////////////////////////////////////////
 
-$button-mode-color-pressed: palette.get('gray', '80') !default;
-$button-mode-background-color-pressed: palette.get('white', '100') !default;
-$button-mode-border-color-pressed: palette.get('white', '100') !default;
-$button-mode-box-shadow-pressed: 0 0 spacing.spacing('s') rgba(palette.get('brand-1', '100'), 0.1) !default;
+$color-pressed: palette.get('gray', '80') !default;
+$background-color-pressed: palette.get('white', '100') !default;
+$border-color-pressed: palette.get('white', '100') !default;
+$box-shadow-pressed: 0 0 spacing.spacing('s') rgba(palette.get('brand-1', '100'), 0.1) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$button-mode-color-disabled: palette.get('black', '50') !default;
-$button-mode-background-color-disabled: palette.get('black', '10') !default;
-$button-mode-border-color-disabled: palette.get('black', '10') !default;
-$button-mode-box-shadow-disabled: none !default;
+$color-disabled: palette.get('black', '50') !default;
+$background-color-disabled: palette.get('black', '10') !default;
+$border-color-disabled: palette.get('black', '10') !default;
+$box-shadow-disabled: none !default;

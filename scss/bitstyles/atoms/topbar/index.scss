@@ -1,7 +1,11 @@
 @use './settings';
 @use "../../settings/setup";
-@use "../../tools/topbar";
 
 .#{setup.$namespace}a-topbar {
-  @include topbar.topbar;
+  position: settings.$position;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: settings.$z-index;
+  padding: settings.$vertical-padding settings.$horizontal-padding;
 }

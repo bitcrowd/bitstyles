@@ -3,10 +3,10 @@
 @use "../../tools/media-query";
 
 @mixin card {
-  padding: settings.$card-padding;
+  padding: settings.$padding;
   overflow: hidden;
-  border-radius: settings.$card-border-radius;
-  box-shadow: settings.$card-box-shadow;
+  border-radius: settings.$border-radius;
+  box-shadow: settings.$box-shadow;
 }
 
 @include directional-properties.output-block(
@@ -16,7 +16,7 @@
   @include card;
 }
 
-@each $breakpoint-alias in settings.$card-breakpoints {
+@each $breakpoint-alias in settings.$breakpoints {
   @include media-query.media-query($breakpoint-alias) {
     @include directional-properties.output-block(
       $object-level: 'a',

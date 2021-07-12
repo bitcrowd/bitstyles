@@ -6,8 +6,8 @@
   @include icon.icon;
 }
 
-@each $icon-size-alias, $icon-size-size in settings.$icon-sizes {
-  .#{setup.$namespace}a-icon--#{$icon-size-alias} {
-    font-size: $icon-size-size;
+@each $size-alias, $size-size in settings.$sizes {
+  .#{setup.$namespace}a-icon--#{$size-alias} {
+    font-size: $size-size;
   }
 }

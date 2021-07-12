@@ -2,7 +2,7 @@
 @use '../../tools/zindex';
 @use '../../settings/layout';
 
-$topbar-position: relative !default;
-$topbar-vertical-padding: spacing.spacing('s') !default;
-$topbar-horizontal-padding: spacing.spacing('m') !default;
-$topbar-z-index: zindex.z(layout.$global-z, 'topbar') !default;
+$position: relative !default;
+$vertical-padding: spacing.spacing('s') !default;
+$horizontal-padding: spacing.spacing('m') !default;
+$z-index: zindex.z(layout.$global-z, 'topbar') !default;

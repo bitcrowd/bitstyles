@@ -17,7 +17,7 @@
   /* stylelint-enable selector-max-type */
 }
 
-@each $size-alias, $size in settings.$avatar-sizes {
+@each $size-alias, $size in settings.$sizes {
   .#{setup.$namespace}a-avatar--#{$size-alias} {
     width: $size;
     height: $size;
