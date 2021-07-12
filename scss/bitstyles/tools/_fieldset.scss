@@ -1,14 +1,16 @@
+@use "../base/forms/settings-fieldset";
+
 @mixin fieldset {
-  padding: $bitstyles-fieldset-padding;
-  background-color: $bitstyles-fieldset-background;
-  border: $bitstyles-fieldset-border;
-  border-radius: $bitstyles-fieldset-border-radius;
+  padding: settings-fieldset.$fieldset-padding;
+  background-color: settings-fieldset.$fieldset-background;
+  border: settings-fieldset.$fieldset-border;
+  border-radius: settings-fieldset.$fieldset-border-radius;
 }
 
 @mixin legend {
-  padding: $bitstyles-legend-padding;
-  color: $bitstyles-legend-color;
-  background-color: $bitstyles-legend-background-color;
-  border: $bitstyles-legend-border;
-  border-radius: $bitstyles-legend-border-radius;
+  padding: settings-fieldset.$legend-padding;
+  color: settings-fieldset.$legend-color;
+  background-color: settings-fieldset.$legend-background-color;
+  border: settings-fieldset.$legend-border;
+  border-radius: settings-fieldset.$legend-border-radius;
 }

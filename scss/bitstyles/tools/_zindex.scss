@@ -1,3 +1,4 @@
+@use "sass:list";
 // Z-index
 //
 // **Assign z-index values in a controlled manner**
@@ -43,7 +44,7 @@
 //
 
 @function z($list, $element) {
-  $z-index: index($list, $element);
+  $z-index: list.index($list, $element);
 
   @if $z-index {
     @return $z-index;

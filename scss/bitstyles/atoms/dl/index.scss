@@ -1,0 +1,13 @@
+@use "../../settings/setup";
+@use "../../tools/palette";
+@use "../../tools/media-query";
+
+.#{setup.$namespace}a-dl {
+  border-top: 1px solid palette.get('gray', '5');
+}
+
+@include media-query.media-query('m') {
+  .#{setup.$namespace}a-dl__item {
+    border-bottom: 1px solid palette.get('gray', '5');
+  }
+}

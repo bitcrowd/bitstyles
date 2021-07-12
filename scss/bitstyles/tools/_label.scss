@@ -1,5 +1,7 @@
+@use "block";
+
 @mixin label {
-  @include block;
+  @include block.block;
 
   margin-bottom: 0;
   cursor: pointer;

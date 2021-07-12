@@ -1,0 +1,37 @@
+@use 'sass:map';
+
+@use './settings';
+@use "../../tools/directional-properties";
+@use "../../tools/media-query";
+
+@include directional-properties.output-directional-properties(
+  $property-name: 'margin',
+  $classname-root: 'margin',
+  $values: map.get(settings.$margin-sizes, 'positive'),
+  $directions: settings.$margin-directions
+);
+@include directional-properties.output-directional-properties(
+  $property-name: 'margin',
+  $classname-root: 'margin-neg',
+  $values: map.get(settings.$margin-sizes, 'negative'),
+  $directions: settings.$margin-directions
+);
+
+@each $breakpoint-alias in settings.$margin-breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-directional-properties(
+      $property-name: 'margin',
+      $classname-root: 'margin',
+      $values: map.get(settings.$margin-sizes, 'positive'),
+      $directions: settings.$margin-directions,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+    @include directional-properties.output-directional-properties(
+      $property-name: 'margin',
+      $classname-root: 'margin-neg',
+      $values: map.get(settings.$margin-sizes, 'negative'),
+      $directions: settings.$margin-directions,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

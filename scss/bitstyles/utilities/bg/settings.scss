@@ -1,12 +1,14 @@
+@use "../../tools/palette";
+
 $background-colors: (
-  'black-80': palette('black', '80'),
-  'background': palette('background'),
-  'white': palette('white'),
-  'brand-2': palette('brand-2', '100'),
-  'gray-90': palette('gray', '90'),
-  'gray-80': palette('gray', '80'),
-  'gray-50': palette('gray', '50'),
-  'gray-20': palette('gray', '20'),
-  'gray-10': palette('gray', '10'),
-  'gray-5': palette('gray', '5'),
+  'black-80': palette.get('black', '80'),
+  'background': palette.get('background'),
+  'white': palette.get('white'),
+  'brand-2': palette.get('brand-2', '100'),
+  'gray-90': palette.get('gray', '90'),
+  'gray-80': palette.get('gray', '80'),
+  'gray-50': palette.get('gray', '50'),
+  'gray-20': palette.get('gray', '20'),
+  'gray-10': palette.get('gray', '10'),
+  'gray-5': palette.get('gray', '5'),
 ) !default;

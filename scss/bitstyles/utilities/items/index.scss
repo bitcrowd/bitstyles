@@ -1,0 +1,20 @@
+@use 'settings';
+@use "../../tools/directional-properties";
+@use "../../tools/media-query";
+
+@include directional-properties.output-properties(
+  $property-name: 'align-items',
+  $classname-root: 'items',
+  $values: settings.$items
+);
+
+@each $breakpoint-alias in settings.$items-breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-properties(
+      $property-name: 'align-items',
+      $classname-root: 'items',
+      $values: settings.$items,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

@@ -1,9 +1,11 @@
-$bitstyles-border-colors: (
-  'gray-70': 1px solid palette('gray', '70'),
-  'gray-10': 1px solid palette('gray', '10'),
+@use "../../tools/palette";
+
+$border-colors: (
+  'gray-70': 1px solid palette.get('gray', '70'),
+  'gray-10': 1px solid palette.get('gray', '10'),
 ) !default;
-$bitstyles-border-breakpoints: () !default;
-$bitstyles-border-directions: (
+$border-breakpoints: () !default;
+$border-directions: (
   '': null,
   'top': ('top'),
   'right': ('right'),

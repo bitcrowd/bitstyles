@@ -1,16 +1,7 @@
 @use 'sass:map';
-
-// Generic heading
-//
-// **Shared styles for heading elements**
-//
-
-@mixin generic-heading {
-  margin: 0 0 spacing('m');
-  font-family: $bitstyles-font-family-header;
-  font-weight: $bitstyles-font-weight-bold;
-  text-rendering: optimizeLegibility;
-}
+@use '../settings/typography';
+@use '../settings/setup';
+@use 'media-query';
 
 // Font-size helper
 //
@@ -23,11 +14,48 @@
 // @param {Number} $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
 //
 
-@mixin set-font-size($pixel-size, $root-size: $bitstyles-font-size-base-small) {
+@mixin set-font-size($pixel-size, $root-size: typography.$font-size-base-small) {
   /* stylelint-disable declaration-block-no-duplicate-properties */
   font-size: $pixel-size;
   font-size: px-to-rem($pixel-size, $root-size);
   /* stylelint-enable declaration-block-no-duplicate-properties */
+}
+
+// Output font sizes
+//
+// **Private mixin**
+//
+// Used to output font-sizes from a map of font-sizes in `element-name: font-size` pairs.
+//
+// @param {Map} $font-sizes  A map of font-sizes in `element-name: font-size` pairs. See `typography.$font-sizes` for an example.
+//
+// @param {String} $prefix  A string to prefix to the ouput selector.
+//
+// @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
+//
+
+@mixin _output-font-sizes($font-sizes, $prefix, $subset) {
+  $base-size: typography.$font-size-base-small;
+
+  @if map.has-key($font-sizes, 'html') {
+    $base-size: map.get($font-sizes, 'html');
+  }
+
+  @each $element-name, $font-size in ($font-sizes) {
+    @if (length($subset) == 0) or (index($subset, $element-name)) {
+      #{setup.$namespace}#{$prefix}#{$element-name} {
+        /* stylelint-disable max-nesting-depth */
+        @if $element-name == 'html' {
+          font-size: px-to-rem($font-size, 16px);
+        }
+
+        @else {
+          font-size: px-to-rem($font-size, $base-size);
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+    }
+  }
 }
 
 // Font-size generator
@@ -73,52 +101,15 @@
 //
 
 @mixin generate-font-sizes($prefix: '', $subset: ()) {
-  @each $media-query-name, $font-sizes in $bitstyles-font-sizes {
+  @each $media-query-name, $font-sizes in typography.$font-sizes {
     // Don’t wrap base classes in a media-query
     @if $media-query-name == 'base' {
-      @include output-font-sizes($font-sizes, $prefix, $subset);
+      @include _output-font-sizes($font-sizes, $prefix, $subset);
     }
 
     @else {
-      @include media-query($media-query-name) {
-        @include output-font-sizes($font-sizes, $prefix, $subset);
-      }
-    }
-  }
-}
-
-// Output font sizes
-//
-// **Private mixin**
-//
-// Used to output font-sizes from a map of font-sizes in `element-name: font-size` pairs.
-//
-// @param {Map} $font-sizes  A map of font-sizes in `element-name: font-size` pairs. See `$bitstyles-font-sizes` for an example.
-//
-// @param {String} $prefix  A string to prefix to the ouput selector.
-//
-// @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
-//
-
-@mixin output-font-sizes($font-sizes, $prefix, $subset) {
-  $base-size: $bitstyles-font-size-base-small;
-
-  @if map.has-key($font-sizes, 'html') {
-    $base-size: map.get($font-sizes, 'html');
-  }
-
-  @each $element-name, $font-size in ($font-sizes) {
-    @if (length($subset) == 0) or (index($subset, $element-name)) {
-      #{$bitstyles-namespace}#{$prefix}#{$element-name} {
-        /* stylelint-disable max-nesting-depth */
-        @if $element-name == 'html' {
-          font-size: px-to-rem($font-size, 16px);
-        }
-
-        @else {
-          font-size: px-to-rem($font-size, $base-size);
-        }
-        /* stylelint-enable max-nesting-depth */
+      @include media-query.media-query($media-query-name) {
+        @include _output-font-sizes($font-sizes, $prefix, $subset);
       }
     }
   }

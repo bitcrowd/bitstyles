@@ -1,0 +1,13 @@
+@use './settings';
+@use "../../settings/setup";
+@use "../../tools/icon";
+
+.#{setup.$namespace}a-icon {
+  @include icon.icon;
+}
+
+@each $icon-size-alias, $icon-size-size in settings.$icon-sizes {
+  .#{setup.$namespace}a-icon--#{$icon-size-alias} {
+    font-size: $icon-size-size;
+  }
+}

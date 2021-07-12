@@ -1,24 +1,28 @@
+@use "../base/forms/settings-select";
+@use "../settings/animation";
+@use "../settings/typography";
+
 @mixin select {
   display: block;
   width: 100%;
-  padding: $bitstyles-select-padding-vertical ($bitstyles-select-padding-horizontal * 2) $bitstyles-select-padding-vertical $bitstyles-select-padding-horizontal;
+  padding: settings-select.$select-padding-vertical (settings-select.$select-padding-horizontal * 2) settings-select.$select-padding-vertical settings-select.$select-padding-horizontal;
   overflow: hidden;
   font: inherit;
-  line-height: $bitstyles-line-height-min;
-  color: $bitstyles-select-color;
+  line-height: typography.$line-height-min;
+  color: settings-select.$select-color;
   text-overflow: ellipsis;
   cursor: pointer;
-  background-color: $bitstyles-select-background-color;
-  background-image: $bitstyles-select-background-image;
+  background-color: settings-select.$select-background-color;
+  background-image: settings-select.$select-background-image;
   background-position: right 0.75em top 50%;
   background-repeat: no-repeat;
   background-size: 1em;
-  border: $bitstyles-select-border-width solid $bitstyles-select-border-color;
-  border-radius: $bitstyles-select-border-radius;
+  border: settings-select.$select-border-width solid settings-select.$select-border-color;
+  border-radius: settings-select.$select-border-radius;
   transition:
-    color $bitstyles-transition-duration $bitstyles-transition-easing,
-    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
-    border $bitstyles-transition-duration $bitstyles-transition-easing;
+    color animation.$transition-duration animation.$transition-easing,
+    background-color animation.$transition-duration animation.$transition-easing,
+    border animation.$transition-duration animation.$transition-easing;
   appearance: none;
 
   &::-ms-expand {
@@ -26,33 +30,33 @@
   }
 
   &:hover {
-    color: $bitstyles-select-color-hover;
-    background-color: $bitstyles-select-background-color-hover;
-    background-image: $bitstyles-select-background-image-hover;
-    border-color: $bitstyles-select-border-color-hover;
+    color: settings-select.$select-color-hover;
+    background-color: settings-select.$select-background-color-hover;
+    background-image: settings-select.$select-background-image-hover;
+    border-color: settings-select.$select-border-color-hover;
   }
 
   &:focus,
   &:active {
-    color: $bitstyles-select-color-active;
-    background-color: $bitstyles-select-background-color-active;
-    background-image: $bitstyles-select-background-image-active;
-    border-color: $bitstyles-select-border-color-active;
+    color: settings-select.$select-color-active;
+    background-color: settings-select.$select-background-color-active;
+    background-image: settings-select.$select-background-image-active;
+    border-color: settings-select.$select-border-color-active;
     outline: none;
   }
 
   &:invalid {
-    color: $bitstyles-select-color-invalid;
-    background-color: $bitstyles-select-background-color-invalid;
-    background-image: $bitstyles-select-background-image-invalid;
-    border-color: $bitstyles-select-border-color-invalid;
+    color: settings-select.$select-color-invalid;
+    background-color: settings-select.$select-background-color-invalid;
+    background-image: settings-select.$select-background-image-invalid;
+    border-color: settings-select.$select-border-color-invalid;
   }
 
   &[disabled] {
-    color: $bitstyles-select-color-disabled;
+    color: settings-select.$select-color-disabled;
     cursor: default;
-    background-color: $bitstyles-select-background-color-disabled;
-    background-image: $bitstyles-select-background-image-disabled;
-    border-color: $bitstyles-select-border-color-disabled;
+    background-color: settings-select.$select-background-color-disabled;
+    background-image: settings-select.$select-background-image-disabled;
+    border-color: settings-select.$select-border-color-disabled;
   }
 }

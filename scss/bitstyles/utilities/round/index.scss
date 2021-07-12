@@ -1,0 +1,21 @@
+@use "../../settings/setup";
+
+.#{setup.$namespace}u-round-0 {
+  border-radius: 0;
+}
+
+.#{setup.$namespace}u-round-0--tr {
+  border-top-right-radius: 0;
+}
+
+.#{setup.$namespace}u-round-0--br {
+  border-bottom-right-radius: 0;
+}
+
+.#{setup.$namespace}u-round-0--bl {
+  border-bottom-left-radius: 0;
+}
+
+.#{setup.$namespace}u-round-0--tl {
+  border-top-left-radius: 0;
+}

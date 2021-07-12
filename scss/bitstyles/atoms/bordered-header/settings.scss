@@ -1,2 +1,5 @@
-$bitstyles-bordered-header-gutter: spacing('m') !default;
-$bitstyles-bordered-header-border: spacing('xxxs') solid palette('gray', '10') !default;
+@use "../../tools/palette";
+@use "../../tools/spacing";
+
+$bordered-header-gutter: spacing.spacing('m') !default;
+$bordered-header-border: spacing.spacing('xxxs') solid palette.get('gray', '10') !default;

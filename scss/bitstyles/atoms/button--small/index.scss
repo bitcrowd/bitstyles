@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+@use './settings';
+@use "../../settings/setup";
+@use "../../tools/spacing";
+
+.#{setup.$namespace}a-button--small {
+  min-height: spacing.spacing('xl');
+  padding: settings.$button-small-padding-vertical settings.$button-small-padding-horizontal;
+
+  &.#{setup.$namespace}a-button--icon {
+    padding: math.div(settings.$button-small-padding-horizontal, 2);
+    border-radius: settings.$button-small-border-radius;
+  }
+}

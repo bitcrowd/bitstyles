@@ -1,25 +1,27 @@
-$bitstyles-margin-sizes: (
+@use "../../tools/spacing";
+
+$margin-sizes: (
   'positive': (
     '0': 0,
-    'xxs': spacing('xxs'),
-    'xs': spacing('xs'),
-    's': spacing('s'),
-    'm': spacing('m'),
-    'l': spacing('l'),
-    'xl': spacing('xl'),
+    'xxs': spacing.spacing('xxs'),
+    'xs': spacing.spacing('xs'),
+    's': spacing.spacing('s'),
+    'm': spacing.spacing('m'),
+    'l': spacing.spacing('l'),
+    'xl': spacing.spacing('xl'),
     'auto': auto
   ),
   'negative': (
-    'xxs': -#{spacing('xxs')},
-    'xs': -#{spacing('xs')},
-    's': -#{spacing('s')},
-    'm': -#{spacing('m')},
-    'l': -#{spacing('l')},
-    'xl': -#{spacing('xl')}
+    'xxs': -#{spacing.spacing('xxs')},
+    'xs': -#{spacing.spacing('xs')},
+    's': -#{spacing.spacing('s')},
+    'm': -#{spacing.spacing('m')},
+    'l': -#{spacing.spacing('l')},
+    'xl': -#{spacing.spacing('xl')}
   )
 ) !default;
-$bitstyles-margin-breakpoints: ('s', 'm') !default;
-$bitstyles-margin-directions: (
+$margin-breakpoints: ('s', 'm') !default;
+$margin-directions: (
   '': null,
   'top': ('top'),
   'right': ('right'),

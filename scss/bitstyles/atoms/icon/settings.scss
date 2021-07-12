@@ -1,6 +1,8 @@
-$bitstyles-icon-sizes: (
-  's':     spacing('xs'),
-  'm':     spacing('m'),
-  'l':     spacing('l'),
-  'xl':     spacing('l') + spacing('xs'),
+@use "../../tools/spacing";
+
+$icon-sizes: (
+  's':     spacing.spacing('xs'),
+  'm':     spacing.spacing('m'),
+  'l':     spacing.spacing('l'),
+  'xl':     spacing.spacing('l') + spacing.spacing('xs'),
 ) !default;

@@ -1,17 +1,17 @@
-$bitstyles-flex-direction: (
+$flex-direction: (
   'col': column,
   'row': row
 ) !default;
-$bitstyles-flex-wrap: (
+$flex-wrap: (
   'wrap': wrap,
   'nowrap': nowrap
 ) !default;
-$bitstyles-flex-grow: (
+$flex-grow: (
   '0': 0,
   '1': 1
 ) !default;
-$bitstyles-flex-shrink: (
+$flex-shrink: (
   '0': 0,
   '1': 1
 ) !default;
-$bitstyles-flex-breakpoints: ('m') !default;
+$flex-breakpoints: ('m') !default;

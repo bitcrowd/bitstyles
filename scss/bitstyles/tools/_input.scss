@@ -1,10 +1,15 @@
+@use "../base/forms/settings-input";
+@use "../settings/animation";
+@use "../settings/typography";
+@use "block";
+
 @use 'sass:math';
 
 @mixin input {
   transition:
-    color $bitstyles-transition-duration $bitstyles-transition-easing,
-    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
-    border $bitstyles-transition-duration $bitstyles-transition-easing;
+    color animation.$transition-duration animation.$transition-easing,
+    background-color animation.$transition-duration animation.$transition-easing,
+    border animation.$transition-duration animation.$transition-easing;
 }
 
 @mixin input--checkbox-radio {
@@ -14,64 +19,64 @@
   display: inline-block;
   width: 1em;
   height: 1em;
-  margin-right: $bitstyles-input-padding;
+  margin-right: settings-input.$input-padding;
   vertical-align: middle;
   cursor: pointer;
   appearance: none;
 }
 
 @mixin input--text {
-  @include block;
+  @include block.block;
   @include input;
 
   width: 100%;
-  padding: ($bitstyles-input-padding - math.div($bitstyles-input-border-width, 2)) $bitstyles-input-padding;
+  padding: (settings-input.$input-padding - math.div(settings-input.$input-border-width, 2)) settings-input.$input-padding;
   font: inherit;
-  line-height: $bitstyles-line-height-min;
-  color: $bitstyles-input-color;
-  background-color: $bitstyles-input-background;
-  border: $bitstyles-input-border-width solid $bitstyles-input-border-color;
-  border-radius: $bitstyles-input-border-radius;
-  box-shadow: $bitstyles-input-box-shadow;
+  line-height: typography.$line-height-min;
+  color: settings-input.$input-color;
+  background-color: settings-input.$input-background;
+  border: settings-input.$input-border-width solid settings-input.$input-border-color;
+  border-radius: settings-input.$input-border-radius;
+  box-shadow: settings-input.$input-box-shadow;
 
   &:hover {
-    color: $bitstyles-input-color-hover;
-    background-color: $bitstyles-input-background-hover;
-    border-color: $bitstyles-input-border-color-hover;
-    box-shadow: $bitstyles-input-box-shadow-hover;
+    color: settings-input.$input-color-hover;
+    background-color: settings-input.$input-background-hover;
+    border-color: settings-input.$input-border-color-hover;
+    box-shadow: settings-input.$input-box-shadow-hover;
   }
 
   &:active,
   &:focus {
-    color: $bitstyles-input-color-active;
-    background-color: $bitstyles-input-background-active;
-    border-color: $bitstyles-input-border-color-active;
+    color: settings-input.$input-color-active;
+    background-color: settings-input.$input-background-active;
+    border-color: settings-input.$input-border-color-active;
     outline: none;
-    box-shadow: $bitstyles-input-box-shadow-active;
+    box-shadow: settings-input.$input-box-shadow-active;
   }
 
   &:invalid,
   &[aria-invalid="true"] {
-    color: $bitstyles-input-color-invalid;
-    background-color: $bitstyles-input-background-color-invalid;
-    border-color: $bitstyles-input-border-color-invalid;
-    box-shadow: $bitstyles-input-box-shadow-invalid;
+    color: settings-input.$input-color-invalid;
+    background-color: settings-input.$input-background-color-invalid;
+    border-color: settings-input.$input-border-color-invalid;
+    box-shadow: settings-input.$input-box-shadow-invalid;
   }
 
   &:disabled {
-    color: $bitstyles-input-color-disabled;
+    color: settings-input.$input-color-disabled;
     cursor: default;
-    background: $bitstyles-input-background-disabled;
-    border-color: $bitstyles-input-border-color-disabled;
-    box-shadow: $bitstyles-input-box-shadow-disabled;
+    background: settings-input.$input-background-disabled;
+    border-color: settings-input.$input-border-color-disabled;
+    box-shadow: settings-input.$input-box-shadow-disabled;
   }
 }
 
 @mixin input-placeholder {
   &::placeholder {
-    font-style: $bitstyles-input-placeholder-font-style;
-    font-weight: $bitstyles-input-placeholder-font-weight;
-    color: $bitstyles-input-placeholder-color;
+    font-style: settings-input.$input-placeholder-font-style;
+    font-weight: settings-input.$input-placeholder-font-weight;
+    color: settings-input.$input-placeholder-color;
     opacity: 1;
   }
 }

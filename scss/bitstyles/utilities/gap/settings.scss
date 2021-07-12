@@ -1,6 +1,8 @@
-$bitstyles-gap-sizes: (
-  's': spacing('s'),
-  'm': spacing('l'),
-  'l': spacing('xl')
+@use "../../tools/spacing";
+
+$gap-sizes: (
+  's': spacing.spacing('s'),
+  'm': spacing.spacing('l'),
+  'l': spacing.spacing('xl')
 ) !default;
-$bitstyles-gap-breakpoints: ('m', 'xl') !default;
+$gap-breakpoints: ('m', 'xl') !default;

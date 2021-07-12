@@ -1,0 +1,54 @@
+@use 'sass:math';
+
+@use './settings';
+@use "../../settings/setup";
+
+.#{setup.$namespace}a-button--nav {
+  padding: settings.$button-nav-padding-vertical settings.$button-nav-padding-horizontal;
+  justify-content: flex-start;
+  border-radius: settings.$button-nav-border-radius;
+
+  &,
+  &:visited {
+    color: settings.$button-nav-color;
+    background: settings.$button-nav-background-color;
+    border-color: settings.$button-nav-border-color;
+    box-shadow: settings.$button-nav-box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: settings.$button-nav-color-hover;
+    background: settings.$button-nav-background-color-hover;
+    border-color: settings.$button-nav-border-color-hover;
+    box-shadow: settings.$button-nav-box-shadow-hover;
+  }
+
+  &:active {
+    color: settings.$button-nav-color-active;
+    background: settings.$button-nav-background-color-active;
+    border-color: settings.$button-nav-border-color-active;
+    box-shadow: settings.$button-nav-box-shadow-active;
+  }
+
+  &[aria-current],
+  &[aria-expanded="true"] {
+    color: settings.$button-nav-color-current;
+    background: settings.$button-nav-background-color-current;
+    border-color: settings.$button-nav-border-color-current;
+    box-shadow: settings.$button-nav-box-shadow-current;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$button-nav-color-disabled;
+    background: settings.$button-nav-background-color-disabled;
+    border-color: settings.$button-nav-border-color-disabled;
+    box-shadow: settings.$button-nav-box-shadow-disabled;
+  }
+}
+
+.#{setup.$namespace}a-button-nav__icon {
+  margin-right: settings.$button-nav-padding-horizontal;
+  margin-left: -#{math.div(settings.$button-nav-padding-horizontal, 4)};
+}

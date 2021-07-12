@@ -1,0 +1,19 @@
+@use './settings';
+@use "../../settings/setup";
+@use "../../tools/media-query";
+
+@each $classname, $value in (settings.$display-types) {
+  .#{setup.$namespace}u-#{$classname} {
+    display: #{$value};
+  }
+}
+
+@each $breakpoint in settings.$display-types-breakpoints {
+  @include media-query.media-query($breakpoint) {
+    @each $classname, $value in (settings.$display-types) {
+      .#{setup.$namespace}u-#{$classname}\@#{$breakpoint} {
+        display: #{$value};
+      }
+    }
+  }
+}

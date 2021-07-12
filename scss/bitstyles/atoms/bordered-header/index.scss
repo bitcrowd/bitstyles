@@ -1,0 +1,7 @@
+@use './settings';
+@use "../../settings/setup";
+@use "../../tools/bordered-header";
+
+.#{setup.$namespace}a-bordered-header {
+  @include bordered-header.bordered-header;
+}

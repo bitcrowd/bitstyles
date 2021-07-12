@@ -1,0 +1,7 @@
+@use './settings';
+@use "../../settings/setup";
+@use "../../tools/topbar";
+
+.#{setup.$namespace}a-topbar {
+  @include topbar.topbar;
+}

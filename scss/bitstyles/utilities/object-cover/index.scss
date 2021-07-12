@@ -1,0 +1,6 @@
+@use "../../settings/setup";
+@use "../../tools/object-cover";
+
+.#{setup.$namespace}u-object-cover {
+  @include object-cover.object-cover;
+}

@@ -1,45 +1,49 @@
+@use "../../settings/animation";
+@use "../../tools/palette";
+@use "../../tools/spacing";
+
 //
 // Base styles ////////////////////////////////////////
 
-$bitstyles-button-padding-vertical: spacing('xs') !default;
-$bitstyles-button-padding-horizontal: spacing('m') !default;
-$bitstyles-button-border-radius: spacing('xs') !default;
-$bitstyles-button-transition:
-  color $bitstyles-transition-duration $bitstyles-transition-easing,
-  background-color $bitstyles-transition-duration $bitstyles-transition-easing,
-  border $bitstyles-transition-duration $bitstyles-transition-easing,
-  box-shadow $bitstyles-transition-duration $bitstyles-transition-easing !default;
-$bitstyles-button-icon-spacing: spacing('s') !default;
+$button-padding-vertical: spacing.spacing('xs') !default;
+$button-padding-horizontal: spacing.spacing('m') !default;
+$button-border-radius: spacing.spacing('xs') !default;
+$button-transition:
+  color animation.$transition-duration animation.$transition-easing,
+  background-color animation.$transition-duration animation.$transition-easing,
+  border animation.$transition-duration animation.$transition-easing,
+  box-shadow animation.$transition-duration animation.$transition-easing !default;
+$button-icon-spacing: spacing.spacing('s') !default;
 
 //
 // Base colors ////////////////////////////////////////
 
-$bitstyles-button-color: palette('white') !default;
-$bitstyles-button-background-color: palette('brand-1', '80') !default;
-$bitstyles-button-border-width: spacing('xxxs') !default;
-$bitstyles-button-border-color: palette('brand-1', '80') !default;
-$bitstyles-button-box-shadow: 0 0 spacing('xs') rgba(palette('brand-1', '80'), 0.2) !default;
+$button-color: palette.get('white') !default;
+$button-background-color: palette.get('brand-1', '80') !default;
+$button-border-width: spacing.spacing('xxxs') !default;
+$button-border-color: palette.get('brand-1', '80') !default;
+$button-box-shadow: 0 0 spacing.spacing('xs') rgba(palette.get('brand-1', '80'), 0.2) !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$bitstyles-button-color-hover: palette('white') !default;
-$bitstyles-button-background-color-hover: palette('brand-1') !default;
-$bitstyles-button-border-color-hover: palette('brand-1') !default;
-$bitstyles-button-box-shadow-hover: 0 0 spacing('s') rgba(palette('brand-1'), 0.2) !default;
+$button-color-hover: palette.get('white') !default;
+$button-background-color-hover: palette.get('brand-1') !default;
+$button-border-color-hover: palette.get('brand-1') !default;
+$button-box-shadow-hover: 0 0 spacing.spacing('s') rgba(palette.get('brand-1'), 0.2) !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$bitstyles-button-color-active: palette('white') !default;
-$bitstyles-button-background-color-active: palette('brand-2', '100') !default;
-$bitstyles-button-border-color-active: palette('brand-2', '100') !default;
-$bitstyles-button-box-shadow-active: 0 0 spacing('s') rgba(palette('brand-1', '100'), 0.3) !default;
+$button-color-active: palette.get('white') !default;
+$button-background-color-active: palette.get('brand-2', '100') !default;
+$button-border-color-active: palette.get('brand-2', '100') !default;
+$button-box-shadow-active: 0 0 spacing.spacing('s') rgba(palette.get('brand-1', '100'), 0.3) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$bitstyles-button-color-disabled: palette('black', '50') !default;
-$bitstyles-button-background-color-disabled: palette('black', '10') !default;
-$bitstyles-button-border-color-disabled: palette('black', '10') !default;
-$bitstyles-button-box-shadow-disabled: none !default;
+$button-color-disabled: palette.get('black', '50') !default;
+$button-background-color-disabled: palette.get('black', '10') !default;
+$button-border-color-disabled: palette.get('black', '10') !default;
+$button-box-shadow-disabled: none !default;

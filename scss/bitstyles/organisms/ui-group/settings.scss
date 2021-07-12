@@ -1,2 +1,5 @@
-$bitstyles-ui-group-border-radius: spacing('s');
-$bitstyles-ui-group-box-shadow: 0 0 spacing('xs') rgba(palette('brand-1', '80'), 0.05) !default;
+@use "../../tools/palette";
+@use "../../tools/spacing";
+
+$ui-group-border-radius: spacing.spacing('s');
+$ui-group-box-shadow: 0 0 spacing.spacing('xs') rgba(palette.get('brand-1', '80'), 0.05) !default;

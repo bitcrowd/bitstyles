@@ -1,4 +1,7 @@
-$bitstyles-button-small-padding-vertical: spacing('xs');
-$bitstyles-button-small-padding-horizontal: spacing('m');
-$bitstyles-button-small-box-shadow: 0 0 spacing('xs') currentColor;
-$bitstyles-button-small-border-radius: $bitstyles-border-radius-round;
+@use "../../settings/layout";
+@use "../../tools/spacing";
+
+$button-small-padding-vertical: spacing.spacing('xs');
+$button-small-padding-horizontal: spacing.spacing('m');
+$button-small-box-shadow: 0 0 spacing.spacing('xs') currentColor;
+$button-small-border-radius: layout.$border-radius-round;

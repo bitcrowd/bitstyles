@@ -1,0 +1,76 @@
+@use './settings-input';
+@use './settings-fieldset';
+@use './settings-select';
+@use './settings-checkbox';
+@use './settings-radio';
+@use "../../settings/typography";
+@use "../../tools/fieldset";
+@use "../../tools/input";
+@use "../../tools/input--checkbox";
+@use "../../tools/input--radio";
+@use "../../tools/label";
+@use "../../tools/select";
+
+/* stylelint-disable selector-max-type */
+
+fieldset {
+  @include fieldset.fieldset;
+}
+
+legend {
+  @include fieldset.legend;
+}
+
+label {
+  @include label.label;
+}
+
+textarea,
+input {
+  @include input.input-placeholder;
+
+  resize: vertical;
+}
+
+/*
+ * Selects all the text-like input types. We’re avoiding using e.g. `input[type="text"]` as it means we cannot use a single class later on
+ */
+[type="text"],
+[type="email"],
+[type="number"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="week"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="url"],
+textarea {
+  @include input.input--text;
+}
+
+[type="color"] {
+  height: calc(#{typography.$line-height-base * 1em} + #{settings-input.$input-padding * 2});
+}
+
+[type="checkbox"],
+[type="radio"] {
+  @include input.input--checkbox-radio;
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none) {
+  select {
+    @include select.select;
+  }
+
+  [type="checkbox"] {
+    @include input--checkbox.input--checkbox;
+  }
+
+  [type="radio"] {
+    @include input--radio.input--radio;
+  }
+}
+/* stylelint-enable selector-max-type */

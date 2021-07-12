@@ -1,13 +1,15 @@
-$bitstyles-content-max-width: (
+@use "../../tools/spacing";
+
+$content-max-width: (
   'xs': 25rem,
   's': 35rem,
   'm': 65rem,
   'l': 85rem,
   'full': 100%
 ) !default;
-$bitstyles-content-max-width-base: 'm' !default;
-$bitstyles-content-padding: (
-  'base':  spacing('m'),
-  'l': spacing('l'),
-  'xl': spacing('xl')
+$content-max-width-base: 'm' !default;
+$content-padding: (
+  'base':  spacing.spacing('m'),
+  'l': spacing.spacing('l'),
+  'xl': spacing.spacing('xl')
 ) !default;

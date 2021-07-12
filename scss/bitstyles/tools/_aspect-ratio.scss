@@ -32,7 +32,7 @@
   @supports not (aspect-ratio: list.slash($width, $height)) {
     &::before {
       float: left;
-      padding-top: percentage(math.div($height, $width));
+      padding-top: math.percentage(math.div($height, $width));
       content: '';
     }
 

@@ -1,3 +1,5 @@
+@use "../settings/setup";
+
 @use 'sass:list';
 @use 'sass:string';
 
@@ -74,7 +76,7 @@
     @each $direction-name, $direction-values in $directions {
       $classname: get-classname(
         (
-          $bitstyles-namespace,
+          setup.$namespace,
           'u',
           $classname-root,
           $alias,
@@ -110,7 +112,7 @@
   @each $alias, $value in $values {
     $classname: get-classname(
       (
-        $bitstyles-namespace,
+        setup.$namespace,
         'u',
         $classname-root,
         $alias
@@ -130,7 +132,7 @@
 ) {
   $classname: get-classname(
     (
-      $bitstyles-namespace,
+      setup.$namespace,
       $object-level,
       $classname-root,
     )
