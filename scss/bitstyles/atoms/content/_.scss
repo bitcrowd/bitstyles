@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 @import './settings';
 
 @mixin content-padding($padding-value) {
@@ -7,7 +9,7 @@
 
 .#{$bitstyles-namespace}a-content {
   width: 100%;
-  max-width: map-get($bitstyles-content-max-width, $bitstyles-content-max-width-base);
+  max-width: map.get($bitstyles-content-max-width, $bitstyles-content-max-width-base);
   margin-right: auto;
   margin-left: auto;
   transition: padding $bitstyles-transition-duration $bitstyles-transition-easing;

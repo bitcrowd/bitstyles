@@ -1,10 +1,12 @@
+@use 'sass:map';
+
 @import './settings';
 
 @each $aspect-ratio-alias, $aspect-ratio-value in $bitstyles-aspect-ratios {
   .#{$bitstyles-namespace}u-aspect-ratio-#{$aspect-ratio-alias} {
     @include aspect-ratio(
-      map-get($aspect-ratio-value, 'width'),
-      map-get($aspect-ratio-value, 'height')
+      map.get($aspect-ratio-value, 'width'),
+      map.get($aspect-ratio-value, 'height')
     );
   }
 }

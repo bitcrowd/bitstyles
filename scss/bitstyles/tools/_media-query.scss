@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // Media Query
 //
 // **Helper function to ease usage of media-queries**.
@@ -22,7 +24,7 @@
 
 @mixin media-query($media-query-name, $breakpoints: $bitstyles-breakpoints) {
 
-  $breakpoint-condition: map-get($breakpoints, $media-query-name);
+  $breakpoint-condition: map.get($breakpoints, $media-query-name);
 
   @if ($breakpoint-condition) {
     @media #{$breakpoint-condition} {

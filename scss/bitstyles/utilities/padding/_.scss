@@ -1,9 +1,11 @@
+@use 'sass:map';
+
 @import './settings';
 
 @include output-directional-properties(
   $property-name: 'padding',
   $classname-root: 'padding',
-  $values: map-get($bitstyles-padding-sizes, 'positive'),
+  $values: map.get($bitstyles-padding-sizes, 'positive'),
   $directions: $bitstyles-padding-directions
 );
 
@@ -12,7 +14,7 @@
     @include output-directional-properties(
       $property-name: 'padding',
       $classname-root: 'padding',
-      $values: map-get($bitstyles-padding-sizes, 'positive'),
+      $values: map.get($bitstyles-padding-sizes, 'positive'),
       $directions: $bitstyles-padding-directions,
       $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );
