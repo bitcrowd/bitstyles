@@ -20,6 +20,9 @@ $bitstyles-color-palette: (
   ),
   'gray': (
     '100': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 0%), $bitstyles-grays-hint-color-mix),
+    '99': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 1%), $bitstyles-grays-hint-color-mix),
+    '98': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 2%), $bitstyles-grays-hint-color-mix),
+    '97': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 3%), $bitstyles-grays-hint-color-mix),
     '95': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 5%), $bitstyles-grays-hint-color-mix),
     '90': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 10%), $bitstyles-grays-hint-color-mix),
     '80': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 20%), $bitstyles-grays-hint-color-mix),
@@ -31,6 +34,8 @@ $bitstyles-color-palette: (
     '20': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 80%), $bitstyles-grays-hint-color-mix),
     '10': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 90%), $bitstyles-grays-hint-color-mix),
     '5': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 95%), $bitstyles-grays-hint-color-mix),
+    '3': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 97%), $bitstyles-grays-hint-color-mix),
+    '2': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 98%), $bitstyles-grays-hint-color-mix),
     '1': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 99%), $bitstyles-grays-hint-color-mix),
   ),
   'text': color.generate-palette(
