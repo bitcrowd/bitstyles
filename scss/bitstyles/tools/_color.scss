@@ -1,5 +1,8 @@
-@use "sass:map";
-@use "sass:math";
+@use 'sass:color';
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:string';
 
 // Generate palette
 //
@@ -15,7 +18,7 @@
   $color-map: ();
 
   @each $percentage in $percentages {
-    $color-map: map.merge($color-map, ('#{$percentage}': mix($mix-color, $base-color, 100% - percentage(math.div($percentage, 100)))));
+    $color-map: map.merge($color-map, ('#{$percentage}': color.mix($mix-color, $base-color, 100% - math.percentage(math.div($percentage, 100)))));
   }
 
   @return $color-map;
@@ -33,11 +36,11 @@
 
 // stylelint-disable at-rule-no-unknown
 @function palette($color, $percent: '100') {
-  @if map-has-key($bitstyles-color-palette, $color) {
-    $palette: map-get($bitstyles-color-palette, $color);
+  @if map.has-key($bitstyles-color-palette, $color) {
+    $palette: map.get($bitstyles-color-palette, $color);
 
-    @if map-has-key($palette, $percent) {
-      @return map-get($palette, $percent);
+    @if map.has-key($palette, $percent) {
+      @return map.get($palette, $percent);
     }
 
     @else {
@@ -50,3 +53,11 @@
   }
 }
 // stylelint-enable at-rule-no-unknown
+
+@function url-encode-color($color) {
+  @if meta.type-of($color) == 'color' and string.index(#{$color}, '#') == 1 {
+    @return '%23' + string.unquote('#{string.slice(#{$color}, 2)}');
+  }
+
+  @return $string;
+}

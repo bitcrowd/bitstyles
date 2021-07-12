@@ -34,6 +34,16 @@ module.exports = {
         }
       },
       {
+        loader: "postcss-loader",
+        options: {
+          postcssOptions: {
+            plugins: [
+              ["autoprefixer"],
+            ],
+          },
+        }
+      },
+      {
         loader: "sass-loader"
       }],
       include: path.resolve(__dirname, '../scss'),
