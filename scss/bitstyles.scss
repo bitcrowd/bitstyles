@@ -101,3 +101,54 @@
 @use 'bitstyles/utilities/truncate';
 @use 'bitstyles/utilities/typography';
 @use 'bitstyles/utilities/z-index';
+
+@forward 'bitstyles/atoms/avatar/settings' as avatar-*;
+@forward 'bitstyles/atoms/badge/settings' as badge-*;
+@forward 'bitstyles/atoms/bordered-header/settings' as bordered-header-*;
+@forward 'bitstyles/atoms/button/settings' as button-*;
+@forward 'bitstyles/atoms/button--danger/settings';
+@forward 'bitstyles/atoms/button--icon/settings';
+@forward 'bitstyles/atoms/button--icon-reversed/settings';
+@forward 'bitstyles/atoms/button--menu/settings';
+@forward 'bitstyles/atoms/button--mode/settings';
+@forward 'bitstyles/atoms/button--nav/settings';
+@forward 'bitstyles/atoms/button--nav-large/settings';
+@forward 'bitstyles/atoms/button--small/settings';
+@forward 'bitstyles/atoms/button--tab/settings';
+@forward 'bitstyles/atoms/button--ui/settings';
+@forward 'bitstyles/atoms/card/settings';
+@forward 'bitstyles/atoms/content/settings';
+@forward 'bitstyles/atoms/dropdown/settings';
+@forward 'bitstyles/atoms/flash/settings';
+@forward 'bitstyles/atoms/icon/settings';
+@forward 'bitstyles/atoms/topbar/settings';
+
+//
+// Organisms ///////////////////////////////////
+
+@forward 'bitstyles/organisms/modal/settings';
+@forward 'bitstyles/organisms/navbar/settings';
+@forward 'bitstyles/organisms/sidebar/settings';
+@forward 'bitstyles/organisms/table/settings';
+@forward 'bitstyles/organisms/ui-group/settings';
+
+//
+// Utilities ////////////////////////////////////
+
+@forward 'bitstyles/utilities/aspect-ratio/settings';
+@forward 'bitstyles/utilities/bg/settings';
+@forward 'bitstyles/utilities/border/settings';
+@forward 'bitstyles/utilities/col-span/settings';
+@forward 'bitstyles/utilities/col-start/settings';
+@forward 'bitstyles/utilities/display/settings';
+@forward 'bitstyles/utilities/fg/settings';
+@forward 'bitstyles/utilities/flex/settings';
+@forward 'bitstyles/utilities/gap/settings';
+@forward 'bitstyles/utilities/grid-cols/settings';
+@forward 'bitstyles/utilities/items/settings';
+@forward 'bitstyles/utilities/justify/settings';
+@forward 'bitstyles/utilities/margin/settings';
+@forward 'bitstyles/utilities/padding/settings';
+@forward 'bitstyles/utilities/self/settings';
+@forward 'bitstyles/utilities/sr-only/settings';
+@forward 'bitstyles/utilities/z-index/settings';
