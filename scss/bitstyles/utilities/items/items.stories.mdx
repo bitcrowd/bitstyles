@@ -1,118 +1,189 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="Utilities/align-items" />
+<Meta title="Utilities/items" />
 
 # Align-items
 
 Flex and Grid share many alignment properties. These will have no effect on elements to which you haven’t given one of those classes (`.u-flex`, `.u-grid`).
 
-## Center
+Set `align-items` to center to align each flex child to the respective side(s) of the main axis:
 
-Set `align-items` to center to align each flex child to their vertical center:
-
-<Canvas>
+<Canvas isColumn>
   <Story name="items-center">
     {`
       <ul class="a-list-reset u-flex u-items-center u-fg--white">
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
-          Elements of different height.
+          u-items-center
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
-          Elements of different height.
+          u-items-center
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
-          Elements of different height.
+          u-items-center
         </li>
       </ul>
     `}
   </Story>
-</Canvas>
-
-
-## End
-
-Set `align-items` to end to align each flex child to their vertical end:
-
-<Canvas>
   <Story name="items-end">
     {`
       <ul class="a-list-reset u-flex u-items-end u-fg--white">
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
-          Elements of different height.
+          u-items-end
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
-          Elements of different height.
+          u-items-end
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
-          Elements of different height.
+          u-items-end
         </li>
       </ul>
     `}
   </Story>
-</Canvas>
-
-## Start
-
-Set `align-items` to start to align each flex child to their vertical start:
-
-<Canvas>
   <Story name="items-start">
     {`
       <ul class="a-list-reset u-flex u-items-start u-fg--white">
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
-          Elements of different height.
+          u-items-start
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
-          Elements of different height.
+          u-items-start
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
-          Elements of different height.
+          u-items-start
         </li>
       </ul>
     `}
   </Story>
-</Canvas>
-
-## Stretch
-
-Set `align-items` to stretch each flex child on their vertical axis:
-
-<Canvas>
   <Story name="items-stretch">
     {`
       <ul class="a-list-reset u-flex u-items-stretch u-fg--white" style="min-height: 10rem;">
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="flex-basis: 33%">
-          Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o.
+          u-items-stretch. Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o.
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="flex-basis: 33%">
-          Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o. Danish sesame snaps chocolate cake chocolate bar croissant liquorice jelly topping.
+          u-items-stretch. Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o. Danish sesame snaps chocolate cake chocolate bar croissant liquorice jelly topping.
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="flex-basis: 33%">
-          Elements with different amounts of content.
+          u-items-stretch. Elements with different amounts of content.
         </li>
       </ul>
     `}
   </Story>
-</Canvas>
-
-## BASELINE
-
-Set `align-items` to align each flex child to the baseline:
-
-<Canvas>
   <Story name="items-baseline">
     {`
       <ul class="a-list-reset u-flex u-items-baseline u-fg--white">
         <li class="u-margin-m u-padding-m u-bg--gray-20">
-          Elements with different padding top & bottom.
+          u-items-baseline. Elements with different padding top & bottom.
         </li>
         <li class="u-margin-m u-padding-m u-padding-xl-y u-bg--gray-20">
-          Elements with different padding top & bottom.
+          u-items-baseline. Elements with different padding top & bottom.
         </li>
         <li class="u-margin-m u-padding-m-left u-padding-m-right u-padding-xl-bottom u-bg--gray-20">
-          Elements with different padding top & bottom.
+          u-items-baseline. Elements with different padding top & bottom.
         </li>
       </ul>
     `}
   </Story>
 </Canvas>
+
+## Responsive
+
+These classes are all available at the `m` breakpoint.
+
+<Canvas isColumn>
+  <Story name="items-center@m">
+    {`
+      <ul class="a-list-reset u-flex u-items-center@m u-fg--white">
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
+          u-items-center
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
+          u-items-center
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
+          u-items-center
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="items-end@m">
+    {`
+      <ul class="a-list-reset u-flex u-items-end@m u-fg--white">
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
+          u-items-end
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
+          u-items-end
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
+          u-items-end
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="items-start@m">
+    {`
+      <ul class="a-list-reset u-flex u-items-start@m u-fg--white">
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
+          u-items-start
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
+          u-items-start
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
+          u-items-start
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="items-stretch@m">
+    {`
+      <ul class="a-list-reset u-flex u-items-stretch@m u-fg--white" style="min-height: 10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="flex-basis: 33%">
+          u-items-stretch. Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="flex-basis: 33%">
+          u-items-stretch. Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o. Danish sesame snaps chocolate cake chocolate bar croissant liquorice jelly topping.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="flex-basis: 33%">
+          u-items-stretch. Elements with different amounts of content.
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="items-baseline@m">
+    {`
+      <ul class="a-list-reset u-flex u-items-baseline@m u-fg--white">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          u-items-baseline. Elements with different padding top & bottom.
+        </li>
+        <li class="u-margin-m u-padding-m u-padding-xl-y u-bg--gray-20">
+          u-items-baseline. Elements with different padding top & bottom.
+        </li>
+        <li class="u-margin-m u-padding-m-left u-padding-m-right u-padding-xl-bottom u-bg--gray-20">
+          u-items-baseline. Elements with different padding top & bottom.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The available align-items values can be customized by overriding the `$bitstyles-items` Sass variable:
+
+```scss
+$bitstyles-items: (
+  'center': center,
+  'end': flex-end,
+  'start': flex-start,
+  'stretch': stretch,
+  'baseline': baseline,
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-items-breakpoints` variable:
+
+```scss
+$bitstyles-items-breakpoints: ('m');
+```

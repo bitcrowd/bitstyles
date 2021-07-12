@@ -6,9 +6,12 @@
 - Added `$bitstyles-grays-hint-color-mix` and `$bitstyles-grays-hint-color` variables to allow control over how the `gray` color palette is generated
 - Added `$bitstyles-color-mix-percentages` list variable, giving control over which percentage intervals are generated in each color’s palette
 - There’s now the `generate-palette($base-color, $mix-color, $percentages)` function to automate generating palettes of individual colors
-- Color scales based on the semantic colors (`brand-1`, `warning` etc.)  are now available in shades as well as tints (`brand-1-shades`, `warning-shades` etc.)
+- Color scales based on the semantic colors (`brand-1`, `warning` etc.) are now available in shades as well as tints (`brand-1-shades`, `warning-shades` etc.)
 - Inputs’ placeholder text font-weight and font-style can now be customized using `$bitstyles-input-placeholder-font-weight` and `$bitstyles-input-placeholder-font-style` variables respectively
 - The `.u-gap` classes are now available at `m` and `xl` breakpoints
+- The `.u-align`, `.u-self`, and `.u-justify` sets of utility classes are now all available at `m` breakpoint. The available breakpoints can be customized
+- The various `.u-flex-` classes are now available at the `m` breakpoint. The available breakpoints can be customized by overriding `$bitstyles-flex-breakpoints`
+- Adds `.u-flex-nowrap` and `.u-flex-row` classes
 
 ## Changed
 
@@ -18,6 +21,13 @@
 ## Docs
 
 - Adds a `Design Tokens` section to the storybook, and lists all available colors
+
+## Breaking
+
+- Renamed `u-flex__shrink-x` (where `x` is a number) to `u-flex-shrink-x`
+- Renamed `u-flex__grow-x` (where `x` is a number) to `u-flex-grow-x`
+- Renamed `u-flex--wrap` to `u-flex-wrap`
+- Renamed `u-flex--col` to `u-flex-col`
 
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
 
@@ -92,7 +102,7 @@
 
 ## Changed
 
-- Sidebar examples now include the closed state, so that it can be seen on  small-viewports
+- Sidebar examples now include the closed state, so that it can be seen on small-viewports
 
 ## Fixed
 

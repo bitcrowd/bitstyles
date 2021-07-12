@@ -51,7 +51,7 @@ const ColorItem = (label, color) =>
 
 const ColorRow = ({ palette }) =>
   `
-    <ul class="u-flex__grow-1 u-grid a-list-reset" style="grid-template-columns: repeat(${
+    <ul class="u-flex-grow-1 u-grid a-list-reset" style="grid-template-columns: repeat(${
       Object.keys(palette).length
     }, 1fr)">
       ${Object.keys(palette)

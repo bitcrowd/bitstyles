@@ -23,10 +23,52 @@ Set `align-self` to align a flex child to the flex end:
         <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
           Elements of different height.
         </li>
-        <li class="u-margin-m u-padding-m u-bg--gray-20 u-self-end" style="height: 10rem;">
-          Elements of different height.
+        <li class="u-margin-m u-padding-m u-bg--brand-2 u-self-end" style="height: 10rem;">
+          u-self-end. Elements of different height.
         </li>
       </ul>
     `}
   </Story>
 </Canvas>
+
+## Responsiveness
+
+The classes are available at the `m` breakpoint.
+
+<Canvas>
+  <Story name="self-end@m">
+    {`
+      <ul class="a-list-reset u-flex u-items-start u-fg--white">
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 10rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 15rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20" style="height: 12rem;">
+          Elements of different height.
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--brand-2 u-self-end@m" style="height: 10rem;">
+          u-self-end@m. Elements of different height.
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+
+## Customization
+
+The available align-self values can be customized by overriding the `$bitstyles-self` Sass variable:
+
+```scss
+$bitstyles-self: (
+  'end': flex-end,
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-self-breakpoints` variable:
+
+```scss
+$bitstyles-self-breakpoints: ('m');
+```

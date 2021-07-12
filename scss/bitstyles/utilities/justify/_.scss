@@ -1,13 +1,18 @@
-.#{$bitstyles-namespace}u-justify-between {
-  justify-content: space-between;
-}
+@import 'settings';
 
-.#{$bitstyles-namespace}u-justify-end {
-  justify-content: flex-end;
-}
+@include output-properties(
+  $property-name: 'justify-content',
+  $classname-root: 'justify',
+  $values: $bitstyles-justify
+);
 
-@include media-query('m') {
-  .#{$bitstyles-namespace}u-justify-between\@m {
-    justify-content: space-between;
+@each $breakpoint-alias in $bitstyles-justify-breakpoints {
+  @include media-query($breakpoint-alias) {
+    @include output-properties(
+      $property-name: 'justify-content',
+      $classname-root: 'justify',
+      $values: $bitstyles-justify,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
   }
 }

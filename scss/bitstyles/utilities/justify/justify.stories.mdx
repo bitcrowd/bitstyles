@@ -1,45 +1,109 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="Utilities/justify-items" />
+<Meta title="Utilities/justify" />
 
-# Justify-items
+# Justify
 
 Flex and Grid share many alignment properties. These will have no effect on elements to which you haven’t given one of those classes (`.u-flex`, `.u-grid`).
 
-### Between
+Set `justify-content` to align flex children to the respecitve different edges on the cross-axis. This only affects layout when the combined elements are smaller than the available cross-axis:
 
-Set `justify-content` to align flex children to the edges on the cross-axis. This only affects layout when the elements are less wide than the available width:
-
-<Canvas>
+<Canvas isColumn>
   <Story name="justify-between">
     {`
       <ul class="a-list-reset u-flex u-justify-between u-fg--white" style="min-height:10rem;">
         <li class="u-margin-m u-padding-m u-bg--gray-20">
-          Elements which leave space.
+          Between
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20">
-          Elements which leave space.
+          Between
         </li>
       </ul>
     `}
   </Story>
-</Canvas>
-
-### End
-
-Set `justify-content` to align flex children to the end on the cross-axis. This only affects layout when the elements are less wide than the available width:
-
-<Canvas>
+  <Story name="justify-start">
+    {`
+      <ul class="a-list-reset u-flex u-justify-start u-fg--white" style="min-height:10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Start
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Start
+        </li>
+      </ul>
+    `}
+  </Story>
   <Story name="justify-end">
     {`
       <ul class="a-list-reset u-flex u-justify-end u-fg--white" style="min-height:10rem;">
         <li class="u-margin-m u-padding-m u-bg--gray-20">
-          Elements which leave space.
+          End
         </li>
         <li class="u-margin-m u-padding-m u-bg--gray-20">
-          Elements which leave space.
+          End
         </li>
       </ul>
     `}
   </Story>
 </Canvas>
+
+## Responsiveness
+
+These classes are available at the `m` breakpoint.
+
+<Canvas isColumn>
+  <Story name="justify-between@m">
+    {`
+      <ul class="a-list-reset u-flex u-justify-between@m u-fg--white" style="min-height:10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Between
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Between
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="justify-start@m">
+    {`
+      <ul class="a-list-reset u-flex u-justify-start@m u-fg--white" style="min-height:10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Start
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          Start
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="justify-end@m">
+    {`
+      <ul class="a-list-reset u-flex u-justify-end@m u-fg--white" style="min-height:10rem;">
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          End
+        </li>
+        <li class="u-margin-m u-padding-m u-bg--gray-20">
+          End
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The available justify-content values can be customized by overriding the `$bitstyles-justify` Sass variable:
+
+```scss
+$bitstyles-justify: (
+  'between': space-between,
+  'end': flex-end,
+  'start': flex-start,
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-justify-breakpoints` variable:
+
+```scss
+$bitstyles-justify-breakpoints: ('m');
+```
