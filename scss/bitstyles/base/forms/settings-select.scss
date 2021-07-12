@@ -1,3 +1,4 @@
+@use '../../tools/color';
 //
 // Base styles ////////////////////////////////////////
 $bitstyles-select-padding-vertical: spacing('xs') !default;
@@ -10,32 +11,32 @@ $bitstyles-select-color: palette('gray', '60') !default;
 $bitstyles-select-border-width: spacing('xxxs');
 $bitstyles-select-border-color: palette('gray', '10') !default;
 $bitstyles-select-background-color: palette('white') !default;
-$bitstyles-select-background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('gray', '60')}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(palette('gray', '60'))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Hover styles ////////////////////////////////////////
 $bitstyles-select-color-hover: palette('gray', '80') !default;
 $bitstyles-select-border-color-hover: palette('gray', '60') !default;
 $bitstyles-select-background-color-hover: palette('gray', '1') !default;
-$bitstyles-select-background-image-hover: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{$bitstyles-select-color-hover}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image-hover: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color($bitstyles-select-color-hover)}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Active styles ////////////////////////////////////////
 $bitstyles-select-color-active: palette('gray', '80') !default;
 $bitstyles-select-border-color-active: palette('gray', '80') !default;
 $bitstyles-select-background-color-active: transparent !default;
-$bitstyles-select-background-image-active: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('gray', '80')}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image-active: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(palette('gray', '80'))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Invalid styles ////////////////////////////////////////
 $bitstyles-select-color-invalid: palette('warning') !default;
 $bitstyles-select-border-color-invalid: palette('warning') !default;
 $bitstyles-select-background-color-invalid: palette('white') !default;
-$bitstyles-select-background-image-invalid: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('warning')}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image-invalid: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(palette('warning'))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Disabled styles ////////////////////////////////////////
 $bitstyles-select-color-disabled: palette('text') !default;
 $bitstyles-select-border-color-disabled: palette('black', '20') !default;
 $bitstyles-select-background-color-disabled: palette('black', '10') !default;
-$bitstyles-select-background-image-disabled: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{palette('gray', '50')}' d='M6.64,34.23a5.57,5.57,0,0,1,7.87-7.89L49.92,61.91,85.49,26.34a5.57,5.57,0,0,1,7.87,7.89L53.94,73.66a5.58,5.58,0,0,1-7.88,0Z'/%3E%3C/svg%3E") !default;
+$bitstyles-select-background-image-disabled: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(palette('gray', '50'))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
