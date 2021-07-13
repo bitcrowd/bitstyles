@@ -1,5 +1,5 @@
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
-$gutter: spacing.spacing('m') !default;
-$border: spacing.spacing('xxxs') solid palette.get('gray', '10') !default;
+$gutter: size.get('m') !default;
+$border: size.get('xxxs') solid palette.get('gray', '10') !default;

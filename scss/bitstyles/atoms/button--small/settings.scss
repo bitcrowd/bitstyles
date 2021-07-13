@@ -1,7 +1,7 @@
 @use "../../settings/layout";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
-$padding-vertical: spacing.spacing('xs');
-$padding-horizontal: spacing.spacing('m');
-$box-shadow: 0 0 spacing.spacing('xs') currentColor;
+$padding-vertical: size.get('xs');
+$padding-horizontal: size.get('m');
+$box-shadow: 0 0 size.get('xs') currentColor;
 $border-radius: layout.$border-radius-round;

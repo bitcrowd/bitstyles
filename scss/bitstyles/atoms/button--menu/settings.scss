@@ -1,11 +1,11 @@
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 //
 // Base styles ////////////////////////////////////////
 
-$padding-vertical: spacing.spacing('s') !default;
-$padding-horizontal: spacing.spacing('m') !default;
+$padding-vertical: size.get('s') !default;
+$padding-horizontal: size.get('m') !default;
 
 //
 // Base colors ////////////////////////////////////////

@@ -1,28 +1,28 @@
 @use "../../settings/animation";
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 //
 // Base styles ////////////////////////////////////////
 
-$padding-vertical: spacing.spacing('xs') !default;
-$padding-horizontal: spacing.spacing('m') !default;
-$border-radius: spacing.spacing('xs') !default;
+$padding-vertical: size.get('xs') !default;
+$padding-horizontal: size.get('m') !default;
+$border-radius: size.get('xs') !default;
 $transition:
   color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing !default;
-$icon-spacing: spacing.spacing('s') !default;
+$icon-spacing: size.get('s') !default;
 
 //
 // Base colors ////////////////////////////////////////
 
 $color: palette.get('white') !default;
 $background-color: palette.get('brand-1', '80') !default;
-$border-width: spacing.spacing('xxxs') !default;
+$border-width: size.get('xxxs') !default;
 $border-color: palette.get('brand-1', '80') !default;
-$box-shadow: 0 0 spacing.spacing('xs') rgba(palette.get('brand-1', '80'), 0.2) !default;
+$box-shadow: 0 0 size.get('xs') rgba(palette.get('brand-1', '80'), 0.2) !default;
 
 //
 // Hover colors ////////////////////////////////////////
@@ -30,7 +30,7 @@ $box-shadow: 0 0 spacing.spacing('xs') rgba(palette.get('brand-1', '80'), 0.2) !
 $color-hover: palette.get('white') !default;
 $background-color-hover: palette.get('brand-1') !default;
 $border-color-hover: palette.get('brand-1') !default;
-$box-shadow-hover: 0 0 spacing.spacing('s') rgba(palette.get('brand-1'), 0.2) !default;
+$box-shadow-hover: 0 0 size.get('s') rgba(palette.get('brand-1'), 0.2) !default;
 
 //
 // Active colors ////////////////////////////////////////
@@ -38,7 +38,7 @@ $box-shadow-hover: 0 0 spacing.spacing('s') rgba(palette.get('brand-1'), 0.2) !d
 $color-active: palette.get('white') !default;
 $background-color-active: palette.get('brand-2', '100') !default;
 $border-color-active: palette.get('brand-2', '100') !default;
-$box-shadow-active: 0 0 spacing.spacing('s') rgba(palette.get('brand-1', '100'), 0.3) !default;
+$box-shadow-active: 0 0 size.get('s') rgba(palette.get('brand-1', '100'), 0.3) !default;
 
 //
 // Disabled colors ////////////////////////////////////////

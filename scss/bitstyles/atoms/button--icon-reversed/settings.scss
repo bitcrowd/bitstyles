@@ -1,11 +1,11 @@
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 //
 // Base styles ////////////////////////////////////////
 
-$padding-vertical: spacing.spacing('m') !default;
-$padding-horizontal: spacing.spacing('m') !default;
+$padding-vertical: size.get('m') !default;
+$padding-horizontal: size.get('m') !default;
 
 //
 // Base colors ////////////////////////////////////////
@@ -13,7 +13,7 @@ $padding-horizontal: spacing.spacing('m') !default;
 $color: palette.get('gray', '20') !default;
 $background-color: transparent !default;
 $border-color: transparent !default;
-$border-radius: spacing.spacing('s') !default;
+$border-radius: size.get('s') !default;
 $box-shadow: none !default;
 
 //

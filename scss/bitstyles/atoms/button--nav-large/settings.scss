@@ -1,13 +1,13 @@
 @use "../../settings/animation";
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 //
 // Base styles ////////////////////////////////////////
 
-$padding-vertical: spacing.spacing('l') !default;
-$padding-horizontal: spacing.spacing('l') !default;
-$border-radius: spacing.spacing('s') !default;
+$padding-vertical: size.get('l') !default;
+$padding-horizontal: size.get('l') !default;
+$border-radius: size.get('s') !default;
 $transition:
   color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,

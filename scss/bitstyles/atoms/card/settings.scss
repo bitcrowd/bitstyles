@@ -1,10 +1,10 @@
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
-$padding: spacing.spacing('m') !default;
-$border-radius: spacing.spacing('m') !default;
+$padding: size.get('m') !default;
+$border-radius: size.get('m') !default;
 $box-shadow:
-  0 spacing.spacing('xs') spacing.spacing('m') rgba(palette.get('brand-1', '100'), 0.1),
-  0 spacing.spacing('xxxs') spacing.spacing('xxs') rgba(palette.get('gray', '90'), 0.04),
-  0 0 spacing.spacing('xxs') rgba(palette.get('gray', '90'), 0.1) !default;
+  0 size.get('xs') size.get('m') rgba(palette.get('brand-1', '100'), 0.1),
+  0 size.get('xxxs') size.get('xxs') rgba(palette.get('gray', '90'), 0.04),
+  0 0 size.get('xxs') rgba(palette.get('gray', '90'), 0.1) !default;
 $breakpoints: ('m', 'l') !default;

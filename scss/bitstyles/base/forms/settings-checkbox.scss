@@ -1,16 +1,16 @@
-@use "../../tools/spacing";
+@use "../../tools/size";
 @use '../../tools/palette';
 @use "../../tools/color";
 
 //
 // Base styles ////////////////////////////////////////
-$checkbox-border-radius: spacing.spacing('xxs') !default;
+$checkbox-border-radius: size.get('xxs') !default;
 
 //
 // Base colors ////////////////////////////////////////
 $checkbox-color: palette.get('black', '80') !default;
 $checkbox-background-color: palette.get('white') !default;
-$checkbox-border-width: spacing.spacing('xxxs') !default;
+$checkbox-border-width: size.get('xxxs') !default;
 $checkbox-border-color: palette.get('black', '80') !default;
 
 //

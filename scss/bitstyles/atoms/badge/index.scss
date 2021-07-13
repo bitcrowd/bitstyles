@@ -2,7 +2,7 @@
 @use "../../settings/layout";
 @use "../../settings/setup";
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 .#{setup.$namespace}a-badge {
   display: inline-flex;
@@ -25,6 +25,6 @@
 }
 
 .#{setup.$namespace}a-badge__button {
-  margin-right: -#{spacing.spacing('s')};
-  margin-left: spacing.spacing('xs');
+  margin-right: -#{size.get('s')};
+  margin-left: size.get('xs');
 }

@@ -1,7 +1,7 @@
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
-$modal-padding: spacing.spacing('m') !default;
+$modal-padding: size.get('m') !default;
 $modal-background-color: palette.get('white') !default;
 $modal-overlay-color: rgba(palette.get('white'), 0.95) !default;
 $modal-transition-easing: ease-in-out !default;

@@ -1,19 +1,19 @@
 @use "../../settings/animation";
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 //
 // Base styles ////////////////////////////////////////
 
-$padding-vertical: spacing.spacing('s') !default;
-$padding-horizontal: spacing.spacing('m') !default;
-$border-radius: spacing.spacing('xs') !default;
+$padding-vertical: size.get('s') !default;
+$padding-horizontal: size.get('m') !default;
+$border-radius: size.get('xs') !default;
 $transition:
   color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing !default;
-$icon-spacing: spacing.spacing('s') !default;
+$icon-spacing: size.get('s') !default;
 
 //
 // Base colors ////////////////////////////////////////
@@ -29,7 +29,7 @@ $box-shadow: none !default;
 $color-hover: palette.get('gray', '90') !default;
 $background-color-hover: palette.get('white', '95') !default;
 $border-color-hover: palette.get('white', '95') !default;
-$box-shadow-hover: 0 0 spacing.spacing('m') rgba(palette.get('brand-1'), 0.1) !default;
+$box-shadow-hover: 0 0 size.get('m') rgba(palette.get('brand-1'), 0.1) !default;
 
 //
 // Active colors ////////////////////////////////////////
@@ -37,7 +37,7 @@ $box-shadow-hover: 0 0 spacing.spacing('m') rgba(palette.get('brand-1'), 0.1) !d
 $color-active: palette.get('white') !default;
 $background-color-active: palette.get('brand-2', '100') !default;
 $border-color-active: palette.get('brand-2', '100') !default;
-$box-shadow-active: 0 0 spacing.spacing('xs') rgba(palette.get('brand-1', '100'), 0.1) !default;
+$box-shadow-active: 0 0 size.get('xs') rgba(palette.get('brand-1', '100'), 0.1) !default;
 
 //
 // Pressed colors ////////////////////////////////////////
@@ -45,7 +45,7 @@ $box-shadow-active: 0 0 spacing.spacing('xs') rgba(palette.get('brand-1', '100')
 $color-pressed: palette.get('gray', '80') !default;
 $background-color-pressed: palette.get('white', '100') !default;
 $border-color-pressed: palette.get('white', '100') !default;
-$box-shadow-pressed: 0 0 spacing.spacing('s') rgba(palette.get('brand-1', '100'), 0.1) !default;
+$box-shadow-pressed: 0 0 size.get('s') rgba(palette.get('brand-1', '100'), 0.1) !default;
 
 //
 // Disabled colors ////////////////////////////////////////

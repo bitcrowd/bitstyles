@@ -1,5 +1,5 @@
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 //
 // Hover colors ////////////////////////////////////////
@@ -7,7 +7,7 @@
 $color-hover: palette.get('white') !default;
 $background-color-hover: palette.get('danger', '100') !default;
 $border-color-hover: palette.get('danger', '100') !default;
-$box-shadow-hover: 0 0 spacing.spacing('m') rgba(palette.get('danger', '100'), 0.3) !default;
+$box-shadow-hover: 0 0 size.get('m') rgba(palette.get('danger', '100'), 0.3) !default;
 
 //
 // Active colors ////////////////////////////////////////
@@ -15,7 +15,7 @@ $box-shadow-hover: 0 0 spacing.spacing('m') rgba(palette.get('danger', '100'), 0
 $color-active: palette.get('white') !default;
 $background-color-active: palette.get('danger', '100') !default;
 $border-color-active: palette.get('danger', '100') !default;
-$box-shadow-active: 0 0 spacing.spacing('xs') rgba(palette.get('danger', '100'), 0.3) !default;
+$box-shadow-active: 0 0 size.get('xs') rgba(palette.get('danger', '100'), 0.3) !default;
 
 //
 // Disabled colors ////////////////////////////////////////

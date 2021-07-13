@@ -1,4 +1,5 @@
 @use "sass:list";
+
 // Z-index
 //
 // **Assign z-index values in a controlled manner**
@@ -43,7 +44,7 @@
 // @param {String} $lement The element for which you need the z-index level.
 //
 
-@function z($list, $element) {
+@function get($list, $element) {
   $z-index: list.index($list, $element);
 
   @if $z-index {

@@ -1,25 +1,25 @@
 @use "../../settings/typography";
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 //
 // Base styles ////////////////////////////////////////
 
-$input-padding: spacing.spacing('xs') !default;
-$input-border-radius: spacing.spacing('xs') !default;
+$input-padding: size.get('xs') !default;
+$input-border-radius: size.get('xs') !default;
 $input-placeholder-font-style: italic !default;
 $input-placeholder-font-weight: typography.$font-weight-normal !default;
 $input-placeholder-color: palette.get('gray', '50') !default;
-$input-checkbox-size: spacing.spacing('m') !default;
+$input-checkbox-size: size.get('m') !default;
 
 //
 // Base colors ////////////////////////////////////////
 
 $input-color: palette.get('text') !default;
-$input-border-width: spacing.spacing('xxxs');
+$input-border-width: size.get('xxxs');
 $input-border-color: palette.get('gray', '10') !default;
 $input-background: palette.get('white') !default;
-$input-box-shadow: 0 0 spacing.spacing('xs') rgba(palette.get('gray', '90'), 0.05);
+$input-box-shadow: 0 0 size.get('xs') rgba(palette.get('gray', '90'), 0.05);
 
 //
 // Hover colors ////////////////////////////////////////
@@ -27,7 +27,7 @@ $input-box-shadow: 0 0 spacing.spacing('xs') rgba(palette.get('gray', '90'), 0.0
 $input-background-hover: palette.get('gray', '1') !default;
 $input-color-hover: palette.get('gray', '70') !default;
 $input-border-color-hover: palette.get('gray', '60') !default;
-$input-box-shadow-hover: 0 0 spacing.spacing('s') rgba(palette.get('brand-1', '90'), 0.05);
+$input-box-shadow-hover: 0 0 size.get('s') rgba(palette.get('brand-1', '90'), 0.05);
 
 //
 // Active colors ////////////////////////////////////////
@@ -35,7 +35,7 @@ $input-box-shadow-hover: 0 0 spacing.spacing('s') rgba(palette.get('brand-1', '9
 $input-color-active: palette.get('gray', '80') !default;
 $input-border-color-active: palette.get('gray', '80') !default;
 $input-background-active: palette.get('white') !default;
-$input-box-shadow-active: 0 0 spacing.spacing('xxs') rgba(palette.get('brand-1', '90'), 0.15);
+$input-box-shadow-active: 0 0 size.get('xxs') rgba(palette.get('brand-1', '90'), 0.15);
 
 //
 // Disabled colors ////////////////////////////////////////
@@ -51,4 +51,4 @@ $input-box-shadow-disabled: none;
 $input-color-invalid: palette.get('warning') !default;
 $input-background-color-invalid: palette.get('white') !default;
 $input-border-color-invalid: palette.get('warning') !default;
-$input-box-shadow-invalid: 0 0 spacing.spacing('s') rgba(palette.get('warning', '90'), 0.1);
+$input-box-shadow-invalid: 0 0 size.get('s') rgba(palette.get('warning', '90'), 0.1);
