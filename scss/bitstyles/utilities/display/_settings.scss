@@ -1,8 +1,8 @@
-$display-types: (
+$values: (
   'block': 'block',
   'grid': 'grid',
   'flex': 'flex',
   'inline-flex': 'inline-flex',
   'hidden': 'none'
 ) !default;
-$display-types-breakpoints: ('s', 'm', 'l') !default;
+$breakpoints: ('s', 'm', 'l') !default;

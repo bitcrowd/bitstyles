@@ -5,15 +5,15 @@
 @include directional-properties.output-properties(
   $property-name: 'grid-template-columns',
   $classname-root: 'grid-cols',
-  $values: settings.$grid-template-columns
+  $values: settings.$values
 );
 
-@each $breakpoint-alias in settings.$grid-template-columns-breakpoints {
+@each $breakpoint-alias in settings.$breakpoints {
   @include media-query.media-query($breakpoint-alias) {
     @include directional-properties.output-properties(
       $property-name: 'grid-template-columns',
       $classname-root: 'grid-cols',
-      $values: settings.$grid-template-columns,
+      $values: settings.$values,
       $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );
   }

@@ -7,7 +7,7 @@
   @include sr-only.sr-only;
 }
 
-@each $breakpoint in settings.$sr-only-breakpoints {
+@each $breakpoint in settings.$breakpoints {
   @include media-query.media-query($breakpoint) {
     .#{setup.$namespace}u-sr-only\@#{$breakpoint} {
       @include sr-only.sr-only;

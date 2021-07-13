@@ -1,17 +1,17 @@
-$flex-direction: (
+$direction: (
   'col': column,
   'row': row
 ) !default;
-$flex-wrap: (
+$wrap: (
   'wrap': wrap,
   'nowrap': nowrap
 ) !default;
-$flex-grow: (
+$grow: (
   '0': 0,
   '1': 1
 ) !default;
-$flex-shrink: (
+$shrink: (
   '0': 0,
   '1': 1
 ) !default;
-$flex-breakpoints: ('m') !default;
+$breakpoints: ('m') !default;

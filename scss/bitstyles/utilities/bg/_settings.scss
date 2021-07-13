@@ -1,6 +1,6 @@
 @use '../../tools/palette';
 
-$background-colors: (
+$values: (
   'black-80': palette.get('black', '80'),
   'background': palette.get('background'),
   'white': palette.get('white'),

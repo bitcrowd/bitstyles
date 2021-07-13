@@ -1,8 +1,8 @@
 @use '../../tools/size';
 
-$gap-sizes: (
+$sizes: (
   's': size.get('s'),
   'm': size.get('l'),
   'l': size.get('xl')
 ) !default;
-$gap-breakpoints: ('m', 'xl') !default;
+$breakpoints: ('m', 'xl') !default;

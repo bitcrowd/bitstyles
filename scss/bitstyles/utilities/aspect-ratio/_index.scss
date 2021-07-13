@@ -3,7 +3,7 @@
 @use '../../settings/setup';
 @use '../../tools/aspect-ratio';
 
-@each $aspect-ratio-alias, $aspect-ratio-value in settings.$aspect-ratios {
+@each $aspect-ratio-alias, $aspect-ratio-value in settings.$values {
   .#{setup.$namespace}u-aspect-ratio-#{$aspect-ratio-alias} {
     @include aspect-ratio.aspect-ratio(
       map.get($aspect-ratio-value, 'width'),

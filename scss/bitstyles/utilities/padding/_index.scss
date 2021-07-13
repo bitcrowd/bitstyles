@@ -6,17 +6,17 @@
 @include directional-properties.output-directional-properties(
   $property-name: 'padding',
   $classname-root: 'padding',
-  $values: map.get(settings.$padding-sizes, 'positive'),
-  $directions: settings.$padding-directions
+  $values: map.get(settings.$sizes, 'positive'),
+  $directions: settings.$directions
 );
 
-@each $breakpoint-alias in settings.$padding-breakpoints {
+@each $breakpoint-alias in settings.$breakpoints {
   @include media-query.media-query($breakpoint-alias) {
     @include directional-properties.output-directional-properties(
       $property-name: 'padding',
       $classname-root: 'padding',
-      $values: map.get(settings.$padding-sizes, 'positive'),
-      $directions: settings.$padding-directions,
+      $values: map.get(settings.$sizes, 'positive'),
+      $directions: settings.$directions,
       $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );
   }

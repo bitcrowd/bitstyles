@@ -1,6 +1,6 @@
 @use '../../tools/palette';
 
-$foreground-colors: (
+$values: (
   'brand-1': palette.get('brand-1', '100'),
   'brand-2': palette.get('brand-2', '100'),
   'warning': palette.get('warning', '100'),
