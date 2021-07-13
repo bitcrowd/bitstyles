@@ -1,34 +1,34 @@
-@use './settings' as settings2;
+@use './settings';
 @use "../../settings/animation";
 @use "../../settings/layout";
 @use "../../settings/setup";
-@use "../button/settings";
+@use "../button/settings" as button-settings;
 
 .#{setup.$namespace}a-button--tab-container {
   & > *:first-child {
-    margin-left: -(settings.$button-padding-horizontal);
+    margin-left: -(button-settings.$padding-horizontal);
   }
 }
 
 .#{setup.$namespace}a-button--tab {
   position: relative;
   border: 0;
-  border-radius: settings2.$border-radius;
+  border-radius: settings.$border-radius;
 
   &,
   &:visited {
-    color: settings2.$color;
-    background: settings2.$background-color;
-    border: settings2.$border;
-    box-shadow: settings2.$box-shadow;
+    color: settings.$color;
+    background: settings.$background-color;
+    border: settings.$border;
+    box-shadow: settings.$box-shadow;
 
     &::after {
       position: absolute;
-      right: settings.$button-padding-horizontal;
+      right: button-settings.$padding-horizontal;
       bottom: 0;
-      left: settings.$button-padding-horizontal;
-      height: settings2.$border-width;
-      background-color: settings2.$indicator-color;
+      left: button-settings.$padding-horizontal;
+      height: settings.$border-width;
+      background-color: settings.$indicator-color;
       border-radius: layout.$border-radius-round;
       content: '';
       transition: background-color animation.$transition-duration animation.$transition-easing;
@@ -37,47 +37,47 @@
 
   &:hover,
   &:focus {
-    color: settings2.$color-hover;
-    background: settings2.$background-color-hover;
-    border: settings2.$border-hover;
-    box-shadow: settings2.$box-shadow-hover;
+    color: settings.$color-hover;
+    background: settings.$background-color-hover;
+    border: settings.$border-hover;
+    box-shadow: settings.$box-shadow-hover;
 
     &::after {
-      background-color: settings2.$indicator-color-hover;
+      background-color: settings.$indicator-color-hover;
     }
   }
 
   &:active {
-    color: settings2.$color-active;
-    background: settings2.$background-color-active;
-    border: settings2.$border-active;
-    box-shadow: settings2.$box-shadow-active;
+    color: settings.$color-active;
+    background: settings.$background-color-active;
+    border: settings.$border-active;
+    box-shadow: settings.$box-shadow-active;
 
     &::after {
-      background-color: settings2.$indicator-color-active;
+      background-color: settings.$indicator-color-active;
     }
   }
 
   &[aria-selected="true"],
   &[aria-current] {
-    color: settings2.$color-selected;
-    background: settings2.$background-color-selected;
-    box-shadow: settings2.$box-shadow-selected;
+    color: settings.$color-selected;
+    background: settings.$background-color-selected;
+    box-shadow: settings.$box-shadow-selected;
 
     &::after {
-      background-color: settings2.$indicator-color-selected;
+      background-color: settings.$indicator-color-selected;
     }
   }
 
   &:disabled,
   &[aria-disabled="true"] {
-    color: settings2.$color-disabled;
-    background: settings2.$background-color-disabled;
-    border: settings2.$border-disabled;
-    box-shadow: settings2.$box-shadow-disabled;
+    color: settings.$color-disabled;
+    background: settings.$background-color-disabled;
+    border: settings.$border-disabled;
+    box-shadow: settings.$box-shadow-disabled;
 
     &::after {
-      background-color: settings2.$indicator-color-disabled;
+      background-color: settings.$indicator-color-disabled;
     }
   }
 }
