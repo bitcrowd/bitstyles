@@ -1,0 +1,4 @@
+@use '../../scss/bitstyles' with (
+  $color-base-black: #f00,
+  $margin-breakpoints: ('xl', 's')
+);
