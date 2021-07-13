@@ -15,16 +15,16 @@
   left: 0;
   z-index: 10;
   cursor: pointer;
-  background: settings.$modal-overlay-color;
-  transition: all settings.$modal-transition-duration settings.$modal-transition-easing;
+  background: settings.$overlay-color;
+  transition: all settings.$transition-duration settings.$transition-easing;
   -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
   backface-visibility: hidden;
-  will-change: settings.$modal-will-change;
+  will-change: settings.$will-change;
 
   [aria-hidden="true"] & {
     @include modal-is-hidden;
 
-    transition: all settings.$modal-transition-duration settings.$modal-transition-easing, visibility 0 settings.$modal-transition-easing settings.$modal-transition-duration;
+    transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
   }
 }
 
@@ -33,34 +33,34 @@
   top: 50%;
   left: 50%;
   z-index: 20;
-  width: calc(100% - 2 * #{settings.$modal-padding});
+  width: calc(100% - 2 * #{settings.$padding});
   height: auto;
-  max-height: calc(100vh - 2 * #{settings.$modal-padding});
+  max-height: calc(100vh - 2 * #{settings.$padding});
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-  background-color: settings.$modal-background-color;
+  background-color: settings.$background-color;
   transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
-  transition: all settings.$modal-transition-duration-smallscreen settings.$modal-transition-easing;
+  transition: all settings.$transition-duration-smallscreen settings.$transition-easing;
   -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
   backface-visibility: hidden;
-  will-change: settings.$modal-will-change;
+  will-change: settings.$will-change;
 
   [aria-hidden="true"] & {
     @include modal-is-hidden;
 
     transform: translate(-50%, 50%);
-    transition: all settings.$modal-transition-duration-smallscreen settings.$modal-transition-easing, visibility 0 settings.$modal-transition-easing settings.$modal-transition-duration;
+    transition: all settings.$transition-duration-smallscreen settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
   }
 }
 
-@include media-query.media-query(settings.$modal-breakpoint) {
+@include media-query.media-query(settings.$breakpoint) {
   .#{setup.$namespace}o-modal__content {
-    transition: all settings.$modal-transition-duration settings.$modal-transition-easing, visibility 0 settings.$modal-transition-easing;
+    transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing;
 
     [aria-hidden="true"] & {
       transform: translate(-50%, -50%) scale(0.875);
-      transition: all settings.$modal-transition-duration settings.$modal-transition-easing, visibility 0 settings.$modal-transition-easing settings.$modal-transition-duration;
+      transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
     }
   }
 }

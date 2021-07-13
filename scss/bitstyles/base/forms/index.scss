@@ -1,6 +1,5 @@
 @use './settings';
 @use "../../settings/typography";
-@use "../../tools/block";
 @use '../../tools/size';
 
 /* stylelint-disable selector-max-type */
@@ -21,8 +20,7 @@ legend {
 }
 
 label {
-  @include block.block;
-
+  display: block;
   margin-bottom: 0;
   cursor: pointer;
 }
