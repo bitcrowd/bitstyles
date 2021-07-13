@@ -1,5 +1,5 @@
-@use "../../settings/setup";
-@use "../../tools/break-text";
+@use '../../settings/setup';
+@use '../../tools/break-text';
 
 .#{setup.$namespace}u-break-text {
   @include break-text.break-text;

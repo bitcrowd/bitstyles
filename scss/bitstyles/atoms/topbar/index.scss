@@ -1,5 +1,5 @@
 @use './settings';
-@use "../../settings/setup";
+@use '../../settings/setup';
 
 .#{setup.$namespace}a-topbar {
   position: settings.$position;

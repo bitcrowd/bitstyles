@@ -1,6 +1,6 @@
 @use './settings';
-@use "../../settings/layout";
-@use "../../settings/setup";
+@use '../../settings/layout';
+@use '../../settings/setup';
 
 .#{setup.$namespace}a-avatar {
   width: 2em;

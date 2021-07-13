@@ -1,6 +1,6 @@
 @use './settings';
-@use "../../settings/setup";
-@use "../../tools/media-query";
+@use '../../settings/setup';
+@use '../../tools/media-query';
 
 @mixin modal-is-hidden {
   opacity: 0;

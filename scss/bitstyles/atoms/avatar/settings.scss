@@ -1,4 +1,4 @@
-@use "../../tools/size";
+@use '../../tools/size';
 
 $sizes: (
   'm': size.get('xl'),

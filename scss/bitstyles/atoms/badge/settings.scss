@@ -1,4 +1,4 @@
-@use "../../tools/size";
+@use '../../tools/size';
 
 $padding-vertical: size.get('xxs') !default;
 $padding-horizontal: size.get('m') !default;

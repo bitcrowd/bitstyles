@@ -1,7 +1,6 @@
 @use 'sass:math';
-
 @use './settings';
-@use "../../settings/setup";
+@use '../../settings/setup';
 
 .#{setup.$namespace}a-button--nav {
   padding: settings.$padding-vertical settings.$padding-horizontal;

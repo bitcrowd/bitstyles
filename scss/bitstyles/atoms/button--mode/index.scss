@@ -1,6 +1,6 @@
 @use './settings.scss';
-@use "../../settings/setup";
-@use "../../tools/size";
+@use '../../settings/setup';
+@use '../../tools/size';
 
 .#{setup.$namespace}a-button--mode-container {
   border-radius: size.get('s');

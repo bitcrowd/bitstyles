@@ -1,5 +1,5 @@
-@use "../../settings/setup";
-@use "../../tools/truncate";
+@use '../../settings/setup';
+@use '../../tools/truncate';
 
 .#{setup.$namespace}u-truncate {
   @include truncate.truncate;

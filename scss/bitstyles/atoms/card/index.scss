@@ -1,6 +1,6 @@
 @use './settings';
-@use "../../tools/directional-properties";
-@use "../../tools/media-query";
+@use '../../tools/directional-properties';
+@use '../../tools/media-query';
 
 @mixin card {
   padding: settings.$padding;

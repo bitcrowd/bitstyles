@@ -1,5 +1,5 @@
-@use "../../settings/setup";
-@use "../../tools/overflow";
+@use '../../settings/setup';
+@use '../../tools/overflow';
 
 .#{setup.$namespace}u-overflow--y {
   @include overflow.overflow-y;

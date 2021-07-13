@@ -1,8 +1,7 @@
 @use 'sass:map';
-
 @use './settings';
-@use "../../tools/directional-properties";
-@use "../../tools/media-query";
+@use '../../tools/directional-properties';
+@use '../../tools/media-query';
 
 @include directional-properties.output-directional-properties(
   $property-name: 'margin',

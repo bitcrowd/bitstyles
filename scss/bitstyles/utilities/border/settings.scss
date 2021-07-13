@@ -1,4 +1,4 @@
-@use "../../tools/palette";
+@use '../../tools/palette';
 
 $border-colors: (
   'gray-70': 1px solid palette.get('gray', '70'),

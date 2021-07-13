@@ -1,7 +1,7 @@
 @use './settings';
-@use "../../settings/setup";
-@use "../../tools/media-query";
-@use "../../tools/sr-only";
+@use '../../settings/setup';
+@use '../../tools/media-query';
+@use '../../tools/sr-only';
 
 .#{setup.$namespace}u-sr-only {
   @include sr-only.sr-only;

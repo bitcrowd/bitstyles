@@ -1,4 +1,4 @@
-@use "../../settings/setup";
+@use '../../settings/setup';
 
 @each $position in ('left', 'right', 'center', 'justify') {
   .#{setup.$namespace}u-text--#{$position} {

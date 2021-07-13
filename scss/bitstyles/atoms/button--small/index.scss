@@ -1,8 +1,7 @@
 @use 'sass:math';
-
 @use './settings';
-@use "../../settings/setup";
-@use "../../tools/size";
+@use '../../settings/setup';
+@use '../../tools/size';
 
 .#{setup.$namespace}a-button--small {
   min-height: size.get('xl');

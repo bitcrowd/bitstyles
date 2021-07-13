@@ -1,5 +1,5 @@
-@use "../../settings/setup";
-@use "../../settings/typography";
+@use '../../settings/setup';
+@use '../../settings/typography';
 
 .#{setup.$namespace}u-font--light {
   font-weight: typography.$font-weight-light;

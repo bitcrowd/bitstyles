@@ -1,6 +1,6 @@
 @use './settings';
-@use "../../tools/directional-properties";
-@use "../../tools/media-query";
+@use '../../tools/directional-properties';
+@use '../../tools/media-query';
 
 @include directional-properties.output-properties(
   $property-name: 'grid-column',

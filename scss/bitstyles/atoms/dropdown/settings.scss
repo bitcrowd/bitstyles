@@ -1,5 +1,5 @@
-@use "../../tools/palette";
-@use "../../tools/size";
+@use '../../tools/palette';
+@use '../../tools/size';
 
 $max-height: 20rem;
 $border-radius: size.get('xs');
