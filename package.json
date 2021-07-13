@@ -4,8 +4,8 @@
   "description": "The Bitcrowd CSS library",
   "main": "build/bitstyles.css",
   "scripts": {
-    "build": "sass scss/bitstyles.scss build/bitstyles.css --style=compressed",
-    "postbuild": "postcss build/bitstyles.css --output build/bitstyles.css",
+    "build": "sass scss/test.scss build/test.css --style=compressed",
+    "postbuild": "postcss build/test.css --output build/test.css",
     "lint:scss": "stylelint scss/**/*.scss --syntax scss",
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
     "lint": "yarn lint:scss && yarn lint:js",
