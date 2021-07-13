@@ -1,17 +1,17 @@
-@use "../../tools/spacing";
+@use "../../tools/size";
 @use '../../tools/palette';
 @use "../../tools/color";
 
 //
 // Base styles ////////////////////////////////////////
-$select-padding-vertical: spacing.spacing('xs') !default;
-$select-padding-horizontal: spacing.spacing('m') !default;
-$select-border-radius: spacing.spacing('xs') !default;
+$select-padding-vertical: size.get('xs') !default;
+$select-padding-horizontal: size.get('m') !default;
+$select-border-radius: size.get('xs') !default;
 
 //
 // Base appearance ////////////////////////////////////////
 $select-color: palette.get('gray', '60') !default;
-$select-border-width: spacing.spacing('xxxs');
+$select-border-width: size.get('xxxs');
 $select-border-color: palette.get('gray', '10') !default;
 $select-background-color: palette.get('white') !default;
 $select-background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(palette.get('gray', '60'))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;

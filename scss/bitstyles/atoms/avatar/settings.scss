@@ -1,6 +1,6 @@
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 $sizes: (
-  'm': spacing.spacing('xl'),
-  'l': spacing.spacing('xl') + spacing.spacing('m'),
+  'm': size.get('xl'),
+  'l': size.get('xl') + size.get('m'),
 );

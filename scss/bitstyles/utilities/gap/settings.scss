@@ -1,8 +1,8 @@
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 $gap-sizes: (
-  's': spacing.spacing('s'),
-  'm': spacing.spacing('l'),
-  'l': spacing.spacing('xl')
+  's': size.get('s'),
+  'm': size.get('l'),
+  'l': size.get('xl')
 ) !default;
 $gap-breakpoints: ('m', 'xl') !default;

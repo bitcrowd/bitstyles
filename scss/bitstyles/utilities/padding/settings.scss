@@ -1,15 +1,15 @@
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 $padding-sizes: (
   'positive': (
     '0': 0,
-    'xxs': spacing.spacing('xxs'),
-    'xs': spacing.spacing('xs'),
-    's': spacing.spacing('s'),
-    'm': spacing.spacing('m'),
-    'l': spacing.spacing('l'),
-    'xl': spacing.spacing('xl'),
-    'xxl': spacing.spacing('xxl')
+    'xxs': size.get('xxs'),
+    'xs': size.get('xs'),
+    's': size.get('s'),
+    'm': size.get('m'),
+    'l': size.get('l'),
+    'xl': size.get('xl'),
+    'xxl': size.get('xxl')
   )
 ) !default;
 $padding-breakpoints: ('m', 'l') !default;

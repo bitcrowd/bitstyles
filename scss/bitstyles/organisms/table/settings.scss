@@ -1,10 +1,10 @@
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 $table-border: 1px solid palette.get('gray', '5') !default;
-$table-padding-horizontal: spacing.spacing('m') !default;
-$table-padding-vertical-td: spacing.spacing('s') !default;
-$table-padding-vertical-th: spacing.spacing('xxs') !default;
+$table-padding-horizontal: size.get('m') !default;
+$table-padding-vertical-td: size.get('s') !default;
+$table-padding-vertical-th: size.get('xxs') !default;
 $table-background-color-td: palette.get('white') !default;
 $table-color-th: palette.get('gray', '70') !default;
 $table-background-color-th: palette.get('background') !default;

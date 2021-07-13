@@ -1,23 +1,23 @@
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 $margin-sizes: (
   'positive': (
     '0': 0,
-    'xxs': spacing.spacing('xxs'),
-    'xs': spacing.spacing('xs'),
-    's': spacing.spacing('s'),
-    'm': spacing.spacing('m'),
-    'l': spacing.spacing('l'),
-    'xl': spacing.spacing('xl'),
+    'xxs': size.get('xxs'),
+    'xs': size.get('xs'),
+    's': size.get('s'),
+    'm': size.get('m'),
+    'l': size.get('l'),
+    'xl': size.get('xl'),
     'auto': auto
   ),
   'negative': (
-    'xxs': -#{spacing.spacing('xxs')},
-    'xs': -#{spacing.spacing('xs')},
-    's': -#{spacing.spacing('s')},
-    'm': -#{spacing.spacing('m')},
-    'l': -#{spacing.spacing('l')},
-    'xl': -#{spacing.spacing('xl')}
+    'xxs': -#{size.get('xxs')},
+    'xs': -#{size.get('xs')},
+    's': -#{size.get('s')},
+    'm': -#{size.get('m')},
+    'l': -#{size.get('l')},
+    'xl': -#{size.get('xl')}
   )
 ) !default;
 $margin-breakpoints: ('s', 'm') !default;

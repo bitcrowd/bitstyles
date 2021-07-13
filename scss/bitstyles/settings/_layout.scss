@@ -3,16 +3,16 @@
 $global-z: ('topbar') !default;
 $border-radius-round: 9999rem !default;
 
-$spacing-base: 0.8rem !default;
-$spacing-sizes: (
+$size-base: 0.8rem !default;
+$sizes: (
   '0': 0,
-  'xxxs': math.div($spacing-base, 8),
-  'xxs': math.div($spacing-base, 4),
-  'xs': math.div($spacing-base, 2),
-  's': $spacing-base - math.div($spacing-base, 4),
-  'm': $spacing-base,
-  'l': $spacing-base + math.div($spacing-base, 4),
-  'xl': $spacing-base * 2,
-  'xxl': $spacing-base * 4,
-  'xxxl': $spacing-base * 8
+  'xxxs': math.div($size-base, 8),
+  'xxs': math.div($size-base, 4),
+  'xs': math.div($size-base, 2),
+  's': $size-base - math.div($size-base, 4),
+  'm': $size-base,
+  'l': $size-base + math.div($size-base, 4),
+  'xl': $size-base * 2,
+  'xxl': $size-base * 4,
+  'xxxl': $size-base * 8
 ) !default;

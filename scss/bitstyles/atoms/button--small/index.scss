@@ -2,10 +2,10 @@
 
 @use './settings';
 @use "../../settings/setup";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 .#{setup.$namespace}a-button--small {
-  min-height: spacing.spacing('xl');
+  min-height: size.get('xl');
   padding: settings.$padding-vertical settings.$padding-horizontal;
 
   &.#{setup.$namespace}a-button--icon {

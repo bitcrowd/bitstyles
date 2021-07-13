@@ -19,5 +19,5 @@
 
 @mixin media__feature {
   float: left;
-  margin-right: spacing.spacing('m');
+  margin-right: size.get('m');
 }

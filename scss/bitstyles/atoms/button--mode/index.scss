@@ -1,9 +1,9 @@
 @use './settings.scss';
 @use "../../settings/setup";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 .#{setup.$namespace}a-button--mode-container {
-  border-radius: spacing.spacing('s');
+  border-radius: size.get('s');
 }
 
 .#{setup.$namespace}a-button--mode {

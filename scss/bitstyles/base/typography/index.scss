@@ -1,6 +1,6 @@
 @use "../../settings/typography";
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 @use "../../tools/typography" as typography-tools;
 
 /* stylelint-disable selector-max-type */
@@ -27,7 +27,7 @@ h6 {
 @include typography-tools.generate-font-sizes('', (html, h1, h2, h3, h4, h5, h6));
 
 p {
-  margin: 0 0 spacing.spacing('m');
+  margin: 0 0 size.get('m');
 }
 
 address {

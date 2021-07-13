@@ -1,4 +1,4 @@
-@use "../tools/spacing";
+@use "../tools/size";
 
 /* stylelint-disable */
 /*
@@ -175,7 +175,7 @@ button:-moz-focusring,
  */
 
 fieldset {
-  padding: spacing.spacing('m');
+  padding: size.get('m');
 }
 
 /**

@@ -1,5 +1,4 @@
 @use "../settings/layout";
-
 @use 'sass:map';
 
 // Spacing
@@ -14,12 +13,12 @@
 // @param {String} $spacing-size  Name of the standardised size required, as defined in the map `$bitstyles-spacing-sizes`.
 //
 
-@function spacing($spacing-size) {
-  @if map.has-key(layout.$spacing-sizes, $spacing-size) {
-    @return map.get(layout.$spacing-sizes, $spacing-size);
+@function get($size) {
+  @if map.has-key(layout.$sizes, $size) {
+    @return map.get(layout.$sizes, $size);
   }
 
   @else {
-    @error "Oops! Spacing size ‘#{$spacing-size}’ does not exist.";
+    @error "Oops! Size ‘#{$size}’ does not exist.";
   }
 }

@@ -1,12 +1,12 @@
 @use "../../settings/animation";
 @use "../../tools/palette";
-@use "../../tools/spacing";
+@use "../../tools/size";
 
 //
 // Base styles ////////////////////////////////////////
 
 $border-radius: 0 !default;
-$border-width: spacing.spacing('xxs');
+$border-width: size.get('xxs');
 $transition:
   color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing !default;
