@@ -2,24 +2,7 @@
 @use '../settings/typography';
 @use '../settings/setup';
 @use 'media-query';
-
-// Font-size helper
-//
-// **Standarised method to set font-size**.
-//
-// Sets font-sizes using `rem`s with `px` fallback.
-//
-// @param {Number} $pixel-size  CSS dimension in `px` units. The font-size required, in pixels.
-//
-// @param {Number} $root-size  CSS dimension in `px` units. The current base font-size of the page (normally the font-size of the `html` element).
-//
-
-@mixin set-font-size($pixel-size, $root-size: typography.$font-size-base-small) {
-  /* stylelint-disable declaration-block-no-duplicate-properties */
-  font-size: $pixel-size;
-  font-size: px-to-rem($pixel-size, $root-size);
-  /* stylelint-enable declaration-block-no-duplicate-properties */
-}
+@use 'unit-conversions';
 
 // Output font sizes
 //
@@ -46,11 +29,11 @@
       #{setup.$namespace}#{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
         @if $element-name == 'html' {
-          font-size: px-to-rem($font-size, 16px);
+          font-size: unit-conversions.px-to-rem($font-size, 16px);
         }
 
         @else {
-          font-size: px-to-rem($font-size, $base-size);
+          font-size: unit-conversions.px-to-rem($font-size, $base-size);
         }
         /* stylelint-enable max-nesting-depth */
       }
