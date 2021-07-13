@@ -1,0 +1,72 @@
+@use '../../settings/animation';
+@use "../../settings/typography";
+@use './settings';
+
+[type="radio"] {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: settings.$gap;
+  vertical-align: middle;
+  cursor: pointer;
+  appearance: none;
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none) {
+  [type="radio"] {
+    color: settings.$color;
+    background-color: settings.$background-color;
+    border: settings.$border-width solid settings.$border-color;
+    border-radius: settings.$border-radius;
+
+    &::after {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: settings.$color-checked;
+      border-radius: settings.$border-radius;
+      content: '';
+      opacity: 0;
+      transform: scale(0.5);
+      transition:
+        opacity animation.$transition-duration animation.$transition-easing,
+        transform animation.$transition-duration animation.$transition-easing;
+    }
+
+    &:hover,
+    &:focus {
+      color: settings.$color-hover;
+      background-color: settings.$background-color-hover;
+      border-color: settings.$border-color-hover;
+      outline: none;
+    }
+
+    &:checked {
+      color: settings.$color-checked;
+      background-color: settings.$background-color-checked;
+      border-color: settings.$border-color-checked;
+
+      &::after {
+        opacity: 1;
+        transform: scale(0.7);
+      }
+    }
+
+    &[disabled] {
+      color: settings.$color-disabled;
+      background-color: settings.$background-color-disabled;
+      border-color: settings.$border-color-disabled;
+
+      &:checked {
+        color: settings.$color-disabled-checked;
+        background-color: settings.$background-color-disabled-checked;
+        border-color: settings.$border-color-disabled-checked;
+      }
+
+      &::after {
+        background: settings.$color-disabled-checked;
+      }
+    }
+  }
+}

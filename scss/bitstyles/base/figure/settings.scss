@@ -1,4 +1,4 @@
 @use "../../tools/palette";
 
-$figure-font-style: italic !default;
-$figure-color: palette.get('text', '80') !default;
+$font-style: italic !default;
+$color: palette.get('text', '80') !default;

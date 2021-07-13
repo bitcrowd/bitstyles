@@ -21,11 +21,14 @@
 //
 // Base /////////////////////////////////////////
 
+@use 'bitstyles/base/anchor';
 @use 'bitstyles/base/figure';
 @use 'bitstyles/base/font-face';
 @use 'bitstyles/base/forms';
 @use 'bitstyles/base/images';
-@use 'bitstyles/base/anchor';
+@use 'bitstyles/base/input-text';
+@use 'bitstyles/base/input-checkbox';
+@use 'bitstyles/base/input-radio';
 @use 'bitstyles/base/typography' as base-typography;
 
 
