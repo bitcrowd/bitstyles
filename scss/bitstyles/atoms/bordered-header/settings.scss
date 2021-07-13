@@ -1,5 +1,5 @@
-@use "../../tools/palette";
-@use "../../tools/size";
+@use '../../tools/palette';
+@use '../../tools/size';
 
 $gutter: size.get('m') !default;
 $border: size.get('xxxs') solid palette.get('gray', '10') !default;

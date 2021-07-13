@@ -1,6 +1,6 @@
 @use './settings';
-@use "../../settings/setup";
-@use "../../tools/media-query";
+@use '../../settings/setup';
+@use '../../tools/media-query';
 
 .#{setup.$namespace}o-sidebar--large {
   width: settings.$large-width;

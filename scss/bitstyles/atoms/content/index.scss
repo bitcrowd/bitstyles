@@ -1,9 +1,8 @@
 @use 'sass:map';
-
 @use './settings';
-@use "../../settings/animation";
-@use "../../settings/setup";
-@use "../../tools/media-query";
+@use '../../settings/animation';
+@use '../../settings/setup';
+@use '../../tools/media-query';
 
 @mixin content-padding($padding-value) {
   padding-right: $padding-value;

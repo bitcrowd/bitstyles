@@ -1,8 +1,8 @@
 @use './settings';
-@use "../../settings/animation";
-@use "../../settings/layout";
-@use "../../settings/setup";
-@use "../button/settings" as button-settings;
+@use '../../settings/animation';
+@use '../../settings/layout';
+@use '../../settings/setup';
+@use '../button/settings' as button-settings;
 
 .#{setup.$namespace}a-button--tab-container {
   & > *:first-child {

@@ -1,4 +1,4 @@
-@use "../settings/layout";
+@use '../settings/layout';
 @use 'sass:map';
 
 // Spacing
@@ -19,6 +19,6 @@
   }
 
   @else {
-    @error "Oops! Size ‘#{$size}’ does not exist.";
+    @error 'Oops! Size ‘#{$size}’ does not exist.';
   }
 }

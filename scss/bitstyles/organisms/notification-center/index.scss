@@ -1,4 +1,4 @@
-@use "../../settings/setup";
+@use '../../settings/setup';
 
 .#{setup.$namespace}o-notification-center {
   position: fixed;

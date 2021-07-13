@@ -1,5 +1,4 @@
-@use "../settings/breakpoints";
-
+@use '../settings/breakpoints';
 @use 'sass:map';
 
 // Media Query
@@ -35,6 +34,6 @@
   }
 
   @else {
-    @error "Oops! Breakpoint ‘#{$media-query-name}’ does not exist.";
+    @error 'Oops! Breakpoint ‘#{$media-query-name}’ does not exist.';
   }
 }

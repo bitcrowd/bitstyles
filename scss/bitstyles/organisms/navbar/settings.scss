@@ -1,12 +1,12 @@
 $transition: opacity 0.2s ease-in, transform 0.12s ease-in !default;
 $will-change: opacity, transform !default;
 $states: (
-  "off-screen": (
-    "opacity": 0,
-    "transform": translateY(-7%)
+  'off-screen': (
+    'opacity': 0,
+    'transform': translateY(-7%)
   ),
-  "on-screen": (
-    "opacity": 1,
-    "transform": none
+  'on-screen': (
+    'opacity': 1,
+    'transform': none
   )
 ) !default;

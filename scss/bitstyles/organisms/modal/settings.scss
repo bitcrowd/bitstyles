@@ -1,5 +1,5 @@
-@use "../../tools/palette";
-@use "../../tools/size";
+@use '../../tools/palette';
+@use '../../tools/size';
 
 $padding: size.get('m') !default;
 $background-color: palette.get('white') !default;

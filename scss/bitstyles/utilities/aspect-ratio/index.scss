@@ -1,8 +1,7 @@
 @use 'sass:map';
-
 @use './settings';
-@use "../../settings/setup";
-@use "../../tools/aspect-ratio";
+@use '../../settings/setup';
+@use '../../tools/aspect-ratio';
 
 @each $aspect-ratio-alias, $aspect-ratio-value in settings.$aspect-ratios {
   .#{setup.$namespace}u-aspect-ratio-#{$aspect-ratio-alias} {

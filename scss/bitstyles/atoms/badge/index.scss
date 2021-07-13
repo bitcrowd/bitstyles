@@ -1,8 +1,8 @@
 @use './settings';
-@use "../../settings/layout";
-@use "../../settings/setup";
-@use "../../tools/palette";
-@use "../../tools/size";
+@use '../../settings/layout';
+@use '../../settings/setup';
+@use '../../tools/palette';
+@use '../../tools/size';
 
 .#{setup.$namespace}a-badge {
   display: inline-flex;

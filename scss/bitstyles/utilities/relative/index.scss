@@ -1,5 +1,5 @@
-@use "../../settings/setup";
-@use "../../tools/media-query";
+@use '../../settings/setup';
+@use '../../tools/media-query';
 
 .#{setup.$namespace}u-relative {
   position: relative;

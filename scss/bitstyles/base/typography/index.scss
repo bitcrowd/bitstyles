@@ -1,7 +1,7 @@
-@use "../../settings/typography";
-@use "../../tools/palette";
-@use "../../tools/size";
-@use "../../tools/typography" as typography-tools;
+@use '../../settings/typography';
+@use '../../tools/palette';
+@use '../../tools/size';
+@use '../../tools/typography' as typography-tools;
 
 /* stylelint-disable selector-max-type */
 html {

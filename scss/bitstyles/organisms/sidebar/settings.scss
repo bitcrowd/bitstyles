@@ -1,5 +1,5 @@
-@use "../../tools/palette";
-@use "../../tools/size";
+@use '../../tools/palette';
+@use '../../tools/size';
 
 $large-width: 15rem !default;
 $small-width: 80vw !default;
@@ -10,10 +10,10 @@ $small-box-shadow:
 $will-change: transform !default;
 $transition: transform 0.12s ease-in !default;
 $states: (
-  "off-screen": (
-    "transform": translateX(-100%)
+  'off-screen': (
+    'transform': translateX(-100%)
   ),
-  "on-screen": (
-    "transform": none
+  'on-screen': (
+    'transform': none
   )
 ) !default;

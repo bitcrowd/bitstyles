@@ -1,6 +1,6 @@
 @use './settings';
-@use "../../settings/setup";
-@use "../../tools/icon";
+@use '../../settings/setup';
+@use '../../tools/icon';
 
 .#{setup.$namespace}a-icon {
   @include icon.icon;

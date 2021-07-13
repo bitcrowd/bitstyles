@@ -1,4 +1,4 @@
-@use "../../tools/palette";
+@use '../../tools/palette';
 
 $background-colors: (
   'black-80': palette.get('black', '80'),

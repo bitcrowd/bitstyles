@@ -1,5 +1,5 @@
-@use "../../settings/layout";
-@use "../../tools/size";
+@use '../../settings/layout';
+@use '../../tools/size';
 
 $padding-vertical: size.get('xs');
 $padding-horizontal: size.get('m');

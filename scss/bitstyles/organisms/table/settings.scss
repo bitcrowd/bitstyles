@@ -1,5 +1,5 @@
-@use "../../tools/palette";
-@use "../../tools/size";
+@use '../../tools/palette';
+@use '../../tools/size';
 
 $border: 1px solid palette.get('gray', '5') !default;
 $padding-horizontal: size.get('m') !default;

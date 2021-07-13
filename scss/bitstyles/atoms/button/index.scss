@@ -1,8 +1,7 @@
 @use 'sass:math';
-
 @use './settings';
-@use "../../settings/setup";
-@use "../../settings/typography";
+@use '../../settings/setup';
+@use '../../settings/typography';
 
 .#{setup.$namespace}a-button {
   position: relative;

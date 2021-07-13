@@ -1,6 +1,6 @@
 @use './settings';
-@use "../../settings/setup";
-@use "../../tools/palette";
+@use '../../settings/setup';
+@use '../../tools/palette';
 
 @each $variant in (settings.$variants) {
   .#{setup.$namespace}a-flash--#{$variant} {

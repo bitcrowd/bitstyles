@@ -20,11 +20,11 @@
     }
 
     @else {
-      @error "Oops! Color/percentage ‘#{$color}/#{$percent}’ does not exist.";
+      @error 'Oops! Color/percentage ‘#{$color}/#{$percent}’ does not exist.';
     }
   }
 
   @else {
-    @error "Oops! Color ‘#{$color}’ does not exist.";
+    @error 'Oops! Color ‘#{$color}’ does not exist.';
   }
 }

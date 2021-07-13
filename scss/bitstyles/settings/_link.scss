@@ -1,5 +1,5 @@
-@use "../tools/palette";
-@use "animation";
+@use '../tools/palette';
+@use 'animation';
 
 $background-color-link: none !default;
 $color-link:            palette.get('brand-1', '80') !default;
