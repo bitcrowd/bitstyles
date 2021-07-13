@@ -3,13 +3,14 @@
 @use './settings';
 @use 'sass:math';
 
+/* stylelint-disable selector-max-type */
 textarea,
 input {
-  resize: vertical;
   transition:
     color animation.$transition-duration animation.$transition-easing,
     background-color animation.$transition-duration animation.$transition-easing,
     border animation.$transition-duration animation.$transition-easing;
+  resize: vertical;
 
   &::placeholder {
     font-style: settings.$placeholder-font-style;
@@ -78,3 +79,4 @@ textarea {
     box-shadow: settings.$box-shadow-disabled;
   }
 }
+/* stylelint-enable selector-max-type */

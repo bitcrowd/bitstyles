@@ -9,14 +9,12 @@
 @forward 'bitstyles/settings/setup';
 @forward 'bitstyles/settings/typography';
 
-
 //
 // Generic ////////////////////////////////////
 
 @use 'bitstyles/generic/box-sizing';
 @use 'bitstyles/generic/normalize';
 @use 'bitstyles/generic/reset';
-
 
 //
 // Base /////////////////////////////////////////
@@ -30,7 +28,6 @@
 @use 'bitstyles/base/input-checkbox';
 @use 'bitstyles/base/input-radio';
 @use 'bitstyles/base/typography' as base-typography;
-
 
 //
 // Atoms //////////////////////////////////////
@@ -105,6 +102,9 @@
 @use 'bitstyles/utilities/typography';
 @use 'bitstyles/utilities/z-index';
 
+//
+// Forwards: Atoms ////////////////////////////////////
+
 @forward 'bitstyles/atoms/avatar/settings' as avatar-*;
 @forward 'bitstyles/atoms/badge/settings' as badge-*;
 @forward 'bitstyles/atoms/bordered-header/settings' as bordered-header-*;
@@ -127,7 +127,7 @@
 @forward 'bitstyles/atoms/topbar/settings' as topbar-*;
 
 //
-// Organisms ///////////////////////////////////
+// Forwards: Organisms ///////////////////////////////////
 
 @forward 'bitstyles/organisms/modal/settings' as modal-*;
 @forward 'bitstyles/organisms/navbar/settings' as navbar-*;
@@ -136,7 +136,7 @@
 @forward 'bitstyles/organisms/ui-group/settings' as ui-group-*;
 
 //
-// Utilities ////////////////////////////////////
+// Forwards: Utilities ////////////////////////////////////
 
 @forward 'bitstyles/utilities/aspect-ratio/settings' as aspect-ratio-*;
 @forward 'bitstyles/utilities/bg/settings' as bg-*;
