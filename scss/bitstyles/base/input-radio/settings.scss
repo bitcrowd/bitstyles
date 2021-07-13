@@ -1,0 +1,39 @@
+@use "../../settings/layout";
+@use "../../tools/palette";
+@use "../../tools/size";
+
+//
+// Base styles ////////////////////////////////////////
+$border-radius: layout.$border-radius-round !default;
+$gap: size.get('xs') !default;
+
+//
+// Base colors ////////////////////////////////////////
+$color: palette.get('text', '80') !default;
+$background-color: palette.get('white') !default;
+$border-width: size.get('xxxs') !default;
+$border-color: palette.get('text', '80') !default;
+
+//
+// Hover colors ////////////////////////////////////////
+$color-hover: palette.get('brand-1') !default;
+$background-color-hover: palette.get('white') !default;
+$border-color-hover: palette.get('brand-1') !default;
+
+//
+// Checked colors ////////////////////////////////////////
+$color-checked: palette.get('brand-1') !default;
+$background-color-checked: palette.get('white') !default;
+$border-color-checked: palette.get('brand-1') !default;
+
+//
+// Disabled colors ////////////////////////////////////////
+$color-disabled: palette.get('black', '40') !default;
+$background-color-disabled: palette.get('black', '20') !default;
+$border-color-disabled: palette.get('black', '40') !default;
+
+//
+// Disabled-checked colors ////////////////////////////////////////
+$color-disabled-checked: palette.get('black', '40') !default;
+$background-color-disabled-checked: palette.get('black', '20') !default;
+$border-color-disabled-checked: palette.get('black', '40') !default;

@@ -1,76 +1,33 @@
-@use './settings-input';
-@use './settings-fieldset';
-@use './settings-select';
-@use './settings-checkbox';
-@use './settings-radio';
+@use './settings';
 @use "../../settings/typography";
-@use "../../tools/fieldset";
-@use "../../tools/input";
-@use "../../tools/input--checkbox";
-@use "../../tools/input--radio";
-@use "../../tools/label";
-@use "../../tools/select";
+@use "../../tools/block";
+@use '../../tools/size';
 
 /* stylelint-disable selector-max-type */
 
 fieldset {
-  @include fieldset.fieldset;
+  padding: settings.$fieldset-padding;
+  background-color: settings.$fieldset-background;
+  border: settings.$fieldset-border;
+  border-radius: settings.$fieldset-border-radius;
 }
 
 legend {
-  @include fieldset.legend;
+  padding: settings.$legend-padding;
+  color: settings.$legend-color;
+  background-color: settings.$legend-background-color;
+  border: settings.$legend-border;
+  border-radius: settings.$legend-border-radius;
 }
 
 label {
-  @include label.label;
-}
+  @include block.block;
 
-textarea,
-input {
-  @include input.input-placeholder;
-
-  resize: vertical;
-}
-
-/*
- * Selects all the text-like input types. We’re avoiding using e.g. `input[type="text"]` as it means we cannot use a single class later on
- */
-[type="text"],
-[type="email"],
-[type="number"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="password"],
-[type="search"],
-[type="tel"],
-[type="time"],
-[type="url"],
-textarea {
-  @include input.input--text;
+  margin-bottom: 0;
+  cursor: pointer;
 }
 
 [type="color"] {
-  height: calc(#{typography.$line-height-base * 1em} + #{settings-input.$input-padding * 2});
-}
-
-[type="checkbox"],
-[type="radio"] {
-  @include input.input--checkbox-radio;
-}
-
-@supports (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none) {
-  select {
-    @include select.select;
-  }
-
-  [type="checkbox"] {
-    @include input--checkbox.input--checkbox;
-  }
-
-  [type="radio"] {
-    @include input--radio.input--radio;
-  }
+  height: calc(#{typography.$line-height-base * 1em} + #{size.get('s')});
 }
 /* stylelint-enable selector-max-type */
