@@ -5,10 +5,11 @@
   "main": "build/bitstyles.css",
   "scripts": {
     "build": "sass scss/bitstyles.scss build/bitstyles.css --style=compressed",
-    "postbuild": "postcss build/bitstyles.css --output build/bitstyles.css",
+    "postbuild": "postcss build/bitstyles.css --replace",
     "lint:scss": "stylelint scss/**/*.scss --syntax scss",
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
     "lint": "yarn lint:scss && yarn lint:js",
+    "test": "sass test/scss/ --style=compressed --no-source-map && postcss test/scss/*.css --replace && diff --from-file test/scss/test-import-all.css test/scss/test-use-all.css test/scss/test-use-each.css test/scss/test-import-each.css",
     "checks": "yarn lint && yarn css:stats",
     "watch": "yarn build && yarn build --watch",
     "clean": "rimraf build/*",
