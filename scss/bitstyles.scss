@@ -1,13 +1,13 @@
 //
 // Settings /////////////////////////////////////
 
-@forward 'bitstyles/settings/animation';
-@forward 'bitstyles/settings/breakpoints';
-@forward 'bitstyles/settings/color-base';
-@forward 'bitstyles/settings/color-palette';
-@forward 'bitstyles/settings/layout';
-@forward 'bitstyles/settings/setup';
-@forward 'bitstyles/settings/typography';
+@forward 'bitstyles/settings/animation' as animation-*;
+@forward 'bitstyles/settings/breakpoints' as breakpoints-*;
+@forward 'bitstyles/settings/color-base' as color-base-*;
+@forward 'bitstyles/settings/color-palette' as color-palette-*;
+@forward 'bitstyles/settings/layout' as layout-*;
+@forward 'bitstyles/settings/setup' as setup-*;
+@forward 'bitstyles/settings/typography' as typography-*;
 
 //
 // Generic ////////////////////////////////////
@@ -117,8 +117,8 @@
 @forward 'bitstyles/atoms/button--nav/settings' as button-nav-*;
 @forward 'bitstyles/atoms/button--nav-large/settings' as button-nav-large-*;
 @forward 'bitstyles/atoms/button--small/settings' as button-small-*;
-@forward 'bitstyles/atoms/button--tab/settings' as button-tab*;
-@forward 'bitstyles/atoms/button--ui/settings' as button-ui*;
+@forward 'bitstyles/atoms/button--tab/settings' as button-tab-*;
+@forward 'bitstyles/atoms/button--ui/settings' as button-ui-*;
 @forward 'bitstyles/atoms/card/settings' as card-*;
 @forward 'bitstyles/atoms/content/settings' as content-*;
 @forward 'bitstyles/atoms/dropdown/settings' as dropdown-*;
