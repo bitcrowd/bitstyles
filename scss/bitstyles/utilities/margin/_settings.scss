@@ -1,6 +1,6 @@
 @use '../../tools/size';
 
-$margin-sizes: (
+$sizes: (
   'positive': (
     '0': 0,
     'xxs': size.get('xxs'),
@@ -20,8 +20,8 @@ $margin-sizes: (
     'xl': -#{size.get('xl')}
   )
 ) !default;
-$margin-breakpoints: ('s', 'm') !default;
-$margin-directions: (
+$breakpoints: ('s', 'm') !default;
+$directions: (
   '': null,
   'top': ('top'),
   'right': ('right'),

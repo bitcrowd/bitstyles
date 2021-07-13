@@ -1,11 +1,11 @@
 @use '../../tools/palette';
 
-$border-colors: (
+$values: (
   'gray-70': 1px solid palette.get('gray', '70'),
   'gray-10': 1px solid palette.get('gray', '10'),
 ) !default;
-$border-breakpoints: () !default;
-$border-directions: (
+$breakpoints: () !default;
+$directions: (
   '': null,
   'top': ('top'),
   'right': ('right'),

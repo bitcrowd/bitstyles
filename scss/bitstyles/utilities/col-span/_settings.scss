@@ -1,4 +1,4 @@
-$col-span: (
+$values: (
   '1': span 1 / span 1,
   '2': span 2 / span 2,
   '3': span 3 / span 3,
@@ -6,4 +6,4 @@ $col-span: (
   '5': span 5 / span 5,
   '6': span 6 / span 6
 ) !default;
-$col-span-breakpoints: ('s', 'm', 'xl') !default;
+$breakpoints: ('s', 'm', 'xl') !default;

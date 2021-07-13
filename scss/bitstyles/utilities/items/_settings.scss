@@ -1,8 +1,8 @@
-$items: (
+$values: (
   'center': center,
   'end': flex-end,
   'start': flex-start,
   'stretch': stretch,
   'baseline': baseline,
 ) !default;
-$items-breakpoints: ('m') !default;
+$breakpoints: ('m') !default;

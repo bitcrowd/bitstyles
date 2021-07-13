@@ -1,7 +1,7 @@
 @use './settings';
 @use '../../settings/setup';
 
-@each $variant, $color in (settings.$background-colors) {
+@each $variant, $color in (settings.$values) {
   .#{setup.$namespace}u-bg--#{$variant} {
     background-color: $color;
   }

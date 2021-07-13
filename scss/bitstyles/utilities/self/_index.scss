@@ -5,15 +5,15 @@
 @include directional-properties.output-properties(
   $property-name: 'align-self',
   $classname-root: 'self',
-  $values: settings.$self
+  $values: settings.$values
 );
 
-@each $breakpoint-alias in settings.$self-breakpoints {
+@each $breakpoint-alias in settings.$breakpoints {
   @include media-query.media-query($breakpoint-alias) {
     @include directional-properties.output-properties(
       $property-name: 'align-self',
       $classname-root: 'self',
-      $values: settings.$self,
+      $values: settings.$values,
       $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );
   }
