@@ -1,13 +1,13 @@
 @use "../../tools/palette";
 @use "../../tools/size";
 
-$modal-padding: size.get('m') !default;
-$modal-background-color: palette.get('white') !default;
-$modal-overlay-color: rgba(palette.get('white'), 0.95) !default;
-$modal-transition-easing: ease-in-out !default;
-$modal-transition-duration: 0.2s !default;
-$modal-transition-duration-smallscreen: 0.25s !default;
-$modal-transition-delay: 0.05s !default;
-$modal-will-change: opacity, transform, visibility !default;
-$modal-border-radius: 0 !default;
-$modal-breakpoint: 'm' !default;
+$padding: size.get('m') !default;
+$background-color: palette.get('white') !default;
+$overlay-color: rgba(palette.get('white'), 0.95) !default;
+$transition-easing: ease-in-out !default;
+$transition-duration: 0.2s !default;
+$transition-duration-smallscreen: 0.25s !default;
+$transition-delay: 0.05s !default;
+$will-change: opacity, transform, visibility !default;
+$border-radius: 0 !default;
+$breakpoint: 'm' !default;

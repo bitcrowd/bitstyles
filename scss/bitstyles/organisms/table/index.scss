@@ -6,17 +6,17 @@
 
   /* stylelint-disable selector-max-type */
   th {
-    padding: settings.$table-padding-vertical-th settings.$table-padding-horizontal;
-    color: settings.$table-color-th;
+    padding: settings.$padding-vertical-th settings.$padding-horizontal;
+    color: settings.$color-th;
     white-space: nowrap;
-    background: settings.$table-background-color-th;
-    border-bottom: settings.$table-border;
+    background: settings.$background-color-th;
+    border-bottom: settings.$border;
   }
 
   td {
-    padding: settings.$table-padding-vertical-td settings.$table-padding-horizontal;
-    background: settings.$table-background-color-td;
-    border-bottom: settings.$table-border;
+    padding: settings.$padding-vertical-td settings.$padding-horizontal;
+    background: settings.$background-color-td;
+    border-bottom: settings.$border;
   }
 
   tr:last-child {
@@ -27,6 +27,6 @@
   /* stylelint-enable selector-max-type */
 
   .#{setup.$namespace}o-table__actions {
-    padding-right: settings.$table-padding-vertical-td;
+    padding-right: settings.$padding-vertical-td;
   }
 }

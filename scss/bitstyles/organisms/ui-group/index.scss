@@ -2,8 +2,8 @@
 @use "../../settings/setup";
 
 .#{setup.$namespace}o-ui-group {
-  border-radius: settings.$ui-group-border-radius;
-  box-shadow: settings.$ui-group-box-shadow;
+  border-radius: settings.$border-radius;
+  box-shadow: settings.$box-shadow;
 }
 
 .#{setup.$namespace}o-ui-group__item {

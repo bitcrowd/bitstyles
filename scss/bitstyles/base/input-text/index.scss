@@ -1,7 +1,6 @@
 @use '../../settings/animation';
 @use "../../settings/typography";
 @use './settings';
-@use "../../tools/block";
 @use 'sass:math';
 
 textarea,
@@ -36,8 +35,7 @@ input {
 [type="time"],
 [type="url"],
 textarea {
-  @include block.block;
-
+  display: block;
   width: 100%;
   padding: (settings.$padding - math.div(settings.$border-width, 2)) settings.$padding;
   font: inherit;
