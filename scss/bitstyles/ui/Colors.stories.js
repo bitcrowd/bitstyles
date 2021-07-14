@@ -24,7 +24,7 @@ const objectToChunkedArray = (object, chunkSize) => {
   let portion = {};
 
   // eslint-disable-next-line array-callback-return
-  Object.keys(object).map(key => {
+  Object.keys(object).map((key) => {
     if (counter !== 0 && counter % chunkSize === 0) {
       array.push(portion);
       portion = {};
@@ -55,7 +55,7 @@ const ColorRow = ({ palette }) =>
       Object.keys(palette).length
     }, 1fr)">
       ${Object.keys(palette)
-        .map(color => {
+        .map((color) => {
           const colorNameParts = color.split('.');
           const colorName = colorNameParts[colorNameParts.length - 1];
           return ColorItem(colorName, colorPalette[color]);
@@ -68,7 +68,7 @@ const ColorPalette = () =>
   `
     <ul class="a-list-reset u-grid u-gap-l">
       ${objectToChunkedArray(colorPalette, 18)
-        .map(palette => {
+        .map((palette) => {
           const name = Object.keys(palette)[0].split('.')[0];
           return `
           <li class="u-margin-xl-bottom u-flex u-items-end">
