@@ -7,7 +7,7 @@
 //
 
 @mixin generic-heading {
-  margin: 0 0 spacing('m');
+  margin: 0;
   font-family: $bitstyles-font-family-header;
   font-weight: $bitstyles-font-weight-bold;
   text-rendering: optimizeLegibility;
@@ -114,8 +114,8 @@
 @mixin output-font-sizes($font-sizes, $indices, $selector-prefix, $media-query-name) {
   $base-size: map-get($bitstyles-font-size-base, $media-query-name);
 
-  @each $index, $element-name in ($indices) {
-    #{$selector-prefix}#{$element-name} {
+  @each $index, $size-name in ($indices) {
+    #{$selector-prefix}#{$size-name} {
       font-size: px-to-rem(map-get($font-sizes, '#{$index}'), $base-size);
     }
   }

@@ -1,3 +1,4 @@
+@use 'sass:map';
 @import 'settings';
 
 /* stylelint-disable selector-max-type */
@@ -7,6 +8,18 @@ html {
   color: palette('text');
   -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
   background: palette('background');
+
+  @each $breakpoint, $scale in $bitstyles-typographic-scale {
+    @if $breakpoint == 'base' {
+      font-size: px-to-rem(map.get($scale, '0'), 16px);
+    }
+
+    @else {
+      @include media-query ($breakpoint) {
+        font-size: px-to-rem(map.get($scale, '0'), 16px);
+      }
+    }
+  }
 }
 
 h1,
