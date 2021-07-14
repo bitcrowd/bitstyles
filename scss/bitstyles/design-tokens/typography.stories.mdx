@@ -1,0 +1,65 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Typography" />
+
+# Typography
+
+The typographic scale is independent of the HTML element you may use for the content in question — `u-text-xs` can be applied to a `<span>` just as well as a `<h1>`, for example. This allows you freedom to use the headings in correct semantic order when the visual design you’re building doesn’t match the logically-dictated order of your heading structure.
+
+<Canvas>
+  <Story id="utilities-text--u-text-xxxl" />
+  <Story id="utilities-text--u-text-xxl" />
+  <Story id="utilities-text--u-text-xl" />
+  <Story id="utilities-text--u-text-l" />
+  <Story id="utilities-text--u-text-m" />
+  <Story id="utilities-text--u-text-s" />
+  <Story id="utilities-text--u-text-xs" />
+</Canvas>
+
+<Canvas>
+  <Story id="base-typography-headings--h-1" />
+  <Story id="base-typography-headings--h-2" />
+  <Story id="base-typography-headings--h-3" />
+  <Story id="base-typography-headings--h-4" />
+  <Story id="base-typography-headings--h-5" />
+  <Story id="base-typography-headings--h-6" />
+</Canvas>
+
+## Customization
+
+The typographic scale can be customized by overriding the base font-size, and the ratio used to calculate each successive font-size:
+
+```scss
+$bitstyles-font-size-base: (
+  'base': 16px,
+  'm': 18px
+);
+$bitstyles-font-ratio: 1.2;
+```
+
+Note that while these are specified in `px` units, the output CSS will use the equivalent `rem`, for accessibility reasons.
+
+If the designs you’re implementing follow a different typographic scale — one not linearly-computable with a ratio/multiplier — you can instead manually specify the font-sizes at every point, and for each breakpoint. Note that the zero-index is your base font-size. By default, the scale is altered to better-fit screensizes at the `m` breakpoint, but you can use any of the defined breakpoints:
+
+```scss
+$bitstyles-typographic-scale: (
+  'base': (
+    '4': 32px,
+    '3': 24px,
+    '2': 20px,
+    '1': 18px,
+    '0': $bitstyles-font-size-base-small,
+    '-1': $bitstyles-font-size-base-small,
+    '-2': 16px
+  ),
+  'm': (
+    '4': 86px,
+    '3': 40px,
+    '2': 28px,
+    '1': 20px,
+    '0': $bitstyles-font-size-base,
+    '-1': $bitstyles-font-size-base,
+    '-2': 16px
+  )
+);
+```

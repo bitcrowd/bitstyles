@@ -1,3 +1,6 @@
+@use 'sass:map';
+@import 'settings';
+
 /* stylelint-disable selector-max-type */
 html {
   font-family: $bitstyles-font-family-body;
@@ -5,6 +8,18 @@ html {
   color: palette('text');
   -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
   background: palette('background');
+
+  @each $breakpoint, $scale in $bitstyles-typographic-scale {
+    @if $breakpoint == 'base' {
+      font-size: px-to-rem(map.get($scale, '0'), 16px);
+    }
+
+    @else {
+      @include media-query ($breakpoint) {
+        font-size: px-to-rem(map.get($scale, '0'), 16px);
+      }
+    }
+  }
 }
 
 h1,
@@ -16,7 +31,10 @@ h6 {
   @include generic-heading;
 }
 
-@include generate-font-sizes('', (html, h1, h2, h3, h4, h5, h6));
+@include generate-font-sizes(
+  $selector-prefix: '',
+  $indices: $bitstyles-base-font-sizes
+);
 
 p {
   margin: 0 0 spacing('m');
