@@ -1,19 +1,2 @@
-@use './settings';
-@use '../../settings/setup';
-@use '../../tools/media-query';
-
-@each $classname, $value in (settings.$values) {
-  .#{setup.$namespace}u-#{$classname} {
-    display: #{$value};
-  }
-}
-
-@each $breakpoint in settings.$breakpoints {
-  @include media-query.media-query($breakpoint) {
-    @each $classname, $value in (settings.$values) {
-      .#{setup.$namespace}u-#{$classname}\@#{$breakpoint} {
-        display: #{$value};
-      }
-    }
-  }
-}
+@forward 'settings';
+@forward 'display';

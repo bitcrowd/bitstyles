@@ -1,0 +1,15 @@
+@use './settings';
+@use '../../settings/setup';
+
+.#{setup.$namespace}a-bordered-header {
+  display: grid;
+  grid-template-columns: auto minmax(1px, 1fr);
+  grid-gap: settings.$gutter;
+  align-items: center;
+  width: 100%;
+
+  &::after {
+    border-top: settings.$border;
+    content: '';
+  }
+}

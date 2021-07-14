@@ -1,27 +1,2 @@
-@use './settings';
-@use '../../settings/setup';
-@use '../../tools/media-query';
-
-.#{setup.$namespace}o-navbar {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: 0;
-
-  @include media-query.media-query('motion-ok') {
-    &.is-transitioning {
-      transition: settings.$transition;
-      will-change: settings.$will-change;
-    }
-  }
-
-  @each $state-alias, $state-properties in settings.$states {
-    &.is-#{$state-alias} {
-      /* stylelint-disable max-nesting-depth */
-      @each $state-property, $state-value in $state-properties {
-        #{$state-property}: $state-value;
-      }
-      /* stylelint-enable max-nesting-depth */
-    }
-  }
-}
+@forward 'settings';
+@forward 'navbar';

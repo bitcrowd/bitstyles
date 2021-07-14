@@ -1,0 +1,20 @@
+@use 'settings';
+@use '../../tools/directional-properties';
+@use '../../tools/media-query';
+
+@include directional-properties.output-properties(
+  $property-name: 'justify-content',
+  $classname-root: 'justify',
+  $values: settings.$values
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-properties(
+      $property-name: 'justify-content',
+      $classname-root: 'justify',
+      $values: settings.$values,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

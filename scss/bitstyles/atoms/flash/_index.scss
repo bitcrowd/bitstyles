@@ -1,10 +1,2 @@
-@use './settings';
-@use '../../settings/setup';
-@use '../../tools/palette';
-
-@each $variant in (settings.$variants) {
-  .#{setup.$namespace}a-flash--#{$variant} {
-    color: palette.get($variant, settings.$color);
-    background-color: palette.get($variant, settings.$background-color);
-  }
-}
+@forward 'settings';
+@forward 'flash';

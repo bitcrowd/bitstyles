@@ -1,4 +1,45 @@
+
 @use '../../scss/bitstyles' with (
+  // global settings
+  $animation-transition-easing: ease-out,
+  $breakpoints-breakpoint-boundary-width: 10em,
   $color-base-black: #f00,
+  $color-palette-grays-hint-color: #f00,
+  $layout-size-base: 10rem,
+  $setup-namespace: 'bs',
+  $typography-font-family-webfont: sans-serif,
+  // base
+  $figure-font-style: bold,
+  $forms-fieldset-padding: 10rem,
+  $input-checkbox-border-radius: 10rem,
+  $input-radio-border-radius: 10rem,
+  $input-text-border-radius: 10rem,
+  $select-border-radius: 10rem,
+  // atoms
+  $avatar-sizes: ('xl': 10rem),
+  $badge-color: '10',
+  $bordered-header-gutter: 10rem,
+  $button-color-hover: #000,
+  $button-danger-color-hover: #000,
+  $button-icon-color-hover: #000,
+  $button-icon-reversed-padding-vertical: #000,
+  $button-menu-color-hover: #000,
+  $button-mode-color-hover: #000,
+  $button-nav-color-hover: #000,
+  $button-nav-large-color-hover: #000,
+  $button-small-padding-vertical: 10rem,
+  $card-padding: 10rem,
+  $content-max-width-base: 'full',
+  $dropdown-max-height: 1rem,
+  $flash-color: '10',
+  $icon-sizes: ('s': 10rem),
+  $topbar-vertical-padding: 10rem,
+  // organisms
+  $modal-padding: 10rem,
+  $navbar-will-change: opacity,
+  $sidebar-large-width: 1rem,
+  $table-color-th: #f00,
+  $ui-group-border-radius: 10rem,
+  // utilities
   $margin-breakpoints: ('xl', 's')
 );

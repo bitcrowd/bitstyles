@@ -2,5 +2,5 @@
 
 $sizes: (
   'm': size.get('xl'),
-  'l': size.get('xl') + size.get('m'),
-);
+  'l': size.get('xl') + size.get('m')
+) !default;

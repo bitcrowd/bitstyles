@@ -1,0 +1,43 @@
+@use './settings';
+@use '../../settings/setup';
+
+.#{setup.$namespace}a-button--icon {
+  padding: settings.$padding-vertical settings.$padding-horizontal;
+  justify-content: flex-start;
+  border-radius: settings.$border-radius;
+
+  &,
+  &:visited {
+    color: settings.$color;
+    background-color: settings.$background-color;
+    border-color: settings.$border-color;
+    box-shadow: settings.$box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: settings.$color-hover;
+    background: settings.$background-color-hover;
+    border-color: settings.$border-color-hover;
+    box-shadow: settings.$box-shadow-hover;
+  }
+
+  &:active {
+    color: settings.$color-active;
+    background: settings.$background-color-active;
+    border-color: settings.$border-color-active;
+    box-shadow: settings.$box-shadow-active;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$color-disabled;
+    background: settings.$background-color-disabled;
+    border-color: settings.$border-color-disabled;
+    box-shadow: settings.$box-shadow-disabled;
+  }
+
+  .#{setup.$namespace}a-button__icon {
+    margin: 0;
+  }
+}

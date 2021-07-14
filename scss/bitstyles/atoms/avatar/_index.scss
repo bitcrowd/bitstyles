@@ -1,25 +1,2 @@
-@use './settings';
-@use '../../settings/layout';
-@use '../../settings/setup';
-
-.#{setup.$namespace}a-avatar {
-  width: 2em;
-  height: 2em;
-  overflow: hidden;
-  border-radius: layout.$border-radius-round;
-
-  /* stylelint-disable selector-max-type */
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  /* stylelint-enable selector-max-type */
-}
-
-@each $size-alias, $size in settings.$sizes {
-  .#{setup.$namespace}a-avatar--#{$size-alias} {
-    width: $size;
-    height: $size;
-  }
-}
+@forward 'settings';
+@forward 'avatar';
