@@ -1,0 +1,35 @@
+@use './settings';
+@use '../../settings/setup';
+
+.#{setup.$namespace}a-button--icon-reversed {
+  &,
+  &:visited {
+    color: var(--button-fg, settings.$color);
+    background: var(--button-bg, settings.$background-color);
+    border-color: settings.$border-color;
+    box-shadow: settings.$box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--button-fg-hover, settings.$color-hover);
+    background: var(--button-bg-hover, settings.$background-color-hover);
+    border-color: settings.$border-color-hover;
+    box-shadow: settings.$box-shadow-hover;
+  }
+
+  &:active {
+    color: settings.$color-active;
+    background: settings.$background-color-active;
+    border-color: settings.$border-color-active;
+    box-shadow: settings.$box-shadow-active;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$color-disabled;
+    background: settings.$background-color-disabled;
+    border-color: settings.$border-color-disabled;
+    box-shadow: settings.$box-shadow-disabled;
+  }
+}

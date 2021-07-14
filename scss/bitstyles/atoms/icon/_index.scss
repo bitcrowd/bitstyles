@@ -1,13 +1,2 @@
-@use './settings';
-@use '../../settings/setup';
-@use '../../tools/icon';
-
-.#{setup.$namespace}a-icon {
-  @include icon.icon;
-}
-
-@each $size-alias, $size-size in settings.$sizes {
-  .#{setup.$namespace}a-icon--#{$size-alias} {
-    font-size: $size-size;
-  }
-}
+@forward 'settings';
+@forward 'icon';

@@ -1,5 +1,5 @@
 @use '../../tools/palette';
 @use '../../tools/size';
 
-$border-radius: size.get('s');
+$border-radius: size.get('s') !default;
 $box-shadow: 0 0 size.get('xs') rgba(palette.get('brand-1', '80'), 0.05) !default;

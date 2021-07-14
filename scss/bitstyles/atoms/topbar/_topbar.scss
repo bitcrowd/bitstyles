@@ -1,0 +1,11 @@
+@use './settings';
+@use '../../settings/setup';
+
+.#{setup.$namespace}a-topbar {
+  position: settings.$position;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: settings.$z-index;
+  padding: settings.$vertical-padding settings.$horizontal-padding;
+}

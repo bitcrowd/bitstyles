@@ -1,15 +1,27 @@
 //
 // Global settings /////////////////////////////////////
 
-@use '../../scss/bitstyles/settings/animation';
-@use '../../scss/bitstyles/settings/breakpoints';
+@use '../../scss/bitstyles/settings/animation' with (
+  $transition-easing: ease-out
+);
+@use '../../scss/bitstyles/settings/breakpoints' with (
+  $breakpoint-boundary-width: 10em
+);
 @use '../../scss/bitstyles/settings/color-base' with (
   $black: #f00
 );
-@use '../../scss/bitstyles/settings/color-palette';
-@use '../../scss/bitstyles/settings/layout';
-@use '../../scss/bitstyles/settings/setup';
-@use '../../scss/bitstyles/settings/typography' as settings-typography;
+@use '../../scss/bitstyles/settings/color-palette' with (
+  $grays-hint-color: #f00
+);
+@use '../../scss/bitstyles/settings/layout' with (
+  $size-base: 10rem
+);
+@use '../../scss/bitstyles/settings/setup' with (
+  $namespace: 'bs'
+);
+@use '../../scss/bitstyles/settings/typography' as settings-typography with (
+  $font-family-webfont: sans-serif
+);
 
 //
 // Generic ////////////////////////////////////
@@ -22,58 +34,118 @@
 // Base /////////////////////////////////////////
 
 @use '../../scss/bitstyles/base/anchor';
-@use '../../scss/bitstyles/base/figure';
+@use '../../scss/bitstyles/base/figure' with (
+  $font-style: bold
+);
 @use '../../scss/bitstyles/base/font-face';
-@use '../../scss/bitstyles/base/forms';
+@use '../../scss/bitstyles/base/forms' with (
+  $fieldset-padding: 10rem
+);
 @use '../../scss/bitstyles/base/images';
-@use '../../scss/bitstyles/base/input-text';
-@use '../../scss/bitstyles/base/input-checkbox';
-@use '../../scss/bitstyles/base/input-radio';
+@use '../../scss/bitstyles/base/input-checkbox' with (
+  $border-radius: 10rem
+);
+@use '../../scss/bitstyles/base/input-radio' with (
+  $border-radius: 10rem
+);
+@use '../../scss/bitstyles/base/input-text' with (
+  $border-radius: 10rem
+);
+@use '../../scss/bitstyles/base/select' with (
+  $border-radius: 10rem
+);
 @use '../../scss/bitstyles/base/typography' as base-typography;
 
 //
 // Atoms //////////////////////////////////////
 
-@use '../../scss/bitstyles/atoms/avatar';
-@use '../../scss/bitstyles/atoms/badge';
-@use '../../scss/bitstyles/atoms/bordered-header';
-@use '../../scss/bitstyles/atoms/button';
-@use '../../scss/bitstyles/atoms/button--danger';
-@use '../../scss/bitstyles/atoms/button--icon';
-@use '../../scss/bitstyles/atoms/button--icon-reversed';
-@use '../../scss/bitstyles/atoms/button--menu';
-@use '../../scss/bitstyles/atoms/button--mode';
-@use '../../scss/bitstyles/atoms/button--nav';
-@use '../../scss/bitstyles/atoms/button--nav-large';
-@use '../../scss/bitstyles/atoms/button--small';
-@use '../../scss/bitstyles/atoms/button--tab';
-@use '../../scss/bitstyles/atoms/button--ui';
-@use '../../scss/bitstyles/atoms/card';
-@use '../../scss/bitstyles/atoms/content';
+@use '../../scss/bitstyles/atoms/avatar' with (
+  $sizes: ('xl': 10rem)
+);
+@use '../../scss/bitstyles/atoms/badge' with (
+  $color: '10'
+);
+@use '../../scss/bitstyles/atoms/bordered-header' with (
+  $gutter: 10rem
+);
+@use '../../scss/bitstyles/atoms/button' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/button--danger' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/button--icon' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/button--icon-reversed' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/button--menu' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/button--mode' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/button--nav' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/button--nav-large' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/button--small' with (
+  $padding-vertical: 10rem
+);
+@use '../../scss/bitstyles/atoms/button--tab' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/button--ui' with (
+  $color-hover: #000
+);
+@use '../../scss/bitstyles/atoms/card' with (
+  $padding: 10rem
+);
+@use '../../scss/bitstyles/atoms/content' with (
+  $max-width-base: 'full'
+);
 @use '../../scss/bitstyles/atoms/dl';
-@use '../../scss/bitstyles/atoms/dropdown';
-@use '../../scss/bitstyles/atoms/flash';
-@use '../../scss/bitstyles/atoms/icon';
+@use '../../scss/bitstyles/atoms/dropdown' with (
+  $max-height: 1rem
+);
+@use '../../scss/bitstyles/atoms/flash' with (
+  $color: '10'
+);
+@use '../../scss/bitstyles/atoms/icon' with (
+  $sizes: ('s': 10rem)
+);
 @use '../../scss/bitstyles/atoms/link';
 @use '../../scss/bitstyles/atoms/list-reset';
-@use '../../scss/bitstyles/atoms/topbar';
+@use '../../scss/bitstyles/atoms/topbar' with (
+  $vertical-padding: 10rem
+);
 
 //
 // Organisms ///////////////////////////////////
 
-@use '../../scss/bitstyles/organisms/modal';
-@use '../../scss/bitstyles/organisms/navbar';
-@use '../../scss/bitstyles/organisms/sidebar';
+@use '../../scss/bitstyles/organisms/modal' with (
+  $padding: 10rem
+);
+@use '../../scss/bitstyles/organisms/navbar' with (
+  $will-change: opacity
+);
+@use '../../scss/bitstyles/organisms/sidebar' with (
+  $large-width: 1rem
+);
 @use '../../scss/bitstyles/organisms/notification-center';
-@use '../../scss/bitstyles/organisms/table';
-@use '../../scss/bitstyles/organisms/ui-group';
+@use '../../scss/bitstyles/organisms/table' with (
+  $color-th: #f00
+);
+@use '../../scss/bitstyles/organisms/ui-group' with (
+  $border-radius: 10rem
+);
 
 //
 // Utilities ////////////////////////////////////
 
-@use '../../scss/bitstyles/utilities/margin/settings' with (
-  $breakpoints: ('xl', 's')
-);
 @use '../../scss/bitstyles/utilities/absolute-center';
 @use '../../scss/bitstyles/utilities/absolute-cover';
 @use '../../scss/bitstyles/utilities/aspect-ratio';
@@ -93,7 +165,9 @@
 @use '../../scss/bitstyles/utilities/items';
 @use '../../scss/bitstyles/utilities/justify';
 @use '../../scss/bitstyles/utilities/line-height';
-@use '../../scss/bitstyles/utilities/margin';
+@use '../../scss/bitstyles/utilities/margin' with (
+  $breakpoints: ('xl', 's')
+);
 @use '../../scss/bitstyles/utilities/object-cover';
 @use '../../scss/bitstyles/utilities/outline';
 @use '../../scss/bitstyles/utilities/overflow';
