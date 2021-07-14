@@ -1,0 +1,26 @@
+@use '../../settings/setup';
+@use '../../settings/typography';
+
+.#{setup.$namespace}u-font--light {
+  font-weight: typography.$font-weight-light;
+}
+
+.#{setup.$namespace}u-font--normal {
+  font-weight: typography.$font-weight-normal;
+}
+
+.#{setup.$namespace}u-font--medium {
+  font-weight: typography.$font-weight-medium;
+}
+
+.#{setup.$namespace}u-font--bold {
+  font-weight: typography.$font-weight-bold;
+}
+
+.#{setup.$namespace}u-font--italic {
+  font-style: italic;
+}
+
+.#{setup.$namespace}u-font--not-italic {
+  font-style: normal;
+}

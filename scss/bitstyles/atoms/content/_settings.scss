@@ -1,0 +1,15 @@
+@use '../../tools/size';
+
+$max-width: (
+  'xs': 25rem,
+  's': 35rem,
+  'm': 65rem,
+  'l': 85rem,
+  'full': 100%
+) !default;
+$max-width-base: 'm' !default;
+$padding: (
+  'base':  size.get('m'),
+  'l': size.get('l'),
+  'xl': size.get('xl')
+) !default;

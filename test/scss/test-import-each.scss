@@ -1,0 +1,161 @@
+//
+// Global settings /////////////////////////////////////
+
+$bitstyles-animation-transition-easing: ease-out;
+$bitstyles-breakpoints-breakpoint-boundary-width: 10em;
+$bitstyles-color-base-black: #f00;
+$bitstyles-color-palette-grays-hint-color: #f00;
+$bitstyles-layout-size-base: 10rem;
+$bitstyles-setup-namespace: 'bs';
+$bitstyles-typography-font-family-webfont: sans-serif;
+
+//
+// Base settings /////////////////////////////////////
+
+$bitstyles-figure-font-style: bold;
+$bitstyles-forms-fieldset-padding: 10rem;
+$bitstyles-input-checkbox-border-radius: 10rem;
+$bitstyles-input-radio-border-radius: 10rem;
+$bitstyles-input-text-border-radius: 10rem;
+$bitstyles-select-border-radius: 10rem;
+
+//
+// Atoms settings /////////////////////////////////////
+
+$bitstyles-avatar-sizes: ('xl': 10rem);
+$bitstyles-badge-color: '10';
+$bitstyles-bordered-header-gutter: 10rem;
+$bitstyles-button-color-hover: #000;
+$bitstyles-button-danger-color-hover: #000;
+$bitstyles-button-icon-color-hover: #000;
+$bitstyles-button-icon-reversed-color-hover: #000;
+$bitstyles-button-menu-color-hover: #000;
+$bitstyles-button-mode-color-hover: #000;
+$bitstyles-button-nav-color-hover: #000;
+$bitstyles-button-nav-large-color-hover: #000;
+$bitstyles-button-small-padding-vertical: 10rem;
+$bitstyles-button-tab-color-hover: #000;
+$bitstyles-button-ui-color-hover: #000;
+$bitstyles-card-padding: 10rem;
+$bitstyles-content-max-width-base: 'full';
+$bitstyles-dropdown-max-height: 1rem;
+$bitstyles-flash-color: '10';
+$bitstyles-icon-sizes: ('s': 10rem);
+$bitstyles-topbar-vertical-padding: 10rem;
+
+//
+// Organisms settings /////////////////////////////////////
+
+$bitstyles-modal-padding: 10rem;
+$bitstyles-navbar-will-change: opacity;
+$bitstyles-sidebar-large-width: 1rem;
+$bitstyles-table-color-th: #f00;
+$bitstyles-ui-group-border-radius: 10rem;
+
+//
+// Utilities settings /////////////////////////////////////
+
+$bitstyles-margin-breakpoints: ('xl', 's');
+
+@import '../../scss/bitstyles/settings/animation';
+@import '../../scss/bitstyles/settings/breakpoints';
+@import '../../scss/bitstyles/settings/color-base';
+@import '../../scss/bitstyles/settings/color-palette';
+@import '../../scss/bitstyles/settings/layout';
+@import '../../scss/bitstyles/settings/setup';
+@import '../../scss/bitstyles/settings/typography';
+
+//
+// Generic ////////////////////////////////////
+
+@import '../../scss/bitstyles/generic/box-sizing';
+@import '../../scss/bitstyles/generic/normalize';
+@import '../../scss/bitstyles/generic/reset';
+
+//
+// Base /////////////////////////////////////////
+
+@import '../../scss/bitstyles/base/anchor';
+@import '../../scss/bitstyles/base/figure';
+@import '../../scss/bitstyles/base/font-face';
+@import '../../scss/bitstyles/base/forms';
+@import '../../scss/bitstyles/base/images';
+@import '../../scss/bitstyles/base/input-checkbox';
+@import '../../scss/bitstyles/base/input-radio';
+@import '../../scss/bitstyles/base/input-text';
+@import '../../scss/bitstyles/base/select';
+@import '../../scss/bitstyles/base/typography';
+
+//
+// Atoms //////////////////////////////////////
+
+@import '../../scss/bitstyles/atoms/avatar';
+@import '../../scss/bitstyles/atoms/badge';
+@import '../../scss/bitstyles/atoms/bordered-header';
+@import '../../scss/bitstyles/atoms/button';
+@import '../../scss/bitstyles/atoms/button--danger';
+@import '../../scss/bitstyles/atoms/button--icon';
+@import '../../scss/bitstyles/atoms/button--icon-reversed';
+@import '../../scss/bitstyles/atoms/button--menu';
+@import '../../scss/bitstyles/atoms/button--mode';
+@import '../../scss/bitstyles/atoms/button--nav';
+@import '../../scss/bitstyles/atoms/button--nav-large';
+@import '../../scss/bitstyles/atoms/button--small';
+@import '../../scss/bitstyles/atoms/button--tab';
+@import '../../scss/bitstyles/atoms/button--ui';
+@import '../../scss/bitstyles/atoms/card';
+@import '../../scss/bitstyles/atoms/content';
+@import '../../scss/bitstyles/atoms/dl';
+@import '../../scss/bitstyles/atoms/dropdown';
+@import '../../scss/bitstyles/atoms/flash';
+@import '../../scss/bitstyles/atoms/icon';
+@import '../../scss/bitstyles/atoms/link';
+@import '../../scss/bitstyles/atoms/list-reset';
+@import '../../scss/bitstyles/atoms/topbar';
+
+//
+// Organisms ///////////////////////////////////
+
+@import '../../scss/bitstyles/organisms/modal';
+@import '../../scss/bitstyles/organisms/navbar';
+@import '../../scss/bitstyles/organisms/sidebar';
+@import '../../scss/bitstyles/organisms/notification-center';
+@import '../../scss/bitstyles/organisms/table';
+@import '../../scss/bitstyles/organisms/ui-group';
+
+//
+// Utilities ////////////////////////////////////
+
+@import '../../scss/bitstyles/utilities/margin/settings';
+@import '../../scss/bitstyles/utilities/absolute-center';
+@import '../../scss/bitstyles/utilities/absolute-cover';
+@import '../../scss/bitstyles/utilities/aspect-ratio';
+@import '../../scss/bitstyles/utilities/bg';
+@import '../../scss/bitstyles/utilities/border';
+@import '../../scss/bitstyles/utilities/break-text';
+@import '../../scss/bitstyles/utilities/clearfix';
+@import '../../scss/bitstyles/utilities/col-span';
+@import '../../scss/bitstyles/utilities/col-start';
+@import '../../scss/bitstyles/utilities/display';
+@import '../../scss/bitstyles/utilities/fg';
+@import '../../scss/bitstyles/utilities/flex';
+@import '../../scss/bitstyles/utilities/font';
+@import '../../scss/bitstyles/utilities/gap';
+@import '../../scss/bitstyles/utilities/grid-cols';
+@import '../../scss/bitstyles/utilities/height';
+@import '../../scss/bitstyles/utilities/items';
+@import '../../scss/bitstyles/utilities/justify';
+@import '../../scss/bitstyles/utilities/line-height';
+@import '../../scss/bitstyles/utilities/margin';
+@import '../../scss/bitstyles/utilities/object-cover';
+@import '../../scss/bitstyles/utilities/outline';
+@import '../../scss/bitstyles/utilities/overflow';
+@import '../../scss/bitstyles/utilities/padding';
+@import '../../scss/bitstyles/utilities/relative';
+@import '../../scss/bitstyles/utilities/round';
+@import '../../scss/bitstyles/utilities/self';
+@import '../../scss/bitstyles/utilities/sr-only';
+@import '../../scss/bitstyles/utilities/text';
+@import '../../scss/bitstyles/utilities/truncate';
+@import '../../scss/bitstyles/utilities/typography';
+@import '../../scss/bitstyles/utilities/z-index';

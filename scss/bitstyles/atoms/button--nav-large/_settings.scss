@@ -1,0 +1,54 @@
+@use '../../settings/animation';
+@use '../../tools/palette';
+@use '../../tools/size';
+
+//
+// Base styles ////////////////////////////////////////
+
+$padding-vertical: size.get('l') !default;
+$padding-horizontal: size.get('l') !default;
+$border-radius: size.get('s') !default;
+$transition:
+  color animation.$transition-duration animation.$transition-easing,
+  background-color animation.$transition-duration animation.$transition-easing,
+  border animation.$transition-duration animation.$transition-easing !default;
+
+//
+// Base colors ////////////////////////////////////////
+
+$color: palette.get('gray', '5') !default;
+$background-color: palette.get('gray', '80') !default;
+$border-color: palette.get('gray', '80') !default;
+$box-shadow: none !default;
+
+//
+// Hover colors ////////////////////////////////////////
+
+$color-hover: palette.get('white') !default;
+$background-color-hover: palette.get('gray', '60') !default;
+$border-color-hover: palette.get('gray', '60') !default;
+$box-shadow-hover: none !default;
+
+//
+// Active colors ////////////////////////////////////////
+
+$color-active: palette.get('text') !default;
+$background-color-active: palette.get('gray', '10') !default;
+$border-color-active: palette.get('gray', '10') !default;
+$box-shadow-active: none !default;
+
+//
+// Disabled colors ////////////////////////////////////////
+
+$color-disabled: palette.get('black', '50') !default;
+$background-color-disabled: palette.get('black', '10') !default;
+$border-color-disabled: palette.get('black', '10') !default;
+$box-shadow-disabled: none !default;
+
+//
+// Current colors ////////////////////////////////////////
+
+$color-current: palette.get('white', '100') !default;
+$background-color-current: palette.get('gray', '100') !default;
+$border-color-current: palette.get('gray', '100') !default;
+$box-shadow-current: none !default;

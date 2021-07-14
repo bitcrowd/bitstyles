@@ -1,0 +1,50 @@
+@use './settings.scss';
+@use '../../settings/setup';
+@use '../../tools/size';
+
+.#{setup.$namespace}a-button--mode-container {
+  border-radius: size.get('s');
+}
+
+.#{setup.$namespace}a-button--mode {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &,
+  &:visited {
+    color: settings.$color;
+    background: settings.$background-color;
+    border-color: settings.$border-color;
+    box-shadow: settings.$box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: settings.$color-hover;
+    background: settings.$background-color-hover;
+    border-color: settings.$border-color-hover;
+    box-shadow: settings.$box-shadow-hover;
+  }
+
+  &:active {
+    color: settings.$color-active;
+    background: settings.$background-color-active;
+    border-color: settings.$border-color-active;
+    box-shadow: settings.$box-shadow-active;
+  }
+
+  &[aria-pressed="true"] {
+    color: settings.$color-pressed;
+    background: settings.$background-color-pressed;
+    border-color: settings.$border-color-pressed;
+    box-shadow: settings.$box-shadow-pressed;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$color-disabled;
+    background: settings.$background-color-disabled;
+    border-color: settings.$border-color-disabled;
+    box-shadow: settings.$box-shadow-disabled;
+  }
+}

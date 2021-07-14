@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 // Z-index
 //
 // **Assign z-index values in a controlled manner**
@@ -42,14 +44,14 @@
 // @param {String} $lement The element for which you need the z-index level.
 //
 
-@function z($list, $element) {
-  $z-index: index($list, $element);
+@function get($list, $element) {
+  $z-index: list.index($list, $element);
 
   @if $z-index {
     @return $z-index;
   }
 
-  @warn 'There is no item "#{$element}" in this list; choose one of: #{$list}';
+  @warn 'There is no item “#{$element}” in this list; choose one of: #{$list}';
 
   @return null;
 }

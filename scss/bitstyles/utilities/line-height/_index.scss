@@ -1,0 +1,6 @@
+@use '../../settings/setup';
+@use '../../settings/typography';
+
+.#{setup.$namespace}u-line-height--min {
+  line-height: typography.$line-height-min;
+}

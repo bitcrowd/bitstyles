@@ -1,8 +1,0 @@
-@import './settings';
-
-@each $variant in ($bitstyles-flash-variants) {
-  .#{$bitstyles-namespace}a-flash--#{$variant} {
-    color: palette($variant, $bitstyles-flash-color);
-    background-color: palette($variant, $bitstyles-flash-background-color);
-  }
-}

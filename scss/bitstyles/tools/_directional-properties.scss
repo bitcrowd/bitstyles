@@ -1,5 +1,6 @@
-@use "sass:list";
-@use "sass:string";
+@use '../settings/setup';
+@use 'sass:list';
+@use 'sass:string';
 
 /*
  * Removes a value from a list
@@ -11,8 +12,8 @@
   $result: ();
 
   @for $i from 1 through list.length($list) {
-    @if nth($list, $i) != $value {
-      $result: list.append($result, nth($list, $i));
+    @if list.nth($list, $i) != $value {
+      $result: list.append($result, list.nth($list, $i));
     }
   }
 
@@ -32,7 +33,7 @@
     $classname-item: list.nth($classname-items, $i);
 
     @if $classname-item != '' and $classname-item != null {
-      $classname: if($i == 1, $classname-item, '#{$classname}#{unquote('-')}#{$classname-item}');
+      $classname: if($i == 1, $classname-item, '#{$classname}#{string.unquote('-')}#{$classname-item}');
     }
   }
 
@@ -74,7 +75,7 @@
     @each $direction-name, $direction-values in $directions {
       $classname: get-classname(
         (
-          $bitstyles-namespace,
+          setup.$namespace,
           'u',
           $classname-root,
           $alias,
@@ -110,7 +111,7 @@
   @each $alias, $value in $values {
     $classname: get-classname(
       (
-        $bitstyles-namespace,
+        setup.$namespace,
         'u',
         $classname-root,
         $alias
@@ -130,7 +131,7 @@
 ) {
   $classname: get-classname(
     (
-      $bitstyles-namespace,
+      setup.$namespace,
       $object-level,
       $classname-root,
     )

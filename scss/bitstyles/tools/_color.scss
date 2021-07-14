@@ -24,36 +24,6 @@
   @return $color-map;
 }
 
-// Palette
-//
-// **Returns requested colours from the global `$palette` map.**
-// e.g. `color: palette('text');`
-//
-// @param {String} $color  Base colour within the palette
-//
-// @param {String} $percent   Optional. Percentage of the color to mix with white. Defaults to `100%` (fuly the specified color, no white)
-//
-
-// stylelint-disable at-rule-no-unknown
-@function palette($color, $percent: '100') {
-  @if map.has-key($bitstyles-color-palette, $color) {
-    $palette: map.get($bitstyles-color-palette, $color);
-
-    @if map.has-key($palette, $percent) {
-      @return map.get($palette, $percent);
-    }
-
-    @else {
-      @error "Oops! Color/percentage ‘#{$color}/#{$percent}’ does not exist.";
-    }
-  }
-
-  @else {
-    @error "Oops! Color ‘#{$color}’ does not exist.";
-  }
-}
-// stylelint-enable at-rule-no-unknown
-
 @function url-encode-color($color) {
   @if meta.type-of($color) == 'color' and string.index(#{$color}, '#') == 1 {
     @return '%23' + string.unquote('#{string.slice(#{$color}, 2)}');

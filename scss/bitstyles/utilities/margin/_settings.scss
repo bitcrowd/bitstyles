@@ -1,0 +1,32 @@
+@use '../../tools/size';
+
+$sizes: (
+  'positive': (
+    '0': 0,
+    'xxs': size.get('xxs'),
+    'xs': size.get('xs'),
+    's': size.get('s'),
+    'm': size.get('m'),
+    'l': size.get('l'),
+    'xl': size.get('xl'),
+    'auto': auto
+  ),
+  'negative': (
+    'xxs': -#{size.get('xxs')},
+    'xs': -#{size.get('xs')},
+    's': -#{size.get('s')},
+    'm': -#{size.get('m')},
+    'l': -#{size.get('l')},
+    'xl': -#{size.get('xl')}
+  )
+) !default;
+$breakpoints: ('s', 'm') !default;
+$directions: (
+  '': null,
+  'top': ('top'),
+  'right': ('right'),
+  'bottom': ('bottom'),
+  'left': ('left'),
+  'x': ('right', 'left'),
+  'y': ('top', 'bottom')
+) !default;

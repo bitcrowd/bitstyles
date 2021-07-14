@@ -1,8 +1,0 @@
-@mixin topbar {
-  position: $bitstyles-topbar-position;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: $bitstyles-topbar-z-index;
-  padding: $bitstyles-topbar-vertical-padding $bitstyles-topbar-horizontal-padding;
-}
