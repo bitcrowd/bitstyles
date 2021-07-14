@@ -5,7 +5,7 @@
   "main": "build/bitstyles.css",
   "scripts": {
     "build": "sass scss/bitstyles.scss build/bitstyles.css --style=compressed --no-source-map",
-    "postbuild": "postcss build/bitstyles.css --replace && npx prettier --write build/bitstyles.css",
+    "postbuild": "postcss build/bitstyles.css --replace",
     "lint:scss": "stylelint scss/**/*.scss --syntax scss",
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
     "lint": "yarn lint:scss && yarn lint:js",
