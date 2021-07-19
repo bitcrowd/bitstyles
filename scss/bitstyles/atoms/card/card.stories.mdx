@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Card
 
-A content wrapper that sections and subtly highlights a chunk of content. The default, small version is ideal for smaller chunks.
+A content wrapper that sections and subtly highlights a chunk of content. At larger screensizes, this element will get more padding to give the content space to breathe.
 
 <Canvas>
   <Story name="Card">
@@ -33,22 +33,24 @@ A content wrapper that sections and subtly highlights a chunk of content. The de
   </Story>
 </Canvas>
 
+## Fullbleed headers
 
-For larger blocks of content, use a padding utility class to give the content more space to breathe:
+It is common to present important content edge-to-edge, using `.a-card__header`:
 
 <Canvas>
-  <Story name="Card [padding-m]">
+  <Story name="a-card__header">
     {`
-      <article class="a-card u-padding-xl">
+    <div class="u-grid u-grid-cols-2@m u-gap-m">
+      <article class="a-card">
+        <div class="a-card__header a-flash a-flash--danger">
+          Something happened
+        </div>
         <h3>Recent activity</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
-          <li>User one changed title to “In progress” [8 mins ago]</li>
-          <li>User one changed date to 01.01.2021 [3 days ago]</li>
-          <li>User one changed date to 01.01.2021 [5 weeks ago]</li>
-          <li>User one changed date to 01.01.2021 [1 month ago]</li>
         </ul>
       </article>
+    </div>
     `}
   </Story>
 </Canvas>
