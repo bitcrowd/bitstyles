@@ -12,6 +12,7 @@
 - The `.u-align`, `.u-self`, and `.u-justify` sets of utility classes are now all available at `m` breakpoint. The available breakpoints can be customized
 - The various `.u-flex-` classes are now available at the `m` breakpoint. The available breakpoints can be customized by overriding `$bitstyles-flex-breakpoints`
 - Adds `.u-flex-nowrap` and `.u-flex-row` classes
+- Adds `url-encode-color` function to our color tools, to encode hex colors correctly
 
 ## Changed
 
@@ -21,6 +22,10 @@
 ## Docs
 
 - Adds a `Design Tokens` section to the storybook, and lists all available colors
+
+## Fixed
+
+- Selects now correctly display the icon specified as a background in Sass, even when postcss isn’t being used (note that you’ll have to deal with the prefixing of the `appearance` property, prefereably using autoprefixer)
 
 ## Breaking
 

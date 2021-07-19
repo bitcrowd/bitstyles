@@ -45,7 +45,7 @@
     color: $bitstyles-select-color-invalid;
     background-color: $bitstyles-select-background-color-invalid;
     background-image: $bitstyles-select-background-image-invalid;
-    border: $bitstyles-select-border-color-invalid;
+    border-color: $bitstyles-select-border-color-invalid;
   }
 
   &[disabled] {
