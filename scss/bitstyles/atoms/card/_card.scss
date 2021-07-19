@@ -12,7 +12,7 @@
 }
 
 @mixin card__header($spacing) {
-  margin: (- $spacing) (- $spacing) math.div($spacing, 2);
+  margin: (- $spacing) (- $spacing) $spacing;
   padding: math.div($spacing, 2) $spacing;
   background-color: settings.$header-background-color;
 }

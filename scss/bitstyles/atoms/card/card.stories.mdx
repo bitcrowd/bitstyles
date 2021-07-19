@@ -4,26 +4,44 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Card
 
-A content wrapper that sections and subtly highlights a chunk of content. At larger screensizes, this element will get more padding to give the content space to breathe.
+A content wrapper that sections and subtly highlights a chunk of content. For larger cards, use the larger `l` size to give the content space to breathe.
 
 <Canvas>
-  <Story name="Card">
+  <Story name="card">
     {`
     <div class="u-grid u-grid-cols-3@m u-gap-m">
       <article class="a-card">
-        <h3>Recent activity</h3>
+        <h3>Standard card</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
         </ul>
       </article>
       <article class="a-card">
-        <h3>Recent activity</h3>
+        <h3>Standard card</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
         </ul>
       </article>
       <article class="a-card">
-        <h3>Recent activity</h3>
+        <h3>Standard card</h3>
+        <ul class="a-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+    </div>
+    `}
+  </Story>
+  <Story name="card--l">
+    {`
+    <div class="u-grid u-grid-cols-2@m u-gap-m">
+      <article class="a-card--l">
+        <h3>Large card</h3>
+        <ul class="a-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+      <article class="a-card--l">
+        <h3>Large card</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
         </ul>
@@ -37,7 +55,7 @@ A content wrapper that sections and subtly highlights a chunk of content. At lar
 
 It is common to present important content edge-to-edge, using `.a-card__header`:
 
-<Canvas>
+<Canvas isColumn>
   <Story name="a-card__header">
     {`
     <div class="u-grid u-grid-cols-2@m u-gap-m">
@@ -45,12 +63,25 @@ It is common to present important content edge-to-edge, using `.a-card__header`:
         <div class="a-card__header a-flash a-flash--danger">
           Something happened
         </div>
-        <h3>Recent activity</h3>
+        <h3>Card with header</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
         </ul>
       </article>
     </div>
+    `}
+  </Story>
+  <Story name="a-card--l__header">
+    {`
+    <article class="a-card--l">
+      <div class="a-card--l__header a-flash a-flash--danger">
+        Something happened
+      </div>
+      <h3>Large card with header</h3>
+      <ul class="a-list-reset">
+        <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+      </ul>
+    </article>
     `}
   </Story>
 </Canvas>
