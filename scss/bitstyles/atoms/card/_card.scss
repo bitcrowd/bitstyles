@@ -4,8 +4,6 @@
 @use '../../tools/directional-properties';
 @use '../../tools/media-query';
 
-$reduced-card-sizes: map.remove($bitstyles-card-sizes, 'base');
-
 @mixin card($padding) {
   padding: $padding;
   overflow: hidden;
@@ -19,31 +17,27 @@ $reduced-card-sizes: map.remove($bitstyles-card-sizes, 'base');
   background-color: settings.$header-background-color;
 }
 
-@include directional-properties.output-block(
-  $object-level: 'a',
-  $classname-root: 'card'
-) {
-  @include card(map.get(settings.$sizes, 'base'));
+@function modifier-name($name) {
+  @if $name == 'base' {
+    @return '';
+  } @else {
+    @return '-#{$name}';
+  }
 }
 
-@include directional-properties.output-block(
-  $object-level: 'a',
-  $classname-root: 'card__header'
-) {
-  @include card__header(map.get(settings.$sizes, 'base'));
-}
+@each $size, $padding-size in settings.$sizes {
+  $size-name: modifier-name($size);
 
-@each $size-name, $padding-size in $reduced-card-sizes {
   @include directional-properties.output-block(
     $object-level: 'a',
-    $classname-root: 'card-#{$size-name}'
+    $classname-root: 'card#{$size-name}'
   ) {
     @include card($padding-size);
   }
 
   @include directional-properties.output-block(
     $object-level: 'a',
-    $classname-root: 'card-#{$size-name}__header'
+    $classname-root: 'card#{$size-name}__header'
   ) {
     @include card__header($padding-size);
   }
@@ -51,25 +45,12 @@ $reduced-card-sizes: map.remove($bitstyles-card-sizes, 'base');
 
 @each $breakpoint-alias in settings.$breakpoints {
   @include media-query.media-query($breakpoint-alias) {
-    @include directional-properties.output-block(
-      $object-level: 'a',
-      $classname-root: 'card',
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    ) {
-      @include card(map.get(settings.$sizes, 'base'));
-    }
+    @each $size, $padding-size in settings.$sizes {
+      $size-name: modifier-name($size);
 
-    @include directional-properties.output-block(
-      $object-level: 'a',
-      $classname-root: 'card__header',
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    ) {
-      @include card__header(map.get(settings.$sizes, 'base'));
-    }
-    @each $size-name, $padding-size in $reduced-card-sizes {
       @include directional-properties.output-block(
         $object-level: 'a',
-        $classname-root: 'card-#{$size-name}',
+        $classname-root: 'card#{$size-name}',
         $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
       ) {
         @include card($padding-size);
@@ -77,7 +58,7 @@ $reduced-card-sizes: map.remove($bitstyles-card-sizes, 'base');
 
       @include directional-properties.output-block(
         $object-level: 'a',
-        $classname-root: 'card-#{$size-name}__header',
+        $classname-root: 'card#{$size-name}__header',
         $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
       ) {
         @include card__header($padding-size);

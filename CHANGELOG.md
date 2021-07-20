@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+# Added
+
+- The breakpoints at which `.a-card` is output can now be specified with the `$bitstyles-card-breakpoints` Sass variable. Default is at `m`, and `l` breakpoints
+- Padding for `.a-card`s is specifiable with the `$bitstyles-card-sizes` Sass variable. By default there is a base size, and a large size
+- A new `.a-card__header` element allows edge-to-edge header sections for cards of all sizes
+
+# Fixed
+
+- `.u-col-span-` and `.u-col-start-` classes are available at `@l` breakpoint again. Fixes the complex form example
+
 ## [[3.0.0-rc.2]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0-rc.2) - 2021-09-06
 
 ### Fixed
@@ -20,7 +32,6 @@
 
 ### Added
 
-- The breakpoints at which `.a-card` is output can now be specified with the `$bitstyles-card-breakpoints` Sass variable. Default is at `m`, and `l` breakpoints
 - Added `$bitstyles-grays-hint-color-mix` and `$bitstyles-grays-hint-color` variables to allow control over how the `gray` color palette is generated
 - Added `$bitstyles-color-mix-percentages` list variable, giving control over which percentage intervals are generated in each color’s palette
 - There’s now the `generate-palette($base-color, $mix-color, $percentages)` function to automate generating palettes of individual colors
