@@ -1,4 +1,4 @@
-# Unreleased
+# [[2.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v2.0.0) - 2021-07-22
 
 ## Added
 
