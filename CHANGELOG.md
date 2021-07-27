@@ -15,6 +15,7 @@
 ### Breaking
 
 - As `.a-card` elements now set their own padding, remove any utility padding classes. If the padding does not match your requirements, it can be customized using the cards’ sass variables
+- If you output any flashes or other content at the top of an `.a-card` element using negative-margin utility classes to cancel out the padding, these classes shuld now be replaced with the `.a-card__header` class
 
 ## [[3.0.0-rc.2]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0-rc.2) - 2021-09-06
 
