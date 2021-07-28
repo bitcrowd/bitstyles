@@ -16,10 +16,10 @@ $checkbox-size: size.get('m') !default;
 // Base colors ////////////////////////////////////////
 
 $color: palette.get('text') !default;
-$border-width: size.get('xxxs');
+$border-width: size.get('xxxs') !default;
 $border-color: palette.get('gray', '10') !default;
 $background: palette.get('white') !default;
-$box-shadow: 0 0 size.get('xs') rgba(palette.get('gray', '90'), 0.05);
+$box-shadow: 0 0 size.get('xs') rgba(palette.get('gray', '90'), 0.05) !default;
 
 //
 // Hover colors ////////////////////////////////////////
@@ -27,7 +27,7 @@ $box-shadow: 0 0 size.get('xs') rgba(palette.get('gray', '90'), 0.05);
 $background-hover: palette.get('gray', '1') !default;
 $color-hover: palette.get('gray', '70') !default;
 $border-color-hover: palette.get('gray', '60') !default;
-$box-shadow-hover: 0 0 size.get('s') rgba(palette.get('brand-1', '90'), 0.05);
+$box-shadow-hover: 0 0 size.get('s') rgba(palette.get('brand-1', '90'), 0.05) !default;
 
 //
 // Active colors ////////////////////////////////////////
@@ -35,7 +35,7 @@ $box-shadow-hover: 0 0 size.get('s') rgba(palette.get('brand-1', '90'), 0.05);
 $color-active: palette.get('gray', '80') !default;
 $border-color-active: palette.get('gray', '80') !default;
 $background-active: palette.get('white') !default;
-$box-shadow-active: 0 0 size.get('xxs') rgba(palette.get('brand-1', '90'), 0.15);
+$box-shadow-active: 0 0 size.get('xxs') rgba(palette.get('brand-1', '90'), 0.15) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
@@ -43,7 +43,7 @@ $box-shadow-active: 0 0 size.get('xxs') rgba(palette.get('brand-1', '90'), 0.15)
 $background-disabled: palette.get('black', '10') !default;
 $color-disabled: palette.get('text') !default;
 $border-color-disabled: palette.get('black', '20') !default;
-$box-shadow-disabled: none;
+$box-shadow-disabled: none !default;
 
 //
 // Invalid colors ////////////////////////////////////////
@@ -51,4 +51,4 @@ $box-shadow-disabled: none;
 $color-invalid: palette.get('warning') !default;
 $background-color-invalid: palette.get('white') !default;
 $border-color-invalid: palette.get('warning') !default;
-$box-shadow-invalid: 0 0 size.get('s') rgba(palette.get('warning', '90'), 0.1);
+$box-shadow-invalid: 0 0 size.get('s') rgba(palette.get('warning', '90'), 0.1) !default;
