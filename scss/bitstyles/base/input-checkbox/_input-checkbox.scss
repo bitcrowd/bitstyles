@@ -4,6 +4,7 @@
 @use 'sass:math';
 
 [type="checkbox"] {
+  font-size: settings.$size;
   position: relative;
   display: inline-block;
   width: 1em;

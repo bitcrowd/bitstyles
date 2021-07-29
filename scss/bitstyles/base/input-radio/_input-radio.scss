@@ -3,6 +3,7 @@
 @use './settings';
 
 [type="radio"] {
+  font-size: settings.$size;
   position: relative;
   display: inline-block;
   width: 1em;
