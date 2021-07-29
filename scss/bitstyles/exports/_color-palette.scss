@@ -2,7 +2,7 @@
 
 /* stylelint-disable selector-pseudo-class-no-unknown, max-nesting-depth */
 :export {
-  @each $name, $color-palette in color-palette.$bitstyles-color-palette {
+  @each $name, $color-palette in color-palette.$color-palette {
     @each $color-name, $color-value in $color-palette {
       #{$name}#{'.'}#{$color-name}: #{$color-value};
     }
