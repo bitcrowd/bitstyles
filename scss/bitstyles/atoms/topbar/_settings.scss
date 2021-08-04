@@ -1,0 +1,8 @@
+@use '../../tools/size';
+@use '../../tools/zindex';
+@use '../../settings/layout';
+
+$position: relative !default;
+$vertical-padding: size.get('s') !default;
+$horizontal-padding: size.get('m') !default;
+$z-index: zindex.get(layout.$global-z, 'topbar') !default;

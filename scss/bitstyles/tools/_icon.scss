@@ -1,3 +1,5 @@
+@use '../settings/animation';
+
 @mixin icon {
   display: inline-block;
   width: 1em;
@@ -7,9 +9,9 @@
   flex-shrink: 0;
   outline: none;
   transition:
-    fill $bitstyles-transition-duration $bitstyles-transition-easing,
-    stroke $bitstyles-transition-duration $bitstyles-transition-easing,
-    background-color $bitstyles-transition-duration $bitstyles-transition-easing,
-    transform $bitstyles-transition-duration $bitstyles-transition-easing;
+    fill animation.$transition-duration animation.$transition-easing,
+    stroke animation.$transition-duration animation.$transition-easing,
+    background-color animation.$transition-duration animation.$transition-easing,
+    transform animation.$transition-duration animation.$transition-easing;
   fill: currentColor;
 }

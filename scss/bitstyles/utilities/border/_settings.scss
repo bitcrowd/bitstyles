@@ -1,0 +1,16 @@
+@use '../../tools/palette';
+
+$values: (
+  'gray-70': 1px solid palette.get('gray', '70'),
+  'gray-10': 1px solid palette.get('gray', '10'),
+) !default;
+$breakpoints: () !default;
+$directions: (
+  '': null,
+  'top': ('top'),
+  'right': ('right'),
+  'bottom': ('bottom'),
+  'left': ('left'),
+  'x': ('left', 'right'),
+  'y': ('top', 'bottom')
+) !default;

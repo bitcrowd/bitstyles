@@ -1,0 +1,12 @@
+@use '../../settings/typography';
+@use '../../tools/font-face';
+@use 'sass:map';
+
+@each $webfont-variant, $webfont-variant-settings in typography.$webfont-variants {
+  @include font-face.webfont(
+    map.get($webfont-variant-settings, 'font-family'),
+    map.get($webfont-variant-settings, 'font-style'),
+    map.get($webfont-variant-settings, 'font-weight'),
+    map.get($webfont-variant-settings, 'url'),
+  );
+}

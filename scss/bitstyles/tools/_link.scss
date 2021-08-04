@@ -1,3 +1,6 @@
+@use '../settings/link';
+@use '../settings/typography';
+
 // Link
 //
 // Styling for all links.
@@ -5,26 +8,26 @@
 
 @mixin link {
   padding: 0;
-  font-weight: $bitstyles-font-weight-medium;
-  color: $bitstyles-color-link;
-  text-decoration: $bitstyles-text-decoration-link;
+  font-weight: typography.$font-weight-medium;
+  color: link.$color-link;
+  text-decoration: link.$text-decoration-link;
   text-decoration-skip-ink: auto;
   cursor: pointer;
-  background: $bitstyles-background-color-link;
+  background: link.$background-color-link;
   border: 0;
   box-shadow: none;
-  transition: $bitstyles-link-transition;
+  transition: link.$link-transition;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
   &:visited {
-    color: $bitstyles-color-link-visited;
+    color: link.$color-link-visited;
   }
 
   &:hover,
   &:focus {
-    color: $bitstyles-color-link-hover;
-    text-decoration: $bitstyles-text-decoration-link-hover;
-    background: $bitstyles-background-color-link-hover;
+    color: link.$color-link-hover;
+    text-decoration: link.$text-decoration-link-hover;
+    background: link.$background-color-link-hover;
     box-shadow: none;
   }
 }

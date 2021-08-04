@@ -1,7 +1,0 @@
-@import './settings';
-
-@each $variant, $color in ($foreground-colors) {
-  .#{$bitstyles-namespace}u-fg--#{$variant} {
-    color: $color;
-  }
-}

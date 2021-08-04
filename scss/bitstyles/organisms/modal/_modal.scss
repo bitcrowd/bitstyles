@@ -1,0 +1,85 @@
+@use './settings';
+@use '../../settings/setup';
+@use '../../tools/media-query';
+
+@mixin modal-is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.#{setup.$namespace}o-modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+  background: settings.$overlay-color;
+  transition: all settings.$transition-duration settings.$transition-easing;
+  -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
+  backface-visibility: hidden;
+  will-change: settings.$will-change;
+
+  [aria-hidden="true"] & {
+    @include modal-is-hidden;
+
+    transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
+  }
+}
+
+.#{setup.$namespace}o-modal__content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  width: calc(100% - 2 * #{settings.$padding});
+  height: auto;
+  max-height: calc(100vh - 2 * #{settings.$padding});
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  background-color: settings.$background-color;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  transition: all settings.$transition-duration-smallscreen settings.$transition-easing;
+  -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
+  backface-visibility: hidden;
+  will-change: settings.$will-change;
+
+  [aria-hidden="true"] & {
+    @include modal-is-hidden;
+
+    transform: translate(-50%, 50%);
+    transition: all settings.$transition-duration-smallscreen settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
+  }
+}
+
+@include media-query.media-query(settings.$breakpoint) {
+  .#{setup.$namespace}o-modal__content {
+    transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing;
+
+    [aria-hidden="true"] & {
+      transform: translate(-50%, -50%) scale(0.875);
+      transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
+    }
+  }
+}
+
+@mixin modal-variation($state) {
+  .#{setup.$namespace}o-modal--animation-#{$state} {
+    &[aria-hidden="true"] {
+      .#{setup.$namespace}o-modal__content {
+        @content;
+      }
+    }
+  }
+}
+
+@include modal-variation(cancel) {
+  transform: translate(-50%, 50%);
+}
+
+@include modal-variation(ok) {
+  opacity: 1;
+  transform: translate(-50%, -200%);
+}

@@ -1,0 +1,46 @@
+@use '../../settings/typography';
+@use '../../tools/palette';
+@use '../../tools/size';
+@use '../../tools/typography' as typography-tools;
+
+/* stylelint-disable selector-max-type */
+html {
+  font-family: typography.$font-family-body;
+  line-height: typography.$line-height-base;
+  color: palette.get('text');
+  -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
+  background: palette.get('background');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: typography.$font-family-header;
+  font-weight: typography.$font-weight-bold;
+  text-rendering: optimizeLegibility;
+}
+
+@include typography-tools.generate-font-sizes('', (html, h1, h2, h3, h4, h5, h6));
+
+p {
+  margin: 0 0 size.get('m');
+}
+
+address {
+  font-style: normal;
+}
+
+dt {
+  font-weight: typography.$font-weight-bold;
+}
+
+table {
+  max-width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+/* stylelint-enable selector-max-type */

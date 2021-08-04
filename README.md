@@ -25,39 +25,89 @@ Once installed, you need to provide your sass installation with the path for bit
 node_modules/bitstyles/scss
 ```
 
-If you’re using Rails 4+, you can add this path to the asset pipeline in `config/initializers/assets.rb` where you see the commmented-out lines
-
-```ruby
-# Add additional assets to the asset load path
-# Rails.application.config.assets.paths << Emoji.images_path
-```
-
-Add the following:
-
-```ruby
-Rails.application.config.assets.paths << Rails.root.join("node_modules", "bitstyles", "bitstyles")
-```
-
 ### Importing the styles
 
-For the simplest case where you don’t need to add any CSS component classes, you can import bitstyles and be done:
+For the simplest case where you don’t need to selectively import modules, you can import bitstyles and be done:
 
 ```scss
-@import '~bitstyles/scss/bitstyles.scss';
+@use '~bitstyles/scss/bitstyles';
 ```
 
-#### Override variables
-
-It’s very likely that you’ll need to set your own colors and fonts. Do this by importing your variables before you import bitstyles:
+The old style is still supported, so if you’re not ready for `@use`:
 
 ```scss
-@import 'path/to/local-overrides.scss';
-@import '~bitstyles/scss/bitstyles.scss';
+@import '~bitstyles/scss/bitstyles';
 ```
 
-For the complete list of global variables you can override, look through the various files in the `bitstyles/settings/` folder.
+### Overrides
 
-Each atom, molecule, organism, and utility class also have their own variables that can be overridden, to be found in the `settings.scss` file in the respective component’s folder.
+It’s very likely that you’ll need to set your own colors, fonts, and spacing.
+
+For the complete list of global variables you can override, look through the files in the `bitstyles/settings/` folder.
+
+Each base object, atom, molecule, organism, and utility class also have their own variables that can be overridden. They’re found in the `_settings.scss` file in the respective folder.
+
+#### `@use` ing the whole library
+
+Assuming you’re ready to use `@use` to build your Sass, and you include the whole library, you can override variables as part of your `@use` statement.
+
+The name of the variable will be prefixed with the name of the module. For the global settings that will be the filename without extensions or underscores e.g. `color-base-`, `layout-`. For all other CSS (atoms, organisms, and utility classes), use the name of the atom or utility e.g. `margin-`.
+
+```scss
+@use 'bitstyles' with (
+  $color-base-black: #f00,
+  $margin-breakpoints: ('xl', 's')
+);
+```
+
+#### `@use` ing each part of the library
+
+You might want to selectively include only the parts of the library you need in order to keep the bundle size down. If you’re ready to use `@use`, pass your overrides at the same time using `with`. Note there’s no need to prefix the variable names with anything.
+
+```scss
+// …
+
+@use 'bitstyles/utilities/margin' with (
+  $breakpoints: ('xl')
+);
+
+// …
+
+```
+
+#### `@import` ing each part of the library
+
+If you’re using `@import`, you can still override settings and selectively include each part of bitstyles. Do this by importing your variables before you import bitstyles:
+
+```scss
+$bitstyles-color-base-black: #f00;
+$bitstyles-margin-breakpoints: ('xl', 's');
+
+// …
+
+@import 'bitstyles/settings/animation';
+@import 'bitstyles/settings/breakpoints';
+
+// …
+
+```
+
+The name of the variable you want to override must be prefixed with `bitstyles-` followed by the name of the module. For the global settings that name will be the filename without extensions or underscores e.g. `$bitstyles-color-base`. For all other CSS (atoms, organisms, and utility classes), use the name of the atom or utility e.g. `$bitstyles-margin-`.
+
+### `@import` ing the whole library
+
+In the same way, you can use `@import` to import the whole library as one, and still override the variables used.
+
+```scss
+$bitstyles-color-base-black: #f00;
+$bitstyles-margin-breakpoints: ('xl', 's');
+
+// …
+
+@import 'bitstyles';
+```
+
+The name of the variable you want to override must be prefixed with `bitstyles-` followed by the name of the module. For the global settings that name will be the filename without extensions or underscores e.g. `color-base`. For all other CSS (atoms, organisms, and utility classes), use the name of the atom or utility e.g. `margin-`.
 
 #### Adding your own components
 

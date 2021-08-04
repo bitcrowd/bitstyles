@@ -1,0 +1,41 @@
+@use '../../tools/palette';
+@use '../../tools/size';
+
+//
+// Base styles ////////////////////////////////////////
+
+$padding-vertical: size.get('m') !default;
+$padding-horizontal: size.get('m') !default;
+
+//
+// Base colors ////////////////////////////////////////
+
+$color: palette.get('gray', '50') !default;
+$background-color: palette.get('gray', '5') !default;
+$border-color: palette.get('gray', '5') !default;
+$border-radius: size.get('s') !default;
+$box-shadow: none !default;
+
+//
+// Hover colors ////////////////////////////////////////
+
+$color-hover: palette.get('gray', '80') !default;
+$background-color-hover: palette.get('gray', '10') !default;
+$border-color-hover: palette.get('gray', '10') !default;
+$box-shadow-hover: none !default;
+
+//
+// Active colors ////////////////////////////////////////
+
+$color-active: palette.get('white') !default;
+$background-color-active: palette.get('brand-1', '100') !default;
+$border-color-active: palette.get('brand-1', '100') !default;
+$box-shadow-active: none !default;
+
+//
+// Disabled colors ////////////////////////////////////////
+
+$color-disabled: palette.get('gray', '20') !default;
+$background-color-disabled: palette.get('gray', '1') !default;
+$border-color-disabled: palette.get('gray', '1') !default;
+$box-shadow-disabled: none !default;

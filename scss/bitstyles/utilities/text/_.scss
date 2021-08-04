@@ -1,5 +1,0 @@
-@each $position in ('left', 'right', 'center', 'justify') {
-  .#{$bitstyles-namespace}u-text--#{$position} {
-    text-align: #{$position};
-  }
-}

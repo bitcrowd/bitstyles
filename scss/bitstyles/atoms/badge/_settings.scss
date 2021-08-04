@@ -1,0 +1,7 @@
+@use '../../tools/size';
+
+$padding-vertical: size.get('xxs') !default;
+$padding-horizontal: size.get('m') !default;
+$color: '80' !default;
+$background-color: '10' !default;
+$variants: ('gray', 'danger', 'brand-1', 'brand-2', 'positive') !default;

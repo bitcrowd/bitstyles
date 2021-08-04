@@ -1,101 +1,102 @@
-@use './color-base';
-@use '../tools/color';
+@use 'color-base';
+@use 'sass:color';
+@use '../tools/color' as bs-color;
 
-// Use Sass map functions to merge in extra colour maps in your project, or re-define the whole map.
+// Use Sass map functions to merge in extra color maps in your project, or re-define the whole map.
 
-$bitstyles-grays-hint-color: color-base.$brand-1 !default;
-$bitstyles-grays-hint-color-mix: 10% !default;
-$bitstyles-color-mix-percentages: (1, 2, 3, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 97, 98, 99, 100) !default;
+$grays-hint-color: color-base.$brand-1 !default;
+$grays-hint-color-mix: 10% !default;
+$color-mix-percentages: (1, 2, 3, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 97, 98, 99, 100) !default;
 
-$bitstyles-color-palette: (
-  'black': color.generate-palette(
+$color-palette: (
+  'black': bs-color.generate-palette(
     $base-color: color-base.$black,
     $mix-color: color-base.$white,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'white': color.generate-palette(
+  'white': bs-color.generate-palette(
     $base-color: color-base.$white,
     $mix-color: color-base.$black,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
   'gray': (
-    '100': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 0%), $bitstyles-grays-hint-color-mix),
-    '99': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 1%), $bitstyles-grays-hint-color-mix),
-    '98': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 2%), $bitstyles-grays-hint-color-mix),
-    '97': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 3%), $bitstyles-grays-hint-color-mix),
-    '95': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 5%), $bitstyles-grays-hint-color-mix),
-    '90': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 10%), $bitstyles-grays-hint-color-mix),
-    '80': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 20%), $bitstyles-grays-hint-color-mix),
-    '70': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 30%), $bitstyles-grays-hint-color-mix),
-    '60': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 40%), $bitstyles-grays-hint-color-mix),
-    '50': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 50%), $bitstyles-grays-hint-color-mix),
-    '40': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 60%), $bitstyles-grays-hint-color-mix),
-    '30': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 70%), $bitstyles-grays-hint-color-mix),
-    '20': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 80%), $bitstyles-grays-hint-color-mix),
-    '10': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 90%), $bitstyles-grays-hint-color-mix),
-    '5': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 95%), $bitstyles-grays-hint-color-mix),
-    '3': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 97%), $bitstyles-grays-hint-color-mix),
-    '2': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 98%), $bitstyles-grays-hint-color-mix),
-    '1': mix($bitstyles-grays-hint-color, mix(color-base.$white, color-base.$black, 99%), $bitstyles-grays-hint-color-mix),
+    '100': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 0%), $grays-hint-color-mix),
+    '99': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 1%), $grays-hint-color-mix),
+    '98': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 2%), $grays-hint-color-mix),
+    '97': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 3%), $grays-hint-color-mix),
+    '95': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 5%), $grays-hint-color-mix),
+    '90': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 10%), $grays-hint-color-mix),
+    '80': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 20%), $grays-hint-color-mix),
+    '70': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 30%), $grays-hint-color-mix),
+    '60': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 40%), $grays-hint-color-mix),
+    '50': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 50%), $grays-hint-color-mix),
+    '40': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 60%), $grays-hint-color-mix),
+    '30': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 70%), $grays-hint-color-mix),
+    '20': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 80%), $grays-hint-color-mix),
+    '10': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 90%), $grays-hint-color-mix),
+    '5': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 95%), $grays-hint-color-mix),
+    '3': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 97%), $grays-hint-color-mix),
+    '2': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 98%), $grays-hint-color-mix),
+    '1': color.mix($grays-hint-color, color.mix(color-base.$white, color-base.$black, 99%), $grays-hint-color-mix),
   ),
-  'text': color.generate-palette(
+  'text': bs-color.generate-palette(
     $base-color: color-base.$text,
     $mix-color: color-base.$white,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'background': color.generate-palette(
+  'background': bs-color.generate-palette(
     $base-color: color-base.$background,
     $mix-color: color-base.$brand-1,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'brand-1': color.generate-palette(
+  'brand-1': bs-color.generate-palette(
     $base-color: color-base.$brand-1,
     $mix-color: color-base.$white,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'brand-1-shades': color.generate-palette(
+  'brand-1-shades': bs-color.generate-palette(
     $base-color: color-base.$brand-1,
     $mix-color: color-base.$black,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'brand-2': color.generate-palette(
+  'brand-2': bs-color.generate-palette(
     $base-color: color-base.$brand-2,
     $mix-color: color-base.$white,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'brand-2-shades': color.generate-palette(
+  'brand-2-shades': bs-color.generate-palette(
     $base-color: color-base.$brand-2,
     $mix-color: color-base.$black,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'danger': color.generate-palette(
+  'danger': bs-color.generate-palette(
     $base-color: color-base.$danger,
     $mix-color: color-base.$white,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'danger-shades': color.generate-palette(
+  'danger-shades': bs-color.generate-palette(
     $base-color: color-base.$danger,
     $mix-color: color-base.$black,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'warning': color.generate-palette(
+  'warning': bs-color.generate-palette(
     $base-color: color-base.$warning,
     $mix-color: color-base.$white,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'warning-shades': color.generate-palette(
+  'warning-shades': bs-color.generate-palette(
     $base-color: color-base.$warning,
     $mix-color: color-base.$black,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'positive': color.generate-palette(
+  'positive': bs-color.generate-palette(
     $base-color: color-base.$positive,
     $mix-color: color-base.$white,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
-  'positive-shades': color.generate-palette(
+  'positive-shades': bs-color.generate-palette(
     $base-color: color-base.$positive,
     $mix-color: color-base.$black,
-    $percentages: $bitstyles-color-mix-percentages
+    $percentages: $color-mix-percentages
   ),
 ) !default;

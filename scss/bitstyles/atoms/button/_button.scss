@@ -1,0 +1,74 @@
+@use 'sass:math';
+@use './settings';
+@use '../../settings/setup';
+@use '../../settings/typography';
+
+.#{setup.$namespace}a-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: calc(#{settings.$padding-vertical  * 2} + 1em);
+  padding: settings.$padding-vertical settings.$padding-horizontal;
+  margin: 0;
+  overflow: visible;
+  font: inherit;
+  font-weight: typography.$font-weight-normal;
+  line-height: typography.$line-height-min;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: settings.$border-radius;
+  transition: settings.$transition;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+  user-select: none;
+  touch-action: manipulation;
+
+  &,
+  &:visited {
+    color: settings.$color;
+    background: settings.$background-color;
+    border: settings.$border-width solid settings.$border-color;
+    box-shadow: settings.$box-shadow;
+  }
+
+  &:hover,
+  &:focus {
+    color: settings.$color-hover;
+    text-decoration: none;
+    background: settings.$background-color-hover;
+    border-color: settings.$border-color-hover;
+    outline: none;
+    box-shadow: settings.$box-shadow-hover;
+  }
+
+  &:active {
+    color: settings.$color-active;
+    background: settings.$background-color-active;
+    border-color: settings.$border-color-active;
+    box-shadow: settings.$box-shadow-active;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$color-disabled;
+    cursor: not-allowed;
+    background: settings.$background-color-disabled;
+    border-color: settings.$border-color-disabled;
+    box-shadow: settings.$box-shadow-disabled;
+  }
+}
+
+.#{setup.$namespace}a-button__avatar,
+.#{setup.$namespace}a-button__icon {
+  margin-right: settings.$icon-spacing;
+  margin-left: math.div(-(settings.$icon-spacing), 4);
+}
+
+.#{setup.$namespace}a-button__label + .#{setup.$namespace}a-button__icon {
+  margin-right: math.div(-(settings.$icon-spacing), 4);
+  margin-left: settings.$icon-spacing;
+}

@@ -1,0 +1,6 @@
+@use '../../settings/setup';
+@use '../../tools/clearfix';
+
+.#{setup.$namespace}u-clearfix {
+  @include clearfix.clearfix;
+}

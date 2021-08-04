@@ -1,0 +1,17 @@
+$direction: (
+  'col': column,
+  'row': row
+) !default;
+$wrap: (
+  'wrap': wrap,
+  'nowrap': nowrap
+) !default;
+$grow: (
+  '0': 0,
+  '1': 1
+) !default;
+$shrink: (
+  '0': 0,
+  '1': 1
+) !default;
+$breakpoints: ('m') !default;

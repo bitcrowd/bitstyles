@@ -1,92 +1,168 @@
 //
-// Settings /////////////////////////////////////
+// Forwards: Global settings /////////////////////////////////////
 
-@import 'bitstyles/settings/all';
+@forward 'bitstyles/settings/animation' as animation-*;
+@forward 'bitstyles/settings/breakpoints' as breakpoints-*;
+@forward 'bitstyles/settings/color-base' as color-base-*;
+@forward 'bitstyles/settings/color-palette' as color-palette-*;
+@forward 'bitstyles/settings/layout' as layout-*;
+@forward 'bitstyles/settings/setup' as setup-*;
+@forward 'bitstyles/settings/typography' as typography-*;
 
 //
-// Tools ////////////////////////////////////////
+// Forwards: Base settings /////////////////////////////////////
 
-@import 'bitstyles/tools/all';
+@forward 'bitstyles/base/figure/settings' as figure-*;
+@forward 'bitstyles/base/forms/settings' as forms-*;
+@forward 'bitstyles/base/input-checkbox/settings' as input-checkbox-*;
+@forward 'bitstyles/base/input-radio/settings' as input-radio-*;
+@forward 'bitstyles/base/input-text/settings' as input-text-*;
+@forward 'bitstyles/base/select/settings' as select-*;
+
+//
+// Forwards: Atoms ////////////////////////////////////
+
+@forward 'bitstyles/atoms/avatar/settings' as avatar-*;
+@forward 'bitstyles/atoms/badge/settings' as badge-*;
+@forward 'bitstyles/atoms/bordered-header/settings' as bordered-header-*;
+@forward 'bitstyles/atoms/button/settings' as button-*;
+@forward 'bitstyles/atoms/button--danger/settings' as button-danger-*;
+@forward 'bitstyles/atoms/button--icon/settings' as button-icon-*;
+@forward 'bitstyles/atoms/button--icon-reversed/settings' as button-icon-reversed-*;
+@forward 'bitstyles/atoms/button--menu/settings' as button-menu-*;
+@forward 'bitstyles/atoms/button--mode/settings' as button-mode-*;
+@forward 'bitstyles/atoms/button--nav/settings' as button-nav-*;
+@forward 'bitstyles/atoms/button--nav-large/settings' as button-nav-large-*;
+@forward 'bitstyles/atoms/button--small/settings' as button-small-*;
+@forward 'bitstyles/atoms/button--tab/settings' as button-tab-*;
+@forward 'bitstyles/atoms/button--ui/settings' as button-ui-*;
+@forward 'bitstyles/atoms/card/settings' as card-*;
+@forward 'bitstyles/atoms/content/settings' as content-*;
+@forward 'bitstyles/atoms/dropdown/settings' as dropdown-*;
+@forward 'bitstyles/atoms/flash/settings' as flash-*;
+@forward 'bitstyles/atoms/icon/settings' as icon-*;
+@forward 'bitstyles/atoms/topbar/settings' as topbar-*;
+
+//
+// Forwards: Organisms ///////////////////////////////////
+
+@forward 'bitstyles/organisms/modal/settings' as modal-*;
+@forward 'bitstyles/organisms/navbar/settings' as navbar-*;
+@forward 'bitstyles/organisms/sidebar/settings' as sidebar-*;
+@forward 'bitstyles/organisms/table/settings' as table-*;
+@forward 'bitstyles/organisms/ui-group/settings' as ui-group-*;
+
+//
+// Forwards: Utilities ////////////////////////////////////
+
+@forward 'bitstyles/utilities/aspect-ratio/settings' as aspect-ratio-*;
+@forward 'bitstyles/utilities/bg/settings' as bg-*;
+@forward 'bitstyles/utilities/border/settings' as border-*;
+@forward 'bitstyles/utilities/col-span/settings' as col-span-*;
+@forward 'bitstyles/utilities/col-start/settings' as col-start-*;
+@forward 'bitstyles/utilities/display/settings' as display-*;
+@forward 'bitstyles/utilities/fg/settings' as fg-*;
+@forward 'bitstyles/utilities/flex/settings' as flex-*;
+@forward 'bitstyles/utilities/gap/settings' as gap-*;
+@forward 'bitstyles/utilities/grid-cols/settings' as grid-cols-*;
+@forward 'bitstyles/utilities/items/settings' as items-*;
+@forward 'bitstyles/utilities/justify/settings' as justify-*;
+@forward 'bitstyles/utilities/margin/settings' as margin-*;
+@forward 'bitstyles/utilities/padding/settings' as padding-*;
+@forward 'bitstyles/utilities/self/settings' as self-*;
+@forward 'bitstyles/utilities/sr-only/settings' as sr-only-*;
+@forward 'bitstyles/utilities/z-index/settings' as z-index-*;
 
 //
 // Generic ////////////////////////////////////
 
-@import 'bitstyles/generic/all';
+@use 'bitstyles/generic/box-sizing';
+@use 'bitstyles/generic/normalize';
+@use 'bitstyles/generic/reset';
 
 //
 // Base /////////////////////////////////////////
 
-@import 'bitstyles/base/all';
+@use 'bitstyles/base/anchor';
+@use 'bitstyles/base/figure';
+@use 'bitstyles/base/font-face';
+@use 'bitstyles/base/forms';
+@use 'bitstyles/base/images';
+@use 'bitstyles/base/input-checkbox';
+@use 'bitstyles/base/input-radio';
+@use 'bitstyles/base/input-text';
+@use 'bitstyles/base/select';
+@use 'bitstyles/base/typography' as base-typography;
 
 //
 // Atoms //////////////////////////////////////
 
-@import 'bitstyles/atoms/avatar/';
-@import 'bitstyles/atoms/badge/';
-@import 'bitstyles/atoms/bordered-header/';
-@import 'bitstyles/atoms/button/';
-@import 'bitstyles/atoms/button--danger/';
-@import 'bitstyles/atoms/button--icon/';
-@import 'bitstyles/atoms/button--icon-reversed/';
-@import 'bitstyles/atoms/button--menu/';
-@import 'bitstyles/atoms/button--mode/';
-@import 'bitstyles/atoms/button--nav/';
-@import 'bitstyles/atoms/button--nav-large/';
-@import 'bitstyles/atoms/button--small/';
-@import 'bitstyles/atoms/button--tab/';
-@import 'bitstyles/atoms/button--ui/';
-@import 'bitstyles/atoms/card/';
-@import 'bitstyles/atoms/content/';
-@import 'bitstyles/atoms/dl/';
-@import 'bitstyles/atoms/dropdown/';
-@import 'bitstyles/atoms/flash/';
-@import 'bitstyles/atoms/icon/';
-@import 'bitstyles/atoms/link/';
-@import 'bitstyles/atoms/list-reset/';
-@import 'bitstyles/atoms/topbar/';
+@use 'bitstyles/atoms/avatar';
+@use 'bitstyles/atoms/badge';
+@use 'bitstyles/atoms/bordered-header';
+@use 'bitstyles/atoms/button';
+@use 'bitstyles/atoms/button--danger';
+@use 'bitstyles/atoms/button--icon';
+@use 'bitstyles/atoms/button--icon-reversed';
+@use 'bitstyles/atoms/button--menu';
+@use 'bitstyles/atoms/button--mode';
+@use 'bitstyles/atoms/button--nav';
+@use 'bitstyles/atoms/button--nav-large';
+@use 'bitstyles/atoms/button--small';
+@use 'bitstyles/atoms/button--tab';
+@use 'bitstyles/atoms/button--ui';
+@use 'bitstyles/atoms/card';
+@use 'bitstyles/atoms/content';
+@use 'bitstyles/atoms/dl';
+@use 'bitstyles/atoms/dropdown';
+@use 'bitstyles/atoms/flash';
+@use 'bitstyles/atoms/icon';
+@use 'bitstyles/atoms/link';
+@use 'bitstyles/atoms/list-reset';
+@use 'bitstyles/atoms/topbar';
 
 //
 // Organisms ///////////////////////////////////
 
-@import 'bitstyles/organisms/modal/';
-@import 'bitstyles/organisms/navbar/';
-@import 'bitstyles/organisms/sidebar/';
-@import 'bitstyles/organisms/notification-center/';
-@import 'bitstyles/organisms/table/';
-@import 'bitstyles/organisms/ui-group/';
+@use 'bitstyles/organisms/modal';
+@use 'bitstyles/organisms/navbar';
+@use 'bitstyles/organisms/sidebar';
+@use 'bitstyles/organisms/notification-center';
+@use 'bitstyles/organisms/table';
+@use 'bitstyles/organisms/ui-group';
 
 //
 // Utilities ////////////////////////////////////
 
-@import 'bitstyles/utilities/absolute-center/';
-@import 'bitstyles/utilities/absolute-cover/';
-@import 'bitstyles/utilities/aspect-ratio/';
-@import 'bitstyles/utilities/bg/';
-@import 'bitstyles/utilities/border/';
-@import 'bitstyles/utilities/break-text/';
-@import 'bitstyles/utilities/clearfix/';
-@import 'bitstyles/utilities/col-span/';
-@import 'bitstyles/utilities/col-start/';
-@import 'bitstyles/utilities/display/';
-@import 'bitstyles/utilities/fg/';
-@import 'bitstyles/utilities/flex/';
-@import 'bitstyles/utilities/font/';
-@import 'bitstyles/utilities/gap/';
-@import 'bitstyles/utilities/grid-cols/';
-@import 'bitstyles/utilities/height/';
-@import 'bitstyles/utilities/items/';
-@import 'bitstyles/utilities/justify/';
-@import 'bitstyles/utilities/line-height/';
-@import 'bitstyles/utilities/margin/';
-@import 'bitstyles/utilities/object-cover/';
-@import 'bitstyles/utilities/outline/';
-@import 'bitstyles/utilities/overflow/';
-@import 'bitstyles/utilities/padding/';
-@import 'bitstyles/utilities/relative/';
-@import 'bitstyles/utilities/round/';
-@import 'bitstyles/utilities/self/';
-@import 'bitstyles/utilities/sr-only/';
-@import 'bitstyles/utilities/text/';
-@import 'bitstyles/utilities/truncate/';
-@import 'bitstyles/utilities/typography/';
-@import 'bitstyles/utilities/z-index/';
+@use 'bitstyles/utilities/absolute-center';
+@use 'bitstyles/utilities/absolute-cover';
+@use 'bitstyles/utilities/aspect-ratio';
+@use 'bitstyles/utilities/bg';
+@use 'bitstyles/utilities/border';
+@use 'bitstyles/utilities/break-text';
+@use 'bitstyles/utilities/clearfix';
+@use 'bitstyles/utilities/col-span';
+@use 'bitstyles/utilities/col-start';
+@use 'bitstyles/utilities/display';
+@use 'bitstyles/utilities/fg';
+@use 'bitstyles/utilities/flex';
+@use 'bitstyles/utilities/font';
+@use 'bitstyles/utilities/gap';
+@use 'bitstyles/utilities/grid-cols';
+@use 'bitstyles/utilities/height';
+@use 'bitstyles/utilities/items';
+@use 'bitstyles/utilities/justify';
+@use 'bitstyles/utilities/line-height';
+@use 'bitstyles/utilities/margin';
+@use 'bitstyles/utilities/object-cover';
+@use 'bitstyles/utilities/outline';
+@use 'bitstyles/utilities/overflow';
+@use 'bitstyles/utilities/padding';
+@use 'bitstyles/utilities/relative';
+@use 'bitstyles/utilities/round';
+@use 'bitstyles/utilities/self';
+@use 'bitstyles/utilities/sr-only';
+@use 'bitstyles/utilities/text';
+@use 'bitstyles/utilities/truncate';
+@use 'bitstyles/utilities/typography';
+@use 'bitstyles/utilities/z-index';

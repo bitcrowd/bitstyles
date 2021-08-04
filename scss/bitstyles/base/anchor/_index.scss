@@ -1,0 +1,8 @@
+@use '../../settings/link' as link2;
+@use '../../tools/link';
+
+/* stylelint-disable selector-max-type */
+a {
+  @include link.link;
+}
+/* stylelint-enable selector-max-type */

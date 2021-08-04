@@ -1,0 +1,20 @@
+@use './settings';
+@use '../../tools/directional-properties';
+@use '../../tools/media-query';
+
+@include directional-properties.output-properties(
+  $property-name: 'gap',
+  $classname-root: 'gap',
+  $values: settings.$sizes
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-properties(
+      $property-name: 'gap',
+      $classname-root: 'gap',
+      $values: settings.$sizes,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

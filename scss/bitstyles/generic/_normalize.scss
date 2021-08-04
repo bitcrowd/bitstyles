@@ -1,3 +1,5 @@
+@use '../tools/size';
+
 /* stylelint-disable */
 /*
   Based on cormalize.css 8.0.1.
@@ -173,7 +175,7 @@ button:-moz-focusring,
  */
 
 fieldset {
-  padding: spacing('m');
+  padding: size.get('m');
 }
 
 /**

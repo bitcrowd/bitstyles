@@ -1,0 +1,56 @@
+@use '../../settings/animation';
+@use '../../tools/palette';
+@use '../../tools/size';
+
+//
+// Base styles ////////////////////////////////////////
+
+$padding-vertical: size.get('s') !default;
+$padding-horizontal: size.get('m') !default;
+$border-radius: size.get('xs') !default;
+$transition:
+  color animation.$transition-duration animation.$transition-easing,
+  background-color animation.$transition-duration animation.$transition-easing,
+  border animation.$transition-duration animation.$transition-easing,
+  box-shadow animation.$transition-duration animation.$transition-easing !default;
+$icon-spacing: size.get('s') !default;
+
+//
+// Base colors ////////////////////////////////////////
+
+$color: palette.get('gray', '90') !default;
+$background-color: transparent !default;
+$border-color: transparent !default;
+$box-shadow: none !default;
+
+//
+// Hover colors ////////////////////////////////////////
+
+$color-hover: palette.get('gray', '90') !default;
+$background-color-hover: palette.get('white', '95') !default;
+$border-color-hover: palette.get('white', '95') !default;
+$box-shadow-hover: 0 0 size.get('m') rgba(palette.get('brand-1'), 0.1) !default;
+
+//
+// Active colors ////////////////////////////////////////
+
+$color-active: palette.get('white') !default;
+$background-color-active: palette.get('brand-2', '100') !default;
+$border-color-active: palette.get('brand-2', '100') !default;
+$box-shadow-active: 0 0 size.get('xs') rgba(palette.get('brand-1', '100'), 0.1) !default;
+
+//
+// Pressed colors ////////////////////////////////////////
+
+$color-pressed: palette.get('gray', '80') !default;
+$background-color-pressed: palette.get('white', '100') !default;
+$border-color-pressed: palette.get('white', '100') !default;
+$box-shadow-pressed: 0 0 size.get('s') rgba(palette.get('brand-1', '100'), 0.1) !default;
+
+//
+// Disabled colors ////////////////////////////////////////
+
+$color-disabled: palette.get('black', '50') !default;
+$background-color-disabled: palette.get('black', '10') !default;
+$border-color-disabled: palette.get('black', '10') !default;
+$box-shadow-disabled: none !default;

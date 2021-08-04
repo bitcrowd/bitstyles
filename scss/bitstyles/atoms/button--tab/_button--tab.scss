@@ -1,0 +1,83 @@
+@use './settings';
+@use '../../settings/animation';
+@use '../../settings/layout';
+@use '../../settings/setup';
+@use '../button/settings' as button-settings;
+
+.#{setup.$namespace}a-button--tab-container {
+  & > *:first-child {
+    margin-left: -(button-settings.$padding-horizontal);
+  }
+}
+
+.#{setup.$namespace}a-button--tab {
+  position: relative;
+  border: 0;
+  border-radius: settings.$border-radius;
+
+  &,
+  &:visited {
+    color: settings.$color;
+    background: settings.$background-color;
+    border: settings.$border;
+    box-shadow: settings.$box-shadow;
+
+    &::after {
+      position: absolute;
+      right: button-settings.$padding-horizontal;
+      bottom: 0;
+      left: button-settings.$padding-horizontal;
+      height: settings.$border-width;
+      background-color: settings.$indicator-color;
+      border-radius: layout.$border-radius-round;
+      content: '';
+      transition: background-color animation.$transition-duration animation.$transition-easing;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: settings.$color-hover;
+    background: settings.$background-color-hover;
+    border: settings.$border-hover;
+    box-shadow: settings.$box-shadow-hover;
+
+    &::after {
+      background-color: settings.$indicator-color-hover;
+    }
+  }
+
+  &:active {
+    color: settings.$color-active;
+    background: settings.$background-color-active;
+    border: settings.$border-active;
+    box-shadow: settings.$box-shadow-active;
+
+    &::after {
+      background-color: settings.$indicator-color-active;
+    }
+  }
+
+  &[aria-selected="true"],
+  &[aria-current] {
+    color: settings.$color-selected;
+    background: settings.$background-color-selected;
+    box-shadow: settings.$box-shadow-selected;
+
+    &::after {
+      background-color: settings.$indicator-color-selected;
+    }
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: settings.$color-disabled;
+    background: settings.$background-color-disabled;
+    border: settings.$border-disabled;
+    box-shadow: settings.$box-shadow-disabled;
+
+    &::after {
+      background-color: settings.$indicator-color-disabled;
+    }
+  }
+}

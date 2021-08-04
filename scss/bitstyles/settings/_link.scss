@@ -1,8 +1,11 @@
-$bitstyles-background-color-link: none !default;
-$bitstyles-color-link:            palette('brand-1', '80') !default;
-$bitstyles-color-link-visited:    palette('brand-1', '60') !default;
-$bitstyles-color-link-hover:      palette('brand-1', '100') !default;
-$bitstyles-background-color-link-hover: none !default;
-$bitstyles-link-transition: color $bitstyles-transition-duration $bitstyles-transition-easing !default;
-$bitstyles-text-decoration-link:       none !default;
-$bitstyles-text-decoration-link-hover: underline !default;
+@use '../tools/palette';
+@use 'animation';
+
+$background-color-link: none !default;
+$color-link:            palette.get('brand-1', '80') !default;
+$color-link-visited:    palette.get('brand-1', '60') !default;
+$color-link-hover:      palette.get('brand-1', '100') !default;
+$background-color-link-hover: none !default;
+$link-transition: color animation.$transition-duration animation.$transition-easing !default;
+$text-decoration-link:       none !default;
+$text-decoration-link-hover: underline !default;

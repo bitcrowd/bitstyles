@@ -13,6 +13,7 @@
 - The various `.u-flex-` classes are now available at the `m` breakpoint. The available breakpoints can be customized by overriding `$bitstyles-flex-breakpoints`
 - Adds `.u-flex-nowrap` and `.u-flex-row` classes
 - Adds `url-encode-color` function to our color tools, to encode hex colors correctly
+- The entire library is now compatible with the [Sass module system](https://sass-lang.com/blog/the-module-system-is-launched), and backwards compatibile with the existing Sass import system. This means you can import  the whole library or its parts with `@use`/`@forward` or `@import`, and override variables in all of the available ways. The functions and mixins are all available in both systems
 
 ## Changed
 
@@ -26,6 +27,9 @@
 ## Fixed
 
 - Selects now correctly display the icon specified as a background in Sass, even when postcss isn’t being used (note that you’ll have to deal with the prefixing of the `appearance` property, prefereably using autoprefixer)
+- `avatar` variables are now able to be overridden
+- All `dropdown` variables are now able to be overridden
+- All `ui-group` variables are now able to be overridden
 
 ## Breaking
 
@@ -33,6 +37,8 @@
 - Renamed `u-flex__grow-x` (where `x` is a number) to `u-flex-grow-x`
 - Renamed `u-flex--wrap` to `u-flex-wrap`
 - Renamed `u-flex--col` to `u-flex-col`
+- The `palette()` function has been renamed to `palette.get()`
+- The `spacing()` function has been renamed to `spacing.get()`
 
 # [[1.5.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v1.5.0) - 2021-06-28
 

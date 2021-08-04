@@ -1,0 +1,8 @@
+@use '../../tools/size';
+
+$sizes: (
+  's':     size.get('xs'),
+  'm':     size.get('m'),
+  'l':     size.get('l'),
+  'xl':     size.get('l') + size.get('xs'),
+) !default;
