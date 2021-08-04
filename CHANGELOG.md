@@ -13,7 +13,7 @@
 - The various `.u-flex-` classes are now available at the `m` breakpoint. The available breakpoints can be customized by overriding `$bitstyles-flex-breakpoints`
 - Adds `.u-flex-nowrap` and `.u-flex-row` classes
 - Adds `url-encode-color` function to our color tools, to encode hex colors correctly
-- The entire library is now compatible with the Sass module system, and backwards compatibile with the existing Sass import system. This means you can import  the whole library or its parts with `@use`/`@forward` or `@import`, and override variables in all of the available ways. The functions and mixins are all available in both systems
+- The entire library is now compatible with the [Sass module system](https://sass-lang.com/blog/the-module-system-is-launched), and backwards compatibile with the existing Sass import system. This means you can import  the whole library or its parts with `@use`/`@forward` or `@import`, and override variables in all of the available ways. The functions and mixins are all available in both systems
 
 ## Changed
 
