@@ -2,6 +2,8 @@
 @use 'sass:list';
 @use 'sass:string';
 
+/* stylelint-disable scss/dollar-variable-default */
+
 /*
  * Removes a value from a list
  *
@@ -141,3 +143,4 @@
     @content;
   }
 }
+/* stylelint-enable scss/dollar-variable-default */
