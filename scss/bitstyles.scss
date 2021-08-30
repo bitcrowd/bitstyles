@@ -3,11 +3,16 @@
 
 @forward 'bitstyles/settings/animation' as animation-*;
 @forward 'bitstyles/settings/breakpoints' as breakpoints-*;
-@forward 'bitstyles/settings/color-base' as color-base-*;
 @forward 'bitstyles/settings/color-palette' as color-palette-*;
 @forward 'bitstyles/settings/layout' as layout-*;
 @forward 'bitstyles/settings/setup' as setup-*;
 @forward 'bitstyles/settings/typography' as typography-*;
+
+//
+// Forwards: Tools /////////////////////////////////////
+
+@forward 'bitstyles/tools/palette' as palette-*;
+@forward 'bitstyles/tools/size' as size-*;
 
 //
 // Forwards: Base settings /////////////////////////////////////
