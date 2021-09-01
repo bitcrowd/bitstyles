@@ -3,7 +3,6 @@
 ## Fixed
 
 - All of the variables can now be overridden by users
-- Sizing of checkboxes & radios now works by setting the `$bitstyles-checkbox-size` and `$bitstyles-radio-size` variables respectively
 
 # [[3.0.0-rc.1]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0-rc.1) - 2021-08-13
 
