@@ -9,12 +9,6 @@
 @forward 'bitstyles/settings/typography' as typography-*;
 
 //
-// Forwards: Tools /////////////////////////////////////
-
-@forward 'bitstyles/tools/palette';
-@forward 'bitstyles/tools/size';
-
-//
 // Forwards: Base settings /////////////////////////////////////
 
 @forward 'bitstyles/base/figure/settings' as figure-*;
