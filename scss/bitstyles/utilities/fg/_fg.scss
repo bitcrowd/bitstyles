@@ -3,16 +3,16 @@
 @use '../../tools/media-query';
 
 @include directional-properties.output-properties(
-  $property-name: 'fg',
-  $classname-root: 'color',
+  $property-name: 'color',
+  $classname-root: 'fg',
   $values: settings.$values
 );
 
 @each $breakpoint-alias in settings.$breakpoints {
   @include media-query.media-query($breakpoint-alias) {
     @include directional-properties.output-properties(
-      $property-name: 'fg',
-      $classname-root: 'color',
+      $property-name: 'color',
+      $classname-root: 'fg',
       $values: settings.$values,
       $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );
