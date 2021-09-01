@@ -36,3 +36,22 @@ Set text-align properties on an element.
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The available text-align values can be customized by overriding the `$bitstyles-text-values` Sass variable:
+
+```scss
+$bitstyles-text-values: (
+  'left': left,
+  'right': right,
+  'center': center,
+  'justify': justify,
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-text-breakpoints` variable:
+
+```scss
+$bitstyles-text-breakpoints: ('m');
+```
