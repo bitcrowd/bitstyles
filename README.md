@@ -175,6 +175,14 @@ yarn
 
 It is recommended to use [yarn](https://yarnpkg.com/en/docs/install) instead of `npm install` to ensure version consistency across dependencies.
 
+### Linting
+
+This project uses [stylelint](https://github.com/stylelint/stylelint) to ensure code consistency. All PRs should be checked before merging:
+
+```sh
+yarn lint
+```
+
 ### Build
 
 To ensure your changes do not break the build, run
