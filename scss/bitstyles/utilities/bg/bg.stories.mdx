@@ -7,14 +7,79 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 Define which background colours you require in the `$background-colors` Sass list, using the colours as defined in `$bitstyles-palette`.
 
 <Canvas>
-  <Story name="Background">
+  <Story name="black-80">
     {`
-      <div class="u-bg--background">Some content here</div>
+      <div class="u-bg-black-80">u-bg-black-80</div>
     `}
   </Story>
-  <Story name="Brand 2">
+  <Story name="background">
     {`
-      <div class="u-bg--brand-2">Some content here</div>
+      <div class="u-bg-background">u-bg-background</div>
+    `}
+  </Story>
+  <Story name="white">
+    {`
+      <div class="u-bg-white">u-bg-white</div>
+    `}
+  </Story>
+  <Story name="brand-2">
+    {`
+      <div class="u-bg-brand-2">u-bg-brand-2</div>
+    `}
+  </Story>
+  <Story name="gray-90">
+    {`
+      <div class="u-bg-black-80">u-bg-black-80</div>
+    `}
+  </Story>
+  <Story name="gray-80">
+    {`
+      <div class="u-bg-gray-80">u-bg-gray-80</div>
+    `}
+  </Story>
+  <Story name="gray-50">
+    {`
+      <div class="u-bg-gray-50">u-bg-gray-50</div>
+    `}
+  </Story>
+  <Story name="gray-20">
+    {`
+      <div class="u-bg-gray-20">u-bg-gray-20</div>
+    `}
+  </Story>
+  <Story name="gray-10">
+    {`
+      <div class="u-bg-gray-10">u-bg-gray-10</div>
+    `}
+  </Story>
+  <Story name="gray-5">
+    {`
+      <div class="u-bg-gray-5">u-bg-gray-5</div>
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The available background-colors can be customized by overriding the `$bitstyles-bg-values` Sass variable:
+
+```scss
+$bitstyles-bg-values: (
+  'black-80': palette.get('black', '80'),
+  'background': palette.get('background'),
+  'white': palette.get('white'),
+  'brand-2': palette.get('brand-2', '100'),
+  'gray-90': palette.get('gray', '90'),
+  'gray-80': palette.get('gray', '80'),
+  'gray-50': palette.get('gray', '50'),
+  'gray-20': palette.get('gray', '20'),
+  'gray-10': palette.get('gray', '10'),
+  'gray-5': palette.get('gray', '5'),
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-bg-breakpoints`:
+
+```scss
+$bitstyles-bg-breakpoints: ('m', 'l');
+```

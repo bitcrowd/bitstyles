@@ -1,7 +1,20 @@
-@use '../../settings/setup';
+@use './settings';
+@use '../../tools/directional-properties';
+@use '../../tools/media-query';
 
-@each $position in ('left', 'right', 'center', 'justify') {
-  .#{setup.$namespace}u-text--#{$position} {
-    text-align: #{$position};
+@include directional-properties.output-properties(
+  $property-name: 'text-align',
+  $classname-root: 'text',
+  $values: settings.$values
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-properties(
+      $property-name: 'text-align',
+      $classname-root: 'text',
+      $values: settings.$values,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
   }
 }

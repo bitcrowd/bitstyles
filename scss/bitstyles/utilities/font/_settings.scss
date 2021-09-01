@@ -1,0 +1,14 @@
+@use '../../settings/typography';
+
+$weight-values: (
+  'light': typography.$font-weight-light,
+  'normal': typography.$font-weight-normal,
+  'medium': typography.$font-weight-medium,
+  'bold': typography.$font-weight-bold
+) !default;
+$weight-breakpoints: () !default;
+$style-values: (
+  'italic': italic,
+  'not-italic': normal
+) !default;
+$style-breakpoints: () !default;

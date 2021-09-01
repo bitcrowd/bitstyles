@@ -1,19 +1,20 @@
 @use './settings';
-@use '../../settings/setup';
+@use '../../tools/directional-properties';
 @use '../../tools/media-query';
 
-@each $classname, $value in (settings.$values) {
-  .#{setup.$namespace}u-#{$classname} {
-    display: #{$value};
-  }
-}
+@include directional-properties.output-properties(
+  $property-name: 'display',
+  $classname-root: null,
+  $values: settings.$values
+);
 
-@each $breakpoint in settings.$breakpoints {
-  @include media-query.media-query($breakpoint) {
-    @each $classname, $value in (settings.$values) {
-      .#{setup.$namespace}u-#{$classname}\@#{$breakpoint} {
-        display: #{$value};
-      }
-    }
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-properties(
+      $property-name: 'display',
+      $classname-root: null,
+      $values: settings.$values,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
   }
 }

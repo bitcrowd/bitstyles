@@ -4,7 +4,9 @@ $values: (
   'brand-1': palette.get('brand-1', '100'),
   'brand-2': palette.get('brand-2', '100'),
   'warning': palette.get('warning', '100'),
+  'white': palette.get('white', '100'),
   'gray-50': palette.get('gray', '50'),
   'gray-40': palette.get('gray', '40'),
   'gray-30': palette.get('gray', '30'),
 ) !default;
+$breakpoints: () !default;
