@@ -5,26 +5,27 @@ set -o nounset
 
 trap cleanup 1 2 15
 
+
+TEMP_FOLDER="./test/tmp"
+FIXTURES_FOLDER="./test/scss/fixtures"
+
 cleanup() {
-  rm -rf "$temp_folder"
+  rm -rf "$TEMP_FOLDER"
 }
 
-temp_folder="./test/tmp"
-fixtures_folder="./test/scss/fixtures"
+printf "\nGenerating CSS…\n"
 
-echo "\nGenerating CSS…\n"
+npx sass test/scss:$TEMP_FOLDER --style=compressed --no-source-map
+npx sass scss/bitstyles.scss:$TEMP_FOLDER/bitstyles.css --style=compressed --no-source-map
+npx postcss $TEMP_FOLDER/*.css --replace
+npx prettier --write $TEMP_FOLDER/*.css
 
-npx sass test/scss:$temp_folder --style=compressed --no-source-map
-npx sass scss/bitstyles.scss:$temp_folder/bitstyles.css --style=compressed --no-source-map
-npx postcss $temp_folder/*.css --replace
-npx prettier --write $temp_folder/*.css
+printf "\nComparing generated CSS against expected CSS…\n"
 
-echo "\nComparing generated CSS against expected CSS…\n"
-
-diff -u -w --from-file $fixtures_folder/bitstyles-overrides.css $temp_folder/test-import-all.css \
-&& diff -u -w --from-file $fixtures_folder/bitstyles-overrides.css $temp_folder/test-use-all.css \
-&& diff -u -w --from-file $fixtures_folder/bitstyles-overrides.css $temp_folder/test-import-each.css \
-&& diff -u -w --from-file $fixtures_folder/bitstyles.css $temp_folder/bitstyles.css
+diff -u -w --from-file $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-all.css \
+  && diff -u -w --from-file $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-use-all.css \
+  && diff -u -w --from-file $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-each.css \
+  && diff -u -w --from-file $FIXTURES_FOLDER/bitstyles.css $TEMP_FOLDER/bitstyles.css
 
 compare_result=$?
 
