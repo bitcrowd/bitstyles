@@ -6,8 +6,19 @@
   "rules": {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
-    "scss/dollar-variable-default": true,
+    "scss/dollar-variable-default": [
+      true,
+      {
+        "ignore": "local"
+      }
+    ],
     "scss/map-keys-quotes": "always",
-    "scss/no-duplicate-dollar-variables": true
+    "scss/no-duplicate-dollar-variables": [
+      true,
+      {
+        "ignoreInsideAtRules": ["if", "each"]
+      }
+    ],
+    "scss/at-import-partial-extension": "always"
   }
 }

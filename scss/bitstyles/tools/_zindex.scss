@@ -45,7 +45,7 @@
 //
 
 @function get($list, $element) {
-  $z-index: list.index($list, $element); // stylelint-disable-line scss/dollar-variable-default
+  $z-index: list.index($list, $element);
 
   @if $z-index {
     @return $z-index;

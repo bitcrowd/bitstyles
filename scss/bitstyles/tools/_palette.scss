@@ -13,7 +13,7 @@
 
 @function get($color, $percent: '100') {
   @if map.has-key(color-palette.$color-palette, $color) {
-    $palette: map.get(color-palette.$color-palette, $color); // stylelint-disable-line scss/dollar-variable-default
+    $palette: map.get(color-palette.$color-palette, $color);
 
     @if map.has-key($palette, $percent) {
       @return map.get($palette, $percent);

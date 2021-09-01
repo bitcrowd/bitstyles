@@ -18,10 +18,10 @@
 //
 
 @mixin _output-font-sizes($font-sizes, $prefix, $subset) {
-  $base-size: typography.$font-size-base-small; // stylelint-disable-line scss/dollar-variable-default
+  $base-size: typography.$font-size-base-small;
 
   @if map.has-key($font-sizes, 'html') {
-    $base-size: map.get($font-sizes, 'html'); // stylelint-disable-line scss/dollar-variable-default, scss/no-duplicate-dollar-variables
+    $base-size: map.get($font-sizes, 'html');
   }
 
   @each $element-name, $font-size in ($font-sizes) {

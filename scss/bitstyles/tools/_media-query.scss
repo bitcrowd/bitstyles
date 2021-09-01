@@ -24,8 +24,7 @@
 //
 
 @mixin media-query($media-query-name, $breakpoints: breakpoints.$breakpoints) {
-
-  $breakpoint-condition: map.get($breakpoints, $media-query-name); // stylelint-disable-line scss/dollar-variable-default
+  $breakpoint-condition: map.get($breakpoints, $media-query-name);
 
   @if ($breakpoint-condition) {
     @media #{$breakpoint-condition} {
