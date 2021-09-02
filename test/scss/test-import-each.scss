@@ -3,8 +3,68 @@
 
 $bitstyles-animation-transition-easing: ease-out;
 $bitstyles-breakpoints-breakpoint-boundary-width: 10em;
-$bitstyles-color-base-black: #f00;
+$bitstyles-color-palette-black: #f00;
 $bitstyles-color-palette-grays-hint-color: #f00;
+$bitstyles-color-palette-color-palette: (
+  'black': (
+    '10': #000,
+    '20': #000,
+    '30': #000,
+    '40': #000,
+    '50': #000,
+    '80': #000,
+    '100': #000,
+  ),
+  'white': (
+    '95': #000,
+    '100': #000,
+  ),
+  'gray': (
+    '1': #000,
+    '5': #000,
+    '10': #000,
+    '20': #000,
+    '30': #000,
+    '40': #000,
+    '50': #000,
+    '60': #000,
+    '70': #000,
+    '80': #000,
+    '90': #000,
+    '100': #000,
+  ),
+  'text': (
+    '80': #000,
+    '100': #000,
+  ),
+  'background': (
+    '100': #000,
+  ),
+  'brand-1': (
+    '10': #000,
+    '60': #000,
+    '70': #000,
+    '80': #000,
+    '90': #000,
+    '100': #000,
+  ),
+  'brand-2': (
+    '10': #000,
+    '100': #000,
+  ),
+  'danger': (
+    '10': #000,
+    '100': #000,
+  ),
+  'warning': (
+    '10': #000,
+    '90': #000,
+    '100': #000,
+  ),
+  'positive': (
+    '10': #000,
+  )
+);
 $bitstyles-layout-size-base: 10rem;
 $bitstyles-setup-namespace: 'bs';
 $bitstyles-typography-font-family-webfont: sans-serif;
@@ -59,7 +119,6 @@ $bitstyles-margin-breakpoints: ('xl', 's');
 
 @import '../../scss/bitstyles/settings/animation';
 @import '../../scss/bitstyles/settings/breakpoints';
-@import '../../scss/bitstyles/settings/color-base';
 @import '../../scss/bitstyles/settings/color-palette';
 @import '../../scss/bitstyles/settings/layout';
 @import '../../scss/bitstyles/settings/setup';

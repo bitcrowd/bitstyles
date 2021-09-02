@@ -6,6 +6,10 @@
 
 - All of the variables can now be overridden by users
 
+### Breaking
+
+- Removes `settings/color-base`, and merges its variables into `settings/color-palette`. If you’re already using the Sass module system, you’ll need to rename all variables containing `color-base` to `color-palette`
+
 ## [[3.0.0-rc.1]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0-rc.1) - 2021-08-13
 
 ### Added
