@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+
+trap cleanup 1 2 15
+
+
+TEMP_FOLDER="./test/tmp"
+FIXTURES_FOLDER="./test/scss/fixtures"
+
+cleanup() {
+  rm -rf "$TEMP_FOLDER"
+}
+
+printf "\nGenerating CSS…\n"
+
+npx sass test/scss:$TEMP_FOLDER --style=compressed --no-source-map
+npx sass scss/bitstyles.scss:$TEMP_FOLDER/bitstyles.css --style=compressed --no-source-map
+npx postcss $TEMP_FOLDER/*.css --replace
+npx prettier --write $TEMP_FOLDER/*.css
+
+printf "\nComparing generated CSS against expected CSS…\n"
+
+diff -u -w --from-file $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-all.css \
+  && diff -u -w --from-file $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-use-all.css \
+  && diff -u -w --from-file $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-each.css \
+  && diff -u -w --from-file $FIXTURES_FOLDER/bitstyles.css $TEMP_FOLDER/bitstyles.css
+
+compare_result=$?
+
+cleanup
+exit $compare_result
