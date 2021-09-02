@@ -6,7 +6,7 @@
 // Base styles ////////////////////////////////////////
 
 $border-radius: 0 !default;
-$border-width: size.get('xxs');
+$border-width: size.get('xxs') !default;
 $transition:
   color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing !default;

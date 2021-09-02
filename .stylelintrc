@@ -1,8 +1,24 @@
 {
   "extends": "stylelint-config-bitcrowd",
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
-    "at-rule-no-unknown": [ true, {
-      "ignoreAtRules": ["else", "include", "mixin", "if", "each", "function", "return", "error", "for", "warn", "use", "forward"]
-    }]
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-default": [
+      true,
+      {
+        "ignore": "local"
+      }
+    ],
+    "scss/map-keys-quotes": "always",
+    "scss/no-duplicate-dollar-variables": [
+      true,
+      {
+        "ignoreInsideAtRules": ["if", "each"]
+      }
+    ],
+    "scss/at-import-partial-extension": "always"
   }
 }

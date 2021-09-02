@@ -24,7 +24,6 @@
 //
 
 @mixin media-query($media-query-name, $breakpoints: breakpoints.$breakpoints) {
-
   $breakpoint-condition: map.get($breakpoints, $media-query-name);
 
   @if ($breakpoint-condition) {
