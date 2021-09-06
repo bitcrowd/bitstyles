@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## [[3.0.0-rc.2]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0-rc.2) - 2021-09-06
 
 ### Fixed
 
