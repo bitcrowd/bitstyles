@@ -160,7 +160,7 @@
   $color-hover: #000
 );
 @use '../../scss/bitstyles/atoms/card' with (
-  $padding: 10rem
+  $sizes: ('base': 10rem, 's': 20rem)
 );
 @use '../../scss/bitstyles/atoms/content' with (
   $max-width-base: 'full'

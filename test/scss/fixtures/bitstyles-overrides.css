@@ -1156,6 +1156,23 @@ table {
   box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
     0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
 }
+.bs-a-card__header {
+  margin: -10rem -10rem 10rem;
+  padding: 5rem 10rem;
+  background-color: #000;
+}
+.bs-a-card-s {
+  padding: 20rem;
+  overflow: hidden;
+  border-radius: 10rem;
+  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
+    0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+}
+.bs-a-card-s__header {
+  margin: -20rem -20rem 20rem;
+  padding: 10rem 20rem;
+  background-color: #000;
+}
 @media screen and (min-width: 30em) {
   .bs-a-card\@m {
     padding: 10rem;
@@ -1163,6 +1180,23 @@ table {
     border-radius: 10rem;
     box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
       0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+  }
+  .bs-a-card__header\@m {
+    margin: -10rem -10rem 10rem;
+    padding: 5rem 10rem;
+    background-color: #000;
+  }
+  .bs-a-card-s\@m {
+    padding: 20rem;
+    overflow: hidden;
+    border-radius: 10rem;
+    box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
+      0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+  }
+  .bs-a-card-s__header\@m {
+    margin: -20rem -20rem 20rem;
+    padding: 10rem 20rem;
+    background-color: #000;
   }
 }
 @media screen and (min-width: 55em) {
@@ -1172,6 +1206,23 @@ table {
     border-radius: 10rem;
     box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
       0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+  }
+  .bs-a-card__header\@l {
+    margin: -10rem -10rem 10rem;
+    padding: 5rem 10rem;
+    background-color: #000;
+  }
+  .bs-a-card-s\@l {
+    padding: 20rem;
+    overflow: hidden;
+    border-radius: 10rem;
+    box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
+      0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+  }
+  .bs-a-card-s__header\@l {
+    margin: -20rem -20rem 20rem;
+    padding: 10rem 20rem;
+    background-color: #000;
   }
 }
 .bsa-content {
@@ -1671,6 +1722,26 @@ table {
     grid-column: span 5 / span 5;
   }
   .bs-u-col-span-6\@m {
+    grid-column: span 6 / span 6;
+  }
+}
+@media screen and (min-width: 55em) {
+  .bs-u-col-span-1\@l {
+    grid-column: span 1 / span 1;
+  }
+  .bs-u-col-span-2\@l {
+    grid-column: span 2 / span 2;
+  }
+  .bs-u-col-span-3\@l {
+    grid-column: span 3 / span 3;
+  }
+  .bs-u-col-span-4\@l {
+    grid-column: span 4 / span 4;
+  }
+  .bs-u-col-span-5\@l {
+    grid-column: span 5 / span 5;
+  }
+  .bs-u-col-span-6\@l {
     grid-column: span 6 / span 6;
   }
 }
