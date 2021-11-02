@@ -12,15 +12,17 @@
 }
 
 @mixin card__header($spacing) {
-  margin: (- $spacing) (- $spacing) $spacing;
   padding: math.div($spacing, 2) $spacing;
+  margin: (- $spacing) (- $spacing) $spacing;
   background-color: settings.$header-background-color;
 }
 
 @function modifier-name($name) {
   @if $name == 'base' {
     @return '';
-  } @else {
+  }
+
+  @else {
     @return '-#{$name}';
   }
 }
