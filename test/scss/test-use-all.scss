@@ -103,5 +103,6 @@
   $table-color-th: #f00,
   $ui-group-border-radius: 10rem,
   // utilities
-  $margin-breakpoints: ('xl', 's')
+  $margin-breakpoints: ('xl', 's'),
+  $row-start-values: ('100': 100, '200': 200),
 );
