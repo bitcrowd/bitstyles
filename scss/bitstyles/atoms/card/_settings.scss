@@ -1,10 +1,14 @@
 @use '../../tools/palette';
 @use '../../tools/size';
 
-$padding: size.get('m') !default;
+$sizes: (
+  'base': size.get('m'),
+  'l': size.get('xl'),
+) !default;
 $border-radius: size.get('m') !default;
 $box-shadow:
   0 size.get('xs') size.get('m') rgba(palette.get('brand-1', '100'), 0.1),
   0 size.get('xxxs') size.get('xxs') rgba(palette.get('gray', '90'), 0.04),
   0 0 size.get('xxs') rgba(palette.get('gray', '90'), 0.1) !default;
 $breakpoints: ('m', 'l') !default;
+$header-background-color: palette.get('gray', '1') !default;

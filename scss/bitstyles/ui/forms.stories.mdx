@@ -37,8 +37,8 @@ Here are some examples using the grid utility classes to create common form layo
   <Story name="Login form">
     {`
       <div class="a-content a-content--s">
-        <form class="a-card@m u-padding-xl@m" method="POST" action="">
-          <h3>Login</h3>
+        <form class="a-card-l@m u-bg--white" method="POST" action="">
+          <h2>Login</h2>
           <ul class="a-list-reset u-margin-xl-bottom">
             <li class="u-margin-m-bottom">
               <label for="email">Email</label>
@@ -80,16 +80,16 @@ The `aria-describedby` attribute accepts a space-separated list of IDs, so if an
   <Story name="Login form with errors">
     {`
       <div class="a-content a-content--s">
-        <form class="a-card@m u-padding-xl@m" method="POST" action="">
-          <div class="u-padding-l-y u-margin-neg-m u-margin-neg-xl@m u-margin-l-bottom@m a-flash a-flash--warning" role="alert">
-            <div class="a-content u-flex u-items-center">
+        <form class="a-card-l@m u-bg--white" method="POST" action="">
+          <div class="a-card-l__header@m a-flash a-flash--warning" role="alert">
+            <div class="u-flex u-items-center">
               <svg width="14" height="14" class="a-icon a-icon--l u-flex-shrink-0 u-margin-m-right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                 <use xlink:href="${icons}#icon-exclamation"></use>
               </svg>
               There was a problem logging in
             </div>
           </div>
-          <h3>Login</h3>
+          <h2>Login</h2>
           <ul class="a-list-reset u-margin-xl-bottom">
             <li class="u-margin-m-bottom">
               <label for="email">Email</label>
@@ -126,8 +126,8 @@ This form has the commonly-required fields for creating an account. Note the wor
   <Story name="Sign up form">
     {`
       <div class="a-content a-content--s">
-        <form class="a-card@m u-padding-xl@m" method="POST" action="">
-          <h3>Create an account</h3>
+        <form class="a-card-l@m u-bg--white" method="POST" action="">
+          <h2>Create an account</h2>
           <ul class="a-list-reset u-margin-xl-bottom">
             <li class="u-margin-m-bottom">
               <label for="email">Email</label>

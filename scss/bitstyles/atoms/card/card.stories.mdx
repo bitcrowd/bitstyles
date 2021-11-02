@@ -4,26 +4,44 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Card
 
-A content wrapper that sections and subtly highlights a chunk of content. The default, small version is ideal for smaller chunks.
+A content wrapper that sections and subtly highlights a chunk of content. For larger cards, use the larger `l` size to give the content space to breathe.
 
 <Canvas>
   <Story name="Card">
     {`
     <div class="u-grid u-grid-cols-3@m u-gap-m">
       <article class="a-card">
-        <h3>Recent activity</h3>
+        <h3>Standard card</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
         </ul>
       </article>
       <article class="a-card">
-        <h3>Recent activity</h3>
+        <h3>Standard card</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
         </ul>
       </article>
       <article class="a-card">
-        <h3>Recent activity</h3>
+        <h3>Standard card</h3>
+        <ul class="a-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+    </div>
+    `}
+  </Story>
+  <Story name="Card-L">
+    {`
+    <div class="u-grid u-grid-cols-2@m u-gap-m">
+      <article class="a-card-l">
+        <h3>Large card</h3>
+        <ul class="a-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+      <article class="a-card-l">
+        <h3>Large card</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
         </ul>
@@ -33,32 +51,47 @@ A content wrapper that sections and subtly highlights a chunk of content. The de
   </Story>
 </Canvas>
 
+## Fullbleed headers
 
-For larger blocks of content, use a padding utility class to give the content more space to breathe:
+It is common to present important content edge-to-edge, using `.a-card__header`:
 
-<Canvas>
-  <Story name="Card [padding-m]">
+<Canvas isColumn>
+  <Story name="Card header">
     {`
-      <article class="a-card u-padding-xl">
-        <h3>Recent activity</h3>
+    <div class="u-grid u-grid-cols-2@m u-gap-m">
+      <article class="a-card">
+        <div class="a-card__header a-flash a-flash--danger">
+          Something happened
+        </div>
+        <h3>Card with header</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
-          <li>User one changed title to “In progress” [8 mins ago]</li>
-          <li>User one changed date to 01.01.2021 [3 days ago]</li>
-          <li>User one changed date to 01.01.2021 [5 weeks ago]</li>
-          <li>User one changed date to 01.01.2021 [1 month ago]</li>
         </ul>
       </article>
+    </div>
+    `}
+  </Story>
+  <Story name="Card-L header">
+    {`
+    <article class="a-card-l">
+      <div class="a-card-l__header a-flash a-flash--danger">
+        Something happened
+      </div>
+      <h3>Large card with header</h3>
+      <ul class="a-list-reset">
+        <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+      </ul>
+    </article>
     `}
   </Story>
 </Canvas>
 
 ## Responsive
 
-The `.a-card` classes are available at `m` and `l` breakpoints by default.
+The `.a-card` classes are available at `m` and `l` breakpoints by default, including all the sizes of card.
 
 <Canvas>
-  <Story name="a-card@m">
+  <Story name="Card [m breakpoint]">
     {`
       <article class="a-card@m">
         <h3>Recent activity (a-card@m)</h3>
@@ -68,9 +101,29 @@ The `.a-card` classes are available at `m` and `l` breakpoints by default.
       </article>
     `}
   </Story>
-  <Story name="a-card@l">
+  <Story name="Card [l breakpoint]">
     {`
       <article class="a-card@l">
+        <h3>Recent activity (a-card@l)</h3>
+        <ul class="a-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+    `}
+  </Story>
+  <Story name="Card-L [m breakpoint]">
+    {`
+      <article class="a-card-l@m">
+        <h3>Recent activity (a-card@m)</h3>
+        <ul class="a-list-reset">
+          <li>User one changed date to 01.01.2021 [5 mins ago]</li>
+        </ul>
+      </article>
+    `}
+  </Story>
+  <Story name="Card-L [l breakpoint]">
+    {`
+      <article class="a-card-l@l">
         <h3>Recent activity (a-card@l)</h3>
         <ul class="a-list-reset">
           <li>User one changed date to 01.01.2021 [5 mins ago]</li>
@@ -85,7 +138,10 @@ The `.a-card` classes are available at `m` and `l` breakpoints by default.
 Card appearance can be customized by overriding the following variables:
 
 ```scss
-$bitstyles-card-padding: spacing('m');
+$bitstyles-card-sizes: (
+  'base': spacing('m'),
+  'l': spacing('xl'),
+);
 $bitstyles-card-border-radius: spacing('m');
 $bitstyles-card-box-shadow:
   0 spacing('xs') spacing('m') rgba(palette('brand-1', '100'), 0.1),
