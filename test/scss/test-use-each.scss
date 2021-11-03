@@ -302,4 +302,8 @@
 @use '../../scss/bitstyles/utilities/text';
 @use '../../scss/bitstyles/utilities/truncate';
 @use '../../scss/bitstyles/utilities/typography';
-@use '../../scss/bitstyles/utilities/z-index';
+@use '../../scss/bitstyles/utilities/z-index' with (
+  $values: (
+    '100': 100,
+  )
+);

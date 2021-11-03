@@ -165,6 +165,9 @@ $bitstyles-self-values: (
   'start': start
 );
 $bitstyles-sr-only-breakpoints: ('xl');
+$bitstyles-z-index-values: (
+  '100': 100,
+);
 
 @import '../../scss/bitstyles/settings/animation';
 @import '../../scss/bitstyles/settings/breakpoints';
