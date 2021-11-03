@@ -147,5 +147,7 @@ $bitstyles-fg-values: (
 $bitstyles-flex-grow: (
   '100': 100
 );
-
+$bitstyles-gap-sizes: (
+  '100': 100rem
+);
 @import '../../scss/bitstyles';

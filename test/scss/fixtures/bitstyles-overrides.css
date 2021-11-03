@@ -1726,35 +1726,17 @@ table {
 .bsu-font--not-italic {
   font-style: normal;
 }
-.bs-u-gap-s {
-  gap: 7.5rem;
-}
-.bs-u-gap-m {
-  gap: 12.5rem;
-}
-.bs-u-gap-l {
-  gap: 20rem;
+.bs-u-gap-100 {
+  gap: 100rem;
 }
 @media screen and (min-width: 30em) {
-  .bs-u-gap-s\@m {
-    gap: 7.5rem;
-  }
-  .bs-u-gap-m\@m {
-    gap: 12.5rem;
-  }
-  .bs-u-gap-l\@m {
-    gap: 20rem;
+  .bs-u-gap-100\@m {
+    gap: 100rem;
   }
 }
 @media screen and (min-width: 95em) {
-  .bs-u-gap-s\@xl {
-    gap: 7.5rem;
-  }
-  .bs-u-gap-m\@xl {
-    gap: 12.5rem;
-  }
-  .bs-u-gap-l\@xl {
-    gap: 20rem;
+  .bs-u-gap-100\@xl {
+    gap: 100rem;
   }
 }
 .bs-u-grid-cols-2 {
