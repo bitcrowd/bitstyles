@@ -153,6 +153,9 @@ $bitstyles-gap-sizes: (
 $bitstyles-grid-cols-values: (
   '100': repeat(100, minmax(0, 1fr)),
 );
+$bitstyles-items-values: (
+  'start': start,
+);
 
 @import '../../scss/bitstyles/settings/animation';
 @import '../../scss/bitstyles/settings/breakpoints';

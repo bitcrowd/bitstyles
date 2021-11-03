@@ -1765,36 +1765,12 @@ table {
 .bsu-height-100vh {
   height: 100vh;
 }
-.bs-u-items-center {
-  align-items: center;
-}
-.bs-u-items-end {
-  align-items: flex-end;
-}
 .bs-u-items-start {
-  align-items: flex-start;
-}
-.bs-u-items-stretch {
-  align-items: stretch;
-}
-.bs-u-items-baseline {
-  align-items: baseline;
+  align-items: start;
 }
 @media screen and (min-width: 30em) {
-  .bs-u-items-center\@m {
-    align-items: center;
-  }
-  .bs-u-items-end\@m {
-    align-items: flex-end;
-  }
   .bs-u-items-start\@m {
-    align-items: flex-start;
-  }
-  .bs-u-items-stretch\@m {
-    align-items: stretch;
-  }
-  .bs-u-items-baseline\@m {
-    align-items: baseline;
+    align-items: start;
   }
 }
 .bs-u-justify-between {

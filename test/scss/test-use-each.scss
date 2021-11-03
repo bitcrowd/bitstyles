@@ -263,7 +263,11 @@
   )
 );
 @use '../../scss/bitstyles/utilities/height';
-@use '../../scss/bitstyles/utilities/items';
+@use '../../scss/bitstyles/utilities/items' with (
+  $values: (
+    'start': start,
+  )
+);
 @use '../../scss/bitstyles/utilities/justify';
 @use '../../scss/bitstyles/utilities/line-height';
 @use '../../scss/bitstyles/utilities/margin' with (
