@@ -226,7 +226,11 @@
 );
 @use '../../scss/bitstyles/utilities/break-text';
 @use '../../scss/bitstyles/utilities/clearfix';
-@use '../../scss/bitstyles/utilities/col-span';
+@use '../../scss/bitstyles/utilities/col-span' with (
+  $values: (
+    '100': span 100 / span 100
+  )
+);
 @use '../../scss/bitstyles/utilities/col-start';
 @use '../../scss/bitstyles/utilities/display';
 @use '../../scss/bitstyles/utilities/fg';

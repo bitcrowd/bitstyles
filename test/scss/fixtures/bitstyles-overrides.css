@@ -1602,102 +1602,27 @@ table {
   clear: both;
   content: '';
 }
-.bs-u-col-span-1 {
-  grid-column: span 1 / span 1;
-}
-.bs-u-col-span-2 {
-  grid-column: span 2 / span 2;
-}
-.bs-u-col-span-3 {
-  grid-column: span 3 / span 3;
-}
-.bs-u-col-span-4 {
-  grid-column: span 4 / span 4;
-}
-.bs-u-col-span-5 {
-  grid-column: span 5 / span 5;
-}
-.bs-u-col-span-6 {
-  grid-column: span 6 / span 6;
+.bs-u-col-span-100 {
+  grid-column: span 100 / span 100;
 }
 @media screen and (max-width: 20em) {
-  .bs-u-col-span-1\@s {
-    grid-column: span 1 / span 1;
-  }
-  .bs-u-col-span-2\@s {
-    grid-column: span 2 / span 2;
-  }
-  .bs-u-col-span-3\@s {
-    grid-column: span 3 / span 3;
-  }
-  .bs-u-col-span-4\@s {
-    grid-column: span 4 / span 4;
-  }
-  .bs-u-col-span-5\@s {
-    grid-column: span 5 / span 5;
-  }
-  .bs-u-col-span-6\@s {
-    grid-column: span 6 / span 6;
+  .bs-u-col-span-100\@s {
+    grid-column: span 100 / span 100;
   }
 }
 @media screen and (min-width: 30em) {
-  .bs-u-col-span-1\@m {
-    grid-column: span 1 / span 1;
-  }
-  .bs-u-col-span-2\@m {
-    grid-column: span 2 / span 2;
-  }
-  .bs-u-col-span-3\@m {
-    grid-column: span 3 / span 3;
-  }
-  .bs-u-col-span-4\@m {
-    grid-column: span 4 / span 4;
-  }
-  .bs-u-col-span-5\@m {
-    grid-column: span 5 / span 5;
-  }
-  .bs-u-col-span-6\@m {
-    grid-column: span 6 / span 6;
+  .bs-u-col-span-100\@m {
+    grid-column: span 100 / span 100;
   }
 }
 @media screen and (min-width: 55em) {
-  .bs-u-col-span-1\@l {
-    grid-column: span 1 / span 1;
-  }
-  .bs-u-col-span-2\@l {
-    grid-column: span 2 / span 2;
-  }
-  .bs-u-col-span-3\@l {
-    grid-column: span 3 / span 3;
-  }
-  .bs-u-col-span-4\@l {
-    grid-column: span 4 / span 4;
-  }
-  .bs-u-col-span-5\@l {
-    grid-column: span 5 / span 5;
-  }
-  .bs-u-col-span-6\@l {
-    grid-column: span 6 / span 6;
+  .bs-u-col-span-100\@l {
+    grid-column: span 100 / span 100;
   }
 }
 @media screen and (min-width: 95em) {
-  .bs-u-col-span-1\@xl {
-    grid-column: span 1 / span 1;
-  }
-  .bs-u-col-span-2\@xl {
-    grid-column: span 2 / span 2;
-  }
-  .bs-u-col-span-3\@xl {
-    grid-column: span 3 / span 3;
-  }
-  .bs-u-col-span-4\@xl {
-    grid-column: span 4 / span 4;
-  }
-  .bs-u-col-span-5\@xl {
-    grid-column: span 5 / span 5;
-  }
-  .bs-u-col-span-6\@xl {
-    grid-column: span 6 / span 6;
+  .bs-u-col-span-100\@xl {
+    grid-column: span 100 / span 100;
   }
 }
 .bs-u-col-start-1 {
