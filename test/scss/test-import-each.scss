@@ -164,6 +164,7 @@ $bitstyles-padding-breakpoints: ('xl', 's');
 $bitstyles-self-values: (
   'start': start
 );
+$bitstyles-sr-only-breakpoints: ('xl');
 
 @import '../../scss/bitstyles/settings/animation';
 @import '../../scss/bitstyles/settings/breakpoints';

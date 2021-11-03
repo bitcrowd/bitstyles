@@ -296,7 +296,9 @@
     'start': start
   )
 );
-@use '../../scss/bitstyles/utilities/sr-only';
+@use '../../scss/bitstyles/utilities/sr-only' with (
+  $breakpoints: ('xl'),
+);
 @use '../../scss/bitstyles/utilities/text';
 @use '../../scss/bitstyles/utilities/truncate';
 @use '../../scss/bitstyles/utilities/typography';
