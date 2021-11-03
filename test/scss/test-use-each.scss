@@ -206,7 +206,14 @@
 
 @use '../../scss/bitstyles/utilities/absolute-center';
 @use '../../scss/bitstyles/utilities/absolute-cover';
-@use '../../scss/bitstyles/utilities/aspect-ratio';
+@use '../../scss/bitstyles/utilities/aspect-ratio' with (
+  $values: (
+    '10-10': (
+      'width': 1,
+      'height': 1
+    )
+  )
+);
 @use '../../scss/bitstyles/utilities/bg';
 @use '../../scss/bitstyles/utilities/border';
 @use '../../scss/bitstyles/utilities/break-text';

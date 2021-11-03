@@ -115,6 +115,12 @@ $bitstyles-ui-group-border-radius: 10rem;
 //
 // Utilities settings /////////////////////////////////////
 
+$bitstyles-aspect-ratio-values: (
+  '10-10': (
+    'width': 1,
+    'height': 1
+  )
+);
 $bitstyles-margin-breakpoints: ('xl', 's');
 $bitstyles-row-start-values: (
   '100': 100,

@@ -1551,31 +1551,16 @@ table {
   bottom: 0;
   left: 0;
 }
-.bsu-aspect-ratio-1-1 {
+.bsu-aspect-ratio-10-10 {
   aspect-ratio: 1/1;
 }
 @supports not (aspect-ratio: 1/1) {
-  .bsu-aspect-ratio-1-1:before {
+  .bsu-aspect-ratio-10-10:before {
     float: left;
     padding-top: 100%;
     content: '';
   }
-  .bsu-aspect-ratio-1-1:after {
-    display: block;
-    clear: both;
-    content: '';
-  }
-}
-.bsu-aspect-ratio-16-9 {
-  aspect-ratio: 16/9;
-}
-@supports not (aspect-ratio: 16/9) {
-  .bsu-aspect-ratio-16-9:before {
-    float: left;
-    padding-top: 56.25%;
-    content: '';
-  }
-  .bsu-aspect-ratio-16-9:after {
+  .bsu-aspect-ratio-10-10:after {
     display: block;
     clear: both;
     content: '';
