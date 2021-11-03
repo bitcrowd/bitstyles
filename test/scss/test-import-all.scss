@@ -141,5 +141,8 @@ $bitstyles-row-start-values: (
   '100': 100,
   '200': 200
 );
+$bitstyles-fg-values: (
+  'f00': #f00,
+);
 
 @import '../../scss/bitstyles';

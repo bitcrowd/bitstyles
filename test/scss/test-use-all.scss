@@ -124,6 +124,9 @@
   $display-values: (
     'inline-block': 'inline-block',
   ),
+  $fg-values: (
+    'f00': #f00,
+  ),
   $margin-breakpoints: ('xl', 's'),
   $row-start-values: ('100': 100, '200': 200),
 );

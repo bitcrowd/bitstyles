@@ -241,7 +241,11 @@
     'inline-block': 'inline-block',
   )
 );
-@use '../../scss/bitstyles/utilities/fg';
+@use '../../scss/bitstyles/utilities/fg' with (
+  $values: (
+    'f00': #f00,
+  )
+);
 @use '../../scss/bitstyles/utilities/flex';
 @use '../../scss/bitstyles/utilities/font';
 @use '../../scss/bitstyles/utilities/gap';
