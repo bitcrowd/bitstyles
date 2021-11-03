@@ -156,5 +156,8 @@ $bitstyles-grid-cols-values: (
 $bitstyles-items-values: (
   'start': start,
 );
+$bitstyles-justify-values: (
+  'start': start,
+);
 
 @import '../../scss/bitstyles';

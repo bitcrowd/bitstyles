@@ -268,7 +268,11 @@
     'start': start,
   )
 );
-@use '../../scss/bitstyles/utilities/justify';
+@use '../../scss/bitstyles/utilities/justify' with (
+  $values: (
+    'start': start,
+  )
+);
 @use '../../scss/bitstyles/utilities/line-height';
 @use '../../scss/bitstyles/utilities/margin' with (
   $breakpoints: ('xl', 's')

@@ -1773,24 +1773,12 @@ table {
     align-items: start;
   }
 }
-.bs-u-justify-between {
-  justify-content: space-between;
-}
-.bs-u-justify-end {
-  justify-content: flex-end;
-}
 .bs-u-justify-start {
-  justify-content: flex-start;
+  justify-content: start;
 }
 @media screen and (min-width: 30em) {
-  .bs-u-justify-between\@m {
-    justify-content: space-between;
-  }
-  .bs-u-justify-end\@m {
-    justify-content: flex-end;
-  }
   .bs-u-justify-start\@m {
-    justify-content: flex-start;
+    justify-content: start;
   }
 }
 .bsu-line-height--min {
