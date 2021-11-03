@@ -257,7 +257,11 @@
     '100': 100rem
   )
 );
-@use '../../scss/bitstyles/utilities/grid-cols';
+@use '../../scss/bitstyles/utilities/grid-cols' with (
+  $values: (
+    '100': repeat(100, minmax(0, 1fr)),
+  )
+);
 @use '../../scss/bitstyles/utilities/height';
 @use '../../scss/bitstyles/utilities/items';
 @use '../../scss/bitstyles/utilities/justify';

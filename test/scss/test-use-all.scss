@@ -134,5 +134,8 @@
   ),
   $gap-sizes: (
     '100': 100rem
+  ),
+  $grid-cols-values: (
+    '100': repeat(100, minmax(0, 1fr)),
   )
 );
