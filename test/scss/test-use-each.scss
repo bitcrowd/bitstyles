@@ -231,7 +231,11 @@
     '100': span 100 / span 100
   )
 );
-@use '../../scss/bitstyles/utilities/col-start';
+@use '../../scss/bitstyles/utilities/col-start' with (
+  $values: (
+    '100': 100
+  )
+);
 @use '../../scss/bitstyles/utilities/display';
 @use '../../scss/bitstyles/utilities/fg';
 @use '../../scss/bitstyles/utilities/flex';
