@@ -236,7 +236,11 @@
     '100': 100
   )
 );
-@use '../../scss/bitstyles/utilities/display';
+@use '../../scss/bitstyles/utilities/display' with (
+  $values: (
+    'inline-block': 'inline-block',
+  )
+);
 @use '../../scss/bitstyles/utilities/fg';
 @use '../../scss/bitstyles/utilities/flex';
 @use '../../scss/bitstyles/utilities/font';

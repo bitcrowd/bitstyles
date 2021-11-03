@@ -1643,70 +1643,22 @@ table {
     grid-column-start: 100;
   }
 }
-.bsu-block {
-  display: block;
-}
-.bsu-grid {
-  display: grid;
-}
-.bsu-flex {
-  display: flex;
-}
-.bsu-inline-flex {
-  display: inline-flex;
-}
-.bsu-hidden {
-  display: none;
+.bsu-inline-block {
+  display: inline-block;
 }
 @media screen and (max-width: 20em) {
-  .bsu-block\@s {
-    display: block;
-  }
-  .bsu-grid\@s {
-    display: grid;
-  }
-  .bsu-flex\@s {
-    display: flex;
-  }
-  .bsu-inline-flex\@s {
-    display: inline-flex;
-  }
-  .bsu-hidden\@s {
-    display: none;
+  .bsu-inline-block\@s {
+    display: inline-block;
   }
 }
 @media screen and (min-width: 30em) {
-  .bsu-block\@m {
-    display: block;
-  }
-  .bsu-grid\@m {
-    display: grid;
-  }
-  .bsu-flex\@m {
-    display: flex;
-  }
-  .bsu-inline-flex\@m {
-    display: inline-flex;
-  }
-  .bsu-hidden\@m {
-    display: none;
+  .bsu-inline-block\@m {
+    display: inline-block;
   }
 }
 @media screen and (min-width: 55em) {
-  .bsu-block\@l {
-    display: block;
-  }
-  .bsu-grid\@l {
-    display: grid;
-  }
-  .bsu-flex\@l {
-    display: flex;
-  }
-  .bsu-inline-flex\@l {
-    display: inline-flex;
-  }
-  .bsu-hidden\@l {
-    display: none;
+  .bsu-inline-block\@l {
+    display: inline-block;
   }
 }
 .bsu-fg--brand-1 {
