@@ -1569,51 +1569,28 @@ table {
 .bsu-bg--f00 {
   background-color: red;
 }
-.bs-u-border-gray-70 {
-  border: 1px solid #000;
+.bs-u-border-f00 {
+  border: red;
 }
-.bs-u-border-gray-70-top {
-  border-top: 1px solid #000;
+.bs-u-border-f00-top {
+  border-top: red;
 }
-.bs-u-border-gray-70-right {
-  border-right: 1px solid #000;
+.bs-u-border-f00-right {
+  border-right: red;
 }
-.bs-u-border-gray-70-bottom {
-  border-bottom: 1px solid #000;
+.bs-u-border-f00-bottom {
+  border-bottom: red;
 }
-.bs-u-border-gray-70-left {
-  border-left: 1px solid #000;
+.bs-u-border-f00-left {
+  border-left: red;
 }
-.bs-u-border-gray-70-x {
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+.bs-u-border-f00-x {
+  border-left: red;
+  border-right: red;
 }
-.bs-u-border-gray-70-y {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-.bs-u-border-gray-10 {
-  border: 1px solid #000;
-}
-.bs-u-border-gray-10-top {
-  border-top: 1px solid #000;
-}
-.bs-u-border-gray-10-right {
-  border-right: 1px solid #000;
-}
-.bs-u-border-gray-10-bottom {
-  border-bottom: 1px solid #000;
-}
-.bs-u-border-gray-10-left {
-  border-left: 1px solid #000;
-}
-.bs-u-border-gray-10-x {
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
-}
-.bs-u-border-gray-10-y {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+.bs-u-border-f00-y {
+  border-top: red;
+  border-bottom: red;
 }
 .bsu-break-text {
   overflow-wrap: break-word;

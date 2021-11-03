@@ -219,7 +219,11 @@
     'f00': #f00,
   )
 );
-@use '../../scss/bitstyles/utilities/border';
+@use '../../scss/bitstyles/utilities/border' with (
+  $values: (
+    'f00': #f00,
+  )
+);
 @use '../../scss/bitstyles/utilities/break-text';
 @use '../../scss/bitstyles/utilities/clearfix';
 @use '../../scss/bitstyles/utilities/col-span';
