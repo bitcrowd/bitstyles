@@ -3381,12 +3381,12 @@ table {
     grid-row-start: 200;
   }
 }
-.bs-u-self-end {
-  align-self: flex-end;
+.bs-u-self-start {
+  align-self: start;
 }
 @media screen and (min-width: 30em) {
-  .bs-u-self-end\@m {
-    align-self: flex-end;
+  .bs-u-self-start\@m {
+    align-self: start;
   }
 }
 .bsu-sr-only {

@@ -291,7 +291,11 @@
     '200': 200
   )
 );
-@use '../../scss/bitstyles/utilities/self';
+@use '../../scss/bitstyles/utilities/self' with (
+  $values: (
+    'start': start
+  )
+);
 @use '../../scss/bitstyles/utilities/sr-only';
 @use '../../scss/bitstyles/utilities/text';
 @use '../../scss/bitstyles/utilities/truncate';

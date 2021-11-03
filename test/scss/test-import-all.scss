@@ -161,5 +161,8 @@ $bitstyles-justify-values: (
 );
 $bitstyles-margin-breakpoints: ('xl', 's');
 $bitstyles-padding-breakpoints: ('xl', 's');
+$bitstyles-self-values: (
+  'start': start
+);
 
 @import '../../scss/bitstyles';
