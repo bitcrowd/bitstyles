@@ -280,7 +280,9 @@
 @use '../../scss/bitstyles/utilities/object-cover';
 @use '../../scss/bitstyles/utilities/outline';
 @use '../../scss/bitstyles/utilities/overflow';
-@use '../../scss/bitstyles/utilities/padding';
+@use '../../scss/bitstyles/utilities/padding' with (
+  $breakpoints: ('xl', 's')
+);
 @use '../../scss/bitstyles/utilities/relative';
 @use '../../scss/bitstyles/utilities/round';
 @use '../../scss/bitstyles/utilities/row-start' with (
