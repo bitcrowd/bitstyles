@@ -1676,11 +1676,8 @@ table {
 .bs-u-flex-row {
   flex-direction: row;
 }
-.bs-u-flex-grow-0 {
-  flex-grow: 0;
-}
-.bs-u-flex-grow-1 {
-  flex-grow: 1;
+.bs-u-flex-grow-100 {
+  flex-grow: 100;
 }
 .bs-u-flex-shrink-0 {
   flex-shrink: 0;
@@ -1701,11 +1698,8 @@ table {
   .bs-u-flex-row\@m {
     flex-direction: row;
   }
-  .bs-u-flex-grow-0\@m {
-    flex-grow: 0;
-  }
-  .bs-u-flex-grow-1\@m {
-    flex-grow: 1;
+  .bs-u-flex-grow-100\@m {
+    flex-grow: 100;
   }
   .bs-u-flex-shrink-0\@m {
     flex-shrink: 0;

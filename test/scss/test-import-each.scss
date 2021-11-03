@@ -144,6 +144,9 @@ $bitstyles-row-start-values: (
   '100': 100,
   '200': 200
 );
+$bitstyles-flex-grow: (
+  '100': 100
+);
 
 @import '../../scss/bitstyles/settings/animation';
 @import '../../scss/bitstyles/settings/breakpoints';

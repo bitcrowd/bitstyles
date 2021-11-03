@@ -144,5 +144,8 @@ $bitstyles-row-start-values: (
 $bitstyles-fg-values: (
   'f00': #f00,
 );
+$bitstyles-flex-grow: (
+  '100': 100
+);
 
 @import '../../scss/bitstyles';

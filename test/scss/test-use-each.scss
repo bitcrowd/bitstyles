@@ -246,7 +246,11 @@
     'f00': #f00,
   )
 );
-@use '../../scss/bitstyles/utilities/flex';
+@use '../../scss/bitstyles/utilities/flex' with (
+  $grow: (
+    '100': 100
+  )
+);
 @use '../../scss/bitstyles/utilities/font';
 @use '../../scss/bitstyles/utilities/gap';
 @use '../../scss/bitstyles/utilities/grid-cols';
