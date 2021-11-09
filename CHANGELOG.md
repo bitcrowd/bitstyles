@@ -6,10 +6,12 @@
 
 - Padding for `.a-card`s is specifiable with the `$bitstyles-card-sizes` Sass variable. By default there is a base size, and a large size
 - A new `.a-card__header` element allows edge-to-edge header sections for cards of all sizes
+- Adds row-start utility classes `.u-row-start-x` where `x` is a number, to specify which row an element should start in
 
 ### Fixed
 
 - `.u-col-span-` and `.u-col-start-` classes are available at `@l` breakpoint again. Fixes the complex form example
+- `$bitstyles-col-span-breakpoints` variable has been corrected to `$bitstyles-col-start-breakpoints`. If you were using this variable, you’ll need to rename it
 
 ### Breaking
 

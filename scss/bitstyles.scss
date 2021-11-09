@@ -68,6 +68,7 @@
 @forward 'bitstyles/utilities/justify/settings' as justify-*;
 @forward 'bitstyles/utilities/margin/settings' as margin-*;
 @forward 'bitstyles/utilities/padding/settings' as padding-*;
+@forward 'bitstyles/utilities/row-start/settings' as row-start-*;
 @forward 'bitstyles/utilities/self/settings' as self-*;
 @forward 'bitstyles/utilities/sr-only/settings' as sr-only-*;
 @forward 'bitstyles/utilities/z-index/settings' as z-index-*;
@@ -159,6 +160,7 @@
 @use 'bitstyles/utilities/padding';
 @use 'bitstyles/utilities/relative';
 @use 'bitstyles/utilities/round';
+@use 'bitstyles/utilities/row-start';
 @use 'bitstyles/utilities/self';
 @use 'bitstyles/utilities/sr-only';
 @use 'bitstyles/utilities/text';

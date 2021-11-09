@@ -232,6 +232,12 @@
 @use '../../scss/bitstyles/utilities/padding';
 @use '../../scss/bitstyles/utilities/relative';
 @use '../../scss/bitstyles/utilities/round';
+@use '../../scss/bitstyles/utilities/row-start' with (
+  $values: (
+    '100': 100,
+    '200': 200
+  )
+);
 @use '../../scss/bitstyles/utilities/self';
 @use '../../scss/bitstyles/utilities/sr-only';
 @use '../../scss/bitstyles/utilities/text';

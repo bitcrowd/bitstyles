@@ -116,5 +116,9 @@ $bitstyles-ui-group-border-radius: 10rem;
 // Utilities settings /////////////////////////////////////
 
 $bitstyles-margin-breakpoints: ('xl', 's');
+$bitstyles-row-start-values: (
+  '100': 100,
+  '200': 200
+);
 
 @import '../../scss/bitstyles';
