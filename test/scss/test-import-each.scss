@@ -139,11 +139,6 @@ $bitstyles-display-values: (
 $bitstyles-fg-values: (
   'f00': #f00,
 );
-$bitstyles-margin-breakpoints: ('xl', 's');
-$bitstyles-row-start-values: (
-  '100': 100,
-  '200': 200
-);
 $bitstyles-flex-grow: (
   '100': 100
 );
@@ -161,6 +156,10 @@ $bitstyles-justify-values: (
 );
 $bitstyles-margin-breakpoints: ('xl', 's');
 $bitstyles-padding-breakpoints: ('xl', 's');
+$bitstyles-row-start-values: (
+  '100': 100,
+  '200': 200
+);
 $bitstyles-self-values: (
   'start': start
 );
