@@ -115,10 +115,57 @@ $bitstyles-ui-group-border-radius: 10rem;
 //
 // Utilities settings /////////////////////////////////////
 
+$bitstyles-aspect-ratio-values: (
+  '10-10': (
+    'width': 1,
+    'height': 1
+  )
+);
+$bitstyles-bg-values: (
+  'f00': #f00,
+);
+$bitstyles-border-values: (
+  'f00': #f00,
+);
+$bitstyles-col-span-values: (
+  '100': span 100 / span 100
+);
+$bitstyles-col-start-values: (
+  '100': 100
+);
+$bitstyles-display-values: (
+  'inline-block': 'inline-block',
+);
+$bitstyles-fg-values: (
+  'f00': #f00,
+);
+$bitstyles-flex-grow: (
+  '100': 100
+);
+$bitstyles-gap-sizes: (
+  '100': 100rem
+);
+$bitstyles-grid-cols-values: (
+  '100': repeat(100, minmax(0, 1fr)),
+);
+$bitstyles-items-values: (
+  'start': start,
+);
+$bitstyles-justify-values: (
+  'start': start,
+);
 $bitstyles-margin-breakpoints: ('xl', 's');
+$bitstyles-padding-breakpoints: ('xl', 's');
 $bitstyles-row-start-values: (
   '100': 100,
   '200': 200
+);
+$bitstyles-self-values: (
+  'start': start
+);
+$bitstyles-sr-only-breakpoints: ('xl');
+$bitstyles-z-index-values: (
+  '100': 100,
 );
 
 @import '../../scss/bitstyles';

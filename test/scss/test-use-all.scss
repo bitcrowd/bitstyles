@@ -103,6 +103,53 @@
   $table-color-th: #f00,
   $ui-group-border-radius: 10rem,
   // utilities
+  $aspect-ratio-values: (
+    '10-10': (
+      'width': 1,
+      'height': 1
+    )
+  ),
+  $bg-values: (
+    'f00': #f00,
+  ),
+  $border-values: (
+    'f00': #f00,
+  ),
+  $col-span-values: (
+    '100': span 100 / span 100
+  ),
+  $col-start-values: (
+    '100': 100
+  ),
+  $display-values: (
+    'inline-block': 'inline-block',
+  ),
+  $fg-values: (
+    'f00': #f00,
+  ),
+  $flex-grow: (
+    '100': 100
+  ),
+  $gap-sizes: (
+    '100': 100rem
+  ),
+  $grid-cols-values: (
+    '100': repeat(100, minmax(0, 1fr)),
+  ),
+  $items-values: (
+    'start': start,
+  ),
+  $justify-values: (
+    'start': start,
+  ),
   $margin-breakpoints: ('xl', 's'),
+  $padding-breakpoints: ('xl', 's'),
   $row-start-values: ('100': 100, '200': 200),
+  $self-values: (
+    'start': start
+  ),
+  $sr-only-breakpoints: ('xl'),
+  $z-index-values: (
+    '100': 100,
+  )
 );

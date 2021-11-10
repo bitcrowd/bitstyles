@@ -206,22 +206,73 @@
 
 @use '../../scss/bitstyles/utilities/absolute-center';
 @use '../../scss/bitstyles/utilities/absolute-cover';
-@use '../../scss/bitstyles/utilities/aspect-ratio';
-@use '../../scss/bitstyles/utilities/bg';
-@use '../../scss/bitstyles/utilities/border';
+@use '../../scss/bitstyles/utilities/aspect-ratio' with (
+  $values: (
+    '10-10': (
+      'width': 1,
+      'height': 1
+    )
+  )
+);
+@use '../../scss/bitstyles/utilities/bg' with (
+  $values: (
+    'f00': #f00,
+  )
+);
+@use '../../scss/bitstyles/utilities/border' with (
+  $values: (
+    'f00': #f00,
+  )
+);
 @use '../../scss/bitstyles/utilities/break-text';
 @use '../../scss/bitstyles/utilities/clearfix';
-@use '../../scss/bitstyles/utilities/col-span';
-@use '../../scss/bitstyles/utilities/col-start';
-@use '../../scss/bitstyles/utilities/display';
-@use '../../scss/bitstyles/utilities/fg';
-@use '../../scss/bitstyles/utilities/flex';
+@use '../../scss/bitstyles/utilities/col-span' with (
+  $values: (
+    '100': span 100 / span 100
+  )
+);
+@use '../../scss/bitstyles/utilities/col-start' with (
+  $values: (
+    '100': 100
+  )
+);
+@use '../../scss/bitstyles/utilities/display' with (
+  $values: (
+    'inline-block': 'inline-block',
+  )
+);
+@use '../../scss/bitstyles/utilities/fg' with (
+  $values: (
+    'f00': #f00,
+  )
+);
+@use '../../scss/bitstyles/utilities/flex' with (
+  $grow: (
+    '100': 100
+  )
+);
 @use '../../scss/bitstyles/utilities/font';
-@use '../../scss/bitstyles/utilities/gap';
-@use '../../scss/bitstyles/utilities/grid-cols';
+@use '../../scss/bitstyles/utilities/gap' with (
+  $sizes: (
+    '100': 100rem
+  )
+);
+@use '../../scss/bitstyles/utilities/grid-cols' with (
+  $values: (
+    '100': repeat(100, minmax(0, 1fr)),
+  )
+);
 @use '../../scss/bitstyles/utilities/height';
-@use '../../scss/bitstyles/utilities/items';
-@use '../../scss/bitstyles/utilities/justify';
+@use '../../scss/bitstyles/utilities/items' with (
+  $values: (
+    'start': start,
+  )
+);
+@use '../../scss/bitstyles/utilities/justify' with (
+  $values: (
+    'start': start,
+  )
+);
 @use '../../scss/bitstyles/utilities/line-height';
 @use '../../scss/bitstyles/utilities/margin' with (
   $breakpoints: ('xl', 's')
@@ -229,7 +280,9 @@
 @use '../../scss/bitstyles/utilities/object-cover';
 @use '../../scss/bitstyles/utilities/outline';
 @use '../../scss/bitstyles/utilities/overflow';
-@use '../../scss/bitstyles/utilities/padding';
+@use '../../scss/bitstyles/utilities/padding' with (
+  $breakpoints: ('xl', 's')
+);
 @use '../../scss/bitstyles/utilities/relative';
 @use '../../scss/bitstyles/utilities/round';
 @use '../../scss/bitstyles/utilities/row-start' with (
@@ -238,9 +291,19 @@
     '200': 200
   )
 );
-@use '../../scss/bitstyles/utilities/self';
-@use '../../scss/bitstyles/utilities/sr-only';
+@use '../../scss/bitstyles/utilities/self' with (
+  $values: (
+    'start': start
+  )
+);
+@use '../../scss/bitstyles/utilities/sr-only' with (
+  $breakpoints: ('xl'),
+);
 @use '../../scss/bitstyles/utilities/text';
 @use '../../scss/bitstyles/utilities/truncate';
 @use '../../scss/bitstyles/utilities/typography';
-@use '../../scss/bitstyles/utilities/z-index';
+@use '../../scss/bitstyles/utilities/z-index' with (
+  $values: (
+    '100': 100,
+  )
+);
