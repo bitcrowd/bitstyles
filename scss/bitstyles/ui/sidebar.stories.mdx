@@ -130,7 +130,6 @@ Uses a fullwidth dropdown to fit with no overlap.
                 x-transition:leave-start="is-on-screen"
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
-                :aria-hidden="!dropdownOpen"
               >
                 <li>
                   <a href="/" class="a-button a-button--menu u-h6">
@@ -256,7 +255,6 @@ Uses a fullwidth dropdown to fit with no overlap.
               <ul
                 x-show="dropdownOpen"
                 @click.away="dropdownOpen = false"
-                :aria-hidden="!dropdownOpen"
                 id="dropdown-4"
                 class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow--y a-list-reset u-margin-s-bottom"
               >
