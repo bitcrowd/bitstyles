@@ -15,6 +15,10 @@
 - `.u-col-span-` and `.u-col-start-` classes are available at `@l` breakpoint again. Fixes the complex form example
 - `$bitstyles-col-span-breakpoints` variable has been corrected to `$bitstyles-col-start-breakpoints`. If you were using this variable, you’ll need to rename it
 
+### Changed
+
+- `dl` examples are now aligned to the baseline, using the `u-items-baseline` class. Update `dl` classnames in your project to match
+
 ### Breaking
 
 - As `.a-card` elements now set their own padding, remove any utility padding classes. If the padding does not match your requirements, it can be customized using the cards’ sass variables
