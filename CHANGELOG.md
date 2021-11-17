@@ -1,9 +1,11 @@
 # Changelog
 
-## Unreleased
+## [[3.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-11-17
 
 ### Added
 
+- The entire library is now compatible with the [Sass module system](https://sass-lang.com/blog/the-module-system-is-launched), and backwards compatibile with the existing Sass import system. This means you can import  the whole library or its parts with `@use`/`@forward` or `@import`, and override variables in all of the available ways. The functions and mixins are all available in both systems
+- The breakpoints at which `.a-card` is output can now be specified with the `$bitstyles-card-breakpoints` Sass variable. Default is at `m`, and `l` breakpoints
 - Padding for `.a-card`s is specifiable with the `$bitstyles-card-sizes` Sass variable. By default there is a base size, and a large size
 - A new `.a-card__header` element allows edge-to-edge header sections for cards of all sizes
 - Adds row-start utility classes `.u-row-start-x` where `x` is a number, to specify which row an element should start in
@@ -17,26 +19,7 @@
 
 - As `.a-card` elements now set their own padding, remove any utility padding classes. If the padding does not match your requirements, it can be customized using the cards’ sass variables
 - If you output any flashes or other content at the top of an `.a-card` element using negative-margin utility classes to cancel out the padding, these classes should now be replaced with the `.a-card__header` class
-
-## [[3.0.0-rc.2]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0-rc.2) - 2021-09-06
-
-### Added
-
-- The breakpoints at which `.a-card` is output can now be specified with the `$bitstyles-card-breakpoints` Sass variable. Default is at `m`, and `l` breakpoints
-
-### Fixed
-
-- All of the variables can now be overridden by users
-
-### Breaking
-
 - Removes `settings/color-base`, and merges its variables into `settings/color-palette`. If you’re already using the Sass module system, you’ll need to rename all variables containing `color-base` to `color-palette`
-
-## [[3.0.0-rc.1]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0-rc.1) - 2021-08-13
-
-### Added
-
-- The entire library is now compatible with the [Sass module system](https://sass-lang.com/blog/the-module-system-is-launched), and backwards compatibile with the existing Sass import system. This means you can import  the whole library or its parts with `@use`/`@forward` or `@import`, and override variables in all of the available ways. The functions and mixins are all available in both systems
 
 ## [[2.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v2.0.0) - 2021-07-22
 
