@@ -6,6 +6,14 @@
 
 - The `border-width` and `border-style` are no longer hardcoded in the dropdown separator styles. The existing default value for the `$separator-border` variable already set those properties, so you so not need to change anything unless you override that variable in your project. This fixes the issue of an invalid `border` property when your build does not get automatically fixed by the build tools (in the case of bitstyles, postcss was correcting the border property)
 
+### Changed
+
+- `dl` examples are now aligned to the baseline, using the `u-items-baseline` class. Update `dl` classnames in your project to match
+
+### Breaking
+
+- `img` and `iframe` now default to `display: block`. Use the utility class `u-inline` if you need to replace the old behavior
+
 ## [[3.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-11-17
 
 ### Added
@@ -20,10 +28,6 @@
 
 - `.u-col-span-` and `.u-col-start-` classes are available at `@l` breakpoint again. Fixes the complex form example
 - `$bitstyles-col-span-breakpoints` variable has been corrected to `$bitstyles-col-start-breakpoints`. If you were using this variable, you’ll need to rename it
-
-### Changed
-
-- `dl` examples are now aligned to the baseline, using the `u-items-baseline` class. Update `dl` classnames in your project to match
 
 ### Breaking
 
