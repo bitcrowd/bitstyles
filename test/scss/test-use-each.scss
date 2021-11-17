@@ -78,7 +78,7 @@
   $namespace: 'bs'
 );
 @use '../../scss/bitstyles/settings/typography' as settings-typography with (
-  $font-family-webfont: sans-serif
+  $webfont-family-name: 'FakeFont'
 );
 
 //
