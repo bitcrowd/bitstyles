@@ -20,7 +20,7 @@
 
   [role="separator"] {
     margin: settings.$separator-spacing 0;
-    border-top: 1px solid settings.$separator-border;
+    border-top: settings.$separator-border;
   }
 
   @include media-query.media-query('motion-ok') {
