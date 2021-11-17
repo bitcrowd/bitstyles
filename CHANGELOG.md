@@ -9,6 +9,7 @@
 ### Changed
 
 - `dl` examples are now aligned to the baseline, using the `u-items-baseline` class. Update `dl` classnames in your project to match
+- `$font-family-webfont` is now `$webfont-family-name`, if you’ve overrideen this variable, you will need to rename it. The variable should now only contain the filename (no filename extansions, as before), as the path to your fonts is set with the `$webfont-base-url` variable (defaults to `../assets/fonts/`). If you host your fonts in a different location, you can change this value to match
 
 ### Breaking
 
