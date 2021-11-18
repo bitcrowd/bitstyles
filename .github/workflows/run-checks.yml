@@ -1,0 +1,18 @@
+name: Run linting & tests
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Lint 👀
+        run: |
+          yarn
+          yarn lint
+
+      - name: Test 🚀
+        run: |
+          yarn
+          yarn test
