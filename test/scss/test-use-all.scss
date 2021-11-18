@@ -2,7 +2,7 @@
 @use '../../scss/bitstyles' with (
   // global settings
   $animation-transition-easing: ease-out,
-  $breakpoints-breakpoint-boundary-width: 10em,
+  $breakpoints-boundary-width: 10em,
   $color-palette-black: #f00,
   $color-palette-grays-hint-color: #f00,
   $color-palette-color-palette: (

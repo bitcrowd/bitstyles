@@ -25,6 +25,7 @@
 - `img` and `iframe` now default to `display: block`. Use the utility class `u-inline` if you need to replace the old behavior
 - The default margin for paragraphs is now `0`. Use the `$margin-paragraph` variable in typography settings to change this, or use margin utility classes on the HTML elements
 - Variable names for links have changed — the word `link` is now omitted, resulting in e.g. `$color-link` becoming `$color`, `$link-color`, or `$bitstyles-link-color`, and `$color-link-hover` becoming `$color-hover`, `$link-color-hover`, or `$bitstyles-link-color-hover`, depending on how you use bitstyles
+- Variable names for breakpoints have changed — the word `breakpoint` is now omittted, resulting in e.g. `$breakpoint-boundary-width` becoming `$boundary-width`, `$breakpoints-boundary-width`, or `$bitstyles-breakpoint-boundary-width`, depending on how you use bitstyles
 
 ## [[3.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-11-17
 
