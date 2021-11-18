@@ -88,9 +88,6 @@ button::-moz-focus-inner {
 button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
-fieldset {
-  padding: 0.8rem;
-}
 legend {
   box-sizing: border-box;
   display: table;
@@ -648,7 +645,7 @@ h6 {
   }
 }
 p {
-  margin: 0 0 0.8rem;
+  margin: 0;
 }
 address {
   font-style: normal;
