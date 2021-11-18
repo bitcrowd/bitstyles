@@ -79,7 +79,9 @@
 );
 @use '../../scss/bitstyles/settings/typography' as settings-typography with (
   $webfont-family-name: 'FakeFont',
-  $webfont-base-url: './'
+  $webfont-base-url: './',
+  $margin-heading: 10rem,
+  $margin-paragraph: 10rem,
 );
 
 //

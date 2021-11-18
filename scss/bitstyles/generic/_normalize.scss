@@ -171,14 +171,6 @@ button:-moz-focusring,
 }
 
 /**
- * Correct the padding in Firefox.
- */
-
-fieldset {
-  padding: size.get('m');
-}
-
-/**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out

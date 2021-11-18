@@ -48,6 +48,9 @@ $font-size-base: 18px !default;
 $line-height-base: 1.5 !default;
 $line-height-min: 1.25 !default;
 
+$margin-heading: 0 !default;
+$margin-paragraph: 0 !default;
+
 $font-sizes: (
   'base': (
     'html': $font-size-base-small,
