@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: typography.$margin-heading;
   font-family: typography.$font-family-header;
   font-weight: typography.$font-weight-bold;
   text-rendering: optimizeLegibility;
@@ -27,7 +27,7 @@ h6 {
 @include typography-tools.generate-font-sizes('', (html, h1, h2, h3, h4, h5, h6));
 
 p {
-  margin: 0 0 size.get('m');
+  margin: 0 0 typography.$margin-paragraph;
 }
 
 address {

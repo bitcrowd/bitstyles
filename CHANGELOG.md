@@ -2,6 +2,10 @@
 
 # Unreleased
 
+### Added
+
+- Default margins for heading elements and paragraphs can now be specified with the `$margin-heading` and `$margin-paragraph` variables respectively
+
 ### Fixed
 
 - The `border-width` and `border-style` are no longer hardcoded in the dropdown separator styles. The existing default value for the `$separator-border` variable already set those properties, so you so not need to change anything unless you override that variable in your project. This fixes the issue of an invalid `border` property when your build does not get automatically fixed by the build tools (in the case of bitstyles, postcss was correcting the border property)
@@ -14,6 +18,7 @@
 ### Breaking
 
 - `img` and `iframe` now default to `display: block`. Use the utility class `u-inline` if you need to replace the old behavior
+- The default margin for paragraphs is now `0`. Use the `$margin-paragraph` variable in typography settings to change this, or use margin utility classes on the HTML elements
 
 ## [[3.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-11-17
 
