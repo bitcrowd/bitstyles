@@ -187,36 +187,36 @@ figcaption {
   color: #000;
 }
 @font-face {
-  font-family: Nunito;
+  font-family: FakeFont;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(../assets/fonts/nunito-v16-latin-400.woff2) format('woff2'),
-    url(../assets/fonts/nunito-v16-latin-400.woff) format('woff');
+  src: url(nunito-v16-latin-400.woff2) format('woff2'),
+    url(nunito-v16-latin-400.woff) format('woff');
 }
 @font-face {
-  font-family: Nunito;
+  font-family: FakeFont;
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(../assets/fonts/nunito-v16-latin-italic.woff2) format('woff2'),
-    url(../assets/fonts/nunito-v16-latin-italic.woff) format('woff');
+  src: url(nunito-v16-latin-italic.woff2) format('woff2'),
+    url(nunito-v16-latin-italic.woff) format('woff');
 }
 @font-face {
-  font-family: Nunito;
+  font-family: FakeFont;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(../assets/fonts/nunito-v16-latin-600.woff2) format('woff2'),
-    url(../assets/fonts/nunito-v16-latin-600.woff) format('woff');
+  src: url(nunito-v16-latin-600.woff2) format('woff2'),
+    url(nunito-v16-latin-600.woff) format('woff');
 }
 @font-face {
-  font-family: Nunito;
+  font-family: FakeFont;
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(../assets/fonts/nunito-v16-latin-800.woff2) format('woff2'),
-    url(../assets/fonts/nunito-v16-latin-800.woff) format('woff');
+  src: url(nunito-v16-latin-800.woff2) format('woff2'),
+    url(nunito-v16-latin-800.woff) format('woff');
 }
 fieldset {
   padding: 10rem;
@@ -577,8 +577,9 @@ textarea:disabled {
   }
 }
 html {
-  font-family: sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    helvetica, arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: FakeFont, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
   line-height: 1.5;
   color: #000;
   -webkit-text-size-adjust: 100%;
@@ -591,8 +592,9 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    helvetica, arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: FakeFont, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
   font-weight: 800;
   text-rendering: optimizeLegibility;
 }

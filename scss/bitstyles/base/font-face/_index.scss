@@ -4,9 +4,9 @@
 
 @each $webfont-variant, $webfont-variant-settings in typography.$webfont-variants {
   @include font-face.webfont(
-    map.get($webfont-variant-settings, 'font-family'),
-    map.get($webfont-variant-settings, 'font-style'),
-    map.get($webfont-variant-settings, 'font-weight'),
-    map.get($webfont-variant-settings, 'url'),
+    $font-family: map.get($webfont-variant-settings, 'font-family'),
+    $font-style: map.get($webfont-variant-settings, 'font-style'),
+    $font-weight: map.get($webfont-variant-settings, 'font-weight'),
+    $font-url: typography.$webfont-base-url + map.get($webfont-variant-settings, 'filename'),
   );
 }
