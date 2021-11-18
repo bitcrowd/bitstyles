@@ -83,6 +83,9 @@
   $margin-heading: 10rem,
   $margin-paragraph: 10rem,
 );
+@use '../../scss/bitstyles/settings/link' as settings-link with (
+  $color: #f00,
+);
 
 //
 // Generic ////////////////////////////////////

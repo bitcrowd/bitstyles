@@ -71,6 +71,7 @@ $bitstyles-typography-webfont-family-name: 'FakeFont';
 $bitstyles-typography-webfont-base-url: './';
 $bitstyles-typography-margin-heading: 10rem;
 $bitstyles-typography-margin-paragraph: 10rem;
+$bitstyles-link-color: #f00;
 
 //
 // Base settings /////////////////////////////////////
@@ -177,6 +178,7 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/settings/layout';
 @import '../../scss/bitstyles/settings/setup';
 @import '../../scss/bitstyles/settings/typography';
+@import '../../scss/bitstyles/settings/link';
 
 //
 // Generic ////////////////////////////////////

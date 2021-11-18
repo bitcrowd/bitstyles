@@ -1,5 +1,4 @@
 @use '../settings/link';
-@use '../settings/typography';
 
 // Link
 //
@@ -8,26 +7,29 @@
 
 @mixin link {
   padding: 0;
-  font-weight: typography.$font-weight-medium;
-  color: link.$color-link;
-  text-decoration: link.$text-decoration-link;
+  font-weight: link.$font-weight;
+  color: link.$color;
+  text-decoration: link.$text-decoration;
   text-decoration-skip-ink: auto;
   cursor: pointer;
-  background: link.$background-color-link;
+  background-color: link.$background-color;
   border: 0;
-  box-shadow: none;
-  transition: link.$link-transition;
+  box-shadow: link.$box-shadow;
+  transition: link.$transition;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
   &:visited {
-    color: link.$color-link-visited;
+    color: link.$color-visited;
+    text-decoration: link.$text-decoration-visited;
+    background-color: link.$background-color-visited;
+    box-shadow: link.$box-shadow-visited;
   }
 
   &:hover,
   &:focus {
-    color: link.$color-link-hover;
-    text-decoration: link.$text-decoration-link-hover;
-    background: link.$background-color-link-hover;
-    box-shadow: none;
+    color: link.$color-hover;
+    text-decoration: link.$text-decoration-hover;
+    background-color: link.$background-color-hover;
+    box-shadow: link.$box-shadow-hover;
   }
 }

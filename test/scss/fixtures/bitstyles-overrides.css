@@ -162,12 +162,12 @@ img {
 a {
   padding: 0;
   font-weight: 600;
-  color: #000;
+  color: red;
   text-decoration: none;
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
   cursor: pointer;
-  background: none;
+  background-color: none;
   border: 0;
   box-shadow: none;
   transition: color 75ms ease-out;
@@ -175,12 +175,15 @@ a {
 }
 a:visited {
   color: #000;
+  text-decoration: none;
+  background-color: none;
+  box-shadow: none;
 }
 a:focus,
 a:hover {
   color: #000;
   text-decoration: underline;
-  background: none;
+  background-color: none;
   box-shadow: none;
 }
 figcaption {
@@ -1360,12 +1363,12 @@ table {
 .bsa-link {
   padding: 0;
   font-weight: 600;
-  color: #000;
+  color: red;
   text-decoration: none;
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
   cursor: pointer;
-  background: none;
+  background-color: none;
   border: 0;
   box-shadow: none;
   transition: color 75ms ease-out;
@@ -1373,12 +1376,15 @@ table {
 }
 .bsa-link:visited {
   color: #000;
+  text-decoration: none;
+  background-color: none;
+  box-shadow: none;
 }
 .bsa-link:focus,
 .bsa-link:hover {
   color: #000;
   text-decoration: underline;
-  background: none;
+  background-color: none;
   box-shadow: none;
 }
 .bsa-list-reset {

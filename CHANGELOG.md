@@ -1,6 +1,10 @@
 # Changelog
 
-# Unreleased
+## Unreleased
+
+### Added
+
+- There are now variables to specify the `color`, `text-decoration`, `background-color`, and `box-shadow` of links in each state
 
 ### Added
 
@@ -9,6 +13,7 @@
 ### Fixed
 
 - The `border-width` and `border-style` are no longer hardcoded in the dropdown separator styles. The existing default value for the `$separator-border` variable already set those properties, so you so not need to change anything unless you override that variable in your project. This fixes the issue of an invalid `border` property when your build does not get automatically fixed by the build tools (in the case of bitstyles, postcss was correcting the border property)
+- Link variables can all now be overridden using any of the four import/use methods
 
 ### Changed
 
@@ -19,6 +24,7 @@
 
 - `img` and `iframe` now default to `display: block`. Use the utility class `u-inline` if you need to replace the old behavior
 - The default margin for paragraphs is now `0`. Use the `$margin-paragraph` variable in typography settings to change this, or use margin utility classes on the HTML elements
+- Variable names for links have changed — the word `link` is now omitted, resulting in e.g. `$color-link` becoming `$color`, `$link-color`, or `$bitstyles-link-color`, and `$color-link-hover` becoming `$color-hover`, `$link-color-hover`, or `$bitstyles-link-color-hover`, depending on how you use bitstyles
 
 ## [[3.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-11-17
 
