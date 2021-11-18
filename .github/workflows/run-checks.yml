@@ -1,6 +1,5 @@
 name: Run linting & tests
-on: [push, pull_request]
-
+on: [push]
 jobs:
   lint:
     runs-on: ubuntu-latest
