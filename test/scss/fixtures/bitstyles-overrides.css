@@ -191,32 +191,32 @@ figcaption {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(../assets/fonts/nunito-v16-latin-400.woff2) format('woff2'),
-    url(../assets/fonts/nunito-v16-latin-400.woff) format('woff');
+  src: url(nunito-v16-latin-400.woff2) format('woff2'),
+    url(nunito-v16-latin-400.woff) format('woff');
 }
 @font-face {
   font-family: FakeFont;
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(../assets/fonts/nunito-v16-latin-italic.woff2) format('woff2'),
-    url(../assets/fonts/nunito-v16-latin-italic.woff) format('woff');
+  src: url(nunito-v16-latin-italic.woff2) format('woff2'),
+    url(nunito-v16-latin-italic.woff) format('woff');
 }
 @font-face {
   font-family: FakeFont;
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(../assets/fonts/nunito-v16-latin-600.woff2) format('woff2'),
-    url(../assets/fonts/nunito-v16-latin-600.woff) format('woff');
+  src: url(nunito-v16-latin-600.woff2) format('woff2'),
+    url(nunito-v16-latin-600.woff) format('woff');
 }
 @font-face {
   font-family: FakeFont;
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(../assets/fonts/nunito-v16-latin-800.woff2) format('woff2'),
-    url(../assets/fonts/nunito-v16-latin-800.woff) format('woff');
+  src: url(nunito-v16-latin-800.woff2) format('woff2'),
+    url(nunito-v16-latin-800.woff) format('woff');
 }
 fieldset {
   padding: 10rem;

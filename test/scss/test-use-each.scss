@@ -78,7 +78,8 @@
   $namespace: 'bs'
 );
 @use '../../scss/bitstyles/settings/typography' as settings-typography with (
-  $webfont-family-name: 'FakeFont'
+  $webfont-family-name: 'FakeFont',
+  $webfont-base-url: './'
 );
 
 //
