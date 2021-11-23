@@ -2,7 +2,7 @@
 // Global settings /////////////////////////////////////
 
 $bitstyles-animation-transition-easing: ease-out;
-$bitstyles-breakpoints-breakpoint-boundary-width: 10em;
+$bitstyles-breakpoints-boundary-width: 10em;
 $bitstyles-color-palette-black: #f00;
 $bitstyles-color-palette-grays-hint-color: #f00;
 $bitstyles-color-palette-color-palette: (
@@ -71,6 +71,7 @@ $bitstyles-typography-webfont-family-name: 'FakeFont';
 $bitstyles-typography-webfont-base-url: './';
 $bitstyles-typography-margin-heading: 10rem;
 $bitstyles-typography-margin-paragraph: 10rem;
+$bitstyles-link-color: #f00;
 
 //
 // Base settings /////////////////////////////////////

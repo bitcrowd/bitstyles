@@ -167,7 +167,7 @@ a {
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
   cursor: pointer;
-  background: none;
+  background-color: none;
   border: 0;
   box-shadow: none;
   transition: color 75ms ease-in-out;
@@ -175,12 +175,15 @@ a {
 }
 a:visited {
   color: #666eff;
+  text-decoration: none;
+  background-color: none;
+  box-shadow: none;
 }
 a:focus,
 a:hover {
   color: #000dff;
   text-decoration: underline;
-  background: none;
+  background-color: none;
   box-shadow: none;
 }
 figcaption {
@@ -1379,7 +1382,7 @@ table {
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
   cursor: pointer;
-  background: none;
+  background-color: none;
   border: 0;
   box-shadow: none;
   transition: color 75ms ease-in-out;
@@ -1387,12 +1390,15 @@ table {
 }
 .a-link:visited {
   color: #666eff;
+  text-decoration: none;
+  background-color: none;
+  box-shadow: none;
 }
 .a-link:focus,
 .a-link:hover {
   color: #000dff;
   text-decoration: underline;
-  background: none;
+  background-color: none;
   box-shadow: none;
 }
 .a-list-reset {

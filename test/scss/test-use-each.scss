@@ -5,7 +5,7 @@
   $transition-easing: ease-out
 );
 @use '../../scss/bitstyles/settings/breakpoints' with (
-  $breakpoint-boundary-width: 10em
+  $boundary-width: 10em
 );
 @use '../../scss/bitstyles/settings/color-palette' with (
   $grays-hint-color: #f00,
@@ -82,6 +82,9 @@
   $webfont-base-url: './',
   $margin-heading: 10rem,
   $margin-paragraph: 10rem,
+);
+@use '../../scss/bitstyles/settings/link' as settings-link with (
+  $color: #f00,
 );
 
 //
