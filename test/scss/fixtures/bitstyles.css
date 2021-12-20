@@ -2018,6 +2018,9 @@ table {
 .u-font--not-italic {
   font-style: normal;
 }
+.u-gap-xs {
+  gap: 0.4rem;
+}
 .u-gap-s {
   gap: 0.6rem;
 }
@@ -2028,6 +2031,9 @@ table {
   gap: 1.6rem;
 }
 @media screen and (min-width: 30em) {
+  .u-gap-xs\@m {
+    gap: 0.4rem;
+  }
   .u-gap-s\@m {
     gap: 0.6rem;
   }
@@ -2039,6 +2045,9 @@ table {
   }
 }
 @media screen and (min-width: 95em) {
+  .u-gap-xs\@xl {
+    gap: 0.4rem;
+  }
   .u-gap-s\@xl {
     gap: 0.6rem;
   }
