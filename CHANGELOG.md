@@ -6,7 +6,7 @@
 
 - There are now variables to specify the `color`, `text-decoration`, `background-color`, and `box-shadow` of links in each state
 - Default margins for heading elements and paragraphs can now be specified with the `$margin-heading` and `$margin-paragraph` variables respectively
-- `u-gap-xs`
+- An extra size was added to the default gap classes: `u-gap-xs`
 
 ### Fixed
 
