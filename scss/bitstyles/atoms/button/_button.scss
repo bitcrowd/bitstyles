@@ -1,7 +1,6 @@
 @use 'sass:math';
 @use './settings';
 @use '../../settings/setup';
-@use '../../settings/typography';
 
 .#{setup.$namespace}a-button {
   position: relative;
@@ -14,9 +13,8 @@
   padding: settings.$padding-vertical settings.$padding-horizontal;
   margin: 0;
   overflow: visible;
-  font: inherit;
-  font-weight: typography.$font-weight-normal;
-  line-height: typography.$line-height-min;
+  font: settings.$font;
+  font-weight: settings.$font-weight;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;

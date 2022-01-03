@@ -38,9 +38,8 @@ input {
 textarea {
   display: block;
   width: 100%;
-  padding: (settings.$padding - math.div(settings.$border-width, 2)) settings.$padding;
-  font: inherit;
-  line-height: typography.$line-height-min;
+  padding: settings.$padding-vertical settings.$padding-horizontal;
+  font: settings.$font;
   color: settings.$color;
   background-color: settings.$background;
   border: settings.$border-width solid settings.$border-color;
