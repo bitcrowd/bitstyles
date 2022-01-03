@@ -415,9 +415,8 @@ textarea::placeholder {
 textarea {
   display: block;
   width: 100%;
-  padding: 0.35rem 0.4rem;
+  padding: 0.4rem;
   font: inherit;
-  line-height: 1.25;
   color: #333;
   background-color: #fff;
   border: 0.1rem solid #cfd0e9;
@@ -533,7 +532,6 @@ textarea:disabled {
     padding: 0.4rem 1.6rem 0.4rem 0.8rem;
     overflow: hidden;
     font: inherit;
-    line-height: 1.25;
     color: #5c5d75;
     text-overflow: ellipsis;
     cursor: pointer;
@@ -756,7 +754,6 @@ table {
   overflow: visible;
   font: inherit;
   font-weight: 400;
-  line-height: 1.25;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
