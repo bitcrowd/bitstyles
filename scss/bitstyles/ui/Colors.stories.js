@@ -41,7 +41,7 @@ const ColorItem = (label, color) =>
     <li style="background-color: ${color};">
       <div style="min-height:4rem;"></div>
       <span
-        class="u-bg--white u-padding-xxs-x u-margin-xxs-left"
+        class="u-bg-white u-padding-xxs-x u-margin-xxs-left"
         style="font-size: 10px;"
       >
         ${label}
@@ -73,7 +73,7 @@ const ColorPalette = () =>
           return `
           <li class="u-margin-xl-bottom u-flex u-items-end">
             <h3
-              class="u-margin-0-bottom u-margin-m-right u-text--right u-line-height--min"
+              class="u-margin-0-bottom u-margin-m-right u-text-right u-line-height-min"
               style="min-width: 9rem"
             >
               ${name}

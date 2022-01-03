@@ -14,7 +14,7 @@ Form elements will take 100% of the available width, so you’ll likely want to 
 Here are some examples using the grid utility classes to create common form layouts.
 
 <details class="u-margin-xl-y">
-  <summary class="u-h4 u-font--medium">Examples use</summary>
+  <summary class="u-h4 u-font-medium">Examples use</summary>
   <ul>
     <li><a href="/docs/atoms-card--card">a-card</a></li>
     <li><a href="/docs/atoms-content--content">a-content</a></li>
@@ -37,7 +37,7 @@ Here are some examples using the grid utility classes to create common form layo
   <Story name="Login form">
     {`
       <div class="a-content a-content--s">
-        <form class="a-card-l@m u-bg--white" method="POST" action="">
+        <form class="a-card-l@m u-bg-white" method="POST" action="">
           <h2>Login</h2>
           <ul class="a-list-reset u-margin-xl-bottom">
             <li class="u-margin-m-bottom">
@@ -80,7 +80,7 @@ The `aria-describedby` attribute accepts a space-separated list of IDs, so if an
   <Story name="Login form with errors">
     {`
       <div class="a-content a-content--s">
-        <form class="a-card-l@m u-bg--white" method="POST" action="">
+        <form class="a-card-l@m u-bg-white" method="POST" action="">
           <div class="a-card-l__header@m a-flash a-flash--warning" role="alert">
             <div class="u-flex u-items-center">
               <svg width="14" height="14" class="a-icon a-icon--l u-flex-shrink-0 u-margin-m-right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -94,7 +94,7 @@ The `aria-describedby` attribute accepts a space-separated list of IDs, so if an
             <li class="u-margin-m-bottom">
               <label for="email">Email</label>
               <input id="email" type="email" autocomplete="email" aria-invalid="true" aria-describedby="email-help-text" />
-              <span id="email-help-text" class="u-fg--warning u-margin-xs-top">Missing email address</span>
+              <span id="email-help-text" class="u-fg-warning u-margin-xs-top">Missing email address</span>
             </li>
             <li class="u-margin-m-bottom u-flex u-flex-col">
               <label for="password">Password</label>
@@ -126,7 +126,7 @@ This form has the commonly-required fields for creating an account. Note the wor
   <Story name="Sign up form">
     {`
       <div class="a-content a-content--s">
-        <form class="a-card-l@m u-bg--white" method="POST" action="">
+        <form class="a-card-l@m u-bg-white" method="POST" action="">
           <h2>Create an account</h2>
           <ul class="a-list-reset u-margin-xl-bottom">
             <li class="u-margin-m-bottom">
@@ -167,7 +167,7 @@ For a more complex form, `.u-grid-cols-6@m` allows for fields of different sizes
         <h2>Profile</h2>
         <fieldset class="u-margin-xl-bottom u-padding-xl-bottom">
           <div class="a-bordered-header u-margin-xl-bottom">
-            <legend class="u-h3 u-font--bold">Account details</legend>
+            <legend class="u-h3 u-font-bold">Account details</legend>
           </div>
           <div class="u-grid u-gap-m u-grid-cols-6@l u-gap-m">
             <ul class="a-list-reset u-col-start-3@l u-grid u-gap-m u-grid-cols-6@m u-col-span-4@l">
@@ -191,11 +191,11 @@ For a more complex form, `.u-grid-cols-6@m` allows for fields of different sizes
         </fieldset>
         <fieldset class="u-margin-xl-bottom u-padding-xl-bottom">
           <div class="a-bordered-header u-margin-xl-bottom">
-            <legend class="u-h3 u-font--bold a-bordered-header">Address</legend>
+            <legend class="u-h3 u-font-bold a-bordered-header">Address</legend>
           </div>
           <div class="u-grid u-gap-m u-grid-cols-6@l">
             <div class="u-col-span-2@l">
-              <p class="u-h6 u-fg--gray-50 u-padding-l-y@l u-padding-xl-right@m">Some intro text can go here, to describe this section</p>
+              <p class="u-h6 u-fg-gray-50 u-padding-l-y@l u-padding-xl-right@m">Some intro text can go here, to describe this section</p>
             </div>
             <ul class="a-list-reset u-col-start-3@l u-col-span-4@l u-grid u-gap-m u-grid-cols-6@m u-gap-m">
               <li class="u-col-span-4@m u-col-span-3@l">
@@ -283,8 +283,8 @@ The `role="search"` attribute highlights this functionality for screenreader use
     {`
     <form role="search" action="" method="POST" class="u-flex o-ui-group">
       <label for="search" class="u-sr-only">Search users</label>
-      <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1 u-round-0--tr u-round-0--br o-ui-group__item" />
-      <button type="submit" class="a-button a-button--ui o-ui-group__item o-ui-group__last u-round-0--tl u-round-0--bl">Search</button>
+      <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1 u-round-0-tr u-round-0-br o-ui-group__item" />
+      <button type="submit" class="a-button a-button--ui o-ui-group__item o-ui-group__last u-round-0-tl u-round-0-bl">Search</button>
     </form>
     `}
   </Story>
@@ -295,8 +295,8 @@ The `role="search"` attribute highlights this functionality for screenreader use
     {`
     <form role="search" action="" method="POST" class="u-flex o-ui-group">
       <label for="search" class="u-sr-only">Search users</label>
-      <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1 o-ui-group__item u-round-0--tr u-round-0--br" />
-      <button type="submit" class="a-button a-button--ui o-ui-group__item o-ui-group__last u-round-0--tl u-round-0--bl" title="Search users">
+      <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1 o-ui-group__item u-round-0-tr u-round-0-br" />
+      <button type="submit" class="a-button a-button--ui o-ui-group__item o-ui-group__last u-round-0-tl u-round-0-bl" title="Search users">
         <svg width="18" height="18" class="a-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
           <use xlink:href="${icons}#icon-search"></use>
         </svg>
