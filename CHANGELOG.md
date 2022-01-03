@@ -70,20 +70,6 @@
 - As `.a-card` elements now set their own padding, remove any utility padding classes. If the padding does not match your requirements, it can be customized using the cards’ sass variables
 - If you output any flashes or other content at the top of an `.a-card` element using negative-margin utility classes to cancel out the padding, these classes should now be replaced with the `.a-card__header` class
 
-## [[3.0.0-rc.2]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0-rc.2) - 2021-09-06
-
-### Added
-
-- The breakpoints at which `.a-card` is output can now be specified with the `$bitstyles-card-breakpoints` Sass variable. Default is at `m`, and `l` breakpoints
-
-### Fixed
-
-- All of the variables can now be overridden by users
-
-### Breaking
-
-- Removes `settings/color-base`, and merges its variables into `settings/color-palette`. If you’re already using the Sass module system, you’ll need to rename all variables containing `color-base` to `color-palette`
-
 ## [[2.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v2.0.0) - 2021-07-22
 
 ### Added
