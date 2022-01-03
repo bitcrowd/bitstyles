@@ -1575,7 +1575,7 @@ table {
     content: '';
   }
 }
-.bsu-bg-f00 {
+.bs-u-bg-f00 {
   background-color: red;
 }
 .bs-u-border-f00 {
@@ -1652,25 +1652,25 @@ table {
     grid-column-start: 100;
   }
 }
-.bsu-inline-block {
+.bs-u-inline-block {
   display: inline-block;
 }
 @media screen and (max-width: 20em) {
-  .bsu-inline-block\@s {
+  .bs-u-inline-block\@s {
     display: inline-block;
   }
 }
 @media screen and (min-width: 30em) {
-  .bsu-inline-block\@m {
+  .bs-u-inline-block\@m {
     display: inline-block;
   }
 }
 @media screen and (min-width: 55em) {
-  .bsu-inline-block\@l {
+  .bs-u-inline-block\@l {
     display: inline-block;
   }
 }
-.bsu-fg--f00 {
+.bs-u-fg-f00 {
   color: red;
 }
 .bs-u-flex-wrap {
@@ -1717,22 +1717,22 @@ table {
     flex-shrink: 1;
   }
 }
-.bsu-font--light {
+.bs-u-font-light {
   font-weight: 300;
 }
-.bsu-font--normal {
+.bs-u-font-normal {
   font-weight: 400;
 }
-.bsu-font--medium {
+.bs-u-font-medium {
   font-weight: 600;
 }
-.bsu-font--bold {
+.bs-u-font-bold {
   font-weight: 800;
 }
-.bsu-font--italic {
+.bs-u-font-italic {
   font-style: italic;
 }
-.bsu-font--not-italic {
+.bs-u-font-not-italic {
   font-style: normal;
 }
 .bs-u-gap-100 {
@@ -2773,11 +2773,11 @@ table {
 .bsu-outline-0:focus {
   outline: none;
 }
-.bsu-overflow--y {
+.bsu-overflow-y {
   -webkit-overflow-scrolling: touch;
   overflow-y: auto;
 }
-.bsu-overflow--x {
+.bsu-overflow-x {
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
 }
@@ -3348,16 +3348,16 @@ table {
 .bsu-round-0 {
   border-radius: 0;
 }
-.bsu-round-0--tr {
+.bsu-round-0-tr {
   border-top-right-radius: 0;
 }
-.bsu-round-0--br {
+.bsu-round-0-br {
   border-bottom-right-radius: 0;
 }
-.bsu-round-0--bl {
+.bsu-round-0-bl {
   border-bottom-left-radius: 0;
 }
-.bsu-round-0--tl {
+.bsu-round-0-tl {
   border-top-left-radius: 0;
 }
 .bs-u-row-start-100 {
@@ -3426,16 +3426,16 @@ table {
     border: 0;
   }
 }
-.bsu-text--left {
+.bs-u-text-left {
   text-align: left;
 }
-.bsu-text--right {
+.bs-u-text-right {
   text-align: right;
 }
-.bsu-text--center {
+.bs-u-text-center {
   text-align: center;
 }
-.bsu-text--justify {
+.bs-u-text-justify {
   text-align: justify;
 }
 .bsu-truncate {
