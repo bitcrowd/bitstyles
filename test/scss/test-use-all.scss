@@ -147,6 +147,11 @@
     'start': start,
   ),
   $margin-breakpoints: ('xl', 's'),
+  $overflow-values: (
+    'overflow': (
+      'hidden': hidden
+    )
+  ),
   $padding-breakpoints: ('xl', 's'),
   $row-start-values: ('100': 100, '200': 200),
   $self-values: (

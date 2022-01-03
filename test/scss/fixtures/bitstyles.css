@@ -3164,13 +3164,20 @@ table {
 .u-outline-0:focus {
   outline: none;
 }
-.u-overflow-y {
-  -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
+.u-overflow-hidden {
+  overflow: hidden;
 }
-.u-overflow-x {
-  -webkit-overflow-scrolling: touch;
+.u-overflow-scroll {
+  overflow: scroll;
+}
+.u-overflow-auto {
+  overflow: auto;
+}
+.u-overflow-x-auto {
   overflow-x: auto;
+}
+.u-overflow-y-auto {
+  overflow-y: auto;
 }
 .u-padding-0 {
   padding: 0;
