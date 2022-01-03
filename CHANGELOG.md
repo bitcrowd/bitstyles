@@ -9,11 +9,17 @@
 - Default settings for `u-fg` classes now include `white` as an option
 - `u-font` classes can now be customized by overriding the `$bitstyles-font-weight-values` and `$bitstyles-font-style-values` variables. They can be made available at different breakpoints by overriding the `$bitstyles-font-weight-breakpoints` and `$bitstyles-font-style-breakpoints` variables
 - `u-text` classes can now be customized by overriding the `$bitstyles-text-values` variable. They can be made available at different breakpoints by overriding the `$bitstyles-text-breakpoints` variable
+- You can now override the font styles for `input-text`s, `selects`, and `buttons`.
+
+### Fixed
+
+- The height of inputs, selects, and `.a-button`s now matches regardless of the border-width
 
 ### Breaking
 
 - All utility classes which had a double dash in their classname (`--`) now only have a single dash. You’ll need to rename all these classes to use single dashes e.g. `.u-bg--brand-1` becomes `.u-bg-brand-1`
 - Values for the display classes (`u-block`, `u-flex` etc.) will now need to be set unquoted. If you previously were overriding the `$bitstyles-display-values` variable, make sure all the values on the right hand side are unquoted CSS values e.g. `'block': block` instead of `'block': 'block'`, as was previously possible
+- If you were using the `$bitstyles-input-padding` variable, you’ll now need to set `$bitstyles-input-padding-vertical` and `$bitstyles-input-padding-horizontal` spearately
 
 ## [[3.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-12-20
 
