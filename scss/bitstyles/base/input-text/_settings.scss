@@ -5,9 +5,11 @@
 //
 // Base styles ////////////////////////////////////////
 
-$padding: size.get('xs') !default;
+$padding-vertical: size.get('xs') !default;
+$padding-horizontal: size.get('xs') !default;
 $border-radius: size.get('xs') !default;
 $border-width: size.get('xxxs') !default;
+$font: inherit !default;
 $placeholder-font-style: italic !default;
 $placeholder-font-weight: typography.$font-weight-normal !default;
 $placeholder-color: palette.get('gray', '50') !default;

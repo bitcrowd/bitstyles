@@ -9,8 +9,7 @@
     width: 100%;
     padding: settings.$padding-vertical (settings.$padding-horizontal * 2) settings.$padding-vertical settings.$padding-horizontal;
     overflow: hidden;
-    font: inherit;
-    line-height: typography.$line-height-min;
+    font: settings.$font;
     color: settings.$color;
     text-overflow: ellipsis;
     cursor: pointer;
