@@ -1,10 +1,2 @@
-@use '../../settings/setup';
-@use '../../tools/overflow';
-
-.#{setup.$namespace}u-overflow-y {
-  @include overflow.overflow-y;
-}
-
-.#{setup.$namespace}u-overflow-x {
-  @include overflow.overflow-x;
-}
+@forward 'settings';
+@forward 'overflow';
