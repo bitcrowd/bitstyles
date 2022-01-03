@@ -1,21 +1,11 @@
 @use 'sass:map';
-@use './settings';
+@use 'settings';
 @use '../../tools/directional-properties';
 
-@include directional-properties.output-properties(
-  $property-name: 'overflow',
-  $classname-root: 'overflow',
-  $values: map.get(settings.$values, 'overflow'),
-);
-
-@include directional-properties.output-properties(
-  $property-name: 'overflow-x',
-  $classname-root: 'overflow-x',
-  $values: map.get(settings.$values, 'overflow-x'),
-);
-
-@include directional-properties.output-properties(
-  $property-name: 'overflow-y',
-  $classname-root: 'overflow-y',
-  $values: map.get(settings.$values, 'overflow-y'),
-);
+@each $property, $values in settings.$values {
+  @include directional-properties.output-properties(
+    $property-name: $property,
+    $classname-root: $property,
+    $values: $values,
+  );
+}
