@@ -1,8 +1,19 @@
 @use './settings';
-@use '../../settings/setup';
+@use '../../tools/directional-properties';
+@use '../../tools/media-query';
 
-@each $variant, $color in (settings.$values) {
-  .#{setup.$namespace}u-bg--#{$variant} {
-    background-color: $color;
+@include directional-properties.output-properties(
+  $property-name: 'background-color',
+  $classname-root: 'bg',
+  $values: settings.$values
+);
+
+@each $breakpoint in settings.$breakpoints {
+  @include media-query.media-query($breakpoint) {
+    @include directional-properties.output-properties(
+      $property-name: 'background-color',
+      $classname-root: 'bg',
+      $values: settings.$values
+    );
   }
 }

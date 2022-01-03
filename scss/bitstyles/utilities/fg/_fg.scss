@@ -1,8 +1,20 @@
 @use './settings';
-@use '../../settings/setup';
+@use '../../tools/directional-properties';
+@use '../../tools/media-query';
 
-@each $variant, $color in (settings.$values) {
-  .#{setup.$namespace}u-fg--#{$variant} {
-    color: $color;
+@include directional-properties.output-properties(
+  $property-name: 'color',
+  $classname-root: 'fg',
+  $values: settings.$values
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.media-query($breakpoint-alias) {
+    @include directional-properties.output-properties(
+      $property-name: 'color',
+      $classname-root: 'fg',
+      $values: settings.$values,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
   }
 }

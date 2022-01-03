@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- `u-bg` classes can now be made available at different breakpoints by overriding the `$bitstyles-bg-breakpoints` variable
+- `u-fg` classes can now be made available at different breakpoints by overriding the `$bitstyles-fg-breakpoints` variable
+- Default settings for `u-fg` classes now include `white` as an option
+- `u-font` classes can now be customized by overriding the `$bitstyles-font-weight-values` and `$bitstyles-font-style-values` variables. They can be made available at different breakpoints by overriding the `$bitstyles-font-weight-breakpoints` and `$bitstyles-font-style-breakpoints` variables
+- `u-text` classes can now be customized by overriding the `$bitstyles-text-values` variable. They can be made available at different breakpoints by overriding the `$bitstyles-text-breakpoints` variable
+
+### Breaking
+
+- All utility classes which had a double dash in their classname (`--`) now only have a single dash. You’ll need to rename all these classes to use single dashes e.g. `.u-bg--brand-1` becomes `.u-bg-brand-1`
+- Values for the display classes (`u-block`, `u-flex` etc.) will now need to be set unquoted. If you previously were overriding the `$bitstyles-display-values` variable, make sure all the values on the right hand side are unquoted CSS values e.g. `'block': block` instead of `'block': 'block'`, as was previously possible
+
 ## [[3.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-12-20
 
 ### Added
@@ -44,6 +59,19 @@
 
 - As `.a-card` elements now set their own padding, remove any utility padding classes. If the padding does not match your requirements, it can be customized using the cards’ sass variables
 - If you output any flashes or other content at the top of an `.a-card` element using negative-margin utility classes to cancel out the padding, these classes should now be replaced with the `.a-card__header` class
+
+## [[3.0.0-rc.2]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0-rc.2) - 2021-09-06
+
+### Added
+
+- The breakpoints at which `.a-card` is output can now be specified with the `$bitstyles-card-breakpoints` Sass variable. Default is at `m`, and `l` breakpoints
+
+### Fixed
+
+- All of the variables can now be overridden by users
+
+### Breaking
+
 - Removes `settings/color-base`, and merges its variables into `settings/color-palette`. If you’re already using the Sass module system, you’ll need to rename all variables containing `color-base` to `color-palette`
 
 ## [[2.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v2.0.0) - 2021-07-22

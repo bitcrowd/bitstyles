@@ -244,7 +244,7 @@
 );
 @use '../../scss/bitstyles/utilities/display' with (
   $values: (
-    'inline-block': 'inline-block',
+    inline-block: inline-block,
   )
 );
 @use '../../scss/bitstyles/utilities/fg' with (
