@@ -50,6 +50,23 @@ Using bolded italics is normally not needed or wanted, and we’re not providing
   </Story>
 </Canvas>
 
+## Font-family
+
+Specify font-family on an element. Defaults to the `header` and `body` font-stacks specified in `settings/_typography`.
+
+<Canvas isColumn>
+  <Story name="font-header">
+    {`
+      <p class="u-bg-background u-font-header"><span class="u-fg-brand-2">u-font-header</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
+    `}
+  </Story>
+  <Story name="font-body">
+    {`
+      <p class="u-bg-background u-font-body"><span class="u-fg-brand-2">u-font-body</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
+    `}
+  </Story>
+</Canvas>
+
 ## Customization
 
 The available font-weights and font-styles can be customized by overriding the `$bitstyles-font-weight-values` and `$bitstyles-font-weight-values` Sass variables respectively:
@@ -65,6 +82,10 @@ $bitstyles-font-style-values: (
   'italic': italic,
   'not-italic': normal
 );
+$bitstyles-font-family-values: (
+  'header': typography.$font-family-header,
+  'body': typography.$font-family-body
+);
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-font-weight-breakpoints` and ``$bitstyles-font-style-breakpoints` Sass variables respectively:
@@ -72,4 +93,5 @@ The breakpoints these classes are available at can be customized by overriding t
 ```scss
 $bitstyles-font-weight-breakpoints: ();
 $bitstyles-font-style-breakpoints: ();
+$bitstyles-font-family-breakpoints: ();
 ```
