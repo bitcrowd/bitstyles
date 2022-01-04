@@ -45,7 +45,7 @@ Uses a fullwidth dropdown to fit with no overlap.
         <nav class="u-flex">
           <div class="u-hidden o-sidebar--large u-flex-shrink-0 u-bg-gray-80 u-padding-m-top u-flex@l u-flex-col">
             <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex-shrink-0 u-margin-m-left u-margin-m-right u-margin-m-bottom" />
-            <ul class="u-flex-grow-1 u-flex-shrink-1 u-overflow-y a-list-reset u-flex u-flex-col u-items-stretch u-padding-xs-right u-padding-xs-left">
+            <ul class="u-flex-grow-1 u-flex-shrink-1 u-overflow-y-auto a-list-reset u-flex u-flex-col u-items-stretch u-padding-xs-right u-padding-xs-left">
               <li class="u-margin-xs-bottom u-flex">
                 <a href="/" class="a-button a-button--nav u-flex-grow-1">
                   <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
@@ -120,7 +120,7 @@ Uses a fullwidth dropdown to fit with no overlap.
                 <span class="a-button__label">Jane Dobermann</span>
               </button>
               <ul
-                class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow-y a-list-reset u-margin-s-bottom"
+                class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow-y-auto a-list-reset u-margin-s-bottom"
                 id="dropdown-3"
                 x-show="dropdownOpen"
                 x-transition:enter="is-transitioning"
@@ -178,7 +178,7 @@ Uses a fullwidth dropdown to fit with no overlap.
               </svg>
               <span class="u-sr-only">Close menu</span>
             </button>
-            <ul class="u-flex-grow-1 u-flex-shrink-1 u-overflow-y a-list-reset u-flex u-flex-col u-items-stretch u-padding-xs-right u-padding-xs-left">
+            <ul class="u-flex-grow-1 u-flex-shrink-1 u-overflow-y-auto a-list-reset u-flex u-flex-col u-items-stretch u-padding-xs-right u-padding-xs-left">
               <li class="u-margin-xs-bottom u-flex">
                 <a href="/" class="a-button a-button--nav u-flex-grow-1">
                   <svg width="16" height="16" class="a-button-nav__icon a-icon a-icon--l u-margin-s-right u-margin-neg-xxs-left" aria-hidden="true" focusable="false">
@@ -256,7 +256,7 @@ Uses a fullwidth dropdown to fit with no overlap.
                 x-show="dropdownOpen"
                 @click.away="dropdownOpen = false"
                 id="dropdown-4"
-                class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow-y a-list-reset u-margin-s-bottom"
+                class="a-dropdown a-dropdown--full-width a-dropdown--top u-overflow-y-auto a-list-reset u-margin-s-bottom"
               >
                 <li>
                   <a href="/" class="a-button a-button--menu u-h6">
@@ -283,7 +283,7 @@ Uses a fullwidth dropdown to fit with no overlap.
             </div>
           </div>
         </nav>
-        <main class="u-flex-grow-1 u-padding-xxl-left@l u-padding-xl-right@l u-padding-xl-bottom u-padding-m u-overflow-y">
+        <main class="u-flex-grow-1 u-padding-xxl-left@l u-padding-xl-right@l u-padding-xl-bottom u-padding-m u-overflow-y-auto">
           <div class="u-flex u-items-center u-margin-m-bottom">
             <button
               class="u-flex-shrink-0 u-margin-neg-m-left a-button a-button--icon a-button--icon-reversed u-margin-xs-right u-hidden@l"
