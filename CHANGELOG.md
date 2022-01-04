@@ -10,13 +10,11 @@
 - `u-font` classes can now be customized by overriding the `$bitstyles-font-weight-values` and `$bitstyles-font-style-values` variables. They can be made available at different breakpoints by overriding the `$bitstyles-font-weight-breakpoints` and `$bitstyles-font-style-breakpoints` variables
 - `u-text` classes can now be customized by overriding the `$bitstyles-text-values` variable. They can be made available at different breakpoints by overriding the `$bitstyles-text-breakpoints` variable
 - You can now override the font styles for `input-text`s, `selects`, and `buttons`.
+- New `u-font` classes to specify font-family. Defaults to `u-font-header` and `u-font-body`, which apply the respective font stack as specified in `settings/typography`. This can be overridden using `$bitstyles-font-family-values`, and can be made responsive by specifying breakpoints in `$bitstyles-font-family-breakpoints`
 
 ### Fixed
 
 - The height of inputs, selects, and `.a-button`s now matches regardless of the border-width
-
-### Fixed
-
 - Modals now only show scrollbars (on OSes/configs where scrollbars are shown) when they’re needed
 
 ### Breaking

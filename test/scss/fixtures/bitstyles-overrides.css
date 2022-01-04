@@ -1732,6 +1732,16 @@ table {
 .bs-u-font-not-italic {
   font-style: normal;
 }
+.bs-u-font-header {
+  font-family: FakeFont, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+}
+.bs-u-font-body {
+  font-family: FakeFont, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+}
 .bs-u-gap-100 {
   gap: 100rem;
 }
