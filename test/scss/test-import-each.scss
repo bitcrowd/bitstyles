@@ -78,6 +78,7 @@ $bitstyles-link-color: #f00;
 
 $bitstyles-figure-font-style: bold;
 $bitstyles-forms-fieldset-padding: 10rem;
+$bitstyles-html-color: red;
 $bitstyles-input-checkbox-border-radius: 10rem;
 $bitstyles-input-radio-border-radius: 10rem;
 $bitstyles-input-text-border-radius: 10rem;
@@ -199,6 +200,7 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/base/figure';
 @import '../../scss/bitstyles/base/font-face';
 @import '../../scss/bitstyles/base/forms';
+@import '../../scss/bitstyles/base/html';
 @import '../../scss/bitstyles/base/images';
 @import '../../scss/bitstyles/base/input-checkbox';
 @import '../../scss/bitstyles/base/input-radio';
