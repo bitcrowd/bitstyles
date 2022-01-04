@@ -1424,7 +1424,7 @@ table {
   width: calc(100% - 20rem);
   height: auto;
   max-height: calc(100vh - 20rem);
-  overflow: scroll;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
   background-color: #000;
   transform: translate(-50%, -50%);

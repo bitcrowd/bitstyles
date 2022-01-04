@@ -15,6 +15,10 @@
 
 - The height of inputs, selects, and `.a-button`s now matches regardless of the border-width
 
+### Fixed
+
+- Modals now only show scrollbars (on OSes/configs where scrollbars are shown) when they’re needed
+
 ### Breaking
 
 - All utility classes which had a double dash in their classname (`--`) now only have a single dash. You’ll need to rename all these classes to use single dashes e.g. `.u-bg--brand-1` becomes `.u-bg-brand-1`
