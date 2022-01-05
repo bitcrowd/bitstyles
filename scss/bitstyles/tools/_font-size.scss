@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use '../settings/typography';
+@use 'unit-conversions';
+
+// Palette
+//
+// **Returns requested colours from the global `$palette` map.**
+// e.g. `color: palette('text');`
+//
+// @param {String} $color  Base colour within the palette
+//
+// @param {String} $percent   Optional. Percentage of the color to mix with white. Defaults to `100%` (fuly the specified color, no white)
+//
+
+@function get($font-size, $breakpoint: 'base') {
+  @if map.has-key(typography.$font-sizes, $breakpoint) {
+    $font-sizes: map.get(typography.$font-sizes, $breakpoint);
+
+    @if map.has-key($font-sizes, $font-size) {
+      @return unit-conversions.px-to-rem(map.get($font-sizes, $font-size));
+    }
+
+    @else {
+      @error 'Oops! Font-size at that breakpoint ‘#{$font-size}/#{$breakpoint}’ does not exist.';
+    }
+  }
+
+  @else {
+    @error 'Oops! Font-size ‘#{$font-size}’ does not exist.';
+  }
+}
