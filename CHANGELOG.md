@@ -14,11 +14,16 @@
 - New `u-font` classes to specify font-family. Defaults to `u-font-header` and `u-font-body`, which apply the respective font stack as specified in `settings/typography`. This can be overridden using `$bitstyles-font-family-values`, and can be made responsive by specifying breakpoints in `$bitstyles-font-family-breakpoints`
 - Color & background-color of the `html` element can now be specified using `$bitstyles-html-color` and `$bitstyles-html-background-color`, and default to the `text` and `background` colors specified in your global color-palette
 - Default key-name to return when asking for a color without specifying it (e.g. `palette.get('white')`) can now be set using `$bitstyles-color-palette-default-key`
+- There’s now a helper function `font-size.get($font-size, $breakpoint)` which returns font-sizes from the global map
 
 ### Fixed
 
 - The height of inputs, selects, and `.a-button`s now matches regardless of the border-width
 - Modals now only show scrollbars (on OSes/configs where scrollbars are shown) when they’re needed
+
+### Changed
+
+- The font-sizes specified in `settings/typography` `$font-sizes` map should now use `rem` units instead of `px`. The Sass will still compile if you specify using `px` as before, but the resulting CSS will not follow current best practices (to use `rem` units for specifying font-size)
 
 ### Breaking
 
