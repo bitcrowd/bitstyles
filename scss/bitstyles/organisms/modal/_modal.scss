@@ -54,7 +54,7 @@
   }
 }
 
-@include media-query.media-query(settings.$breakpoint) {
+@include media-query.get(settings.$breakpoint) {
   .#{setup.$namespace}o-modal__content {
     transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing;
 

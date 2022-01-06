@@ -91,7 +91,7 @@
     }
 
     @else {
-      @include media-query.media-query($media-query-name) {
+      @include media-query.get($media-query-name) {
         @include _output-font-sizes($font-sizes, $prefix, $subset);
       }
     }

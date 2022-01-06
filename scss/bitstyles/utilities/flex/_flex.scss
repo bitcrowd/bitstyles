@@ -24,7 +24,7 @@
 );
 
 @each $breakpoint-alias in settings.$breakpoints {
-  @include media-query.media-query($breakpoint-alias) {
+  @include media-query.get($breakpoint-alias) {
     @include directional-properties.output-properties(
       $property-name: 'flex-wrap',
       $classname-root: 'flex',
