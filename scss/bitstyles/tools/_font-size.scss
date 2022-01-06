@@ -15,17 +15,28 @@
 @function get($font-size, $breakpoint: 'base') {
   @if map.has-key(typography.$font-sizes, $breakpoint) {
     $font-sizes: map.get(typography.$font-sizes, $breakpoint);
+    $base-size: typography.$font-size-base-small;
+
+    @if map.has-key($font-sizes, 'html') {
+      $base-size: map.get($font-sizes, 'html');
+    }
 
     @if map.has-key($font-sizes, $font-size) {
-      @return unit-conversions.px-to-rem(map.get($font-sizes, $font-size));
+      @if $font-size == 'html' {
+        @return unit-conversions.px-to-rem(map.get($font-sizes, $font-size), 16px);
+      }
+
+      @else {
+        @return unit-conversions.px-to-rem(map.get($font-sizes, $font-size), $base-size);
+      }
     }
 
     @else {
-      @error 'Oops! Font-size at that breakpoint ‘#{$font-size}/#{$breakpoint}’ does not exist.';
+      @error 'Oops! There’s no font-size at that breakpoint ‘#{$font-size}/#{$breakpoint}’.';
     }
   }
 
   @else {
-    @error 'Oops! Font-size ‘#{$font-size}’ does not exist.';
+    @error 'Oops! Font-sizes at breakpoint ‘#{$breakpoint}’ do not exist.';
   }
 }

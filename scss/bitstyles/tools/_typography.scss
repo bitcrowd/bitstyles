@@ -3,6 +3,7 @@
 @use '../settings/setup';
 @use 'media-query';
 @use 'unit-conversions';
+@use 'font-size';
 
 // Output font sizes
 //
@@ -17,24 +18,12 @@
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 //
 
-@mixin _output-font-sizes($font-sizes, $prefix, $subset) {
-  $base-size: typography.$font-size-base-small;
-
-  @if map.has-key($font-sizes, 'html') {
-    $base-size: map.get($font-sizes, 'html');
-  }
-
+@mixin _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint) {
   @each $element-name, $font-size in ($font-sizes) {
     @if (length($subset) == 0) or (index($subset, $element-name)) {
       #{setup.$namespace}#{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
-        @if $element-name == 'html' {
-          font-size: unit-conversions.px-to-rem($font-size, 16px);
-        }
-
-        @else {
-          font-size: unit-conversions.px-to-rem($font-size, $base-size);
-        }
+        font-size: font-size.get($font-size: $element-name, $breakpoint: $breakpoint);
         /* stylelint-enable max-nesting-depth */
       }
     }
@@ -84,15 +73,15 @@
 //
 
 @mixin generate-font-sizes($prefix: '', $subset: ()) {
-  @each $media-query-name, $font-sizes in typography.$font-sizes {
+  @each $breakpoint, $font-sizes in typography.$font-sizes {
     // Don’t wrap base classes in a media-query
-    @if $media-query-name == 'base' {
-      @include _output-font-sizes($font-sizes, $prefix, $subset);
+    @if $breakpoint == 'base' {
+      @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
     }
 
     @else {
-      @include media-query.get($media-query-name) {
-        @include _output-font-sizes($font-sizes, $prefix, $subset);
+      @include media-query.get($breakpoint) {
+        @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
       }
     }
   }
