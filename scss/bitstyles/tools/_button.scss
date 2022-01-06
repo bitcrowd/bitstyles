@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use '../settings/setup';
+@use '../tools/directional-properties';
+
+@mixin _properties($properties) {
+  @each $property, $value in $properties {
+    #{$property}: $value;
+  }
+}
+
+@mixin new($button) {
+  $classname: directional-properties.get-classname(
+    (
+      setup.$namespace,
+      'a',
+      'button',
+      map.get($button, 'name')
+    )
+  );
+  $states: map.get($button, 'states');
+
+  .#{$classname} {
+    &,
+    &:visited {
+      @include _properties(map.get($states, 'default'));
+    }
+
+    &:hover,
+    &:focus {
+      @include _properties(map.get($states, 'hover'));
+    }
+
+    &:active {
+      @include _properties(map.get($states, 'active'));
+    }
+
+    &:disabled,
+    &[aria-disabled='true'] {
+      @include _properties(map.get($states, 'disabled'));
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use 'sass:math';
+@use './settings';
+@use '../../settings/setup';
+@use '../../tools/button';
+
+.#{setup.$namespace}a-button {
+  display: inline-flex;
+  position: relative;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: calc(#{settings.$padding-y * 2} + 1em);
+  margin: 0;
+  padding: settings.$padding-y settings.$padding-x;
+  overflow: visible;
+  transition: settings.$transition;
+  border-radius: settings.$border-radius;
+  font: settings.$font;
+  font-weight: settings.$font-weight;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
+  touch-action: manipulation;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+@include button.new(settings.$button);
+
+.#{setup.$namespace}a-button__avatar,
+.#{setup.$namespace}a-button__icon {
+  margin-right: settings.$icon-spacing;
+  margin-left: math.div(-(settings.$icon-spacing), 4);
+}
+
+.#{setup.$namespace}a-button__label + .#{setup.$namespace}a-button__icon {
+  margin-right: math.div(-(settings.$icon-spacing), 4);
+  margin-left: settings.$icon-spacing;
+}
