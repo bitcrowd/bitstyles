@@ -4,12 +4,12 @@
 
 // Palette
 //
-// **Returns requested colours from the global `$palette` map.**
-// e.g. `color: palette('text');`
+// **Returns requested font-size from the global `typography.$font-sizes` map.**
+// e.g. `font-size: font-size.get('h1');`
 //
-// @param {String} $color  Base colour within the palette
+// @param {String} $font-size  The font-size, as named in the `typography.$font-sizes` map
 //
-// @param {String} $percent   Optional. Percentage of the color to mix with white. Defaults to `100%` (fuly the specified color, no white)
+// @param {String} $breakpoint   Optional. Defaults to `base`, you can request the font-size at other breakpoints as defined in the `typography.$font-sizes` map
 //
 
 @function get($font-size, $breakpoint: 'base') {
