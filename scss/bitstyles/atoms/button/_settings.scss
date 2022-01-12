@@ -14,49 +14,110 @@ $transition: color animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing !default;
 $icon-spacing: size.get('s') !default;
 
-$button: (
-  'name': '',
-  'states': (
-    'default': (
-      'color': palette.get('white'),
-      'background-color': palette.get('brand-1', '80'),
-      'border': size.get('xxxs') solid palette.get('brand-1', '80'),
-      'border-radius': size.get('xs'),
-      'box-shadow': shadow.to-box-shadow(
-        shadow.generate(
-          $color: rgba(palette.get('brand-1', '80'), 0.2),
-          $blur-radius: size.get('xs'),
-        )
-      ),
-    ),
-    'hover': (
-      'color': palette.get('white'),
-      'background-color': palette.get('brand-1'),
-      'border-color': palette.get('brand-1'),
-      'box-shadow': shadow.to-box-shadow(
-        shadow.generate(
-          $color: rgba(palette.get('brand-1', '80'), 0.2),
-          $blur-radius: size.get('s'),
-        )
-      ),
-    ),
-    'active': (
-      'color': palette.get('white'),
-      'background-color': palette.get('brand-2', '100'),
-      'border-color': palette.get('brand-2', '100'),
-      'box-shadow': shadow.to-box-shadow(
-        shadow.generate(
-          $color: rgba(palette.get('brand-2', '100'), 0.3),
-          $blur-radius: size.get('xs'),
-        )
+$base: (
+  'default': (
+    'color': palette.get('white'),
+    'background-color': palette.get('brand-1', '80'),
+    'border': size.get('xxxs') solid palette.get('brand-1', '80'),
+    'border-radius': size.get('xs'),
+    'box-shadow': shadow.to-box-shadow(
+      shadow.generate(
+        $color: rgba(palette.get('brand-1', '80'), 0.2),
+        $blur-radius: size.get('xs'),
       )
     ),
-    'disabled': (
-      'color': palette.get('black', '50'),
-      'cursor': not-allowed,
-      'background-color': palette.get('black', '10'),
-      'border-color': palette.get('black', '10'),
-      'box-shadow': none,
+  ),
+  'hover': (
+    'color': palette.get('white'),
+    'background-color': palette.get('brand-1'),
+    'border-color': palette.get('brand-1'),
+    'box-shadow': shadow.to-box-shadow(
+      shadow.generate(
+        $color: rgba(palette.get('brand-1', '80'), 0.2),
+        $blur-radius: size.get('s'),
+      )
+    ),
+  ),
+  'active': (
+    'color': palette.get('white'),
+    'background-color': palette.get('brand-2', '100'),
+    'border-color': palette.get('brand-2', '100'),
+    'box-shadow': shadow.to-box-shadow(
+      shadow.generate(
+        $color: rgba(palette.get('brand-2', '100'), 0.3),
+        $blur-radius: size.get('xs'),
+      )
     )
   ),
+  'disabled': (
+    'color': palette.get('black', '50'),
+    'cursor': not-allowed,
+    'background-color': palette.get('black', '10'),
+    'border-color': palette.get('black', '10'),
+    'box-shadow': none,
+  )
+) !default;
+
+$danger: (
+  'hover': (
+    'color': palette.get('white'),
+    'background-color': palette.get('danger', '100'),
+    'border-color': palette.get('danger', '100'),
+    'box-shadow': shadow.to-box-shadow(
+      shadow.generate(
+        $color: rgba(palette.get('danger', '100'), 0.3),
+        $blur-radius: size.get('s'),
+      )
+    )
+  ),
+  'active': (
+    'background-color': palette.get('danger', '100'),
+    'border-color': palette.get('danger', '100'),
+    'box-shadow': shadow.to-box-shadow(
+      shadow.generate(
+        $color: rgba(palette.get('danger', '100'), 0.3),
+        $blur-radius: size.get('xs'),
+      )
+    ),
+  ),
+) !default;
+
+$ui: (
+  default: (
+    'border-radius': size.get('s'),
+    'color': palette.get('gray', '60'),
+    'background-color': palette.get('gray', '1'),
+    'border-color': palette.get('gray', '10'),
+    'box-shadow': none,
+  ),
+  'hover': (
+    'color': palette.get('gray', '80'),
+    'background-color': palette.get('gray', '10'),
+    'border-color': palette.get('gray', '20'),
+    'box-shadow': none,
+  ),
+  'active': (
+    'color': palette.get('white'),
+    'background-color': palette.get('brand-2', '100'),
+    'border-color': palette.get('brand-2', '100'),
+    'box-shadow': none,
+  ),
+  'pressed': (
+    'pressed': palette.get('gray', '90'),
+    'background-color': palette.get('brand-2', '100'),
+    'border-color': palette.get('brand-2', '100'),
+    'box-shadow': none,
+  ),
+  'disabled': (
+    'color': palette.get('gray', '10'),
+    'background-color': rgba(palette.get('gray', '1'), 0.5),
+    'border-color': palette.get('gray', '10'),
+    'box-shadow': none,
+  )
+) !default;
+
+$variants: (
+  '': $base,
+  'danger': $danger,
+  'ui': $ui,
 ) !default;

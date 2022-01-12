@@ -147,7 +147,7 @@
   $gutter: 10rem
 );
 @use '../../scss/bitstyles/atoms/button' with (
-  $color-hover: #000
+  $padding-y: 10rem
 );
 @use '../../scss/bitstyles/atoms/button--danger' with (
   $color-hover: #000

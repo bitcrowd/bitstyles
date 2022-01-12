@@ -8,35 +8,43 @@
   }
 }
 
-@mixin new($button) {
+@mixin new($name, $states) {
+  @debug($name);
   $classname: directional-properties.get-classname(
     (
       setup.$namespace,
       'a',
       'button',
-      map.get($button, 'name')
+      $name
     )
   );
-  $states: map.get($button, 'states');
 
   .#{$classname} {
-    &,
-    &:visited {
-      @include _properties(map.get($states, 'default'));
+    @if (map.has-key($states, 'default')) {
+      &,
+      &:visited {
+        @include _properties(map.get($states, 'default'));
+      }
     }
 
-    &:hover,
-    &:focus {
-      @include _properties(map.get($states, 'hover'));
+    @if (map.has-key($states, 'hover')) {
+      &:hover,
+      &:focus {
+        @include _properties(map.get($states, 'hover'));
+      }
     }
 
-    &:active {
-      @include _properties(map.get($states, 'active'));
+    @if (map.has-key($states, 'active')) {
+      &:active {
+        @include _properties(map.get($states, 'active'));
+      }
     }
 
-    &:disabled,
-    &[aria-disabled='true'] {
-      @include _properties(map.get($states, 'disabled'));
+    @if (map.has-key($states, 'disabled')) {
+      &:disabled,
+      &[aria-disabled='true'] {
+        @include _properties(map.get($states, 'disabled'));
+      }
     }
   }
 }

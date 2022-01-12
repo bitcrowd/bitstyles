@@ -1,6 +1,7 @@
 @use '../../tools/palette';
 
 $values: (
+  '0': 0,
   'gray-70': 1px solid palette.get('gray', '70'),
   'gray-10': 1px solid palette.get('gray', '10'),
 ) !default;

@@ -33,8 +33,6 @@
   }
 }
 
-@include button.new(settings.$button);
-
 .#{setup.$namespace}a-button__avatar,
 .#{setup.$namespace}a-button__icon {
   margin-right: settings.$icon-spacing;
@@ -44,4 +42,8 @@
 .#{setup.$namespace}a-button__label + .#{setup.$namespace}a-button__icon {
   margin-right: math.div(-(settings.$icon-spacing), 4);
   margin-left: settings.$icon-spacing;
+}
+
+@each $name, $states in settings.$variants {
+  @include button.new($name, $states);
 }
