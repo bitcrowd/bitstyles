@@ -20,6 +20,7 @@
 
 - The height of inputs, selects, and `.a-button`s now matches regardless of the border-width
 - Modals now only show scrollbars (on OSes/configs where scrollbars are shown) when they’re needed
+- Typographic scale of base elements is no longer prefixed when a prefix is specified
 
 ### Changed
 
@@ -32,6 +33,8 @@
 - If you were using the `$bitstyles-input-padding` variable, you’ll now need to set `$bitstyles-input-padding-vertical` and `$bitstyles-input-padding-horizontal` separately
 - The `u-overflow-x` and `u-overflow-y` classes were renamed to `u-overflow-x-auto` and `u-overflow-y-auto`, respectively
 - The media-query/breakpoint mixin is no longer called using `media-query.media-query()`. You’ll need to update all uses of this to `media-query.get()`
+- `typography.$font-sizes` must now be specified using `rem` if you want to use `rem` units (recommended), instead of `px` units, as was previously possible
+- Removes the `unit-conversions` functions
 
 ## [[3.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-12-20
 
