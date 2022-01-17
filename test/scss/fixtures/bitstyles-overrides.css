@@ -600,48 +600,48 @@ h6 {
   font-weight: 800;
   text-rendering: optimizeLegibility;
 }
-bshtml {
+html {
   font-size: 1rem;
 }
-bsh1 {
-  font-size: 1.5rem;
+h1 {
+  font-size: 2rem;
 }
-bsh2 {
-  font-size: 1.25rem;
+h2 {
+  font-size: 1.7rem;
 }
-bsh3 {
-  font-size: 1.125rem;
+h3 {
+  font-size: 1.45rem;
 }
-bsh4 {
+h4 {
+  font-size: 1.2rem;
+}
+h5 {
   font-size: 1rem;
 }
-bsh5 {
-  font-size: 1rem;
-}
-bsh6 {
-  font-size: 1rem;
+h6 {
+  font-size: 0.8rem;
 }
 @media screen and (min-width: 30em) {
-  bshtml {
+  html {
     font-size: 1.125rem;
   }
-  bsh1 {
-    font-size: 2.2222222222rem;
+  h1 {
+    font-size: 3rem;
   }
-  bsh2 {
-    font-size: 1.5555555556rem;
+  h2 {
+    font-size: 2.45rem;
   }
-  bsh3 {
-    font-size: 1.1111111111rem;
+  h3 {
+    font-size: 1.95rem;
   }
-  bsh4 {
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
     font-size: 1rem;
   }
-  bsh5 {
-    font-size: 1rem;
-  }
-  bsh6 {
-    font-size: 0.8888888889rem;
+  h6 {
+    font-size: 0.8rem;
   }
 }
 p {
@@ -3446,48 +3446,48 @@ table {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-bs.bsu-h0 {
+.bsu-h0 {
+  font-size: 3rem;
+}
+.bsu-h1 {
   font-size: 2rem;
 }
-bs.bsu-h1 {
-  font-size: 1.5rem;
+.bsu-h2 {
+  font-size: 1.7rem;
 }
-bs.bsu-h2 {
-  font-size: 1.25rem;
+.bsu-h3 {
+  font-size: 1.45rem;
 }
-bs.bsu-h3 {
-  font-size: 1.125rem;
+.bsu-h4 {
+  font-size: 1.2rem;
 }
-bs.bsu-h4 {
+.bsu-h5 {
   font-size: 1rem;
 }
-bs.bsu-h5 {
-  font-size: 1rem;
-}
-bs.bsu-h6 {
-  font-size: 1rem;
+.bsu-h6 {
+  font-size: 0.8rem;
 }
 @media screen and (min-width: 30em) {
-  bs.bsu-h0 {
-    font-size: 4.7777777778rem;
+  .bsu-h0 {
+    font-size: 4.8rem;
   }
-  bs.bsu-h1 {
-    font-size: 2.2222222222rem;
+  .bsu-h1 {
+    font-size: 3rem;
   }
-  bs.bsu-h2 {
-    font-size: 1.5555555556rem;
+  .bsu-h2 {
+    font-size: 2.45rem;
   }
-  bs.bsu-h3 {
-    font-size: 1.1111111111rem;
+  .bsu-h3 {
+    font-size: 1.95rem;
   }
-  bs.bsu-h4 {
+  .bsu-h4 {
+    font-size: 1.25rem;
+  }
+  .bsu-h5 {
     font-size: 1rem;
   }
-  bs.bsu-h5 {
-    font-size: 1rem;
-  }
-  bs.bsu-h6 {
-    font-size: 0.8888888889rem;
+  .bsu-h6 {
+    font-size: 0.8rem;
   }
 }
 .bs-u-z-100 {

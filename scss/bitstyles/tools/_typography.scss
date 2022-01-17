@@ -20,7 +20,7 @@
 @mixin _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint) {
   @each $element-name, $font-size in ($font-sizes) {
     @if (length($subset) == 0) or (index($subset, $element-name)) {
-      #{setup.$namespace}#{$prefix}#{$element-name} {
+      #{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
         font-size: font-size.get($font-size: $element-name, $breakpoint: $breakpoint);
         /* stylelint-enable max-nesting-depth */
