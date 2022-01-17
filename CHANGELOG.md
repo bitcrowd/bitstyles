@@ -12,6 +12,7 @@
 - `u-overflow` classes are now also available for `scroll`, `hidden`, and `auto` by default, and can be set by overriding `$bitstyles-overflow-values`
 - You can now override the font styles for `input-text`s, `selects`, and `buttons`.
 - New `u-font` classes to specify font-family. Defaults to `u-font-header` and `u-font-body`, which apply the respective font stack as specified in `settings/typography`. This can be overridden using `$bitstyles-font-family-values`, and can be made responsive by specifying breakpoints in `$bitstyles-font-family-breakpoints`
+- Color & background-color of the `html` element can now be specified using `$bitstyles-html-color` and `$bitstyles-html-background-color`, and default to the `text` and `background` colors specified in your global color-palette
 
 ### Fixed
 

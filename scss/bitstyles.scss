@@ -14,6 +14,7 @@
 
 @forward 'bitstyles/base/figure/settings' as figure-*;
 @forward 'bitstyles/base/forms/settings' as forms-*;
+@forward 'bitstyles/base/html/settings' as html-*;
 @forward 'bitstyles/base/input-checkbox/settings' as input-checkbox-*;
 @forward 'bitstyles/base/input-radio/settings' as input-radio-*;
 @forward 'bitstyles/base/input-text/settings' as input-text-*;
@@ -89,6 +90,7 @@
 @use 'bitstyles/base/figure';
 @use 'bitstyles/base/font-face';
 @use 'bitstyles/base/forms';
+@use 'bitstyles/base/html';
 @use 'bitstyles/base/images';
 @use 'bitstyles/base/input-checkbox';
 @use 'bitstyles/base/input-radio';

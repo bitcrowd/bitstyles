@@ -243,6 +243,15 @@ label {
 [type='color'] {
   height: calc(1.5em + 7.5rem);
 }
+html {
+  font-family: FakeFont, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  line-height: 1.5;
+  color: red;
+  -webkit-text-size-adjust: 100%;
+  background: #000;
+}
 img {
   height: auto;
   max-width: 100%;
@@ -577,15 +586,6 @@ textarea:disabled {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M6.64 34.23a5.57 5.57 0 017.87-7.89l35.41 35.57 35.57-35.57a5.57 5.57 0 017.87 7.89L53.94 73.66a5.58 5.58 0 01-7.88 0z'/%3E%3C/svg%3E");
     border-color: #000;
   }
-}
-html {
-  font-family: FakeFont, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol;
-  line-height: 1.5;
-  color: #000;
-  -webkit-text-size-adjust: 100%;
-  background: #000;
 }
 h1,
 h2,

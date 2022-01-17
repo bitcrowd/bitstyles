@@ -105,6 +105,9 @@
 @use '../../scss/bitstyles/base/forms' with (
   $fieldset-padding: 10rem
 );
+@use '../../scss/bitstyles/base/html' with (
+  $color: red
+);
 @use '../../scss/bitstyles/base/images';
 @use '../../scss/bitstyles/base/input-checkbox' with (
   $border-radius: 10rem

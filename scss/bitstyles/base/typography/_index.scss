@@ -1,17 +1,7 @@
 @use '../../settings/typography';
-@use '../../tools/palette';
-@use '../../tools/size';
 @use '../../tools/typography' as typography-tools;
 
 /* stylelint-disable selector-max-type */
-html {
-  font-family: typography.$font-family-body;
-  line-height: typography.$line-height-base;
-  color: palette.get('text');
-  -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
-  background: palette.get('background');
-}
-
 h1,
 h2,
 h3,
