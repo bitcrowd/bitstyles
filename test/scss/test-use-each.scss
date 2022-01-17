@@ -285,7 +285,13 @@
 );
 @use '../../scss/bitstyles/utilities/object-cover';
 @use '../../scss/bitstyles/utilities/outline';
-@use '../../scss/bitstyles/utilities/overflow';
+@use '../../scss/bitstyles/utilities/overflow' with (
+  $values: (
+    'overflow': (
+      'hidden': hidden
+    )
+  )
+);
 @use '../../scss/bitstyles/utilities/padding' with (
   $breakpoints: ('xl', 's')
 );

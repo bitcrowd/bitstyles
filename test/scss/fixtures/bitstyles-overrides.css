@@ -2770,13 +2770,8 @@ table {
 .bsu-outline-0:focus {
   outline: none;
 }
-.bsu-overflow-y {
-  -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
-}
-.bsu-overflow-x {
-  -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
+.bs-u-overflow-hidden {
+  overflow: hidden;
 }
 .bs-u-padding-0 {
   padding: 0;

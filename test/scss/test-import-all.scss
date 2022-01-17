@@ -159,6 +159,11 @@ $bitstyles-justify-values: (
   'start': start,
 );
 $bitstyles-margin-breakpoints: ('xl', 's');
+$bitstyles-overflow-values: (
+  'overflow': (
+    'hidden': hidden
+  )
+);
 $bitstyles-padding-breakpoints: ('xl', 's');
 $bitstyles-row-start-values: (
   '100': 100,

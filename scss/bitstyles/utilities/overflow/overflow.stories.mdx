@@ -4,27 +4,46 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Overflow
 
-## Vertical scrolling panel
-
-Any vertical overflow on the element is allowed to scroll, horizontal overflow is not. The height of this element will need to be restricted somehow — the example here shows an inline style for simplicity, but in practice that should handled by your layout e.g. a flex-based layout.
-
-Different browsers/OSes have different strategies for displaying scrollbars when they’re needed, this class standardises that behavior and ensures no scrollbars are displayed unless there’s something to scroll.
-
 <Canvas>
-  <Story name="u-overflow-y">
+  <Story name="u-overflow-hidden">
     {`
-      <div class="u-overflow-y u-bg-brand-2" style="height: 5rem">
-        Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.
+      <div class="u-overflow-hidden u-bg-brand-2" style="height: 5rem">
+        u-overflow-x-auto Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.
+      </div>
+    `}
+  </Story>
+  <Story name="u-overflow-scroll">
+    {`
+      <div class="u-overflow-scroll u-bg-brand-2" style="height: 5rem">
+        u-overflow-x-auto Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.
+      </div>
+    `}
+  </Story>
+  <Story name="u-overflow-auto">
+    {`
+      <div class="u-overflow-auto u-bg-brand-2" style="height: 5rem">
+        u-overflow-x-auto Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.
       </div>
     `}
   </Story>
 </Canvas>
 
+## Scrolling panels
+
+Commonly we want to limit the height or width of an element, and allow scrolling in that direction. It’s best to not use `scroll` but auto, to ensure the scrollbars do not appear when not needed.
+
 <Canvas>
-  <Story name="u-overflow-x">
+  <Story name="u-overflow-y-auto">
     {`
-      <div class="u-overflow-x u-bg-brand-2" style="width: 10rem">
-        Jelly&nbsp;cake&nbsp;marshmallow.&nbsp;Pie&nbsp;cotton&nbsp;candy&nbsp;chupa&nbsp;chups&nbsp;marzipan&nbsp;liquorice&nbsp;cheesecake&nbsp;wafer.
+      <div class="u-overflow-y-auto u-bg-brand-2" style="height: 5rem">
+        u-overflow-x-auto Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.
+      </div>
+    `}
+  </Story>
+  <Story name="u-overflow-x-auto">
+    {`
+      <div class="u-overflow-x-auto u-bg-brand-2" style="width: 10rem">
+        u-overflow-x-auto Jelly&nbsp;cake&nbsp;marshmallow.&nbsp;Pie&nbsp;cotton&nbsp;candy&nbsp;chupa&nbsp;chups&nbsp;marzipan&nbsp;liquorice&nbsp;cheesecake&nbsp;wafer.
       </div>
     `}
   </Story>
