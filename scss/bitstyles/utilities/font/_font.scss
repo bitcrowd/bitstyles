@@ -33,3 +33,19 @@
     );
   }
 }
+
+@include directional-properties.output-properties(
+  $property-name: 'font-family',
+  $classname-root: 'font',
+  $values: settings.$family-values
+);
+
+@each $breakpoint in settings.$family-breakpoints {
+  @include media-query.media-query($breakpoint) {
+    @include directional-properties.output-properties(
+      $property-name: 'font-family',
+      $classname-root: 'font',
+      $values: settings.$family-values
+    );
+  }
+}

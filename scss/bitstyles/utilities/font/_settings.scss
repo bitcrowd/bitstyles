@@ -12,3 +12,8 @@ $style-values: (
   'not-italic': normal
 ) !default;
 $style-breakpoints: () !default;
+$family-values: (
+  'header': typography.$font-family-header,
+  'body': typography.$font-family-body
+) !default;
+$family-breakpoints: () !default;
