@@ -1,8 +1,7 @@
 @use 'sass:map';
 @use '../settings/typography';
-@use 'unit-conversions';
 
-// Palette
+// Font-size
 //
 // **Returns requested font-size from the global `typography.$font-sizes` map.**
 // e.g. `font-size: font-size.get('h1');`
@@ -15,20 +14,9 @@
 @function get($font-size, $breakpoint: 'base') {
   @if map.has-key(typography.$font-sizes, $breakpoint) {
     $font-sizes: map.get(typography.$font-sizes, $breakpoint);
-    $base-size: typography.$font-size-base-small;
-
-    @if map.has-key($font-sizes, 'html') {
-      $base-size: map.get($font-sizes, 'html');
-    }
 
     @if map.has-key($font-sizes, $font-size) {
-      @if $font-size == 'html' {
-        @return unit-conversions.px-to-rem(map.get($font-sizes, $font-size), 16px);
-      }
-
-      @else {
-        @return unit-conversions.px-to-rem(map.get($font-sizes, $font-size), $base-size);
-      }
+      @return map.get($font-sizes, $font-size);
     }
 
     @else {
