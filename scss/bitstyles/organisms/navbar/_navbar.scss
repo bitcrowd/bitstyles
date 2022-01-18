@@ -8,7 +8,7 @@
   right: 0;
   left: 0;
 
-  @include media-query.media-query('motion-ok') {
+  @include media-query.get('motion-ok') {
     &.is-transitioning {
       transition: settings.$transition;
       will-change: settings.$will-change;

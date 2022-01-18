@@ -23,7 +23,7 @@
 
     @else {
       /* stylelint-disable max-nesting-depth */
-      @include media-query.media-query($breakpoint-alias) {
+      @include media-query.get($breakpoint-alias) {
         @include content-padding($padding-value);
       }
       /* stylelint-enable max-nesting-depth */

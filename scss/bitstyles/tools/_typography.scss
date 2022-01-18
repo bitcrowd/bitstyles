@@ -2,7 +2,7 @@
 @use '../settings/typography';
 @use '../settings/setup';
 @use 'media-query';
-@use 'unit-conversions';
+@use 'font-size';
 
 // Output font sizes
 //
@@ -17,24 +17,12 @@
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 //
 
-@mixin _output-font-sizes($font-sizes, $prefix, $subset) {
-  $base-size: typography.$font-size-base-small;
-
-  @if map.has-key($font-sizes, 'html') {
-    $base-size: map.get($font-sizes, 'html');
-  }
-
+@mixin _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint) {
   @each $element-name, $font-size in ($font-sizes) {
     @if (length($subset) == 0) or (index($subset, $element-name)) {
-      #{setup.$namespace}#{$prefix}#{$element-name} {
+      #{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
-        @if $element-name == 'html' {
-          font-size: unit-conversions.px-to-rem($font-size, 16px);
-        }
-
-        @else {
-          font-size: unit-conversions.px-to-rem($font-size, $base-size);
-        }
+        font-size: font-size.get($font-size: $element-name, $breakpoint: $breakpoint);
         /* stylelint-enable max-nesting-depth */
       }
     }
@@ -50,31 +38,31 @@
 // ```scss
 // $bitstyles-font-sizes: (
 //   'base': (
-//     'html': $bitstyles-font-size-base-small,
-//     'h0': 32px,
-//     'h1': 24px,
-//     'h2': 20px,
-//     'h3': 18px,
-//     'h4': $bitstyles-font-size-base-small,
-//     'h5': $bitstyles-font-size-base-small,
-//     'h6': $bitstyles-font-size-base-small
+//     'html': $font-size-base-small,
+//     'h0': 3rem,
+//     'h1': 2rem,
+//     'h2': 1.7rem,
+//     'h3': 1.45rem,
+//     'h4': 1.2rem,
+//     'h5': $font-size-base-small,
+//     'h6': 0.8rem,
 //   ),
 //   'm': (
-//     'html': $bitstyles-font-size-base,
-//     'h0': 86px,
-//     'h1': 40px,
-//     'h2': 28px,
-//     'h3': 20px,
-//     'h4': $bitstyles-font-size-base,
-//     'h5': $bitstyles-font-size-base,
-//     'h6': $bitstyles-font-size-base
+//     'html': $font-size-base,
+//     'h0': 4.8rem,
+//     'h1': 3rem,
+//     'h2': 2.45rem,
+//     'h3': 1.95rem,
+//     'h4': 1.25rem,
+//     'h5': $font-size-base,
+//     'h6': 0.8rem,
 //   )
 // );
 // ```
 //
-// Use `px` to define font-sizes, the output will specify `rem`s with a `px` fallback.
+// Use `rem` to define font-sizes.
 //
-// `base` is a reserved word, and results in font-sizes being output without an enclosing media query.
+// `html` is a reserved word, and results in font-sizes being output without an enclosing media query.
 //
 // The media-query names used should be defined in `$bitstyles-breakpoints`.
 //
@@ -84,15 +72,15 @@
 //
 
 @mixin generate-font-sizes($prefix: '', $subset: ()) {
-  @each $media-query-name, $font-sizes in typography.$font-sizes {
+  @each $breakpoint, $font-sizes in typography.$font-sizes {
     // Don’t wrap base classes in a media-query
-    @if $media-query-name == 'base' {
-      @include _output-font-sizes($font-sizes, $prefix, $subset);
+    @if $breakpoint == 'base' {
+      @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
     }
 
     @else {
-      @include media-query.media-query($media-query-name) {
-        @include _output-font-sizes($font-sizes, $prefix, $subset);
+      @include media-query.get($breakpoint) {
+        @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
       }
     }
   }

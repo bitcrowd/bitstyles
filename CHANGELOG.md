@@ -14,18 +14,27 @@
 - New `u-font` classes to specify font-family. Defaults to `u-font-header` and `u-font-body`, which apply the respective font stack as specified in `settings/typography`. This can be overridden using `$bitstyles-font-family-values`, and can be made responsive by specifying breakpoints in `$bitstyles-font-family-breakpoints`
 - Color & background-color of the `html` element can now be specified using `$bitstyles-html-color` and `$bitstyles-html-background-color`, and default to the `text` and `background` colors specified in your global color-palette
 - Default key-name to return when asking for a color without specifying it (e.g. `palette.get('white')`) can now be set using `$bitstyles-color-palette-default-key`
+- There’s now a helper function `font-size.get($font-size, $breakpoint)` which returns font-sizes from the global map
 
 ### Fixed
 
 - The height of inputs, selects, and `.a-button`s now matches regardless of the border-width
 - Modals now only show scrollbars (on OSes/configs where scrollbars are shown) when they’re needed
+- Typographic scale of base elements is no longer prefixed when a prefix is specified
+
+### Changed
+
+- The font-sizes specified in `settings/typography` `$font-sizes` map should now use `rem` units instead of `px`. The Sass will still compile if you specify using `px` as before, but the resulting CSS will not follow current best practices (to use `rem` units for specifying font-size)
 
 ### Breaking
 
 - All utility classes which had a double dash in their classname (`--`) now only have a single dash. You’ll need to rename all these classes to use single dashes e.g. `.u-bg--brand-1` becomes `.u-bg-brand-1`
 - Values for the display classes (`u-block`, `u-flex` etc.) will now need to be set unquoted. If you previously were overriding the `$bitstyles-display-values` variable, make sure all the values on the right hand side are unquoted CSS values e.g. `'block': block` instead of `'block': 'block'`, as was previously possible
-- If you were using the `$bitstyles-input-padding` variable, you’ll now need to set `$bitstyles-input-padding-vertical` and `$bitstyles-input-padding-horizontal` spearately
+- If you were using the `$bitstyles-input-padding` variable, you’ll now need to set `$bitstyles-input-padding-vertical` and `$bitstyles-input-padding-horizontal` separately
 - The `u-overflow-x` and `u-overflow-y` classes were renamed to `u-overflow-x-auto` and `u-overflow-y-auto`, respectively
+- The media-query/breakpoint mixin is no longer called using `media-query.media-query()`. You’ll need to update all uses of this to `media-query.get()`
+- `typography.$font-sizes` must now be specified using `rem` if you want to use `rem` units (recommended), instead of `px` units, as was previously possible
+- Removes the `unit-conversions` functions
 
 ## [[3.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-12-20
 

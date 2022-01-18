@@ -8,7 +8,7 @@
 }
 
 @each $breakpoint in settings.$breakpoints {
-  @include media-query.media-query($breakpoint) {
+  @include media-query.get($breakpoint) {
     .#{setup.$namespace}u-sr-only\@#{$breakpoint} {
       @include sr-only.sr-only;
     }

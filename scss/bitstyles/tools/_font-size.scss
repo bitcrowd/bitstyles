@@ -1,0 +1,30 @@
+@use 'sass:map';
+@use '../settings/typography';
+
+// Font-size
+//
+// **Returns requested font-size from the global `typography.$font-sizes` map.**
+// e.g. `font-size: font-size.get('h1');`
+//
+// @param {String} $font-size  The font-size, as named in the `typography.$font-sizes` map
+//
+// @param {String} $breakpoint   Optional. Defaults to `base`, you can request the font-size at other breakpoints as defined in the `typography.$font-sizes` map
+//
+
+@function get($font-size, $breakpoint: 'base') {
+  @if map.has-key(typography.$font-sizes, $breakpoint) {
+    $font-sizes: map.get(typography.$font-sizes, $breakpoint);
+
+    @if map.has-key($font-sizes, $font-size) {
+      @return map.get($font-sizes, $font-size);
+    }
+
+    @else {
+      @error 'Oops! There’s no font-size at that breakpoint ‘#{$font-size}/#{$breakpoint}’.';
+    }
+  }
+
+  @else {
+    @error 'Oops! Font-sizes at breakpoint ‘#{$breakpoint}’ do not exist.';
+  }
+}

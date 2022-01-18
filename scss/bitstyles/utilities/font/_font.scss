@@ -9,7 +9,7 @@
 );
 
 @each $breakpoint in settings.$weight-breakpoints {
-  @include media-query.media-query($breakpoint) {
+  @include media-query.get($breakpoint) {
     @include directional-properties.output-properties(
       $property-name: 'font-weight',
       $classname-root: 'font',
@@ -25,7 +25,7 @@
 );
 
 @each $breakpoint in settings.$style-breakpoints {
-  @include media-query.media-query($breakpoint) {
+  @include media-query.get($breakpoint) {
     @include directional-properties.output-properties(
       $property-name: 'font-style',
       $classname-root: 'font',

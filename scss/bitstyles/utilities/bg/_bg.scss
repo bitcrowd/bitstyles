@@ -9,7 +9,7 @@
 );
 
 @each $breakpoint in settings.$breakpoints {
-  @include media-query.media-query($breakpoint) {
+  @include media-query.get($breakpoint) {
     @include directional-properties.output-properties(
       $property-name: 'background-color',
       $classname-root: 'bg',
