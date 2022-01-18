@@ -8,19 +8,19 @@
 //
 // @param {String} $color  Base colour within the palette
 //
-// @param {String} $percent   Optional. Percentage of the color to mix with white. Defaults to `100%` (fuly the specified color, no white)
+// @param {String} $key   Optional. Key/name of the color to select from the sass map. Defaults to `100`, but that can be specified using `$bitstyles-color-palette-default-key`.
 //
 
-@function get($color, $percent: '100') {
+@function get($color, $key: color-palette.$default-key) {
   @if map.has-key(color-palette.$color-palette, $color) {
     $palette: map.get(color-palette.$color-palette, $color);
 
-    @if map.has-key($palette, $percent) {
-      @return map.get($palette, $percent);
+    @if map.has-key($palette, $key) {
+      @return map.get($palette, $key);
     }
 
     @else {
-      @error 'Oops! Color/percentage ‘#{$color}/#{$percent}’ does not exist.';
+      @error 'Oops! Color/name pair ‘#{$color}/#{$key}’ does not exist.';
     }
   }
 
