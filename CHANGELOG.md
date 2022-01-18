@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## [[4.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.0.0) - 2021-12-20
 
 ### Added
 
@@ -36,7 +36,7 @@
 - `typography.$font-sizes` must now be specified using `rem` if you want to use `rem` units (recommended), instead of `px` units, as was previously possible
 - Removes the `unit-conversions` functions
 
-## [[3.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.0.0) - 2021-12-20
+## [[3.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v3.1.0) - 2021-12-20
 
 ### Added
 
