@@ -1,9 +1,9 @@
 @use 'sass:map';
 @use 'settings';
-@use '../../tools/directional-properties';
+@use '../../tools/properties';
 
 @each $property, $values in settings.$values {
-  @include directional-properties.output-properties(
+  @include properties.output(
     $property-name: $property,
     $classname-root: $property,
     $values: $values,
