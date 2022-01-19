@@ -1,0 +1,7 @@
+@use '../tools/shadow';
+
+$shadows: (
+  'default': shadow.generate(#f00, 4rem, 8rem, 4),
+) !default;
+
+@debug $shadows;

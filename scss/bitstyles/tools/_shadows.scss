@@ -1,0 +1,12 @@
+@use '../settings/shadows';
+@use 'sass:map';
+
+@function get($shadow) {
+  @if map.has-key(shadows.$shadows, $shadow) {
+    @return map.get(shadows.$shadows, $shadow);
+  }
+
+  @else {
+    @error 'Oops! There’s no shadow with the name ‘#{$shadow}’.';
+  }
+}

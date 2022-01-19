@@ -1,0 +1,8 @@
+@use './settings';
+@use '../../tools/properties';
+
+@include properties.output(
+  $property-name: 'drop-shadow',
+  $classname-root: 'shadow',
+  $values: settings.$values
+);

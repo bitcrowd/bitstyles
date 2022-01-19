@@ -1,0 +1,7 @@
+@use '../../tools/shadows';
+
+$values: (
+  'default': shadows.get('default'),
+) !default;
+
+@debug $values;
