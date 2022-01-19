@@ -56,6 +56,36 @@
 }
 
 /*
+ * Outputs a classname with CSS properties, intended for CSS properties that do not have directional variants.
+ *
+ * @param $property-name The name of the CSS property to be specified e.g. `margin`
+ * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
+ * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
+ * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
+ */
+@mixin output(
+  $property-name,
+  $classname-root,
+  $values,
+  $breakpoint-suffix: ''
+) {
+  @each $alias, $value in $values {
+    $classname: get-classname(
+      (
+        setup.$namespace,
+        'u',
+        $classname-root,
+        $alias
+      )
+    );
+
+    .#{$classname}#{$breakpoint-suffix} {
+      #{$property-name}: $value;
+    }
+  }
+}
+
+/*
  * Outputs a classname with CSS properties, intended for directional CSS properties i.e. those which accept `-top`, `-right` etc. suffixes.
  *
  * @param $property-name The name of the CSS property to be specified e.g. `margin`
@@ -64,7 +94,7 @@
  * @param $directions A map of name/value pairs, where the name will form part of the classname, and the list of values will be form part of the CSS property e.g. ('left': ('left'), 'x': ('left', 'right'))
  * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
  */
-@mixin output-directional-properties(
+@mixin output-directional(
   $property-name,
   $classname-root,
   $values,
@@ -95,44 +125,21 @@
 }
 
 /*
- * Outputs a classname with CSS properties, intended for CSS properties that do not have directional variants.
+ * Outputs a classname that applies a block of properties that you pass in.
  *
- * @param $property-name The name of the CSS property to be specified e.g. `margin`
+ * @param $classname-prefix [optional] Pass a prefix for your classname e.g. to denote the layer of CSS it belongs to
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
- * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
  * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
  */
-@mixin output-properties(
-  $property-name,
-  $classname-root,
-  $values,
-  $breakpoint-suffix: ''
-) {
-  @each $alias, $value in $values {
-    $classname: get-classname(
-      (
-        setup.$namespace,
-        'u',
-        $classname-root,
-        $alias
-      )
-    );
-
-    .#{$classname}#{$breakpoint-suffix} {
-      #{$property-name}: $value;
-    }
-  }
-}
-
 @mixin output-block(
-  $object-level,
+  $classname-prefix,
   $classname-root,
   $breakpoint-suffix: ''
 ) {
   $classname: get-classname(
     (
       setup.$namespace,
-      $object-level,
+      $classname-prefix,
       $classname-root,
     )
   );

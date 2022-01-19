@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'sass:math';
 @use './settings';
-@use '../../tools/directional-properties';
+@use '../../tools/properties';
 @use '../../tools/media-query';
 
 @mixin card($padding) {
@@ -30,15 +30,15 @@
 @each $size, $padding-size in settings.$sizes {
   $size-name: modifier-name($size);
 
-  @include directional-properties.output-block(
-    $object-level: 'a',
+  @include properties.output-block(
+    $classname-prefix: 'a',
     $classname-root: 'card#{$size-name}'
   ) {
     @include card($padding-size);
   }
 
-  @include directional-properties.output-block(
-    $object-level: 'a',
+  @include properties.output-block(
+    $classname-prefix: 'a',
     $classname-root: 'card#{$size-name}__header'
   ) {
     @include card__header($padding-size);
@@ -50,16 +50,16 @@
     @each $size, $padding-size in settings.$sizes {
       $size-name: modifier-name($size);
 
-      @include directional-properties.output-block(
-        $object-level: 'a',
+      @include properties.output-block(
+        $classname-prefix: 'a',
         $classname-root: 'card#{$size-name}',
         $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
       ) {
         @include card($padding-size);
       }
 
-      @include directional-properties.output-block(
-        $object-level: 'a',
+      @include properties.output-block(
+        $classname-prefix: 'a',
         $classname-root: 'card#{$size-name}__header',
         $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
       ) {

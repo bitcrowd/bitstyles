@@ -1,9 +1,9 @@
 @use 'sass:map';
 @use './settings';
-@use '../../tools/directional-properties';
+@use '../../tools/properties';
 @use '../../tools/media-query';
 
-@include directional-properties.output-directional-properties(
+@include properties.output-directional(
   $property-name: 'padding',
   $classname-root: 'padding',
   $values: map.get(settings.$sizes, 'positive'),
@@ -12,7 +12,7 @@
 
 @each $breakpoint-alias in settings.$breakpoints {
   @include media-query.get($breakpoint-alias) {
-    @include directional-properties.output-directional-properties(
+    @include properties.output-directional(
       $property-name: 'padding',
       $classname-root: 'padding',
       $values: map.get(settings.$sizes, 'positive'),

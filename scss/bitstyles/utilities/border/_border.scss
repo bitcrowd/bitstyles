@@ -1,8 +1,8 @@
 @use './settings';
-@use '../../tools/directional-properties';
+@use '../../tools/properties';
 @use '../../tools/media-query';
 
-@include directional-properties.output-directional-properties(
+@include properties.output-directional(
   $property-name: 'border',
   $classname-root: 'border',
   $values: settings.$values,
@@ -11,7 +11,7 @@
 
 @each $breakpoint-alias in settings.$breakpoints {
   @include media-query.get($breakpoint-alias) {
-    @include directional-properties.output-directional-properties(
+    @include properties.output-directional(
       $property-name: 'border',
       $classname-root: 'border',
       $values: settings.$values,

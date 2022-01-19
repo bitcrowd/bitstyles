@@ -1,15 +1,15 @@
 @use 'sass:map';
 @use './settings';
-@use '../../tools/directional-properties';
+@use '../../tools/properties';
 @use '../../tools/media-query';
 
-@include directional-properties.output-directional-properties(
+@include properties.output-directional(
   $property-name: 'margin',
   $classname-root: 'margin',
   $values: map.get(settings.$sizes, 'positive'),
   $directions: settings.$directions
 );
-@include directional-properties.output-directional-properties(
+@include properties.output-directional(
   $property-name: 'margin',
   $classname-root: 'margin-neg',
   $values: map.get(settings.$sizes, 'negative'),
@@ -18,14 +18,14 @@
 
 @each $breakpoint-alias in settings.$breakpoints {
   @include media-query.get($breakpoint-alias) {
-    @include directional-properties.output-directional-properties(
+    @include properties.output-directional(
       $property-name: 'margin',
       $classname-root: 'margin',
       $values: map.get(settings.$sizes, 'positive'),
       $directions: settings.$directions,
       $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );
-    @include directional-properties.output-directional-properties(
+    @include properties.output-directional(
       $property-name: 'margin',
       $classname-root: 'margin-neg',
       $values: map.get(settings.$sizes, 'negative'),

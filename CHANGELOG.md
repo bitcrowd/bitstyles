@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Renames `tools/_directional-properties.scss` -> `tools/_properties.scss`, so any imports of those files will need to be updated to reflect that
+- Renames `output-properties()` -> `output()`
+- Renames `output-directional-properties()` -> `output-directional()`
+
 ## [[4.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.0.0) - 2021-12-20
 
 ### Added

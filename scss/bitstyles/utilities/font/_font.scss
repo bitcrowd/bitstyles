@@ -1,8 +1,8 @@
 @use './settings';
-@use '../../tools/directional-properties';
+@use '../../tools/properties';
 @use '../../tools/media-query';
 
-@include directional-properties.output-properties(
+@include properties.output(
   $property-name: 'font-weight',
   $classname-root: 'font',
   $values: settings.$weight-values
@@ -10,7 +10,7 @@
 
 @each $breakpoint in settings.$weight-breakpoints {
   @include media-query.get($breakpoint) {
-    @include directional-properties.output-properties(
+    @include properties.output(
       $property-name: 'font-weight',
       $classname-root: 'font',
       $values: settings.$weight-values
@@ -18,7 +18,7 @@
   }
 }
 
-@include directional-properties.output-properties(
+@include properties.output(
   $property-name: 'font-style',
   $classname-root: 'font',
   $values: settings.$style-values
@@ -26,7 +26,7 @@
 
 @each $breakpoint in settings.$style-breakpoints {
   @include media-query.get($breakpoint) {
-    @include directional-properties.output-properties(
+    @include properties.output(
       $property-name: 'font-style',
       $classname-root: 'font',
       $values: settings.$style-values
@@ -34,7 +34,7 @@
   }
 }
 
-@include directional-properties.output-properties(
+@include properties.output(
   $property-name: 'font-family',
   $classname-root: 'font',
   $values: settings.$family-values
@@ -42,7 +42,7 @@
 
 @each $breakpoint in settings.$family-breakpoints {
   @include media-query.media-query($breakpoint) {
-    @include directional-properties.output-properties(
+    @include properties.output(
       $property-name: 'font-family',
       $classname-root: 'font',
       $values: settings.$family-values

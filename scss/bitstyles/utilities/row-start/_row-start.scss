@@ -1,8 +1,8 @@
 @use './settings.scss';
-@use '../../tools/directional-properties';
+@use '../../tools/properties';
 @use '../../tools/media-query';
 
-@include directional-properties.output-properties(
+@include properties.output(
   $property-name: 'grid-row-start',
   $classname-root: 'row-start',
   $values: settings.$values
@@ -10,7 +10,7 @@
 
 @each $breakpoint-alias in settings.$breakpoints {
   @include media-query.get($breakpoint-alias) {
-    @include directional-properties.output-properties(
+    @include properties.output(
       $property-name: 'grid-row-start',
       $classname-root: 'row-start',
       $values: settings.$values,
