@@ -1,5 +1,6 @@
 @use '../../settings/animation';
 @use '../../tools/palette';
+@use '../../tools/shadow';
 @use '../../tools/size';
 
 //
@@ -28,7 +29,14 @@ $box-shadow: none !default;
 $color-hover: palette.get('white') !default;
 $background-color-hover: palette.get('gray', '60') !default;
 $border-color-hover: palette.get('gray', '60') !default;
-$box-shadow-hover: 0 0 size.get('l') rgba(palette.get('black', '100'), 0.3) !default;
+$box-shadow-hover: shadow.to-css(
+  shadow.generate(
+    $color: rgba(palette.get('black', '100'), 0.15),
+    $offset: 0,
+    $blur-radius: size.get('l'),
+    $layers: 4,
+  )
+) !default;
 
 //
 // Active colors ////////////////////////////////////////
@@ -36,7 +44,14 @@ $box-shadow-hover: 0 0 size.get('l') rgba(palette.get('black', '100'), 0.3) !def
 $color-active: palette.get('text') !default;
 $background-color-active: palette.get('gray', '10') !default;
 $border-color-active: palette.get('gray', '10') !default;
-$box-shadow-active: 0 0 size.get('xs') rgba(palette.get('black', '100'), 0.3) !default;
+$box-shadow-active: shadow.to-css(
+  shadow.generate(
+    $color: rgba(palette.get('black', '100'), 0.15),
+    $offset: 0,
+    $blur-radius: size.get('xs'),
+    $layers: 4,
+  )
+) !default;
 
 //
 // Disabled colors ////////////////////////////////////////

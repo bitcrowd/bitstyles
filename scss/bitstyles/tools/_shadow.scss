@@ -1,6 +1,27 @@
 @use 'sass:list';
+@use 'sass:map';
 @use 'sass:math';
 @use 'sass:string';
+
+@function to-css($shadow) {
+  $shadow-definition: ();
+
+  @each $layer in $shadow {
+    $shadow-definition: list.append($shadow-definition, string.unquote('0 #{map.get($layer, 'offset')} #{map.get($layer, 'blur-radius')} #{map.get($layer, 'color')}'), comma);
+  }
+
+  @return $shadow-definition;
+}
+
+@function to-filter($shadow) {
+  $shadow-definition: ();
+
+  @each $layer in $shadow {
+    $shadow-definition: list.append($shadow-definition, string.unquote('drop-shadow(#{map.get($layer, 'color')} 0 #{map.get($layer, 'offset')} #{map.get($layer, 'blur-radius')})'), space);
+  }
+
+  @return $shadow-definition;
+}
 
 /* stylelint-disable scss/no-duplicate-dollar-variables */
 @function generate($color, $offset, $blur-radius, $layers: 4) {

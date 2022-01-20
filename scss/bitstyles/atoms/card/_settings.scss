@@ -1,4 +1,5 @@
 @use '../../tools/palette';
+@use '../../tools/shadow';
 @use '../../tools/size';
 
 $sizes: (
@@ -6,9 +7,13 @@ $sizes: (
   'l': size.get('xl'),
 ) !default;
 $border-radius: size.get('m') !default;
-$box-shadow:
-  0 size.get('xs') size.get('m') rgba(palette.get('brand-1', '100'), 0.1),
-  0 size.get('xxxs') size.get('xxs') rgba(palette.get('gray', '90'), 0.04),
-  0 0 size.get('xxs') rgba(palette.get('gray', '90'), 0.1) !default;
+$box-shadow: shadow.to-css(
+  shadow.generate(
+    $color: rgba(palette.get('brand-1', '100'), 0.025),
+    $offset: size.get('s'),
+    $blur-radius: size.get('l'),
+    $layers: 6,
+  )
+) !default;
 $breakpoints: ('m', 'l') !default;
 $header-background-color: palette.get('gray', '1') !default;
