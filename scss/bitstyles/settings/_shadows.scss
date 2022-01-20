@@ -4,10 +4,8 @@
 $shadows: (
   'default': shadow.generate(
     $color: rgba(palette.get('brand-1'), 0.15),
-    $offset: 3rem,
-    $distance: 5rem,
-    $layers: 4
+    $offset: 2rem,
+    $blur-radius: 2rem,
+    $layers: 4,
   ),
 ) !default;
-
-@debug $shadows;

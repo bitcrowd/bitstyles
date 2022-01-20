@@ -1,16 +1,27 @@
 @use 'sass:string';
 @use './settings';
 @use '../../tools/properties';
+@use '../../tools/shadows';
 
 @each $name, $shadow in settings.$values {
-  $shadow-definition: '';
-  @each $shadow-layer in $shadow {
-    $shadow-definition: '#{$shadow-definition} drop-shadow(#{$shadow-layer})';
-  };
   @include properties.output-block(
     $classname-prefix: 'u',
-    $classname-root: 'shadow-#{$name}',
+    $classname-root: 'drop-shadow-#{$name}',
   ) {
-    filter: string.unquote($shadow-definition);
-  };
+    filter: $shadow;
+  }
+}
+
+@each $breakpoint in settings.$breakpoints {
+  @include media-query.get($breakpoint) {
+    @each $name, $shadow in settings.$values {
+      @include properties.output-block(
+        $classname-prefix: 'u',
+        $classname-root: 'drop-shadow-#{$name}',
+        $breakpoint-suffix: '\\\@#{$breakpoint}',
+      ) {
+        filter: $shadow;
+      }
+    }
+  }
 }

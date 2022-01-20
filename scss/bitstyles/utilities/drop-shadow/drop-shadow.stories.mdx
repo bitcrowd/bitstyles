@@ -6,12 +6,12 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Apply a drop-shadow to the element, selected from the standard set of shadows.
 
-## u-shadow
+## u-drop-shadow
 
 <Canvas isColumn>
-  <Story name="u-shadow">
+  <Story name="u-drop-shadow">
     {`
-      <div class="u-shadow-default u-padding-m u-bg-white" style="width: 10rem; height: 10rem;">
+      <div class="u-drop-shadow-default u-padding-m u-bg-white" style="width: 10rem; height: 10rem;">
       </div>
     `}
   </Story>
@@ -19,20 +19,16 @@ Apply a drop-shadow to the element, selected from the standard set of shadows.
 
 ## Customization
 
-The available display types can be customized by overriding the `$bitstyles-display-values` Sass variable:
+The available drop-shadows and their names can be customized by overriding the `$bitstyles-drop-shadow-values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `filter` as the format (drop-shadows are applied using CSS filters):
 
 ```scss
 $bitstyles-display-values: (
-  'block': block,
-  'grid': grid,
-  'flex': flex,
-  'inline-flex': inline-flex,
-  'hidden': none
+  'default': shadows.get('default', 'filter'),
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-display-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-drop-shadows-breakpoints` variable:
 
 ```scss
-$bitstyles-display-breakpoints: ('s', 'm', 'xl');
+$bitstyles-drop-shadows-breakpoints: ('s', 'm', 'xl');
 ```

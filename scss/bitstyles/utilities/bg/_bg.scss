@@ -13,6 +13,7 @@
     @include properties.output(
       $property-name: 'background-color',
       $classname-root: 'bg',
+      $breakpoint-suffix: '\\\@#{$breakpoint}',
       $values: settings.$values
     );
   }

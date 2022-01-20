@@ -2,16 +2,22 @@
 @use 'sass:math';
 @use 'sass:string';
 
-@function generate($color, $offset, $distance, $layers: 4) {
+/* stylelint-disable scss/no-duplicate-dollar-variables */
+@function generate($color, $offset, $blur-radius, $layers: 4) {
   $shadow: ();
 
   @for $layer-index from $layers through 1 {
-    $layer-distance: math.div($distance, $layer-index);
+    $layer-blur-radius: math.div($blur-radius, $layer-index);
     $layer-offset: math.div($offset, $layer-index);
-    $layer-css: string.unquote('#{$color} 0 #{$layer-offset} #{$layer-distance}');
+    $layer: (
+      'color': $color,
+      'offset': $layer-offset,
+      'blur-radius': $layer-blur-radius,
+    );
 
-    $shadow: list.append($shadow, $layer-css);
+    $shadow: list.append($shadow, $layer);
   }
 
   @return $shadow;
-};
+}
+/* stylelint-enable scss/no-duplicate-dollar-variables */

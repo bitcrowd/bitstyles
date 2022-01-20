@@ -1,9 +1,36 @@
 @use '../settings/shadows';
 @use 'sass:map';
+@use 'sass:string';
 
-@function get($shadow) {
+@function to-css($shadow) {
+  $shadow-definition: '';
+
+  @each $layer in $shadow {
+    $shadow-definition: '#{$shadow-definition} 0 #{map.get($layer, $offset)} #{map.get($layer, $blur-radius)} #{map.get($layer, $color)})';
+  }
+
+  @return string.unquote($shadow-definition);
+}
+
+@function to-filter($shadow) {
+  $shadow-definition: '';
+
+  @each $layer in $shadow {
+    $shadow-definition: '#{$shadow-definition} drop-shadow(#{map.get($layer, 'color')} 0 #{map.get($layer, 'offset')} #{map.get($layer, 'blur-radius')})';
+  }
+
+  @return string.unquote($shadow-definition);
+}
+
+@function get($shadow, $format: 'css') {
   @if map.has-key(shadows.$shadows, $shadow) {
-    @return map.get(shadows.$shadows, $shadow);
+    @if $format == 'css' {
+      @return to-css(map.get(shadows.$shadows, $shadow));
+    }
+
+    @if $format == 'filter' {
+      @return to-filter(map.get(shadows.$shadows, $shadow));
+    }
   }
 
   @else {
