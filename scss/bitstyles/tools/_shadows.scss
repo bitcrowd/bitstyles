@@ -3,6 +3,7 @@
 @use 'sass:map';
 
 @function get($shadow, $format: 'css') {
+  @debug shadows.$shadows;
   @if map.has-key(shadows.$shadows, $shadow) {
     @if $format == 'css' {
       @return shadow.to-css(map.get(shadows.$shadows, $shadow));

@@ -7,6 +7,12 @@ $shadows: (
     $color: rgba(palette.get('brand-1'), 0.15),
     $offset: 2rem,
     $blur-radius: 2rem,
-    $layers: 4,
   ),
+  'test': ((
+    'color': #f00,
+    'offset': 2rem,
+    'blur-radius': 3rem,
+  ))
 ) !default;
+
+@debug $shadows;

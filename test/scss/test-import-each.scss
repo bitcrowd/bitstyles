@@ -67,6 +67,19 @@ $bitstyles-color-palette-color-palette: (
 );
 $bitstyles-layout-size-base: 10rem;
 $bitstyles-setup-namespace: 'bs';
+$bitstyles-shadows-shadows: (
+  'default': (
+    (
+      'color': #f00,
+      'offset': 2.5rem,
+      'blur-radius': 5rem,
+    ), (
+      'color': #f00,
+      'offset': 5rem,
+      'blur-radius': 10rem,
+    ),
+  )
+);
 $bitstyles-typography-webfont-family-name: 'FakeFont';
 $bitstyles-typography-webfont-base-url: './';
 $bitstyles-typography-margin-heading: 10rem;
@@ -254,11 +267,13 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/utilities/aspect-ratio';
 @import '../../scss/bitstyles/utilities/bg';
 @import '../../scss/bitstyles/utilities/border';
+@import '../../scss/bitstyles/utilities/box-shadow';
 @import '../../scss/bitstyles/utilities/break-text';
 @import '../../scss/bitstyles/utilities/clearfix';
 @import '../../scss/bitstyles/utilities/col-span';
 @import '../../scss/bitstyles/utilities/col-start';
 @import '../../scss/bitstyles/utilities/display';
+@import '../../scss/bitstyles/utilities/drop-shadow';
 @import '../../scss/bitstyles/utilities/fg';
 @import '../../scss/bitstyles/utilities/flex';
 @import '../../scss/bitstyles/utilities/font';

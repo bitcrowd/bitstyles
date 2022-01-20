@@ -429,7 +429,9 @@ textarea {
   background-color: #000;
   border: 1.25rem solid #000;
   border-radius: 10rem;
-  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.025),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
+    0 0 5rem rgba(0, 0, 0, 0.025);
 }
 [type='date']:hover,
 [type='datetime-local']:hover,
@@ -447,7 +449,8 @@ textarea:hover {
   color: #000;
   background-color: #000;
   border-color: #000;
-  box-shadow: 0 0 7.5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
+    0 0 3.75rem rgba(0, 0, 0, 0.025), 0 0 7.5rem rgba(0, 0, 0, 0.025);
 }
 [type='date']:active,
 [type='date']:focus,
@@ -479,7 +482,9 @@ textarea:focus {
   background-color: #000;
   border-color: #000;
   outline: none;
-  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.075),
+    0 0 0.8333333333rem rgba(0, 0, 0, 0.075), 0 0 1.25rem rgba(0, 0, 0, 0.075),
+    0 0 2.5rem rgba(0, 0, 0, 0.075);
 }
 [type='date']:invalid,
 [type='date'][aria-invalid='true'],
@@ -510,7 +515,8 @@ textarea[aria-invalid='true'] {
   color: #000;
   background-color: #000;
   border-color: #000;
-  box-shadow: 0 0 7.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.5), 0 0 2.5rem rgba(0, 0, 0, 0.5),
+    0 0 3.75rem rgba(0, 0, 0, 0.5), 0 0 7.5rem rgba(0, 0, 0, 0.5);
 }
 [type='date']:disabled,
 [type='datetime-local']:disabled,
@@ -768,7 +774,9 @@ table {
   color: #000;
   background: #000;
   border: 1.25rem solid #000;
-  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.2), 0 0 2.5rem rgba(0, 0, 0, 0.2),
+    0 0 5rem rgba(0, 0, 0, 0.2);
 }
 .bsa-button:focus,
 .bsa-button:hover {
@@ -777,13 +785,16 @@ table {
   background: #000;
   border-color: #000;
   outline: none;
-  box-shadow: 0 0 7.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.2), 0 0 2.5rem rgba(0, 0, 0, 0.2),
+    0 0 3.75rem rgba(0, 0, 0, 0.2), 0 0 7.5rem rgba(0, 0, 0, 0.2);
 }
 .bsa-button:active {
   color: #000;
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 7.5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.3),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.3), 0 0 2.5rem rgba(0, 0, 0, 0.3),
+    0 0 5rem rgba(0, 0, 0, 0.3);
 }
 .bsa-button:disabled,
 .bsa-button[aria-disabled='true'] {
@@ -807,13 +818,16 @@ table {
   color: #000;
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.3), 0 0 2.5rem rgba(0, 0, 0, 0.3),
+    0 0 3.75rem rgba(0, 0, 0, 0.3), 0 0 7.5rem rgba(0, 0, 0, 0.3);
 }
 .bsa-button--danger:active {
   color: #000;
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.3),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.3), 0 0 2.5rem rgba(0, 0, 0, 0.3),
+    0 0 5rem rgba(0, 0, 0, 0.3);
 }
 .bsa-button--danger:disabled,
 .bsa-button--danger[aria-disabled='true'] {
@@ -937,19 +951,24 @@ table {
   color: #000;
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.05),
+    0 0 3.3333333333rem rgba(0, 0, 0, 0.05), 0 0 5rem rgba(0, 0, 0, 0.05),
+    0 0 10rem rgba(0, 0, 0, 0.05);
 }
 .bsa-button--mode:active {
   color: #000;
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.05),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.05), 0 0 2.5rem rgba(0, 0, 0, 0.05),
+    0 0 5rem rgba(0, 0, 0, 0.05);
 }
 .bsa-button--mode[aria-pressed='true'] {
   color: #000;
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 7.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.05), 0 0 2.5rem rgba(0, 0, 0, 0.05),
+    0 0 3.75rem rgba(0, 0, 0, 0.05), 0 0 7.5rem rgba(0, 0, 0, 0.05);
 }
 .bsa-button--mode:disabled,
 .bsa-button--mode[aria-disabled='true'] {
@@ -975,13 +994,17 @@ table {
   color: #000;
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 12.5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.15),
+    0 0 4.1666666667rem rgba(0, 0, 0, 0.15), 0 0 6.25rem rgba(0, 0, 0, 0.15),
+    0 0 12.5rem rgba(0, 0, 0, 0.15);
 }
 .bsa-button--nav:active {
   color: #000;
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.15),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.15), 0 0 2.5rem rgba(0, 0, 0, 0.15),
+    0 0 5rem rgba(0, 0, 0, 0.15);
 }
 .bsa-button--nav[aria-current],
 .bsa-button--nav[aria-expanded='true'] {
@@ -1156,8 +1179,12 @@ table {
   padding: 10rem;
   overflow: hidden;
   border-radius: 10rem;
-  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
-    0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
+    0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
+    0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
+    0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
+    0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
+    0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
 }
 .bs-a-card__header {
   padding: 5rem 10rem;
@@ -1168,8 +1195,12 @@ table {
   padding: 20rem;
   overflow: hidden;
   border-radius: 10rem;
-  box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
-    0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
+    0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
+    0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
+    0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
+    0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
+    0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
 }
 .bs-a-card-s__header {
   padding: 10rem 20rem;
@@ -1181,8 +1212,12 @@ table {
     padding: 10rem;
     overflow: hidden;
     border-radius: 10rem;
-    box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
-      0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
+      0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
+      0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
+      0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
+      0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
+      0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
   }
   .bs-a-card__header\@m {
     padding: 5rem 10rem;
@@ -1193,8 +1228,12 @@ table {
     padding: 20rem;
     overflow: hidden;
     border-radius: 10rem;
-    box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
-      0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
+      0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
+      0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
+      0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
+      0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
+      0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
   }
   .bs-a-card-s__header\@m {
     padding: 10rem 20rem;
@@ -1207,8 +1246,12 @@ table {
     padding: 10rem;
     overflow: hidden;
     border-radius: 10rem;
-    box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
-      0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
+      0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
+      0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
+      0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
+      0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
+      0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
   }
   .bs-a-card__header\@l {
     padding: 5rem 10rem;
@@ -1219,8 +1262,12 @@ table {
     padding: 20rem;
     overflow: hidden;
     border-radius: 10rem;
-    box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.1),
-      0 1.25rem 2.5rem rgba(0, 0, 0, 0.04), 0 0 2.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
+      0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
+      0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
+      0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
+      0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
+      0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
   }
   .bs-a-card-s__header\@l {
     padding: 10rem 20rem;
@@ -1288,7 +1335,9 @@ table {
   background-color: #000;
   border: 2px solid #000;
   border-radius: 5rem;
-  box-shadow: 0 0 10rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.05),
+    0 0 3.3333333333rem rgba(0, 0, 0, 0.05), 0 0 5rem rgba(0, 0, 0, 0.05),
+    0 0 10rem rgba(0, 0, 0, 0.05);
 }
 .bsa-dropdown [role='separator'] {
   margin: 2.5rem 0;
@@ -1533,7 +1582,9 @@ table {
 }
 .bso-ui-group {
   border-radius: 10rem;
-  box-shadow: 0 0 5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.025),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
+    0 0 5rem rgba(0, 0, 0, 0.025);
 }
 .bso-ui-group__item {
   box-shadow: none;
@@ -1597,6 +1648,9 @@ table {
 .bs-u-border-f00-y {
   border-top: red;
   border-bottom: red;
+}
+.bs-u-shadow-default {
+  box-shadow: 0 2.5rem 5rem red, 0 5rem 10rem red;
 }
 .bsu-break-text {
   overflow-wrap: break-word;
@@ -1666,6 +1720,9 @@ table {
   .bs-u-inline-block\@l {
     display: inline-block;
   }
+}
+.bs-u-drop-shadow-default {
+  filter: drop-shadow(#f00 0 2.5rem 5rem) drop-shadow(#f00 0 5rem 10rem);
 }
 .bs-u-fg-f00 {
   color: red;

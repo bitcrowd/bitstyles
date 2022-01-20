@@ -24,7 +24,7 @@
 }
 
 /* stylelint-disable scss/no-duplicate-dollar-variables */
-@function generate($color, $offset, $blur-radius, $layers: 4) {
+@function generate($color, $offset: 0, $blur-radius, $layers: 4) {
   $shadow: ();
 
   @for $layer-index from $layers through 1 {

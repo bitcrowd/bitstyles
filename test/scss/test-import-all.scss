@@ -67,6 +67,19 @@ $bitstyles-color-palette-color-palette: (
 );
 $bitstyles-layout-size-base: 10rem;
 $bitstyles-setup-namespace: 'bs';
+$bitstyles-shadows-shadows: (
+  'default': (
+    (
+      'color': #f00,
+      'offset': 2.5rem,
+      'blur-radius': 5rem,
+    ), (
+      'color': #f00,
+      'offset': 5rem,
+      'blur-radius': 10rem,
+    ),
+  )
+);
 $bitstyles-typography-webfont-family-name: 'FakeFont';
 $bitstyles-typography-webfont-base-url: './';
 $bitstyles-typography-margin-heading: 10rem;

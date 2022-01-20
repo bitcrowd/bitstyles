@@ -9,9 +9,7 @@ $background-color: palette.get('white', '100') !default;
 $box-shadow: shadow.to-css(
   shadow.generate(
     $color: rgba(palette.get('gray', '80'), 0.05),
-    $offset: 0,
     $blur-radius: size.get('m'),
-    $layers: 4,
   )
 ) !default;
 $separator-border: 1px solid palette.get('gray', '1') !default;

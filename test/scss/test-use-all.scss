@@ -66,6 +66,19 @@
     )
   ),
   $layout-size-base: 10rem,
+  $shadows-shadows: (
+    'default': (
+      (
+        'color': #f00,
+        'offset': 2.5rem,
+        'blur-radius': 5rem,
+      ), (
+        'color': #f00,
+        'offset': 5rem,
+        'blur-radius': 10rem,
+      ),
+    )
+  ),
   $setup-namespace: 'bs',
   $typography-webfont-family-name: 'FakeFont',
   $typography-webfont-base-url: './',
