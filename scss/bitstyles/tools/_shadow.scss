@@ -2,15 +2,15 @@
 @use 'sass:math';
 @use 'sass:string';
 
-@function generate($color, $offset, $distance, $steps: 4) {
+@function generate($color, $offset, $distance, $layers: 4) {
   $shadow: ();
 
-  @for $step-index from $steps through 1 {
-    $step-distance: math.div($distance, $step-index);
-    $step-offset: math.div($offset, $step-index);
-    $step-css: string.unquote('0 #{$step-offset} #{$step-distance} #{$color}');
+  @for $layer-index from $layers through 1 {
+    $layer-distance: math.div($distance, $layer-index);
+    $layer-offset: math.div($offset, $layer-index);
+    $layer-css: string.unquote('#{$color} 0 #{$layer-offset} #{$layer-distance}');
 
-    $shadow: list.append($shadow, $step-css);
+    $shadow: list.append($shadow, $layer-css);
   }
 
   @return $shadow;

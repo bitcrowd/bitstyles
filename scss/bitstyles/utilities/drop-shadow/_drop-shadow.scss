@@ -1,8 +1,16 @@
+@use 'sass:string';
 @use './settings';
 @use '../../tools/properties';
 
-@include properties.output(
-  $property-name: 'drop-shadow',
-  $classname-root: 'shadow',
-  $values: settings.$values
-);
+@each $name, $shadow in settings.$values {
+  $shadow-definition: '';
+  @each $shadow-layer in $shadow {
+    $shadow-definition: '#{$shadow-definition} drop-shadow(#{$shadow-layer})';
+  };
+  @include properties.output-block(
+    $classname-prefix: 'u',
+    $classname-root: 'shadow-#{$name}',
+  ) {
+    filter: string.unquote($shadow-definition);
+  };
+}
