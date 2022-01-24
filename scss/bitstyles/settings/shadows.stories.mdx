@@ -1,0 +1,143 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Shadows" />
+
+# Shadows
+
+Bitstyles provides a global list of shadow specifications, for consistency throughout your styles. They’re specified in a sass list so they can be translated as needed, to be used in CSS `box-shadow` properties and CSS filter `drop-shadow()` properties — the order of parameters for both those is different. There is a generator function to help you produce “natural” multi-layered shadows in the correct format.
+
+## Generating shadows
+
+The simplest way to override `$bitstyles-shadows-shadows` with your own shadow specifications is to use `shadow.generate()`:
+
+```scss
+@use '../tools/shadow';
+
+$bitstyles-shadows-shadows: (
+  'default': shadow.generate(
+    $color: rgba(palette.get('brand-1'), 0.15),
+    $offset: 2rem,
+    $blur-radius: 2rem,
+  ),
+);
+```
+
+This will create a specification for a multi-layered shadow using the `brand-1` color with a `2rem` blur, and offset `2rem` downwards, which looks like the following examples.
+
+<Canvas>
+  <Story id="utilities-shadow--u-shadow-default" />
+  <Story id="utilities-drop-shadow--u-drop-shadow-default" />
+</Canvas>
+
+### Parameters
+
+|Name|Format|Description|
+|--|--|--|
+|$color|color|The color to be used. Probably you want a low-opacity version of a color. Avoid using pure black unless your design calls for it, as that can look flat, especially on non-white backgrounds.|
+|$offset|number|Vertical offset for the shadow. Include the units unless it’s zero. Optional, defaults to `0`.
+|$blur-radius|number|Maximum distance to blur the shadow. The extra layers in this multi-layer shadow will be smaller than the value you pass. Include the units.|
+|$layers|number|Number of layers of in the shadow. Optional, defaults to `4`.|
+
+## Using shadows
+
+The accessor function `shadows.get()` allows you to use shadows stored in this format. Specify the output format you require (these examples are taken from the settings file for `box-shadow` and `drop-shadow` utility classes):
+
+```scss
+@use '../../tools/shadows';
+
+$bitstyles-box-shadow-values: (
+  'default': shadows.get('default', 'css'),
+);
+
+/*
+
+box-shadow:
+  0 0.5rem 0.5rem rgba(0, 13, 255, 0.15),
+  0 0.6666666667rem 0.6666666667rem rgba(0, 13, 255, 0.15),
+  0 1rem 1rem rgba(0, 13, 255, 0.15),
+  0 2rem 2rem rgba(0, 13, 255, 0.15);
+
+*/
+
+$bitstyles-drop-shadow-values: (
+  'default': shadows.get('default', 'filter'),
+);
+
+/*
+
+filter:
+  drop-shadow(rgba(0, 13, 255, 0.15) 0 0.5rem 0.5rem)
+  drop-shadow(rgba(0, 13, 255, 0.15) 0 0.6666666667rem 0.6666666667rem)
+  drop-shadow(rgba(0, 13, 255, 0.15) 0 1rem 1rem)
+  drop-shadow(rgba(0, 13, 255, 0.15) 0 2rem 2rem);
+
+*/
+```
+
+### Using local shadows
+
+Not all shadows belong among the global shadows design tokens. For example, different shadows applied to buttons on hover/focus/active/disabled… could swamp the global list. But you may still want to use `shadow.generate()` to take advantage of the multi-layered shadows. You can do this using one of the two helper functions `shadow.to-css()` and `shadow.to-filter()`. These convert the list formatted-shadows provided by the generator into a format suitable for use in CSS `box-shadow` properties or for CSS `filter` properties (using `drop-shadow`), respectively.
+
+For example, the two shadows overriding the `box-shadow` and `drop-shadow` settings above could be specified in-place instead of `shadow.get()`ing them:
+
+```scss
+@use '../../tools/shadow';
+
+$bitstyles-box-shadow-values: (
+  'default': shadow.to-css(
+    shadow.generate(
+      $color: rgba(palette.get('brand-1'), 0.15),
+      $offset: 2rem,
+      $blur-radius: 2rem,
+    )
+  ),
+);
+
+$bitstyles-drop-shadow-values: (
+  'default': shadow.to-filter(
+    shadow.generate(
+      $color: rgba(palette.get('brand-1'), 0.15),
+      $offset: 2rem,
+      $blur-radius: 2rem,
+    )
+  ),
+);
+
+```
+
+## Specifying shadows manually
+
+You may need more fine-grained control of the shadows — perhaps if your designs differ from the shadows the generator produces. You can still use bitstyles’ central shadow settings without using `shadow.generate()`, but it means writing the format by hand.
+
+Each shadow is specified as a list of maps. Each map represents a layer of the shadow, and has the same keys as the parameters for `generate()` shown in the table above, except for `$layers`.
+
+An example two-layer shadow:
+
+```scss
+$bitstyles-shadows-shadows: (
+  'default': (
+    (
+      'color': rgba(palette.get('brand-1'), 0.15),
+      'offset': 0.25rem,
+      'blur-radius': 125rem,
+    ),
+    (
+      'color': rgba(palette.get('brand-1'), 0.12),
+      'offset': 0.5rem,
+      'blur-radius': 2rem,
+    ),
+  ),
+);
+
+/*
+
+box-shadow:
+  0 .25rem 125rem rgba(0,13,255,.15),
+  0 .5rem 2rem rgba(0,13,255,.12);
+
+filter:
+  drop-shadow(rgba(0,13,255,.15) 0 .25rem 125rem)
+  drop-shadow(rgba(0,13,255,.12) 0 .5rem 2rem);
+
+*/
+```

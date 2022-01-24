@@ -4,14 +4,15 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Box-shadow
 
-Apply a box-shadow to the element, selected from the standard set of shadows.
+Apply a box-shadow to the element. By default this is selected from the standard set of shadows, but you can specify any shadow (see the “Customization” section below).
 
 ## u-shadow
 
-<Canvas isColumn>
+<Canvas>
   <Story name="u-shadow-default">
     {`
       <div class="u-shadow-default u-padding-m u-bg-white" style="width: 10rem; height: 10rem;">
+        u-shadow-default
       </div>
     `}
   </Story>
@@ -19,16 +20,24 @@ Apply a box-shadow to the element, selected from the standard set of shadows.
 
 ## Customization
 
-The available drop-shadows and their names can be customized by overriding the `$bitstyles-drop-shadow-values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `filter` as the format (drop-shadows are applied using CSS filters):
+The available drop-shadows and their names can be customized by overriding the `$bitstyles-drop-shadow-values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `css` as the format:
 
 ```scss
-$bitstyles-display-values: (
-  'default': shadows.get('default', 'filter'),
+$bitstyles-box-shadow-values: (
+  'default': shadows.get('default', 'css'),
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-drop-shadows-breakpoints` variable:
+You can also specify shadows directly, using the correct format for the CSS `box-shadow` property e.g.
 
 ```scss
-$bitstyles-drop-shadows-breakpoints: ('s', 'm', 'xl');
+$bitstyles-box-shadow-values: (
+  'default': 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2), 0 0 2rem 1rem rgba(0 ,0 ,0 ,0.2),
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-box-shadows-breakpoints` variable:
+
+```scss
+$bitstyles-box-shadows-breakpoints: ('s', 'm', 'xl');
 ```
