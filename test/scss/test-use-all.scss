@@ -133,6 +133,9 @@
   $border-values: (
     'f00': #f00,
   ),
+  $box-shadow-breakpoints: (
+    'xl'
+  ),
   $col-span-values: (
     '100': span 100 / span 100
   ),
@@ -141,6 +144,9 @@
   ),
   $display-values: (
     inline-block: inline-block,
+  ),
+  $drop-shadow-breakpoints: (
+    's'
   ),
   $fg-values: (
     'f00': #f00,

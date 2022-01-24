@@ -1652,6 +1652,11 @@ table {
 .bs-u-shadow-default {
   box-shadow: 0 2.5rem 5rem red, 0 5rem 10rem red;
 }
+@media screen and (min-width: 95em) {
+  .bs-u-shadow-default\@xl {
+    box-shadow: 0 2.5rem 5rem red, 0 5rem 10rem red;
+  }
+}
 .bsu-break-text {
   overflow-wrap: break-word;
   word-break: break-word;
@@ -1723,6 +1728,11 @@ table {
 }
 .bs-u-drop-shadow-default {
   filter: drop-shadow(#f00 0 2.5rem 5rem) drop-shadow(#f00 0 5rem 10rem);
+}
+@media screen and (max-width: 20em) {
+  .bs-u-drop-shadow-default\@s {
+    filter: drop-shadow(#f00 0 2.5rem 5rem) drop-shadow(#f00 0 5rem 10rem);
+  }
 }
 .bs-u-fg-f00 {
   color: red;

@@ -142,6 +142,9 @@ $bitstyles-aspect-ratio-values: (
 $bitstyles-bg-values: (
   'f00': #f00,
 );
+$bitstyles-box-shadow-breakpoints: (
+  'xl'
+);
 $bitstyles-border-values: (
   'f00': #f00,
 );
@@ -153,6 +156,9 @@ $bitstyles-col-start-values: (
 );
 $bitstyles-display-values: (
   inline-block: inline-block,
+);
+$bitstyles-drop-shadow-breakpoints: (
+  's'
 );
 $bitstyles-fg-values: (
   'f00': #f00,
@@ -196,6 +202,7 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/settings/color-palette';
 @import '../../scss/bitstyles/settings/layout';
 @import '../../scss/bitstyles/settings/setup';
+@import '../../scss/bitstyles/settings/shadows';
 @import '../../scss/bitstyles/settings/typography';
 @import '../../scss/bitstyles/settings/link';
 

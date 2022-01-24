@@ -145,6 +145,9 @@ $bitstyles-bg-values: (
 $bitstyles-border-values: (
   'f00': #f00,
 );
+$bitstyles-box-shadow-breakpoints: (
+  'xl'
+);
 $bitstyles-col-span-values: (
   '100': span 100 / span 100
 );
@@ -153,6 +156,9 @@ $bitstyles-col-start-values: (
 );
 $bitstyles-display-values: (
   inline-block: inline-block,
+);
+$bitstyles-drop-shadow-breakpoints: (
+  's'
 );
 $bitstyles-fg-values: (
   'f00': #f00,

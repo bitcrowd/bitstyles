@@ -4,5 +4,3 @@ $values: (
   'default': shadows.get('default', 'css'),
 ) !default;
 $breakpoints: () !default;
-
-@debug $values;

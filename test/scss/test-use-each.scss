@@ -248,6 +248,11 @@
     'f00': #f00,
   )
 );
+@use '../../scss/bitstyles/utilities/box-shadow' with (
+  $breakpoints: (
+    'xl'
+  )
+);
 @use '../../scss/bitstyles/utilities/break-text';
 @use '../../scss/bitstyles/utilities/clearfix';
 @use '../../scss/bitstyles/utilities/col-span' with (
@@ -264,6 +269,11 @@
   $values: (
     inline-block: inline-block,
   )
+);
+@use '../../scss/bitstyles/utilities/drop-shadow' with (
+  $breakpoints: (
+    's'
+  ),
 );
 @use '../../scss/bitstyles/utilities/fg' with (
   $values: (
