@@ -3,21 +3,9 @@
 @use '../tools/size';
 
 $shadows: (
-  'default': (
-    (
-      'color': rgba(palette.get('brand-1'), 0.15),
-      'offset': 0.25rem,
-      'blur-radius': 125rem,
-    ),
-    (
-      'color': rgba(palette.get('brand-1'), 0.12),
-      'offset': 0.5rem,
-      'blur-radius': 2rem,
-    ),
+  'default': shadow.generate(
+    $color: rgba(palette.get('brand-1'), 0.15),
+    $offset: 2rem,
+    $blur-radius: 2rem,
   ),
-  'test': ((
-    'color': #f00,
-    'offset': 2rem,
-    'blur-radius': 3rem,
-  ))
 ) !default;
