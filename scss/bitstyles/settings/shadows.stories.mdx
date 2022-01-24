@@ -4,11 +4,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Shadows
 
-Bitstyles provides a global list of shadow specifications, for consistency throughout your styles. They’re specified in a sass list so they can be translated as needed, to be used in CSS `box-shadow` properties and CSS filter `drop-shadow()` properties — the order of parameters for both those is different. There is a generator function to help you produce “natural” multi-layered shadows in the correct format.
+Bitstyles provides a global list of shadow specifications, to maintain consistency of shadows throughout your components. The shadows are specified in a sass list so they can be translated to various formats as needed — the order of parameters for CSS `box-shadow` is different to the CSS filter `drop-shadow()`. We need to be able to translate to either of those formats.
+
+The default shadows used throughout bitstyles are multi-layered to create a more natural or realistic appearance than you get from a single box-shadow or filter. We provide a generator function that you can use to produce “natural” multi-layered shadows in the correct format for our Sass design system, and functions to translate those to useful formats.
 
 ## Generating shadows
 
-The simplest way to override `$bitstyles-shadows-shadows` with your own shadow specifications is to use `shadow.generate()`:
+The simplest way to override the global shadow design tokens in `$bitstyles-shadows-shadows` is to use `shadow.generate()`:
 
 ```scss
 @use '../tools/shadow';
@@ -22,7 +24,7 @@ $bitstyles-shadows-shadows: (
 );
 ```
 
-This will create a specification for a multi-layered shadow using the `brand-1` color with a `2rem` blur, and offset `2rem` downwards, which looks like the following examples.
+This creates a specification for a multi-layered shadow using the `brand-1` color with a `2rem` blur, offset `2rem` downwards, which looks like the following examples.
 
 <Canvas>
   <Story id="utilities-shadow--u-shadow-default" />
@@ -40,7 +42,7 @@ This will create a specification for a multi-layered shadow using the `brand-1` 
 
 ## Using shadows
 
-The accessor function `shadows.get()` allows you to use shadows stored in this format. Specify the output format you require (these examples are taken from the settings file for `box-shadow` and `drop-shadow` utility classes):
+The accessor function `shadows.get()` is the most straightfoward way to use shadows stored in this format. Specify the name of the shadow and the output format you need (these examples are taken from the settings files for `box-shadow` and `drop-shadow` utility classes, each of which uses a different format):
 
 ```scss
 @use '../../tools/shadows';
@@ -76,9 +78,9 @@ filter:
 
 ### Using local shadows
 
-Not all shadows belong among the global shadows design tokens. For example, different shadows applied to buttons on hover/focus/active/disabled… could swamp the global list. But you may still want to use `shadow.generate()` to take advantage of the multi-layered shadows. You can do this using one of the two helper functions `shadow.to-css()` and `shadow.to-filter()`. These convert the list formatted-shadows provided by the generator into a format suitable for use in CSS `box-shadow` properties or for CSS `filter` properties (using `drop-shadow`), respectively.
+Not all shadows belong among the global shadows design tokens. Including all the shadows applied to buttons and input elements on hover/focus/active/disabled/etc. could swamp the global list. But you may want to use `shadow.generate()` to take advantage of the multi-layered shadows without having to hand-code them. You can do this using one of the two helper functions `shadow.to-css()` and `shadow.to-filter()`. These convert the list formatted-shadows provided by the generator into a format suitable for use in CSS `box-shadow` properties and CSS `filter` properties (using `drop-shadow`), respectively.
 
-For example, the two shadows overriding the `box-shadow` and `drop-shadow` settings above could be specified in-place instead of `shadow.get()`ing them:
+For example, take the two shadows overriding the `box-shadow` and `drop-shadow` settings above. We could specify them in-place instead of `shadow.get()`ing them, if they were not part of our design system right now:
 
 ```scss
 @use '../../tools/shadow';
@@ -107,9 +109,9 @@ $bitstyles-drop-shadow-values: (
 
 ## Specifying shadows manually
 
-You may need more fine-grained control of the shadows — perhaps if your designs differ from the shadows the generator produces. You can still use bitstyles’ central shadow settings without using `shadow.generate()`, but it means writing the format by hand.
+You may need more fine-grained control of the shadows — for example when your designs differ from the shadows the generator produces. You can use bitstyles’ central shadow settings without using `shadow.generate()`, but it means writing the format by hand.
 
-Each shadow is specified as a list of maps. Each map represents a layer of the shadow, and has the same keys as the parameters for `generate()` shown in the table above, except for `$layers`.
+In this format, each shadow is specified as a list of maps (Sass lists and Sass maps. This can be thought of as similar to an array of objects in javascript). Each map represents a layer of the shadow, and has the `color`, `offset`, and `blur-radius` keys as defined in the parameters for `generate()`, shown in the table above.
 
 An example two-layer shadow:
 
