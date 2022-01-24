@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### Added
+
+- New Sass map `$bitstyles-shadows-shadows` for holding global shadow design tokens, and a `shadows.get()` function for accessing them in your Sass
+- New `u-shadow` and `u-drop-shadow` utility classes to set box-shadows and drop-shadows respectively
+- New helper function `shadow.generate()` to generate multi-layered “natural” shadows based on the color and distances you give
+
 ### Changed
 
 - Renames `tools/_directional-properties.scss` -> `tools/_properties.scss`, so any imports of those files will need to be updated to reflect that
