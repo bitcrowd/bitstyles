@@ -9,7 +9,7 @@
     "lint:scss": "stylelint --ignore-path .gitignore 'scss/**/*.scss' --customSyntax postcss-scss",
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx .",
     "lint": "yarn lint:scss && yarn lint:js",
-    "prettier": "prettier --ignore-path .gitignore --check .",
+    "prettier": "prettier --ignore-path .gitignore --check ./scss",
     "test": "script/test",
     "checks": "yarn lint && yarn prettier && yarn css:stats && yarn test",
     "watch": "yarn build && yarn build --watch",

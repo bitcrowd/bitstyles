@@ -3,8 +3,8 @@
 
 $large-width: 15rem !default;
 $small-width: 80vw !default;
-$small-box-shadow:
-  size.get('m') 0 size.get('l') rgb(palette.get('brand-1', '100') / 10%),
+$small-box-shadow: size.get('m') 0 size.get('l')
+    rgb(palette.get('brand-1', '100') / 10%),
   size.get('l') 0 size.get('m') rgb(palette.get('gray', '90') / 7%),
   0 0 size.get('xl') rgb(palette.get('gray', '90') / 10%) !default;
 $will-change: transform !default;
