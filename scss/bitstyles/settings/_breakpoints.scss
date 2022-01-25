@@ -2,7 +2,6 @@ $boundary-width: 0.0625em !default;
 $s-m-boundary: 30em !default;
 $m-l-boundary: 55em !default;
 $l-xl-boundary: 95em !default;
-
 $breakpoints: (
   's': 'screen and (max-width: #{$s-m-boundary - $boundary-width})',
   'm': 'screen and (min-width: #{$s-m-boundary})',

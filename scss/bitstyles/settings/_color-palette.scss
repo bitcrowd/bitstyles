@@ -1,7 +1,8 @@
 @use 'sass:color';
 @use '../tools/color' as bs-color;
 
-// Use Sass map functions to merge in extra color maps in your project, or re-define the whole map.
+//
+// Base colors /////////////////////////////////////////
 
 $black: #000 !default;
 $white: #fff !default;
@@ -12,6 +13,9 @@ $background: color.mix($white, $brand-1, 97%) !default;
 $positive: #50a802 !default;
 $danger: #e82915 !default;
 $warning: #fe881e !default;
+
+//
+// Color palettes /////////////////////////////////////////
 
 $grays-hint-color: $brand-1 !default;
 $grays-hint-color-mix: 10% !default;
@@ -35,7 +39,7 @@ $color-mix-percentages: (
   99,
   100
 ) !default;
-
+$default-key: '100' !default;
 $color-palette: (
   'black':
     bs-color.generate-palette(
@@ -232,5 +236,3 @@ $color-palette: (
       $percentages: $color-mix-percentages,
     ),
 ) !default;
-
-$default-key: '100' !default;

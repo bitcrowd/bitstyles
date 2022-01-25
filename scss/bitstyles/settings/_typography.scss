@@ -1,9 +1,15 @@
 @use 'sass:list';
 
+//
+// Font-weights /////////////////////////////////////////
+
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
 $font-weight-medium: 600 !default;
 $font-weight-bold: 800 !default;
+
+//
+// Webfonts /////////////////////////////////////////
 
 /* stylelint-disable value-keyword-case */
 $webfont-family-name: 'Nunito' !default;
@@ -34,7 +40,6 @@ $webfont-variants: (
     'filename': 'nunito-v16-latin-800',
   ),
 ) !default;
-
 $font-family-header-stack: (
   -apple-system,
   BlinkMacSystemFont,
@@ -70,15 +75,15 @@ $font-family-body: list.join(
   $font-family-body-stack
 ) !default;
 
+//
+// Vertical rythm /////////////////////////////////////////
+
 $font-size-base-small: 1rem !default;
 $font-size-base: 1.125rem !default;
-
 $line-height-base: 1.5 !default;
 $line-height-min: 1.25 !default;
-
 $margin-heading: 0 !default;
 $margin-paragraph: 0 !default;
-
 $font-sizes: (
   'base': (
     'html': $font-size-base-small,
