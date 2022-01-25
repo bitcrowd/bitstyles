@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Drop-shadow
 
-Apply a drop-shadow to the element, selected from the standard set of shadows.
+Apply a drop-shadow to the elementusing CSS filters. By default this is selected from the standard set of shadows, but you can specify any shadow (see the “Customization” section below).
 
 ## u-drop-shadow
 
@@ -23,7 +23,7 @@ Apply a drop-shadow to the element, selected from the standard set of shadows.
 The available drop-shadows and their names can be customized by overriding the `$bitstyles-drop-shadow-values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `filter` as the format (drop-shadows are applied using CSS filters):
 
 ```scss
-$bitstyles-display-values: (
+$bitstyles-drop-shadow-values: (
   'default': shadows.get('default', 'filter'),
 );
 ```
@@ -31,5 +31,5 @@ $bitstyles-display-values: (
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-drop-shadows-breakpoints` variable:
 
 ```scss
-$bitstyles-drop-shadows-breakpoints: ('s', 'm', 'xl');
+$bitstyles-drop-shadow-breakpoints: ('s', 'm', 'xl');
 ```

@@ -6,7 +6,10 @@
 //
 // **Returns requested shadow from the global `$bitstyles-shadows-shadows` map**.
 //
-// e.g. `padding: shadow.get('default');`
+// Examples:
+//
+// `box-shadow: shadow.get('default');`
+// `filter: shadow.get('default', 'filter);`
 //
 // @param {String} $shadow  Name of the shadow required, as defined in the map `$bitstyles-shadows-shadows`.
 // @param {String} $format  The format in which you want the returned shadow. Options are `css` (for CSS box-shadow property) and `filter` (for CSS/SVG filter properties). Defaults to `css`

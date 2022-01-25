@@ -9,6 +9,10 @@
 - Two functions (`shadow.to-css()` and `shadow.to-filter()`) for translating those shadows (which are specified in sass list format) into either CSS `box-shadow` format, or CSS filter `drop-shadow` format. Not necessary for the shadows accessed using `shadows.get()`
 - New `u-shadow` and `u-drop-shadow` utility classes to set box-shadows and drop-shadows respectively
 
+### Fixed
+
+- `u-bg` classes will now be output with the correct breakpoint suffix
+
 ### Changed
 
 - Renames `tools/_directional-properties.scss` -> `tools/_properties.scss`, so any imports of those files will need to be updated to reflect that
