@@ -26,12 +26,11 @@
 @mixin get($media-query-name, $breakpoints: breakpoints.$breakpoints) {
   $breakpoint-condition: map.get($breakpoints, $media-query-name);
 
-  @if ($breakpoint-condition) {
+  @if $breakpoint-condition {
     @media #{$breakpoint-condition} {
       @content;
     }
   }
-
   @else {
     @error 'Oops! Breakpoint ‘#{$media-query-name}’ does not exist.';
   }

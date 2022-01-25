@@ -17,7 +17,6 @@
   @if map.has-key(layout.$sizes, $size) {
     @return map.get(layout.$sizes, $size);
   }
-
   @else {
     @error 'Oops! Size ‘#{$size}’ does not exist.';
   }

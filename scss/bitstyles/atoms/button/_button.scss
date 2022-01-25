@@ -9,7 +9,7 @@
   justify-content: center;
   flex-shrink: 0;
   max-width: 100%;
-  min-height: calc(#{settings.$padding-vertical  * 2} + 1em);
+  min-height: calc(#{settings.$padding-vertical * 2} + 1em);
   padding: settings.$padding-vertical settings.$padding-horizontal;
   margin: 0;
   overflow: visible;

@@ -20,7 +20,6 @@
     @if $breakpoint-alias == 'base' {
       @include content-padding($padding-value);
     }
-
     @else {
       /* stylelint-disable max-nesting-depth */
       @include media-query.get($breakpoint-alias) {

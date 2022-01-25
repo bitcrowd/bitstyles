@@ -18,12 +18,10 @@
     @if map.has-key($palette, $key) {
       @return map.get($palette, $key);
     }
-
     @else {
       @error 'Oops! Color/name pair ‘#{$color}/#{$key}’ does not exist.';
     }
   }
-
   @else {
     @error 'Oops! Color ‘#{$color}’ does not exist.';
   }

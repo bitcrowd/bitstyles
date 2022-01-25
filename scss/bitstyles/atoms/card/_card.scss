@@ -21,7 +21,6 @@
   @if $name == 'base' {
     @return '';
   }
-
   @else {
     @return '-#{$name}';
   }

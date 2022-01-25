@@ -19,7 +19,7 @@
 
 @mixin _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint) {
   @each $element-name, $font-size in ($font-sizes) {
-    @if (length($subset) == 0) or (index($subset, $element-name)) {
+    @if length($subset) == 0 or index($subset, $element-name) {
       #{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
         font-size: font-size.get($font-size: $element-name, $breakpoint: $breakpoint);
@@ -77,7 +77,6 @@
     @if $breakpoint == 'base' {
       @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
     }
-
     @else {
       @include media-query.get($breakpoint) {
         @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
