@@ -1,35 +1,3 @@
 {
-  "extends": [
-    "stylelint-config-bitcrowd",
-    "stylelint-config-standard-scss",
-    "stylelint-config-prettier"
-  ],
-  "rules": {
-    "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": true,
-    "scss/dollar-variable-default": [
-      true,
-      {
-        "ignore": "local"
-      }
-    ],
-    "scss/map-keys-quotes": "always",
-    "scss/no-duplicate-dollar-variables": [
-      true,
-      {
-        "ignoreInsideAtRules": ["if", "each"]
-      }
-    ],
-    "scss/at-import-partial-extension": "always",
-    "selector-class-pattern": null,
-    "scss/comment-no-empty": null,
-    "scss/dollar-variable-colon-space-after": "always-single-line",
-    "value-keyword-case": [
-      "lower",
-      {
-        "camelCaseSvgKeywords": true
-      }
-    ],
-    "scss/operator-no-newline-after": null
-  }
+  "extends": "stylelint-config-bitcrowd"
 }
