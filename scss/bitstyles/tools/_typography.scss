@@ -22,7 +22,10 @@
     @if length($subset) == 0 or index($subset, $element-name) {
       #{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
-        font-size: font-size.get($font-size: $element-name, $breakpoint: $breakpoint);
+        font-size: font-size.get(
+          $font-size: $element-name,
+          $breakpoint: $breakpoint
+        );
         /* stylelint-enable max-nesting-depth */
       }
     }
@@ -76,8 +79,7 @@
     // Don’t wrap base classes in a media-query
     @if $breakpoint == 'base' {
       @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
-    }
-    @else {
+    } @else {
       @include media-query.get($breakpoint) {
         @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
       }

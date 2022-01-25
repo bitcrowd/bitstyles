@@ -3,7 +3,7 @@
 @use './settings';
 @use 'sass:math';
 
-[type="checkbox"] {
+[type='checkbox'] {
   position: relative;
   display: inline-block;
   width: 1em;
@@ -15,8 +15,9 @@
   appearance: none;
 }
 
-@supports (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none) {
-  [type="checkbox"] {
+@supports (-webkit-appearance: none) or (-moz-appearance: none) or
+  (appearance: none) {
+  [type='checkbox'] {
     color: settings.$color;
     background-color: settings.$background-color;
     border: settings.$border-width solid settings.$border-color;
@@ -41,9 +42,10 @@
       content: '';
       opacity: 0;
       transform: scale(0.7);
-      transition:
-        opacity math.div(animation.$transition-duration, 2) animation.$transition-duration animation.$transition-easing,
-        transform math.div(animation.$transition-duration, 2) animation.$transition-duration animation.$transition-easing;
+      transition: opacity math.div(animation.$transition-duration, 2)
+          animation.$transition-duration animation.$transition-easing,
+        transform math.div(animation.$transition-duration, 2)
+          animation.$transition-duration animation.$transition-easing;
     }
 
     &:checked {

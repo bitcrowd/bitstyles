@@ -51,7 +51,7 @@
   }
 
   &:disabled,
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     color: settings.$color-disabled;
     cursor: not-allowed;
     background: settings.$background-color-disabled;

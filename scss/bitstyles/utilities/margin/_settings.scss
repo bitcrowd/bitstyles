@@ -9,7 +9,7 @@ $sizes: (
     'm': size.get('m'),
     'l': size.get('l'),
     'xl': size.get('xl'),
-    'auto': auto
+    'auto': auto,
   ),
   'negative': (
     'xxs': -#{size.get('xxs')},
@@ -17,16 +17,30 @@ $sizes: (
     's': -#{size.get('s')},
     'm': -#{size.get('m')},
     'l': -#{size.get('l')},
-    'xl': -#{size.get('xl')}
-  )
+    'xl': -#{size.get('xl')},
+  ),
 ) !default;
 $breakpoints: ('s', 'm') !default;
 $directions: (
   '': null,
-  'top': ('top'),
-  'right': ('right'),
-  'bottom': ('bottom'),
-  'left': ('left'),
-  'x': ('right', 'left'),
-  'y': ('top', 'bottom')
+  'top': (
+    'top',
+  ),
+  'right': (
+    'right',
+  ),
+  'bottom': (
+    'bottom',
+  ),
+  'left': (
+    'left',
+  ),
+  'x': (
+    'right',
+    'left',
+  ),
+  'y': (
+    'top',
+    'bottom',
+  ),
 ) !default;

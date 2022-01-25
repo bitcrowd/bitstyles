@@ -7,10 +7,24 @@ $values: (
 $breakpoints: () !default;
 $directions: (
   '': null,
-  'top': ('top'),
-  'right': ('right'),
-  'bottom': ('bottom'),
-  'left': ('left'),
-  'x': ('left', 'right'),
-  'y': ('top', 'bottom')
+  'top': (
+    'top',
+  ),
+  'right': (
+    'right',
+  ),
+  'bottom': (
+    'bottom',
+  ),
+  'left': (
+    'left',
+  ),
+  'x': (
+    'left',
+    'right',
+  ),
+  'y': (
+    'top',
+    'bottom',
+  ),
 ) !default;

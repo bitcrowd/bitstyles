@@ -18,7 +18,7 @@ $bitstyles-margin-sizes: (
     'm': spacing('m'),
     'l': spacing('l'),
     'xl': spacing('xl'),
-    'auto': auto
+    'auto': auto,
   ),
   'negative': (
     'xxs': -#{spacing('xxs')},
@@ -26,8 +26,8 @@ $bitstyles-margin-sizes: (
     's': -#{spacing('s')},
     'm': -#{spacing('m')},
     'l': -#{spacing('l')},
-    'xl': -#{spacing('xl')}
-  )
+    'xl': -#{spacing('xl')},
+  ),
 );
 ```
 
@@ -148,12 +148,26 @@ This can be customised by overriding `$bitstyles-margin-directions` e.g.
 ```scss
 $bitstyles-margin-directions: (
   '': null,
-  'top': ('top'),
-  'right': ('right'),
-  'bottom': ('bottom'),
-  'left': ('left'),
-  'x': ('right', 'left'),
-  'y': ('top', 'bottom')
+  'top': (
+    'top',
+  ),
+  'right': (
+    'right',
+  ),
+  'bottom': (
+    'bottom',
+  ),
+  'left': (
+    'left',
+  ),
+  'x': (
+    'right',
+    'left',
+  ),
+  'y': (
+    'top',
+    'bottom',
+  ),
 );
 ```
 

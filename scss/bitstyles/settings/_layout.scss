@@ -14,5 +14,5 @@ $sizes: (
   'l': $size-base + math.div($size-base, 4),
   'xl': $size-base * 2,
   'xxl': $size-base * 4,
-  'xxxl': $size-base * 8
+  'xxxl': $size-base * 8,
 ) !default;

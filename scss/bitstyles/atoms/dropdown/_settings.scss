@@ -18,10 +18,10 @@ $separator-spacing: size.get('xxs') !default;
 $transition: opacity 0.12s ease-in !default;
 $will-change: opacity !default;
 $states: (
-  "off-screen": (
-    "opacity": 0
+  'off-screen': (
+    'opacity': 0,
   ),
-  "on-screen": (
-    "opacity": 1
-  )
+  'on-screen': (
+    'opacity': 1,
+  ),
 ) !default;

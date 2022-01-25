@@ -32,7 +32,7 @@
   }
 
   &[aria-current],
-  &[aria-expanded="true"] {
+  &[aria-expanded='true'] {
     color: settings.$color-current;
     background: settings.$background-color-current;
     border-color: settings.$border-color-current;
@@ -40,7 +40,7 @@
   }
 
   &:disabled,
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     color: settings.$color-disabled;
     background: settings.$background-color-disabled;
     border: settings.$border-color-disabled;

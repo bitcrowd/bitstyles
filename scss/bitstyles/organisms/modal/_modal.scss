@@ -21,10 +21,11 @@
   backface-visibility: hidden;
   will-change: settings.$will-change;
 
-  [aria-hidden="true"] & {
+  [aria-hidden='true'] & {
     @include modal-is-hidden;
 
-    transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
+    transition: all settings.$transition-duration settings.$transition-easing,
+      visibility 0 settings.$transition-easing settings.$transition-duration;
   }
 }
 
@@ -41,33 +42,38 @@
   background-color: settings.$background-color;
   transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
-  transition: all settings.$transition-duration-smallscreen settings.$transition-easing;
+  transition: all settings.$transition-duration-smallscreen
+    settings.$transition-easing;
   -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
   backface-visibility: hidden;
   will-change: settings.$will-change;
 
-  [aria-hidden="true"] & {
+  [aria-hidden='true'] & {
     @include modal-is-hidden;
 
     transform: translate(-50%, 50%);
-    transition: all settings.$transition-duration-smallscreen settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
+    transition: all settings.$transition-duration-smallscreen
+        settings.$transition-easing,
+      visibility 0 settings.$transition-easing settings.$transition-duration;
   }
 }
 
 @include media-query.get(settings.$breakpoint) {
   .#{setup.$namespace}o-modal__content {
-    transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing;
+    transition: all settings.$transition-duration settings.$transition-easing,
+      visibility 0 settings.$transition-easing;
 
-    [aria-hidden="true"] & {
+    [aria-hidden='true'] & {
       transform: translate(-50%, -50%) scale(0.875);
-      transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
+      transition: all settings.$transition-duration settings.$transition-easing,
+        visibility 0 settings.$transition-easing settings.$transition-duration;
     }
   }
 }
 
 @mixin modal-variation($state) {
   .#{setup.$namespace}o-modal--animation-#{$state} {
-    &[aria-hidden="true"] {
+    &[aria-hidden='true'] {
       .#{setup.$namespace}o-modal__content {
         @content;
       }

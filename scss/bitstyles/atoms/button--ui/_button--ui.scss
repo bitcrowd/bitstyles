@@ -26,15 +26,15 @@
   }
 
   &:disabled,
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     color: settings.$color-disabled;
     background: settings.$background-color-disabled;
     border-color: settings.$border-color-disabled;
     box-shadow: settings.$box-shadow-disabled;
   }
 
-  &[aria-pressed="true"],
-  &[aria-expanded="true"],
+  &[aria-pressed='true'],
+  &[aria-expanded='true'],
   &[aria-current] {
     color: settings.$color-pressed;
     background: settings.$background-color-pressed;

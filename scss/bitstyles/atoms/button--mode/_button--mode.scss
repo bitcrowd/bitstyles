@@ -33,7 +33,7 @@
     box-shadow: settings.$box-shadow-active;
   }
 
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     color: settings.$color-pressed;
     background: settings.$background-color-pressed;
     border-color: settings.$border-color-pressed;
@@ -41,7 +41,7 @@
   }
 
   &:disabled,
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     color: settings.$color-disabled;
     background: settings.$background-color-disabled;
     border-color: settings.$border-color-disabled;

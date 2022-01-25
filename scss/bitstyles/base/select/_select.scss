@@ -2,12 +2,14 @@
 @use '../../settings/typography';
 @use '../../settings/animation';
 
-@supports (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none) {
+@supports (-webkit-appearance: none) or (-moz-appearance: none) or
+  (appearance: none) {
   /* stylelint-disable selector-max-type */
   select {
     display: block;
     width: 100%;
-    padding: settings.$padding-vertical (settings.$padding-horizontal * 2) settings.$padding-vertical settings.$padding-horizontal;
+    padding: settings.$padding-vertical (settings.$padding-horizontal * 2)
+      settings.$padding-vertical settings.$padding-horizontal;
     overflow: hidden;
     font: settings.$font;
     color: settings.$color;
@@ -20,9 +22,10 @@
     background-size: 1em;
     border: settings.$border-width solid settings.$border-color;
     border-radius: settings.$border-radius;
-    transition:
-      color animation.$transition-duration animation.$transition-easing,
-      background-color animation.$transition-duration animation.$transition-easing,
+    transition: color animation.$transition-duration
+        animation.$transition-easing,
+      background-color animation.$transition-duration
+        animation.$transition-easing,
       border animation.$transition-duration animation.$transition-easing;
     appearance: none;
 

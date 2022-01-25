@@ -18,7 +18,7 @@
   border-radius: settings.$border-radius;
   box-shadow: settings.$box-shadow;
 
-  [role="separator"] {
+  [role='separator'] {
     margin: settings.$separator-spacing 0;
     border-top: settings.$separator-border;
   }

@@ -56,7 +56,10 @@ The name of the variable will be prefixed with the name of the module. For the g
 ```scss
 @use 'bitstyles' with (
   $color-base-black: #f00,
-  $margin-breakpoints: ('xl', 's')
+  $margin-breakpoints: (
+    'xl',
+    's',
+  )
 );
 ```
 
@@ -68,11 +71,12 @@ You might want to selectively include only the parts of the library you need in 
 // …
 
 @use 'bitstyles/utilities/margin' with (
-  $breakpoints: ('xl')
+  $breakpoints: (
+    'xl',
+  )
 );
 
 // …
-
 ```
 
 #### `@import` ing each part of the library
@@ -89,7 +93,6 @@ $bitstyles-margin-breakpoints: ('xl', 's');
 @import 'bitstyles/settings/breakpoints';
 
 // …
-
 ```
 
 The name of the variable you want to override must be prefixed with `bitstyles-` followed by the name of the module. For the global settings that name will be the filename without extensions or underscores e.g. `$bitstyles-color-base`. For all other CSS (atoms, organisms, and utility classes), use the name of the atom or utility e.g. `$bitstyles-margin-`.
@@ -115,45 +118,45 @@ When adding your own custom component CSS (i.e. not a component built using the 
 
 1. Duplicate the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`) to make use of the entire library. Optionally, if you’ll not need all the components in there, comment-out the lines of atoms, molecules and organisms you don’t need:
 
-    ```scss
-    @import 'bitstyles/settings/all';
+   ```scss
+   @import 'bitstyles/settings/all';
 
-    // …
+   // …
 
-    @import 'bitstyles/atoms/icon/';
-    // @import 'bitstyles/atoms/button/';
-    // @import 'bitstyles/atoms/button-icon/';
-    @import 'bitstyles/atoms/absolute-center/';
-    ```
+   @import 'bitstyles/atoms/icon/';
+   // @import 'bitstyles/atoms/button/';
+   // @import 'bitstyles/atoms/button-icon/';
+   @import 'bitstyles/atoms/absolute-center/';
+   ```
 
 1. Import your new CSS in one of the component sections (atoms, molecules, or organisms) to preserve the source order, with the utility classes at the end so they’ll still override the CSS that comes before them:.
 
-    ```scss
-    @import 'bitstyles/settings/all';
+   ```scss
+   @import 'bitstyles/settings/all';
 
-    // Atoms
-    /////////////////////////////////
+   // Atoms
+   /////////////////////////////////
 
-    @import 'bitstyles/atoms/icon/';
-    @import 'bitstyles/atoms/button/';
+   @import 'bitstyles/atoms/icon/';
+   @import 'bitstyles/atoms/button/';
 
-    //  …
+   //  …
 
-    @import 'local/atoms/my-new-atom';
+   @import 'local/atoms/my-new-atom';
 
-    // Organisms
-    /////////////////////////////////
+   // Organisms
+   /////////////////////////////////
 
-    @import 'bitstyles/organisms/modal/';
-    @import 'bitstyles/organisms/navbar/';
+   @import 'bitstyles/organisms/modal/';
+   @import 'bitstyles/organisms/navbar/';
 
-    // …
+   // …
 
-    @import 'local/organisms/my-new-organism';
+   @import 'local/organisms/my-new-organism';
 
-    // Utilities
-    /////////////////////////////////
-    ```
+   // Utilities
+   /////////////////////////////////
+   ```
 
 ## Contributing
 

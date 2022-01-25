@@ -26,7 +26,7 @@
   }
 
   &:disabled,
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     color: settings.$color-disabled;
     background: settings.$background-color-disabled;
     border-color: settings.$border-color-disabled;

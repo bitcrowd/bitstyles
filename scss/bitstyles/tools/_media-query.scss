@@ -30,8 +30,7 @@
     @media #{$breakpoint-condition} {
       @content;
     }
-  }
-  @else {
+  } @else {
     @error 'Oops! Breakpoint ‘#{$media-query-name}’ does not exist.';
   }
 }

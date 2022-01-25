@@ -6,8 +6,7 @@
 /* stylelint-disable selector-max-type */
 textarea,
 input {
-  transition:
-    color animation.$transition-duration animation.$transition-easing,
+  transition: color animation.$transition-duration animation.$transition-easing,
     background-color animation.$transition-duration animation.$transition-easing,
     border animation.$transition-duration animation.$transition-easing;
   resize: vertical;
@@ -23,18 +22,18 @@ input {
 /*
  * Selects all the text-like input types. We’re avoiding using e.g. `input[type="text"]` as it means we cannot use a single class later on
  */
-[type="text"],
-[type="email"],
-[type="number"],
-[type="date"],
-[type="datetime-local"],
-[type="month"],
-[type="week"],
-[type="password"],
-[type="search"],
-[type="tel"],
-[type="time"],
-[type="url"],
+[type='text'],
+[type='email'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
 textarea {
   display: block;
   width: 100%;
@@ -63,7 +62,7 @@ textarea {
   }
 
   &:invalid,
-  &[aria-invalid="true"] {
+  &[aria-invalid='true'] {
     color: settings.$color-invalid;
     background-color: settings.$background-color-invalid;
     border-color: settings.$border-color-invalid;

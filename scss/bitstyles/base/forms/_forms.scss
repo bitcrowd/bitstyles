@@ -25,7 +25,7 @@ label {
   cursor: pointer;
 }
 
-[type="color"] {
+[type='color'] {
   height: calc(#{typography.$line-height-base * 1em} + #{size.get('s')});
 }
 /* stylelint-enable selector-max-type */

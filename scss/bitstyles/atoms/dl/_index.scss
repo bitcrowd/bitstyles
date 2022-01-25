@@ -1,6 +1,6 @@
-@use "../../settings/setup";
-@use "../../tools/palette";
-@use "../../tools/media-query";
+@use '../../settings/setup';
+@use '../../tools/palette';
+@use '../../tools/media-query';
 
 .#{setup.$namespace}a-dl {
   border-top: 1px solid palette.get('gray', '5');

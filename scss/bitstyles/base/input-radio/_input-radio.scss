@@ -2,7 +2,7 @@
 @use '../../settings/typography';
 @use './settings';
 
-[type="radio"] {
+[type='radio'] {
   position: relative;
   display: inline-block;
   width: 1em;
@@ -14,8 +14,9 @@
   appearance: none;
 }
 
-@supports (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none) {
-  [type="radio"] {
+@supports (-webkit-appearance: none) or (-moz-appearance: none) or
+  (appearance: none) {
+  [type='radio'] {
     color: settings.$color;
     background-color: settings.$background-color;
     border: settings.$border-width solid settings.$border-color;
@@ -30,8 +31,8 @@
       content: '';
       opacity: 0;
       transform: scale(0.5);
-      transition:
-        opacity animation.$transition-duration animation.$transition-easing,
+      transition: opacity animation.$transition-duration
+          animation.$transition-easing,
         transform animation.$transition-duration animation.$transition-easing;
     }
 
