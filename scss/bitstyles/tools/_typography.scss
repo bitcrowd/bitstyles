@@ -17,7 +17,7 @@
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 //
 
-@mixin _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint) {
+@mixin output-font-sizes($font-sizes, $prefix, $subset, $breakpoint) {
   @each $element-name, $font-size in ($font-sizes) {
     @if length($subset) == 0 or index($subset, $element-name) {
       #{$prefix}#{$element-name} {
@@ -78,10 +78,10 @@
   @each $breakpoint, $font-sizes in typography.$font-sizes {
     // Don’t wrap base classes in a media-query
     @if $breakpoint == 'base' {
-      @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
+      @include output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
     } @else {
       @include media-query.get($breakpoint) {
-        @include _output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
+        @include output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
       }
     }
   }
