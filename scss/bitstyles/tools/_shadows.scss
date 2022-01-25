@@ -2,6 +2,16 @@
 @use '../tools/shadow';
 @use 'sass:map';
 
+// Shadows
+//
+// **Returns requested shadow from the global `$bitstyles-shadows-shadows` map**.
+//
+// e.g. `padding: shadow.get('default');`
+//
+// @param {String} $shadow  Name of the shadow required, as defined in the map `$bitstyles-shadows-shadows`.
+// @param {String} $format  The format in which you want the returned shadow. Options are `css` (for CSS box-shadow property) and `filter` (for CSS/SVG filter properties). Defaults to `css`
+//
+
 @function get($shadow, $format: 'css') {
   @if map.has-key(shadows.$shadows, $shadow) {
     @if $format == 'css' {

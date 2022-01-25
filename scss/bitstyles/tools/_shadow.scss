@@ -3,6 +3,12 @@
 @use 'sass:math';
 @use 'sass:string';
 
+/*
+ * Converts a list of shadow-layers to CSS suitable for use with the `box-shadow` property
+ *
+ * @param {List} $shadow The list of shadow-layer maps
+ */
+
 @function to-css($shadow) {
   $shadow-definition: ();
 
@@ -13,6 +19,12 @@
   @return $shadow-definition;
 }
 
+/*
+ * Converts a list of shadow-layers to CSS suitable for use with the `filter` property
+ *
+ * @param {List} $shadow The list of shadow-layer maps
+ */
+
 @function to-filter($shadow) {
   $shadow-definition: ();
 
@@ -22,6 +34,20 @@
 
   @return $shadow-definition;
 }
+
+/*
+ * Generates a list of shadow-layers, which is a list of sass maps in the following format:
+ * (
+ *   'color': <color>
+ *   'offset': <length>
+ *   'blur-radius': <length>
+ * )
+ *
+ * @param {Color} $color. The shadow color (will be the same for each layer)
+ * @param {Length} $offset. The shadow offset in the y-axis
+ * @param {Length} $blur-radius. The amount of blur applied to the shadow
+ * @param {Number} $layers. The number of layers the shadow should be built with. More produces a more natural-looking result, but with diminishing returns — past some value there is no visible difference, but larger values may cause some performance impact on rendering in the browser.
+ */
 
 /* stylelint-disable scss/no-duplicate-dollar-variables */
 @function generate($color, $offset: 0, $blur-radius, $layers: 4) {
