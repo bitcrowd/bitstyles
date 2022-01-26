@@ -30,7 +30,7 @@ $box-shadow: none !default;
 $color-hover: palette.get('gray', '90') !default;
 $background-color-hover: palette.get('white', '95') !default;
 $border-color-hover: palette.get('white', '95') !default;
-$box-shadow-hover: shadow.to-css(
+$box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', '100'), 0.05),
     $blur-radius: size.get('m'),
@@ -43,7 +43,7 @@ $box-shadow-hover: shadow.to-css(
 $color-active: palette.get('white') !default;
 $background-color-active: palette.get('brand-2', '100') !default;
 $border-color-active: palette.get('brand-2', '100') !default;
-$box-shadow-active: shadow.to-css(
+$box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', '100'), 0.05),
     $blur-radius: size.get('xs'),
@@ -56,7 +56,7 @@ $box-shadow-active: shadow.to-css(
 $color-pressed: palette.get('gray', '80') !default;
 $background-color-pressed: palette.get('white', '100') !default;
 $border-color-pressed: palette.get('white', '100') !default;
-$box-shadow-pressed: shadow.to-css(
+$box-shadow-pressed: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', '100'), 0.05),
     $blur-radius: size.get('s'),

@@ -6,7 +6,7 @@
 
 - New Sass map `$bitstyles-shadows-shadows` for holding global shadow design tokens as a Sass list, and a `shadows.get()` function for accessing them in your Sass
 - New helper function `shadow.generate()` to generate multi-layered “natural” shadows based on the color and distances you give
-- Two functions (`shadow.to-css()` and `shadow.to-filter()`) for translating those shadows (which are specified in Sass' list format) into either CSS `box-shadow` format, or CSS filter `drop-shadow` format. Not necessary for the shadows accessed using `shadows.get()`
+- Two functions (`shadow.to-box-shadow()` and `shadow.to-drop-shadow()`) for translating those shadows (which are specified in Sass' list format) into either CSS `box-shadow` format, or CSS filter `drop-shadow` format. Not necessary for the shadows accessed using `shadows.get()`
 - New `u-shadow` and `u-drop-shadow` utility classes to set box-shadows and drop-shadows respectively
 
 ### Fixed

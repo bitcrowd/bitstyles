@@ -9,7 +9,7 @@
  * @param {List} $shadow The list of shadow-layer maps
  */
 
-@function to-css($shadow) {
+@function to-box-shadow($shadow) {
   $shadow-definition: ();
 
   @each $layer in $shadow {
@@ -25,7 +25,7 @@
  * @param {List} $shadow The list of shadow-layer maps
  */
 
-@function to-filter($shadow) {
+@function to-drop-shadow($shadow) {
   $shadow-definition: ();
 
   @each $layer in $shadow {

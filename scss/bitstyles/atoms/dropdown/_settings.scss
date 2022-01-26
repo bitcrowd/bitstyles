@@ -6,7 +6,7 @@ $max-height: 20rem !default;
 $border-radius: size.get('xs') !default;
 $border: 2px solid palette.get('brand-2', '100') !default;
 $background-color: palette.get('white', '100') !default;
-$box-shadow: shadow.to-css(
+$box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('gray', '80'), 0.05),
     $blur-radius: size.get('m'),

@@ -48,7 +48,7 @@ The accessor function `shadows.get()` is the most straightfoward way to use shad
 @use '../../tools/shadows';
 
 $bitstyles-box-shadow-values: (
-  'default': shadows.get('default', 'css'),
+  'default': shadows.get('default', 'box'),
 );
 
 /*
@@ -62,7 +62,7 @@ box-shadow:
 */
 
 $bitstyles-drop-shadow-values: (
-  'default': shadows.get('default', 'filter'),
+  'default': shadows.get('default', 'drop'),
 );
 
 /*
@@ -78,15 +78,15 @@ filter:
 
 ### Using local shadows
 
-Not all shadows belong among the global shadows design tokens. Including all the shadows applied to buttons and input elements on hover/focus/active/disabled/etc. could swamp the global list. But you may want to use `shadow.generate()` to take advantage of the multi-layered shadows without having to hand-code them. You can do this using one of the two helper functions `shadow.to-css()` and `shadow.to-filter()`. These convert the list formatted-shadows provided by the generator into a format suitable for use in CSS `box-shadow` properties and CSS `filter` properties (using `drop-shadow`), respectively.
+Not all shadows belong to the global shadows design tokens. Including all the shadows applied to buttons and input elements on hover/focus/active/disabled/etc. could swamp the global list. But you may want to use `shadow.generate()` to take advantage of the multi-layered shadows without having to hand-code them. You can do this using one of the two helper functions `shadow.to-box-shadow()` and `shadow.to-drop-shadow()`. These convert the list formatted-shadows provided by the generator into a format suitable for use in CSS `box-shadow` properties and CSS `filter` properties (using `drop-shadow`), respectively.
 
-For example, take the two shadows overriding the `box-shadow` and `drop-shadow` settings above. We could specify them in-place instead of `shadow.get()`ing them, if they were not part of our design system right now:
+For example, take the two shadows overriding the `box-shadow` and `drop-shadow` settings above. We could specify them in-place instead of `shadows.get()`ing them, if they were not part of our design system right now:
 
 ```scss
 @use '../../tools/shadow';
 
 $bitstyles-box-shadow-values: (
-  'default': shadow.to-css(
+  'default': shadow.to-box-shadow(
     shadow.generate(
       $color: rgba(palette.get('brand-1'), 0.15),
       $offset: 2rem,
@@ -96,7 +96,7 @@ $bitstyles-box-shadow-values: (
 );
 
 $bitstyles-drop-shadow-values: (
-  'default': shadow.to-filter(
+  'default': shadow.to-drop-shadow(
     shadow.generate(
       $color: rgba(palette.get('brand-1'), 0.15),
       $offset: 2rem,

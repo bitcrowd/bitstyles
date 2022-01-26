@@ -21,7 +21,7 @@ $placeholder-color: palette.get('gray', '50') !default;
 $color: palette.get('text') !default;
 $border-color: palette.get('gray', '10') !default;
 $background: palette.get('white') !default;
-$box-shadow: shadow.to-css(
+$box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('gray', '80'), 0.025),
     $blur-radius: size.get('xs'),
@@ -34,7 +34,7 @@ $box-shadow: shadow.to-css(
 $color-hover: palette.get('gray', '70') !default;
 $background-hover: palette.get('gray', '1') !default;
 $border-color-hover: palette.get('gray', '60') !default;
-$box-shadow-hover: shadow.to-css(
+$box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', '90'), 0.025),
     $blur-radius: size.get('s'),
@@ -47,7 +47,7 @@ $box-shadow-hover: shadow.to-css(
 $color-active: palette.get('gray', '80') !default;
 $background-active: palette.get('white') !default;
 $border-color-active: palette.get('gray', '80') !default;
-$box-shadow-active: shadow.to-css(
+$box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', '90'), 0.075),
     $blur-radius: size.get('xxs'),
@@ -68,7 +68,7 @@ $box-shadow-disabled: none !default;
 $color-invalid: palette.get('warning') !default;
 $background-color-invalid: palette.get('white') !default;
 $border-color-invalid: palette.get('warning') !default;
-$box-shadow-invalid: shadow.to-css(
+$box-shadow-invalid: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('warning', '90'), 0.5),
     $blur-radius: size.get('s'),

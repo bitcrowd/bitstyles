@@ -8,7 +8,7 @@
 $color-hover: palette.get('white') !default;
 $background-color-hover: palette.get('danger', '100') !default;
 $border-color-hover: palette.get('danger', '100') !default;
-$box-shadow-hover: shadow.to-css(
+$box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('danger', '100'), 0.3),
     $blur-radius: size.get('s'),
@@ -21,7 +21,7 @@ $box-shadow-hover: shadow.to-css(
 $color-active: palette.get('white') !default;
 $background-color-active: palette.get('danger', '100') !default;
 $border-color-active: palette.get('danger', '100') !default;
-$box-shadow-active: shadow.to-css(
+$box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('danger', '100'), 0.3),
     $blur-radius: size.get('xs'),

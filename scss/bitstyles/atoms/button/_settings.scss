@@ -26,7 +26,7 @@ $icon-spacing: size.get('s') !default;
 $color: palette.get('white') !default;
 $background-color: palette.get('brand-1', '80') !default;
 $border-color: palette.get('brand-1', '80') !default;
-$box-shadow: shadow.to-css(
+$box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', '80'), 0.2),
     $blur-radius: size.get('xs'),
@@ -39,7 +39,7 @@ $box-shadow: shadow.to-css(
 $color-hover: palette.get('white') !default;
 $background-color-hover: palette.get('brand-1') !default;
 $border-color-hover: palette.get('brand-1') !default;
-$box-shadow-hover: shadow.to-css(
+$box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', '80'), 0.2),
     $blur-radius: size.get('s'),
@@ -52,7 +52,7 @@ $box-shadow-hover: shadow.to-css(
 $color-active: palette.get('white') !default;
 $background-color-active: palette.get('brand-2', '100') !default;
 $border-color-active: palette.get('brand-2', '100') !default;
-$box-shadow-active: shadow.to-css(
+$box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', '100'), 0.3),
     $blur-radius: size.get('xs'),

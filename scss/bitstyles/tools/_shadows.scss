@@ -8,21 +8,21 @@
 //
 // Examples:
 //
-// `box-shadow: shadow.get('default');`
-// `filter: shadow.get('default', 'filter);`
+// `box-shadow: shadows.get('default');`
+// `filter: shadows.get('default', 'drop');`
 //
 // @param {String} $shadow  Name of the shadow required, as defined in the map `$bitstyles-shadows-shadows`.
-// @param {String} $format  The format in which you want the returned shadow. Options are `css` (for CSS box-shadow property) and `filter` (for CSS/SVG filter properties). Defaults to `css`
+// @param {String} $format  The format in which you want the returned shadow. Options are `box` (for CSS box-shadow property) and `drop` (for CSS/SVG drop-shadow using the filter propertt). Defaults to `box`
 //
 
-@function get($shadow, $format: 'css') {
+@function get($shadow, $format: 'box') {
   @if map.has-key(shadows.$shadows, $shadow) {
-    @if $format == 'css' {
-      @return shadow.to-css(map.get(shadows.$shadows, $shadow));
+    @if $format == 'box' {
+      @return shadow.to-box-shadow(map.get(shadows.$shadows, $shadow));
     }
 
-    @if $format == 'filter' {
-      @return shadow.to-filter(map.get(shadows.$shadows, $shadow));
+    @if $format == 'drop' {
+      @return shadow.to-drop-shadow(map.get(shadows.$shadows, $shadow));
     }
   }
 
