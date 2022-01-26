@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Shadows
 
-Bitstyles provides a global list of shadow specifications, to maintain consistency of shadows throughout your components. The shadows are specified in a sass list so they can be translated to various formats as needed — the order of parameters for CSS `box-shadow` is different to the CSS filter `drop-shadow()`. We need to be able to translate to either of those formats.
+Bitstyles provides a global list of shadow specifications, to maintain consistency of shadows throughout your components. The shadows are specified in a Sass list so they can be translated to various formats as needed — the order of parameters for CSS `box-shadow` is different to the CSS filter `drop-shadow()`. We need to be able to translate to either of those formats.
 
 The default shadows used throughout bitstyles are multi-layered to create a more natural or realistic appearance than you get from a single box-shadow or filter. We provide a generator function that you can use to produce “natural” multi-layered shadows in the correct format for our Sass design system, and functions to translate those to useful formats.
 
@@ -36,7 +36,7 @@ This creates a specification for a multi-layered shadow using the `brand-1` colo
 |Name|Format|Description|
 |--|--|--|
 |$color|color|The color to be used. Probably you want a low-opacity version of a color. Avoid using pure black unless your design calls for it, as that can look flat, especially on non-white backgrounds.|
-|$offset|number|Vertical offset for the shadow. Include the units unless it’s zero. Optional, defaults to `0`.
+|$offset|number|Vertical offset for the shadow. Include the units unless it’s zero. Optional, defaults to `0`.|
 |$blur-radius|number|Maximum distance to blur the shadow. The extra layers in this multi-layer shadow will be smaller than the value you pass. Include the units.|
 |$layers|number|Number of layers of in the shadow. Optional, defaults to `4`.|
 
@@ -111,7 +111,7 @@ $bitstyles-drop-shadow-values: (
 
 You may need more fine-grained control of the shadows — for example when your designs differ from the shadows the generator produces. You can use bitstyles’ central shadow settings without using `shadow.generate()`, but it means writing the format by hand.
 
-In this format, each shadow is specified as a list of maps (Sass lists and Sass maps. This can be thought of as similar to an array of objects in javascript). Each map represents a layer of the shadow, and has the `color`, `offset`, and `blur-radius` keys as defined in the parameters for `generate()`, shown in the table above.
+In this format, each shadow is specified as a list of maps (Sass lists and Sass maps. This can be thought of as similar to an array of objects in JavaScript). Each map represents a layer of the shadow, and has the `color`, `offset` and `blur-radius` keys as defined in the parameters for `generate()`, shown in the table above.
 
 An example two-layer shadow:
 
