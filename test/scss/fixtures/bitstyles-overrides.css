@@ -1335,9 +1335,9 @@ table {
   background-color: #000;
   border: 2px solid #000;
   border-radius: 5rem;
-  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.05),
-    0 0 3.3333333333rem rgba(0, 0, 0, 0.05), 0 0 5rem rgba(0, 0, 0, 0.05),
-    0 0 10rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2.5rem 3.125rem rgba(0, 0, 0, 0.05),
+    0 3.3333333333rem 4.1666666667rem rgba(0, 0, 0, 0.05),
+    0 5rem 6.25rem rgba(0, 0, 0, 0.05), 0 10rem 12.5rem rgba(0, 0, 0, 0.05);
 }
 .bsa-dropdown [role='separator'] {
   margin: 2.5rem 0;
