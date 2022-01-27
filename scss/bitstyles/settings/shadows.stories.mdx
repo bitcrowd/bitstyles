@@ -17,10 +17,10 @@ The simplest way to override the global shadow design tokens in `$bitstyles-shad
 
 $bitstyles-shadows-shadows: (
   'default': shadow.generate(
-    $color: rgba(palette.get('brand-1'), 0.15),
-    $offset: 2rem,
-    $blur-radius: 2rem,
-  ),
+      $color: rgba(palette.get('brand-1'), 0.15),
+      $offset: 2rem,
+      $blur-radius: 2rem,
+    ),
 );
 ```
 
@@ -33,12 +33,12 @@ This creates a specification for a multi-layered shadow using the `brand-1` colo
 
 ### Parameters
 
-|Name|Format|Description|
-|--|--|--|
-|$color|color|The color to be used. Probably you want a low-opacity version of a color. Avoid using pure black unless your design calls for it, as that can look flat, especially on non-white backgrounds.|
-|$offset|number|Vertical offset for the shadow. Include the units unless it’s zero. Optional, defaults to `0`.|
-|$blur-radius|number|Maximum distance to blur the shadow. The extra layers in this multi-layer shadow will be smaller than the value you pass. Include the units.|
-|$layers|number|Number of layers of in the shadow. Optional, defaults to `4`.|
+| Name         | Format | Description                                                                                                                                                                                   |
+| ------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $color       | color  | The color to be used. Probably you want a low-opacity version of a color. Avoid using pure black unless your design calls for it, as that can look flat, especially on non-white backgrounds. |
+| $offset      | number | Vertical offset for the shadow. Include the units unless it’s zero. Optional, defaults to `0`.                                                                                                |
+| $blur-radius | number | Maximum distance to blur the shadow. The extra layers in this multi-layer shadow will be smaller than the value you pass. Include the units.                                                  |
+| $layers      | number | Number of layers of in the shadow. Optional, defaults to `4`.                                                                                                                                 |
 
 ## Using shadows
 
@@ -87,24 +87,23 @@ For example, take the two shadows overriding the `box-shadow` and `drop-shadow` 
 
 $bitstyles-box-shadow-values: (
   'default': shadow.to-box-shadow(
-    shadow.generate(
-      $color: rgba(palette.get('brand-1'), 0.15),
-      $offset: 2rem,
-      $blur-radius: 2rem,
-    )
-  ),
+      shadow.generate(
+        $color: rgba(palette.get('brand-1'), 0.15),
+        $offset: 2rem,
+        $blur-radius: 2rem,
+      )
+    ),
 );
 
 $bitstyles-drop-shadow-values: (
   'default': shadow.to-drop-shadow(
-    shadow.generate(
-      $color: rgba(palette.get('brand-1'), 0.15),
-      $offset: 2rem,
-      $blur-radius: 2rem,
-    )
-  ),
+      shadow.generate(
+        $color: rgba(palette.get('brand-1'), 0.15),
+        $offset: 2rem,
+        $blur-radius: 2rem,
+      )
+    ),
 );
-
 ```
 
 ## Specifying shadows manually
