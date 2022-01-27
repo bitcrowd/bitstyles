@@ -4,8 +4,6 @@
 @use '../../tools/shadow';
 @use '../../tools/size';
 
-$padding-y: size.get('xs') !default;
-$padding-x: size.get('m') !default;
 $font: inherit !default;
 $font-weight: typography.$font-weight-normal !default;
 $transition: color animation.$transition-duration animation.$transition-easing,
@@ -14,12 +12,11 @@ $transition: color animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing !default;
 $icon-spacing: size.get('s') !default;
 
-$base: (
+$default: (
   'default': (
     'color': palette.get('white'),
     'background-color': palette.get('brand-1', '80'),
-    'border': size.get('xxxs') solid palette.get('brand-1', '80'),
-    'border-radius': size.get('xs'),
+    'border-color': palette.get('brand-1', '80'),
     'box-shadow': shadow.to-box-shadow(
       shadow.generate(
         $color: rgba(palette.get('brand-1', '80'), 0.2),
@@ -51,7 +48,6 @@ $base: (
   ),
   'disabled': (
     'color': palette.get('black', '50'),
-    'cursor': not-allowed,
     'background-color': palette.get('black', '10'),
     'border-color': palette.get('black', '10'),
     'box-shadow': none,
@@ -83,8 +79,7 @@ $danger: (
 ) !default;
 
 $ui: (
-  default: (
-    'border-radius': size.get('s'),
+  'default': (
     'color': palette.get('gray', '60'),
     'background-color': palette.get('gray', '1'),
     'border-color': palette.get('gray', '10'),
@@ -103,7 +98,7 @@ $ui: (
     'box-shadow': none,
   ),
   'pressed': (
-    'pressed': palette.get('gray', '90'),
+    'color': palette.get('gray', '90'),
     'background-color': palette.get('brand-2', '100'),
     'border-color': palette.get('brand-2', '100'),
     'box-shadow': none,
@@ -116,8 +111,8 @@ $ui: (
   )
 ) !default;
 
-$variants: (
-  '': $base,
-  'danger': $danger,
-  'ui': $ui,
+$color-variants: (
+  '': $default,
+  '-ui': $ui,
+  '-danger': $danger,
 ) !default;

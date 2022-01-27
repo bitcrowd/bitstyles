@@ -1,0 +1,6 @@
+@use './settings';
+@use '../../tools/button';
+
+@each $name, $sizes in settings.$size-variants {
+  @include button.new($name, $sizes);
+}

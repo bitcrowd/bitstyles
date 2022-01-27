@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use '../settings/setup';
-@use '../tools/directional-properties';
+@use '../tools/properties';
 
 @mixin _properties($properties) {
   @each $property, $value in $properties {
@@ -9,8 +9,7 @@
 }
 
 @mixin new($name, $states) {
-  @debug($name);
-  $classname: directional-properties.get-classname(
+  $classname: properties.classname(
     (
       setup.$namespace,
       'a',

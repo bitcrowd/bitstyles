@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  min-height: calc(#{settings.$padding-y * 2} + 1em);
+  // min-height: calc(#{settings.$padding-y * 2} + 1em);
   margin: 0;
   padding: settings.$padding-y settings.$padding-x;
   overflow: visible;
@@ -20,6 +20,7 @@
   font-weight: settings.$font-weight;
   text-align: center;
   text-decoration: none;
+  border: 0 solid currentColor;
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
@@ -30,6 +31,11 @@
   &:focus {
     text-decoration: none;
     outline: none;
+  }
+
+  &:disabled,
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
   }
 }
 
@@ -44,6 +50,6 @@
   margin-left: settings.$icon-spacing;
 }
 
-@each $name, $states in settings.$variants {
+@each $name, $states in settings.$color-variants {
   @include button.new($name, $states);
 }

@@ -25,7 +25,7 @@
  *
  * @param $classname-items An ordered list of strings to be joined with dashes to form the classname
  */
-@function get-classname($classname-items) {
+@function classname($classname-items) {
   $classname: null;
   $classname-items: remove($classname-items, null);
 
@@ -74,7 +74,14 @@
   $breakpoint-suffix: ''
 ) {
   @each $alias, $value in $values {
-    $classname: get-classname((setup.$namespace, 'u', $classname-root, $alias));
+    $classname: classname(
+      (
+        setup.$namespace,
+        'u',
+        $classname-root,
+        $alias
+      )
+    );
 
     .#{$classname}#{$breakpoint-suffix} {
       #{$property-name}: $value;
@@ -100,8 +107,14 @@
 ) {
   @each $alias, $value in $values {
     @each $direction-name, $direction-values in $directions {
-      $classname: get-classname(
-        (setup.$namespace, 'u', $classname-root, $alias, $direction-name)
+      $classname: classname(
+        (
+          setup.$namespace,
+          'u',
+          $classname-root,
+          $alias,
+          $direction-name
+        )
       );
 
       .#{$classname}#{$breakpoint-suffix} {
@@ -127,8 +140,12 @@
   $classname-root,
   $breakpoint-suffix: ''
 ) {
-  $classname: get-classname(
-    (setup.$namespace, $classname-prefix, $classname-root)
+  $classname: classname(
+    (
+      setup.$namespace,
+      $classname-prefix,
+      $classname-root,
+    )
   );
 
   .#{$classname}#{$breakpoint-suffix} {
