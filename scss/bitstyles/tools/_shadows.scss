@@ -24,9 +24,7 @@
     @if $format == 'drop' {
       @return shadow.to-drop-shadow(map.get(shadows.$shadows, $shadow));
     }
-  }
-
-  @else {
+  } @else {
     @error 'Oops! There’s no shadow with the name ‘#{$shadow}’.';
   }
 }

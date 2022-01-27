@@ -6,7 +6,7 @@
 @each $name, $shadow in settings.$values {
   @include properties.output-block(
     $classname-prefix: 'u',
-    $classname-root: 'drop-shadow-#{$name}',
+    $classname-root: 'drop-shadow-#{$name}'
   ) {
     filter: $shadow;
   }
@@ -18,7 +18,7 @@
       @include properties.output-block(
         $classname-prefix: 'u',
         $classname-root: 'drop-shadow-#{$name}',
-        $breakpoint-suffix: '\\\@#{$breakpoint}',
+        $breakpoint-suffix: '\\\@#{$breakpoint}'
       ) {
         filter: $shadow;
       }
