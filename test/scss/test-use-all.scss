@@ -50,6 +50,7 @@
     ),
     'brand-2': (
       '10': #000,
+      '80': #000,
       '100': #000,
     ),
     'danger': (
@@ -66,6 +67,19 @@
     )
   ),
   $layout-size-base: 10rem,
+  $shadows-shadows: (
+    'default': (
+      (
+        'color': #f00,
+        'offset': 2.5rem,
+        'blur-radius': 5rem,
+      ), (
+        'color': #f00,
+        'offset': 5rem,
+        'blur-radius': 10rem,
+      ),
+    )
+  ),
   $setup-namespace: 'bs',
   $typography-webfont-family-name: 'FakeFont',
   $typography-webfont-base-url: './',
@@ -120,6 +134,9 @@
   $border-values: (
     'f00': #f00,
   ),
+  $box-shadow-breakpoints: (
+    'xl'
+  ),
   $col-span-values: (
     '100': span 100 / span 100
   ),
@@ -128,6 +145,9 @@
   ),
   $display-values: (
     inline-block: inline-block,
+  ),
+  $drop-shadow-breakpoints: (
+    's'
   ),
   $fg-values: (
     'f00': #f00,

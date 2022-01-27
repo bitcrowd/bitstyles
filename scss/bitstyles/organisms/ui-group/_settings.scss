@@ -1,5 +1,11 @@
 @use '../../tools/palette';
+@use '../../tools/shadow';
 @use '../../tools/size';
 
 $border-radius: size.get('s') !default;
-$box-shadow: 0 0 size.get('xs') rgba(palette.get('brand-1', '80'), 0.05) !default;
+$box-shadow: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-1', '80'), 0.025),
+    $blur-radius: size.get('xs'),
+  )
+) !default;

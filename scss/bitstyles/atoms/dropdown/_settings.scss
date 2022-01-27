@@ -1,11 +1,18 @@
 @use '../../tools/palette';
+@use '../../tools/shadow';
 @use '../../tools/size';
 
 $max-height: 20rem !default;
 $border-radius: size.get('xs') !default;
 $border: 2px solid palette.get('brand-2', '100') !default;
 $background-color: palette.get('white', '100') !default;
-$box-shadow: 0 0 size.get('m') rgba(palette.get('gray', '80'), 0.1) !default;
+$box-shadow: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-2', '80'), 0.05),
+    $offset: size.get('m'),
+    $blur-radius: size.get('l'),
+  )
+) !default;
 $separator-border: 1px solid palette.get('gray', '1') !default;
 $separator-spacing: size.get('xxs') !default;
 $transition: opacity 0.12s ease-in !default;

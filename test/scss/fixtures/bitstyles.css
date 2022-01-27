@@ -430,7 +430,9 @@ textarea {
   background-color: #fff;
   border: 0.1rem solid #cfd0e9;
   border-radius: 0.4rem;
-  box-shadow: 0 0 0.4rem rgba(23, 25, 49, 0.05);
+  box-shadow: 0 0 0.1rem rgba(46, 47, 71, 0.025),
+    0 0 0.1333333333rem rgba(46, 47, 71, 0.025),
+    0 0 0.2rem rgba(46, 47, 71, 0.025), 0 0 0.4rem rgba(46, 47, 71, 0.025);
 }
 [type='date']:hover,
 [type='datetime-local']:hover,
@@ -448,7 +450,9 @@ textarea:hover {
   color: #45475f;
   background-color: #e3e4fc;
   border-color: #5c5d75;
-  box-shadow: 0 0 0.6rem rgba(26, 37, 255, 0.05);
+  box-shadow: 0 0 0.15rem rgba(26, 37, 255, 0.025),
+    0 0 0.2rem rgba(26, 37, 255, 0.025), 0 0 0.3rem rgba(26, 37, 255, 0.025),
+    0 0 0.6rem rgba(26, 37, 255, 0.025);
 }
 [type='date']:active,
 [type='date']:focus,
@@ -480,7 +484,9 @@ textarea:focus {
   background-color: #fff;
   border-color: #2e2f47;
   outline: none;
-  box-shadow: 0 0 0.2rem rgba(26, 37, 255, 0.15);
+  box-shadow: 0 0 0.05rem rgba(26, 37, 255, 0.075),
+    0 0 0.0666666667rem rgba(26, 37, 255, 0.075),
+    0 0 0.1rem rgba(26, 37, 255, 0.075), 0 0 0.2rem rgba(26, 37, 255, 0.075);
 }
 [type='date']:invalid,
 [type='date'][aria-invalid='true'],
@@ -511,7 +517,9 @@ textarea[aria-invalid='true'] {
   color: #fe881e;
   background-color: #fff;
   border-color: #fe881e;
-  box-shadow: 0 0 0.6rem rgba(254, 148, 53, 0.1);
+  box-shadow: 0 0 0.15rem rgba(254, 148, 53, 0.5),
+    0 0 0.2rem rgba(254, 148, 53, 0.5), 0 0 0.3rem rgba(254, 148, 53, 0.5),
+    0 0 0.6rem rgba(254, 148, 53, 0.5);
 }
 [type='date']:disabled,
 [type='datetime-local']:disabled,
@@ -773,7 +781,9 @@ table {
   color: #fff;
   background: #333dff;
   border: 0.1rem solid #333dff;
-  box-shadow: 0 0 0.4rem rgba(51, 61, 255, 0.2);
+  box-shadow: 0 0 0.1rem rgba(51, 61, 255, 0.2),
+    0 0 0.1333333333rem rgba(51, 61, 255, 0.2),
+    0 0 0.2rem rgba(51, 61, 255, 0.2), 0 0 0.4rem rgba(51, 61, 255, 0.2);
 }
 .a-button:focus,
 .a-button:hover {
@@ -782,13 +792,17 @@ table {
   background: #000dff;
   border-color: #000dff;
   outline: none;
-  box-shadow: 0 0 0.6rem rgba(0, 13, 255, 0.2);
+  box-shadow: 0 0 0.15rem rgba(51, 61, 255, 0.2),
+    0 0 0.2rem rgba(51, 61, 255, 0.2), 0 0 0.3rem rgba(51, 61, 255, 0.2),
+    0 0 0.6rem rgba(51, 61, 255, 0.2);
 }
 .a-button:active {
   color: #fff;
   background: #fa0;
   border-color: #fa0;
-  box-shadow: 0 0 0.6rem rgba(0, 13, 255, 0.3);
+  box-shadow: 0 0 0.1rem rgba(255, 170, 0, 0.3),
+    0 0 0.1333333333rem rgba(255, 170, 0, 0.3),
+    0 0 0.2rem rgba(255, 170, 0, 0.3), 0 0 0.4rem rgba(255, 170, 0, 0.3);
 }
 .a-button:disabled,
 .a-button[aria-disabled='true'] {
@@ -812,13 +826,17 @@ table {
   color: #fff;
   background: #e82915;
   border-color: #e82915;
-  box-shadow: 0 0 0.8rem rgba(232, 41, 21, 0.3);
+  box-shadow: 0 0 0.15rem rgba(232, 41, 21, 0.3),
+    0 0 0.2rem rgba(232, 41, 21, 0.3), 0 0 0.3rem rgba(232, 41, 21, 0.3),
+    0 0 0.6rem rgba(232, 41, 21, 0.3);
 }
 .a-button--danger:active {
   color: #fff;
   background: #e82915;
   border-color: #e82915;
-  box-shadow: 0 0 0.4rem rgba(232, 41, 21, 0.3);
+  box-shadow: 0 0 0.1rem rgba(232, 41, 21, 0.3),
+    0 0 0.1333333333rem rgba(232, 41, 21, 0.3),
+    0 0 0.2rem rgba(232, 41, 21, 0.3), 0 0 0.4rem rgba(232, 41, 21, 0.3);
 }
 .a-button--danger:disabled,
 .a-button--danger[aria-disabled='true'] {
@@ -942,19 +960,25 @@ table {
   color: #171931;
   background: #f2f2f2;
   border-color: #f2f2f2;
-  box-shadow: 0 0 0.8rem rgba(0, 13, 255, 0.1);
+  box-shadow: 0 0 0.2rem rgba(0, 13, 255, 0.05),
+    0 0 0.2666666667rem rgba(0, 13, 255, 0.05),
+    0 0 0.4rem rgba(0, 13, 255, 0.05), 0 0 0.8rem rgba(0, 13, 255, 0.05);
 }
 .a-button--mode:active {
   color: #fff;
   background: #fa0;
   border-color: #fa0;
-  box-shadow: 0 0 0.4rem rgba(0, 13, 255, 0.1);
+  box-shadow: 0 0 0.1rem rgba(0, 13, 255, 0.05),
+    0 0 0.1333333333rem rgba(0, 13, 255, 0.05),
+    0 0 0.2rem rgba(0, 13, 255, 0.05), 0 0 0.4rem rgba(0, 13, 255, 0.05);
 }
 .a-button--mode[aria-pressed='true'] {
   color: #2e2f47;
   background: #fff;
   border-color: #fff;
-  box-shadow: 0 0 0.6rem rgba(0, 13, 255, 0.1);
+  box-shadow: 0 0 0.15rem rgba(0, 13, 255, 0.05),
+    0 0 0.2rem rgba(0, 13, 255, 0.05), 0 0 0.3rem rgba(0, 13, 255, 0.05),
+    0 0 0.6rem rgba(0, 13, 255, 0.05);
 }
 .a-button--mode:disabled,
 .a-button--mode[aria-disabled='true'] {
@@ -980,13 +1004,17 @@ table {
   color: #fff;
   background: #5c5d75;
   border-color: #5c5d75;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.15),
+    0 0 0.3333333333rem rgba(0, 0, 0, 0.15), 0 0 0.5rem rgba(0, 0, 0, 0.15),
+    0 0 1rem rgba(0, 0, 0, 0.15);
 }
 .a-button--nav:active {
   color: #333;
   background: #cfd0e9;
   border-color: #cfd0e9;
-  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.15),
+    0 0 0.1333333333rem rgba(0, 0, 0, 0.15), 0 0 0.2rem rgba(0, 0, 0, 0.15),
+    0 0 0.4rem rgba(0, 0, 0, 0.15);
 }
 .a-button--nav[aria-current],
 .a-button--nav[aria-expanded='true'] {
@@ -1161,8 +1189,12 @@ table {
   padding: 0.8rem;
   overflow: hidden;
   border-radius: 0.8rem;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 13, 255, 0.1),
-    0 0.1rem 0.2rem rgba(23, 25, 49, 0.04), 0 0 0.2rem rgba(23, 25, 49, 0.1);
+  box-shadow: 0 0.1rem 0.1666666667rem rgba(0, 13, 255, 0.025),
+    0 0.12rem 0.2rem rgba(0, 13, 255, 0.025),
+    0 0.15rem 0.25rem rgba(0, 13, 255, 0.025),
+    0 0.2rem 0.3333333333rem rgba(0, 13, 255, 0.025),
+    0 0.3rem 0.5rem rgba(0, 13, 255, 0.025),
+    0 0.6rem 1rem rgba(0, 13, 255, 0.025);
 }
 .a-card__header {
   padding: 0.4rem 0.8rem;
@@ -1173,8 +1205,12 @@ table {
   padding: 1.6rem;
   overflow: hidden;
   border-radius: 0.8rem;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 13, 255, 0.1),
-    0 0.1rem 0.2rem rgba(23, 25, 49, 0.04), 0 0 0.2rem rgba(23, 25, 49, 0.1);
+  box-shadow: 0 0.1rem 0.1666666667rem rgba(0, 13, 255, 0.025),
+    0 0.12rem 0.2rem rgba(0, 13, 255, 0.025),
+    0 0.15rem 0.25rem rgba(0, 13, 255, 0.025),
+    0 0.2rem 0.3333333333rem rgba(0, 13, 255, 0.025),
+    0 0.3rem 0.5rem rgba(0, 13, 255, 0.025),
+    0 0.6rem 1rem rgba(0, 13, 255, 0.025);
 }
 .a-card-l__header {
   padding: 0.8rem 1.6rem;
@@ -1186,8 +1222,12 @@ table {
     padding: 0.8rem;
     overflow: hidden;
     border-radius: 0.8rem;
-    box-shadow: 0 0.4rem 0.8rem rgba(0, 13, 255, 0.1),
-      0 0.1rem 0.2rem rgba(23, 25, 49, 0.04), 0 0 0.2rem rgba(23, 25, 49, 0.1);
+    box-shadow: 0 0.1rem 0.1666666667rem rgba(0, 13, 255, 0.025),
+      0 0.12rem 0.2rem rgba(0, 13, 255, 0.025),
+      0 0.15rem 0.25rem rgba(0, 13, 255, 0.025),
+      0 0.2rem 0.3333333333rem rgba(0, 13, 255, 0.025),
+      0 0.3rem 0.5rem rgba(0, 13, 255, 0.025),
+      0 0.6rem 1rem rgba(0, 13, 255, 0.025);
   }
   .a-card__header\@m {
     padding: 0.4rem 0.8rem;
@@ -1198,8 +1238,12 @@ table {
     padding: 1.6rem;
     overflow: hidden;
     border-radius: 0.8rem;
-    box-shadow: 0 0.4rem 0.8rem rgba(0, 13, 255, 0.1),
-      0 0.1rem 0.2rem rgba(23, 25, 49, 0.04), 0 0 0.2rem rgba(23, 25, 49, 0.1);
+    box-shadow: 0 0.1rem 0.1666666667rem rgba(0, 13, 255, 0.025),
+      0 0.12rem 0.2rem rgba(0, 13, 255, 0.025),
+      0 0.15rem 0.25rem rgba(0, 13, 255, 0.025),
+      0 0.2rem 0.3333333333rem rgba(0, 13, 255, 0.025),
+      0 0.3rem 0.5rem rgba(0, 13, 255, 0.025),
+      0 0.6rem 1rem rgba(0, 13, 255, 0.025);
   }
   .a-card-l__header\@m {
     padding: 0.8rem 1.6rem;
@@ -1212,8 +1256,12 @@ table {
     padding: 0.8rem;
     overflow: hidden;
     border-radius: 0.8rem;
-    box-shadow: 0 0.4rem 0.8rem rgba(0, 13, 255, 0.1),
-      0 0.1rem 0.2rem rgba(23, 25, 49, 0.04), 0 0 0.2rem rgba(23, 25, 49, 0.1);
+    box-shadow: 0 0.1rem 0.1666666667rem rgba(0, 13, 255, 0.025),
+      0 0.12rem 0.2rem rgba(0, 13, 255, 0.025),
+      0 0.15rem 0.25rem rgba(0, 13, 255, 0.025),
+      0 0.2rem 0.3333333333rem rgba(0, 13, 255, 0.025),
+      0 0.3rem 0.5rem rgba(0, 13, 255, 0.025),
+      0 0.6rem 1rem rgba(0, 13, 255, 0.025);
   }
   .a-card__header\@l {
     padding: 0.4rem 0.8rem;
@@ -1224,8 +1272,12 @@ table {
     padding: 1.6rem;
     overflow: hidden;
     border-radius: 0.8rem;
-    box-shadow: 0 0.4rem 0.8rem rgba(0, 13, 255, 0.1),
-      0 0.1rem 0.2rem rgba(23, 25, 49, 0.04), 0 0 0.2rem rgba(23, 25, 49, 0.1);
+    box-shadow: 0 0.1rem 0.1666666667rem rgba(0, 13, 255, 0.025),
+      0 0.12rem 0.2rem rgba(0, 13, 255, 0.025),
+      0 0.15rem 0.25rem rgba(0, 13, 255, 0.025),
+      0 0.2rem 0.3333333333rem rgba(0, 13, 255, 0.025),
+      0 0.3rem 0.5rem rgba(0, 13, 255, 0.025),
+      0 0.6rem 1rem rgba(0, 13, 255, 0.025);
   }
   .a-card-l__header\@l {
     padding: 0.8rem 1.6rem;
@@ -1293,7 +1345,10 @@ table {
   background-color: #fff;
   border: 2px solid #fa0;
   border-radius: 0.4rem;
-  box-shadow: 0 0 0.8rem rgba(46, 47, 71, 0.1);
+  box-shadow: 0 0.2rem 0.25rem rgba(255, 187, 51, 0.05),
+    0 0.2666666667rem 0.3333333333rem rgba(255, 187, 51, 0.05),
+    0 0.4rem 0.5rem rgba(255, 187, 51, 0.05),
+    0 0.8rem 1rem rgba(255, 187, 51, 0.05);
 }
 .a-dropdown [role='separator'] {
   margin: 0.2rem 0;
@@ -1547,7 +1602,9 @@ table {
 }
 .o-ui-group {
   border-radius: 0.6rem;
-  box-shadow: 0 0 0.4rem rgba(51, 61, 255, 0.05);
+  box-shadow: 0 0 0.1rem rgba(51, 61, 255, 0.025),
+    0 0 0.1333333333rem rgba(51, 61, 255, 0.025),
+    0 0 0.2rem rgba(51, 61, 255, 0.025), 0 0 0.4rem rgba(51, 61, 255, 0.025);
 }
 .o-ui-group__item {
   box-shadow: none;
@@ -1676,6 +1733,11 @@ table {
 .u-border-gray-10-y {
   border-top: 1px solid #cfd0e9;
   border-bottom: 1px solid #cfd0e9;
+}
+.u-shadow-default {
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 13, 255, 0.15),
+    0 0.6666666667rem 0.6666666667rem rgba(0, 13, 255, 0.15),
+    0 1rem 1rem rgba(0, 13, 255, 0.15), 0 2rem 2rem rgba(0, 13, 255, 0.15);
 }
 .u-break-text {
   overflow-wrap: break-word;
@@ -1928,6 +1990,12 @@ table {
   .u-hidden\@l {
     display: none;
   }
+}
+.u-drop-shadow-default {
+  filter: drop-shadow(rgba(0, 13, 255, 0.15) 0 0.5rem 0.5rem)
+    drop-shadow(rgba(0, 13, 255, 0.15) 0 0.6666666667rem 0.6666666667rem)
+    drop-shadow(rgba(0, 13, 255, 0.15) 0 1rem 1rem)
+    drop-shadow(rgba(0, 13, 255, 0.15) 0 2rem 2rem);
 }
 .u-fg-brand-1 {
   color: #000dff;

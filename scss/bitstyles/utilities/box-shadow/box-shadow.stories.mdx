@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/shadow" />
+
+# Box-shadow
+
+Apply a CSS box-shadow to the element. By default this is selected from the standard set of shadows, but you can specify any shadow (see the [“Customization”](#customization) section below).
+
+## u-shadow
+
+<Canvas>
+  <Story name="u-shadow-default">
+    {`
+      <div class="u-shadow-default u-padding-m u-bg-white" style="width: 10rem; height: 10rem;">
+        u-shadow-default
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The available box-shadows and their names can be customized by overriding the `$bitstyles-box-shadow-values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `css` as the format:
+
+```scss
+$bitstyles-box-shadow-values: (
+  'default': shadows.get('default', 'box'),
+);
+```
+
+You can also specify shadows directly, using the correct format for the CSS `box-shadow` property e.g.
+
+```scss
+$bitstyles-box-shadow-values: (
+  'default': 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2), 0 0 2rem 1rem rgba(0 ,0 ,0 ,0.2),
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-box-shadows-breakpoints` variable:
+
+```scss
+$bitstyles-box-shadow-breakpoints: ('s', 'm', 'xl');
+```

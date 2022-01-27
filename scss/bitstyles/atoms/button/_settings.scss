@@ -1,6 +1,7 @@
 @use '../../settings/animation';
 @use '../../settings/typography';
 @use '../../tools/palette';
+@use '../../tools/shadow';
 @use '../../tools/size';
 
 //
@@ -25,7 +26,12 @@ $icon-spacing: size.get('s') !default;
 $color: palette.get('white') !default;
 $background-color: palette.get('brand-1', '80') !default;
 $border-color: palette.get('brand-1', '80') !default;
-$box-shadow: 0 0 size.get('xs') rgba(palette.get('brand-1', '80'), 0.2) !default;
+$box-shadow: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-1', '80'), 0.2),
+    $blur-radius: size.get('xs'),
+  )
+) !default;
 
 //
 // Hover colors ////////////////////////////////////////
@@ -33,7 +39,12 @@ $box-shadow: 0 0 size.get('xs') rgba(palette.get('brand-1', '80'), 0.2) !default
 $color-hover: palette.get('white') !default;
 $background-color-hover: palette.get('brand-1') !default;
 $border-color-hover: palette.get('brand-1') !default;
-$box-shadow-hover: 0 0 size.get('s') rgba(palette.get('brand-1'), 0.2) !default;
+$box-shadow-hover: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-1', '80'), 0.2),
+    $blur-radius: size.get('s'),
+  )
+) !default;
 
 //
 // Active colors ////////////////////////////////////////
@@ -41,7 +52,12 @@ $box-shadow-hover: 0 0 size.get('s') rgba(palette.get('brand-1'), 0.2) !default;
 $color-active: palette.get('white') !default;
 $background-color-active: palette.get('brand-2', '100') !default;
 $border-color-active: palette.get('brand-2', '100') !default;
-$box-shadow-active: 0 0 size.get('s') rgba(palette.get('brand-1', '100'), 0.3) !default;
+$box-shadow-active: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-2', '100'), 0.3),
+    $blur-radius: size.get('xs'),
+  )
+) !default;
 
 //
 // Disabled colors ////////////////////////////////////////

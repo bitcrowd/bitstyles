@@ -55,6 +55,7 @@
     ),
     'brand-2': (
       '10': #000,
+      '80': #000,
       '100': #000,
     ),
     'danger': (
@@ -76,6 +77,21 @@
 );
 @use '../../scss/bitstyles/settings/setup' with (
   $namespace: 'bs'
+);
+@use '../../scss/bitstyles/settings/shadows' with (
+  $shadows: (
+    'default': (
+      (
+        'color': #f00,
+        'offset': 2.5rem,
+        'blur-radius': 5rem,
+      ), (
+        'color': #f00,
+        'offset': 5rem,
+        'blur-radius': 10rem,
+      ),
+    )
+  ),
 );
 @use '../../scss/bitstyles/settings/typography' as settings-typography with (
   $webfont-family-name: 'FakeFont',
@@ -233,6 +249,11 @@
     'f00': #f00,
   )
 );
+@use '../../scss/bitstyles/utilities/box-shadow' with (
+  $breakpoints: (
+    'xl'
+  )
+);
 @use '../../scss/bitstyles/utilities/break-text';
 @use '../../scss/bitstyles/utilities/clearfix';
 @use '../../scss/bitstyles/utilities/col-span' with (
@@ -249,6 +270,11 @@
   $values: (
     inline-block: inline-block,
   )
+);
+@use '../../scss/bitstyles/utilities/drop-shadow' with (
+  $breakpoints: (
+    's'
+  ),
 );
 @use '../../scss/bitstyles/utilities/fg' with (
   $values: (

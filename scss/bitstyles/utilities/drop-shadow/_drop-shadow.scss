@@ -1,0 +1,27 @@
+@use './settings';
+@use '../../tools/media-query';
+@use '../../tools/properties';
+@use '../../tools/shadows';
+
+@each $name, $shadow in settings.$values {
+  @include properties.output-block(
+    $classname-prefix: 'u',
+    $classname-root: 'drop-shadow-#{$name}',
+  ) {
+    filter: $shadow;
+  }
+}
+
+@each $breakpoint in settings.$breakpoints {
+  @include media-query.get($breakpoint) {
+    @each $name, $shadow in settings.$values {
+      @include properties.output-block(
+        $classname-prefix: 'u',
+        $classname-root: 'drop-shadow-#{$name}',
+        $breakpoint-suffix: '\\\@#{$breakpoint}',
+      ) {
+        filter: $shadow;
+      }
+    }
+  }
+}

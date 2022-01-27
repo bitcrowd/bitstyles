@@ -6,6 +6,7 @@
 @forward 'bitstyles/settings/color-palette' as color-palette-*;
 @forward 'bitstyles/settings/layout' as layout-*;
 @forward 'bitstyles/settings/setup' as setup-*;
+@forward 'bitstyles/settings/shadows' as shadows-*;
 @forward 'bitstyles/settings/typography' as typography-*;
 @forward 'bitstyles/settings/link' as link-*;
 
@@ -59,9 +60,11 @@
 @forward 'bitstyles/utilities/aspect-ratio/settings' as aspect-ratio-*;
 @forward 'bitstyles/utilities/bg/settings' as bg-*;
 @forward 'bitstyles/utilities/border/settings' as border-*;
+@forward 'bitstyles/utilities/box-shadow/settings' as box-shadow-*;
 @forward 'bitstyles/utilities/col-span/settings' as col-span-*;
 @forward 'bitstyles/utilities/col-start/settings' as col-start-*;
 @forward 'bitstyles/utilities/display/settings' as display-*;
+@forward 'bitstyles/utilities/drop-shadow/settings' as drop-shadow-*;
 @forward 'bitstyles/utilities/fg/settings' as fg-*;
 @forward 'bitstyles/utilities/flex/settings' as flex-*;
 @forward 'bitstyles/utilities/gap/settings' as gap-*;
@@ -143,11 +146,13 @@
 @use 'bitstyles/utilities/aspect-ratio';
 @use 'bitstyles/utilities/bg';
 @use 'bitstyles/utilities/border';
+@use 'bitstyles/utilities/box-shadow';
 @use 'bitstyles/utilities/break-text';
 @use 'bitstyles/utilities/clearfix';
 @use 'bitstyles/utilities/col-span';
 @use 'bitstyles/utilities/col-start';
 @use 'bitstyles/utilities/display';
+@use 'bitstyles/utilities/drop-shadow';
 @use 'bitstyles/utilities/fg';
 @use 'bitstyles/utilities/flex';
 @use 'bitstyles/utilities/font';

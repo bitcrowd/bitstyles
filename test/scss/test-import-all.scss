@@ -50,6 +50,7 @@ $bitstyles-color-palette-color-palette: (
   ),
   'brand-2': (
     '10': #000,
+    '80': #000,
     '100': #000,
   ),
   'danger': (
@@ -67,6 +68,19 @@ $bitstyles-color-palette-color-palette: (
 );
 $bitstyles-layout-size-base: 10rem;
 $bitstyles-setup-namespace: 'bs';
+$bitstyles-shadows-shadows: (
+  'default': (
+    (
+      'color': #f00,
+      'offset': 2.5rem,
+      'blur-radius': 5rem,
+    ), (
+      'color': #f00,
+      'offset': 5rem,
+      'blur-radius': 10rem,
+    ),
+  )
+);
 $bitstyles-typography-webfont-family-name: 'FakeFont';
 $bitstyles-typography-webfont-base-url: './';
 $bitstyles-typography-margin-heading: 10rem;
@@ -132,6 +146,9 @@ $bitstyles-bg-values: (
 $bitstyles-border-values: (
   'f00': #f00,
 );
+$bitstyles-box-shadow-breakpoints: (
+  'xl'
+);
 $bitstyles-col-span-values: (
   '100': span 100 / span 100
 );
@@ -140,6 +157,9 @@ $bitstyles-col-start-values: (
 );
 $bitstyles-display-values: (
   inline-block: inline-block,
+);
+$bitstyles-drop-shadow-breakpoints: (
+  's'
 );
 $bitstyles-fg-values: (
   'f00': #f00,
