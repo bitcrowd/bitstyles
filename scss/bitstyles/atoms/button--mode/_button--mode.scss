@@ -12,39 +12,39 @@
 
   &,
   &:visited {
-    color: settings.$color;
-    background: settings.$background-color;
     border-color: settings.$border-color;
+    background: settings.$background-color;
     box-shadow: settings.$box-shadow;
+    color: settings.$color;
   }
 
   &:hover,
   &:focus {
-    color: settings.$color-hover;
-    background: settings.$background-color-hover;
     border-color: settings.$border-color-hover;
+    background: settings.$background-color-hover;
     box-shadow: settings.$box-shadow-hover;
+    color: settings.$color-hover;
   }
 
   &:active {
-    color: settings.$color-active;
-    background: settings.$background-color-active;
     border-color: settings.$border-color-active;
+    background: settings.$background-color-active;
     box-shadow: settings.$box-shadow-active;
+    color: settings.$color-active;
   }
 
   &[aria-pressed='true'] {
-    color: settings.$color-pressed;
-    background: settings.$background-color-pressed;
     border-color: settings.$border-color-pressed;
+    background: settings.$background-color-pressed;
     box-shadow: settings.$box-shadow-pressed;
+    color: settings.$color-pressed;
   }
 
   &:disabled,
   &[aria-disabled='true'] {
-    color: settings.$color-disabled;
-    background: settings.$background-color-disabled;
     border-color: settings.$border-color-disabled;
+    background: settings.$background-color-disabled;
     box-shadow: settings.$box-shadow-disabled;
+    color: settings.$color-disabled;
   }
 }

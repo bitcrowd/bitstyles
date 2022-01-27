@@ -64,7 +64,7 @@ $bitstyles-color-palette-color-palette: (
   ),
   'positive': (
     '10': #000,
-  )
+  ),
 );
 $bitstyles-layout-size-base: 10rem;
 $bitstyles-setup-namespace: 'bs';
@@ -101,7 +101,9 @@ $bitstyles-select-border-radius: 10rem;
 //
 // Atoms settings /////////////////////////////////////
 
-$bitstyles-avatar-sizes: ('xl': 10rem);
+$bitstyles-avatar-sizes: (
+  'xl': 10rem,
+);
 $bitstyles-badge-color: '10';
 $bitstyles-bordered-header-gutter: 10rem;
 $bitstyles-button-color-hover: #000;
@@ -115,11 +117,16 @@ $bitstyles-button-nav-large-color-hover: #000;
 $bitstyles-button-small-padding-vertical: 10rem;
 $bitstyles-button-tab-color-hover: #000;
 $bitstyles-button-ui-color-hover: #000;
-$bitstyles-card-sizes: ('base': 10rem, 's': 20rem);
+$bitstyles-card-sizes: (
+  'base': 10rem,
+  's': 20rem,
+);
 $bitstyles-content-max-width-base: 'full';
 $bitstyles-dropdown-max-height: 1rem;
 $bitstyles-flash-color: '10';
-$bitstyles-icon-sizes: ('s': 10rem);
+$bitstyles-icon-sizes: (
+  's': 10rem,
+);
 $bitstyles-topbar-vertical-padding: 10rem;
 
 //
@@ -137,8 +144,8 @@ $bitstyles-ui-group-border-radius: 10rem;
 $bitstyles-aspect-ratio-values: (
   '10-10': (
     'width': 1,
-    'height': 1
-  )
+    'height': 1,
+  ),
 );
 $bitstyles-bg-values: (
   'f00': #f00,
@@ -150,10 +157,10 @@ $bitstyles-box-shadow-breakpoints: (
   'xl'
 );
 $bitstyles-col-span-values: (
-  '100': span 100 / span 100
+  '100': span 100 / span 100,
 );
 $bitstyles-col-start-values: (
-  '100': 100
+  '100': 100,
 );
 $bitstyles-display-values: (
   inline-block: inline-block,
@@ -165,10 +172,10 @@ $bitstyles-fg-values: (
   'f00': #f00,
 );
 $bitstyles-flex-grow: (
-  '100': 100
+  '100': 100,
 );
 $bitstyles-gap-sizes: (
-  '100': 100rem
+  '100': 100rem,
 );
 $bitstyles-grid-cols-values: (
   '100': repeat(100, minmax(0, 1fr)),
@@ -182,16 +189,16 @@ $bitstyles-justify-values: (
 $bitstyles-margin-breakpoints: ('xl', 's');
 $bitstyles-overflow-values: (
   'overflow': (
-    'hidden': hidden
-  )
+    'hidden': hidden,
+  ),
 );
 $bitstyles-padding-breakpoints: ('xl', 's');
 $bitstyles-row-start-values: (
   '100': 100,
-  '200': 200
+  '200': 200,
 );
 $bitstyles-self-values: (
-  'start': start
+  'start': start,
 );
 $bitstyles-sr-only-breakpoints: ('xl');
 $bitstyles-z-index-values: (

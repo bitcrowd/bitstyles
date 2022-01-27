@@ -3,10 +3,10 @@
 
 /* stylelint-disable selector-max-type */
 html {
+  background: settings.$background-color;
+  color: settings.$color;
   font-family: typography.$font-family-body;
   line-height: typography.$line-height-base;
-  color: settings.$color;
   -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
-  background: settings.$background-color;
 }
 /* stylelint-enable selector-max-type */

@@ -31,15 +31,15 @@
 
   @supports not (aspect-ratio: list.slash($width, $height)) {
     &::before {
-      float: left;
-      padding-top: math.percentage(math.div($height, $width));
       content: '';
+      padding-top: math.percentage(math.div($height, $width));
+      float: left;
     }
 
     &::after {
+      content: '';
       display: block;
       clear: both;
-      content: '';
     }
   }
 }

@@ -11,22 +11,22 @@
     padding: settings.$padding-vertical (settings.$padding-horizontal * 2)
       settings.$padding-vertical settings.$padding-horizontal;
     overflow: hidden;
-    font: settings.$font;
-    color: settings.$color;
-    text-overflow: ellipsis;
-    cursor: pointer;
-    background-color: settings.$background-color;
-    background-image: settings.$background-image;
-    background-position: right 0.75em top 50%;
-    background-repeat: no-repeat;
-    background-size: 1em;
-    border: settings.$border-width solid settings.$border-color;
-    border-radius: settings.$border-radius;
     transition: color animation.$transition-duration
         animation.$transition-easing,
       background-color animation.$transition-duration
         animation.$transition-easing,
       border animation.$transition-duration animation.$transition-easing;
+    border: settings.$border-width solid settings.$border-color;
+    border-radius: settings.$border-radius;
+    background-color: settings.$background-color;
+    background-image: settings.$background-image;
+    background-repeat: no-repeat;
+    background-position: right 0.75em top 50%;
+    background-size: 1em;
+    color: settings.$color;
+    font: settings.$font;
+    text-overflow: ellipsis;
+    cursor: pointer;
     appearance: none;
 
     &::-ms-expand {
@@ -34,34 +34,34 @@
     }
 
     &:hover {
-      color: settings.$color-hover;
+      border-color: settings.$border-color-hover;
       background-color: settings.$background-color-hover;
       background-image: settings.$background-image-hover;
-      border-color: settings.$border-color-hover;
+      color: settings.$color-hover;
     }
 
     &:focus,
     &:active {
-      color: settings.$color-active;
-      background-color: settings.$background-color-active;
-      background-image: settings.$background-image-active;
       border-color: settings.$border-color-active;
       outline: none;
+      background-color: settings.$background-color-active;
+      background-image: settings.$background-image-active;
+      color: settings.$color-active;
     }
 
     &:invalid {
-      color: settings.$color-invalid;
+      border-color: settings.$border-color-invalid;
       background-color: settings.$background-color-invalid;
       background-image: settings.$background-image-invalid;
-      border-color: settings.$border-color-invalid;
+      color: settings.$color-invalid;
     }
 
     &[disabled] {
-      color: settings.$color-disabled;
-      cursor: default;
+      border-color: settings.$border-color-disabled;
       background-color: settings.$background-color-disabled;
       background-image: settings.$background-image-disabled;
-      border-color: settings.$border-color-disabled;
+      color: settings.$color-disabled;
+      cursor: default;
     }
   }
   /* stylelint-enable selector-max-type */

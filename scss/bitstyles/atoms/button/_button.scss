@@ -3,60 +3,60 @@
 @use '../../settings/setup';
 
 .#{setup.$namespace}a-button {
-  position: relative;
   display: inline-flex;
+  position: relative;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   max-width: 100%;
   min-height: calc(#{settings.$padding-vertical * 2} + 1em);
-  padding: settings.$padding-vertical settings.$padding-horizontal;
   margin: 0;
+  padding: settings.$padding-vertical settings.$padding-horizontal;
   overflow: visible;
+  transition: settings.$transition;
+  border-radius: settings.$border-radius;
   font: settings.$font;
   font-weight: settings.$font-weight;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  border-radius: settings.$border-radius;
-  transition: settings.$transition;
-  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   user-select: none;
+  -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   touch-action: manipulation;
 
   &,
   &:visited {
-    color: settings.$color;
-    background: settings.$background-color;
     border: settings.$border-width solid settings.$border-color;
+    background: settings.$background-color;
     box-shadow: settings.$box-shadow;
+    color: settings.$color;
   }
 
   &:hover,
   &:focus {
-    color: settings.$color-hover;
-    text-decoration: none;
-    background: settings.$background-color-hover;
     border-color: settings.$border-color-hover;
     outline: none;
+    background: settings.$background-color-hover;
     box-shadow: settings.$box-shadow-hover;
+    color: settings.$color-hover;
+    text-decoration: none;
   }
 
   &:active {
-    color: settings.$color-active;
-    background: settings.$background-color-active;
     border-color: settings.$border-color-active;
+    background: settings.$background-color-active;
     box-shadow: settings.$box-shadow-active;
+    color: settings.$color-active;
   }
 
   &:disabled,
   &[aria-disabled='true'] {
+    border-color: settings.$border-color-disabled;
+    background: settings.$background-color-disabled;
+    box-shadow: settings.$box-shadow-disabled;
     color: settings.$color-disabled;
     cursor: not-allowed;
-    background: settings.$background-color-disabled;
-    border-color: settings.$border-color-disabled;
-    box-shadow: settings.$box-shadow-disabled;
   }
 }
 

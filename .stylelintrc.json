@@ -1,6 +1,11 @@
 {
   "extends": "stylelint-config-bitcrowd",
   "rules": {
-    "color-function-notation": null
+    "scss/dollar-variable-default": [
+      true,
+      {
+        "ignore": "local"
+      }
+    ]
   }
 }
