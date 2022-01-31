@@ -4500,6 +4500,11 @@ css-parse@^2.0.0:
   dependencies:
     css "^2.0.0"
 
+css-property-sort-order-smacss@~2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/css-property-sort-order-smacss/-/css-property-sort-order-smacss-2.1.3.tgz#b9cf1753b3612ee7d18fe99224f483353ea38e53"
+  integrity sha512-tMGlBxcfQq5VYmMFp4tGqxkNeXDBmlGbyuuz1FFGRvCUj9CvocShe23d4kFyfxW6JMlhlBVfnZRa8AO8kgceJA==
+
 css-select-base-adapter@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/css-select-base-adapter/-/css-select-base-adapter-0.1.1.tgz#3b2ff4972cc362ab88561507a95408a1432135d7"
@@ -11193,19 +11198,27 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
-stylelint-config-bitcrowd@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/stylelint-config-bitcrowd/-/stylelint-config-bitcrowd-5.0.1.tgz#013e8601d14e00e23e69edb81da927456ea5fde8"
-  integrity sha512-NSQdkBXltMZ1ppr+esqfjmazQ86mrwoCSHPJT1UAtgDBYdNbTuNZMbdOGKkrfsY3Z8/EF7axoSJvfHR6wJhrkQ==
+stylelint-config-bitcrowd@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-bitcrowd/-/stylelint-config-bitcrowd-5.1.0.tgz#df69a4aeaefb2a43d5b4e8e61e8e05e5e50977ca"
+  integrity sha512-W8wDQYzSJRyYCcfUqHePyhSeJ/hPqWkv+IpOgkeHm87UEkQfn24qyq4eutiGEoVUdOohLd9eEKlj5jDUTuQjoQ==
   dependencies:
     stylelint-config-prettier "^9.0.3"
+    stylelint-config-property-sort-order-smacss "^8.0.0"
     stylelint-config-standard-scss "^3.0.0"
-    stylelint-order "^5.0.0"
 
 stylelint-config-prettier@^9.0.3:
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-9.0.3.tgz#0dccebeff359dcc393c9229184408b08964d561c"
   integrity sha512-5n9gUDp/n5tTMCq1GLqSpA30w2sqWITSSEiAWQlpxkKGAUbjcemQ0nbkRvRUa0B1LgD3+hCvdL7B1eTxy1QHJg==
+
+stylelint-config-property-sort-order-smacss@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-property-sort-order-smacss/-/stylelint-config-property-sort-order-smacss-8.0.0.tgz#6e9415baba015a82eab786f3b0462666a4ea1f3c"
+  integrity sha512-tuHNU/PJ6SYvQCaBbv/mhtBh79yHtzc7M3y5oTck3Pgm3hk+K7Jkr6i4/PB7m5Rodle9wQ0oEPLF5psF/t+7wQ==
+  dependencies:
+    css-property-sort-order-smacss "~2.1.3"
+    stylelint-order "^5.0.0"
 
 stylelint-config-recommended-scss@^5.0.2:
   version "5.0.2"
