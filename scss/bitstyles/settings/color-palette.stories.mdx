@@ -1,0 +1,23 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Color palette" />
+
+# Color palette
+
+The global color palette is used throughout the components and utility classes of bitstyles to maintain visual consistency.
+
+By default the palette includes variants of the following colors:
+
+```scss
+$black: #000;
+$white: #fff;
+$brand-1: #000dff;
+$brand-2: #fa0;
+$text: #333;
+$background: color.mix($white, $brand-1, 97%);
+$positive: #50a802;
+$danger: #e82915;
+$warning: #fe881e;
+```
+
+For each of these colors we generate a map of color variants with white added (made available with the name of the color) and a map with black added (available with the name of the color suffixed with `_shades`).
