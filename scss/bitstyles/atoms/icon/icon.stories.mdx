@@ -7,59 +7,57 @@ import icons from '../../../../assets/images/icons.svg';
 
 ## SVG icon system
 
-Icons are implemented using inline SVG where possible (see example markup). They must be accompanied by some machine-readable text for accessibility & SEO purposes. If there is to be no such text visible (e.g. based on design mockups), provide an alternative next to the `<svg>` element using a `<span class="u-sr-only">` containing descriptive text.
+Icons are best implemented using inline SVG (see the examples below). However they’re rendered, they must be accompanied by some machine-readable text for accessibility & SEO. If there is to be no such text visible (e.g. from design mockups), use [`.u-sr-only`](/docs/utilities-sr-only--sr-only) to hide the span containing descriptive text.
 
-The base icon size inherits from the surrounding text i.e. `1em`.
+The base icon size inherits from the surrounding text i.e. `1em`. Other sizes available by default (`s`, `m`, `l`, and `xl`) are based on the global rem-based sizing map.
 
-<Canvas isColumn>
-  <Story name="Icon">
+<Canvas>
+  <Story name="a-icon">
     {`
       <svg width="16" height="16" class="a-icon" aria-hidden="true" focusable="false">
         <use xlink:href="${icons}#icon-plus"></use>
       </svg>
     `}
   </Story>
-  <Story name="Icon with adjacent text">
+  <Story name="a-icon--s">
     {`
-      <div class="u-flex u-items-center">
-        <svg width="16" height="16" class="a-icon u-margin-m-right" aria-hidden="true" focusable="false">
-          <use xlink:href="${icons}#icon-plus"></use>
-        </svg>
-        <span>This is standard-sized text</span>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-Use the modifier classes `a-icon--<size>` to override this e.g. `.a-icon--s`.
-
-<Canvas>
-  <Story name="Small icon">
-    {`
-      <svg width="16" height="16" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+      <svg width="6" height="6" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
         <use xlink:href="${icons}#icon-plus"></use>
       </svg>
     `}
   </Story>
-  <Story name="Medium icon">
+  <Story name="a-icon--m">
     {`
-      <svg width="16" height="16" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+      <svg width="13" height="13" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
         <use xlink:href="${icons}#icon-plus"></use>
       </svg>
     `}
   </Story>
-  <Story name="Large icon">
+  <Story name="a-icon--l">
     {`
       <svg width="16" height="16" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
         <use xlink:href="${icons}#icon-plus"></use>
       </svg>
     `}
   </Story>
-  <Story name="X-Large icon">
+  <Story name="a-icon--xl">
     {`
-      <svg width="16" height="16" class="a-icon a-icon--xl" aria-hidden="true" focusable="false">
+      <svg width="22" height="2" class="a-icon a-icon--xl" aria-hidden="true" focusable="false">
         <use xlink:href="${icons}#icon-plus"></use>
       </svg>
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The available sizes and their classnames can be customized using `$bitstyles-icon-sizes`:
+
+```scss
+$sizes: (
+  's':     size.get('xs'),
+  'm':     size.get('m'),
+  'l':     size.get('l'),
+  'xl':    size.get('l') + size.get('xs'),
+);
+```
