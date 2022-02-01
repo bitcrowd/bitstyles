@@ -139,10 +139,10 @@ Card appearance can be customized by overriding the following variables:
 
 ```scss
 $bitstyles-card-sizes: (
-  'base': spacing('m'),
-  'l': spacing('xl'),
+  'base': size.get('m'),
+  'l': size.get('xl'),
 );
-$bitstyles-card-border-radius: spacing('m');
+$bitstyles-card-border-radius: size.get('m');
 $bitstyles-card-box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', '100'), 0.025),

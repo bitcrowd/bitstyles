@@ -19,11 +19,11 @@
 //
 // ```scss
 // .block__element-name-bottom {
-//   z-index: z($globalz, block__element-name-bottom);
+//   z-index: z.get($globalz, block__element-name-bottom);
 // }
 //
 // .block__element-name-top {
-//   z-index: z($globalz, block__element-name-top);
+//   z-index: z.get($globalz, block__element-name-top);
 // }
 // ```
 //
