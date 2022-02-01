@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Bordered Header
 
-Creates equally-sized horizontal lines to the left & right of the text within the element. The text is centered and the lines are of equal length.
+Creates a vertically-centered horizontal line to the right of any content in the element.
 
 <Canvas>
   <Story name="Bordered header">
@@ -13,3 +13,12 @@ Creates equally-sized horizontal lines to the left & right of the text within th
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The space between the text and the border can be specified, and the border styles:
+
+```scss
+$gutter: size.get('m');
+$border: size.get('xxxs') solid palette.get('gray', '10');
+```
