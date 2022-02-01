@@ -1,0 +1,41 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Animation" />
+
+# Animation
+
+Animations for many simple interactive state changes are defined globally in `settings/animation`. This simple system ensures that buttons, inputs, links etc. all transition with the same speed and easing function, with the minimum of maintenance.
+
+The default values are:
+
+```scss
+$transition-easing: ease-in-out;
+$transition-duration: 0.075s;
+$transition-duration-long: 0.5s;
+```
+
+Note that there are two transition variables. The short transition-duration is by default used for fast and responsive-feeling user interactions such as hovering a button, link, or input. The second is present so you can also standardize larger transitions of content (e.g. a modal or sidebar), where a very short transition may be jarring.
+
+## Using animation settings in Sass
+
+`@use` the settings module in your component Sass file, then access the variables in the standard Sass way:
+
+```scss
+@use "~bitstyles/scss/bitstyles/settings/animation";
+
+.component-class {
+  transition-duration: animation.$transition-duration;
+}
+```
+
+## Customization
+
+Override the values for these animation variables at the start of your Sass manifest file.
+
+```scss
+@use "~bitstyles/scss/bitstyles/settings/animation" with (
+  $transition-easing: ease-in-out,
+  $transition-duration: 0.075s,
+  $transition-duration-long: 0.5s,
+);
+```
