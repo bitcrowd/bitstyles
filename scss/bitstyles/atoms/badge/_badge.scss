@@ -10,6 +10,11 @@
   padding: settings.$padding-vertical settings.$padding-horizontal;
   border-radius: layout.$border-radius-round;
   white-space: nowrap;
+
+  .#{setup.$namespace}a-badge__button {
+    margin-right: -#{size.get('s')};
+    margin-left: size.get('xs');
+  }
 }
 
 @each $variant in (settings.$variants) {
@@ -22,9 +27,4 @@
     background-color: palette.get($variant, settings.$background-color);
     color: palette.get($variant, settings.$color);
   }
-}
-
-.#{setup.$namespace}a-badge__button {
-  margin-right: -#{size.get('s')};
-  margin-left: size.get('xs');
 }
