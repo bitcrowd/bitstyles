@@ -1,7 +1,7 @@
-name: Run linting & tests
+name: Linting & tests
 on: [push]
 jobs:
-  lint:
+  lint-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️

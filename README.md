@@ -1,7 +1,7 @@
 # Bitstyles
 
-[![Build Status](https://travis-ci.org/bitcrowd/bitstyles.svg?branch=master)](https://travis-ci.org/bitcrowd/bitstyles)
-[![npm version](https://badge.fury.io/js/bitstyles.svg)](https://badge.fury.io/js/bitstyles)
+[![Linting & tests](https://github.com/bitcrowd/bitstyles/actions/workflows/run-checks.yml/badge.svg)](https://github.com/bitcrowd/bitstyles/actions/workflows/run-checks.yml)
+![npm version](https://img.shields.io/npm/v/bitstyles)
 
 Bitstyles is a collection of tiny Sass CSS objects and helpers, intended to be used by reasonably CSS- & HTML-aware frontend developers. This is no simple drop-in solution to skin a website, rather a collection of focused object-classes, each defining just a single visual aspect. By using these simple building blocks in your HTML, it’s possible to construct complex layouts without repeating CSS.
 
