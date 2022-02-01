@@ -13,8 +13,7 @@ $border-width: size.get('xxxs') !default;
 $border-radius: size.get('xs') !default;
 $font: inherit !default;
 $font-weight: typography.$font-weight-normal !default;
-$transition:
-  color animation.$transition-duration animation.$transition-easing,
+$transition: color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing !default;

@@ -3,47 +3,47 @@
 @use '../../settings/setup';
 
 .#{setup.$namespace}a-button--nav {
-  padding: settings.$padding-vertical settings.$padding-horizontal;
   justify-content: flex-start;
+  padding: settings.$padding-vertical settings.$padding-horizontal;
   border-radius: settings.$border-radius;
 
   &,
   &:visited {
-    color: settings.$color;
-    background: settings.$background-color;
     border-color: settings.$border-color;
+    background: settings.$background-color;
     box-shadow: settings.$box-shadow;
+    color: settings.$color;
   }
 
   &:hover,
   &:focus {
-    color: settings.$color-hover;
-    background: settings.$background-color-hover;
     border-color: settings.$border-color-hover;
+    background: settings.$background-color-hover;
     box-shadow: settings.$box-shadow-hover;
+    color: settings.$color-hover;
   }
 
   &:active {
-    color: settings.$color-active;
-    background: settings.$background-color-active;
     border-color: settings.$border-color-active;
+    background: settings.$background-color-active;
     box-shadow: settings.$box-shadow-active;
+    color: settings.$color-active;
   }
 
   &[aria-current],
-  &[aria-expanded="true"] {
-    color: settings.$color-current;
-    background: settings.$background-color-current;
+  &[aria-expanded='true'] {
     border-color: settings.$border-color-current;
+    background: settings.$background-color-current;
     box-shadow: settings.$box-shadow-current;
+    color: settings.$color-current;
   }
 
   &:disabled,
-  &[aria-disabled="true"] {
-    color: settings.$color-disabled;
-    background: settings.$background-color-disabled;
+  &[aria-disabled='true'] {
     border-color: settings.$border-color-disabled;
+    background: settings.$background-color-disabled;
     box-shadow: settings.$box-shadow-disabled;
+    color: settings.$color-disabled;
   }
 }
 

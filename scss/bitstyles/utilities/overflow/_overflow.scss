@@ -6,6 +6,6 @@
   @include properties.output(
     $property-name: $property,
     $classname-root: $property,
-    $values: $values,
+    $values: $values
   );
 }

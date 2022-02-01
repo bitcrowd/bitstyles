@@ -1,6 +1,7 @@
 Fixes #
 
 The following changes are contained in this pull request:
+
 - x
 - y
 - z

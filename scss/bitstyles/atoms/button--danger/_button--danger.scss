@@ -4,24 +4,24 @@
 .#{setup.$namespace}a-button--danger {
   &:hover,
   &:focus {
-    color: settings.$color-hover;
-    background: settings.$background-color-hover;
     border-color: settings.$border-color-hover;
+    background: settings.$background-color-hover;
     box-shadow: settings.$box-shadow-hover;
+    color: settings.$color-hover;
   }
 
   &:active {
-    color: settings.$color-active;
-    background: settings.$background-color-active;
     border-color: settings.$border-color-active;
+    background: settings.$background-color-active;
     box-shadow: settings.$box-shadow-active;
+    color: settings.$color-active;
   }
 
   &:disabled,
-  &[aria-disabled="true"] {
-    color: settings.$color-disabled;
-    background: settings.$background-color-disabled;
+  &[aria-disabled='true'] {
     border-color: settings.$border-color-disabled;
+    background: settings.$background-color-disabled;
     box-shadow: settings.$box-shadow-disabled;
+    color: settings.$color-disabled;
   }
 }

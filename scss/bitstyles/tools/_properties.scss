@@ -32,8 +32,12 @@
   @for $i from 1 through list.length($classname-items) {
     $classname-item: list.nth($classname-items, $i);
 
-    @if $classname-item != '' and $classname-item != null {
-      $classname: if($i == 1, $classname-item, '#{$classname}#{string.unquote('-')}#{$classname-item}');
+    @if $classname-item != '' and $classname-item {
+      $classname: if(
+        $i == 1,
+        $classname-item,
+        '#{$classname}#{string.unquote('-')}#{$classname-item}'
+      );
     }
   }
 
@@ -70,14 +74,7 @@
   $breakpoint-suffix: ''
 ) {
   @each $alias, $value in $values {
-    $classname: get-classname(
-      (
-        setup.$namespace,
-        'u',
-        $classname-root,
-        $alias
-      )
-    );
+    $classname: get-classname((setup.$namespace, 'u', $classname-root, $alias));
 
     .#{$classname}#{$breakpoint-suffix} {
       #{$property-name}: $value;
@@ -104,13 +101,7 @@
   @each $alias, $value in $values {
     @each $direction-name, $direction-values in $directions {
       $classname: get-classname(
-        (
-          setup.$namespace,
-          'u',
-          $classname-root,
-          $alias,
-          $direction-name
-        )
+        (setup.$namespace, 'u', $classname-root, $alias, $direction-name)
       );
 
       .#{$classname}#{$breakpoint-suffix} {
@@ -137,11 +128,7 @@
   $breakpoint-suffix: ''
 ) {
   $classname: get-classname(
-    (
-      setup.$namespace,
-      $classname-prefix,
-      $classname-root,
-    )
+    (setup.$namespace, $classname-prefix, $classname-root)
   );
 
   .#{$classname}#{$breakpoint-suffix} {

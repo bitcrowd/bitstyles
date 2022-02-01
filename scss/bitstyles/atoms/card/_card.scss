@@ -11,18 +11,16 @@
   box-shadow: settings.$box-shadow;
 }
 
-@mixin card__header($spacing) {
+@mixin card-header($spacing) {
+  margin: (-$spacing) (-$spacing) $spacing;
   padding: math.div($spacing, 2) $spacing;
-  margin: (- $spacing) (- $spacing) $spacing;
   background-color: settings.$header-background-color;
 }
 
 @function modifier-name($name) {
   @if $name == 'base' {
     @return '';
-  }
-
-  @else {
+  } @else {
     @return '-#{$name}';
   }
 }
@@ -41,7 +39,7 @@
     $classname-prefix: 'a',
     $classname-root: 'card#{$size-name}__header'
   ) {
-    @include card__header($padding-size);
+    @include card-header($padding-size);
   }
 }
 
@@ -63,7 +61,7 @@
         $classname-root: 'card#{$size-name}__header',
         $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
       ) {
-        @include card__header($padding-size);
+        @include card-header($padding-size);
       }
     }
   }

@@ -7,16 +7,16 @@
   /* stylelint-disable selector-max-type */
   th {
     padding: settings.$padding-vertical-th settings.$padding-horizontal;
+    border-bottom: settings.$border;
+    background: settings.$background-color-th;
     color: settings.$color-th;
     white-space: nowrap;
-    background: settings.$background-color-th;
-    border-bottom: settings.$border;
   }
 
   td {
     padding: settings.$padding-vertical-td settings.$padding-horizontal;
-    background: settings.$background-color-td;
     border-bottom: settings.$border;
+    background: settings.$background-color-td;
   }
 
   tr:last-child {

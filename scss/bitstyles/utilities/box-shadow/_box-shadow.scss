@@ -7,7 +7,7 @@
 @each $name, $shadow in settings.$values {
   @include properties.output-block(
     $classname-prefix: 'u',
-    $classname-root: 'shadow-#{$name}',
+    $classname-root: 'shadow-#{$name}'
   ) {
     box-shadow: $shadow;
   }
@@ -19,7 +19,7 @@
       @include properties.output-block(
         $classname-prefix: 'u',
         $classname-root: 'shadow-#{$name}',
-        $breakpoint-suffix: '\\\@#{$breakpoint}',
+        $breakpoint-suffix: '\\\@#{$breakpoint}'
       ) {
         box-shadow: $shadow;
       }

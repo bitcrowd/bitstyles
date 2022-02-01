@@ -4,6 +4,6 @@ $sizes: (
   'xs': size.get('xs'),
   's': size.get('s'),
   'm': size.get('l'),
-  'l': size.get('xl')
+  'l': size.get('xl'),
 ) !default;
 $breakpoints: ('m', 'xl') !default;

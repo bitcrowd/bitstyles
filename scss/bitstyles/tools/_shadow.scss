@@ -13,7 +13,14 @@
   $shadow-definition: ();
 
   @each $layer in $shadow {
-    $shadow-definition: list.append($shadow-definition, string.unquote('0 #{map.get($layer, 'offset')} #{map.get($layer, 'blur-radius')} #{map.get($layer, 'color')}'), comma);
+    /* prettier-ignore */
+    $shadow-definition: list.append(
+      $shadow-definition,
+      string.unquote(
+        '0 #{map.get($layer, 'offset')} #{map.get($layer, 'blur-radius')} #{map.get($layer, 'color')}'
+      ),
+      comma
+    );
   }
 
   @return $shadow-definition;
@@ -29,7 +36,14 @@
   $shadow-definition: ();
 
   @each $layer in $shadow {
-    $shadow-definition: list.append($shadow-definition, string.unquote('drop-shadow(#{map.get($layer, 'color')} 0 #{map.get($layer, 'offset')} #{map.get($layer, 'blur-radius')})'), space);
+    /* prettier-ignore */
+    $shadow-definition: list.append(
+      $shadow-definition,
+      string.unquote(
+        'drop-shadow(#{map.get($layer, 'color')} 0 #{map.get($layer, 'offset')} #{map.get($layer, 'blur-radius')})'
+      ),
+      space
+    );
   }
 
   @return $shadow-definition;
@@ -61,7 +75,6 @@
       'offset': $layer-offset,
       'blur-radius': $layer-blur-radius,
     );
-
     $shadow: list.append($shadow, $layer);
   }
 

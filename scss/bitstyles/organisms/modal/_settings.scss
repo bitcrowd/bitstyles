@@ -3,7 +3,7 @@
 
 $padding: size.get('m') !default;
 $background-color: palette.get('white') !default;
-$overlay-color: rgba(palette.get('white'), 0.95) !default;
+$overlay-color: rgba(palette.get('white'), 95%) !default;
 $transition-easing: ease-in-out !default;
 $transition-duration: 0.2s !default;
 $transition-duration-smallscreen: 0.25s !default;

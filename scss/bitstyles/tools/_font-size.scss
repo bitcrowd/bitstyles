@@ -17,14 +17,10 @@
 
     @if map.has-key($font-sizes, $font-size) {
       @return map.get($font-sizes, $font-size);
-    }
-
-    @else {
+    } @else {
       @error 'Oops! There’s no font-size at that breakpoint ‘#{$font-size}/#{$breakpoint}’.';
     }
-  }
-
-  @else {
+  } @else {
     @error 'Oops! Font-sizes at breakpoint ‘#{$breakpoint}’ do not exist.';
   }
 }

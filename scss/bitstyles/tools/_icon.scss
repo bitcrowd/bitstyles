@@ -2,16 +2,15 @@
 
 @mixin icon {
   display: inline-block;
+  flex-shrink: 0;
   width: 1em;
   height: 1em;
-  font-size: 1em;
-  vertical-align: middle;
-  flex-shrink: 0;
-  outline: none;
-  transition:
-    fill animation.$transition-duration animation.$transition-easing,
+  transition: fill animation.$transition-duration animation.$transition-easing,
     stroke animation.$transition-duration animation.$transition-easing,
     background-color animation.$transition-duration animation.$transition-easing,
     transform animation.$transition-duration animation.$transition-easing;
+  outline: none;
   fill: currentColor;
+  font-size: 1em;
+  vertical-align: middle;
 }

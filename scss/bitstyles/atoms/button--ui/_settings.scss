@@ -6,8 +6,7 @@
 // Base styles ////////////////////////////////////////
 
 $border-radius: size.get('s') !default;
-$transition:
-  color animation.$transition-duration animation.$transition-easing,
+$transition: color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing !default;
 
@@ -47,6 +46,6 @@ $box-shadow-pressed: none !default;
 // Disabled colors ////////////////////////////////////////
 
 $color-disabled: palette.get('gray', '10') !default;
-$background-color-disabled: rgba(palette.get('gray', '1'), 0.5) !default;
+$background-color-disabled: rgba(palette.get('gray', '1'), 50%) !default;
 $border-color-disabled: palette.get('gray', '10') !default;
 $box-shadow-disabled: none !default;

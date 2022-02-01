@@ -8,7 +8,7 @@
 //
 
 @mixin break-text {
-  overflow-wrap: break-word;
-  word-break: break-word; // all 3 are required for cross-browser reasonablness. Without, some browsers force-break *everything*
   word-wrap: break-word;
+  word-break: break-word; // all 3 are required for cross-browser reasonablness. Without, some browsers force-break *everything*
+  overflow-wrap: break-word;
 }

@@ -6,17 +6,17 @@
 
 fieldset {
   padding: settings.$fieldset-padding;
-  background-color: settings.$fieldset-background;
   border: settings.$fieldset-border;
   border-radius: settings.$fieldset-border-radius;
+  background-color: settings.$fieldset-background;
 }
 
 legend {
   padding: settings.$legend-padding;
-  color: settings.$legend-color;
-  background-color: settings.$legend-background-color;
   border: settings.$legend-border;
   border-radius: settings.$legend-border-radius;
+  background-color: settings.$legend-background-color;
+  color: settings.$legend-color;
 }
 
 label {
@@ -25,7 +25,7 @@ label {
   cursor: pointer;
 }
 
-[type="color"] {
+[type='color'] {
   height: calc(#{typography.$line-height-base * 1em} + #{size.get('s')});
 }
 /* stylelint-enable selector-max-type */

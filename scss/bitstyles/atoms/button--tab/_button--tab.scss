@@ -17,30 +17,31 @@
 
   &,
   &:visited {
-    color: settings.$color;
-    background: settings.$background-color;
     border: settings.$border;
+    background: settings.$background-color;
     box-shadow: settings.$box-shadow;
+    color: settings.$color;
 
     &::after {
+      content: '';
       position: absolute;
       right: button-settings.$padding-horizontal;
       bottom: 0;
       left: button-settings.$padding-horizontal;
       height: settings.$border-width;
-      background-color: settings.$indicator-color;
+      transition: background-color animation.$transition-duration
+        animation.$transition-easing;
       border-radius: layout.$border-radius-round;
-      content: '';
-      transition: background-color animation.$transition-duration animation.$transition-easing;
+      background-color: settings.$indicator-color;
     }
   }
 
   &:hover,
   &:focus {
-    color: settings.$color-hover;
-    background: settings.$background-color-hover;
     border: settings.$border-hover;
+    background: settings.$background-color-hover;
     box-shadow: settings.$box-shadow-hover;
+    color: settings.$color-hover;
 
     &::after {
       background-color: settings.$indicator-color-hover;
@@ -48,21 +49,21 @@
   }
 
   &:active {
-    color: settings.$color-active;
-    background: settings.$background-color-active;
     border: settings.$border-active;
+    background: settings.$background-color-active;
     box-shadow: settings.$box-shadow-active;
+    color: settings.$color-active;
 
     &::after {
       background-color: settings.$indicator-color-active;
     }
   }
 
-  &[aria-selected="true"],
+  &[aria-selected='true'],
   &[aria-current] {
-    color: settings.$color-selected;
     background: settings.$background-color-selected;
     box-shadow: settings.$box-shadow-selected;
+    color: settings.$color-selected;
 
     &::after {
       background-color: settings.$indicator-color-selected;
@@ -70,11 +71,11 @@
   }
 
   &:disabled,
-  &[aria-disabled="true"] {
-    color: settings.$color-disabled;
-    background: settings.$background-color-disabled;
+  &[aria-disabled='true'] {
     border: settings.$border-disabled;
+    background: settings.$background-color-disabled;
     box-shadow: settings.$box-shadow-disabled;
+    color: settings.$color-disabled;
 
     &::after {
       background-color: settings.$indicator-color-disabled;

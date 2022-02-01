@@ -9,16 +9,30 @@ $sizes: (
     'm': size.get('m'),
     'l': size.get('l'),
     'xl': size.get('xl'),
-    'xxl': size.get('xxl')
-  )
+    'xxl': size.get('xxl'),
+  ),
 ) !default;
 $breakpoints: ('m', 'l') !default;
 $directions: (
   '': null,
-  'top': ('top'),
-  'right': ('right'),
-  'bottom': ('bottom'),
-  'left': ('left'),
-  'x': ('right', 'left'),
-  'y': ('top', 'bottom')
+  'top': (
+    'top',
+  ),
+  'right': (
+    'right',
+  ),
+  'bottom': (
+    'bottom',
+  ),
+  'left': (
+    'left',
+  ),
+  'x': (
+    'right',
+    'left',
+  ),
+  'y': (
+    'top',
+    'bottom',
+  ),
 ) !default;

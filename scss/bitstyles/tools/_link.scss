@@ -7,29 +7,29 @@
 
 @mixin link {
   padding: 0;
-  font-weight: link.$font-weight;
-  color: link.$color;
-  text-decoration: link.$text-decoration;
-  text-decoration-skip-ink: auto;
-  cursor: pointer;
-  background-color: link.$background-color;
-  border: 0;
-  box-shadow: link.$box-shadow;
   transition: link.$transition;
+  border: 0;
+  background-color: link.$background-color;
+  box-shadow: link.$box-shadow;
+  color: link.$color;
+  font-weight: link.$font-weight;
+  text-decoration: link.$text-decoration;
+  cursor: pointer;
+  text-decoration-skip-ink: auto;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
   &:visited {
-    color: link.$color-visited;
-    text-decoration: link.$text-decoration-visited;
     background-color: link.$background-color-visited;
     box-shadow: link.$box-shadow-visited;
+    color: link.$color-visited;
+    text-decoration: link.$text-decoration-visited;
   }
 
   &:hover,
   &:focus {
-    color: link.$color-hover;
-    text-decoration: link.$text-decoration-hover;
     background-color: link.$background-color-hover;
     box-shadow: link.$box-shadow-hover;
+    color: link.$color-hover;
+    text-decoration: link.$text-decoration-hover;
   }
 }

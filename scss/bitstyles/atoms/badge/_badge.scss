@@ -8,8 +8,8 @@
   display: inline-flex;
   align-items: center;
   padding: settings.$padding-vertical settings.$padding-horizontal;
-  white-space: nowrap;
   border-radius: layout.$border-radius-round;
+  white-space: nowrap;
 }
 
 @each $variant in (settings.$variants) {
@@ -19,8 +19,8 @@
     --button-fg-hover: #{palette.get($variant, settings.$background-color)};
     --button-bg-hover: #{palette.get($variant, settings.$color)};
 
-    color: palette.get($variant, settings.$color);
     background-color: palette.get($variant, settings.$background-color);
+    color: palette.get($variant, settings.$color);
   }
 }
 

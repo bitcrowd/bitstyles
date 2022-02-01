@@ -18,7 +18,17 @@
   $color-map: ();
 
   @each $percentage in $percentages {
-    $color-map: map.merge($color-map, ('#{$percentage}': color.mix($mix-color, $base-color, 100% - math.percentage(math.div($percentage, 100)))));
+    $color-map: map.merge(
+      $color-map,
+      (
+        '#{$percentage}':
+          color.mix(
+            $mix-color,
+            $base-color,
+            100% - math.percentage(math.div($percentage, 100))
+          ),
+      )
+    );
   }
 
   @return $color-map;

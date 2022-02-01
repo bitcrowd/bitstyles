@@ -17,8 +17,8 @@ $bitstyles-padding-sizes: (
     'm': spacing('m'),
     'l': spacing('l'),
     'xl': spacing('xl'),
-    'xxl': spacing('xl')
-  )
+    'xxl': spacing('xl'),
+  ),
 );
 ```
 
@@ -85,12 +85,26 @@ This can be customised by overriding `$bitstyles-padding-directions` e.g.
 ```scss
 $bitstyles-padding-directions: (
   '': null,
-  'top': ('top'),
-  'right': ('right'),
-  'bottom': ('bottom'),
-  'left': ('left'),
-  'x': ('right', 'left'),
-  'y': ('top', 'bottom')
+  'top': (
+    'top',
+  ),
+  'right': (
+    'right',
+  ),
+  'bottom': (
+    'bottom',
+  ),
+  'left': (
+    'left',
+  ),
+  'x': (
+    'right',
+    'left',
+  ),
+  'y': (
+    'top',
+    'bottom',
+  ),
 );
 ```
 

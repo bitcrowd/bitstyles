@@ -3,10 +3,10 @@ $will-change: opacity, transform !default;
 $states: (
   'off-screen': (
     'opacity': 0,
-    'transform': translateY(-7%)
+    'transform': translateY(-7%),
   ),
   'on-screen': (
     'opacity': 1,
-    'transform': none
-  )
+    'transform': none,
+  ),
 ) !default;

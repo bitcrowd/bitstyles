@@ -4,21 +4,21 @@
 
 .#{setup.$namespace}a-dropdown {
   position: absolute;
-  top: 100%;
   z-index: 1;
+  top: 100%;
   width: min-content;
+  min-width: 12rem;
   max-width: 90vw;
   max-height: settings.$max-height;
-  min-width: 12rem;
   padding: settings.$separator-spacing 0;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: settings.$background-color;
   border: settings.$border;
   border-radius: settings.$border-radius;
+  background-color: settings.$background-color;
   box-shadow: settings.$box-shadow;
 
-  [role="separator"] {
+  [role='separator'] {
     margin: settings.$separator-spacing 0;
     border-top: settings.$separator-border;
   }

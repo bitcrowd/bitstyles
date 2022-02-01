@@ -3,71 +3,77 @@
 @use '../../tools/media-query';
 
 @mixin modal-is-hidden {
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
 }
 
 .#{setup.$namespace}o-modal__overlay {
   position: fixed;
+  z-index: 10;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 10;
-  cursor: pointer;
-  background: settings.$overlay-color;
-  transition: all settings.$transition-duration settings.$transition-easing;
   -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
   backface-visibility: hidden;
+  transition: all settings.$transition-duration settings.$transition-easing;
+  background: settings.$overlay-color;
+  cursor: pointer;
   will-change: settings.$will-change;
 
-  [aria-hidden="true"] & {
+  [aria-hidden='true'] & {
     @include modal-is-hidden;
 
-    transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
+    transition: all settings.$transition-duration settings.$transition-easing,
+      visibility 0 settings.$transition-easing settings.$transition-duration;
   }
 }
 
 .#{setup.$namespace}o-modal__content {
   position: fixed;
+  z-index: 20;
   top: 50%;
   left: 50%;
-  z-index: 20;
   width: calc(100% - 2 * #{settings.$padding});
   height: auto;
   max-height: calc(100vh - 2 * #{settings.$padding});
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  background-color: settings.$background-color;
   transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
-  transition: all settings.$transition-duration-smallscreen settings.$transition-easing;
   -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
   backface-visibility: hidden;
+  transition: all settings.$transition-duration-smallscreen
+    settings.$transition-easing;
+  background-color: settings.$background-color;
+  -webkit-overflow-scrolling: touch;
   will-change: settings.$will-change;
 
-  [aria-hidden="true"] & {
+  [aria-hidden='true'] & {
     @include modal-is-hidden;
 
     transform: translate(-50%, 50%);
-    transition: all settings.$transition-duration-smallscreen settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
+    transition: all settings.$transition-duration-smallscreen
+        settings.$transition-easing,
+      visibility 0 settings.$transition-easing settings.$transition-duration;
   }
 }
 
 @include media-query.get(settings.$breakpoint) {
   .#{setup.$namespace}o-modal__content {
-    transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing;
+    transition: all settings.$transition-duration settings.$transition-easing,
+      visibility 0 settings.$transition-easing;
 
-    [aria-hidden="true"] & {
+    [aria-hidden='true'] & {
       transform: translate(-50%, -50%) scale(0.875);
-      transition: all settings.$transition-duration settings.$transition-easing, visibility 0 settings.$transition-easing settings.$transition-duration;
+      transition: all settings.$transition-duration settings.$transition-easing,
+        visibility 0 settings.$transition-easing settings.$transition-duration;
     }
   }
 }
 
 @mixin modal-variation($state) {
   .#{setup.$namespace}o-modal--animation-#{$state} {
-    &[aria-hidden="true"] {
+    &[aria-hidden='true'] {
       .#{setup.$namespace}o-modal__content {
         @content;
       }
@@ -80,6 +86,6 @@
 }
 
 @include modal-variation(ok) {
-  opacity: 1;
   transform: translate(-50%, -200%);
+  opacity: 1;
 }
