@@ -8,7 +8,7 @@ A content wrapper that ensures content is a readable width, has spacing at the s
 
 Content will span the full width of the viewport, up to a maximum set by Sass variables (see [Customization](#customization) below). This means that in small viewports your content will use all the available width, and in larger viewports it will stop growing once it reaches the given limit.
 
-By default this class is available at several sizes, which refer to the max-width that’s enforced: `xs`, `s`, `m`,`l`, and  `full`. The padding to the sides of the element is set at increasingly larger sizes based on viewport size for all those content-sizes: `base`, `l`, and `xl` (note that’s not dependent on the content-size, but the viewport size).
+By default this class is available at several sizes, which refer to the max-width that’s enforced: `xs`, `s`, `m`,`l`, and `full`. The padding to the sides of the element is set at increasingly larger sizes based on viewport size for all those content-sizes: `base`, `l`, and `xl` (note that’s not dependent on the content-size, but the viewport size).
 
 <Canvas isColumn>
   <Story name="a-content">
@@ -77,7 +77,7 @@ $max-width: (
   's': 35rem,
   'm': 65rem,
   'l': 85rem,
-  'full': 100%
+  'full': 100%,
 );
 ```
 
@@ -85,10 +85,10 @@ The padding that’s applied to all the sizes, and at which breakpoints, can be 
 
 ```scss
 $padding: (
-  'base':  size.get('m'),
+  'base': size.get('m'),
   'l': size.get('l'),
-  'xl': size.get('xl')
-)
+  'xl': size.get('xl'),
+);
 ```
 
 The default size that’s applied when only the base class `a-content` is used defaults to size `m`, but can be set using `$bitstyles-content-max-width-base`:
