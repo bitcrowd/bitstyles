@@ -237,5 +237,3 @@ $color-palette: (
       $percentages: $color-mix-percentages,
     ),
 ) !default;
-
-@debug map.get($color-palette, 'brand-1-shades');

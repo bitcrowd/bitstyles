@@ -2,7 +2,7 @@
 
 $global-z: ('topbar') !default;
 $border-radius-round: 9999rem !default;
-$size-base: 0.8rem !default;
+$size-base: 1rem !default;
 $sizes: (
   '0': 0,
   'xxxs': math.div($size-base, 8),
@@ -15,3 +15,5 @@ $sizes: (
   'xxl': $size-base * 4,
   'xxxl': $size-base * 8,
 ) !default;
+
+@debug $sizes;
