@@ -1,4 +1,5 @@
 @use 'sass:color';
+@use 'sass:map';
 @use '../tools/color' as bs-color;
 
 //
@@ -236,3 +237,5 @@ $color-palette: (
       $percentages: $color-mix-percentages,
     ),
 ) !default;
+
+@debug map.get($color-palette, 'brand-1-shades');

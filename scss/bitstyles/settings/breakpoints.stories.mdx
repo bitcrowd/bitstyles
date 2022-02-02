@@ -45,12 +45,12 @@ Breakpoint-limited classnames are suffixed with and `@` symbol and the name of t
 
 ## Using breakpoints in Sass
 
-Use the provided helper function for access to the breakpoints. In your component Sass file first import the `media-query` tools, then use the `get()` mixin provided, passing in the breakpoint name:
+Use the `media-query.get()` mixin for access to the media queries. In your component Sass file first import the `media-query` tools, then use the `get()` mixin, passing the breakpoint name:
 
 ```scss
-@use "~bitstyles/scss/bitstyles/tools/media-query";
+@use '~bitstyles/scss/bitstyles/tools/media-query';
 
-@include media-query.get("m") {
+@include media-query.get('m') {
   .component-class {
     /* styles */
   }
@@ -69,22 +69,22 @@ This will output:
 
 ## Customization
 
-Override the values for the available breakpoints  at the start of your Sass manifest file.
+Override the values for the available breakpoints at the start of your Sass manifest file.
 
 If you don’t need to add or rename a media-query, perhaps you can just override the values of the variables used to build the default breakpoints. This will alter the boundaries at which `s` becomes `m`, `m` becomes `l`, and so on:
 
 ```scss
-@use "~bitstyles/scss/bitstyles/settings/breakpoints" with (
+@use '~bitstyles/scss/bitstyles/settings/breakpoints' with (
   $s-m-boundary: 12em,
   $m-l-boundary: 85em,
-  $l-xl-boundary: 125em,
+  $l-xl-boundary: 125em
 );
 ```
 
-If you need more control, or you want more breakpoints than are present, you’ll need to override the `$breakpoints` map. Note that you cannot add or update the values in the default map, you can only overrwite the entire thing, so be sure to copy the breakpoints you’ll use even if you don’t change them:
+If you need more control, or you want more breakpoints than are present, you’ll need to override the `$breakpoints` map. Note that you cannot add to nor edit the values in the default map, you can only overwrite the entire thing, so be sure to copy the breakpoints you’ll use even if you don’t change them:
 
 ```scss
-@use "~bitstyles/scss/bitstyles/settings/breakpoints" with (
+@use '~bitstyles/scss/bitstyles/settings/breakpoints' with (
   $breakpoints: (
     'xs': 'screen and (max-width: 19.9875em)',
     's': 'screen and (max-width: 29.9875em)',

@@ -21,7 +21,7 @@ Note that there are two transition variables. The short transition-duration is b
 `@use` the settings module in your component Sass file, then access the variables in the standard Sass way:
 
 ```scss
-@use "~bitstyles/scss/bitstyles/settings/animation";
+@use '~bitstyles/scss/bitstyles/settings/animation';
 
 .component-class {
   transition-duration: animation.$transition-duration;
@@ -33,9 +33,9 @@ Note that there are two transition variables. The short transition-duration is b
 Override the values for these animation variables at the start of your Sass manifest file.
 
 ```scss
-@use "~bitstyles/scss/bitstyles/settings/animation" with (
+@use '~bitstyles/scss/bitstyles/settings/animation' with (
   $transition-easing: ease-in-out,
   $transition-duration: 0.075s,
-  $transition-duration-long: 0.5s,
+  $transition-duration-long: 0.5s
 );
 ```
