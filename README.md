@@ -218,6 +218,6 @@ Storybook will automatically open in a new tab in your default browser on a rand
 
 The storybook documentation is automatically deployed when a branch is merged to `main`.
 
-# Font license
+## Font license
 
-The Nunito webfont is included in Bitstyles, and is licensed under the (SIL Open Font License, 1.1)[http://scripts.sil.org/OFL]. Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito).
+The Nunito webfont is included in Bitstyles, and is licensed under the [SIL Open Font License, 1.1](https://scripts.sil.org/ofl). Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito).
