@@ -34,7 +34,7 @@ $font-sizes: (
     'h5': 1rem,
     'h6': 0.8rem,
   ),
-)
+);
 ```
 
 ### Using font-sizes in HTML
@@ -76,10 +76,10 @@ With the default setup this will output:
 
 #### `font-size.get()` parameters
 
-| Name   | Type   | Description |
-| -- | -- | -- |
-| $font-size | string | The name of the font-size |
-| $breakpoint | string | The name of the breakpoint you need the font-size from. Defaults to `"base"` (so it’s mobile-first)
+| Name        | Type   | Description                                                                                         |
+| ----------- | ------ | --------------------------------------------------------------------------------------------------- |
+| $font-size  | string | The name of the font-size                                                                           |
+| $breakpoint | string | The name of the breakpoint you need the font-size from. Defaults to `"base"` (so it’s mobile-first) |
 
 ### Using font-sizes in classes
 
@@ -145,8 +145,8 @@ To use different webfonts, override the Sass variables specifying the name of th
       'font-style': italic,
       'font-weight': 400,
       'filename': 'font-family-name-italic',
-    )
-  ),
+    ),
+  )
 );
 ```
 
@@ -156,7 +156,14 @@ You may want to provide different fallback fonts. To do this, override one or bo
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/typography' with (
-  $font-family-header: ('Font family name', 'Futura', 'Helvetica Neue'),
-  $font-family-body: ('Other font family name', 'Arial'),
+  $font-family-header: (
+    'Font family name',
+    'Futura',
+    'Helvetica Neue',
+  ),
+  $font-family-body: (
+    'Other font family name',
+    'Arial',
+  )
 );
 ```

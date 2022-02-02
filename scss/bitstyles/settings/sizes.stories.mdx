@@ -10,16 +10,16 @@ The default size scale:
 
 ```scss
 $sizes: (
-  "0": 0,
-  "xxxs": 0.1rem,
-  "xxs": 0.2rem,
-  "xs": 0.4rem,
-  "s": 0.6rem,
-  "m": 0.8rem,
-  "l": 1rem,
-  "xl": 1.6rem,
-  "xxl": 3.2rem,
-  "xxxl": 6.4rem
+  '0': 0,
+  'xxxs': 0.1rem,
+  'xxs': 0.2rem,
+  'xs': 0.4rem,
+  's': 0.6rem,
+  'm': 0.8rem,
+  'l': 1rem,
+  'xl': 1.6rem,
+  'xxl': 3.2rem,
+  'xxxl': 6.4rem,
 );
 ```
 
@@ -45,13 +45,13 @@ With the default setup this will output:
 
 ### `size.get()` parameters
 
-| Name   | Type   | Description |
-| -- | -- | -- |
+| Name  | Type   | Description          |
+| ----- | ------ | -------------------- |
 | $size | string | The name of the size |
 
 ## Using the sizes in classes
 
-Use the appropriate utility classes to apply spacing. See the documentation of each  class for information on defaults & customization:
+Use the appropriate utility classes to apply spacing. See the documentation of each class for information on defaults & customization:
 
 - [`u-margin`](/docs/utilities-margin--margin-0)
 - [`u-padding`](/docs/utilities-padding--padding-0)
@@ -64,7 +64,7 @@ The size scale is computed from a single starting value. By changing that starti
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/layout' with (
-  $size-base: 1rem,
+  $size-base: 1rem
 );
 
 /* sizes:
@@ -91,17 +91,18 @@ When you need to increase or reduce the number of sizes available, change the na
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/layout' with (
   $sizes: (
-    "0": 0,
-    "1": 1px, // add some pixel-based sizes for small adjustments
-    "xxxs": 0.125rem,
-    "xxs": 0.25rem,
-    "xs": 0.5rem,
-    "s": 0.75rem,
-    "m": 1rem,
-    "l": 1.25rem,
-    "xl": 2rem,
-    "xxl": 4rem,
-    "xxxl": 8rem,
-  ),
+    '0': 0,
+    '1': 1px,
+    // add some pixel-based sizes for small adjustments
+    'xxxs': 0.125rem,
+    'xxs': 0.25rem,
+    'xs': 0.5rem,
+    's': 0.75rem,
+    'm': 1rem,
+    'l': 1.25rem,
+    'xl': 2rem,
+    'xxl': 4rem,
+    'xxxl': 8rem,
+  )
 );
 ```
