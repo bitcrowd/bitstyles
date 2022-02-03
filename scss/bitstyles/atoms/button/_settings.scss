@@ -11,8 +11,7 @@ $transition: color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing !default;
 $icon-spacing: size.get('s') !default;
-
-$default: (
+$button-default: (
   'default': (
     'color': palette.get('white'),
     'background-color': palette.get('brand-1', '80'),
@@ -56,8 +55,7 @@ $default: (
     'box-shadow': none,
   ),
 ) !default;
-
-$danger: (
+$button-danger: (
   'hover': (
     'color': palette.get('white'),
     'background-color': palette.get('danger', '100'),
@@ -82,8 +80,7 @@ $danger: (
       ),
   ),
 ) !default;
-
-$ui: (
+$button-ui: (
   'default': (
     'color': palette.get('gray', '60'),
     'background-color': palette.get('gray', '1'),
@@ -115,9 +112,8 @@ $ui: (
     'box-shadow': none,
   ),
 ) !default;
-
 $color-variants: (
-  '': $default,
-  '-ui': $ui,
-  '-danger': $danger,
+  '': $button-default,
+  '-ui': $button-ui,
+  '-danger': $button-danger,
 ) !default;

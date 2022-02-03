@@ -2,7 +2,7 @@
 @use '../settings/setup';
 @use '../tools/properties';
 
-@mixin _properties($properties) {
+@mixin properties($properties) {
   @each $property, $value in $properties {
     #{$property}: $value;
   }
@@ -12,30 +12,30 @@
   $classname: properties.classname((setup.$namespace, 'a', 'button', $name));
 
   .#{$classname} {
-    @if (map.has-key($states, 'default')) {
+    @if map.has-key($states, 'default') {
       &,
       &:visited {
-        @include _properties(map.get($states, 'default'));
+        @include properties(map.get($states, 'default'));
       }
     }
 
-    @if (map.has-key($states, 'hover')) {
+    @if map.has-key($states, 'hover') {
       &:hover,
       &:focus {
-        @include _properties(map.get($states, 'hover'));
+        @include properties(map.get($states, 'hover'));
       }
     }
 
-    @if (map.has-key($states, 'active')) {
+    @if map.has-key($states, 'active') {
       &:active {
-        @include _properties(map.get($states, 'active'));
+        @include properties(map.get($states, 'active'));
       }
     }
 
-    @if (map.has-key($states, 'disabled')) {
+    @if map.has-key($states, 'disabled') {
       &:disabled,
       &[aria-disabled='true'] {
-        @include _properties(map.get($states, 'disabled'));
+        @include properties(map.get($states, 'disabled'));
       }
     }
   }

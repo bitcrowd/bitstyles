@@ -15,12 +15,12 @@
   padding: settings.$padding-y settings.$padding-x;
   overflow: visible;
   transition: settings.$transition;
+  border: 0 solid currentColor;
   border-radius: settings.$border-radius;
   font: settings.$font;
   font-weight: settings.$font-weight;
   text-align: center;
   text-decoration: none;
-  border: 0 solid currentColor;
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
@@ -29,8 +29,8 @@
 
   &:hover,
   &:focus {
-    text-decoration: none;
     outline: none;
+    text-decoration: none;
   }
 
   &:disabled,

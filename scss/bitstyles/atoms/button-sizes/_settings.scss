@@ -1,28 +1,25 @@
 @use '../../settings/layout';
 @use '../../tools/size';
 
-$default: (
+$button-default: (
   'padding': size.get('xs') size.get('m'),
   'border-width': size.get('xxxs'),
   'border-radius': size.get('xs'),
   'min-height': calc(#{size.get('l')} + 1em),
   'min-width': calc(#{size.get('l')} + 10em),
 ) !default;
-
-$icon: (
+$button-icon: (
   'padding': size.get('m'),
   'border-radius': size.get('s'),
   'min-height': calc(#{size.get('l')} + 1em),
   'min-width': calc(#{size.get('l')} + 1em),
 ) !default;
-
-$small: (
+$button-small: (
   'padding': size.get('xxs') size.get('xs'),
   'border-radius': layout.$border-radius-round,
 ) !default;
-
 $size-variants: (
-  '': $default,
-  'icon': $icon,
-  'small': $small,
+  '': $button-default,
+  'icon': $button-icon,
+  'small': $button-small,
 ) !default;
