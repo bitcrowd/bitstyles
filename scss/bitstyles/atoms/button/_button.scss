@@ -10,13 +10,10 @@
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  // min-height: calc(#{settings.$padding-y * 2} + 1em);
   margin: 0;
-  padding: settings.$padding-y settings.$padding-x;
   overflow: visible;
   transition: settings.$transition;
   border: 0 solid currentColor;
-  border-radius: settings.$border-radius;
   font: settings.$font;
   font-weight: settings.$font-weight;
   text-align: center;

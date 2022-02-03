@@ -1,17 +1,17 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 import icons from '../../../../assets/images/icons.svg';
 
-<Meta title="Atoms/Button/Icon-reversed" />
+<Meta title="Atoms/Button/UI-reversed" />
 
-# Icon Button (reversed)
+# UI Button (reversed)
 
-A variant of the standard `.a-button--icon`, intended to be used on dark backgrounds.
+A variant of the standard `.a-button--ui`, intended to be used on dark backgrounds.
 
 <Canvas>
-  <Story name="Icon-reversed">
+  <Story name="ui-reversed">
     {`
       <div class="u-bg-gray-90 u-padding-m">
-        <button type="button" class="a-button a-button--icon a-button--icon-reversed" title="button-label">
+        <button type="button" class="a-button a-button--icon a-button--ui-reversed" title="button-label">
           <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
             <use xlink:href="${icons}#icon-plus"></use>
           </svg>
@@ -20,10 +20,10 @@ A variant of the standard `.a-button--icon`, intended to be used on dark backgro
       </div>
     `}
   </Story>
-  <Story name="Icon-reversed [disabled]">
+  <Story name="ui-reversed [disabled]">
     {`
       <div class="u-bg-gray-90 u-padding-m">
-        <button type="button" class="a-button a-button--icon a-button--icon-reversed" title="button-label" disabled>
+        <button type="button" class="a-button a-button--icon a-button--ui-reversed" title="button-label" disabled>
           <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
             <use xlink:href="${icons}#icon-plus"></use>
           </svg>
@@ -35,10 +35,10 @@ A variant of the standard `.a-button--icon`, intended to be used on dark backgro
 </Canvas>
 
 <Canvas>
-  <Story name="Icon-reversed anchor">
+  <Story name="ui-reversed anchor">
     {`
       <div class="u-bg-gray-90 u-padding-m">
-        <a href="/" class="a-button a-button--icon a-button--icon-reversed" title="button-label">
+        <a href="/" class="a-button a-button--icon a-button--ui-reversed" title="button-label">
           <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
             <use xlink:href="${icons}#icon-plus"></use>
           </svg>
@@ -47,10 +47,10 @@ A variant of the standard `.a-button--icon`, intended to be used on dark backgro
       </div>
     `}
   </Story>
-  <Story name="Icon-reversed anchor [disabled]">
+  <Story name="ui-reversed anchor [disabled]">
     {`
       <div class="u-bg-gray-90 u-padding-m">
-        <a href="/" class="a-button a-button--icon a-button--icon-reversed" title="button-label" aria-disabled="true">
+        <a href="/" class="a-button a-button--icon a-button--ui-reversed" title="button-label" aria-disabled="true">
           <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
             <use xlink:href="${icons}#icon-plus"></use>
           </svg>

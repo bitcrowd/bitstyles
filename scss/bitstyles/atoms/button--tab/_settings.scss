@@ -5,6 +5,7 @@
 //
 // Base styles ////////////////////////////////////////
 
+$padding-x: size.get('m') !default;
 $border-radius: 0 !default;
 $border-width: size.get('xxs') !default;
 $transition: color animation.$transition-duration animation.$transition-easing,
