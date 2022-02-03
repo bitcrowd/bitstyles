@@ -1,8 +1,0 @@
-@use './settings';
-
-/* stylelint-disable selector-max-type */
-figcaption {
-  color: settings.$color;
-  font-style: settings.$font-style;
-}
-/* stylelint-enable selector-max-type */

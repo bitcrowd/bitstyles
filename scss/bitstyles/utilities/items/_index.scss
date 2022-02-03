@@ -1,2 +1,21 @@
 @forward 'settings';
-@forward 'items';
+@use 'settings';
+@use '../../tools/properties';
+@use '../../tools/media-query';
+
+@include properties.output(
+  $property-name: 'align-items',
+  $classname-root: 'items',
+  $values: settings.$values
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.get($breakpoint-alias) {
+    @include properties.output(
+      $property-name: 'align-items',
+      $classname-root: 'items',
+      $values: settings.$values,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

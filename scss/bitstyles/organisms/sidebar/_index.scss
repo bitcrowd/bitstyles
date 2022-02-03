@@ -1,2 +1,35 @@
 @forward 'settings';
-@forward 'sidebar';
+@use './settings';
+@use '../../settings/setup';
+@use '../../tools/media-query';
+
+.#{setup.$namespace}o-sidebar--large {
+  width: settings.$large-width;
+}
+
+.#{setup.$namespace}o-sidebar--small {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  #{settings.$small-location}: 0;
+  width: settings.$small-width; /* stylelint-disable-line declaration-empty-line-before */
+  box-shadow: settings.$small-box-shadow;
+
+  @include media-query.get('motion-ok') {
+    &.is-transitioning {
+      transition: settings.$transition;
+      will-change: settings.$will-change;
+    }
+  }
+
+  @each $state-alias, $state-properties in settings.$states {
+    &.is-#{$state-alias} {
+      /* stylelint-disable max-nesting-depth */
+      @each $state-property, $state-value in $state-properties {
+        #{$state-property}: $state-value;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+}

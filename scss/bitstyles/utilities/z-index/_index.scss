@@ -1,2 +1,21 @@
 @forward 'settings';
-@forward 'z-index';
+@use './settings';
+@use '../../tools/properties';
+@use '../../tools/media-query';
+
+@include properties.output(
+  $property-name: 'z-index',
+  $classname-root: 'z',
+  $values: settings.$values
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.get($breakpoint-alias) {
+    @include properties.output(
+      $property-name: 'z-index',
+      $classname-root: 'z',
+      $values: settings.$values,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

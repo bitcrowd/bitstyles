@@ -1,2 +1,21 @@
 @forward 'settings';
-@forward 'gap';
+@use './settings';
+@use '../../tools/properties';
+@use '../../tools/media-query';
+
+@include properties.output(
+  $property-name: 'gap',
+  $classname-root: 'gap',
+  $values: settings.$sizes
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.get($breakpoint-alias) {
+    @include properties.output(
+      $property-name: 'gap',
+      $classname-root: 'gap',
+      $values: settings.$sizes,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

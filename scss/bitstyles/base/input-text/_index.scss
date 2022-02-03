@@ -1,2 +1,81 @@
 @forward 'settings';
-@forward 'input-text';
+@use '../../settings/animation';
+@use '../../settings/typography';
+@use './settings';
+@use 'sass:math';
+
+/* stylelint-disable selector-max-type */
+textarea,
+input {
+  transition: color animation.$transition-duration animation.$transition-easing,
+    background-color animation.$transition-duration animation.$transition-easing,
+    border animation.$transition-duration animation.$transition-easing;
+  resize: vertical;
+
+  &::placeholder {
+    opacity: 1;
+    color: settings.$placeholder-color;
+    font-style: settings.$placeholder-font-style;
+    font-weight: settings.$placeholder-font-weight;
+  }
+}
+
+/*
+ * Selects all the text-like input types. We’re avoiding using e.g. `input[type="text"]` as it means we cannot use a single class later on
+ */
+[type='text'],
+[type='email'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='password'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+textarea {
+  display: block;
+  width: 100%;
+  padding: settings.$padding-vertical settings.$padding-horizontal;
+  border: settings.$border-width solid settings.$border-color;
+  border-radius: settings.$border-radius;
+  background-color: settings.$background;
+  box-shadow: settings.$box-shadow;
+  color: settings.$color;
+  font: settings.$font;
+
+  &:hover {
+    border-color: settings.$border-color-hover;
+    background-color: settings.$background-hover;
+    box-shadow: settings.$box-shadow-hover;
+    color: settings.$color-hover;
+  }
+
+  &:active,
+  &:focus {
+    border-color: settings.$border-color-active;
+    outline: none;
+    background-color: settings.$background-active;
+    box-shadow: settings.$box-shadow-active;
+    color: settings.$color-active;
+  }
+
+  &:invalid,
+  &[aria-invalid='true'] {
+    border-color: settings.$border-color-invalid;
+    background-color: settings.$background-color-invalid;
+    box-shadow: settings.$box-shadow-invalid;
+    color: settings.$color-invalid;
+  }
+
+  &:disabled {
+    border-color: settings.$border-color-disabled;
+    background: settings.$background-disabled;
+    box-shadow: settings.$box-shadow-disabled;
+    color: settings.$color-disabled;
+    cursor: default;
+  }
+}
+/* stylelint-enable selector-max-type */

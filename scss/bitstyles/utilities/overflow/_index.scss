@@ -1,2 +1,12 @@
 @forward 'settings';
-@forward 'overflow';
+@use 'sass:map';
+@use 'settings';
+@use '../../tools/properties';
+
+@each $property, $values in settings.$values {
+  @include properties.output(
+    $property-name: $property,
+    $classname-root: $property,
+    $values: $values
+  );
+}

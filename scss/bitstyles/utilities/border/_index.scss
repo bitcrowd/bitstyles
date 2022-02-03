@@ -1,2 +1,23 @@
 @forward 'settings';
-@forward 'border';
+@use './settings';
+@use '../../tools/properties';
+@use '../../tools/media-query';
+
+@include properties.output-directional(
+  $property-name: 'border',
+  $classname-root: 'border',
+  $values: settings.$values,
+  $directions: settings.$directions
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.get($breakpoint-alias) {
+    @include properties.output-directional(
+      $property-name: 'border',
+      $classname-root: 'border',
+      $values: settings.$values,
+      $directions: settings.$directions,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
+}

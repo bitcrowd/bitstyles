@@ -1,2 +1,33 @@
 @forward 'settings';
-@forward 'table';
+@use './settings';
+@use '../../settings/setup';
+
+.#{setup.$namespace}o-table {
+  width: 100%;
+
+  /* stylelint-disable selector-max-type */
+  th {
+    padding: settings.$padding-vertical-th settings.$padding-horizontal;
+    border-bottom: settings.$border;
+    background: settings.$background-color-th;
+    color: settings.$color-th;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: settings.$padding-vertical-td settings.$padding-horizontal;
+    border-bottom: settings.$border;
+    background: settings.$background-color-td;
+  }
+
+  tr:last-child {
+    td {
+      border: 0;
+    }
+  }
+  /* stylelint-enable selector-max-type */
+
+  .#{setup.$namespace}o-table__actions {
+    padding-right: settings.$padding-vertical-td;
+  }
+}
