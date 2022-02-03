@@ -4,8 +4,8 @@
 $large-width: 15rem !default;
 $small-width: 80vw !default;
 $small-location: left !default;
-$small-box-shadow:
-  size.get('m') 0 size.get('l') rgba(palette.get('brand-1', '100'), 10%),
+$small-box-shadow: size.get('m') 0 size.get('l')
+    rgba(palette.get('brand-1', '100'), 10%),
   size.get('l') 0 size.get('m') rgba(palette.get('gray', '90'), 7%),
   0 0 size.get('xl') rgba(palette.get('gray', '90'), 10%) !default;
 $will-change: transform !default;

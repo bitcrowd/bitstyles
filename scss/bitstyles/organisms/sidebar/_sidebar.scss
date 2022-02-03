@@ -6,6 +6,7 @@
   width: settings.$large-width;
 }
 
+/* stylelint-disable declaration-empty-line-before */
 .#{setup.$namespace}o-sidebar--small {
   position: fixed;
   z-index: 1;
@@ -32,3 +33,4 @@
     }
   }
 }
+/* stylelint-enable declaration-empty-line-before */
