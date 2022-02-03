@@ -362,8 +362,7 @@ The location can be either `left` or `right`, to specify which side of the scree
 
 ```scss
 $small-location: left;
-$small-box-shadow:
-  size.get('m') 0 size.get('l') rgba(palette.get('brand-1', '100'), 0.1),
+$small-box-shadow: size.get('m') 0 size.get('l') rgba(palette.get('brand-1', '100'), 0.1),
   size.get('l') 0 size.get('m') rgba(palette.get('gray', '90'), 0.07),
   0 0 size.get('xl') rgba(palette.get('gray', '90'), 0.1);
 ```
@@ -375,10 +374,10 @@ $will-change: transform;
 $transition: transform 0.12s ease-in;
 $states: (
   'off-screen': (
-    'transform': translateX(-100%)
+    'transform': translateX(-100%),
   ),
   'on-screen': (
-    'transform': none
-  )
+    'transform': none,
+  ),
 );
 ```
