@@ -17,41 +17,44 @@ $default: (
     'color': palette.get('white'),
     'background-color': palette.get('brand-1', '80'),
     'border-color': palette.get('brand-1', '80'),
-    'box-shadow': shadow.to-box-shadow(
-      shadow.generate(
-        $color: rgba(palette.get('brand-1', '80'), 0.2),
-        $blur-radius: size.get('xs'),
-      )
-    ),
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('brand-1', '80'), 0.2),
+          $blur-radius: size.get('xs'),
+        )
+      ),
   ),
   'hover': (
     'color': palette.get('white'),
     'background-color': palette.get('brand-1'),
     'border-color': palette.get('brand-1'),
-    'box-shadow': shadow.to-box-shadow(
-      shadow.generate(
-        $color: rgba(palette.get('brand-1', '80'), 0.2),
-        $blur-radius: size.get('s'),
-      )
-    ),
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('brand-1', '80'), 0.2),
+          $blur-radius: size.get('s'),
+        )
+      ),
   ),
   'active': (
     'color': palette.get('white'),
     'background-color': palette.get('brand-2', '100'),
     'border-color': palette.get('brand-2', '100'),
-    'box-shadow': shadow.to-box-shadow(
-      shadow.generate(
-        $color: rgba(palette.get('brand-2', '100'), 0.3),
-        $blur-radius: size.get('xs'),
-      )
-    )
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('brand-2', '100'), 0.3),
+          $blur-radius: size.get('xs'),
+        )
+      ),
   ),
   'disabled': (
     'color': palette.get('black', '50'),
     'background-color': palette.get('black', '10'),
     'border-color': palette.get('black', '10'),
     'box-shadow': none,
-  )
+  ),
 ) !default;
 
 $danger: (
@@ -59,22 +62,24 @@ $danger: (
     'color': palette.get('white'),
     'background-color': palette.get('danger', '100'),
     'border-color': palette.get('danger', '100'),
-    'box-shadow': shadow.to-box-shadow(
-      shadow.generate(
-        $color: rgba(palette.get('danger', '100'), 0.3),
-        $blur-radius: size.get('s'),
-      )
-    )
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('danger', '100'), 0.3),
+          $blur-radius: size.get('s'),
+        )
+      ),
   ),
   'active': (
     'background-color': palette.get('danger', '100'),
     'border-color': palette.get('danger', '100'),
-    'box-shadow': shadow.to-box-shadow(
-      shadow.generate(
-        $color: rgba(palette.get('danger', '100'), 0.3),
-        $blur-radius: size.get('xs'),
-      )
-    ),
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('danger', '100'), 0.3),
+          $blur-radius: size.get('xs'),
+        )
+      ),
   ),
 ) !default;
 
@@ -108,7 +113,7 @@ $ui: (
     'background-color': rgba(palette.get('gray', '1'), 0.5),
     'border-color': palette.get('gray', '10'),
     'box-shadow': none,
-  )
+  ),
 ) !default;
 
 $color-variants: (

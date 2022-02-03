@@ -74,14 +74,7 @@
   $breakpoint-suffix: ''
 ) {
   @each $alias, $value in $values {
-    $classname: classname(
-      (
-        setup.$namespace,
-        'u',
-        $classname-root,
-        $alias
-      )
-    );
+    $classname: classname((setup.$namespace, 'u', $classname-root, $alias));
 
     .#{$classname}#{$breakpoint-suffix} {
       #{$property-name}: $value;
@@ -108,13 +101,7 @@
   @each $alias, $value in $values {
     @each $direction-name, $direction-values in $directions {
       $classname: classname(
-        (
-          setup.$namespace,
-          'u',
-          $classname-root,
-          $alias,
-          $direction-name
-        )
+        (setup.$namespace, 'u', $classname-root, $alias, $direction-name)
       );
 
       .#{$classname}#{$breakpoint-suffix} {
@@ -140,13 +127,7 @@
   $classname-root,
   $breakpoint-suffix: ''
 ) {
-  $classname: classname(
-    (
-      setup.$namespace,
-      $classname-prefix,
-      $classname-root,
-    )
-  );
+  $classname: classname((setup.$namespace, $classname-prefix, $classname-root));
 
   .#{$classname}#{$breakpoint-suffix} {
     @content;

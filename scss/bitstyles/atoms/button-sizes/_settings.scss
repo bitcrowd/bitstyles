@@ -18,7 +18,7 @@ $icon: (
 
 $small: (
   'padding': size.get('xxs') size.get('xs'),
-  'border-radius': layout.$border-radius-round
+  'border-radius': layout.$border-radius-round,
 ) !default;
 
 $size-variants: (

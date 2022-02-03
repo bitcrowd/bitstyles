@@ -9,14 +9,7 @@
 }
 
 @mixin new($name, $states) {
-  $classname: properties.classname(
-    (
-      setup.$namespace,
-      'a',
-      'button',
-      $name
-    )
-  );
+  $classname: properties.classname((setup.$namespace, 'a', 'button', $name));
 
   .#{$classname} {
     @if (map.has-key($states, 'default')) {
