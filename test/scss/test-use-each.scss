@@ -217,7 +217,7 @@
 );
 @use '../../scss/bitstyles/organisms/sidebar' with (
   $large-width: 1rem,
-  $small-location: right,
+  $small-location: right
 );
 @use '../../scss/bitstyles/organisms/notification-center';
 @use '../../scss/bitstyles/organisms/table' with (
