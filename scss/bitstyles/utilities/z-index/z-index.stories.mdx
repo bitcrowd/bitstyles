@@ -4,7 +4,11 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Z (z-index)
 
-Sets the z-index. By default, only `.u-z-1` is available. Note that you need to set a position other than the default `static` (probably either using `u-relative`, or by using component-level custom CSS to set `position: absolute`, `sticky`, or `fixed`), as otherwise CSS `z-index` has no effect.
+Sets the z-index property.
+
+By default, only `.u-z-1` is available. Note that you need to set a position other than the default `static` (probably either using `u-relative`, or by using component-level custom CSS to set `position: absolute`, `sticky`, or `fixed`), as otherwise CSS `z-index` has no effect.
+
+Not available at any breakpoints when using the default configuration. See [customization](#customization) for details on how to change the configuration.
 
 <Canvas>
   <Story name="z">
@@ -16,17 +20,21 @@ Sets the z-index. By default, only `.u-z-1` is available. Note that you need to 
 
 ## Customization
 
-The available z-indexes can be customized by overriding the `$bitstyles-z-index` variable:
+The available z-indexes can be customized by overriding the `$bitstyles-z-index-values` map. Provide the name to be used for the class as the key, and the value:
 
 ```scss
-$bitstyles-z-index: (
-  '1': 1,
-  'modal': 10,
+@use '~bitstyles/scss/bitstyles/utilities/z-index' with (
+  $values: (
+    '1': 1,
+    'modal': 10,
+  ),
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-z-index-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-z-index-breakpoints` list, providing the names of breakpoints from the global list of breakpoints:
 
 ```scss
-$bitstyles-z-index-breakpoints: ('s', 'm', 'xl');
+@use '~bitstyles/scss/bitstyles/utilities/z-index' with (
+  $breakpoints: ('s', 'm', 'xl'),
+);
 ```
