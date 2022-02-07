@@ -4,7 +4,14 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Border
 
-Apply a border with the specified color and direction.
+Apply a border with the specified color, and on the specified side of the element.
+
+Default colors available are:
+
+- `gray-70`
+- `gray-10`
+
+All colors are available on `top`, `right`, `bottom`, `left`, `x`, and `y` directions. By default these classes are not available at any breakpoints. See the [customization](#customization) section for details on how you can change those settings.
 
 ## Gray-10
 
@@ -85,3 +92,39 @@ Apply a border with the specified color and direction.
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The available border properties can be customized by overriding the `$bitstyles-border-values` Sass map. Provide complete `border` shorthand properties (including border-width, border-style, and border-color), using colors from your global color palette:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/border' with (
+  $values: (
+    'gray-70': 1px solid palette.get('gray', '70'),
+    'gray-10': 1px solid palette.get('gray', '10'),
+  ),
+);
+```
+
+To make these classes available at breakpoints, override `$bitstyles-border-breakpoints`, providing the name(s) of breakpoints defined in your global breakpoint settings:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/border' with (
+  $breakpoints: ('m'),
+);
+```
+
+You can also redefine which directions of border are output by overriding the `$bitstyles-border-directions` Sass map. Provide the name to be used for each class, and a Sass list of the border directions that should be included:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/border' with (
+  $directions: (
+    'top-and-right': (
+      'top', 'right',
+    ),
+    '∏': (
+      'top', 'right', 'left',
+    ),
+  ),
+);
+```

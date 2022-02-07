@@ -23,22 +23,28 @@ Apply a CSS box-shadow to the element. By default this is selected from the stan
 The available box-shadows and their names can be customized by overriding the `$bitstyles-box-shadow-values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `css` as the format:
 
 ```scss
-$bitstyles-box-shadow-values: (
-  'default': shadows.get('default', 'box'),
+@use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
+  $values: (
+    'default': shadows.get('default', 'box'),
+  ),
 );
 ```
 
 You can also specify shadows directly, using the correct format for the CSS `box-shadow` property e.g.
 
 ```scss
-$bitstyles-box-shadow-values: (
-  'default': 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2),
-  0 0 2rem 1rem rgba(0, 0, 0, 0.2),
+@use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
+  $values: (
+    'default': 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2),
+    0 0 2rem 1rem rgba(0, 0, 0, 0.2),
+  ),
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-box-shadows-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-box-shadows-breakpoints` variable, providing a list of breakpoint names from your globally-defined breakpoints:
 
 ```scss
-$bitstyles-box-shadow-breakpoints: ('s', 'm', 'xl');
+@use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
+  $breakpoints: ('s', 'm', 'xl'),
+);
 ```

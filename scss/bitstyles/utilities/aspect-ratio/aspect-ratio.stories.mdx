@@ -6,20 +6,20 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Enforce an aspect ratio on this element and its contents.
 
-The aspect-ratio element takes 100% of its parent element’s width, then the height is set so the element will maintain the specified ratio. The default ratios inclue 1:1 (square), and 16:9 (common for video content).
+The aspect-ratio element takes 100% of its parent element’s width, then the height is set so the element will maintain the specified ratio. The default ratios inclue 1:1 (square), and 16:9 (common for video content). See the [Customization](#customization) section below for details how to change that.
 
 <Canvas>
   <Story name="aspect-ratio-1-1">
     {`
-      <div class="u-aspect-ratio-1-1 u-bg-brand-2 u-relative">
-        <div class="u-absolute-center u-text-center">1:1 <span class="u-block">(try resizing)</span></div>
+      <div class="u-aspect-ratio-1-1 u-bg-brand-2 u-relative" style="min-width:10rem">
+        <div class="u-absolute-center u-text-center">1:1</div>
       </div>
     `}
   </Story>
   <Story name="aspect-ratio-16-9">
     {`
-      <div class="u-aspect-ratio-16-9 u-bg-brand-2 u-relative">
-        <div class="u-absolute-center u-text-center">16:9 <span class="u-block">(try resizing)</span></div>
+      <div class="u-aspect-ratio-16-9 u-bg-brand-2 u-relative" style="min-width:10rem">
+        <div class="u-absolute-center u-text-center">16:9</div>
       </div>
     `}
   </Story>
@@ -27,17 +27,19 @@ The aspect-ratio element takes 100% of its parent element’s width, then the he
 
 # Customization
 
-Available aspect ratios can be customized by overriding the Sass map `$bitstyles-aspect-ratios`, for each providing the name for the class as the key, and a sass map containing `width` and `height`:
+Available aspect ratios can be customized by overriding the Sass map `$bitstyles-aspect-ratio-values`, for each providing the name for the class as the key, and a sass map containing `width` and `height`:
 
 ```scss
-$bitstyles-aspect-ratios: (
-  '16-9': (
-    'width': 16,
-    'height': 9,
+@use '~bitstyles/scss/bitstyles/utilities/aspect-ratio' with (
+  $values: (
+    '16-9': (
+      'width': 16,
+      'height': 9,
+    ),
+    '1-1': (
+      'width': 1,
+      'height': 1,
+    )
   ),
-  '1-1': (
-    'width': 1,
-    'height': 1,
-  )
 );
 ```
