@@ -47,7 +47,7 @@
 
 ### Breaking
 
-- All utility classes which had a double dash in their classname (`--`) now only have a single dash. You’ll need to rename all these classes to use single dashes e.g. `.u-bg--brand-1` becomes `.u-bg-brand-1`. The following classes are affected: 
+- All utility classes which had a double dash in their classname (`--`) now only have a single dash. You’ll need to rename all these classes to use single dashes e.g. `.u-bg--brand-1` becomes `.u-bg-brand-1`. The following classes are affected:
   - `u-bg`
   - `u-fg`
   - `u-font`
