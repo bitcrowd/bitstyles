@@ -6,9 +6,9 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 ## Hide an element visually, while leaving it readable & accessible by search engines & screenreaders
 
-Use this to give more complete & understandable labels for UI and to help explain connections between content that may otherwise only be visually apparent e.g. visually display only 'next' on a button, but use `.u-sr-only` to hide a span containing a more descriptive or specific label (see the markup below).
+Use this to give more complete & understandable labels for UI and to help explain connections between content that may otherwise only be visually apparent e.g. visually display only “next” on a button, but use `.u-sr-only` to hide a span containing a more descriptive or specific label (see the markup below).
 
-Available at every breakpoint set in `$bitstyles-sr-only-breakpoints`.
+Available at no breakpoints by default, see [customization](#customization) for details on how to change that.
 
 <Canvas>
   <Story name="sr-only">
@@ -20,3 +20,13 @@ Available at every breakpoint set in `$bitstyles-sr-only-breakpoints`.
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The class can be made available at various breakpoints by overriding the `$bitstyles-sr-only-breakpoints` Sass list, and including the names of breakpoints from the global breakpoints list:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/sr-only' with (
+  $breakpoints: ('m'),
+);
+```

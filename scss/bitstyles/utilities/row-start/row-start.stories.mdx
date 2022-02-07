@@ -4,7 +4,9 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Row-start
 
-Use these classes to specify which row an element should start in.
+Specify which row an element should start in.
+
+By default, rows `1`, `2`, `3`, `4`, `5`, and `6` are available. These classes can be applied at `s`, `m`, `xl` breakpoints. See [customization](#customization) if you need to change that configuration.
 
 It’s common to use `.u-row-start-1` to force an element to be placed in the first row even if it follows another grid-item that’s been placed at the end of that row (so they are both placed in the first row despite their source-order).
 
@@ -128,21 +130,25 @@ The `row-start` classes are available at `s`, `m`, and `xl` breakpoints by defau
 
 ## Customization
 
-The available start rows can be customized by overriding the `$bitstyles-row-start` Sass variable:
+The available start rows can be customized by overriding the `$bitstyles-row-start-values` Sass map. Provide the classname as the key, and the value to be used as the property value.
 
 ```scss
-$bitstyles-row-start: (
-  '1': 1,
-  '2': 2,
-  '3': 3,
-  '4': 4,
-  '5': 5,
-  '6': 6,
+@use '~bitstyles/scss/bitstyles/utilities/row-start' with (
+  $values: (
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+  ),
 );
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-row-start-breakpoints` variable:
 
 ```scss
-$bitstyles-row-start-breakpoints: ('s', 'm', 'xl');
+@use '~bitstyles/scss/bitstyles/utilities/row-start' with (
+  $breakpoints: ('s', 'm', 'xl'),
+);
 ```
