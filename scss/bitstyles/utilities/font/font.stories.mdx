@@ -88,7 +88,7 @@ The available font-weights and font-styles can be customized by overriding the `
   $family-values: (
     'header': typography.$font-family-header,
     'body': typography.$font-family-body,
-  ),
+  )
 );
 ```
 
@@ -96,8 +96,14 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/font' with (
-  $bitstyles-font-weight-breakpoints: ('m'),
-  $bitstyles-font-style-breakpoints: ('l'),
-  $bitstyles-font-family-breakpoints: ('s'),
+  $bitstyles-font-weight-breakpoints: (
+    'm',
+  ),
+  $bitstyles-font-style-breakpoints: (
+    'l',
+  ),
+  $bitstyles-font-family-breakpoints: (
+    's',
+  )
 );
 ```

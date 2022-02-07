@@ -396,7 +396,7 @@ The available values for `flex-direction`, `flex-wrap`, `flex-grow`, and `flex-s
   ),
   $shrink: (
     '100': 100,
-  ),
+  )
 );
 ```
 
@@ -404,6 +404,9 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/flex' with (
-  $breakpoints: ('m', 'xl'),
+  $breakpoints: (
+    'm',
+    'xl',
+  )
 );
 ```

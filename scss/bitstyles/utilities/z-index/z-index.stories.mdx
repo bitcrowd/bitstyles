@@ -27,7 +27,7 @@ The available z-indexes can be customized by overriding the `$bitstyles-z-index-
   $values: (
     '1': 1,
     'modal': 10,
-  ),
+  )
 );
 ```
 
@@ -35,6 +35,10 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/z-index' with (
-  $breakpoints: ('s', 'm', 'xl'),
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
 );
 ```

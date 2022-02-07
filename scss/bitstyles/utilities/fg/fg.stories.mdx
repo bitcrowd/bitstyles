@@ -52,7 +52,7 @@ The available display types can be customized by overriding the `$bitstyles-fg-v
     'gray-50': palette.get('gray', '50'),
     'gray-40': palette.get('gray', '40'),
     'gray-30': palette.get('gray', '30'),
-  ),
+  )
 );
 ```
 
@@ -60,6 +60,10 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/fg' with (
-  $breakpoints: ('s', 'm', 'xl'),
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
 );
 ```

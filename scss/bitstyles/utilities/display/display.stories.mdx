@@ -299,7 +299,7 @@ The available display types can be customized by overriding the `$bitstyles-disp
     'flex': flex,
     'inline-flex': inline-flex,
     'hidden': none,
-  ),
+  )
 );
 ```
 
@@ -307,6 +307,10 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/display' with (
-  $breakpoints: ('s', 'm', 'xl'),
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
 );
 ```

@@ -158,9 +158,10 @@ The directions can be customised by overriding `$bitstyles-padding-directions`. 
   $directions: (
     '': null,
     'top-and-right': (
-      'top', 'right',
-    )
-  ),
+      'top',
+      'right',
+    ),
+  )
 );
 ```
 
@@ -170,6 +171,9 @@ To customise the breakpoints these classes are all available at, override `$bits
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/padding' with (
-  $breakpoints: ('m', 'l'),
+  $breakpoints: (
+    'm',
+    'l',
+  )
 );
 ```

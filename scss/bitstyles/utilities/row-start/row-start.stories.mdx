@@ -141,7 +141,7 @@ The available start rows can be customized by overriding the `$bitstyles-row-sta
     '4': 4,
     '5': 5,
     '6': 6,
-  ),
+  )
 );
 ```
 
@@ -149,6 +149,10 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/row-start' with (
-  $breakpoints: ('s', 'm', 'xl'),
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
 );
 ```

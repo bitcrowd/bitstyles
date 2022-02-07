@@ -222,7 +222,10 @@ To customise the breakpoints these classes are available at, override `$bitstyle
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/margin' with (
-  $breakpoints: ('s', 'm'),
+  $breakpoints: (
+    's',
+    'm',
+  )
 );
 ```
 
@@ -233,9 +236,10 @@ Directions can be customised by overriding the `$bitstyles-margin-directions` Sa
   $directions: (
     '': null,
     'top-and-right': (
-      'top', 'right',
+      'top',
+      'right',
     ),
-  ),
+  )
 );
 ```
 

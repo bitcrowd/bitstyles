@@ -26,7 +26,7 @@ The available box-shadows and their names can be customized by overriding the `$
 @use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
   $values: (
     'default': shadows.get('default', 'box'),
-  ),
+  )
 );
 ```
 
@@ -37,7 +37,7 @@ You can also specify shadows directly, using the correct format for the CSS `box
   $values: (
     'default': 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2),
     0 0 2rem 1rem rgba(0, 0, 0, 0.2),
-  ),
+  )
 );
 ```
 
@@ -45,6 +45,10 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
-  $breakpoints: ('s', 'm', 'xl'),
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
 );
 ```

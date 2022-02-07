@@ -150,7 +150,7 @@ The available column-spans can be customized by overriding the `$bitstyles-col-s
     '5': span 5 / span 5,
     '6': span 6 / span 6,
     '7': span 7 / span 7,
-  ),
+  )
 );
 ```
 
@@ -158,6 +158,10 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/col-span' with (
-  $breakpoints: ('s', 'm', 'xl'),
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
 );
 ```

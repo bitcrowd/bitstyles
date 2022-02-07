@@ -185,7 +185,7 @@ Customize the available align-items values by overriding the `$bitstyles-items-v
     'start': flex-start,
     'stretch': stretch,
     'baseline': baseline,
-  ),
+  )
 );
 ```
 
@@ -193,6 +193,8 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/items' with (
-  $breakpoints: ('m'),
+  $breakpoints: (
+    'm',
+  )
 );
 ```

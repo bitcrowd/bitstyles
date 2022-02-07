@@ -89,7 +89,7 @@ The available background-colors can be customized by overriding the `$bitstyles-
     'gray-20': palette.get('gray', '20'),
     'gray-10': palette.get('gray', '10'),
     'gray-5': palette.get('gray', '5'),
-  ),
+  )
 );
 ```
 
@@ -97,6 +97,9 @@ The breakpoints these classes are available at can be customized by overriding t
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/bg' with (
-  $bitstyles-bg-breakpoints: ('m', 'l'),
+  $bitstyles-bg-breakpoints: (
+    'm',
+    'l',
+  )
 );
 ```
