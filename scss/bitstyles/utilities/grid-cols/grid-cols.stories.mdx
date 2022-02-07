@@ -4,11 +4,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Grid
 
-A responsive CSS grid system. Grids can be nested as much as you need.
+Specify the number of columns on a grid element.
+
+By default grids of `2`, `3`, `4`, and `6` columns are provided, and they are available at the `s`, `m`, `l`, and `xl` breakpoints. See [customization](#customization) for details on how to change those settings.
 
 Giving an element the base class `.u-grid` alone will not create the columns you probably want — see the example below. The grid children have some space between them, but otherwise they behave like block elements.
 
-The grid classes are only rarely used without the [gap](/docs/utilities-gap--u-gap-m) utilities, as you normally want some space between items, and gap achieves that with no mathematics required.
+The grid classes are only rarely used without the [gap](/docs/utilities-gap--u-gap-m) utilities, as you normally want some space between items.
 
 <Canvas>
   <Story name="u-grid">
@@ -142,23 +144,24 @@ Column classes are available at `s`, `m`, and `xl` breakpoints using the suffix 
 
 ## Customization
 
-The available grid column counts can be customized by overriding the `$bitstyles-grid-template-columns` Sass variable. This accepts everything you can use with the CSS `grid-template-columns` property:
+The available grid column counts can be customized by overriding the `$bitstyles-grid-cols-values` Sass map. Provide the name for the class as the key, and the value for the `grid-template-columns` property as the value:
 
 ```scss
-$bitstyles-grid-template-columns: (
-  '2': repeat(2, minmax(0, 1fr)),
-  '3': repeat(3, minmax(0, 1fr)),
-  '4': repeat(4, minmax(0, 1fr)),
-  '6': repeat(6, minmax(0, 1fr)),
-  'magazine': 20rem,
-  1fr,
-  10%,
-  2fr,
+@use '~bitstyles/scss/bitstyles/utilities/grid-cols' with (
+  $values: (
+    '2': repeat(2, minmax(0, 1fr)),
+    '3': repeat(3, minmax(0, 1fr)),
+    '4': repeat(4, minmax(0, 1fr)),
+    '6': repeat(6, minmax(0, 1fr)),
+    'magazine': 20rem, 1fr, 10%, 2fr,
+  ),
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-grid-template-columns-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-grid-cols-breakpoints` variable:
 
 ```scss
-$bitstyles-grid-template-columns-breakpoints: ('s', 'm', 'xl');
+@use '~bitstyles/scss/bitstyles/utilities/grid-cols' with (
+  $breakpoints: ('s', 'm', 'xl'),
+);
 ```
