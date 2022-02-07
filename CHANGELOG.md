@@ -21,6 +21,40 @@
 - Renames `output-properties()` -> `output()`
 - Renames `output-directional-properties()` -> `output-directional()`
 
+### Breaking
+
+- If you were overriding `bitstyles-padding-values` and providing your sizes nested inside a `positive` key, you will need to remove that, and provide the values directly e.g.
+
+  ```scss
+  $sizes: (
+    'positive': (
+      '0': 0,
+      'xxs': size.get('xxs'),
+      'xs': size.get('xs'),
+      's': size.get('s'),
+      'm': size.get('m'),
+      'l': size.get('l'),
+      'xl': size.get('xl'),
+      'xxl': size.get('xxl'),
+    ),
+  );
+  ```
+
+  becomes
+
+  ```scss
+  $sizes: (
+    '0': 0,
+    'xxs': size.get('xxs'),
+    'xs': size.get('xs'),
+    's': size.get('s'),
+    'm': size.get('m'),
+    'l': size.get('l'),
+    'xl': size.get('xl'),
+    'xxl': size.get('xxl'),
+  );
+  ```
+
 ## [[4.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.0.0) - 2021-12-20
 
 ### Added
