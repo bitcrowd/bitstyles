@@ -47,9 +47,11 @@ module.exports = {
         },
       ],
       include: path.resolve(__dirname, '../scss'),
-    });
+    }); // Return the altered config
 
-    // Return the altered config
     return config;
+  },
+  core: {
+    builder: 'webpack5',
   },
 };

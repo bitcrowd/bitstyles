@@ -3,7 +3,7 @@
   "env": {
     "browser": true
   },
-  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "extends": ["airbnb", "plugin:prettier/recommended", "plugin:storybook/recommended"],
   "plugins": ["prettier"],
   "settings": {
     "import/resolver": {
