@@ -1,14 +1,16 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="Utilities/flex" />
+<Meta title="Utilities/flex/flex" />
 
 # Flex
+
+Apply `flex-direction`, `flex-wrap`, `flex-shrink`, and `flex-grow` properties to an element. By default these classes are available at the `m` breakpoint. See the [customization](#customization) section for details on how to chnage that.
 
 **Resize your viewport** to best view these examples, or view the examples in the canvas instead of here in the docs.
 
 **Some of these examples will cause horizontal scrollbars** at some viewport widths. That’s deliberate and important — your approach to dealing with that issue will depend on your content, but probably `.u-flex-wrap` will be among the first places to look (see below).
 
-Flex has become the prefered method for laying out app UI, and in many cases also for content in an article/content context. Probably the only instance that’s not true is when you can assume browser support for CSS Grid, which gives developers control over layout in two axis. These flex layout classes cover the most common usecases, they should be extended as needed.
+Flex has become the prefered method for laying out app UI, and in many cases also for content in an article/content context. Probably the only instance that’s not true is when you can assume browser support for CSS Grid, which gives developers control over layout in two axis. These flex layout classes cover the most common usecases; they should be extended as needed.
 
 ## Basic flex layout
 
@@ -376,3 +378,32 @@ Flex defaults to laying out children in horizontal rows. To layout items vertica
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The available values for `flex-direction`, `flex-wrap`, `flex-grow`, and `flex-shrink` and their names can be customized by overriding the `$bitstyles-flex-direction`, `$bitstyles-flex-wrap`, `$bitstyles-flex-grow`, and `$bitstyles-flex-shrink` Sass maps respectively:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/flex' with (
+  $direction: (
+    'row': row,
+  ),
+  $wrap: (
+    'nowrap': nowrap,
+  ),
+  $grow: (
+    '100': 100,
+  ),
+  $shrink: (
+    '100': 100,
+  ),
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-flex-breakpoints` variable:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/flex' with (
+  $breakpoints: ('m', 'xl'),
+);
+```

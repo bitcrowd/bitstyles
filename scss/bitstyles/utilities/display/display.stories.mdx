@@ -4,9 +4,9 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Display
 
-Apply display types to an element. These are often paired with [flex](/docs/utilities-flex--flex-with-grow-1-child) or [grid](/docs/utilities-grid--u-grid) classes, or used to show/hide content based on viewport size (see below).
+Specify display properties of an element. These are often paired with [flex](/docs/utilities-flex--flex-with-grow-1-child) or [grid](/docs/utilities-grid--u-grid) classes, or used to show/hide content based on viewport size (see [show/hide](#showhide) below).
 
-These classes are all available at breakpoints (see examples), resize your browser to see them in action.
+Default display values are `block`, `grid`,`flex`, `inline-flex`, and `hidden`, and the classes are all available at `s`, `m`, and `l` breakpoints — resize your browser to see them in action. See [customization](#customization) for details on how to change those settings.
 
 ## u-block
 
@@ -210,8 +210,6 @@ See the documentation for [grid](/docs/utilities-grid--u-grid) classes for more 
 
 ## u-inline-flex
 
-Largely the same as the block flex layouts above, except the `.u-inline-flex` does not expand to fill the block.
-
 See the documentation for [flex](/docs/utilities-flex--flex-with-grow-1-child) classes for more practical examples.
 
 <Canvas isColumn>
@@ -291,20 +289,24 @@ Another use is to add `.u-hidden` to “remove” an element from the page, then
 
 ## Customization
 
-The available display types can be customized by overriding the `$bitstyles-display-values` Sass variable:
+The available display types can be customized by overriding the `$bitstyles-display-values` Sass map. Provide a name for the class as the key, and the `display` property value:
 
 ```scss
-$bitstyles-display-values: (
-  'block': block,
-  'grid': grid,
-  'flex': flex,
-  'inline-flex': inline-flex,
-  'hidden': none,
+@use '~bitstyles/scss/bitstyles/utilities/display' with (
+  $values: (
+    'block': block,
+    'grid': grid,
+    'flex': flex,
+    'inline-flex': inline-flex,
+    'hidden': none,
+  ),
 );
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-display-breakpoints` variable:
 
 ```scss
-$bitstyles-display-breakpoints: ('s', 'm', 'xl');
+@use '~bitstyles/scss/bitstyles/utilities/display' with (
+  $breakpoints: ('s', 'm', 'xl'),
+);
 ```
