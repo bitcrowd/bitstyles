@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Avatar
 
-A user’s visual representation — a photograph (or other image) that will represent them in the UI. The image will be cropped to a circle, and span edge-to-edge regardless of aspect ratio & size.
+A user’s visual representation — an image that will represent them in your UI. The image is cropped to a circle, and spans edge-to-edge regardless of aspect ratio & size (so you can use non-square images if necessary).
 
 <Canvas>
   <Story name="Avatar">
@@ -16,33 +16,10 @@ A user’s visual representation — a photograph (or other image) that will rep
   </Story>
 </Canvas>
 
-Commonly, the username will be displayed to one side:
+Avatars are available at `m` and `l` sizes by default:
 
 <Canvas isColumn>
-  <Story name="Avatar with name (left-to-right)">
-    {`
-      <div class="u-flex u-items-center">
-        <div class="a-avatar u-flex u-items-center">
-          <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
-        </div>
-        <span class="u-margin-s-left">Username</span>
-      </div>
-    `}
-  </Story>
-  <Story name="Avatar with name (right-to-left)">
-    {`
-      <div class="u-flex u-items-center">
-        <span class="u-margin-s-right">Username</span>
-        <div class="a-avatar">
-          <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
-        </div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas isColumn>
-  <Story name="Avatar - medium">
+  <Story name="a-avatar--m">
     {`
       <div class="u-flex u-items-center">
         <div class="a-avatar a-avatar--m u-flex u-items-center">
@@ -52,7 +29,7 @@ Commonly, the username will be displayed to one side:
       </div>
     `}
   </Story>
-  <Story name="Avatar - large">
+  <Story name="a-avatar--l">
     {`
       <div class="u-flex u-items-center">
         <div class="a-avatar a-avatar--l u-flex u-items-center">
@@ -63,3 +40,14 @@ Commonly, the username will be displayed to one side:
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The available avatar sizes can be customized with `$bitstyles-avatar-sizes`:
+
+```scss
+$sizes: (
+  'm': size.get('xl'),
+  'l': size.get('xl') + size.get('m'),
+);
+```

@@ -687,6 +687,10 @@ table {
   border-radius: 9999rem;
   white-space: nowrap;
 }
+.bsa-badge .bsa-badge__button {
+  margin-right: -7.5rem;
+  margin-left: 5rem;
+}
 .bsa-badge--gray {
   --button-fg: #000;
   --button-bg: #000;
@@ -726,10 +730,6 @@ table {
   --button-bg-hover: #000;
   background-color: #000;
   color: #000;
-}
-.bsa-badge__button {
-  margin-right: -7.5rem;
-  margin-left: 5rem;
 }
 .bsa-bordered-header {
   display: grid;

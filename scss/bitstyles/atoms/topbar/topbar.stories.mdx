@@ -6,8 +6,6 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Commonly used to contain site navigation, logo etc. this element spans the full width available, and by default has a z-index that ensures it’s rendered above other content.
 
-Use utility classes to set colors.
-
 <Canvas>
   <Story name="Topbar">
     {`
@@ -17,3 +15,17 @@ Use utility classes to set colors.
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+Common customizations for this atom include:
+
+- using the [content](/docs/atoms-content--a-content) atom to wrap the topbar’s content, and removing the horizontal padding to ensure correct alignment with other content
+- making the topbar sticky (or fixed), so it stays in place when scrolling
+
+```scss
+$position: relative;
+$vertical-padding: size.get('s');
+$horizontal-padding: size.get('m');
+$z-index: zindex.get(layout.$global-z, 'topbar');
+```

@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Dropdown
 
-A floating container for a list of links.
+A floating container shown on clicking a button (use JS for this), to show some small extra content such as a list of links. In smaller viewports, the dropdown will be disaplyed using the full width available.
 
 ## Left alignment (default)
 
@@ -32,10 +32,12 @@ A floating container for a list of links.
   </Story>
 </Canvas>
 
-## Right alignment
+## Alignment
+
+The dropdown defaults to left-top-aligned, but can be aligned to any edges using the modifier classes. Note that in smaller viewports, all left/right alignment is removed and the dropdown will be displayed at the full available width.
 
 <Canvas>
-  <Story name="Dropdown--right" inline={false} height="20rem">
+  <Story name="a-dropdown--right" inline={false} height="20rem">
     {`
       <div class="u-relative" style="height: 10rem; width: 100%">
         <ul class="a-dropdown a-dropdown--right u-overflow-y-auto a-list-reset">
@@ -56,12 +58,7 @@ A floating container for a list of links.
       </div>
     `}
   </Story>
-</Canvas>
-
-## Top alignment
-
-<Canvas>
-  <Story name="Dropdown--top" inline={false} height="20rem">
+  <Story name="a-dropdown--top" inline={false} height="20rem">
     {`
       <div class="u-relative u-flex" style="height: 10rem; width: 100%">
         <ul class="a-dropdown a-dropdown--top u-overflow-y-auto a-list-reset">
@@ -82,12 +79,7 @@ A floating container for a list of links.
       </div>
     `}
   </Story>
-</Canvas>
-
-## Top-right alignment
-
-<Canvas>
-  <Story name="Dropdown--top dropdown--right" inline={false} height="20rem">
+  <Story name="a-dropdown--top a-dropdown--right" inline={false} height="20rem">
     {`
       <div class="u-relative u-flex" style="height: 10rem; width: 100%">
         <ul class="a-dropdown a-dropdown--top a-dropdown--right u-overflow-y-auto a-list-reset">
@@ -108,16 +100,7 @@ A floating container for a list of links.
       </div>
     `}
   </Story>
-</Canvas>
-
-## Full-width
-
-Sometimes you need your dropdown to fill the width of the container.
-
-### Full-width bottom
-
-<Canvas>
-  <Story name="Dropdown--bottom dropdown--full" inline={false} height="20rem">
+  <Story name="a-dropdown--bottom dropdown--full" inline={false} height="20rem">
     {`
       <div class="u-relative u-flex" style="height: 10rem; width: 100%">
         <ul class="a-dropdown a-dropdown--full-width u-overflow-y-auto a-list-reset">
@@ -138,12 +121,7 @@ Sometimes you need your dropdown to fill the width of the container.
       </div>
     `}
   </Story>
-</Canvas>
-
-## Full-width top
-
-<Canvas>
-  <Story name="Dropdown--top dropdown--full" inline={false} height="20rem">
+  <Story name="a-dropdown--top dropdown--full" inline={false} height="20rem">
     {`
       <div class="u-relative u-flex" style="height: 10rem; width: 100%">
         <ul class="a-dropdown a-dropdown--top a-dropdown--full-width u-overflow-y-auto a-list-reset">
@@ -165,3 +143,43 @@ Sometimes you need your dropdown to fill the width of the container.
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The visual appearance & layout of the dropdowns can be customized:
+
+```scss
+$max-height: 20rem;
+$border-radius: size.get('xs');
+$border: 2px solid palette.get('brand-2', '100');
+$background-color: palette.get('white', '100');
+$box-shadow: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-2', '80'), 0.05),
+    $offset: size.get('m'),
+    $blur-radius: size.get('l'),
+  )
+);
+```
+
+The border and spacing above and below the separators used to divide the contents of your dropdowns (see the `<li role="separator"></li>` in the examples above) can also be customized:
+
+```scss
+$separator-border: 1px solid palette.get('gray', '1');
+$separator-spacing: size.get('xxs');
+```
+
+By default the dropdown will fade in and out respectively when the `is-on-screen` and `is-off-screen` classes are applied, but this can customized too. Be sure to update the `$will-change` value to reflect the properties you specify in the `$transition` value.
+
+```scss
+$transition: opacity 0.12s ease-in;
+$will-change: opacity;
+$states: (
+  'off-screen': (
+    'opacity': 0,
+  ),
+  'on-screen': (
+    'opacity': 1,
+  ),
+);
+```

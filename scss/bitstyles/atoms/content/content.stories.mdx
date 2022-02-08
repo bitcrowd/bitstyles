@@ -4,22 +4,95 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Content
 
-A content wrapper to ensure content is a readable width, and has space to the sides of the viewport.
+A content wrapper that ensures content is at readable width, has spacing at the sides of the viewport so content will not touch the edge, and is always centered.
 
-This class ensures there is always whitespace at the sides of the viewport, so any content inside will never touch the edge.
+Content will span the full width of the viewport, up to a maximum set by Sass variables (see [Customization](#customization) below). This means that in small viewports your content will use all the available width, and in larger viewports it will stop growing once it reaches the given limit.
 
-Content will span the full width of the viewport, up to a maximum set by `$bitstyles-content-max-width`. This means that in small viewports your content will use all the available width. In larger viewports your content will stop growing once it reaches the limit of what is comfortably readable, and not keep growing infintely.
+By default this class is available at several sizes, which refer to the max-width that’s enforced: `xs`, `s`, `m`,`l`, and `full`. The padding to the sides of the element is set at increasingly larger sizes based on viewport size for all those content-sizes: `base`, `l`, and `xl` (note that’s not dependent on the content-size, but the viewport size).
 
-Whatever the size of the viewport, content will remain centered.
-
-If this class is used on an element with less than viewport-width, the above conditions will be relative to its parent element instead of the viewport.
-
-<Canvas>
-  <Story name="Content">
+<Canvas isColumn>
+  <Story name="a-content">
     {`
-      <div class="a-content">
-        <p>Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
+      <div class="u-bg-gray-5 u-padding-l-x">
+        <div class="a-content u-bg-white">
+          <p><b>a-content</b> Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="a-content--xs">
+    {`
+      <div class="u-bg-gray-5 u-padding-l-x">
+        <div class="a-content a-content--xs u-bg-white">
+          <p><b>a-content--xs</b> Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="a-content--s">
+    {`
+      <div class="u-bg-gray-5 u-padding-l-x">
+        <div class="a-content a-content--s u-bg-white">
+          <p><b>a-content--s</b> Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="a-content--m">
+    {`
+      <div class="u-bg-gray-5 u-padding-l-x">
+        <div class="a-content a-content--m u-bg-white">
+          <p><b>a-content--m</b> Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="a-content--l">
+    {`
+      <div class="u-bg-gray-5 u-padding-l-x">
+        <div class="a-content a-content--l u-bg-white">
+          <p><b>a-content--l</b> Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="a-content--full">
+    {`
+      <div class="u-bg-gray-5 u-padding-l-x">
+        <div class="a-content a-content--full u-bg-white">
+          <p><b>a-content--full</b> Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream. Sweet chocolate marzipan. Candy canes danish cake carrot cake bonbon. Gummi bears sesame snaps tart bear claw pie chocolate bar. Ice cream candy canes sugar plum cookie. Macaroon biscuit biscuit carrot cake liquorice. Muffin pudding gingerbread powder jelly-o chocolate bar powder jelly beans toffee.</p>
+        </div>
       </div>
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The available content-sizes and their classnames can be customized by overriding the `$bitstyles-content-max-width` Sass map:
+
+```scss
+$max-width: (
+  'xs': 25rem,
+  's': 35rem,
+  'm': 65rem,
+  'l': 85rem,
+  'full': 100%,
+);
+```
+
+The padding that’s applied to all the sizes, and at which breakpoints, can be customized using `$bitstyles-content-padding`:
+
+```scss
+$padding: (
+  'base': size.get('m'),
+  'l': size.get('l'),
+  'xl': size.get('xl'),
+);
+```
+
+The default size that’s applied when only the base class `a-content` is used defaults to size `m`, but can be set using `$bitstyles-content-max-width-base`:
+
+```scss
+$max-width-base: 'm';
+```

@@ -694,6 +694,10 @@ table {
   border-radius: 9999rem;
   white-space: nowrap;
 }
+.a-badge .a-badge__button {
+  margin-right: -0.6rem;
+  margin-left: 0.4rem;
+}
 .a-badge--gray {
   --button-fg: #2e2f47;
   --button-bg: #cfd0e9;
@@ -733,10 +737,6 @@ table {
   --button-bg-hover: #73b935;
   background-color: #eef6e6;
   color: #73b935;
-}
-.a-badge__button {
-  margin-right: -0.6rem;
-  margin-left: 0.4rem;
 }
 .a-bordered-header {
   display: grid;

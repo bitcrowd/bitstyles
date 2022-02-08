@@ -5,40 +5,41 @@ import icons from '../../../../assets/images/icons.svg';
 
 # Badge
 
-Display tags and other filters or categorization.
+Display tags, filters, or categorization.
 
 <Canvas>
   <Story name="Badge">
     {`
-      <span class="a-badge a-badge--gray u-h6 u-font-medium">badge</span>
+      <span class="a-badge a-badge--gray u-h6 u-font-medium">Urgent</span>
+      <span class="a-badge a-badge--gray u-h6 u-font-medium">In progress</span>
     `}
   </Story>
 </Canvas>
 
-Various colours are available, based on the colors you specify in your palette. Here, they’re displayed in a list (there are often multiple tags etc. so this is very common).
+By default `gray`, `brand-1`, `brand-2`, and `danger` colors are available (see [Customization](#customization) section below). Here, they’re displayed in a list (there are often multiple tags or filters so this is very common).
 
 <Canvas>
   <Story name="Badge — color variants">
     {`
       <ul class="a-list-reset u-flex">
         <li class="u-margin-s-right">
-          <span class="a-badge a-badge--gray u-h6 u-font-medium">badge</span>
+          <span class="a-badge a-badge--gray u-h6 u-font-medium">gray</span>
         </li>
         <li class="u-margin-s-right">
-          <span class="a-badge a-badge--brand-1 u-h6 u-font-medium">badge</span>
+          <span class="a-badge a-badge--brand-1 u-h6 u-font-medium">brand-1</span>
         </li>
         <li class="u-margin-s-right">
-          <span class="a-badge a-badge--brand-2 u-h6 u-font-medium">badge</span>
+          <span class="a-badge a-badge--brand-2 u-h6 u-font-medium">brand-2</span>
         </li>
         <li class="u-margin-s-right">
-          <span class="a-badge a-badge--danger u-h6 u-font-medium">badge</span>
+          <span class="a-badge a-badge--danger u-h6 u-font-medium">danger</span>
         </li>
       </ul>
     `}
   </Story>
 </Canvas>
 
-When used as filters, you’ll want the badges to be removable — you can add a button to do that:
+You may want the badges to be removable, for example when used as part of a filter interface. You can add a button to do that (be sure to provide text for users’ AT):
 
 <Canvas>
   <Story name="Badge — with buttons">
@@ -92,3 +93,25 @@ When used as filters, you’ll want the badges to be removable — you can add a
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The available variants can be specified with `$bitstyles-badge-variants`, where the strings you pass must match colors in your color palette:
+
+```scss
+$variants: ('gray', 'danger', 'brand-1', 'brand-2', 'positive');
+```
+
+The keys from those colors that will be used are specified with the `$bitstyles-badge-color` and `$bitstyles-badge-background-color`, and are applied to all variants. With the following settings, the `gray` variant will have color `gray` value `80`, with background color `gray` value `10`. The `danger` variant will have color `danger` with value `80` and background-color `danger` at value `10` etc.
+
+```scss
+$color: '80';
+$background-color: '10';
+```
+
+Padding can be specified with `$bitstyles-badge-padding-horizontal` and ``$bitstyles-badge-padding-vertical`:
+
+```scss
+$padding-vertical: size.get('xxs');
+$padding-horizontal: size.get('m');
+```
