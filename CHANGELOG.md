@@ -9,6 +9,8 @@
 - Two functions (`shadow.to-box-shadow()` and `shadow.to-drop-shadow()`) for translating those shadows (which are specified in Sass' list format) into either CSS `box-shadow` format, or CSS filter `drop-shadow` format. Not necessary for the shadows accessed using `shadows.get()`
 - New `u-shadow` and `u-drop-shadow` utility classes to set box-shadows and drop-shadows respectively
 - The smallscreen version of the Sidebar organism can now be positioned to the left or right side of the screen by overriding `$bitstyles-sidebar-small-location` (defaults to `left`)
+- New `u-min-height` utility class
+- `u-height` utility class is now configurable using `$bitstyles-height-values` and `$bitstyles-height-breakpoints`
 
 ### Fixed
 
