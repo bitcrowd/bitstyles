@@ -1845,8 +1845,8 @@ table {
     grid-template-columns: repeat(100, minmax(0, 1fr));
   }
 }
-.bsu-height-100vh {
-  height: 100vh;
+.bs-u-height-1em {
+  height: 1em;
 }
 .bs-u-items-start {
   align-items: start;
@@ -2836,6 +2836,9 @@ table {
     margin-bottom: -20rem;
     margin-top: -20rem;
   }
+}
+.bs-u-min-height-1em {
+  min-height: 1em;
 }
 .bsu-object-cover {
   display: block;
