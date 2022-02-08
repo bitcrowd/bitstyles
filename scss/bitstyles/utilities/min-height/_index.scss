@@ -1,0 +1,9 @@
+@forward './settings';
+@use './settings';
+@use '../../tools/properties';
+
+@include properties.output(
+  $property-name: 'min-height',
+  $classname-root: 'min-height',
+  $values: settings.$values
+);

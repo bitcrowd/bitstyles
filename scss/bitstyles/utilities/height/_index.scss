@@ -3,3 +3,7 @@
 .#{setup.$namespace}u-height-100vh {
   height: 100vh;
 }
+
+.#{setup.$namespace}u-height-fill {
+  height: -webkit-fill-available;
+}
