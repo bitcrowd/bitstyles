@@ -4,9 +4,9 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Link
 
-Mimic the appearance of standard anchor by applying a classname. This allows other interactive elements (e.g. `<button>`) to visually match your links.
+Mimic the appearance of a standard anchor element by applying a classname. This allows other interactive elements (e.g. `<button>`) to visually match your links.
 
-This is a slightly bad practice — if it looks like a link, it should be a link — that’s sometimes necessary for technical reasons, generally when building a JS app. Actions triggered by javascript should not use anchor elements because no navigation occurs, instead they should use `button` elements, but sometimes that button needs to look like a link (examples are the trigger to displaying a modal, or a smaller de-emphasised cancel button next to your primary “OK” action).
+This is a slightly bad practice — if it looks like a link, it should be a link — that’s sometimes necessary for technical reasons, generally when building a JS app. Actions triggered by JavaScript should not use anchor elements because no navigation occurs, instead they should use `button` elements. But sometimes that button needs to look like a link (examples are the trigger to displaying a modal, or a smaller de-emphasised cancel button next to your primary “OK” action).
 
 <Canvas>
   <Story name="Link">
