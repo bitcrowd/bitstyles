@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # min-height
 
-
+Specify the `min-height` property of an element. Default configuration provides `min-height: 0` and `min-height: stretch` (also known as `fill-available`), with no breakpoint variations. See [customization](#customization) for details on how to change that.
 
 <Canvas>
   <Story name="u-min-height-0">
@@ -14,9 +14,29 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
   </Story>
   <Story name="u-min-height-stretch">
     {`
-      <div style="height:30vh; ">
+      <div style="height:10rem">
         <div class="u-min-height-stretch u-bg-gray-5 u-block">u-min-height-stretch</div>
       </div>
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+Customize the available min-heights by overriding the `$bitstyles-min-height-values` Sass map, providing the name to be used for the class, and the value to use.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/min-height' with (
+  $values: (
+    '10rem': 10rem,
+  ),
+);
+```
+
+Available breakpoint variables can be specified by overriding the `$bitstyles-min-height-breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/min-height' with (
+  $breakpoints: ('m'),
+);
+```

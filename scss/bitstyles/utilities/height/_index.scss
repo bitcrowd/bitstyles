@@ -1,9 +1,17 @@
-@use '../../settings/setup';
+@forward './settings';
+@use './settings';
+@use '../../tools/properties';
 
-.#{setup.$namespace}u-height-100vh {
-  height: 100vh;
-}
+@include properties.output(
+  $property-name: 'height',
+  $classname-root: 'height',
+  $values: settings.$values
+);
 
-.#{setup.$namespace}u-height-fill {
-  height: -webkit-fill-available;
+@each $breakpoint-alias in settings.$breakpoints {
+  @include properties.output(
+    $property-name: 'height',
+    $classname-root: 'height',
+    $values: settings.$values
+  );
 }

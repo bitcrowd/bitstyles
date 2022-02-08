@@ -7,3 +7,11 @@
   $classname-root: 'min-height',
   $values: settings.$values
 );
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include properties.output(
+    $property-name: 'min-height',
+    $classname-root: 'min-height',
+    $values: settings.$values
+  );
+}
