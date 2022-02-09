@@ -367,7 +367,7 @@ $small-box-shadow: size.get('m') 0 size.get('l') rgba(palette.get('brand-1', '10
   0 0 size.get('xl') rgba(palette.get('gray', '90'), 0.1);
 ```
 
-By default the sidebar will animate into view and back out, assuming the classes `.is-off-screen` and `.is-on-screen` will be applied using JS. The classnames and the styles to be applied can be overridden. Be sure to update the `$will-change` to reflect the property you’re transitioning. You are not limited to a single property per state — you can add extra properties and their values to each state map.
+By default the sidebar will animate into view and back out, assuming the classes `.is-off-screen` and `.is-on-screen` will be applied using JS. The classnames and the styles to be applied can be overridden. Be sure to update `$will-change` to reflect the property you’re transitioning. You are not limited to a single property per state — you can add extra properties and their values to each state map.
 
 ```scss
 $will-change: transform;
