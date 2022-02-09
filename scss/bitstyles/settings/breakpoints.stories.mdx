@@ -22,17 +22,17 @@ $breakpoints: (
 ) !default;
 ```
 
-This setup assumes a mobile-first approach, where base styles are be applied to all viewport sizes, then overridden on larger. Therefore the four size-based breakpoints are specified using `min-width` i.e. they apply to viewport sizes larger than the specified value.
+This setup assumes a mobile-first approach, where base styles are being applied to all viewport sizes, then overridden on larger. Therefore the four size-based breakpoints are specified using `min-width` i.e. they apply to viewport sizes larger than the specified value.
 
-The exception is the `s` breakpoint. As we’re applying styles always mobile-first, we don’t need a small-or-larger breakpoint — that’s what we have already when we don’t use any breakpoint. The `s` breakpoint instead applies **only** to small viewport sizes, and is there for the exceptional circumstances where applying exceptions for small viewport sizes (instead of vice versa) results in simpler code with fewer classnames or CSS properies.
+The exception is the `s` breakpoint. As we’re applying styles always mobile-first, we don’t need a small-or-larger breakpoint — that’s what we have already when we don’t use any breakpoint. The `s` breakpoint instead applies **only** to small viewport sizes, and is there for the exceptional circumstances where applying exceptions for small viewport sizes (instead of vice versa) results in simpler code with fewer classnames or CSS properties.
 
 The `motion-ok` media-query assumes a motion-ok-first approach — one where we assume that the user is not ok with animations unless they set their browser preferences otherwise. Whenever you’re applying animations and transitions involving motion (not just opacity), be sure to do so using this media query.
 
 ## Using breakpoints in classnames
 
-Most of the utility classes and many of the components are available at various breakpoints or can be customized to be available, if they’re not by default. See the `customization` section of the docs for the class you’re interested in to see which breakpoints are already available, and how to change that.
+Most of the utility classes and many of the components are available at various breakpoints or can be customized to be available, if they’re not by default. See the `customization` section of the docs for the class you’re interested in, to see which breakpoints are already available, and how to change that.
 
-Breakpoint-limited classnames are suffixed with and `@` symbol and the name of the breakpoint e.g. `.u-classname@xl`, `u-classname@motion-ok`. As we’re using the mobile-first approach, apply your base styles suitable for smaller viewport sizes then provide overrides for larger viewports using classes with breakpoint suffixes.
+Breakpoint-limited classnames are suffixed with an `@` symbol and the name of the breakpoint e.g. `.u-classname@xl`, `u-classname@motion-ok`. As we’re using the mobile-first approach, apply your base styles suitable for smaller viewport sizes then provide overrides for larger viewports using classes with breakpoint suffixes.
 
 ```html
 <div class="u-grid u-gap-m u-grid-cols-6@m">
@@ -81,7 +81,7 @@ If you don’t need to add or rename a media-query, perhaps you can just overrid
 );
 ```
 
-If you need more control, or you want more breakpoints than are present, you’ll need to override the `$breakpoints` map. Note that you cannot add to nor edit the values in the default map, you can only overwrite the entire thing, so be sure to copy the breakpoints you’ll use even if you don’t change them:
+If you need more control, or you want more breakpoints than are present, you’ll need to override the `$breakpoints` map. Note that you cannot add to nor edit the values in the default map, you can only overwrite the entire thing. So be sure to copy the breakpoints you use even if you don’t change them:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/breakpoints' with (

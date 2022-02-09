@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Sizes
 
-Using a central scale of sizes maintains consistency in spacing (most often padding and margins) throughout your project. The default sizes are based on font-size to keep the spacing tied to the typography. For users who view your content at a different font-size, the spacing will remain proprtional and usable.
+Using a central scale of sizes maintains consistency in spacing (most often padding and margins) throughout your project. The default sizes are based on font-size to keep the spacing tied to the typography. For users who view your content at a different font-size, the spacing will remain proportional and usable.
 
 The default size scale:
 
@@ -86,14 +86,14 @@ The size scale is computed from a single starting value. By changing that starti
 
 ### Overriding the size scale
 
-When you need to increase or reduce the number of sizes available, change the names of the sizes, adjust the ratio between each point of the scale, or otherwise have total control, you’ll need to override the `$sizes` Sass map. Note that you cannot add to nor edit the values in the default map, you can only overwrite the entire thing, so be sure to copy the sizes you’ll use even if you don’t change them.
+When you need to increase or reduce the number of sizes available, change the names of the sizes, adjust the ratio between each point of the scale, or otherwise have total control, you’ll need to override the `$sizes` Sass map. Note that you cannot add to nor edit the values in the default map. You can only overwrite the entire thing, so be sure to copy the sizes you’ll use even if you don’t change them.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/layout' with (
   $sizes: (
     '0': 0,
-    '1': 1px,
     // add some pixel-based sizes for small adjustments
+    '1': 1px,
     'xxxs': 0.125rem,
     'xxs': 0.25rem,
     'xs': 0.5rem,
