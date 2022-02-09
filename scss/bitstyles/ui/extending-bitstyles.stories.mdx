@@ -22,49 +22,48 @@ Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your proj
 
 At the end of the `@use` statements importing from `bitstyles/base`, you can add your own base styles:
 
-  ```scss
+```scss
+//
+// Base /////////////////////////////////////////
 
-  //
-  // Base /////////////////////////////////////////
+@use 'bitstyles/base/anchor';
+@use 'bitstyles/base/figure';
+// …
+@use 'bitstyles/base/select';
+@use 'bitstyles/base/typography' as base-typography;
 
-  @use 'bitstyles/base/anchor';
-  @use 'bitstyles/base/figure';
-  // …
-  @use 'bitstyles/base/select';
-  @use 'bitstyles/base/typography' as base-typography;
-
-  @use './base/local-base-style';
-  ```
+@use './base/local-base-style';
+```
 
 At the end of the `@use` statements importing from `bitstyles/organisms`, you can add your own components:
 
-  ```scss
-  //
-  // Organisms ///////////////////////////////////
+```scss
+//
+// Organisms ///////////////////////////////////
 
-  @use 'bitstyles/organisms/modal';
-  @use 'bitstyles/organisms/navbar';
-  @use 'bitstyles/organisms/sidebar';
-  @use 'bitstyles/organisms/notification-center';
-  @use 'bitstyles/organisms/table';
-  @use 'bitstyles/organisms/ui-group';
+@use 'bitstyles/organisms/modal';
+@use 'bitstyles/organisms/navbar';
+@use 'bitstyles/organisms/sidebar';
+@use 'bitstyles/organisms/notification-center';
+@use 'bitstyles/organisms/table';
+@use 'bitstyles/organisms/ui-group';
 
-  // …
+// …
 
-  @use './components/local-component';
-  ```
+@use './components/local-component';
+```
 
 At the end of the `@use` statements importing from `bitstyles/utilities`, you can add your own utility classes:
 
-  ```scss
-  //
-  // Utilities ////////////////////////////////////
+```scss
+//
+// Utilities ////////////////////////////////////
 
-  @use 'bitstyles/utilities/absolute-center';
-  @use 'bitstyles/utilities/absolute-cover';
-  // …
-  @use 'bitstyles/utilities/typography';
-  @use 'bitstyles/utilities/z-index';
+@use 'bitstyles/utilities/absolute-center';
+@use 'bitstyles/utilities/absolute-cover';
+// …
+@use 'bitstyles/utilities/typography';
+@use 'bitstyles/utilities/z-index';
 
-  @use './utilities/local-utility';
-  ```
+@use './utilities/local-utility';
+```
