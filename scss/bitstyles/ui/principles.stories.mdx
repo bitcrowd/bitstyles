@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Principles" />
+
+# Principles
+
+## Layers
+
+As CSS is source order-dependent, the order in which styles appear is important. Configuration comes first, then:
+
+1. *Base styles* Styles applied to elements, no classnames.
+1. *Components* Styles applied to encapsulated blocks of UI, like buttons, dropdown menus, card interfaces, modals. Always classnames.
+1. *Utilities* Apply a single CSS property, useful as an override for default/component styles, or to avoid creating a whole new component module for a common or simple task.
+
+## Components
+
+The components layer of bitstyles follows [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) principles, and is divided into three layers: Atoms, Molecules, and Organisms.
+
+Just because bitstyles follow these principles, doesn’t mean your components need to! Though for larger component systems you might find it a useful organisation tool.
+
+## Classname prefixes
+
+Bitstyles prefixes classnames with a single letter that indicates which layer the classname belongs to. This is for developer convenience, so you can quickly recognize whether you’re looking at a component or a utility.
+
+- `.a-`, `.m-`, `.o-` for Atoms, Molecules, Organisms (all components)
+- `.u-` Utility class
+
+## Mobile-first
+
+Bitstyles is of course designed to be [responsive](https://alistapart.com/article/responsive-web-design/) out of the box. It assumes a mobile-first approach where all styles are applied to all screensizes, unless you override them by applying styles for larger viewports.
+
+### Breakpoint suffixes
+
+Larger viewports are targetting by appending an `@` symbol followed by the name of the breakpoint. Breakpoints provided in the default configuration are: `s`, `m`, `l`, `xl`, `hidpi`, `landscape`, `portrait`, and `motion-ok`. All of those can be used as suffixes _if the module has been configured to be available at the that breakpoint_. Check the docs for the module you’re using, and override the module’s `$breakpoint` variable if necessary.
+
+## Design tokens & helper functions
+
+Common design tokens are managed centrally, and used throughout the library. Changing a design token will therefore update all the places it’s used, so we maintain consistency.
+
+So far, the central design tokens include:
+
+- Colors
+- Typography (fonts & font-sizes)
+- Spacing sizes
+- Breakpoints
+- Shadows
+- Transitions
+
+Most of these have helper functions and mixins to make it easier to use them to configure your bitstyles setup. Some also provide generator functions so you don’t have to define these things by hand. Check the docs for each for details.
