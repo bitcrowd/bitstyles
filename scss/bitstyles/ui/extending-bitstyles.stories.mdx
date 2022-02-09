@@ -14,9 +14,9 @@ There are three main layers you need to be aware of:
 1. Components
 1. Utility classes
 
-When adding your own base styles, be sure to add them at the end of the base styles in bitstyles. When adding your own components, they should go at the end of the bitstyles components, and your own utility classes should go at the end of the bitstyles utility classes.
+When adding your own base styles, be sure to add them at the end of the base styles section in bitstyles. When adding your own components, they should go at the end of the bitstyles components, and your own utility classes should go at the end of the bitstyles utility classes.
 
-To that that, you need to be `@use` ing each of the bitstyles modules individually, not importing the whole library in one line.
+To do that, you need to be `@use` ing each of the bitstyles modules individually, not importing the whole library in one line.
 
 Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`).
 
