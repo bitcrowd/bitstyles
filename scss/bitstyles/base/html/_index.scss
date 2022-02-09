@@ -1,2 +1,13 @@
 @forward 'settings';
-@forward 'html';
+@use '../../settings/typography';
+@use './settings';
+
+/* stylelint-disable selector-max-type */
+html {
+  background: settings.$background-color;
+  color: settings.$color;
+  font-family: typography.$font-family-body;
+  line-height: typography.$line-height-base;
+  -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
+}
+/* stylelint-enable selector-max-type */

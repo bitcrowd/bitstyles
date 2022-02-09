@@ -1,2 +1,69 @@
 @forward 'settings';
-@forward 'card';
+@use 'sass:map';
+@use 'sass:math';
+@use './settings';
+@use '../../tools/properties';
+@use '../../tools/media-query';
+
+@mixin card($padding) {
+  padding: $padding;
+  overflow: hidden;
+  border-radius: settings.$border-radius;
+  box-shadow: settings.$box-shadow;
+}
+
+@mixin card-header($spacing) {
+  margin: (-$spacing) (-$spacing) $spacing;
+  padding: math.div($spacing, 2) $spacing;
+  background-color: settings.$header-background-color;
+}
+
+@function modifier-name($name) {
+  @if $name == 'base' {
+    @return '';
+  } @else {
+    @return '-#{$name}';
+  }
+}
+
+@each $size, $padding-size in settings.$sizes {
+  $size-name: modifier-name($size);
+
+  @include properties.output-block(
+    $classname-prefix: 'a',
+    $classname-root: 'card#{$size-name}'
+  ) {
+    @include card($padding-size);
+  }
+
+  @include properties.output-block(
+    $classname-prefix: 'a',
+    $classname-root: 'card#{$size-name}__header'
+  ) {
+    @include card-header($padding-size);
+  }
+}
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.get($breakpoint-alias) {
+    @each $size, $padding-size in settings.$sizes {
+      $size-name: modifier-name($size);
+
+      @include properties.output-block(
+        $classname-prefix: 'a',
+        $classname-root: 'card#{$size-name}',
+        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      ) {
+        @include card($padding-size);
+      }
+
+      @include properties.output-block(
+        $classname-prefix: 'a',
+        $classname-root: 'card#{$size-name}__header',
+        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      ) {
+        @include card-header($padding-size);
+      }
+    }
+  }
+}

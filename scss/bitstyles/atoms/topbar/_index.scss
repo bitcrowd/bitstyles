@@ -1,2 +1,12 @@
 @forward 'settings';
-@forward 'topbar';
+@use './settings';
+@use '../../settings/setup';
+
+.#{setup.$namespace}a-topbar {
+  position: settings.$position;
+  z-index: settings.$z-index;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: settings.$vertical-padding settings.$horizontal-padding;
+}
