@@ -10,9 +10,9 @@ You could be following some or all of these principles in projects already, and 
 
 As CSS is source order-dependent, the order in which styles appear is important. Configuration comes first, then:
 
-1. _Base styles_ Styles applied to elements, no classnames.
-1. _Components_ Styles applied to encapsulated blocks of UI, like buttons, dropdown menus, card interfaces, modals. Always classnames.
-1. _Utilities_ Apply a single CSS property, useful as an override for default/component styles, or to avoid creating a whole new component module for a common or simple task.
+1. **Base styles** Styles applied to elements, no classnames.
+1. **Components** Styles applied to encapsulated blocks of UI, like buttons, dropdown menus, card interfaces, modals. Always classnames.
+1. **Utilities** Apply a single CSS property, useful as an override for default/component styles, or to avoid creating a whole new component module for a common or simple task.
 
 ## Components
 
@@ -33,7 +33,7 @@ Bitstyles is [responsive](https://alistapart.com/article/responsive-web-design/)
 
 ### Breakpoint suffixes
 
-Larger viewports are targeted by appending an `@` symbol followed by the name of the breakpoint. Breakpoints provided in the default configuration are: `s`, `m`, `l`, `xl`, `hidpi`, `landscape`, `portrait`, and `motion-ok`. All of those can be used as suffixes _if the module has been configured to be available at the that breakpoint_. Check the docs for the module you’re using, and override the module’s `$breakpoint` variable if necessary.
+Larger viewports are targeted by appending an `@` symbol followed by the name of the breakpoint to a classname. Breakpoints provided in the default configuration are: `s`, `m`, `l`, `xl`, `hidpi`, `landscape`, `portrait`, and `motion-ok`. All of those can be used as suffixes _if the module has been configured to be available at the that breakpoint_. Check the docs for the module you’re using, and override the module’s `$breakpoint` variable if necessary.
 
 See the [breakpoints documentation](/docs/design-tokens-breakpoints--page) for more information on how to configure breakpoints, and how to use them in your Sass.
 
@@ -51,3 +51,9 @@ The central design tokens include:
 - [Typography](/docs/design-tokens-typography--page)
 
 These provide helper functions and mixins to make it easier to use them in your Sass, and to make configuring your bitstyles setup easier. Some also provide generator functions so you don’t have to define these things by hand. Check the documentation for each for details.
+
+## Next steps
+
+If you’re getting started with using bitstyles as your styling library in a project, go take a look at [Extending bitstyles](/docs/extending-bitstyles--page)
+
+If you’re here for the ready-to-use UI components, go take a look at the [Components library](/docs/ui-introduction--page)

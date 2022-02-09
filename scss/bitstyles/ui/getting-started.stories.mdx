@@ -2,6 +2,8 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Getting started" />
 
+# Getting started
+
 ## Installing
 
 Install bitstyles using yarn or npm:
@@ -18,6 +20,10 @@ Bitstyles is a [Sass](https://sass-lang.com) library, so you’ll need to use Sa
 
 ## Using bitstyles
 
+Modern Sass offers a few ways of importing Sass. Which you should choose depends on the complexity of your configuration requirements. The following approaches are listed in order of complexity.
+
+### Default configuration
+
 In your main Sass file (e.g. `index.scss`), import bitstyles using `@use`. The exact path you use will be dependent on your setup, but assuming a default setup and install location:
 
 ```scss
@@ -32,9 +38,9 @@ You may need to provide your sass installation with the path for bitstyles’ sa
 node_modules/bitstyles/scss
 ```
 
-## Configuration
+### Simple configuration
 
-Commonly you’ll want to change some configuration — colors, typography, sizes etc. When making changes to these global design tokens only, it can be done pretty simply in the `@use` statement:
+Commonly you’ll want to change configuration — colors, typography, sizes etc. When making changes to these global design tokens, it can be done in the `@use` statement:
 
 ```scss
 @use '~bitstyles/scss/bitstyles' with (
@@ -48,11 +54,32 @@ Commonly you’ll want to change some configuration — colors, typography, size
 );
 ```
 
-If you’re changing a lot of configuration, including component and utitlity classes, you may want to switch to configuring bitstyles on a module basis. A few things to note:
+You could keep going like that, and reconfigure every module in bitstyles. But that single file starts to get unwieldy.
+
+If you’re configuring only global design tokens, you may prefer to `@use` each settings file then import the library in one. Note the variable names must *lose the module-name prefix* because the module’s scope is clear e.g. `$color-palette-text` is now `$text`.
+
+```scss
+
+@use '~bitstyles/scss/bitstyles/settings/color-palette' with (
+  $text: #fff,
+ /* lots of options */
+);
+@use '~bitstyles/scss/bitstyles/settings/layout' with (
+  $size-base: 1.2rem,
+  /* lots of options */
+);
+@use '~bitstyles/scss/bitstyles';
+```
+
+### Advanced configuration
+
+If you’re changing a lot of configuration, it’s recommended you switch to configuring bitstyles on a per-module basis.
+
+A few things to note:
 
 - you’ll need to import every part of bitstyles individually, whether you’re overriding variables there or not
-- you can use that to selectively exclude modules you do not need, to keep your bundle size down
-- the variable names must lose the module-name prefix (e.g. `$color-palette-text` is now just `$text`, because the module’s scope is already clear)
+- you could use that to selectively exclude modules you don’t need, to keep your bundle size down
+- the variable names must *lose the module-name prefix* because the module’s scope is clear e.g. `$color-palette-text` is now `$text`
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/color-palette' with (
@@ -63,7 +90,7 @@ If you’re changing a lot of configuration, including component and utitlity cl
   $size-base: 1.2rem
 );
 
-// …
+/* … */
 
 @use '~bitstyles/scss/bitstyles/utilities/margin' with (
   $breakpoints: (
@@ -73,15 +100,15 @@ If you’re changing a lot of configuration, including component and utitlity cl
 );
 ```
 
-## Legacy `@import`
+### Legacy `@import`
 
-Sass still supports the `@import` directive. Though it’ll be deprecated and gone soon, bitstyles can for now still be configured and built using this method. It’s really recommended that you use the `@use` approach shown above.
+Although deprectaed, Sass still supports the `@import` directive. Bitstyles can for now still be configured and built using this method, but it’s recommended that you use the `@use` approach shown above.
 
 ```scss
 @import '~bitstyles/scss/bitstyles';
 ```
 
-You can also configure bitstyles this way, by defining variables before importing. Note the variables need to be prefixed with `bitstyles-`:
+You can configure bitstyles by defining variables before importing. Note the variables need to be prefixed with `bitstyles-`:
 
 ```scss
 $bitstyles-color-palette-text: #fff;
@@ -92,4 +119,24 @@ $bitstyles-margin-breakpoints: ('l', 'xl');
 @import '~bitstyles/scss/bitstyles';
 ```
 
-If you don’t need the whole library, after configuration you could import only the modules you need, instead of importing the whole library.
+If you don’t need all of bitstyles, instead of importing the whole library you could define your variables then import the modules you need.
+
+```scss
+$bitstyles-color-palette-text: #fff;
+$bitstyles-color-palette-background: #000;
+$bitstyles-layout-size-base: 1.2rem;
+$bitstyles-margin-breakpoints: ('l', 'xl');
+
+@import '~bitstyles/scss/bitstyles/settings/color-palette';
+@import '~bitstyles/scss/bitstyles/settings/layout';
+
+/* … */
+
+@import '~bitstyles/scss/bitstyles/settings/color-palette';
+```
+
+## Next steps
+
+If you’re getting started with using bitstyles as your styling library in a project, go take a look at [Principles](/docs/principles--page)
+
+If you’re here for the ready-to-use UI components, go take a look at the [Components library](/docs/ui-introduction--page)

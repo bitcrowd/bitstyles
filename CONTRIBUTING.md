@@ -2,12 +2,6 @@
 
 ## Getting started
 
-Bitstyles requires `node v14.16.0` or higher. If you have [nvm](https://github.com/creationix/nvm) installed:
-
-```sh
-nvm use
-```
-
 The project uses [yarn](https://yarnpkg.com/en/docs/install) as its package manager.
 
 Clone this repository, and install packages:

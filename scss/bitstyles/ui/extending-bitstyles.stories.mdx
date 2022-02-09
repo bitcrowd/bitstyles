@@ -16,11 +16,9 @@ There are three main layers you need to be aware of:
 
 When adding your own base styles, be sure to add them at the end of the base styles section in bitstyles. When adding your own components, they should go at the end of the bitstyles components, and your own utility classes should go at the end of the bitstyles utility classes.
 
-To do that, you need to be `@use` ing each of the bitstyles modules individually, not importing the whole library in one line.
+To do that, you need to be `@use` ing each of the bitstyles modules individually, not importing the whole library in one line (see [Getting started](/docs/getting-started--page#advanced-configuration)).
 
-Copy the contents of the bitstyles manifest file (`bitstyles.scss`) to your project’s own sass manifest file (e.g. `app.scss`, `main.scss`).
-
-At the end of the `@use` statements importing from `bitstyles/base`, you can add your own base styles:
+At the end of the `@use` statements importing from `bitstyles/base`, add your own base styles:
 
 ```scss
 //
@@ -32,7 +30,7 @@ At the end of the `@use` statements importing from `bitstyles/base`, you can add
 @use 'bitstyles/base/select';
 @use 'bitstyles/base/typography' as base-typography;
 
-@use './base/local-base-style';
+@use './base/local-base-style'; /* extra base styles */
 ```
 
 At the end of the `@use` statements importing from `bitstyles/organisms`, you can add your own components:
@@ -50,7 +48,7 @@ At the end of the `@use` statements importing from `bitstyles/organisms`, you ca
 
 // …
 
-@use './components/local-component';
+@use './components/local-component'; /* extra components */
 ```
 
 At the end of the `@use` statements importing from `bitstyles/utilities`, you can add your own utility classes:
@@ -65,5 +63,5 @@ At the end of the `@use` statements importing from `bitstyles/utilities`, you ca
 @use 'bitstyles/utilities/typography';
 @use 'bitstyles/utilities/z-index';
 
-@use './utilities/local-utility';
+@use './utilities/local-utility'; /* extra utilities */
 ```
