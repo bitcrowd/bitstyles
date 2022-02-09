@@ -11,8 +11,8 @@
   z-index: 1;
   top: 0;
   bottom: 0;
-  left: 0;
-  width: settings.$small-width;
+  #{settings.$small-location}: 0;
+  width: settings.$small-width; /* stylelint-disable-line declaration-empty-line-before */
   box-shadow: settings.$small-box-shadow;
 
   @include media-query.get('motion-ok') {

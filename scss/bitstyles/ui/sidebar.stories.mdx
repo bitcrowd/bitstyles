@@ -346,3 +346,38 @@ Uses a fullwidth dropdown to fit with no overlap.
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The width of the sidebar can be overridden for large and small screens:
+
+```scss
+$large-width: 15rem;
+$small-width: 80vw;
+```
+
+For the small-screen version, there are several more variables that set appearance and animations.
+
+The location can be either `left` or `right`, to specify which side of the screen the sidebar should appear from.
+
+```scss
+$small-location: left;
+$small-box-shadow: size.get('m') 0 size.get('l') rgba(palette.get('brand-1', '100'), 0.1),
+  size.get('l') 0 size.get('m') rgba(palette.get('gray', '90'), 0.07),
+  0 0 size.get('xl') rgba(palette.get('gray', '90'), 0.1);
+```
+
+By default the sidebar will animate into view and back out, assuming the classes `.is-off-screen` and `.is-on-screen` will be applied using JS. The classnames and the styles to be applied can be overridden. Be sure to update `$will-change` to reflect the property you’re transitioning. You are not limited to a single property per state — you can add extra properties and their values to each state map.
+
+```scss
+$will-change: transform;
+$transition: transform 0.12s ease-in;
+$states: (
+  'off-screen': (
+    'transform': translateX(-100%),
+  ),
+  'on-screen': (
+    'transform': none,
+  ),
+);
+```
