@@ -6,14 +6,13 @@
   width: settings.$large-width;
 }
 
-/* stylelint-disable declaration-empty-line-before */
 .#{setup.$namespace}o-sidebar--small {
   position: fixed;
   z-index: 1;
   top: 0;
   bottom: 0;
   #{settings.$small-location}: 0;
-  width: settings.$small-width;
+  width: settings.$small-width; /* stylelint-disable-line declaration-empty-line-before */
   box-shadow: settings.$small-box-shadow;
 
   @include media-query.get('motion-ok') {
@@ -33,4 +32,3 @@
     }
   }
 }
-/* stylelint-enable declaration-empty-line-before */
