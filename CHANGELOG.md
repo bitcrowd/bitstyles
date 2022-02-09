@@ -12,6 +12,7 @@
 ### Fixed
 
 - `u-bg` classes will now be output with the correct breakpoint suffix
+- `$bitstyles-font-family-breakpoints` will now correctly output media-queries
 
 ### Changed
 

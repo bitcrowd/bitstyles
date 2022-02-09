@@ -41,7 +41,7 @@
 );
 
 @each $breakpoint in settings.$family-breakpoints {
-  @include media-query.media-query($breakpoint) {
+  @include media-query.get($breakpoint) {
     @include properties.output(
       $property-name: 'font-family',
       $classname-root: 'font',

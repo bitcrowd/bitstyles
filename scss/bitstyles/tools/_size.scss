@@ -5,7 +5,7 @@
 //
 // **Returns requested size/length from the global `$bitstyles-spacing-sizes` map**.
 //
-// e.g. `padding: spacing('s');`
+// e.g. `padding: size.get('s');`
 //
 // Default naming of sizes: `s`, `m`, `l` (suggested: `xs`,
 // `xxs` etc. for further variants)
