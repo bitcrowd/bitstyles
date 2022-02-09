@@ -51,9 +51,7 @@ const ColorItem = (label, color) =>
 
 const ColorRow = ({ palette }) =>
   `
-    <ul class="u-flex-grow-1 u-grid a-list-reset" style="grid-template-columns: repeat(${
-      Object.keys(palette).length
-    }, 1fr)">
+    <ul class="u-flex-grow-1 u-grid u-grid-cols-4 a-list-reset">
       ${Object.keys(palette)
         .map((color) => {
           const colorNameParts = color.split('.');
@@ -66,19 +64,18 @@ const ColorRow = ({ palette }) =>
 
 const ColorPalette = () =>
   `
-    <ul class="a-list-reset u-grid u-gap-l">
+    <ul class="a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l">
       ${objectToChunkedArray(colorPalette, 18)
         .map((palette) => {
           const name = Object.keys(palette)[0].split('.')[0];
           return `
-          <li class="u-margin-xl-bottom u-flex u-items-end">
+          <li class="u-margin-xl-bottom u-grid u-gap-m">
+            ${ColorRow({ palette })}
             <h3
-              class="u-margin-0-bottom u-margin-m-right u-text-right u-line-height-min"
-              style="min-width: 9rem"
+              class="u-margin-0-bottom u-margin-m-right u-line-height-min"
             >
               ${name}
             </h3>
-            ${ColorRow({ palette })}
           </li>
         `;
         })
@@ -89,6 +86,6 @@ const ColorPalette = () =>
 export { ColorPalette };
 
 export default {
-  title: 'Design Tokens/Colors',
+  title: 'Base/Colors',
   component: ColorPalette,
 };

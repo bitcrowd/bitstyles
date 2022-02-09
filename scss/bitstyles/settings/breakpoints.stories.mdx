@@ -1,0 +1,96 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Breakpoints" />
+
+# Breakpoints
+
+Bitstyles provides a central Sass map of global media queries that are then used to make almost all utilities, and many components, available limited to specified breakpoints.
+
+Default values are:
+
+```scss
+$breakpoints: (
+  's': 'screen and (max-width: 29.9375em)',
+  'm': 'screen and (min-width: 30em)',
+  'l': 'screen and (min-width: 55em)',
+  'xl': 'screen and (min-width: 95em)',
+  'hidpi':
+    '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)',
+  'landscape': 'all and (orientation:landscape)',
+  'portrait': 'all and (orientation:portrait)',
+  'motion-ok': 'screen and (prefers-reduced-motion: no-preference)',
+) !default;
+```
+
+This setup assumes a mobile-first approach, where base styles are being applied to all viewport sizes, then overridden on larger. Therefore the four size-based breakpoints are specified using `min-width` i.e. they apply to viewport sizes larger than the specified value.
+
+The exception is the `s` breakpoint. As we’re applying styles mobile-first, we don’t need a “small-or-larger” breakpoint — that’s what we have already have when we don’t use any breakpoints. The `s` breakpoint instead applies **only** to small viewport sizes, and is there for the exceptional circumstances where applying overrides for small viewport sizes (instead of vice versa) results in simpler code with fewer classnames or CSS properties.
+
+The `motion-ok` media-query assumes a motion-ok-first approach — one where we assume that the user is not ok with animations unless they set their browser preferences otherwise. Whenever you’re applying animations and transitions involving motion (not just opacity), be sure to do so using this media query.
+
+## Using breakpoints in classnames
+
+Most of the utility classes and many of the components are available at various breakpoints, or can be customized to be available if they’re not by default. See the `customization` section of the docs for the class you’re interested in, to see which breakpoints are already available, and how to change that.
+
+Breakpoint-limited classnames are suffixed with an `@` symbol and the name of the breakpoint e.g. `.u-classname@xl`, `u-classname@motion-ok`. As we’re using the mobile-first approach, apply your base styles suitable for smaller viewport sizes then provide overrides for larger viewports using classes with breakpoint suffixes.
+
+```html
+<div class="u-grid u-gap-m u-grid-cols-6@m">
+  <!--
+    Insert content blocks here, they’ll display in a single column on smaller viewports,
+    and six columns in viewports larger than the `m` breakpoint
+  -->
+</div>
+```
+
+## Using breakpoints in Sass
+
+Use the `media-query.get()` mixin for access to the media queries. In your component Sass file first import the `media-query` tools, then use the `get()` mixin, passing the breakpoint name:
+
+```scss
+@use '~bitstyles/scss/bitstyles/tools/media-query';
+
+@include media-query.get('m') {
+  .component-class {
+    /* styles */
+  }
+}
+```
+
+This will output:
+
+```css
+@media screen and (min-width: 30em) {
+  .component-class {
+    /* styles */
+  }
+}
+```
+
+## Customization
+
+Override the values for the available breakpoints at the start of your Sass manifest file.
+
+If you don’t need to add or rename a media-query, you may be able to achieve what you need by overriding the values of the variables used to build the default breakpoints. This will alter the boundaries at which `s` becomes `m`, `m` becomes `l`, and so on:
+
+```scss
+@use '~bitstyles/scss/bitstyles/settings/breakpoints' with (
+  $s-m-boundary: 12em,
+  $m-l-boundary: 85em,
+  $l-xl-boundary: 125em
+);
+```
+
+If you need more control, or you want more breakpoints than are present, you’ll need to override the `$breakpoints` map. Note that you cannot add to nor edit the values in the default map, you can only overwrite the entire thing. Be sure to copy the breakpoints you use even if you don’t change them:
+
+```scss
+@use '~bitstyles/scss/bitstyles/settings/breakpoints' with (
+  $breakpoints: (
+    'xs': 'screen and (max-width: 19.9875em)',
+    's': 'screen and (max-width: 29.9875em)',
+    'm': 'screen and (min-width: 30em)',
+    'l': 'screen and (min-width: 55em)',
+    'xl': 'screen and (min-width: 95em)',
+  )
+);
+```

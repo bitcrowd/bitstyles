@@ -1,0 +1,108 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Sizes" />
+
+# Sizes
+
+Using a central scale of sizes maintains consistency in spacing (most often padding and margins) throughout your project. The default sizes are based on font-size to keep the spacing tied to the typography. For users who view your content at a different font-size, the spacing will remain proportional and usable.
+
+The default size scale:
+
+```scss
+$sizes: (
+  '0': 0,
+  'xxxs': 0.1rem,
+  'xxs': 0.2rem,
+  'xs': 0.4rem,
+  's': 0.6rem,
+  'm': 0.8rem,
+  'l': 1rem,
+  'xl': 1.6rem,
+  'xxl': 3.2rem,
+  'xxxl': 6.4rem,
+);
+```
+
+## Using the sizes in Sass
+
+Use the `size.get()` helper function for accessing sizes in the sizing scale. In your component Sass file first import the `size` tools, then use the `get()` function, passing the size name:
+
+```scss
+@use '~bitstyles/scss/bitstyles/tools/size';
+
+.component-class::after {
+  margin-left: size.get('xl');
+}
+```
+
+With the default setup this will output:
+
+```css
+.component-class::after {
+  margin-left: 1.6rem;
+}
+```
+
+### `size.get()` parameters
+
+| Name  | Type   | Description          |
+| ----- | ------ | -------------------- |
+| $size | string | The name of the size |
+
+## Using the sizes in classes
+
+Use the appropriate utility classes to apply spacing. See the documentation of each class for information on defaults & customization:
+
+- [`u-margin`](/docs/utilities-margin--margin-0)
+- [`u-padding`](/docs/utilities-padding--padding-0)
+
+## Customization
+
+### Base size
+
+The size scale is computed from a single starting value. By changing that starting value you can change the whole scale:
+
+```scss
+@use '~bitstyles/scss/bitstyles/settings/layout' with (
+  $size-base: 1rem
+);
+
+/* sizes:
+
+(
+  "0": 0,
+  "xxxs": 0.125rem,
+  "xxs": 0.25rem,
+  "xs": 0.5rem,
+  "s": 0.75rem,
+  "m": 1rem,
+  "l": 1.25rem,
+  "xl": 2rem,
+  "xxl": 4rem,
+  "xxxl": 8rem,
+)
+*/
+```
+
+### Overriding the size scale
+
+When you need to increase or reduce the number of sizes available, change the names of the sizes, adjust the ratio between each point of the scale, or otherwise have total control, you’ll need to override the `$sizes` Sass map. Note that you cannot add to nor edit the values in the default map. You can only overwrite the entire thing, so be sure to copy the sizes you’ll use even if you don’t change them.
+
+```scss
+@use '~bitstyles/scss/bitstyles/settings/layout' with (
+  $sizes: (
+    '0': 0,
+    // add some pixel-based sizes for small adjustments
+    '1': 1px,
+    'xxxs': 0.125rem,
+    'xxs': 0.25rem,
+    'xs': 0.5rem,
+    's': 0.75rem,
+    'm': 1rem,
+    'l': 1.25rem,
+    'xl': 2rem,
+    'xxl': 4rem,
+    'xxxl': 8rem,
+  )
+);
+```
