@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-<Meta title="Extending bitstyles" />
+<Meta title="Introduction/Extending bitstyles" />
 
 # Extending Bitstyles
 
@@ -16,7 +16,7 @@ There are three main layers you need to be aware of:
 
 When adding your own base styles, be sure to add them at the end of the base styles section in bitstyles. When adding your own components, they should go at the end of the bitstyles components, and your own utility classes should go at the end of the bitstyles utility classes.
 
-To do that, you need to be `@use` ing each of the bitstyles modules individually, not importing the whole library in one line (see [Getting started](/docs/getting-started--page#advanced-configuration)).
+To do that, you need to be `@use` ing each of the bitstyles modules individually, not importing the whole library in one line (see [Getting started](/docs/introduction-getting-started--page)).
 
 At the end of the `@use` statements importing from `bitstyles/base`, add your own base styles:
 
@@ -65,3 +65,11 @@ At the end of the `@use` statements importing from `bitstyles/utilities`, you ca
 
 @use './utilities/local-utility'; /* extra utilities */
 ```
+
+## Next steps
+
+If you’re here for the ready-to-use UI components, go take a look at the [UI components](/docs/introduction-ui-components--page)
+
+Familiarize yourself with the design tokens bitstyles helps manage, starting at [Animation](/docs/design-tokens-animation--page)
+
+All components and utility classes are listed in the left-hand sidebar, look for examples and further documentation there.
