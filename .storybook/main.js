@@ -8,7 +8,14 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-a11y',
-    '@storybook/addon-postcss',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
     {
       name: '@storybook/addon-essentials',
       options: {
@@ -30,7 +37,7 @@ module.exports = {
           options: {
             importLoaders: 1,
             modules: {
-              compileType: 'icss',
+              mode: 'icss',
             },
           },
         },
