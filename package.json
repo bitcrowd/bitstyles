@@ -10,7 +10,7 @@
     "lint:js": "eslint --ignore-path .gitignore --ext js,jsx . && yarn prettier:js",
     "lint:docs": "prettier --ignore-path .gitignore --check './**/*.{md,mdx}'",
     "lint": "yarn lint:scss && yarn lint:js && yarn lint:docs",
-    "prettier:js": "prettier --ignore-path .gitignore --check './**/*.js'",
+    "prettier:js": "prettier --ignore-path .gitignore --check './**/*.{js,jsx,json}'",
     "prettier:scss": "prettier --ignore-path .gitignore --check './**/*.scss'",
     "test": "script/test",
     "checks": "yarn lint && yarn prettier && yarn css:stats && yarn test",
