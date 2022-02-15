@@ -1,0 +1,6 @@
+@use '../../tools/palette';
+@use '../../tools/size';
+
+$padding: size.get('m') !default;
+$background: palette('background') !default;
+$border: none !default;
