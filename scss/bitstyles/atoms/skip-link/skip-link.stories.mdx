@@ -1,0 +1,18 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Atoms/Skip link" />
+
+# Skip link
+
+A skip-to-content link for keyboard users, especially those with litlle or no vision, enabling them to skip your navigation and get straight to the content.
+
+Be sure the id you reference exists!
+
+<Canvas>
+  <Story name="a-skip-link">
+    {`
+      <a href="#main">Skip to content</a>
+      <div id="main">Your main content here, after some other content that gets repeated on every page (navigation etc.)</div>
+    `}
+  </Story>
+</Canvas>

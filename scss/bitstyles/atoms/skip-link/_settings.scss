@@ -2,5 +2,6 @@
 @use '../../tools/size';
 
 $padding: size.get('m') !default;
-$background: palette('background') !default;
-$border: none !default;
+$background: palette.get('white') !default;
+$color: palette.get('black') !default;
+$border: size.get('xxs') palette.get('black') solid !default;
