@@ -1649,6 +1649,21 @@ table {
   border-bottom: red;
   border-top: red;
 }
+.bs-u-border-radius-m {
+  border-radius: 10rem;
+}
+.bs-u-border-radius-m-tr {
+  border-top-right-radius: 10rem;
+}
+.bs-u-border-radius-m-br {
+  border-bottom-right-radius: 10rem;
+}
+.bs-u-border-radius-m-bl {
+  border-bottom-left-radius: 10rem;
+}
+.bs-u-border-radius-m-tl {
+  border-top-left-radius: 10rem;
+}
 .bs-u-shadow-default {
   box-shadow: 0 2.5rem 5rem red, 0 5rem 10rem red;
 }
@@ -3413,21 +3428,6 @@ table {
   .bsu-relative\@m {
     position: relative;
   }
-}
-.bsu-border-radius-0 {
-  border-radius: 0;
-}
-.bsu-border-radius-0-tr {
-  border-top-right-radius: 0;
-}
-.bsu-border-radius-0-br {
-  border-bottom-right-radius: 0;
-}
-.bsu-border-radius-0-bl {
-  border-bottom-left-radius: 0;
-}
-.bsu-border-radius-0-tl {
-  border-top-left-radius: 0;
 }
 .bs-u-row-start-100 {
   grid-row-start: 100;

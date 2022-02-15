@@ -1734,6 +1734,21 @@ table {
   border-bottom: 1px solid #cfd0e9;
   border-top: 1px solid #cfd0e9;
 }
+.u-border-radius-0 {
+  border-radius: 0;
+}
+.u-border-radius-0-tr {
+  border-top-right-radius: 0;
+}
+.u-border-radius-0-br {
+  border-bottom-right-radius: 0;
+}
+.u-border-radius-0-bl {
+  border-bottom-left-radius: 0;
+}
+.u-border-radius-0-tl {
+  border-top-left-radius: 0;
+}
 .u-shadow-default {
   box-shadow: 0 0.5rem 0.5rem rgba(0, 13, 255, 0.15),
     0 0.6666666667rem 0.6666666667rem rgba(0, 13, 255, 0.15),
@@ -3820,21 +3835,6 @@ table {
   .u-relative\@m {
     position: relative;
   }
-}
-.u-border-radius-0 {
-  border-radius: 0;
-}
-.u-border-radius-0-tr {
-  border-top-right-radius: 0;
-}
-.u-border-radius-0-br {
-  border-bottom-right-radius: 0;
-}
-.u-border-radius-0-bl {
-  border-bottom-left-radius: 0;
-}
-.u-border-radius-0-tl {
-  border-top-left-radius: 0;
 }
 .u-row-start-1 {
   grid-row-start: 1;
