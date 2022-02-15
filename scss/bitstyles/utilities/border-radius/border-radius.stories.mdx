@@ -41,8 +41,8 @@ The available sizes of border radius can be customized by overriding the `$bitst
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/border-radius' with (
   $values: (
-    'm': size.get('m')
-  ),
+    'm': size.get('m'),
+  )
 );
 ```
 
@@ -50,7 +50,9 @@ Make these classes available at breakpoints using the `$bitstyles-border-radius-
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/border-radius' with (
-  $breakpoints: ('m'),
+  $breakpoints: (
+    'm',
+  )
 );
 ```
 
@@ -60,12 +62,12 @@ If you need it, you can also customize which corners are available using `$bitst
 @use '~bitstyles/scss/bitstyles/utilities/border-radius' with (
   $directions: (
     '': (
-      'radius'
+      'radius',
     ),
     'brand': (
       'top-right-radius',
       'top-left-radius',
     ),
-  ),
+  )
 );
 ```

@@ -253,7 +253,7 @@
 @use '../../scss/bitstyles/utilities/border-radius' with (
   $values: (
     'm': 10rem,
-  ),
+  )
 );
 @use '../../scss/bitstyles/utilities/box-shadow' with (
   $breakpoints: (
