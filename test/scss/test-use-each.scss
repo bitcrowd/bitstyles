@@ -332,7 +332,11 @@
   )
 );
 @use '../../scss/bitstyles/utilities/relative';
-@use '../../scss/bitstyles/utilities/round';
+@use '../../scss/bitstyles/utilities/border-radius' with (
+  $values: (
+    'm': 10rem,
+  ),
+);
 @use '../../scss/bitstyles/utilities/row-start' with (
   $values: (
     '100': 100,

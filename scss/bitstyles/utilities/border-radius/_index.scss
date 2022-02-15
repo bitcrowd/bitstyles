@@ -1,21 +1,23 @@
-@use '../../settings/setup';
+@forward './settings';
+@use './settings';
+@use '../../tools/properties';
+@use '../../tools/media-query';
 
-.#{setup.$namespace}u-round-0 {
-  border-radius: 0;
-}
+@include properties.output-directional(
+  $property-name: 'border',
+  $classname-root: 'border-radius',
+  $values: settings.$values,
+  $directions: settings.$directions
+);
 
-.#{setup.$namespace}u-round-0-tr {
-  border-top-right-radius: 0;
-}
-
-.#{setup.$namespace}u-round-0-br {
-  border-bottom-right-radius: 0;
-}
-
-.#{setup.$namespace}u-round-0-bl {
-  border-bottom-left-radius: 0;
-}
-
-.#{setup.$namespace}u-round-0-tl {
-  border-top-left-radius: 0;
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.get($breakpoint-alias) {
+    @include properties.output-directional(
+      $property-name: 'border',
+      $classname-root: 'border-radius',
+      $values: settings.$values,
+      $directions: settings.$directions,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
 }
