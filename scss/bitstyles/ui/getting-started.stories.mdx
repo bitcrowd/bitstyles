@@ -82,18 +82,11 @@ Commonly you’ll want to change configuration — colors, typography, sizes etc
 
 You could keep going like that, and reconfigure every module in bitstyles. But that single file starts to get unwieldy.
 
-If you’re configuring only global design tokens, you may prefer to `@use` each settings file then import the library in one. Note the variable names must *lose the module-name prefix* because the module’s scope is clear e.g. `$color-palette-text` is now `$text`.
+If you’re configuring only global design tokens, you may prefer to `@use` each settings file then import the library in one. Note the variable names must _lose the module-name prefix_ because the module’s scope is clear e.g. `$color-palette-text` is now `$text`.
 
 ```scss
-
-@use '~bitstyles/scss/bitstyles/settings/color-palette' with (
-  $text: #fff,
- /* lots of options */
-);
-@use '~bitstyles/scss/bitstyles/settings/layout' with (
-  $size-base: 1.2rem,
-  /* lots of options */
-);
+@use '~bitstyles/scss/bitstyles/settings/color-palette' with ($text: #fff, /* lots of options */);
+@use '~bitstyles/scss/bitstyles/settings/layout' with ($size-base: 1.2rem, /* lots of options */);
 @use '~bitstyles/scss/bitstyles';
 ```
 
@@ -105,7 +98,7 @@ A few things to note:
 
 - you’ll need to import every part of bitstyles individually, whether you’re overriding variables there or not
 - you could use that to selectively exclude modules you don’t need, to keep your bundle size down
-- the variable names must *lose the module-name prefix* because the module’s scope is clear e.g. `$color-palette-text` is now `$text`
+- the variable names must _lose the module-name prefix_ because the module’s scope is clear e.g. `$color-palette-text` is now `$text`
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/color-palette' with (
