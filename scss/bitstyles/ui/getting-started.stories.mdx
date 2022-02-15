@@ -18,6 +18,32 @@ npm install bitstyles
 
 Bitstyles is a [Sass](https://sass-lang.com) library, so you’ll need to use Sass to build it. You could use the tools directly (see [Sass](https://sass-lang.com/install)). If you’re using webpack, use something like [sass-loader](https://github.com/webpack-contrib/sass-loader) for compiling.
 
+## Updating
+
+If you’re already using bitstyles in a project, you can update using npm. We stick to semantic versioning using major/minor/patch numbers, but as we’re talking about CSS classnames sometimes care is needed. We do not consider a changed classname a breaking change, but a changed classname can break your layout.
+
+See the [CHANGELOG](../../../CHANGELOG.md) for details of updates you may need to make in your project when upgrading.
+
+To update bitstyles while respecting the semantic versioning range specified in your package.json (change the version range before running this command if you need a version outside that range):
+
+```sh
+yarn upgrade bitstyles
+
+# or
+
+npm update bitstyles
+```
+
+If you want to jump straight to the latest version:
+
+```sh
+yarn add bitstyles@latest
+
+# or
+
+npm install bitstyles@latest
+```
+
 ## Using bitstyles
 
 Modern Sass offers a few ways of importing Sass. Which you should choose depends on the complexity of your configuration requirements. The following approaches are listed in order of complexity.

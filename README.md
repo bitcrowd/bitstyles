@@ -11,6 +11,10 @@ There is a layer of more complex components built using these low-level classes 
 
 See how to get started, and read the full documentation for each module, with examples, at [https://bitcrowd.github.io/bitstyles/](https://bitcrowd.github.io/bitstyles/).
 
+## Contributing
+
+See [the contributing guide](./CONTRIBUTING.md) for an introduction to opening a PR on bitstyles.
+
 ## Font license
 
 The Nunito webfont is included in Bitstyles, and is licensed under the [SIL Open Font License, 1.1](https://scripts.sil.org/ofl). Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito).
