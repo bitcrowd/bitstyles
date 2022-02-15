@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Breaking
+
+- `u-round` classes have been renamed `u-border-radius`
+
 ## [[4.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.1.0) - 2021-12-20
 
 ### Added
@@ -9,6 +15,7 @@
 - Two functions (`shadow.to-box-shadow()` and `shadow.to-drop-shadow()`) for translating those shadows (which are specified in Sass' list format) into either CSS `box-shadow` format, or CSS filter `drop-shadow` format. Not necessary for the shadows accessed using `shadows.get()`
 - New `u-shadow` and `u-drop-shadow` utility classes to set box-shadows and drop-shadows respectively
 - The smallscreen version of the Sidebar organism can now be positioned to the left or right side of the screen by overriding `$bitstyles-sidebar-small-location` (defaults to `left`)
+- Configuration of the border-radius utility class is now possible: `$bitstyles-border-radius-values`, `$bitstyles-border-radius-breakpoints`, `$bitstyles-border-radius-directions`
 
 ### Fixed
 
