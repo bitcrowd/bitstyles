@@ -1438,6 +1438,26 @@ table {
   margin: 0;
   padding: 0;
 }
+.a-skip-link {
+  font-weight: 600;
+  left: 50%;
+  padding: 10rem;
+  position: absolute;
+  top: -100%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.a-skip-link,
+.a-skip-link:focus,
+.a-skip-link:hover,
+.a-skip-link:visited {
+  background: #000;
+  border: 2.5rem solid #000;
+  color: red;
+}
+.a-skip-link:focus {
+  top: 0;
+}
 .bsa-topbar {
   left: 0;
   padding: 10rem;
