@@ -4,15 +4,28 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Skip link
 
-A skip-to-content link for keyboard users, especially those with litlle or no vision, enabling them to skip your navigation and get straight to the content.
+A skip-to-content link for keyboard users, especially those with litlle or no vision, enabling them to skip your navigation and get straight to the content. The default colors are black & white for readability, but they can be [customized](#customization).
 
-Be sure the id you reference exists!
+The `href` attribute should match the `id` you add to your main content, which is commonly `main`.
 
 <Canvas>
-  <Story name="a-skip-link">
+  <Story inline={false} name="a-skip-link">
     {`
-      <a href="#main">Skip to content</a>
+      <a href="#main" class="a-skip-link">Skip to content</a>
       <div id="main">Your main content here, after some other content that gets repeated on every page (navigation etc.)</div>
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+The default colors are high contrast and clearly readable. If you change them, please check the contrast ratio between your foreground and background colors is high. This component is not intended to fit into a design, but to be highly visible and readable.
+
+```scss
+ @use '~bitstyles/scss/bitstyles/atoms/skip-link' with (
+  $padding: size.get('m'),
+  $background: palette.get('white'),
+  $color: palette.get('black'),
+  $border: size.get('xxs') palette.get('black') solid,
+ );
+ ````

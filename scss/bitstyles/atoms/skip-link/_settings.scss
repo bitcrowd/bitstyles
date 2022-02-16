@@ -1,7 +1,16 @@
+@use '../../settings/typography';
 @use '../../tools/palette';
 @use '../../tools/size';
 
+//
+// Base styles /////////////////////////////////////////
+
 $padding: size.get('m') !default;
+$font-weight: typography.$font-weight-medium !default;
+
+//
+// Base/hover Colors /////////////////////////////////////////
+
 $background: palette.get('white') !default;
 $color: palette.get('black') !default;
 $border: size.get('xxs') palette.get('black') solid !default;
