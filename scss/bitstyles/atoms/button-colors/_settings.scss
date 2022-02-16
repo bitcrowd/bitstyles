@@ -1,0 +1,164 @@
+@use '../../tools/palette';
+@use '../../tools/shadow';
+@use '../../tools/size';
+
+$button-default: (
+  'default': (
+    'color': palette.get('white'),
+    'background-color': palette.get('brand-1', '80'),
+    'border-color': palette.get('brand-1', '80'),
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('brand-1', '80'), 0.2),
+          $blur-radius: size.get('xs'),
+        )
+      ),
+  ),
+  'hover': (
+    'color': palette.get('white'),
+    'background-color': palette.get('brand-1'),
+    'border-color': palette.get('brand-1'),
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('brand-1', '80'), 0.2),
+          $blur-radius: size.get('s'),
+        )
+      ),
+  ),
+  'active': (
+    'color': palette.get('white'),
+    'background-color': palette.get('brand-2', '100'),
+    'border-color': palette.get('brand-2', '100'),
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('brand-2', '100'), 0.3),
+          $blur-radius: size.get('xs'),
+        )
+      ),
+  ),
+  'disabled': (
+    'color': palette.get('black', '50'),
+    'background-color': palette.get('black', '10'),
+    'border-color': palette.get('black', '10'),
+    'box-shadow': none,
+  ),
+) !default;
+$button-danger: (
+  'hover': (
+    'color': palette.get('white'),
+    'background-color': palette.get('danger', '100'),
+    'border-color': palette.get('danger', '100'),
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('danger', '100'), 0.3),
+          $blur-radius: size.get('s'),
+        )
+      ),
+  ),
+  'active': (
+    'background-color': palette.get('danger', '100'),
+    'border-color': palette.get('danger', '100'),
+    'box-shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('danger', '100'), 0.3),
+          $blur-radius: size.get('xs'),
+        )
+      ),
+  ),
+) !default;
+$button-ui: (
+  'default': (
+    'color': palette.get('gray', '60'),
+    'background-color': palette.get('gray', '1'),
+    'border-color': palette.get('gray', '10'),
+    'box-shadow': none,
+  ),
+  'hover': (
+    'color': palette.get('gray', '80'),
+    'background-color': palette.get('gray', '10'),
+    'border-color': palette.get('gray', '20'),
+    'box-shadow': none,
+  ),
+  'active': (
+    'color': palette.get('white'),
+    'background-color': palette.get('gray', '50'),
+    'border-color': palette.get('gray', '50'),
+    'box-shadow': none,
+  ),
+  'pressed': (
+    'color': palette.get('gray', '90'),
+    'background-color': palette.get('brand-2', '100'),
+    'border-color': palette.get('brand-2', '100'),
+    'box-shadow': none,
+  ),
+  'disabled': (
+    'color': palette.get('gray', '10'),
+    'background-color': palette.get('gray', '1'),
+    'border-color': palette.get('gray', '10'),
+    'box-shadow': none,
+  ),
+) !default;
+$button-ui-reversed: (
+  'default': (
+    'border-color': var(--button-bg, transparent),
+    'background': var(--button-bg, transparent),
+    'box-shadow': none,
+    'color': var(--button-fg, palette.get('gray', '20')),
+  ),
+  'hover': (
+    'border-color': var(--button-bg-hover, palette.get('gray', '80')),
+    'background': var(--button-bg-hover, palette.get('gray', '80')),
+    'box-shadow': none,
+    'color': var(--button-fg-hover, palette.get('white')),
+  ),
+  'active': (
+    'border-color': palette.get('gray', '80'),
+    'background': palette.get('gray', '80'),
+    'box-shadow': none,
+    'color': palette.get('white'),
+  ),
+  'disabled': (
+    'border-color': transparent,
+    'background': transparent,
+    'box-shadow': none,
+    'color': palette.get('black', '50'),
+  ),
+) !default;
+$button-transparent: (
+  'default': (
+    'color': palette.get('gray', '60'),
+    'background-color': palette.get('white', '100'),
+    'border-color': palette.get('white', '100'),
+    'box-shadow': none,
+  ),
+  'hover': (
+    'color': palette.get('gray', '80'),
+    'background-color': palette.get('gray', '1'),
+    'border-color': palette.get('gray', '1'),
+    'box-shadow': none,
+  ),
+  'active': (
+    'color': palette.get('white'),
+    'background-color': palette.get('brand-2', '100'),
+    'border-color': palette.get('brand-2', '100'),
+    'box-shadow': none,
+  ),
+  'disabled': (
+    'color-disabled': palette.get('gray', '30'),
+    'background-color-disabled': transparent,
+    'border-color-disabled': transparent,
+    'box-shadow-disabled': none,
+  ),
+) !default;
+$variants: (
+  '': $button-default,
+  '-ui': $button-ui,
+  '-ui-reversed': $button-ui-reversed,
+  '-danger': $button-danger,
+  '-transparent': $button-transparent,
+) !default;

@@ -1,0 +1,7 @@
+@use 'settings';
+@forward 'settings';
+@use '../../tools/button';
+
+@each $name, $colors in settings.$variants {
+  @include button.new($name, $colors);
+}

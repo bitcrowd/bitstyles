@@ -3,16 +3,15 @@
 @use '../../settings/animation';
 @use '../../settings/layout';
 @use '../../settings/setup';
-@use '../button/settings' as button-settings;
 
 .#{setup.$namespace}a-button--tab-container {
   & > *:first-child {
-    margin-left: -(button-settings.$padding-horizontal);
+    margin-left: -(settings.$padding-x);
   }
 }
 
 .#{setup.$namespace}a-button--tab {
-  position: relative;
+
   border: 0;
   border-radius: settings.$border-radius;
 
@@ -26,9 +25,9 @@
     &::after {
       content: '';
       position: absolute;
-      right: button-settings.$padding-horizontal;
+      right: settings.$padding-x;
       bottom: 0;
-      left: button-settings.$padding-horizontal;
+      left: settings.$padding-x;
       height: settings.$border-width;
       transition: background-color animation.$transition-duration
         animation.$transition-easing;

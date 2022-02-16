@@ -1,6 +1,6 @@
 @forward 'settings';
-@use 'sass:math';
 @use './settings';
+@use 'sass:math';
 @use '../../settings/setup';
 
 .#{setup.$namespace}a-button {
@@ -10,12 +10,10 @@
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  min-height: calc(#{settings.$padding-vertical * 2} + 1em);
   margin: 0;
-  padding: settings.$padding-vertical settings.$padding-horizontal;
   overflow: visible;
   transition: settings.$transition;
-  border-radius: settings.$border-radius;
+  border: 0 solid currentColor;
   font: settings.$font;
   font-weight: settings.$font-weight;
   text-align: center;
@@ -26,37 +24,14 @@
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   touch-action: manipulation;
 
-  &,
-  &:visited {
-    border: settings.$border-width solid settings.$border-color;
-    background: settings.$background-color;
-    box-shadow: settings.$box-shadow;
-    color: settings.$color;
-  }
-
   &:hover,
   &:focus {
-    border-color: settings.$border-color-hover;
     outline: none;
-    background: settings.$background-color-hover;
-    box-shadow: settings.$box-shadow-hover;
-    color: settings.$color-hover;
     text-decoration: none;
-  }
-
-  &:active {
-    border-color: settings.$border-color-active;
-    background: settings.$background-color-active;
-    box-shadow: settings.$box-shadow-active;
-    color: settings.$color-active;
   }
 
   &:disabled,
   &[aria-disabled='true'] {
-    border-color: settings.$border-color-disabled;
-    background: settings.$background-color-disabled;
-    box-shadow: settings.$box-shadow-disabled;
-    color: settings.$color-disabled;
     cursor: not-allowed;
   }
 }
@@ -71,3 +46,8 @@
   margin-right: math.div(-(settings.$icon-spacing), 4);
   margin-left: settings.$icon-spacing;
 }
+
+
+
+
+
