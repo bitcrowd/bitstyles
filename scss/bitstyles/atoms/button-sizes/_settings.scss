@@ -22,6 +22,11 @@ $button-small: (
     'padding': size.get('xxs') size.get('xs'),
   )
 ) !default;
+$button-large: (
+  'default' : (
+    'padding': size.get('l'),
+  )
+) !default;
 $button-menu: (
   'default': (
     'justify-content': flex-start,
@@ -33,5 +38,6 @@ $variants: (
   '': $button-default,
   '-icon': $button-icon,
   '-small': $button-small,
+  '-large': $button-large,
   '-menu': $button-menu,
 ) !default;
