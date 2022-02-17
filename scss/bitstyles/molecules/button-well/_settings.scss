@@ -3,7 +3,7 @@
 @use '../../tools/shadow';
 @use '../../tools/size';
 
-$gap: size.get('xs');
-$padding: size.get('xs');
-$border-radius: size.get('s');
-$background: palette.get('gray', '10');
+$gap: size.get('xs') !default;
+$padding: size.get('xs') !default;
+$border-radius: size.get('s') !default;
+$background: palette.get('gray', '10') !default;

@@ -182,10 +182,43 @@ $button-transparent: (
     'box-shadow': none,
   ),
 ) !default;
+$button-tab: (
+  'default': (
+    'color': palette.get('gray', '60'),
+    'background-color': transparent,
+    'border': transparent,
+    'box-shadow': none,
+  ),
+  'hover': (
+    'color': palette.get('gray', '80'),
+    'background-color': transparent,
+    'border-color': transparent,
+    'box-shadow': none,
+  ),
+  'active': (
+    'color': palette.get('brand-1', '90'),
+    'background-color': transparent,
+    'border-color': transparent,
+    'box-shadow': none,
+  ),
+  'pressed': (
+    'color': palette.get('gray', '80'),
+    'background-color': transparent,
+    'border-color': transparent,
+    'box-shadow': none,
+  ),
+  'disabled': (
+    'color': palette.get('gray', '30'),
+    'background-color': transparent,
+    'border-color': transparent,
+    'box-shadow': none,
+  ),
+) !default;
 $variants: (
   '': $button-default,
   '-secondary': $button-secondary,
   '-reversed': $button-reversed,
   '-danger': $button-danger,
   '-transparent': $button-transparent,
+  '-tab': $button-tab,
 ) !default;
