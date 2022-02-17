@@ -111,16 +111,26 @@ $button-reversed: (
     'color': var(--button-fg, palette.get('gray', '20')),
   ),
   'hover': (
-    'border-color': var(--button-bg-hover, palette.get('gray', '80')),
-    'background': var(--button-bg-hover, palette.get('gray', '80')),
-    'box-shadow': none,
+    'border-color': var(--button-bg-hover, palette.get('gray', '60')),
+    'background': var(--button-bg-hover, palette.get('gray', '60')),
+    'box-shadow': shadow.to-box-shadow(
+      shadow.generate(
+        $color: rgba(palette.get('brand-1-shades', '50'), 0.1),
+        $blur-radius: size.get('l'),
+      )
+    ),
     'color': var(--button-fg-hover, palette.get('white')),
   ),
   'active': (
-    'border-color': palette.get('gray', '80'),
-    'background': palette.get('gray', '80'),
-    'box-shadow': none,
-    'color': palette.get('white'),
+    'border-color': palette.get('gray', '40'),
+    'background': palette.get('gray', '40'),
+    'box-shadow': shadow.to-box-shadow(
+      shadow.generate(
+        $color: rgba(palette.get('brand-1-shades', '50'), 0.1),
+        $blur-radius: size.get('m'),
+      )
+    ),
+    'color': palette.get('black'),
   ),
   'disabled': (
     'border-color': transparent,
@@ -128,6 +138,12 @@ $button-reversed: (
     'box-shadow': none,
     'color': palette.get('black', '50'),
   ),
+  'pressed': (
+    'color': palette.get('white', '100'),
+    'background-color': palette.get('black', '100'),
+    'border-color': palette.get('gray', '80'),
+    'box-shadow': none,
+  )
 ) !default;
 $button-transparent: (
   'default': (

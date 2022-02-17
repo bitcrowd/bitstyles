@@ -33,6 +33,8 @@
     }
 
     @if map.has-key($states, 'pressed') {
+      &[aria-current],
+      &[aria-expanded='true'],
       &[aria-pressed='true'] {
         @include properties(map.get($states, 'pressed'));
       }

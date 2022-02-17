@@ -3,11 +3,10 @@
 
 $button-default: (
   'default' : (
-    'padding': size.get('xs') size.get('m'),
+    'padding': size.get('xs') size.get('l'),
     'border-width': size.get('xxxs'),
     'border-radius': size.get('xs'),
     'min-height': calc(#{size.get('l')} + 1em),
-    'min-width': calc(#{size.get('l')} + 10em),
   )
 ) !default;
 $button-icon: (
