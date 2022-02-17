@@ -21,7 +21,6 @@ $button-icon: (
 $button-small: (
   'default' : (
     'padding': size.get('xxs') size.get('xs'),
-    'border-radius': layout.$border-radius-round,
   )
 ) !default;
 $button-menu: (

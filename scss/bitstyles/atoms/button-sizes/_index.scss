@@ -3,6 +3,5 @@
 @use '../../tools/button';
 
 @each $name, $size in settings.$variants {
-  @debug $size;
   @include button.new($name, $size);
 }

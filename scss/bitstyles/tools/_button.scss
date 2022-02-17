@@ -32,6 +32,12 @@
       }
     }
 
+    @if map.has-key($states, 'pressed') {
+      &[aria-pressed='true'] {
+        @include properties(map.get($states, 'pressed'));
+      }
+    }
+
     @if map.has-key($states, 'disabled') {
       &:disabled,
       &[aria-disabled='true'] {

@@ -1,0 +1,13 @@
+@use '../../tools/palette';
+@use '../../tools/size';
+@use '../../settings/setup';
+
+.#{setup.$namespace}m-button-well {
+  display: inline-flex;
+  gap: settings.$gap;
+  align-items: center;
+  padding: settings.$padding;
+  list-style-type: none;
+  border-radius: settings.$border-radius;
+  background: settings.$background;
+}

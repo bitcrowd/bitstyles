@@ -71,7 +71,7 @@ $button-danger: (
       ),
   ),
 ) !default;
-$button-ui: (
+$button-secondary: (
   'default': (
     'color': palette.get('gray', '60'),
     'background-color': palette.get('gray', '1'),
@@ -103,7 +103,7 @@ $button-ui: (
     'box-shadow': none,
   ),
 ) !default;
-$button-ui-reversed: (
+$button-reversed: (
   'default': (
     'border-color': var(--button-bg, transparent),
     'background': var(--button-bg, transparent),
@@ -132,8 +132,8 @@ $button-ui-reversed: (
 $button-transparent: (
   'default': (
     'color': palette.get('gray', '60'),
-    'background-color': palette.get('white', '100'),
-    'border-color': palette.get('white', '100'),
+    'background-color': transparent,
+    'border-color': transparent,
     'box-shadow': none,
   ),
   'hover': (
@@ -148,6 +148,17 @@ $button-transparent: (
     'border-color': palette.get('brand-2', '100'),
     'box-shadow': none,
   ),
+  'pressed': (
+    'color': palette.get('gray', '80'),
+    'background-color': palette.get('white', '100'),
+    'border-color': palette.get('white', '100'),
+    'box-shadow': shadow.to-box-shadow(
+      shadow.generate(
+        $color: rgba(palette.get('brand-1', '100'), 0.0375),
+        $blur-radius: size.get('s'),
+      )
+    ),
+  ),
   'disabled': (
     'color': palette.get('gray', '30'),
     'background-color': transparent,
@@ -157,8 +168,8 @@ $button-transparent: (
 ) !default;
 $variants: (
   '': $button-default,
-  '-secondary': $button-ui,
-  '-reversed': $button-ui-reversed,
+  '-secondary': $button-secondary,
+  '-reversed': $button-reversed,
   '-danger': $button-danger,
   '-transparent': $button-transparent,
 ) !default;
