@@ -24,8 +24,16 @@ $button-small: (
     'border-radius': layout.$border-radius-round,
   )
 ) !default;
+$button-menu: (
+  'default': (
+    'justify-content': flex-start,
+    'padding': size.get('s') size.get('m'),
+    'border-radius': 0,
+  )
+) !default;
 $variants: (
   '': $button-default,
   '-icon': $button-icon,
   '-small': $button-small,
+  '-menu': $button-menu,
 ) !default;

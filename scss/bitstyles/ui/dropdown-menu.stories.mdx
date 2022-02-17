@@ -5,7 +5,7 @@ import icons from '../../../assets/images/icons.svg';
 
 # Dropdown menu
 
-A button that when clicked reveals a floating menu of links. This is a combination of an `.a-button--secondary` as the button that is clicked to show/hide the menu, an `.a-dropdown` menu that’s the container for a series of `.a-button--menu` sub-items.
+A button that when clicked reveals a floating menu of links. This is a combination of an `.a-button--secondary` as the button that is clicked to show/hide the menu, an `.a-dropdown` menu that’s the container for a series of `.a-button--menu a-button--transparent` sub-items.
 
 The component requires JS to show and hide the `ul`, and update the aria attributes when the user clicks the `.a-button--secondary`.
 
@@ -27,7 +27,7 @@ The component requires JS to show and hide the `ul`, and update the aria attribu
       <a href="/docs/atoms-button-ui--ui">a-button--secondary</a>
     </li>
     <li>
-      <a href="/docs/atoms-button-menu--menu">a-button--menu</a>
+      <a href="/docs/atoms-button-menu--menu">a-button--menu a-button--transparent</a>
     </li>
     <li>
       <a href="/docs/atoms-dropdown--dropdown">a-dropdown</a>
@@ -70,7 +70,7 @@ The component requires JS to show and hide the `ul`, and update the aria attribu
 These examples show various contents for the dropdown menus — what you put in it is up to you, but things to note are:
 
 - the `<li role="separator"></li>` that provide visual and semantic sepearators
-- the standard menu items are likely to be created using `.a-button.a-button--menu`
+- the standard menu items are likely to be created using `.a-button.a-button--menu a-button--transparent`
 
 <Canvas>
   <Story name="Dropdown menu">
@@ -102,7 +102,7 @@ These examples show various contents for the dropdown menus — what you put in 
             id="dropdown-1"
           >
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <use xlink:href="${icons}#icon-plus"></use>
                 </svg>
@@ -110,7 +110,7 @@ These examples show various contents for the dropdown menus — what you put in 
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <use xlink:href="${icons}#icon-plus"></use>
                 </svg>
@@ -118,7 +118,7 @@ These examples show various contents for the dropdown menus — what you put in 
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <use xlink:href="${icons}#icon-plus"></use>
                 </svg>
@@ -127,7 +127,7 @@ These examples show various contents for the dropdown menus — what you put in 
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <use xlink:href="${icons}#icon-plus"></use>
                 </svg>
@@ -168,7 +168,7 @@ These examples show various contents for the dropdown menus — what you put in 
             id="dropdown-2"
           >
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 <div class="a-button__avatar a-avatar a-avatar--l u-flex-shrink-0 u-flex u-items-center">
                   <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
                 </div>
@@ -180,23 +180,23 @@ These examples show various contents for the dropdown menus — what you put in 
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Settings
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Help
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Privacy
               </a>
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Sign out
               </a>
             </li>
@@ -246,23 +246,23 @@ These examples show various contents for the dropdown menus — what you put in 
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Settings
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Help
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Privacy
               </a>
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Sign out
               </a>
             </li>
@@ -323,23 +323,23 @@ The default dropdowns are aligned to the left edge of their relative parent, und
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Settings
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Help
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Privacy
               </a>
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Sign out
               </a>
             </li>
@@ -390,23 +390,23 @@ The default dropdowns are aligned to the left edge of their relative parent, und
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Settings
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Help
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Privacy
               </a>
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Sign out
               </a>
             </li>
@@ -456,23 +456,23 @@ The default dropdowns are aligned to the left edge of their relative parent, und
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Settings
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Help
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Privacy
               </a>
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Sign out
               </a>
             </li>
@@ -528,23 +528,23 @@ The directions can be combined.
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Settings
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Help
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Privacy
               </a>
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Sign out
               </a>
             </li>
@@ -595,23 +595,23 @@ The directions can be combined.
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Settings
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Help
               </a>
             </li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Privacy
               </a>
             </li>
             <li role="separator"></li>
             <li>
-              <a href="/" class="a-button a-button--menu u-h6">
+              <a href="/" class="a-button a-button--menu a-button--transparent u-h6">
                 Sign out
               </a>
             </li>
