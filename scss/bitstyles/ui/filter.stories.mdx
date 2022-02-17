@@ -23,7 +23,7 @@ When a user wants to filter a list of objects by fields which have a limited num
       <a href="/docs/atoms-button-base--button-element">a-button</a>
     </li>
     <li>
-      <a href="/docs/atoms-button-ui--ui">a-button--ui</a>
+      <a href="/docs/atoms-button-ui--ui">a-button--secondary</a>
     </li>
     <li>
       <a href="/docs/atoms-button-menu--menu">a-button--menu</a>
@@ -74,15 +74,15 @@ When a user wants to filter a list of objects by fields which have a limited num
             <li class="u-relative u-margin-xs-right">
               <button
                 type="button"
-                class="a-button a-button--ui"
+                class="a-button a-button--secondary"
                 title="Filter by category"
                 aria-controls="dropdown-1"
                 @click="dropdownOpen = !dropdownOpen"
                 :aria-expanded="dropdownOpen"
               >
                 <span class="u-sr-only">Filter by</span>
-                <span class="a-button__label">Account type: Admin</span>
-                <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                Account type: Admin
+                <svg class="a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
                 </svg>
               </button>
@@ -128,14 +128,14 @@ When a user wants to filter a list of objects by fields which have a limited num
             <li class="u-relative" x-data="{ dropdownOpen: false }">
               <button
                 type="button"
-                class="a-button a-button--ui"
+                class="a-button a-button--secondary"
                 title="Add filter"
                 aria-controls="dropdown-2" @click="dropdownOpen = !dropdownOpen"
                 :aria-expanded="dropdownOpen"
               >
                 <span class="u-sr-only">Filter by</span>
-                <span class="a-button__label">Account status: All</span>
-                <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                Account status: All
+                <svg class="a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
                 </svg>
               </button>
@@ -204,13 +204,13 @@ Some fields such as names and emails will need to be filtered by user-entered fr
             <li class="u-flex u-relative" x-data="{ dropdownOpen: false }">
               <button
                 type="button"
-                class="a-button a-button--ui u-round-0-tl u-round-0-bl"
+                class="a-button a-button--secondary u-round-0-tl u-round-0-bl"
                 aria-controls="dropdown-1"
                 @click="dropdownOpen = !dropdownOpen"
                 :aria-expanded="dropdownOpen"
               >
-                <span class="a-button__label">Email</span>
-                <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+                Email
+                <svg class="a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
                   <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
                 </svg>
               </button>
@@ -274,14 +274,14 @@ When giving the user filters by category and free text, place the free text sear
                 <li class="u-flex u-relative" x-data="{ dropdownOpen: false }">
                   <button
                     type="button"
-                    class="a-button a-button--ui u-round-0-tl u-round-0-bl"
+                    class="a-button a-button--secondary u-round-0-tl u-round-0-bl"
                     aria-controls="dropdown-1"
                     @click="dropdownOpen = !dropdownOpen"
                     :aria-expanded="dropdownOpen"
                   >
                     <span class="u-sr-only">Filter field:</span>
-                    <span class="a-button__label">All</span>
-                    <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+                    All
+                    <svg class="a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
                       <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
                     </svg>
                   </button>
@@ -316,15 +316,15 @@ When giving the user filters by category and free text, place the free text sear
             <li class="u-relative" x-data="{ dropdownOpen: false }">
               <button
                 type="button"
-                class="a-button a-button--ui"
+                class="a-button a-button--secondary"
                 title="Filter by category"
                 aria-controls="dropdown-2"
                 @click="dropdownOpen = !dropdownOpen"
                 :aria-expanded="dropdownOpen"
               >
                 <span class="u-sr-only">Filter by</span>
-                <span class="a-button__label">Account type: Admin</span>
-                <svg class="a-button__icon a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                Account type: Admin
+                <svg class="a-icon a-icon--m" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <path d="M2.78,32.83a6.07,6.07,0,0,1,8.58-8.59L45.71,58.59a6.07,6.07,0,0,0,8.58,0L88.64,24.24a6.07,6.07,0,1,1,8.58,8.59L54.29,75.76a6.07,6.07,0,0,1-8.58,0Z" fill-rule="evenodd"/>
                 </svg>
               </button>

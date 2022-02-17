@@ -5,9 +5,9 @@ import icons from '../../../assets/images/icons.svg';
 
 # Dropdown menu
 
-A button that when clicked reveals a floating menu of links. This is a combination of an `.a-button--ui` as the button that is clicked to show/hide the menu, an `.a-dropdown` menu that’s the container for a series of `.a-button--menu` sub-items.
+A button that when clicked reveals a floating menu of links. This is a combination of an `.a-button--secondary` as the button that is clicked to show/hide the menu, an `.a-dropdown` menu that’s the container for a series of `.a-button--menu` sub-items.
 
-The component requires JS to show and hide the `ul`, and update the aria attributes when the user clicks the `.a-button--ui`.
+The component requires JS to show and hide the `ul`, and update the aria attributes when the user clicks the `.a-button--secondary`.
 
 <div class="u-bg-gray-10 u-padding-m-x u-padding-xs-y">
   <p>
@@ -24,7 +24,7 @@ The component requires JS to show and hide the `ul`, and update the aria attribu
       <a href="/docs/atoms-button-base--button-element">a-button</a>
     </li>
     <li>
-      <a href="/docs/atoms-button-ui--ui">a-button--ui</a>
+      <a href="/docs/atoms-button-ui--ui">a-button--secondary</a>
     </li>
     <li>
       <a href="/docs/atoms-button-menu--menu">a-button--menu</a>
@@ -79,13 +79,13 @@ These examples show various contents for the dropdown menus — what you put in 
         <div class="u-relative" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--secondary u-h6"
             aria-controls="dropdown-1"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
           >
-            <span class="a-button__label">Account</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            Account
+            <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
@@ -103,35 +103,35 @@ These examples show various contents for the dropdown menus — what you put in 
           >
             <li>
               <a href="/" class="a-button a-button--menu u-h6">
-                <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <use xlink:href="${icons}#icon-plus"></use>
                 </svg>
-                <span class="a-button__label">Settings</span>
+                Settings
               </a>
             </li>
             <li>
               <a href="/" class="a-button a-button--menu u-h6">
-                <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <use xlink:href="${icons}#icon-plus"></use>
                 </svg>
-                <span class="a-button__label">Help</span>
+                Help
               </a>
             </li>
             <li>
               <a href="/" class="a-button a-button--menu u-h6">
-                <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <use xlink:href="${icons}#icon-plus"></use>
                 </svg>
-                <span class="a-button__label">Privacy</span>
+                Privacy
               </a>
             </li>
             <li role="separator"></li>
             <li>
               <a href="/" class="a-button a-button--menu u-h6">
-                <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                   <use xlink:href="${icons}#icon-plus"></use>
                 </svg>
-                <span class="a-button__label">Sign out</span>
+                Sign out
               </a>
             </li>
           </ul>
@@ -145,13 +145,13 @@ These examples show various contents for the dropdown menus — what you put in 
         <div class="u-relative" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--secondary u-h6"
             aria-controls="dropdown-2"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
           >
-            <span class="a-button__label">Account</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            Account
+            <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
@@ -172,7 +172,7 @@ These examples show various contents for the dropdown menus — what you put in 
                 <div class="a-button__avatar a-avatar a-avatar--l u-flex-shrink-0 u-flex u-items-center">
                   <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
                 </div>
-                <div class="a-button__label u-flex u-flex-col u-items-start">
+                <div class="u-flex u-flex-col u-items-start">
                   <span>Signed in as</span>
                   <span>Username</span>
                 </div>
@@ -211,13 +211,13 @@ These examples show various contents for the dropdown menus — what you put in 
         <div class="u-relative" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--secondary u-h6"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
           >
-            <span class="a-button__label">Account</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            Account
+            <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
@@ -288,13 +288,13 @@ The default dropdowns are aligned to the left edge of their relative parent, und
         <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--secondary u-h6"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
           >
-            <span class="a-button__label">Account [right]</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            Account [right]
+            <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
@@ -355,13 +355,13 @@ The default dropdowns are aligned to the left edge of their relative parent, und
         <div class="u-relative" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--secondary u-h6"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
           >
-            <span class="a-button__label">Account [top]</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            Account [top]
+            <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
@@ -421,13 +421,13 @@ The default dropdowns are aligned to the left edge of their relative parent, und
         <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--secondary u-h6"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
           >
-            <span class="a-button__label">Account [full-width]</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            Account [full-width]
+            <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
@@ -493,13 +493,13 @@ The directions can be combined.
         <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--secondary u-h6"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
           >
-            <span class="a-button__label">Account [top, right]</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            Account [top, right]
+            <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>
@@ -560,13 +560,13 @@ The directions can be combined.
         <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--secondary u-h6"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
           >
-            <span class="a-button__label">Account [full-width, top]</span>
-            <svg width="14" height="14" class="a-button__icon a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            Account [full-width, top]
+            <svg width="14" height="14" class="a-icon a-icon-m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
               <use xlink:href="${icons}#icon-caret-down"></use>
             </svg>
           </button>

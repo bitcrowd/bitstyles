@@ -1,4 +1,5 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import icons from '../../../../assets/images/icons.svg';
 
 <Meta title="Atoms/Button/Danger" />
 
@@ -23,7 +24,7 @@ A button that performs any action the user should be wary off, most often someth
   </Story>
   <Story name="Danger/UI">
     {`
-      <a href="/" class="a-button a-button--ui a-button--danger">
+      <a href="/" class="a-button a-button--secondary a-button--danger">
         Destroy
       </a>
     `}
@@ -47,7 +48,7 @@ A button that performs any action the user should be wary off, most often someth
   </Story>
   <Story name="Danger/UI button">
     {`
-      <button type="button" class="a-button a-button--ui a-button--danger">
+      <button type="button" class="a-button a-button--secondary a-button--danger">
         Destroy
       </button>
     `}
@@ -61,21 +62,35 @@ These buttons are often placed in a list of possible actions:
     {`
       <ul class="a-list-reset u-flex">
         <li class="u-margin-s-right">
-          <a href="/" class="a-button a-button--ui">
+          <a href="/" class="a-button a-button--secondary">
             Show
           </a>
         </li>
         <li class="u-margin-s-right">
-          <a href="/" class="a-button a-button--ui">
+          <a href="/" class="a-button a-button--secondary">
             Edit
           </a>
         </li>
         <li class="u-margin-s-right">
-          <a href="/" class="a-button a-button--ui a-button--danger">
+          <a href="/" class="a-button a-button--secondary a-button--danger">
             Delete
           </a>
         </li>
       </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Dangerous icon buttons
+
+<Canvas>
+  <Story name="Danger icon">
+    {`
+      <a href="/" class="a-button a-button--icon a-button--danger">
+        <svg width="20" height="20" class="a-icon" aria-hidden="true" focusable="false">
+          <use xlink:href="${icons}#icon-bin"></use>
+        </svg>
+      </a>
     `}
   </Story>
 </Canvas>

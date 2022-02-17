@@ -149,16 +149,16 @@ $button-transparent: (
     'box-shadow': none,
   ),
   'disabled': (
-    'color-disabled': palette.get('gray', '30'),
-    'background-color-disabled': transparent,
-    'border-color-disabled': transparent,
-    'box-shadow-disabled': none,
+    'color': palette.get('gray', '30'),
+    'background-color': transparent,
+    'border-color': transparent,
+    'box-shadow': none,
   ),
 ) !default;
 $variants: (
   '': $button-default,
-  '-ui': $button-ui,
-  '-ui-reversed': $button-ui-reversed,
+  '-secondary': $button-ui,
+  '-reversed': $button-ui-reversed,
   '-danger': $button-danger,
   '-transparent': $button-transparent,
 ) !default;
