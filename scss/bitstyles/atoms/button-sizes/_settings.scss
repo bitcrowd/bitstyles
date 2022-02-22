@@ -2,15 +2,15 @@
 @use '../../tools/size';
 
 $button-default: (
-  'default' : (
+  'default': (
     'padding': size.get('xs') size.get('l'),
     'border-width': size.get('xxxs'),
     'border-radius': size.get('xs'),
     'min-height': calc(#{size.get('l')} + 1em),
-  )
+  ),
 ) !default;
 $button-icon: (
-  'default' : (
+  'default': (
     'padding': size.get('m'),
     'border-radius': size.get('s'),
     'min-height': calc(#{size.get('l')} + 1em),
@@ -18,21 +18,21 @@ $button-icon: (
   ),
 ) !default;
 $button-small: (
-  'default' : (
+  'default': (
     'padding': size.get('xxs') size.get('xs'),
-  )
+  ),
 ) !default;
 $button-large: (
-  'default' : (
+  'default': (
     'padding': size.get('l'),
-  )
+  ),
 ) !default;
 $button-menu: (
   'default': (
     'justify-content': flex-start,
     'padding': size.get('s') size.get('m'),
     'border-radius': 0,
-  )
+  ),
 ) !default;
 $variants: (
   '': $button-default,

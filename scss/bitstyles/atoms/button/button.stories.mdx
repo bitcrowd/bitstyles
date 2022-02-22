@@ -1,9 +1,71 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 import icons from '../../../../assets/images/icons.svg';
 
-<Meta title="Atoms/Button/Base" />
+<Meta title="Atoms/Buttons" />
 
-## Button
+## Buttons
+
+Bitstyles provides a set of button variants divided around two aspects: the colors used, and the size and shape of the button. These can be mixed to produce a range of buttons that conform to standard colors on hover, active, and pressed or selected states, and whose sizes will fit when placed in a row or column next to other variants.
+
+The following example use the default configuration, see [customization](#customization) for information on how to change these.
+
+Available color variants:
+
+|Name|Classname|Usage|
+|Default/Primary|`a-button`|A highly-visible button. Use it for the primary action on a page|
+|Secondary|`.a-button--secondary`|General-purpose button. Use it for common actions|
+|Reversed|`.a-button--reversed`|General-purpose button, for use on dark backgrounds|
+|Danger|`.a-button--danger`|A modifier color variant that has no default colors of its own, only hover/focus colors. Apply this to any other color variant and it’ll turn red on hover, indicating to the user that the action this button performs is destructive, not undoable, or somehow dangerous|
+|Transparent|`.a-button--transparent`|A button that has no appearance until hovered|
+|Tab|`.a-button--tab`||
+
+<Canvas>
+  <Story name="a-button">
+    {`
+      <button class="a-button" type="button">
+        Button
+      </button>
+    `}
+  </Story>
+  <Story name="a-button--secondary">
+    {`
+      <button class="a-button a-button--secondary" type="button">
+        Secondary button
+      </button>
+    `}
+  </Story>
+  <Story name="a-button--reversed">
+    {`
+      <div class="u-padding-m u-bg-gray-80">
+        <button class="a-button a-button--reversed" type="button">
+          Reversed button
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="a-button--danger">
+    {`
+      <button class="a-button a-button--danger" type="button">
+        Danger button
+      </button>
+    `}
+  </Story>
+  <Story name="a-button--transparent">
+    {`
+      <button class="a-button a-button--transparent" type="button">
+        Transparent button
+      </button>
+    `}
+  </Story>
+  <Story name="a-button--tab">
+    {`
+      <button class="a-button a-button--tab" type="button">
+        Tab button
+      </button>
+    `}
+  </Story>
+</Canvas>
+
 
 All the buttons produce a larger-than-text hit target, and by default react to `:hover`, `:focus`, `:active`, and `:disabled`. Visited states are not shown even if the button is an anchor, as “visited” doesn’t make sense for an action.
 
