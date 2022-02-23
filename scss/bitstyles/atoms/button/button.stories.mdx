@@ -7,17 +7,27 @@ import icons from '../../../../assets/images/icons.svg';
 
 Bitstyles provides a set of button variants divided around two aspects: the colors used, and the size and shape of the button. These can be mixed to produce a range of buttons that conform to standard colors on hover, active, and pressed or selected states, and whose sizes will fit when placed in a row or column next to other variants.
 
-The following example use the default configuration, see [customization](#customization) for information on how to change these.
+The following examples use the default configuration, see [customization](#customization) for information on how to change these.
 
-Available color variants:
+### Color variants
 
-|Name|Classname|Usage|
-|Default/Primary|`a-button`|A highly-visible button. Use it for the primary action on a page|
-|Secondary|`.a-button--secondary`|General-purpose button. Use it for common actions|
-|Reversed|`.a-button--reversed`|General-purpose button, for use on dark backgrounds|
-|Danger|`.a-button--danger`|A modifier color variant that has no default colors of its own, only hover/focus colors. Apply this to any other color variant and it’ll turn red on hover, indicating to the user that the action this button performs is destructive, not undoable, or somehow dangerous|
-|Transparent|`.a-button--transparent`|A button that has no appearance until hovered|
-|Tab|`.a-button--tab`||
+|Name|Classname|Example|Usage|
+|--|--|--|--|
+|Default/Primary|`a-button`|<Story id="atoms-buttons--a-button" />|A highly-visible button. Use it for the primary action on a page|
+|Secondary|`.a-button--secondary`|<Story id="atoms-buttons--a-button-secondary" />|General-purpose button. Use it for common actions|
+|Reversed|`.a-button--reversed`|<Story id="atoms-buttons--a-button-reversed" />|General-purpose button, for use on dark backgrounds|
+|Danger|`.a-button--danger`|<Story id="atoms-buttons--a-button-danger" />|A modifier color variant that has no default colors of its own, only hover/focus colors. Apply this to any other color variant and it’ll turn red on hover, indicating to the user that the action this button performs is destructive, not undoable, or somehow dangerous|
+|Transparent|`.a-button--transparent`|<Story id="atoms-buttons-a-button-transparent" />|A button that has no appearance until hovered|
+|Tab|`.a-button--tab`|<Story id="atoms-buttons--a-button-tab" />|A button with tab-like appearance, to act as links to segmented content, and show the currently-selected section|
+
+### Size variants
+
+|Name|Classname|Example|Usage|
+|--|--|--|--|
+|Default|`.a-button`||Default size, fits alongside other text content|
+|Small|`.a-button--small`||Smaller target, useful in space-constrained UI like a large table|
+|Large|`.a-button--large`||Large target, useful in exceptional circumstances as a call to action, like a hero section, or empty UI state with only one way forward|
+|Icon|`.a-button--icon`||Given square content, this has a one-to-one aspect ratio (whether squared or round). Best used for icon-only buttons|
 
 <Canvas>
   <Story name="a-button">
