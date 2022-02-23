@@ -23,13 +23,21 @@ Apply a drop-shadow to the elementusing CSS filters. By default this is selected
 The available drop-shadows and their names can be customized by overriding the `$bitstyles-drop-shadow-values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `filter` as the format (drop-shadows are applied using CSS filters):
 
 ```scss
-$bitstyles-drop-shadow-values: (
-  'default': shadows.get('default', 'drop'),
+@use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (
+  $values: (
+    'default': shadows.get('default', 'drop'),
+  )
 );
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-drop-shadows-breakpoints` variable:
 
 ```scss
-$bitstyles-drop-shadow-breakpoints: ('s', 'm', 'xl');
+@use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
+);
 ```

@@ -4,6 +4,10 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Align-self
 
+Specify the `align-self` property of an element.
+
+The `flex-end` value is provided with default configuration, and is also available at the `m` breakpoint. See [customization](#customization) for details on how to change that.
+
 Flex and Grid share many alignment properties. These will have no effect on elements to which you haven’t given one of those classes (`.u-flex`, `.u-grid`).
 
 ## End
@@ -58,16 +62,22 @@ The classes are available at the `m` breakpoint.
 
 ## Customization
 
-The available align-self values can be customized by overriding the `$bitstyles-self` Sass variable:
+The available align-self values can be customized by overriding the `$bitstyles-self-values` Sass map. Provide the classname as the key, and the property value:
 
 ```scss
-$bitstyles-self: (
-  'end': flex-end,
+@use '~bitstyles/scss/bitstyles/utilities/self' with (
+  $values: (
+    'end': flex-end,
+  )
 );
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-self-breakpoints` variable:
 
 ```scss
-$bitstyles-self-breakpoints: ('m');
+@use '~bitstyles/scss/bitstyles/utilities/self' with (
+  $breakpoints: (
+    'm',
+  )
+);
 ```

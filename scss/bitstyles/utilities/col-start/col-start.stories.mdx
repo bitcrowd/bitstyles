@@ -4,11 +4,11 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Col-start
 
-Use these classes to specify which column an element should start in.
+Manually specify which column an element starts in.
 
-Manually placing items in a grid normally results in unwanted gaps, as the following automatically-placed grid children continue from where you placed it. You could avoid this by applying other col-start classes to every grid child to manually place each one in the grid.
+Auto-placed grid children following this one will be placed consecutively.
 
-It’s common to use `.u-col-start-1` to force an element to start a new row — the following grid children will continue afterwards.
+It’s common to use `.u-col-start-1` to force an element to start a new row. By default these classes are available for sizes `1`, `2`, `3`, `4`, `5`, and `6`, see [customization](#customization) for details on how to change that.
 
 <Canvas isColumn>
   <Story name="u-col-start-1">
@@ -87,7 +87,7 @@ It’s common to use `.u-col-start-1` to force an element to start a new row —
 
 ## Responsive col-start
 
-The `col-start` classes are available at `s`, `m`, and `xl` breakpoints by default.
+The `col-start` classes are available at `s`, `m`, and `xl` breakpoints by default. See the [customization](#customization) section below.
 
 <Canvas isColumn>
   <Story name="u-col-start-1@s">
@@ -130,21 +130,30 @@ The `col-start` classes are available at `s`, `m`, and `xl` breakpoints by defau
 
 ## Customization
 
-The available start columns can be customized by overriding the `$bitstyles-col-start` Sass variable:
+The available start columns can be customized by overriding the `$bitstyles-col-start-values` Sass map. Provide a name for the class as the key, and the col-start value you require. If you want to add some values (because you’ve defined you grid with more columns, for example), you’ll need to copy the the existing values in order to keep them — you can only override the whole map, not update or merge:
 
 ```scss
-$bitstyles-col-start: (
-  '1': 1,
-  '2': 2,
-  '3': 3,
-  '4': 4,
-  '5': 5,
-  '6': 6,
+@use '~bitstyles/scss/bitstyles/utilities/col-start' with (
+  $values: (
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+  )
 );
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-col-start-breakpoints` variable:
 
 ```scss
-$bitstyles-col-start-breakpoints: ('s', 'm', 'xl');
+@use '~bitstyles/scss/bitstyles/utilities/col-start' with (
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
+);
 ```

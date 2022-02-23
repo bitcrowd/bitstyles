@@ -7,7 +7,7 @@
 @include properties.output-directional(
   $property-name: 'padding',
   $classname-root: 'padding',
-  $values: map.get(settings.$sizes, 'positive'),
+  $values: settings.$sizes,
   $directions: settings.$directions
 );
 
@@ -16,7 +16,7 @@
     @include properties.output-directional(
       $property-name: 'padding',
       $classname-root: 'padding',
-      $values: map.get(settings.$sizes, 'positive'),
+      $values: settings.$sizes,
       $directions: settings.$directions,
       $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );

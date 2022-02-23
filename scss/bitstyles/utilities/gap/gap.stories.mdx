@@ -4,7 +4,9 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Gap
 
-The gap classes specify gaps on your grid elements — space between each grid item, but no space around them (you need to handle the space outside yourself).
+Specify the `gap` property of an element. This applies to flex and grid layouts, though right now the flex version is not as well supported. Use auto-prefixer to ensure the older `grid-gap` version of the property is used in your final CSS.
+
+By default, available sizes are `xs`, `s`, `m`, and `l`, and the classes are available at the `m` and `xl` breakpoints. See the [customization](#customization) section below for details on how to change those settings.
 
 <Canvas>
   <Story name="u-gap-s">
@@ -47,8 +49,6 @@ The gap classes specify gaps on your grid elements — space between each grid i
 
 ### Responsive gaps
 
-Gap classes are available at `m` and `xl` breakpoints using the suffix on the class e.g. `u-gap-l@m`.
-
 <Canvas isColumn>
   <Story name="u-gap-s@m">
     {`
@@ -78,16 +78,27 @@ Gap classes are available at `m` and `xl` breakpoints using the suffix on the cl
 
 ## Customization
 
-Sizes `s`, `m`, and `l` are available by default. This can be customized by overriding `$bitstyles-gap-sizes` e.g.
+The available sizes can be customized by overriding `$bitstyles-gap-sizes`. Provide the name to be used for the class as the key, and the size of gap. Note that if you want to keep the existing values, you’ll need to copy them.
 
 ```scss
-$bitstyles-gap-sizes: (
-  'my-gap-size': 5rem,
+@use '~bitstyles/scss/bitstyles/utilities/gap' with (
+  $sizes: (
+    'xs': size.get('xs'),
+    's': size.get('s'),
+    'm': size.get('l'),
+    'l': size.get('xl'),
+    'xl': 5rem,
+  )
 );
 ```
 
-The breakpoints these classes are available at can be customised too, by changing the named breakpoints:
+The breakpoints these classes are available at can be customised by overriding `$bitstyles-gap-breakpoints` Sass list:
 
 ```scss
-$bitstyles-gap-breakpoints: ('m', 'xl');
+@use '~bitstyles/scss/bitstyles/utilities/gap' with (
+  $bitstyles-gap-breakpoints: (
+    'm',
+    'xl',
+  )
+);
 ```

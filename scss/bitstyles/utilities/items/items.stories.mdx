@@ -1,10 +1,14 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="Utilities/items" />
+<Meta title="Utilities/flex" />
 
 # Align-items
 
-Flex and Grid share many alignment properties. These will have no effect on elements to which you haven’t given one of those classes (`.u-flex`, `.u-grid`).
+Specify `align-items` property on an element.
+
+Available with `center`, `flex-start`, and `flex-end` values by default, and at the `m` breakpoint. See [customization](#customization) below for details on how change the settings.
+
+Flex and Grid share many alignment properties. The `item` classes will have no effect on elements to which you haven’t given one of those classes (`.u-flex`, `.u-grid`).
 
 The `u-items-` classes set `align-items` to the respective direction(s) on the main axis (`center`, `flex-start`, `flex-end`):
 
@@ -170,20 +174,26 @@ These classes are all available at the `m` breakpoint.
 
 ## Customization
 
-The available align-items values can be customized by overriding the `$bitstyles-items` Sass variable:
+Customize the available align-items values by overriding the `$bitstyles-items-values` Sass map. Provide the name to be used for the class as the key, and the favlue for the `align-items` property:
 
 ```scss
-$bitstyles-items: (
-  'center': center,
-  'end': flex-end,
-  'start': flex-start,
-  'stretch': stretch,
-  'baseline': baseline,
+@use '~bitstyles/scss/bitstyles/utilities/items' with (
+  $values: (
+    'center': center,
+    'end': flex-end,
+    'start': flex-start,
+    'stretch': stretch,
+    'baseline': baseline,
+  )
 );
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-items-breakpoints` variable:
 
 ```scss
-$bitstyles-items-breakpoints: ('m');
+@use '~bitstyles/scss/bitstyles/utilities/items' with (
+  $breakpoints: (
+    'm',
+  )
+);
 ```

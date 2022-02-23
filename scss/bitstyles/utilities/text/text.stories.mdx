@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Text
 
-Set text-align properties on an element.
+Set text-align properties on an element. Default values available are: `left`, `right`, `center`, and `justify`. These classes are not available at any breakpoint by default. See the [customization](#customization) section for details on how to change the configuration.
 
 <Canvas isColumn>
   <Story name="u-text-left">
@@ -42,16 +42,22 @@ Set text-align properties on an element.
 The available text-align values can be customized by overriding the `$bitstyles-text-values` Sass variable:
 
 ```scss
-$bitstyles-text-values: (
-  'left': left,
-  'right': right,
-  'center': center,
-  'justify': justify,
+@use '~bitstyles/scss/bitstyles/utilities/text' with (
+  $values: (
+    'left': left,
+    'right': right,
+    'center': center,
+    'justify': justify,
+  )
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-text-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-text-breakpoints` list, providing the names of the breakpoints from the global breakpoints list.
 
 ```scss
-$bitstyles-text-breakpoints: ('m');
+@use '~bitstyles/scss/bitstyles/utilities/text' with (
+  $breakpoints: (
+    'm',
+  )
+);
 ```

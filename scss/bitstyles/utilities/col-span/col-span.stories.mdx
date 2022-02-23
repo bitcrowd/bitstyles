@@ -4,12 +4,24 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Col-span
 
-For some layouts, you’ll want to allow some of the grid children a little more space. You can do this using `.u-col-span-2` and `.u-col-span-3`. But note that using these classes can break the grid layout if the `span` class on the child is not applied at the same breakpoint as the grid.
+For some layouts, you’ll want to allow some of the grid children a little more space. You can do this using `.u-col-span-2`, `.u-col-span-3` … up to `.u-col-span-6`. See [customization](#customization) for details on how to change the available col-spans.
 
 <Canvas isColumn>
+  <Story name="u-col-span-1">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-6 u-padding-m u-bg-gray-10 a-list-reset">
+        <li class="u-bg-brand-2 u-padding-m a-card u-col-span-1">Grid child 1, span 2</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 2</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 3</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 4</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 5</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
   <Story name="u-col-span-2">
     {`
-      <ul class="u-grid u-gap-m u-grid-cols-2 u-padding-m u-bg-gray-10 a-list-reset">
+      <ul class="u-grid u-gap-m u-grid-cols-6 u-padding-m u-bg-gray-10 a-list-reset">
         <li class="u-bg-brand-2 u-padding-m a-card u-col-span-2">Grid child 1, span 2</li>
         <li class="u-bg-background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg-background u-padding-m a-card">Grid child 3</li>
@@ -21,8 +33,44 @@ For some layouts, you’ll want to allow some of the grid children a little more
   </Story>
   <Story name="u-col-span-3">
     {`
-      <ul class="u-grid u-gap-m u-grid-cols-3 u-padding-m u-bg-gray-10 a-list-reset">
+      <ul class="u-grid u-gap-m u-grid-cols-6 u-padding-m u-bg-gray-10 a-list-reset">
         <li class="u-bg-brand-2 u-padding-m a-card u-col-span-3">Grid child 1, span 3</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 2</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 3</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 4</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 5</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="u-col-span-4">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-6 u-padding-m u-bg-gray-10 a-list-reset">
+        <li class="u-bg-brand-2 u-padding-m a-card u-col-span-4">Grid child 1, span 4</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 2</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 3</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 4</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 5</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="u-col-span-5">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-6 u-padding-m u-bg-gray-10 a-list-reset">
+        <li class="u-bg-brand-2 u-padding-m a-card u-col-span-5">Grid child 1, span 5</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 2</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 3</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 4</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 5</li>
+        <li class="u-bg-background u-padding-m a-card">Grid child 6</li>
+      </ul>
+    `}
+  </Story>
+  <Story name="u-col-span-6">
+    {`
+      <ul class="u-grid u-gap-m u-grid-cols-6 u-padding-m u-bg-gray-10 a-list-reset">
+        <li class="u-bg-brand-2 u-padding-m a-card u-col-span-6">Grid child 1, span 6</li>
         <li class="u-bg-background u-padding-m a-card">Grid child 2</li>
         <li class="u-bg-background u-padding-m a-card">Grid child 3</li>
         <li class="u-bg-background u-padding-m a-card">Grid child 4</li>
@@ -35,7 +83,7 @@ For some layouts, you’ll want to allow some of the grid children a little more
 
 # Responsive col-span
 
-The `col-span` classes are also all available at `s`, `m`, and `xl` breakpoints.
+The `col-span` classes are available at `s`, `m`, `l`, and `xl` breakpoints. See the [customization](#customization) section below.
 
 <Canvas isColumn>
   <Story name="u-col-span-6@s">
@@ -90,21 +138,30 @@ The `col-span` classes are also all available at `s`, `m`, and `xl` breakpoints.
 
 ## Customization
 
-The available column-spans can be customized by overriding the `$bitstyles-col-span` Sass variable:
+The available column-spans can be customized by overriding the `$bitstyles-col-span-values` Sass map. Provide a name for the class as the key, and the span values you require. If you want to add some values (because you’ve defined you grid with more columns, for example), you’ll need to copy the the existing values in order to keep them — you can only override the whole map, not update or merge:
 
 ```scss
-$bitstyles-col-span: (
-  '1': span 1 / span 1,
-  '2': span 2 / span 2,
-  '3': span 3 / span 3,
-  '4': span 4 / span 4,
-  '5': span 5 / span 5,
-  '6': span 6 / span 6,
+@use '~bitstyles/scss/bitstyles/utilities/col-span' with (
+  $values: (
+    '1': span 1 / span 1,
+    '2': span 2 / span 2,
+    '3': span 3 / span 3,
+    '4': span 4 / span 4,
+    '5': span 5 / span 5,
+    '6': span 6 / span 6,
+    '7': span 7 / span 7,
+  )
 );
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-col-span-breakpoints` variable:
 
 ```scss
-$bitstyles-col-span-breakpoints: ('s', 'm', 'xl');
+@use '~bitstyles/scss/bitstyles/utilities/col-span' with (
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
+);
 ```

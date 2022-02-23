@@ -4,7 +4,20 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # bg (BackGround color)
 
-Define which background colours you require in the `$background-colors` Sass list, using the colours as defined in `$bitstyles-palette`.
+Applies a background-color to the element. Default colors are
+
+- `black-80`
+- `background`
+- `white`
+- `brand-2`
+- `gray-90`
+- `gray-80`
+- `gray-50`
+- `gray-20`
+- `gray-10`
+- `gray-5`
+
+See the [customization](#customization) section below for details on how to change available colors.
 
 <Canvas>
   <Story name="black-80">
@@ -61,25 +74,32 @@ Define which background colours you require in the `$background-colors` Sass lis
 
 ## Customization
 
-The available background-colors can be customized by overriding the `$bitstyles-bg-values` Sass variable:
+The available background-colors can be customized by overriding the `$bitstyles-bg-values` Sass variable. Use the `palette.get()` function to maintain consistency throughout your project:
 
 ```scss
-$bitstyles-bg-values: (
-  'black-80': palette.get('black', '80'),
-  'background': palette.get('background'),
-  'white': palette.get('white'),
-  'brand-2': palette.get('brand-2', '100'),
-  'gray-90': palette.get('gray', '90'),
-  'gray-80': palette.get('gray', '80'),
-  'gray-50': palette.get('gray', '50'),
-  'gray-20': palette.get('gray', '20'),
-  'gray-10': palette.get('gray', '10'),
-  'gray-5': palette.get('gray', '5'),
+@use '~bitstyles/scss/bitstyles/utilities/bg' with (
+  $values: (
+    'black-80': palette.get('black', '80'),
+    'background': palette.get('background'),
+    'white': palette.get('white'),
+    'brand-2': palette.get('brand-2', '100'),
+    'gray-90': palette.get('gray', '90'),
+    'gray-80': palette.get('gray', '80'),
+    'gray-50': palette.get('gray', '50'),
+    'gray-20': palette.get('gray', '20'),
+    'gray-10': palette.get('gray', '10'),
+    'gray-5': palette.get('gray', '5'),
+  )
 );
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-bg-breakpoints`:
 
 ```scss
-$bitstyles-bg-breakpoints: ('m', 'l');
+@use '~bitstyles/scss/bitstyles/utilities/bg' with (
+  $bitstyles-bg-breakpoints: (
+    'm',
+    'l',
+  )
+);
 ```

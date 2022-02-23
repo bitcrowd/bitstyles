@@ -4,6 +4,10 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Overflow
 
+Specify the `overflow` property on an element.
+
+By default `hidden`, `auto`, and `scroll` values are available, at all directions, x, and y. See the [customization](#customization) section for details on how to change that.
+
 <Canvas>
   <Story name="u-overflow-hidden">
     {`
@@ -48,3 +52,20 @@ Commonly we want to limit the height or width of an element, and allow scrolling
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+Available overflow values can be customized by overriding the `$bitstyles-overflow-values` Sass list. Provide the name for the class and the property as the key, and a Sass map of classname/property value pairs.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/overflow' with (
+  $values: (
+    'overflow': (
+      'hidden': hidden,
+    ),
+    'overflow-y': (
+      'hidden': hidden,
+    ),
+  )
+);
+```

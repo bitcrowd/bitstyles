@@ -6,9 +6,11 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Set font properties of an element.
 
+By default these classes are not provided at any breakpoint, but see [customization](#customization) for details on how to change that.
+
 ## Font Weight
 
-The Nunito font provided has no `light` font-weight, so in the following list you’ll see no difference to `font-normal`.
+Note: the Nunito font provided has no `light` font-weight, so in the following list you’ll see no difference to `font-normal`.
 
 <Canvas isColumn>
   <Story name="font-light">
@@ -69,29 +71,39 @@ Specify font-family on an element. Defaults to the `header` and `body` font-stac
 
 ## Customization
 
-The available font-weights and font-styles can be customized by overriding the `$bitstyles-font-weight-values` and `$bitstyles-font-weight-values` Sass variables respectively:
+The available font-weights and font-styles can be customized by overriding the `$bitstyles-font-weight-values`, `$bitstyles-font-style-values`, and `$bitstyles-font-family-values` Sass maps respectively. Provide the name to be used for the class, and the value for that CSS property:
 
 ```scss
-$bitstyles-font-weight-values: (
-  'light': typography.$font-weight-light,
-  'normal': typography.$font-weight-normal,
-  'medium': typography.$font-weight-medium,
-  'bold': typography.$font-weight-bold,
-);
-$bitstyles-font-style-values: (
-  'italic': italic,
-  'not-italic': normal,
-);
-$bitstyles-font-family-values: (
-  'header': typography.$font-family-header,
-  'body': typography.$font-family-body,
+@use '~bitstyles/scss/bitstyles/utilities/font' with (
+  $weight-values: (
+    'light': typography.$font-weight-light,
+    'normal': typography.$font-weight-normal,
+    'medium': typography.$font-weight-medium,
+    'bold': typography.$font-weight-bold,
+  ),
+  $style-values: (
+    'italic': italic,
+    'not-italic': normal,
+  ),
+  $family-values: (
+    'header': typography.$font-family-header,
+    'body': typography.$font-family-body,
+  )
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-font-weight-breakpoints` and ``$bitstyles-font-style-breakpoints` Sass variables respectively:
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-font-weight-breakpoints`, `$bitstyles-font-style-breakpoints`, and `$bitstyles-font-family-breakpoints` Sass lists respectively:
 
 ```scss
-$bitstyles-font-weight-breakpoints: ();
-$bitstyles-font-style-breakpoints: ();
-$bitstyles-font-family-breakpoints: ();
+@use '~bitstyles/scss/bitstyles/utilities/font' with (
+  $bitstyles-font-weight-breakpoints: (
+    'm',
+  ),
+  $bitstyles-font-style-breakpoints: (
+    'l',
+  ),
+  $bitstyles-font-family-breakpoints: (
+    's',
+  )
+);
 ```

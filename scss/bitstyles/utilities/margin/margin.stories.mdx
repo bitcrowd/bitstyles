@@ -6,30 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Apply margins of a specified size and direction to an element.
 
-With default configuration, the margins are available in sizes `0`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, with negative-margin variations of each. This can be configured by overriding `$bitstyles-margin-sizes` e.g.
-
-```scss
-$bitstyles-margin-sizes: (
-  'positive': (
-    '0': 0,
-    'xxs': size.get('xxs'),
-    'xs': size.get('xs'),
-    's': size.get('s'),
-    'm': size.get('m'),
-    'l': size.get('l'),
-    'xl': size.get('xl'),
-    'auto': auto,
-  ),
-  'negative': (
-    'xxs': -#{size.get('xxs')},
-    'xs': -#{size.get('xs')},
-    's': -#{size.get('s')},
-    'm': -#{size.get('m')},
-    'l': -#{size.get('l')},
-    'xl': -#{size.get('xl')},
-  ),
-);
-```
+With default configuration, the margins are available in sizes `0`, `xxs`, `xs`, `s`, `m`, `l`, `xl`, with negative-margin variations of each. They are provided at the `s` and `m` breakpoints. See [customization](#customization) below for details on how to change that.
 
 ## Margin sizes
 
@@ -94,6 +71,8 @@ $bitstyles-margin-sizes: (
 
 ## Negative margin sizes
 
+Apply the prefix `neg` to the margin size to apply the negative version of the margin.
+
 <Canvas>
   <Story name="margin-neg-xxs">
     {`
@@ -143,36 +122,6 @@ $bitstyles-margin-sizes: (
 
 Every margin size (negative and positive) is also available directed at the single sides `top`, `right`, `bottom`, `left`, and the double directions `x` and `y`.
 
-This can be customised by overriding `$bitstyles-margin-directions` e.g.
-
-```scss
-$bitstyles-margin-directions: (
-  '': null,
-  'top': (
-    'top',
-  ),
-  'right': (
-    'right',
-  ),
-  'bottom': (
-    'bottom',
-  ),
-  'left': (
-    'left',
-  ),
-  'x': (
-    'right',
-    'left',
-  ),
-  'y': (
-    'top',
-    'bottom',
-  ),
-);
-```
-
-The `'': null` entry is needed to render the margin classes with no directional modifiers.
-
 <Canvas>
   <Story id="utilities-margin--margin-xl" />
   <Story name="margin-xl-top">
@@ -221,13 +170,7 @@ The `'': null` entry is needed to render the margin classes with no directional 
 
 ## Responsive margins
 
-All the margins are also available at the `@s` and `@m` breakpoint suffixes. To customise this, override `$bitstyles-margin-breakpoints` e.g.
-
-```scss
-$bitstyles-margin-breakpoints: ('s', 'm');
-```
-
-If you remove `base`, margin classes will not be output without a breakpoint.
+All the margins are also available at the `@s` and `@m` breakpoint suffixes.
 
 <Canvas>
   <Story name="margin-xl@s">
@@ -245,3 +188,61 @@ If you remove `base`, margin classes will not be output without a breakpoint.
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+Available margin-sizes can be configured by overriding the `$bitstyles-margin-sizes` Sass map. Provide the name to be used for the class as the key, and the value for the property as the value. If you want to keey the existing values, you’ll need to copy the default configuration as you cannot merge or update the existing map.
+
+The `positive` and `negative` keys are required for each group you want to define (e.g. if you have no negative margins, that key is not required).
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/margin' with (
+  $bitstyles-margin-sizes: (
+    'positive': (
+      '0': 0,
+      'xxs': size.get('xxs'),
+      'xs': size.get('xs'),
+      's': size.get('s'),
+      'm': size.get('m'),
+      'l': size.get('l'),
+      'xl': size.get('xl'),
+      'auto': auto,
+    ),
+    'negative': (
+      'xxs': -#{size.get('xxs')},
+      'xs': -#{size.get('xs')},
+      's': -#{size.get('s')},
+      'm': -#{size.get('m')},
+      'l': -#{size.get('l')},
+      'xl': -#{size.get('xl')},
+    ),
+  )
+);
+```
+
+To customise the breakpoints these classes are available at, override `$bitstyles-margin-breakpoints` e.g.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/margin' with (
+  $breakpoints: (
+    's',
+    'm',
+  )
+);
+```
+
+Directions can be customised by overriding the `$bitstyles-margin-directions` Sass map. Provide the name for the direction as the key, and the list of directions. Note that if you want to keep the existing directions, you’ll need to copy the existing configurations — the map cannot be updated, only overwritten.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/margin' with (
+  $directions: (
+    '': null,
+    'top-and-right': (
+      'top',
+      'right',
+    ),
+  )
+);
+```
+
+The `'': null` entry is needed to render the margin classes with no directional modifiers e.g. `u-margin-m`, `u-margin-l`.

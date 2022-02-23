@@ -4,6 +4,10 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Justify
 
+Specify `justify-content` property on an element.
+
+Available with `between`, `start`, and `end` values by default, and at the `m` breakpoint. See [customization](#customization) below for details on how change the settings.
+
 Flex and Grid share many alignment properties. These will have no effect on elements to which you haven’t given one of those classes (`.u-flex`, `.u-grid`).
 
 The `u-justify-` classes set set `justify-content` to align flex children to the respective different edges on the cross-axis. This only affects layout when the combined elements are smaller than the available cross-axis:
@@ -92,18 +96,24 @@ These classes are available at the `m` breakpoint.
 
 ## Customization
 
-The available justify-content values can be customized by overriding the `$bitstyles-justify` Sass variable:
+Customize the available justify-content values by overriding the `$bitstyles-justify-values` Sass map. Provide the name to be used for the class as the key, and the favlue for the `justify-content` property:
 
 ```scss
-$bitstyles-justify: (
-  'between': space-between,
-  'end': flex-end,
-  'start': flex-start,
+@use '~bitstyles/scss/bitstyles/utilities/justify' with (
+  $values: (
+    'between': space-between,
+    'end': flex-end,
+    'start': flex-start,
+  )
 );
 ```
 
 The breakpoints these classes are available at can be customized by overriding the `$bitstyles-justify-breakpoints` variable:
 
 ```scss
-$bitstyles-justify-breakpoints: ('m');
+@use '~bitstyles/scss/bitstyles/utilities/justify' with (
+  $breakpoints: (
+    'm',
+  )
+);
 ```
