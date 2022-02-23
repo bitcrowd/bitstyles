@@ -1,0 +1,75 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction/Extending bitstyles" />
+
+# Extending Bitstyles
+
+## Adding your own components
+
+When adding your own custom component in CSS (not a component built using the utility classes), the point at which you import it is important, because CSS is a source order-dependent language.
+
+There are three main layers you need to be aware of:
+
+1. Base styles
+1. Components
+1. Utility classes
+
+When adding your own base styles, be sure to add them at the end of the base styles section in bitstyles. When adding your own components, they should go at the end of the bitstyles components, and your own utility classes should go at the end of the bitstyles utility classes.
+
+To do that, you need to be `@use` ing each of the bitstyles modules individually, not importing the whole library in one line (see [Getting started](/docs/introduction-getting-started--page)).
+
+At the end of the `@use` statements importing from `bitstyles/base`, add your own base styles:
+
+```scss
+//
+// Base /////////////////////////////////////////
+
+@use 'bitstyles/base/anchor';
+@use 'bitstyles/base/figure';
+// …
+@use 'bitstyles/base/select';
+@use 'bitstyles/base/typography' as base-typography;
+
+@use './base/local-base-style'; /* extra base styles */
+```
+
+Add your own components at the end of the `@use` statements importing from `bitstyles/organisms`:
+
+```scss
+//
+// Organisms ///////////////////////////////////
+
+@use 'bitstyles/organisms/modal';
+@use 'bitstyles/organisms/navbar';
+@use 'bitstyles/organisms/sidebar';
+@use 'bitstyles/organisms/notification-center';
+@use 'bitstyles/organisms/table';
+@use 'bitstyles/organisms/ui-group';
+
+// …
+
+@use './components/local-component'; /* extra components */
+```
+
+Add your own utility classes at the end of the `@use` statements importing from `bitstyles/utilities`,:
+
+```scss
+//
+// Utilities ////////////////////////////////////
+
+@use 'bitstyles/utilities/absolute-center';
+@use 'bitstyles/utilities/absolute-cover';
+// …
+@use 'bitstyles/utilities/typography';
+@use 'bitstyles/utilities/z-index';
+
+@use './utilities/local-utility'; /* extra utilities */
+```
+
+## Next steps
+
+If you’re here for the ready-to-use UI components, go take a look at the [UI components](/docs/introduction-ui-components--page)
+
+Familiarize yourself with the design tokens bitstyles helps manage, starting at [Animation](/docs/design-tokens-animation--page)
+
+All components and utility classes are listed in the left-hand sidebar, look for examples and further documentation there.
