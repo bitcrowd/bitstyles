@@ -20,7 +20,7 @@ To build the whole library once, run
 yarn build
 ```
 
-To recompile sass on every change (while working on changes, for example):
+To recompile the Sass on every change (while working on changes, for example):
 
 ```sh
 yarn watch
@@ -36,9 +36,9 @@ yarn lint
 
 ## Component library
 
-We use [storybookjs](https://storybook.js.org) to provide a single navigable library of the classes in bitstyles, and the associated documentation.
+We use [Storybook](https://storybook.js.org) to provide a single navigable library of the classes in bitstyles, and the associated documentation.
 
-When updating existing modules, be sure to update the necessary documentation in sotrybook, and provide meaningful stories that test the CSS, or illustrate its usage. When adding new modules, include a new `<module name>.stories.mdx` file, and follow the format of existing docs as best you can.
+When updating existing modules, be sure to update the necessary documentation in storybook, and provide meaningful stories that test the CSS, or illustrate its usage. When adding new modules, include a new `<module name>.stories.mdx` file, and follow the format of existing docs as best you can.
 
 To view the storybook locally:
 

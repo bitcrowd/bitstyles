@@ -20,7 +20,7 @@ Bitstyles is a [Sass](https://sass-lang.com) library, so you’ll need to use Sa
 
 ## Updating
 
-If you’re already using bitstyles in a project, you can update using npm. We stick to semantic versioning using major/minor/patch numbers, but as we’re talking about CSS classnames sometimes care is needed. We do not consider a changed classname a breaking change, but a changed classname can break your layout.
+Update bitstyles using npm. You may also need to make some changes to Sass variables or classnames in your project. We stick to semantic versioning using major/minor/patch numbers, but as we’re talking about CSS classnames sometimes care is needed. We do not consider a changed classname a breaking change, but a changed classname can still break your layout.
 
 See the [CHANGELOG](../../../CHANGELOG.md) for details of updates you may need to make in your project when upgrading.
 
@@ -121,7 +121,7 @@ A few things to note:
 
 ### Legacy `@import`
 
-Although deprecated, Sass still supports the `@import` directive. Bitstyles can for now still be configured and built using this method, but it’s recommended that you use the `@use` approach shown above.
+Although deprecated, Sass still supports the `@import` directive. Bitstyles can for now be configured and built using this method, but it’s recommended that you use the `@use` approach shown above.
 
 ```scss
 @import '~bitstyles/scss/bitstyles';
