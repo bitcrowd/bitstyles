@@ -2,9 +2,9 @@
 
 ## Getting started
 
-The project uses [yarn](https://yarnpkg.com/en/docs/install) as its package manager.
+The project requires a recent version of [NodeJS](https://nodejs.org/en/) and uses [yarn](https://yarnpkg.com/en/docs/install) as its package manager. See the `.tool-versions` file for the specific NodeJS version and use your version manager of choice (e.g. [asdf](https://asdf-vm.com/) or [nvm](https://github.com/creationix/nvm)) to install it.
 
-Clone this repository, and install packages:
+Next, clone this repository, and install packages:
 
 ```sh
 git clone git@github.com:bitcrowd/bitstyles.git
