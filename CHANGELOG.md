@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- New `u-min-height` utility class
+- `u-height` utility class is now configurable using `$bitstyles-height-values` and `$bitstyles-height-breakpoints`
+
 ## [[4.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.1.0) - 2021-12-20
 
 ### Added
