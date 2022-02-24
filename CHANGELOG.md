@@ -2,8 +2,15 @@
 
 ## Unreleased
 
+### Added
+
+- Configuration of the border-radius utility class is now possible: `$bitstyles-border-radius-values`, `$bitstyles-border-radius-breakpoints`, `$bitstyles-border-radius-directions`
 - New `u-min-height` utility class
 - `u-height` utility class is now configurable using `$bitstyles-height-values` and `$bitstyles-height-breakpoints`
+
+### Breaking
+
+- `u-round` classes have been renamed `u-border-radius`
 
 ## [[4.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.1.0) - 2021-12-20
 

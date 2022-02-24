@@ -1,0 +1,73 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/border-radius" />
+
+# Border-radius
+
+Specify the radius of the corners of an element (`border-radius`). It defaults to `border-radius: 0` and is specifiable for each corner individually and all at once. See [customization](#customization) for details on how to change that, and how to make these classes available at different breakpoints.
+
+<Canvas>
+  <Story name="u-border-radius-0">
+    {`
+      <button class="a-button u-border-radius-0">u-border-radius-0</button>
+    `}
+  </Story>
+  <Story name="u-border-radius-0-tr">
+    {`
+      <button class="a-button u-border-radius-0-tr">u-border-radius-0-tr</button>
+    `}
+  </Story>
+  <Story name="u-border-radius-0-br">
+    {`
+      <button class="a-button u-border-radius-0-br">u-border-radius-0-br</button>
+    `}
+  </Story>
+  <Story name="u-border-radius-0-bl">
+    {`
+      <button class="a-button u-border-radius-0-bl">u-border-radius-0-bl</button>
+    `}
+  </Story>
+  <Story name="u-border-radius-0-tl">
+    {`
+      <button class="a-button u-border-radius-0-tl">u-border-radius-0-tl</button>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The available sizes of border radius can be customized by overriding the `$bitstyles-border-radius-values` Sass map, specifying the name to be used for the class, and the value to apply:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/border-radius' with (
+  $values: (
+    'm': size.get('m'),
+  )
+);
+```
+
+Make these classes available at breakpoints using the `$bitstyles-border-radius-breakpoints` Sass list:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/border-radius' with (
+  $breakpoints: (
+    'm',
+  )
+);
+```
+
+If you need it, you can also customize which corners are available using `$bitstyles-border-radius-directions`. Provide a Sass map with the name to be used for the class as the keys, and a Sass list of the directions that class will specify. Note the directions must each end with the suffix `radius` (it’s because of the unusual ordering of the directions and property name in the CSS properties like `border-top-left-radius`):
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/border-radius' with (
+  $directions: (
+    '': (
+      'radius',
+    ),
+    'brand': (
+      'top-right-radius',
+      'top-left-radius',
+    ),
+  )
+);
+```

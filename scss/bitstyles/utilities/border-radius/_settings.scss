@@ -1,0 +1,23 @@
+@use '../../tools/size';
+
+$values: (
+  '0': 0,
+) !default;
+$breakpoints: () !default;
+$directions: (
+  '': (
+    'radius',
+  ),
+  'tr': (
+    'top-right-radius',
+  ),
+  'br': (
+    'bottom-right-radius',
+  ),
+  'bl': (
+    'bottom-left-radius',
+  ),
+  'tl': (
+    'top-left-radius',
+  ),
+) !default;
