@@ -4,14 +4,45 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Height
 
-Force an element’s height regardless of the content.
+Specify an element’s height. Default configuration provides `height: 100vh` and `height: stretch` (previously known as `fill-available`), with no breakpoint vartiants. See [customization](#customization) for details on how to change that.
 
 <Canvas>
   <Story name="100vh">
     {`
       <div class="u-height-100vh u-bg-gray-10">
-        This element will take the height of the viewport, regardless how much content.
+        u-height-100vh
+      </div>
+    `}
+  </Story>
+  <Story name="stretch">
+    {`
+      <div style="height: 10rem">
+        <div class="u-height-stretch u-bg-gray-10">
+          u-height-stretch
+        </div>
       </div>
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+Customize the available heights by overriding the `$bitstyles-height-values` Sass map, providing the name to be used for the class, and the value to use.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/height' with (
+  $values: (
+    '10rem': 10rem,
+  )
+);
+```
+
+Available breakpoint variables can be specified by overriding the `$bitstyles-height-breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/height' with (
+  $breakpoints: (
+    'm',
+  )
+);
+```

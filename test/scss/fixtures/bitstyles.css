@@ -2222,6 +2222,11 @@ table {
 .u-height-100vh {
   height: 100vh;
 }
+.u-height-stretch {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+}
 .u-items-center {
   align-items: center;
 }
@@ -3246,6 +3251,14 @@ table {
     margin-bottom: -1.6rem;
     margin-top: -1.6rem;
   }
+}
+.u-min-height-0 {
+  min-height: 0;
+}
+.u-min-height-stretch {
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: stretch;
 }
 .u-object-cover {
   display: block;
