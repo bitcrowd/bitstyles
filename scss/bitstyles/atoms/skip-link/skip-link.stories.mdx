@@ -8,6 +8,10 @@ A skip-to-content link for keyboard users, especially those with little or no vi
 
 The `href` attribute should match the `id` you add to your main content, which is commonly `main`.
 
+To see the link in the example here, you need to give the link focus, just like in a live site or app — click inside the example, then hit the tab key on your keyboard to pass keyboard focus to the link.
+
+If you try this example using a screenreader, move the screenreader focus to the skip link. The link text will be read out but the link itself may not become visible (that requires keyboard focus). You can follow the link in the normal way provided by your screenreader software; when you do so, the text in the main content area will be read out loud.
+
 <Canvas>
   <Story inline={false} name="a-skip-link">
     {`
@@ -22,10 +26,10 @@ The `href` attribute should match the `id` you add to your main content, which i
 The default colors are high contrast and clearly readable. If you change them, please check the contrast ratio between your foreground and background colors is high. This component is not intended to fit into a design, but to be highly visible and readable.
 
 ```scss
- @use '~bitstyles/scss/bitstyles/atoms/skip-link' with (
+@use '~bitstyles/scss/bitstyles/atoms/skip-link' with (
   $padding: size.get('m'),
   $background: palette.get('white'),
   $color: palette.get('black'),
-  $border: size.get('xxs') palette.get('black') solid,
- );
- ````
+  $border: size.get('xxs') palette.get('black') solid
+);
+```
