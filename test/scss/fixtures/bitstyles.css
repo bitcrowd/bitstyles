@@ -3260,6 +3260,9 @@ table {
   min-height: -moz-available;
   min-height: stretch;
 }
+.u-min-width-0 {
+  min-width: 0;
+}
 .u-object-cover {
   display: block;
   height: 100%;
