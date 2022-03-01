@@ -1,0 +1,17 @@
+@forward './settings';
+@use './settings';
+@use '../../tools/properties';
+
+@include properties.output(
+  $property-name: 'min-width',
+  $classname-root: 'min-width',
+  $values: settings.$values
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include properties.output(
+    $property-name: 'min-width',
+    $classname-root: 'min-width',
+    $values: settings.$values
+  );
+}

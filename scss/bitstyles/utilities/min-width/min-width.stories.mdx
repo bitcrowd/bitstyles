@@ -1,0 +1,37 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/min-width" />
+
+# min-width
+
+Specify the `min-width` property of an element. Default configuration provides `min-width: 0` with no breakpoint variations. See [customization](#customization) for details on how to change that.
+
+<Canvas>
+  <Story name="u-min-width-0">
+    {`
+      <div class="u-min-width-0">u-min-width-0</div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+Customize the available min-width by overriding the `$bitstyles-min-width-values` Sass map, providing the name to be used for the class, and the value to use.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/min-width' with (
+  $values: (
+    '10rem': 10rem,
+  )
+);
+```
+
+Available breakpoint variables can be specified by overriding the `$bitstyles-min-width-breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/min-width' with (
+  $breakpoints: (
+    'm',
+  )
+);
+```
