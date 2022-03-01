@@ -1,6 +1,7 @@
 @forward './settings';
 @use './settings';
 @use '../../tools/properties';
+@use '../../tools/media-query';
 
 @include properties.output(
   $property-name: 'min-height',
@@ -9,9 +10,12 @@
 );
 
 @each $breakpoint-alias in settings.$breakpoints {
-  @include properties.output(
-    $property-name: 'min-height',
-    $classname-root: 'min-height',
-    $values: settings.$values
-  );
+  @include media-query.get($breakpoint-alias) {
+    @include properties.output(
+      $property-name: 'min-height',
+      $classname-root: 'min-height',
+      $values: settings.$values,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
 }
