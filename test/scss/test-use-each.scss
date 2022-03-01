@@ -330,6 +330,11 @@
     '1em': 1em,
   )
 );
+@use '../../scss/bitstyles/utilities/min-width' with (
+  $values: (
+    '1em': 1em,
+  )
+);
 @use '../../scss/bitstyles/utilities/object-cover';
 @use '../../scss/bitstyles/utilities/outline';
 @use '../../scss/bitstyles/utilities/overflow' with (
