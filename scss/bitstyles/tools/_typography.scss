@@ -17,8 +17,8 @@
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 //
 
-@mixin output-font-sizes($font-sizes, $prefix, $subset, $breakpoint) {
-  @each $element-name, $font-size in ($font-sizes) {
+@mixin output-font-specs($font-specs, $prefix, $subset, $breakpoint) {
+  @each $element-name, $font-spec in ($font-specs) {
     @if length($subset) == 0 or index($subset, $element-name) {
       #{$prefix}#{$element-name} {
         /* stylelint-disable max-nesting-depth */
@@ -26,6 +26,7 @@
           $font-size: $element-name,
           $breakpoint: $breakpoint
         );
+        line-height: map.get($font-spec, 'line-height')
         /* stylelint-enable max-nesting-depth */
       }
     }
@@ -75,13 +76,13 @@
 //
 
 @mixin generate-font-sizes($prefix: '', $subset: ()) {
-  @each $breakpoint, $font-sizes in typography.$font-sizes {
+  @each $breakpoint, $font-specs in typography.$scale {
     // Don’t wrap base classes in a media-query
     @if $breakpoint == 'base' {
-      @include output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
+      @include output-font-specs($font-specs, $prefix, $subset, $breakpoint);
     } @else {
       @include media-query.get($breakpoint) {
-        @include output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
+        @include output-font-specs($font-specs, $prefix, $subset, $breakpoint);
       }
     }
   }

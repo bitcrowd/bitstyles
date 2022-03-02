@@ -1,5 +1,5 @@
-@use '../../settings/typography';
-@use '../../tools/typography' as typography-tools;
+@use '../../settings/typography' as settings;
+@use '../../tools/typography';
 
 /* stylelint-disable selector-max-type */
 h1,
@@ -8,19 +8,19 @@ h3,
 h4,
 h5,
 h6 {
-  margin: typography.$margin-heading;
-  font-family: typography.$font-family-header;
-  font-weight: typography.$font-weight-bold;
+  margin: settings.$margin-heading;
+  font-family: settings.$font-family-header;
+  font-weight: settings.$font-weight-bold;
   text-rendering: optimizeLegibility;
 }
 
-@include typography-tools.generate-font-sizes(
+@include typography.generate-font-sizes(
   '',
   (html, h1, h2, h3, h4, h5, h6)
 );
 
 p {
-  margin: 0 0 typography.$margin-paragraph;
+  margin: 0 0 settings.$margin-paragraph;
 }
 
 address {
@@ -28,7 +28,7 @@ address {
 }
 
 dt {
-  font-weight: typography.$font-weight-bold;
+  font-weight: settings.$font-weight-bold;
 }
 
 table {

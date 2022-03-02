@@ -12,11 +12,11 @@
 //
 
 @function get($font-size, $breakpoint: 'base') {
-  @if map.has-key(typography.$font-sizes, $breakpoint) {
-    $font-sizes: map.get(typography.$font-sizes, $breakpoint);
+  @if map.has-key(typography.$scale, $breakpoint) {
+    $font-specs: map.get(typography.$scale, $breakpoint);
 
-    @if map.has-key($font-sizes, $font-size) {
-      @return map.get($font-sizes, $font-size);
+    @if map.has-key($font-specs, $font-size) {
+      @return map.get(map.get($font-specs, $font-size), 'font-size');
     } @else {
       @error 'Oops! There’s no font-size at that breakpoint ‘#{$font-size}/#{$breakpoint}’.';
     }
