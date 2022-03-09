@@ -39,7 +39,7 @@ You can also run linting on js, scss, or mdx files separately using the respecti
 ```sh
 yarn lint:js
 yarn lint:scss
-yarn lint:docs
+yarn prettier:docs
 ```
 
 This is useful for automatically fixing linting errors by passing the `--fix` parameter (which will not work with the rolled-into-one `lint` command, only these individual commands) e.g.
