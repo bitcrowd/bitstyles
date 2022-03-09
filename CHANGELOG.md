@@ -14,7 +14,7 @@
 
 - `u-round` classes have been renamed `u-border-radius`
 
-## [[4.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.1.0) - 2022-22-02
+## [[4.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.1.0) - 2022-02-22
 
 ### Added
 
