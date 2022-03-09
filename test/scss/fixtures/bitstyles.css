@@ -1458,6 +1458,26 @@ table {
   margin: 0;
   padding: 0;
 }
+.a-skip-link {
+  font-weight: 600;
+  left: 50%;
+  padding: 0.8rem;
+  position: absolute;
+  top: -100%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.a-skip-link,
+.a-skip-link:focus,
+.a-skip-link:hover,
+.a-skip-link:visited {
+  background: #fff;
+  border: 0.2rem solid #000;
+  color: #000;
+}
+.a-skip-link:focus {
+  top: 0;
+}
 .a-topbar {
   left: 0;
   padding: 0.6rem 0.8rem;

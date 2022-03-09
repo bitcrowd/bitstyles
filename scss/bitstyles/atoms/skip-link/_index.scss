@@ -1,0 +1,25 @@
+@forward './settings';
+@use './settings';
+
+.a-skip-link {
+  position: absolute;
+  z-index: 1;
+  top: -100%;
+  left: 50%;
+  padding: settings.$padding;
+  transform: translateX(-50%);
+  font-weight: settings.$font-weight;
+
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    border: settings.$border;
+    background: settings.$background;
+    color: settings.$color;
+  }
+
+  &:focus {
+    top: 0;
+  }
+}

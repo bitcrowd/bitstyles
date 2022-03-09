@@ -202,6 +202,7 @@
 );
 @use '../../scss/bitstyles/atoms/link';
 @use '../../scss/bitstyles/atoms/list-reset';
+@use '../../scss/bitstyles/atoms/skip-link' with($color: #f00);
 @use '../../scss/bitstyles/atoms/topbar' with (
   $vertical-padding: 10rem
 );

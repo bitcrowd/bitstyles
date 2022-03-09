@@ -34,6 +34,32 @@ This project uses [stylelint](https://github.com/stylelint/stylelint) and [prett
 yarn lint
 ```
 
+You can also run linting on js, scss, or mdx files separately using the respective commands:
+
+```sh
+yarn lint:js
+yarn lint:scss
+yarn prettier:docs
+```
+
+This is useful for automatically fixing linting errors by passing the `--fix` parameter (which will not work with the rolled-into-one `lint` command, only these individual commands) e.g.
+
+```sh
+yarn lint:scss --fix
+```
+
+## Testing
+
+After adding or changing anything that affects the final output CSS, you’ll need to update the fixtures. These record the expected state of the CSS output by the entire library in its default state, and when some configuration is being overidden.
+
+Run the build & comparison:
+
+```sh
+yarn test
+```
+
+The output in terminal will show which lines differ from the current CSS output. This may be because of a bug introduced on the current branch, in which case the fixture should stay the same but your changes to source need to be corrected. If the change is expected, update the fixture to match, and commit the changes.
+
 ## Component library
 
 We use [Storybook](https://storybook.js.org) to provide a single navigable library of the classes in bitstyles, and the associated documentation.
