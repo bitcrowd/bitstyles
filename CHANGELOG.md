@@ -7,6 +7,7 @@
 - Configuration of the border-radius utility class is now possible: `$bitstyles-border-radius-values`, `$bitstyles-border-radius-breakpoints`, `$bitstyles-border-radius-directions`
 - New `u-min-height` utility class
 - `u-height` utility class is now configurable using `$bitstyles-height-values` and `$bitstyles-height-breakpoints`
+- New `u-min-width` utility class
 
 ### Breaking
 

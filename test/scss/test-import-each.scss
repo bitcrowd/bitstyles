@@ -194,6 +194,9 @@ $bitstyles-margin-breakpoints: ('xl', 's');
 $bitstyles-min-height-values: (
   '1em': 1em,
 );
+$bitstyles-min-width-values: (
+  '1em': 1em,
+);
 $bitstyles-overflow-values: (
   'overflow': (
     'hidden': hidden,
@@ -308,6 +311,7 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/utilities/line-height';
 @import '../../scss/bitstyles/utilities/margin';
 @import '../../scss/bitstyles/utilities/min-height';
+@import '../../scss/bitstyles/utilities/min-width';
 @import '../../scss/bitstyles/utilities/object-cover';
 @import '../../scss/bitstyles/utilities/outline';
 @import '../../scss/bitstyles/utilities/overflow';

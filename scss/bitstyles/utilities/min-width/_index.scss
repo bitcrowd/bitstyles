@@ -4,16 +4,16 @@
 @use '../../tools/media-query';
 
 @include properties.output(
-  $property-name: 'min-height',
-  $classname-root: 'min-height',
+  $property-name: 'min-width',
+  $classname-root: 'min-width',
   $values: settings.$values
 );
 
 @each $breakpoint-alias in settings.$breakpoints {
   @include media-query.get($breakpoint-alias) {
     @include properties.output(
-      $property-name: 'min-height',
-      $classname-root: 'min-height',
+      $property-name: 'min-width',
+      $classname-root: 'min-width',
       $values: settings.$values,
       $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
     );
