@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## [[4.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.2.0) - 2022-02-09
 
 ### Added
 
@@ -8,12 +8,13 @@
 - New `u-min-height` utility class
 - `u-height` utility class is now configurable using `$bitstyles-height-values` and `$bitstyles-height-breakpoints`
 - New `u-min-width` utility class
+- New atom component `a-skip-link`, for skip-to-content links
 
 ### Breaking
 
 - `u-round` classes have been renamed `u-border-radius`
 
-## [[4.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.1.0) - 2021-12-20
+## [[4.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.1.0) - 2022-02-22
 
 ### Added
 
@@ -22,7 +23,6 @@
 - Two functions (`shadow.to-box-shadow()` and `shadow.to-drop-shadow()`) for translating those shadows (which are specified in Sass' list format) into either CSS `box-shadow` format, or CSS filter `drop-shadow` format. Not necessary for the shadows accessed using `shadows.get()`
 - New `u-shadow` and `u-drop-shadow` utility classes to set box-shadows and drop-shadows respectively
 - The smallscreen version of the Sidebar organism can now be positioned to the left or right side of the screen by overriding `$bitstyles-sidebar-small-location` (defaults to `left`)
-- New atom component `a-skip-link`, for skip-to-content links
 
 ### Fixed
 
