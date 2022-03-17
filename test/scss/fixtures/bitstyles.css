@@ -3867,9 +3867,29 @@ table {
 .u-relative {
   position: relative;
 }
+.u-absolute {
+  position: absolute;
+}
+.u-fixed {
+  position: fixed;
+}
+.u-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
 @media screen and (min-width: 30em) {
   .u-relative\@m {
     position: relative;
+  }
+  .u-absolute\@m {
+    position: absolute;
+  }
+  .u-fixed\@m {
+    position: fixed;
+  }
+  .u-sticky\@m {
+    position: -webkit-sticky;
+    position: sticky;
   }
 }
 .u-row-start-1 {

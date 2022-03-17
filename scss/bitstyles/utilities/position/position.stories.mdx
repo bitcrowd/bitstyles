@@ -1,0 +1,102 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/position" />
+
+# Position
+
+Apply specified positioning to an element.
+
+With default configuration, `relative`, `absolute`, `fixed`, and `sticky`  positioning are all available, and at the `m` breakpoint — see [customization](#customization) for details on how to change that.
+
+<Canvas>
+  <Story name="u-relative">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-background u-padding-0">u-padding-0</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-absolute">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-background u-padding-xs">u-padding-xs</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-fixed">
+    {`
+      <div class="">
+        <div class="u-bg-background u-padding-s">u-padding-s</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-sticky">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-background u-padding-m">u-padding-m</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Responsive positioning
+
+All the position classes are also available at the `@m` breakpoint suffixes.
+
+<Canvas>
+  <Story name="u-relative@m">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-background u-padding-0">u-padding-0</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-absolute@m">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-background u-padding-xs">u-padding-xs</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-fixed@m">
+    {`
+      <div class="">
+        <div class="u-bg-background u-padding-s">u-padding-s</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-sticky@m">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-background u-padding-m">u-padding-m</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The available positioning classes can be configured by overriding `$bitstyles-position-values` Sass map, providing the classname as the key, and the size as value:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/position' with (
+  $values: (
+    'relative': relative,
+    'absolute': absolute,
+    'fixed': fixed,
+    'sticky': sticky,
+    'static': static,
+  )
+);
+```
+
+To customise the breakpoints these classes are all available at, override `$bitstyles-position-breakpoints` with a list of the breakpoint names from the global settings.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/position' with (
+  $breakpoints: (
+    'm',
+    'l',
+  )
+);
+```

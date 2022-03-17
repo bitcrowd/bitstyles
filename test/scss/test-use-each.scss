@@ -351,7 +351,9 @@
     's',
   )
 );
-@use '../../scss/bitstyles/utilities/relative';
+@use '../../scss/bitstyles/utilities/position' with (
+  $breakpoints: ('l')
+);
 @use '../../scss/bitstyles/utilities/row-start' with (
   $values: (
     '100': 100,

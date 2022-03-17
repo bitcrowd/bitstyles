@@ -3447,12 +3447,32 @@ table {
     padding-top: 40rem;
   }
 }
-.bsu-relative {
+.bs-u-relative {
   position: relative;
 }
-@media screen and (min-width: 30em) {
-  .bsu-relative\@m {
+.bs-u-absolute {
+  position: absolute;
+}
+.bs-u-fixed {
+  position: fixed;
+}
+.bs-u-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+@media screen and (min-width: 55em) {
+  .bs-u-relative\@l {
     position: relative;
+  }
+  .bs-u-absolute\@l {
+    position: absolute;
+  }
+  .bs-u-fixed\@l {
+    position: fixed;
+  }
+  .bs-u-sticky\@l {
+    position: -webkit-sticky;
+    position: sticky;
   }
 }
 .bs-u-row-start-100 {

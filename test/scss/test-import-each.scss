@@ -204,6 +204,7 @@ $bitstyles-overflow-values: (
   ),
 );
 $bitstyles-padding-breakpoints: ('xl', 's');
+$bitstyles-position-breakpoints: ('l');
 $bitstyles-row-start-values: (
   '100': 100,
   '200': 200,
@@ -318,7 +319,7 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/utilities/outline';
 @import '../../scss/bitstyles/utilities/overflow';
 @import '../../scss/bitstyles/utilities/padding';
-@import '../../scss/bitstyles/utilities/relative';
+@import '../../scss/bitstyles/utilities/position';
 @import '../../scss/bitstyles/utilities/row-start';
 @import '../../scss/bitstyles/utilities/self';
 @import '../../scss/bitstyles/utilities/sr-only';
