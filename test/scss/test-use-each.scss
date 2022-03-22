@@ -352,7 +352,9 @@
   )
 );
 @use '../../scss/bitstyles/utilities/position' with (
-  $breakpoints: ('l')
+  $breakpoints: (
+    'l',
+  )
 );
 @use '../../scss/bitstyles/utilities/row-start' with (
   $values: (

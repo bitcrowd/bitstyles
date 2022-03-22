@@ -6,7 +6,7 @@
 @include properties.output(
   $property-name: 'position',
   $classname-root: '',
-  $values: settings.$values,
+  $values: settings.$values
 );
 
 @each $breakpoint-alias in settings.$breakpoints {
