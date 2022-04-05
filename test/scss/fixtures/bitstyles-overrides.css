@@ -3447,6 +3447,9 @@ table {
     padding-top: 40rem;
   }
 }
+.bs-u-static {
+  position: static;
+}
 .bs-u-relative {
   position: relative;
 }
@@ -3461,6 +3464,9 @@ table {
   position: sticky;
 }
 @media screen and (min-width: 55em) {
+  .bs-u-static\@l {
+    position: static;
+  }
   .bs-u-relative\@l {
     position: relative;
   }

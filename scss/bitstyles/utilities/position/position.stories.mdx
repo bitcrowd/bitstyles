@@ -12,7 +12,7 @@ Default configuration provides `static`, `relative`, `absolute`, `fixed`, and `s
 
 ### Static parent, absolute child
 
-This is the default value, there’s no need to specify it really.
+This is the default value, there’s normally no need to specify it unless you’re overriding at a breakpoint.
 
 The static element is in the normal flow of the document, and does not serve as reference for any absolute children — any positioning applied to the absolute child will be relative to the next positioned parent.
 
@@ -83,7 +83,7 @@ Applying offsets to the fixed-position element will move the element relative to
         <div class="u-bg-background u-relative u-padding-m" style="height:10rem;">
           u-relative parent
           <div class="u-padding-m u-bg-white u-static" style="left:0; bottom:0;">u-static child</div>
-          <div class="u-padding-m u-bg-white u-absolute u-drop-shadow-default" style="left:0; bottom:0;">u-absolute child</div>
+          <div class="u-padding-m u-bg-white u-fixed u-drop-shadow-default" style="left:0; bottom:0;">u-fixed child</div>
         </div>
       </div>
     `}
@@ -96,7 +96,7 @@ Applying offsets to the fixed-position element will move the element relative to
   <Story name="u-static">
     {`
       <div class="u-bg-brand-2 u-padding-m" style="width: 10rem; height: 5rem">
-        <div class="u-bg-background u-relative">u-relative</div>
+        <div class="u-bg-background u-static">u-static</div>
       </div>
     `}
   </Story>
