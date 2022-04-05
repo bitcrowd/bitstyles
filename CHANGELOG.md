@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Position classes are now available for `static`, `absolute`, `fixed`, and `sticky`, as well as the existing `relative`. These classes are available at the `m` breakpoint by default, and are customizable using `$bitstyles-position-values`
+
 ## [[4.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.2.0) - 2022-02-09
 
 ### Added
