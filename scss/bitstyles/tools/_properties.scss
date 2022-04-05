@@ -25,14 +25,14 @@
  *
  * @param $classname-items An ordered list of strings to be joined with dashes to form the classname
  */
-@function get-classname($classname-items) {
+@function join-with-dashes($classname-items) {
   $classname: null;
-  $classname-items: remove($classname-items, null);
+  $classname-items: remove(remove($classname-items, null), '');
 
   @for $i from 1 through list.length($classname-items) {
     $classname-item: list.nth($classname-items, $i);
 
-    @if $classname-item != '' and $classname-item {
+    @if $classname-item {
       $classname: if(
         $i == 1,
         $classname-item,
@@ -53,9 +53,7 @@
  */
 @mixin output-property-directions($direction-values, $name, $value) {
   @each $direction in $direction-values {
-    $property: if($direction, '#{$name}-#{$direction}', $name);
-
-    #{$property}: $value;
+    #{join-with-dashes(($name, $direction))}: $value;
   }
 }
 
@@ -74,7 +72,7 @@
   $breakpoint-suffix: ''
 ) {
   @each $alias, $value in $values {
-    $classname: get-classname((setup.$namespace, 'u', $classname-root, $alias));
+    $classname: join-with-dashes((setup.$namespace, 'u', $classname-root, $alias));
 
     .#{$classname}#{$breakpoint-suffix} {
       #{$property-name}: $value;
@@ -100,7 +98,7 @@
 ) {
   @each $alias, $value in $values {
     @each $direction-name, $direction-values in $directions {
-      $classname: get-classname(
+      $classname: join-with-dashes(
         (setup.$namespace, 'u', $classname-root, $alias, $direction-name)
       );
 
@@ -127,7 +125,7 @@
   $classname-root,
   $breakpoint-suffix: ''
 ) {
-  $classname: get-classname(
+  $classname: join-with-dashes(
     (setup.$namespace, $classname-prefix, $classname-root)
   );
 

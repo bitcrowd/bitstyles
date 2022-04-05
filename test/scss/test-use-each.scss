@@ -309,6 +309,11 @@
     '1em': 1em,
   )
 );
+@use '../../scss/bitstyles/utilities/inset' with (
+  $values: (
+    '100': 100rem,
+  ),
+);
 @use '../../scss/bitstyles/utilities/items' with (
   $values: (
     'start': start,
