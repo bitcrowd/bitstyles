@@ -32,4 +32,11 @@
     color: link.$color-hover;
     text-decoration: link.$text-decoration-hover;
   }
+
+  &:active {
+    background-color: link.$background-color-active;
+    box-shadow: link.$box-shadow-active;
+    color: link.$color-active;
+    text-decoration: link.$text-decoration-active;
+  }
 }
