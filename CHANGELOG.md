@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Adds utility classes for specifying inset — top/right/bottom/left CSS properties. Defaults to just classes specifying `0` for each, customizable using `$bitstyles-inset-values`, `$bitstyles-inset-directions`, and `$bitstyles-inset-breakpoints`
+
+### Breaking
+
+- `properties.get-classname()` has been renamed to `properties.join-with-dashes()` to reflect its more generic usage. The list of strings passed as a parameter is renamed from `$classname-items` to `$string-items`. If you were using this function, rename the function call and the parameter (if using named parameters in your call)
+
 ## [[4.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.2.0) - 2022-02-09
 
 ### Added

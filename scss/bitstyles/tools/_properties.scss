@@ -21,27 +21,27 @@
 }
 
 /*
- * Returns a classname suitable for a utility class, by joining strings with dash characters
+ * Returns a string suitable for a utility class or CSS property name, by joining strings with dash characters
  *
- * @param $classname-items An ordered list of strings to be joined with dashes to form the classname
+ * @param $string-items An ordered list of strings to be joined with dashes to form the string
  */
-@function join-with-dashes($classname-items) {
-  $classname: null;
-  $classname-items: remove(remove($classname-items, null), '');
+@function join-with-dashes($string-items) {
+  $string: null;
+  $string-items: remove(remove($string-items, null), '');
 
-  @for $i from 1 through list.length($classname-items) {
-    $classname-item: list.nth($classname-items, $i);
+  @for $i from 1 through list.length($string-items) {
+    $string-item: list.nth($string-items, $i);
 
-    @if $classname-item {
-      $classname: if(
+    @if $string-item {
+      $string: if(
         $i == 1,
-        $classname-item,
-        '#{$classname}#{string.unquote('-')}#{$classname-item}'
+        $string-item,
+        '#{$string}#{string.unquote('-')}#{$string-item}'
       );
     }
   }
 
-  @return $classname;
+  @return $string;
 }
 
 /*
@@ -72,7 +72,9 @@
   $breakpoint-suffix: ''
 ) {
   @each $alias, $value in $values {
-    $classname: join-with-dashes((setup.$namespace, 'u', $classname-root, $alias));
+    $classname: join-with-dashes(
+      (setup.$namespace, 'u', $classname-root, $alias)
+    );
 
     .#{$classname}#{$breakpoint-suffix} {
       #{$property-name}: $value;
