@@ -4,18 +4,20 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # max-height
 
-Specify the `max-height` property of an element. Default configuration provides `max-height: 100%` and `max-height: stretch` (also known as `fill-available`), with no breakpoint variations. See [customization](#customization) for details on how to change that.
+Specify the `max-height` property of an element. Default configuration provides `100vh` and `stretch` (also known as `fill-available`) as values, with no breakpoint variations. See [customization](#customization) for details on how to change that.
 
 <Canvas>
-  <Story name="u-max-height-100">
+  <Story name="u-max-height-100" inline={false} height="13rem">
     {`
-      <div class="u-max-height-100">u-max-height-100</div>
+      <div class="u-bg-brand-2 u-padding-m" style="height:12rem">
+        <div class="u-max-height-100 u-bg-gray-5" style="height:50rem">u-max-height-100</div>
+      </div>
     `}
   </Story>
-  <Story name="u-max-height-stretch">
+  <Story name="u-max-height-stretch" inline={false} height="13rem">
     {`
-      <div style="height:10rem">
-        <div class="u-max-height-stretch u-bg-gray-5 u-block">u-max-height-stretch</div>
+      <div class="u-bg-brand-2 u-padding-m" style="height:12rem">
+        <div class="u-max-height-stretch u-bg-gray-5" style="height:50rem;">u-max-height-stretch</div>
       </div>
     `}
   </Story>
