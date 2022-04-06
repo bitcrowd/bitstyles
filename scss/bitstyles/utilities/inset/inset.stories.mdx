@@ -3,3 +3,82 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 <Meta title="Utilities/inset" />
 
 # Inset
+
+Specify the various directional inset properties (top/right/bottom/left) on an element. These are only useful on an element that has something other than `static` positioning — that means elements with position `relative`, `absolute`, `fixed`, and `sticky`. For elements with relative-, absolute-, or sticky-positioning, the inset will be relative to their nearest non-statically positioned parent elements. For those with position `fixed`, the inset will be relative to the viewport.
+
+Default configuration provides a value of `0` for each of the properties at the four cardinal directions, and is not available at other breakpoints. See [customization](#customization) below for details on how to change that.
+
+<Canvas>
+  <Story name="u-0-top" inline={false} height="12rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 20rem">
+        <div class="u-bg-background u-padding-m" style="height:10rem;">
+          <div style="position:absolute;" class="u-0-top u-padding-m u-bg-white u-drop-shadow-default">u-0-top</div>
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-0-right" inline={false} height="12rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 20rem">
+        <div class="u-bg-background u-padding-m" style="height:10rem;">
+          <div style="position:absolute;" class="u-0-right u-padding-m u-bg-white u-drop-shadow-default">u-0-right</div>
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-0-bottom" inline={false} height="12rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 20rem">
+        <div class="u-bg-background u-padding-m" style="height:10rem;">
+          <div style="position:absolute;" class="u-0-bottom u-padding-m u-bg-white u-drop-shadow-default">u-0-bottom</div>
+        </div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-0-left" inline={false} height="12rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 20rem">
+        <div class="u-bg-background u-padding-m" style="height:10rem;">
+          <div style="position:absolute;" class="u-0-left u-padding-m u-bg-white u-drop-shadow-default">u-0-left</div>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+Available positioning types can be configured by overriding the `$bitstyles-inset-values` Sass map. Provide the name to be used for the class as the key, and the value for the property as the value. If you want to keep the existing values, you’ll need to copy the default configuration as you cannot merge or update the existing map.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/inset' with (
+  $values: (
+    '0': 0,
+    'm': size.get('m'),
+  )
+);
+```
+
+To make these classes available at breakpoints, override `$bitstyles-inset-breakpoints`, providing the name(s) of breakpoints defined in your global breakpoint settings:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/inset' with (
+  $breakpoints: (
+    'm',
+  )
+);
+```
+
+Available directions can be customised by overriding the `$bitstyles-inset-directions` Sass map. Provide the name for the direction as the key, and the list of directions. Note that if you want to keep the existing directions, you’ll need to copy the existing configurations — the map cannot be updated, only overwritten.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/inset' with (
+  $directions: (
+    'top-and-right': (
+      'top',
+      'right',
+    ),
+  )
+);
+```
