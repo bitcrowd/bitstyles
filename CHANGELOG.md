@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Adds utility class to specify max-height property, with `100vh` and `stretch` as default values. Customizable using `$bitstyles-max-height-values` and `$bitstyles-max-height-breakpoints`
+
 ## [[4.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.2.0) - 2022-02-09
 
 ### Added
