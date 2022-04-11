@@ -5,6 +5,7 @@
 ### Added
 
 - Position classes are now available for `static`, `absolute`, `fixed`, and `sticky`, as well as the existing `relative`. These classes are available at the `m` breakpoint by default, and are customizable using `$bitstyles-position-values`
+- `u-line-height` class can now be configured using `$bitstyles-line-height-values` and `$bitstyles-line-height-breakpoints`
 
 ## [[4.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.2.0) - 2022-02-09
 
