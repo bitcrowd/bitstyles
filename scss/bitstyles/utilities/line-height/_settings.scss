@@ -1,0 +1,6 @@
+@use '../../settings/typography';
+
+$values: (
+  'min': typography.$line-height-min,
+) !default;
+$breakpoints: () !default;

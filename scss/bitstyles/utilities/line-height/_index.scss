@@ -1,6 +1,21 @@
-@use '../../settings/setup';
-@use '../../settings/typography';
+@forward 'settings';
+@use 'settings';
+@use '../../tools/properties';
+@use '../../tools/media-query';
 
-.#{setup.$namespace}u-line-height-min {
-  line-height: typography.$line-height-min;
+@include properties.output(
+  $property-name: 'line-height',
+  $classname-root: 'line-height',
+  $values: settings.$values
+);
+
+@each $breakpoint-alias in settings.$breakpoints {
+  @include media-query.get($breakpoint-alias) {
+    @include properties.output(
+      $property-name: 'line-height',
+      $classname-root: 'line-height',
+      $values: settings.$values,
+      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+    );
+  }
 }
