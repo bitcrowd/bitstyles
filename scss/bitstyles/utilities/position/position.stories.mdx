@@ -1,0 +1,193 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/position" />
+
+# Position
+
+Apply specified positioning to an element.
+
+Default configuration provides `static`, `relative`, `absolute`, `fixed`, and `sticky` positioning. These are also available at the `m` breakpoint — see [customization](#customization) for details on how to change both of those.
+
+## Usage
+
+### Static parent, absolute child
+
+This is the default value, there’s normally no need to specify it unless you’re overriding at a breakpoint.
+
+The static element is in the normal flow of the document, and does not serve as reference for any absolute children — any positioning applied to the absolute child will be relative to the next positioned parent.
+
+Applying offsets to the static element has no effect.
+
+<Canvas>
+  <Story name="u-static-with-absolute" inline={false} height="12rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 20rem">
+        <div class="u-bg-background u-static u-padding-m" style="height:10rem;">
+          u-static parent
+          <div class="u-padding-m u-bg-white u-absolute u-drop-shadow-default" style="left:0; bottom:0;">u-absolute child</div>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+### Relative parent, absolute child
+
+The relative element is in the normal flow of the document, and serves as reference for any absolute children — any positioning applied to the absolute child will be relative to this element.
+
+Applying offsets to the relative element will move the element relative to its starting position.
+
+<Canvas>
+  <Story name="u-relative-with-absolute" inline={false} height="12rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 20rem">
+        <div class="u-bg-background u-relative u-padding-m" style="height:10rem;">
+          u-relative parent
+          <div class="u-padding-m u-bg-white u-absolute u-drop-shadow-default" style="left:0; bottom:0;">u-absolute child</div>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+### Absolutely-positioned element
+
+The absolutely-positioned element is taken out of the normal flow of the document. It serves as reference for any absolute children — any positioning applied to the absolute child will be relative to this element.
+
+Applying offsets to the absolute element will move the element relative to its next non statically-positioned parent.
+
+<Canvas>
+  <Story name="u-absolute-element" inline={false} height="12rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 20rem">
+        <div class="u-bg-background u-relative u-padding-m" style="height:10rem;">
+          u-relative parent
+          <div class="u-padding-m u-bg-white u-static" style="left:0; bottom:0;">u-static child</div>
+          <div class="u-padding-m u-bg-white u-absolute u-drop-shadow-default" style="left:0; bottom:0;">u-absolute child</div>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+### Fixed-position element
+
+The fixed-position element is taken out of the normal flow of the document, and positioned relative to the viewport. It serves as reference for any absolute children — any positioning applied to the absolute child will be relative to this element.
+
+Applying offsets to the fixed-position element will move the element relative to the viewport.
+
+<Canvas>
+  <Story name="u-fixed-element" inline={false} height="12rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 20rem">
+        <div class="u-bg-background u-relative u-padding-m" style="height:10rem;">
+          u-relative parent
+          <div class="u-padding-m u-bg-white u-static" style="left:0; bottom:0;">u-static child</div>
+          <div class="u-padding-m u-bg-white u-fixed u-drop-shadow-default" style="left:0; bottom:0;">u-fixed child</div>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Classes
+
+<Canvas>
+  <Story name="u-static">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 10rem; height: 5rem">
+        <div class="u-bg-background u-static">u-static</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-relative">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 10rem; height: 5rem">
+        <div class="u-bg-background u-relative">u-relative</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-absolute">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 10rem; height: 5rem">
+        <div class="u-bg-background u-absolute">u-absolute</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-fixed" inline={false}>
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 10rem; height: 5rem">
+        <div class="u-bg-background u-fixed">u-fixed</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-sticky">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="width: 10rem; height: 5rem">
+        <div class="u-bg-background u-sticky">u-sticky</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+### Responsive positioning
+
+All the position classes are also available at the `@m` breakpoint suffixes.
+
+<Canvas>
+  <Story name="u-relative@m">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-background u-padding-0">u-padding-0</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-absolute@m">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-background u-padding-xs">u-padding-xs</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-fixed@m">
+    {`
+      <div class="">
+        <div class="u-bg-background u-padding-s">u-padding-s</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-sticky@m">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-background u-padding-m">u-padding-m</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The available positioning classes can be configured by overriding `$bitstyles-position-values` Sass map, providing the classname as the key, and the size as value:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/position' with (
+  $values: (
+    'relative': relative,
+    'absolute': absolute,
+    'fixed': fixed,
+    'sticky': sticky,
+    'static': static,
+  )
+);
+```
+
+To customise the breakpoints these classes are all available at, override `$bitstyles-position-breakpoints` with a list of the breakpoint names from the global settings.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/position' with (
+  $breakpoints: (
+    'm',
+    'l',
+  )
+);
+```
