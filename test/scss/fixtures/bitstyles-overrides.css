@@ -186,6 +186,12 @@ a:hover {
   color: #000;
   text-decoration: underline;
 }
+a:active {
+  background-color: none;
+  box-shadow: none;
+  color: #000;
+  text-decoration: underline;
+}
 figcaption {
   color: #000;
   font-style: bold;
@@ -1428,6 +1434,12 @@ table {
 }
 .bsa-link:focus,
 .bsa-link:hover {
+  background-color: none;
+  box-shadow: none;
+  color: #000;
+  text-decoration: underline;
+}
+.bsa-link:active {
   background-color: none;
   box-shadow: none;
   color: #000;

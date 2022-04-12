@@ -186,6 +186,12 @@ a:hover {
   color: #000dff;
   text-decoration: underline;
 }
+a:active {
+  background-color: none;
+  box-shadow: none;
+  color: #000dff;
+  text-decoration: underline;
+}
 figcaption {
   color: #5c5c5c;
   font-style: italic;
@@ -1448,6 +1454,12 @@ table {
 }
 .a-link:focus,
 .a-link:hover {
+  background-color: none;
+  box-shadow: none;
+  color: #000dff;
+  text-decoration: underline;
+}
+.a-link:active {
   background-color: none;
   box-shadow: none;
   color: #000dff;
