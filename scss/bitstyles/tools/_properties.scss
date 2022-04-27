@@ -64,14 +64,14 @@
  * @param $property-name The name of the CSS property to be specified e.g. `margin`
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
- * @param $breakpoints  Pass the list of breakpoints at which these stles should be output
+ * @param $breakpoints The list of breakpoints at which these stles should be output
  */
 
 @mixin output(
   $property-name,
   $classname-root,
   $values,
-  $breakpoints,
+  $breakpoints: (),
 ) {
   @each $alias, $value in $values {
     $classname: join-with-dashes(
@@ -104,14 +104,14 @@
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
  * @param $directions A map of name/value pairs, where the name will form part of the classname, and the list of values will be form part of the CSS property e.g. ('left': ('left'), 'x': ('left', 'right'))
- * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
+ * @param $breakpoints The list of breakpoints at which these stles should be output
  */
 @mixin output-directional(
   $property-name,
   $classname-root,
   $values,
   $directions,
-  $breakpoint-suffix: ''
+  $breakpoints: ()
 ) {
   @each $alias, $value in $values {
     @each $direction-name, $direction-values in $directions {
@@ -119,12 +119,32 @@
         (setup.$namespace, 'u', $classname-root, $alias, $direction-name)
       );
 
-      .#{$classname}#{$breakpoint-suffix} {
+      .#{$classname} {
         @include output-property-directions(
           $direction-values: $direction-values,
           $name: $property-name,
           $value: $value
         );
+      }
+    }
+  }
+  @each $breakpoint in $breakpoints {
+    @include media-query.get($breakpoint) {
+      @each $alias, $value in $values {
+        @each $direction-name, $direction-values in $directions {
+          $classname: get-classname(
+            (setup.$namespace, 'u', $classname-root, $alias, $direction-name)
+          );
+          $breakpoint-suffix: '\\\@#{$breakpoint}';
+
+          .#{$classname}#{$breakpoint-suffix} {
+            @include output-property-directions(
+              $direction-values: $direction-values,
+              $name: $property-name,
+              $value: $value
+            );
+          }
+        }
       }
     }
   }
