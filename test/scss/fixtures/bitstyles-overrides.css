@@ -3559,7 +3559,7 @@ table {
     align-self: start;
   }
 }
-.bsu-sr-only {
+.bs-u-sr-only {
   clip: rect(0, 0, 0, 0);
   border: 0;
   -webkit-clip-path: inset(50%);
@@ -3573,7 +3573,7 @@ table {
   width: 1px;
 }
 @media screen and (min-width: 95em) {
-  .bsu-sr-only\@xl {
+  .bs-u-sr-only\@xl {
     clip: rect(0, 0, 0, 0);
     border: 0;
     -webkit-clip-path: inset(50%);
