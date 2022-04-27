@@ -1790,14 +1790,35 @@ table {
 .bs-u-flex-nowrap {
   flex-wrap: nowrap;
 }
+@media screen and (min-width: 30em) {
+  .bs-u-flex-wrap\@m {
+    flex-wrap: wrap;
+  }
+  .bs-u-flex-nowrap\@m {
+    flex-wrap: nowrap;
+  }
+}
 .bs-u-flex-col {
   flex-direction: column;
 }
 .bs-u-flex-row {
   flex-direction: row;
 }
+@media screen and (min-width: 30em) {
+  .bs-u-flex-col\@m {
+    flex-direction: column;
+  }
+  .bs-u-flex-row\@m {
+    flex-direction: row;
+  }
+}
 .bs-u-flex-grow-100 {
   flex-grow: 100;
+}
+@media screen and (min-width: 30em) {
+  .bs-u-flex-grow-100\@m {
+    flex-grow: 100;
+  }
 }
 .bs-u-flex-shrink-0 {
   flex-shrink: 0;
@@ -1806,21 +1827,6 @@ table {
   flex-shrink: 1;
 }
 @media screen and (min-width: 30em) {
-  .bs-u-flex-wrap\@m {
-    flex-wrap: wrap;
-  }
-  .bs-u-flex-nowrap\@m {
-    flex-wrap: nowrap;
-  }
-  .bs-u-flex-col\@m {
-    flex-direction: column;
-  }
-  .bs-u-flex-row\@m {
-    flex-direction: row;
-  }
-  .bs-u-flex-grow-100\@m {
-    flex-grow: 100;
-  }
   .bs-u-flex-shrink-0\@m {
     flex-shrink: 0;
   }
