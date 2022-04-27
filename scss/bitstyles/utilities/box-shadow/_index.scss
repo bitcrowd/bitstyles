@@ -4,25 +4,9 @@
 @use '../../tools/media-query';
 @use '../../tools/properties';
 
-@each $name, $shadow in settings.$values {
-  @include properties.output-block(
-    $classname-prefix: 'u',
-    $classname-root: 'shadow-#{$name}'
-  ) {
-    box-shadow: $shadow;
-  }
-}
-
-@each $breakpoint in settings.$breakpoints {
-  @include media-query.get($breakpoint) {
-    @each $name, $shadow in settings.$values {
-      @include properties.output-block(
-        $classname-prefix: 'u',
-        $classname-root: 'shadow-#{$name}',
-        $breakpoint-suffix: '\\\@#{$breakpoint}'
-      ) {
-        box-shadow: $shadow;
-      }
-    }
-  }
-}
+@include properties.output(
+  $property-name: 'box-shadow',
+  $classname-root: 'shadow',
+  $values: settings.$values,
+  $breakpoints: settings.$breakpoints
+);
