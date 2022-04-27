@@ -1,6 +1,7 @@
 @use '../settings/setup';
 @use 'sass:list';
 @use 'sass:string';
+@use '../tools/media-query';
 
 /*
  * Removes a value from a list
@@ -63,21 +64,35 @@
  * @param $property-name The name of the CSS property to be specified e.g. `margin`
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
- * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
+ * @param $breakpoints  Pass the list of breakpoints at which these stles should be output
  */
+
 @mixin output(
   $property-name,
   $classname-root,
   $values,
-  $breakpoint-suffix: ''
+  $breakpoints,
 ) {
   @each $alias, $value in $values {
     $classname: join-with-dashes(
       (setup.$namespace, 'u', $classname-root, $alias)
     );
 
-    .#{$classname}#{$breakpoint-suffix} {
+    .#{$classname} {
       #{$property-name}: $value;
+    }
+  }
+
+  @each $breakpoint in $breakpoints {
+    @include media-query.get($breakpoint) {
+      @each $alias, $value in $values {
+        $classname: get-classname((setup.$namespace, 'u', $classname-root, $alias));
+        $breakpoint-suffix: '\\\@#{$breakpoint}';
+
+        .#{$classname}#{$breakpoint-suffix} {
+          #{$property-name}: $value;
+        }
+      }
     }
   }
 }

@@ -6,49 +6,24 @@
 @include properties.output(
   $property-name: 'flex-wrap',
   $classname-root: 'flex',
-  $values: settings.$wrap
+  $values: settings.$wrap,
+  $breakpoints: settings.$breakpoints
 );
 @include properties.output(
   $property-name: 'flex-direction',
   $classname-root: 'flex',
-  $values: settings.$direction
+  $values: settings.$direction,
+  $breakpoints: settings.$breakpoints
 );
 @include properties.output(
   $property-name: 'flex-grow',
   $classname-root: 'flex-grow',
-  $values: settings.$grow
+  $values: settings.$grow,
+  $breakpoints: settings.$breakpoints
 );
 @include properties.output(
   $property-name: 'flex-shrink',
   $classname-root: 'flex-shrink',
-  $values: settings.$shrink
+  $values: settings.$shrink,
+  $breakpoints: settings.$breakpoints
 );
-
-@each $breakpoint-alias in settings.$breakpoints {
-  @include media-query.get($breakpoint-alias) {
-    @include properties.output(
-      $property-name: 'flex-wrap',
-      $classname-root: 'flex',
-      $values: settings.$wrap,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-    @include properties.output(
-      $property-name: 'flex-direction',
-      $classname-root: 'flex',
-      $values: settings.$direction,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-    @include properties.output(
-      $property-name: 'flex-grow',
-      $classname-root: 'flex-grow',
-      $values: settings.$grow,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-    @include properties.output(
-      $property-name: 'flex-shrink',
-      $classname-root: 'flex-shrink',
-      $values: settings.$shrink,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-  }
-}
