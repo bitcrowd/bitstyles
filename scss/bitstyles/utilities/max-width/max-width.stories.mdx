@@ -4,13 +4,20 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # max-width
 
-Specify the `max-width` property of an element. Default configuration provides `max-width: 0` with no breakpoint variations. See [customization](#customization) for details on how to change that.
+Specify the `max-width` property of an element. Default configuration provides `max-width: 0` and `100vw` with no breakpoint variations. See [customization](#customization) for details on how to change that.
 
 <Canvas>
-  <Story name="u-max-width-100" inline={false} height="13rem" width="100%">
+  <Story name="u-max-width-0" inline={false} height="13rem" width="100%">
     {`
       <div class="u-bg-brand-2 u-padding-m" style="height:12rem">
-        <div class="u-max-width-100 u-bg-gray-5" style="width:9999rem">u-max-width-100</div>
+        <div class="u-max-width-0 u-bg-gray-5" style="width:9999rem">u-max-width-0</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-max-width-100vw" inline={false} height="13rem" width="100%">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="height:12rem">
+        <div class="u-max-width-100vw u-bg-gray-5" style="width:9999rem">u-max-width-100vw</div>
       </div>
     `}
   </Story>

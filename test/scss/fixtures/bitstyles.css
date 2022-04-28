@@ -3304,7 +3304,10 @@ table {
   max-height: -moz-available;
   max-height: stretch;
 }
-.u-max-width-100 {
+.u-max-width-0 {
+  max-width: 0;
+}
+.u-max-width-100vw {
   max-width: 100vw;
 }
 .u-min-height-0 {
