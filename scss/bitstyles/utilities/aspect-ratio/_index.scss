@@ -6,8 +6,8 @@
 @use '../../tools/properties';
 
 @each $aspect-ratio-alias, $aspect-ratio-value in settings.$values {
-  $classname: properties.get-classname(
-    $classname-items: (
+  $classname: properties.join-with-dashes(
+    $string-items: (
       setup.$namespace,
       'u',
       'aspect-ratio',
