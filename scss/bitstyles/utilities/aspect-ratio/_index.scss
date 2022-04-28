@@ -3,9 +3,19 @@
 @use './settings';
 @use '../../settings/setup';
 @use '../../tools/aspect-ratio';
+@use '../../tools/properties';
 
 @each $aspect-ratio-alias, $aspect-ratio-value in settings.$values {
-  .#{setup.$namespace}u-aspect-ratio-#{$aspect-ratio-alias} {
+  $classname: properties.get-classname(
+    $classname-items: (
+      setup.$namespace,
+      'u',
+      'aspect-ratio',
+      $aspect-ratio-alias,
+    ),
+  );
+
+  .#{$classname} {
     @include aspect-ratio.aspect-ratio(
       map.get($aspect-ratio-value, 'width'),
       map.get($aspect-ratio-value, 'height')

@@ -1,6 +1,17 @@
 @use '../../settings/setup';
 @use '../../tools/object-cover';
+@use '../../tools/properties';
 
-.#{setup.$namespace}u-object-cover {
+/* stylelint-disable scss/dollar-variable-default */
+$classname: properties.get-classname(
+  $classname-items: (
+    setup.$namespace,
+    'u',
+    'object-cover',
+  ),
+);
+/* stylelint-enable scss/dollar-variable-default */
+
+.#{$classname} {
   @include object-cover.object-cover;
 }
