@@ -3296,6 +3296,14 @@ table {
     margin-top: -1.6rem;
   }
 }
+.u-max-height-100 {
+  max-height: 100vh;
+}
+.u-max-height-stretch {
+  max-height: -webkit-fill-available;
+  max-height: -moz-available;
+  max-height: stretch;
+}
 .u-min-height-0 {
   min-height: 0;
 }

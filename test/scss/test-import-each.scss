@@ -198,6 +198,9 @@ $bitstyles-justify-values: (
   'start': start,
 );
 $bitstyles-margin-breakpoints: ('xl', 's');
+$bitstyles-max-height-values: (
+  '1em': 1em,
+);
 $bitstyles-min-height-values: (
   '1em': 1em,
 );
@@ -320,6 +323,7 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/utilities/justify';
 @import '../../scss/bitstyles/utilities/line-height';
 @import '../../scss/bitstyles/utilities/margin';
+@import '../../scss/bitstyles/utilities/max-height';
 @import '../../scss/bitstyles/utilities/min-height';
 @import '../../scss/bitstyles/utilities/min-width';
 @import '../../scss/bitstyles/utilities/object-cover';
