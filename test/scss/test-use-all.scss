@@ -47,6 +47,9 @@
       '90': #000,
       '100': #000,
     ),
+    'brand-1-shades': (
+      '100': #000,
+    ),
     'brand-2': (
       '10': #000,
       '80': #000,
@@ -148,6 +151,7 @@
     )
   ),
   $padding-breakpoints: ('xl', 's'),
+  $position-breakpoints: ('l'),
   $row-start-values: ('100': 100, '200': 200),
   $self-values: ('start': start),
   $sr-only-breakpoints: ('xl'),

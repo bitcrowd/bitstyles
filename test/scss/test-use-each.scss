@@ -53,6 +53,9 @@
       '90': #000,
       '100': #000,
     ),
+    'brand-1-shades': (
+      '100': #000,
+    ),
     'brand-2': (
       '10': #000,
       '80': #000,
@@ -356,7 +359,11 @@
     's',
   )
 );
-@use '../../scss/bitstyles/utilities/relative';
+@use '../../scss/bitstyles/utilities/position' with (
+  $breakpoints: (
+    'l',
+  )
+);
 @use '../../scss/bitstyles/utilities/row-start' with (
   $values: (
     '100': 100,
