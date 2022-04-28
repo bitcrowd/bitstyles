@@ -1627,29 +1627,29 @@ table {
 .bso-ui-group__item:not(.bso-ui-group__last) {
   border-right: 0;
 }
-.bsu-absolute-center {
+.bs-u-absolute-center {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.bsu-absolute-cover {
+.bs-u-absolute-cover {
   bottom: 0;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
 }
-.bsu-aspect-ratio-10-10 {
+.bs-u-aspect-ratio-10-10 {
   aspect-ratio: 1/1;
 }
 @supports not (aspect-ratio: 1/1) {
-  .bsu-aspect-ratio-10-10:before {
+  .bs-u-aspect-ratio-10-10:before {
     content: '';
     float: left;
     padding-top: 100%;
   }
-  .bsu-aspect-ratio-10-10:after {
+  .bs-u-aspect-ratio-10-10:after {
     clear: both;
     content: '';
     display: block;
@@ -1704,12 +1704,12 @@ table {
     box-shadow: 0 2.5rem 5rem red, 0 5rem 10rem red;
   }
 }
-.bsu-break-text {
+.bs-u-break-text {
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: break-word;
 }
-.bsu-clearfix:after {
+.bs-u-clearfix:after {
   clear: both;
   content: '';
   display: table;
@@ -2918,14 +2918,14 @@ table {
 .bs-u-min-width-1em {
   min-width: 1em;
 }
-.bsu-object-cover {
+.bs-u-object-cover {
   display: block;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
 }
-.bsu-outline-0:focus {
+.bs-u-outline-0:focus {
   outline: none;
 }
 .bs-u-overflow-hidden {
@@ -3599,7 +3599,7 @@ table {
 .bs-u-text-justify {
   text-align: justify;
 }
-.bsu-truncate {
+.bs-u-truncate {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
