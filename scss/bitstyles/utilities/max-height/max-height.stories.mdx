@@ -1,0 +1,46 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/max-height" />
+
+# max-height
+
+Specify the `max-height` property of an element. Default configuration provides `100vh` and `stretch` (also known as `fill-available`) as values, with no breakpoint variations. See [customization](#customization) for details on how to change that.
+
+<Canvas>
+  <Story name="u-max-height-100" inline={false} height="13rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="height:12rem">
+        <div class="u-max-height-100 u-bg-gray-5" style="height:50rem">u-max-height-100</div>
+      </div>
+    `}
+  </Story>
+  <Story name="u-max-height-stretch" inline={false} height="13rem">
+    {`
+      <div class="u-bg-brand-2 u-padding-m" style="height:12rem">
+        <div class="u-max-height-stretch u-bg-gray-5" style="height:50rem;">u-max-height-stretch</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+Customize the available min-heights by overriding the `$bitstyles-max-height-values` Sass map, providing the name to be used for the class, and the value to use.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/max-height' with (
+  $values: (
+    '10rem': 10rem,
+  )
+);
+```
+
+Available breakpoint variables can be specified by overriding the `$bitstyles-max-height-breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/max-height' with (
+  $breakpoints: (
+    'm',
+  )
+);
+```
