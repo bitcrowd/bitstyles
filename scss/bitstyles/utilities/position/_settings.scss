@@ -1,0 +1,8 @@
+$values: (
+  'static': static,
+  'relative': relative,
+  'absolute': absolute,
+  'fixed': fixed,
+  'sticky': sticky,
+) !default;
+$breakpoints: ('m') !default;
