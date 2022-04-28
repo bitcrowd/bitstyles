@@ -19,6 +19,10 @@
 
 - `properties.get-classname()` has been renamed to `properties.join-with-dashes()` to reflect its more generic usage. The list of strings passed as a parameter is renamed from `$classname-items` to `$string-items`. If you were using this function, rename the function call and the parameter (if using named parameters in your call)
 
+### Fixed
+
+- Prefixing of utility classname with `setup.$namespace` is now working correctly, with the exception of line-height and the font-size utility classes. These will be done in another PR. If you were using namespacing, you’ll need to update the classnames for all utilities (apart from line-height & font-size) in your HTML to the correct format , with `-` dashes between each part of the name e.g. `.<namespace>-u-<classname>` instead of `.<namespace>u-<classname>`
+
 ## [[4.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.2.0) - 2022-02-09
 
 ### Added
