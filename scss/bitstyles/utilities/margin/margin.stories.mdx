@@ -191,13 +191,13 @@ All the margins are also available at the `@s` and `@m` breakpoint suffixes.
 
 ## Customization
 
-Available margin-sizes can be configured by overriding the `$bitstyles-margin-sizes` Sass map. Provide the name to be used for the class as the key, and the value for the property as the value. If you want to keey the existing values, you’ll need to copy the default configuration as you cannot merge or update the existing map.
+Available margin-sizes can be configured by overriding the `$bitstyles-margin-sizes` Sass map. Provide the name to be used for the class as the key, and the value for the property as the value. If you want to keep the existing values, you’ll need to copy the default configuration as you cannot merge or update the existing map.
 
 The `positive` and `negative` keys are required for each group you want to define (e.g. if you have no negative margins, that key is not required).
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/margin' with (
-  $bitstyles-margin-sizes: (
+  $sizes: (
     'positive': (
       '0': 0,
       'xxs': size.get('xxs'),

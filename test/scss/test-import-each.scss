@@ -188,6 +188,9 @@ $bitstyles-grid-cols-values: (
 $bitstyles-height-values: (
   '1em': 1em,
 );
+$bitstyles-inset-values: (
+  '100': 100rem,
+);
 $bitstyles-items-values: (
   'start': start,
 );
@@ -315,6 +318,7 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/utilities/gap';
 @import '../../scss/bitstyles/utilities/grid-cols';
 @import '../../scss/bitstyles/utilities/height';
+@import '../../scss/bitstyles/utilities/inset';
 @import '../../scss/bitstyles/utilities/items';
 @import '../../scss/bitstyles/utilities/justify';
 @import '../../scss/bitstyles/utilities/line-height';

@@ -4,9 +4,14 @@
 
 ### Added
 
+- Adds utility classes for specifying inset — top/right/bottom/left CSS properties. Defaults to just classes specifying `0` for each, customizable using `$bitstyles-inset-values`, `$bitstyles-inset-directions`, and `$bitstyles-inset-breakpoints`
 - Adds utility class to specify max-height property, with `100vh` and `stretch` as default values. Customizable using `$bitstyles-max-height-values` and `$bitstyles-max-height-breakpoints`
 - `a-link` and `<a>` elements now have variables to specify the active state
 - Position classes are now available for `static`, `absolute`, `fixed`, and `sticky`, as well as the existing `relative`. These classes are available at the `m` breakpoint by default, and are customizable using `$bitstyles-position-values`
+
+### Breaking
+
+- `properties.get-classname()` has been renamed to `properties.join-with-dashes()` to reflect its more generic usage. The list of strings passed as a parameter is renamed from `$classname-items` to `$string-items`. If you were using this function, rename the function call and the parameter (if using named parameters in your call)
 
 ## [[4.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.2.0) - 2022-02-09
 
