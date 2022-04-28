@@ -44,15 +44,15 @@
   }
 }
 
-@each $breakpoint-alias in settings.$breakpoints {
-  @include media-query.get($breakpoint-alias) {
+@each $breakpoint in settings.$breakpoints {
+  @include media-query.get($breakpoint) {
     @each $size, $padding-size in settings.$sizes {
       $size-name: modifier-name($size);
 
       @include properties.output-block(
         $classname-prefix: 'a',
         $classname-root: 'card#{$size-name}',
-        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+        $breakpoint: $breakpoint
       ) {
         @include card($padding-size);
       }
@@ -60,7 +60,7 @@
       @include properties.output-block(
         $classname-prefix: 'a',
         $classname-root: 'card#{$size-name}__header',
-        $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+        $breakpoint: $breakpoint
       ) {
         @include card-header($padding-size);
       }

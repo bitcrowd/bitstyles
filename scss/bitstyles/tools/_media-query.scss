@@ -1,4 +1,5 @@
 @use '../settings/breakpoints';
+@use '../settings/setup';
 @use 'sass:map';
 
 // Media Query
@@ -24,13 +25,17 @@
 //
 
 @mixin get($media-query-name, $breakpoints: breakpoints.$breakpoints) {
-  $breakpoint-condition: map.get($breakpoints, $media-query-name);
+  @if $media-query-name == setup.$no-media-query {
+    @content;
+  } @else {
+    $breakpoint-condition: map.get($breakpoints, $media-query-name);
 
-  @if $breakpoint-condition {
-    @media #{$breakpoint-condition} {
+    @if $breakpoint-condition {
+      @media #{$breakpoint-condition} {
+        @content;
+      }
+    } @else {
       @content;
     }
-  } @else {
-    @error 'Oops! Breakpoint ‘#{$media-query-name}’ does not exist.';
   }
 }

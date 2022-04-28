@@ -11,12 +11,12 @@
   @include sr-only.sr-only;
 }
 
-@each $breakpoint-alias in settings.$breakpoints {
-  @include media-query.get($breakpoint-alias) {
+@each $breakpoint in settings.$breakpoints {
+  @include media-query.get($breakpoint) {
     @include properties.output-block(
       $classname-prefix: 'u',
       $classname-root: 'sr-only',
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
+      $breakpoint: $breakpoint
     ) {
       @include sr-only.sr-only;
     }

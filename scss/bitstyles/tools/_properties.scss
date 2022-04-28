@@ -25,8 +25,9 @@
  * Returns a string suitable for a utility class or CSS property name, by joining strings with dash characters
  *
  * @param $string-items An ordered list of strings to be joined with dashes to form the string
+ * @param $at-suffix [optional] Suffix for the string, to be precedeed with an `@` symbol, if present
  */
-@function join-with-dashes($string-items) {
+@function join-with-dashes($string-items, $at-suffix: setup.$no-media-query) {
   $string: null;
   $string-items: remove(remove($string-items, null), '');
 
@@ -40,6 +41,10 @@
         '#{$string}#{string.unquote('-')}#{$string-item}'
       );
     }
+  }
+
+  @if $at-suffix and $at-suffix != setup.$no-media-query {
+    $string: '#{$string}\\\@#{$at-suffix}';
   }
 
   @return $string;
@@ -67,29 +72,23 @@
  * @param $breakpoints The list of breakpoints at which these stles should be output
  */
 
-@mixin output(
-  $property-name,
-  $classname-root,
-  $values,
-  $breakpoints: (),
-) {
-  @each $alias, $value in $values {
-    $classname: join-with-dashes(
-      (setup.$namespace, 'u', $classname-root, $alias)
-    );
-
-    .#{$classname} {
-      #{$property-name}: $value;
-    }
-  }
+@mixin output($property-name, $classname-root, $values, $breakpoints: ()) {
+  $breakpoints: list.join(setup.$no-media-query, $breakpoints);
 
   @each $breakpoint in $breakpoints {
     @include media-query.get($breakpoint) {
       @each $alias, $value in $values {
-        $classname: get-classname((setup.$namespace, 'u', $classname-root, $alias));
-        $breakpoint-suffix: '\\\@#{$breakpoint}';
+        $classname: join-with-dashes(
+          $string-items: (
+            setup.$namespace,
+            'u',
+            $classname-root,
+            $alias,
+          ),
+          $at-suffix: $breakpoint,
+        );
 
-        .#{$classname}#{$breakpoint-suffix} {
+        .#{$classname} {
           #{$property-name}: $value;
         }
       }
@@ -113,31 +112,25 @@
   $directions,
   $breakpoints: ()
 ) {
-  @each $alias, $value in $values {
-    @each $direction-name, $direction-values in $directions {
-      $classname: join-with-dashes(
-        (setup.$namespace, 'u', $classname-root, $alias, $direction-name)
-      );
+  $breakpoints: list.join(setup.$no-media-query, $breakpoints);
 
-      .#{$classname} {
-        @include output-property-directions(
-          $direction-values: $direction-values,
-          $name: $property-name,
-          $value: $value
-        );
-      }
-    }
-  }
+  /* stylelint-disable max-nesting-depth */
   @each $breakpoint in $breakpoints {
     @include media-query.get($breakpoint) {
       @each $alias, $value in $values {
         @each $direction-name, $direction-values in $directions {
-          $classname: get-classname(
-            (setup.$namespace, 'u', $classname-root, $alias, $direction-name)
+          $classname: join-with-dashes(
+            $string-items: (
+              setup.$namespace,
+              'u',
+              $classname-root,
+              $alias,
+              $direction-name,
+            ),
+            $at-suffix: $breakpoint,
           );
-          $breakpoint-suffix: '\\\@#{$breakpoint}';
 
-          .#{$classname}#{$breakpoint-suffix} {
+          .#{$classname} {
             @include output-property-directions(
               $direction-values: $direction-values,
               $name: $property-name,
@@ -147,6 +140,7 @@
         }
       }
     }
+    /* stylelint-enable max-nesting-depth */
   }
 }
 
@@ -160,13 +154,14 @@
 @mixin output-block(
   $classname-prefix,
   $classname-root,
-  $breakpoint-suffix: ''
+  $breakpoint: null
 ) {
   $classname: join-with-dashes(
-    (setup.$namespace, $classname-prefix, $classname-root)
+    $string-items: (setup.$namespace, $classname-prefix, $classname-root),
+    $at-suffix: $breakpoint
   );
 
-  .#{$classname}#{$breakpoint-suffix} {
+  .#{$classname} {
     @content;
   }
 }
