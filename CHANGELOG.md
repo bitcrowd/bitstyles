@@ -9,6 +9,11 @@
 - `a-link` and `<a>` elements now have variables to specify the active state
 - Position classes are now available for `static`, `absolute`, `fixed`, and `sticky`, as well as the existing `relative`. These classes are available at the `m` breakpoint by default, and are customizable using `$bitstyles-position-values`
 - New `u-max-width` utility class, with `0` and `100vw` as default values. Customizable using `$bitstyles-max-width-values` and `$bitstyles-max-width-breakpoints`
+- `u-line-height` class can now be configured using `$bitstyles-line-height-values` and `$bitstyles-line-height-breakpoints`
+- A new variable `setup.$no-media-query` is available. In case you use the name `no-mq` for one of your breakpoints, you can change this value to avoid conflict
+- The `properties.join-with-dashes()` function now handles adding the breakpoint suffix with a preceding `@` symbol, when you pass `$at-suffix`
+- `media-query.get()` will now output the contents you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`
+- The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
 
 ### Breaking
 

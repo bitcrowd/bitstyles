@@ -1,0 +1,38 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Setup" />
+
+# Setup
+
+There are a few global variables that are useful in rare cases to avoid conflicts. These are bundled together in `settings/setup`.
+
+## Namespace
+
+Useful if you need bitstyles to coexist with other CSS libraries, if you specify a namespace all the bitstyles classes will be prefixed with it.
+
+```scss
+@use 'bitstyles/settings/setup' with (
+  $namespace: 'bs'
+);
+```
+
+Will result in classnames which all start with `bs`, followed by the CSS layer abbreviations, then the class name:
+
+```scss
+.bs-a-card {
+}
+.bs-u-padding-0 {
+}
+```
+
+## “No media query” name
+
+When you pass a block of CSS content to the `media-query.get()` helper, it wraps that content in a media-query. To make looping over media-queries easier, there is a special-case media-query name that results in no media query wrapper. This defaults to `no-mq`, and can be configured using `$bitstyles-setup-no-media-query`:
+
+```scss
+@use 'bitstyles/settings/setup' with (
+  $no-media-query: 'base'
+);
+```
+
+This is useful if you need a media-query with the name `no-mq` for other purposes.

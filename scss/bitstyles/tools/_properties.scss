@@ -69,7 +69,7 @@
  * @param $property-name The name of the CSS property to be specified e.g. `margin`
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
- * @param $breakpoints The list of breakpoints at which these stles should be output
+ * @param $breakpoints The list of breakpoints at which these styles should be output
  */
 
 @mixin output($property-name, $classname-root, $values, $breakpoints: ()) {
@@ -103,7 +103,7 @@
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
  * @param $directions A map of name/value pairs, where the name will form part of the classname, and the list of values will be form part of the CSS property e.g. ('left': ('left'), 'x': ('left', 'right'))
- * @param $breakpoints The list of breakpoints at which these stles should be output
+ * @param $breakpoints The list of breakpoints at which these styles should be output
  */
 @mixin output-directional(
   $property-name,
