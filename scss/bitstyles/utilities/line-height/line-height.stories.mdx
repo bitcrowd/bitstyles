@@ -4,13 +4,41 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Line-height
 
+Specify `line-height` property on an element. With the default configuration `min` is available, setting the line-height to the minimum safe value that doesn’t truncate diacritics from above letters. This is not available at any breakpoints, but see [customization](#customization) below for details on how change the configuration.
+
 <Canvas>
   <Story name="u-line-height-min">
     {`
       <div class="u-flex">
-        <h1 class="u-bg-gray-10">Default line-height</h1>
-        <h1 class="u-bg-gray-20 u-line-height-min">u-line-height-min</h1>
+        <p class="u-padding-m u-bg-gray-10">
+          <span class="u-bg-white">Default line-height</span>
+        </p>
+        <p class="u-padding-m u-bg-gray-20 u-line-height-min">
+          <span class="u-bg-white">u-line-height-min</span>
+        </p>
       </div>
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+Customize the available line-height values by overriding the `$bitstyles-line-height-values` Sass map. Provide the name to be used for the class as the key, and the value for the `line-height` property:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/line-height' with (
+  $values: (
+    'large': 2.5,
+  )
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-line-height-breakpoints` variable:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/line-height' with (
+  $breakpoints: (
+    'm',
+  )
+);
+```

@@ -327,7 +327,11 @@
     'start': start,
   )
 );
-@use '../../scss/bitstyles/utilities/line-height';
+@use '../../scss/bitstyles/utilities/line-height' with (
+  $values: (
+    '10': 10,
+  )
+);
 @use '../../scss/bitstyles/utilities/margin' with (
   $breakpoints: (
     'xl',
