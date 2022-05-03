@@ -12,7 +12,7 @@
 - `u-line-height` class can now be configured using `$bitstyles-line-height-values` and `$bitstyles-line-height-breakpoints`
 - A new variable `setup.$no-media-query` is available. In case you use the name `no-mq` for one of your breakpoints, you can change this value to avoid conflict
 - The `properties.join-with-dashes()` function now handles adding the breakpoint suffix with a preceding `@` symbol, when you pass `$at-suffix`
-- `media-query.get()` will now output the contents you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`
+- `media-query.get()` will now output the content block you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`. This is useful for outputing base CSS with media-query wrapped CSS in one loop
 - The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
 
 ### Breaking

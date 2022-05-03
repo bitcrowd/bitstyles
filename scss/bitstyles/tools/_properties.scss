@@ -43,7 +43,7 @@
     }
   }
 
-  @if $at-suffix and $at-suffix != setup.$no-media-query {
+  @if $at-suffix != setup.$no-media-query {
     $string: '#{$string}\\\@#{$at-suffix}';
   }
 
@@ -151,7 +151,11 @@
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
  */
-@mixin output-block($classname-prefix, $classname-root, $breakpoint: null) {
+@mixin output-block(
+  $classname-prefix,
+  $classname-root,
+  $breakpoint: setup.$no-media-query
+) {
   $classname: join-with-dashes(
     $string-items: (
       setup.$namespace,
