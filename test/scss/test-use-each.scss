@@ -343,6 +343,11 @@
     '1em': 1em,
   )
 );
+@use '../../scss/bitstyles/utilities/max-width' with (
+  $values: (
+    '1em': 1em,
+  )
+);
 @use '../../scss/bitstyles/utilities/min-height' with (
   $values: (
     '1em': 1em,
