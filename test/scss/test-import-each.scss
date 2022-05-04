@@ -101,6 +101,14 @@ $bitstyles-input-text-border-radius: 10rem;
 $bitstyles-select-border-radius: 10rem;
 $bitstyles-base-typography-margin-heading: 10rem;
 $bitstyles-base-typography-margin-paragraph: 10rem;
+$bitstyles-base-typography-font-sizes: (
+  'm': (
+    'h1': 10rem
+  ),
+  'xl': (
+    'h1': 20rem
+  ),
+);
 
 //
 // Atoms settings /////////////////////////////////////
@@ -228,6 +236,17 @@ $bitstyles-self-values: (
   'start': start,
 );
 $bitstyles-sr-only-breakpoints: ('xl');
+$bitstyles-responsive-typography-values: (
+  'm': (
+    'h1': 10rem
+  ),
+  'xl': (
+    'h1': 20rem
+  ),
+);
+$bitstyles-typography-values: (
+  '100': 100rem
+);
 $bitstyles-z-index-values: (
   '100': 100,
 );
@@ -344,4 +363,5 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/utilities/text';
 @import '../../scss/bitstyles/utilities/truncate';
 @import '../../scss/bitstyles/utilities/typography';
+@import '../../scss/bitstyles/utilities/typography-responsive';
 @import '../../scss/bitstyles/utilities/z-index';

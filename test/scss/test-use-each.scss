@@ -133,7 +133,15 @@
 );
 @use '../../scss/bitstyles/base/typography' as base-typography with (
   $margin-heading: 10rem,
-  $margin-paragraph: 10rem
+  $margin-paragraph: 10rem,
+  $font-sizes: (
+    'm': (
+      'h1': 10rem
+    ),
+    'xl': (
+      'h1': 20rem
+    ),
+  )
 );
 
 //
@@ -397,7 +405,21 @@
 );
 @use '../../scss/bitstyles/utilities/text';
 @use '../../scss/bitstyles/utilities/truncate';
-@use '../../scss/bitstyles/utilities/typography';
+@use '../../scss/bitstyles/utilities/typography' with (
+  $values: (
+    '100': 100rem
+  )
+);
+@use '../../scss/bitstyles/utilities/typography-responsive' with (
+  $values: (
+    'm': (
+      'h1': 10rem
+    ),
+    'xl': (
+      'h1': 20rem
+    ),
+  )
+);
 @use '../../scss/bitstyles/utilities/z-index' with (
   $values: (
     '100': 100,

@@ -89,6 +89,14 @@
   $select-border-radius: 10rem,
   $base-typography-margin-heading: 10rem,
   $base-typography-margin-paragraph: 10rem,
+  $base-typography-font-sizes: (
+    'm': (
+      'h1': 10rem
+    ),
+    'xl': (
+      'h1': 20rem
+    ),
+  ),
   // atoms
   $avatar-sizes: ('xl': 10rem),
   $badge-color: '10',
@@ -158,5 +166,16 @@
   $row-start-values: ('100': 100, '200': 200),
   $self-values: ('start': start),
   $sr-only-breakpoints: ('xl'),
+  $responsive-typography-values: (
+    'm': (
+      'h1': 10rem
+    ),
+    'xl': (
+      'h1': 20rem
+    ),
+  ),
+  $typography-values: (
+    '100': 100rem
+  ),
   $z-index-values: ('100': 100)
 );
