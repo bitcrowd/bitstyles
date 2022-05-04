@@ -17,7 +17,7 @@ h6 {
 }
 
 @include typography-tools.output-responsive-font-sizes(
-  $font-sizes: settings.$font-sizes,
+  $font-sizes: settings.$font-sizes
 );
 
 p {

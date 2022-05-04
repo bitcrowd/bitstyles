@@ -91,7 +91,7 @@
 );
 @use '../../scss/bitstyles/settings/typography' as settings-typography with (
   $webfont-family-name: 'FakeFont',
-  $webfont-base-url: './',
+  $webfont-base-url: './'
 );
 @use '../../scss/bitstyles/settings/link' as settings-link with (
   $color: #f00
@@ -133,7 +133,7 @@
 );
 @use '../../scss/bitstyles/base/typography' as base-typography with (
   $margin-heading: 10rem,
-  $margin-paragraph: 10rem,
+  $margin-paragraph: 10rem
 );
 
 //

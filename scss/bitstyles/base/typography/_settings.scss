@@ -4,7 +4,7 @@
 $margin-heading: 0 !default;
 $margin-paragraph: 0 !default;
 $font-sizes: (
-  setup.$no-media-query: (
+  '#{setup.$no-media-query}': (
     'h1': font-size.get('6'),
     'h2': font-size.get('5'),
     'h3': font-size.get('4'),

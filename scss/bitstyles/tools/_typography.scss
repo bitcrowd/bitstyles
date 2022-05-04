@@ -22,7 +22,7 @@
     @include media-query.get($breakpoint) {
       @each $name, $font-size in ($font-size-list) {
         #{$prefix}#{$name} {
-          font-size: $font-size
+          font-size: $font-size;
         }
       }
     }
