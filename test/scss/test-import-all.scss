@@ -87,8 +87,6 @@ $bitstyles-shadows-shadows: (
 );
 $bitstyles-typography-webfont-family-name: 'FakeFont';
 $bitstyles-typography-webfont-base-url: './';
-$bitstyles-typography-margin-heading: 10rem;
-$bitstyles-typography-margin-paragraph: 10rem;
 $bitstyles-link-color: #f00;
 
 //
@@ -101,6 +99,8 @@ $bitstyles-input-checkbox-border-radius: 10rem;
 $bitstyles-input-radio-border-radius: 10rem;
 $bitstyles-input-text-border-radius: 10rem;
 $bitstyles-select-border-radius: 10rem;
+$bitstyles-base-typography-margin-heading: 10rem;
+$bitstyles-base-typography-margin-paragraph: 10rem;
 
 //
 // Atoms settings /////////////////////////////////////

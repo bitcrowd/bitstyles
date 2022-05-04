@@ -76,13 +76,8 @@
 
 @mixin generate-font-sizes($prefix: '', $subset: ()) {
   @each $breakpoint, $font-sizes in typography.$font-sizes {
-    // Don’t wrap base classes in a media-query
-    @if $breakpoint == 'base' {
+    @include media-query.get($breakpoint) {
       @include output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
-    } @else {
-      @include media-query.get($breakpoint) {
-        @include output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
-      }
     }
   }
 }

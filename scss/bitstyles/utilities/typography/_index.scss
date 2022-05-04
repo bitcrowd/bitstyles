@@ -2,6 +2,6 @@
 @use '../../tools/typography';
 
 @include typography.generate-font-sizes(
-  '.#{setup.$namespace}u-',
-  ('h0', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6')
+  $prefix: '.#{setup.$namespace}u-',
+  $subset: ('h0', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6')
 );
