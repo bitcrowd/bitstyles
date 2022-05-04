@@ -1,0 +1,26 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/typography" />
+
+# Typography
+
+Typographic classes that apply font-sizes from the typographic scale. These are useful mainly in two cases:
+
+- when your visual design calls for a specific font-size, but following the correct order of HTML `<h>` elements would result in a different size
+- when you need to apply a specific font-size to some other element, such as a button
+
+Note the `.u-h0` has been added as an additional layer above `.u-h1`, use it to acheive extra-large ‘hero’ text.
+
+<Canvas>
+  <Story name="Typography">
+    {`
+      <h1 class="u-h0">Header 0 (really an h1)</h1>
+      <h2 class="u-h1">Header 1 (really an h2)</h2>
+      <h3 class="u-h2">Header 2 (really an h3)</h3>
+      <h4 class="u-h3">Header 3 (really an h4)</h4>
+      <h5 class="u-h4">Header 4 (really an h5)</h5>
+      <h6 class="u-h5">Header 5 (really an h6)</h6>
+      <h5 class="u-h6">Header 6 (really an h5)</h5>
+    `}
+  </Story>
+</Canvas>

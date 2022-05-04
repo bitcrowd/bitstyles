@@ -17,67 +17,14 @@
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 //
 
-@mixin output-font-sizes($font-sizes, $prefix, $subset, $breakpoint) {
-  @each $element-name, $font-size in ($font-sizes) {
-    @if length($subset) == 0 or index($subset, $element-name) {
-      #{$prefix}#{$element-name} {
-        /* stylelint-disable max-nesting-depth */
-        font-size: font-size.get(
-          $font-size: $element-name,
-          $breakpoint: $breakpoint
-        );
-        /* stylelint-enable max-nesting-depth */
-      }
-    }
-  }
-}
-
-// Font-size generator
-//
-// **Generate your typographic scale**
-//
-// Set your font-sizes in the map `$bitstyles-font-sizes` e.g.
-//
-// ```scss
-// $bitstyles-font-sizes: (
-//   'base': (
-//     'html': $font-size-base-small,
-//     'h0': 3rem,
-//     'h1': 2rem,
-//     'h2': 1.7rem,
-//     'h3': 1.45rem,
-//     'h4': 1.2rem,
-//     'h5': $font-size-base-small,
-//     'h6': 0.8rem,
-//   ),
-//   'm': (
-//     'html': $font-size-base,
-//     'h0': 4.8rem,
-//     'h1': 3rem,
-//     'h2': 2.45rem,
-//     'h3': 1.95rem,
-//     'h4': 1.25rem,
-//     'h5': $font-size-base,
-//     'h6': 0.8rem,
-//   )
-// );
-// ```
-//
-// Use `rem` to define font-sizes.
-//
-// `html` is a reserved word, and results in font-sizes being output without an enclosing media query.
-//
-// The media-query names used should be defined in `$bitstyles-breakpoints`.
-//
-// @param {String} $prefix  Optional. Provide a string that will be prepended to the element name. Can include `.` to output classname selectors instead of elements.
-//
-// @param {List} $subset  Optional. Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in `$bitstyles-font-sizes`.
-//
-
-@mixin generate-font-sizes($prefix: '', $subset: ()) {
-  @each $breakpoint, $font-sizes in typography.$font-sizes {
+@mixin output-responsive-font-sizes($font-sizes, $prefix: null) {
+  @each $breakpoint, $font-size-list in $font-sizes {
     @include media-query.get($breakpoint) {
-      @include output-font-sizes($font-sizes, $prefix, $subset, $breakpoint);
+      @each $name, $font-size in ($font-size-list) {
+        #{$prefix}#{$name} {
+          font-size: $font-size
+        }
+      }
     }
   }
 }

@@ -16,8 +16,8 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
-@include typography-tools.generate-font-sizes(
-  $subset: (html, h1, h2, h3, h4, h5, h6)
+@include typography-tools.output-responsive-font-sizes(
+  $font-sizes: settings.$font-sizes,
 );
 
 p {

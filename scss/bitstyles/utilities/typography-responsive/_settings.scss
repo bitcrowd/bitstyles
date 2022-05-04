@@ -1,9 +1,8 @@
 @use '../../settings/setup';
+@use '../../settings/typography';
 @use '../../tools/font-size';
 
-$margin-heading: 0 !default;
-$margin-paragraph: 0 !default;
-$font-sizes: (
+$values: (
   setup.$no-media-query: (
     'h1': font-size.get('6'),
     'h2': font-size.get('5'),

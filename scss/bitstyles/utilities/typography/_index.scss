@@ -1,7 +1,11 @@
+@forward './settings';
+@use './settings';
 @use '../../settings/setup';
-@use '../../tools/typography';
+@use '../../tools/properties';
 
-@include typography.generate-font-sizes(
-  $prefix: '.#{setup.$namespace}u-',
-  $subset: ('h0', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6')
+@include properties.output(
+  $property-name: 'font-size',
+  $classname-root: 'text',
+  $values: settings.$values,
+  $breakpoints: settings.$breakpoints
 );

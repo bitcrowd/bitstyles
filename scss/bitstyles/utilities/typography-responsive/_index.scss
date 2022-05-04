@@ -1,0 +1,14 @@
+@forward './settings';
+@use './settings';
+@use '../../settings/setup';
+@use '../../tools/typography';
+@use '../../tools/properties';
+
+$classname-prefix: properties.join-with-dashes(
+  $string-items: (setup.$namespace, 'u'),
+);
+
+@include typography.output-responsive-font-sizes(
+  $prefix: '.#{$classname-prefix}-',
+  $font-sizes: settings.$values,
+);
