@@ -136,10 +136,10 @@
   $margin-paragraph: 10rem,
   $font-sizes: (
     'm': (
-      'h1': 10rem
+      'h1': 10rem,
     ),
     'xl': (
-      'h1': 20rem
+      'h1': 20rem,
     ),
   )
 );
@@ -407,16 +407,16 @@
 @use '../../scss/bitstyles/utilities/truncate';
 @use '../../scss/bitstyles/utilities/typography' with (
   $values: (
-    '100': 100rem
+    '100': 100rem,
   )
 );
 @use '../../scss/bitstyles/utilities/typography-responsive' with (
   $values: (
     'm': (
-      'h1': 10rem
+      'h1': 10rem,
     ),
     'xl': (
-      'h1': 20rem
+      'h1': 20rem,
     ),
   )
 );

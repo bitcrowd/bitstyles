@@ -103,10 +103,10 @@ $bitstyles-base-typography-margin-heading: 10rem;
 $bitstyles-base-typography-margin-paragraph: 10rem;
 $bitstyles-base-typography-font-sizes: (
   'm': (
-    'h1': 10rem
+    'h1': 10rem,
   ),
   'xl': (
-    'h1': 20rem
+    'h1': 20rem,
   ),
 );
 
@@ -238,14 +238,14 @@ $bitstyles-self-values: (
 $bitstyles-sr-only-breakpoints: ('xl');
 $bitstyles-responsive-typography-values: (
   'm': (
-    'h1': 10rem
+    'h1': 10rem,
   ),
   'xl': (
-    'h1': 20rem
+    'h1': 20rem,
   ),
 );
 $bitstyles-typography-values: (
-  '100': 100rem
+  '100': 100rem,
 );
 $bitstyles-z-index-values: (
   '100': 100,

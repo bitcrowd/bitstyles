@@ -91,11 +91,11 @@
   $base-typography-margin-paragraph: 10rem,
   $base-typography-font-sizes: (
     'm': (
-      'h1': 10rem
+      'h1': 10rem,
     ),
     'xl': (
-      'h1': 20rem
-    ),
+      'h1': 20rem,
+    )
   ),
   // atoms
   $avatar-sizes: ('xl': 10rem),
@@ -168,14 +168,12 @@
   $sr-only-breakpoints: ('xl'),
   $responsive-typography-values: (
     'm': (
-      'h1': 10rem
+      'h1': 10rem,
     ),
     'xl': (
-      'h1': 20rem
-    ),
+      'h1': 20rem,
+    )
   ),
-  $typography-values: (
-    '100': 100rem
-  ),
+  $typography-values: ('100': 100rem),
   $z-index-values: ('100': 100)
 );
