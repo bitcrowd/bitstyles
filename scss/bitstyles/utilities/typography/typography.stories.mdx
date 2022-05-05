@@ -117,7 +117,7 @@ Override `$bitstyles-typography-values` if you need to provide font-sizes outsid
 ```scss
 @use 'bitstyles/utilities/typography' with (
   $values: (
-    '5': 5rem
+    '5': 5rem,
   )
 );
 ```
@@ -126,6 +126,9 @@ You can configure the breakpoints at which the classes are available by overridi
 
 ```scss
 @use 'bitstyles/utilities/typography' with (
-  $breakpoints: ('m', 'l')
+  $breakpoints: (
+    'm',
+    'l',
+  )
 );
 ```

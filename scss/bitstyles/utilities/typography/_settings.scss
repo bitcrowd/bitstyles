@@ -1,6 +1,4 @@
-@use '../../settings/setup';
 @use '../../settings/typography';
-@use '../../tools/font-size';
 
 $values: typography.$font-sizes !default;
 $breakpoints: ('m') !default;

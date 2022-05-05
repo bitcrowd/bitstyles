@@ -1,26 +1,5 @@
 @use '../../settings/setup';
-@use '../../settings/typography';
+@use '../../settings/typography-responsive';
 @use '../../tools/font-size';
 
-$values: (
-  '#{setup.$no-media-query}': (
-    'h1': font-size.get('6'),
-    'h2': font-size.get('5'),
-    'h3': font-size.get('4'),
-    'h4': font-size.get('3'),
-    'h5': font-size.get('2'),
-    'h6': font-size.get('1'),
-    'body': font-size.get('2'),
-    'p': font-size.get('2'),
-  ),
-  'm': (
-    'h1': font-size.get('8'),
-    'h2': font-size.get('7'),
-    'h3': font-size.get('6'),
-    'h4': font-size.get('4'),
-    'h5': font-size.get('2'),
-    'h6': font-size.get('1'),
-    'body': font-size.get('2'),
-    'p': font-size.get('2'),
-  ),
-) !default;
+$values: typography-responsive.$font-sizes !default;
