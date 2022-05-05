@@ -8,7 +8,11 @@ There are several aspects to typography which are handled by systems in bitstyle
 
 ## Font-sizes
 
-Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default sizes are based on a ratio of 1.17 between each font-size, and adjust to the size of the viewport using a mobile-first approach.
+Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default configuration provides base desing tokens for font-size based on a ratio of 1.17 between each font-size. These base tokens are later used to provide consistent font-sizing for:
+
+- [responsive typography](/docs/base/typography) — font-sizes specified for HTML elememnts (e.g. `h1` – `h6`) that adjust to the size of the viewport using a mobile-first approach
+- [utility classes](/docs/utilities/typography) that apply the same responsive typography as the base elements, for when you need arbritrary elements to consistently match your heading elements
+- [utility classes](/docs/utilities/typography) that apply specific font-sizes at specified breakpoints
 
 The `'base'` sizes shown below apply for all screensizes, until overridden at the `m` breakpoint (see [breakpoints](/docs/design-tokens-breakpoints--page)):
 
