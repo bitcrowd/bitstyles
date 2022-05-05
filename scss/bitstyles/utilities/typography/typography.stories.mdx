@@ -4,23 +4,128 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Typography
 
-Typographic classes that apply font-sizes from the typographic scale. These are useful mainly in two cases:
+The default configuration provides typographic classes that apply all the font-sizes from the typographic scale, for all viewport sizes, and at the `m` breakpoint. See [customization](#customization) below for details on how to change that.
 
-- when your visual design calls for a specific font-size, but following the correct order of HTML `<h>` elements would result in a different size
-- when you need to apply a specific font-size to some other element, such as a button
+These are useful when you need to produce **exceptions** to the standard resonsive typographic scale (see [responsiveness](#responsiveness), below), or when you need text with a fixed font-size at every viewport size.
 
-Note the `.u-h0` has been added as an additional layer above `.u-h1`, use it to acheive extra-large ‘hero’ text.
-
-<Canvas>
-  <Story name="Typography">
+<Canvas isColumn>
+  <Story name="u-text-1">
     {`
-      <h1 class="u-h0">Header 0 (really an h1)</h1>
-      <h2 class="u-h1">Header 1 (really an h2)</h2>
-      <h3 class="u-h2">Header 2 (really an h3)</h3>
-      <h4 class="u-h3">Header 3 (really an h4)</h4>
-      <h5 class="u-h4">Header 4 (really an h5)</h5>
-      <h6 class="u-h5">Header 5 (really an h6)</h6>
-      <h5 class="u-h6">Header 6 (really an h5)</h5>
+      <div class="u-text-1">u-text-1</div>
+    `}
+  </Story>
+  <Story name="u-text-2">
+    {`
+      <div class="u-text-2">u-text-2</div>
+    `}
+  </Story>
+  <Story name="u-text-3">
+    {`
+      <div class="u-text-3">u-text-3</div>
+    `}
+  </Story>
+  <Story name="u-text-4">
+    {`
+      <div class="u-text-4">u-text-4</div>
+    `}
+  </Story>
+  <Story name="u-text-5">
+    {`
+      <div class="u-text-5">u-text-5</div>
+    `}
+  </Story>
+  <Story name="u-text-6">
+    {`
+      <div class="u-text-6">u-text-6</div>
+    `}
+  </Story>
+  <Story name="u-text-7">
+    {`
+      <div class="u-text-7">u-text-7</div>
+    `}
+  </Story>
+  <Story name="u-text-8">
+    {`
+      <div class="u-text-8">u-text-8</div>
     `}
   </Story>
 </Canvas>
+
+## Responsiveness
+
+These classes are not responsive in the same way that the base heading elements or responsive typography utility classes are. Though available at various breakpoints (depending on your configuration), these utility classes won’t result in the element’s font-size changing at different viewport sizes — for that you should use the [responsive typography](/docs/utilities-responsive-typography--typography) utility classes.
+
+With the default configuration, all the base font-sizes are available scoped to the `m` breakpoint:
+
+<Canvas isColumn>
+  <Story name="u-text-1@m">
+    {`
+      <div class="u-text-1@m">u-text-1@m</div>
+    `}
+  </Story>
+  <Story name="u-text-2@m">
+    {`
+      <div class="u-text-2@m">u-text-2@m</div>
+    `}
+  </Story>
+  <Story name="u-text-3@m">
+    {`
+      <div class="u-text-3@m">u-text-3@m</div>
+    `}
+  </Story>
+  <Story name="u-text-4@m">
+    {`
+      <div class="u-text-4@m">u-text-4@m</div>
+    `}
+  </Story>
+  <Story name="u-text-5@m">
+    {`
+      <div class="u-text-5@m">u-text-5@m</div>
+    `}
+  </Story>
+  <Story name="u-text-6@m">
+    {`
+      <div class="u-text-6@m">u-text-6@m</div>
+    `}
+  </Story>
+  <Story name="u-text-7@m">
+    {`
+      <div class="u-text-7@m">u-text-7@m</div>
+    `}
+  </Story>
+  <Story name="u-text-8@m">
+    {`
+      <div class="u-text-8@m">u-text-8@m</div>
+    `}
+  </Story>
+</Canvas>
+
+What these classes are useful for is producing **exceptions** to the standardized responsive typography — perhaps you need a specific `<h3>` (or `.u-h3`) to have a different font-size than is standard, at a certain breakpoint.
+
+<Canvas>
+  <Story name="exception-example">
+    {`
+      <p class="u-text-4@m">A paragraph that becomes font-size “4” large at larger viewport sizes.</p>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+Override `$bitstyles-typography-values` if you need to provide font-sizes outside of you base font-size design tokens, or a subset of those. But be aware this could lead to inconcistent type treatment — probably you should add the font-size you need to the base font-sizes instead.
+
+```scss
+@use 'bitstyles/utilities/typography' with (
+  $values: (
+    '5': 5rem
+  )
+);
+```
+
+You can configure the breakpoints at which the classes are available by overriding `$bitstyles-typography-breakpoints`:
+
+```scss
+@use 'bitstyles/utilities/typography' with (
+  $breakpoints: ('m', 'l')
+);
+```
