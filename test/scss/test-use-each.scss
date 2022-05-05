@@ -89,9 +89,19 @@
     ),
   )
 );
-@use '../../scss/bitstyles/settings/typography' as settings-typography with (
+@use '../../scss/bitstyles/settings/typography' with (
   $webfont-family-name: 'FakeFont',
   $webfont-base-url: './'
+);
+@use '../../scss/bitstyles/settings/typography-responsive' with (
+  $font-sizes: (
+    'm': (
+      'h1': 10rem,
+    ),
+    'xl': (
+      'h1': 20rem,
+    )
+  ),
 );
 @use '../../scss/bitstyles/settings/link' as settings-link with (
   $color: #f00
@@ -387,6 +397,7 @@
     'l',
   )
 );
+@use '../../scss/bitstyles/utilities/responsive-typography' as responsive-typography-utilities;
 @use '../../scss/bitstyles/utilities/row-start' with (
   $values: (
     '100': 100,
@@ -405,19 +416,9 @@
 );
 @use '../../scss/bitstyles/utilities/text';
 @use '../../scss/bitstyles/utilities/truncate';
-@use '../../scss/bitstyles/utilities/typography' with (
+@use '../../scss/bitstyles/utilities/typography' as typography-utilities with (
   $values: (
     '100': 100rem,
-  )
-);
-@use '../../scss/bitstyles/utilities/typography-responsive' with (
-  $values: (
-    'm': (
-      'h1': 10rem,
-    ),
-    'xl': (
-      'h1': 20rem,
-    ),
   )
 );
 @use '../../scss/bitstyles/utilities/z-index' with (

@@ -8,6 +8,7 @@
 @forward 'bitstyles/settings/setup' as setup-*;
 @forward 'bitstyles/settings/shadows' as shadows-*;
 @forward 'bitstyles/settings/typography' as typography-*;
+@forward 'bitstyles/settings/typography-responsive' as responsive-typography-*;
 @forward 'bitstyles/settings/link' as link-*;
 
 //
@@ -106,11 +107,11 @@
 @forward 'bitstyles/utilities/overflow' as overflow-*;
 @forward 'bitstyles/utilities/padding' as padding-*;
 @forward 'bitstyles/utilities/position' as position-*;
+@forward 'bitstyles/utilities/responsive-typography' as responsive-typography-utilities-*;
 @forward 'bitstyles/utilities/row-start' as row-start-*;
 @forward 'bitstyles/utilities/self' as self-*;
 @forward 'bitstyles/utilities/sr-only' as sr-only-*;
 @forward 'bitstyles/utilities/text' as text-*;
 @forward 'bitstyles/utilities/truncate' as truncate-*;
-@forward 'bitstyles/utilities/typography' as typography-*;
-@forward 'bitstyles/utilities/typography-responsive' as responsive-typography-*;
+@forward 'bitstyles/utilities/typography' as typography-utilities-*;
 @forward 'bitstyles/utilities/z-index' as z-index-*;

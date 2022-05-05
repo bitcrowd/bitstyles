@@ -27,24 +27,4 @@ Resize your viewport to see how these elements change font-size at larger screen
 
 ## Customization
 
-The default configuration mimics the styles set in `base/typography`, so if you change the configuration of that module, you should update this one:
-
-```scss
-@use '../../settings/setup';
-@use '../../tools/font-size';
-@use 'bitstyles/utilities/typography-responsive' with (
-  $values: (
-    '#{setup.$no-media-query}': (
-      'h1': font-size.get('6'),
-      // other font-sizes
-    )'m': (
-      'h1': font-size.get('7'),
-      // other font-sizes
-    ),
-    'l': (
-      'h1': font-size.get('8'),
-      // other font-sizes
-    ),
-  )
-);
-```
+The default configuration imports the styles set in [`settings/responsive-typography`](/docs/design-tokens-typography), so all configuration should happen there. This ensures these utility classes match the styles set in `base/typography`.

@@ -87,6 +87,14 @@ $bitstyles-shadows-shadows: (
 );
 $bitstyles-typography-webfont-family-name: 'FakeFont';
 $bitstyles-typography-webfont-base-url: './';
+$bitstyles-responsive-typography-font-sizes: (
+  'm': (
+    'h1': 10rem,
+  ),
+  'xl': (
+    'h1': 20rem,
+  )
+);
 $bitstyles-link-color: #f00;
 
 //
@@ -236,15 +244,7 @@ $bitstyles-self-values: (
   'start': start,
 );
 $bitstyles-sr-only-breakpoints: ('xl');
-$bitstyles-responsive-typography-values: (
-  'm': (
-    'h1': 10rem,
-  ),
-  'xl': (
-    'h1': 20rem,
-  ),
-);
-$bitstyles-typography-values: (
+$bitstyles-typography-utilities-values: (
   '100': 100rem,
 );
 $bitstyles-z-index-values: (

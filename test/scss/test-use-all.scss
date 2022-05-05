@@ -78,6 +78,14 @@
   $setup-namespace: 'bs',
   $typography-webfont-family-name: 'FakeFont',
   $typography-webfont-base-url: './',
+  $responsive-typography-font-sizes: (
+    'm': (
+      'h1': 10rem,
+    ),
+    'xl': (
+      'h1': 20rem,
+    )
+  ),
   $link-color: #f00,
   // base
   $figure-font-style: bold,
@@ -166,14 +174,6 @@
   $row-start-values: ('100': 100, '200': 200),
   $self-values: ('start': start),
   $sr-only-breakpoints: ('xl'),
-  $responsive-typography-values: (
-    'm': (
-      'h1': 10rem,
-    ),
-    'xl': (
-      'h1': 20rem,
-    )
-  ),
-  $typography-values: ('100': 100rem),
+  $typography-utilities-values: ('100': 100rem),
   $z-index-values: ('100': 100)
 );

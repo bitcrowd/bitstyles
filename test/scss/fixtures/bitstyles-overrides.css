@@ -3487,6 +3487,16 @@ table {
     position: sticky;
   }
 }
+@media screen and (min-width: 30em) {
+  .bs-u-h1 {
+    font-size: 10rem;
+  }
+}
+@media screen and (min-width: 95em) {
+  .bs-u-h1 {
+    font-size: 20rem;
+  }
+}
 .bs-u-row-start-100 {
   grid-row-start: 100;
 }
@@ -3577,16 +3587,6 @@ table {
 @media screen and (min-width: 30em) {
   .bs-u-text-100\@m {
     font-size: 100rem;
-  }
-}
-@media screen and (min-width: 30em) {
-  .bs-u-h1 {
-    font-size: 10rem;
-  }
-}
-@media screen and (min-width: 95em) {
-  .bs-u-h1 {
-    font-size: 20rem;
   }
 }
 .bs-u-z-100 {
