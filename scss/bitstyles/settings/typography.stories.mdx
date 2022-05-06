@@ -8,11 +8,57 @@ There are several aspects to typography which are handled by systems in bitstyle
 
 ## Font-sizes
 
-Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default configuration provides base desing tokens for font-size based on a ratio of 1.17 between each font-size. These base tokens are later used to provide consistent font-sizing for:
+Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default configuration provides base design tokens for font-sizes based on a ratio of 1.17 between each font-size.
+
+These base tokens are used to create a responsive typographic scale that’s applied to the base elements `h1` – `h6` and the corresponding utility classes `.u-h1` – `.u-h6`, and then utility classes producing exceptions `.u-text-1` to `.u-text-8` at specific breakpoints.
+
+For more details on these, see
 
 - [responsive typography](/docs/base-typography-responsive-headings--h-1) — font-sizes specified for HTML elememnts (e.g. `h1` – `h6`) that adjust to the size of the viewport using a mobile-first approach
 - [utility classes](/docs/utilities-typography--typography) that apply the same responsive typography as the base elements, for when you need arbritrary elements to consistently match your heading elements
 - [utility classes](/docs/utilities-typography--typography) that apply specific font-sizes at specified breakpoints
+
+The default setup provides the following typographic scales, see [customization](#customization) below for details on how to change that:
+
+```scss
+/* settings/typography */
+
+$font-sizes: (
+  '1': 0.8rem,
+  '2': 1rem,
+  '3': 1.25rem,
+  '4': 1.45rem,
+  '5': 1.7rem,
+  '6': 2rem,
+  '7': 3rem,
+  '8': 4.8rem,
+)
+```
+
+```scss
+/* settings/typography-responsive */
+
+$font-sizes: (
+  '#{setup.$no-media-query}': (
+    'h1': font-size.get('6'),
+    'h2': font-size.get('5'),
+    'h3': font-size.get('4'),
+    'h4': font-size.get('3'),
+    'h5': font-size.get('2'),
+    'h6': font-size.get('1'),
+    'body': font-size.get('2'),
+  ),
+  'm': (
+    'h1': font-size.get('8'),
+    'h2': font-size.get('7'),
+    'h3': font-size.get('6'),
+    'h4': font-size.get('4'),
+    'h5': font-size.get('2'),
+    'h6': font-size.get('1'),
+    'body': font-size.get('2'),
+  ),
+)
+```
 
 ### Usage
 
@@ -25,7 +71,7 @@ There are also helper functions in Sass that can be used to create styles in you
 
 ### responsive-font-size.get()
 
-Use the `responsive-font-size.get()` mixin for accessing the responsive font-sizes specified in your base design tokens. By using this mixin you ensure the font-size of a component will match the resposnive typography of your heading elements and responsive-typography utility classes.
+Use the `responsive-font-size.get()` mixin for accessing the responsive font-sizes specified in your base design tokens. By using this mixin you ensure the font-size of a component will match the responsive typography of your heading elements and responsive-typography utility classes.
 
 In your Sass file first import the `responsive-font-size` tools, then use the `get()` function, passing in the font-size you need:
 
@@ -149,7 +195,7 @@ You can specify the font-sizes and names for each of your base font-size design 
 
 #### Responsive font-sizes
 
-By overriding `$bitstyles-responsive-typography-font-sizes`, you can specify which font-sizes are applied to which HTML elements (in [`base/typography`](/docs/base-typography-responsive-headings--h-1)) and responsive-typography utility classes (in [`utilities/typography-responsive`](/docs/utilities-responsive-typography--typography)), and at which breakpoints.
+By overriding `$bitstyles-responsive-typography-font-sizes`, you can specify which font-sizes are applied to which HTML elements (in [`base/typography`](/docs/base-typography-responsive-headings--h-1)) and responsive-typography utility classes (in [`utilities/responsive-typography`](/docs/utilities-responsive-typography--typography)), and at which breakpoints.
 
 Using a mobile-first approach, the first Sass map of font-sizes shown below apply for all screensizes, until overridden at the `m` breakpoint (see [breakpoints](/docs/design-tokens-breakpoints--page)). You can provide font-size maps at every breakpoint available in your base breakpoints if you wish.
 
