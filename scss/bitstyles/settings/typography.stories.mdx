@@ -14,9 +14,55 @@ Using a central scale of font-sizes maintains consistency in the typography thro
 - [utility classes](/docs/utilities-typography--typography) that apply the same responsive typography as the base elements, for when you need arbritrary elements to consistently match your heading elements
 - [utility classes](/docs/utilities-typography--typography) that apply specific font-sizes at specified breakpoints
 
-### Using font-sizes in Sass
+### Usage
 
-Use the `font-size.get()` helper function for accessing the font-sizes specified in your base design tokens. In your Sass file first import the `font-size` tools, then use the `get()` function, passing in the font-size you need:
+In most cases, it’s recommended to use the appropriate utility classes to apply font-size. See the documentation of the classes for information on defaults & customization:
+
+- [`responsive-typography`](/docs/utilities-responsive-typography--typography)
+- [`typography`](/docs/utilities-typography--typography)
+
+There are also helper functions in Sass that can be used to create styles in your components that match those utility classes, so you can maintain consistency — see the next sections for details.
+
+### responsive-font-size.get()
+
+Use the `responsive-font-size.get()` mixin for accessing the responsive font-sizes specified in your base design tokens. By using this mixin you ensure the font-size of a component will match the resposnive typography of your heading elements and responsive-typography utility classes.
+
+In your Sass file first import the `responsive-font-size` tools, then use the `get()` function, passing in the font-size you need:
+
+```scss
+@use '~bitstyles/scss/bitstyles/tools/responsive-font-size';
+
+.component-class::after {
+  @include responsive-font-size.get('h4');
+}
+```
+
+With the default setup this will output:
+
+```css
+.component-class::after {
+  font-size:  1.25rem;
+}
+
+@media screen and (min-width: 30em) {
+  .component-class::after {
+    font-size: 1.45rem;
+  }
+}
+```
+
+#### `responsive-font-size.get()` parameters
+
+| Name       | Type   | Description               |
+| ---------- | ------ | ------------------------- |
+| $font-size | string | The name of the font-size |
+| $breakpoint | string | Defaults to `null`, which will output all the font-sizes under that name, at each breakpoint, wrapped in the appropriate media-query. If you provide this parameter, the font-size at only that breakpoint will be output |
+
+### font-size.get()
+
+Use the `font-size.get()` function for accessing the font-sizes specified in your base design tokens. This is useful when you need a component’s font-size to be rendered differently to your standard responsive typography.
+
+In your Sass file first import the `font-size` tools, then use the `get()` function, passing in the font-size you need:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/font-size';
@@ -47,7 +93,7 @@ With the default setup this will output:
 }
 ```
 
-`font-size.get()` is also used to setup the responsive typographic scale for the [base styles](/docs/base-typography-responsive-headings--h-1) and the [utility classes](/docs/utilities-typography--typography), to ensure consistency.
+`font-size.get()` is also used in the setup the responsive typographic scale for the [base styles](/docs/base-typography-responsive-headings--h-1) and the [utility classes](/docs/utilities-typography--typography), to ensure consistency across your designs.
 
 #### `font-size.get()` parameters
 
@@ -55,15 +101,9 @@ With the default setup this will output:
 | ---------- | ------ | ------------------------- |
 | $font-size | string | The name of the font-size |
 
-### Using font-sizes in classes
-
-Use the appropriate utility classes to apply font-size. See the documentation of the class for information on defaults & customization:
-
-- [`typography`](/docs/utilities-typography--typography)
-
 ## Webfonts
 
-The default webfont is Nunito. If you wish to keep using it, there’s nothing you need to do.
+The default webfont is Nunito. If you wish to keep using it, there’s nothing you need to do. See [customization](#customization) below for details on how to change this configuration.
 
 ### Using font-family in Sass
 

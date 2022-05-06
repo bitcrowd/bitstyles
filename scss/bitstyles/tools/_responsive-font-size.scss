@@ -1,27 +1,36 @@
 @use 'sass:map';
 @use '../settings/setup';
 @use '../settings/typography-responsive';
+@use '../tools/media-query';
 
 // Font-size
 //
-// **Returns requested font-size from the global `typography.$font-sizes` map.**
-// e.g. `font-size: font-size.get('h1');`
+// **Outputs requested responsive font-sizes from the global `responsive-typography.$font-sizes` map.**
+// e.g. `@include responsive-font-size.get('h1');`
 //
-// @param {String} $font-size  The font-size, as named in the `typography.$font-sizes` map
+// @param {String} $font-size  The font-size as named in the `responsive-typography.$font-sizes` map
 //
-// @param {String} $breakpoint   Optional. Defaults to `base`, you can request the font-size at other breakpoints as defined in the `typography.$font-sizes` map
+// @param {String} $breakpoint   Optional. Defaults to `null`, which outputs the font-sizes at each breakpoint defined in `responsive-typography.$font-sizes`. If you pass a $breakpoint parameter, the output will be the font-size at that specific breakpoint
 //
 
-@function get($font-size, $breakpoint: setup.$no-mq) {
-  @if map.has-key(typography-responsive.$font-sizes, $breakpoint) {
-    $font-sizes: map.get(typography.$font-sizes, $breakpoint);
+@mixin get($font-size, $breakpoint: null) {
+  @if $breakpoint {
+    @if map.has-key(typography-responsive.$font-sizes, $breakpoint) {
+      $font-sizes: map.get(typography.$font-sizes, $breakpoint);
 
-    @if map.has-key($font-sizes, $font-size) {
-      @return map.get($font-sizes, $font-size);
+      @if map.has-key($font-sizes, $font-size) {
+        font-size: map.get($font-sizes, $font-size);
+      } @else {
+        @error 'Oops! There’s no font-size at that breakpoint ‘#{$font-size}/#{$breakpoint}’.';
+      }
     } @else {
-      @error 'Oops! There’s no font-size at that breakpoint ‘#{$font-size}/#{$breakpoint}’.';
+      @error 'Oops! Font-sizes at breakpoint ‘#{$breakpoint}’ do not exist.';
     }
   } @else {
-    @error 'Oops! Font-sizes at breakpoint ‘#{$breakpoint}’ do not exist.';
+    @each $breakpoint, $font-sizes in typography-responsive.$font-sizes {
+      @include media-query.get($breakpoint) {
+        font-size: map.get($font-sizes, $font-size);
+      }
+    }
   }
 }
