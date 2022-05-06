@@ -41,7 +41,7 @@ With the default setup this will output:
 
 ```css
 .component-class::after {
-  font-size:  1.25rem;
+  font-size: 1.25rem;
 }
 
 @media screen and (min-width: 30em) {
@@ -53,9 +53,9 @@ With the default setup this will output:
 
 #### `responsive-font-size.get()` parameters
 
-| Name       | Type   | Description               |
-| ---------- | ------ | ------------------------- |
-| $font-size | string | The name of the font-size |
+| Name        | Type   | Description                                                                                                                                                                                                               |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $font-size  | string | The name of the font-size                                                                                                                                                                                                 |
 | $breakpoint | string | Defaults to `null`, which will output all the font-sizes under that name, at each breakpoint, wrapped in the appropriate media-query. If you provide this parameter, the font-size at only that breakpoint will be output |
 
 ### font-size.get()
@@ -168,7 +168,6 @@ We’re using the global `setup.$no-media-query` to provide font-sizes that appl
       'h5': font-size.get('2'),
       'h6': font-size.get('1'),
       'body': font-size.get('2'),
-      'p': font-size.get('2'),
     ),
     'm': (
       'h1': font-size.get('8'),
@@ -178,7 +177,6 @@ We’re using the global `setup.$no-media-query` to provide font-sizes that appl
       'h5': font-size.get('2'),
       'h6': font-size.get('1'),
       'body': font-size.get('2'),
-      'p': font-size.get('2'),
     ),
   )
 );

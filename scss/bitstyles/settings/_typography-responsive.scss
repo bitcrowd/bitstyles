@@ -10,7 +10,6 @@ $font-sizes: (
     'h5': font-size.get('2'),
     'h6': font-size.get('1'),
     'body': font-size.get('2'),
-    'p': font-size.get('2'),
   ),
   'm': (
     'h1': font-size.get('8'),
@@ -20,6 +19,5 @@ $font-sizes: (
     'h5': font-size.get('2'),
     'h6': font-size.get('1'),
     'body': font-size.get('2'),
-    'p': font-size.get('2'),
   ),
 ) !default;
