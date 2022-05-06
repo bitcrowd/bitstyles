@@ -20,13 +20,14 @@
 - New `u-max-width` utility class, with `0` and `100vw` as default values. Customizable using `$bitstyles-max-width-values` and `$bitstyles-max-width-breakpoints`
 - `u-line-height` class can now be configured using `$bitstyles-line-height-values` and `$bitstyles-line-height-breakpoints`
 
-### Breaking
+### Changed
 
 - `properties.get-classname()` has been renamed to `properties.join-with-dashes()` to reflect its more generic usage. The list of strings passed as a parameter is renamed from `$classname-items` to `$string-items`. If you were using this function, rename the function call and the parameter (if using named parameters in your call)
+- We now have a two-tier typography design token system. A single Sass map `$bitstylestypography-font-sizes` is used to create the existing responsive typography system for `h1` – `h6` elements, and the corresponding `.u-h1` – `.u-h6` responsive typography utility classes. The responsive typography for the base heading elements and the corresponding utility classes is built on top of these base design tokens. To update, all your unique font-sizes should be defined in the base scale in `settings/typography`, then referenced using `font-size.get()` to build your responsive typography scale in `settings/typography-responsive`.
 
 ### Fixed
 
-- Prefixing of utility classname with `setup.$namespace` is now working correctly, with the exception of line-height and the font-size utility classes. These will be done in another PR. If you were using namespacing, you’ll need to update the classnames for all utilities (apart from line-height & font-size) in your HTML to the correct format , with `-` dashes between each part of the name e.g. `.<namespace>-u-<classname>` instead of `.<namespace>u-<classname>`
+- Prefixing of utility classnames with `setup.$namespace` is now working correctly, with the exception of line-height and the font-size utility classes. These will be done in another PR. If you were using namespacing, you’ll need to update the classnames for all utilities (apart from line-height & font-size) in your HTML to the correct format , with `-` dashes between each part of the name e.g. `.<namespace>-u-<classname>` instead of `.<namespace>u-<classname>`
 
 ## [[4.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.2.0) - 2022-02-09
 
