@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## [[4.3.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.3.0) - 2022-05-25
 
 ### Added
 
