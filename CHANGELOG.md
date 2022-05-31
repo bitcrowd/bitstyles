@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- A new variable `setup.$no-media-query` is available. In case you use the name `no-mq` for one of your breakpoints, you can change this value to avoid conflict
+- The `properties.join-with-dashes()` function now handles adding the breakpoint suffix with a preceding `@` symbol, when you pass `$at-suffix`
+- `media-query.get()` will now output the content block you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`. This is useful for outputing base CSS with media-query wrapped CSS in one loop
+- The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
+
 ## [[4.3.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.3.0) - 2022-05-25
 
 ### Added
@@ -10,10 +19,6 @@
 - Position classes are now available for `static`, `absolute`, `fixed`, and `sticky`, as well as the existing `relative`. These classes are available at the `m` breakpoint by default, and are customizable using `$bitstyles-position-values`
 - New `u-max-width` utility class, with `0` and `100vw` as default values. Customizable using `$bitstyles-max-width-values` and `$bitstyles-max-width-breakpoints`
 - `u-line-height` class can now be configured using `$bitstyles-line-height-values` and `$bitstyles-line-height-breakpoints`
-- A new variable `setup.$no-media-query` is available. In case you use the name `no-mq` for one of your breakpoints, you can change this value to avoid conflict
-- The `properties.join-with-dashes()` function now handles adding the breakpoint suffix with a preceding `@` symbol, when you pass `$at-suffix`
-- `media-query.get()` will now output the content block you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`. This is useful for outputing base CSS with media-query wrapped CSS in one loop
-- The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
 
 ### Breaking
 
