@@ -46,12 +46,12 @@ The available display types can be customized by overriding the `$bitstyles-fg-v
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/fg' with (
   $values: (
-    'brand-1': palette.get('brand-1', '100'),
-    'brand-2': palette.get('brand-2', '100'),
-    'warning': palette.get('warning', '100'),
-    'gray-50': palette.get('gray', '50'),
-    'gray-40': palette.get('gray', '40'),
-    'gray-30': palette.get('gray', '30'),
+    'brand-1': palette.get('brand-1', 'base'),
+    'brand-2': palette.get('brand-2', 'base'),
+    'warning': palette.get('warning', 'base'),
+    'gray-50': palette.get('text', 'light'),
+    'gray-40': palette.get('text', 'lighter'),
+    'gray-30': palette.get('brand-gray', 'light'),
   )
 );
 ```

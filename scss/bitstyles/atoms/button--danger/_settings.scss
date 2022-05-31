@@ -6,11 +6,11 @@
 // Hover colors ////////////////////////////////////////
 
 $color-hover: palette.get('white') !default;
-$background-color-hover: palette.get('danger', '100') !default;
-$border-color-hover: palette.get('danger', '100') !default;
+$background-color-hover: palette.get('danger', 'base') !default;
+$border-color-hover: palette.get('danger', 'base') !default;
 $box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('danger', '100'), 0.3),
+    $color: rgba(palette.get('danger', 'base'), 0.3),
     $blur-radius: size.get('s'),
   )
 ) !default;
@@ -19,11 +19,11 @@ $box-shadow-hover: shadow.to-box-shadow(
 // Active colors ////////////////////////////////////////
 
 $color-active: palette.get('white') !default;
-$background-color-active: palette.get('danger', '100') !default;
-$border-color-active: palette.get('danger', '100') !default;
+$background-color-active: palette.get('danger', 'dark') !default;
+$border-color-active: palette.get('danger', 'dark') !default;
 $box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('danger', '100'), 0.3),
+    $color: rgba(palette.get('danger', 'dark'), 0.3),
     $blur-radius: size.get('xs'),
   )
 ) !default;
@@ -31,7 +31,7 @@ $box-shadow-active: shadow.to-box-shadow(
 //
 // Disabled colors ////////////////////////////////////////
 
-$color-disabled: palette.get('black', '50') !default;
-$background-color-disabled: palette.get('black', '10') !default;
-$border-color-disabled: palette.get('black', '10') !default;
+$color-disabled: palette.get('text', 'light') !default;
+$background-color-disabled: palette.get('text', 'lightest') !default;
+$border-color-disabled: palette.get('text', 'lightest') !default;
 $box-shadow-disabled: none !default;

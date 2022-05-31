@@ -1,4 +1,4 @@
-import colorPalette from '../exports/_color-palette.scss';
+import palette from '../exports/_base-colors.scss';
 
 /*
  * Variables in our Sass are exported via webpack in the form
@@ -49,14 +49,14 @@ const ColorItem = (label, color) =>
     </li>
   `;
 
-const ColorRow = ({ palette }) =>
+const ColorRow = ({ colors }) =>
   `
     <ul class="u-flex-grow-1 u-grid u-grid-cols-4 a-list-reset">
-      ${Object.keys(palette)
+      ${Object.keys(colors)
         .map((color) => {
           const colorNameParts = color.split('.');
           const colorName = colorNameParts[colorNameParts.length - 1];
-          return ColorItem(colorName, colorPalette[color]);
+          return ColorItem(colorName, colors[color]);
         })
         .join('')}
     </ul>
@@ -65,12 +65,12 @@ const ColorRow = ({ palette }) =>
 const ColorPalette = () =>
   `
     <ul class="a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l">
-      ${objectToChunkedArray(colorPalette, 18)
-        .map((palette) => {
-          const name = Object.keys(palette)[0].split('.')[0];
+      ${objectToChunkedArray(palette, 16)
+        .map((colors) => {
+          const name = Object.keys(colors)[0].split('.')[0];
           return `
           <li class="u-margin-xl-bottom u-grid u-gap-m">
-            ${ColorRow({ palette })}
+            ${ColorRow({ colors })}
             <h3
               class="u-margin-0-bottom u-margin-m-right u-line-height-min"
             >

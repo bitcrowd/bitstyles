@@ -1,10 +1,10 @@
 @use '../../tools/palette';
 @use '../../tools/size';
 
-$border: 1px solid palette.get('gray', '5') !default;
+$border: 1px solid palette.get('brand-gray', 'lighter') !default;
 $padding-horizontal: size.get('m') !default;
 $padding-vertical-td: size.get('s') !default;
 $padding-vertical-th: size.get('xxs') !default;
 $background-color-td: palette.get('white') !default;
-$color-th: palette.get('gray', '70') !default;
+$color-th: palette.get('brand-gray', 'dark') !default;
 $background-color-th: palette.get('background') !default;

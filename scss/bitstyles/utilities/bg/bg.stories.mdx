@@ -79,16 +79,16 @@ The available background-colors can be customized by overriding the `$bitstyles-
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/bg' with (
   $values: (
-    'black-80': palette.get('black', '80'),
+    'black-80': palette.get('text', 'base'),
     'background': palette.get('background'),
     'white': palette.get('white'),
-    'brand-2': palette.get('brand-2', '100'),
-    'gray-90': palette.get('gray', '90'),
-    'gray-80': palette.get('gray', '80'),
-    'gray-50': palette.get('gray', '50'),
-    'gray-20': palette.get('gray', '20'),
-    'gray-10': palette.get('gray', '10'),
-    'gray-5': palette.get('gray', '5'),
+    'brand-2': palette.get('brand-2', 'base'),
+    'gray-90': palette.get('brand-gray', 'dark'),
+    'gray-80': palette.get('brand-gray', 'dark'),
+    'gray-50': palette.get('text', 'light'),
+    'gray-20': palette.get('brand-gray', 'light'),
+    'gray-10': palette.get('brand-gray', 'light'),
+    'gray-5': palette.get('brand-gray', 'lighter'),
   )
 );
 ```

@@ -1,4 +1,4 @@
 @use '../../tools/palette';
 
 $font-style: italic !default;
-$color: palette.get('text', '80') !default;
+$color: palette.get('text', 'light') !default;

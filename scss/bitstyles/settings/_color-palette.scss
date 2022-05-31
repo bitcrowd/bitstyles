@@ -1,238 +1,56 @@
-@use 'sass:color';
-@use '../tools/color' as bs-color;
+@use '../tools/base-color';
+@use './base-colors';
+
+$default-key: 'base' !default;
 
 //
-// Base colors /////////////////////////////////////////
+// Color palette /////////////////////////////////////////
 
-$black: #000 !default;
-$white: #fff !default;
-$brand-1: #000dff !default;
-$brand-2: #fa0 !default;
-$text: #333 !default;
-$background: color.mix($white, $brand-1, 97%) !default;
-$positive: #50a802 !default;
-$danger: #e82915 !default;
-$warning: #fe881e !default;
-
-//
-// Color palettes /////////////////////////////////////////
-
-$grays-hint-color: $brand-1 !default;
-$grays-hint-color-mix: 10% !default;
-$color-mix-percentages: (
-  1,
-  2,
-  3,
-  5,
-  10,
-  20,
-  30,
-  40,
-  50,
-  60,
-  70,
-  80,
-  90,
-  95,
-  97,
-  98,
-  99,
-  100
-) !default;
-$default-key: '100' !default;
-$color-palette: (
-  'black':
-    bs-color.generate-palette(
-      $base-color: $black,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'white':
-    bs-color.generate-palette(
-      $base-color: $white,
-      $mix-color: $black,
-      $percentages: $color-mix-percentages,
-    ),
-  'gray': (
-    '100':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 0%),
-        $grays-hint-color-mix
-      ),
-    '99':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 1%),
-        $grays-hint-color-mix
-      ),
-    '98':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 2%),
-        $grays-hint-color-mix
-      ),
-    '97':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 3%),
-        $grays-hint-color-mix
-      ),
-    '95':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 5%),
-        $grays-hint-color-mix
-      ),
-    '90':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 10%),
-        $grays-hint-color-mix
-      ),
-    '80':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 20%),
-        $grays-hint-color-mix
-      ),
-    '70':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 30%),
-        $grays-hint-color-mix
-      ),
-    '60':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 40%),
-        $grays-hint-color-mix
-      ),
-    '50':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 50%),
-        $grays-hint-color-mix
-      ),
-    '40':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 60%),
-        $grays-hint-color-mix
-      ),
-    '30':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 70%),
-        $grays-hint-color-mix
-      ),
-    '20':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 80%),
-        $grays-hint-color-mix
-      ),
-    '10':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 90%),
-        $grays-hint-color-mix
-      ),
-    '5':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 95%),
-        $grays-hint-color-mix
-      ),
-    '3':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 97%),
-        $grays-hint-color-mix
-      ),
-    '2':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 98%),
-        $grays-hint-color-mix
-      ),
-    '1':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 99%),
-        $grays-hint-color-mix
-      ),
+$palette: (
+  'text': (
+    'dark': base-color.get('brand-gray', '100'),
+    'base': base-color.get('brand-gray', '80'),
+    'light': base-color.get('brand-gray', '40'),
+    'lighter': base-color.get('brand-gray', '30'),
+    'lightest': base-color.get('brand-gray', '20'),
   ),
-  'text':
-    bs-color.generate-palette(
-      $base-color: $text,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'background':
-    bs-color.generate-palette(
-      $base-color: $background,
-      $mix-color: $brand-1,
-      $percentages: $color-mix-percentages,
-    ),
-  'brand-1':
-    bs-color.generate-palette(
-      $base-color: $brand-1,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'brand-1-shades':
-    bs-color.generate-palette(
-      $base-color: $brand-1,
-      $mix-color: $black,
-      $percentages: $color-mix-percentages,
-    ),
-  'brand-2':
-    bs-color.generate-palette(
-      $base-color: $brand-2,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'brand-2-shades':
-    bs-color.generate-palette(
-      $base-color: $brand-2,
-      $mix-color: $black,
-      $percentages: $color-mix-percentages,
-    ),
-  'danger':
-    bs-color.generate-palette(
-      $base-color: $danger,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'danger-shades':
-    bs-color.generate-palette(
-      $base-color: $danger,
-      $mix-color: $black,
-      $percentages: $color-mix-percentages,
-    ),
-  'warning':
-    bs-color.generate-palette(
-      $base-color: $warning,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'warning-shades':
-    bs-color.generate-palette(
-      $base-color: $warning,
-      $mix-color: $black,
-      $percentages: $color-mix-percentages,
-    ),
-  'positive':
-    bs-color.generate-palette(
-      $base-color: $positive,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'positive-shades':
-    bs-color.generate-palette(
-      $base-color: $positive,
-      $mix-color: $black,
-      $percentages: $color-mix-percentages,
-    ),
+  'background': (
+    'base': base-color.get('brand-gray', '1'),
+    'dark': base-color.get('brand-gray', '2'),
+  ),
+  'white': (
+    'base': base-color.get('pure-gray', '0'),
+  ),
+  'brand-1': (
+    'base': base-color.get('brand-1', '90'),
+    'dark': base-color.get('brand-1-shades', '20'),
+    'light': base-color.get('brand-1', '60'),
+  ),
+  'brand-2': (
+    'base': base-color.get('brand-2', '100'),
+    'dark': base-color.get('brand-2-shades', '60'),
+    'light': base-color.get('brand-2', '80'),
+  ),
+  'brand-gray': (
+    'base': base-color.get('brand-gray', '60'),
+    'light': base-color.get('brand-gray', '10'),
+    'lighter': base-color.get('brand-gray', '5'),
+    'dark': base-color.get('brand-gray', '80'),
+    'darkest': base-color.get('brand-gray', '100'),
+  ),
+  'danger': (
+    'base': base-color.get('red', '100'),
+    'dark': base-color.get('red-shades', '10'),
+    'light': base-color.get('red', '30'),
+  ),
+  'warning': (
+    'base': base-color.get('orange', '90'),
+    'dark': base-color.get('orange-shades', '40'),
+    'light': base-color.get('orange', '30'),
+  ),
+  'positive': (
+    'base': base-color.get('green', '50'),
+    'dark': base-color.get('green-shades', '40'),
+    'light': base-color.get('green', '30'),
+  )
 ) !default;

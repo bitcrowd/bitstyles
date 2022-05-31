@@ -11,9 +11,9 @@ $size: size.get('m') !default;
 
 //
 // Base colors ////////////////////////////////////////
-$color: palette.get('black', '80') !default;
+$color: palette.get('text', 'base') !default;
 $background-color: palette.get('white') !default;
-$border-color: palette.get('black', '80') !default;
+$border-color: palette.get('text', 'base') !default;
 
 //
 // Hover colors ////////////////////////////////////////
@@ -30,12 +30,12 @@ $background-image-checked: url("data:image/svg+xml,%3Csvg width='20' height='20'
 
 //
 // Disabled colors ////////////////////////////////////////
-$color-disabled: palette.get('black', '40') !default;
-$background-color-disabled: palette.get('black', '20') !default;
-$border-color-disabled: palette.get('black', '40') !default;
+$color-disabled: palette.get('text', 'lighter') !default;
+$background-color-disabled: palette.get('text', 'lightest') !default;
+$border-color-disabled: palette.get('text', 'lighter') !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
-$color-disabled-checked: palette.get('text', '80') !default;
-$background-color-disabled-checked: palette.get('black', '30') !default;
-$border-color-disabled-checked: palette.get('black', '30') !default;
+$color-disabled-checked: palette.get('text', 'light') !default;
+$background-color-disabled-checked: palette.get('text', 'lightest') !default;
+$border-color-disabled-checked: palette.get('text', 'light') !default;

@@ -39,5 +39,5 @@
     @return '%23' + string.unquote('#{string.slice(#{$color}, 2)}');
   }
 
-  @return $string;
+  @return $color;
 }
