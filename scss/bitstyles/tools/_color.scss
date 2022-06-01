@@ -14,16 +14,50 @@
 //
 // @param {list} $percentages  A list of decmial values representing the percentages at which the mix-color will be mixed into the base-color
 
-@function generate-palette($base-color, $mix-color, $percentages) {
+@function generate-tints-and-shades($base-color) {
   $color-map: ();
 
-  @each $percentage in $percentages {
+  @each $percentage in (1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100) {
     $color-map: map.merge(
       $color-map,
       (
         '#{$percentage}':
           color.mix(
-            $mix-color,
+            #fff,
+            $base-color,
+            100% - math.percentage(math.div($percentage, 100))
+          ),
+      )
+    );
+  }
+
+  @each $percentage in (95, 90, 80, 70, 60, 50, 40, 30, 20, 10) {
+    $color-map: map.merge(
+      $color-map,
+      (
+        '#{100 + 100 - $percentage}':
+          color.mix(
+            #000,
+            $base-color,
+            100 - math.percentage(math.div($percentage, 100))
+          ),
+      )
+    );
+  }
+
+  @return $color-map;
+}
+
+@function generate-tints($base-color) {
+  $color-map: ();
+
+  @each $percentage in (0, 1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100) {
+    $color-map: map.merge(
+      $color-map,
+      (
+        '#{$percentage}':
+          color.mix(
+            #fff,
             $base-color,
             100% - math.percentage(math.div($percentage, 100))
           ),
@@ -32,7 +66,7 @@
   }
 
   @return $color-map;
-}
+};
 
 @function url-encode-color($color) {
   @if meta.type-of($color) == 'color' and string.index(#{$color}, '#') == 1 {

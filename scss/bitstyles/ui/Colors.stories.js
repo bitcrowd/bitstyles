@@ -65,7 +65,7 @@ const ColorRow = ({ colors }) =>
 const ColorPalette = () =>
   `
     <ul class="a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l">
-      ${objectToChunkedArray(palette, 16)
+      ${objectToChunkedArray(palette, 25)
         .map((colors) => {
           const name = Object.keys(colors)[0].split('.')[0];
           return `

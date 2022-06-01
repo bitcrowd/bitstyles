@@ -14,24 +14,7 @@ $orange: #f57302 !default;
 
 $grays-hint-color: $brand-1 !default;
 $grays-hint-color-mix: 6% !default;
-$color-mix-percentages: (
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
-  10,
-  20,
-  30,
-  40,
-  50,
-  60,
-  70,
-  80,
-  90,
-  100
-) !default;
+
 $default-key: '100' !default;
 
 //
@@ -39,167 +22,31 @@ $default-key: '100' !default;
 
 $palette: (
   'pure-gray':
-    bs-color.generate-palette(
+    bs-color.generate-tints(
       $base-color: $black,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
     ),
-  'brand-gray': (
-    '0':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 100%),
-        $grays-hint-color-mix
-      ),
-    '1':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 99%),
-        $grays-hint-color-mix
-      ),
-    '2':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 98%),
-        $grays-hint-color-mix
-      ),
-    '3':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 97%),
-        $grays-hint-color-mix
-      ),
-    '4':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 96%),
-        $grays-hint-color-mix
-      ),
-    '5':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 95%),
-        $grays-hint-color-mix
-      ),
-    '10':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 90%),
-        $grays-hint-color-mix
-      ),
-    '20':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 80%),
-        $grays-hint-color-mix
-      ),
-    '30':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 70%),
-        $grays-hint-color-mix
-      ),
-    '40':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 60%),
-        $grays-hint-color-mix
-      ),
-    '50':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 50%),
-        $grays-hint-color-mix
-      ),
-    '60':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 40%),
-        $grays-hint-color-mix
-      ),
-    '70':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 30%),
-        $grays-hint-color-mix
-      ),
-    '80':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 20%),
-        $grays-hint-color-mix
-      ),
-    '90':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 10%),
-        $grays-hint-color-mix
-      ),
-    '100':
-      color.mix(
-        $grays-hint-color,
-        color.mix($white, $black, 0%),
-        $grays-hint-color-mix
-      ),
-  ),
+  'brand-gray':
+    bs-color.generate-tints-and-shades(
+      $base-color: color.adjust($brand-1, $saturation: -50%),
+    ),
   'brand-1':
-    bs-color.generate-palette(
+    bs-color.generate-tints-and-shades(
       $base-color: $brand-1,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'brand-1-shades':
-    bs-color.generate-palette(
-      $base-color: $black,
-      $mix-color: $brand-1,
-      $percentages: $color-mix-percentages,
     ),
   'brand-2':
-    bs-color.generate-palette(
+    bs-color.generate-tints-and-shades(
       $base-color: $brand-2,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'brand-2-shades':
-    bs-color.generate-palette(
-      $base-color: $black,
-      $mix-color: $brand-2,
-      $percentages: $color-mix-percentages,
     ),
   'red':
-    bs-color.generate-palette(
+    bs-color.generate-tints-and-shades(
       $base-color: $red,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'red-shades':
-    bs-color.generate-palette(
-      $base-color: $black,
-      $mix-color: $red,
-      $percentages: $color-mix-percentages,
     ),
   'orange':
-    bs-color.generate-palette(
+    bs-color.generate-tints-and-shades(
       $base-color: $orange,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'orange-shades':
-    bs-color.generate-palette(
-      $base-color: $black,
-      $mix-color: $orange,
-      $percentages: $color-mix-percentages,
     ),
   'green':
-    bs-color.generate-palette(
+    bs-color.generate-tints-and-shades(
       $base-color: $green,
-      $mix-color: $white,
-      $percentages: $color-mix-percentages,
-    ),
-  'green-shades':
-    bs-color.generate-palette(
-      $base-color: $black,
-      $mix-color: $green,
-      $percentages: $color-mix-percentages,
     ),
 ) !default;
