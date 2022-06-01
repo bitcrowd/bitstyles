@@ -6,6 +6,10 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 The global color palette is used throughout the components and utility classes of bitstyles to maintain visual consistency.
 
+<Story id="base-colors--color-palette" />
+
+## Base colors
+
 By default the palette includes variants of the following colors:
 
 ```scss
@@ -20,13 +24,11 @@ $danger: #e82915;
 $warning: #fe881e;
 ```
 
-For each of these colors we generate two maps of 18 color variants: one has white mixed into the color (made available with the name of the color) and one has black mixed in (available with the name of the color suffixed with `_shades`). There is also a map of `gray` colors, which by default is your brand-1 color mixed with black through to white.
+For each of these colors we generate a map of 25 color variants from light to dark. There is also a simple grayscale called `pure-gray`, and a `brand-gray` scale, which is a grayscale with a hint of your `$brand-1` color.
 
-The color variants are generated at a range of 18 percentage points between 1 and 100. That means for each color you have the following variants available to you: 1, 2, 3, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 97, 98, 99, 100.
+The color variants are generated at a range of 25 percentage points between 0 and 190. For each color you have the following variants available to you: 1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 105, 110, 120, 130, 140, 150, 160, 170, 180, 190.
 
-<Canvas>
-  <Story id="base-colors--color-palette" />
-</Canvas>
+<Story id="base-colors--base-colors" />
 
 ## Using the color palette in Sass
 

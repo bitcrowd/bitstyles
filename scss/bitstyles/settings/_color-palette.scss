@@ -8,49 +8,49 @@ $default-key: 'base' !default;
 
 $palette: (
   'text': (
-    'dark': base-color.get('brand-gray', '190'),
-    'base': base-color.get('brand-gray', '170'),
-    'light': base-color.get('brand-gray', '40'),
-    'lighter': base-color.get('brand-gray', '30'),
     'lightest': base-color.get('brand-gray', '20'),
+    'lighter': base-color.get('brand-gray', '30'),
+    'light': base-color.get('brand-gray', '40'),
+    'base': base-color.get('brand-gray', '170'),
+    'dark': base-color.get('brand-gray', '190'),
   ),
   'background': (
     'base': base-color.get('brand-gray', '1'),
-    'dark': base-color.get('brand-gray', '2'),
+    'dark': base-color.get('brand-gray', '5'),
   ),
   'white': (
     'base': base-color.get('pure-gray', '0'),
   ),
   'brand-1': (
+    'light': base-color.get('brand-1', '60'),
     'base': base-color.get('brand-1', '90'),
     'dark': base-color.get('brand-1', '120'),
-    'light': base-color.get('brand-1', '60'),
   ),
   'brand-2': (
+    'light': base-color.get('brand-2', '70'),
     'base': base-color.get('brand-2', '100'),
     'dark': base-color.get('brand-2', '160'),
-    'light': base-color.get('brand-2', '80'),
   ),
   'brand-gray': (
-    'base': base-color.get('brand-gray', '60'),
-    'light': base-color.get('brand-gray', '10'),
     'lighter': base-color.get('brand-gray', '5'),
+    'light': base-color.get('brand-gray', '10'),
+    'base': base-color.get('brand-gray', '60'),
     'dark': base-color.get('brand-gray', '80'),
     'darkest': base-color.get('brand-gray', '100'),
   ),
   'danger': (
-    'base': base-color.get('red', '100'),
-    'dark': base-color.get('red', '110'),
     'light': base-color.get('red', '30'),
+    'base': base-color.get('red', '100'),
+    'dark': base-color.get('red', '130'),
   ),
   'warning': (
+    'light': base-color.get('orange', '30'),
     'base': base-color.get('orange', '90'),
     'dark': base-color.get('orange', '140'),
-    'light': base-color.get('orange', '30'),
   ),
   'positive': (
+    'light': base-color.get('green', '30'),
     'base': base-color.get('green', '50'),
     'dark': base-color.get('green', '140'),
-    'light': base-color.get('green', '30'),
   )
 ) !default;
