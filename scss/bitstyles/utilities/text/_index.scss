@@ -5,16 +5,6 @@
 @include properties.output(
   $property-name: 'text-align',
   $classname-root: 'text',
-  $values: settings.$values
+  $values: settings.$values,
+  $breakpoints: settings.$breakpoints
 );
-
-@each $breakpoint-alias in settings.$breakpoints {
-  @include media-query.get($breakpoint-alias) {
-    @include properties.output(
-      $property-name: 'text-align',
-      $classname-root: 'text',
-      $values: settings.$values,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-  }
-}

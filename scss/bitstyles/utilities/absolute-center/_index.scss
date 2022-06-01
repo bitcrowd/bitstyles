@@ -1,6 +1,17 @@
 @use '../../settings/setup';
 @use '../../tools/absolute-center';
+@use '../../tools/properties';
 
-.#{setup.$namespace}u-absolute-center {
+/* stylelint-disable scss/dollar-variable-default */
+$classname: properties.join-with-dashes(
+  $string-items: (
+    setup.$namespace,
+    'u',
+    'absolute-center',
+  ),
+);
+/* stylelint-enable scss/dollar-variable-default */
+
+.#{$classname} {
   @include absolute-center.absolute-center;
 }

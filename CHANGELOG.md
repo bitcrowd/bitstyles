@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- A new variable `setup.$no-media-query` is available. In case you use the name `no-mq` for one of your breakpoints, you can change this value to avoid conflict
+- The `properties.join-with-dashes()` function now handles adding the breakpoint suffix with a preceding `@` symbol, when you pass `$at-suffix`
+- `media-query.get()` will now output the content block you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`. This is useful for outputing base CSS with media-query wrapped CSS in one loop
+- The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
+
 ## [[4.3.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.3.0) - 2022-05-25
 
 ### Added
@@ -9,10 +18,15 @@
 - `a-link` and `<a>` elements now have variables to specify the active state
 - Position classes are now available for `static`, `absolute`, `fixed`, and `sticky`, as well as the existing `relative`. These classes are available at the `m` breakpoint by default, and are customizable using `$bitstyles-position-values`
 - New `u-max-width` utility class, with `0` and `100vw` as default values. Customizable using `$bitstyles-max-width-values` and `$bitstyles-max-width-breakpoints`
+- `u-line-height` class can now be configured using `$bitstyles-line-height-values` and `$bitstyles-line-height-breakpoints`
 
 ### Breaking
 
 - `properties.get-classname()` has been renamed to `properties.join-with-dashes()` to reflect its more generic usage. The list of strings passed as a parameter is renamed from `$classname-items` to `$string-items`. If you were using this function, rename the function call and the parameter (if using named parameters in your call)
+
+### Fixed
+
+- Prefixing of utility classname with `setup.$namespace` is now working correctly, with the exception of line-height and the font-size utility classes. These will be done in another PR. If you were using namespacing, you’ll need to update the classnames for all utilities (apart from line-height & font-size) in your HTML to the correct format , with `-` dashes between each part of the name e.g. `.<namespace>-u-<classname>` instead of `.<namespace>u-<classname>`
 
 ## [[4.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.2.0) - 2022-02-09
 

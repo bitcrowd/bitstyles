@@ -7,17 +7,6 @@
   $property-name: '',
   $classname-root: '',
   $values: settings.$values,
-  $directions: settings.$directions
+  $directions: settings.$directions,
+  $breakpoints: settings.$breakpoints
 );
-
-@each $breakpoint-alias in settings.$breakpoints {
-  @include media-query.get($breakpoint-alias) {
-    @include properties.output-directional(
-      $property-name: '',
-      $classname-root: '',
-      $values: settings.$values,
-      $directions: settings.$directions,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-  }
-}

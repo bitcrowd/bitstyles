@@ -6,16 +6,6 @@
 @include properties.output(
   $property-name: 'grid-column',
   $classname-root: 'col-span',
-  $values: settings.$values
+  $values: settings.$values,
+  $breakpoints: settings.$breakpoints
 );
-
-@each $breakpoint-alias in settings.$breakpoints {
-  @include media-query.get($breakpoint-alias) {
-    @include properties.output(
-      $property-name: 'grid-column',
-      $classname-root: 'col-span',
-      $values: settings.$values,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-  }
-}

@@ -6,47 +6,20 @@
 @include properties.output(
   $property-name: 'font-weight',
   $classname-root: 'font',
-  $values: settings.$weight-values
+  $values: settings.$weight-values,
+  $breakpoints: settings.$weight-breakpoints
 );
-
-@each $breakpoint in settings.$weight-breakpoints {
-  @include media-query.get($breakpoint) {
-    @include properties.output(
-      $property-name: 'font-weight',
-      $classname-root: 'font',
-      $values: settings.$weight-values
-    );
-  }
-}
 
 @include properties.output(
   $property-name: 'font-style',
   $classname-root: 'font',
-  $values: settings.$style-values
+  $values: settings.$style-values,
+  $breakpoints: settings.$style-breakpoints
 );
-
-@each $breakpoint in settings.$style-breakpoints {
-  @include media-query.get($breakpoint) {
-    @include properties.output(
-      $property-name: 'font-style',
-      $classname-root: 'font',
-      $values: settings.$style-values
-    );
-  }
-}
 
 @include properties.output(
   $property-name: 'font-family',
   $classname-root: 'font',
-  $values: settings.$family-values
+  $values: settings.$family-values,
+  $breakpoints: settings.$family-breakpoints
 );
-
-@each $breakpoint in settings.$family-breakpoints {
-  @include media-query.get($breakpoint) {
-    @include properties.output(
-      $property-name: 'font-family',
-      $classname-root: 'font',
-      $values: settings.$family-values
-    );
-  }
-}

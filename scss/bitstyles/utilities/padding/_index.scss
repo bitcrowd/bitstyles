@@ -8,17 +8,6 @@
   $property-name: 'padding',
   $classname-root: 'padding',
   $values: settings.$sizes,
-  $directions: settings.$directions
+  $directions: settings.$directions,
+  $breakpoints: settings.$breakpoints
 );
-
-@each $breakpoint-alias in settings.$breakpoints {
-  @include media-query.get($breakpoint-alias) {
-    @include properties.output-directional(
-      $property-name: 'padding',
-      $classname-root: 'padding',
-      $values: settings.$sizes,
-      $directions: settings.$directions,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-  }
-}

@@ -5,13 +5,6 @@
 @include properties.output(
   $property-name: 'height',
   $classname-root: 'height',
-  $values: settings.$values
+  $values: settings.$values,
+  $breakpoints: settings.$breakpoints
 );
-
-@each $breakpoint-alias in settings.$breakpoints {
-  @include properties.output(
-    $property-name: 'height',
-    $classname-root: 'height',
-    $values: settings.$values
-  );
-}

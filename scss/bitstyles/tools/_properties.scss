@@ -1,6 +1,7 @@
 @use '../settings/setup';
 @use 'sass:list';
 @use 'sass:string';
+@use '../tools/media-query';
 
 /*
  * Removes a value from a list
@@ -24,8 +25,9 @@
  * Returns a string suitable for a utility class or CSS property name, by joining strings with dash characters
  *
  * @param $string-items An ordered list of strings to be joined with dashes to form the string
+ * @param $at-suffix [optional] Suffix for the string, to be precedeed with an `@` symbol, if present
  */
-@function join-with-dashes($string-items) {
+@function join-with-dashes($string-items, $at-suffix: setup.$no-media-query) {
   $string: null;
   $string-items: remove(remove($string-items, null), '');
 
@@ -39,6 +41,10 @@
         '#{$string}#{string.unquote('-')}#{$string-item}'
       );
     }
+  }
+
+  @if $at-suffix != setup.$no-media-query {
+    $string: '#{$string}\\\@#{$at-suffix}';
   }
 
   @return $string;
@@ -63,21 +69,29 @@
  * @param $property-name The name of the CSS property to be specified e.g. `margin`
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
- * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
+ * @param $breakpoints The list of breakpoints at which these styles should be output
  */
-@mixin output(
-  $property-name,
-  $classname-root,
-  $values,
-  $breakpoint-suffix: ''
-) {
-  @each $alias, $value in $values {
-    $classname: join-with-dashes(
-      (setup.$namespace, 'u', $classname-root, $alias)
-    );
 
-    .#{$classname}#{$breakpoint-suffix} {
-      #{$property-name}: $value;
+@mixin output($property-name, $classname-root, $values, $breakpoints: ()) {
+  $breakpoints: list.join(setup.$no-media-query, $breakpoints);
+
+  @each $breakpoint in $breakpoints {
+    @include media-query.get($breakpoint) {
+      @each $alias, $value in $values {
+        $classname: join-with-dashes(
+          $string-items: (
+            setup.$namespace,
+            'u',
+            $classname-root,
+            $alias,
+          ),
+          $at-suffix: $breakpoint,
+        );
+
+        .#{$classname} {
+          #{$property-name}: $value;
+        }
+      }
     }
   }
 }
@@ -89,29 +103,44 @@
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $values A map of name/value pairs, where the name will form part of the classname, and the value will be output as the value for the current CSS property e.g. ('m': 1rem, 'l': 2rem)
  * @param $directions A map of name/value pairs, where the name will form part of the classname, and the list of values will be form part of the CSS property e.g. ('left': ('left'), 'x': ('left', 'right'))
- * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
+ * @param $breakpoints The list of breakpoints at which these styles should be output
  */
 @mixin output-directional(
   $property-name,
   $classname-root,
   $values,
   $directions,
-  $breakpoint-suffix: ''
+  $breakpoints: ()
 ) {
-  @each $alias, $value in $values {
-    @each $direction-name, $direction-values in $directions {
-      $classname: join-with-dashes(
-        (setup.$namespace, 'u', $classname-root, $alias, $direction-name)
-      );
+  $breakpoints: list.join(setup.$no-media-query, $breakpoints);
 
-      .#{$classname}#{$breakpoint-suffix} {
-        @include output-property-directions(
-          $direction-values: $direction-values,
-          $name: $property-name,
-          $value: $value
-        );
+  /* stylelint-disable max-nesting-depth */
+  @each $breakpoint in $breakpoints {
+    @include media-query.get($breakpoint) {
+      @each $alias, $value in $values {
+        @each $direction-name, $direction-values in $directions {
+          $classname: join-with-dashes(
+            $string-items: (
+              setup.$namespace,
+              'u',
+              $classname-root,
+              $alias,
+              $direction-name,
+            ),
+            $at-suffix: $breakpoint,
+          );
+
+          .#{$classname} {
+            @include output-property-directions(
+              $direction-values: $direction-values,
+              $name: $property-name,
+              $value: $value
+            );
+          }
+        }
       }
     }
+    /* stylelint-enable max-nesting-depth */
   }
 }
 
@@ -125,13 +154,18 @@
 @mixin output-block(
   $classname-prefix,
   $classname-root,
-  $breakpoint-suffix: ''
+  $breakpoint: setup.$no-media-query
 ) {
   $classname: join-with-dashes(
-    (setup.$namespace, $classname-prefix, $classname-root)
+    $string-items: (
+      setup.$namespace,
+      $classname-prefix,
+      $classname-root,
+    ),
+    $at-suffix: $breakpoint,
   );
 
-  .#{$classname}#{$breakpoint-suffix} {
+  .#{$classname} {
     @content;
   }
 }

@@ -1,16 +1,23 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/media-query';
+@use '../../tools/properties';
 @use '../../tools/sr-only';
 
-.#{setup.$namespace}u-sr-only {
+@include properties.output-block(
+  $classname-prefix: 'u',
+  $classname-root: 'sr-only'
+) {
   @include sr-only.sr-only;
 }
 
 @each $breakpoint in settings.$breakpoints {
   @include media-query.get($breakpoint) {
-    .#{setup.$namespace}u-sr-only\@#{$breakpoint} {
+    @include properties.output-block(
+      $classname-prefix: 'u',
+      $classname-root: 'sr-only',
+      $breakpoint: $breakpoint
+    ) {
       @include sr-only.sr-only;
     }
   }

@@ -8,30 +8,13 @@
   $property-name: 'margin',
   $classname-root: 'margin',
   $values: map.get(settings.$sizes, 'positive'),
-  $directions: settings.$directions
+  $directions: settings.$directions,
+  $breakpoints: settings.$breakpoints
 );
 @include properties.output-directional(
   $property-name: 'margin',
   $classname-root: 'margin-neg',
   $values: map.get(settings.$sizes, 'negative'),
-  $directions: settings.$directions
+  $directions: settings.$directions,
+  $breakpoints: settings.$breakpoints
 );
-
-@each $breakpoint-alias in settings.$breakpoints {
-  @include media-query.get($breakpoint-alias) {
-    @include properties.output-directional(
-      $property-name: 'margin',
-      $classname-root: 'margin',
-      $values: map.get(settings.$sizes, 'positive'),
-      $directions: settings.$directions,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-    @include properties.output-directional(
-      $property-name: 'margin',
-      $classname-root: 'margin-neg',
-      $values: map.get(settings.$sizes, 'negative'),
-      $directions: settings.$directions,
-      $breakpoint-suffix: '\\\@#{$breakpoint-alias}'
-    );
-  }
-}

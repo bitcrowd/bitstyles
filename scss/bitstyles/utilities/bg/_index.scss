@@ -1,21 +1,10 @@
 @forward 'settings';
 @use './settings';
 @use '../../tools/properties';
-@use '../../tools/media-query';
 
 @include properties.output(
   $property-name: 'background-color',
   $classname-root: 'bg',
-  $values: settings.$values
+  $values: settings.$values,
+  $breakpoints: settings.$breakpoints
 );
-
-@each $breakpoint in settings.$breakpoints {
-  @include media-query.get($breakpoint) {
-    @include properties.output(
-      $property-name: 'background-color',
-      $classname-root: 'bg',
-      $breakpoint-suffix: '\\\@#{$breakpoint}',
-      $values: settings.$values
-    );
-  }
-}

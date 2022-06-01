@@ -1,6 +1,17 @@
 @use '../../settings/setup';
 @use '../../tools/truncate';
+@use '../../tools/properties';
 
-.#{setup.$namespace}u-truncate {
+/* stylelint-disable scss/dollar-variable-default */
+$classname: properties.join-with-dashes(
+  $string-items: (
+    setup.$namespace,
+    'u',
+    'truncate',
+  ),
+);
+/* stylelint-enable scss/dollar-variable-default */
+
+.#{$classname} {
   @include truncate.truncate;
 }

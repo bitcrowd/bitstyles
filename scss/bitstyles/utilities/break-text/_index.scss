@@ -1,6 +1,17 @@
 @use '../../settings/setup';
 @use '../../tools/break-text';
+@use '../../tools/properties';
 
-.#{setup.$namespace}u-break-text {
+/* stylelint-disable scss/dollar-variable-default */
+$classname: properties.join-with-dashes(
+  $string-items: (
+    setup.$namespace,
+    'u',
+    'break-text',
+  ),
+);
+/* stylelint-enable scss/dollar-variable-default */
+
+.#{$classname} {
   @include break-text.break-text;
 }
