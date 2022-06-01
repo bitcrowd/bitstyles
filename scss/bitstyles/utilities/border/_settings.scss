@@ -2,7 +2,7 @@
 
 $values: (
   'gray-70': 1px solid palette.get('brand-gray', 'dark'),
-  'gray-10': 1px solid palette.get('brand-gray', 'light'),
+  'gray-light': 1px solid palette.get('brand-gray', 'light'),
 ) !default;
 $breakpoints: () !default;
 $directions: (

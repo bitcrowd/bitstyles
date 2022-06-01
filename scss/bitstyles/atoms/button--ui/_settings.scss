@@ -46,6 +46,9 @@ $box-shadow-pressed: none !default;
 // Disabled colors ////////////////////////////////////////
 
 $color-disabled: palette.get('brand-gray', 'light') !default;
-$background-color-disabled: rgba(palette.get('background', 'base'), 50%) !default;
+$background-color-disabled: rgba(
+  palette.get('background', 'base'),
+  50%
+) !default;
 $border-color-disabled: palette.get('brand-gray', 'light') !default;
 $box-shadow-disabled: none !default;

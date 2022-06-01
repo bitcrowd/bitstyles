@@ -10,12 +10,12 @@ Applies a background-color to the element. Default colors are
 - `background`
 - `white`
 - `brand-2`
-- `gray-90`
-- `gray-80`
-- `gray-50`
-- `gray-20`
-- `gray-10`
-- `gray-5`
+- `gray-dark`
+- `gray-dark`
+- `text-light`
+- `gray-light`
+- `gray-light`
+- `gray-lighter`
 
 See the [customization](#customization) section below for details on how to change available colors.
 
@@ -40,34 +40,34 @@ See the [customization](#customization) section below for details on how to chan
       <div class="u-bg-brand-2">u-bg-brand-2</div>
     `}
   </Story>
-  <Story name="gray-90">
+  <Story name="gray-dark">
     {`
       <div class="u-bg-black-80">u-bg-black-80</div>
     `}
   </Story>
-  <Story name="gray-80">
+  <Story name="gray-dark">
     {`
-      <div class="u-bg-gray-80">u-bg-gray-80</div>
+      <div class="u-bg-gray-dark">u-bg-gray-dark</div>
     `}
   </Story>
-  <Story name="gray-50">
+  <Story name="text-light">
     {`
-      <div class="u-bg-gray-50">u-bg-gray-50</div>
+      <div class="u-bg-text-light">u-bg-text-light</div>
     `}
   </Story>
-  <Story name="gray-20">
+  <Story name="gray-light">
     {`
-      <div class="u-bg-gray-20">u-bg-gray-20</div>
+      <div class="u-bg-gray-light">u-bg-gray-light</div>
     `}
   </Story>
-  <Story name="gray-10">
+  <Story name="gray-light">
     {`
-      <div class="u-bg-gray-10">u-bg-gray-10</div>
+      <div class="u-bg-gray-light">u-bg-gray-light</div>
     `}
   </Story>
-  <Story name="gray-5">
+  <Story name="gray-lighter">
     {`
-      <div class="u-bg-gray-5">u-bg-gray-5</div>
+      <div class="u-bg-gray-lighter">u-bg-gray-lighter</div>
     `}
   </Story>
 </Canvas>
@@ -83,12 +83,12 @@ The available background-colors can be customized by overriding the `$bitstyles-
     'background': palette.get('background'),
     'white': palette.get('white'),
     'brand-2': palette.get('brand-2', 'base'),
-    'gray-90': palette.get('brand-gray', 'dark'),
-    'gray-80': palette.get('brand-gray', 'dark'),
-    'gray-50': palette.get('text', 'light'),
-    'gray-20': palette.get('brand-gray', 'light'),
-    'gray-10': palette.get('brand-gray', 'light'),
-    'gray-5': palette.get('brand-gray', 'lighter'),
+    'gray-dark': palette.get('brand-gray', 'dark'),
+    'gray-dark': palette.get('brand-gray', 'dark'),
+    'text-light': palette.get('text', 'light'),
+    'gray-light': palette.get('brand-gray', 'light'),
+    'gray-light': palette.get('brand-gray', 'light'),
+    'gray-lighter': palette.get('brand-gray', 'lighter'),
   )
 );
 ```
