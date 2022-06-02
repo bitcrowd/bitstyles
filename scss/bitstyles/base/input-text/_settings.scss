@@ -19,7 +19,7 @@ $placeholder-color: palette.get('text', 'light') !default;
 // Base colors ////////////////////////////////////////
 
 $color: palette.get('text') !default;
-$border-color: palette.get('brand-gray', 'light') !default;
+$border-color: palette.get('text', 'light') !default;
 $background: palette.get('white') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
@@ -31,9 +31,9 @@ $box-shadow: shadow.to-box-shadow(
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('brand-gray', 'dark') !default;
+$color-hover: palette.get('text', 'dark') !default;
 $background-hover: palette.get('background', 'base') !default;
-$border-color-hover: palette.get('brand-gray', 'base') !default;
+$border-color-hover: palette.get('brand-gray', 'dark') !default;
 $box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', 'light'), 0.025),
@@ -70,7 +70,7 @@ $background-color-invalid: palette.get('white') !default;
 $border-color-invalid: palette.get('warning') !default;
 $box-shadow-invalid: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('warning', 'dark'), 0.5),
-    $blur-radius: size.get('s'),
+    $color: rgba(palette.get('warning'), 0.05),
+    $blur-radius: size.get('m'),
   )
 ) !default;

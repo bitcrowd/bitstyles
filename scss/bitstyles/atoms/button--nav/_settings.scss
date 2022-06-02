@@ -26,8 +26,8 @@ $box-shadow: none !default;
 // Hover colors ////////////////////////////////////////
 
 $color-hover: palette.get('white') !default;
-$background-color-hover: palette.get('brand-gray', 'base') !default;
-$border-color-hover: palette.get('brand-gray', 'base') !default;
+$background-color-hover: palette.get('brand-gray', 'dark') !default;
+$border-color-hover: palette.get('brand-gray', 'dark') !default;
 $box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('text', 'dark'), 0.15),
@@ -61,5 +61,5 @@ $box-shadow-disabled: none !default;
 
 $color-current: palette.get('white', 'base') !default;
 $background-color-current: palette.get('text', 'dark') !default;
-$border-color-current: palette.get('brand-gray', 'dark') !default;
+$border-color-current: palette.get('text', 'dark') !default;
 $box-shadow-current: none !default;

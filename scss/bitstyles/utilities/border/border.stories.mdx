@@ -8,7 +8,7 @@ Apply a border with the specified color, and on the specified side of the elemen
 
 Default colors available are:
 
-- `gray-70`
+- `gray-dark`
 - `gray-light`
 
 All colors are available on `top`, `right`, `bottom`, `left`, `x`, and `y` directions. By default these classes are not available at any breakpoint. See the [customization](#customization) section for details on how you can change those settings.
@@ -53,42 +53,42 @@ All colors are available on `top`, `right`, `bottom`, `left`, `x`, and `y` direc
   </Story>
 </Canvas>
 
-## Gray-70
+## gray-dark
 
 <Canvas>
-  <Story name="u-border-gray-70">
+  <Story name="u-border-gray-dark">
     {`
-      <h3 class="u-border-gray-70">u-border-gray-70</h3>
+      <h3 class="u-border-gray-dark">u-border-gray-dark</h3>
     `}
   </Story>
-  <Story name="u-border-gray-70-top">
+  <Story name="u-border-gray-dark-top">
     {`
-      <h3 class="u-border-gray-70-top">u-border-gray-70-top</h3>
+      <h3 class="u-border-gray-dark-top">u-border-gray-dark-top</h3>
     `}
   </Story>
-  <Story name="u-border-gray-70-right">
+  <Story name="u-border-gray-dark-right">
     {`
-      <h3 class="u-border-gray-70-right">u-border-gray-70-right</h3>
+      <h3 class="u-border-gray-dark-right">u-border-gray-dark-right</h3>
     `}
   </Story>
-  <Story name="u-border-gray-70-bottom">
+  <Story name="u-border-gray-dark-bottom">
     {`
-      <h3 class="u-border-gray-70-bottom">u-border-gray-70-bottom</h3>
+      <h3 class="u-border-gray-dark-bottom">u-border-gray-dark-bottom</h3>
     `}
   </Story>
-  <Story name="u-border-gray-70-left">
+  <Story name="u-border-gray-dark-left">
     {`
-      <h3 class="u-border-gray-70-left">u-border-gray-70-left</h3>
+      <h3 class="u-border-gray-dark-left">u-border-gray-dark-left</h3>
     `}
   </Story>
-  <Story name="u-border-gray-70-x">
+  <Story name="u-border-gray-dark-x">
     {`
-      <h3 class="u-border-gray-70-x">u-border-gray-70-x</h3>
+      <h3 class="u-border-gray-dark-x">u-border-gray-dark-x</h3>
     `}
   </Story>
-  <Story name="u-border-gray-70-y">
+  <Story name="u-border-gray-dark-y">
     {`
-      <h3 class="u-border-gray-70-y">u-border-gray-70-y</h3>
+      <h3 class="u-border-gray-dark-y">u-border-gray-dark-y</h3>
     `}
   </Story>
 </Canvas>
@@ -100,7 +100,7 @@ The available border properties can be customized by overriding the `$bitstyles-
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/border' with (
   $values: (
-    'gray-70': 1px solid palette.get('brand-gray', 'dark'),
+    'gray-dark': 1px solid palette.get('brand-gray', 'dark'),
     'gray-light': 1px solid palette.get('brand-gray', 'light'),
   )
 );

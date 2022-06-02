@@ -1,5 +1,5 @@
 @use '../../tools/palette';
 @use '../../tools/size';
 
-$gutter: size.get('m') !default;
-$border: size.get('xxxs') solid palette.get('brand-gray', 'light') !default;
+$gutter: size.get('xl') !default;
+$border: size.get('xxxs') solid palette.get('text', 'lightest') !default;

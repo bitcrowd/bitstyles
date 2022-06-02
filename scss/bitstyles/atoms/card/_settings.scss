@@ -10,8 +10,8 @@ $border-radius: size.get('m') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', 'base'), 0.025),
-    $offset: size.get('s'),
-    $blur-radius: size.get('l'),
+    $offset: size.get('m'),
+    $blur-radius: size.get('xxl'),
     $layers: 6,
   )
 ) !default;

@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use '../settings/base-colors';
+@use '../settings/base-palette';
 
 // Palette
 //
@@ -12,8 +13,8 @@
 //
 
 @function get($color, $key: base-colors.$default-key) {
-  @if map.has-key(base-colors.$palette, $color) {
-    $palette: map.get(base-colors.$palette, $color);
+  @if map.has-key(base-palette.$palette, $color) {
+    $palette: map.get(base-palette.$palette, $color);
 
     @if map.has-key($palette, $key) {
       @return map.get($palette, $key);

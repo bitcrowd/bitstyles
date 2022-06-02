@@ -9,32 +9,42 @@ Specify the `color` property of an element.
 <Canvas>
   <Story name="brand-1">
     {`
-      <div class="u-fg-brand-1">u-fg-brand-1</div>
+      <div class="u-fg-brand-1" style="padding: 1em;background-color:#eee;">u-fg-brand-1</div>
     `}
   </Story>
   <Story name="brand-2">
     {`
-      <div class="u-fg-brand-2">u-fg-brand-2</div>
+      <div class="u-fg-brand-2" style="padding: 1em;background-color:#eee;">u-fg-brand-2</div>
     `}
   </Story>
-  <Story name="warning">
+  <Story name="gray">
     {`
-      <div class="u-fg-warning">u-fg-warning</div>
-    `}
-  </Story>
-  <Story name="text-light">
-    {`
-      <div class="u-fg-text-light">u-fg-text-light</div>
-    `}
-  </Story>
-  <Story name="text-lighter">
-    {`
-      <div class="u-fg-text-lighter">u-fg-text-lighter</div>
+      <div class="u-fg-gray" style="padding: 1em;background-color:#eee;">u-fg-gray</div>
     `}
   </Story>
   <Story name="gray-light">
     {`
-      <div class="u-fg-gray-light">u-fg-gray-light</div>
+      <div class="u-fg-gray-light" style="padding: 1em;background-color:#333;">u-fg-gray-light</div>
+    `}
+  </Story>
+   <Story name="text">
+    {`
+      <div class="u-fg-text" style="padding: 1em;background-color:#eee;">u-fg-text</div>
+    `}
+  </Story>
+  <Story name="text-light">
+    {`
+      <div class="u-fg-text-light" style="padding: 1em;background-color:#eee;">u-fg-text-light</div>
+    `}
+  </Story>
+  <Story name="text-lighter">
+    {`
+      <div class="u-fg-text-lighter" style="padding: 1em;background-color:#333;">u-fg-text-lighter</div>
+    `}
+  </Story>
+  <Story name="warning">
+    {`
+      <div class="u-fg-warning" style="padding: 1em;background-color:#eee;">u-fg-warning</div>
     `}
   </Story>
 </Canvas>
@@ -48,10 +58,13 @@ The available display types can be customized by overriding the `$bitstyles-fg-v
   $values: (
     'brand-1': palette.get('brand-1', 'base'),
     'brand-2': palette.get('brand-2', 'base'),
-    'warning': palette.get('warning', 'base'),
+    'gray-light': palette.get('brand-gray', 'light'),
+    'gray': palette.get('brand-gray', 'base'),
+    'text': palette.get('text', 'base'),
     'text-light': palette.get('text', 'light'),
     'text-lighter': palette.get('text', 'lighter'),
-    'gray-light': palette.get('brand-gray', 'light'),
+    'warning': palette.get('warning', 'base'),
+    'white': palette.get('white', 'base'),
   )
 );
 ```

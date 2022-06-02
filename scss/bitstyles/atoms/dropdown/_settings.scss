@@ -13,7 +13,7 @@ $box-shadow: shadow.to-box-shadow(
     $blur-radius: size.get('l'),
   )
 ) !default;
-$separator-border: 1px solid palette.get('background', 'base') !default;
+$separator-border: 1px solid palette.get('background', 'darker') !default;
 $separator-spacing: size.get('xxs') !default;
 $transition: opacity 0.12s ease-in !default;
 $will-change: opacity !default;

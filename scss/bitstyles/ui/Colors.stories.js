@@ -1,5 +1,6 @@
-import baseColors from '../exports/_base-colors.scss';
-import colorPalette from '../exports/_color-palette.scss';
+import baseColorValues from '../exports/_base-colors.scss';
+import basePaletteValues from '../exports/_base-palette.scss';
+import colorPaletteValues from '../exports/_color-palette.scss';
 
 /*
  * Variables in our Sass are exported via webpack in the form
@@ -52,10 +53,10 @@ function expand(obj) {
 
 const RenderColorItem = (label, color) =>
   `
-    <li style="background-color: ${color}; min-height:4rem;" class="u-aspect-ratio-1-1">
+    <li style="background-color: ${color}; min-height:3rem;" class="u-aspect-ratio-1-1">
       <div
-        class="u-margin-xs-left u-margin-xs-top"
-        style="font-size: 10px;"
+        class="u-margin-xs-left u-margin-xs-top u-fg-text"
+        style="font-size: 0.625rem;"
       >
         <strong class="u-bg-white u-padding-xxs-x">${label}</strong>
         <br/>
@@ -64,7 +65,7 @@ const RenderColorItem = (label, color) =>
     </li>
   `;
 
-const RenderColorRow = ({ colors }) =>
+const RenderColors = ({ colors }) =>
   `
     <ul class="u-flex-grow-1 u-grid u-grid-cols-auto a-list-reset">
       ${Object.entries(colors)
@@ -73,38 +74,61 @@ const RenderColorRow = ({ colors }) =>
     </ul>
   `;
 
-const RenderColorPalette = ({ palette }) => {
+const RenderColorPaletteItem = ({ colors, withBackground }) => {
+  const name = colors[0];
+  const style =
+    withBackground &&
+    baseColorValues[name] &&
+    `background-color: ${baseColorValues[name]}; color: #fff`;
+  const titleClassname = withBackground
+    ? 'u-padding-xs u-padding-m-bottom u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min'
+    : 'u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min';
+
   return `
-    <ul class="a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l">
+    <li class="u-grid u-gap-s" style="${style}">
+      ${RenderColors({ colors: colors[1] })}
+      <h3 class="${titleClassname}">
+        ${name}
+      </h3>
+    </li>
+  `;
+};
+
+const RenderColorPaletteList = ({
+  palette,
+  dense = false,
+  withBackground = false,
+}) => {
+  const classname = dense
+    ? 'a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l u-margin-xl-bottom'
+    : 'a-list-reset u-grid u-gap-l u-grid-cols-2@l u-margin-xl-bottom';
+
+  return `
+    <ul class="${classname}">
       ${Object.entries(expand(palette))
-        .map((colors) => {
-          const name = colors[0];
-          return `
-          <li class="u-margin-xl-bottom u-grid u-gap-m">
-            ${RenderColorRow({ colors: colors[1] })}
-            <h3
-              class="u-margin-0-bottom u-margin-m-right u-line-height-min"
-            >
-              ${name}
-            </h3>
-          </li>
-        `;
-        })
+        .map((colors) => RenderColorPaletteItem({ colors, withBackground }))
         .join('')}
     </ul>
   `;
 };
 
-const Template = (args) => RenderColorPalette(args);
+const Template = (args) => RenderColorPaletteList(args);
 
 export const BaseColors = Template.bind({});
 BaseColors.args = {
-  palette: baseColors,
+  palette: { base: baseColorValues },
+};
+
+export const BasePalette = Template.bind({});
+BasePalette.args = {
+  palette: basePaletteValues,
+  dense: true,
+  withBackground: true,
 };
 
 export const ColorPalette = Template.bind({});
 ColorPalette.args = {
-  palette: colorPalette,
+  palette: colorPaletteValues,
 };
 
 export default {

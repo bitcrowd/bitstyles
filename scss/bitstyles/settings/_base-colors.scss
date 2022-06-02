@@ -1,50 +1,16 @@
-@use 'sass:color';
-@use '../tools/color' as bs-color;
-
-//
-// Base colors /////////////////////////////////////////
-
-$black: #000 !default;
-$white: #fff !default;
-$brand-1: #322cd7 !default;
-$brand-2: #ffd000 !default;
-$green: #50a802 !default;
-$red: #e82915 !default;
-$orange: #f57302 !default;
-$grays-hint-color: $brand-1 !default;
-$grays-hint-color-mix: 6% !default;
-$default-key: '100' !default;
-
-//
-// Base palette /////////////////////////////////////////
-
-$palette: (
-  'pure-gray':
-    bs-color.generate-tints(
-      $base-color: $black,
-    ),
-  'brand-gray':
-    bs-color.generate-tints-and-shades(
-      $base-color: color.adjust($brand-1, $saturation: -50%),
-    ),
-  'brand-1':
-    bs-color.generate-tints-and-shades(
-      $base-color: $brand-1,
-    ),
-  'brand-2':
-    bs-color.generate-tints-and-shades(
-      $base-color: $brand-2,
-    ),
-  'red':
-    bs-color.generate-tints-and-shades(
-      $base-color: $red,
-    ),
-  'orange':
-    bs-color.generate-tints-and-shades(
-      $base-color: $orange,
-    ),
-  'green':
-    bs-color.generate-tints-and-shades(
-      $base-color: $green,
-    ),
+$colors: (
+  'pure-gray': #000,
+  'white': #fff,
+  'brand-1': #3b37ab,
+  'brand-2': #f3d13b,
+  'green': #669f34,
+  'red': #e44332,
+  'orange': #f57302,
 ) !default;
+
+/* prettier-ignore */
+$tint-percentages: (1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100) !default;
+$shade-percentages: (95, 90, 80, 70, 60, 50, 40, 30, 20, 10) !default;
+
+/* prettier-ignore */
+$scale-percentages: (0, 1, 2, 3, 4, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100 ) !default;

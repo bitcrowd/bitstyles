@@ -1,7 +1,7 @@
 @use '../../tools/palette';
 
 $values: (
-  'gray-70': 1px solid palette.get('brand-gray', 'dark'),
+  'gray-dark': 1px solid palette.get('brand-gray', 'dark'),
   'gray-light': 1px solid palette.get('brand-gray', 'light'),
 ) !default;
 $breakpoints: () !default;

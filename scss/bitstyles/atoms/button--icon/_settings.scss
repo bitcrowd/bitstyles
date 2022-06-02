@@ -10,16 +10,16 @@ $padding-horizontal: size.get('m') !default;
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('text', 'light') !default;
+$color: palette.get('brand-1', 'light') !default;
 $background-color: palette.get('brand-gray', 'lighter') !default;
-$border-color: palette.get('brand-gray', 'lighter') !default;
+$border-color: palette.get('brand-gray', 'light') !default;
 $border-radius: size.get('s') !default;
 $box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('brand-gray', 'dark') !default;
+$color-hover: palette.get('brand-1', 'base') !default;
 $background-color-hover: palette.get('brand-gray', 'light') !default;
 $border-color-hover: palette.get('brand-gray', 'light') !default;
 $box-shadow-hover: none !default;

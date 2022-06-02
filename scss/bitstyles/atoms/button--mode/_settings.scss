@@ -18,7 +18,7 @@ $icon-spacing: size.get('s') !default;
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('brand-gray', 'dark') !default;
+$color: palette.get('brand-gray', 'darker') !default;
 $background-color: transparent !default;
 $border-color: transparent !default;
 $box-shadow: none !default;
@@ -26,7 +26,7 @@ $box-shadow: none !default;
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('brand-gray', 'dark') !default;
+$color-hover: palette.get('brand-gray', 'darker') !default;
 $background-color-hover: palette.get('brand-gray', 'lighter') !default;
 $border-color-hover: palette.get('brand-gray', 'lighter') !default;
 $box-shadow-hover: shadow.to-box-shadow(
@@ -39,9 +39,9 @@ $box-shadow-hover: shadow.to-box-shadow(
 //
 // Active colors ////////////////////////////////////////
 
-$color-active: palette.get('white') !default;
-$background-color-active: palette.get('brand-1', 'base') !default;
-$border-color-active: palette.get('brand-1', 'base') !default;
+$color-active: palette.get('text') !default;
+$background-color-active: palette.get('brand-2', 'base') !default;
+$border-color-active: palette.get('brand-2', 'base') !default;
 $box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', 'base'), 0.05),
@@ -52,7 +52,7 @@ $box-shadow-active: shadow.to-box-shadow(
 //
 // Pressed colors ////////////////////////////////////////
 
-$color-pressed: palette.get('brand-gray', 'dark') !default;
+$color-pressed: palette.get('brand-gray', 'darker') !default;
 $background-color-pressed: palette.get('white', 'base') !default;
 $border-color-pressed: palette.get('white', 'base') !default;
 $box-shadow-pressed: shadow.to-box-shadow(

@@ -6,68 +6,62 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Applies a background-color to the element. Default colors are
 
-- `black-80`
 - `background`
-- `white`
 - `brand-2`
+- `gray-darkest`
 - `gray-dark`
-- `gray-dark`
-- `text-light`
-- `gray-light`
 - `gray-light`
 - `gray-lighter`
+- `text`
+- `text-light`
+- `white`
 
 See the [customization](#customization) section below for details on how to change available colors.
 
 <Canvas>
-  <Story name="black-80">
-    {`
-      <div class="u-bg-black-80">u-bg-black-80</div>
-    `}
-  </Story>
   <Story name="background">
     {`
-      <div class="u-bg-background">u-bg-background</div>
-    `}
-  </Story>
-  <Story name="white">
-    {`
-      <div class="u-bg-white">u-bg-white</div>
+      <div class="u-bg-background" style="padding: 1rem;">u-bg-background</div>
     `}
   </Story>
   <Story name="brand-2">
     {`
-      <div class="u-bg-brand-2">u-bg-brand-2</div>
+      <div class="u-bg-brand-2" style="padding: 1rem;">u-bg-brand-2</div>
+    `}
+  </Story>
+  <Story name="gray-darkest">
+    {`
+      <div class="u-bg-gray-darkest" style="color:#fff;padding: 1rem;">u-bg-gray-darkest</div>
     `}
   </Story>
   <Story name="gray-dark">
     {`
-      <div class="u-bg-black-80">u-bg-black-80</div>
-    `}
-  </Story>
-  <Story name="gray-dark">
-    {`
-      <div class="u-bg-gray-dark">u-bg-gray-dark</div>
-    `}
-  </Story>
-  <Story name="text-light">
-    {`
-      <div class="u-bg-text-light">u-bg-text-light</div>
+      <div class="u-bg-gray-dark" style="padding: 1rem;">u-bg-gray-dark</div>
     `}
   </Story>
   <Story name="gray-light">
     {`
-      <div class="u-bg-gray-light">u-bg-gray-light</div>
-    `}
-  </Story>
-  <Story name="gray-light">
-    {`
-      <div class="u-bg-gray-light">u-bg-gray-light</div>
+      <div class="u-bg-gray-light" style="padding: 1rem;">u-bg-gray-light</div>
     `}
   </Story>
   <Story name="gray-lighter">
     {`
-      <div class="u-bg-gray-lighter">u-bg-gray-lighter</div>
+      <div class="u-bg-gray-lighter" style="padding: 1rem;">u-bg-gray-lighter</div>
+    `}
+  </Story>
+  <Story name="text">
+    {`
+      <div class="u-bg-text" style="color:#fff;padding: 1rem;">u-bg-text</div>
+    `}
+  </Story>
+  <Story name="text-light">
+    {`
+      <div class="u-bg-text-light" style="padding: 1rem;">u-bg-text-light</div>
+    `}
+  </Story>
+  <Story name="white">
+    {`
+      <div class="u-bg-white" style="padding: 1rem;">u-bg-white</div>
     `}
   </Story>
 </Canvas>
@@ -79,16 +73,15 @@ The available background-colors can be customized by overriding the `$bitstyles-
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/bg' with (
   $values: (
-    'black-80': palette.get('text', 'base'),
     'background': palette.get('background'),
-    'white': palette.get('white'),
     'brand-2': palette.get('brand-2', 'base'),
     'gray-dark': palette.get('brand-gray', 'dark'),
     'gray-dark': palette.get('brand-gray', 'dark'),
-    'text-light': palette.get('text', 'light'),
-    'gray-light': palette.get('brand-gray', 'light'),
     'gray-light': palette.get('brand-gray', 'light'),
     'gray-lighter': palette.get('brand-gray', 'lighter'),
+    'text': palette.get('text', 'base'),
+    'text-light': palette.get('text', 'light'),
+    'white': palette.get('white'),
   )
 );
 ```

@@ -16,8 +16,8 @@ $transition: color animation.$transition-duration animation.$transition-easing,
 // Base colors ////////////////////////////////////////
 
 $color: palette.get('brand-gray', 'lighter') !default;
-$background-color: palette.get('brand-gray', 'dark') !default;
-$border-color: palette.get('brand-gray', 'dark') !default;
+$background-color: palette.get('brand-gray', 'darkest') !default;
+$border-color: palette.get('brand-gray', 'darkest') !default;
 $box-shadow: none !default;
 
 //

@@ -1,11 +1,9 @@
 @use '../settings/base-colors';
 
-/* stylelint-disable selector-pseudo-class-no-unknown, max-nesting-depth */
+/* stylelint-disable selector-pseudo-class-no-unknown */
 :export {
-  @each $name, $color-palette in base-colors.$palette {
-    @each $color-name, $color-value in $color-palette {
-      #{$name}#{'.'}#{$color-name}: #{$color-value};
-    }
+  @each $name, $color in base-colors.$colors {
+    #{$name}: #{$color};
   }
 }
-/* stylelint-enable selector-pseudo-class-no-unknown, max-nesting-depth */
+/* stylelint-enable selector-pseudo-class-no-unknown */
