@@ -120,12 +120,8 @@
       ".o-modal--animation-ok[aria-hidden=true] .o-modal__content @ 1:29504",
       ".o-table tr:last-child td @ 1:30736"
     ],
-    "redundantChildNodesSelectors": [
-      ".o-table tr:last-child td @ 1:30736"
-    ],
-    "importants": [
-      ".u-sr-only {position: absolute!important} @ 1:64109"
-    ],
+    "redundantChildNodesSelectors": [".o-table tr:last-child td @ 1:30736"],
+    "importants": [".u-sr-only {position: absolute!important} @ 1:64109"],
     "colors": [
       "rgba(79,75,179,0.025) (36 times)",
       "#ffffff (25 times)",
@@ -169,9 +165,6 @@
       "#934501 (1 times)",
       "rgba(79,75,179,0.1) (1 times)"
     ],
-    "duplicatedSelectors": [
-      "html (3 times)",
-      "legend (2 times)"
-    ]
+    "duplicatedSelectors": ["html (3 times)", "legend (2 times)"]
   }
 }

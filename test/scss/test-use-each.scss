@@ -7,8 +7,8 @@
 @use '../../scss/bitstyles/settings/breakpoints' with (
   $boundary-width: 10em
 );
-@use  '../../scss/bitstyles/settings/base-colors';
-@use  '../../scss/bitstyles/settings/base-palette';
+@use '../../scss/bitstyles/settings/base-colors';
+@use '../../scss/bitstyles/settings/base-palette';
 @use '../../scss/bitstyles/settings/color-palette' with (
   $palette: (
     'text': (
@@ -31,6 +31,7 @@
       'light': #000,
       'base': #000,
       'dark': #000,
+      'darker': #000,
     ),
     'brand-2': (
       'lighter': #000,

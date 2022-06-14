@@ -10,14 +10,14 @@ Buttons that look more like native UI than the other color-branded buttons, inte
 <Canvas>
   <Story name="UI">
     {`
-      <button type="button" class="a-button a-button--ui u-h6">
+      <button type="button" class="a-button a-button--ui">
         Edit account
       </button>
     `}
   </Story>
   <Story name="UI [disabled]">
     {`
-      <button type="button" class="a-button a-button--ui u-h6" disabled>
+      <button type="button" class="a-button a-button--ui" disabled>
         Edit account
       </button>
     `}
@@ -27,14 +27,14 @@ Buttons that look more like native UI than the other color-branded buttons, inte
 <Canvas>
   <Story name="UI anchor">
     {`
-      <a href="/" type="button" class="a-button a-button--ui u-h6">
+      <a href="/" type="button" class="a-button a-button--ui">
         Edit account
       </a>
     `}
   </Story>
   <Story name="UI anchor [disabled]">
     {`
-      <a href="/" class="a-button a-button--ui u-h6" disabled>
+      <a href="/" class="a-button a-button--ui" disabled>
         Edit account
       </a>
     `}
@@ -46,7 +46,7 @@ When you’re representing state in the UI, use the `aria-pressed="true"` attrib
 <Canvas>
   <Story name="[aria-pressed]">
     {`
-      <button type="button" class="a-button a-button--ui u-h6" aria-pressed="true">
+      <button type="button" class="a-button a-button--ui" aria-pressed="true">
         Pressed
       </button>
     `}
@@ -58,7 +58,7 @@ When using the buttons for dropdown menus, add the `aria-expanded` attribute ins
 <Canvas>
   <Story name="Dropdown">
     {`
-      <button type="button" class="a-button a-button--ui u-h6" aria-controls="element-id" aria-expanded="false">
+      <button type="button" class="a-button a-button--ui" aria-controls="element-id" aria-expanded="false">
         <span class="a-button__label">Dropdown</span>
         <svg width="14" height="14" class="a-button__icon a-icon a-icon--m" aria-hidden="true" focusable="false">
           <use xlink:href="${icons}#icon-caret-down"></use>
@@ -68,7 +68,7 @@ When using the buttons for dropdown menus, add the `aria-expanded` attribute ins
   </Story>
   <Story name="Dropdown [expanded]">
     {`
-      <button type="button" class="a-button a-button--ui u-h6" aria-controls="element-id" aria-expanded="true">
+      <button type="button" class="a-button a-button--ui" aria-controls="element-id" aria-expanded="true">
         <span class="a-button__label">Expanded</span>
         <svg width="20" height="20" class="a-button__icon a-icon a-icon--m" aria-hidden="true" focusable="false">
           <use xlink:href="${icons}#icon-caret-down"></use>

@@ -1,7 +1,7 @@
 @use '../../tools/palette';
 @use '../../tools/size';
 
-$border: 1px solid palette.get('brand-gray', 'lighter') !default;
+$border: 1px solid palette.get('brand-gray', 'light') !default;
 $padding-horizontal: size.get('m') !default;
 $padding-vertical-td: size.get('s') !default;
 $padding-vertical-th: size.get('xxs') !default;
