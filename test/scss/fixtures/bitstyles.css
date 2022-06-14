@@ -1958,6 +1958,26 @@ table {
     grid-column-start: 6;
   }
 }
+@media screen and (min-width: 55em) {
+  .u-col-start-1\@l {
+    grid-column-start: 1;
+  }
+  .u-col-start-2\@l {
+    grid-column-start: 2;
+  }
+  .u-col-start-3\@l {
+    grid-column-start: 3;
+  }
+  .u-col-start-4\@l {
+    grid-column-start: 4;
+  }
+  .u-col-start-5\@l {
+    grid-column-start: 5;
+  }
+  .u-col-start-6\@l {
+    grid-column-start: 6;
+  }
+}
 @media screen and (min-width: 95em) {
   .u-col-start-1\@xl {
     grid-column-start: 1;
@@ -2051,25 +2071,31 @@ table {
     drop-shadow(rgba(0, 13, 255, 0.15) 0 2rem 2rem);
 }
 .u-fg-brand-1 {
-  color: #000dff;
+  color: #4f4bb3;
 }
 .u-fg-brand-2 {
-  color: #fa0;
+  color: #f4d64f;
+}
+.u-fg-gray {
+  color: #a3a2b2;
+}
+.u-fg-gray-light {
+  color: #f0f0f2;
+}
+.u-fg-text {
+  color: #1e1e26;
+}
+.u-fg-text-light {
+  color: #9393a5;
+}
+.u-fg-text-lighter {
+  color: #d1d1d8;
 }
 .u-fg-warning {
-  color: #fe881e;
+  color: #f6811b;
 }
 .u-fg-white {
   color: #fff;
-}
-.u-fg-text-light {
-  color: #73758d;
-}
-.u-fg-text-lighter {
-  color: #8a8ba3;
-}
-.u-fg-gray-light {
-  color: #a1a2bb;
 }
 .u-flex-wrap {
   flex-wrap: wrap;
@@ -2195,6 +2221,9 @@ table {
     gap: 1.6rem;
   }
 }
+.u-grid-cols-auto {
+  grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
+}
 .u-grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -2208,6 +2237,9 @@ table {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 @media screen and (max-width: 29.9375em) {
+  .u-grid-cols-auto\@s {
+    grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
+  }
   .u-grid-cols-2\@s {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2222,6 +2254,9 @@ table {
   }
 }
 @media screen and (min-width: 30em) {
+  .u-grid-cols-auto\@m {
+    grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
+  }
   .u-grid-cols-2\@m {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2236,6 +2271,9 @@ table {
   }
 }
 @media screen and (min-width: 55em) {
+  .u-grid-cols-auto\@l {
+    grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
+  }
   .u-grid-cols-2\@l {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2250,6 +2288,9 @@ table {
   }
 }
 @media screen and (min-width: 95em) {
+  .u-grid-cols-auto\@xl {
+    grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
+  }
   .u-grid-cols-2\@xl {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

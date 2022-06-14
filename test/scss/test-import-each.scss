@@ -14,16 +14,19 @@ $bitstyles-color-palette-color-palette: (
   'background': (
     'base': #000,
     'dark': #000,
+    'darker': #000,
   ),
   'white': (
     'base': #000,
   ),
   'brand-1': (
+    'lighter': #000,
     'light': #000,
     'base': #000,
     'dark': #000,
   ),
   'brand-2': (
+    'lighter': #000,
     'light': #000,
     'base': #000,
     'dark': #000,
@@ -34,18 +37,22 @@ $bitstyles-color-palette-color-palette: (
     'base': #000,
     'dark': #000,
     'darker': #000,
+    'darkest': #000,
   ),
   'danger': (
+    'lighter': #000,
     'light': #000,
     'base': #000,
     'dark': #000,
   ),
   'warning': (
+    'lighter': #000,
     'light': #000,
     'base': #000,
     'dark': #000,
   ),
   'positive': (
+    'lighter': #000,
     'light': #000,
     'base': #000,
     'dark': #000,
@@ -247,6 +254,8 @@ $bitstyles-z-index-values: (
 
 @import '../../scss/bitstyles/settings/animation';
 @import '../../scss/bitstyles/settings/breakpoints';
+@import '../../scss/bitstyles/settings/base-colors';
+@import '../../scss/bitstyles/settings/base-palette';
 @import '../../scss/bitstyles/settings/color-palette';
 @import '../../scss/bitstyles/settings/layout';
 @import '../../scss/bitstyles/settings/setup';

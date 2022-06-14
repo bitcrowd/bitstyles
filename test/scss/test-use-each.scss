@@ -7,6 +7,8 @@
 @use '../../scss/bitstyles/settings/breakpoints' with (
   $boundary-width: 10em
 );
+@use  '../../scss/bitstyles/settings/base-colors';
+@use  '../../scss/bitstyles/settings/base-palette';
 @use '../../scss/bitstyles/settings/color-palette' with (
   $palette: (
     'text': (
@@ -19,16 +21,19 @@
     'background': (
       'base': #000,
       'dark': #000,
+      'darker': #000,
     ),
     'white': (
       'base': #000,
     ),
     'brand-1': (
+      'lighter': #000,
       'light': #000,
       'base': #000,
       'dark': #000,
     ),
     'brand-2': (
+      'lighter': #000,
       'light': #000,
       'base': #000,
       'dark': #000,
@@ -39,18 +44,22 @@
       'base': #000,
       'dark': #000,
       'darker': #000,
+      'darkest': #000,
     ),
     'danger': (
+      'lighter': #000,
       'light': #000,
       'base': #000,
       'dark': #000,
     ),
     'warning': (
+      'lighter': #000,
       'light': #000,
       'base': #000,
       'dark': #000,
     ),
     'positive': (
+      'lighter': #000,
       'light': #000,
       'base': #000,
       'dark': #000,

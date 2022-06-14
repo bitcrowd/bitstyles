@@ -11,10 +11,7 @@ $palette: (
   'brand-gray':
     bs-color.generate-tints-and-shades(
       $base-color:
-        color.adjust(
-          map.get(base-colors.$colors, 'brand-1'),
-          $saturation: -40%
-        ),
+        color.adjust(map.get(base-colors.$colors, 'brand-1'), $saturation: -40%),
     ),
   'brand-1':
     bs-color.generate-tints-and-shades(

@@ -30,7 +30,7 @@ For each of these colors we generate a map of 25 color variants from light to da
 
 The color variants are generated at a range of 25 percentage points between 1 and 190. 1 has only 1% of the base color, the rest is white. 100 is 100% the base color, and 190 has 10% base color, 90% black. For each color you have the following variants available to you: 1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 105, 110, 120, 130, 140, 150, 160, 170, 180, 190.
 
-The special case of the `pure-gray` palette offers a scale from white to black, 0 to 100 respectively.
+The special case of the `pure-gray` palette offers a scale of 25 colors from white to black, 0 to 100 respectively.
 
 <Story id="base-colors--base-palette" />
 
@@ -56,9 +56,9 @@ With the default setup this will output:
 
 ### `palette.get()` parameters
 
-| Name   | Type   | Description                                                                                                                                          |
-| ------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $color | string | The name of the color                                                                                                                                |
+| Name   | Type   | Description                                               |
+| ------ | ------ | --------------------------------------------------------- |
+| $color | string | The name of the color                                     |
 | $key   | string | The variant of that color you want. Defaults to `"base"`. |
 
 ## Using colors with classnames
@@ -66,7 +66,7 @@ With the default setup this will output:
 Use the appropriate utility classes to apply colors. See the documentation of each class for information on defaults & customization:
 
 - [`u-fg` (color)](/docs/utilities-color--brand-1)
-- [`u-bg` (background-color)](/docs/utilities-background-color--text)
+- [`u-bg` (background-color)](/docs/utilities-background-color--background)
 
 ## Customization
 
@@ -193,7 +193,7 @@ It’s recomended that you select the colors from the base palette, but it’s n
     'blue': (
       'default': #00f,
       'dark': #006,
-    )
+    ),
   )
 );
 ```
