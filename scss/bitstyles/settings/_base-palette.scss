@@ -3,34 +3,40 @@
 @use '../tools/color' as bs-color;
 @use './base-colors';
 
+$accent-gray-color: map.get(base-colors.$colors, 'brand-1') !default;
+$accent-gray-saturation: -90% !default;
 $palette: (
   'pure-gray':
     bs-color.generate-scale(
       $base-color: map.get(base-colors.$colors, 'pure-gray'),
+      $percentages: base-colors.$grayscale-percentages,
     ),
-  'brand-gray':
-    bs-color.generate-tints-and-shades(
+  'accent-gray':
+    bs-color.generate-scale(
       $base-color:
-        color.adjust(map.get(base-colors.$colors, 'brand-1'), $saturation: -40%),
+        color.scale(
+          $color: $accent-gray-color,
+          $saturation: $accent-gray-saturation,
+        ),
     ),
   'brand-1':
-    bs-color.generate-tints-and-shades(
+    bs-color.generate-scale(
       $base-color: map.get(base-colors.$colors, 'brand-1'),
     ),
   'brand-2':
-    bs-color.generate-tints-and-shades(
+    bs-color.generate-scale(
       $base-color: map.get(base-colors.$colors, 'brand-2'),
     ),
   'red':
-    bs-color.generate-tints-and-shades(
+    bs-color.generate-scale(
       $base-color: map.get(base-colors.$colors, 'red'),
     ),
   'orange':
-    bs-color.generate-tints-and-shades(
+    bs-color.generate-scale(
       $base-color: map.get(base-colors.$colors, 'orange'),
     ),
   'green':
-    bs-color.generate-tints-and-shades(
+    bs-color.generate-scale(
       $base-color: map.get(base-colors.$colors, 'green'),
     ),
 ) !default;

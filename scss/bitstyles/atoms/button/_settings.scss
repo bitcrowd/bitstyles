@@ -22,7 +22,7 @@ $icon-spacing: size.get('s') !default;
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('white') !default;
+$color: palette.get('grayscale', 'white') !default;
 $background-color: palette.get('brand-1', 'base') !default;
 $border-color: palette.get('brand-1', 'base') !default;
 $box-shadow: shadow.to-box-shadow(
@@ -35,7 +35,7 @@ $box-shadow: shadow.to-box-shadow(
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('white') !default;
+$color-hover: palette.get('grayscale', 'white') !default;
 $background-color-hover: palette.get('brand-1', 'dark') !default;
 $border-color-hover: palette.get('brand-1', 'dark') !default;
 $box-shadow-hover: shadow.to-box-shadow(
@@ -48,7 +48,7 @@ $box-shadow-hover: shadow.to-box-shadow(
 //
 // Active colors ////////////////////////////////////////
 
-$color-active: palette.get('white') !default;
+$color-active: palette.get('grayscale', 'white') !default;
 $background-color-active: palette.get('brand-1', 'darker') !default;
 $border-color-active: palette.get('brand-1', 'darker') !default;
 $box-shadow-active: shadow.to-box-shadow(

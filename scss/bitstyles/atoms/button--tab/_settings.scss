@@ -13,7 +13,7 @@ $transition: color animation.$transition-duration animation.$transition-easing,
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('brand-gray', 'darker') !default;
+$color: palette.get('accent-gray', 'darker') !default;
 $background-color: transparent !default;
 $indicator-color: transparent !default;
 $border: 2px solid transparent !default;

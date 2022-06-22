@@ -11,6 +11,6 @@ $font-weight: typography.$font-weight-medium !default;
 //
 // Base/hover Colors /////////////////////////////////////////
 
-$background: palette.get('white') !default;
+$background: palette.get('grayscale', 'white') !default;
 $color: palette.get('text', 'dark') !default;
 $border: size.get('xxs') palette.get('text', 'dark') solid !default;

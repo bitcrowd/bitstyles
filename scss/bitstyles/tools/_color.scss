@@ -15,60 +15,19 @@
 //
 // @param {list} $percentages  A list of decmial values representing the percentages at which the mix-color will be mixed into the base-color
 
-@function generate-tints-and-shades(
-  $base-color,
-  $tint-percentages: base-colors.$tint-percentages,
-  $shade-percentages: base-colors.$shade-percentages
-) {
-  $color-map: ();
-
-  @each $percentage in $tint-percentages {
-    $color-map: map.merge(
-      $color-map,
-      (
-        '#{$percentage}':
-          color.mix(
-            #fff,
-            $base-color,
-            100% - math.percentage(math.div($percentage, 100))
-          ),
-      )
-    );
-  }
-
-  @each $percentage in $shade-percentages {
-    $color-map: map.merge(
-      $color-map,
-      (
-        '#{100 + 100 - $percentage}':
-          color.mix(
-            #000,
-            $base-color,
-            100 - math.percentage(math.div($percentage, 100))
-          ),
-      )
-    );
-  }
-
-  @return $color-map;
-}
-
 @function generate-scale(
   $base-color,
-  $scale-percentages: base-colors.$scale-percentages
+  $percentages: base-colors.$color-scale-percentages
 ) {
   $color-map: ();
 
-  @each $percentage in $scale-percentages {
+  @each $color-name, $percentage in $percentages {
+    $lightness-value: math.percentage(math.div($percentage, 100));
     $color-map: map.merge(
       $color-map,
       (
-        '#{$percentage}':
-          color.mix(
-            #fff,
-            $base-color,
-            100% - math.percentage(math.div($percentage, 100))
-          ),
+        '#{$color-name}':
+          color.scale($base-color, $lightness: $lightness-value),
       )
     );
   }

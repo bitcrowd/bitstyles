@@ -12,19 +12,19 @@ $size: size.get('m') !default;
 //
 // Base colors ////////////////////////////////////////
 $color: palette.get('text', 'light') !default;
-$background-color: palette.get('white') !default;
+$background-color: palette.get('grayscale', 'white') !default;
 $border-color: palette.get('text', 'light') !default;
 
 //
 // Hover colors ////////////////////////////////////////
 $color-hover: palette.get('brand-1') !default;
-$background-color-hover: palette.get('white') !default;
+$background-color-hover: palette.get('grayscale', 'white') !default;
 $border-color-hover: palette.get('brand-1') !default;
 
 //
 // Checked colors ////////////////////////////////////////
 $color-checked: palette.get('brand-1') !default;
-$background-color-checked: palette.get('white') !default;
+$background-color-checked: palette.get('grayscale', 'white') !default;
 $border-color-checked: palette.get('brand-1') !default;
 
 //

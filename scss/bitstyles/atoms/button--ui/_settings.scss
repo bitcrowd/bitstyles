@@ -14,9 +14,9 @@ $transition: color animation.$transition-duration animation.$transition-easing,
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('brand-gray', 'darker') !default;
-$background-color: palette.get('white', 'base') !default;
-$border-color: palette.get('brand-gray', 'darker') !default;
+$color: palette.get('accent-gray', 'darker') !default;
+$background-color: palette.get('grayscale', 'white') !default;
+$border-color: palette.get('accent-gray', 'darker') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', 'dark'), 0.025),
@@ -53,7 +53,7 @@ $box-shadow-active: shadow.to-box-shadow(
 //
 // Pressed colors ////////////////////////////////////////
 
-$color-pressed: palette.get('white') !default;
+$color-pressed: palette.get('grayscale', 'white') !default;
 $background-color-pressed: palette.get('brand-1', 'dark') !default;
 $border-color-pressed: palette.get('brand-1', 'dark') !default;
 $box-shadow-pressed: shadow.to-box-shadow(
@@ -68,8 +68,8 @@ $box-shadow-pressed: shadow.to-box-shadow(
 
 $color-disabled: palette.get('text', 'lighter') !default;
 $background-color-disabled: rgba(
-  palette.get('brand-gray', 'lighter'),
+  palette.get('accent-gray', 'lighter'),
   50%
 ) !default;
-$border-color-disabled: palette.get('brand-gray', 'dark') !default;
+$border-color-disabled: palette.get('accent-gray', 'dark') !default;
 $box-shadow-disabled: none !default;

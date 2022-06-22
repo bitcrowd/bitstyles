@@ -17,7 +17,7 @@ $transition: color animation.$transition-duration animation.$transition-easing,
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('brand-gray', 'light') !default;
+$color: palette.get('accent-gray', 'light') !default;
 $background-color: transparent !default;
 $border-color: transparent !default;
 $box-shadow: none !default;
@@ -25,9 +25,9 @@ $box-shadow: none !default;
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('white') !default;
-$background-color-hover: palette.get('brand-gray', 'dark') !default;
-$border-color-hover: palette.get('brand-gray', 'dark') !default;
+$color-hover: palette.get('grayscale', 'white') !default;
+$background-color-hover: palette.get('accent-gray', 'dark') !default;
+$border-color-hover: palette.get('accent-gray', 'dark') !default;
 $box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('text', 'dark'), 0.15),
@@ -39,8 +39,8 @@ $box-shadow-hover: shadow.to-box-shadow(
 // Active colors ////////////////////////////////////////
 
 $color-active: palette.get('text') !default;
-$background-color-active: palette.get('brand-gray', 'light') !default;
-$border-color-active: palette.get('brand-gray', 'light') !default;
+$background-color-active: palette.get('accent-gray', 'light') !default;
+$border-color-active: palette.get('accent-gray', 'light') !default;
 $box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('text', 'dark'), 0.15),
@@ -59,7 +59,7 @@ $box-shadow-disabled: none !default;
 //
 // Current colors ////////////////////////////////////////
 
-$color-current: palette.get('white', 'base') !default;
+$color-current: palette.get('grayscale', 'white') !default;
 $background-color-current: palette.get('text', 'dark') !default;
 $border-color-current: palette.get('text', 'dark') !default;
 $box-shadow-current: none !default;

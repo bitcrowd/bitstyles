@@ -3,12 +3,13 @@
 $values: (
   'background': palette.get('background'),
   'brand-2': palette.get('brand-2', 'base'),
-  'gray-darkest': palette.get('brand-gray', 'darkest'),
-  'gray-dark': palette.get('brand-gray', 'dark'),
-  'gray-light': palette.get('brand-gray', 'light'),
-  'gray-lighter': palette.get('brand-gray', 'lighter'),
+  'gray-darkest': palette.get('accent-gray', 'darkest'),
+  'gray-dark': palette.get('accent-gray', 'dark'),
+  'gray-light': palette.get('accent-gray', 'light'),
+  'gray-lighter': palette.get('accent-gray', 'lighter'),
   'text': palette.get('text', 'base'),
   'text-light': palette.get('text', 'light'),
-  'white': palette.get('white'),
+  'white': palette.get('grayscale', 'white'),
+  'black': palette.get('grayscale', 'black'),
 ) !default;
 $breakpoints: () !default;

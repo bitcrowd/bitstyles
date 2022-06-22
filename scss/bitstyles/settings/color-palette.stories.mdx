@@ -4,39 +4,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Color palette
 
-Bitstyles uses a three-tier color system:
-
-- Base colors
-- Base palette
-- Semantic palette
-
-The **base colors** are a small list of colors from which we generate the base palette.
-
-The **base palette** consists of a large number of tints (mixed with white) and shades (mixed with black) generated from the base colors. The colors in the palettes are all named with the name of the base color, and a number indicating how much white or black is mixed in e.g. `red-50`, `red-150` (50% white and 50% black respectively).
-
-The base palette is only used once — to configure our **semantic palette**, which is what’s used throughout the codebase to apply colors to components, and for any utility classes that apply color. This palette is a limited list of semantically-named colors, selected from the base color palettes, giving colors such as `background-dark`, `danger-base`, `danger-light`.
-
-This three-tier system is intended to offer a wide range of color options with minimal setup, while encouraging use of just a small tightly-controlled palette of colors throughout the final codebase. That helps to maintain both visual and code consistency, and reduces the potential for color bloat.
+Bitstyles provides a semantically-named color palette, with each color having named variants such as `dark`, `light`, `base`. These are used to create the components and the color-related utility classes.
 
 <Story id="base-colors--color-palette" />
 
-## Base colors
-
-By default the palette includes variants of the following colors:
-
-<Story id="base-colors--base-colors" />
-
-For each of these colors we generate a map of 25 color variants from light to dark. There is also a simple grayscale called `pure-gray`, and a `brand-gray` scale, which is a grayscale with a hint of your `$brand-1` color.
-
-The color variants are generated at a range of 25 percentage points between 1 and 190. 1 has only 1% of the base color, the rest is white. 100 is 100% the base color, and 190 has 10% base color, 90% black. For each color you have the following variants available to you: 1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 105, 110, 120, 130, 140, 150, 160, 170, 180, 190.
-
-The special case of the `pure-gray` palette offers a scale of 25 colors from white to black, 0 to 100 respectively.
-
-<Story id="base-colors--base-palette" />
-
 ## Using the color palette in Sass
 
-Use the `palette.get()` helper function for accessing colors in the color palette. In your component Sass file first import the `palette` tools, then use the `get()` function, passing the color name and variant:
+Use the `palette.get()` helper function for accessing colors in your Sass. First import `tools/palette`, then use the `get()` function, passing the color name and variant:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/palette';
@@ -67,6 +41,42 @@ Use the appropriate utility classes to apply colors. See the documentation of ea
 
 - [`u-fg` (color)](/docs/utilities-color--brand-1)
 - [`u-bg` (background-color)](/docs/utilities-background-color--background)
+- [`u-border`](/docs/utilities-border--border)
+
+## How the system works
+
+Bitstyles uses a three-tier color system:
+
+- Base colors
+- Base palette
+- Semantic palette
+
+The **base colors** are a small list of colors from which we generate the base palette.
+
+The **base palette** consists of a large number of tints (versions of the colors with extra lightness in the HSL color space) and shades (versions of the colors with less lightness in the HSL color space) generated from the base colors
+
+In the default configuration, these are named with numbers from `5` (darkest) to `195` (lightest) in intervals of 5, with `100` being the base color itself. Due to the way the color adjustment works, color `200` would always be pure white, and color `0` would always be pure black, so they’re not included. That also means that if you want a balanced scale (not necessarily important), the lightness in HSL color space of the base color you provide should be approximately 50%.
+
+The base palette is only used once — during setup to configure our **semantic palette**, which is then used throughout the codebase to apply colors to components, and for any utility classes that apply color. This palette is a limited list of semantically-named colors, selected from the base color palettes, giving colors such as `background-dark`, `danger-base`, `danger-light`.
+
+This three-tier system is intended to offer a wide range of color options with minimal setup, while encouraging use of just a small tightly-controlled palette of colors throughout the final codebase. That helps to maintain both visual and code consistency, and reduces the potential for color bloat.
+
+If you have a specific set of colors you need to use, and cannot rely on generated scale to match those, you can skip the base colors and/or the the base palette entirely and just specify your colors in the base and semantic palette.
+
+## Base colors
+
+By default the palette includes variants of the following colors:
+
+<Story id="base-colors--base-colors" />
+
+For each color, 39 variants are generated from `5` to `195`. The lower the number, the darker it is.
+
+There are two special cases:
+
+- The `pure-gray` palette offers a scale of 25 colors from black to white, 0 to 100 respectively.
+- The `accent-gray` colors are a grayscale mixed with a little accent color (your brand-1 color by default).
+
+<Story id="base-colors--base-palette" />
 
 ## Customization
 
@@ -123,23 +133,20 @@ You can also add entirely new colors by defining them here in the same way.
 
 Change the base color palettes that will be generated by overriding
 
-- `base-colors.$tint-percentages`
-- `base-colors.$shade-percentages`
-- `base-colors.$scale-percentages`
+- `base-colors.$color-scale-percentages`
+- `base-colors.$grayscale-percentages`
 
-These are a Sass lists with number values for the percentages of the color to be mixed. The numbers will also be used as the label for the variant. `$tint-percentages` and `$shade-percentages` are used to generate most colors, `$scale-percentages` is used to generate the 0–100 grayscale.
+These are a Sass lists with number values for the percentages of the color to be mixed. The numbers will also be used as the label for the variant. `$color-scale-percentages` is used to generate most colors; `$grayscale-percentages` is used to generate the 0–100 grayscale.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/base-colors' with (
-  $tint-percentages: (
-    10,
-    50,
-    90,
-  ),
-  $shade-percentages: (
-    90,
-    50,
-    10,
+  $color-scale-percentages: (
+    '10': 10,
+    '50': 50,
+    '90': 90,
+    '110': -10,
+    '150': -50,
+    '190': -90,
   )
 );
 

@@ -5,7 +5,7 @@
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('white') !default;
+$color-hover: palette.get('grayscale', 'white') !default;
 $background-color-hover: palette.get('danger', 'base') !default;
 $border-color-hover: palette.get('danger', 'base') !default;
 $box-shadow-hover: shadow.to-box-shadow(
@@ -18,7 +18,7 @@ $box-shadow-hover: shadow.to-box-shadow(
 //
 // Active colors ////////////////////////////////////////
 
-$color-active: palette.get('white') !default;
+$color-active: palette.get('grayscale', 'white') !default;
 $background-color-active: palette.get('danger', 'dark') !default;
 $border-color-active: palette.get('danger', 'dark') !default;
 $box-shadow-active: shadow.to-box-shadow(

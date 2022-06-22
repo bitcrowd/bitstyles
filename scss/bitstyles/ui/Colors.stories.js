@@ -100,8 +100,8 @@ const RenderColorPaletteList = ({
   withBackground = false,
 }) => {
   const classname = dense
-    ? 'a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l u-margin-xl-bottom'
-    : 'a-list-reset u-grid u-gap-l u-grid-cols-2@l u-margin-xl-bottom';
+    ? 'a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l u-margin-xl-bottom u-items-start'
+    : 'a-list-reset u-grid u-gap-l u-grid-cols-2@l u-margin-xl-bottom u-items-start';
 
   return `
     <ul class="${classname}">

@@ -28,7 +28,7 @@ The default colors are high contrast and clearly readable. If you change them, p
 ```scss
 @use '~bitstyles/scss/bitstyles/atoms/skip-link' with (
   $padding: size.get('m'),
-  $background: palette.get('white'),
+  $background: palette.get('grayscale', 'white'),
   $color: palette.get('text', 'dark'),
   $border: size.get('xxs') palette.get('text', 'dark') solid
 );

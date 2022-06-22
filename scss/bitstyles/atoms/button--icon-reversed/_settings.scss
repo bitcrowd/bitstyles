@@ -10,7 +10,7 @@ $padding-horizontal: size.get('m') !default;
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('brand-gray', 'light') !default;
+$color: palette.get('accent-gray', 'light') !default;
 $background-color: transparent !default;
 $border-color: transparent !default;
 $border-radius: size.get('s') !default;
@@ -19,17 +19,17 @@ $box-shadow: none !default;
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('white') !default;
-$background-color-hover: palette.get('brand-gray', 'darker') !default;
-$border-color-hover: palette.get('brand-gray', 'darker') !default;
+$color-hover: palette.get('grayscale', 'white') !default;
+$background-color-hover: palette.get('accent-gray', 'darker') !default;
+$border-color-hover: palette.get('accent-gray', 'darker') !default;
 $box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$color-active: palette.get('white') !default;
-$background-color-active: palette.get('brand-gray', 'darker') !default;
-$border-color-active: palette.get('brand-gray', 'darker') !default;
+$color-active: palette.get('grayscale', 'white') !default;
+$background-color-active: palette.get('accent-gray', 'darker') !default;
+$border-color-active: palette.get('accent-gray', 'darker') !default;
 $box-shadow-active: none !default;
 
 //
@@ -40,5 +40,5 @@ $background-color-disabled: rgba(
   palette.get('background', 'dark'),
   50%
 ) !default;
-$border-color-disabled: palette.get('brand-gray', 'base') !default;
+$border-color-disabled: palette.get('accent-gray', 'base') !default;
 $box-shadow-disabled: none !default;
