@@ -65,16 +65,27 @@ const RenderColorItem = (label, color) =>
     </li>
   `;
 
-const RenderColors = ({ colors }) =>
-  `
-    <ul class="u-flex-grow-1 u-grid u-grid-cols-auto a-list-reset">
+const RenderColors = ({ colors, layout }) => {
+  let classname;
+  switch (layout) {
+    case 'dense':
+      classname = 'u-flex-grow-1 u-grid u-grid-cols-auto a-list-reset';
+      break;
+    default:
+      classname =
+        'u-flex-grow-1 u-grid u-grid-cols-auto a-list-reset u-gap-xxs';
+  }
+
+  return `
+    <ul class="${classname}">
       ${Object.entries(colors)
         .map((color) => RenderColorItem(color[0], color[1]))
         .join('')}
     </ul>
   `;
+};
 
-const RenderColorPaletteItem = ({ colors, withBackground }) => {
+const RenderColorPaletteItem = ({ colors, withBackground, layout }) => {
   const name = colors[0];
   const style =
     withBackground &&
@@ -86,7 +97,7 @@ const RenderColorPaletteItem = ({ colors, withBackground }) => {
 
   return `
     <li class="u-flex-grow-1 u-grid u-gap-s" style="${style}">
-      ${RenderColors({ colors: colors[1] })}
+      ${RenderColors({ colors: colors[1], layout })}
       <h3 class="${titleClassname}">
         ${name}
       </h3>
