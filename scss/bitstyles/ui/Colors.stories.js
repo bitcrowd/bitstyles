@@ -85,7 +85,7 @@ const RenderColorPaletteItem = ({ colors, withBackground }) => {
     : 'u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min';
 
   return `
-    <li class="u-grid u-gap-s" style="${style}">
+    <li class="u-flex-grow-1 u-grid u-gap-s" style="${style}">
       ${RenderColors({ colors: colors[1] })}
       <h3 class="${titleClassname}">
         ${name}
@@ -96,17 +96,29 @@ const RenderColorPaletteItem = ({ colors, withBackground }) => {
 
 const RenderColorPaletteList = ({
   palette,
-  dense = false,
+  layout = null,
   withBackground = false,
 }) => {
-  const classname = dense
-    ? 'a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l u-margin-xl-bottom u-items-start'
-    : 'a-list-reset u-grid u-gap-l u-grid-cols-2@l u-margin-xl-bottom u-items-start';
+  let classname;
+  switch (layout) {
+    case 'dense':
+      classname =
+        'a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l u-margin-xl-bottom u-items-start';
+      break;
+    case 'row':
+      classname = 'a-list-reset u-flex';
+      break;
+    default:
+      classname =
+        'a-list-reset u-grid u-gap-l u-grid-cols-2@l u-margin-xl-bottom u-items-start';
+  }
 
   return `
     <ul class="${classname}">
       ${Object.entries(expand(palette))
-        .map((colors) => RenderColorPaletteItem({ colors, withBackground }))
+        .map((colors) =>
+          RenderColorPaletteItem({ colors, withBackground, layout })
+        )
         .join('')}
     </ul>
   `;
@@ -117,12 +129,13 @@ const Template = (args) => RenderColorPaletteList(args);
 export const BaseColors = Template.bind({});
 BaseColors.args = {
   palette: { base: baseColorValues },
+  layout: 'row',
 };
 
 export const BasePalette = Template.bind({});
 BasePalette.args = {
   palette: basePaletteValues,
-  dense: true,
+  layout: 'dense',
   withBackground: true,
 };
 
