@@ -3,11 +3,11 @@
 @use '../../tools/media-query';
 
 .#{setup.$namespace}a-dl {
-  border-top: 1px solid palette.get('accent-gray', 'light');
+  border-top: 1px solid palette.get('text', 'light');
 }
 
 @include media-query.get('m') {
   .#{setup.$namespace}a-dl__item {
-    border-bottom: 1px solid palette.get('accent-gray', 'light');
+    border-bottom: 1px solid palette.get('text', 'light');
   }
 }

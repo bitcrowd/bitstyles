@@ -3,9 +3,10 @@
 $values: (
   'brand-1': palette.get('brand-1', 'base'),
   'brand-2': palette.get('brand-2', 'base'),
-  'gray': palette.get('accent-gray', 'base'),
-  'gray-light': palette.get('accent-gray', 'light'),
+  'gray': palette.get('text', 'base'),
+  'gray-light': palette.get('text', 'light'),
   'text': palette.get('text', 'base'),
+  'text-darker': palette.get('text', 'darker'),
   'text-light': palette.get('text', 'light'),
   'text-lighter': palette.get('text', 'lighter'),
   'warning': palette.get('warning', 'base'),

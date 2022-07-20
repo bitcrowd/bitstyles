@@ -22,27 +22,20 @@ $palette: (
     'darkest': base-palette.get('brand-2', '50'),
   ),
   'text': (
-    'lightest': base-palette.get('accent-gray', '180'),
-    'lighter': base-palette.get('accent-gray', '170'),
-    'light': base-palette.get('accent-gray', '130'),
-    'base': base-palette.get('accent-gray', '30'),
-    'dark': base-palette.get('accent-gray', '10'),
+    'lighter': base-palette.get('accent-gray', '180'),
+    'light': base-palette.get('accent-gray', '170'),
+    'base': base-palette.get('accent-gray', '120'),
+    'dark': base-palette.get('accent-gray', '80'),
+    'darker': base-palette.get('accent-gray', '30'),
   ),
   'background': (
-    'base': base-palette.get('accent-gray', '195'),
+    'base': base-palette.get('pure-gray', '100'),
     'dark': base-palette.get('accent-gray', '190'),
     'darker': base-palette.get('accent-gray', '180'),
   ),
   'grayscale': (
     'white': base-palette.get('pure-gray', '100'),
     'black': base-palette.get('pure-gray', '0'),
-  ),
-  'accent-gray': (
-    'lighter': base-palette.get('accent-gray', '195'),
-    'light': base-palette.get('accent-gray', '175'),
-    'base': base-palette.get('accent-gray', '120'),
-    'dark': base-palette.get('accent-gray', '80'),
-    'darker': base-palette.get('accent-gray', '35'),
   ),
   'danger': (
     'lighter': base-palette.get('red', '195'),

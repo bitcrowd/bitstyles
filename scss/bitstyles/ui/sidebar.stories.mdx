@@ -81,7 +81,7 @@ Uses a fullwidth dropdown to fit with no overlap.
     {`
       <div class="u-flex u-height-100vh" x-data="{ sidebarOpen: false }">
         <nav class="u-flex">
-          <div class="u-hidden o-sidebar--large u-flex-shrink-0 u-bg-gray-darkest u-padding-m-top u-flex@l u-flex-col">
+          <div class="u-hidden o-sidebar--large u-flex-shrink-0 u-bg-gray-darker u-padding-m-top u-flex@l u-flex-col">
             <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex-shrink-0 u-margin-m-left u-margin-m-right u-margin-m-bottom" />
             <ul class="u-flex-grow-1 u-flex-shrink-1 u-overflow-y-auto a-list-reset u-flex u-flex-col u-items-stretch u-padding-xs-right u-padding-xs-left">
               <li class="u-margin-xs-bottom u-flex">
@@ -363,8 +363,8 @@ The location can be either `left` or `right`, to specify which side of the scree
 ```scss
 $small-location: left;
 $small-box-shadow: size.get('m') 0 size.get('l') rgba(palette.get('brand-1', 'base'), 0.1),
-  size.get('l') 0 size.get('m') rgba(palette.get('accent-gray', 'dark'), 0.07),
-  0 0 size.get('xl') rgba(palette.get('accent-gray', 'dark'), 0.1);
+  size.get('l') 0 size.get('m') rgba(palette.get('text', 'light'), 0.07),
+  0 0 size.get('xl') rgba(palette.get('text', 'light'), 0.1);
 ```
 
 By default the sidebar will animate into view and back out, assuming the classes `.is-off-screen` and `.is-on-screen` will be applied using JS. The classnames and the styles to be applied can be overridden. Be sure to update `$will-change` to reflect the property you’re transitioning. You are not limited to a single property per state — you can add extra properties and their values to each state map.

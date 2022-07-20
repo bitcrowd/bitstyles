@@ -30,11 +30,11 @@ $border-color-checked: palette.get('brand-1') !default;
 //
 // Disabled colors ////////////////////////////////////////
 $color-disabled: palette.get('text', 'light') !default;
-$background-color-disabled: palette.get('text', 'lightest') !default;
+$background-color-disabled: palette.get('text', 'lighter') !default;
 $border-color-disabled: palette.get('text', 'light') !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
 $color-disabled-checked: palette.get('text', 'light') !default;
-$background-color-disabled-checked: palette.get('text', 'lightest') !default;
+$background-color-disabled-checked: palette.get('text', 'lighter') !default;
 $border-color-disabled-checked: palette.get('text', 'light') !default;

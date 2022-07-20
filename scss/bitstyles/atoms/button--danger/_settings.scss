@@ -32,6 +32,6 @@ $box-shadow-active: shadow.to-box-shadow(
 // Disabled colors ////////////////////////////////////////
 
 $color-disabled: palette.get('text', 'light') !default;
-$background-color-disabled: palette.get('text', 'lightest') !default;
-$border-color-disabled: palette.get('text', 'lightest') !default;
+$background-color-disabled: palette.get('text', 'lighter') !default;
+$border-color-disabled: palette.get('text', 'lighter') !default;
 $box-shadow-disabled: none !default;

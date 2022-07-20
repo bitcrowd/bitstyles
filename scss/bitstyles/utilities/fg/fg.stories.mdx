@@ -29,7 +29,7 @@ Specify the `color` property of an element.
   </Story>
   <Story name="text">
     {`
-      <div class="u-fg-text" style="padding: 1em;background-color:#eee;">u-fg-text</div>
+      <div class="u-fg-text--darker" style="padding: 1em;background-color:#eee;">u-fg-text--darker</div>
     `}
   </Story>
   <Story name="text-light">
@@ -58,8 +58,8 @@ The available display types can be customized by overriding the `$bitstyles-fg-v
   $values: (
     'brand-1': palette.get('brand-1', 'base'),
     'brand-2': palette.get('brand-2', 'base'),
-    'gray-light': palette.get('accent-gray', 'light'),
-    'gray': palette.get('accent-gray', 'base'),
+    'gray-light': palette.get('text', 'light'),
+    'gray': palette.get('text', 'base'),
     'text': palette.get('text', 'base'),
     'text-light': palette.get('text', 'light'),
     'text-lighter': palette.get('text', 'lighter'),

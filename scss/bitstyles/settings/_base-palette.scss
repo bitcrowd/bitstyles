@@ -4,7 +4,7 @@
 @use './base-colors';
 
 $accent-gray-color: map.get(base-colors.$colors, 'brand-1') !default;
-$accent-gray-saturation: -78% !default;
+$accent-gray-saturation: -85% !default;
 $palette: (
   'pure-gray':
     bs-color.generate-scale(

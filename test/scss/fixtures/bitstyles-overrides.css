@@ -162,7 +162,7 @@ img {
 a {
   -webkit-text-decoration-skip: ink;
   -webkit-appearance: none;
-  background-color: none;
+  background-color: transparent;
   border: 0;
   box-shadow: none;
   color: red;
@@ -174,20 +174,20 @@ a {
   transition: color 75ms ease-out;
 }
 a:visited {
-  background-color: none;
+  background-color: transparent;
   box-shadow: none;
   color: #000;
   text-decoration: none;
 }
 a:focus,
 a:hover {
-  background-color: none;
+  background-color: transparent;
   box-shadow: none;
   color: #000;
   text-decoration: underline;
 }
 a:active {
-  background-color: none;
+  background-color: transparent;
   box-shadow: none;
   color: #000;
   text-decoration: underline;
@@ -513,8 +513,9 @@ textarea:invalid,
 textarea[aria-invalid='true'] {
   background-color: #000;
   border-color: #000;
-  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.5), 0 0 2.5rem rgba(0, 0, 0, 0.5),
-    0 0 3.75rem rgba(0, 0, 0, 0.5), 0 0 7.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.05),
+    0 0 3.3333333333rem rgba(0, 0, 0, 0.05), 0 0 5rem rgba(0, 0, 0, 0.05),
+    0 0 10rem rgba(0, 0, 0, 0.05);
   color: #000;
 }
 [type='date']:disabled,
@@ -739,17 +740,18 @@ table {
 .bs-a-button:visited {
   background: #000;
   border: 1.25rem solid #000;
-  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2),
-    0 0 1.6666666667rem rgba(0, 0, 0, 0.2), 0 0 2.5rem rgba(0, 0, 0, 0.2),
-    0 0 5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.025),
+    0 0 3.3333333333rem rgba(0, 0, 0, 0.025), 0 0 5rem rgba(0, 0, 0, 0.025),
+    0 0 10rem rgba(0, 0, 0, 0.025);
   color: #000;
 }
 .bs-a-button:focus,
 .bs-a-button:hover {
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.2), 0 0 2.5rem rgba(0, 0, 0, 0.2),
-    0 0 3.75rem rgba(0, 0, 0, 0.2), 0 0 7.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.025),
+    0 0 4.1666666667rem rgba(0, 0, 0, 0.025), 0 0 6.25rem rgba(0, 0, 0, 0.025),
+    0 0 12.5rem rgba(0, 0, 0, 0.025);
   color: #000;
   outline: none;
   text-decoration: none;
@@ -757,9 +759,9 @@ table {
 .bs-a-button:active {
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.3),
-    0 0 1.6666666667rem rgba(0, 0, 0, 0.3), 0 0 2.5rem rgba(0, 0, 0, 0.3),
-    0 0 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.025),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
+    0 0 5rem rgba(0, 0, 0, 0.025);
   color: #000;
 }
 .bs-a-button:disabled,
@@ -857,8 +859,8 @@ table {
   box-shadow: none;
   color: #000;
 }
-.bs-a-button--icon-reversed:disabled,
-.bs-a-button--icon-reversed[aria-disabled='true'] {
+.bsa-button--icon-reversed:disabled,
+.bsa-button--icon-reversed[aria-disabled='true'] {
   background: transparent;
   border-color: transparent;
   box-shadow: none;
@@ -916,24 +918,25 @@ table {
 .bs-a-button--mode:hover {
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.05),
-    0 0 3.3333333333rem rgba(0, 0, 0, 0.05), 0 0 5rem rgba(0, 0, 0, 0.05),
-    0 0 10rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.025),
+    0 0 4.1666666667rem rgba(0, 0, 0, 0.025), 0 0 6.25rem rgba(0, 0, 0, 0.025),
+    0 0 12.5rem rgba(0, 0, 0, 0.025);
   color: #000;
 }
 .bs-a-button--mode:active {
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.05),
-    0 0 1.6666666667rem rgba(0, 0, 0, 0.05), 0 0 2.5rem rgba(0, 0, 0, 0.05),
-    0 0 5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.025),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
+    0 0 5rem rgba(0, 0, 0, 0.025);
   color: #000;
 }
 .bs-a-button--mode[aria-pressed='true'] {
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.05), 0 0 2.5rem rgba(0, 0, 0, 0.05),
-    0 0 3.75rem rgba(0, 0, 0, 0.05), 0 0 7.5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.025),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
+    0 0 5rem rgba(0, 0, 0, 0.025);
   color: #000;
 }
 .bs-a-button--mode:disabled,
@@ -1111,20 +1114,26 @@ table {
 .bs-a-button--ui:visited {
   background: #000;
   border-color: #000;
-  box-shadow: none;
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.025),
+    0 0 3.3333333333rem rgba(0, 0, 0, 0.025), 0 0 5rem rgba(0, 0, 0, 0.025),
+    0 0 10rem rgba(0, 0, 0, 0.025);
   color: #000;
 }
 .bs-a-button--ui:focus,
 .bs-a-button--ui:hover {
   background: #000;
   border-color: #000;
-  box-shadow: none;
+  box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.025),
+    0 0 4.1666666667rem rgba(0, 0, 0, 0.025), 0 0 6.25rem rgba(0, 0, 0, 0.025),
+    0 0 12.5rem rgba(0, 0, 0, 0.025);
   color: #000;
 }
 .bs-a-button--ui:active {
   background: #000;
   border-color: #000;
-  box-shadow: none;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.025),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
+    0 0 5rem rgba(0, 0, 0, 0.025);
   color: #000;
 }
 .bs-a-button--ui:disabled,
@@ -1143,12 +1152,10 @@ table {
 }
 .bs-a-card {
   border-radius: 10rem;
-  box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
-    0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
-    0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
-    0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
-    0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
-    0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
+  box-shadow: 0 1.6666666667rem 6.6666666667rem rgba(0, 0, 0, 0.025),
+        0 2rem 8rem rgba(0, 0, 0, 0.025), 0 2.5rem 10rem rgba(0, 0, 0, 0.025),
+        0 3.3333333333rem 13.3333333333rem rgba(0, 0, 0, 0.025),
+        0 5rem 20rem rgba(0, 0, 0, 0.025), 0 10rem 40rem rgba(0, 0, 0, 0.025);
   overflow: hidden;
   padding: 10rem;
 }
@@ -1159,12 +1166,10 @@ table {
 }
 .bs-a-card-s {
   border-radius: 10rem;
-  box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
-    0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
-    0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
-    0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
-    0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
-    0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
+  box-shadow: 0 1.6666666667rem 6.6666666667rem rgba(0, 0, 0, 0.025),
+      0 2rem 8rem rgba(0, 0, 0, 0.025), 0 2.5rem 10rem rgba(0, 0, 0, 0.025),
+      0 3.3333333333rem 13.3333333333rem rgba(0, 0, 0, 0.025),
+      0 5rem 20rem rgba(0, 0, 0, 0.025), 0 10rem 40rem rgba(0, 0, 0, 0.025);
   overflow: hidden;
   padding: 20rem;
 }
@@ -1176,12 +1181,10 @@ table {
 @media screen and (min-width: 30em) {
   .bs-a-card\@m {
     border-radius: 10rem;
-    box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
-      0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
-      0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
-      0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
-      0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
-      0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
+    box-shadow: 0 1.6666666667rem 6.6666666667rem rgba(0, 0, 0, 0.025),
+      0 2rem 8rem rgba(0, 0, 0, 0.025), 0 2.5rem 10rem rgba(0, 0, 0, 0.025),
+      0 3.3333333333rem 13.3333333333rem rgba(0, 0, 0, 0.025),
+      0 5rem 20rem rgba(0, 0, 0, 0.025), 0 10rem 40rem rgba(0, 0, 0, 0.025);
     overflow: hidden;
     padding: 10rem;
   }
@@ -1192,12 +1195,10 @@ table {
   }
   .bs-a-card-s\@m {
     border-radius: 10rem;
-    box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
-      0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
-      0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
-      0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
-      0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
-      0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
+    box-shadow: 0 1.6666666667rem 6.6666666667rem rgba(0, 0, 0, 0.025),
+      0 2rem 8rem rgba(0, 0, 0, 0.025), 0 2.5rem 10rem rgba(0, 0, 0, 0.025),
+      0 3.3333333333rem 13.3333333333rem rgba(0, 0, 0, 0.025),
+      0 5rem 20rem rgba(0, 0, 0, 0.025), 0 10rem 40rem rgba(0, 0, 0, 0.025);
     overflow: hidden;
     padding: 20rem;
   }
@@ -1210,12 +1211,10 @@ table {
 @media screen and (min-width: 55em) {
   .bs-a-card\@l {
     border-radius: 10rem;
-    box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
-      0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
-      0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
-      0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
-      0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
-      0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
+    box-shadow: 0 1.6666666667rem 6.6666666667rem rgba(0, 0, 0, 0.025),
+      0 2rem 8rem rgba(0, 0, 0, 0.025), 0 2.5rem 10rem rgba(0, 0, 0, 0.025),
+      0 3.3333333333rem 13.3333333333rem rgba(0, 0, 0, 0.025),
+      0 5rem 20rem rgba(0, 0, 0, 0.025), 0 10rem 40rem rgba(0, 0, 0, 0.025);
     overflow: hidden;
     padding: 10rem;
   }
@@ -1226,12 +1225,10 @@ table {
   }
   .bs-a-card-s\@l {
     border-radius: 10rem;
-    box-shadow: 0 1.25rem 2.0833333333rem rgba(0, 0, 0, 0.025),
-      0 1.5rem 2.5rem rgba(0, 0, 0, 0.025),
-      0 1.875rem 3.125rem rgba(0, 0, 0, 0.025),
-      0 2.5rem 4.1666666667rem rgba(0, 0, 0, 0.025),
-      0 3.75rem 6.25rem rgba(0, 0, 0, 0.025),
-      0 7.5rem 12.5rem rgba(0, 0, 0, 0.025);
+    box-shadow: 0 1.6666666667rem 6.6666666667rem rgba(0, 0, 0, 0.025),
+      0 2rem 8rem rgba(0, 0, 0, 0.025), 0 2.5rem 10rem rgba(0, 0, 0, 0.025),
+      0 3.3333333333rem 13.3333333333rem rgba(0, 0, 0, 0.025),
+      0 5rem 20rem rgba(0, 0, 0, 0.025), 0 10rem 40rem rgba(0, 0, 0, 0.025);
     overflow: hidden;
     padding: 20rem;
   }
@@ -1375,7 +1372,7 @@ table {
 .bs-a-link {
   -webkit-text-decoration-skip: ink;
   -webkit-appearance: none;
-  background-color: none;
+  background-color: transparent;
   border: 0;
   box-shadow: none;
   color: red;
@@ -1386,20 +1383,20 @@ table {
   text-decoration-skip-ink: auto;
   transition: color 75ms ease-out;
 }
-.bs-a-link:visited {
+.bsa-link:visited {
   background-color: none;
   box-shadow: none;
   color: #000;
   text-decoration: none;
 }
-.bs-a-link:focus,
-.bs-a-link:hover {
+.bsa-link:focus,
+.bsa-link:hover {
   background-color: none;
   box-shadow: none;
   color: #000;
   text-decoration: underline;
 }
-.bs-a-link:active {
+.bsa-link:active {
   background-color: none;
   box-shadow: none;
   color: #000;
@@ -1707,6 +1704,11 @@ table {
 }
 @media screen and (min-width: 30em) {
   .bs-u-col-start-100\@m {
+    grid-column-start: 100;
+  }
+}
+@media screen and (min-width: 55em) {
+  .bs-u-col-start-100\@l {
     grid-column-start: 100;
   }
 }

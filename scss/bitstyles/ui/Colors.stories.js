@@ -55,7 +55,7 @@ const RenderColorItem = (label, color) =>
   `
     <li style="background-color: ${color}; min-height:3rem;" class="u-aspect-ratio-1-1">
       <div
-        class="u-margin-xs-left u-margin-xs-top u-fg-text"
+        class="u-margin-xs-left u-margin-xs-top u-fg-text--darker"
         style="font-size: 0.625rem;"
       >
         <strong class="u-bg-white u-padding-xxs-x">${label}</strong>

@@ -3,7 +3,7 @@
 
 $bitstyles-animation-transition-easing: ease-out;
 $bitstyles-breakpoints-boundary-width: 10em;
-$bitstyles-color-palette-color-palette: (
+$bitstyles-color-palette-palette: (
   'text': (
     'lightest': #000,
     'lighter': #000,
@@ -32,7 +32,11 @@ $bitstyles-color-palette-color-palette: (
     'base': #000,
     'dark': #000,
   ),
-  'brand-gray': (
+  'grayscale': (
+    'white': #000,
+    'black': #000,
+  ),
+  'accent-gray': (
     'lighter': #000,
     'light': #000,
     'base': #000,

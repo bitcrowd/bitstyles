@@ -15,33 +15,33 @@ $transition: color animation.$transition-duration animation.$transition-easing,
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('accent-gray', 'lighter') !default;
-$background-color: palette.get('accent-gray', 'darker') !default;
-$border-color: palette.get('accent-gray', 'darker') !default;
+$color: palette.get('text', 'lighter') !default;
+$background-color: palette.get('text', 'base') !default;
+$border-color: palette.get('text', 'base') !default;
 $box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
 $color-hover: palette.get('grayscale', 'white') !default;
-$background-color-hover: palette.get('accent-gray', 'base') !default;
-$border-color-hover: palette.get('accent-gray', 'base') !default;
+$background-color-hover: palette.get('text', 'base') !default;
+$border-color-hover: palette.get('text', 'base') !default;
 $box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
 
 $color-active: palette.get('text') !default;
-$background-color-active: palette.get('accent-gray', 'light') !default;
-$border-color-active: palette.get('accent-gray', 'light') !default;
+$background-color-active: palette.get('text', 'light') !default;
+$border-color-active: palette.get('text', 'light') !default;
 $box-shadow-active: none !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
 $color-disabled: palette.get('text', 'light') !default;
-$background-color-disabled: palette.get('text', 'lightest') !default;
-$border-color-disabled: palette.get('text', 'lightest') !default;
+$background-color-disabled: palette.get('text', 'lighter') !default;
+$border-color-disabled: palette.get('text', 'lighter') !default;
 $box-shadow-disabled: none !default;
 
 //

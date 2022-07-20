@@ -1,8 +1,8 @@
 @use '../../tools/palette';
 
 $values: (
-  'gray-dark': 1px solid palette.get('accent-gray', 'dark'),
-  'gray-light': 1px solid palette.get('accent-gray', 'light'),
+  'gray-dark': 1px solid palette.get('text', 'dark'),
+  'gray-light': 1px solid palette.get('text', 'light'),
 ) !default;
 $breakpoints: () !default;
 $directions: (
