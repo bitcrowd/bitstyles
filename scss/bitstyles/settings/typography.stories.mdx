@@ -64,7 +64,7 @@ $font-sizes: (
 
 In most cases, it’s recommended to use the appropriate utility classes to apply font-size. See the documentation of the classes for information on defaults & customization:
 
-- [`responsive-typography`](/docs/utilities-responsive-typography--typography)
+- [`typography-responsive`](/docs/utilities-typography-responsive--typography)
 - [`typography`](/docs/utilities-typography--typography)
 
 There are also helper functions in Sass that can be used to create styles in your components that match those utility classes, so you can maintain consistency — see the next sections for details.
@@ -195,7 +195,7 @@ You can specify the font-sizes and names for each of your base font-size design 
 
 #### Responsive font-sizes
 
-By overriding `$bitstyles-responsive-typography-font-sizes`, you can specify which font-sizes are applied to which HTML elements (in [`base/typography`](/docs/base-typography-responsive-headings--h-1)) and responsive-typography utility classes (in [`utilities/responsive-typography`](/docs/utilities-responsive-typography--typography)), and at which breakpoints.
+By overriding `$bitstyles-typography-responsive-font-sizes`, you can specify which font-sizes are applied to which HTML elements (in [`base/typography`](/docs/base-typography-responsive-headings--h-1)) and responsive-typography utility classes (in [`utilities/typography-responsive`](/docs/utilities-typography-responsive--typography)), and at which breakpoints.
 
 Using a mobile-first approach, the first Sass map of font-sizes shown below apply for all screensizes, until overridden at the `m` breakpoint (see [breakpoints](/docs/design-tokens-breakpoints--page)). You can provide font-size maps at every breakpoint available in your base breakpoints if you wish.
 

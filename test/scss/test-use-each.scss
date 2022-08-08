@@ -397,8 +397,6 @@
     'l',
   )
 );
-@use '../../scss/bitstyles/utilities/responsive-typography' as
-  responsive-typography-utilities;
 @use '../../scss/bitstyles/utilities/row-start' with (
   $values: (
     '100': 100,
@@ -417,6 +415,8 @@
 );
 @use '../../scss/bitstyles/utilities/text';
 @use '../../scss/bitstyles/utilities/truncate';
+@use '../../scss/bitstyles/utilities/typography-responsive' as
+  typography-responsive-utilities;
 @use '../../scss/bitstyles/utilities/typography' as typography-utilities with (
   $values: (
     '100': 100rem,

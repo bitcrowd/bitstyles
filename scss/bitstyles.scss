@@ -107,12 +107,12 @@
 @forward 'bitstyles/utilities/overflow' as overflow-*;
 @forward 'bitstyles/utilities/padding' as padding-*;
 @forward 'bitstyles/utilities/position' as position-*;
-@forward 'bitstyles/utilities/responsive-typography' as
-  responsive-typography-utilities-*;
 @forward 'bitstyles/utilities/row-start' as row-start-*;
 @forward 'bitstyles/utilities/self' as self-*;
 @forward 'bitstyles/utilities/sr-only' as sr-only-*;
 @forward 'bitstyles/utilities/text' as text-*;
 @forward 'bitstyles/utilities/truncate' as truncate-*;
+@forward 'bitstyles/utilities/typography-responsive' as
+  typography-responsive-utilities*;
 @forward 'bitstyles/utilities/typography' as typography-utilities-*;
 @forward 'bitstyles/utilities/z-index' as z-index-*;

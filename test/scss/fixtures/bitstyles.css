@@ -3946,50 +3946,6 @@ table {
     position: sticky;
   }
 }
-.u-h1 {
-  font-size: 2rem;
-}
-.u-h2 {
-  font-size: 1.7rem;
-}
-.u-h3 {
-  font-size: 1.45rem;
-}
-.u-h4 {
-  font-size: 1.25rem;
-}
-.u-h5 {
-  font-size: 1rem;
-}
-.u-h6 {
-  font-size: 0.8rem;
-}
-.u-body {
-  font-size: 1rem;
-}
-@media screen and (min-width: 30em) {
-  .u-h1 {
-    font-size: 4.8rem;
-  }
-  .u-h2 {
-    font-size: 3rem;
-  }
-  .u-h3 {
-    font-size: 2rem;
-  }
-  .u-h4 {
-    font-size: 1.45rem;
-  }
-  .u-h5 {
-    font-size: 1rem;
-  }
-  .u-h6 {
-    font-size: 0.8rem;
-  }
-  .u-body {
-    font-size: 1rem;
-  }
-}
 .u-row-start-1 {
   grid-row-start: 1;
 }
@@ -4106,6 +4062,50 @@ table {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.u-h1 {
+  font-size: 2rem;
+}
+.u-h2 {
+  font-size: 1.7rem;
+}
+.u-h3 {
+  font-size: 1.45rem;
+}
+.u-h4 {
+  font-size: 1.25rem;
+}
+.u-h5 {
+  font-size: 1rem;
+}
+.u-h6 {
+  font-size: 0.8rem;
+}
+.u-body {
+  font-size: 1rem;
+}
+@media screen and (min-width: 30em) {
+  .u-h1 {
+    font-size: 4.8rem;
+  }
+  .u-h2 {
+    font-size: 3rem;
+  }
+  .u-h3 {
+    font-size: 2rem;
+  }
+  .u-h4 {
+    font-size: 1.45rem;
+  }
+  .u-h5 {
+    font-size: 1rem;
+  }
+  .u-h6 {
+    font-size: 0.8rem;
+  }
+  .u-body {
+    font-size: 1rem;
+  }
 }
 .u-text-1 {
   font-size: 0.8rem;

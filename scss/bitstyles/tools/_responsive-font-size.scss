@@ -5,12 +5,12 @@
 
 // Font-size
 //
-// **Outputs requested responsive font-sizes from the global `responsive-typography.$font-sizes` map.**
+// **Outputs requested responsive font-sizes from the global `typography-responsive.$font-sizes` map.**
 // e.g. `@include responsive-font-size.get('h1');`
 //
-// @param {String} $font-size  The font-size as named in the `responsive-typography.$font-sizes` map
+// @param {String} $font-size  The font-size as named in the `typography-responsive.$font-sizes` map
 //
-// @param {String} $breakpoint   Optional. Defaults to `null`, which outputs the font-sizes at each breakpoint defined in `responsive-typography.$font-sizes`. If you pass a $breakpoint parameter, the output will be the font-size at that specific breakpoint
+// @param {String} $breakpoint   Optional. Defaults to `null`, which outputs the font-sizes at each breakpoint defined in `typography-responsive.$font-sizes`. If you pass a $breakpoint parameter, the output will be the font-size at that specific breakpoint
 //
 
 @mixin get($font-size, $breakpoint: null) {
