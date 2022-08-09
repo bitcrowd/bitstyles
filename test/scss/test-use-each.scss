@@ -351,6 +351,8 @@
     '10': 10,
   )
 );
+@use '../../scss/bitstyles/utilities/line-height-responsive' as
+  line-height-responsive-utilities;
 @use '../../scss/bitstyles/utilities/margin' with (
   $breakpoints: (
     'xl',
@@ -416,13 +418,7 @@
 @use '../../scss/bitstyles/utilities/text';
 @use '../../scss/bitstyles/utilities/truncate';
 @use '../../scss/bitstyles/utilities/typography-responsive' as
-  typography-responsive-utilities with (
-  $values: (
-    'xl': (
-      'h1': 100rem,
-    ),
-  )
-);
+  typography-responsive-utilities;
 @use '../../scss/bitstyles/utilities/typography' as typography-utilities with (
   $values: (
     '100': 100rem,

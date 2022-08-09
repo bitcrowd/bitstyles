@@ -1,0 +1,5 @@
+@use '../../settings/setup';
+@use '../../settings/typography-responsive';
+@use '../../tools/line-height';
+
+$values: typography-responsive.$line-heights !default;

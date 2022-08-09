@@ -1,0 +1,20 @@
+@forward './settings';
+@use './settings';
+@use '../../settings/setup';
+@use '../../tools/typography';
+@use '../../tools/properties';
+
+/* stylelint-disable scss/dollar-variable-default */
+$classname-prefix: properties.join-with-dashes(
+  $string-items: (
+    setup.$namespace,
+    'u-line-height',
+  ),
+);
+/* stylelint-enable scss/dollar-variable-default */
+
+@include typography.output-responsive-font-sizes(
+  $prefix: '.#{$classname-prefix}-',
+  $font-sizes: settings.$values,
+  $attribute: 'line-height',
+);

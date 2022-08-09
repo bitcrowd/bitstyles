@@ -17,12 +17,22 @@
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 //
 
-@mixin output-responsive-font-sizes($font-sizes, $prefix: null) {
+@mixin output-responsive-font-sizes($font-sizes, $prefix: null, $attribute: 'font-size') {
   @each $breakpoint, $font-size-list in $font-sizes {
     @include media-query.get($breakpoint) {
-      @each $name, $font-size in ($font-size-list) {
-        #{$prefix}#{$name} {
-          font-size: $font-size;
+      @each $name, $font-attributes in ($font-size-list) {
+        @if type-of($font-attributes) != map {
+          #{$prefix}#{$name} {
+            #{$attribute}: $font-attributes;
+          }
+        } @else {
+          @each $name, $property in ($font-attributes) {
+            #{$prefix}#{$name} {
+              @each $key, $value in ($property) {
+                #{$key}: #{$value};
+              }
+            }
+          }
         }
       }
     }

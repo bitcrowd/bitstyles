@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '../settings/typography';
+
+// Line-height
+//
+// **Returns requested line-height from the global `typography.$line-heights` map.**
+// e.g. `line-height: line-height.get('1');`
+//
+// @param {String} $line-height  The line-height, as named in the `typography.$line-heights` map
+//
+// @param {String} $breakpoint   Optional. Defaults to `base`, you can request the line-height at other breakpoints as defined in the `typography.$line-heights` map
+//
+
+@function get($line-height) {
+  @if map.has-key(typography.$line-heights, $line-height) {
+    @return map.get(typography.$line-heights, $line-height);
+  } @else {
+    @error 'Oops! There’s no line-height ‘#{$line-height}’.';
+  }
+}
