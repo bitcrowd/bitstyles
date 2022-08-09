@@ -55,7 +55,7 @@ const RenderColorItem = (label, color) =>
   `
     <li style="background-color: ${color}; min-height:3rem;" class="u-aspect-ratio-1-1">
       <div
-        class="u-margin-xs-left u-margin-xs-top u-fg-text--darker"
+        class="u-margin-xs-left u-margin-xs-top u-fg-text-darker"
         style="font-size: 0.625rem;"
       >
         <strong class="u-bg-white u-padding-xxs-x">${label}</strong>
@@ -96,7 +96,7 @@ const RenderColorPaletteItem = ({ colors, withBackground, layout }) => {
     : 'u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min';
 
   return `
-    <li class="u-flex-grow-1 u-grid u-gap-s" style="${style}">
+    <li class="u-flex-grow-1 u-grid u-gap-xs" style="${style}">
       ${RenderColors({ colors: colors[1], layout })}
       <h3 class="${titleClassname}">
         ${name}
