@@ -8,6 +8,12 @@
 - The `properties.join-with-dashes()` function now handles adding the breakpoint suffix with a preceding `@` symbol, when you pass `$at-suffix`
 - `media-query.get()` will now output the content block you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`. This is useful for outputing base CSS with media-query wrapped CSS in one loop
 - The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
+- A new typography configuration `typography.$line-heights` is available with additional setup config for line-heights.
+
+### Changed
+- Renamed `typography.$font-sizes` to `typography.$typographic-scale` which also includes `line-height`.
+- Newly configured `line-height` utility classes to include the base `typography.$line-heights`
+- The `output-responsive-font-sizes` mixin expects a map data structure which includes `font-size` and `line-height`. If you were using the mixin you would have to change the parameter passed.
 
 ### Changed
 

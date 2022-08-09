@@ -78,13 +78,19 @@
   $setup-namespace: 'bs',
   $typography-webfont-family-name: 'FakeFont',
   $typography-webfont-base-url: './',
-  $typography-responsive-font-sizes: (
+  $typography-responsive-typographic-scale: (
     'm': (
-      'h1': 10rem,
+      'h1': (
+        'font-size': 10rem,
+        'line-height': 200,
+      ),
     ),
     'xl': (
-      'h1': 20rem,
-    )
+      'h1': (
+        'font-size': 30rem,
+        'line-height': 400,
+      ),
+    ),
   ),
   $link-color: #f00,
   // base
@@ -97,14 +103,6 @@
   $select-border-radius: 10rem,
   $base-typography-margin-heading: 10rem,
   $base-typography-margin-paragraph: 10rem,
-  $base-typography-font-sizes: (
-    'm': (
-      'h1': 10rem,
-    ),
-    'xl': (
-      'h1': 20rem,
-    )
-  ),
   // atoms
   $avatar-sizes: ('xl': 10rem),
   $badge-color: '10',

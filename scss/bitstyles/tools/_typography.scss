@@ -22,11 +22,9 @@
   @each $breakpoint, $font-size-list in $font-sizes {
     @include media-query.get($breakpoint) {
       @each $name, $font-attributes in ($font-size-list) {
-        @each $name, $property in ($font-attributes) {
-          #{$prefix}#{$name} {
-            @each $key, $value in ($property) {
-              #{$key}: #{$value};
-            }
+        #{$prefix}#{$name} {
+          @each $property-name, $property-value in ($font-attributes) {
+            #{$property-name}: #{$property-value};
           }
         }
       }
