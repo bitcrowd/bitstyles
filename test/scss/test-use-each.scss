@@ -107,7 +107,7 @@
         'line-height': 400,
       ),
     ),
-  ),
+  )
 );
 @use '../../scss/bitstyles/settings/link' as settings-link with (
   $color: #f00
@@ -149,7 +149,7 @@
 );
 @use '../../scss/bitstyles/base/typography' as base-typography with (
   $margin-heading: 10rem,
-  $margin-paragraph: 10rem,
+  $margin-paragraph: 10rem
 );
 
 //
