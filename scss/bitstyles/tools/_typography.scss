@@ -17,6 +17,7 @@
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 //
 
+/* stylelint-disable max-nesting-depth */
 @mixin output-responsive-font-sizes($font-sizes, $prefix: null) {
   @each $breakpoint, $font-size-list in $font-sizes {
     @include media-query.get($breakpoint) {
@@ -32,3 +33,4 @@
     }
   }
 }
+/* stylelint-enable max-nesting-depth */
