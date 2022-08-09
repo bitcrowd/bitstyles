@@ -10,15 +10,15 @@ There are several aspects to typography which are handled by systems in bitstyle
 
 Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default configuration provides base design tokens for font-sizes based on a ratio of 1.17 between each font-size.
 
-These base tokens are used to create a responsive typographic scale that’s applied to the base elements `h1` – `h6` and the corresponding utility classes `.u-h1` – `.u-h6`, and then utility classes producing exceptions `.u-text-1` to `.u-text-8` at specific breakpoints.
+These base tokens are used to create a responsive typographic scale that’s applied to the base elements `h1` – `h6` and the corresponding utility classes `.u-h1` – `.u-h6`. The utility classes `.u-text-1` to `.u-text-8` produce exceptions to this responsive typography at specific breakpoints.
 
-For more details on these, see
+For more details on using these, see
 
 - [responsive typography](/docs/base-typography-responsive-headings--h-1) — font-sizes specified for HTML elememnts (e.g. `h1` – `h6`) that adjust to the size of the viewport using a mobile-first approach
 - [utility classes](/docs/utilities-typography--typography) that apply the same responsive typography as the base elements, for when you need arbritrary elements to consistently match your heading elements
 - [utility classes](/docs/utilities-typography--typography) that apply specific font-sizes at specified breakpoints
 
-The default setup provides the following typographic scales, see [customization](#customization) below for details on how to change that:
+The default setup provides the following typographic scales. See [customization](#customization) below for details on how to change that:
 
 ```scss
 /* settings/typography */
@@ -108,7 +108,7 @@ With the default setup this will output:
 
 Use the `font-size.get()` function for accessing the font-sizes specified in your base design tokens. This is useful when you need a component’s font-size to be rendered differently to your standard responsive typography.
 
-In your Sass file first import the `font-size` tools, then use the `get()` function, passing in the font-size you need:
+Import the `font-size` tools, then use the `get()` function, passing in the font-size you need:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/font-size';
