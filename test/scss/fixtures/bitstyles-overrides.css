@@ -1478,7 +1478,7 @@ table {
   top: 0;
   z-index: 1;
 }
-.bso-modal__overlay {
+.bs-o-modal__overlay {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background: rgba(0, 0, 0, 0.95);
@@ -1492,12 +1492,12 @@ table {
   will-change: opacity, transform, visibility;
   z-index: 10;
 }
-[aria-hidden='true'] .bso-modal__overlay {
+[aria-hidden='true'] .bs-o-modal__overlay {
   opacity: 0;
   transition: all 0.2s ease-in-out, visibility 0 ease-in-out 0.2s;
   visibility: hidden;
 }
-.bso-modal__content {
+.bs-o-modal__content {
   -webkit-overflow-scrolling: touch;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -1515,52 +1515,52 @@ table {
   will-change: opacity, transform, visibility;
   z-index: 20;
 }
-[aria-hidden='true'] .bso-modal__content {
+[aria-hidden='true'] .bs-o-modal__content {
   opacity: 0;
   transform: translate(-50%, 50%);
   transition: all 0.25s ease-in-out, visibility 0 ease-in-out 0.2s;
   visibility: hidden;
 }
 @media screen and (min-width: 30em) {
-  .bso-modal__content {
+  .bs-o-modal__content {
     transition: all 0.2s ease-in-out, visibility 0 ease-in-out;
   }
-  [aria-hidden='true'] .bso-modal__content {
+  [aria-hidden='true'] .bs-o-modal__content {
     transform: translate(-50%, -50%) scale(0.875);
     transition: all 0.2s ease-in-out, visibility 0 ease-in-out 0.2s;
   }
 }
-.bso-modal--animation-cancel[aria-hidden='true'] .bso-modal__content {
+.bs-o-modal--animation-cancel[aria-hidden='true'] .bs-o-modal__content {
   transform: translate(-50%, 50%);
 }
-.bso-modal--animation-ok[aria-hidden='true'] .bso-modal__content {
+.bs-o-modal--animation-ok[aria-hidden='true'] .bs-o-modal__content {
   opacity: 1;
   transform: translate(-50%, -200%);
 }
-.bso-navbar {
+.bs-o-navbar {
   left: 0;
   position: absolute;
   right: 0;
   top: 100%;
 }
 @media screen and (prefers-reduced-motion: no-preference) {
-  .bso-navbar.is-transitioning {
+  .bs-o-navbar.is-transitioning {
     transition: opacity 0.2s ease-in, transform 0.12s ease-in;
     will-change: opacity;
   }
 }
-.bso-navbar.is-off-screen {
+.bs-o-navbar.is-off-screen {
   opacity: 0;
   transform: translateY(-7%);
 }
-.bso-navbar.is-on-screen {
+.bs-o-navbar.is-on-screen {
   opacity: 1;
   transform: none;
 }
-.bso-sidebar--large {
+.bs-o-sidebar--large {
   width: 1rem;
 }
-.bso-sidebar--small {
+.bs-o-sidebar--small {
   bottom: 0;
   box-shadow: 10rem 0 12.5rem rgba(0, 0, 0, 0.1),
     12.5rem 0 10rem rgba(0, 0, 0, 0.07), 0 0 20rem rgba(0, 0, 0, 0.1);
@@ -1571,60 +1571,60 @@ table {
   z-index: 1;
 }
 @media screen and (prefers-reduced-motion: no-preference) {
-  .bso-sidebar--small.is-transitioning {
+  .bs-o-sidebar--small.is-transitioning {
     transition: transform 0.12s ease-in;
     will-change: transform;
   }
 }
-.bso-sidebar--small.is-off-screen {
+.bs-o-sidebar--small.is-off-screen {
   transform: translateX(-100%);
 }
-.bso-sidebar--small.is-on-screen {
+.bs-o-sidebar--small.is-on-screen {
   transform: none;
 }
-.bso-notification-center {
+.bs-o-notification-center {
   pointer-events: none;
   position: fixed;
   right: 0;
   top: 0;
 }
-.bso-notification-center > * {
+.bs-o-notification-center > * {
   pointer-events: auto;
 }
-.bso-table {
+.bs-o-table {
   width: 100%;
 }
-.bso-table th {
+.bs-o-table th {
   background: #000;
   border-bottom: 1px solid #000;
   color: red;
   padding: 2.5rem 10rem;
   white-space: nowrap;
 }
-.bso-table td {
+.bs-o-table td {
   background: #000;
   border-bottom: 1px solid #000;
   padding: 7.5rem 10rem;
 }
-.bso-table tr:last-child td {
+.bs-o-table tr:last-child td {
   border: 0;
 }
-.bso-table .bso-table__actions {
+.bs-o-table__actions {
   padding-right: 7.5rem;
 }
-.bso-ui-group {
+.bs-o-ui-group {
   border-radius: 10rem;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.025),
     0 0 1.6666666667rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
     0 0 5rem rgba(0, 0, 0, 0.025);
 }
-.bso-ui-group__item {
+.bs-o-ui-group__item {
   box-shadow: none;
 }
-.bso-ui-group__item:active:not(.bso-ui-group__last),
-.bso-ui-group__item:focus:not(.bso-ui-group__last),
-.bso-ui-group__item:hover:not(.bso-ui-group__last),
-.bso-ui-group__item:not(.bso-ui-group__last) {
+.bs-o-ui-group__item:active:not(.bs-o-ui-group__last),
+.bs-o-ui-group__item:focus:not(.bs-o-ui-group__last),
+.bs-o-ui-group__item:hover:not(.bs-o-ui-group__last),
+.bs-o-ui-group__item:not(.bs-o-ui-group__last) {
   border-right: 0;
 }
 .bs-u-absolute-center {

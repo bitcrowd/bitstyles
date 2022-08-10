@@ -1,6 +1,7 @@
 @use '../../settings/setup';
+@use '../../tools/properties';
 
-.#{setup.$namespace}o-notification-center {
+.#{properties.join-with-dashes((setup.$namespace, 'o', 'notification-center'))} {
   position: fixed;
   top: 0;
   right: 0;

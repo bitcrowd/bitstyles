@@ -1,20 +1,21 @@
 @forward 'settings';
 @use './settings';
 @use '../../settings/setup';
+@use '../../tools/properties';
 
-.#{setup.$namespace}o-ui-group {
+.#{properties.join-with-dashes((setup.$namespace, 'o', 'ui-group'))} {
   border-radius: settings.$border-radius;
   box-shadow: settings.$box-shadow;
 }
 
-.#{setup.$namespace}o-ui-group__item {
+.#{properties.join-with-dashes((setup.$namespace, 'o', 'ui-group__item'))} {
   box-shadow: none;
 
   &,
   &:hover,
   &:active,
   &:focus {
-    &:not(.#{setup.$namespace}o-ui-group__last) {
+    &:not(.#{properties.join-with-dashes((setup.$namespace, 'o', 'ui-group__last'))}) {
       border-right: 0;
     }
   }

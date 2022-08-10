@@ -2,12 +2,13 @@
 @use './settings';
 @use '../../settings/setup';
 @use '../../tools/media-query';
+@use '../../tools/properties';
 
-.#{setup.$namespace}o-sidebar--large {
+.#{properties.join-with-dashes((setup.$namespace, 'o', 'sidebar--large'))} {
   width: settings.$large-width;
 }
 
-.#{setup.$namespace}o-sidebar--small {
+.#{properties.join-with-dashes((setup.$namespace, 'o', 'sidebar--small'))} {
   position: fixed;
   z-index: 1;
   top: 0;
