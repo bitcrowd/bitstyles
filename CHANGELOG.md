@@ -9,6 +9,10 @@
 - `media-query.get()` will now output the content block you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`. This is useful for outputing base CSS with media-query wrapped CSS in one loop
 - The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
 
+### Fixed
+
+- All classnames of atoms and organisms now correctly insert a minus character between the global namespace and the rest of the classname. If you were using `setup.$namespace`, you’ll need to update those classnames to include a minus e.g. `.namespacea-button` becomes `.namespace-a-button`
+
 ## [[4.3.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.3.0) - 2022-05-25
 
 ### Added
