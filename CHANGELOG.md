@@ -11,6 +11,7 @@
 - A new typography configuration `typography.$line-heights` is available with additional setup config for line-heights.
 
 ### Changed
+
 - Renamed `typography.$font-sizes` to `typography.$typographic-scale` which also includes `line-height`.
 - Newly configured `line-height` utility classes to include the base `typography.$line-heights`
 - The `output-responsive-font-sizes` mixin expects a map data structure which includes `font-size` and `line-height`. If you were using the mixin you would have to change the parameter passed.
