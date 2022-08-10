@@ -2,8 +2,9 @@
 @use './settings';
 @use '../../settings/setup';
 @use '../../tools/media-query';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-dropdown {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown'))} {
   position: absolute;
   z-index: 1;
   top: 100%;
@@ -42,16 +43,16 @@
   }
 }
 
-.#{setup.$namespace}a-dropdown--right {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown--right'))} {
   right: 0;
 }
 
-.#{setup.$namespace}a-dropdown--top {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown--top'))} {
   top: auto;
   bottom: 100%;
 }
 
-.a-dropdown--full-width {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown--full-width'))} {
   right: 0;
   left: 0;
   width: 100%;
@@ -59,7 +60,7 @@
 }
 
 @include media-query.get('s') {
-  .#{setup.$namespace}a-dropdown {
+  .#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown'))} {
     right: 0;
     left: 0;
     width: 100%;

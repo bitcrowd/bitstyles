@@ -2,13 +2,14 @@
 @use './settings';
 @use '../../settings/setup';
 @use '../../tools/icon';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-icon {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'icon'))} {
   @include icon.icon;
 }
 
 @each $size-alias, $size-size in settings.$sizes {
-  .#{setup.$namespace}a-icon--#{$size-alias} {
+  .#{properties.join-with-dashes((setup.$namespace, 'a', 'icon--#{$size-alias}'))} {
     font-size: $size-size;
   }
 }

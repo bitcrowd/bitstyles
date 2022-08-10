@@ -1,8 +1,9 @@
 @forward 'settings';
 @use './settings';
 @use '../../settings/setup';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-button--icon-reversed {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--icon-reversed'))} {
   &,
   &:visited {
     border-color: settings.$border-color;

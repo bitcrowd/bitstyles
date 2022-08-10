@@ -3,15 +3,16 @@
 @use '../../settings/animation';
 @use '../../settings/layout';
 @use '../../settings/setup';
+@use '../../tools/properties';
 @use '../button/settings' as button-settings;
 
-.#{setup.$namespace}a-button--tab-container {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--tab-container'))} {
   & > *:first-child {
     margin-left: -(button-settings.$padding-horizontal);
   }
 }
 
-.#{setup.$namespace}a-button--tab {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--tab'))} {
   position: relative;
   border: 0;
   border-radius: settings.$border-radius;

@@ -1,7 +1,8 @@
 @use '../../settings/link' as link2;
 @use '../../settings/setup';
 @use '../../tools/link';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-link {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'link'))} {
   @include link.link;
 }

@@ -1,13 +1,14 @@
 @forward 'settings';
 @use './settings';
 @use '../../settings/setup';
+@use '../../tools/properties';
 @use '../../tools/size';
 
-.#{setup.$namespace}a-button--mode-container {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--mode-container'))} {
   border-radius: size.get('s');
 }
 
-.#{setup.$namespace}a-button--mode {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--mode'))} {
   padding-top: 0;
   padding-bottom: 0;
 

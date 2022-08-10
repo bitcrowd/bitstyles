@@ -1,8 +1,9 @@
 @forward 'settings';
 @use './settings';
 @use '../../settings/setup';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-topbar {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'topbar'))} {
   position: settings.$position;
   z-index: settings.$z-index;
   top: 0;
