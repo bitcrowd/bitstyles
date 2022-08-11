@@ -9,10 +9,11 @@
 - `media-query.get()` will now output the content block you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`. This is useful for outputing base CSS with media-query wrapped CSS in one loop
 - The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
 - A new typography configuration `typography.$line-heights` is available with additional setup config for line-heights.
+- Renamed `typography-responsive.$font-sizes` to `typography-responsive.$typographic-scale`, which now expects the font-size for each to be paired with line-height
 
 ### Changed
 
-- Renamed `typography.$font-sizes` to `typography.$typographic-scale` which also includes `line-height`.
+- `typography.$font-sizes` now expects a single Sass map of font-sizes. This is the base set of design tokens for your font-sizes, from which the responsive typographic scale is created.
 - Newly configured `line-height` utility classes to include the base `typography.$line-heights`
 - The `output-responsive-font-sizes` mixin expects a map data structure which includes `font-size` and `line-height`. If you were using the mixin you would have to change the parameter passed.
 
