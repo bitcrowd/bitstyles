@@ -416,7 +416,13 @@
 @use '../../scss/bitstyles/utilities/text';
 @use '../../scss/bitstyles/utilities/truncate';
 @use '../../scss/bitstyles/utilities/typography-responsive' as
-  typography-responsive-utilities;
+  typography-responsive-utilities with (
+    $values: (
+      'xl': (
+        'h1': 100rem,
+      )
+    ),
+  );
 @use '../../scss/bitstyles/utilities/typography' as typography-utilities with (
   $values: (
     '100': 100rem,
