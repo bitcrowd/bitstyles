@@ -9,6 +9,10 @@
 - `media-query.get()` will now output the content block you pass it without a media-query wrapping them, if the media-query name matches `settings.no-media-query`. This is useful for outputing base CSS with media-query wrapped CSS in one loop
 - The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
 
+### Changed
+
+- We now have a two-tier typography design token system. A single Sass map `$bitstylestypography-font-sizes` is used to create the existing responsive typography system for `h1` – `h6` elements, and the corresponding `.u-h1` – `.u-h6` responsive typography utility classes. The responsive typography for the base heading elements and the corresponding utility classes is built on top of these base design tokens. To update, all your unique font-sizes should be defined in the base scale in `settings/typography`, then referenced using `font-size.get()` to build your responsive typography scale in `settings/typography-responsive`.
+
 ## [[4.3.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.3.0) - 2022-05-25
 
 ### Added
@@ -23,7 +27,6 @@
 ### Changed
 
 - `properties.get-classname()` has been renamed to `properties.join-with-dashes()` to reflect its more generic usage. The list of strings passed as a parameter is renamed from `$classname-items` to `$string-items`. If you were using this function, rename the function call and the parameter (if using named parameters in your call)
-- We now have a two-tier typography design token system. A single Sass map `$bitstylestypography-font-sizes` is used to create the existing responsive typography system for `h1` – `h6` elements, and the corresponding `.u-h1` – `.u-h6` responsive typography utility classes. The responsive typography for the base heading elements and the corresponding utility classes is built on top of these base design tokens. To update, all your unique font-sizes should be defined in the base scale in `settings/typography`, then referenced using `font-size.get()` to build your responsive typography scale in `settings/typography-responsive`.
 
 ### Fixed
 
