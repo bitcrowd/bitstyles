@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use './setup';
 
 //
 // Font-weights /////////////////////////////////////////
@@ -78,31 +79,15 @@ $font-family-body: list.join(
 //
 // Vertical rythm /////////////////////////////////////////
 
-$font-size-base-small: 1rem !default;
-$font-size-base: 1.125rem !default;
 $line-height-base: 1.5 !default;
 $line-height-min: 1.25 !default;
-$margin-heading: 0 !default;
-$margin-paragraph: 0 !default;
 $font-sizes: (
-  'base': (
-    'html': $font-size-base-small,
-    'h0': 3rem,
-    'h1': 2rem,
-    'h2': 1.7rem,
-    'h3': 1.45rem,
-    'h4': 1.2rem,
-    'h5': 1rem,
-    'h6': 0.8rem,
-  ),
-  'm': (
-    'html': $font-size-base,
-    'h0': 4.8rem,
-    'h1': 3rem,
-    'h2': 2.45rem,
-    'h3': 1.95rem,
-    'h4': 1.25rem,
-    'h5': 1rem,
-    'h6': 0.8rem,
-  ),
+  '1': 0.8rem,
+  '2': 1rem,
+  '3': 1.25rem,
+  '4': 1.45rem,
+  '5': 1.7rem,
+  '6': 2rem,
+  '7': 3rem,
+  '8': 4.8rem,
 ) !default;

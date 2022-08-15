@@ -78,8 +78,14 @@
   $setup-namespace: 'bs',
   $typography-webfont-family-name: 'FakeFont',
   $typography-webfont-base-url: './',
-  $typography-margin-heading: 10rem,
-  $typography-margin-paragraph: 10rem,
+  $typography-responsive-font-sizes: (
+    'm': (
+      'h1': 10rem,
+    ),
+    'xl': (
+      'h1': 20rem,
+    )
+  ),
   $link-color: #f00,
   // base
   $figure-font-style: bold,
@@ -89,6 +95,16 @@
   $input-radio-border-radius: 10rem,
   $input-text-border-radius: 10rem,
   $select-border-radius: 10rem,
+  $base-typography-margin-heading: 10rem,
+  $base-typography-margin-paragraph: 10rem,
+  $base-typography-font-sizes: (
+    'm': (
+      'h1': 10rem,
+    ),
+    'xl': (
+      'h1': 20rem,
+    )
+  ),
   // atoms
   $avatar-sizes: ('xl': 10rem),
   $badge-color: '10',
@@ -158,5 +174,11 @@
   $row-start-values: ('100': 100, '200': 200),
   $self-values: ('start': start),
   $sr-only-breakpoints: ('xl'),
+  $typography-responsive-utilities-values: (
+    'xl': (
+      'h1': 100rem,
+    )
+  ),
+  $typography-utilities-values: ('100': 100rem),
   $z-index-values: ('100': 100)
 );

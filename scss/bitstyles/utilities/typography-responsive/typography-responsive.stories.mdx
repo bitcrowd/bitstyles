@@ -1,0 +1,30 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/responsive typography" />
+
+# Responsive typography
+
+These are utility classes that apply responsive font-sizes from the typographic scale to an element. Using the default configuration, these mimic the responsive typographic scale used for the base elements, using font-sizes from your base design tokens. That results in elements that change font-size at different viewport sizes, making use of extra space and increasing visual contrast when space allows.
+
+See [customization](#customization) below for details on how to change this.
+
+In ideal cases, using the correct base elements (`h1`, `h2` etc.) should produce the typographic scale you need, but visual designs often call for a heading to have a font-size that doesn’t match the correct order of HTML `<h>` elements dictated by the semantics of your document or app. Use these classes to override the font-size of the heading element to match your visual designs.
+
+Resize your viewport to see how these elements change font-size at larger screen sizes.
+
+<Canvas>
+  <Story name="Typography">
+    {`
+      <h3 class="u-h1">Header 1 (really an h3)</h3>
+      <h3 class="u-h2">Header 2 (really an h3)</h3>
+      <h2 class="u-h3">Header 3 (really an h2)</h2>
+      <h3 class="u-h4">Header 4 (really an h3)</h3>
+      <h3 class="u-h5">Header 5 (really an h3)</h3>
+      <h3 class="u-h6">Header 6 (really an h3)</h3>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The default configuration imports the styles set in [`settings/typography-responsive`](/docs/design-tokens-typography--page); all configuration should happen there. This ensures these utility classes match the styles set in `base/typography`.

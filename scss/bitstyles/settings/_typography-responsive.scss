@@ -1,0 +1,23 @@
+@use './setup';
+@use '../tools/font-size';
+
+$font-sizes: (
+  '#{setup.$no-media-query}': (
+    'h1': font-size.get('6'),
+    'h2': font-size.get('5'),
+    'h3': font-size.get('4'),
+    'h4': font-size.get('3'),
+    'h5': font-size.get('2'),
+    'h6': font-size.get('1'),
+    'body': font-size.get('2'),
+  ),
+  'm': (
+    'h1': font-size.get('8'),
+    'h2': font-size.get('7'),
+    'h3': font-size.get('6'),
+    'h4': font-size.get('4'),
+    'h5': font-size.get('2'),
+    'h6': font-size.get('1'),
+    'body': font-size.get('2'),
+  ),
+) !default;

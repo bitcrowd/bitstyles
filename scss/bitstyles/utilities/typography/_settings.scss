@@ -1,0 +1,4 @@
+@use '../../settings/typography';
+
+$values: typography.$font-sizes !default;
+$breakpoints: ('m') !default;

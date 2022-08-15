@@ -87,8 +87,14 @@ $bitstyles-shadows-shadows: (
 );
 $bitstyles-typography-webfont-family-name: 'FakeFont';
 $bitstyles-typography-webfont-base-url: './';
-$bitstyles-typography-margin-heading: 10rem;
-$bitstyles-typography-margin-paragraph: 10rem;
+$bitstyles-typography-responsive-font-sizes: (
+  'm': (
+    'h1': 10rem,
+  ),
+  'xl': (
+    'h1': 20rem,
+  ),
+);
 $bitstyles-link-color: #f00;
 
 //
@@ -101,6 +107,16 @@ $bitstyles-input-checkbox-border-radius: 10rem;
 $bitstyles-input-radio-border-radius: 10rem;
 $bitstyles-input-text-border-radius: 10rem;
 $bitstyles-select-border-radius: 10rem;
+$bitstyles-base-typography-margin-heading: 10rem;
+$bitstyles-base-typography-margin-paragraph: 10rem;
+$bitstyles-base-typography-font-sizes: (
+  'm': (
+    'h1': 10rem,
+  ),
+  'xl': (
+    'h1': 20rem,
+  ),
+);
 
 //
 // Atoms settings /////////////////////////////////////
@@ -228,6 +244,14 @@ $bitstyles-self-values: (
   'start': start,
 );
 $bitstyles-sr-only-breakpoints: ('xl');
+$bitstyles-typography-responsive-utilities-values: (
+  'xl': (
+    'h1': 100rem,
+  ),
+);
+$bitstyles-typography-utilities-values: (
+  '100': 100rem,
+);
 $bitstyles-z-index-values: (
   '100': 100,
 );

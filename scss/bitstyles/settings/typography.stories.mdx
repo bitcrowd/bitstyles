@@ -8,54 +8,119 @@ There are several aspects to typography which are handled by systems in bitstyle
 
 ## Font-sizes
 
-Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default sizes are based on a ratio of 1.17 between each font-size, and adjust to the size of the viewport using a mobile-first approach.
+Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default configuration provides base design tokens for font-sizes based on a ratio of 1.17 between each font-size.
 
-The `'base'` sizes shown below apply for all screensizes, until overridden at the `m` breakpoint (see [breakpoints](/docs/design-tokens-breakpoints--page)):
+These base tokens are used to create a responsive typographic scale that’s applied to the base elements `h1` – `h6` and the corresponding utility classes `.u-h1` – `.u-h6`. The utility classes `.u-text-1` to `.u-text-8` produce exceptions to this responsive typography at specific breakpoints.
+
+For more details on using these, see
+
+- [responsive typography](/docs/base-typography-responsive-headings--h-1) — font-sizes specified for HTML elements (e.g. `h1` – `h6`) that adjust to the size of the viewport using a mobile-first approach
+- [utility classes](/docs/utilities-typography--typography) that apply the same responsive typography as the base elements, for when you need arbitrary elements to consistently match your heading elements
+- [utility classes](/docs/utilities-typography--typography) that apply specific font-sizes at specified breakpoints
+
+The default setup provides the following typographic scales. See [customization](#customization) below for details on how to change that:
 
 ```scss
+/* settings/typography */
+
 $font-sizes: (
-  'base': (
-    'html': 1rem,
-    'h0': 3rem,
-    'h1': 2rem,
-    'h2': 1.7rem,
-    'h3': 1.45rem,
-    'h4': 1.2rem,
-    'h5': 1rem,
-    'h6': 0.8rem,
+  '1': 0.8rem,
+  '2': 1rem,
+  '3': 1.25rem,
+  '4': 1.45rem,
+  '5': 1.7rem,
+  '6': 2rem,
+  '7': 3rem,
+  '8': 4.8rem,
+);
+```
+
+```scss
+/* settings/typography-responsive */
+
+$font-sizes: (
+  '#{setup.$no-media-query}': (
+    'h1': font-size.get('6'),
+    'h2': font-size.get('5'),
+    'h3': font-size.get('4'),
+    'h4': font-size.get('3'),
+    'h5': font-size.get('2'),
+    'h6': font-size.get('1'),
+    'body': font-size.get('2'),
   ),
   'm': (
-    'html': 1.125rem,
-    'h0': 4.8rem,
-    'h1': 3rem,
-    'h2': 2.45rem,
-    'h3': 1.95rem,
-    'h4': 1.25rem,
-    'h5': 1rem,
-    'h6': 0.8rem,
+    'h1': font-size.get('8'),
+    'h2': font-size.get('7'),
+    'h3': font-size.get('6'),
+    'h4': font-size.get('4'),
+    'h5': font-size.get('2'),
+    'h6': font-size.get('1'),
+    'body': font-size.get('2'),
   ),
 );
 ```
 
-### Using font-sizes in HTML
+### Usage
 
-The font-sizes defined in `settings/typography` are applied to all the heading elements `h1`, `h2`, `h3`, `h4`, `h5`, and `h6`. You need do nothing more than use those elements in your HTML.
+In most cases, it’s recommended to use the appropriate utility classes to apply font-size. See the documentation of the classes for information on defaults & customization:
 
-### Using font-sizes in Sass
+- [`typography-responsive`](/docs/utilities-typography-responsive--typography)
+- [`typography`](/docs/utilities-typography--typography)
 
-Use the `font-size.get()` helper function for accessing font-sizes. In your Sass component file first import the `font-size` tools, then use the `get()` function, passing in the font-size you need. By default it returns the font-sizes from the `base` map. When you need the size for a larger viewport, pass the name of the breakpoint (see [breakpoints](/docs/design-tokens-breakpoints--page)):
+There are also helper functions in Sass that can be used to create styles in your components that match those utility classes, so you can maintain consistency — see the next sections for details.
+
+### responsive-font-size.get()
+
+Use the `responsive-font-size.get()` mixin for accessing the responsive font-sizes specified in your base design tokens. By using this mixin you ensure the font-size of a component will match the responsive typography of your heading elements and responsive-typography utility classes.
+
+In your Sass file first import the `responsive-font-size` tools, then use the `get()` function, passing in the font-size you need:
+
+```scss
+@use '~bitstyles/scss/bitstyles/tools/responsive-font-size';
+
+.component-class::after {
+  @include responsive-font-size.get('h4');
+}
+```
+
+With the default setup this will output:
+
+```css
+.component-class::after {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 30em) {
+  .component-class::after {
+    font-size: 1.45rem;
+  }
+}
+```
+
+#### `responsive-font-size.get()` parameters
+
+| Name        | Type   | Description                                                                                                                                                                                                               |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $font-size  | string | The name of the font-size                                                                                                                                                                                                 |
+| $breakpoint | string | Defaults to `null`, which will output all the font-sizes under that name, at each breakpoint, wrapped in the appropriate media-query. If you provide this parameter, the font-size at only that breakpoint will be output |
+
+### font-size.get()
+
+Use the `font-size.get()` function for accessing the font-sizes specified in your base design tokens. This is useful when you need a component’s font-size to be rendered differently to your standard responsive typography.
+
+Import the `font-size` tools, then use the `get()` function, passing in the font-size you need:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/font-size';
 @use '~bitstyles/scss/bitstyles/tools/media-query';
 
 .component-class::after {
-  font-size: font-size.get('h3');
+  font-size: font-size.get('4');
 }
 
 @include media-query('m') {
   .component-class::after {
-    font-size: font-size.get('h3', 'm');
+    font-size: font-size.get('6');
   }
 }
 ```
@@ -69,27 +134,22 @@ With the default setup this will output:
 
 @media screen and (min-width: 30em) {
   .component-class::after {
-    font-size: 1.95rem;
+    font-size: 2rem;
   }
 }
 ```
 
+`font-size.get()` is also used in the setup the responsive typographic scale for the [base styles](/docs/base-typography-responsive-headings--h-1) and the [utility classes](/docs/utilities-typography--typography), to ensure consistency across your designs.
+
 #### `font-size.get()` parameters
 
-| Name        | Type   | Description                                                                                         |
-| ----------- | ------ | --------------------------------------------------------------------------------------------------- |
-| $font-size  | string | The name of the font-size                                                                           |
-| $breakpoint | string | The name of the breakpoint you need the font-size from. Defaults to `"base"` (so it’s mobile-first) |
-
-### Using font-sizes in classes
-
-Use the appropriate utility classes to apply font-size. See the documentation of the class for information on defaults & customization:
-
-- [`typography`](/docs/utilities-typography--typography)
+| Name       | Type   | Description               |
+| ---------- | ------ | ------------------------- |
+| $font-size | string | The name of the font-size |
 
 ## Webfonts
 
-The default webfont is Nunito. If you wish to keep using it, there’s nothing you need to do.
+The default webfont is Nunito. If you wish to keep using it, there’s nothing you need to do. See [customization](#customization) below for details on how to change this configuration.
 
 ### Using font-family in Sass
 
@@ -118,6 +178,71 @@ Use the `u-font` utility classes to apply font-family. See the documentation of 
 - [u-font](/docs/utilities-font--font-header)
 
 ### Customization
+
+#### Font-sizes
+
+You can specify the font-sizes and names for each of your base font-size design tokens. Default configuration uses the numbers 1–8, but you can use any string, and any font-size.
+
+```scss
+@use '~bitstyles/scss/bitstyles/settings/typography' with (
+  $font-sizes: (
+    'm': 1rem,
+    'l': 1.5rem,
+    'xl': 2rem,
+  )
+);
+```
+
+#### Responsive font-sizes
+
+By overriding `$bitstyles-typography-responsive-font-sizes`, you can specify which font-sizes are applied to which HTML elements (in [`base/typography`](/docs/base-typography-responsive-headings--h-1)) and responsive-typography utility classes (in [`utilities/typography-responsive`](/docs/utilities-typography-responsive--typography)), and at which breakpoints.
+
+Using a mobile-first approach, the first Sass map of font-sizes shown below apply for all screensizes, until overridden at the `m` breakpoint (see [breakpoints](/docs/design-tokens-breakpoints--page)). You can provide font-size maps at every breakpoint available in your base breakpoints if you wish.
+
+We’re using the global `setup.$no-media-query` to provide font-sizes that apply with no media-query (this is recommended, otherwise you’ll be seeing your browser defaults), and `font-size.get()` to get our font-sizes from our base design tokens:
+
+```scss
+@use 'bitstyles/settings/setup';
+@use 'bitstyles/tools/font-size';
+@use 'bitstyles/settings/typography-responsive' with (
+  $font-sizes: (
+    '#{setup.$no-media-query}': (
+      'h1': font-size.get('6'),
+      'h2': font-size.get('5'),
+      'h3': font-size.get('4'),
+      'h4': font-size.get('3'),
+      'h5': font-size.get('2'),
+      'h6': font-size.get('1'),
+      'body': font-size.get('2'),
+    ),
+    'm': (
+      'h1': font-size.get('8'),
+      'h2': font-size.get('7'),
+      'h3': font-size.get('6'),
+      'h4': font-size.get('4'),
+      'h5': font-size.get('2'),
+      'h6': font-size.get('1'),
+      'body': font-size.get('2'),
+    ),
+  )
+);
+```
+
+You can also specify other html elements here, if needed:
+
+```scss
+@use 'bitstyles/settings/setup';
+@use 'bitstyles/tools/font-size';
+
+@use 'bitstyles/settings/typography-responsive' with (
+  $font-sizes: (
+    '#{setup.$no-media-query}': (
+      'li': font-size.get('6'),
+      'code': font-size.get('5'),
+    ),
+  )
+);
+```
 
 #### Font-face declarations
 

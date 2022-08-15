@@ -1,0 +1,6 @@
+@use '../../settings/setup';
+@use '../../settings/typography-responsive';
+
+$margin-heading: 0 !default;
+$margin-paragraph: 0 !default;
+$font-sizes: typography-responsive.$font-sizes !default;

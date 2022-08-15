@@ -8,6 +8,7 @@
 @forward 'bitstyles/settings/setup' as setup-*;
 @forward 'bitstyles/settings/shadows' as shadows-*;
 @forward 'bitstyles/settings/typography' as typography-*;
+@forward 'bitstyles/settings/typography-responsive' as typography-responsive-*;
 @forward 'bitstyles/settings/link' as link-*;
 
 //
@@ -111,5 +112,7 @@
 @forward 'bitstyles/utilities/sr-only' as sr-only-*;
 @forward 'bitstyles/utilities/text' as text-*;
 @forward 'bitstyles/utilities/truncate' as truncate-*;
-@forward 'bitstyles/utilities/typography' as typography-*;
+@forward 'bitstyles/utilities/typography-responsive' as
+  typography-responsive-utilities-*;
+@forward 'bitstyles/utilities/typography' as typography-utilities-*;
 @forward 'bitstyles/utilities/z-index' as z-index-*;

@@ -1,0 +1,66 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Base/Typography/Responsive Headings" />
+
+# Typography
+
+The default configuration provides responsive sizing for the heading elements `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, and `body` element. In this context, “responsive font-sizing” means the elements have a default font-size that is overridden at larger breakpoints to become larger (probably, though you can make them smaller if you want), making use of the extra space. The ratio difference between font-sizes is also larger on larger screens, as there’s more space to play with.
+
+All font-sizes are taken from the base font-size design tokens specified in `settings/typography`. See [Design tokens/typography](/docs/design-tokens-typography--page) for details on how to customize the font-sizes available to you. See [customization](#customization) below for detail on how to change which of the available base font-sizes are used for which HTML element.
+
+## Elements
+
+Semantic headings from `<h1>` to `<h6>` will be sized as shown (resize your viewport to see how they change at different viewport sizes):
+
+<Canvas isColumn>
+  <Story name="h1">
+    {`
+      <h1>h1 sized text. Jelly cake marshmallow</h1>
+    `}
+  </Story>
+  <Story name="h2">
+    {`
+      <h2>h2 sized text. Jelly cake marshmallow</h2>
+    `}
+  </Story>
+  <Story name="h3">
+    {`
+      <h3>h3 sized text. Jelly cake marshmallow</h3>
+    `}
+  </Story>
+  <Story name="h4">
+    {`
+      <h4>h4 sized text. Jelly cake marshmallow</h4>
+    `}
+  </Story>
+  <Story name="h5">
+    {`
+      <h5>h5 sized text. Jelly cake marshmallow</h5>
+    `}
+  </Story>
+  <Story name="h6">
+    {`
+      <h6>h6 sized text. Jelly cake marshmallow</h6>
+    `}
+  </Story>
+  <Story name="p">
+    {`
+      <p>p sized text. Jelly cake marshmallow</p>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The default configuration imports the styles set in [`settings/typography-responsive`](/docs/design-tokens-typography--page), so all font-size configuration should happen there. This ensures these base styles match the classes specified in `utilities/typography-responsive`.
+
+### Default margins
+
+Override `$margin-heading` and `$margin-paragraph` in `base/typography` to specify margins to use for all `<h>` elements and all `<p>` elements, respectively:
+
+```scss
+@use 'bitstyles/base/typography' with (
+  $margin-heading: 1rem,
+  $margin-paragraph: 1rem
+);
+```
