@@ -12,19 +12,23 @@
 //
 // @param {Map} $font-sizes  A map of font-sizes in `element-name: font-size` pairs. See `typography.$font-sizes` for an example.
 //
-// @param {String} $prefix  A string to prefix to the ouput selector.
+// @param {String} $prefix  A string to prefix to the output selector.
 //
 // @param {List} $subset  Provide a list of element names for which to output font-sizes. Defaults to include all sizes defined in the `$font-sizes` parameter.
 //
 
+/* stylelint-disable max-nesting-depth */
 @mixin output-responsive-font-sizes($font-sizes, $prefix: null) {
   @each $breakpoint, $font-size-list in $font-sizes {
     @include media-query.get($breakpoint) {
-      @each $name, $font-size in ($font-size-list) {
+      @each $name, $font-attributes in ($font-size-list) {
         #{$prefix}#{$name} {
-          font-size: $font-size;
+          @each $property-name, $property-value in ($font-attributes) {
+            #{$property-name}: #{$property-value};
+          }
         }
       }
     }
   }
 }
+/* stylelint-enable max-nesting-depth */

@@ -617,46 +617,60 @@ h6 {
 }
 h1 {
   font-size: 2rem;
+  line-height: 1.29;
 }
 h2 {
   font-size: 1.7rem;
+  line-height: 1.2;
 }
 h3 {
   font-size: 1.45rem;
+  line-height: 1.33;
 }
 h4 {
   font-size: 1.25rem;
+  line-height: 1.5;
 }
 h5 {
   font-size: 1rem;
+  line-height: 1.43;
 }
 h6 {
   font-size: 0.8rem;
+  line-height: 1.67;
 }
 body {
   font-size: 1rem;
+  line-height: 1.67;
 }
 @media screen and (min-width: 30em) {
   h1 {
     font-size: 4.8rem;
+    line-height: 1.29;
   }
   h2 {
     font-size: 3rem;
+    line-height: 1.2;
   }
   h3 {
     font-size: 2rem;
+    line-height: 1.33;
   }
   h4 {
     font-size: 1.45rem;
+    line-height: 1.5;
   }
   h5 {
     font-size: 1rem;
+    line-height: 1.43;
   }
   h6 {
     font-size: 0.8rem;
+    line-height: 1.67;
   }
   body {
     font-size: 1rem;
+    line-height: 1.5;
   }
 }
 p {
@@ -2329,8 +2343,23 @@ table {
     justify-content: flex-start;
   }
 }
-.u-line-height-min {
-  line-height: 1.25;
+.u-line-height-1 {
+  line-height: 1.29;
+}
+.u-line-height-2 {
+  line-height: 1.2;
+}
+.u-line-height-3 {
+  line-height: 1.33;
+}
+.u-line-height-4 {
+  line-height: 1.5;
+}
+.u-line-height-5 {
+  line-height: 1.43;
+}
+.u-line-height-6 {
+  line-height: 1.67;
 }
 .u-margin-0 {
   margin: 0;
@@ -4065,46 +4094,60 @@ table {
 }
 .u-h1 {
   font-size: 2rem;
+  line-height: 1.29;
 }
 .u-h2 {
   font-size: 1.7rem;
+  line-height: 1.2;
 }
 .u-h3 {
   font-size: 1.45rem;
+  line-height: 1.33;
 }
 .u-h4 {
   font-size: 1.25rem;
+  line-height: 1.5;
 }
 .u-h5 {
   font-size: 1rem;
+  line-height: 1.43;
 }
 .u-h6 {
   font-size: 0.8rem;
+  line-height: 1.67;
 }
 .u-body {
   font-size: 1rem;
+  line-height: 1.67;
 }
 @media screen and (min-width: 30em) {
   .u-h1 {
     font-size: 4.8rem;
+    line-height: 1.29;
   }
   .u-h2 {
     font-size: 3rem;
+    line-height: 1.2;
   }
   .u-h3 {
     font-size: 2rem;
+    line-height: 1.33;
   }
   .u-h4 {
     font-size: 1.45rem;
+    line-height: 1.5;
   }
   .u-h5 {
     font-size: 1rem;
+    line-height: 1.43;
   }
   .u-h6 {
     font-size: 0.8rem;
+    line-height: 1.67;
   }
   .u-body {
     font-size: 1rem;
+    line-height: 1.5;
   }
 }
 .u-text-1 {

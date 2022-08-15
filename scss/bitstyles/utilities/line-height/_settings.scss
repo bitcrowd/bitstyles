@@ -1,6 +1,12 @@
 @use '../../settings/typography';
+@use '../../tools/line-height';
 
 $values: (
-  'min': typography.$line-height-min,
+  '1': line-height.get('1'),
+  '2': line-height.get('2'),
+  '3': line-height.get('3'),
+  '4': line-height.get('4'),
+  '5': line-height.get('5'),
+  '6': line-height.get('6'),
 ) !default;
 $breakpoints: () !default;

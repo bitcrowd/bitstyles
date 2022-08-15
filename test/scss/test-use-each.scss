@@ -94,12 +94,18 @@
   $webfont-base-url: './'
 );
 @use '../../scss/bitstyles/settings/typography-responsive' with (
-  $font-sizes: (
+  $typographic-scale: (
     'm': (
-      'h1': 10rem,
+      'h1': (
+        'font-size': 10rem,
+        'line-height': 200,
+      ),
     ),
     'xl': (
-      'h1': 20rem,
+      'h1': (
+        'font-size': 30rem,
+        'line-height': 400,
+      ),
     ),
   )
 );
@@ -143,15 +149,7 @@
 );
 @use '../../scss/bitstyles/base/typography' as base-typography with (
   $margin-heading: 10rem,
-  $margin-paragraph: 10rem,
-  $font-sizes: (
-    'm': (
-      'h1': 10rem,
-    ),
-    'xl': (
-      'h1': 20rem,
-    ),
-  )
+  $margin-paragraph: 10rem
 );
 
 //
@@ -418,8 +416,17 @@
 @use '../../scss/bitstyles/utilities/typography-responsive' as
   typography-responsive-utilities with (
   $values: (
+    'm': (
+      'h1': (
+        'font-size': 10rem,
+        'line-height': 200,
+      ),
+    ),
     'xl': (
-      'h1': 100rem,
+      'h1': (
+        'font-size': 30rem,
+        'line-height': 400,
+      ),
     ),
   )
 );

@@ -615,11 +615,13 @@ h6 {
 @media screen and (min-width: 30em) {
   h1 {
     font-size: 10rem;
+    line-height: 200;
   }
 }
 @media screen and (min-width: 95em) {
   h1 {
-    font-size: 20rem;
+    font-size: 30rem;
+    line-height: 400;
   }
 }
 p {
@@ -3571,9 +3573,16 @@ table {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media screen and (min-width: 30em) {
+  .bs-u-h1 {
+    font-size: 10rem;
+    line-height: 200;
+  }
+}
 @media screen and (min-width: 95em) {
   .bs-u-h1 {
-    font-size: 100rem;
+    font-size: 30rem;
+    line-height: 400;
   }
 }
 .bs-u-text-100 {
