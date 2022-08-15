@@ -401,13 +401,6 @@ textarea::-moz-placeholder {
   font-weight: 400;
   opacity: 1;
 }
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #73758d;
-  font-style: italic;
-  font-weight: 400;
-  opacity: 1;
-}
 input::placeholder,
 textarea::placeholder {
   color: #73758d;
@@ -792,7 +785,6 @@ table {
     border 75ms ease-in-out, box-shadow 75ms ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   white-space: nowrap;
 }
