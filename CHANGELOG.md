@@ -23,6 +23,7 @@
 - The color palette generator in `tools/color` is renamed from `color.generate-palette` to `color.generate-scale`, and now produces a more evenly-spread range of colors, with more accurate saturation and hue than before
 - By default there are now two tiers of color palettes — the one used in your codebase and in all bitstyles components (the “semantic palette”) is generated from a base palette. In the default configuration, this base palette is generated from the base colors provided. See [https://bitcrowd.github.io/bitstyles/?path=/docs/design-tokens-color-palette--page](https://bitcrowd.github.io/bitstyles/?path=/docs/design-tokens-color-palette--page) for details on customizing this.
 - Default naming of color variants has switched from using numbers, to using meaningful names like `light`, `dark`, `base`. If you override the palette in your codebase, you may need to override the colors used by other bitstyles components
+- Sizes scale naming has been updated to use to following convention `s`, `xs`, `2xs`, `3xs`, and `l`, `xl`, `2xl`, `3xl`. Any utility classnames in your codebase containing the sizes (e.g. `u-margin-xxs-bottom`, `u-padding-xxxl`) will need to be updated to use the new naming scheme (e.g. `u-margin-2xs-bottom`, `u-padding-3xl`). Any uses of `size.get()` in your codebase will need to be updated to use the new naming scheme.
 
 ### Fixed
 
