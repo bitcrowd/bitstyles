@@ -22,11 +22,9 @@
 - By default there are now two tiers of color palettes — the one used in your codebase and in all bitstyles components (the “semantic palette”) is generated from a base palette. In the default configuration, this base palette is generated from the base colors provided. See [https://bitcrowd.github.io/bitstyles/?path=/docs/design-tokens-color-palette--page](https://bitcrowd.github.io/bitstyles/?path=/docs/design-tokens-color-palette--page) for details on csutomizing this.
 - Default naming of color variants has switched from using numbers, to using meaningful names like `light`, `dark`, `base`. If you override the palette in your codebase, you may need to update anything
 
-
 ### Fixed
 
 - All classnames of atoms and organisms now correctly insert a minus character between the global namespace and the rest of the classname. If you were using `setup.$namespace`, you’ll need to update those classnames to include a minus e.g. `.namespacea-button` becomes `.namespace-a-button`
-
 
 ## [[4.3.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.3.0) - 2022-05-25
 

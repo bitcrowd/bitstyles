@@ -1,13 +1,14 @@
 @use '../../settings/setup';
 @use '../../tools/palette';
 @use '../../tools/media-query';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-dl {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'dl'))} {
   border-top: 1px solid palette.get('text', 'light');
 }
 
 @include media-query.get('m') {
-  .#{setup.$namespace}a-dl__item {
+  .#{properties.join-with-dashes((setup.$namespace, 'a', 'dl__item'))} {
     border-bottom: 1px solid palette.get('text', 'light');
   }
 }
