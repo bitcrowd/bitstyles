@@ -1,6 +1,7 @@
 @use '../../settings/setup';
 @use '../../tools/list-reset';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-list-reset {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'list-reset'))} {
   @include list-reset.list-reset;
 }

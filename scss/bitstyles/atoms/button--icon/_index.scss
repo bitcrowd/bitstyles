@@ -1,8 +1,9 @@
 @forward 'settings';
 @use './settings';
 @use '../../settings/setup';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-button--icon {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--icon'))} {
   justify-content: flex-start;
   padding: settings.$padding-vertical settings.$padding-horizontal;
   border-radius: settings.$border-radius;
@@ -38,7 +39,7 @@
     color: settings.$color-disabled;
   }
 
-  .#{setup.$namespace}a-button__icon {
+  .#{properties.join-with-dashes((setup.$namespace, 'a', 'button__icon'))} {
     margin: 0;
   }
 }

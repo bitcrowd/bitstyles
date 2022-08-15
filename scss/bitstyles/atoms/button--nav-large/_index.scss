@@ -2,7 +2,9 @@
 @use './settings';
 @use '../../settings/setup';
 
-.#{setup.$namespace}a-button--nav-large {
+@use '../../tools/properties';
+
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--nav-large'))} {
   display: flex;
   justify-content: flex-start;
   width: 100%;

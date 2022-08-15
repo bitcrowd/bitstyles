@@ -1,8 +1,9 @@
 @forward 'settings';
 @use './settings';
 @use '../../settings/setup';
+@use '../../tools/properties';
 
-.#{setup.$namespace}o-table {
+.#{properties.join-with-dashes((setup.$namespace, 'o', 'table'))} {
   width: 100%;
 
   /* stylelint-disable selector-max-type */
@@ -26,8 +27,8 @@
     }
   }
   /* stylelint-enable selector-max-type */
+}
 
-  .#{setup.$namespace}o-table__actions {
-    padding-right: settings.$padding-vertical-td;
-  }
+.#{properties.join-with-dashes((setup.$namespace, 'o', 'table__actions'))} {
+  padding-right: settings.$padding-vertical-td;
 }

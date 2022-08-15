@@ -2,8 +2,9 @@
 @use 'sass:math';
 @use './settings';
 @use '../../settings/setup';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-button {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button'))} {
   display: inline-flex;
   position: relative;
   flex-shrink: 0;
@@ -61,13 +62,14 @@
   }
 }
 
-.#{setup.$namespace}a-button__avatar,
-.#{setup.$namespace}a-button__icon {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button__avatar'))},
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button__icon'))} {
   margin-right: settings.$icon-spacing;
   margin-left: math.div(-(settings.$icon-spacing), 4);
 }
 
-.#{setup.$namespace}a-button__label + .#{setup.$namespace}a-button__icon {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button__label'))}
+  + .#{properties.join-with-dashes((setup.$namespace, 'a', 'button__icon'))} {
   margin-right: math.div(-(settings.$icon-spacing), 4);
   margin-left: settings.$icon-spacing;
 }

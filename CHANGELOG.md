@@ -21,6 +21,10 @@
 
 - We now have a two-tier typography design token system. A single Sass map `$bitstylestypography-font-sizes` is used to create the existing responsive typography system for `h1` – `h6` elements, and the corresponding `.u-h1` – `.u-h6` responsive typography utility classes. The responsive typography for the base heading elements and the corresponding utility classes is built on top of these base design tokens. To update, all your unique font-sizes should be defined in the base scale in `settings/typography`, then referenced using `font-size.get()` to build your responsive typography scale in `settings/typography-responsive`.
 
+### Fixed
+
+- All classnames of atoms and organisms now correctly insert a minus character between the global namespace and the rest of the classname. If you were using `setup.$namespace`, you’ll need to update those classnames to include a minus e.g. `.namespacea-button` becomes `.namespace-a-button`
+
 ## [[4.3.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.3.0) - 2022-05-25
 
 ### Added

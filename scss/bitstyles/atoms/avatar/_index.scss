@@ -2,8 +2,9 @@
 @use './settings';
 @use '../../settings/layout';
 @use '../../settings/setup';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-avatar {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'avatar'))} {
   width: 2em;
   height: 2em;
   overflow: hidden;
@@ -19,7 +20,7 @@
 }
 
 @each $size-alias, $size in settings.$sizes {
-  .#{setup.$namespace}a-avatar--#{$size-alias} {
+  .#{properties.join-with-dashes((setup.$namespace, 'a', 'avatar--#{$size-alias}'))} {
     width: $size;
     height: $size;
   }

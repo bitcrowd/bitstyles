@@ -2,13 +2,14 @@
 @use './settings';
 @use '../../settings/setup';
 @use '../../tools/media-query';
+@use '../../tools/properties';
 
 @mixin modal-is-hidden {
   visibility: hidden;
   opacity: 0;
 }
 
-.#{setup.$namespace}o-modal__overlay {
+.#{properties.join-with-dashes((setup.$namespace, 'o', 'modal__overlay'))} {
   position: fixed;
   z-index: 10;
   top: 0;
@@ -30,7 +31,7 @@
   }
 }
 
-.#{setup.$namespace}o-modal__content {
+.#{properties.join-with-dashes((setup.$namespace, 'o', 'modal__content'))} {
   position: fixed;
   z-index: 20;
   top: 50%;
@@ -60,7 +61,7 @@
 }
 
 @include media-query.get(settings.$breakpoint) {
-  .#{setup.$namespace}o-modal__content {
+  .#{properties.join-with-dashes((setup.$namespace, 'o', 'modal__content'))} {
     transition: all settings.$transition-duration settings.$transition-easing,
       visibility 0 settings.$transition-easing;
 
@@ -73,9 +74,9 @@
 }
 
 @mixin modal-variation($state) {
-  .#{setup.$namespace}o-modal--animation-#{$state} {
+  .#{properties.join-with-dashes((setup.$namespace, 'o', 'modal--animation', $state))} {
     &[aria-hidden='true'] {
-      .#{setup.$namespace}o-modal__content {
+      .#{properties.join-with-dashes((setup.$namespace, 'o', 'modal__content'))} {
         @content;
       }
     }

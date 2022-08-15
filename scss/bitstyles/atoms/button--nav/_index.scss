@@ -2,8 +2,9 @@
 @use 'sass:math';
 @use './settings';
 @use '../../settings/setup';
+@use '../../tools/properties';
 
-.#{setup.$namespace}a-button--nav {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--nav'))} {
   justify-content: flex-start;
   padding: settings.$padding-vertical settings.$padding-horizontal;
   border-radius: settings.$border-radius;
@@ -48,7 +49,7 @@
   }
 }
 
-.#{setup.$namespace}a-button-nav__icon {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'button-nav__icon'))} {
   margin-right: settings.$padding-horizontal;
   margin-left: -#{math.div(settings.$padding-horizontal, 4)};
 }

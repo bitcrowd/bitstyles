@@ -1,7 +1,9 @@
 @forward './settings';
 @use './settings';
+@use '../../settings/setup';
+@use '../../tools/properties';
 
-.a-skip-link {
+.#{properties.join-with-dashes((setup.$namespace, 'a', 'skip-link'))} {
   position: absolute;
   z-index: 1;
   top: -100%;
