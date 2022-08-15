@@ -173,8 +173,17 @@
   $self-values: ('start': start),
   $sr-only-breakpoints: ('xl'),
   $typography-responsive-utilities-values: (
+    'm': (
+      'h1': (
+        'font-size': 10rem,
+        'line-height': 200,
+      ),
+    ),
     'xl': (
-      'h1': 100rem,
+      'h1': (
+        'font-size': 30rem,
+        'line-height': 400,
+      ),
     )
   ),
   $typography-utilities-values: ('100': 100rem),
