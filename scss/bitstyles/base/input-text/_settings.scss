@@ -9,7 +9,7 @@
 $padding-vertical: size.get('xs') !default;
 $padding-horizontal: size.get('xs') !default;
 $border-radius: size.get('xs') !default;
-$border-width: size.get('xxxs') !default;
+$border-width: size.get('3xs') !default;
 $font: inherit !default;
 $placeholder-font-style: italic !default;
 $placeholder-font-weight: typography.$font-weight-normal !default;
@@ -50,7 +50,7 @@ $border-color-active: palette.get('text', 'dark') !default;
 $box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', 'light'), 0.075),
-    $blur-radius: size.get('xxs'),
+    $blur-radius: size.get('2xs'),
   )
 ) !default;
 

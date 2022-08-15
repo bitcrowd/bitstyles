@@ -2,13 +2,13 @@
 
 $sizes: (
   '0': 0,
-  'xxs': size.get('xxs'),
+  '2xs': size.get('2xs'),
   'xs': size.get('xs'),
   's': size.get('s'),
   'm': size.get('m'),
   'l': size.get('l'),
   'xl': size.get('xl'),
-  'xxl': size.get('xxl'),
+  '2xl': size.get('2xl'),
 ) !default;
 $breakpoints: ('m', 'l') !default;
 $directions: (

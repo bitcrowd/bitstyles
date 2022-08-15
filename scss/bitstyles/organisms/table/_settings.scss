@@ -4,7 +4,7 @@
 $border: 1px solid palette.get('text', 'light') !default;
 $padding-horizontal: size.get('m') !default;
 $padding-vertical-td: size.get('s') !default;
-$padding-vertical-th: size.get('xxs') !default;
+$padding-vertical-th: size.get('2xs') !default;
 $background-color-td: palette.get('grayscale', 'white') !default;
 $color-th: palette.get('text', 'dark') !default;
 $background-color-th: palette.get('background') !default;
