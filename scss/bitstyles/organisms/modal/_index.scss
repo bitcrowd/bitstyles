@@ -1,15 +1,14 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/media-query';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
 @mixin modal-is-hidden {
   visibility: hidden;
   opacity: 0;
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'o', 'modal__overlay'))} {
+.#{classname.get($classname-items: 'modal__overlay', $layer: 'organism')} {
   position: fixed;
   z-index: 10;
   top: 0;
@@ -31,7 +30,7 @@
   }
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'o', 'modal__content'))} {
+.#{classname.get($classname-items: 'modal__content', $layer: 'organism')} {
   position: fixed;
   z-index: 20;
   top: 50%;
@@ -61,7 +60,7 @@
 }
 
 @include media-query.get(settings.$breakpoint) {
-  .#{properties.join-with-dashes((setup.$namespace, 'o', 'modal__content'))} {
+  .#{classname.get($classname-items: 'modal__content', $layer: 'organism')} {
     transition: all settings.$transition-duration settings.$transition-easing,
       visibility 0 settings.$transition-easing;
 
@@ -74,9 +73,9 @@
 }
 
 @mixin modal-variation($state) {
-  .#{properties.join-with-dashes((setup.$namespace, 'o', 'modal--animation', $state))} {
+  .#{classname.get($classname-items: ('modal--animation', $state), $layer: 'organism')} {
     &[aria-hidden='true'] {
-      .#{properties.join-with-dashes((setup.$namespace, 'o', 'modal__content'))} {
+      .#{classname.get($classname-items: 'modal__content', $layer: 'organism')} {
         @content;
       }
     }
