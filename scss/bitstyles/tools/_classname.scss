@@ -3,7 +3,7 @@
 @use 'sass:list';
 @use 'sass:map';
 
-@function get($classname-items, $at-suffix: setup.$no-media-query, $layer: null) {
+@function get($classname-items: (), $at-suffix: setup.$no-media-query, $layer: null) {
   $items: list.join((setup.$namespace, map.get(setup.$prefixes, $layer)), $classname-items);
   $classname: properties.join-with-dashes($string-items: $items);
 

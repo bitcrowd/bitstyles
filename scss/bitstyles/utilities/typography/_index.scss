@@ -1,6 +1,5 @@
 @forward './settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/properties';
 
 @include properties.output(

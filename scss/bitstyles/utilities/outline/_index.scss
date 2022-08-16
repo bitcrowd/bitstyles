@@ -1,18 +1,6 @@
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-/* stylelint-disable scss/dollar-variable-default */
-$classname: properties.join-with-dashes(
-  $string-items: (
-    setup.$namespace,
-    'u',
-    'outline',
-    '0',
-  ),
-);
-/* stylelint-enable scss/dollar-variable-default */
-
-.#{$classname} {
+.#{classname.get($classname-items: ('outline', '0'), $layer: 'utility')} {
   &:focus {
     outline: none;
   }

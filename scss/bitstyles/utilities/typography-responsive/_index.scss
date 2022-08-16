@@ -1,19 +1,9 @@
 @forward './settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/typography';
-@use '../../tools/properties';
-
-/* stylelint-disable scss/dollar-variable-default */
-$classname-prefix: properties.join-with-dashes(
-  $string-items: (
-    setup.$namespace,
-    'u',
-  ),
-);
-/* stylelint-enable scss/dollar-variable-default */
+@use '../../tools/classname';
 
 @include typography.output-responsive-font-sizes(
-  $prefix: '.#{$classname-prefix}-',
+  $prefix: '.#{classname.get($layer: 'utility')}-',
   $font-sizes: settings.$values
 );
