@@ -1,14 +1,9 @@
 @use '../../tools/size';
 
 $sizes: (
-  '3xs': size.get('3xs'),
-  '2xs': size.get('2xs'),
   'xs': size.get('xs'),
   's': size.get('s'),
   'm': size.get('m'),
   'l': size.get('l'),
-  'xl': size.get('xl'),
-  '2xl': size.get('2xl'),
-  '3xl': size.get('3xl'),
 ) !default;
 $breakpoints: ('m', 'xl') !default;

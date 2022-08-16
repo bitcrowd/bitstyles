@@ -700,12 +700,12 @@ table {
   width: 100%;
 }
 .a-avatar--m {
-  height: 0.8rem;
-  width: 0.8rem;
+  height: 1.6rem;
+  width: 1.6rem;
 }
 .a-avatar--l {
-  height: 1rem;
-  width: 1rem;
+  height: 2.4rem;
+  width: 2.4rem;
 }
 .a-badge {
   align-items: center;
@@ -2213,15 +2213,6 @@ table {
 .u-gap-l {
   gap: 1rem;
 }
-.u-gap-xl {
-  gap: 1.6rem;
-}
-.u-gap-2xl {
-  gap: 3.2rem;
-}
-.u-gap-3xl {
-  gap: 6.4rem;
-}
 @media screen and (min-width: 30em) {
   .u-gap-xs\@m {
     gap: 0.4rem;
@@ -2234,15 +2225,6 @@ table {
   }
   .u-gap-l\@m {
     gap: 1rem;
-  }
-  .u-gap-xl\@m {
-    gap: 1.6rem;
-  }
-  .u-gap-2xl\@m {
-    gap: 3.2rem;
-  }
-  .u-gap-3xl\@m {
-    gap: 6.4rem;
   }
 }
 @media screen and (min-width: 95em) {

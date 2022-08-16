@@ -1,6 +1,6 @@
 @use '../../tools/size';
 
 $sizes: (
-  'm': size.get('m'),
-  'l': size.get('l'),
+  'm': size.get('xl'),
+  'l': size.get('xl') + size.get('m'),
 ) !default;
