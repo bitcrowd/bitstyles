@@ -1,0 +1,42 @@
+#!/bin/sh
+
+set -o errexit
+set -o nounset
+
+trap cleanup 1 2 15
+
+
+TEMP_FOLDER="./test/tmp"
+FIXTURES_FOLDER="./test/scss/fixtures"
+
+cleanup() {
+  rm -rf "$TEMP_FOLDER"
+}
+
+# printf "\nGenerating CSS…\n"
+
+# npx sass test/scss:$TEMP_FOLDER --style=compressed --no-source-map
+# npx sass scss/bitstyles.scss:$TEMP_FOLDER/bitstyles.css --style=compressed --no-source-map
+# npx postcss $TEMP_FOLDER/*.css --replace
+# npx prettier --write $TEMP_FOLDER/*.css
+
+printf "\nSyncing files…\n"
+
+diff $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-all.css > $TEMP_FOLDER/test-import-all.patch &
+diff $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-use-all.css > $TEMP_FOLDER/test-use-all.patch &
+diff $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-each.css > $TEMP_FOLDER/test-import-each.patch &
+diff $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-use-each.css > $TEMP_FOLDER/test-use-each.patch &
+diff $FIXTURES_FOLDER/bitstyles.css $TEMP_FOLDER/bitstyles.css > $TEMP_FOLDER/bitstyles.patch &
+
+
+patch -R $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-all.patch &
+patch -R $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-use-all.patch &
+patch -R $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-each.patch &
+patch -R $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-use-each.patch &
+patch -R $FIXTURES_FOLDER/bitstyles.css $TEMP_FOLDER/bitstyles.patch
+
+
+compare_result=$?
+
+cleanup
+exit $compare_result

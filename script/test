@@ -30,5 +30,5 @@ diff -u -w --from-file $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/tes
 
 compare_result=$?
 
-cleanup
+# cleanup
 exit $compare_result
