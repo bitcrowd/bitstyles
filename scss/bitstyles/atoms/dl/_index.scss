@@ -1,6 +1,6 @@
-@use '../../settings/setup';
 @use '../../tools/palette';
 @use '../../tools/media-query';
+
 @use '../../tools/properties';
 
 .#{properties.join-with-dashes((setup.$namespace, 'a', 'dl'))} {

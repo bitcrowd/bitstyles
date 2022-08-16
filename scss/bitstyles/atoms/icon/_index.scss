@@ -1,15 +1,14 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/icon';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'icon'))} {
+.#{classname.get($classname-items: 'icon', $layer: 'atom')} {
   @include icon.icon;
 }
 
 @each $size-alias, $size-size in settings.$sizes {
-  .#{properties.join-with-dashes((setup.$namespace, 'a', 'icon--#{$size-alias}'))} {
+  .#{classname.get($classname-items: 'icon--#{$size-alias}', $layer: 'atom')} {
     font-size: $size-size;
   }
 }

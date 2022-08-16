@@ -1,10 +1,8 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
+@use '../../tools/classname';
 
-@use '../../tools/properties';
-
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--nav-large'))} {
+.#{classname.get($classname-items: 'button--nav-large', $layer: 'atom')} {
   display: flex;
   justify-content: flex-start;
   width: 100%;

@@ -1,9 +1,8 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--ui'))} {
+.#{classname.get($classname-items: 'button--ui', $layer: 'atom')} {
   &,
   &:visited {
     border-color: settings.$border-color;

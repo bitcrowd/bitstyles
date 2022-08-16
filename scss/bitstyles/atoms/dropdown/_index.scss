@@ -1,10 +1,9 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/media-query';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown'))} {
+.#{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
   position: absolute;
   z-index: 1;
   top: 100%;
@@ -43,16 +42,16 @@
   }
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown--right'))} {
+.#{classname.get($classname-items: 'dropdown--right', $layer: 'atom')} {
   right: 0;
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown--top'))} {
+.#{classname.get($classname-items: 'dropdown--top', $layer: 'atom')} {
   top: auto;
   bottom: 100%;
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown--full-width'))} {
+.#{classname.get($classname-items: 'dropdown--full-width', $layer: 'atom')} {
   right: 0;
   left: 0;
   width: 100%;
@@ -60,7 +59,7 @@
 }
 
 @include media-query.get('s') {
-  .#{properties.join-with-dashes((setup.$namespace, 'a', 'dropdown'))} {
+  .#{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
     right: 0;
     left: 0;
     width: 100%;

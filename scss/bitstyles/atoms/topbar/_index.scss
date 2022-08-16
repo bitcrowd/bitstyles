@@ -1,9 +1,8 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'topbar'))} {
+.#{classname.get($classname-items: 'topbar', $layer: 'atom')} {
   position: settings.$position;
   z-index: settings.$z-index;
   top: 0;

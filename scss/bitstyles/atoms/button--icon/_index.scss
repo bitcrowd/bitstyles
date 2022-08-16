@@ -1,9 +1,8 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--icon'))} {
+.#{classname.get($classname-items: 'button--icon', $layer: 'atom')} {
   justify-content: flex-start;
   padding: settings.$padding-vertical settings.$padding-horizontal;
   border-radius: settings.$border-radius;
@@ -39,7 +38,7 @@
     color: settings.$color-disabled;
   }
 
-  .#{properties.join-with-dashes((setup.$namespace, 'a', 'button__icon'))} {
+  .#{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
     margin: 0;
   }
 }

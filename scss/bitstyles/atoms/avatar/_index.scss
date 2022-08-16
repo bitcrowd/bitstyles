@@ -1,10 +1,9 @@
 @forward './settings';
 @use './settings';
 @use '../../settings/layout';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'avatar'))} {
+.#{classname.get($classname-items: 'avatar', $layer: 'atom')} {
   width: 2em;
   height: 2em;
   overflow: hidden;
@@ -20,7 +19,7 @@
 }
 
 @each $size-alias, $size in settings.$sizes {
-  .#{properties.join-with-dashes((setup.$namespace, 'a', 'avatar--#{$size-alias}'))} {
+  .#{classname.get($classname-items: 'avatar--#{$size-alias}', $layer: 'atom')} {
     width: $size;
     height: $size;
   }

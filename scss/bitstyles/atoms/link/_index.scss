@@ -1,8 +1,7 @@
 @use '../../settings/link' as link2;
-@use '../../settings/setup';
 @use '../../tools/link';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'link'))} {
+.#{classname.get($classname-items: 'link', $layer: 'atom')} {
   @include link.link;
 }

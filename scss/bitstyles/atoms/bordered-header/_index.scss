@@ -1,9 +1,8 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'bordered-header'))} {
+.#{classname.get($classname-items: 'bordered-header', $layer: 'atom')} {
   display: grid;
   grid-gap: settings.$gutter;
   grid-template-columns: auto minmax(1px, 1fr);

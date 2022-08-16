@@ -1,11 +1,10 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/palette';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
 @each $variant in (settings.$variants) {
-  .#{properties.join-with-dashes((setup.$namespace, 'a', 'flash--#{$variant}'))} {
+  .#{classname.get($classname-items: 'flash--#{$variant}', $layer: 'atom')} {
     background-color: palette.get($variant, settings.$background-color);
     color: palette.get($variant, settings.$color);
   }
