@@ -18,12 +18,12 @@ Useful if you need bitstyles to coexist with other CSS libraries, if you specify
 
 Will result in classnames which all start with `bs`, followed by the CSS layer abbreviations, then the class name:
 
+<!-- prettier-ignore-start -->
 ```scss
-.bs-a-card {
-}
-.bs-u-padding-0 {
-}
+.bs-a-card {}
+.bs-u-padding-0 {}
 ```
+<!-- prettier-ignore-end -->
 
 ## Layer-prefixes
 
@@ -42,12 +42,14 @@ Bitstyles is based on an ITCSS structure, with several layer. Default configurat
 
 This results in classnames like:
 
+<!-- prettier-ignore-start -->
 ```scss
 .a-card {} // atom-layer class
 .m-modal {} // molecule-level class
 .o-button-group {} // organism-level class
 .u-margin-0 {} // utility-level class
 ```
+<!-- prettier-ignore-end -->
 
 Note that if you‘ve specified a namespace (see above), that will appear before the layer prefix in the classname.
 
@@ -66,12 +68,14 @@ You can configure the layer prefixes by overriding `setup.$layer-prefix`. You ca
 
 This would result in classnames like:
 
+<!-- prettier-ignore-start -->
 ```scss
 .at-card {} // atom-layer class
 .mo-modal {} // molecule-level class
 .or-button-group {} // organism-level class
 .margin-0 {} // utility-level class
 ```
+<!-- prettier-ignore-end -->
 
 ## “No media query” name
 
