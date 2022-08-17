@@ -1,54 +1,8 @@
-@use '../settings/setup';
 @use 'sass:list';
-@use 'sass:string';
-@use '../tools/media-query';
-
-/*
- * Removes a value from a list
- *
- * @param $list The list from which to remove values
- * @param $value The value to remove from the list. Values that occur multiple times will all be removed
- */
-@function remove($list, $value) {
-  $result: ();
-
-  @for $i from 1 through list.length($list) {
-    @if list.nth($list, $i) != $value {
-      $result: list.append($result, list.nth($list, $i));
-    }
-  }
-
-  @return $result;
-}
-
-/*
- * Returns a string suitable for a utility class or CSS property name, by joining strings with dash characters
- *
- * @param $string-items An ordered list of strings to be joined with dashes to form the string
- * @param $at-suffix [optional] Suffix for the string, to be precedeed with an `@` symbol, if present
- */
-@function join-with-dashes($string-items, $at-suffix: setup.$no-media-query) {
-  $string: null;
-  $string-items: remove(remove($string-items, null), '');
-
-  @for $i from 1 through list.length($string-items) {
-    $string-item: list.nth($string-items, $i);
-
-    @if $string-item {
-      $string: if(
-        $i == 1,
-        $string-item,
-        '#{$string}#{string.unquote('-')}#{$string-item}'
-      );
-    }
-  }
-
-  @if $at-suffix != setup.$no-media-query {
-    $string: '#{$string}\\\@#{$at-suffix}';
-  }
-
-  @return $string;
-}
+@use '../settings/setup';
+@use './classname';
+@use './media-query';
+@use './string';
 
 /*
  * While most utility classes output a single CSS property, some (e.g. `.u-margin-m-x`) need to output several directions of the same property. This mixin iterates over the list that it’s passed, and outputs the property for each direction.
@@ -59,7 +13,7 @@
  */
 @mixin output-property-directions($direction-values, $name, $value) {
   @each $direction in $direction-values {
-    #{join-with-dashes(($name, $direction))}: $value;
+    #{string.join-with-dashes(($name, $direction))}: $value;
   }
 }
 
@@ -78,17 +32,7 @@
   @each $breakpoint in $breakpoints {
     @include media-query.get($breakpoint) {
       @each $alias, $value in $values {
-        $classname: join-with-dashes(
-          $string-items: (
-            setup.$namespace,
-            'u',
-            $classname-root,
-            $alias,
-          ),
-          $at-suffix: $breakpoint,
-        );
-
-        .#{$classname} {
+        .#{classname.get($classname-items: ($classname-root, $alias), $layer: 'utility', $at-suffix: $breakpoint)} {
           #{$property-name}: $value;
         }
       }
@@ -119,18 +63,7 @@
     @include media-query.get($breakpoint) {
       @each $alias, $value in $values {
         @each $direction-name, $direction-values in $directions {
-          $classname: join-with-dashes(
-            $string-items: (
-              setup.$namespace,
-              'u',
-              $classname-root,
-              $alias,
-              $direction-name,
-            ),
-            $at-suffix: $breakpoint,
-          );
-
-          .#{$classname} {
+          .#{classname.get($classname-items: ($classname-root, $alias, $direction-name), $layer: 'utility', $at-suffix: $breakpoint)} {
             @include output-property-directions(
               $direction-values: $direction-values,
               $name: $property-name,
@@ -147,25 +80,16 @@
 /*
  * Outputs a classname that applies a block of properties that you pass in.
  *
- * @param $classname-prefix [optional] Pass a prefix for your classname e.g. to denote the layer of CSS it belongs to
+ * @param $layer [optional] Pass a prefix for your classname e.g. to denote the layer of CSS it belongs to
  * @param $classname-root The root name to use for the class, normally matches the CSS property to avoid confusion e.g. `margin`
  * @param $breakpoint-suffix [optional] Pass the suffix to use in the classname to denote the breakpoint you’re outputting these classes for. If you’re using a character that needs to be escaped, remember to double-escape it e.g. `\\\@m`
  */
 @mixin output-block(
-  $classname-prefix,
+  $layer: 'atom',
   $classname-root,
   $breakpoint: setup.$no-media-query
 ) {
-  $classname: join-with-dashes(
-    $string-items: (
-      setup.$namespace,
-      $classname-prefix,
-      $classname-root,
-    ),
-    $at-suffix: $breakpoint,
-  );
-
-  .#{$classname} {
+  .#{classname.get($classname-items: ($classname-root), $layer: $layer, $at-suffix: $breakpoint)} {
     @content;
   }
 }
