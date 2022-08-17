@@ -10,7 +10,9 @@
 - The `overflow` utility classes can now be output at breakpoints, configurable with the `$bitstyles-overflow-breakpoints` variable
 - A new typography configuration `typography.$line-heights` is available with additional setup config for line-heights.
 - Renamed `typography-responsive.$font-sizes` to `typography-responsive.$typographic-scale`, which now expects the font-size for each to be paired with line-height
-- A new helper function `tools/base-palette` `get()` that returns colors from your base palette, to be used when setting up your color palette
+- A new helper function `base-palette.get()` that returns colors from your base palette, to be used when setting up your color palette
+- Classname layer prefixes for indicating whether a class is at atom/molecule/organism/utility level can now be configured or even removed by overriding `setup.$layer-prefixes`.
+- New helper function `classname.get()` for generating classnames that respect the nampespace and layer-prefix configuration. If you were previously using `properties.join-with-dashes()` to generate classnames, you should migrate to using `classname.get()` instead.
 
 ### Changed
 

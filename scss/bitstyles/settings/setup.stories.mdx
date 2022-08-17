@@ -25,6 +25,50 @@ Will result in classnames which all start with `bs`, followed by the CSS layer a
 }
 ```
 
+## Layer-prefixes
+
+Bitstyles is based on an ITCSS structure, with several layer. Default configuration will prepend all classnames with a letter indicating which layer it’s found in:
+
+```scss
+$layer-prefixes: (
+  'atom': 'a',
+  'molecule': 'm',
+  'organism': 'o',
+  'utility': 'u',
+);
+```
+
+This results in classnames like:
+
+```scss
+.a-card {} // atom-layer class
+.m-modal {} // molecule-level class
+.o-button-group {} // organism-level class
+.u-margin-0 {} // utility-level class
+```
+
+Note that if you‘ve specified a namespace (see above), that will appear before the layer prefix in the classname.
+
+You can configure the layer prefixes by overriding `setup.$layer-prefix`. You can change the string to be prefixed, or remove it entirely.
+
+```scss
+$bitstyles-setup-layer-prefixes: (
+  'atom': 'at',
+  'molecule': 'mo',
+  'organism': 'or',
+  'utility': '',
+);
+```
+
+This would result in classnames like:
+
+```scss
+.at-card {} // atom-layer class
+.mo-modal {} // molecule-level class
+.or-button-group {} // organism-level class
+.margin-0 {} // utility-level class
+```
+
 ## “No media query” name
 
 When you pass a block of CSS content to the `media-query.get()` helper, it wraps that content in a media-query. To make looping over media-queries easier, there is a special-case media-query name that results in no media query wrapper. This defaults to `no-mq`, and can be configured using `$bitstyles-setup-no-media-query`:
