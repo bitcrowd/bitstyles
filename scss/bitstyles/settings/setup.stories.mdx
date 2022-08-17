@@ -30,11 +30,13 @@ Will result in classnames which all start with `bs`, followed by the CSS layer a
 Bitstyles is based on an ITCSS structure, with several layer. Default configuration will prepend all classnames with a letter indicating which layer it’s found in:
 
 ```scss
-$layer-prefixes: (
-  'atom': 'a',
-  'molecule': 'm',
-  'organism': 'o',
-  'utility': 'u',
+@use 'bitstyles/settings/setup' with (
+  $layer-prefixes: (
+    'atom': 'a',
+    'molecule': 'm',
+    'organism': 'o',
+    'utility': 'u',
+  )
 );
 ```
 
@@ -52,11 +54,13 @@ Note that if you‘ve specified a namespace (see above), that will appear before
 You can configure the layer prefixes by overriding `setup.$layer-prefix`. You can change the string to be prefixed, or remove it entirely.
 
 ```scss
-$bitstyles-setup-layer-prefixes: (
-  'atom': 'at',
-  'molecule': 'mo',
-  'organism': 'or',
-  'utility': '',
+@use 'bitstyles/settings/setup' with (
+  $bitstyles-setup-layer-prefixes: (
+    'atom': 'at',
+    'molecule': 'mo',
+    'organism': 'or',
+    'utility': '',
+  )
 );
 ```
 

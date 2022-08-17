@@ -1,5 +1,3 @@
-@use '../../settings/setup';
 @use '../../settings/typography-responsive';
-@use '../../tools/font-size';
 
 $values: typography-responsive.$typographic-scale !default;
