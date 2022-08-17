@@ -9,7 +9,7 @@
   $layer: null
 ) {
   $items: list.join(
-    (setup.$namespace, map.get(setup.$prefixes, $layer)),
+    (setup.$namespace, map.get(setup.$layer-prefixes, $layer)),
     $classname-items
   );
   $classname: string.join-with-dashes(

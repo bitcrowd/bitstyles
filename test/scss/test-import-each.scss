@@ -65,6 +65,12 @@ $bitstyles-color-palette-palette: (
 );
 $bitstyles-layout-size-base: 10rem;
 $bitstyles-setup-namespace: 'bs';
+$bitstyles-setup-layer-prefixes: (
+  'atom': 'at',
+  'molecule': 'mo',
+  'organism': 'or',
+  'utility': '',
+);
 $bitstyles-shadows-shadows: (
   'default': (
     (

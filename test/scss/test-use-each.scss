@@ -75,7 +75,13 @@
   $size-base: 10rem
 );
 @use '../../scss/bitstyles/settings/setup' with (
-  $namespace: 'bs'
+  $namespace: 'bs',
+  $layer-prefixes: (
+    'atom': 'at',
+    'molecule': 'mo',
+    'organism': 'or',
+    'utility': '',
+  )
 );
 @use '../../scss/bitstyles/settings/shadows' with (
   $shadows: (
