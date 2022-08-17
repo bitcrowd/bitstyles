@@ -12,15 +12,15 @@
 - Renamed `typography-responsive.$font-sizes` to `typography-responsive.$typographic-scale`, which now expects the font-size for each to be paired with line-height
 - A new helper function `tools/base-palette` `get()` that returns colors from your base palette, to be used when setting up your color palette
 
-## Changed
+### Changed
 
 - `typography.$font-sizes` now expects a single Sass map of font-sizes. This is the base set of design tokens for your font-sizes, from which the responsive typographic scale is created.
 - Newly configured `line-height` utility classes to include the base `typography.$line-heights`
 - The `output-responsive-font-sizes` mixin expects a map data structure which includes `font-size` and `line-height`. If you were using the mixin you would have to change the parameter passed.
 - We now have a two-tier typography design token system. A single Sass map `$bitstylestypography-font-sizes` is used to create the existing responsive typography system for `h1` – `h6` elements, and the corresponding `.u-h1` – `.u-h6` responsive typography utility classes. The responsive typography for the base heading elements and the corresponding utility classes is built on top of these base design tokens. To update, all your unique font-sizes should be defined in the base scale in `settings/typography`, then referenced using `font-size.get()` to build your responsive typography scale in `settings/typography-responsive`.
-- The color palette generator in `tools/color` is renamed `generate-palette` -> `generate-scale`, and now produces a more evenly-spread range of colors, with more accurate saturation and hue than before
+- The color palette generator in `tools/color` is renamed from `color.generate-palette` to `color.generate-scale`, and now produces a more evenly-spread range of colors, with more accurate saturation and hue than before
 - By default there are now two tiers of color palettes — the one used in your codebase and in all bitstyles components (the “semantic palette”) is generated from a base palette. In the default configuration, this base palette is generated from the base colors provided. See [https://bitcrowd.github.io/bitstyles/?path=/docs/design-tokens-color-palette--page](https://bitcrowd.github.io/bitstyles/?path=/docs/design-tokens-color-palette--page) for details on csutomizing this.
-- Default naming of color variants has switched from using numbers, to using meaningful names like `light`, `dark`, `base`. If you override the palette in your codebase, you may need to update anything
+- Default naming of color variants has switched from using numbers, to using meaningful names like `light`, `dark`, `base`. If you override the palette in your codebase, you may need to override the colors used by other bitstyles components
 
 ### Fixed
 
