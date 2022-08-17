@@ -2207,11 +2207,11 @@ table {
 .u-gap-s {
   gap: 0.6rem;
 }
-.u-gap-m {
-  gap: 0.8rem;
-}
 .u-gap-l {
   gap: 1rem;
+}
+.u-gap-xl {
+  gap: 1.6rem;
 }
 @media screen and (min-width: 30em) {
   .u-gap-xs\@m {
@@ -2220,11 +2220,11 @@ table {
   .u-gap-s\@m {
     gap: 0.6rem;
   }
-  .u-gap-m\@m {
-    gap: 0.8rem;
-  }
   .u-gap-l\@m {
     gap: 1rem;
+  }
+  .u-gap-xl\@m {
+    gap: 1.6rem;
   }
 }
 @media screen and (min-width: 95em) {
@@ -2233,9 +2233,6 @@ table {
   }
   .u-gap-s\@xl {
     gap: 0.6rem;
-  }
-  .u-gap-m\@xl {
-    gap: 0.8rem;
   }
   .u-gap-l\@xl {
     gap: 1rem;
