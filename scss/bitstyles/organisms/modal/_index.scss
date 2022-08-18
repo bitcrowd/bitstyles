@@ -8,7 +8,7 @@
   opacity: 0;
 }
 
-.#{classname.get($classname-items: 'modal__overlay', $layer: 'organism')} {
+#{classname.get($classname-items: 'modal__overlay', $layer: 'organism')} {
   position: fixed;
   z-index: 10;
   top: 0;
@@ -30,7 +30,7 @@
   }
 }
 
-.#{classname.get($classname-items: 'modal__content', $layer: 'organism')} {
+#{classname.get($classname-items: 'modal__content', $layer: 'organism')} {
   position: fixed;
   z-index: 20;
   top: 50%;
@@ -60,7 +60,7 @@
 }
 
 @include media-query.get(settings.$breakpoint) {
-  .#{classname.get($classname-items: 'modal__content', $layer: 'organism')} {
+  #{classname.get($classname-items: 'modal__content', $layer: 'organism')} {
     transition: all settings.$transition-duration settings.$transition-easing,
       visibility 0 settings.$transition-easing;
 
@@ -73,9 +73,9 @@
 }
 
 @mixin modal-variation($state) {
-  .#{classname.get($classname-items: ('modal--animation', $state), $layer: 'organism')} {
+  #{classname.get($classname-items: ('modal--animation', $state), $layer: 'organism')} {
     &[aria-hidden='true'] {
-      .#{classname.get($classname-items: 'modal__content', $layer: 'organism')} {
+      #{classname.get($classname-items: 'modal__content', $layer: 'organism')} {
         @content;
       }
     }

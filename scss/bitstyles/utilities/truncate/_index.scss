@@ -1,6 +1,6 @@
 @use '../../tools/truncate';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'truncate', $layer: 'utility')} {
+#{classname.get($classname-items: 'truncate', $layer: 'utility')} {
   @include truncate.truncate;
 }

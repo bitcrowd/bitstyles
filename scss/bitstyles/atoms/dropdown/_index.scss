@@ -3,7 +3,7 @@
 @use '../../tools/media-query';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
+#{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
   position: absolute;
   z-index: 1;
   top: 100%;
@@ -42,16 +42,16 @@
   }
 }
 
-.#{classname.get($classname-items: 'dropdown--right', $layer: 'atom')} {
+#{classname.get($classname-items: 'dropdown--right', $layer: 'atom')} {
   right: 0;
 }
 
-.#{classname.get($classname-items: 'dropdown--top', $layer: 'atom')} {
+#{classname.get($classname-items: 'dropdown--top', $layer: 'atom')} {
   top: auto;
   bottom: 100%;
 }
 
-.#{classname.get($classname-items: 'dropdown--full-width', $layer: 'atom')} {
+#{classname.get($classname-items: 'dropdown--full-width', $layer: 'atom')} {
   right: 0;
   left: 0;
   width: 100%;
@@ -59,7 +59,7 @@
 }
 
 @include media-query.get('s') {
-  .#{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
+  #{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
     right: 0;
     left: 0;
     width: 100%;

@@ -32,7 +32,7 @@
   @each $breakpoint in $breakpoints {
     @include media-query.get($breakpoint) {
       @each $alias, $value in $values {
-        .#{classname.get($classname-items: ($classname-root, $alias), $layer: 'utility', $at-suffix: $breakpoint)} {
+        #{classname.get($classname-items: ($classname-root, $alias), $layer: 'utility', $at-suffix: $breakpoint)} {
           #{$property-name}: $value;
         }
       }
@@ -63,7 +63,7 @@
     @include media-query.get($breakpoint) {
       @each $alias, $value in $values {
         @each $direction-name, $direction-values in $directions {
-          .#{classname.get($classname-items: ($classname-root, $alias, $direction-name), $layer: 'utility', $at-suffix: $breakpoint)} {
+          #{classname.get($classname-items: ($classname-root, $alias, $direction-name), $layer: 'utility', $at-suffix: $breakpoint)} {
             @include output-property-directions(
               $direction-values: $direction-values,
               $name: $property-name,
@@ -89,7 +89,7 @@
   $classname-root,
   $breakpoint: setup.$no-media-query
 ) {
-  .#{classname.get($classname-items: ($classname-root), $layer: $layer, $at-suffix: $breakpoint)} {
+  #{classname.get($classname-items: ($classname-root), $layer: $layer, $at-suffix: $breakpoint)} {
     @content;
   }
 }

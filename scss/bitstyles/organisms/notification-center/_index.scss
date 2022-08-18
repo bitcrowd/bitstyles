@@ -1,6 +1,6 @@
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'notification-center', $layer: 'organism')} {
+#{classname.get($classname-items: 'notification-center', $layer: 'organism')} {
   position: fixed;
   top: 0;
   right: 0;

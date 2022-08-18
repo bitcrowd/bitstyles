@@ -4,11 +4,11 @@
 @use '../../tools/classname';
 @use '../../tools/size';
 
-.#{classname.get($classname-items: 'button--small', $layer: 'atom')} {
+#{classname.get($classname-items: 'button--small', $layer: 'atom')} {
   min-height: size.get('xl');
   padding: settings.$padding-vertical settings.$padding-horizontal;
 
-  &.#{classname.get($classname-items: 'button--icon', $layer: 'atom')} {
+  &#{classname.get($classname-items: 'button--icon', $layer: 'atom')} {
     padding: math.div(settings.$padding-horizontal, 2);
     border-radius: settings.$border-radius;
   }

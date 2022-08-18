@@ -5,7 +5,7 @@
 @use '../../tools/classname';
 
 @each $aspect-ratio-alias, $aspect-ratio-value in settings.$values {
-  .#{classname.get($classname-items: ('aspect-ratio', $aspect-ratio-alias), $layer: 'utility')} {
+  #{classname.get($classname-items: ('aspect-ratio', $aspect-ratio-alias), $layer: 'utility')} {
     @include aspect-ratio.aspect-ratio(
       map.get($aspect-ratio-value, 'width'),
       map.get($aspect-ratio-value, 'height')

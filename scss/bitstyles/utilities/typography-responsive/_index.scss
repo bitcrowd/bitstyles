@@ -4,6 +4,6 @@
 @use '../../tools/classname';
 
 @include typography.output-responsive-font-sizes(
-  $prefix: '.#{classname.get($layer: "utility")}-',
+  $prefix: '#{classname.get($layer: "utility")}-',
   $font-sizes: settings.$values
 );

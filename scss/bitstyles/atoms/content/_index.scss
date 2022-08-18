@@ -10,7 +10,7 @@
   padding-left: $padding-value;
 }
 
-.#{classname.get($classname-items: 'content', $layer: 'atom')} {
+#{classname.get($classname-items: 'content', $layer: 'atom')} {
   width: 100%;
   max-width: map.get(settings.$max-width, settings.$max-width-base);
   margin-right: auto;
@@ -32,7 +32,7 @@
 }
 
 @each $max-width-alias, $max-width-value in settings.$max-width {
-  .#{classname.get($classname-items: 'content--#{$max-width-alias}', $layer: 'atom')} {
+  #{classname.get($classname-items: 'content--#{$max-width-alias}', $layer: 'atom')} {
     max-width: $max-width-value;
   }
 }

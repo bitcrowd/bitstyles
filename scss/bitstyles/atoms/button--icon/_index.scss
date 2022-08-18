@@ -2,7 +2,7 @@
 @use './settings';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'button--icon', $layer: 'atom')} {
+#{classname.get($classname-items: 'button--icon', $layer: 'atom')} {
   justify-content: flex-start;
   padding: settings.$padding-vertical settings.$padding-horizontal;
   border-radius: settings.$border-radius;
@@ -38,7 +38,7 @@
     color: settings.$color-disabled;
   }
 
-  .#{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
+  #{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
     margin: 0;
   }
 }

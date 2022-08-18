@@ -4,7 +4,7 @@
 @use '../../tools/classname';
 
 @each $variant in (settings.$variants) {
-  .#{classname.get($classname-items: 'flash--#{$variant}', $layer: 'atom')} {
+  #{classname.get($classname-items: 'flash--#{$variant}', $layer: 'atom')} {
     background-color: palette.get($variant, settings.$background-color);
     color: palette.get($variant, settings.$color);
   }

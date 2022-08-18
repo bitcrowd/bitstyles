@@ -2,6 +2,6 @@
 @use '../../tools/link';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'link', $layer: 'atom')} {
+#{classname.get($classname-items: 'link', $layer: 'atom')} {
   @include link.link;
 }

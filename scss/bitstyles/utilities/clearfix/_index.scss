@@ -1,6 +1,6 @@
 @use '../../tools/clearfix';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'clearfix', $layer: 'utility')} {
+#{classname.get($classname-items: 'clearfix', $layer: 'utility')} {
   @include clearfix.clearfix;
 }

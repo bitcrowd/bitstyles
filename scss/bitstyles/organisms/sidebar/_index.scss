@@ -3,11 +3,11 @@
 @use '../../tools/media-query';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'sidebar--large', $layer: 'organism')} {
+#{classname.get($classname-items: 'sidebar--large', $layer: 'organism')} {
   width: settings.$large-width;
 }
 
-.#{classname.get($classname-items: 'sidebar--small', $layer: 'organism')} {
+#{classname.get($classname-items: 'sidebar--small', $layer: 'organism')} {
   position: fixed;
   z-index: 1;
   top: 0;

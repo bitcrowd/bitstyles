@@ -1,6 +1,6 @@
 @use '../../tools/object-cover';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'object-cover', $layer: 'utility')} {
+#{classname.get($classname-items: 'object-cover', $layer: 'utility')} {
   @include object-cover.object-cover;
 }

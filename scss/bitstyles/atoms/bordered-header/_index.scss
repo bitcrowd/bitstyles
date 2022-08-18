@@ -2,7 +2,7 @@
 @use './settings';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'bordered-header', $layer: 'atom')} {
+#{classname.get($classname-items: 'bordered-header', $layer: 'atom')} {
   display: grid;
   grid-gap: settings.$gutter;
   grid-template-columns: auto minmax(1px, 1fr);

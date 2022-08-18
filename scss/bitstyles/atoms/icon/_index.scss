@@ -3,12 +3,12 @@
 @use '../../tools/icon';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'icon', $layer: 'atom')} {
+#{classname.get($classname-items: 'icon', $layer: 'atom')} {
   @include icon.icon;
 }
 
 @each $size-alias, $size-size in settings.$sizes {
-  .#{classname.get($classname-items: 'icon--#{$size-alias}', $layer: 'atom')} {
+  #{classname.get($classname-items: 'icon--#{$size-alias}', $layer: 'atom')} {
     font-size: $size-size;
   }
 }

@@ -1,6 +1,6 @@
 @use '../../tools/absolute-center';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'absolute-center', $layer: 'utility')} {
+#{classname.get($classname-items: 'absolute-center', $layer: 'utility')} {
   @include absolute-center.absolute-center;
 }

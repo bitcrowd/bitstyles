@@ -2,7 +2,7 @@
 @use './settings';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'table', $layer: 'organism')} {
+#{classname.get($classname-items: 'table', $layer: 'organism')} {
   width: 100%;
 
   /* stylelint-disable selector-max-type */
@@ -28,6 +28,6 @@
   /* stylelint-enable selector-max-type */
 }
 
-.#{classname.get($classname-items: 'table__actions', $layer: 'organism')} {
+#{classname.get($classname-items: 'table__actions', $layer: 'organism')} {
   padding-right: settings.$padding-vertical-td;
 }

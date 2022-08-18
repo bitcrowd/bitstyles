@@ -3,7 +3,7 @@
 @use './settings';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'button', $layer: 'atom')} {
+#{classname.get($classname-items: 'button', $layer: 'atom')} {
   display: inline-flex;
   position: relative;
   flex-shrink: 0;
@@ -61,14 +61,14 @@
   }
 }
 
-.#{classname.get($classname-items: 'button__avatar', $layer: 'atom')},
-.#{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
+#{classname.get($classname-items: 'button__avatar', $layer: 'atom')},
+#{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
   margin-right: settings.$icon-spacing;
   margin-left: math.div(-(settings.$icon-spacing), 4);
 }
 
-.#{classname.get($classname-items: 'button__label', $layer: 'atom')}
-  + .#{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
+#{classname.get($classname-items: 'button__label', $layer: 'atom')}
+  + #{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
   margin-right: math.div(-(settings.$icon-spacing), 4);
   margin-left: settings.$icon-spacing;
 }

@@ -2,7 +2,7 @@
 @use './settings';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'topbar', $layer: 'atom')} {
+#{classname.get($classname-items: 'topbar', $layer: 'atom')} {
   position: settings.$position;
   z-index: settings.$z-index;
   top: 0;

@@ -3,7 +3,7 @@
 @use '../../settings/layout';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'avatar', $layer: 'atom')} {
+#{classname.get($classname-items: 'avatar', $layer: 'atom')} {
   width: 2em;
   height: 2em;
   overflow: hidden;
@@ -19,7 +19,7 @@
 }
 
 @each $size-alias, $size in settings.$sizes {
-  .#{classname.get($classname-items: 'avatar--#{$size-alias}', $layer: 'atom')} {
+  #{classname.get($classname-items: 'avatar--#{$size-alias}', $layer: 'atom')} {
     width: $size;
     height: $size;
   }

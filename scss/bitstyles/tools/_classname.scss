@@ -20,5 +20,5 @@
     $classname: '#{$classname}\\\@#{$at-suffix}';
   }
 
-  @return $classname;
+  @return '.#{$classname}';
 }

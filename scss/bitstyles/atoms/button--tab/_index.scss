@@ -5,13 +5,13 @@
 @use '../../tools/classname';
 @use '../button/settings' as button-settings;
 
-.#{classname.get($classname-items: 'button--tab-container', $layer: 'atom')} {
+#{classname.get($classname-items: 'button--tab-container', $layer: 'atom')} {
   & > *:first-child {
     margin-left: -(button-settings.$padding-horizontal);
   }
 }
 
-.#{classname.get($classname-items: 'button--tab', $layer: 'atom')} {
+#{classname.get($classname-items: 'button--tab', $layer: 'atom')} {
   position: relative;
   border: 0;
   border-radius: settings.$border-radius;

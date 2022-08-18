@@ -3,11 +3,11 @@
 @use '../../tools/classname';
 @use '../../tools/size';
 
-.#{classname.get($classname-items: 'button--mode-container', $layer: 'atom')} {
+#{classname.get($classname-items: 'button--mode-container', $layer: 'atom')} {
   border-radius: size.get('s');
 }
 
-.#{classname.get($classname-items: 'button--mode', $layer: 'atom')} {
+#{classname.get($classname-items: 'button--mode', $layer: 'atom')} {
   padding-top: 0;
   padding-bottom: 0;
 

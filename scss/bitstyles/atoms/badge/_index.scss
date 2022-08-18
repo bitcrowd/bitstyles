@@ -5,21 +5,21 @@
 @use '../../tools/palette';
 @use '../../tools/size';
 
-.#{classname.get($classname-items: 'badge', $layer: 'atom')} {
+#{classname.get($classname-items: 'badge', $layer: 'atom')} {
   display: inline-flex;
   align-items: center;
   padding: settings.$padding-vertical settings.$padding-horizontal;
   border-radius: layout.$border-radius-round;
   white-space: nowrap;
 
-  .#{classname.get($classname-items: 'badge__button', $layer: 'atom')} {
+  #{classname.get($classname-items: 'badge__button', $layer: 'atom')} {
     margin-right: -#{size.get('s')};
     margin-left: size.get('xs');
   }
 }
 
 @each $variant in (settings.$variants) {
-  .#{classname.get($classname-items: 'badge--#{$variant}', $layer: 'atom')} {
+  #{classname.get($classname-items: 'badge--#{$variant}', $layer: 'atom')} {
     --button-fg: #{palette.get($variant, settings.$color)};
     --button-bg: #{palette.get($variant, settings.$background-color)};
     --button-fg-hover: #{palette.get($variant, settings.$background-color)};
