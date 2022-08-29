@@ -1,0 +1,59 @@
+@use 'sass:color';
+@use 'sass:map';
+@use './color-palette';
+@use '../tools/custom-property';
+@use '../tools/palette';
+
+$default-theme: (
+  'color': (
+    'background':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'background',
+              'base',
+            ),
+          )}
+      ),
+    'text':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'text',
+              'darker',
+            ),
+          )}
+      ),
+  ),
+) !default;
+$dark-theme: (
+  'color': (
+    'background':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'background',
+              'darkest',
+            ),
+          )}
+      ),
+    'text':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'text',
+              'lightest',
+            ),
+          )}
+      ),
+  ),
+) !default;
+$default-theme-name: 'default' !default;
+$themes: (
+  '#{$default-theme-name}': $default-theme,
+  'dark': $dark-theme,
+) !default;

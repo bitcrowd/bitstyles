@@ -4,6 +4,8 @@
 @use '../../tools/custom-property';
 @use 'sass:math';
 
+/* prettier-ignore */
+
 #{classname.get($classname-items: 'button', $layer: 'atom')} {
   #{custom-property.get($items: ('button', 'transition'), $layer: 'atom')}: #{settings.$transition};
   #{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')}: #{settings.$justify-content};
@@ -12,101 +14,21 @@
   box-sizing: content-box;
   flex-shrink: 0;
   align-items: center;
-  justify-content: var(
-    #{custom-property.get(
-        $items: (
-          'button',
-          'justify-content',
-        ),
-        $layer: 'atom'
-      )}
-  );
-  min-width: var(
-    #{custom-property.get(
-        $items: (
-          'button',
-          'min-width',
-        ),
-        $layer: 'atom'
-      )}
-  );
+  justify-content: var(#{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')});
+  min-width: var(#{custom-property.get($items: ('button', 'min-width'), $layer: 'atom')});
   max-width: 100%;
-  min-height: var(
-    #{custom-property.get(
-        $items: (
-          'button',
-          'min-height',
-        ),
-        $layer: 'atom'
-      )}
-  );
+  min-height: var(#{custom-property.get($items: ('button', 'min-height'), $layer: 'atom')});
   margin: 0;
-  padding: var(
-      #{custom-property.get(
-          $items: (
-            'button',
-            'padding-vertical',
-          ),
-          $layer: 'atom'
-        )}
-    )
-    var(
-      #{custom-property.get(
-          $items: (
-            'button',
-            'padding-horizontal',
-          ),
-          $layer: 'atom'
-        )}
-    );
+  padding: var(#{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')})
+    var(#{custom-property.get($items: ('button','padding-horizontal'), $layer: 'atom')});
   overflow: visible;
-  transition: var(
-    #{custom-property.get(
-        $items: (
-          'button',
-          'transition',
-        ),
-        $layer: 'atom'
-      )}
-  );
-  border-width: var(
-    #{custom-property.get(
-        $items: (
-          'button',
-          'border-width',
-        ),
-        $layer: 'atom'
-      )}
-  );
+  transition: var(#{custom-property.get($items: ('button', 'transition'), $layer: 'atom')});
+  border-width: var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')});
   border-style: solid;
-  border-radius: var(
-    #{custom-property.get(
-        $items: (
-          'button',
-          'border-radius',
-        ),
-        $layer: 'atom'
-      )}
-  );
+  border-radius: var(#{custom-property.get($items: ('button', 'border-radius'), $layer: 'atom')});
   font-family: settings.$font-family;
-  font-size: var(
-    #{custom-property.get(
-        $items: (
-          'button',
-          'font-size',
-        ),
-        $layer: 'atom'
-      )}
-  );
-  font-weight: var(
-    #{custom-property.get(
-        $items: (
-          'button',
-          'font-weight',
-        ),
-        $layer: 'atom'
-      )}
-  );
+  font-size: var(#{custom-property.get($items: ('button', 'font-size'), $layer: 'atom')});
+  font-weight: var(#{custom-property.get($items: ('button', 'font-weight'), $layer: 'atom')});
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -114,46 +36,6 @@
   user-select: none;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   touch-action: manipulation;
-
-  &,
-  &:visited {
-    border-color: var(
-      #{custom-property.get(
-          $items: (
-            'button',
-            'border-color',
-          ),
-          $layer: 'atom'
-        )}
-    );
-    background-color: var(
-      #{custom-property.get(
-          $items: (
-            'button',
-            'background-color',
-          ),
-          $layer: 'atom'
-        )}
-    );
-    box-shadow: var(
-      #{custom-property.get(
-          $items: (
-            'button',
-            'box-shadow',
-          ),
-          $layer: 'atom'
-        )}
-    );
-    color: var(
-      #{custom-property.get(
-          $items: (
-            'button',
-            'color',
-          ),
-          $layer: 'atom'
-        )}
-    );
-  }
 
   &:hover,
   &:focus {

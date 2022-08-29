@@ -1,0 +1,19 @@
+@use '../settings/themes';
+@use 'sass:map';
+
+@mixin get($theme-name) {
+  @if $theme-name == themes.$default-theme-name {
+    :root,
+    [data-theme='#{themes.$default-theme-name}'] {
+      @content;
+    }
+  } @else {
+    @if map.has-key(themes.$themes, $theme-name) {
+      [data-theme='#{$theme-name}'] {
+        @content;
+      }
+    } @else {
+      @error 'Oops! Theme ‘#{$theme-name}’ does not exist.';
+    }
+  }
+} ;

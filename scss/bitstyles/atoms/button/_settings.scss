@@ -11,3 +11,20 @@ $transition: color animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing !default;
 $icon-spacing: size.get('s') !default;
 $justify-content: center !default;
+$allowed-color-properties: (
+  'color',
+  'background-color',
+  'border-color',
+  'box-shadow'
+) !default;
+$allowed-shape-properties: (
+  'padding-vertical',
+  'padding-horizontal',
+  'border-width',
+  'border-radius',
+  'min-height',
+  'min-width',
+  'font-size',
+  'font-weight',
+  'justify-content'
+) !default;

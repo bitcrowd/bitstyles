@@ -1,12 +1,8 @@
-@forward 'settings';
-@use './settings';
 @use '../../settings/typography';
 @use '../../tools/line-height';
 
 /* stylelint-disable selector-max-type */
 html {
-  background: settings.$background-color;
-  color: settings.$color;
   font-family: typography.$font-family-body;
   line-height: line-height.get('5');
   -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
