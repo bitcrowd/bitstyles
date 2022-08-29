@@ -11,7 +11,7 @@
       #{custom-property.get(
           $items: (
             'button',
-            'bg',
+            'background-color',
           ),
           $layer: 'atom'
         )},
@@ -22,7 +22,7 @@
       #{custom-property.get(
           $items: (
             'button',
-            'fg',
+            'color',
           ),
           $layer: 'atom'
         )},
@@ -37,7 +37,7 @@
       #{custom-property.get(
           $items: (
             'button',
-            'bg',
+            'background-color',
             'hover',
           ),
           $layer: 'atom'
@@ -49,7 +49,7 @@
       #{custom-property.get(
           $items: (
             'button',
-            'fg',
+            'color',
             'hover',
           ),
           $layer: 'atom'

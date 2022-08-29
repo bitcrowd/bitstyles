@@ -21,19 +21,19 @@
 
 @each $variant in (settings.$variants) {
   #{classname.get($classname-items: 'badge--#{$variant}', $layer: 'atom')} {
-    #{custom-property.get($items: ('button', 'fg'), $layer: 'atom')}: #{palette.get(
+    #{custom-property.get($items: ('button', 'color'), $layer: 'atom')}: #{palette.get(
         $variant,
         settings.$color
       )};
-    #{custom-property.get($items: ('button', 'bg'), $layer: 'atom')}: #{palette.get(
+    #{custom-property.get($items: ('button', 'background-color'), $layer: 'atom')}: #{palette.get(
         $variant,
         settings.$background-color
       )};
-    #{custom-property.get($items: ('button', 'fg', 'hover'), $layer: 'atom')}: #{palette.get(
+    #{custom-property.get($items: ('button', 'color', 'hover'), $layer: 'atom')}: #{palette.get(
         $variant,
         settings.$background-color
       )};
-    #{custom-property.get($items: ('button', 'bg', 'hover'), $layer: 'atom')}: #{palette.get(
+    #{custom-property.get($items: ('button', 'background-color', 'hover'), $layer: 'atom')}: #{palette.get(
         $variant,
         settings.$color
       )};
