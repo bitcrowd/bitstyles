@@ -29,18 +29,20 @@ Give the active link the `aria-current="page"` attribute.
       <a href="/docs/atoms-button-base--button-element">a-button</a>
     </li>
     <li>
-      <a href="/docs/atoms-button-icon--button-element">a-button--icon</a>
+      <a href="/docs/atoms-button-icon--button-element">a-button--square</a>
     </li>
     <li>
       <a href="/docs/atoms-button-icon-reversed--icon-reversed">
-        a-button--icon-reversed
+        a-button--square-reversed
       </a>
     </li>
     <li>
-      <a href="/docs/atoms-button-nav--nav">a-button--nav</a>
+      <a href="/docs/atoms-button-nav--nav">a-button--transparent</a>
     </li>
     <li>
-      <a href="/docs/atoms-button-nav-large--nav-large">a-button--nav-large</a>
+      <a href="/docs/atoms-button-nav-large--nav-large">
+        a-button--large a-button--secondary
+      </a>
     </li>
     <li>
       <a href="/docs/atoms-content--content">a-content</a>
@@ -86,19 +88,19 @@ Give the active link the `aria-current="page"` attribute.
             <div class="u-hidden u-block@l u-flex-shrink-1 u-overflow-x-auto">
               <ul class="u-flex u-list-none">
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav" aria-current="page">Team</a>
+                  <a href="/" class="a-button a-button--transparent" aria-current="page">Team</a>
                 </li>
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav">Projects</a>
+                  <a href="/" class="a-button a-button--transparent">Projects</a>
                 </li>
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav">Dashboard</a>
+                  <a href="/" class="a-button a-button--transparent">Dashboard</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="u-hidden u-block@l">
-            <a href="/" class="a-button a-button--nav">
+            <a href="/" class="a-button a-button--transparent">
               <span class="a-button__label">Jane Dobermann</span>
               <div class="a-button__icon a-avatar">
                 <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
@@ -107,7 +109,7 @@ Give the active link the `aria-current="page"` attribute.
           </div>
           <div class="u-hidden@l" x-data="{ navbarOpen: false }">
             <button
-              class="a-button a-button--icon a-button--icon-reversed"
+              class="a-button a-button--square a-button--secondary"
               title="Toggle menu"
               aria-controls="navbar-1"
               @click="navbarOpen = !navbarOpen"
@@ -131,7 +133,7 @@ Give the active link the `aria-current="page"` attribute.
               x-transition:leave-end="is-off-screen"
             >
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">
+                <a href="/" class="a-button a-button--large a-button--secondary">
                   <div class="a-button__icon a-avatar">
                     <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
                   </div>
@@ -139,13 +141,13 @@ Give the active link the `aria-current="page"` attribute.
                 </a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large" aria-current="page">Team</a>
+                <a href="/" class="a-button a-button--large a-button--secondary" aria-current="page">Team</a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">Projects</a>
+                <a href="/" class="a-button a-button--large a-button--secondary">Projects</a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">Dashboard</a>
+                <a href="/" class="a-button a-button--large a-button--secondary">Dashboard</a>
               </li>
             </ul>
           </div>
@@ -170,31 +172,31 @@ This navbar is only intended to hold a few link to the main sections of your sit
             <div class="u-hidden u-block@l u-flex-shrink-1 u-overflow-x-auto">
               <ul class="u-flex u-list-none">
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav" aria-current="page">Team</a>
+                  <a href="/" class="a-button a-button--transparent" aria-current="page">Team</a>
                 </li>
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav">Projects</a>
+                  <a href="/" class="a-button a-button--transparent">Projects</a>
                 </li>
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav">Dashboard</a>
+                  <a href="/" class="a-button a-button--transparent">Dashboard</a>
                 </li>
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav">Customers</a>
+                  <a href="/" class="a-button a-button--transparent">Customers</a>
                 </li>
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav">Privacy policies</a>
+                  <a href="/" class="a-button a-button--transparent">Privacy policies</a>
                 </li>
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav">Bookings</a>
+                  <a href="/" class="a-button a-button--transparent">Bookings</a>
                 </li>
                 <li class="u-margin-m-right">
-                  <a href="/" class="a-button a-button--nav">Sales</a>
+                  <a href="/" class="a-button a-button--transparent">Sales</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="u-hidden u-block@l u-flex-shrink-0">
-            <a href="/" class="a-button a-button--nav">
+            <a href="/" class="a-button a-button--transparent">
               <span class="a-button__label">Jane Dobermann</span>
               <div class="a-button__icon a-avatar">
                 <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
@@ -203,7 +205,7 @@ This navbar is only intended to hold a few link to the main sections of your sit
           </div>
           <div class="u-hidden@l" x-data="{ navbarOpen: false }">
             <button
-              class="a-button a-button--icon a-button--icon-reversed"
+              class="a-button a-button--square a-button--secondary"
               title="Toggle menu"
               aria-controls="navbar-1"
               @click="navbarOpen = !navbarOpen"
@@ -227,7 +229,7 @@ This navbar is only intended to hold a few link to the main sections of your sit
               x-transition:leave-end="is-off-screen"
             >
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">
+                <a href="/" class="a-button a-button--large a-button--secondary">
                   <div class="a-button__icon a-avatar">
                     <img src="https://placekitten.com/100/150" width="36" height="54" alt="Username’s avatar" class="a-avatar" />
                   </div>
@@ -235,25 +237,25 @@ This navbar is only intended to hold a few link to the main sections of your sit
                 </a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large" aria-current="page">Team</a>
+                <a href="/" class="a-button a-button--large a-button--secondary" aria-current="page">Team</a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">Projects</a>
+                <a href="/" class="a-button a-button--large a-button--secondary">Projects</a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">Dashboard</a>
+                <a href="/" class="a-button a-button--large a-button--secondary">Dashboard</a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">Customers</a>
+                <a href="/" class="a-button a-button--large a-button--secondary">Customers</a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">Privacy policies</a>
+                <a href="/" class="a-button a-button--large a-button--secondary">Privacy policies</a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">Bookings</a>
+                <a href="/" class="a-button a-button--large a-button--secondary">Bookings</a>
               </li>
               <li class="u-margin-s-bottom">
-                <a href="/" class="a-button a-button--nav-large">Sales</a>
+                <a href="/" class="a-button a-button--large a-button--secondary">Sales</a>
               </li>
             </ul>
           </div>

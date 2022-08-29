@@ -1,0 +1,10 @@
+@forward 'settings';
+@use './settings';
+@use '../../settings/setup';
+@use '../../tools/button';
+
+@each $variant-name, $variant in settings.$variants {
+  .a-button#{$variant-name} {
+    @include button.colors($colors: $variant);
+  }
+}

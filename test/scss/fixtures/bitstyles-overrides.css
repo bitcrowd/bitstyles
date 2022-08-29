@@ -941,63 +941,63 @@ table {
   box-shadow: none;
   color: #000;
 }
-.bs-at-button--icon {
+.bs-a-button--square {
   border-radius: 7.5rem;
   justify-content: flex-start;
   padding: 10rem;
 }
-.bs-at-button--icon,
-.bs-at-button--icon:visited {
+.bs-a-button--square,
+.bs-a-button--square:visited {
   background-color: #000;
   border-color: #000;
   box-shadow: none;
   color: #000;
 }
-.bs-at-button--icon:focus,
-.bs-at-button--icon:hover {
+.bs-a-button--square:focus,
+.bs-a-button--square:hover {
   background: #000;
   border-color: #000;
   box-shadow: none;
   color: #000;
 }
-.bs-at-button--icon:active {
+.bs-a-button--square:active {
   background: #000;
   border-color: #000;
   box-shadow: none;
   color: #000;
 }
-.bs-at-button--icon:disabled,
-.bs-at-button--icon[aria-disabled='true'] {
+.bs-a-button--square:disabled,
+.bs-a-button--square[aria-disabled='true'] {
   background: #000;
   border-color: #000;
   box-shadow: none;
   color: #000;
 }
-.bs-at-button--icon .bs-at-button__icon {
+.bs-a-button--square .bs-a-button__icon {
   margin: 0;
 }
-.bs-at-button--icon-reversed,
-.bs-at-button--icon-reversed:visited {
+.bs-a-button--square-reversed,
+.bs-a-button--square-reversed:visited {
   background: var(--bscpn-at-button-background-color, transparent);
   border-color: transparent;
   box-shadow: none;
   color: var(--bscpn-at-button-color, #000);
 }
-.bs-at-button--icon-reversed:focus,
-.bs-at-button--icon-reversed:hover {
+.bs-a-button--square-reversed:focus,
+.bs-a-button--square-reversed:hover {
   background: var(--bscpn-at-button-background-color-hover, #000);
   border-color: #000;
   box-shadow: none;
   color: var(--bscpn-at-button-color-hover, #000);
 }
-.bs-at-button--icon-reversed:active {
+.bs-a-button--square-reversed:active {
   background: #000;
   border-color: #000;
   box-shadow: none;
   color: #000;
 }
-.bs-at-button--icon-reversed:disabled,
-.bs-at-button--icon-reversed[aria-disabled='true'] {
+.bs-a-button--square-reversed:disabled,
+.bs-a-button--square-reversed[aria-disabled='true'] {
   background: rgba(0, 0, 0, 0.5);
   border-color: #000;
   box-shadow: none;
@@ -1063,9 +1063,9 @@ table {
 .bs-at-button--mode:active {
   background: #000;
   border-color: #000;
-  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.025),
-    0 0 1.6666666667rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
-    0 0 5rem rgba(0, 0, 0, 0.025);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.0225),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.0225), 0 0 2.5rem rgba(0, 0, 0, 0.0225),
+    0 0 5rem rgba(0, 0, 0, 0.0225);
   color: #000;
 }
 .bs-at-button--mode[aria-pressed='true'] {
@@ -1175,7 +1175,7 @@ table {
   min-height: 20rem;
   padding: 10rem;
 }
-.bs-at-button--small.bs-at-button--icon {
+.bs-a-button--small.bs-a-button--square {
   border-radius: 9999rem;
   padding: 5rem;
 }
@@ -1519,21 +1519,21 @@ table {
   text-decoration-skip-ink: auto;
   transition: color 75ms ease-out;
 }
-.bs-at-link:visited {
-  background-color: transparent;
+.bs-a-link:visited {
+   background-color: transparent;
   box-shadow: none;
   color: #000;
   text-decoration: none;
 }
-.bs-at-link:focus,
-.bs-at-link:hover {
-  background-color: transparent;
+.bs-a-link:focus,
+.bs-a-link:hover {
+   background-color: transparent;
   box-shadow: none;
   color: #000;
   text-decoration: underline;
 }
-.bs-at-link:active {
-  background-color: transparent;
+.bs-a-link:active {
+   background-color: transparent;
   box-shadow: none;
   color: #000;
   text-decoration: underline;
@@ -1821,12 +1821,12 @@ table {
   }
 }
 @media screen and (min-width: 30em) {
-  .bs-col-start-100\@m {
+  .bs-u-col-start-100\@m {
     grid-column-start: 100;
   }
 }
 @media screen and (min-width: 55em) {
-  .bs-col-start-100\@l {
+  .bs-u-col-start-100\@l {
     grid-column-start: 100;
   }
 }

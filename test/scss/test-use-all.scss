@@ -108,17 +108,13 @@
   $avatar-sizes: ('xl': 10rem),
   $badge-color: 'light',
   $bordered-header-gutter: 10rem,
-  $button-color-hover: #000,
-  $button-danger-color-hover: #000,
-  $button-icon-color-hover: #000,
-  $button-icon-reversed-color-hover: #000,
-  $button-menu-color-hover: #000,
-  $button-mode-color-hover: #000,
-  $button-nav-color-hover: #000,
-  $button-nav-large-color-hover: #000,
-  $button-small-padding-vertical: 10rem,
+  $button-transition: none,
+  $button-colors-default: (
+    'default': (
+      'color': var(--color-grayscale-white),
+    )
+  ),
   $button-tab-color-hover: #000,
-  $button-ui-color-hover: #000,
   $card-sizes: ('base': 10rem, 's': 20rem),
   $content-max-width-base: 'full',
   $dropdown-max-height: 1rem,

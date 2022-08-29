@@ -125,17 +125,13 @@ $bitstyles-avatar-sizes: (
 );
 $bitstyles-badge-color: 'light';
 $bitstyles-bordered-header-gutter: 10rem;
-$bitstyles-button-color-hover: #000;
-$bitstyles-button-danger-color-hover: #000;
-$bitstyles-button-icon-color-hover: #000;
-$bitstyles-button-icon-reversed-color-hover: #000;
-$bitstyles-button-menu-color-hover: #000;
-$bitstyles-button-mode-color-hover: #000;
-$bitstyles-button-nav-color-hover: #000;
-$bitstyles-button-nav-large-color-hover: #000;
-$bitstyles-button-small-padding-vertical: 10rem;
+$bitstyles-button-transition: none;
+$bitstyles-button-colors-default: (
+  'default': (
+    'color': var(--color-grayscale-white),
+  ),
+);
 $bitstyles-button-tab-color-hover: #000;
-$bitstyles-button-ui-color-hover: #000;
 $bitstyles-card-sizes: (
   'base': 10rem,
   's': 20rem,

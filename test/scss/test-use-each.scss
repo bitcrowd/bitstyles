@@ -185,36 +185,17 @@
   $gutter: 10rem
 );
 @use '../../scss/bitstyles/atoms/button' with (
-  $color-hover: #000
+  $transition: none
 );
-@use '../../scss/bitstyles/atoms/button--danger' with (
-  $color-hover: #000
+@use '../../scss/bitstyles/atoms/button-colors' with (
+  $default: (
+    'default': (
+      'color': var(--color-grayscale-white),
+    ),
+  )
 );
-@use '../../scss/bitstyles/atoms/button--icon' with (
-  $color-hover: #000
-);
-@use '../../scss/bitstyles/atoms/button--icon-reversed' with (
-  $color-hover: #000
-);
-@use '../../scss/bitstyles/atoms/button--menu' with (
-  $color-hover: #000
-);
-@use '../../scss/bitstyles/atoms/button--mode' with (
-  $color-hover: #000
-);
-@use '../../scss/bitstyles/atoms/button--nav' with (
-  $color-hover: #000
-);
-@use '../../scss/bitstyles/atoms/button--nav-large' with (
-  $color-hover: #000
-);
-@use '../../scss/bitstyles/atoms/button--small' with (
-  $padding-vertical: 10rem
-);
+@use '../../scss/bitstyles/atoms/button-sizes';
 @use '../../scss/bitstyles/atoms/button--tab' with (
-  $color-hover: #000
-);
-@use '../../scss/bitstyles/atoms/button--ui' with (
   $color-hover: #000
 );
 @use '../../scss/bitstyles/atoms/card' with (

@@ -1,13 +1,13 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/animation';
 @use '../../settings/layout';
 @use '../../tools/classname';
+@use '../../tools/button';
 @use '../button/settings' as button-settings;
 
 #{classname.get($classname-items: 'button--tab-container', $layer: 'atom')} {
   & > *:first-child {
-    margin-left: -(button-settings.$padding-horizontal);
+    margin-left: -(var(--button-padding-horizontal));
   }
 }
 
@@ -16,22 +16,51 @@
   border: 0;
   border-radius: settings.$border-radius;
 
+  @include button.colors(
+    $colors: (
+      'default': (
+        'border-color': settings.$border-color,
+        'background-color': settings.$background-color,
+        'box-shadow': settings.$box-shadow,
+        'color': settings.$color,
+      ),
+      'hover': (
+        'border-color': settings.$border-color-hover,
+        'background-color': settings.$background-color-hover,
+        'box-shadow': settings.$box-shadow-hover,
+        'color': settings.$color-hover,
+      ),
+      'active': (
+        'border-color': settings.$border-color-active,
+        'background-color': settings.$background-color-active,
+        'box-shadow': settings.$box-shadow-active,
+        'color': settings.$color-active,
+      ),
+      'pressed': (
+        'border-color': settings.$border-color-pressed,
+        'background-color': settings.$background-color-pressed,
+        'box-shadow': settings.$box-shadow-pressed,
+        'color': settings.$color-pressed,
+      ),
+      'disabled': (
+        'border-color': settings.$border-color-disabled,
+        'background-color': settings.$background-color-disabled,
+        'box-shadow': settings.$box-shadow-disabled,
+        'color': settings.$color-disabled,
+      ),
+    )
+  );
+
   &,
   &:visited {
-    border: settings.$border;
-    background: settings.$background-color;
-    box-shadow: settings.$box-shadow;
-    color: settings.$color;
-
     &::after {
       content: '';
       position: absolute;
-      right: button-settings.$padding-horizontal;
+      right: var(--button-padding-horizontal);
       bottom: 0;
-      left: button-settings.$padding-horizontal;
+      left: var(--button-padding-horizontal);
       height: settings.$border-width;
-      transition: background-color animation.$transition-duration
-        animation.$transition-easing;
+      transition: settings.$indicator-transition;
       border-radius: layout.$border-radius-round;
       background-color: settings.$indicator-color;
     }
@@ -39,22 +68,12 @@
 
   &:hover,
   &:focus {
-    border: settings.$border-hover;
-    background: settings.$background-color-hover;
-    box-shadow: settings.$box-shadow-hover;
-    color: settings.$color-hover;
-
     &::after {
       background-color: settings.$indicator-color-hover;
     }
   }
 
   &:active {
-    border: settings.$border-active;
-    background: settings.$background-color-active;
-    box-shadow: settings.$box-shadow-active;
-    color: settings.$color-active;
-
     &::after {
       background-color: settings.$indicator-color-active;
     }
@@ -62,22 +81,17 @@
 
   &[aria-selected='true'],
   &[aria-current] {
-    background: settings.$background-color-selected;
-    box-shadow: settings.$box-shadow-selected;
-    color: settings.$color-selected;
-
     &::after {
-      background-color: settings.$indicator-color-selected;
+      background-color: settings.$indicator-color-pressed;
     }
   }
 
   &:disabled,
-  &[aria-disabled='true'] {
-    border: settings.$border-disabled;
-    background: settings.$background-color-disabled;
-    box-shadow: settings.$box-shadow-disabled;
-    color: settings.$color-disabled;
-
+  &[aria-disabled='true'],
+  &:disabled:hover,
+  &[aria-disabled='true']:hover,
+  &:disabled:focus,
+  &[aria-disabled='true']:focus {
     &::after {
       background-color: settings.$indicator-color-disabled;
     }

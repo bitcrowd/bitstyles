@@ -1,0 +1,14 @@
+@forward 'settings';
+@use './settings';
+@use '../../settings/setup';
+@use '../../tools/button';
+
+@each $variant-name, $variant in settings.$variants {
+  .a-button#{$variant-name} {
+    @include button.sizes($sizes: $variant);
+  }
+}
+
+.#{setup.$namespace}a-button--menu {
+  justify-content: flex-start;
+}

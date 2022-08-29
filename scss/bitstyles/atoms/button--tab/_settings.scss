@@ -9,47 +9,50 @@ $border-radius: 0 !default;
 $border-width: size.get('2xs') !default;
 $transition: color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing !default;
+$indicator-transition: background-color animation.$transition-duration
+  animation.$transition-easing !default;
 
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('text', 'base') !default;
+$color: var(--color-accent-gray-darker) !default;
 $background-color: transparent !default;
-$indicator-color: transparent !default;
-$border: 2px solid transparent !default;
+$border-color: transparent !default;
 $box-shadow: none !default;
+$indicator-color: transparent !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('brand-1', 'dark') !default;
+$color-hover: var(--color-accent-gray-darker) !default;
 $background-color-hover: transparent !default;
-$indicator-color-hover: palette.get('brand-1', 'light') !default;
-$border-hover: 2px solid transparent !default;
+$border-color-hover: var(--color-accent-gray-lighter) !default;
 $box-shadow-hover: none !default;
+$indicator-color-hover: var(--color-button-1-background) !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$color-active: palette.get('brand-1', 'base') !default;
+$color-active: var(--color-button-1-background-hover) !default;
 $background-color-active: transparent !default;
-$indicator-color-active: palette.get('brand-1', 'base') !default;
-$border-active: 2px solid transparent !default;
+$border-color-active: transparent !default;
 $box-shadow-active: none !default;
+$indicator-color-active: var(--color-button-1-background-hover) !default;
 
 //
-// Selected colors ////////////////////////////////////////
+// Pressed colors ////////////////////////////////////////
 
-$color-selected: palette.get('text', 'base') !default;
-$background-color-selected: transparent !default;
-$indicator-color-selected: palette.get('brand-1', 'base') !default;
-$box-shadow-selected: none !default;
+$color-pressed: var(--color-accent-gray-darker) !default;
+$background-color-pressed: transparent !default;
+$border-color-pressed: var(--color-grayscale-white) !default;
+$box-shadow-pressed: none !default;
+$indicator-color-pressed: var(--color-button-1-background) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$color-disabled: palette.get('text', 'light') !default;
+$color-disabled: var(--color-button-1-text-disabled) !default;
 $background-color-disabled: transparent !default;
-$indicator-color-disabled: transparent !default;
-$border-disabled: 2px solid transparent !default;
+$border-color-disabled: transparent !default;
 $box-shadow-disabled: none !default;
+$indicator-color-disabled: transparent !default;

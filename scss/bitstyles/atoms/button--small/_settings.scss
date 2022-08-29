@@ -1,7 +1,0 @@
-@use '../../settings/layout';
-@use '../../tools/size';
-
-$padding-vertical: size.get('xs') !default;
-$padding-horizontal: size.get('m') !default;
-$box-shadow: 0 0 size.get('xs') currentColor !default;
-$border-radius: layout.$border-radius-round !default;

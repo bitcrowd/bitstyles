@@ -1,0 +1,204 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import icons from '../../../../assets/images/icons.svg';
+
+<Meta title="Atoms/Button/Sizes" />
+
+# Button sizes
+
+<Canvas>
+  <Story name="Small primary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small primary icon">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small secondary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--secondary">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small secondary icon">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--square a-button--secondary">
+          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small transparent">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--transparent">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small transparent icon">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--transparent a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Default primary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default primary icon">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default secondary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--secondary">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default secondary icon">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--square a-button--secondary">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default transparent">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent">
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Default transparent icon">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Large primary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large primary icon">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large secondary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--secondary">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large secondary icon">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--square a-button--secondary">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large transparent">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--transparent">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large transparent icon">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--transparent a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>

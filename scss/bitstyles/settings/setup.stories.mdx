@@ -79,7 +79,7 @@ This would result in classnames like:
 
 ## “No media query” name
 
-When you pass a block of CSS content to the `media-query.get()` helper, it wraps that content in a media-query. To make looping over media-queries easier, there is a special-case media-query name that results in no media query wrapper. This defaults to `no-mq`, and can be configured using `$bitstyles-setup-no-media-query`:
+When you pass a block of CSS content to the `media-query.get()` helper, it wraps that content in a media-query. To make looping over media-queries easier, there is a special-case media-query name that results in no media query wrapper. This defaults to `no-media-query`, and can be configured using `$bitstyles-setup-no-media-query`:
 
 ```scss
 @use 'bitstyles/settings/setup' with (
@@ -87,4 +87,4 @@ When you pass a block of CSS content to the `media-query.get()` helper, it wraps
 );
 ```
 
-This is useful if you need a media-query with the name `no-mq` for other purposes.
+This is useful if you need a media-query with the name `no-media-query` for other purposes.

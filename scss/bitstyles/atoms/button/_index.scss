@@ -1,23 +1,33 @@
 @forward 'settings';
-@use 'sass:math';
 @use './settings';
 @use '../../tools/classname';
+@use 'sass:math';
 
 #{classname.get($classname-items: 'button', $layer: 'atom')} {
-  display: inline-flex;
+  --button-transition: #{settings.$transition};
+
+  display: flex;
   position: relative;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
+  min-width: var(--button-min-width);
   max-width: 100%;
-  min-height: calc(#{settings.$padding-vertical * 2} + 1em);
+  min-height: var(--button-min-height);
   margin: 0;
-  padding: settings.$padding-vertical settings.$padding-horizontal;
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
   overflow: visible;
-  transition: settings.$transition;
-  border-radius: settings.$border-radius;
-  font: settings.$font;
-  font-weight: settings.$font-weight;
+  transition: var(--button-transition);
+  border-width: var(--button-border-width);
+  border-style: solid;
+  border-radius: var(--button-border-radius);
+  border-color: var(--button-border-color);
+  background-color: var(--button-background-color);
+  box-shadow: var(--button-box-shadow);
+  color: var(--button-color);
+  font-family: settings.$font-family;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -26,37 +36,18 @@
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   touch-action: manipulation;
 
-  &,
-  &:visited {
-    border: settings.$border-width solid settings.$border-color;
-    background: settings.$background-color;
-    box-shadow: settings.$box-shadow;
-    color: settings.$color;
-  }
-
   &:hover,
   &:focus {
-    border-color: settings.$border-color-hover;
     outline: none;
-    background: settings.$background-color-hover;
-    box-shadow: settings.$box-shadow-hover;
-    color: settings.$color-hover;
     text-decoration: none;
   }
 
-  &:active {
-    border-color: settings.$border-color-active;
-    background: settings.$background-color-active;
-    box-shadow: settings.$box-shadow-active;
-    color: settings.$color-active;
-  }
-
   &:disabled,
-  &[aria-disabled='true'] {
-    border-color: settings.$border-color-disabled;
-    background: settings.$background-color-disabled;
-    box-shadow: settings.$box-shadow-disabled;
-    color: settings.$color-disabled;
+  &[aria-disabled='true'],
+  &:disabled:hover,
+  &[aria-disabled='true']:hover,
+  &:disabled:focus,
+  &[aria-disabled='true']:focus {
     cursor: not-allowed;
   }
 }

@@ -5,7 +5,8 @@ $border-radius-round: 9999rem !default;
 $size-base: 0.8rem !default;
 $sizes: (
   '0': 0,
-  '3xs': math.div($size-base, 8),
+  '4xs': math.div($size-base, 8),
+  '3xs': math.div($size-base, 6),
   '2xs': math.div($size-base, 4),
   'xs': math.div($size-base, 2),
   's': $size-base - math.div($size-base, 4),
@@ -13,6 +14,7 @@ $sizes: (
   'l': $size-base + math.div($size-base, 4),
   'xl': $size-base * 2,
   '2xl': $size-base * 4,
-  '3xl': $size-base * 8,
+  '3xl': $size-base * 6,
+  '4xl': $size-base * 8,
 ) !default;
 $viewport-elements: ('html', 'body', '#root') !default;

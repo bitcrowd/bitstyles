@@ -1,14 +1,44 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
-<Meta title="UI/Buttons/Buttons" />
+<Meta title="UI/Buttons/Overview" />
 
 # Buttons
 
-## Buttons perform actions
-
 The button classes are used to make an interactive element look like a “button” to the user, and should ideally perform an action rather a navigation. For historical and technical reasons, things which we consider “actions” are actually implemented by navigating to a page (e.g. a CRUD system) so this class is often applied to `<a>` elements. Ideally though (and definitely if you’re working on a JS app) use a real `<button>` element.
 
-All the buttons produce a larger-than-text hit target, and by default react to `:hover`, `:focus`, `:active`, and `:disabled`. Visited states are not shown even if the button is an anchor, as “visited” doesn’t make sense for an action.
+All the buttons produce a larger-than-text hit target, and by default react to `:hover`, `:focus`, `:active`, `:disabled`, and `aria-pressed`, `aria-selected`, and `aria-current` states. Visited states are not shown even if the “button” is actually an anchor element. This is because buttons indicate actions, and “visited” doesn’t make sense for an action.
+
+Bitstyles provides two sets of button variants — size variants, and color variants. Each of the size variants can be combined with each of the color variants to produce a wide range of button appearances.
+
+## Size variants
+
+Buttons are available in a variety of sizes: `small`, `default`, `large`, `icon`. See [Button sizes](/docs/atoms-button-sizes--small-primary) for details on customizing these.
+
+### Icon Button
+
+An Icon Button is a specialised button size variant where the visible content is intended to be only an icon. It can be combined with the small, default, and large variants.
+
+Always provide:
+
+- **a `title` attribute**. When a user hovers their pointer over the button, they’ll be told what it does (icons alone are not always clear).
+- **an `sr-only` label** containing descriptive text next to the icon, so the button will have valid text to use as button label (see examples). This dictates whether people with visual impairments (whether temporary or permanent) can use our UIs.
+
+## Color variants
+
+- **Primary** The default button style is primary, and in most cases should be used only once per screen to indicate the primary action for the screen.
+- **Secondary** The most-commonly used, these indicate all the non-primary actions a user can enact on a screen.
+- **Transparent** Use transparent buttons to de-emphasise an action (see the “cancel” buttons, below). Use also for nav menus, sidebars, and dropdown menus.
+- **Dangerous** A special case, that only applies a different appearance on hover and active. use these to indicate an action the user should be wary of, most often something destructive to data. This variant can be combined with other button color variants.
+
+See [Button colors](/docs/atoms-button-colors--primary) for details on customizing these.
+
+### Disabled buttons
+
+Use the `aria-disabled="true"` attribute on `anchor` elements, or the `disabled` attribute on `button` elements.
+
+### Themeing
+
+Buttons will render with different colors dependent on the current theme they’re rendered inside. See [Button colors](/docs/atoms-button-colors--primary) for details on how to change the colors per-theme. Default configuration provides a default- and dark-theme appearance for all the buttons color variants.
 
 <details class="u-margin-xl-y">
   <summary class="u-h4 u-font-medium">Examples use</summary>
@@ -20,37 +50,23 @@ All the buttons produce a larger-than-text hit target, and by default react to `
       <a href="/docs/atoms-button-danger--danger">a-button--danger</a>
     </li>
     <li>
-      <a href="/docs/atoms-button-ui--ui">a-button--ui</a>
+      <a href="/docs/atoms-button-ui--ui">a-button--secondary</a>
     </li>
     <li>
-      <a href="/docs/atoms-button-icon--button-element">a-button--icon</a>
+      <a href="/docs/atoms-button-icon--button-element">a-button--square</a>
     </li>
     <li>
-      <a href="/docs/atoms-button-nav--nav">a-button--nav</a>
+      <a href="/docs/atoms-button-nav--nav">a-button--transparent</a>
     </li>
   </ul>
 </details>
 
-## Base buttons
+## Examples
 
-<Canvas isColumn>
+<Canvas>
   <Story id="atoms-button-base--button-element" />
   <Story id="atoms-button-base--button-with-icon" />
   <Story id="atoms-button-base--button-with-icon-reversed" />
-</Canvas>
-
-## UI buttons
-
-<Canvas isColumn>
-  <Story id="atoms-button-ui--ui" />
-  <Story id="atoms-button-ui--dropdown" />
-</Canvas>
-
-## Icon buttons
-
-<Canvas>
-  <Story id="atoms-button-icon--button-element" />
-  <Story id="atoms-button-icon-reversed--icon-reversed" />
 </Canvas>
 
 ## Nav buttons
