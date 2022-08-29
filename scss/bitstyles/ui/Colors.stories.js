@@ -1,4 +1,6 @@
-import colorPalette from '../exports/_color-palette.scss';
+import baseColorValues from '../exports/_base-colors.scss';
+import basePaletteValues from '../exports/_base-palette.scss';
+import colorPaletteValues from '../exports/_color-palette.scss';
 
 /*
  * Variables in our Sass are exported via webpack in the form
@@ -17,75 +19,142 @@ import colorPalette from '../exports/_color-palette.scss';
  *   …
  * ]
  */
-const objectToChunkedArray = (object, chunkSize) => {
-  const values = Object.values(object);
-  const array = [];
-  let counter = 0;
-  let portion = {};
 
-  // eslint-disable-next-line array-callback-return
-  Object.keys(object).map((key) => {
-    if (counter !== 0 && counter % chunkSize === 0) {
-      array.push(portion);
-      portion = {};
+function parseDotNotation(str, val, obj) {
+  let currentObj = obj;
+  const keys = str.split('.');
+  let i;
+  const l = Math.max(1, keys.length - 1);
+  let key;
+
+  for (i = 0; i < l; i += 1) {
+    key = keys[i];
+    currentObj[key] = currentObj[key] || {};
+    currentObj = currentObj[key];
+  }
+
+  currentObj[keys[i]] = val;
+  /* eslint-disable no-param-reassign */
+  delete obj[str];
+  /* eslint-enable no-param-reassign */
+}
+
+function expand(obj) {
+  let key;
+  /* eslint-disable no-restricted-syntax */
+  for (key in obj) {
+    if (key.indexOf('.') !== -1) {
+      parseDotNotation(key, obj[key], obj);
     }
-    portion[key] = values[counter];
-    counter += 1;
-  });
-  array.push(portion);
-  return array;
-};
+  }
+  /* eslint-enable no-restricted-syntax */
+  return obj;
+}
 
-const ColorItem = (label, color) =>
+const RenderColorItem = (label, color) =>
   `
-    <li style="background-color: ${color};">
-      <div style="min-height:4rem;"></div>
-      <span
-        class="u-bg-white u-padding-xxs-x u-margin-xxs-left"
-        style="font-size: 10px;"
+    <li style="background-color: ${color}; min-height:3rem;" class="u-aspect-ratio-1-1">
+      <div
+        class="u-margin-xs-left u-margin-xs-top u-fg-text-darker"
+        style="font-size: 0.625rem;"
       >
-        ${label}
-      </span>
+        <strong class="u-bg-white u-padding-xxs-x">${label}</strong>
+        <br/>
+        <span class="u-bg-white u-padding-xxs-x">${color}</span>
+      </div>
     </li>
   `;
 
-const ColorRow = ({ palette }) =>
-  `
-    <ul class="u-flex-grow-1 u-grid u-grid-cols-4 a-list-reset">
-      ${Object.keys(palette)
-        .map((color) => {
-          const colorNameParts = color.split('.');
-          const colorName = colorNameParts[colorNameParts.length - 1];
-          return ColorItem(colorName, colorPalette[color]);
-        })
+const RenderColors = ({ colors, layout }) => {
+  let classname;
+  switch (layout) {
+    case 'dense':
+      classname = 'u-flex-grow-1 u-grid u-grid-cols-auto a-list-reset';
+      break;
+    default:
+      classname =
+        'u-flex-grow-1 u-grid u-grid-cols-auto a-list-reset u-gap-xxs';
+  }
+
+  return `
+    <ul class="${classname}">
+      ${Object.entries(colors)
+        .map((color) => RenderColorItem(color[0], color[1]))
         .join('')}
     </ul>
   `;
+};
 
-const ColorPalette = () =>
-  `
-    <ul class="a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l">
-      ${objectToChunkedArray(colorPalette, 18)
-        .map((palette) => {
-          const name = Object.keys(palette)[0].split('.')[0];
-          return `
-          <li class="u-margin-xl-bottom u-grid u-gap-m">
-            ${ColorRow({ palette })}
-            <h3
-              class="u-margin-0-bottom u-margin-m-right u-line-height-min"
-            >
-              ${name}
-            </h3>
-          </li>
-        `;
-        })
+const RenderColorPaletteItem = ({ colors, withBackground, layout }) => {
+  const name = colors[0];
+  const style =
+    withBackground &&
+    baseColorValues[name] &&
+    `background-color: ${baseColorValues[name]}; color: #fff`;
+  const titleClassname = withBackground
+    ? 'u-padding-xs u-padding-m-bottom u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min'
+    : 'u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min';
+
+  return `
+    <li class="u-flex-grow-1 u-grid u-gap-xs" style="${style}">
+      ${RenderColors({ colors: colors[1], layout })}
+      <h3 class="${titleClassname}">
+        ${name}
+      </h3>
+    </li>
+  `;
+};
+
+const RenderColorPaletteList = ({
+  palette,
+  layout = null,
+  withBackground = false,
+}) => {
+  let classname;
+  switch (layout) {
+    case 'dense':
+      classname =
+        'a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l u-margin-xl-bottom u-items-start';
+      break;
+    case 'row':
+      classname = 'a-list-reset u-flex';
+      break;
+    default:
+      classname =
+        'a-list-reset u-grid u-gap-l u-grid-cols-2@l u-margin-xl-bottom u-items-start';
+  }
+
+  return `
+    <ul class="${classname}">
+      ${Object.entries(expand(palette))
+        .map((colors) =>
+          RenderColorPaletteItem({ colors, withBackground, layout })
+        )
         .join('')}
     </ul>
   `;
+};
 
-export { ColorPalette };
+const Template = (args) => RenderColorPaletteList(args);
+
+export const BaseColors = Template.bind({});
+BaseColors.args = {
+  palette: { base: baseColorValues },
+  layout: 'row',
+};
+
+export const BasePalette = Template.bind({});
+BasePalette.args = {
+  palette: basePaletteValues,
+  layout: 'dense',
+  withBackground: true,
+};
+
+export const ColorPalette = Template.bind({});
+ColorPalette.args = {
+  palette: colorPaletteValues,
+};
 
 export default {
   title: 'Base/Colors',
-  component: ColorPalette,
 };

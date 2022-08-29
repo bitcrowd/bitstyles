@@ -1,6 +1,7 @@
 @use '../../tools/size';
 
 $sizes: (
+  'xxs': size.get('xxs'),
   'xs': size.get('xs'),
   's': size.get('s'),
   'm': size.get('l'),

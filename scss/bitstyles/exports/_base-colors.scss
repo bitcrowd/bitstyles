@@ -1,0 +1,9 @@
+@use '../settings/base-colors';
+
+/* stylelint-disable selector-pseudo-class-no-unknown */
+:export {
+  @each $name, $color in base-colors.$colors {
+    #{$name}: #{$color};
+  }
+}
+/* stylelint-enable selector-pseudo-class-no-unknown */

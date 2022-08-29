@@ -9,32 +9,42 @@ Specify the `color` property of an element.
 <Canvas>
   <Story name="brand-1">
     {`
-      <div class="u-fg-brand-1">u-fg-brand-1</div>
+      <div class="u-fg-brand-1" style="padding: 1em;background-color:#eee;">u-fg-brand-1</div>
     `}
   </Story>
   <Story name="brand-2">
     {`
-      <div class="u-fg-brand-2">u-fg-brand-2</div>
+      <div class="u-fg-brand-2" style="padding: 1em;background-color:#eee;">u-fg-brand-2</div>
+    `}
+  </Story>
+  <Story name="gray">
+    {`
+      <div class="u-fg-gray" style="padding: 1em;background-color:#eee;">u-fg-gray</div>
+    `}
+  </Story>
+  <Story name="gray-light">
+    {`
+      <div class="u-fg-gray-light" style="padding: 1em;background-color:#333;">u-fg-gray-light</div>
+    `}
+  </Story>
+  <Story name="text">
+    {`
+      <div class="u-fg-text-darker" style="padding: 1em;background-color:#eee;">u-fg-text-darker</div>
+    `}
+  </Story>
+  <Story name="text-light">
+    {`
+      <div class="u-fg-text-light" style="padding: 1em;background-color:#eee;">u-fg-text-light</div>
+    `}
+  </Story>
+  <Story name="text-lighter">
+    {`
+      <div class="u-fg-text-lighter" style="padding: 1em;background-color:#333;">u-fg-text-lighter</div>
     `}
   </Story>
   <Story name="warning">
     {`
-      <div class="u-fg-warning">u-fg-warning</div>
-    `}
-  </Story>
-  <Story name="gray-50">
-    {`
-      <div class="u-fg-gray-50">u-fg-gray-50</div>
-    `}
-  </Story>
-  <Story name="gray-40">
-    {`
-      <div class="u-fg-gray-40">u-fg-gray-40</div>
-    `}
-  </Story>
-  <Story name="gray-30">
-    {`
-      <div class="u-fg-gray-30">u-fg-gray-30</div>
+      <div class="u-fg-warning" style="padding: 1em;background-color:#eee;">u-fg-warning</div>
     `}
   </Story>
 </Canvas>
@@ -46,12 +56,15 @@ The available display types can be customized by overriding the `$bitstyles-fg-v
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/fg' with (
   $values: (
-    'brand-1': palette.get('brand-1', '100'),
-    'brand-2': palette.get('brand-2', '100'),
-    'warning': palette.get('warning', '100'),
-    'gray-50': palette.get('gray', '50'),
-    'gray-40': palette.get('gray', '40'),
-    'gray-30': palette.get('gray', '30'),
+    'brand-1': palette.get('brand-1', 'base'),
+    'brand-2': palette.get('brand-2', 'base'),
+    'gray-light': palette.get('text', 'light'),
+    'gray': palette.get('text', 'base'),
+    'text': palette.get('text', 'base'),
+    'text-light': palette.get('text', 'light'),
+    'text-lighter': palette.get('text', 'lighter'),
+    'warning': palette.get('warning', 'base'),
+    'white': palette.get('grayscale', 'white'),
   )
 );
 ```

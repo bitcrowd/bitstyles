@@ -11,7 +11,7 @@ A vertical navbar provides more space than a horizontal version, useful for a lo
 
 Uses a fullwidth dropdown to fit with no overlap.
 
-<div class="u-bg-gray-10 u-padding-m-x u-padding-xs-y">
+<div class="u-bg-gray-light u-padding-m-x u-padding-xs-y">
   <p>
     These examples use AlpineJS for the behavior. If you’re using a different JS
     package, replace the blocks of html attributes starting with `x-`, and with
@@ -81,7 +81,7 @@ Uses a fullwidth dropdown to fit with no overlap.
     {`
       <div class="u-flex u-height-100vh" x-data="{ sidebarOpen: false }">
         <nav class="u-flex">
-          <div class="u-hidden o-sidebar--large u-flex-shrink-0 u-bg-gray-80 u-padding-m-top u-flex@l u-flex-col">
+          <div class="u-hidden o-sidebar--large u-flex-shrink-0 u-bg-gray-darker u-padding-m-top u-flex@l u-flex-col">
             <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex-shrink-0 u-margin-m-left u-margin-m-right u-margin-m-bottom" />
             <ul class="u-flex-grow-1 u-flex-shrink-1 u-overflow-y-auto a-list-reset u-flex u-flex-col u-items-stretch u-padding-xs-right u-padding-xs-left">
               <li class="u-margin-xs-bottom u-flex">
@@ -142,7 +142,7 @@ Uses a fullwidth dropdown to fit with no overlap.
               </li>
             </ul>
             <div
-              class="u-flex-shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-70-top u-relative u-flex u-flex-col"
+              class="u-flex-shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-dark-top u-relative u-flex u-flex-col"
               x-data="{ dropdownOpen: false }"
             >
               <button
@@ -194,7 +194,7 @@ Uses a fullwidth dropdown to fit with no overlap.
             </div>
           </div>
           <div
-            class="o-sidebar--small u-bg-gray-80 u-flex u-flex-col u-hidden@l"
+            class="o-sidebar--small u-bg-gray-dark u-flex u-flex-col u-hidden@l"
             x-show="sidebarOpen"
             @click.away="sidebarOpen = false"
             x-transition:enter="is-transitioning"
@@ -275,7 +275,7 @@ Uses a fullwidth dropdown to fit with no overlap.
               </li>
             </ul>
             <div
-              class="u-flex-shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-70-top u-relative"
+              class="u-flex-shrink-0 u-padding-xs-y u-margin-xs-left u-margin-xs-right u-border-gray-dark-top u-relative"
               x-data="{ dropdownOpen: false }"
             >
               <button
@@ -362,9 +362,9 @@ The location can be either `left` or `right`, to specify which side of the scree
 
 ```scss
 $small-location: left;
-$small-box-shadow: size.get('m') 0 size.get('l') rgba(palette.get('brand-1', '100'), 0.1),
-  size.get('l') 0 size.get('m') rgba(palette.get('gray', '90'), 0.07),
-  0 0 size.get('xl') rgba(palette.get('gray', '90'), 0.1);
+$small-box-shadow: size.get('m') 0 size.get('l') rgba(palette.get('brand-1', 'base'), 0.1),
+  size.get('l') 0 size.get('m') rgba(palette.get('text', 'light'), 0.07),
+  0 0 size.get('xl') rgba(palette.get('text', 'light'), 0.1);
 ```
 
 By default the sidebar will animate into view and back out, assuming the classes `.is-off-screen` and `.is-on-screen` will be applied using JS. The classnames and the styles to be applied can be overridden. Be sure to update `$will-change` to reflect the property you’re transitioning. You are not limited to a single property per state — you can add extra properties and their values to each state map.

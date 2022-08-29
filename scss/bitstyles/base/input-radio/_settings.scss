@@ -11,30 +11,30 @@ $size: size.get('m') !default;
 
 //
 // Base colors ////////////////////////////////////////
-$color: palette.get('text', '80') !default;
-$background-color: palette.get('white') !default;
-$border-color: palette.get('text', '80') !default;
+$color: palette.get('text', 'light') !default;
+$background-color: palette.get('grayscale', 'white') !default;
+$border-color: palette.get('text', 'light') !default;
 
 //
 // Hover colors ////////////////////////////////////////
 $color-hover: palette.get('brand-1') !default;
-$background-color-hover: palette.get('white') !default;
+$background-color-hover: palette.get('grayscale', 'white') !default;
 $border-color-hover: palette.get('brand-1') !default;
 
 //
 // Checked colors ////////////////////////////////////////
 $color-checked: palette.get('brand-1') !default;
-$background-color-checked: palette.get('white') !default;
+$background-color-checked: palette.get('grayscale', 'white') !default;
 $border-color-checked: palette.get('brand-1') !default;
 
 //
 // Disabled colors ////////////////////////////////////////
-$color-disabled: palette.get('black', '40') !default;
-$background-color-disabled: palette.get('black', '20') !default;
-$border-color-disabled: palette.get('black', '40') !default;
+$color-disabled: palette.get('text', 'light') !default;
+$background-color-disabled: palette.get('text', 'lighter') !default;
+$border-color-disabled: palette.get('text', 'light') !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
-$color-disabled-checked: palette.get('black', '40') !default;
-$background-color-disabled-checked: palette.get('black', '20') !default;
-$border-color-disabled-checked: palette.get('black', '40') !default;
+$color-disabled-checked: palette.get('text', 'light') !default;
+$background-color-disabled-checked: palette.get('text', 'lighter') !default;
+$border-color-disabled-checked: palette.get('text', 'light') !default;

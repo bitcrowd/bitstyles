@@ -4,39 +4,19 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Color palette
 
-The global color palette is used throughout the components and utility classes of bitstyles to maintain visual consistency.
+Bitstyles provides a semantically-named color palette, with each color having named variants such as `dark`, `light`, `base`. These are used to create the components and the color-related utility classes.
 
-By default the palette includes variants of the following colors:
-
-```scss
-$black: #000;
-$white: #fff;
-$brand-1: #000dff;
-$brand-2: #fa0;
-$text: #333;
-$background: color.mix($white, $brand-1, 97%);
-$positive: #50a802;
-$danger: #e82915;
-$warning: #fe881e;
-```
-
-For each of these colors we generate two maps of 18 color variants: one has white mixed into the color (made available with the name of the color) and one has black mixed in (available with the name of the color suffixed with `_shades`). There is also a map of `gray` colors, which by default is your brand-1 color mixed with black through to white.
-
-The color variants are generated at a range of 18 percentage points between 1 and 100. That means for each color you have the following variants available to you: 1, 2, 3, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 97, 98, 99, 100.
-
-<Canvas>
-  <Story id="base-colors--color-palette" />
-</Canvas>
+<Story id="base-colors--color-palette" />
 
 ## Using the color palette in Sass
 
-Use the `palette.get()` helper function for accessing colors in the color palette. In your component Sass file first import the `palette` tools, then use the `get()` function, passing the color name, and variant:
+Use the `palette.get()` helper function for accessing colors in your Sass. Import `tools/palette`, then use the `get()` function. Pass the color name and variant you want, as parameters:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/palette';
 
 .component-class::after {
-  background-color: palette.get('brand-1', '70');
+  background-color: palette.get('brand-1', 'light');
 }
 ```
 
@@ -50,27 +30,67 @@ With the default setup this will output:
 
 ### `palette.get()` parameters
 
-| Name   | Type   | Description                                                                                                                                          |
-| ------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $color | string | The name of the color                                                                                                                                |
-| $key   | string | The variant of that color you want. With the default setup this is one of the 18 percentages. Defaults to `"100"`, giving you the full unmixed color |
+| Name   | Type   | Description                                              |
+| ------ | ------ | -------------------------------------------------------- |
+| $color | string | The name of the color                                    |
+| $key   | string | The variant of that color you want. Default is `"base"`. |
 
 ## Using colors with classnames
 
 Use the appropriate utility classes to apply colors. See the documentation of each class for information on defaults & customization:
 
 - [`u-fg` (color)](/docs/utilities-color--brand-1)
-- [`u-bg` (background-color)](/docs/utilities-background-color--black-80)
+- [`u-bg` (background-color)](/docs/utilities-background-color--background)
+- [`u-border`](/docs/utilities-border--border)
+
+## How the system works
+
+The color system in Bitstyles is a three-tier design token system:
+
+- Base colors
+- Base palette
+- Semantic palette
+
+The **base colors** are a small list of colors from which we generate the base palette.
+
+The **base palette** consists of a large number of tints (versions of the colors with extra lightness in the HSL color space) and shades (versions of the colors with less lightness in the HSL color space) generated from the base colors.
+
+In the default configuration, these are named with numbers from `5` (darkest) to `195` (lightest) in intervals of 5, with `100` being the base color itself. Due to the way the color adjustment works, color `200` would always be pure white, and color `0` would always be pure black, so they’re not included. That also means that if you want a balanced scale (not necessarily important), the lightness of the base color you provide should be approximately 50% in the HSL color space.
+
+The base palette is used during setup to configure our **semantic palette**, which is what’s used throughout the codebase to apply colors to components, and for any utility classes that apply color. The base palette is not to be used outside of setting up this semantic palette.
+
+The semantic palette is your final source of truth for colors in your project. If a color doesn’t exist here, it should not be used in your components or utility classes. It’s a limited list of semantically-named colors, selected from those base color palettes, providing colors with meaningful names such as `background-light`, `background-dark`, `danger-base`, `danger-light`.
+
+This three-tier system is intended to offer a wide range of color options with minimal setup, while encouraging use of a small tightly-controlled palette of colors in your final codebase. That helps to maintain both visual and code consistency, and reduces the potential for color bloat.
+
+If you have a specific set of colors you need to use, and cannot rely on generated scale to match those, you can skip the base colors and/or the base palette entirely, and just specify your colors in the semantic palette.
+
+## Base colors
+
+By default the palette includes variants of the following colors:
+
+<Story id="base-colors--base-colors" />
+
+For each color, 39 variants are generated from `5` to `195`. Lower numbers indicate darker colors.
+
+There are two special cases:
+
+- The `pure-gray` palette offers a scale of 25 colors from black to white, 0 to 100 respectively.
+- The `accent-gray` colors are a grayscale accented with a color (your brand-1 color by default).
+
+<Story id="base-colors--base-palette" />
 
 ## Customization
 
 ### Base colors
 
-The color variants are generated from the set of initial base colors. Changing those base colors will change the variants generated from them. For example changing the brand-1 color to pure red will generate color variants of red.
+The color variants in the base color palette are generated from a set of initial base colors. Changing those base colors will change the variants generated from them. For example changing the brand-1 color to pure red will generate color variants of red.
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/color-palette' with (
-  $brand-1: #f00
+@use '~bitstyles/scss/bitstyles/settings/base-colors' with (
+  $colors: (
+    'brand-1': #f00,
+  )
 );
 
 /* brand-1 colors:
@@ -79,6 +99,7 @@ The color variants are generated from the set of initial base colors. Changing t
   "1": #fffcfc,
   "2": snow,
   "3": #fff7f7,
+  "4": #fff5f5,
   "5": #fff2f2,
   "10": #ffe6e6,
   "20": #ffcccc,
@@ -89,64 +110,103 @@ The color variants are generated from the set of initial base colors. Changing t
   "70": #ff4d4d,
   "80": #ff3333,
   "90": #ff1a1a,
-  "95": #ff0d0d,
-  "97": #ff0808,
-  "98": #ff0505,
-  "99": #ff0303,
-  "100": red
+  "100": red,
+  "105": #f20000,
+  "110": #e60000,
+  "120": #cc0000,
+  "130": #b30000,
+  "140": #990000,
+  "150": maroon,
+  "160": #660000,
+  "170": #4d0000,
+  "180": #330000,
+  "190": #1a0000
 )
 */
 ```
 
-### Color variants
+Note that if you wish to retain the other colors, you’ll need to copy them from the default configuration and provide them here, as these sass lists are immutable.
 
-Control the range of color variants that will be generated by overriding `$color-mix-percentages`. This is a Sass list with number values for the percentages of the color to be mixed with white or black. The numbers will be used as the label for the variant.
+You can add new colors not present in the default Bitstyles configuration, by defining them here, but you’ll then need to update the base-palette to use those new colors.
+
+### Base color palette
+
+#### Changing the scale
+
+Change the lightness values at which the colors of the base color palettes will be generated by overriding:
+
+- `base-colors.$color-scale-percentages`
+- `base-colors.$grayscale-percentages`
+
+These are a Sass lists with number values for the percentages of the color to be mixed. The numbers will also be used as the label for the variant. `$color-scale-percentages` is used to generate most of these colors; `$grayscale-percentages` is used to generate the 0–100 grayscale.
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/color-palette' with (
-  $color-mix-percentages: (
-    10,
-    50,
-    90,
+@use '~bitstyles/scss/bitstyles/settings/base-colors' with (
+  $color-scale-percentages: (
+    '10': 10,
+    '50': 50,
+    '90': 90,
+    '110': -10,
+    '150': -50,
+    '190': -90,
   )
 );
+
+/* brand-1 colors:
+(
+  "10": #ebebf7,
+  "50": #9d9bd5,
+  "90": #4f4bb3,
+  "110": #35329a,
+  "150": #1e1c56,
+  "190": #060611,
+)
+*/
 ```
 
-Each color will be available only at those variants e.g.
+### Override the base palette
 
-```scss
-palette.get("black", "10");
-palette.get("black", "50");
-palette.get("black", "90");
-palette.get("brand-1", "10");
-palette.get("brand-1", "50");
-palette.get("brand-1", "90");
-```
-
-### Overriding the color-palette
-
-For more fine-grained and total control, override the `$color-palette` Sass map. Note that you cannot add to nor edit the values in the default map. You can only overwrite the entire thing, so be sure to copy the colors you’ll use even if you don’t change them.
-
-Depending on your requirements, you may want to use the color generator from bitstyles to generate some color variants, and manually specify others:
+Override the base palette to customize the generated colors. `tools/color` provides `generate-tints-and-shades` and `generate-scale` functions to make this easier, but you can also manually specify colors. It’s recommended you use the colors specified in the base-colors layer, but it’s not required:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/color';
-@use '~bitstyles/scss/bitstyles/settings/color-palette' with (
+@use '~bitstyles/scss/bitstyles/settings/base-color';
+@use '~bitstyles/scss/bitstyles/settings/base-palette' with (
   $color-palette: (
-    'black': color.generate-palette(
-        $base-color: #000,
-        $mix-color: #fff,
-        $percentages: (
-          1,
-          35,
-          90,
-        )
-      ),
-    'brand-1': (
-      'default': #000dff,
-      'light': #4d56ff,
-      'dark': #0009b3,
+    'red': color.generate-tints-and-shades($base-color: map.get(base-colors.$colors, 'red')),
+    'blue': color.generate-tints-and-shades($base-color: #00f),
+    'custom-color-scale': (
+      '0': #355322,
+      '1': #986282,
+      // …
     ),
   )
 );
 ```
+
+## Semantic Color palette
+
+All the colors of the base palette are available to you to construct the semantic palette. If the default colors are not suitable, or if changes to the base colors or base color palette mean the colors used by default in the semantic palette are no longer suitable, override the semantic palette. You must overwrite the entire thing, so be sure to copy the colors you’ll use even if you don’t change them.
+
+It’s recommended that you select the colors from the base palette, but it’s not required:
+
+```scss
+@use '~bitstyles/scss/bitstyles/tools/base-color';
+@use '~bitstyles/scss/bitstyles/settings/color-palette' with (
+  $color-palette: (
+    'brand-1': (
+      'default': base-color.get('brand-1', '70'),
+      'light': base-color.get('brand-1', '30'),
+      'dark': base-color.get('brand-1', '170'),
+    ),
+    'blue': (
+      'default': #00f,
+      'dark': #006,
+    ),
+  )
+);
+```
+
+### Default key
+
+With the default configuration, `base` is the root for each color, allowing you to use e.g. `palette.get()` without specifying a color variant when you want the base color e.g. `palette.get('brand-1')`. To change the default key, override `color-palette.$default-key` with the string you wish to use.

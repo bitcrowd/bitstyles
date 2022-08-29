@@ -3,6 +3,7 @@
 @use 'sass:math';
 @use 'sass:meta';
 @use 'sass:string';
+@use '../settings/base-colors';
 
 // Generate palette
 //
@@ -14,19 +15,19 @@
 //
 // @param {list} $percentages  A list of decmial values representing the percentages at which the mix-color will be mixed into the base-color
 
-@function generate-palette($base-color, $mix-color, $percentages) {
+@function generate-scale(
+  $base-color,
+  $percentages: base-colors.$color-scale-percentages
+) {
   $color-map: ();
 
-  @each $percentage in $percentages {
+  @each $color-name, $percentage in $percentages {
+    $lightness-value: math.percentage(math.div($percentage, 100));
     $color-map: map.merge(
       $color-map,
       (
-        '#{$percentage}':
-          color.mix(
-            $mix-color,
-            $base-color,
-            100% - math.percentage(math.div($percentage, 100))
-          ),
+        '#{$color-name}':
+          color.scale($base-color, $lightness: $lightness-value),
       )
     );
   }
@@ -39,5 +40,5 @@
     @return '%23' + string.unquote('#{string.slice(#{$color}, 2)}');
   }
 
-  @return $string;
+  @return $color;
 }

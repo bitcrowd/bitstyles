@@ -1,5 +1,6 @@
 @use '../../settings/animation';
 @use '../../tools/palette';
+@use '../../tools/shadow';
 @use '../../tools/size';
 
 //
@@ -13,39 +14,59 @@ $transition: color animation.$transition-duration animation.$transition-easing,
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('gray', '60') !default;
-$background-color: palette.get('gray', '1') !default;
-$border-color: palette.get('gray', '10') !default;
-$box-shadow: none !default;
+$color: palette.get('text', 'base') !default;
+$background-color: palette.get('grayscale', 'white') !default;
+$border-color: palette.get('text', 'base') !default;
+$box-shadow: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-1', 'dark'), 0.025),
+    $blur-radius: size.get('m'),
+  )
+) !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('gray', '80') !default;
-$background-color-hover: palette.get('gray', '10') !default;
-$border-color-hover: palette.get('gray', '20') !default;
-$box-shadow-hover: none !default;
+$color-hover: palette.get('brand-1', 'base') !default;
+$background-color-hover: palette.get('brand-1', 'lighter') !default;
+$border-color-hover: palette.get('brand-1', 'base') !default;
+$box-shadow-hover: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-1', 'dark'), 0.025),
+    $blur-radius: size.get('l'),
+  )
+) !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$color-active: palette.get('white') !default;
-$background-color-active: palette.get('brand-2', '100') !default;
-$border-color-active: palette.get('brand-2', '100') !default;
-$box-shadow-active: none !default;
+$color-active: palette.get('text', 'base') !default;
+$background-color-active: palette.get('brand-1', 'base') !default;
+$border-color-active: palette.get('brand-1', 'base') !default;
+$box-shadow-active: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-1', 'dark'), 0.025),
+    $blur-radius: size.get('xs'),
+  )
+) !default;
 
 //
 // Pressed colors ////////////////////////////////////////
 
-$color-pressed: palette.get('gray', '90') !default;
-$background-color-pressed: palette.get('brand-2', '100') !default;
-$border-color-pressed: palette.get('brand-2', '100') !default;
-$box-shadow-pressed: none !default;
+$color-pressed: palette.get('grayscale', 'white') !default;
+$background-color-pressed: palette.get('brand-1', 'dark') !default;
+$border-color-pressed: palette.get('brand-1', 'dark') !default;
+$box-shadow-pressed: shadow.to-box-shadow(
+  shadow.generate(
+    $color: rgba(palette.get('brand-1', 'dark'), 0.025),
+    $blur-radius: size.get('xs'),
+  )
+) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$color-disabled: palette.get('gray', '10') !default;
-$background-color-disabled: rgba(palette.get('gray', '1'), 50%) !default;
-$border-color-disabled: palette.get('gray', '10') !default;
+$color-disabled: palette.get('text', 'lighter') !default;
+$background-color-disabled: rgba(palette.get('text', 'lighter'), 50%) !default;
+$border-color-disabled: palette.get('text', 'dark') !default;
 $box-shadow-disabled: none !default;

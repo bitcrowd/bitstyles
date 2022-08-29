@@ -11,31 +11,31 @@ $font-weight: typography.$font-weight-medium !default;
 //
 // Base Colors /////////////////////////////////////////
 
-$color: palette.get('brand-1', '80') !default;
+$color: palette.get('brand-1', 'base') !default;
 $text-decoration: none !default;
-$background-color: none !default;
+$background-color: transparent !default;
 $box-shadow: none !default;
 
 //
 // Visited /////////////////////////////////////////
 
-$color-visited: palette.get('brand-1', '60') !default;
+$color-visited: palette.get('brand-1', 'base') !default;
 $text-decoration-visited: none !default;
-$background-color-visited: none !default;
+$background-color-visited: transparent !default;
 $box-shadow-visited: none !default;
 
 //
 // Hover /////////////////////////////////////////
 
-$color-hover: palette.get('brand-1', '100') !default;
+$color-hover: palette.get('brand-1', 'dark') !default;
 $text-decoration-hover: underline !default;
-$background-color-hover: none !default;
+$background-color-hover: transparent !default;
 $box-shadow-hover: none !default;
 
 //
 // Active /////////////////////////////////////////
 
-$color-active: palette.get('brand-1-shades', '100') !default;
+$color-active: palette.get('brand-1', 'dark') !default;
 $text-decoration-active: underline !default;
-$background-color-active: none !default;
+$background-color-active: transparent !default;
 $box-shadow-active: none !default;

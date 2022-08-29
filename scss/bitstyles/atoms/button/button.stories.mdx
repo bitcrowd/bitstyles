@@ -10,35 +10,35 @@ All the buttons produce a larger-than-text hit target, and by default react to `
 <Canvas>
   <Story name="Button Element">
     {`
-      <button class="a-button u-h6" type="button">
+      <button class="a-button" type="button">
         <span class="a-button__label">Button element</span>
       </button>
     `}
   </Story>
   <Story name="Button (Disabled)">
     {`
-      <button disabled class="a-button u-h6" type="button">
+      <button disabled class="a-button" type="button">
         <span class="a-button__label">Button element (disabled)</span>
       </button>
     `}
   </Story>
   <Story name="Anchor Element">
     {`
-      <a href="#" class="a-button u-h6">
+      <a href="#" class="a-button">
         <span class="a-button__label">Anchor element</span>
       </a>
     `}
   </Story>
   <Story name="Anchor Element (visited)">
     {`
-      <a href="/" class="a-button u-h6">
+      <a href="/" class="a-button">
         <span class="a-button__label">Anchor element (visited)</span>
       </a>
     `}
   </Story>
   <Story name="Anchor Element (disabled)">
     {`
-      <a href="/" class="a-button u-h6" aria-disabled="true">
+      <a href="/" class="a-button" aria-disabled="true">
         <span class="a-button__label">Anchor element (disabled)</span>
       </a>
     `}
@@ -54,7 +54,7 @@ These are buttons containing a visible text label next to an icon. The order of 
 <Canvas>
   <Story name="Button with Icon">
     {`
-      <button class="a-button u-h6" type="button">
+      <button class="a-button" type="button">
         <svg width="16" height="16" class="a-button__icon a-icon" aria-hidden="true" focusable="false">
           <use xlink:href="${icons}#icon-plus"></use>
         </svg>
@@ -64,7 +64,7 @@ These are buttons containing a visible text label next to an icon. The order of 
   </Story>
   <Story name="Button with Icon (reversed)">
     {`
-      <button class="a-button u-h6" type="button">
+      <button class="a-button" type="button">
         <span class="a-button__label">Button with icon (reversed)</span>
         <svg width="16" height="16" class="a-button__icon a-icon" aria-hidden="true" focusable="false">
           <use xlink:href="${icons}#icon-plus"></use>

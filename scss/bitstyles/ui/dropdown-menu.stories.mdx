@@ -9,7 +9,7 @@ A button that when clicked reveals a floating menu of links. This is a combinati
 
 The component requires JS to show and hide the `ul`, and update the aria attributes when the user clicks the `.a-button--ui`.
 
-<div class="u-bg-gray-10 u-padding-m-x u-padding-xs-y">
+<div class="u-bg-gray-light u-padding-m-x u-padding-xs-y">
   <p>
     These examples use AlpineJS for the behavior. If you’re using a different JS
     package, replace the blocks of html attributes starting with `x-`, and with
@@ -79,7 +79,7 @@ These examples show various contents for the dropdown menus — what you put in 
         <div class="u-relative" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--ui"
             aria-controls="dropdown-1"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
@@ -145,7 +145,7 @@ These examples show various contents for the dropdown menus — what you put in 
         <div class="u-relative" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--ui"
             aria-controls="dropdown-2"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
@@ -211,7 +211,7 @@ These examples show various contents for the dropdown menus — what you put in 
         <div class="u-relative" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--ui"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
@@ -239,7 +239,7 @@ These examples show various contents for the dropdown menus — what you put in 
                   <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
                 </div>
                 <div class="u-flex-shrink-0 u-flex u-flex-col u-items-start">
-                  <span class="u-fg-gray-40">Signed in as</span>
+                  <span class="u-fg-text-light">Signed in as</span>
                   <span>Username</span>
                 </div>
               </div>
@@ -288,7 +288,7 @@ The default dropdowns are aligned to the left edge of their relative parent, und
         <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--ui"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
@@ -316,7 +316,7 @@ The default dropdowns are aligned to the left edge of their relative parent, und
                   <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
                 </div>
                 <div class="u-flex-shrink-0 u-flex u-flex-col u-items-start">
-                  <span class="u-fg-gray-40">Signed in as</span>
+                  <span class="u-fg-text-light">Signed in as</span>
                   <span>Username</span>
                 </div>
               </div>
@@ -355,7 +355,7 @@ The default dropdowns are aligned to the left edge of their relative parent, und
         <div class="u-relative" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--ui"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
@@ -383,7 +383,7 @@ The default dropdowns are aligned to the left edge of their relative parent, und
                   <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
                 </div>
                 <div class="u-flex-shrink-0 u-flex u-flex-col u-items-start">
-                  <span class="u-fg-gray-40">Signed in as</span>
+                  <span class="u-fg-text-light">Signed in as</span>
                   <span>Username</span>
                 </div>
               </div>
@@ -421,7 +421,7 @@ The default dropdowns are aligned to the left edge of their relative parent, und
         <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--ui"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
@@ -449,7 +449,7 @@ The default dropdowns are aligned to the left edge of their relative parent, und
                   <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
                 </div>
                 <div class="u-flex-shrink-0 u-flex u-flex-col u-items-start">
-                  <span class="u-fg-gray-40">Signed in as</span>
+                  <span class="u-fg-text-light">Signed in as</span>
                   <span>Username</span>
                 </div>
               </div>
@@ -493,7 +493,7 @@ The directions can be combined.
         <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--ui"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
@@ -521,7 +521,7 @@ The directions can be combined.
                   <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
                 </div>
                 <div class="u-flex-shrink-0 u-flex u-flex-col u-items-start">
-                  <span class="u-fg-gray-40">Signed in as</span>
+                  <span class="u-fg-text-light">Signed in as</span>
                   <span>Username</span>
                 </div>
               </div>
@@ -560,7 +560,7 @@ The directions can be combined.
         <div class="u-relative u-flex u-justify-end" x-data="{ dropdownOpen: false }">
           <button
             type="button"
-            class="a-button a-button--ui u-h6"
+            class="a-button a-button--ui"
             aria-controls="dropdown-3"
             @click="dropdownOpen = !dropdownOpen"
             :aria-expanded="dropdownOpen"
@@ -588,7 +588,7 @@ The directions can be combined.
                   <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
                 </div>
                 <div class="u-flex-shrink-0 u-flex u-flex-col u-items-start">
-                  <span class="u-fg-gray-40">Signed in as</span>
+                  <span class="u-fg-text-light">Signed in as</span>
                   <span>Username</span>
                 </div>
               </div>

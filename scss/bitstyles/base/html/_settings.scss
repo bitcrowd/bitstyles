@@ -1,4 +1,4 @@
 @use '../../tools/palette';
 
-$color: palette.get('text') !default;
+$color: palette.get('text', 'darker') !default;
 $background-color: palette.get('background') !default;

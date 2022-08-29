@@ -15,39 +15,39 @@ $transition: color animation.$transition-duration animation.$transition-easing,
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('gray', '5') !default;
-$background-color: palette.get('gray', '80') !default;
-$border-color: palette.get('gray', '80') !default;
+$color: palette.get('text', 'lighter') !default;
+$background-color: palette.get('text', 'base') !default;
+$border-color: palette.get('text', 'base') !default;
 $box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('white') !default;
-$background-color-hover: palette.get('gray', '60') !default;
-$border-color-hover: palette.get('gray', '60') !default;
+$color-hover: palette.get('grayscale', 'white') !default;
+$background-color-hover: palette.get('text', 'base') !default;
+$border-color-hover: palette.get('text', 'base') !default;
 $box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
 
 $color-active: palette.get('text') !default;
-$background-color-active: palette.get('gray', '10') !default;
-$border-color-active: palette.get('gray', '10') !default;
+$background-color-active: palette.get('text', 'light') !default;
+$border-color-active: palette.get('text', 'light') !default;
 $box-shadow-active: none !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$color-disabled: palette.get('black', '50') !default;
-$background-color-disabled: palette.get('black', '10') !default;
-$border-color-disabled: palette.get('black', '10') !default;
+$color-disabled: palette.get('text', 'light') !default;
+$background-color-disabled: palette.get('text', 'lighter') !default;
+$border-color-disabled: palette.get('text', 'lighter') !default;
 $box-shadow-disabled: none !default;
 
 //
 // Current colors ////////////////////////////////////////
 
-$color-current: palette.get('white', '100') !default;
-$background-color-current: palette.get('gray', '100') !default;
-$border-color-current: palette.get('gray', '100') !default;
+$color-current: palette.get('grayscale', 'white') !default;
+$background-color-current: palette.get('text', 'dark') !default;
+$border-color-current: palette.get('text', 'dark') !default;
 $box-shadow-current: none !default;

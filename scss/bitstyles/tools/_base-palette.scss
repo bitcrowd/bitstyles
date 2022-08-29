@@ -1,5 +1,6 @@
 @use 'sass:map';
-@use '../settings/color-palette';
+@use '../settings/base-colors';
+@use '../settings/base-palette';
 
 // Palette
 //
@@ -11,9 +12,9 @@
 // @param {String} $key   Optional. Key/name of the color to select from the sass map. Defaults to `100`, but that can be specified using `$bitstyles-color-palette-default-key`.
 //
 
-@function get($color, $key: color-palette.$default-key) {
-  @if map.has-key(color-palette.$palette, $color) {
-    $palette: map.get(color-palette.$palette, $color);
+@function get($color, $key: base-colors.$default-key) {
+  @if map.has-key(base-palette.$palette, $color) {
+    $palette: map.get(base-palette.$palette, $color);
 
     @if map.has-key($palette, $key) {
       @return map.get($palette, $key);
