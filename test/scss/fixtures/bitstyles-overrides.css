@@ -662,42 +662,42 @@ table {
   margin-right: -7.5rem;
 }
 .bs-at-badge--text {
-  --button-fg: #000;
-  --button-bg: #000;
-  --button-fg-hover: #000;
-  --button-bg-hover: #000;
+  --bs-at-button-fg: #000;
+  --bs-at-button-bg: #000;
+  --bs-at-button-fg-hover: #000;
+  --bs-at-button-bg-hover: #000;
   background-color: #000;
   color: #000;
 }
 .bs-at-badge--danger {
-  --button-fg: #000;
-  --button-bg: #000;
-  --button-fg-hover: #000;
-  --button-bg-hover: #000;
+  --bs-at-button-fg: #000;
+  --bs-at-button-bg: #000;
+  --bs-at-button-fg-hover: #000;
+  --bs-at-button-bg-hover: #000;
   background-color: #000;
   color: #000;
 }
 .bs-at-badge--brand-1 {
-  --button-fg: #000;
-  --button-bg: #000;
-  --button-fg-hover: #000;
-  --button-bg-hover: #000;
+  --bs-at-button-fg: #000;
+  --bs-at-button-bg: #000;
+  --bs-at-button-fg-hover: #000;
+  --bs-at-button-bg-hover: #000;
   background-color: #000;
   color: #000;
 }
 .bs-at-badge--brand-2 {
-  --button-fg: #000;
-  --button-bg: #000;
-  --button-fg-hover: #000;
-  --button-bg-hover: #000;
+  --bs-at-button-fg: #000;
+  --bs-at-button-bg: #000;
+  --bs-at-button-fg-hover: #000;
+  --bs-at-button-bg-hover: #000;
   background-color: #000;
   color: #000;
 }
 .bs-at-badge--positive {
-  --button-fg: #000;
-  --button-bg: #000;
-  --button-fg-hover: #000;
-  --button-bg-hover: #000;
+  --bs-at-button-fg: #000;
+  --bs-at-button-bg: #000;
+  --bs-at-button-fg-hover: #000;
+  --bs-at-button-bg-hover: #000;
   background-color: #000;
   color: #000;
 }
@@ -843,17 +843,17 @@ table {
 }
 .bs-at-button--icon-reversed,
 .bs-at-button--icon-reversed:visited {
-  background: var(--button-bg, transparent);
+  background: var(--bs-at-button-bg, transparent);
   border-color: transparent;
   box-shadow: none;
-  color: var(--button-fg, #000);
+  color: var(--bs-at-button-fg, #000);
 }
 .bs-at-button--icon-reversed:focus,
 .bs-at-button--icon-reversed:hover {
-  background: var(--button-bg-hover, #000);
+  background: var(--bs-at-button-bg-hover, #000);
   border-color: #000;
   box-shadow: none;
-  color: var(--button-fg-hover, #000);
+  color: var(--bs-at-button-fg-hover, #000);
 }
 .bs-at-button--icon-reversed:active {
   background: #000;
