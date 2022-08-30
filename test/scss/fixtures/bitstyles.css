@@ -713,45 +713,45 @@ table {
   margin-left: 0.4rem;
   margin-right: -0.6rem;
 }
-.a-badge--gray {
-  --a-button-color: #2e2f47;
-  --a-button-background-color: #cfd0e9;
-  --a-button-color-hover: #cfd0e9;
-  --a-button-background-color-hover: #2e2f47;
-  background-color: #cfd0e9;
-  color: #2e2f47;
+.a-badge--text {
+  --a-button-color: #645f81;
+  --a-button-background-color: #d9d7e2;
+  --a-button-color-hover: #d9d7e2;
+  --a-button-background-color-hover: #645f81;
+  background-color: #d9d7e2;
+  color: #645f81;
 }
 .a-badge--danger {
-  --a-button-color: #ed5444;
-  --a-button-background-color: #fdeae8;
-  --a-button-color-hover: #fdeae8;
-  --a-button-background-color-hover: #ed5444;
-  background-color: #fdeae8;
-  color: #ed5444;
+  --a-button-color: #d90016;
+  --a-button-background-color: #ffbfc6;
+  --a-button-color-hover: #ffbfc6;
+  --a-button-background-color-hover: #d90016;
+  background-color: #ffbfc6;
+  color: #d90016;
 }
 .a-badge--brand-1 {
-  --a-button-color: #333dff;
-  --a-button-background-color: #e6e7ff;
-  --a-button-color-hover: #e6e7ff;
-  --a-button-background-color-hover: #333dff;
-  background-color: #e6e7ff;
-  color: #333dff;
+  --a-button-color: #1f00e6;
+  --a-button-background-color: #c8bfff;
+  --a-button-color-hover: #c8bfff;
+  --a-button-background-color-hover: #1f00e6;
+  background-color: #c8bfff;
+  color: #1f00e6;
 }
 .a-badge--brand-2 {
-  --a-button-color: #fb3;
-  --a-button-background-color: #fff7e6;
-  --a-button-color-hover: #fff7e6;
-  --a-button-background-color-hover: #fb3;
-  background-color: #fff7e6;
-  color: #fb3;
+  --a-button-color: #00e6da;
+  --a-button-background-color: #b3fffb;
+  --a-button-color-hover: #b3fffb;
+  --a-button-background-color-hover: #00e6da;
+  background-color: #b3fffb;
+  color: #00e6da;
 }
 .a-badge--positive {
-  --a-button-color: #73b935;
-  --a-button-background-color: #eef6e6;
-  --a-button-color-hover: #eef6e6;
-  --a-button-background-color-hover: #73b935;
-  background-color: #eef6e6;
-  color: #73b935;
+  --a-button-color: #00995e;
+  --a-button-background-color: #73ffc9;
+  --a-button-color-hover: #73ffc9;
+  --a-button-background-color-hover: #00995e;
+  background-color: #73ffc9;
+  color: #00995e;
 }
 .a-bordered-header {
   grid-gap: 1.6rem;
@@ -899,12 +899,12 @@ table {
   background: var(--a-button-background-color, transparent);
   border-color: transparent;
   box-shadow: none;
-  color: var(--a-button-color, #b8b9d1);
+  color: var(--a-button-color, #d9d7e2);
 }
 .a-button--icon-reversed:focus,
 .a-button--icon-reversed:hover {
-  background: var(--a-button-background-color-hover, #2e2f47);
-  border-color: #2e2f47;
+  background: var(--a-button-background-color-hover, #9995b1);
+  border-color: #9995b1;
   box-shadow: none;
   color: var(--a-button-color-hover, #fff);
 }

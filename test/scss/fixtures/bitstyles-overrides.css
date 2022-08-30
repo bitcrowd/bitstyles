@@ -661,11 +661,11 @@ table {
   margin-left: 5rem;
   margin-right: -7.5rem;
 }
-.bs-at-badge--gray {
-  --bs-a-button-color: #000;
-  --bs-a-button-background-color: #000;
-  --bs-a-button-color-hover: #000;
-  --bs-a-button-background-color-hover: #000;
+.bs-at-badge--text {
+  --bs-at-button-color: #000;
+  --bs-at-button-background-color: #000;
+  --bs-at-button-color-hover: #000;
+  --bs-at-button-background-color-hover: #000;
   background-color: #000;
   color: #000;
 }
