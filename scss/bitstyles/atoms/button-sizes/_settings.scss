@@ -9,7 +9,7 @@ $default: (
   'padding-horizontal': size.get('l'),
   'border-width': size.get('xxxs'),
   'border-radius': size.get('xs'),
-  'min-height': calc(var(--padding-vertical) + 1em),
+  'min-height': calc(var(--padding-vertical) * 2 + 1em),
   'min-width': 0,
   'font-size': font-size.get('2'),
   'font-weight': typography.$font-weight-normal,

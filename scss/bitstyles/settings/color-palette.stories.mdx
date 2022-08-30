@@ -129,7 +129,6 @@ The color variants in the base color palette are generated from a set of initial
   "2": snow,
   "3": #fff7f7,
   "4": #fff5f5,
-  "4": #fff5f5,
   "5": #fff2f2,
   "10": #ffe6e6,
   "20": #ffcccc,
@@ -192,17 +191,6 @@ These are a Sass lists with number values for the percentages of the color to be
   "190": #060611,
 )
 */
-
-/* brand-1 colors:
-(
-  "10": #ebebf7,
-  "50": #9d9bd5,
-  "90": #4f4bb3,
-  "110": #35329a,
-  "150": #1e1c56,
-  "190": #060611,
-)
-*/
 ```
 
 ### Override the base palette
@@ -224,7 +212,6 @@ Override the base palette to customize the generated colors. `tools/color` provi
   )
 );
 ```
-<<<<<<< HEAD
 
 ## Semantic Color palette
 
@@ -233,7 +220,7 @@ All the colors of the base palette are available to you to construct the semanti
 It’s recomended that you select the colors from the base palette, but it’s not required:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/tools/base-base-color';
+@use '~bitstyles/scss/bitstyles/tools/base-color';
 @use '~bitstyles/scss/bitstyles/settings/color-palette' with (
   $color-palette: (
     'brand-1': (
