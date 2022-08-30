@@ -157,6 +157,38 @@ $transparent: (
     'box-shadow': none,
   ),
 ) !default;
+$tab: (
+  'default': (
+    'border-color': transparent,
+    'background-color': transparent,
+    'box-shadow': none,
+    'color': var(--color-text-darker),
+  ),
+  'hover': (
+    'border-color': transparent,
+    'background-color': transparent,
+    'box-shadow': none,
+    'color': var(--color-brand-1-base),
+  ),
+  'active': (
+    'border-color': transparent,
+    'background-color': transparent,
+    'box-shadow': none,
+    'color': var(--color-brand-1-dark),
+  ),
+  'pressed': (
+    'border-color': transparent,
+    'background-color': transparent,
+    'box-shadow': none,
+    'color': var(--color-brand-1-darker),
+  ),
+  'disabled': (
+    'border-color': transparent,
+    'background-color': transparent,
+    'box-shadow': none,
+    'color': var(--color-accent-gray-light),
+  ),
+) !default;
 $danger: (
   'hover': (
     'color': var(--color-grayscale-white),
@@ -187,5 +219,6 @@ $variants: (
   '': $default,
   '--secondary': $secondary,
   '--transparent': $transparent,
+  '--tab': $tab,
   '--danger': $danger,
 ) !default;

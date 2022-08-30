@@ -16,41 +16,6 @@
   border: 0;
   border-radius: settings.$border-radius;
 
-  @include button.colors(
-    $colors: (
-      'default': (
-        'border-color': settings.$border-color,
-        'background-color': settings.$background-color,
-        'box-shadow': settings.$box-shadow,
-        'color': settings.$color,
-      ),
-      'hover': (
-        'border-color': settings.$border-color-hover,
-        'background-color': settings.$background-color-hover,
-        'box-shadow': settings.$box-shadow-hover,
-        'color': settings.$color-hover,
-      ),
-      'active': (
-        'border-color': settings.$border-color-active,
-        'background-color': settings.$background-color-active,
-        'box-shadow': settings.$box-shadow-active,
-        'color': settings.$color-active,
-      ),
-      'pressed': (
-        'border-color': settings.$border-color-pressed,
-        'background-color': settings.$background-color-pressed,
-        'box-shadow': settings.$box-shadow-pressed,
-        'color': settings.$color-pressed,
-      ),
-      'disabled': (
-        'border-color': settings.$border-color-disabled,
-        'background-color': settings.$background-color-disabled,
-        'box-shadow': settings.$box-shadow-disabled,
-        'color': settings.$color-disabled,
-      ),
-    )
-  );
-
   &,
   &:visited {
     &::after {

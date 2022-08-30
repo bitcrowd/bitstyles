@@ -48,9 +48,8 @@
 - A new helper function `base-palette.get()` that returns colors from your base palette, to be used when setting up your color palette
 - Classname layer prefixes for indicating whether a class is at atom/molecule/organism/utility level can now be configured or even removed by overriding `setup.$layer-prefixes`.
 - New helper function `classname.get()` for generating classnames that respect the namespace and layer-prefix configuration. If you were previously using `properties.join-with-dashes()` to generate classnames, you should migrate to using `classname.get()` instead.
-- A new helper function `tools/base-palette` `get()` that returns colors from your base palette, to be used when setting up your color palette
 
-## Changed
+### Changed
 
 - `typography.$font-sizes` now expects a single Sass map of font-sizes. This is the base set of design tokens for your font-sizes, from which the responsive typographic scale is created.
 - Newly configured `line-height` utility classes to include the base `typography.$line-heights`
