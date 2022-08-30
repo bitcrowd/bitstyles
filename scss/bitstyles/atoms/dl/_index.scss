@@ -1,14 +1,13 @@
-@use '../../settings/setup';
 @use '../../tools/palette';
 @use '../../tools/media-query';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'dl'))} {
+#{classname.get($classname-items: 'dl', $layer: 'atom')} {
   border-top: 1px solid palette.get('text', 'light');
 }
 
 @include media-query.get('m') {
-  .#{properties.join-with-dashes((setup.$namespace, 'a', 'dl__item'))} {
+  #{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
     border-bottom: 1px solid palette.get('text', 'light');
   }
 }

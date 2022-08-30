@@ -1,17 +1,6 @@
-@use '../../settings/setup';
 @use '../../tools/truncate';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-/* stylelint-disable scss/dollar-variable-default */
-$classname: properties.join-with-dashes(
-  $string-items: (
-    setup.$namespace,
-    'u',
-    'truncate',
-  ),
-);
-/* stylelint-enable scss/dollar-variable-default */
-
-.#{$classname} {
+#{classname.get($classname-items: 'truncate', $layer: 'utility')} {
   @include truncate.truncate;
 }

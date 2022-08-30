@@ -1,9 +1,8 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--menu'))} {
+#{classname.get($classname-items: 'button--menu', $layer: 'atom')} {
   display: flex;
   justify-content: flex-start;
   min-height: 0;

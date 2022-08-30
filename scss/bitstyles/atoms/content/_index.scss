@@ -2,16 +2,15 @@
 @use 'sass:map';
 @use './settings';
 @use '../../settings/animation';
-@use '../../settings/setup';
 @use '../../tools/media-query';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
 @mixin content-padding($padding-value) {
   padding-right: $padding-value;
   padding-left: $padding-value;
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'content'))} {
+#{classname.get($classname-items: 'content', $layer: 'atom')} {
   width: 100%;
   max-width: map.get(settings.$max-width, settings.$max-width-base);
   margin-right: auto;
@@ -33,7 +32,7 @@
 }
 
 @each $max-width-alias, $max-width-value in settings.$max-width {
-  .#{properties.join-with-dashes((setup.$namespace, 'a', 'content--#{$max-width-alias}'))} {
+  #{classname.get($classname-items: 'content--#{$max-width-alias}', $layer: 'atom')} {
     max-width: $max-width-value;
   }
 }

@@ -1,17 +1,6 @@
-@use '../../settings/setup';
 @use '../../tools/clearfix';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-/* stylelint-disable scss/dollar-variable-default */
-$classname: properties.join-with-dashes(
-  $string-items: (
-    setup.$namespace,
-    'u',
-    'clearfix',
-  ),
-);
-/* stylelint-enable scss/dollar-variable-default */
-
-.#{$classname} {
+#{classname.get($classname-items: 'clearfix', $layer: 'utility')} {
   @include clearfix.clearfix;
 }

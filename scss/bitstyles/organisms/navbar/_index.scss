@@ -1,10 +1,9 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/media-query';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'o', 'navbar'))} {
+#{classname.get($classname-items: 'navbar', $layer: 'organism')} {
   position: absolute;
   top: 100%;
   right: 0;

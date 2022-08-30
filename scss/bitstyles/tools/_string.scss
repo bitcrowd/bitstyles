@@ -1,0 +1,45 @@
+@use 'sass:list';
+@use 'sass:string';
+
+/*
+ * Removes a value from a list
+ *
+ * @param $list The list from which to remove values
+ * @param $value The value to remove from the list. Values that occur multiple times will all be removed
+ */
+@function remove($list, $value) {
+  $result: ();
+
+  @for $i from 1 through list.length($list) {
+    @if list.nth($list, $i) != $value {
+      $result: list.append($result, list.nth($list, $i));
+    }
+  }
+
+  @return $result;
+}
+
+/*
+ * Returns a string suitable for a utility class or CSS property name, by joining strings with dash characters
+ *
+ * @param $string-items An ordered list of strings to be joined with dashes to form the string
+ *
+ */
+@function join-with-dashes($string-items) {
+  $string: null;
+  $string-items: remove(remove($string-items, null), '');
+
+  @for $i from 1 through list.length($string-items) {
+    $string-item: list.nth($string-items, $i);
+
+    @if $string-item {
+      $string: if(
+        $i == 1,
+        $string-item,
+        '#{$string}#{string.unquote('-')}#{$string-item}'
+      );
+    }
+  }
+
+  @return $string;
+}

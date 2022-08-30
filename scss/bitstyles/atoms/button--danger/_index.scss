@@ -1,9 +1,8 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--danger'))} {
+#{classname.get($classname-items: 'button--danger', $layer: 'atom')} {
   &:hover,
   &:focus {
     border-color: settings.$border-color-hover;

@@ -2,17 +2,16 @@
 @use './settings';
 @use '../../settings/animation';
 @use '../../settings/layout';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 @use '../button/settings' as button-settings;
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--tab-container'))} {
+#{classname.get($classname-items: 'button--tab-container', $layer: 'atom')} {
   & > *:first-child {
     margin-left: -(button-settings.$padding-horizontal);
   }
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--tab'))} {
+#{classname.get($classname-items: 'button--tab', $layer: 'atom')} {
   position: relative;
   border: 0;
   border-radius: settings.$border-radius;

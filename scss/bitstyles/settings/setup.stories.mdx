@@ -4,11 +4,11 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Setup
 
-There are a few global variables that are useful in rare cases to avoid conflicts. These are bundled together in `settings/setup`.
+There are a few global variables that are useful in rare cases, to avoid conflicts. These are bundled together in `settings/setup`.
 
 ## Namespace
 
-Useful if you need bitstyles to coexist with other CSS libraries, if you specify a namespace all the bitstyles classes will be prefixed with it.
+If you need bitstyles to coexist with other CSS libraries, specify a namespace. This will be prefixed to all the bitstyles classes:
 
 ```scss
 @use 'bitstyles/settings/setup' with (
@@ -16,14 +16,66 @@ Useful if you need bitstyles to coexist with other CSS libraries, if you specify
 );
 ```
 
-Will result in classnames which all start with `bs`, followed by the CSS layer abbreviations, then the class name:
+Your classnames will all start with `bs`, followed by the CSS layer abbreviations (see below), then the class name:
+
+<!-- prettier-ignore-start -->
+```scss
+.bs-a-card {}
+.bs-u-padding-0 {}
+```
+<!-- prettier-ignore-end -->
+
+## Layer-prefixes
+
+Bitstyles is based on an ITCSS structure, with CSS organised into several discrete layers. The default configuration prepends all classnames with a letter indicating which layer it’s found in:
 
 ```scss
-.bs-a-card {
-}
-.bs-u-padding-0 {
-}
+@use 'bitstyles/settings/setup' with (
+  $layer-prefixes: (
+    'atom': 'a',
+    'molecule': 'm',
+    'organism': 'o',
+    'utility': 'u',
+  )
+);
 ```
+
+Which gives us classnames like:
+
+<!-- prettier-ignore-start -->
+```scss
+.a-card {} // atom-layer class
+.m-modal {} // molecule-level class
+.o-button-group {} // organism-level class
+.u-margin-0 {} // utility-level class
+```
+<!-- prettier-ignore-end -->
+
+Note that if you‘ve specified a namespace (see above), that will appear before the layer prefix in the classname.
+
+You can configure the layer prefixes by overriding `setup.$layer-prefix`. Change the string to be prefixed, or remove it entirely.
+
+```scss
+@use 'bitstyles/settings/setup' with (
+  $bitstyles-setup-layer-prefixes: (
+    'atom': 'at',
+    'molecule': 'mo',
+    'organism': 'or',
+    'utility': '',
+  )
+);
+```
+
+This would result in classnames like:
+
+<!-- prettier-ignore-start -->
+```scss
+.at-card {} // atom-layer class
+.mo-modal {} // molecule-level class
+.or-button-group {} // organism-level class
+.margin-0 {} // utility-level class
+```
+<!-- prettier-ignore-end -->
 
 ## “No media query” name
 

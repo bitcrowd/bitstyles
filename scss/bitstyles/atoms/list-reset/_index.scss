@@ -1,7 +1,6 @@
-@use '../../settings/setup';
 @use '../../tools/list-reset';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'list-reset'))} {
+#{classname.get($classname-items: 'list-reset', $layer: 'atom')} {
   @include list-reset.list-reset;
 }

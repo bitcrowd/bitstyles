@@ -1,14 +1,13 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 @use '../../tools/size';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--mode-container'))} {
+#{classname.get($classname-items: 'button--mode-container', $layer: 'atom')} {
   border-radius: size.get('s');
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--mode'))} {
+#{classname.get($classname-items: 'button--mode', $layer: 'atom')} {
   padding-top: 0;
   padding-bottom: 0;
 

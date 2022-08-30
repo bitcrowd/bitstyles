@@ -1,17 +1,6 @@
-@use '../../settings/setup';
 @use '../../tools/absolute-cover';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-/* stylelint-disable scss/dollar-variable-default */
-$classname: properties.join-with-dashes(
-  $string-items: (
-    setup.$namespace,
-    'u',
-    'absolute-cover',
-  ),
-);
-/* stylelint-enable scss/dollar-variable-default */
-
-.#{$classname} {
+#{classname.get($classname-items: 'absolute-cover', $layer: 'utility')} {
   @include absolute-cover.absolute-cover;
 }

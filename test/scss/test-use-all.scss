@@ -70,6 +70,12 @@
     )
   ),
   $setup-namespace: 'bs',
+  $setup-layer-prefixes: (
+    'atom': 'at',
+    'molecule': 'mo',
+    'organism': 'or',
+    'utility': ''
+  ),
   $typography-webfont-family-name: 'FakeFont',
   $typography-webfont-base-url: './',
   $typography-responsive-typographic-scale: (

@@ -5,7 +5,7 @@
 @use '../../tools/sr-only';
 
 @include properties.output-block(
-  $classname-prefix: 'u',
+  $layer: 'utility',
   $classname-root: 'sr-only'
 ) {
   @include sr-only.sr-only;
@@ -14,7 +14,7 @@
 @each $breakpoint in settings.$breakpoints {
   @include media-query.get($breakpoint) {
     @include properties.output-block(
-      $classname-prefix: 'u',
+      $layer: 'utility',
       $classname-root: 'sr-only',
       $breakpoint: $breakpoint
     ) {

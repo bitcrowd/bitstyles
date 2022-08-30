@@ -1,21 +1,11 @@
 @forward 'settings';
 @use 'sass:map';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/aspect-ratio';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
 @each $aspect-ratio-alias, $aspect-ratio-value in settings.$values {
-  $classname: properties.join-with-dashes(
-    $string-items: (
-      setup.$namespace,
-      'u',
-      'aspect-ratio',
-      $aspect-ratio-alias,
-    ),
-  );
-
-  .#{$classname} {
+  #{classname.get($classname-items: ('aspect-ratio', $aspect-ratio-alias), $layer: 'utility')} {
     @include aspect-ratio.aspect-ratio(
       map.get($aspect-ratio-value, 'width'),
       map.get($aspect-ratio-value, 'height')

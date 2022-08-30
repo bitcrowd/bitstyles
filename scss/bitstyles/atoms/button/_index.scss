@@ -1,10 +1,9 @@
 @forward 'settings';
 @use 'sass:math';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button'))} {
+#{classname.get($classname-items: 'button', $layer: 'atom')} {
   display: inline-flex;
   position: relative;
   flex-shrink: 0;
@@ -62,14 +61,14 @@
   }
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button__avatar'))},
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button__icon'))} {
+#{classname.get($classname-items: 'button__avatar', $layer: 'atom')},
+#{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
   margin-right: settings.$icon-spacing;
   margin-left: math.div(-(settings.$icon-spacing), 4);
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button__label'))}
-  + .#{properties.join-with-dashes((setup.$namespace, 'a', 'button__icon'))} {
+#{classname.get($classname-items: 'button__label', $layer: 'atom')}
+  + #{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
   margin-right: math.div(-(settings.$icon-spacing), 4);
   margin-left: settings.$icon-spacing;
 }

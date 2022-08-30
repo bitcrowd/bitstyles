@@ -1,9 +1,8 @@
 @forward './settings';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'skip-link'))} {
+#{classname.get($classname-items: 'skip-link', $layer: 'atom')} {
   position: absolute;
   z-index: 1;
   top: -100%;

@@ -1,26 +1,25 @@
 @forward './settings';
 @use './settings';
 @use '../../settings/layout';
-@use '../../settings/setup';
+@use '../../tools/classname';
 @use '../../tools/palette';
-@use '../../tools/properties';
 @use '../../tools/size';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'badge'))} {
+#{classname.get($classname-items: 'badge', $layer: 'atom')} {
   display: inline-flex;
   align-items: center;
   padding: settings.$padding-vertical settings.$padding-horizontal;
   border-radius: layout.$border-radius-round;
   white-space: nowrap;
 
-  .#{properties.join-with-dashes((setup.$namespace, 'a', 'badge__button'))} {
+  #{classname.get($classname-items: 'badge__button', $layer: 'atom')} {
     margin-right: -#{size.get('s')};
     margin-left: size.get('xs');
   }
 }
 
 @each $variant in (settings.$variants) {
-  .#{properties.join-with-dashes((setup.$namespace, 'a', 'badge--#{$variant}'))} {
+  #{classname.get($classname-items: 'badge--#{$variant}', $layer: 'atom')} {
     --button-fg: #{palette.get($variant, settings.$color)};
     --button-bg: #{palette.get($variant, settings.$background-color)};
     --button-fg-hover: #{palette.get($variant, settings.$background-color)};

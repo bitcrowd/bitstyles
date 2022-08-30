@@ -1,0 +1,24 @@
+@use '../settings/setup';
+@use './string';
+@use 'sass:list';
+@use 'sass:map';
+
+@function get(
+  $classname-items: (),
+  $at-suffix: setup.$no-media-query,
+  $layer: null
+) {
+  $items: list.join(
+    (setup.$namespace, map.get(setup.$layer-prefixes, $layer)),
+    $classname-items
+  );
+  $classname: string.join-with-dashes(
+    $string-items: $items,
+  );
+
+  @if $at-suffix != setup.$no-media-query {
+    $classname: '#{$classname}\\\@#{$at-suffix}';
+  }
+
+  @return '.#{$classname}';
+}

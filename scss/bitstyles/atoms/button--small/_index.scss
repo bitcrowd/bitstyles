@@ -1,15 +1,14 @@
 @forward 'settings';
 @use 'sass:math';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 @use '../../tools/size';
 
-.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--small'))} {
+#{classname.get($classname-items: 'button--small', $layer: 'atom')} {
   min-height: size.get('xl');
   padding: settings.$padding-vertical settings.$padding-horizontal;
 
-  &.#{properties.join-with-dashes((setup.$namespace, 'a', 'button--icon'))} {
+  &#{classname.get($classname-items: 'button--icon', $layer: 'atom')} {
     padding: math.div(settings.$padding-horizontal, 2);
     border-radius: settings.$border-radius;
   }

@@ -1,7 +1,6 @@
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'o', 'notification-center'))} {
+#{classname.get($classname-items: 'notification-center', $layer: 'organism')} {
   position: fixed;
   top: 0;
   right: 0;

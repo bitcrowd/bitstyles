@@ -1,14 +1,13 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/media-query';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'o', 'sidebar--large'))} {
+#{classname.get($classname-items: 'sidebar--large', $layer: 'organism')} {
   width: settings.$large-width;
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'o', 'sidebar--small'))} {
+#{classname.get($classname-items: 'sidebar--small', $layer: 'organism')} {
   position: fixed;
   z-index: 1;
   top: 0;

@@ -1,9 +1,8 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
-@use '../../tools/properties';
+@use '../../tools/classname';
 
-.#{properties.join-with-dashes((setup.$namespace, 'o', 'table'))} {
+#{classname.get($classname-items: 'table', $layer: 'organism')} {
   width: 100%;
 
   /* stylelint-disable selector-max-type */
@@ -29,6 +28,6 @@
   /* stylelint-enable selector-max-type */
 }
 
-.#{properties.join-with-dashes((setup.$namespace, 'o', 'table__actions'))} {
+#{classname.get($classname-items: 'table__actions', $layer: 'organism')} {
   padding-right: settings.$padding-vertical-td;
 }

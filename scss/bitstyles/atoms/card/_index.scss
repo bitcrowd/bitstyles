@@ -30,14 +30,14 @@
   $size-name: modifier-name($size);
 
   @include properties.output-block(
-    $classname-prefix: 'a',
+    $layer: 'atom',
     $classname-root: 'card#{$size-name}'
   ) {
     @include card($padding-size);
   }
 
   @include properties.output-block(
-    $classname-prefix: 'a',
+    $layer: 'atom',
     $classname-root: 'card#{$size-name}__header'
   ) {
     @include card-header($padding-size);
@@ -50,7 +50,7 @@
       $size-name: modifier-name($size);
 
       @include properties.output-block(
-        $classname-prefix: 'a',
+        $layer: 'atom',
         $classname-root: 'card#{$size-name}',
         $breakpoint: $breakpoint
       ) {
@@ -58,7 +58,7 @@
       }
 
       @include properties.output-block(
-        $classname-prefix: 'a',
+        $layer: 'atom',
         $classname-root: 'card#{$size-name}__header',
         $breakpoint: $breakpoint
       ) {

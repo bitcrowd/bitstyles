@@ -1,2 +1,8 @@
 $namespace: null !default; // Defining a namespace will prepend it to every selector name
+$layer-prefixes: (
+  'atom': 'a',
+  'molecule': 'm',
+  'organism': 'o',
+  'utility': 'u',
+) !default;
 $no-media-query: 'no-mq' !default;
