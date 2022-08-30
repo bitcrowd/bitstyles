@@ -2,12 +2,12 @@
 @use '../../tools/media-query';
 @use '../../tools/classname';
 
-.#{classname.get($classname-items: 'dl', $layer: 'atom')} {
-  border-top: 1px solid palette.get('gray', '5');
+#{classname.get($classname-items: 'dl', $layer: 'atom')} {
+  border-top: 1px solid palette.get('text', 'light');
 }
 
 @include media-query.get('m') {
-  .#{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
-    border-bottom: 1px solid palette.get('gray', '5');
+  #{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
+    border-bottom: 1px solid palette.get('text', 'light');
   }
 }
