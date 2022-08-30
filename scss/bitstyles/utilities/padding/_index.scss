@@ -1,8 +1,7 @@
 @forward 'settings';
-@use 'sass:map';
 @use './settings';
+@use 'sass:map';
 @use '../../tools/properties';
-@use '../../tools/media-query';
 
 @include properties.output-directional(
   $property-name: 'padding',

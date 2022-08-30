@@ -1,7 +1,6 @@
 @forward 'settings';
-@use 'sass:string';
 @use './settings';
-@use '../../tools/media-query';
+@use 'sass:string';
 @use '../../tools/properties';
 
 @include properties.output(

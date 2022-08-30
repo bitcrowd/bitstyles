@@ -1,7 +1,6 @@
 @forward 'settings';
 @use './settings';
 @use '../../tools/properties';
-@use '../../tools/media-query';
 
 @include properties.output(
   $property-name: 'grid-template-columns',
