@@ -102,7 +102,7 @@
   }
 }
 
-@mixin sizes($sizes, $withSquareVariant: true) {
+@mixin sizes($sizes, $with-square-variant: true) {
   $allowed-sizes: (
     'padding-vertical',
     'padding-horizontal',
@@ -120,7 +120,7 @@
     }
   }
 
-  @if $withSquareVariant {
+  @if $with-square-variant {
     &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
       --button-min-width: calc(#{map.get($sizes, 'padding-vertical')} + 2em);
       --button-min-height: calc(#{map.get($sizes, 'padding-vertical')} + 2em);

@@ -5,12 +5,13 @@
 @use 'sass:list';
 
 @each $variant-name, $variant in settings.$variants {
-  $withSquareVariant: not list.index(settings.$square-variants, $variant-name);
+  $with-square-variant: not
+    list.index(settings.$square-variants, $variant-name);
 
   #{classname.get($classname-items: 'button#{$variant-name}', $layer: 'atom')} {
     @include button.sizes(
       $sizes: $variant,
-      $withSquareVariant: $withSquareVariant,
+      $with-square-variant: $with-square-variant
     );
   }
 }
