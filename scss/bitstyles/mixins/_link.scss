@@ -21,7 +21,6 @@
   text-decoration-skip-ink: auto;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
-
   &:visited {
     --link-color: settings.$color-visited;
     --link-background-color: settings.$background-color-visited;
