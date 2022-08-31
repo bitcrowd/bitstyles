@@ -9,41 +9,34 @@
   padding: 0;
   transition: link.$transition;
   border: 0;
-  background-color: var(--background-color, #{link.$background-color});
-  box-shadow: var(--box-shadow, #{link.$box-shadow});
-  color: var(--color, #{link.$color});
+  background-color: link.$background-color;
+  box-shadow: link.$box-shadow;
+  color: link.$color;
   font-weight: link.$font-weight;
   text-decoration: link.$text-decoration;
   cursor: pointer;
   text-decoration-skip-ink: auto;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
-  --background-color: link.$background-color-visited;
-  --box-shadow: link.$box-shadow-visited;
-  --color: link.$color-visited;
-
   &:visited {
-    --background-color: link.$background-color-visited;
-    --box-shadow: link.$box-shadow-visited;
-    --color: link.$color-visited;
-
+    background-color: link.$background-color-visited;
+    box-shadow: link.$box-shadow-visited;
+    color: link.$color-visited;
     text-decoration: link.$text-decoration-visited;
   }
 
   &:hover,
   &:focus {
-    --background-color: link.$background-color-hover;
-    --box-shadow: link.$box-shadow-hover;
-    --color: link.$color-hover;
-
+    background-color: link.$background-color-hover;
+    box-shadow: link.$box-shadow-hover;
+    color: link.$color-hover;
     text-decoration: link.$text-decoration-hover;
   }
 
   &:active {
-    --background-color: link.$background-color-active;
-    --box-shadow: link.$box-shadow-active;
-    --color: link.$color-active;
-
+    background-color: link.$background-color-active;
+    box-shadow: link.$box-shadow-active;
+    color: link.$color-active;
     text-decoration: link.$text-decoration-active;
   }
 }

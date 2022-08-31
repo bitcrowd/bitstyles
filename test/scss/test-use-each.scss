@@ -196,7 +196,7 @@
 );
 @use '../../scss/bitstyles/atoms/button-sizes';
 @use '../../scss/bitstyles/atoms/button--tab' with (
-  $color-hover: #000
+  $indicator-color: #f00
 );
 @use '../../scss/bitstyles/atoms/card' with (
   $sizes: (
