@@ -1,10 +1,11 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/button';
+@use '../../tools/classname';
 
 @each $variant-name, $variant in settings.$variants {
-  .a-button#{$variant-name} {
+
+  #{classname.get($classname-items: 'button#{$variant-name}', $layer: 'atom')} {
     @include button.colors($colors: $variant);
   }
 }

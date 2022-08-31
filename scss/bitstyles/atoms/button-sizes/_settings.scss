@@ -19,7 +19,7 @@ $small: (
   'min-width': size.get('xl'),
   'padding-vertical': 0,
   'padding-horizontal': size.get('m'),
-  'border-radius': layout.$border-radius-round,
+  'border-radius': size.get('xs'),
   'font-size': font-size.get('1'),
 ) !default;
 $menu: (
@@ -46,3 +46,4 @@ $variants: (
   '--square': $square,
   '--round': $round,
 ) !default;
+$square-variants: ('--square', '--round') !default;

@@ -1,14 +1,20 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/setup';
 @use '../../tools/button';
+@use '../../tools/classname';
+@use 'sass:list';
 
 @each $variant-name, $variant in settings.$variants {
-  .a-button#{$variant-name} {
-    @include button.sizes($sizes: $variant);
+  $withSquareVariant: not list.index(settings.$square-variants, $variant-name);
+
+  #{classname.get($classname-items: 'button#{$variant-name}', $layer: 'atom')} {
+    @include button.sizes(
+      $sizes: $variant,
+      $withSquareVariant: $withSquareVariant,
+    );
   }
 }
 
-.#{setup.$namespace}a-button--menu {
+#{classname.get($classname-items: 'button--menu', $layer: 'atom')} {
   justify-content: flex-start;
 }

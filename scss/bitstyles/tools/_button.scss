@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use './custom-properties';
+@use './classname';
 
 @mixin colors($colors) {
   $allowed-color-properties: (
@@ -101,7 +102,7 @@
   }
 }
 
-@mixin sizes($sizes) {
+@mixin sizes($sizes, $withSquareVariant: true) {
   $allowed-sizes: (
     'padding-vertical',
     'padding-horizontal',
@@ -119,8 +120,15 @@
     }
   }
 
-  &.a-button--round,
-  &.a-button--square {
-    --button-min-width: calc(#{map.get($sizes, 'padding-vertical')} + 1em);
+  @if $withSquareVariant {
+    &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
+      --button-min-width: calc(#{map.get($sizes, 'padding-vertical')} + 2em);
+      --button-min-height: calc(#{map.get($sizes, 'padding-vertical')} + 2em);
+
+      @if map.has-key($sizes, 'padding-vertical') {
+        --button-padding-horizontal: #{map.get($sizes, 'padding-vertical')};
+        --button-padding-vertical: #{map.get($sizes, 'padding-vertical')};
+      }
+    }
   }
 }
