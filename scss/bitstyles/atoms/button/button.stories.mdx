@@ -1,7 +1,7 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 import icons from '../../../../assets/images/icons.svg';
 
-<Meta title="Atoms/Button/Base" />
+<Meta title="Atoms/Button/Overview" />
 
 ## Button
 
@@ -385,11 +385,43 @@ For details on usage of these buttons, go see [/docs/ui-buttons-buttons--page](U
       <div>
     `}
   </Story>
-  <Story name="Primary square (Disabled)">
+</Canvas>
+
+## Danger buttons
+
+<Canvas>
+  <Story name="Primary danger">
     {`
       <div class="u-padding-m">
-        <button class="a-button a-button--square" disabled>
-          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+        <button class="a-button a-button--danger">
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Secondary danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--secondary a-button--danger">
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Transparent danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent a-button--danger">
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Primary square danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
             <use xlink:href="${icons}#icon-plus"></use>
           </svg>
           <span class="u-sr-only">Remove</span>
@@ -397,11 +429,11 @@ For details on usage of these buttons, go see [/docs/ui-buttons-buttons--page](U
       </div>
     `}
   </Story>
-  <Story name="Secondary square (Disabled)">
+  <Story name="Primary round danger">
     {`
       <div class="u-padding-m">
-        <button class="a-button a-button--secondary a-button--square" disabled>
-          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+        <button class="a-button a-button--round a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
             <use xlink:href="${icons}#icon-plus"></use>
           </svg>
           <span class="u-sr-only">Remove</span>
@@ -409,11 +441,47 @@ For details on usage of these buttons, go see [/docs/ui-buttons-buttons--page](U
       </div>
     `}
   </Story>
-  <Story name="Transparent square (Disabled)">
+  <Story name="Secondary square danger">
     {`
       <div class="u-padding-m">
-        <button class="a-button a-button--transparent a-button--square" disabled>
-          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+        <button class="a-button a-button--secondary a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Secondary round danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--secondary a-button--round a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Transparent square danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Transparent round danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent a-button--round a-button--square  a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
             <use xlink:href="${icons}#icon-plus"></use>
           </svg>
           <span class="u-sr-only">Remove</span>

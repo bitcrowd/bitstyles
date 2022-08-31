@@ -21,10 +21,6 @@
   border-width: var(--button-border-width);
   border-style: solid;
   border-radius: var(--button-border-radius);
-  border-color: var(--button-border-color);
-  background-color: var(--button-background-color);
-  box-shadow: var(--button-box-shadow);
-  color: var(--button-color);
   font-family: settings.$font-family;
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
@@ -35,6 +31,14 @@
   user-select: none;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   touch-action: manipulation;
+
+  &,
+  &:visited {
+    border-color: var(--button-border-color);
+    background-color: var(--button-background-color);
+    box-shadow: var(--button-box-shadow);
+    color: var(--button-color);
+  }
 
   &:hover,
   &:focus {

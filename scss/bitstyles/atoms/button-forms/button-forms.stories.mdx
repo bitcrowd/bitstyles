@@ -1,0 +1,116 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import icons from '../../../../assets/images/icons.svg';
+
+<Meta title="Atoms/Button/Forms" />
+
+# Button forms
+
+“Form” refers to the size and shape of the button.
+
+<Canvas>
+  <Story name="Small">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--square a-button--round">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Default">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--square a-button--round">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Large">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--square a-button--round">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>

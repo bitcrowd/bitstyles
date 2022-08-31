@@ -4,6 +4,12 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Button colors
 
+Buttons are available in several color-based variations:
+
+- **Primary** This is the default color variant, that should be used sparingly (even only once) per screen to indicate the primary action.
+- **Secondary** Most other buttons on a screen should probably use this variant. It is a visibly interactive element but not heavily emphasised.
+- **Transparent** For buttons that really shouldn’t stand out, these present only a text label until interacted with.
+
 <Canvas>
   <Story name="Primary">
     {`
@@ -32,6 +38,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
       </div>
     `}
   </Story>
+</Canvas>
+
+## Danger
+
+A special color variant that only shows itself on hover. This can be applied to all the other color variants to indicate to the user that the action is destructive or dangerous — it turns red on hover.
+
+<Canvas>
   <Story name="Danger/primary">
     {`
       <div class="u-padding-m">
@@ -60,6 +73,8 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
     `}
   </Story>
 </Canvas>
+
+## Disabled buttons
 
 <Canvas>
   <Story name="Primary (disabled)">
@@ -120,6 +135,8 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 ## Anchors
 
+For technical reasons, some “buttons” will likely be anchor elements.
+
 <Canvas>
   <Story name="Primary anchor">
     {`
@@ -164,6 +181,8 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
     `}
   </Story>
 </Canvas>
+
+Add `aria-disabled="true"` to an anchor to make it appear disabled. Be aware that the link will still work though.
 
 <Canvas>
   <Story name="Primary anchor (disabled)">
