@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use './custom-properties';
 @use './classname';
+@use '../settings/typography';
 
 @mixin colors($colors) {
   $allowed-color-properties: (
@@ -122,8 +123,8 @@
 
   @if $with-square-variant {
     &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
-      --button-min-width: calc(#{map.get($sizes, 'padding-vertical')} + 2em);
-      --button-min-height: calc(#{map.get($sizes, 'padding-vertical')} + 2em);
+      --button-min-width: calc(#{typography.$line-height-base} * 1em);
+      --button-min-height: calc(#{typography.$line-height-base} * 1em);
 
       @if map.has-key($sizes, 'padding-vertical') {
         --button-padding-horizontal: #{map.get($sizes, 'padding-vertical')};

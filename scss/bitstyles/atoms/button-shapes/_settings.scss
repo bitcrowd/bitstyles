@@ -9,23 +9,18 @@ $default: (
   'padding-horizontal': size.get('l'),
   'border-width': size.get('xxxs'),
   'border-radius': size.get('xs'),
-  'min-height': calc(var(--button-padding-vertical) * 2 + 1em),
+  'min-height': 1em,
   'min-width': 0,
   'font-size': font-size.get('2'),
   'font-weight': typography.$font-weight-normal,
 ) !default;
 $small: (
-  'min-height': size.get('xl'),
-  'min-width': size.get('xl'),
+  'min-height': size.get('l'),
+  'min-width': size.get('l'),
   'padding-vertical': 0,
   'padding-horizontal': size.get('m'),
   'border-radius': size.get('xxs'),
   'font-size': font-size.get('1'),
-) !default;
-$menu: (
-  'padding-vertical': size.get('s'),
-  'padding-horizontal': size.get('m'),
-  'border-radius': 0,
 ) !default;
 $large: (
   'padding-vertical': size.get('s'),
@@ -35,6 +30,7 @@ $large: (
 $square: (
   'padding-vertical': size.get('s') + size.get('xxxs'),
   'padding-horizontal': size.get('s') + size.get('xxxs'),
+  'justify-content': flex-start,
 ) !default;
 $round: (
   'border-radius': layout.$border-radius-round,

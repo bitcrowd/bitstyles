@@ -1,11 +1,15 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 import icons from '../../../../assets/images/icons.svg';
 
-<Meta title="Atoms/Button/Forms" />
+<Meta title="Atoms/Button/Shapes" />
 
-# Button forms
+# Button shapes
 
-“Form” refers to the size and shape of the button.
+“Shape” refers to the size and/or shape of the button. Available with default configuration are the sizes `small`, `default`, `large`, and the shapes `square`, and `round`. The sizes and shapes can be combined to create e.g. small square buttons.
+
+## Variations
+
+### Small
 
 <Canvas>
   <Story name="Small">
@@ -43,6 +47,8 @@ import icons from '../../../../assets/images/icons.svg';
   </Story>
 </Canvas>
 
+### Default
+
 <Canvas>
   <Story name="Default">
     {`
@@ -79,6 +85,8 @@ import icons from '../../../../assets/images/icons.svg';
   </Story>
 </Canvas>
 
+### Large
+
 <Canvas>
   <Story name="Large">
     {`
@@ -114,3 +122,48 @@ import icons from '../../../../assets/images/icons.svg';
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+There are two approaches to customization. Which you take depends on your needs.
+
+### Customize the existing buttons
+
+If the variety of buttons provided fits your requirements, but you need e.g. your large buttons to be larger, or your default buttons to be smaller, you can customize the existing buttons.
+
+The `small`, `default`, `large`, `square`, and `round` configurations are all available to be overridden at variables with those names. The configuration expects a Sass map where the CSS property name is key, and the value for that property is the value:
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/button-shapes' with (
+  $large: (
+    'padding-horizontal': 4rem,
+    'padding-vertical': 2rem,
+  )
+);
+```
+
+Buttons expose the following properties:
+
+- `padding-vertical`
+- `padding-horizontal`
+- `border-width`
+- `border-radius`
+- `min-height`
+- `min-width`
+- `font-size`
+- `font-weight`
+
+### Create new button types
+
+When you need an entirely different set of buttons, you can define your own and pass it to `button-shapes.$variants` with a name. For now you’ll need to include the double dashes for BEM naming (or a single dash if you prefer).
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/button-shapes' with (
+  $variants: (
+    '--custom-button': (
+      'padding-horizontal': 4rem,
+      'padding-vertical': 2rem,
+    ),
+  )
+);
+```
