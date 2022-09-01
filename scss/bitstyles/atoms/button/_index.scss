@@ -5,13 +5,14 @@
 
 #{classname.get($classname-items: 'button', $layer: 'atom')} {
   --button-transition: #{settings.$transition};
+  --button-justify-content: #{settings.$justify-content};
 
   display: flex;
   position: relative;
   box-sizing: content-box;
   flex-shrink: 0;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: var(--button-justify-content);
   min-width: var(--button-min-width);
   max-width: 100%;
   min-height: var(--button-min-height);

@@ -1,5 +1,4 @@
 @use '../tools/base-palette';
-@use 'sass:color';
 
 $default-key: 'base' !default;
 
@@ -68,14 +67,3 @@ $palette: (
     'darker': base-palette.get('green', '40'),
   ),
 ) !default;
-
-:root {
-  /* Output entire semantic color palette as CSS variables */
-  @each $palette-name, $colors in $palette {
-    @each $color-name, $color in $colors {
-      --color-#{$palette-name}-#{$color-name}: #{$color};
-      --color-#{$palette-name}-#{$color-name}-rgb: #{color.red($color),
-        color.green($color), color.blue($color)};
-    }
-  }
-}

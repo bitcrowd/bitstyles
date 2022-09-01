@@ -13,3 +13,4 @@ $transition: color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing !default;
 $icon-spacing: size.get('s') !default;
+$justify-content: center !default;

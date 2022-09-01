@@ -295,12 +295,14 @@ img {
   display: block;
 }
 a {
+  --link-color: red;
+  --link-background-color: transparent;
   -webkit-text-decoration-skip: ink;
   -webkit-appearance: none;
-  background-color: transparent;
-  border: 0;
+  background-color: var(--link-background-color);
+  border: none;
   box-shadow: none;
-  color: red;
+  color: var(--link-color);
   cursor: pointer;
   font-weight: 600;
   padding: 0;
@@ -309,22 +311,22 @@ a {
   transition: color 75ms ease-out;
 }
 a:visited {
-  background-color: transparent;
+  --link-color: var(--color-brand-1-base);
+  --link-background-color: transparent;
   box-shadow: none;
-  color: #000;
   text-decoration: none;
 }
 a:focus,
 a:hover {
-  background-color: transparent;
+  --link-color: var(--color-brand-1-light);
+  --link-background-color: transparent;
   box-shadow: none;
-  color: #000;
   text-decoration: underline;
 }
 a:active {
-  background-color: transparent;
+  --link-color: var(--color-brand-1-dark);
+  --link-background-color: transparent;
   box-shadow: none;
-  color: #000;
   text-decoration: underline;
 }
 figcaption {
@@ -849,22 +851,20 @@ table {
 }
 .bs-at-button {
   --button-transition: none;
+  --button-justify-content: center;
   align-items: center;
   -webkit-appearance: none;
-  background-color: var(--button-background-color);
-  border-color: var(--button-border-color);
   border-radius: var(--button-border-radius);
   border-style: solid;
   border-width: var(--button-border-width);
-  box-shadow: var(--button-box-shadow);
-  color: var(--button-color);
+  box-sizing: content-box;
   cursor: pointer;
   display: flex;
   flex-shrink: 0;
   font-family: inherit;
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
-  justify-content: center;
+  justify-content: var(--button-justify-content);
   margin: 0;
   max-width: 100%;
   min-height: var(--button-min-height);
@@ -880,6 +880,13 @@ table {
   -moz-user-select: none;
   user-select: none;
   white-space: nowrap;
+}
+.bs-at-button,
+.bs-at-button:visited {
+  background-color: var(--button-background-color);
+  border-color: var(--button-border-color);
+  box-shadow: var(--button-box-shadow);
+  color: var(--button-color);
 }
 .bs-at-button:focus,
 .bs-at-button:hover {
@@ -1069,14 +1076,14 @@ table {
   --button-padding-horizontal: 12.5rem;
   --button-border-width: 1.6666666667rem;
   --button-border-radius: 5rem;
-  --button-min-height: calc(var(--padding-vertical) * 2 + 1em);
+  --button-min-height: 1em;
   --button-min-width: 0;
   --button-font-size: 1rem;
   --button-font-weight: 400;
 }
 .bs-at-button.bs-at-button--square {
-  --button-min-width: calc(5rem + 2em);
-  --button-min-height: calc(5rem + 2em);
+  --button-min-width: 1.5em;
+  --button-min-height: 1.5em;
   --button-padding-horizontal: 5rem;
   --button-padding-vertical: 5rem;
 }
@@ -1084,13 +1091,13 @@ table {
   --button-padding-vertical: 0;
   --button-padding-horizontal: 10rem;
   --button-border-radius: 2.5rem;
-  --button-min-height: 20rem;
-  --button-min-width: 20rem;
+  --button-min-height: 12.5rem;
+  --button-min-width: 12.5rem;
   --button-font-size: 0.8rem;
 }
 .bs-at-button--small.bs-at-button--square {
-  --button-min-width: 2em;
-  --button-min-height: 2em;
+  --button-min-width: 1.5em;
+  --button-min-height: 1.5em;
   --button-padding-horizontal: 0;
   --button-padding-vertical: 0;
 }
@@ -1100,10 +1107,13 @@ table {
   --button-font-size: 1rem;
 }
 .bs-at-button--large.bs-at-button--square {
-  --button-min-width: calc(7.5rem + 2em);
-  --button-min-height: calc(7.5rem + 2em);
+  --button-min-width: 1.5em;
+  --button-min-height: 1.5em;
   --button-padding-horizontal: 7.5rem;
   --button-padding-vertical: 7.5rem;
+}
+.bs-at-button--menu {
+  --button-justify-content: flex-start;
 }
 .bs-at-button--square {
   --button-padding-vertical: 9.1666666667rem;
@@ -1111,9 +1121,6 @@ table {
 }
 .bs-at-button--round {
   --button-border-radius: 9999rem;
-}
-.bs-at-button--menu {
-  justify-content: flex-start;
 }
 .bs-at-button--tab-container > :first-child {
   margin-left: -var(--button-padding-horizontal);
@@ -1373,12 +1380,14 @@ table {
   font-size: 10rem;
 }
 .bs-at-link {
+  --link-color: red;
+  --link-background-color: transparent;
   -webkit-text-decoration-skip: ink;
   -webkit-appearance: none;
-  background-color: transparent;
-  border: 0;
+  background-color: var(--link-background-color);
+  border: none;
   box-shadow: none;
-  color: red;
+  color: var(--link-color);
   cursor: pointer;
   font-weight: 600;
   padding: 0;
@@ -1387,22 +1396,22 @@ table {
   transition: color 75ms ease-out;
 }
 .bs-at-link:visited {
-   background-color: transparent;
+  --link-color: var(--color-brand-1-base);
+  --link-background-color: transparent;
   box-shadow: none;
-  color: #000;
   text-decoration: none;
 }
 .bs-at-link:focus,
 .bs-at-link:hover {
-   background-color: transparent;
+  --link-color: var(--color-brand-1-light);
+  --link-background-color: transparent;
   box-shadow: none;
-  color: #000;
   text-decoration: underline;
 }
 .bs-at-link:active {
-   background-color: transparent;
+  --link-color: var(--color-brand-1-dark);
+  --link-background-color: transparent;
   box-shadow: none;
-  color: #000;
   text-decoration: underline;
 }
 .bs-at-skip-link {

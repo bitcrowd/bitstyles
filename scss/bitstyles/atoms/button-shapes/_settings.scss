@@ -27,10 +27,12 @@ $large: (
   'padding-horizontal': size.get('xl'),
   'font-size': font-size.get('2'),
 ) !default;
+$menu: (
+  'justify-content': flex-start,
+) !default;
 $square: (
   'padding-vertical': size.get('s') + size.get('xxxs'),
   'padding-horizontal': size.get('s') + size.get('xxxs'),
-  'justify-content': flex-start,
 ) !default;
 $round: (
   'border-radius': layout.$border-radius-round,
@@ -39,7 +41,8 @@ $variants: (
   '': $default,
   '--small': $small,
   '--large': $large,
+  '--menu': $menu,
   '--square': $square,
   '--round': $round,
 ) !default;
-$square-variants: ('--square', '--round') !default;
+$with-square-variants: ('--small', '--large', '') !default;

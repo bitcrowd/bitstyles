@@ -1,0 +1,13 @@
+@use '../settings/color-palette';
+@use 'sass:color';
+
+:root {
+  /* Output entire semantic color palette as CSS variables */
+  @each $palette-name, $colors in color-palette.$palette {
+    @each $color-name, $color in $colors {
+      --color-#{$palette-name}-#{$color-name}: #{$color};
+      --color-#{$palette-name}-#{$color-name}-rgb: #{color.red($color),
+        color.green($color), color.blue($color)};
+    }
+  }
+}

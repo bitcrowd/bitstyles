@@ -303,6 +303,7 @@ $bitstyles-z-index-values: (
 //
 // Generic ////////////////////////////////////
 
+@import '../../scss/bitstyles/generic/custom-properties';
 @import '../../scss/bitstyles/generic/box-sizing';
 @import '../../scss/bitstyles/generic/normalize';
 @import '../../scss/bitstyles/generic/reset';

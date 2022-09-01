@@ -112,7 +112,8 @@
     'min-height',
     'min-width',
     'font-size',
-    'font-weight'
+    'font-weight',
+    'justify-content'
   );
 
   @each $property-name in ($allowed-sizes) {
