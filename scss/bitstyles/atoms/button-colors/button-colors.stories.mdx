@@ -10,6 +10,7 @@ Buttons are available in several color-based variations:
 - **Secondary** Most other buttons on a screen should probably use this variant. It is a visibly interactive element but not heavily emphasised.
 - **Transparent** For buttons that really shouldn’t stand out, these present only a text label until interacted with.
 
+
 <Canvas>
   <Story name="Primary">
     {`
@@ -228,3 +229,52 @@ Add `aria-disabled="true"` to an anchor to make it appear disabled. Be aware tha
     `}
   </Story>
 </Canvas>
+
+## Customization
+
+There are two approaches to customizing the button color variants, depending on your needs.
+
+### Customize existing color variants
+
+If the variety of buttons provided fits your requirements, but you need e.g. you primary buttons to have a different box-shadow, or your secondary buttons to be outlined with a border, you can customize the existing buttons.
+
+The `default`, `secondary`, `transparent`, `tab`, and `danger` configurations are all available to be overridden at variables with those names. The configuration expects a Sass map of button states `default`, `hover`, `active`, `pressed`, and `disabled`. You do not need to provide all of these, only those you require. Each state should contain a Sass map where the CSS property name is key, and the value for that property is the value:
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/button-colors' with (
+  $secondary: (
+    'default': (
+      'border-color': #f00,
+    ),
+    'hover': (
+      'border-color': #600,
+    ),
+  )
+);
+```
+
+Buttons expose the following properties:
+
+- `color`
+- `background-color`
+- `border-color`
+- `box-shadow`
+
+### Create new color variants
+
+When you need an entirely different set of buttons, you can define your own and pass it to `button-colors.$variants` with a name. For now you’ll need to include the double dashes for BEM naming (or a single dash if you prefer).
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/button-colors' with (
+  $variants: (
+    '--custom-button': (
+      'default': (
+        'border-color': #f00,
+      ),
+      'hover': (
+        'border-color': #600,
+      ),
+    ),
+  )
+);
+```

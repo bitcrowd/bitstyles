@@ -8,7 +8,8 @@
   #{classname.get($classname-items: 'button#{$variant-name}', $layer: 'atom')} {
     @include button.sizes(
       $sizes: $variant,
-      $with-square-variant: not list.index(settings.$square-variants, $variant-name)
+      $with-square-variant: not
+        list.index(settings.$square-variants, $variant-name)
     );
   }
 }
