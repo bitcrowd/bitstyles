@@ -1,6 +1,5 @@
 @forward 'settings';
 @use 'settings';
-@use '../../settings/typography';
 @use '../../settings/animation';
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or

@@ -27,6 +27,7 @@
 ### Fixed
 
 - All classnames of atoms and organisms now correctly insert a minus character between the global namespace and the rest of the classname. If you were using `setup.$namespace`, you’ll need to update those classnames to include a minus e.g. `.namespacea-button` becomes `.namespace-a-button`
+- Settings for `utilities/text` can now be overridden
 
 ## [[4.3.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v4.3.0) - 2022-05-25
 

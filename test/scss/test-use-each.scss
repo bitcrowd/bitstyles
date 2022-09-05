@@ -413,7 +413,11 @@
     'xl',
   )
 );
-@use '../../scss/bitstyles/utilities/text';
+@use '../../scss/bitstyles/utilities/text' with (
+  $values: (
+    'top': top,
+  )
+);
 @use '../../scss/bitstyles/utilities/truncate';
 @use '../../scss/bitstyles/utilities/typography-responsive' as
   typography-responsive-utilities with (

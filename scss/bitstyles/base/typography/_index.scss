@@ -1,6 +1,6 @@
 @forward 'settings';
-@use '../../settings/typography';
 @use './settings';
+@use '../../settings/typography';
 @use '../../tools/typography' as typography-tools;
 
 /* stylelint-disable selector-max-type */
