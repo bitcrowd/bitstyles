@@ -14,7 +14,7 @@ $box-shadow: shadow.to-box-shadow(
   )
 ) !default;
 $separator-border: 1px solid palette.get('background', 'darker') !default;
-$separator-spacing: size.get('xxs') !default;
+$separator-spacing: size.get('2xs') !default;
 $transition: opacity 0.12s ease-in !default;
 $will-change: opacity !default;
 $states: (

@@ -5,13 +5,13 @@ $border-radius-round: 9999rem !default;
 $size-base: 0.8rem !default;
 $sizes: (
   '0': 0,
-  'xxxs': math.div($size-base, 8),
-  'xxs': math.div($size-base, 4),
+  '3xs': math.div($size-base, 8),
+  '2xs': math.div($size-base, 4),
   'xs': math.div($size-base, 2),
   's': $size-base - math.div($size-base, 4),
   'm': $size-base,
   'l': $size-base + math.div($size-base, 4),
   'xl': $size-base * 2,
-  'xxl': $size-base * 4,
-  'xxxl': $size-base * 8,
+  '2xl': $size-base * 4,
+  '3xl': $size-base * 8,
 ) !default;
