@@ -400,13 +400,6 @@ textarea::-moz-placeholder {
   font-weight: 400;
   opacity: 1;
 }
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #000;
-  font-style: italic;
-  font-weight: 400;
-  opacity: 1;
-}
 input::placeholder,
 textarea::placeholder {
   color: #000;
@@ -740,7 +733,6 @@ table {
     border 75ms ease-out, box-shadow 75ms ease-out;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   white-space: nowrap;
 }
@@ -1925,26 +1917,26 @@ table {
   margin-bottom: 0;
   margin-top: 0;
 }
-.bs-u-margin-2xs {
+.bs-margin-2xs {
   margin: 2.5rem;
 }
-.bs-u-margin-2xs-top {
+.bs-margin-2xs-top {
   margin-top: 2.5rem;
 }
-.bs-u-margin-2xs-right {
+.bs-margin-2xs-right {
   margin-right: 2.5rem;
 }
-.bs-u-margin-2xs-bottom {
+.bs-margin-2xs-bottom {
   margin-bottom: 2.5rem;
 }
-.bs-u-margin-2xs-left {
+.bs-margin-2xs-left {
   margin-left: 2.5rem;
 }
-.bs-u-margin-2xs-x {
+.bs-margin-2xs-x {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
 }
-.bs-u-margin-2xs-y {
+.bs-margin-2xs-y {
   margin-bottom: 2.5rem;
   margin-top: 2.5rem;
 }
@@ -2110,26 +2102,26 @@ table {
     margin-bottom: 0;
     margin-top: 0;
   }
-  .bs-u-margin-2xs\@xl {
+  .bs-margin-2xs\@xl {
     margin: 2.5rem;
   }
-  .bs-u-margin-2xs-top\@xl {
+  .bs-margin-2xs-top\@xl {
     margin-top: 2.5rem;
   }
-  .bs-u-margin-2xs-right\@xl {
+  .bs-margin-2xs-right\@xl {
     margin-right: 2.5rem;
   }
-  .bs-u-margin-2xs-bottom\@xl {
+  .bs-margin-2xs-bottom\@xl {
     margin-bottom: 2.5rem;
   }
-  .bs-u-margin-2xs-left\@xl {
+  .bs-margin-2xs-left\@xl {
     margin-left: 2.5rem;
   }
-  .bs-u-margin-2xs-x\@xl {
+  .bs-margin-2xs-x\@xl {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
-  .bs-u-margin-2xs-y\@xl {
+  .bs-margin-2xs-y\@xl {
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
   }
@@ -2296,26 +2288,26 @@ table {
     margin-bottom: 0;
     margin-top: 0;
   }
-  .bs-u-margin-2xs\@s {
+  .bs-margin-2xs\@s {
     margin: 2.5rem;
   }
-  .bs-u-margin-2xs-top\@s {
+  .bs-margin-2xs-top\@s {
     margin-top: 2.5rem;
   }
-  .bs-u-margin-2xs-right\@s {
+  .bs-margin-2xs-right\@s {
     margin-right: 2.5rem;
   }
-  .bs-u-margin-2xs-bottom\@s {
+  .bs-margin-2xs-bottom\@s {
     margin-bottom: 2.5rem;
   }
-  .bs-u-margin-2xs-left\@s {
+  .bs-margin-2xs-left\@s {
     margin-left: 2.5rem;
   }
-  .bs-u-margin-2xs-x\@s {
+  .bs-margin-2xs-x\@s {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
   }
-  .bs-u-margin-2xs-y\@s {
+  .bs-margin-2xs-y\@s {
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
   }
@@ -2458,26 +2450,26 @@ table {
     margin-top: auto;
   }
 }
-.bs-u-margin-neg-2xs {
+.bs-margin-neg-2xs {
   margin: -2.5rem;
 }
-.bs-u-margin-neg-2xs-top {
+.bs-margin-neg-2xs-top {
   margin-top: -2.5rem;
 }
-.bs-u-margin-neg-2xs-right {
+.bs-margin-neg-2xs-right {
   margin-right: -2.5rem;
 }
-.bs-u-margin-neg-2xs-bottom {
+.bs-margin-neg-2xs-bottom {
   margin-bottom: -2.5rem;
 }
-.bs-u-margin-neg-2xs-left {
+.bs-margin-neg-2xs-left {
   margin-left: -2.5rem;
 }
-.bs-u-margin-neg-2xs-x {
+.bs-margin-neg-2xs-x {
   margin-left: -2.5rem;
   margin-right: -2.5rem;
 }
-.bs-u-margin-neg-2xs-y {
+.bs-margin-neg-2xs-y {
   margin-bottom: -2.5rem;
   margin-top: -2.5rem;
 }
@@ -2597,26 +2589,26 @@ table {
   margin-top: -20rem;
 }
 @media screen and (min-width: 95em) {
-  .bs-u-margin-neg-2xs\@xl {
+  .bs-margin-neg-2xs\@xl {
     margin: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-top\@xl {
+  .bs-margin-neg-2xs-top\@xl {
     margin-top: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-right\@xl {
+  .bs-margin-neg-2xs-right\@xl {
     margin-right: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-bottom\@xl {
+  .bs-margin-neg-2xs-bottom\@xl {
     margin-bottom: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-left\@xl {
+  .bs-margin-neg-2xs-left\@xl {
     margin-left: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-x\@xl {
+  .bs-margin-neg-2xs-x\@xl {
     margin-left: -2.5rem;
     margin-right: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-y\@xl {
+  .bs-margin-neg-2xs-y\@xl {
     margin-bottom: -2.5rem;
     margin-top: -2.5rem;
   }
@@ -2737,26 +2729,26 @@ table {
   }
 }
 @media screen and (max-width: 20em) {
-  .bs-u-margin-neg-2xs\@s {
+  .bs-margin-neg-2xs\@s {
     margin: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-top\@s {
+  .bs-margin-neg-2xs-top\@s {
     margin-top: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-right\@s {
+  .bs-margin-neg-2xs-right\@s {
     margin-right: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-bottom\@s {
+  .bs-margin-neg-2xs-bottom\@s {
     margin-bottom: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-left\@s {
+  .bs-margin-neg-2xs-left\@s {
     margin-left: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-x\@s {
+  .bs-margin-neg-2xs-x\@s {
     margin-left: -2.5rem;
     margin-right: -2.5rem;
   }
-  .bs-u-margin-neg-2xs-y\@s {
+  .bs-margin-neg-2xs-y\@s {
     margin-bottom: -2.5rem;
     margin-top: -2.5rem;
   }
@@ -2924,26 +2916,26 @@ table {
   padding-bottom: 0;
   padding-top: 0;
 }
-.bs-u-padding-2xs {
+.bs-padding-2xs {
   padding: 2.5rem;
 }
-.bs-u-padding-2xs-top {
+.bs-padding-2xs-top {
   padding-top: 2.5rem;
 }
-.bs-u-padding-2xs-right {
+.bs-padding-2xs-right {
   padding-right: 2.5rem;
 }
-.bs-u-padding-2xs-bottom {
+.bs-padding-2xs-bottom {
   padding-bottom: 2.5rem;
 }
-.bs-u-padding-2xs-left {
+.bs-padding-2xs-left {
   padding-left: 2.5rem;
 }
-.bs-u-padding-2xs-x {
+.bs-padding-2xs-x {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.bs-u-padding-2xs-y {
+.bs-padding-2xs-y {
   padding-bottom: 2.5rem;
   padding-top: 2.5rem;
 }
@@ -3062,26 +3054,26 @@ table {
   padding-bottom: 20rem;
   padding-top: 20rem;
 }
-.bs-u-padding-2xl {
+.bs-padding-2xl {
   padding: 40rem;
 }
-.bs-u-padding-2xl-top {
+.bs-padding-2xl-top {
   padding-top: 40rem;
 }
-.bs-u-padding-2xl-right {
+.bs-padding-2xl-right {
   padding-right: 40rem;
 }
-.bs-u-padding-2xl-bottom {
+.bs-padding-2xl-bottom {
   padding-bottom: 40rem;
 }
-.bs-u-padding-2xl-left {
+.bs-padding-2xl-left {
   padding-left: 40rem;
 }
-.bs-u-padding-2xl-x {
+.bs-padding-2xl-x {
   padding-left: 40rem;
   padding-right: 40rem;
 }
-.bs-u-padding-2xl-y {
+.bs-padding-2xl-y {
   padding-bottom: 40rem;
   padding-top: 40rem;
 }
@@ -3109,26 +3101,26 @@ table {
     padding-bottom: 0;
     padding-top: 0;
   }
-  .bs-u-padding-2xs\@xl {
+  .bs-padding-2xs\@xl {
     padding: 2.5rem;
   }
-  .bs-u-padding-2xs-top\@xl {
+  .bs-padding-2xs-top\@xl {
     padding-top: 2.5rem;
   }
-  .bs-u-padding-2xs-right\@xl {
+  .bs-padding-2xs-right\@xl {
     padding-right: 2.5rem;
   }
-  .bs-u-padding-2xs-bottom\@xl {
+  .bs-padding-2xs-bottom\@xl {
     padding-bottom: 2.5rem;
   }
-  .bs-u-padding-2xs-left\@xl {
+  .bs-padding-2xs-left\@xl {
     padding-left: 2.5rem;
   }
-  .bs-u-padding-2xs-x\@xl {
+  .bs-padding-2xs-x\@xl {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-  .bs-u-padding-2xs-y\@xl {
+  .bs-padding-2xs-y\@xl {
     padding-bottom: 2.5rem;
     padding-top: 2.5rem;
   }
@@ -3247,26 +3239,26 @@ table {
     padding-bottom: 20rem;
     padding-top: 20rem;
   }
-  .bs-u-padding-2xl\@xl {
+  .bs-padding-2xl\@xl {
     padding: 40rem;
   }
-  .bs-u-padding-2xl-top\@xl {
+  .bs-padding-2xl-top\@xl {
     padding-top: 40rem;
   }
-  .bs-u-padding-2xl-right\@xl {
+  .bs-padding-2xl-right\@xl {
     padding-right: 40rem;
   }
-  .bs-u-padding-2xl-bottom\@xl {
+  .bs-padding-2xl-bottom\@xl {
     padding-bottom: 40rem;
   }
-  .bs-u-padding-2xl-left\@xl {
+  .bs-padding-2xl-left\@xl {
     padding-left: 40rem;
   }
-  .bs-u-padding-2xl-x\@xl {
+  .bs-padding-2xl-x\@xl {
     padding-left: 40rem;
     padding-right: 40rem;
   }
-  .bs-u-padding-2xl-y\@xl {
+  .bs-padding-2xl-y\@xl {
     padding-bottom: 40rem;
     padding-top: 40rem;
   }
@@ -3295,26 +3287,26 @@ table {
     padding-bottom: 0;
     padding-top: 0;
   }
-  .bs-u-padding-2xs\@s {
+  .bs-padding-2xs\@s {
     padding: 2.5rem;
   }
-  .bs-u-padding-2xs-top\@s {
+  .bs-padding-2xs-top\@s {
     padding-top: 2.5rem;
   }
-  .bs-u-padding-2xs-right\@s {
+  .bs-padding-2xs-right\@s {
     padding-right: 2.5rem;
   }
-  .bs-u-padding-2xs-bottom\@s {
+  .bs-padding-2xs-bottom\@s {
     padding-bottom: 2.5rem;
   }
-  .bs-u-padding-2xs-left\@s {
+  .bs-padding-2xs-left\@s {
     padding-left: 2.5rem;
   }
-  .bs-u-padding-2xs-x\@s {
+  .bs-padding-2xs-x\@s {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
-  .bs-u-padding-2xs-y\@s {
+  .bs-padding-2xs-y\@s {
     padding-bottom: 2.5rem;
     padding-top: 2.5rem;
   }
@@ -3433,26 +3425,26 @@ table {
     padding-bottom: 20rem;
     padding-top: 20rem;
   }
-  .bs-u-padding-2xl\@s {
+  .bs-padding-2xl\@s {
     padding: 40rem;
   }
-  .bs-u-padding-2xl-top\@s {
+  .bs-padding-2xl-top\@s {
     padding-top: 40rem;
   }
-  .bs-u-padding-2xl-right\@s {
+  .bs-padding-2xl-right\@s {
     padding-right: 40rem;
   }
-  .bs-u-padding-2xl-bottom\@s {
+  .bs-padding-2xl-bottom\@s {
     padding-bottom: 40rem;
   }
-  .bs-u-padding-2xl-left\@s {
+  .bs-padding-2xl-left\@s {
     padding-left: 40rem;
   }
-  .bs-u-padding-2xl-x\@s {
+  .bs-padding-2xl-x\@s {
     padding-left: 40rem;
     padding-right: 40rem;
   }
-  .bs-u-padding-2xl-y\@s {
+  .bs-padding-2xl-y\@s {
     padding-bottom: 40rem;
     padding-top: 40rem;
   }

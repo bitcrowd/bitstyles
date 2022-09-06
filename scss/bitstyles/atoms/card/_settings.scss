@@ -11,7 +11,7 @@ $box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', 'base'), 0.025),
     $offset: size.get('m'),
-    $blur-radius: size.get('xxl'),
+    $blur-radius: size.get('2xl'),
     $layers: 6,
   )
 ) !default;
