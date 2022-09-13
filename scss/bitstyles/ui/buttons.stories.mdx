@@ -3,78 +3,9 @@ import icons from '../../../assets/images/icons.svg';
 
 <Meta title="UI/Buttons/Overview" />
 
-<Story name="Button selection">
-  {`
-    <div class="u-grid u-gap-l">
-      <ul class="a-list-reset u-flex u-gap-m">
-        <li>
-          <button class="a-button a-button--small">Save</button>
-        </li>
-        <li>
-          <button class="a-button a-button--small a-button--secondary">Edit</button>
-        </li>
-        <li>
-          <button class="a-button a-button--small a-button--transparent">Cancel</button>
-        </li>
-        <li>
-          <button class="a-button a-button--small a-button--secondary a-button--danger">Delete</button>
-        </li>
-        <li>
-          <button class="a-button a-button--small a-button--square">
-            <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
-              <use xlink:href="${icons}#icon-plus"></use>
-            </svg>
-            <span class="u-sr-only">Add</span>
-          </button>
-        </li>
-      </ul>
-      <ul class="a-list-reset u-flex u-gap-m">
-        <li>
-          <button class="a-button">Save</button>
-        </li>
-        <li>
-          <button class="a-button a-button--secondary">Edit</button>
-        </li>
-        <li>
-          <button class="a-button a-button--transparent">Cancel</button>
-        </li>
-        <li>
-          <button class="a-button a-button--secondary a-button--danger">Delete</button>
-        </li>
-        <li>
-          <button class="a-button a-button--square">
-            <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
-              <use xlink:href="${icons}#icon-plus"></use>
-            </svg>
-            <span class="u-sr-only">Add</span>
-          </button>
-        </li>
-      </ul>
-      <ul class="a-list-reset u-flex u-gap-m">
-        <li>
-          <button class="a-button a-button--large">Save</button>
-        </li>
-        <li>
-          <button class="a-button a-button--large a-button--secondary">Edit</button>
-        </li>
-        <li>
-          <button class="a-button a-button--large a-button--transparent">Cancel</button>
-        </li>
-        <li>
-          <button class="a-button a-button--large a-button--secondary a-button--danger">Delete</button>
-        </li>
-        <li>
-          <button class="a-button a-button--large a-button--square">
-            <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
-              <use xlink:href="${icons}#icon-plus"></use>
-            </svg>
-            <span class="u-sr-only">Add</span>
-          </button>
-        </li>
-      </ul>
-    </div>
-  `}
-</Story>
+<Canvas>
+  <Story id="atoms-button-base--button-selection" />
+</Canvas>
 
 # Buttons
 
@@ -84,9 +15,15 @@ All the buttons produce a larger-than-text hit target, and by default react to `
 
 Bitstyles provides two sets of button variants — size variants, and color variants. Each of the size variants can be combined with each of the color variants to produce a wide range of button appearances.
 
-## Form variants
+## Shape variants
 
-Buttons are available in a variety of forms: `small`, `default`, `large`, `square`, `round`. See [Button sizes](/docs/atoms-button-shapes--small-primary) for details on customizing these.
+Buttons are available in a variety of shapes:
+
+- **small**, **default**, **large** Sizes which can be combined with the other shapes.
+- **square** A square button, with padding and border-radius that matches the other buttons at a given size. Useful for icon buttons.
+- **round** A circular button, which matches the size of other buttons at a given size. Useful for icon buttons.
+
+See [Button shapes](/docs/atoms-button-shapes--small) for details on customizing these.
 
 ## Color variants
 
@@ -100,6 +37,16 @@ See [Button colors](/docs/atoms-button-colors--primary) for details on customizi
 ### Disabled buttons
 
 Use the `aria-disabled="true"` attribute on `anchor` elements, or the `disabled` attribute on `button` elements.
+
+## Pressed, selected, current
+
+Buttons can be given aria attributes to indicate to the user that they have a another state. This normally gives the user a little more information about how that button is intended to be used, or the effects it will have when clicked.
+
+Apply `aria-pressed="true"` to your button to indicate that it’s a toggle button in a pressed state.
+
+Apply `aria-selected="true` to the currently-selected tab button in a series of tab buttons.
+
+Apply `aria-current="page"` to the navigation button in your main navigation, when the user is currently on that page.
 
 <details class="u-margin-xl-y">
   <summary class="u-h4 u-font-medium">Examples use</summary>
