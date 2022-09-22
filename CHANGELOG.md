@@ -1,6 +1,12 @@
 # Changelog
 
-## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
+## Unreleased
+
+### Added
+
+- Adds a utility class for the `width` property. Defaults to providing `width: 100%` under the name `u-width-full`. This can be customized using `$bitstyles-width-values` and `$bitstyles-width-breakpoints`
+
+## [[5.0.0-alpha]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
 
 ### Added
 
