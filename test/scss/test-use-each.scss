@@ -369,6 +369,11 @@
     '10': 10,
   )
 );
+@use '../../scss/bitstyles/utilities/list' with (
+  $values: (
+    'none': none,
+  )
+);
 @use '../../scss/bitstyles/utilities/margin' with (
   $breakpoints: (
     'xl',
