@@ -2,13 +2,25 @@
 @use './settings';
 @use '../../tools/media-query';
 @use '../../tools/properties';
-@use '../../tools/sr-only';
+
+@mixin sr-only {
+  position: absolute !important; // stylelint-disable-line declaration-no-important
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
 
 @include properties.output-block(
   $layer: 'utility',
   $classname-root: 'sr-only'
 ) {
-  @include sr-only.sr-only;
+  @include sr-only();
 }
 
 @each $breakpoint in settings.$breakpoints {
@@ -18,7 +30,7 @@
       $classname-root: 'sr-only',
       $breakpoint: $breakpoint
     ) {
-      @include sr-only.sr-only;
+      @include sr-only();
     }
   }
 }
