@@ -1,0 +1,44 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/White-space" />
+
+# White-space
+
+Utility classes to specify `white-space`.
+
+Default configuration gives you `nowrap`, which prevents text from wrapping when its containing element is too narrow, not available with any breakpoint suffixes. See [Customization](#customization) for details on how to change that.
+
+<Canvas>
+  <Story name="nowrap">
+    {`
+      <div style="width: 15rem" class="u-bg-gray-light u-padding-m">
+        <div class="u-white-space-nowrap">.u-white-space-nowrap Lorem ipsum dolor sit amet</div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The available classes can be customized by overriding the `$bitstyles-white-space-values` map. Provide the name to be used for the class as the key, and the value:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/white-space' with (
+  $values: (
+    'nowrap': nowrap,
+    'normal': normal,
+  )
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-white-space-breakpoints` list, providing the names of breakpoints from the global list of breakpoints:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/white-space' with (
+  $breakpoints: (
+    's',
+    'm',
+    'xl',
+  )
+);
+```
