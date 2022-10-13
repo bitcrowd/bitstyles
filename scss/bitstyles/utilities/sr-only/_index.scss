@@ -20,7 +20,7 @@
   $layer: 'utility',
   $classname-root: 'sr-only'
 ) {
-  @include sr-only();
+  @include sr-only;
 }
 
 @each $breakpoint in settings.$breakpoints {
@@ -30,7 +30,7 @@
       $classname-root: 'sr-only',
       $breakpoint: $breakpoint
     ) {
-      @include sr-only();
+      @include sr-only;
     }
   }
 }

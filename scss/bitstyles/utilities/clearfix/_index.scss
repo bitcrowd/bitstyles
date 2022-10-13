@@ -1,5 +1,5 @@
+@use '../../mixins/clearfix';
 @use '../../tools/classname';
-@use '../../tools/clearfix';
 
 #{classname.get($classname-items: 'clearfix', $layer: 'utility')} {
   @include clearfix.clearfix;

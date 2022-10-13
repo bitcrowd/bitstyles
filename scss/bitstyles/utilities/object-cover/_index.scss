@@ -1,5 +1,5 @@
 @use '../../tools/classname';
-@use '../../tools/object-cover';
+@use '../../mixins/object-cover';
 
 #{classname.get($classname-items: 'object-cover', $layer: 'utility')} {
   @include object-cover.object-cover;

@@ -1,5 +1,5 @@
 @use '../../settings/link' as link2;
-@use '../../tools/link';
+@use '../../mixins/link';
 @use '../../tools/classname';
 
 #{classname.get($classname-items: 'link', $layer: 'atom')} {

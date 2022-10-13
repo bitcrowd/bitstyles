@@ -1,4 +1,4 @@
-@use '../../tools/truncate';
+@use '../../mixins/truncate';
 @use '../../tools/classname';
 
 #{classname.get($classname-items: 'truncate', $layer: 'utility')} {

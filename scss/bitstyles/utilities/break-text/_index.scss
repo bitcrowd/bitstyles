@@ -1,4 +1,4 @@
-@use '../../tools/break-text';
+@use '../../mixins/break-text';
 @use '../../tools/classname';
 
 #{classname.get($classname-items: 'break-text', $layer: 'utility')} {

@@ -1,7 +1,7 @@
 @forward 'settings';
 @use 'sass:map';
 @use './settings';
-@use '../../tools/aspect-ratio';
+@use '../../mixins/aspect-ratio';
 @use '../../tools/classname';
 
 @each $aspect-ratio-alias, $aspect-ratio-value in settings.$values {
