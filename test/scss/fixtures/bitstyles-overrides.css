@@ -1534,11 +1534,6 @@ table {
   color: #000;
   text-decoration: underline;
 }
-.bs-at-list-reset {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 .bs-at-skip-link {
   font-weight: 600;
   left: 50%;
@@ -1715,19 +1710,6 @@ table {
 .bs-or-ui-group__item:hover:not(.bs-or-ui-group__last),
 .bs-or-ui-group__item:not(.bs-or-ui-group__last) {
   border-right: 0;
-}
-.bs-absolute-center {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.bs-absolute-cover {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 .bs-aspect-ratio-10-10 {
   aspect-ratio: 1/1;

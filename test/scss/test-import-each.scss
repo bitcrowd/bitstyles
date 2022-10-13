@@ -347,7 +347,6 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/atoms/flash';
 @import '../../scss/bitstyles/atoms/icon';
 @import '../../scss/bitstyles/atoms/link';
-@import '../../scss/bitstyles/atoms/list-reset';
 @import '../../scss/bitstyles/atoms/skip-link';
 @import '../../scss/bitstyles/atoms/topbar';
 
@@ -364,9 +363,6 @@ $bitstyles-z-index-values: (
 //
 // Utilities ////////////////////////////////////
 
-@import '../../scss/bitstyles/utilities/margin/settings';
-@import '../../scss/bitstyles/utilities/absolute-center';
-@import '../../scss/bitstyles/utilities/absolute-cover';
 @import '../../scss/bitstyles/utilities/aspect-ratio';
 @import '../../scss/bitstyles/utilities/bg';
 @import '../../scss/bitstyles/utilities/border';
