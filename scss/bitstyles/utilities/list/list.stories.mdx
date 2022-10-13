@@ -1,0 +1,80 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/list" />
+
+# List
+
+Utility classes to specify the list-style-type property.
+
+Default configuration gives you `none`, `decimal`, and `disc`. To change that, and to make the classes available at specific breakpoints, see [Customization](#customization).
+
+<Canvas isColumn>
+  <Story name="none">
+    {`
+      <ul class="u-list-none">
+        <li>
+          u-list-none
+        </li>
+        <li>
+          u-list-none
+        </li>
+        <li>
+          u-list-none
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="decimal">
+    {`
+      <ul class="u-list-decimal">
+        <li>
+          u-list-decimal
+        </li>
+        <li>
+          u-list-decimal
+        </li>
+        <li>
+          u-list-decimal
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="disc">
+    {`
+      <ul class="u-list-disc">
+        <li>
+          u-list-disc
+        </li>
+        <li>
+          u-list-disc
+        </li>
+        <li>
+          u-list-disc
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+Customize the available list-style-type values by overriding the `$bitstyles-list-values` Sass map. Provide the name to be used for the class as the key, and the value for the property:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/list' with (
+  $values: (
+    'circle': circle,
+    'thumbs': '\1F44D',
+  )
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$bitstyles-list-breakpoints` variable:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/list' with (
+  $breakpoints: (
+    'm',
+  )
+);
+```
