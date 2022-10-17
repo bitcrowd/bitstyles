@@ -17,6 +17,7 @@
 // Generic ////////////////////////////////////
 
 @forward 'bitstyles/generic/box-sizing' as box-sizing-*;
+@forward 'bitstyles/generic/custom-properties' as custom-properties-*;
 @forward 'bitstyles/generic/normalize' as normalize-*;
 @forward 'bitstyles/generic/reset' as reset-*;
 

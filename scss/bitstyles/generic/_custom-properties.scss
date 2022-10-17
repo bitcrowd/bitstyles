@@ -1,0 +1,38 @@
+@use '../settings/breakpoints';
+@use '../settings/color-palette';
+@use '../settings/layout';
+@use '../settings/shadows' as shadows-settings;
+@use '../settings/typography';
+@use '../tools/shadows';
+@use '../tools/custom-property';
+@use 'sass:color';
+
+:root {
+  @each $breakpoint-name, $breakpoint in breakpoints.$breakpoints {
+    #{custom-property.get($items: ('breakpoint', $breakpoint-name))}: #{$breakpoint};
+  }
+
+  @each $palette-name, $colors in color-palette.$palette {
+    @each $color-name, $color in $colors {
+      --color-#{$palette-name}-#{$color-name}: #{$color};
+      --color-#{$palette-name}-#{$color-name}-rgb: #{color.red($color),
+        color.green($color), color.blue($color)};
+    }
+  }
+
+  @each $size-name, $size in layout.$sizes {
+    #{custom-property.get($items: ('size', $size-name))}: #{$size};
+  }
+
+  @each $shadow-name, $shadow in shadows-settings.$shadows {
+    #{custom-property.get($items: ('shadow', $shadow-name))}: #{shadows.get($shadow-name, 'drop')};
+  }
+
+  @each $font-size-name, $font-size in typography.$font-sizes {
+    #{custom-property.get($items: ('font-size', $font-size-name))}: #{$font-size};
+  }
+
+  @each $line-height-name, $line-height in typography.$line-heights {
+    #{custom-property.get($items: ('line-height', $line-height-name))}: #{$line-height};
+  }
+}
