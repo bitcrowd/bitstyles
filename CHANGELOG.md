@@ -6,6 +6,10 @@
 
 - Radios and checkboxes no longer get distorted when placed in a flex layout, and the sibling content has a min-content width larger than the available space
 
+### Added
+
+- New helper function `custom-property.get()` for generating names of CSS custom properties that respect the nampespace and layer-prefix configuration.
+
 ### Changed
 
 - Names of CSS custom properties used for styling the icon buttons inside badge components have been renamed from `--button-fg`, `--button-bg`, `--button-fg-hover`, `--button-bg-hover` to `--a-button-color`, `--a-button-background-color`, `--a-button-color-hover`, `--a-button-background-color-hover` respectively. If you were using these variables in your own codebase, you’ll need to update the names.
@@ -23,7 +27,6 @@
 - A new helper function `base-palette.get()` that returns colors from your base palette, to be used when setting up your color palette
 - Classname layer prefixes for indicating whether a class is at atom/molecule/organism/utility level can now be configured or even removed by overriding `setup.$layer-prefixes`.
 - New helper function `classname.get()` for generating classnames that respect the nampespace and layer-prefix configuration. If you were previously using `properties.join-with-dashes()` to generate classnames, you should migrate to using `classname.get()` instead.
-- New helper function `custom-property.get()` for generating names of CSS custom properties that respect the nampespace and layer-prefix configuration.
 
 ### Changed
 
