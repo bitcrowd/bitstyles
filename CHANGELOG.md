@@ -8,10 +8,11 @@
 
 ### Added
 
-- New helper function `custom-property.get()` for generating names of CSS custom properties that respect the nampespace and layer-prefix configuration.
+- New helper function `custom-property.get()` for generating names of CSS custom properties that respect the namespace and layer-prefix configuration.
 
 ### Changed
 
+- `properties.join-with-dashes` is now `string.join-with-dashes`, and does not accept an `$at-prefix`. If you were using this for generating CSS property names, or some other dash-separated string, you need to import `tools/string` instead of `tools/properties`, and update the namespace at the point of usage from `properties.join-with-dashes` to `string.join-with-dashes`. If you were using the `$at-prefix`, you should switch to using `classname.get()`.
 - Names of CSS custom properties used for styling the icon buttons inside badge components have been renamed from `--button-fg`, `--button-bg`, `--button-fg-hover`, `--button-bg-hover` to `--a-button-color`, `--a-button-background-color`, `--a-button-color-hover`, `--a-button-background-color-hover` respectively. If you were using these variables in your own codebase, you’ll need to update the names.
 
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
@@ -26,14 +27,13 @@
 - Renamed `typography-responsive.$font-sizes` to `typography-responsive.$typographic-scale`, which now expects the font-size for each to be paired with line-height
 - A new helper function `base-palette.get()` that returns colors from your base palette, to be used when setting up your color palette
 - Classname layer prefixes for indicating whether a class is at atom/molecule/organism/utility level can now be configured or even removed by overriding `setup.$layer-prefixes`.
-- New helper function `classname.get()` for generating classnames that respect the nampespace and layer-prefix configuration. If you were previously using `properties.join-with-dashes()` to generate classnames, you should migrate to using `classname.get()` instead.
+- New helper function `classname.get()` for generating classnames that respect the namespace and layer-prefix configuration. If you were previously using `properties.join-with-dashes()` to generate classnames, you should migrate to using `classname.get()` instead.
 
 ### Changed
 
 - `typography.$font-sizes` now expects a single Sass map of font-sizes. This is the base set of design tokens for your font-sizes, from which the responsive typographic scale is created.
 - Newly configured `line-height` utility classes to include the base `typography.$line-heights`
 - The `output-responsive-font-sizes` mixin expects a map data structure which includes `font-size` and `line-height`. If you were using the mixin you would have to change the parameter passed.
-- `properties.join-with-dashes` is now `string.join-with-dashes`, and does not accept an `$at-prefix`. If you were using this for generating CSS property names, or some other dash-separated string, you need to import `tools/string` instead of `tools/properties`, and update the namespace at the point of usage from `properties.join-with-dashes` to `string.join-with-dashes`.
 - We now have a two-tier typography design token system. A single Sass map `$bitstylestypography-font-sizes` is used to create the existing responsive typography system for `h1` – `h6` elements, and the corresponding `.u-h1` – `.u-h6` responsive typography utility classes. The responsive typography for the base heading elements and the corresponding utility classes is built on top of these base design tokens. To update, all your unique font-sizes should be defined in the base scale in `settings/typography`, then referenced using `font-size.get()` to build your responsive typography scale in `settings/typography-responsive`.
 - The color palette generator in `tools/color` is renamed from `color.generate-palette` to `color.generate-scale`, and now produces a more evenly-spread range of colors, with more accurate saturation and hue than before
 - By default there are now two tiers of color palettes — the one used in your codebase and in all bitstyles components (the “semantic palette”) is generated from a base palette. In the default configuration, this base palette is generated from the base colors provided. See [https://bitcrowd.github.io/bitstyles/?path=/docs/design-tokens-color-palette--page](https://bitcrowd.github.io/bitstyles/?path=/docs/design-tokens-color-palette--page) for details on customizing this.
