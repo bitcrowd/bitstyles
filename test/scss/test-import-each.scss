@@ -65,6 +65,7 @@ $bitstyles-color-palette-palette: (
 );
 $bitstyles-layout-size-base: 10rem;
 $bitstyles-setup-namespace: 'bs';
+$bitstyles-setup-custom-property-namespace: 'bscpn';
 $bitstyles-setup-layer-prefixes: (
   'atom': 'at',
   'molecule': 'mo',
@@ -282,6 +283,7 @@ $bitstyles-z-index-values: (
 // Generic ////////////////////////////////////
 
 @import '../../scss/bitstyles/generic/box-sizing';
+@import '../../scss/bitstyles/generic/custom-properties';
 @import '../../scss/bitstyles/generic/normalize';
 @import '../../scss/bitstyles/generic/reset';
 
