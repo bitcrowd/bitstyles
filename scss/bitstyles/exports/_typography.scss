@@ -1,0 +1,13 @@
+@use '../settings/typography';
+
+/* stylelint-disable selector-pseudo-class-no-unknown */
+:export {
+  @each $font-size-name, $font-size in typography.$font-sizes {
+    #{'font-size.'}#{$font-size-name}: $font-size;
+  }
+
+  @each $line-height-name, $line-height in typography.$line-heights {
+    #{'line-height.'}#{$line-height-name}: $line-height;
+  }
+}
+/* stylelint-enable selector-pseudo-class-no-unknown */

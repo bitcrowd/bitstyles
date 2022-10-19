@@ -38,6 +38,18 @@ The animation design tokens are also available as CSS custom properties. In the 
 --bs-transition-easing: ease-in-out;
 ```
 
+## Using animation settings in JS
+
+The animation design tokens can be imported and used in JS:
+
+```js
+import animation from '../exports/_animation.scss';
+
+console.log(animation['easing']); // 'ease-in-out'
+console.log(animation['duration']); // '75ms'
+console.log(animation['duration-long']); // '0.5s'
+```
+
 ## Customization
 
 Override the values for these animation variables at the start of your Sass manifest file.

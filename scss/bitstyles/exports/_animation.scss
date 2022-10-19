@@ -1,0 +1,9 @@
+@use '../settings/animation';
+
+/* stylelint-disable selector-pseudo-class-no-unknown */
+:export {
+  #{'easing'}: ease-in-out;
+  #{'duration'}: 0.075s;
+  #{'duration-long'}: 0.5s;
+}
+/* stylelint-enable selector-pseudo-class-no-unknown */
