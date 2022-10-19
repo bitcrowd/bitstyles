@@ -1,3 +1,4 @@
+@use '../settings/animation';
 @use '../settings/breakpoints';
 @use '../settings/color-palette';
 @use '../settings/layout';
@@ -8,6 +9,10 @@
 @use 'sass:color';
 
 :root {
+  #{custom-property.get($items: ('transition', 'duration'))}: #{animation.$transition-duration};
+  #{custom-property.get($items: ('transition', 'duration-long'))}: #{animation.$transition-duration-long};
+  #{custom-property.get($items: ('transition', 'easing'))}: #{animation.$transition-easing};
+
   @each $breakpoint-name, $breakpoint in breakpoints.$breakpoints {
     #{custom-property.get($items: ('breakpoint', $breakpoint-name))}: #{$breakpoint};
   }
@@ -15,7 +20,9 @@
   @each $palette-name, $colors in color-palette.$palette {
     @each $color-name, $color in $colors {
       #{custom-property.get($items: ('color', $palette-name, $color-name))}: #{$color};
-      #{custom-property.get($items: ('color', $palette-name, $color-name, 'rgb'))}: #{color.red($color),
+      #{custom-property.get($items: ('color', $palette-name, $color-name, 'rgb'))}: #{color.red(
+            $color
+          ),
         color.green($color), color.blue($color)};
     }
   }
@@ -25,7 +32,10 @@
   }
 
   @each $shadow-name, $shadow in shadows-settings.$shadows {
-    #{custom-property.get($items: ('shadow', $shadow-name))}: #{shadows.get($shadow-name, 'drop')};
+    #{custom-property.get($items: ('shadow', $shadow-name))}: #{shadows.get(
+        $shadow-name,
+        'drop'
+      )};
   }
 
   @each $font-size-name, $font-size in typography.$font-sizes {

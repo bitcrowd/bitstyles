@@ -11,6 +11,9 @@ body {
   box-sizing: inherit;
 }
 :root {
+  --bscpn-transition-duration: 0.075s;
+  --bscpn-transition-duration-long: 0.5s;
+  --bscpn-transition-easing: ease-out;
   --bscpn-breakpoint-s: screen and (max-width: 20em);
   --bscpn-breakpoint-m: screen and (min-width: 30em);
   --bscpn-breakpoint-l: screen and (min-width: 55em);
