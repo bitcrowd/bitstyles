@@ -81,10 +81,12 @@ filter:
 The shadow definitions are also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
 
 ```css
---bs-shadow-default: drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem)
-  drop-shadow(rgba(200, 191, 255, 0.125) 0 0.6666666667rem 0.6666666667rem)
-  drop-shadow(rgba(200, 191, 255, 0.125) 0 1rem 1rem)
-  drop-shadow(rgba(200, 191, 255, 0.125) 0 2rem 2rem);
+--bs-shadow-default: drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem) drop-shadow(
+    rgba(200, 191, 255, 0.125) 0 0.6666666667rem 0.6666666667rem
+  )
+  drop-shadow(rgba(200, 191, 255, 0.125) 0 1rem 1rem) drop-shadow(
+    rgba(200, 191, 255, 0.125) 0 2rem 2rem
+  );
 ```
 
 ### Using local shadows
