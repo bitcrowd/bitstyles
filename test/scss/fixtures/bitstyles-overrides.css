@@ -127,15 +127,18 @@
 }
 html {
   box-sizing: border-box;
-  height: 100%;
-}
-body {
-  min-height: 100%;
 }
 *,
 :after,
 :before {
   box-sizing: inherit;
+}
+body,
+html {
+  height: 100%;
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: stretch;
 } /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 hr {
   box-sizing: content-box;

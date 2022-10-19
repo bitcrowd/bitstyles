@@ -15,4 +15,4 @@ $sizes: (
   '2xl': $size-base * 4,
   '3xl': $size-base * 8,
 ) !default;
-$viewport-elements: ('html', 'body', '#root') !default;
+$viewport-elements: ('html', 'body') !default;
