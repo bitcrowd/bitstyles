@@ -67,6 +67,22 @@ This will output:
 }
 ```
 
+## Using breakpoints in CSS
+
+The breakpoints are also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
+
+```css
+--bs-breakpoint-s: screen and (max-width: 29.9375em);
+--bs-breakpoint-m: screen and (min-width: 30em);
+--bs-breakpoint-l: screen and (min-width: 55em);
+--bs-breakpoint-xl: screen and (min-width: 95em);
+--bs-breakpoint-hidpi: (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi), (min-resolution: 2dppx);
+--bs-breakpoint-landscape: all and (orientation: landscape);
+--bs-breakpoint-portrait: all and (orientation: portrait);
+--bs-breakpoint-motion-ok: screen and (prefers-reduced-motion: no-preference);
+```
+
 ## Customization
 
 Override the values for the available breakpoints at the start of your Sass manifest file.
