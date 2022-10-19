@@ -599,12 +599,12 @@ h3,
 h4,
 h5,
 h6 {
-  text-rendering: optimizeLegibility;
   font-family: FakeFont, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol;
+  helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+  Segoe UI Symbol;
   font-weight: 800;
   margin: 10rem;
+  text-rendering: optimizeLegibility;
 }
 @media screen and (min-width: 30em) {
   h1 {
@@ -1297,7 +1297,6 @@ table {
   padding: 2.5rem 0;
   position: absolute;
   top: 100%;
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   z-index: 1;
@@ -3462,7 +3461,6 @@ table {
   position: fixed;
 }
 .bs-sticky {
-  position: -webkit-sticky;
   position: sticky;
 }
 @media screen and (min-width: 55em) {
@@ -3479,7 +3477,6 @@ table {
     position: fixed;
   }
   .bs-sticky\@l {
-    position: -webkit-sticky;
     position: sticky;
   }
 }
