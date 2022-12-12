@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+
+- Radios and checkboxes no longer get distorted when placed in a flex layout, and the sibling content has a min-content width larger than the available space
+
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
 
 ### Added
