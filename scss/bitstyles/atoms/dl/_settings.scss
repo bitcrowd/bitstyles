@@ -1,0 +1,17 @@
+@use '../../tools/palette';
+@use '../../tools/size';
+@use '../../settings/setup';
+
+$layout-breakpoint: 'm' !default;
+$sizes: (
+  setup.$no-media-query: (
+    'gap': size.get('s'),
+    'item-gap': 0,
+  ),
+  $layout-breakpoint: (
+    'border-top': 1px solid palette.get('text', 'light-1'),
+    'gap': 0,
+    'item-gap': size.get('l'),
+    'item-border-bottom': 1px solid palette.get('text', 'light-1'),
+  ),
+) !default;

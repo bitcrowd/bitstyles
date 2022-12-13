@@ -1,13 +1,58 @@
-@use '../../tools/palette';
-@use '../../tools/media-query';
+@forward './settings';
+@use './settings';
 @use '../../tools/classname';
+@use '../../tools/media-query';
+@use 'sass:map';
 
 #{classname.get($classname-items: 'dl', $layer: 'atom')} {
-  border-top: 1px solid palette.get('grayscale', 'light-1');
+  display: grid;
+
+  @each $breakpoint, $size in settings.$sizes {
+    @include media-query.get($breakpoint) {
+      @each $property in ('border-top', 'border-bottom', 'gap') {
+        @if map.has-key($size, $property) {
+          #{$property}: map.get($size, $property);
+        }
+      }
+    }
+  }
 }
 
-@include media-query.get('m') {
+#{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
+  align-items: baseline;
+  display: grid;
+
+  @each $breakpoint, $size in settings.$sizes {
+    @include media-query.get($breakpoint) {
+      @if map.has-key($size, 'item-border-top') {
+        border-top: map.get($size, 'item-border-top');
+      }
+      @if map.has-key($size, 'item-border-bottom') {
+        border-bottom: map.get($size, 'item-border-bottom');
+      }
+      @if map.has-key($size, 'item-gap') {
+        gap: map.get($size, 'item-gap');
+        padding-top: map.get($size, 'item-gap');
+        padding-bottom: map.get($size, 'item-gap');
+      }
+      @if map.has-key($size, 'item-padding-horizontal') {
+        padding-right: map.get($size, 'item-padding-horizontal');
+        padding-left: map.get($size, 'item-padding-horizontal');
+      }
+    }
+  }
+
+  &:last-child {
+    border: 0;
+  }
+}
+
+@include media-query.get(settings.$layout-breakpoint) {
   #{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
-    border-bottom: 1px solid palette.get('grayscale', 'light-1');
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #{classname.get($classname-items: 'dl__dd', $layer: 'atom')} {
+    grid-column: span 2 / span 2;
   }
 }

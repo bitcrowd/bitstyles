@@ -10,19 +10,27 @@ A list of term/description pairs, used to display any set of key-value pairs. It
   <Story name="dl">
     {`
       <dl class="a-dl">
-        <div class="a-dl__item u-grid@m u-grid-cols-3 u-gap-m u-padding-m-y u-padding-m@m u-items-baseline">
-          <dt class="u-font-medium u-h6 u-fg-grayscale u-margin-s4-bottom@s">Full name</dt>
-          <dd class="u-col-span-2">Muffin Gummies</dd>
+        <div class="a-dl__item">
+          <dt class="u-font-medium u-h6 u-fg-text a-dl__dt">Full name</dt>
+          <dd class="a-dl__dd">Muffin Gummies</dd>
         </div>
-        <div class="a-dl__item u-grid@m u-grid-cols-3 u-gap-m u-padding-m-y u-padding-m@m u-items-baseline">
-          <dt class="u-font-medium u-h6 u-fg-grayscale u-margin-s4-bottom@s">Email</dt>
-          <dd class="u-col-span-2">cupcake@tiramisu.com</dd>
+        <div class="a-dl__item">
+          <dt class="u-font-medium u-h6 u-fg-text a-dl__dt">Email</dt>
+          <dd class="a-dl__dd">cupcake@tiramisu.com</dd>
         </div>
-        <div class="a-dl__item u-grid@m u-grid-cols-3 u-gap-m u-padding-m-y u-padding-m@m u-items-baseline">
-          <dt class="u-font-medium u-h6 u-fg-grayscale u-margin-s4-bottom@s">Description</dt>
-          <dd class="u-col-span-2">Muffin gummies tart fruitcake gummi bears chocolate bar. Jujubes candy macaroon topping dessert biscuit topping sugar plum sesame snaps. Chocolate donut cake tootsie roll donut biscuit caramels sugar plum jelly beans. Dessert dragée jelly-o gummi bears sweet halvah soufflé.</dd>
+        <div class="a-dl__item">
+          <dt class="u-font-medium u-h6 u-fg-text a-dl__dt">Description</dt>
+          <dd class="a-dl__dd">Muffin gummies tart fruitcake gummi bears chocolate bar. Jujubes candy macaroon topping dessert biscuit topping sugar plum sesame snaps. Chocolate donut cake tootsie roll donut biscuit caramels sugar plum jelly beans. Dessert dragée jelly-o gummi bears sweet halvah soufflé.</dd>
         </div>
       </dl>
     `}
   </Story>
 </Canvas>
+
+## Responsiveness
+
+There are two layouts for this component, with a simpler vertical stack for small viewports, and a wider asymmetrical two-column layout for larger viewports. The simple stack has no borders and minimal spacing, whereas the two-column layout uses borders and increased spacing to group content. With default configuration, the `m` breakpoint is used.
+
+## Customization
+
+The spacing and borders of the whole component, and of each item inside the list, can be specified at any breakpoint. In
