@@ -4,46 +4,70 @@
 @use '../../tools/media-query';
 @use 'sass:map';
 
-#{classname.get($classname-items: 'dl', $layer: 'atom')} {
+#{classname.get($classname-items: 'dl', $layer: 'atom')},
+#{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
   display: grid;
-
-  @each $breakpoint, $size in settings.$sizes {
-    @include media-query.get($breakpoint) {
-      @each $property in ('border-top', 'border-bottom', 'gap') {
-        @if map.has-key($size, $property) {
-          #{$property}: map.get($size, $property);
-        }
-      }
-    }
-  }
+  align-items: baseline;
 }
 
 #{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
-  align-items: baseline;
-  display: grid;
-
-  @each $breakpoint, $size in settings.$sizes {
-    @include media-query.get($breakpoint) {
-      @if map.has-key($size, 'item-border-top') {
-        border-top: map.get($size, 'item-border-top');
-      }
-      @if map.has-key($size, 'item-border-bottom') {
-        border-bottom: map.get($size, 'item-border-bottom');
-      }
-      @if map.has-key($size, 'item-gap') {
-        gap: map.get($size, 'item-gap');
-        padding-top: map.get($size, 'item-gap');
-        padding-bottom: map.get($size, 'item-gap');
-      }
-      @if map.has-key($size, 'item-padding-horizontal') {
-        padding-right: map.get($size, 'item-padding-horizontal');
-        padding-left: map.get($size, 'item-padding-horizontal');
-      }
-    }
-  }
-
   &:last-child {
     border: 0;
+  }
+}
+
+#{classname.get($classname-items: 'dl__dt', $layer: 'atom')} {
+  color: settings.$dt-color;
+}
+
+@each $breakpoint, $size in settings.$sizes {
+  @include media-query.get($breakpoint) {
+
+    // DL component
+    @if map.has-key($size, 'dl') {
+      $dl-values: map.get($size, 'dl');
+      #{classname.get($classname-items: 'dl', $layer: 'atom')} {
+        @each $property in ('border-top', 'border-bottom', 'gap') {
+          @if map.has-key($dl-values, $property) {
+            #{$property}: map.get($dl-values, $property);
+          }
+        }
+      }
+    }
+
+    // Each item
+    @if map.has-key($size, 'item') {
+      $item-values: map.get($size, 'item');
+      #{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
+        @if map.has-key($item-values, 'border-top') {
+          border-top: map.get($item-values, 'border-top');
+        }
+        @if map.has-key($item-values, 'border-bottom') {
+          border-bottom: map.get($item-values, 'border-bottom');
+        }
+        @if map.has-key($item-values, 'gap') {
+          gap: map.get($item-values, 'gap');
+          padding-top: map.get($item-values, 'gap');
+          padding-bottom: map.get($item-values, 'gap');
+        }
+        @if map.has-key($item-values, 'padding-horizontal') {
+          padding-right: map.get($item-values, 'padding-horizontal');
+          padding-left: map.get($item-values, 'padding-horizontal');
+        }
+      }
+    }
+
+    // DT
+    @if map.has-key($size, 'dt') {
+      $dt-values: map.get($size, 'dt');
+      #{classname.get($classname-items: 'dl__dt', $layer: 'atom')} {
+        @each $property in ('font-size', 'font-weight') {
+          @if map.has-key($dt-values, $property) {
+            #{$property}: map.get($dt-values, $property);
+          }
+        }
+      }
+    }
   }
 }
 

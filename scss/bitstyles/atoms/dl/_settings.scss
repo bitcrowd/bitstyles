@@ -1,17 +1,35 @@
+@use '../../tools/font-size';
 @use '../../tools/palette';
 @use '../../tools/size';
 @use '../../settings/setup';
+@use '../../settings/typography';
 
 $layout-breakpoint: 'm' !default;
 $sizes: (
   setup.$no-media-query: (
-    'gap': size.get('s'),
-    'item-gap': 0,
+    'dl': (
+      'gap': size.get('s'),
+    ),
+    'item': (
+      'gap': 0,
+    ),
+    'dt': (
+      'font-size': font-size.get('1'),
+      'font-weight': typography.$font-weight-bold
+    ),
   ),
   $layout-breakpoint: (
-    'border-top': 1px solid palette.get('text', 'light-1'),
-    'gap': 0,
-    'item-gap': size.get('l'),
-    'item-border-bottom': 1px solid palette.get('text', 'light-1'),
+    'dl': (
+      'border-top': 1px solid palette.get('text', 'light'),
+      'gap': 0,
+    ),
+    'item': (
+      'gap': size.get('l'),
+      'border-bottom': 1px solid palette.get('text', 'light'),
+    ),
+    'dt': (
+      'font-size': font-size.get('2'),
+    ),
   ),
 ) !default;
+$dt-color: palette.get('text', 'darker');
