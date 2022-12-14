@@ -16,3 +16,8 @@ jobs:
         run: |
           yarn
           yarn test
+
+      - name: Build Storybook 📖
+        run: |
+          yarn
+          yarn build-storybook
