@@ -1,4 +1,4 @@
-@use '../settings/link' as settings;
+@use '../settings/link';
 
 // Link
 //
@@ -6,43 +6,37 @@
 //
 
 @mixin link {
-  --link-color: #{settings.$color};
-  --link-background-color: #{settings.$background-color};
-
   padding: 0;
-  transition: settings.$transition;
-  border: none;
-  background-color: var(--link-background-color);
-  box-shadow: settings.$box-shadow;
-  color: var(--link-color);
-  font-weight: settings.$font-weight;
-  text-decoration: settings.$text-decoration;
+  transition: link.$transition;
+  border: 0;
+  background-color: link.$background-color;
+  box-shadow: link.$box-shadow;
+  color: link.$color;
+  font-weight: link.$font-weight;
+  text-decoration: link.$text-decoration;
   cursor: pointer;
   text-decoration-skip-ink: auto;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
   &:visited {
-    --link-color: #{settings.$color-visited};
-    --link-background-color: #{settings.$background-color-visited};
-
-    box-shadow: settings.$box-shadow-visited;
-    text-decoration: settings.$text-decoration-visited;
+    background-color: link.$background-color-visited;
+    box-shadow: link.$box-shadow-visited;
+    color: link.$color-visited;
+    text-decoration: link.$text-decoration-visited;
   }
 
   &:hover,
   &:focus {
-    --link-color: #{settings.$color-hover};
-    --link-background-color: #{settings.$background-color-hover};
-
-    box-shadow: settings.$box-shadow-hover;
-    text-decoration: settings.$text-decoration-hover;
+    background-color: link.$background-color-hover;
+    box-shadow: link.$box-shadow-hover;
+    color: link.$color-hover;
+    text-decoration: link.$text-decoration-hover;
   }
 
   &:active {
-    --link-color: #{settings.$color-active};
-    --link-background-color: #{settings.$background-color-active};
-
-    box-shadow: settings.$box-shadow-active;
-    text-decoration: settings.$text-decoration-active;
+    background-color: link.$background-color-active;
+    box-shadow: link.$box-shadow-active;
+    color: link.$color-active;
+    text-decoration: link.$text-decoration-active;
   }
 }

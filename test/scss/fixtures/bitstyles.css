@@ -292,14 +292,12 @@ img {
   display: block;
 }
 a {
-  --link-color: var(--color-brand-1-base);
-  --link-background-color: transparent;
   -webkit-text-decoration-skip: ink;
   -webkit-appearance: none;
-  background-color: var(--link-background-color);
-  border: none;
+  background-color: transparent;
+  border: 0;
   box-shadow: none;
-  color: var(--link-color);
+  color: #644dff;
   cursor: pointer;
   font-weight: 600;
   padding: 0;
@@ -308,22 +306,22 @@ a {
   transition: color 75ms ease-in-out;
 }
 a:visited {
-  --link-color: var(--color-brand-1-base);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #644dff;
   text-decoration: none;
 }
 a:focus,
 a:hover {
-  --link-color: var(--color-brand-1-light);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #1f00e6;
   text-decoration: underline;
 }
 a:active {
-  --link-color: var(--color-brand-1-dark);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #1f00e6;
   text-decoration: underline;
 }
 figcaption {
@@ -1500,14 +1498,12 @@ table {
   font-size: 1.6rem;
 }
 .a-link {
-  --link-color: var(--color-brand-1-base);
-  --link-background-color: transparent;
   -webkit-text-decoration-skip: ink;
   -webkit-appearance: none;
-  background-color: var(--link-background-color);
-  border: none;
+  background-color: transparent;
+  border: 0;
   box-shadow: none;
-  color: var(--link-color);
+  color: #644dff;
   cursor: pointer;
   font-weight: 600;
   padding: 0;
@@ -1516,22 +1512,22 @@ table {
   transition: color 75ms ease-in-out;
 }
 .a-link:visited {
-  --link-color: var(--color-brand-1-base);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #644dff;
   text-decoration: none;
 }
 .a-link:focus,
 .a-link:hover {
-  --link-color: var(--color-brand-1-light);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #1f00e6;
   text-decoration: underline;
 }
 .a-link:active {
-  --link-color: var(--color-brand-1-dark);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #1f00e6;
   text-decoration: underline;
 }
 .a-skip-link {

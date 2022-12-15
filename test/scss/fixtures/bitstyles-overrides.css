@@ -295,14 +295,12 @@ img {
   display: block;
 }
 a {
-  --link-color: red;
-  --link-background-color: transparent;
   -webkit-text-decoration-skip: ink;
   -webkit-appearance: none;
-  background-color: var(--link-background-color);
-  border: none;
+  background-color: transparent;
+  border: 0;
   box-shadow: none;
-  color: var(--link-color);
+  color: red;
   cursor: pointer;
   font-weight: 600;
   padding: 0;
@@ -311,22 +309,22 @@ a {
   transition: color 75ms ease-out;
 }
 a:visited {
-  --link-color: var(--color-brand-1-base);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #000;
   text-decoration: none;
 }
 a:focus,
 a:hover {
-  --link-color: var(--color-brand-1-light);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #000;
   text-decoration: underline;
 }
 a:active {
-  --link-color: var(--color-brand-1-dark);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #000;
   text-decoration: underline;
 }
 figcaption {
@@ -1380,14 +1378,12 @@ table {
   font-size: 10rem;
 }
 .bs-at-link {
-  --link-color: red;
-  --link-background-color: transparent;
   -webkit-text-decoration-skip: ink;
   -webkit-appearance: none;
-  background-color: var(--link-background-color);
-  border: none;
+  background-color: transparent;
+  border: 0;
   box-shadow: none;
-  color: var(--link-color);
+  color: red;
   cursor: pointer;
   font-weight: 600;
   padding: 0;
@@ -1396,22 +1392,22 @@ table {
   transition: color 75ms ease-out;
 }
 .bs-at-link:visited {
-  --link-color: var(--color-brand-1-base);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #000;
   text-decoration: none;
 }
 .bs-at-link:focus,
 .bs-at-link:hover {
-  --link-color: var(--color-brand-1-light);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #000;
   text-decoration: underline;
 }
 .bs-at-link:active {
-  --link-color: var(--color-brand-1-dark);
-  --link-background-color: transparent;
+  background-color: transparent;
   box-shadow: none;
+  color: #000;
   text-decoration: underline;
 }
 .bs-at-skip-link {
