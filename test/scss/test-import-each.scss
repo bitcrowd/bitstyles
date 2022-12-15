@@ -280,10 +280,19 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/settings/link';
 
 //
+// Custom properties ////////////////////////////////////
+
+@import '../../scss/bitstyles/custom-properties/animation';
+@import '../../scss/bitstyles/custom-properties/breakpoints';
+@import '../../scss/bitstyles/custom-properties/color-palette';
+@import '../../scss/bitstyles/custom-properties/layout';
+@import '../../scss/bitstyles/custom-properties/shadows';
+@import '../../scss/bitstyles/custom-properties/typography';
+
+//
 // Generic ////////////////////////////////////
 
 @import '../../scss/bitstyles/generic/box-sizing';
-@import '../../scss/bitstyles/generic/custom-properties';
 @import '../../scss/bitstyles/generic/normalize';
 @import '../../scss/bitstyles/generic/reset';
 

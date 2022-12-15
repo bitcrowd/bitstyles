@@ -117,10 +117,24 @@
 );
 
 //
+// Custom properties ////////////////////////////////////
+
+@use '../../scss/bitstyles/custom-properties/animation' as
+  custom-properties-animation;
+@use '../../scss/bitstyles/custom-properties/breakpoints' as
+  custom-properties-breakpoints;
+@use '../../scss/bitstyles/custom-properties/color-palette' as
+  custom-properties-color-palette;
+@use '../../scss/bitstyles/custom-properties/layout' as custom-properties-layout;
+@use '../../scss/bitstyles/custom-properties/shadows' as
+  custom-properties-shadows;
+@use '../../scss/bitstyles/custom-properties/typography' as
+  custom-properties-typography;
+
+//
 // Generic ////////////////////////////////////
 
 @use '../../scss/bitstyles/generic/box-sizing';
-@use '../../scss/bitstyles/generic/custom-properties';
 @use '../../scss/bitstyles/generic/normalize';
 @use '../../scss/bitstyles/generic/reset';
 

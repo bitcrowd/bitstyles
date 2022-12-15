@@ -14,10 +14,22 @@
 @forward 'bitstyles/settings/link' as link-*;
 
 //
+// Custom properties ////////////////////////////////////
+
+@forward 'bitstyles/custom-properties/animation' as custom-properties-animation-*;
+@forward 'bitstyles/custom-properties/breakpoints' as
+  custom-properties-breakpoints-*;
+@forward 'bitstyles/custom-properties/color-palette' as
+  custom-properties-color-palette-*;
+@forward 'bitstyles/custom-properties/layout' as custom-properties-layout-*;
+@forward 'bitstyles/custom-properties/shadows' as custom-properties-shadows-*;
+@forward 'bitstyles/custom-properties/typography' as
+  custom-properties-typography-*;
+
+//
 // Generic ////////////////////////////////////
 
 @forward 'bitstyles/generic/box-sizing' as box-sizing-*;
-@forward 'bitstyles/generic/custom-properties' as custom-properties-*;
 @forward 'bitstyles/generic/normalize' as normalize-*;
 @forward 'bitstyles/generic/reset' as reset-*;
 
