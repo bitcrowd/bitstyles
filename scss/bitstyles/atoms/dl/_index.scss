@@ -16,14 +16,10 @@
   }
 }
 
-#{classname.get($classname-items: 'dl__dt', $layer: 'atom')} {
-  color: settings.$dt-color;
-}
-
+/* stylelint-disable max-nesting-depth */
 @each $breakpoint, $size in settings.$sizes {
   @include media-query.get($breakpoint) {
-
-    // DL component
+    /* dl component */
     @if map.has-key($size, 'dl') {
       $dl-values: map.get($size, 'dl');
       #{classname.get($classname-items: 'dl', $layer: 'atom')} {
@@ -35,7 +31,7 @@
       }
     }
 
-    // Each item
+    /* Each item */
     @if map.has-key($size, 'item') {
       $item-values: map.get($size, 'item');
       #{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
@@ -57,11 +53,11 @@
       }
     }
 
-    // DT
+    /* dt component */
     @if map.has-key($size, 'dt') {
       $dt-values: map.get($size, 'dt');
       #{classname.get($classname-items: 'dl__dt', $layer: 'atom')} {
-        @each $property in ('font-size', 'font-weight') {
+        @each $property in ('font-size', 'font-weight', 'color') {
           @if map.has-key($dt-values, $property) {
             #{$property}: map.get($dt-values, $property);
           }
@@ -70,6 +66,7 @@
     }
   }
 }
+/* stylelint-enable max-nesting-depth */
 
 @include media-query.get(settings.$layout-breakpoint) {
   #{classname.get($classname-items: 'dl__item', $layer: 'atom')} {

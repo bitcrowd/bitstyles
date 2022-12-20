@@ -51,6 +51,7 @@ The complete list of variables you can configure for each part of the component 
 - dt
   - `font-weight` Font-weight of the dt.
   - `font-weight` Font-size of the dt.
+  - `color` Color for the dt.
 
 Note that the styles will be built mobile-first — if you do not need to override a value from an earlier breakpoint, you do not need to re-sepcify it.
 
@@ -69,10 +70,12 @@ An example of how to configure the component:
       ),
       'dt': (
         'font-weight': typography.$font-weight-medium,
+        'color': palette.get('text', 'light'),
       ),
     )
     // all the above values will still hold, unless overridden below
-    'm': (
+  'm':
+    (
       'dl': (
         'gap': 0,
       ),
@@ -83,18 +86,16 @@ An example of how to configure the component:
         'font-size': font-size.get('2'),
       ),
     ),
-  ),
+  )
 );
 ```
 
-There are two extra variables that may be useful, which cannot be specified on a per-breakpoint basis:
+There is an extra variable that may be useful:
 
 - `$layout-breakpoint` specifies the breakpoint at which you want the layout to switch between the vertical stack & two-column layout.
-- `$dt-color` specify what color to use for the `dt` element
 
 ```scss
 @use '~bitstyles/scss/bitstyles/atoms/dl' with (
-  $layout-breakpoint: 'l',
-  $dt-color: palette.get('brand-1'),
+  $layout-breakpoint: 'l'
 );
 ```
