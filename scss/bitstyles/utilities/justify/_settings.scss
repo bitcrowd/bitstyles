@@ -1,6 +1,22 @@
-$values: (
+$content-values: (
   'between': space-between,
   'end': flex-end,
   'start': flex-start,
 ) !default;
-$breakpoints: ('m') !default;
+$content-breakpoints: ('m') !default;
+
+$self-values: (
+  'start': start,
+  'end': end,
+  'stretch': stretch,
+  'center': center,
+) !default;
+$self-breakpoints: ('m') !default;
+
+$items-values: (
+  'start': start,
+  'end': end,
+  'stretch': stretch,
+  'center': center,
+) !default;
+$items-breakpoints: ('m') !default;
