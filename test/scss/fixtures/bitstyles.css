@@ -2390,6 +2390,58 @@ table {
     justify-content: flex-start;
   }
 }
+.u-justify-self-start {
+  justify-self: start;
+}
+.u-justify-self-end {
+  justify-self: end;
+}
+.u-justify-self-stretch {
+  justify-self: stretch;
+}
+.u-justify-self-center {
+  justify-self: center;
+}
+@media screen and (min-width: 30em) {
+  .u-justify-self-start\@m {
+    justify-self: start;
+  }
+  .u-justify-self-end\@m {
+    justify-self: end;
+  }
+  .u-justify-self-stretch\@m {
+    justify-self: stretch;
+  }
+  .u-justify-self-center\@m {
+    justify-self: center;
+  }
+}
+.u-justify-items-start {
+  justify-items: start;
+}
+.u-justify-items-end {
+  justify-items: end;
+}
+.u-justify-items-stretch {
+  justify-items: stretch;
+}
+.u-justify-items-center {
+  justify-items: center;
+}
+@media screen and (min-width: 30em) {
+  .u-justify-items-start\@m {
+    justify-items: start;
+  }
+  .u-justify-items-end\@m {
+    justify-items: end;
+  }
+  .u-justify-items-stretch\@m {
+    justify-items: stretch;
+  }
+  .u-justify-items-center\@m {
+    justify-items: center;
+  }
+}
 .u-line-height-1 {
   line-height: 1.29;
 }

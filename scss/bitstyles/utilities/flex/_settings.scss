@@ -1,17 +1,23 @@
-$direction: (
+$direction-values: (
   'col': column,
   'row': row,
 ) !default;
-$wrap: (
+$direction-breakpoints: ('m') !default;
+
+$wrap-values: (
   'wrap': wrap,
   'nowrap': nowrap,
 ) !default;
-$grow: (
+$wrap-breakpoints: ('m') !default;
+
+$grow-values: (
   '0': 0,
   '1': 1,
 ) !default;
-$shrink: (
+$grow-breakpoints: ('m') !default;
+
+$shrink-values: (
   '0': 0,
   '1': 1,
 ) !default;
-$breakpoints: ('m') !default;
+$shrink-breakpoints: ('m') !default;

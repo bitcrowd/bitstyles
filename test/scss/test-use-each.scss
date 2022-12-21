@@ -311,7 +311,7 @@
   )
 );
 @use '../../scss/bitstyles/utilities/flex' with (
-  $grow: (
+  $grow-values: (
     '100': 100,
   )
 );
@@ -342,7 +342,7 @@
   )
 );
 @use '../../scss/bitstyles/utilities/justify' with (
-  $values: (
+  $content-values: (
     'start': start,
   )
 );
