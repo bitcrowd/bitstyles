@@ -26,11 +26,13 @@
 - `<body>` is now given `height: stretch` instead of 100%. In all likelihood, this is what was intended by the previous declaration of `height: 100%`, so you shouldn’t need to change anything.
 - The variables for the `justify` utility class (which specifies `justify-content`) have been renamed to from `$values` to `$content-values`, and `$breakpoints` to `$content-breakpoints`. If you were overriding these variables, you’ll need to rename them.
 - The variables for the `utilities/flex` classes have been updated to match the pattern used by the `utilities/justify` classes. `$direction` becomes `$direction-values`, `$wrap` becomes `$wrap-values`, `$grow` becomes `$grow-values`, and `$shrink` becomes `$shrink-values`. The single `$breakpoints` variable has been broken out into individual variables for specifying breakpoints for each property: `$direction-breakpoints`, `$wrap-breakpoints`, `$grow-breakpoints`, and `$shrink-breakpoints`. If you were overriding any of these variables, you’ll need to rename them.
-- The following mixins have been moved from `tools/` to `mixins/`: aspect-ratio, clearfix, link, object-cover, truncate.
+- The following mixins have been moved from `tools/` to `mixins/`: `aspect-ratio`, `clearfix`, `link`, `object-cover`, `truncate`.
+- Removes the class `a-list-reset`. Replace uses of this class with `u-list-none`.
 
 ### Breaking
 
-- Removes the following mixins: list-reset, absolute-center, absolute-cover, break-text, icon, list-inline, sr-only, and vertical-center
+- Removes the following mixins: `list-reset`, `absolute-center`, `absolute-cover`, `break-text`, `icon`, `list-inline`, `sr-only`, and `vertical-center`.
+- All `ul` elements have their margins & padding removed. If you need that for some instances, use the `u-margin` or `u-padding` utility classes.
 
 ## [[5.0.0-alpha-1]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0-alpha) - 2022-09-12
 
