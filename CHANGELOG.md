@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+### Added
+
+- Adds utility classes for specifying `justify-self` and `justify-items`
+
+### Changed
+
+- The variables for the `justify` utility class (which specifies `justify-content`) have been renamed to from `$values` to `$content-values`, and `$breakpoints` to `$content-breakpoints`. If you were overriding these variables, you’ll need to rename them.
+- The variables for the `utilities/flex` classes have been updated to match the pattern used by the `utilities/justify` classes. `$direction` becomes `$direction-values`, `$wrap` becomes `$wrap-values`, `$grow` becomes `$grow-values`, and `$shrink` becomes `$shrink-values`. The single `$breakpoints` variable has been broken out into individual variables for specifying breakpoints for each property: `$direction-breakpoints`, `$wrap-breakpoints`, `$grow-breakpoints`, and `$shrink-breakpoints`. If you were overriding any of these variables, you’ll need to rename them.
+
 ### Fixed
 
 - Radios and checkboxes no longer get distorted when placed in a flex layout, and the sibling content has a min-content width larger than the available space
