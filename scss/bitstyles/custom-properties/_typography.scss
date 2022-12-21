@@ -1,0 +1,12 @@
+@use '../settings/typography';
+@use '../tools/custom-property';
+
+:root {
+  @each $font-size-name, $font-size in typography.$font-sizes {
+    #{custom-property.get($items: ('font-size', $font-size-name))}: #{$font-size};
+  }
+
+  @each $line-height-name, $line-height in typography.$line-heights {
+    #{custom-property.get($items: ('line-height', $line-height-name))}: #{$line-height};
+  }
+}

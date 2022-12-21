@@ -1,3 +1,127 @@
+:root {
+  --bs-transition-duration: 0.075s;
+  --bs-transition-duration-long: 0.5s;
+  --bs-transition-easing: ease-in-out;
+}
+:root {
+  --bs-breakpoint-s: screen and (max-width: 29.9375em);
+  --bs-breakpoint-m: screen and (min-width: 30em);
+  --bs-breakpoint-l: screen and (min-width: 55em);
+  --bs-breakpoint-xl: screen and (min-width: 95em);
+  --bs-breakpoint-hidpi: (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi), (min-resolution: 2dppx);
+  --bs-breakpoint-landscape: all and (orientation: landscape);
+  --bs-breakpoint-portrait: all and (orientation: portrait);
+  --bs-breakpoint-motion-ok: screen and (prefers-reduced-motion: no-preference);
+}
+:root {
+  --bs-color-brand-1-lighter: #f4f2ff;
+  --bs-color-brand-1-lighter-rgb: 244, 242, 255;
+  --bs-color-brand-1-light: #c8bfff;
+  --bs-color-brand-1-light-rgb: 200, 191, 255;
+  --bs-color-brand-1-base: #644dff;
+  --bs-color-brand-1-base-rgb: 100, 77, 255;
+  --bs-color-brand-1-dark: #1f00e6;
+  --bs-color-brand-1-dark-rgb: 31, 0, 230;
+  --bs-color-brand-1-darker: #0e0066;
+  --bs-color-brand-1-darker-rgb: 14, 0, 102;
+  --bs-color-brand-2-lighter: #e6fffe;
+  --bs-color-brand-2-lighter-rgb: 230, 255, 254;
+  --bs-color-brand-2-light: #b3fffb;
+  --bs-color-brand-2-light-rgb: 179, 255, 251;
+  --bs-color-brand-2-base: #33fff5;
+  --bs-color-brand-2-base-rgb: 51, 255, 245;
+  --bs-color-brand-2-dark: #00e6da;
+  --bs-color-brand-2-dark-rgb: 0, 230, 218;
+  --bs-color-brand-2-darker: #009991;
+  --bs-color-brand-2-darker-rgb: 0, 153, 145;
+  --bs-color-brand-2-darkest: #008079;
+  --bs-color-brand-2-darkest-rgb: 0, 128, 121;
+  --bs-color-text-lighter: #e6e5eb;
+  --bs-color-text-lighter-rgb: 230, 229, 235;
+  --bs-color-text-light: #d9d7e2;
+  --bs-color-text-light-rgb: 217, 215, 226;
+  --bs-color-text-base: #9995b1;
+  --bs-color-text-base-rgb: 153, 149, 177;
+  --bs-color-text-dark: #645f81;
+  --bs-color-text-dark-rgb: 100, 95, 129;
+  --bs-color-text-darker: #252430;
+  --bs-color-text-darker-rgb: 37, 36, 48;
+  --bs-color-background-base: #fff;
+  --bs-color-background-base-rgb: 255, 255, 255;
+  --bs-color-background-dark: #f2f2f5;
+  --bs-color-background-dark-rgb: 242, 242, 245;
+  --bs-color-background-darker: #e6e5eb;
+  --bs-color-background-darker-rgb: 230, 229, 235;
+  --bs-color-grayscale-white: #fff;
+  --bs-color-grayscale-white-rgb: 255, 255, 255;
+  --bs-color-grayscale-black: #000;
+  --bs-color-grayscale-black-rgb: 0, 0, 0;
+  --bs-color-danger-lighter: #fff2f4;
+  --bs-color-danger-lighter-rgb: 255, 242, 244;
+  --bs-color-danger-light: #ffbfc6;
+  --bs-color-danger-light-rgb: 255, 191, 198;
+  --bs-color-danger-base: #ff6676;
+  --bs-color-danger-base-rgb: 255, 102, 118;
+  --bs-color-danger-dark: #d90016;
+  --bs-color-danger-dark-rgb: 217, 0, 22;
+  --bs-color-danger-darker: #990010;
+  --bs-color-danger-darker-rgb: 153, 0, 16;
+  --bs-color-warning-lighter: #fff4e6;
+  --bs-color-warning-lighter-rgb: 255, 244, 230;
+  --bs-color-warning-light: #ffcb8c;
+  --bs-color-warning-light-rgb: 255, 203, 140;
+  --bs-color-warning-base: #ffa940;
+  --bs-color-warning-base-rgb: 255, 169, 64;
+  --bs-color-warning-dark: #ff8c00;
+  --bs-color-warning-dark-rgb: 255, 140, 0;
+  --bs-color-warning-darker: #a65b00;
+  --bs-color-warning-darker-rgb: 166, 91, 0;
+  --bs-color-positive-lighter: #d9fff0;
+  --bs-color-positive-lighter-rgb: 217, 255, 240;
+  --bs-color-positive-light: #73ffc9;
+  --bs-color-positive-light-rgb: 115, 255, 201;
+  --bs-color-positive-base: #00d985;
+  --bs-color-positive-base-rgb: 0, 217, 133;
+  --bs-color-positive-dark: #00995e;
+  --bs-color-positive-dark-rgb: 0, 153, 94;
+  --bs-color-positive-darker: #00663f;
+  --bs-color-positive-darker-rgb: 0, 102, 63;
+}
+:root {
+  --bs-size-0: 0;
+  --bs-size-3xs: 0.1rem;
+  --bs-size-2xs: 0.2rem;
+  --bs-size-xs: 0.4rem;
+  --bs-size-s: 0.6rem;
+  --bs-size-m: 0.8rem;
+  --bs-size-l: 1rem;
+  --bs-size-xl: 1.6rem;
+  --bs-size-2xl: 3.2rem;
+  --bs-size-3xl: 6.4rem;
+}
+:root {
+  --bs-shadow-default: drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem)
+    drop-shadow(rgba(200, 191, 255, 0.125) 0 0.6666666667rem 0.6666666667rem)
+    drop-shadow(rgba(200, 191, 255, 0.125) 0 1rem 1rem)
+    drop-shadow(rgba(200, 191, 255, 0.125) 0 2rem 2rem);
+}
+:root {
+  --bs-font-size-1: 0.8rem;
+  --bs-font-size-2: 1rem;
+  --bs-font-size-3: 1.25rem;
+  --bs-font-size-4: 1.45rem;
+  --bs-font-size-5: 1.7rem;
+  --bs-font-size-6: 2rem;
+  --bs-font-size-7: 3rem;
+  --bs-font-size-8: 4.8rem;
+  --bs-line-height-1: 1.2;
+  --bs-line-height-2: 1.29;
+  --bs-line-height-3: 1.33;
+  --bs-line-height-4: 1.43;
+  --bs-line-height-5: 1.5;
+  --bs-line-height-6: 1.67;
+}
 html {
   box-sizing: border-box;
   height: 100%;
@@ -714,42 +838,42 @@ table {
   margin-right: -0.6rem;
 }
 .a-badge--text {
-  --a-button-color: #645f81;
-  --a-button-background-color: #d9d7e2;
-  --a-button-color-hover: #d9d7e2;
-  --a-button-background-color-hover: #645f81;
+  --bs-a-button-color: #645f81;
+  --bs-a-button-background-color: #d9d7e2;
+  --bs-a-button-color-hover: #d9d7e2;
+  --bs-a-button-background-color-hover: #645f81;
   background-color: #d9d7e2;
   color: #645f81;
 }
 .a-badge--danger {
-  --a-button-color: #d90016;
-  --a-button-background-color: #ffbfc6;
-  --a-button-color-hover: #ffbfc6;
-  --a-button-background-color-hover: #d90016;
+  --bs-a-button-color: #d90016;
+  --bs-a-button-background-color: #ffbfc6;
+  --bs-a-button-color-hover: #ffbfc6;
+  --bs-a-button-background-color-hover: #d90016;
   background-color: #ffbfc6;
   color: #d90016;
 }
 .a-badge--brand-1 {
-  --a-button-color: #1f00e6;
-  --a-button-background-color: #c8bfff;
-  --a-button-color-hover: #c8bfff;
-  --a-button-background-color-hover: #1f00e6;
+  --bs-a-button-color: #1f00e6;
+  --bs-a-button-background-color: #c8bfff;
+  --bs-a-button-color-hover: #c8bfff;
+  --bs-a-button-background-color-hover: #1f00e6;
   background-color: #c8bfff;
   color: #1f00e6;
 }
 .a-badge--brand-2 {
-  --a-button-color: #00e6da;
-  --a-button-background-color: #b3fffb;
-  --a-button-color-hover: #b3fffb;
-  --a-button-background-color-hover: #00e6da;
+  --bs-a-button-color: #00e6da;
+  --bs-a-button-background-color: #b3fffb;
+  --bs-a-button-color-hover: #b3fffb;
+  --bs-a-button-background-color-hover: #00e6da;
   background-color: #b3fffb;
   color: #00e6da;
 }
 .a-badge--positive {
-  --a-button-color: #00995e;
-  --a-button-background-color: #73ffc9;
-  --a-button-color-hover: #73ffc9;
-  --a-button-background-color-hover: #00995e;
+  --bs-a-button-color: #00995e;
+  --bs-a-button-background-color: #73ffc9;
+  --bs-a-button-color-hover: #73ffc9;
+  --bs-a-button-background-color-hover: #00995e;
   background-color: #73ffc9;
   color: #00995e;
 }
@@ -896,17 +1020,17 @@ table {
 }
 .a-button--icon-reversed,
 .a-button--icon-reversed:visited {
-  background: var(--a-button-background-color, transparent);
+  background: var(--bs-a-button-background-color, transparent);
   border-color: transparent;
   box-shadow: none;
-  color: var(--a-button-color, #d9d7e2);
+  color: var(--bs-a-button-color, #d9d7e2);
 }
 .a-button--icon-reversed:focus,
 .a-button--icon-reversed:hover {
-  background: var(--a-button-background-color-hover, #9995b1);
+  background: var(--bs-a-button-background-color-hover, #9995b1);
   border-color: #9995b1;
   box-shadow: none;
-  color: var(--a-button-color-hover, #fff);
+  color: var(--bs-a-button-color-hover, #fff);
 }
 .a-button--icon-reversed:active {
   background: #9995b1;

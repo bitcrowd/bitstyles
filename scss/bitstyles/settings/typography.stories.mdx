@@ -198,6 +198,27 @@ With the default setup this will output:
 | ---------- | ------ | ------------------------- |
 | $font-size | string | The name of the font-size |
 
+## Using font-sizes and line-heights in CSS
+
+The font-size and line-height scales are also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
+
+```css
+--bs-font-size-1: 0.8rem;
+--bs-font-size-2: 1rem;
+--bs-font-size-3: 1.25rem;
+--bs-font-size-4: 1.45rem;
+--bs-font-size-5: 1.7rem;
+--bs-font-size-6: 2rem;
+--bs-font-size-7: 3rem;
+--bs-font-size-8: 4.8rem;
+--bs-line-height-1: 1.29;
+--bs-line-height-2: 1.2;
+--bs-line-height-3: 1.33;
+--bs-line-height-4: 1.5;
+--bs-line-height-5: 1.43;
+--bs-line-height-6: 1.67;
+```
+
 ## Webfonts
 
 The default webfont is Nunito. If you wish to keep using it, there’s nothing you need to do. See [customization](#customization) below for details on how to change this configuration.

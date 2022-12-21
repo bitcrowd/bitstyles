@@ -76,6 +76,7 @@
 );
 @use '../../scss/bitstyles/settings/setup' with (
   $namespace: 'bs',
+  $custom-property-namespace: 'bscpn',
   $layer-prefixes: (
     'atom': 'at',
     'molecule': 'mo',
@@ -114,6 +115,21 @@
 @use '../../scss/bitstyles/settings/link' as settings-link with (
   $color: #f00
 );
+
+//
+// Custom properties ////////////////////////////////////
+
+@use '../../scss/bitstyles/custom-properties/animation' as
+  custom-properties-animation;
+@use '../../scss/bitstyles/custom-properties/breakpoints' as
+  custom-properties-breakpoints;
+@use '../../scss/bitstyles/custom-properties/color-palette' as
+  custom-properties-color-palette;
+@use '../../scss/bitstyles/custom-properties/layout' as custom-properties-layout;
+@use '../../scss/bitstyles/custom-properties/shadows' as
+  custom-properties-shadows;
+@use '../../scss/bitstyles/custom-properties/typography' as
+  custom-properties-typography;
 
 //
 // Generic ////////////////////////////////////
