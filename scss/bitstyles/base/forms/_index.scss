@@ -1,6 +1,6 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/typography';
+@use '../../tools/line-height';
 @use '../../tools/size';
 
 /* stylelint-disable selector-max-type */
@@ -27,6 +27,6 @@ label {
 }
 
 [type='color'] {
-  height: calc(#{typography.$line-height-base * 1em} + #{size.get('s')});
+  height: calc(#{line-height.get('5') * 1em} + #{size.get('s')});
 }
 /* stylelint-enable selector-max-type */
