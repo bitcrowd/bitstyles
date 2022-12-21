@@ -1,22 +1,61 @@
 @forward 'settings';
 @use './settings';
 @use '../../tools/classname';
+@use '../../tools/custom-property';
 
 #{classname.get($classname-items: 'button--icon-reversed', $layer: 'atom')} {
   &,
   &:visited {
     border-color: settings.$border-color;
-    background: var(--button-bg, settings.$background-color);
+    background: var(
+      #{custom-property.get(
+          $items: (
+            'button',
+            'background-color',
+          ),
+          $layer: 'atom'
+        )},
+      settings.$background-color
+    );
     box-shadow: settings.$box-shadow;
-    color: var(--button-fg, settings.$color);
+    color: var(
+      #{custom-property.get(
+          $items: (
+            'button',
+            'color',
+          ),
+          $layer: 'atom'
+        )},
+      settings.$color
+    );
   }
 
   &:hover,
   &:focus {
     border-color: settings.$border-color-hover;
-    background: var(--button-bg-hover, settings.$background-color-hover);
+    background: var(
+      #{custom-property.get(
+          $items: (
+            'button',
+            'background-color',
+            'hover',
+          ),
+          $layer: 'atom'
+        )},
+      settings.$background-color-hover
+    );
     box-shadow: settings.$box-shadow-hover;
-    color: var(--button-fg-hover, settings.$color-hover);
+    color: var(
+      #{custom-property.get(
+          $items: (
+            'button',
+            'color',
+            'hover',
+          ),
+          $layer: 'atom'
+        )},
+      settings.$color-hover
+    );
   }
 
   &:active {

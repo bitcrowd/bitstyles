@@ -714,42 +714,42 @@ table {
   margin-right: -0.6rem;
 }
 .a-badge--text {
-  --button-fg: #645f81;
-  --button-bg: #d9d7e2;
-  --button-fg-hover: #d9d7e2;
-  --button-bg-hover: #645f81;
+  --a-button-color: #645f81;
+  --a-button-background-color: #d9d7e2;
+  --a-button-color-hover: #d9d7e2;
+  --a-button-background-color-hover: #645f81;
   background-color: #d9d7e2;
   color: #645f81;
 }
 .a-badge--danger {
-  --button-fg: #d90016;
-  --button-bg: #ffbfc6;
-  --button-fg-hover: #ffbfc6;
-  --button-bg-hover: #d90016;
+  --a-button-color: #d90016;
+  --a-button-background-color: #ffbfc6;
+  --a-button-color-hover: #ffbfc6;
+  --a-button-background-color-hover: #d90016;
   background-color: #ffbfc6;
   color: #d90016;
 }
 .a-badge--brand-1 {
-  --button-fg: #1f00e6;
-  --button-bg: #c8bfff;
-  --button-fg-hover: #c8bfff;
-  --button-bg-hover: #1f00e6;
+  --a-button-color: #1f00e6;
+  --a-button-background-color: #c8bfff;
+  --a-button-color-hover: #c8bfff;
+  --a-button-background-color-hover: #1f00e6;
   background-color: #c8bfff;
   color: #1f00e6;
 }
 .a-badge--brand-2 {
-  --button-fg: #00e6da;
-  --button-bg: #b3fffb;
-  --button-fg-hover: #b3fffb;
-  --button-bg-hover: #00e6da;
+  --a-button-color: #00e6da;
+  --a-button-background-color: #b3fffb;
+  --a-button-color-hover: #b3fffb;
+  --a-button-background-color-hover: #00e6da;
   background-color: #b3fffb;
   color: #00e6da;
 }
 .a-badge--positive {
-  --button-fg: #00995e;
-  --button-bg: #73ffc9;
-  --button-fg-hover: #73ffc9;
-  --button-bg-hover: #00995e;
+  --a-button-color: #00995e;
+  --a-button-background-color: #73ffc9;
+  --a-button-color-hover: #73ffc9;
+  --a-button-background-color-hover: #00995e;
   background-color: #73ffc9;
   color: #00995e;
 }
@@ -896,17 +896,17 @@ table {
 }
 .a-button--icon-reversed,
 .a-button--icon-reversed:visited {
-  background: var(--button-bg, transparent);
+  background: var(--a-button-background-color, transparent);
   border-color: transparent;
   box-shadow: none;
-  color: var(--button-fg, #d9d7e2);
+  color: var(--a-button-color, #d9d7e2);
 }
 .a-button--icon-reversed:focus,
 .a-button--icon-reversed:hover {
-  background: var(--button-bg-hover, #9995b1);
+  background: var(--a-button-background-color-hover, #9995b1);
   border-color: #9995b1;
   box-shadow: none;
-  color: var(--button-fg-hover, #fff);
+  color: var(--a-button-color-hover, #fff);
 }
 .a-button--icon-reversed:active {
   background: #9995b1;
