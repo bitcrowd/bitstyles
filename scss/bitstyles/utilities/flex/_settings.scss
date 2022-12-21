@@ -1,21 +1,25 @@
+/* flex-direction */
 $direction-values: (
   'col': column,
   'row': row,
 ) !default;
 $direction-breakpoints: ('m') !default;
 
+/* flex-wrap */
 $wrap-values: (
   'wrap': wrap,
   'nowrap': nowrap,
 ) !default;
 $wrap-breakpoints: ('m') !default;
 
+/* flex-grow */
 $grow-values: (
   '0': 0,
   '1': 1,
 ) !default;
 $grow-breakpoints: ('m') !default;
 
+/* flex-shrink */
 $shrink-values: (
   '0': 0,
   '1': 1,
