@@ -8,7 +8,7 @@
 
 ### Changed
 
-- Order of line-heights in `settings/typography.$line-heights` is now in order of size. If you were using the utility classes based on these values, line-heights `1` and `2` have swapped places, as have `4` and `5`.
+- Order of line-heights in `settings/typography.$line-heights` is now in order of size. If you were using the utility classes based on these values, line-heights `1` and `2` have swapped places, as have `4` and `5`. If you were using those values with `line-height.get()`, you’ll need to change the value you request to match. If you were using the utility classes `u-line-height`, you’ll need to rename `u-line-height-1` to `u-line-height-2`, `u-line-height-2` to `u-line-height-1`, `u-line-height-4` to `u-line-height-5`, and `u-line-height-5` to `u-line-height-4`.
 - `settings/typography.$line-height-base` has been removed. Use `tools/line-height.get('5')` instead.
 
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
