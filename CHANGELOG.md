@@ -6,6 +6,11 @@
 
 - Radios and checkboxes no longer get distorted when placed in a flex layout, and the sibling content has a min-content width larger than the available space
 
+### Changed
+
+- Order of line-heights in `settings/typography.$line-heights` is now in order of size. If you were using the utility classes based on these values, line-heights `1` and `2` have swapped places, as have `4` and `5`.
+- `settings/typography.$line-height-base` has been removed. Use `tools/line-height.get('5')` instead.
+
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
 
 ### Added
