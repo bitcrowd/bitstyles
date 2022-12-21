@@ -2,12 +2,13 @@
 @use './settings';
 @use '../../settings/layout';
 @use '../../tools/classname';
+@use '../../tools/custom-property';
 @use '../../tools/button';
 @use '../button/settings' as button-settings;
 
 #{classname.get($classname-items: 'button--tab-container', $layer: 'atom')} {
   & > *:first-child {
-    margin-left: -(var(--button-padding-horizontal));
+    margin-left: -(var(#{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')}));
   }
 }
 
@@ -21,9 +22,9 @@
     &::after {
       content: '';
       position: absolute;
-      right: var(--button-padding-horizontal);
+      right: var(#{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')});
       bottom: 0;
-      left: var(--button-padding-horizontal);
+      left: var(#{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')});
       height: settings.$border-width;
       transition: settings.$indicator-transition;
       border-radius: layout.$border-radius-round;

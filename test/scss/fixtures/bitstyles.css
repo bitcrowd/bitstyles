@@ -53,10 +53,22 @@
   --bs-color-background-dark-rgb: 242, 242, 245;
   --bs-color-background-darker: #e6e5eb;
   --bs-color-background-darker-rgb: 230, 229, 235;
+  --bs-color-background-darkest: #3e3c51;
+  --bs-color-background-darkest-rgb: 62, 60, 81;
   --bs-color-grayscale-white: #fff;
   --bs-color-grayscale-white-rgb: 255, 255, 255;
   --bs-color-grayscale-black: #000;
   --bs-color-grayscale-black-rgb: 0, 0, 0;
+  --bs-color-accent-gray-lighter: #f9f8fa;
+  --bs-color-accent-gray-lighter-rgb: 249, 248, 250;
+  --bs-color-accent-gray-light: #e6e5eb;
+  --bs-color-accent-gray-light-rgb: 230, 229, 235;
+  --bs-color-accent-gray-base: #8c88a7;
+  --bs-color-accent-gray-base-rgb: 140, 136, 167;
+  --bs-color-accent-gray-dark: #6a6589;
+  --bs-color-accent-gray-dark-rgb: 106, 101, 137;
+  --bs-color-accent-gray-darker: #2c2a38;
+  --bs-color-accent-gray-darker-rgb: 44, 42, 56;
   --bs-color-danger-lighter: #fff2f4;
   --bs-color-danger-lighter-rgb: 255, 242, 244;
   --bs-color-danger-light: #ffbfc6;
@@ -90,7 +102,8 @@
 }
 :root {
   --bs-size-0: 0;
-  --bs-size-3xs: 0.1rem;
+  --bs-size-4xs: 0.1rem;
+  --bs-size-3xs: 0.1333333333rem;
   --bs-size-2xs: 0.2rem;
   --bs-size-xs: 0.4rem;
   --bs-size-s: 0.6rem;
@@ -98,7 +111,8 @@
   --bs-size-l: 1rem;
   --bs-size-xl: 1.6rem;
   --bs-size-2xl: 3.2rem;
-  --bs-size-3xl: 6.4rem;
+  --bs-size-3xl: 4.8rem;
+  --bs-size-4xl: 6.4rem;
 }
 :root {
   --bs-shadow-default: drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem)
@@ -897,34 +911,35 @@ table {
   content: '';
 }
 .a-button {
-  --button-transition: color 0.075s ease-in-out,
+  --bs-a-button-transition: color 0.075s ease-in-out,
     background-color 0.075s ease-in-out, border 0.075s ease-in-out,
     box-shadow 0.075s ease-in-out;
-  --button-justify-content: center;
+  --bs-a-button-justify-content: center;
   align-items: center;
   -webkit-appearance: none;
-  border-radius: var(--button-border-radius);
+  border-radius: var(--bs-a-button-border-radius);
   border-style: solid;
-  border-width: var(--button-border-width);
+  border-width: var(--bs-a-button-border-width);
   box-sizing: content-box;
   cursor: pointer;
   display: flex;
   flex-shrink: 0;
   font-family: inherit;
-  font-size: var(--button-font-size);
-  font-weight: var(--button-font-weight);
-  justify-content: var(--button-justify-content);
+  font-size: var(--bs-a-button-font-size);
+  font-weight: var(--bs-a-button-font-weight);
+  justify-content: var(--bs-a-button-justify-content);
   margin: 0;
   max-width: 100%;
-  min-height: var(--button-min-height);
-  min-width: var(--button-min-width);
+  min-height: var(--bs-a-button-min-height);
+  min-width: var(--bs-a-button-min-width);
   overflow: visible;
-  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  padding: var(--bs-a-button-padding-vertical)
+    var(--bs-a-button-padding-horizontal);
   position: relative;
   text-align: center;
   text-decoration: none;
   touch-action: manipulation;
-  transition: var(--button-transition);
+  transition: var(--bs-a-button-transition);
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -932,10 +947,10 @@ table {
 }
 .a-button,
 .a-button:visited {
-  background-color: var(--button-background-color);
-  border-color: var(--button-border-color);
-  box-shadow: var(--button-box-shadow);
-  color: var(--button-color);
+  background-color: var(--bs-a-button-background-color);
+  border-color: var(--bs-a-button-border-color);
+  box-shadow: var(--bs-a-button-box-shadow);
+  color: var(--bs-a-button-color);
 }
 .a-button:focus,
 .a-button:hover {
@@ -961,43 +976,47 @@ table {
 }
 .a-button,
 .a-button:visited {
-  --button-color: var(--color-grayscale-white);
-  --button-background-color: var(--color-brand-1-base);
-  --button-border-color: var(--color-brand-1-base);
-  --button-box-shadow: 0 0 0.2rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.2666666667rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.4rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.8rem rgba(var(--color-brand-1-base-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-grayscale-white);
+  --bs-a-button-background-color: var(--bs-color-brand-1-base);
+  --bs-a-button-border-color: var(--bs-color-brand-1-base);
+  --bs-a-button-box-shadow: 0 0 0.2rem
+      rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.2666666667rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.8rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
 }
 .a-button:focus,
 .a-button:hover {
-  --button-color: var(--color-brand-1-dark);
-  --button-background-color: var(--color-brand-1-light);
-  --button-border-color: var(--color-brand-1-light);
-  --button-box-shadow: 0 0 0.25rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.3333333333rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.5rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 1rem rgba(var(--color-brand-1-base-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-brand-1-dark);
+  --bs-a-button-background-color: var(--bs-color-brand-1-light);
+  --bs-a-button-border-color: var(--bs-color-brand-1-light);
+  --bs-a-button-box-shadow: 0 0 0.25rem
+      rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.3333333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.5rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 1rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
 }
 .a-button:active {
-  --button-color: var(--color-grayscale-white);
-  --button-background-color: var(--color-brand-1-base);
-  --button-border-color: var(--color-brand-1-base);
-  --button-box-shadow: 0 0 0.1rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.2rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.4rem rgba(var(--color-brand-1-base-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-grayscale-white);
+  --bs-a-button-background-color: var(--bs-color-brand-1-base);
+  --bs-a-button-border-color: var(--bs-color-brand-1-base);
+  --bs-a-button-box-shadow: 0 0 0.1rem
+      rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
 }
 .a-button[aria-current],
 .a-button[aria-pressed='true'],
 .a-button[aria-selected='true'] {
-  --button-color: var(--color-grayscale-white);
-  --button-background-color: var(--color-brand-1-dark);
-  --button-border-color: var(--color-brand-1-dark);
-  --button-box-shadow: 0 0 0.1rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.2rem rgba(var(--color-brand-1-base-rgb), 0.075),
-    0 0 0.4rem rgba(var(--color-brand-1-base-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-grayscale-white);
+  --bs-a-button-background-color: var(--bs-color-brand-1-dark);
+  --bs-a-button-border-color: var(--bs-color-brand-1-dark);
+  --bs-a-button-box-shadow: 0 0 0.1rem
+      rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
 }
 .a-button:disabled,
 .a-button:disabled:focus,
@@ -1005,51 +1024,54 @@ table {
 .a-button[aria-disabled='true'],
 .a-button[aria-disabled='true']:focus,
 .a-button[aria-disabled='true']:hover {
-  --button-color: var(--color-accent-gray-base);
-  --button-background-color: var(--color-accent-gray-light);
-  --button-border-color: var(--color-accent-gray-light);
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-accent-gray-base);
+  --bs-a-button-background-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-border-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-box-shadow: none;
 }
 .a-button--secondary,
 .a-button--secondary:visited {
-  --button-color: var(--color-accent-gray-darker);
-  --button-background-color: var(--color-accent-gray-light);
-  --button-border-color: var(--color-accent-gray-light);
-  --button-box-shadow: 0 0 0.2rem
-      rgba(var(--color-accent-gray-light-rgb), 0.075),
-    0 0 0.2666666667rem rgba(var(--color-accent-gray-light-rgb), 0.075),
-    0 0 0.4rem rgba(var(--color-accent-gray-light-rgb), 0.075),
-    0 0 0.8rem rgba(var(--color-accent-gray-light-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-accent-gray-darker);
+  --bs-a-button-background-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-border-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-box-shadow: 0 0 0.2rem
+      rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
+    0 0 0.2666666667rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
+    0 0 0.8rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075);
 }
 .a-button--secondary:focus,
 .a-button--secondary:hover {
-  --button-color: var(--color-accent-gray-darker);
-  --button-background-color: var(--color-brand-1-light);
-  --button-border-color: var(--color-brand-1-light);
-  --button-box-shadow: 0 0 0.25rem rgba(var(--color-brand-1-light-rgb), 0.075),
-    0 0 0.3333333333rem rgba(var(--color-brand-1-light-rgb), 0.075),
-    0 0 0.5rem rgba(var(--color-brand-1-light-rgb), 0.075),
-    0 0 1rem rgba(var(--color-brand-1-light-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-accent-gray-darker);
+  --bs-a-button-background-color: var(--bs-color-brand-1-light);
+  --bs-a-button-border-color: var(--bs-color-brand-1-light);
+  --bs-a-button-box-shadow: 0 0 0.25rem
+      rgba(var(--bs-color-brand-1-light-rgb), 0.075),
+    0 0 0.3333333333rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
+    0 0 0.5rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
+    0 0 1rem rgba(var(--bs-color-brand-1-light-rgb), 0.075);
 }
 .a-button--secondary:active {
-  --button-color: var(--color-brand-1-dark);
-  --button-background-color: var(--color-brand-1-light);
-  --button-border-color: var(--color-brand-1-light);
-  --button-box-shadow: 0 0 0.1rem rgba(var(--color-brand-1-light-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--color-brand-1-light-rgb), 0.075),
-    0 0 0.2rem rgba(var(--color-brand-1-light-rgb), 0.075),
-    0 0 0.4rem rgba(var(--color-brand-1-light-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-brand-1-dark);
+  --bs-a-button-background-color: var(--bs-color-brand-1-light);
+  --bs-a-button-border-color: var(--bs-color-brand-1-light);
+  --bs-a-button-box-shadow: 0 0 0.1rem
+      rgba(var(--bs-color-brand-1-light-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-brand-1-light-rgb), 0.075);
 }
 .a-button--secondary[aria-current],
 .a-button--secondary[aria-pressed='true'],
 .a-button--secondary[aria-selected='true'] {
-  --button-color: var(--color-brand-1-base);
-  --button-background-color: var(--color-brand-1-light);
-  --button-border-color: var(--color-brand-1-light);
-  --button-box-shadow: 0 0 0.1rem rgba(var(--color-brand-1-light-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--color-brand-1-light-rgb), 0.075),
-    0 0 0.2rem rgba(var(--color-brand-1-light-rgb), 0.075),
-    0 0 0.4rem rgba(var(--color-brand-1-light-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-brand-1-base);
+  --bs-a-button-background-color: var(--bs-color-brand-1-light);
+  --bs-a-button-border-color: var(--bs-color-brand-1-light);
+  --bs-a-button-box-shadow: 0 0 0.1rem
+      rgba(var(--bs-color-brand-1-light-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-brand-1-light-rgb), 0.075);
 }
 .a-button--secondary:disabled,
 .a-button--secondary:disabled:focus,
@@ -1057,46 +1079,46 @@ table {
 .a-button--secondary[aria-disabled='true'],
 .a-button--secondary[aria-disabled='true']:focus,
 .a-button--secondary[aria-disabled='true']:hover {
-  --button-color: var(--color-accent-gray-base);
-  --button-background-color: var(--color-accent-gray-light);
-  --button-border-color: var(--color-accent-gray-light);
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-accent-gray-base);
+  --bs-a-button-background-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-border-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-box-shadow: none;
 }
 .a-button--transparent,
 .a-button--transparent:visited {
-  --button-color: var(--color-accent-gray-base);
-  --button-background-color: transparent;
-  --button-border-color: transparent;
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-accent-gray-base);
+  --bs-a-button-background-color: transparent;
+  --bs-a-button-border-color: transparent;
+  --bs-a-button-box-shadow: none;
 }
 .a-button--transparent:focus,
 .a-button--transparent:hover {
-  --button-color: var(--color-brand-1-base);
-  --button-background-color: transparent;
-  --button-border-color: transparent;
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-brand-1-base);
+  --bs-a-button-background-color: transparent;
+  --bs-a-button-border-color: transparent;
+  --bs-a-button-box-shadow: none;
 }
 .a-button--transparent:active {
-  --button-color: var(--color-brand-1-base);
-  --button-background-color: var(--color-accent-gray-lighter);
-  --button-border-color: var(--color-accent-gray-lighter);
-  --button-box-shadow: 0 0 0.1rem
-      rgba(var(--color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.2rem rgba(var(--color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.4rem rgba(var(--color-accent-gray-lighter-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-brand-1-base);
+  --bs-a-button-background-color: var(--bs-color-accent-gray-lighter);
+  --bs-a-button-border-color: var(--bs-color-accent-gray-lighter);
+  --bs-a-button-box-shadow: 0 0 0.1rem
+      rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075);
 }
 .a-button--transparent[aria-current],
 .a-button--transparent[aria-pressed='true'],
 .a-button--transparent[aria-selected='true'] {
-  --button-color: var(--color-brand-1-dark);
-  --button-background-color: var(--color-accent-gray-light);
-  --button-border-color: var(--color-accent-gray-light);
-  --button-box-shadow: 0 0 0.1rem
-      rgba(var(--color-accent-gray-light-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--color-accent-gray-light-rgb), 0.075),
-    0 0 0.2rem rgba(var(--color-accent-gray-light-rgb), 0.075),
-    0 0 0.4rem rgba(var(--color-accent-gray-light-rgb), 0.075);
+  --bs-a-button-color: var(--bs-color-brand-1-dark);
+  --bs-a-button-background-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-border-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-box-shadow: 0 0 0.1rem
+      rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075);
 }
 .a-button--transparent:disabled,
 .a-button--transparent:disabled:focus,
@@ -1104,38 +1126,38 @@ table {
 .a-button--transparent[aria-disabled='true'],
 .a-button--transparent[aria-disabled='true']:focus,
 .a-button--transparent[aria-disabled='true']:hover {
-  --button-color: var(--color-accent-gray-base);
-  --button-background-color: var(--color-accent-gray-light);
-  --button-border-color: var(--color-accent-gray-light);
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-accent-gray-base);
+  --bs-a-button-background-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-border-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-box-shadow: none;
 }
 .a-button--tab,
 .a-button--tab:visited {
-  --button-color: var(--color-text-darker);
-  --button-background-color: transparent;
-  --button-border-color: transparent;
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-text-darker);
+  --bs-a-button-background-color: transparent;
+  --bs-a-button-border-color: transparent;
+  --bs-a-button-box-shadow: none;
 }
 .a-button--tab:focus,
 .a-button--tab:hover {
-  --button-color: var(--color-brand-1-base);
-  --button-background-color: transparent;
-  --button-border-color: transparent;
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-brand-1-base);
+  --bs-a-button-background-color: transparent;
+  --bs-a-button-border-color: transparent;
+  --bs-a-button-box-shadow: none;
 }
 .a-button--tab:active {
-  --button-color: var(--color-brand-1-dark);
-  --button-background-color: transparent;
-  --button-border-color: transparent;
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-brand-1-dark);
+  --bs-a-button-background-color: transparent;
+  --bs-a-button-border-color: transparent;
+  --bs-a-button-box-shadow: none;
 }
 .a-button--tab[aria-current],
 .a-button--tab[aria-pressed='true'],
 .a-button--tab[aria-selected='true'] {
-  --button-color: var(--color-brand-1-darker);
-  --button-background-color: transparent;
-  --button-border-color: transparent;
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-brand-1-darker);
+  --bs-a-button-background-color: transparent;
+  --bs-a-button-border-color: transparent;
+  --bs-a-button-box-shadow: none;
 }
 .a-button--tab:disabled,
 .a-button--tab:disabled:focus,
@@ -1143,83 +1165,83 @@ table {
 .a-button--tab[aria-disabled='true'],
 .a-button--tab[aria-disabled='true']:focus,
 .a-button--tab[aria-disabled='true']:hover {
-  --button-color: var(--color-accent-gray-light);
-  --button-background-color: transparent;
-  --button-border-color: transparent;
-  --button-box-shadow: none;
+  --bs-a-button-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-background-color: transparent;
+  --bs-a-button-border-color: transparent;
+  --bs-a-button-box-shadow: none;
 }
 .a-button--danger:focus,
 .a-button--danger:hover {
-  --button-color: var(--color-grayscale-white);
-  --button-background-color: var(--color-danger-base);
-  --button-border-color: var(--color-danger-base);
-  --button-box-shadow: 0 0 0.1rem rgba(var(--color-danger-base), 0.075),
-    0 0 0.1333333333rem rgba(var(--color-danger-base), 0.075),
-    0 0 0.2rem rgba(var(--color-danger-base), 0.075),
-    0 0 0.4rem rgba(var(--color-danger-base), 0.075);
+  --bs-a-button-color: var(--bs-color-grayscale-white);
+  --bs-a-button-background-color: var(--bs-color-danger-base);
+  --bs-a-button-border-color: var(--bs-color-danger-base);
+  --bs-a-button-box-shadow: 0 0 0.1rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-danger-base), 0.075);
 }
 .a-button--danger:active {
-  --button-color: var(--color-grayscale-white);
-  --button-background-color: var(--color-danger-dark);
-  --button-border-color: var(--color-danger-dark);
-  --button-box-shadow: 0 0 0.1rem rgba(var(--color-danger-base), 0.075),
-    0 0 0.1333333333rem rgba(var(--color-danger-base), 0.075),
-    0 0 0.2rem rgba(var(--color-danger-base), 0.075),
-    0 0 0.4rem rgba(var(--color-danger-base), 0.075);
+  --bs-a-button-color: var(--bs-color-grayscale-white);
+  --bs-a-button-background-color: var(--bs-color-danger-dark);
+  --bs-a-button-border-color: var(--bs-color-danger-dark);
+  --bs-a-button-box-shadow: 0 0 0.1rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-danger-base), 0.075);
 }
 .a-button {
-  --button-padding-vertical: 0.4rem;
-  --button-padding-horizontal: 1rem;
-  --button-border-width: 0.1333333333rem;
-  --button-border-radius: 0.4rem;
-  --button-min-height: 1em;
-  --button-min-width: 0;
-  --button-font-size: 1rem;
-  --button-font-weight: 400;
+  --bs-a-button-padding-vertical: 0.4rem;
+  --bs-a-button-padding-horizontal: 1rem;
+  --bs-a-button-border-width: 0.1333333333rem;
+  --bs-a-button-border-radius: 0.4rem;
+  --bs-a-button-min-height: 1em;
+  --bs-a-button-min-width: 0;
+  --bs-a-button-font-size: 1rem;
+  --bs-a-button-font-weight: 400;
 }
 .a-button.a-button--square {
-  --button-min-width: 1.5em;
-  --button-min-height: 1.5em;
-  --button-padding-horizontal: 0.4rem;
-  --button-padding-vertical: 0.4rem;
+  --bs-a-button-min-width: 1.5em;
+  --bs-a-button-min-height: 1.5em;
+  --bs-a-button-padding-horizontal: 0.4rem;
+  --bs-a-button-padding-vertical: 0.4rem;
 }
 .a-button--small {
-  --button-padding-vertical: 0;
-  --button-padding-horizontal: 0.8rem;
-  --button-border-radius: 0.2rem;
-  --button-min-height: 1rem;
-  --button-min-width: 1rem;
-  --button-font-size: 0.8rem;
+  --bs-a-button-padding-vertical: 0;
+  --bs-a-button-padding-horizontal: 0.8rem;
+  --bs-a-button-border-radius: 0.2rem;
+  --bs-a-button-min-height: 1rem;
+  --bs-a-button-min-width: 1rem;
+  --bs-a-button-font-size: 0.8rem;
 }
 .a-button--small.a-button--square {
-  --button-min-width: 1.5em;
-  --button-min-height: 1.5em;
-  --button-padding-horizontal: 0;
-  --button-padding-vertical: 0;
+  --bs-a-button-min-width: 1.5em;
+  --bs-a-button-min-height: 1.5em;
+  --bs-a-button-padding-horizontal: 0;
+  --bs-a-button-padding-vertical: 0;
 }
 .a-button--large {
-  --button-padding-vertical: 0.6rem;
-  --button-padding-horizontal: 1.6rem;
-  --button-font-size: 1rem;
+  --bs-a-button-padding-vertical: 0.6rem;
+  --bs-a-button-padding-horizontal: 1.6rem;
+  --bs-a-button-font-size: 1rem;
 }
 .a-button--large.a-button--square {
-  --button-min-width: 1.5em;
-  --button-min-height: 1.5em;
-  --button-padding-horizontal: 0.6rem;
-  --button-padding-vertical: 0.6rem;
+  --bs-a-button-min-width: 1.5em;
+  --bs-a-button-min-height: 1.5em;
+  --bs-a-button-padding-horizontal: 0.6rem;
+  --bs-a-button-padding-vertical: 0.6rem;
 }
 .a-button--menu {
-  --button-justify-content: flex-start;
+  --bs-a-button-justify-content: flex-start;
 }
 .a-button--square {
-  --button-padding-vertical: 0.7333333333rem;
-  --button-padding-horizontal: 0.7333333333rem;
+  --bs-a-button-padding-vertical: 0.7333333333rem;
+  --bs-a-button-padding-horizontal: 0.7333333333rem;
 }
 .a-button--round {
-  --button-border-radius: 9999rem;
+  --bs-a-button-border-radius: 9999rem;
 }
 .a-button--tab-container > :first-child {
-  margin-left: -var(--button-padding-horizontal);
+  margin-left: -var(--bs-a-button-padding-horizontal);
 }
 .a-button--tab {
   border: 0;
@@ -1233,21 +1255,21 @@ table {
   bottom: 0;
   content: '';
   height: 0.2rem;
-  left: var(--button-padding-horizontal);
+  left: var(--bs-a-button-padding-horizontal);
   position: absolute;
-  right: var(--button-padding-horizontal);
+  right: var(--bs-a-button-padding-horizontal);
   transition: background-color 75ms ease-in-out;
 }
 .a-button--tab:focus:after,
 .a-button--tab:hover:after {
-  background-color: var(--color-brand-1-base);
+  background-color: var(--bs-color-brand-1-base);
 }
 .a-button--tab:active:after {
-  background-color: var(--color-brand-1-base);
+  background-color: var(--bs-color-brand-1-base);
 }
 .a-button--tab[aria-current]:after,
 .a-button--tab[aria-selected='true']:after {
-  background-color: var(--color-brand-1-base);
+  background-color: var(--bs-color-brand-1-base);
 }
 .a-button--tab:disabled:after,
 .a-button--tab:disabled:focus:after,

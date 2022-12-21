@@ -1,4 +1,5 @@
 @use '../../settings/animation';
+@use '../../tools/custom-property';
 @use '../../tools/palette';
 @use '../../tools/size';
 
@@ -16,7 +17,31 @@ $indicator-transition: background-color animation.$transition-duration
 // Indicator colors ////////////////////////////////////////
 
 $indicator-color: transparent !default;
-$indicator-color-hover: var(--color-brand-1-base) !default;
-$indicator-color-active: var(--color-brand-1-base) !default;
-$indicator-color-pressed: var(--color-brand-1-base) !default;
+$indicator-color-hover: var(
+  #{custom-property.get(
+      $items: (
+        'color',
+        'brand-1',
+        'base',
+      ),
+    )}
+) !default;
+$indicator-color-active: var(
+  #{custom-property.get(
+      $items: (
+        'color',
+        'brand-1',
+        'base',
+      ),
+    )}
+) !default;
+$indicator-color-pressed: var(
+  #{custom-property.get(
+      $items: (
+        'color',
+        'brand-1',
+        'base',
+      ),
+    )}
+) !default;
 $indicator-color-disabled: transparent !default;

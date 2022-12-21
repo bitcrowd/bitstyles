@@ -128,7 +128,8 @@ $bitstyles-bordered-header-gutter: 10rem;
 $bitstyles-button-transition: none;
 $bitstyles-button-colors-default: (
   'default': (
-    'color': var(--color-grayscale-white),
+    'color':
+      var(--bscpn-color-grayscale-white),
   ),
 );
 $bitstyles-button-tab-indicator-color: #f00;
@@ -303,7 +304,6 @@ $bitstyles-z-index-values: (
 //
 // Generic ////////////////////////////////////
 
-@import '../../scss/bitstyles/generic/custom-properties';
 @import '../../scss/bitstyles/generic/box-sizing';
 @import '../../scss/bitstyles/generic/normalize';
 @import '../../scss/bitstyles/generic/reset';

@@ -1,159 +1,649 @@
+@use '../../tools/custom-property';
 @use '../../tools/shadow';
 @use '../../tools/size';
 
 $default: (
   'default': (
-    'color': var(--color-grayscale-white),
-    'background-color': var(--color-brand-1-base),
-    'border-color': var(--color-brand-1-base),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'grayscale',
+              'white',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'base',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'base',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-brand-1-base-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'brand-1',
+                      'base',
+                    ),
+                  )}-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('m'),
         )
       ),
   ),
   'hover': (
-    'color': var(--color-brand-1-dark),
-    'background-color': var(--color-brand-1-light),
-    'border-color': var(--color-brand-1-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'dark',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'light',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'light',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-brand-1-base-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'brand-1',
+                      'base',
+                    ),
+                  )}-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('l'),
         )
       ),
   ),
   'active': (
-    'color': var(--color-grayscale-white),
-    'background-color': var(--color-brand-1-base),
-    'border-color': var(--color-brand-1-base),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'grayscale',
+              'white',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'base',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'base',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-brand-1-base-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'brand-1',
+                      'base',
+                    ),
+                  )}-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('xs'),
         )
       ),
   ),
   'pressed': (
-    'color': var(--color-grayscale-white),
-    'background-color': var(--color-brand-1-dark),
-    'border-color': var(--color-brand-1-dark),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'grayscale',
+              'white',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'dark',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'dark',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-brand-1-base-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'brand-1',
+                      'base',
+                    ),
+                  )}-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('xs'),
         )
       ),
   ),
   'disabled': (
-    'color': var(--color-accent-gray-base),
-    'background-color': var(--color-accent-gray-light),
-    'border-color': var(--color-accent-gray-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'base',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
     'box-shadow': none,
   ),
 ) !default;
 $secondary: (
   'default': (
-    'color': var(--color-accent-gray-darker),
-    'background-color': var(--color-accent-gray-light),
-    'border-color': var(--color-accent-gray-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'darker',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-accent-gray-light-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'accent-gray',
+                      'light',
+                    ),
+                  )}-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('m'),
         )
       ),
   ),
   'hover': (
-    'color': var(--color-accent-gray-darker),
-    'background-color': var(--color-brand-1-light),
-    'border-color': var(--color-brand-1-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'darker',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'light',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'light',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-brand-1-light-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'brand-1',
+                      'light',
+                    ),
+                  )}-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('l'),
         )
       ),
   ),
   'active': (
-    'color': var(--color-brand-1-dark),
-    'background-color': var(--color-brand-1-light),
-    'border-color': var(--color-brand-1-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'dark',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'light',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'light',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-brand-1-light-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'brand-1',
+                      'light',
+                    ),
+                  )}-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('xs'),
         )
       ),
   ),
   'pressed': (
-    'color': var(--color-brand-1-base),
-    'background-color': var(--color-brand-1-light),
-    'border-color': var(--color-brand-1-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'base',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'light',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'light',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-brand-1-light-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'brand-1',
+                      'light',
+                    ),
+                  )}-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('xs'),
         )
       ),
   ),
   'disabled': (
-    'color': var(--color-accent-gray-base),
-    'background-color': var(--color-accent-gray-light),
-    'border-color': var(--color-accent-gray-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'base',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
     'box-shadow': none,
   ),
 ) !default;
 $transparent: (
   'default': (
-    'color': var(--color-accent-gray-base),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'base',
+            ),
+          )}
+      ),
     'background-color': transparent,
     'border-color': transparent,
     'box-shadow': none,
   ),
   'hover': (
-    'color': var(--color-brand-1-base),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'base',
+            ),
+          )}
+      ),
     'background-color': transparent,
     'border-color': transparent,
     'box-shadow': none,
   ),
   'active': (
-    'color': var(--color-brand-1-base),
-    'background-color': var(--color-accent-gray-lighter),
-    'border-color': var(--color-accent-gray-lighter),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'base',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}er
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}er
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-accent-gray-lighter-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'accent-gray',
+                      'light',
+                    ),
+                  )}er-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('xs'),
         )
       ),
   ),
   'pressed': (
-    'color': var(--color-brand-1-dark),
-    'background-color': var(--color-accent-gray-light),
-    'border-color': var(--color-accent-gray-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'dark',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-accent-gray-light-rgb), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'accent-gray',
+                      'light',
+                    ),
+                  )}-rgb
+              ),
+              0.075
+            ),
           $blur-radius: size.get('xs'),
         )
       ),
   ),
   'disabled': (
-    'color': var(--color-accent-gray-base),
-    'background-color': var(--color-accent-gray-light),
-    'border-color': var(--color-accent-gray-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'base',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
     'box-shadow': none,
   ),
 ) !default;
@@ -162,54 +652,177 @@ $tab: (
     'border-color': transparent,
     'background-color': transparent,
     'box-shadow': none,
-    'color': var(--color-text-darker),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'text',
+              'darker',
+            ),
+          )}
+      ),
   ),
   'hover': (
     'border-color': transparent,
     'background-color': transparent,
     'box-shadow': none,
-    'color': var(--color-brand-1-base),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'base',
+            ),
+          )}
+      ),
   ),
   'active': (
     'border-color': transparent,
     'background-color': transparent,
     'box-shadow': none,
-    'color': var(--color-brand-1-dark),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'dark',
+            ),
+          )}
+      ),
   ),
   'pressed': (
     'border-color': transparent,
     'background-color': transparent,
     'box-shadow': none,
-    'color': var(--color-brand-1-darker),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'brand-1',
+              'dark',
+            ),
+          )}er
+      ),
   ),
   'disabled': (
     'border-color': transparent,
     'background-color': transparent,
     'box-shadow': none,
-    'color': var(--color-accent-gray-light),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'accent-gray',
+              'light',
+            ),
+          )}
+      ),
   ),
 ) !default;
 $danger: (
   'hover': (
-    'color': var(--color-grayscale-white),
-    'background-color': var(--color-danger-base),
-    'border-color': var(--color-danger-base),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'grayscale',
+              'white',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'danger',
+              'base',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'danger',
+              'base',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-danger-base), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'danger',
+                      'base',
+                    ),
+                  )}
+              ),
+              0.075
+            ),
           $blur-radius: size.get('xs'),
         )
       ),
   ),
   'active': (
-    'color': var(--color-grayscale-white),
-    'background-color': var(--color-danger-dark),
-    'border-color': var(--color-danger-dark),
+    'color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'grayscale',
+              'white',
+            ),
+          )}
+      ),
+    'background-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'danger',
+              'dark',
+            ),
+          )}
+      ),
+    'border-color':
+      var(
+        #{custom-property.get(
+            $items: (
+              'color',
+              'danger',
+              'dark',
+            ),
+          )}
+      ),
     'box-shadow':
       shadow.to-box-shadow(
         shadow.generate(
-          $color: rgba(var(--color-danger-base), 0.075),
+          $color:
+            rgba(
+              var(
+                #{custom-property.get(
+                    $items: (
+                      'color',
+                      'danger',
+                      'base',
+                    ),
+                  )}
+              ),
+              0.075
+            ),
           $blur-radius: size.get('xs'),
         )
       ),

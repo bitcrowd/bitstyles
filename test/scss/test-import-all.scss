@@ -128,7 +128,8 @@ $bitstyles-bordered-header-gutter: 10rem;
 $bitstyles-button-transition: none;
 $bitstyles-button-colors-default: (
   'default': (
-    'color': var(--color-grayscale-white),
+    'color':
+      var(--bscpn-color-grayscale-white),
   ),
 );
 $bitstyles-button-tab-indicator-color: #f00;

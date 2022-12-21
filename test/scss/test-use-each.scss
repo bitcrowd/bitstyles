@@ -134,7 +134,6 @@
 //
 // Generic ////////////////////////////////////
 
-@use '../../scss/bitstyles/generic/custom-properties';
 @use '../../scss/bitstyles/generic/box-sizing';
 @use '../../scss/bitstyles/generic/normalize';
 @use '../../scss/bitstyles/generic/reset';
@@ -191,7 +190,7 @@
 @use '../../scss/bitstyles/atoms/button-colors' with (
   $default: (
     'default': (
-      'color': var(--color-grayscale-white),
+      'color': var(--bscpn-color-grayscale-white),
     ),
   )
 );

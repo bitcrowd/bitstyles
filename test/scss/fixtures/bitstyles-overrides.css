@@ -95,7 +95,8 @@
 }
 :root {
   --bscpn-size-0: 0;
-  --bscpn-size-3xs: 1.25rem;
+  --bscpn-size-4xs: 1.25rem;
+  --bscpn-size-3xs: 1.6666666667rem;
   --bscpn-size-2xs: 2.5rem;
   --bscpn-size-xs: 5rem;
   --bscpn-size-s: 7.5rem;
@@ -103,7 +104,8 @@
   --bscpn-size-l: 12.5rem;
   --bscpn-size-xl: 20rem;
   --bscpn-size-2xl: 40rem;
-  --bscpn-size-3xl: 80rem;
+  --bscpn-size-3xl: 60rem;
+  --bscpn-size-4xl: 80rem;
 }
 :root {
   --bscpn-shadow-default: drop-shadow(red 0 2.5rem 5rem)
