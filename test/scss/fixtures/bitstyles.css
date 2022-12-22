@@ -2446,6 +2446,9 @@ table {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
+.u-grid-rows-max-content {
+  grid-template-rows: max-content;
+}
 .u-height-100vh {
   height: 100vh;
 }

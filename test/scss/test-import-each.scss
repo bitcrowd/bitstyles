@@ -200,6 +200,9 @@ $bitstyles-gap-sizes: (
 $bitstyles-grid-cols-values: (
   '100': repeat(100, minmax(0, 1fr)),
 );
+$bitstyles-grid-rows-values: (
+  'auto': auto,
+);
 $bitstyles-height-values: (
   '1em': 1em,
 );
@@ -371,6 +374,7 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/utilities/font';
 @import '../../scss/bitstyles/utilities/gap';
 @import '../../scss/bitstyles/utilities/grid-cols';
+@import '../../scss/bitstyles/utilities/grid-rows';
 @import '../../scss/bitstyles/utilities/height';
 @import '../../scss/bitstyles/utilities/inset';
 @import '../../scss/bitstyles/utilities/items';

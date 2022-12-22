@@ -1992,6 +1992,9 @@ table {
     grid-template-columns: repeat(100, minmax(0, 1fr));
   }
 }
+.bs-grid-rows-auto {
+  grid-template-rows: auto;
+}
 .bs-height-1em {
   height: 1em;
 }
