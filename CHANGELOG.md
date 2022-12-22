@@ -2,11 +2,26 @@
 
 ## Unreleased
 
+### Fixed
+
+- Radios and checkboxes no longer get distorted when placed in a flex layout, and the sibling content has a min-content width larger than the available space
+
 ### Added
 
+- New helper function `custom-property.get()` for generating names of CSS custom properties that respect the namespace and layer-prefix configuration.
+- Most design tokens are now output as CSS Custom Properties in a `:root` block. All are prefixed with `bs` in the default configuration (customize that using `setup.$custom-property-namespace`), with names matching their Sass variable e.g. `--bs-color-brand-1-base`, `--bs-color-brand-1-light`, `--bs-size-xs`, `--bs-size-s`.
+- Use `setup.$viewport-elements` to define which elements should be considered equal to the viewport in size. These elements’ heights will match the viewport (including any variable sizing on mobile browsers). Make sure to add a selector for any wrapper elements your framework may be wrapping around your app/content.
 - Adds a utility class for the `width` property. Defaults to providing `width: 100%` under the name `u-width-full`. This can be customized using `$bitstyles-width-values` and `$bitstyles-width-breakpoints`
 
-## [[5.0.0-alpha]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
+### Changed
+
+- `properties.join-with-dashes` is now `string.join-with-dashes`, and does not accept an `$at-prefix`. If you were using this for generating CSS property names, or some other dash-separated string, you need to import `tools/string` instead of `tools/properties`, and update the namespace at the point of usage from `properties.join-with-dashes` to `string.join-with-dashes`. If you were using the `$at-prefix`, you should switch to using `classname.get()`.
+- Names of CSS custom properties used for styling the icon buttons inside badge components have been renamed from `--button-fg`, `--button-bg`, `--button-fg-hover`, `--button-bg-hover` to `--bs-a-button-color`, `--bs-a-button-background-color`, `--bs-a-button-color-hover`, `--bs-a-button-background-color-hover` respectively. If you were using these variables in your own codebase, you’ll need to update the names.
+- Order of line-heights in `settings/typography.$line-heights` is now in order of size. If you were using the utility classes based on these values, line-heights `1` and `2` have swapped places, as have `4` and `5`. If you were using those values with `line-height.get()`, you’ll need to change the value you request to match. If you were using the utility classes `u-line-height`, you’ll need to rename `u-line-height-1` to `u-line-height-2`, `u-line-height-2` to `u-line-height-1`, `u-line-height-4` to `u-line-height-5`, and `u-line-height-5` to `u-line-height-4`.
+- `settings/typography.$line-height-base` has been removed. Use `tools/line-height.get('5')` instead.
+- `<body>` is now given `height: stretch` instead of 100%. In all likelihood, this is what was intended by the previous declaration of `height: 100%`, so you shouldn’t need to change anything.
+
+## [[5.0.0-alpha-1]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
 
 ### Added
 

@@ -76,6 +76,19 @@ filter:
 */
 ```
 
+## Using the shadows in CSS
+
+The shadow definitions are also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
+
+```css
+--bs-shadow-default: drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem) drop-shadow(
+    rgba(200, 191, 255, 0.125) 0 0.6666666667rem 0.6666666667rem
+  )
+  drop-shadow(rgba(200, 191, 255, 0.125) 0 1rem 1rem) drop-shadow(
+    rgba(200, 191, 255, 0.125) 0 2rem 2rem
+  );
+```
+
 ### Using local shadows
 
 Not all shadows belong to the global shadows design tokens. Including all the shadows applied to buttons and input elements on hover/focus/active/disabled/etc. could swamp the global list. But you may want to use `shadow.generate()` to take advantage of the multi-layered shadows without having to hand-code them. You can do this using one of the two helper functions `shadow.to-box-shadow()` and `shadow.to-drop-shadow()`. These convert the list formatted-shadows provided by the generator into a format suitable for use in CSS `box-shadow` properties and CSS `filter` properties (using `drop-shadow`), respectively.

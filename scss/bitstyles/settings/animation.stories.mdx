@@ -28,6 +28,16 @@ Note that there are two transition variables. The short transition-duration is b
 }
 ```
 
+## Using animation settings in CSS
+
+The animation design tokens are also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
+
+```css
+--bs-transition-duration: 0.075s;
+--bs-transition-duration-long: 0.5s;
+--bs-transition-easing: ease-in-out;
+```
+
 ## Customization
 
 Override the values for these animation variables at the start of your Sass manifest file.

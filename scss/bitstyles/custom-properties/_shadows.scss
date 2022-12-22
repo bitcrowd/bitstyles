@@ -1,0 +1,12 @@
+@use '../settings/shadows' as shadows-settings;
+@use '../tools/shadows';
+@use '../tools/custom-property';
+
+:root {
+  @each $shadow-name, $shadow in shadows-settings.$shadows {
+    #{custom-property.get($items: ('shadow', $shadow-name))}: #{shadows.get(
+        $shadow-name,
+        'drop'
+      )};
+  }
+}

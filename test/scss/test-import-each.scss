@@ -65,6 +65,7 @@ $bitstyles-color-palette-palette: (
 );
 $bitstyles-layout-size-base: 10rem;
 $bitstyles-setup-namespace: 'bs';
+$bitstyles-setup-custom-property-namespace: 'bscpn';
 $bitstyles-setup-layer-prefixes: (
   'atom': 'at',
   'molecule': 'mo',
@@ -280,6 +281,16 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/settings/typography';
 @import '../../scss/bitstyles/settings/typography-responsive';
 @import '../../scss/bitstyles/settings/link';
+
+//
+// Custom properties ////////////////////////////////////
+
+@import '../../scss/bitstyles/custom-properties/animation';
+@import '../../scss/bitstyles/custom-properties/breakpoints';
+@import '../../scss/bitstyles/custom-properties/color-palette';
+@import '../../scss/bitstyles/custom-properties/layout';
+@import '../../scss/bitstyles/custom-properties/shadows';
+@import '../../scss/bitstyles/custom-properties/typography';
 
 //
 // Generic ////////////////////////////////////

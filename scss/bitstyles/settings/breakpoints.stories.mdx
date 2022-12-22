@@ -35,7 +35,7 @@ Most of the utility classes and many of the components are available at various 
 Breakpoint-limited classnames are suffixed with an `@` symbol and the name of the breakpoint e.g. `.u-classname@xl`, `u-classname@motion-ok`. As we’re using the mobile-first approach, apply your base styles suitable for smaller viewport sizes then provide overrides for larger viewports using classes with breakpoint suffixes.
 
 ```html
-<div class="u-grid u-gap-m u-grid-cols-6@m">
+<div class="u-grid u-gap-l u-grid-cols-6@m">
   <!--
     Insert content blocks here, they’ll display in a single column on smaller viewports,
     and six columns in viewports larger than the `m` breakpoint
@@ -65,6 +65,23 @@ This will output:
     /* styles */
   }
 }
+```
+
+## Using breakpoints in CSS
+
+The breakpoints are also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
+
+```css
+--bs-breakpoint-s: screen and (max-width: 29.9375em);
+--bs-breakpoint-m: screen and (min-width: 30em);
+--bs-breakpoint-l: screen and (min-width: 55em);
+--bs-breakpoint-xl: screen and (min-width: 95em);
+--bs-breakpoint-hidpi: (-webkit-min-device-pixel-ratio: 2), (
+    min-resolution: 192dpi
+  ), (min-resolution: 2dppx);
+--bs-breakpoint-landscape: all and (orientation: landscape);
+--bs-breakpoint-portrait: all and (orientation: portrait);
+--bs-breakpoint-motion-ok: screen and (prefers-reduced-motion: no-preference);
 ```
 
 ## Customization

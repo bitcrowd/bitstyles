@@ -1,0 +1,8 @@
+@use '../settings/breakpoints';
+@use '../tools/custom-property';
+
+:root {
+  @each $breakpoint-name, $breakpoint in breakpoints.$breakpoints {
+    #{custom-property.get($items: ('breakpoint', $breakpoint-name))}: #{$breakpoint};
+  }
+}
