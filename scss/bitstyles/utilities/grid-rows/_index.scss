@@ -1,0 +1,10 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/properties';
+
+@include properties.output(
+  $property-name: 'grid-template-rows',
+  $classname-root: 'grid-rows',
+  $values: settings.$values,
+  $breakpoints: settings.$breakpoints
+);
