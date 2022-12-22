@@ -200,6 +200,9 @@ $bitstyles-gap-sizes: (
 $bitstyles-grid-cols-values: (
   '100': repeat(100, minmax(0, 1fr)),
 );
+$bitstyles-grid-rows-values: (
+  'auto': auto,
+);
 $bitstyles-height-values: (
   '1em': 1em,
 );

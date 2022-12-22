@@ -342,6 +342,11 @@
     '100': repeat(100, minmax(0, 1fr)),
   )
 );
+@use '../../scss/bitstyles/utilities/grid-rows' with (
+  $values: (
+    'auto': auto,
+  )
+);
 @use '../../scss/bitstyles/utilities/height' with (
   $values: (
     '1em': 1em,
