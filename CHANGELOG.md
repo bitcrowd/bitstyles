@@ -2,15 +2,6 @@
 
 ## Unreleased
 
-### Added
-
-- Adds utility classes for specifying `justify-self` and `justify-items`
-
-### Changed
-
-- The variables for the `justify` utility class (which specifies `justify-content`) have been renamed to from `$values` to `$content-values`, and `$breakpoints` to `$content-breakpoints`. If you were overriding these variables, you’ll need to rename them.
-- The variables for the `utilities/flex` classes have been updated to match the pattern used by the `utilities/justify` classes. `$direction` becomes `$direction-values`, `$wrap` becomes `$wrap-values`, `$grow` becomes `$grow-values`, and `$shrink` becomes `$shrink-values`. The single `$breakpoints` variable has been broken out into individual variables for specifying breakpoints for each property: `$direction-breakpoints`, `$wrap-breakpoints`, `$grow-breakpoints`, and `$shrink-breakpoints`. If you were overriding any of these variables, you’ll need to rename them.
-
 ### Fixed
 
 - Radios and checkboxes no longer get distorted when placed in a flex layout, and the sibling content has a min-content width larger than the available space
@@ -22,6 +13,8 @@
 - Use `setup.$viewport-elements` to define which elements should be considered equal to the viewport in size. These elements’ heights will match the viewport (including any variable sizing on mobile browsers). Make sure to add a selector for any wrapper elements your framework may be wrapping around your app/content.
 - Adds a utility class for the `width` property. Defaults to providing `width: 100%` under the name `u-width-full`. This can be customized using `$bitstyles-width-values` and `$bitstyles-width-breakpoints`.
 - Adds utility classes to specify white-space property. Defaults to just `nowrap`, and is configurable with `$bitstyles-white-space-values`, and `$bitstyles-white-space-breakpoints`.
+- Adds a new set of utility classes for specifying the `text-decoration-line` property. Default configuration gives `underline` and `line-through` as values, and is not available at any breakpoints. This can be configured using `$values` and `$breakpoints`.
+- Adds utility classes for specifying `justify-self` and `justify-items`
 
 ### Changed
 
@@ -30,6 +23,8 @@
 - Order of line-heights in `settings/typography.$line-heights` is now in order of size. If you were using the utility classes based on these values, line-heights `1` and `2` have swapped places, as have `4` and `5`. If you were using those values with `line-height.get()`, you’ll need to change the value you request to match. If you were using the utility classes `u-line-height`, you’ll need to rename `u-line-height-1` to `u-line-height-2`, `u-line-height-2` to `u-line-height-1`, `u-line-height-4` to `u-line-height-5`, and `u-line-height-5` to `u-line-height-4`.
 - `settings/typography.$line-height-base` has been removed. Use `tools/line-height.get('5')` instead.
 - `<body>` is now given `height: stretch` instead of 100%. In all likelihood, this is what was intended by the previous declaration of `height: 100%`, so you shouldn’t need to change anything.
+- The variables for the `justify` utility class (which specifies `justify-content`) have been renamed to from `$values` to `$content-values`, and `$breakpoints` to `$content-breakpoints`. If you were overriding these variables, you’ll need to rename them.
+- The variables for the `utilities/flex` classes have been updated to match the pattern used by the `utilities/justify` classes. `$direction` becomes `$direction-values`, `$wrap` becomes `$wrap-values`, `$grow` becomes `$grow-values`, and `$shrink` becomes `$shrink-values`. The single `$breakpoints` variable has been broken out into individual variables for specifying breakpoints for each property: `$direction-breakpoints`, `$wrap-breakpoints`, `$grow-breakpoints`, and `$shrink-breakpoints`. If you were overriding any of these variables, you’ll need to rename them.
 
 ## [[5.0.0-alpha-1]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
 

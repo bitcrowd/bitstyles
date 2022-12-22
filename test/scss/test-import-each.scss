@@ -246,6 +246,9 @@ $bitstyles-sr-only-breakpoints: ('xl');
 $bitstyles-text-values: (
   'top': top,
 );
+$bitstyles-text-decoration-values: (
+  'text-decoration-none': none,
+);
 $bitstyles-typography-responsive-utilities-values: (
   'm': (
     'h1': (
@@ -396,6 +399,7 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/utilities/self';
 @import '../../scss/bitstyles/utilities/sr-only';
 @import '../../scss/bitstyles/utilities/text';
+@import '../../scss/bitstyles/utilities/text-decoration';
 @import '../../scss/bitstyles/utilities/truncate';
 @import '../../scss/bitstyles/utilities/typography-responsive';
 @import '../../scss/bitstyles/utilities/typography';

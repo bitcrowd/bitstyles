@@ -4311,6 +4311,12 @@ table {
 .u-text-justify {
   text-align: justify;
 }
+.u-line-through {
+  text-decoration-line: line-through;
+}
+.u-underline {
+  text-decoration-line: underline;
+}
 .u-truncate {
   max-width: 100%;
   overflow: hidden;

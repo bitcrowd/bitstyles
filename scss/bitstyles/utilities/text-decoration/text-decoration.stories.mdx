@@ -1,0 +1,42 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Utilities/text-decoration" />
+
+# Text-decoration
+
+Set the `text-decoration-line` property on an element. With default configuration the available values are: `line-through` and `underline`, which are not available at any breakpoint. See the [customization](#customization) section for details on how to change the configuration.
+
+<Canvas isColumn>
+  <Story name="u-line-through">
+    {`
+      <p class="u-line-through">Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
+    `}
+  </Story>
+  <Story name="u-underline">
+    {`
+      <p class="u-underline">Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+The available text-align values can be customized by overriding the `$values` Sass variable:
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/text-decoration' with (
+  $values: (
+    'overline': overline,
+  )
+);
+```
+
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` list, providing the names of the breakpoints from the global breakpoints list.
+
+```scss
+@use '~bitstyles/scss/bitstyles/utilities/text-decoration' with (
+  $breakpoints: (
+    'm',
+  )
+);
+```
