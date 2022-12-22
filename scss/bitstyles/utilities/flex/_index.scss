@@ -5,24 +5,24 @@
 @include properties.output(
   $property-name: 'flex-wrap',
   $classname-root: 'flex',
-  $values: settings.$wrap,
-  $breakpoints: settings.$breakpoints
+  $values: settings.$wrap-values,
+  $breakpoints: settings.$wrap-breakpoints
 );
 @include properties.output(
   $property-name: 'flex-direction',
   $classname-root: 'flex',
-  $values: settings.$direction,
-  $breakpoints: settings.$breakpoints
+  $values: settings.$direction-values,
+  $breakpoints: settings.$direction-breakpoints
 );
 @include properties.output(
   $property-name: 'flex-grow',
   $classname-root: 'flex-grow',
-  $values: settings.$grow,
-  $breakpoints: settings.$breakpoints
+  $values: settings.$grow-values,
+  $breakpoints: settings.$grow-breakpoints
 );
 @include properties.output(
   $property-name: 'flex-shrink',
   $classname-root: 'flex-shrink',
-  $values: settings.$shrink,
-  $breakpoints: settings.$breakpoints
+  $values: settings.$shrink-values,
+  $breakpoints: settings.$shrink-breakpoints
 );

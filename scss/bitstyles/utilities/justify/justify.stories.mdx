@@ -2,7 +2,9 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 <Meta title="Utilities/justify" />
 
-# Justify
+# Justify classes
+
+## Justify
 
 Specify `justify-content` property on an element.
 
@@ -16,10 +18,10 @@ The `u-justify-` classes set set `justify-content` to align flex children to the
   <Story name="justify-between">
     {`
       <ul class="a-list-reset u-flex u-justify-between u-fg-white" style="min-height:10rem;">
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
+        <li class="a-card u-margin-m u-bg-gray-dark">
           Between
         </li>
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
+        <li class="a-card u-margin-m u-bg-gray-dark">
           Between
         </li>
       </ul>
@@ -28,10 +30,10 @@ The `u-justify-` classes set set `justify-content` to align flex children to the
   <Story name="justify-start">
     {`
       <ul class="a-list-reset u-flex u-justify-start u-fg-white" style="min-height:10rem;">
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
+        <li class="a-card u-margin-m u-bg-gray-dark">
           Start
         </li>
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
+        <li class="a-card u-margin-m u-bg-gray-dark">
           Start
         </li>
       </ul>
@@ -40,11 +42,187 @@ The `u-justify-` classes set set `justify-content` to align flex children to the
   <Story name="justify-end">
     {`
       <ul class="a-list-reset u-flex u-justify-end u-fg-white" style="min-height:10rem;">
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
+        <li class="a-card u-margin-m u-bg-gray-dark">
           End
         </li>
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
+        <li class="a-card u-bg-gray-dark">
           End
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Justify-self
+
+Specify the `justify-self` property on an element. Default configuration provides `start`, `end`, `stretch`, and `center` as values. **This does nothing in a flex layout**, but is useful in grids.
+
+<Canvas>
+  <Story name="justify-self-start">
+    {`
+      <ul class="a-list-reset u-grid u-grid-cols-2 u-gap-l u-fg-white" style="min-height:10rem;">
+        <li class="a-card u-bg-gray-dark">
+          Start
+        </li>
+        <li class="u-justify-self-start a-card u-bg-gray-dark">
+          justify-self-start
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Three
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Four
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="justify-self-end">
+    {`
+      <ul class="a-list-reset u-grid u-grid-cols-2 u-gap-l u-fg-white" style="min-height:10rem;">
+        <li class="a-card u-bg-gray-dark">
+          One
+        </li>
+        <li class="u-justify-self-end a-card u-bg-gray-dark">
+          justify-self-end
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Three
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Four
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="justify-self-stretch">
+    {`
+      <ul class="a-list-reset u-grid u-grid-cols-2 u-gap-l u-fg-white" style="min-height:10rem;">
+        <li class="a-card u-bg-gray-dark">
+          One
+        </li>
+        <li class="u-justify-self-stretch a-card u-bg-gray-dark">
+          justify-self-stretch
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Three
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Four
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="justify-self-center">
+    {`
+      <ul class="a-list-reset u-grid u-grid-cols-2 u-gap-l u-fg-white" style="min-height:10rem;">
+        <li class="a-card u-bg-gray-dark">
+          One
+        </li>
+        <li class="u-justify-self-center a-card u-bg-gray-dark">
+          justify-self-center
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Three
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Four
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+## Justify-items
+
+Specify the `justify-items` property on an element. Default configuration provides `start`, `end`, `stretch`, and `center` as values. these examples are in a grid layout, but this can also be used with flexbox.
+
+<Canvas>
+  <Story name="justify-items-start">
+    {`
+      <ul class="a-list-reset u-grid u-grid-cols-2 u-gap-l u-fg-white u-justify-items-start" style="min-height:10rem;">
+        <li class="a-card u-bg-gray-dark">
+          Start
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Start
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Start
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Start
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="justify-items-end">
+    {`
+      <ul class="a-list-reset u-grid u-grid-cols-2 u-justify-items-end u-gap-l u-fg-white" style="min-height:10rem;">
+        <li class="a-card u-bg-gray-dark">
+          End
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          End
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          End
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          End
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="justify-items-stretch">
+    {`
+      <ul class="a-list-reset u-grid u-grid-cols-2 u-justify-items-stretch u-gap-l u-fg-white" style="min-height:10rem;">
+        <li class="a-card u-bg-gray-dark">
+          Stretch
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Stretch
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Stretch
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Stretch
+        </li>
+      </ul>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="justify-items-center">
+    {`
+      <ul class="a-list-reset u-grid u-grid-cols-2 u-justify-items-center u-gap-l u-fg-white" style="min-height:10rem;">
+        <li class="a-card u-bg-gray-dark">
+          Center
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Center
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Center
+        </li>
+        <li class="a-card u-bg-gray-dark">
+          Center
         </li>
       </ul>
     `}
@@ -53,66 +231,37 @@ The `u-justify-` classes set set `justify-content` to align flex children to the
 
 ## Responsiveness
 
-These classes are available at the `m` breakpoint.
-
-<Canvas isColumn>
-  <Story name="justify-between@m">
-    {`
-      <ul class="a-list-reset u-flex u-justify-between@m u-fg-white" style="min-height:10rem;">
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
-          Between
-        </li>
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
-          Between
-        </li>
-      </ul>
-    `}
-  </Story>
-  <Story name="justify-start@m">
-    {`
-      <ul class="a-list-reset u-flex u-justify-start@m u-fg-white" style="min-height:10rem;">
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
-          Start
-        </li>
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
-          Start
-        </li>
-      </ul>
-    `}
-  </Story>
-  <Story name="justify-end@m">
-    {`
-      <ul class="a-list-reset u-flex u-justify-end@m u-fg-white" style="min-height:10rem;">
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
-          End
-        </li>
-        <li class="u-margin-m u-padding-m u-bg-gray-light">
-          End
-        </li>
-      </ul>
-    `}
-  </Story>
-</Canvas>
+These classes are available at the `m` breakpoint with the default configuration.
 
 ## Customization
 
-Customize the available justify-content values by overriding the `$bitstyles-justify-values` Sass map. Provide the name to be used for the class as the key, and the value for the `justify-content` property:
+Customize the available justify-content values by overriding the `$bitstyles-justify-content-values` Sass map. Similarly for `justify-items` and `justify-self`: `$bitstyles-justify-items-values` `$bitstyles-justify-self-values`.
+
+Provide the name to be used for the class as the key, and the value for the property:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/justify' with (
-  $values: (
+  $content-values: (
     'between': space-between,
-    'end': flex-end,
-    'start': flex-start,
+    'end': end,
+    'start': start,
+  ),
+  $items-values: (
+    'stretch': stretch,
+    'end': end,
+    'start': start,
   )
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-justify-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `breakpoints` variables `$bitstyles-justify-content-breakpoints`, `$bitstyles-justify-items-breakpoints`, and `$bitstyles-justify-self-breakpoints`
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/justify' with (
-  $breakpoints: (
+  $content-breakpoints: (
+    'm',
+  ),
+  $self-breakpoints: (
     'm',
   )
 );

@@ -385,26 +385,26 @@ The available values for `flex-direction`, `flex-wrap`, `flex-grow`, and `flex-s
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/flex' with (
-  $direction: (
+  $direction-values: (
     'row': row,
   ),
-  $wrap: (
+  $wrap-values: (
     'nowrap': nowrap,
   ),
-  $grow: (
+  $grow-values: (
     '100': 100,
   ),
-  $shrink: (
+  $shrink-values: (
     '100': 100,
   )
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-flex-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the various `breakpoints` variables `$direction-breakpoints`, `$wrap-breakpoints` etc:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/flex' with (
-  $breakpoints: (
+  $shrink-breakpoints: (
     'm',
     'xl',
   )

@@ -1,6 +1,25 @@
-$values: (
+/* justify-content */
+$content-values: (
   'between': space-between,
   'end': flex-end,
   'start': flex-start,
 ) !default;
-$breakpoints: ('m') !default;
+$content-breakpoints: ('m') !default;
+
+/* justify-self */
+$self-values: (
+  'start': start,
+  'end': end,
+  'stretch': stretch,
+  'center': center,
+) !default;
+$self-breakpoints: ('m') !default;
+
+/* justify-items */
+$items-values: (
+  'start': start,
+  'end': end,
+  'stretch': stretch,
+  'center': center,
+) !default;
+$items-breakpoints: ('m') !default;

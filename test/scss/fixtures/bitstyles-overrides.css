@@ -2023,6 +2023,58 @@ table {
     justify-content: start;
   }
 }
+.bs-justify-self-start {
+  justify-self: start;
+}
+.bs-justify-self-end {
+  justify-self: end;
+}
+.bs-justify-self-stretch {
+  justify-self: stretch;
+}
+.bs-justify-self-center {
+  justify-self: center;
+}
+@media screen and (min-width: 30em) {
+  .bs-justify-self-start\@m {
+    justify-self: start;
+  }
+  .bs-justify-self-end\@m {
+    justify-self: end;
+  }
+  .bs-justify-self-stretch\@m {
+    justify-self: stretch;
+  }
+  .bs-justify-self-center\@m {
+    justify-self: center;
+  }
+}
+.bs-justify-items-start {
+  justify-items: start;
+}
+.bs-justify-items-end {
+  justify-items: end;
+}
+.bs-justify-items-stretch {
+  justify-items: stretch;
+}
+.bs-justify-items-center {
+  justify-items: center;
+}
+@media screen and (min-width: 30em) {
+  .bs-justify-items-start\@m {
+    justify-items: start;
+  }
+  .bs-justify-items-end\@m {
+    justify-items: end;
+  }
+  .bs-justify-items-stretch\@m {
+    justify-items: stretch;
+  }
+  .bs-justify-items-center\@m {
+    justify-items: center;
+  }
+}
 .bs-line-height-10 {
   line-height: 10;
 }
