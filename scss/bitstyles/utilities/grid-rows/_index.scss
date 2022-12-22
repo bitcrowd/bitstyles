@@ -3,7 +3,7 @@
 @use '../../tools/properties';
 
 @include properties.output(
-  $property-name: 'grid-template-rows',
+  $property-name: 'grid-auto-rows',
   $classname-root: 'grid-rows',
   $values: settings.$values,
   $breakpoints: settings.$breakpoints

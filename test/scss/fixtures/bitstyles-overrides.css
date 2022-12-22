@@ -1993,7 +1993,7 @@ table {
   }
 }
 .bs-grid-rows-auto {
-  grid-template-rows: auto;
+  grid-auto-rows: auto;
 }
 .bs-height-1em {
   height: 1em;
