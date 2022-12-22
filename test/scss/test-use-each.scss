@@ -457,6 +457,11 @@
     '100': 100rem,
   )
 );
+@use '../../scss/bitstyles/utilities/width' with (
+  $values: (
+    '0': 0,
+  )
+);
 @use '../../scss/bitstyles/utilities/z-index' with (
   $values: (
     '100': 100,

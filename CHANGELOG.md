@@ -11,6 +11,7 @@
 - New helper function `custom-property.get()` for generating names of CSS custom properties that respect the namespace and layer-prefix configuration.
 - Most design tokens are now output as CSS Custom Properties in a `:root` block. All are prefixed with `bs` in the default configuration (customize that using `setup.$custom-property-namespace`), with names matching their Sass variable e.g. `--bs-color-brand-1-base`, `--bs-color-brand-1-light`, `--bs-size-xs`, `--bs-size-s`.
 - Use `setup.$viewport-elements` to define which elements should be considered equal to the viewport in size. These elements’ heights will match the viewport (including any variable sizing on mobile browsers). Make sure to add a selector for any wrapper elements your framework may be wrapping around your app/content.
+- Adds a utility class for the `width` property. Defaults to providing `width: 100%` under the name `u-width-full`. This can be customized using `$bitstyles-width-values` and `$bitstyles-width-breakpoints`
 
 ### Changed
 
@@ -20,7 +21,7 @@
 - `settings/typography.$line-height-base` has been removed. Use `tools/line-height.get('5')` instead.
 - `<body>` is now given `height: stretch` instead of 100%. In all likelihood, this is what was intended by the previous declaration of `height: 100%`, so you shouldn’t need to change anything.
 
-## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
+## [[5.0.0-alpha-1]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
 
 ### Added
 

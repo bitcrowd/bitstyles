@@ -263,6 +263,9 @@ $bitstyles-typography-responsive-utilities-values: (
 $bitstyles-typography-utilities-values: (
   '100': 100rem,
 );
+$bitstyles-width-values: (
+  '0': 0,
+);
 $bitstyles-z-index-values: (
   '100': 100,
 );
@@ -393,4 +396,5 @@ $bitstyles-z-index-values: (
 @import '../../scss/bitstyles/utilities/truncate';
 @import '../../scss/bitstyles/utilities/typography-responsive';
 @import '../../scss/bitstyles/utilities/typography';
+@import '../../scss/bitstyles/utilities/width';
 @import '../../scss/bitstyles/utilities/z-index';
