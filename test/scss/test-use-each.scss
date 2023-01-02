@@ -327,7 +327,7 @@
   )
 );
 @use '../../scss/bitstyles/utilities/flex' with (
-  $grow: (
+  $grow-values: (
     '100': 100,
   )
 );
@@ -340,6 +340,11 @@
 @use '../../scss/bitstyles/utilities/grid-cols' with (
   $values: (
     '100': repeat(100, minmax(0, 1fr)),
+  )
+);
+@use '../../scss/bitstyles/utilities/grid-rows' with (
+  $values: (
+    'auto': auto,
   )
 );
 @use '../../scss/bitstyles/utilities/height' with (
@@ -358,7 +363,7 @@
   )
 );
 @use '../../scss/bitstyles/utilities/justify' with (
-  $values: (
+  $content-values: (
     'start': start,
   )
 );
@@ -434,6 +439,11 @@
     'top': top,
   )
 );
+@use '../../scss/bitstyles/utilities/text-decoration' with (
+  $values: (
+    'text-decoration-none': none,
+  )
+);
 @use '../../scss/bitstyles/utilities/truncate';
 @use '../../scss/bitstyles/utilities/typography-responsive' as
   typography-responsive-utilities with (
@@ -455,6 +465,16 @@
 @use '../../scss/bitstyles/utilities/typography' as typography-utilities with (
   $values: (
     '100': 100rem,
+  )
+);
+@use '../../scss/bitstyles/utilities/white-space' with (
+  $values: (
+    'normal': normal,
+  )
+);
+@use '../../scss/bitstyles/utilities/width' with (
+  $values: (
+    '0': 0,
   )
 );
 @use '../../scss/bitstyles/utilities/z-index' with (

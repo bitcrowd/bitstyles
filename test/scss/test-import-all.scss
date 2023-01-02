@@ -191,7 +191,7 @@ $bitstyles-drop-shadow-breakpoints: ('s');
 $bitstyles-fg-values: (
   'f00': #f00,
 );
-$bitstyles-flex-grow: (
+$bitstyles-flex-grow-values: (
   '100': 100,
 );
 $bitstyles-gap-sizes: (
@@ -199,6 +199,9 @@ $bitstyles-gap-sizes: (
 );
 $bitstyles-grid-cols-values: (
   '100': repeat(100, minmax(0, 1fr)),
+);
+$bitstyles-grid-rows-values: (
+  'auto': auto,
 );
 $bitstyles-height-values: (
   '1em': 1em,
@@ -209,7 +212,7 @@ $bitstyles-inset-values: (
 $bitstyles-items-values: (
   'start': start,
 );
-$bitstyles-justify-values: (
+$bitstyles-justify-content-values: (
   'start': start,
 );
 $bitstyles-line-height-values: (
@@ -246,6 +249,9 @@ $bitstyles-sr-only-breakpoints: ('xl');
 $bitstyles-text-values: (
   'top': top,
 );
+$bitstyles-text-decoration-values: (
+  'text-decoration-none': none,
+);
 $bitstyles-typography-responsive-utilities-values: (
   'm': (
     'h1': (
@@ -262,6 +268,12 @@ $bitstyles-typography-responsive-utilities-values: (
 );
 $bitstyles-typography-utilities-values: (
   '100': 100rem,
+);
+$bitstyles-white-space-values: (
+  'normal': normal,
+);
+$bitstyles-width-values: (
+  '0': 0,
 );
 $bitstyles-z-index-values: (
   '100': 100,

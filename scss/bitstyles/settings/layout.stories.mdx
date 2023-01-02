@@ -1,0 +1,37 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Layout" />
+
+# Layout
+
+Default configuration causes the height of your site or app to stretch to at least the height of the viewport, even if there’s not enough content to make it do so. This allows you to position a footer or other content at the bottom of the screen. On browsers such as iOS safari where the viewport changes height as the user interacts with the UI, this means the height of your content will adapt and ensures any content placed at the bottom of the screen will stay correctly in view.
+
+This height could also be applied using the [u-height-stretch](/docs/utilities-height--stretch) classname (that’s being used in the example here because the default configuration applies only to the `html` and `body` elements, and to the `#root` element as this storybook requires it). See [Customization](#customization) below for details on how to change that in your setup — selectors for any and all wrapper element(s) around your app or content will need to be added here.
+
+<Canvas>
+  <Story name="layout stretch" inline={false} height="80vh">
+    {`
+      <div class="u-flex u-flex-col u-height-stretch u-gap-s" style="height: 100%;">
+        <header class="u-padding-m u-bg-gray-light">Header</header>
+        <main class="u-flex-grow-1 u-padding-m u-bg-gray-light">Main</main>
+        <footer class="u-padding-m u-bg-gray-light">Footer</footer>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Customization
+
+If you use a clientside framework that inserts its content into a wrapper element inside the `<body>` element, this layout will break because the minimum height is not set on this wrapper element. For React apps, that’s commonly an element with `id="root"`, for Next.js it’s `id="__next"`. Other frameworks may use similar mechanisms. If your content is wrapped in multiple elements, be sure to add each to the list.
+
+Configure `layout.$viewport-elements` to include the selector for the wrapper element:
+
+```scss
+@use 'bitstyles/settings/layout' with (
+  $viewport-elements: (
+    'html',
+    'body',
+    '#__next',
+  )
+);
+```

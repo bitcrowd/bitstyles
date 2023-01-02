@@ -11,6 +11,11 @@
 - New helper function `custom-property.get()` for generating names of CSS custom properties that respect the namespace and layer-prefix configuration.
 - Most design tokens are now output as CSS Custom Properties in a `:root` block. All are prefixed with `bs` in the default configuration (customize that using `setup.$custom-property-namespace`), with names matching their Sass variable e.g. `--bs-color-brand-1-base`, `--bs-color-brand-1-light`, `--bs-size-xs`, `--bs-size-s`.
 - Most design tokens are now available in JS environments by importing the relevant file from `exports/`. See the documentation for each set of design tokens for more details.
+- Use `setup.$viewport-elements` to define which elements should be considered equal to the viewport in size. These elements’ heights will match the viewport (including any variable sizing on mobile browsers). Make sure to add a selector for any wrapper elements your framework may be wrapping around your app/content.
+- Adds a utility class for the `width` property. Defaults to providing `width: 100%` under the name `u-width-full`. This can be customized using `$bitstyles-width-values` and `$bitstyles-width-breakpoints`.
+- Adds utility classes to specify white-space property. Defaults to just `nowrap`, and is configurable with `$bitstyles-white-space-values`, and `$bitstyles-white-space-breakpoints`.
+- Adds a new set of utility classes for specifying the `text-decoration-line` property. Default configuration gives `underline` and `line-through` as values, and is not available at any breakpoints. This can be configured using `$values` and `$breakpoints`.
+- Adds utility classes for specifying `justify-self` and `justify-items`
 
 ### Changed
 
@@ -18,6 +23,9 @@
 - Names of CSS custom properties used for styling the icon buttons inside badge components have been renamed from `--button-fg`, `--button-bg`, `--button-fg-hover`, `--button-bg-hover` to `--bs-a-button-color`, `--bs-a-button-background-color`, `--bs-a-button-color-hover`, `--bs-a-button-background-color-hover` respectively. If you were using these variables in your own codebase, you’ll need to update the names.
 - Order of line-heights in `settings/typography.$line-heights` is now in order of size. If you were using the utility classes based on these values, line-heights `1` and `2` have swapped places, as have `4` and `5`. If you were using those values with `line-height.get()`, you’ll need to change the value you request to match. If you were using the utility classes `u-line-height`, you’ll need to rename `u-line-height-1` to `u-line-height-2`, `u-line-height-2` to `u-line-height-1`, `u-line-height-4` to `u-line-height-5`, and `u-line-height-5` to `u-line-height-4`.
 - `settings/typography.$line-height-base` has been removed. Use `tools/line-height.get('5')` instead.
+- `<body>` is now given `height: stretch` instead of 100%. In all likelihood, this is what was intended by the previous declaration of `height: 100%`, so you shouldn’t need to change anything.
+- The variables for the `justify` utility class (which specifies `justify-content`) have been renamed to from `$values` to `$content-values`, and `$breakpoints` to `$content-breakpoints`. If you were overriding these variables, you’ll need to rename them.
+- The variables for the `utilities/flex` classes have been updated to match the pattern used by the `utilities/justify` classes. `$direction` becomes `$direction-values`, `$wrap` becomes `$wrap-values`, `$grow` becomes `$grow-values`, and `$shrink` becomes `$shrink-values`. The single `$breakpoints` variable has been broken out into individual variables for specifying breakpoints for each property: `$direction-breakpoints`, `$wrap-breakpoints`, `$grow-breakpoints`, and `$shrink-breakpoints`. If you were overriding any of these variables, you’ll need to rename them.
 
 ## [[5.0.0-alpha-1]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0-alpha) - 2022-09-12
 

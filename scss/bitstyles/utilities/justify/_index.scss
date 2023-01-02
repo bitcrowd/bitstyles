@@ -5,6 +5,20 @@
 @include properties.output(
   $property-name: 'justify-content',
   $classname-root: 'justify',
-  $values: settings.$values,
-  $breakpoints: settings.$breakpoints
+  $values: settings.$content-values,
+  $breakpoints: settings.$content-breakpoints
+);
+
+@include properties.output(
+  $property-name: 'justify-self',
+  $classname-root: 'justify-self',
+  $values: settings.$self-values,
+  $breakpoints: settings.$self-breakpoints
+);
+
+@include properties.output(
+  $property-name: 'justify-items',
+  $classname-root: 'justify-items',
+  $values: settings.$items-values,
+  $breakpoints: settings.$items-breakpoints
 );

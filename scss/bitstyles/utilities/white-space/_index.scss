@@ -1,0 +1,10 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/properties';
+
+@include properties.output(
+  $property-name: 'white-space',
+  $classname-root: 'white-space',
+  $values: settings.$values,
+  $breakpoints: settings.$breakpoints
+);

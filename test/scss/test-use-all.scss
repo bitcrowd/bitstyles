@@ -150,13 +150,14 @@
   $display-values: (inline-block: inline-block),
   $drop-shadow-breakpoints: ('s'),
   $fg-values: ('f00': #f00),
-  $flex-grow: ('100': 100),
+  $flex-grow-values: ('100': 100),
   $gap-sizes: ('100': 100rem),
   $grid-cols-values: ('100': repeat(100, minmax(0, 1fr))),
+  $grid-rows-values: ('auto': auto),
   $height-values: ('1em': 1em),
   $inset-values: ('100': 100rem),
   $items-values: ('start': start),
-  $justify-values: ('start': start),
+  $justify-content-values: ('start': start),
   $line-height-values: ('10': 10),
   $margin-breakpoints: ('xl', 's'),
   $max-height-values: ('1em': 1em),
@@ -174,6 +175,7 @@
   $self-values: ('start': start),
   $sr-only-breakpoints: ('xl'),
   $text-values: ('top': top),
+  $text-decoration-values: ('text-decoration-none': none),
   $typography-responsive-utilities-values: (
     'm': (
       'h1': (
@@ -189,5 +191,7 @@
     )
   ),
   $typography-utilities-values: ('100': 100rem),
+  $white-space-values: ('normal': normal),
+  $width-values: ('0': 0),
   $z-index-values: ('100': 100)
 );
