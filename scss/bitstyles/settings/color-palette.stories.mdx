@@ -59,6 +59,19 @@ The color palette is also available as CSS custom properties. In the default con
 
 Note that each color is also output as rgb tuples, to make using them in CSS color functions a little easier e.g. `rgba(var(--bs-color-brand-1-lighter), 0.5)`
 
+## Using color-palettes in JS
+
+The color design tokens can be imported and used in JS:
+
+```js
+import colorPalette from '../exports/_color-palette.scss';
+
+console.log(colorPalette['brand-1.lighter']); // '#f4f2ff'
+console.log(colorPalette['brand-1.light']); // '#c8bfff'
+console.log(colorPalette['brand-1.base']); // '#644dff'
+// …
+```
+
 ## How the system works
 
 The color system in Bitstyles is a three-tier design token system:

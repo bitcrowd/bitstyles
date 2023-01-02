@@ -1,0 +1,10 @@
+@use '../settings/shadows' as shadows-settings;
+@use '../tools/shadows';
+
+/* stylelint-disable selector-pseudo-class-no-unknown */
+:export {
+  @each $shadow-name, $shadow in shadows-settings.$shadows {
+    #{$shadow-name}: shadows.get($shadow-name, 'drop');
+  }
+}
+/* stylelint-enable selector-pseudo-class-no-unknown */

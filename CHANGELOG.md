@@ -10,6 +10,7 @@
 
 - New helper function `custom-property.get()` for generating names of CSS custom properties that respect the namespace and layer-prefix configuration.
 - Most design tokens are now output as CSS Custom Properties in a `:root` block. All are prefixed with `bs` in the default configuration (customize that using `setup.$custom-property-namespace`), with names matching their Sass variable e.g. `--bs-color-brand-1-base`, `--bs-color-brand-1-light`, `--bs-size-xs`, `--bs-size-s`.
+- Most design tokens are now available in JS environments by importing the relevant file from `exports/`. See the documentation for each set of design tokens for more details.
 - Use `setup.$viewport-elements` to define which elements should be considered equal to the viewport in size. These elements’ heights will match the viewport (including any variable sizing on mobile browsers). Make sure to add a selector for any wrapper elements your framework may be wrapping around your app/content.
 - Adds a utility class for the `width` property. Defaults to providing `width: 100%` under the name `u-width-full`. This can be customized using `$bitstyles-width-values` and `$bitstyles-width-breakpoints`.
 - Adds utility classes to specify white-space property. Defaults to just `nowrap`, and is configurable with `$bitstyles-white-space-values`, and `$bitstyles-white-space-breakpoints`.
@@ -26,7 +27,7 @@
 - The variables for the `justify` utility class (which specifies `justify-content`) have been renamed to from `$values` to `$content-values`, and `$breakpoints` to `$content-breakpoints`. If you were overriding these variables, you’ll need to rename them.
 - The variables for the `utilities/flex` classes have been updated to match the pattern used by the `utilities/justify` classes. `$direction` becomes `$direction-values`, `$wrap` becomes `$wrap-values`, `$grow` becomes `$grow-values`, and `$shrink` becomes `$shrink-values`. The single `$breakpoints` variable has been broken out into individual variables for specifying breakpoints for each property: `$direction-breakpoints`, `$wrap-breakpoints`, `$grow-breakpoints`, and `$shrink-breakpoints`. If you were overriding any of these variables, you’ll need to rename them.
 
-## [[5.0.0-alpha-1]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2022-09-12
+## [[5.0.0-alpha-1]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0-alpha) - 2022-09-12
 
 ### Added
 

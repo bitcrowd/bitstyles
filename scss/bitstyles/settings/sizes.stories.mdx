@@ -72,6 +72,20 @@ The sizing scale is also available as CSS custom properties. In the default conf
 --bs-size-3xl: 6.4rem;
 ```
 
+## Using size design tokens in JS
+
+The size design tokens can be imported and used in JS:
+
+```js
+import sizes from '../exports/_sizes.scss';
+
+console.log(sizes['0']); // '0'
+console.log(sizes['2xl']); // '3.2rem'
+console.log(sizes['xl']); // '1.6rem'
+console.log(sizes['l']); // '1rem'
+// …
+```
+
 ## Customization
 
 ### Base size

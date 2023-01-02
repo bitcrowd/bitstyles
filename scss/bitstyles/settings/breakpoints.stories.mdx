@@ -84,6 +84,19 @@ The breakpoints are also available as CSS custom properties. In the default conf
 --bs-breakpoint-motion-ok: screen and (prefers-reduced-motion: no-preference);
 ```
 
+## Using breakpoint settings in JS
+
+The breakpoint design tokens can be imported and used in JS:
+
+```js
+import breakpoints from '../exports/_breakpoints.scss';
+
+console.log(breakpoints['s']); // 'screen and (max-width:29.9375em)'
+console.log(breakpoints['m']); // 'screen and (min-width:30em)'
+console.log(breakpoints['l']); // 'screen and (min-width:55em)'
+// …
+```
+
 ## Customization
 
 Override the values for the available breakpoints at the start of your Sass manifest file.
