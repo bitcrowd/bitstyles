@@ -1,0 +1,25 @@
+@use './custom-property';
+@use 'sass:map';
+@use 'sass:list';
+
+@mixin output($properties, $module-name: '', $layer: null) {
+  @each $property, $value in $properties {
+    #{custom-property.get($items: ($module-name, $property), $layer: $layer)}: #{$value};
+  }
+}
+
+@mixin output-filtered(
+  $properties,
+  $module-name: (''),
+  $allow-list: (),
+  $layer: null
+) {
+  @each $property in $allow-list {
+    @if map.has-key($properties, $property) {
+      #{custom-property.get($items: list.append($module-name, $property), $layer: $layer)}: #{map.get(
+          $properties,
+          $property
+        )};
+    }
+  }
+}

@@ -1,0 +1,84 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Base/Themes" />
+
+# Themes
+
+<Canvas>
+  <Story name="Default theme">
+    {`
+      <div class="u-padding-m" data-theme>
+        <p class="u-margin-m-bottom"><b>Default theme</b>. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream.</p>
+        <ul class="u-list-none u-flex u-gap-s">
+          <li>
+            <button class="a-button">Primary</button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary">Secondary</button>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+  <Story name="Dark theme">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <p class="u-margin-m-bottom"><b>Dark theme</b>. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream.</p>
+        <ul class="u-list-none u-flex u-gap-s">
+          <li>
+            <button class="a-button">Primary</button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary">Secondary</button>
+          </li>
+        </ul>
+      </div>
+    `}
+  </Story>
+  <Story name="Default theme nested">
+    {`
+      <div class="a-card" data-theme="dark">
+        <p class="u-margin-m-bottom"><b>Dark theme</b>. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream.</p>
+        <ul class="u-list-none u-flex u-gap-s u-margin-m-bottom">
+          <li>
+            <button class="a-button">Primary</button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary">Secondary</button>
+          </li>
+          <li>
+              <button class="a-button a-button--secondary a-button--danger">Secondary danger</button>
+            </li>
+        </ul>
+        <div class="a-card" data-theme="default">
+          <p class="u-margin-m-bottom"><b>Default theme</b>. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream.</p>
+          <ul class="u-list-none u-flex u-gap-s u-margin-m-bottom">
+            <li>
+              <button class="a-button">Primary</button>
+            </li>
+            <li>
+              <button class="a-button a-button--secondary">Secondary</button>
+            </li>
+            <li>
+              <button class="a-button a-button--secondary a-button--danger">Secondary danger</button>
+            </li>
+          </ul>
+          <div class="a-card" data-theme="dark">
+            <p class="u-margin-m-bottom"><b>Dark theme</b>. Jelly cake marshmallow. Pie cotton candy chupa chups marzipan liquorice cheesecake wafer. Gummies cheesecake oat cake sugar plum icing cupcake tiramisu bonbon. Cotton candy chupa chups tootsie roll chupa chups cotton candy liquorice jelly gingerbread. Pastry gummi bears liquorice tart cotton candy marshmallow. Ice cream cotton candy chocolate cake cookie. Bonbon candy jelly-o sugar plum cotton candy carrot cake icing ice cream.</p>
+            <ul class="u-list-none u-flex u-gap-s">
+              <li>
+                <button class="a-button">Primary</button>
+              </li>
+              <li>
+                <button class="a-button a-button--secondary">Secondary</button>
+              </li>
+              <li>
+                <button class="a-button a-button--secondary a-button--danger">Secondary danger</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    `}
+  </Story>
+</Canvas>

@@ -1,0 +1,134 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/Themes" />
+
+<Story id="base-themes--default-theme-nested" />
+
+# Themes
+
+The semantic color palette is used to create color schemes called “themes”, implemented using CSS custom properties in the browser. Themed areas can be nested, as in the example above, and are intended to allow different parts of your UI or page to apply a different but coherent color scheme to their contents. Themes could be used for a content sectioning (a callout or highlighted block of content), or for a piece of UI like a sidebar or top menu.
+
+Components can provide their colors on a per-theme basis if desired. Bitstyles buttons do this in the default configuration, which you see above in the different theme versions of each button type (primary, secondary etc.).
+
+Default configuration provides a `default` (light) theme, and a `dark` theme. See [customization](#customization) for details on how to change that.
+
+<Canvas>
+  <Story id="base-themes--default-theme" />
+</Canvas>
+
+<Canvas>
+  <Story id="base-themes--dark-theme" />
+</Canvas>
+
+## Using themes in HTML
+
+Themes are applied to elements using the `data-theme` data attribute, with the value being the name of the theme you wish to apply e.g. `data-theme="default"` or `data-theme="dark"`. The default theme is automatically applied to the HTML element, and the custom properties are inherited down the DOM until encountering another `data-theme` attribute. That means there’s no need to apply the default theme yourself, unless you want a default-themed area inside a dark-themed area.
+
+If you add themes to the global theme design token (see [customization](#customization)), you can apply them to HTML elements in the same way, using the name you specified when configuring the theme.
+
+## Using themes in Sass
+
+Themes can be accessed much like the media query design tokens, allowing you to output further CSS custom properties for new components on a per-theme basis. Bitstyles uses this to provide different colors for our button variants when used on light- or dark-themed areas.
+
+First, apply the custom properties to the CSS properties you want to make changeable on a per-theme basis. Be sure to scope the CSS custom properties to the component (don’t output this in a `:root` block), so we do not pollute the global namespace. Wrap them in the call to `themes.get()` to apply those values in the given themed areas:
+
+```scss
+.a-my-custom-input {
+  color: var(--my-custom-input-color);
+  background-color: var(--my-custom-input-background-color);
+}
+
+@include themes.get('default') {
+  .a-my-custom-input {
+    --my-custom-input-color: var(--bs-color-grayscale-white);
+    --my-custom-input-background-color: var(--bs-color-brand-1-dark);
+  }
+}
+
+@include themes.get('dark') {
+  .a-my-custom-input {
+    --my-custom-input-color: var(--bs-color-brand-1-dark);
+    --my-custom-input-background-color: var(--bs-color-brand-1-light);
+  }
+}
+```
+
+We’re using the colors from the global semantic palette, which are all output as custom properties on `:root`. You can use any values you like, but this is a good practice to maintain a consistent color palette in both Sass and CSS.
+
+Variants of your component can be created by redefining the value of the same properties. This is how the different buttons (base, secondary, transparent) are created in bitstyles, and their hover/focus states etc. We use the themes to specify different appearances for those button variants when they’re used in the main content area and in a dark-background sidebar or topbar.
+
+```scss
+@include themes.get('default') {
+  .a-my-custom-input--secondary {
+    --my-custom-input-color: var(--bs-color-brand-2-light);
+    --my-custom-input-background-color: var(--bs-color-brand-2-dark);
+  }
+}
+
+@include themes.get('dark') {
+  .a-my-custom-input--secondary {
+    --my-custom-input-color: var(--bs-color-brand-2-dark);
+    --my-custom-input-background-color: var(--bs-color-brand-2-light);
+  }
+}
+```
+
+Think of the CSS custom properties as an API that’s exposed by the component. In these examples, you can change the color and background-color, and no more. Those properties can be changed for variants of the component, or for different in-browser states like hover/focus (for interactive elements). These could also respond to a user preference for dark mode or high-contrast mode, but bitstyles doesn’t handle that itself yet.
+
+```scss
+.a-my-custom-input {
+  --my-custom-input-color: var(--color-brand-1-dark);
+  --my-custom-input-background-color: var(--color-brand-1-light);
+
+  &:hover,
+  &:focus {
+    --my-custom-input-color: var(--color-brand-1-darker);
+    --my-custom-input-background-color: var(--color-brand-1-lighter);
+  }
+}
+```
+
+### Naming
+
+The CSS custom properties output in each theme should be namespaced to the component you’re creating. For example the button variables are called `--bs-a-button-color`, `--bs-a-button-background-color`.
+
+## Customization
+
+Configure the names of your themes, and/or the colors they apply, and add whole new themes. All the colors are expected to be listed under the `color` key. The values for each color should be taken from the global color CSS custom properties:
+
+```scss
+@use '~bitstyles/scss/bitstyles/settings/themes' with (
+  $themes: (
+    'default': (
+      'color': (
+        'background': var(--bs-color-background-lightest),
+        'color': var(--bs-color-text-darkest),
+      ),
+      'dark': (
+        'background': var(--bs-color-background-darkest),
+        'text': var(--bs-color-text-lightest),
+      ),
+    ),
+  )
+);
+```
+
+If you change the name of the default theme as you redefine its colors, you’ll also need to specify the new default theme name (it’s used internally to ensure the default colors are correctly applied):
+
+```scss
+@use '~bitstyles/scss/bitstyles/settings/themes' with (
+  $themes: (
+    'custom-theme-name': (
+      'color': (
+        'background': var(--bs-color-background-lightest),
+        'color': var(--bs-color-text-darkest),
+      ),
+      'dark': (
+        'background': var(--bs-color-background-darkest),
+        'text': var(--bs-color-text-lightest),
+      ),
+    ),
+  ),
+  $default-theme-name: 'custom-theme-name'
+);
+```

@@ -9,6 +9,7 @@
 @forward 'bitstyles/settings/layout' as layout-*;
 @forward 'bitstyles/settings/setup' as setup-*;
 @forward 'bitstyles/settings/shadows' as shadows-*;
+@forward 'bitstyles/settings/themes' as themes-*;
 @forward 'bitstyles/settings/typography' as typography-*;
 @forward 'bitstyles/settings/typography-responsive' as typography-responsive-*;
 @forward 'bitstyles/settings/link' as link-*;
@@ -46,6 +47,7 @@
 @forward 'bitstyles/base/input-radio' as input-radio-*;
 @forward 'bitstyles/base/input-text' as input-text-*;
 @forward 'bitstyles/base/select' as select-*;
+@forward 'bitstyles/base/themes' as base-themes-*;
 @forward 'bitstyles/base/typography' as base-typography-*;
 
 //

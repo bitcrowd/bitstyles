@@ -13,7 +13,7 @@ Buttons are available in several color-based variations:
 <Canvas>
   <Story name="Primary">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button">
           Save
         </button>
@@ -22,7 +22,7 @@ Buttons are available in several color-based variations:
   </Story>
   <Story name="Secondary">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--secondary">
           Edit
         </button>
@@ -31,7 +31,7 @@ Buttons are available in several color-based variations:
   </Story>
   <Story name="Transparent">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--transparent">
           Cancel
         </button>
@@ -47,7 +47,7 @@ A special color variant that only shows itself on hover. This can be applied to 
 <Canvas>
   <Story name="Danger/primary">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--danger">
           Destroy
         </button>
@@ -56,7 +56,7 @@ A special color variant that only shows itself on hover. This can be applied to 
   </Story>
   <Story name="Danger/secondary">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--secondary a-button--danger">
           Destroy
         </button>
@@ -65,7 +65,7 @@ A special color variant that only shows itself on hover. This can be applied to 
   </Story>
   <Story name="Danger/transparent">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--transparent a-button--danger">
           Destroy
         </button>
@@ -79,7 +79,7 @@ A special color variant that only shows itself on hover. This can be applied to 
 <Canvas>
   <Story name="Primary (disabled)">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button" disabled>
           Save
         </button>
@@ -88,7 +88,7 @@ A special color variant that only shows itself on hover. This can be applied to 
   </Story>
   <Story name="Secondary (disabled)">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--secondary" disabled>
           Edit
         </button>
@@ -97,7 +97,7 @@ A special color variant that only shows itself on hover. This can be applied to 
   </Story>
   <Story name="Transparent (disabled)">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--transparent" disabled>
           Cancel
         </button>
@@ -106,7 +106,7 @@ A special color variant that only shows itself on hover. This can be applied to 
   </Story>
   <Story name="Danger/primary (disabled)">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--danger" disabled>
           Destroy
         </button>
@@ -115,7 +115,7 @@ A special color variant that only shows itself on hover. This can be applied to 
   </Story>
   <Story name="Danger/secondary (disabled)">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--secondary a-button--danger" disabled>
           Destroy
         </button>
@@ -124,7 +124,7 @@ A special color variant that only shows itself on hover. This can be applied to 
   </Story>
   <Story name="Danger/transparent (disabled)">
     {`
-      <div class="u-padding-m">
+      <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--transparent a-button--danger" disabled>
           Destroy
         </button>
@@ -227,6 +227,122 @@ Add `aria-disabled="true"` to an anchor to make it appear disabled. Be aware tha
       <a href="/" class="a-button a-button--transparent a-button--danger" aria-disabled="true">
         Destroy
       </a>
+    `}
+  </Story>
+</Canvas>
+
+## Dark theme
+
+<Canvas>
+  <Story name="Primary (dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button">
+          Save
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Secondary (dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--secondary">
+          Edit
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Transparent (dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--transparent">
+          Cancel
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Danger/primary (dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--danger">
+          Destroy
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Danger/secondary (dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--secondary a-button--danger">
+          Destroy
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Danger/transparent (dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--transparent a-button--danger">
+          Destroy
+        </a>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Primary (disabled, dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button" aria-disabled="true">
+          Save
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Secondary (disabled, dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--secondary" aria-disabled="true">
+          Edit
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Transparent (disabled, dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--transparent" aria-disabled="true">
+          Cancel
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Danger/primary (disabled, dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--danger" aria-disabled="true">
+          Destroy
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Danger/secondary (disabled, dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--secondary a-button--danger" aria-disabled="true">
+          Destroy
+        </a>
+      </div>
+    `}
+  </Story>
+  <Story name="Danger/transparent (disabled, dark theme)">
+    {`
+      <div class="u-padding-m" data-theme="dark">
+        <a href="/" class="a-button a-button--transparent a-button--danger" aria-disabled="true">
+          Destroy
+        </a>
+      </div>
     `}
   </Story>
 </Canvas>

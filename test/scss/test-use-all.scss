@@ -63,12 +63,6 @@
     )
   ),
   $layout-size-base: 10rem,
-  $shadows-shadows: (
-    'default': (
-      ('color': #f00, 'offset': 2.5rem, 'blur-radius': 5rem),
-      ('color': #f00, 'offset': 5rem, 'blur-radius': 10rem),
-    )
-  ),
   $setup-namespace: 'bs',
   $setup-custom-property-namespace: 'bscpn',
   $setup-layer-prefixes: (
@@ -76,6 +70,26 @@
     'molecule': 'mo',
     'organism': 'or',
     'utility': ''
+  ),
+  $shadows-shadows: (
+    'default': (
+      ('color': #f00, 'offset': 2.5rem, 'blur-radius': 5rem),
+      ('color': #f00, 'offset': 5rem, 'blur-radius': 10rem),
+    )
+  ),
+  $themes-themes: (
+    'default': (
+      'color': (
+        'background': var(--bscpn-color-brand-1-lightest),
+        'color': var(--bscpn-color-brand-2-darkest),
+      ),
+    ),
+    'dark': (
+      'color': (
+        'background': var(--bscpn-color-brand-1-darkest),
+        'text': var(--bscpn-color-brand-2-lightest),
+      ),
+    )
   ),
   $typography-webfont-family-name: 'FakeFont',
   $typography-webfont-base-url: './',
@@ -97,7 +111,6 @@
   // base
   $figure-font-style: bold,
   $forms-fieldset-padding: 10rem,
-  $html-color: red,
   $input-checkbox-border-radius: 10rem,
   $input-radio-border-radius: 10rem,
   $input-text-border-radius: 10rem,
@@ -111,7 +124,14 @@
   $button-transition: none,
   $button-colors-default: (
     'default': (
-      'color': var(--bscpn-color-grayscale-white),
+      'default': (
+        'color': var(--bscpn-color-grayscale-black),
+      ),
+    ),
+    'dark': (
+      'default': (
+        'color': var(--bscpn-color-grayscale-white),
+      ),
     )
   ),
   $button-tab-indicator-color: #f00,

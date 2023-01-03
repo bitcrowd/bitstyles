@@ -92,6 +92,22 @@
     ),
   )
 );
+@use '../../scss/bitstyles/settings/themes' with (
+  $themes: (
+    'default': (
+      'color': (
+        'background': var(--bscpn-color-brand-1-lightest),
+        'color': var(--bscpn-color-brand-2-darkest),
+      ),
+    ),
+    'dark': (
+      'color': (
+        'background': var(--bscpn-color-brand-1-darkest),
+        'text': var(--bscpn-color-brand-2-lightest),
+      ),
+    ),
+  )
+);
 @use '../../scss/bitstyles/settings/typography' with (
   $webfont-family-name: 'FakeFont',
   $webfont-base-url: './'
@@ -149,9 +165,7 @@
 @use '../../scss/bitstyles/base/forms' with (
   $fieldset-padding: 10rem
 );
-@use '../../scss/bitstyles/base/html' with (
-  $color: red
-);
+@use '../../scss/bitstyles/base/html';
 @use '../../scss/bitstyles/base/images';
 @use '../../scss/bitstyles/base/input-checkbox' with (
   $border-radius: 10rem
@@ -165,6 +179,7 @@
 @use '../../scss/bitstyles/base/select' with (
   $border-radius: 10rem
 );
+@use '../../scss/bitstyles/base/themes' as base-themes;
 @use '../../scss/bitstyles/base/typography' as base-typography with (
   $margin-heading: 10rem,
   $margin-paragraph: 10rem
@@ -190,7 +205,14 @@
 @use '../../scss/bitstyles/atoms/button-colors' with (
   $default: (
     'default': (
-      'color': var(--bscpn-color-grayscale-white),
+      'default': (
+        'color': var(--bscpn-color-grayscale-black),
+      ),
+    ),
+    'dark': (
+      'default': (
+        'color': var(--bscpn-color-grayscale-white),
+      ),
     ),
   )
 );

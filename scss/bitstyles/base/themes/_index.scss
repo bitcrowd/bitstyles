@@ -1,0 +1,41 @@
+@use '../../settings/themes' as settings;
+@use '../../tools/custom-properties';
+@use '../../tools/custom-property';
+@use '../../tools/themes';
+
+/* stylelint-disable selector-max-type */
+html,
+[data-theme] {
+  background-color: var(
+    #{custom-property.get(
+        $items: (
+          'theme',
+          'background',
+        )
+      )}
+  );
+  color: var(
+    #{custom-property.get(
+        $items: (
+          'theme',
+          'text',
+        )
+      )}
+  );
+}
+/* stylelint-enable selector-max-type */
+
+@each $theme-name, $theme in settings.$themes {
+  @include themes.get($theme-name) {
+    @each $palette-name, $colors in $theme {
+      @include custom-properties.output-filtered(
+        $properties: $colors,
+        $module-name: 'theme',
+        $allow-list: (
+          'text',
+          'background',
+        )
+      );
+    }
+  }
+}

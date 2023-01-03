@@ -22,6 +22,7 @@ $palette: (
     'darkest': base-palette.get('brand-2', '50'),
   ),
   'text': (
+    'lightest': base-palette.get('accent-gray', '195'),
     'lighter': base-palette.get('accent-gray', '180'),
     'light': base-palette.get('accent-gray', '170'),
     'base': base-palette.get('accent-gray', '120'),

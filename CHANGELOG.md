@@ -50,6 +50,8 @@
 - A new helper function `base-palette.get()` that returns colors from your base palette, to be used when setting up your color palette
 - Classname layer prefixes for indicating whether a class is at atom/molecule/organism/utility level can now be configured or even removed by overriding `setup.$layer-prefixes`.
 - New helper function `classname.get()` for generating classnames that respect the namespace and layer-prefix configuration. If you were previously using `properties.join-with-dashes()` to generate classnames, you should migrate to using `classname.get()` instead.
+- Added a new theming system, with the default configuration offering `default` and `dark` themes. These specify the `color` and `background-color` for the element to which they’re applied. The themes are available in Sass using `themes.get()`, which behaves similarly to `media-query.get()`.
+- Button color variations are now configured per-theme. Default configuration provides colors for default and dark themes.
 
 ### Changed
 
