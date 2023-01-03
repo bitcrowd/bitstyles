@@ -1,10 +1,21 @@
 @forward 'settings';
 @use './settings';
-@use '../../tools/icon';
+@use '../../settings/animation';
 @use '../../tools/classname';
 
 #{classname.get($classname-items: 'icon', $layer: 'atom')} {
-  @include icon.icon;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  transition: fill animation.$transition-duration animation.$transition-easing,
+    stroke animation.$transition-duration animation.$transition-easing,
+    background-color animation.$transition-duration animation.$transition-easing,
+    transform animation.$transition-duration animation.$transition-easing;
+  outline: none;
+  fill: currentColor;
+  font-size: 1em;
+  vertical-align: middle;
 }
 
 @each $size-alias, $size-size in settings.$sizes {

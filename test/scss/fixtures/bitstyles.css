@@ -282,6 +282,10 @@ textarea,
 ul {
   margin: 0;
 }
+ol,
+ul {
+  padding: 0;
+}
 iframe,
 img {
   border-style: none;
@@ -1606,11 +1610,6 @@ table {
   color: #1f00e6;
   text-decoration: underline;
 }
-.a-list-reset {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 .a-skip-link {
   font-weight: 600;
   left: 50%;
@@ -1787,19 +1786,6 @@ table {
 .o-ui-group__item:hover:not(.o-ui-group__last),
 .o-ui-group__item:not(.o-ui-group__last) {
   border-right: 0;
-}
-.u-absolute-center {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.u-absolute-cover {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 .u-aspect-ratio-1-1 {
   aspect-ratio: 1/1;

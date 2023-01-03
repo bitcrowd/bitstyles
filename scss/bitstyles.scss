@@ -72,7 +72,6 @@
 @forward 'bitstyles/atoms/flash' as flash-*;
 @forward 'bitstyles/atoms/icon' as icon-*;
 @forward 'bitstyles/atoms/link' as link-*;
-@forward 'bitstyles/atoms/list-reset' as link-reset-*;
 @forward 'bitstyles/atoms/skip-link' as skip-link-*;
 @forward 'bitstyles/atoms/topbar' as topbar-*;
 
@@ -89,8 +88,6 @@
 //
 // Utilities ////////////////////////////////////
 
-@forward 'bitstyles/utilities/absolute-center' as absolute-center-*;
-@forward 'bitstyles/utilities/absolute-cover' as absolute-cover-*;
 @forward 'bitstyles/utilities/aspect-ratio' as aspect-ratio-*;
 @forward 'bitstyles/utilities/bg' as bg-*;
 @forward 'bitstyles/utilities/border' as border-*;
