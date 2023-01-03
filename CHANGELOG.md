@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2023-01-03
 
 ### Fixed
 
