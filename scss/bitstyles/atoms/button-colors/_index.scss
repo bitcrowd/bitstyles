@@ -1,0 +1,10 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/button';
+@use '../../tools/classname';
+
+@each $variant-name, $variant in settings.$variants {
+  #{classname.get($classname-items: 'button#{$variant-name}', $layer: 'atom')} {
+    @include button.colors($colors: $variant);
+  }
+}

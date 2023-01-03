@@ -1,0 +1,158 @@
+@use 'sass:map';
+@use './classname';
+@use '../tools/custom-property';
+@use '../tools/line-height';
+
+@mixin colors($colors) {
+  $allowed-color-properties: (
+    'color',
+    'background-color',
+    'border-color',
+    'box-shadow'
+  );
+
+  @if map.has-key($colors, 'default') {
+    $current-colors: map.get($colors, 'default');
+
+    &,
+    &:visited {
+      /* stylelint-disable max-nesting-depth */
+      @each $color-property in $allowed-color-properties {
+        @if map.has-key($current-colors, $color-property) {
+          #{custom-property.get($items: ('button', $color-property), $layer: 'atom')}: #{map.get(
+              $current-colors,
+              $color-property
+            )};
+        }
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+
+  @if map.has-key($colors, 'hover') {
+    $current-colors: map.get($colors, 'hover');
+
+    &:hover,
+    &:focus {
+      /* stylelint-disable max-nesting-depth */
+      @each $color-property in $allowed-color-properties {
+        @if map.has-key($current-colors, $color-property) {
+          #{custom-property.get($items: ('button', $color-property), $layer: 'atom')}: #{map.get(
+              $current-colors,
+              $color-property
+            )};
+        }
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+
+  @if map.has-key($colors, 'active') {
+    $current-colors: map.get($colors, 'active');
+
+    &:active {
+      /* stylelint-disable max-nesting-depth */
+      @each $color-property in $allowed-color-properties {
+        @if map.has-key($current-colors, $color-property) {
+          #{custom-property.get($items: ('button', $color-property), $layer: 'atom')}: #{map.get(
+              $current-colors,
+              $color-property
+            )};
+        }
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+
+  @if map.has-key($colors, 'pressed') {
+    $current-colors: map.get($colors, 'pressed');
+
+    &[aria-pressed='true'],
+    &[aria-selected='true'],
+    &[aria-current] {
+      /* stylelint-disable max-nesting-depth */
+      @each $color-property in $allowed-color-properties {
+        @if map.has-key($current-colors, $color-property) {
+          #{custom-property.get($items: ('button', $color-property), $layer: 'atom')}: #{map.get(
+              $current-colors,
+              $color-property
+            )};
+        }
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+
+  @if map.has-key($colors, 'disabled') {
+    $current-colors: map.get($colors, 'disabled');
+
+    &:disabled,
+    &[aria-disabled='true'],
+    &:disabled:hover,
+    &[aria-disabled='true']:hover,
+    &:disabled:focus,
+    &[aria-disabled='true']:focus {
+      #{custom-property.get($items: ('button', 'color'), $layer: 'atom')}: #{map.get(
+          $current-colors,
+          'color'
+        )};
+      #{custom-property.get($items: ('button', 'background-color'), $layer: 'atom')}: #{map.get(
+          $current-colors,
+          'background-color'
+        )};
+      #{custom-property.get($items: ('button', 'border-color'), $layer: 'atom')}: #{map.get(
+          $current-colors,
+          'border-color'
+        )};
+      #{custom-property.get($items: ('button', 'box-shadow'), $layer: 'atom')}: #{map.get(
+          $current-colors,
+          'box-shadow'
+        )};
+    }
+  }
+}
+
+@mixin sizes($sizes, $with-square-variant: true) {
+  $allowed-sizes: (
+    'padding-vertical',
+    'padding-horizontal',
+    'border-width',
+    'border-radius',
+    'min-height',
+    'min-width',
+    'font-size',
+    'font-weight',
+    'justify-content'
+  );
+
+  @each $property-name in ($allowed-sizes) {
+    @if map.has-key($sizes, $property-name) {
+      #{custom-property.get($items: ('button', $property-name), $layer: 'atom')}: #{map.get(
+          $sizes,
+          $property-name
+        )};
+    }
+  }
+
+  @if $with-square-variant {
+    &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
+      #{custom-property.get($items: ('button', 'min-width'), $layer: 'atom')}: #{calc(
+          #{line-height.get('5')} * 1em
+        )};
+      #{custom-property.get($items: ('button', 'min-height'), $layer: 'atom')}: #{calc(
+          #{line-height.get('5')} * 1em
+        )};
+
+      @if map.has-key($sizes, 'padding-vertical') {
+        #{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')}: #{map.get(
+            $sizes,
+            'padding-vertical'
+          )};
+        #{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')}: #{map.get(
+            $sizes,
+            'padding-vertical'
+          )};
+      }
+    }
+  }
+}

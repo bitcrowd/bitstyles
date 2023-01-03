@@ -32,10 +32,18 @@ $palette: (
     'base': base-palette.get('pure-gray', '100'),
     'dark': base-palette.get('accent-gray', '190'),
     'darker': base-palette.get('accent-gray', '180'),
+    'darkest': base-palette.get('accent-gray', '50'),
   ),
   'grayscale': (
     'white': base-palette.get('pure-gray', '100'),
     'black': base-palette.get('pure-gray', '0'),
+  ),
+  'accent-gray': (
+    'lighter': base-palette.get('accent-gray', '195'),
+    'light': base-palette.get('accent-gray', '180'),
+    'base': base-palette.get('accent-gray', '110'),
+    'dark': base-palette.get('accent-gray', '85'),
+    'darker': base-palette.get('accent-gray', '35'),
   ),
   'danger': (
     'lighter': base-palette.get('red', '195'),

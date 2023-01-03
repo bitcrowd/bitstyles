@@ -3,73 +3,703 @@ import icons from '../../../../assets/images/icons.svg';
 
 <Meta title="Atoms/Button/Base" />
 
-## Button
-
-All the buttons produce a larger-than-text hit target, and by default react to `:hover`, `:focus`, `:active`, and `:disabled`. Visited states are not shown even if the button is an anchor, as “visited” doesn’t make sense for an action.
-
 <Canvas>
-  <Story name="Button Element">
+  <Story name="Button selection">
     {`
-      <button class="a-button" type="button">
-        <span class="a-button__label">Button element</span>
-      </button>
-    `}
-  </Story>
-  <Story name="Button (Disabled)">
-    {`
-      <button disabled class="a-button" type="button">
-        <span class="a-button__label">Button element (disabled)</span>
-      </button>
-    `}
-  </Story>
-  <Story name="Anchor Element">
-    {`
-      <a href="#" class="a-button">
-        <span class="a-button__label">Anchor element</span>
-      </a>
-    `}
-  </Story>
-  <Story name="Anchor Element (visited)">
-    {`
-      <a href="/" class="a-button">
-        <span class="a-button__label">Anchor element (visited)</span>
-      </a>
-    `}
-  </Story>
-  <Story name="Anchor Element (disabled)">
-    {`
-      <a href="/" class="a-button" aria-disabled="true">
-        <span class="a-button__label">Anchor element (disabled)</span>
-      </a>
+      <div class="u-grid u-gap-l">
+        <ul class="u-list-none u-flex u-gap-l">
+          <li>
+            <button class="a-button a-button--small">Save</button>
+          </li>
+          <li>
+            <button class="a-button a-button--small a-button--secondary">Edit</button>
+          </li>
+          <li>
+            <button class="a-button a-button--small a-button--transparent">Cancel</button>
+          </li>
+          <li>
+            <button class="a-button a-button--small a-button--primary a-button--danger">Delete</button>
+          </li>
+          <li>
+            <button class="a-button a-button--small a-button--secondary a-button--danger">Delete</button>
+          </li>
+          <li>
+            <button class="a-button a-button--small a-button--transparent a-button--danger">Delete</button>
+          </li>
+          <li>
+            <button class="a-button a-button--small a-button--square">
+              <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary a-button--small a-button--square">
+              <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--transparent a-button--small a-button--square">
+              <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--small a-button--square a-button--round">
+              <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary a-button--small a-button--square a-button--round">
+              <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--transparent a-button--small a-button--square a-button--round">
+              <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="u-list-none u-flex u-gap-l">
+          <li>
+            <button class="a-button">Save</button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary">Edit</button>
+          </li>
+          <li>
+            <button class="a-button a-button--transparent">Cancel</button>
+          </li>
+          <li>
+            <button class="a-button a-button--danger">Delete</button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary a-button--danger">Delete</button>
+          </li>
+          <li>
+            <button class="a-button a-button--transparent a-button--danger">Delete</button>
+          </li>
+          <li>
+            <button class="a-button a-button--square">
+              <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary a-button--square">
+              <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--transparent a-button--square">
+              <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--square a-button--round">
+              <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary a-button--square a-button--round">
+              <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--transparent a-button--square a-button--round">
+              <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+        </ul>
+        <ul class="u-list-none u-flex u-gap-l">
+          <li>
+            <button class="a-button a-button--large">Save</button>
+          </li>
+          <li>
+            <button class="a-button a-button--large a-button--secondary">Edit</button>
+          </li>
+          <li>
+            <button class="a-button a-button--large a-button--transparent">Cancel</button>
+          </li>
+          <li>
+            <button class="a-button a-button--large a-button--danger">Delete</button>
+          </li>
+          <li>
+            <button class="a-button a-button--large a-button--secondary a-button--danger">Delete</button>
+          </li>
+          <li>
+            <button class="a-button a-button--large a-button--transparent a-button--danger">Delete</button>
+          </li>
+          <li>
+            <button class="a-button a-button--large a-button--square">
+              <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary a-button--large a-button--square">
+              <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--transparent a-button--large a-button--square">
+              <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--large a-button--square a-button--round">
+              <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--secondary a-button--large a-button--square a-button--round">
+              <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+          <li>
+            <button class="a-button a-button--transparent a-button--large a-button--square a-button--round">
+              <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+                <use xlink:href="${icons}#icon-plus"></use>
+              </svg>
+              <span class="u-sr-only">Add</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     `}
   </Story>
 </Canvas>
 
-## Buttons with icons and text
+## Button
 
-**Note**: if you want a button with _only_ an icon, go look at [`Icon buttons`](/docs/atoms-button-icon--button-element)
+For details on usage of these buttons, go see [/docs/ui-buttons-buttons--page](UI/buttons).
 
-These are buttons containing a visible text label next to an icon. The order of text/icon is dictated by the order of the elements, you do not need to add a class to change it.
+### Small buttons
 
 <Canvas>
-  <Story name="Button with Icon">
+  <Story name="Small primary">
     {`
-      <button class="a-button" type="button">
-        <svg width="16" height="16" class="a-button__icon a-icon" aria-hidden="true" focusable="false">
-          <use xlink:href="${icons}#icon-plus"></use>
-        </svg>
-        <span class="a-button__label">Button with icon</span>
-      </button>
+      <div class="u-padding-m">
+        <button class="a-button a-button--small">
+          Dashboard
+        </button>
+      </div>
     `}
   </Story>
-  <Story name="Button with Icon (reversed)">
+  <Story name="Small primary square">
     {`
-      <button class="a-button" type="button">
-        <span class="a-button__label">Button with icon (reversed)</span>
-        <svg width="16" height="16" class="a-button__icon a-icon" aria-hidden="true" focusable="false">
-          <use xlink:href="${icons}#icon-plus"></use>
-        </svg>
-      </button>
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small primary round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--round a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small secondary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--secondary">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small secondary square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--square a-button--secondary">
+          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small secondary round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--round a-button--square a-button--secondary">
+          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small transparent">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--transparent">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small transparent square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--transparent a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small transparent round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--transparent a-button--round a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Small tab">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--small a-button--tab">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+### Default buttons
+
+<Canvas>
+  <Story name="Default primary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default primary square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default primary round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--round a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default secondary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--secondary">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default secondary square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--square a-button--secondary">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default secondary round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--square a-button--round a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default transparent">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent">
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Default transparent square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default transparent round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent a-button--round a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Default tab">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--tab">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+### Large buttons
+
+<Canvas>
+  <Story name="Large primary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large primary square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large primary round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--round a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large secondary">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--secondary">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large secondary square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--square a-button--secondary">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large secondary round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--round a-button--square a-button--secondary">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large transparent">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--transparent">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large transparent square">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--transparent a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large transparent round">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--transparent a-button--round a-button--square a-button--square">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Large tab">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--large a-button--tab">
+          Dashboard
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+## Disabled buttons
+
+<Canvas>
+  <Story name="Primary (Disabled)">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button" disabled>
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Secondary (Disabled)">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--secondary" disabled>
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Transparent (Disabled)">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent" disabled>
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Tab (Disabled)">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--tab" disabled>
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+</Canvas>
+
+## Danger buttons
+
+<Canvas>
+  <Story name="Primary danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--danger">
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Secondary danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--secondary a-button--danger">
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Transparent danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent a-button--danger">
+          Dashboard
+        </button>
+      <div>
+    `}
+  </Story>
+  <Story name="Primary square danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Primary round danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--round a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Secondary square danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--secondary a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Secondary round danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--secondary a-button--round a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Transparent square danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent a-button--square a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Transparent round danger">
+    {`
+      <div class="u-padding-m">
+        <button class="a-button a-button--transparent a-button--round a-button--square  a-button--danger">
+          <svg width="20" height="20" class="a-icon a-icon--l" aria-hidden="true" focusable="false">
+            <use xlink:href="${icons}#icon-plus"></use>
+          </svg>
+          <span class="u-sr-only">Remove</span>
+        </button>
+      </div>
     `}
   </Story>
 </Canvas>

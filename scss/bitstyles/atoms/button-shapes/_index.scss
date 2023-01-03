@@ -1,0 +1,15 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/button';
+@use '../../tools/classname';
+@use 'sass:list';
+
+@each $variant-name, $variant in settings.$variants {
+  #{classname.get($classname-items: 'button#{$variant-name}', $layer: 'atom')} {
+    @include button.sizes(
+      $sizes: $variant,
+      $with-square-variant:
+        list.index(settings.$with-square-variants, $variant-name)
+    );
+  }
+}

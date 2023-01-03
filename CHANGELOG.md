@@ -17,6 +17,7 @@
 - Adds a new set of utility classes for specifying the `text-decoration-line` property. Default configuration gives `underline` and `line-through` as values, and is not available at any breakpoints. This can be configured using `$values` and `$breakpoints`.
 - Adds utility classes for specifying `justify-self` and `justify-items`.
 - A new utility class `u-list` to specify the `list-style-type` property. Default values available are `none`, `decimal`, `disc`. Configuration is possible using `$bitstyles-list-values` and `$bitstyles-list-breakpoints`.
+- Two generators for button variants: `button.colors($colors)` allows variations of color properties (color, background-color, shadow, border-color, etc); `button.sizes.($sizes)` allows variations of size- and shape-related properties (padding, border-width, border-radius, font-size etc.).
 
 ### Changed
 
@@ -29,6 +30,7 @@
 - The variables for the `utilities/flex` classes have been updated to match the pattern used by the `utilities/justify` classes. `$direction` becomes `$direction-values`, `$wrap` becomes `$wrap-values`, `$grow` becomes `$grow-values`, and `$shrink` becomes `$shrink-values`. The single `$breakpoints` variable has been broken out into individual variables for specifying breakpoints for each property: `$direction-breakpoints`, `$wrap-breakpoints`, `$grow-breakpoints`, and `$shrink-breakpoints`. If you were overriding any of these variables, you’ll need to rename them.
 - The following mixins have been moved from `tools/` to `mixins/`: `aspect-ratio`, `clearfix`, `link`, `object-cover`, `truncate`.
 - Removes the class `a-list-reset`. Replace uses of this class with `u-list-none`.
+- Removes existing button types: `icon`, `icon-reversed`, `menu`, `mode`, `nav`, `nav-large`, `ui`. These are replaced with buttons variants of size & shape, and of color, which can be combined to create a similar set of visual appearances: `small`, `medium`, `large`, `square`, `round`, and `primary`, `secondary`, `transparent`, `danger`, `tab`. You’ll need to update any button classes you were using to use the new classes in combination, or use the button variant `color()` and `size()` generators in `tools/button` to recreate the button classes you were previously using.
 
 ### Breaking
 

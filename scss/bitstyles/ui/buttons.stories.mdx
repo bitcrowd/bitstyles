@@ -1,72 +1,49 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import icons from '../../../assets/images/icons.svg';
 
-<Meta title="UI/Buttons/Buttons" />
+<Meta title="UI/Buttons/Overview" />
+
+<Canvas>
+  <Story id="atoms-button-base--button-selection" />
+</Canvas>
 
 # Buttons
 
-## Buttons perform actions
-
 The button classes are used to make an interactive element look like a “button” to the user, and should ideally perform an action rather a navigation. For historical and technical reasons, things which we consider “actions” are actually implemented by navigating to a page (e.g. a CRUD system) so this class is often applied to `<a>` elements. Ideally though (and definitely if you’re working on a JS app) use a real `<button>` element.
 
-All the buttons produce a larger-than-text hit target, and by default react to `:hover`, `:focus`, `:active`, and `:disabled`. Visited states are not shown even if the button is an anchor, as “visited” doesn’t make sense for an action.
+All the buttons produce a larger-than-text hit target, and by default react to `:hover`, `:focus`, `:active`, `:disabled`, and `aria-pressed`, `aria-selected`, and `aria-current` states. Visited states are not shown even if the “button” is actually an anchor element. This is because buttons indicate actions, and “visited” doesn’t make sense for an action.
 
-<details class="u-margin-xl-y">
-  <summary class="u-h4 u-font-medium">Examples use</summary>
-  <ul>
-    <li>
-      <a href="/docs/atoms-button-base--button-element">a-button</a>
-    </li>
-    <li>
-      <a href="/docs/atoms-button-danger--danger">a-button--danger</a>
-    </li>
-    <li>
-      <a href="/docs/atoms-button-ui--ui">a-button--ui</a>
-    </li>
-    <li>
-      <a href="/docs/atoms-button-icon--button-element">a-button--icon</a>
-    </li>
-    <li>
-      <a href="/docs/atoms-button-nav--nav">a-button--nav</a>
-    </li>
-  </ul>
-</details>
+Bitstyles provides two sets of button variants — size variants, and color variants. Each of the size variants can be combined with each of the color variants to produce a wide range of button appearances.
 
-## Base buttons
+## Shape variants
 
-<Canvas isColumn>
-  <Story id="atoms-button-base--button-element" />
-  <Story id="atoms-button-base--button-with-icon" />
-  <Story id="atoms-button-base--button-with-icon-reversed" />
-</Canvas>
+Buttons are available in a variety of shapes:
 
-## UI buttons
+- **small**, **default**, **large** Sizes which can be combined with the other shapes.
+- **square** A square button, with padding and border-radius that matches the other buttons at a given size. Useful for icon buttons.
+- **round** A button with rounded corners, which matches the size of other buttons at a given size. Combine with **square** to make a circular button (useful for circular icon buttons).
 
-<Canvas isColumn>
-  <Story id="atoms-button-ui--ui" />
-  <Story id="atoms-button-ui--dropdown" />
-</Canvas>
+See [Button shapes](/docs/atoms-button-shapes--small) for details on customizing these.
 
-## Icon buttons
+## Color variants
 
-<Canvas>
-  <Story id="atoms-button-icon--button-element" />
-  <Story id="atoms-button-icon-reversed--icon-reversed" />
-</Canvas>
+- **Primary** The default button style is primary, and in most cases should be used only once per screen to indicate the primary action for the screen.
+- **Secondary** The most-commonly used, these indicate all the non-primary actions a user can enact on a screen.
+- **Transparent** Use transparent buttons to de-emphasise an action (see the “cancel” buttons, below). Use also for nav menus, sidebars, and dropdown menus.
+- **Dangerous** A special case, that only applies its appearance on hover and active. Use these to indicate an action the user should be wary of, most often something destructive to data. This variant can be combined with all other button color variants.
 
-## Nav buttons
+See [Button colors](/docs/atoms-button-colors--primary) for details on customizing these.
 
-Use these in your main navigation (see [Navbar](/docs/ui-navigation-navbar--navbar)). The currently-active link should be given `aria-current="page"`, so it’ll be highlighted.
+### Disabled buttons
 
-<Canvas>
-  <Story id="atoms-button-nav--nav" />
-  <Story id="atoms-button-nav--nav-aria-current" />
-</Canvas>
+Use the `aria-disabled="true"` attribute on `anchor` elements, or the `disabled` attribute on `button` elements.
 
-## Danger buttons
+## Pressed, selected, current
 
-For dangerous or destructive actions, these show danger when you hover or focus them.
+Buttons can be given aria attributes to indicate to the user that they have a another state. This normally gives the user a little more information about how that button is intended to be used, or the effects it will have when clicked.
 
-<Canvas isColumn>
-  <Story id="atoms-button-danger--danger" />
-  <Story id="atoms-button-danger--danger-list" />
-</Canvas>
+Apply `aria-pressed="true"` to your button to indicate that it’s a toggle button in a pressed state.
+
+Apply `aria-selected="true` to the currently-selected tab button in a series of tab buttons.
+
+Apply `aria-current="page"` to the navigation button in your main navigation, when the user is currently on that page.

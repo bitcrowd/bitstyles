@@ -58,9 +58,9 @@ const RenderColorItem = (label, color) =>
         class="u-margin-xs-left u-margin-xs-top u-fg-text-darker"
         style="font-size: 0.625rem;"
       >
-        <strong class="u-bg-white u-padding-xxs-x">${label}</strong>
+        <strong class="u-bg-white u-padding-2xs-x">${label}</strong>
         <br/>
-        <span class="u-bg-white u-padding-xxs-x">${color}</span>
+        <span class="u-bg-white u-padding-2xs-x">${color}</span>
       </div>
     </li>
   `;
@@ -72,7 +72,7 @@ const RenderColors = ({ colors, layout }) => {
       classname = 'u-flex-grow-1 u-grid u-grid-cols-auto u-list-none';
       break;
     default:
-      classname = 'u-flex-grow-1 u-grid u-grid-cols-auto u-list-none u-gap-xxs';
+      classname = 'u-flex-grow-1 u-grid u-grid-cols-auto u-list-none u-gap-2xs';
   }
 
   return `
