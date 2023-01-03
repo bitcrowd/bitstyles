@@ -69,11 +69,10 @@ const RenderColors = ({ colors, layout }) => {
   let classname;
   switch (layout) {
     case 'dense':
-      classname = 'u-flex-grow-1 u-grid u-grid-cols-auto a-list-reset';
+      classname = 'u-flex-grow-1 u-grid u-grid-cols-auto u-list-none';
       break;
     default:
-      classname =
-        'u-flex-grow-1 u-grid u-grid-cols-auto a-list-reset u-gap-xxs';
+      classname = 'u-flex-grow-1 u-grid u-grid-cols-auto u-list-none u-gap-xxs';
   }
 
   return `
@@ -114,14 +113,14 @@ const RenderColorPaletteList = ({
   switch (layout) {
     case 'dense':
       classname =
-        'a-list-reset u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l u-margin-xl-bottom u-items-start';
+        'u-list-none u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l u-margin-xl-bottom u-items-start';
       break;
     case 'row':
-      classname = 'a-list-reset u-flex';
+      classname = 'u-list-none u-flex';
       break;
     default:
       classname =
-        'a-list-reset u-grid u-gap-l u-grid-cols-2@l u-margin-xl-bottom u-items-start';
+        'u-list-none u-grid u-gap-l u-grid-cols-2@l u-margin-xl-bottom u-items-start';
   }
 
   return `

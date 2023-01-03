@@ -15,7 +15,8 @@
 - Adds a utility class for the `width` property. Defaults to providing `width: 100%` under the name `u-width-full`. This can be customized using `$bitstyles-width-values` and `$bitstyles-width-breakpoints`.
 - Adds utility classes to specify white-space property. Defaults to just `nowrap`, and is configurable with `$bitstyles-white-space-values`, and `$bitstyles-white-space-breakpoints`.
 - Adds a new set of utility classes for specifying the `text-decoration-line` property. Default configuration gives `underline` and `line-through` as values, and is not available at any breakpoints. This can be configured using `$values` and `$breakpoints`.
-- Adds utility classes for specifying `justify-self` and `justify-items`
+- Adds utility classes for specifying `justify-self` and `justify-items`.
+- A new utility class `u-list` to specify the `list-style-type` property. Default values available are `none`, `decimal`, `disc`. Configuration is possible using `$bitstyles-list-values` and `$bitstyles-list-breakpoints`.
 
 ### Changed
 

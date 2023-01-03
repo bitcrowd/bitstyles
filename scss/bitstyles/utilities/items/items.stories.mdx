@@ -15,7 +15,7 @@ The `u-items-` classes set `align-items` to the respective direction(s) on the m
 <Canvas isColumn>
   <Story name="items-center">
     {`
-      <ul class="a-list-reset u-flex u-items-center u-fg-white">
+      <ul class="u-list-none u-flex u-items-center u-fg-white">
         <li class="u-margin-m u-padding-m u-bg-gray-light" style="height: 10rem;">
           u-items-center
         </li>
@@ -30,7 +30,7 @@ The `u-items-` classes set `align-items` to the respective direction(s) on the m
   </Story>
   <Story name="items-end">
     {`
-      <ul class="a-list-reset u-flex u-items-end u-fg-white">
+      <ul class="u-list-none u-flex u-items-end u-fg-white">
         <li class="u-margin-m u-padding-m u-bg-gray-light" style="height: 10rem;">
           u-items-end
         </li>
@@ -45,7 +45,7 @@ The `u-items-` classes set `align-items` to the respective direction(s) on the m
   </Story>
   <Story name="items-start">
     {`
-      <ul class="a-list-reset u-flex u-items-start u-fg-white">
+      <ul class="u-list-none u-flex u-items-start u-fg-white">
         <li class="u-margin-m u-padding-m u-bg-gray-light" style="height: 10rem;">
           u-items-start
         </li>
@@ -60,7 +60,7 @@ The `u-items-` classes set `align-items` to the respective direction(s) on the m
   </Story>
   <Story name="items-stretch">
     {`
-      <ul class="a-list-reset u-flex u-items-stretch u-fg-white" style="min-height: 10rem;">
+      <ul class="u-list-none u-flex u-items-stretch u-fg-white" style="min-height: 10rem;">
         <li class="u-margin-m u-padding-m u-bg-gray-light" style="flex-basis: 33%">
           u-items-stretch. Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o.
         </li>
@@ -75,7 +75,7 @@ The `u-items-` classes set `align-items` to the respective direction(s) on the m
   </Story>
   <Story name="items-baseline">
     {`
-      <ul class="a-list-reset u-flex u-items-baseline u-fg-white">
+      <ul class="u-list-none u-flex u-items-baseline u-fg-white">
         <li class="u-margin-m u-padding-m u-bg-gray-light">
           u-items-baseline. Elements with different padding top & bottom.
         </li>
@@ -97,7 +97,7 @@ These classes are all available at the `m` breakpoint.
 <Canvas isColumn>
   <Story name="items-center@m">
     {`
-      <ul class="a-list-reset u-flex u-items-center@m u-fg-white">
+      <ul class="u-list-none u-flex u-items-center@m u-fg-white">
         <li class="u-margin-m u-padding-m u-bg-gray-light" style="height: 10rem;">
           u-items-center
         </li>
@@ -112,7 +112,7 @@ These classes are all available at the `m` breakpoint.
   </Story>
   <Story name="items-end@m">
     {`
-      <ul class="a-list-reset u-flex u-items-end@m u-fg-white">
+      <ul class="u-list-none u-flex u-items-end@m u-fg-white">
         <li class="u-margin-m u-padding-m u-bg-gray-light" style="height: 10rem;">
           u-items-end
         </li>
@@ -127,7 +127,7 @@ These classes are all available at the `m` breakpoint.
   </Story>
   <Story name="items-start@m">
     {`
-      <ul class="a-list-reset u-flex u-items-start@m u-fg-white">
+      <ul class="u-list-none u-flex u-items-start@m u-fg-white">
         <li class="u-margin-m u-padding-m u-bg-gray-light" style="height: 10rem;">
           u-items-start
         </li>
@@ -142,7 +142,7 @@ These classes are all available at the `m` breakpoint.
   </Story>
   <Story name="items-stretch@m">
     {`
-      <ul class="a-list-reset u-flex u-items-stretch@m u-fg-white" style="min-height: 10rem;">
+      <ul class="u-list-none u-flex u-items-stretch@m u-fg-white" style="min-height: 10rem;">
         <li class="u-margin-m u-padding-m u-bg-gray-light" style="flex-basis: 33%">
           u-items-stretch. Elements with different amounts of content. Gummies bonbon oat cake tootsie roll liquorice sugar plum tart pie jelly-o.
         </li>
@@ -157,7 +157,7 @@ These classes are all available at the `m` breakpoint.
   </Story>
   <Story name="items-baseline@m">
     {`
-      <ul class="a-list-reset u-flex u-items-baseline@m u-fg-white">
+      <ul class="u-list-none u-flex u-items-baseline@m u-fg-white">
         <li class="u-margin-m u-padding-m u-bg-gray-light">
           u-items-baseline. Elements with different padding top & bottom.
         </li>
@@ -174,7 +174,7 @@ These classes are all available at the `m` breakpoint.
 
 ## Customization
 
-Customize the available align-items values by overriding the `$bitstyles-items-values` Sass map. Provide the name to be used for the class as the key, and the favlue for the `align-items` property:
+Customize the available align-items values by overriding the `$bitstyles-items-values` Sass map. Provide the name to be used for the class as the key, and the value for the `align-items` property:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/items' with (

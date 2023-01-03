@@ -44,7 +44,7 @@ When a user wants to filter a list of objects by fields which have a limited num
       <a href="/docs/atoms-icon--icon">a-icon</a>
     </li>
     <li>
-      <a href="/docs/atoms-list-reset--list-reset">a-list-reset</a>
+      <a href="/docs/atoms-list-reset--list-reset">u-list-none</a>
     </li>
     <li>
       <a href="/docs/utilities-typography--typography">u-h6</a>
@@ -70,7 +70,7 @@ When a user wants to filter a list of objects by fields which have a limited num
       <div style="min-height: 15rem;">
         <form action="" method="POST" class="u-flex u-items-center" role="search">
           <h3 class="u-sr-only">Filter results</h3>
-          <ul class="a-list-reset u-flex" x-data="{ dropdownOpen: false }">
+          <ul class="u-list-none u-flex" x-data="{ dropdownOpen: false }">
             <li class="u-relative u-margin-xs-right">
               <button
                 type="button"
@@ -95,7 +95,7 @@ When a user wants to filter a list of objects by fields which have a limited num
                 x-transition:leave-start="is-on-screen"
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
-                class="a-dropdown a-dropdown--right u-overflow-y-auto a-list-reset u-margin-s-top"
+                class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
                 id="dropdown-1"
               >
                 <li>
@@ -148,7 +148,7 @@ When a user wants to filter a list of objects by fields which have a limited num
                 x-transition:leave-start="is-on-screen"
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
-                class="a-dropdown a-dropdown--right u-overflow-y-auto a-list-reset u-margin-s-top"
+                class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
                 id="dropdown-2"
               >
                 <li>
@@ -196,7 +196,7 @@ Some fields such as names and emails will need to be filtered by user-entered fr
       <div style="min-height: 10rem;">
         <form action="" method="POST" role="search">
           <h3 class="u-sr-only">Filter results</h3>
-          <ul class="o-ui-group u-flex a-list-reset">
+          <ul class="o-ui-group u-flex u-list-none">
             <li class="u-flex">
               <label for="search_users" class="u-sr-only">Search users</label>
               <input type="search" id="search_users" class="o-ui-group__item u-border-radius-0-tr u-border-radius-0-br" placeholder="Search users…" />
@@ -223,7 +223,7 @@ Some fields such as names and emails will need to be filtered by user-entered fr
                 x-transition:leave-start="is-on-screen"
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
-                class="a-dropdown a-dropdown--right u-margin-s-top u-overflow-y-auto a-list-reset u-margin-s-bottom"
+                class="a-dropdown a-dropdown--right u-margin-s-top u-overflow-y-auto u-list-none u-margin-s-bottom"
                 id="dropdown-1"
               >
                 <li>
@@ -264,9 +264,9 @@ When giving the user filters by category and free text, place the free text sear
       <div style="min-height: 10rem;">
         <form action="" method="POST" role="search">
           <h3 class="u-sr-only">Filter results</h3>
-          <ul class="a-list-reset u-flex u-items-center">
+          <ul class="u-list-none u-flex u-items-center">
             <li class="u-margin-xs-right">
-              <ul class="o-ui-group u-flex a-list-reset">
+              <ul class="o-ui-group u-flex u-list-none">
                 <li class="u-flex">
                   <label for="search_users" class="u-sr-only">Search users</label>
                   <input type="search" id="search_users" class="o-ui-group__item u-border-radius-0-tr u-border-radius-0-br" placeholder="Search users…" />
@@ -294,7 +294,7 @@ When giving the user filters by category and free text, place the free text sear
                     x-transition:leave-start="is-on-screen"
                     x-transition:leave-end="is-off-screen"
                     @click.away="dropdownOpen = false"
-                    class="a-dropdown a-dropdown--right u-overflow-y-auto a-list-reset u-margin-s-top"
+                    class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
                     id="dropdown-1"
                   >
                     <li>
@@ -337,7 +337,7 @@ When giving the user filters by category and free text, place the free text sear
                 x-transition:leave-start="is-on-screen"
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
-                class="a-dropdown a-dropdown--right u-overflow-y-auto a-list-reset u-margin-s-top"
+                class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
                 id="dropdown-1"
               >
                 <li>
