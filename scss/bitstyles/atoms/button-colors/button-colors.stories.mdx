@@ -363,14 +363,22 @@ If the variety of buttons provided fits your requirements, but you need e.g. you
 The `default`, `secondary`, `transparent`, `tab`, and `danger` configurations are all available to be overridden at variables with those names. The configuration expects a Sass map of button states `default`, `hover`, `active`, `pressed`, and `disabled`. You do not need to provide all of these, only those you require. Each state should contain a Sass map where the CSS property name (from the list above) is the key, and the value for that property is the value:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/atoms/button-colors' with (
-  $secondary: (
+$secondary: (
+  'default': (
     'default': (
       'border-color': #f00,
     ),
     'hover': (
       'border-color': #600,
     ),
+  ),
+);
+
+@use '~bitstyles/scss/bitstyles/atoms/button-colors' with (
+  $variants: (
+    '': $default,
+    '--secondary': $secondary,
+    // other created variants can be passed here
   )
 );
 ```
@@ -380,18 +388,22 @@ The `default`, `secondary`, `transparent`, `tab`, and `danger` configurations ar
 When you need an entirely different set of buttons, you can define your own and pass it to `button-colors.$variants` with a name. For now you’ll need to include the double dashes for BEM naming (or a single dash if you prefer).
 
 ```scss
+$custom-button: (
+  'default': (
+    'default': (
+      'border-color': #f00,
+      'color': #fff,
+    ),
+    'hover': (
+      'border-color': #600,
+      'color': #f00,
+    ),
+  ),
+);
+
 @use '~bitstyles/scss/bitstyles/atoms/button-colors' with (
   $variants: (
-    '--custom-button': (
-      'default': (
-        'border-color': #f00,
-        'color': #fff,
-      ),
-      'hover': (
-        'border-color': #600,
-        'color': #f00,
-      ),
-    ),
+    '--custom-button': $custom-button,
   )
 );
 ```
