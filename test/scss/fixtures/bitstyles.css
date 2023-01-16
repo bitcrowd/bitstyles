@@ -2716,6 +2716,9 @@ table {
 .u-justify-between {
   justify-content: space-between;
 }
+.u-justify-center {
+  justify-content: center;
+}
 .u-justify-end {
   justify-content: flex-end;
 }
@@ -2725,6 +2728,9 @@ table {
 @media screen and (min-width: 30em) {
   .u-justify-between\@m {
     justify-content: space-between;
+  }
+  .u-justify-center\@m {
+    justify-content: center;
   }
   .u-justify-end\@m {
     justify-content: flex-end;
