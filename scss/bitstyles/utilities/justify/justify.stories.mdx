@@ -8,7 +8,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Specify `justify-content` property on an element.
 
-Available with `between`, `start`, and `end` values by default, and at the `m` breakpoint. See [customization](#customization) below for details on how change the settings.
+Available with `between`, `start`, `center` and `end` values by default, and at the `m` breakpoint. See [customization](#customization) below for details on how change the settings.
 
 Flex and Grid share many alignment properties. These will have no effect on elements to which you haven’t given one of those classes (`.u-flex`, `.u-grid`).
 
@@ -23,6 +23,18 @@ The `u-justify-` classes set set `justify-content` to align flex children to the
         </li>
         <li class="a-card u-margin-m u-bg-gray-dark">
           Between
+        </li>
+      </ul>
+    `}
+  </Story>
+  <Story name="justify-center">
+    {`
+      <ul class="u-list-none u-flex u-justify-center u-fg-white" style="min-height:10rem;">
+        <li class="a-card u-margin-m u-bg-gray-dark">
+          Center
+        </li>
+        <li class="a-card u-margin-m u-bg-gray-dark">
+          Center
         </li>
       </ul>
     `}
