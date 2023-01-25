@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Buttons now show their `pressed` state when they have `aria-expanded='true'`, so it’s usable with dropdowns, and other show/hide UI.
+
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2023-01-03
 
 ### Fixed
