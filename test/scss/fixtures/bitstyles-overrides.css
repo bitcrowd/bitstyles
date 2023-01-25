@@ -950,6 +950,7 @@ table {
   color: var(--bscpn-at-button--secondary-active-color);
 }
 .bs-at-button--secondary[aria-current],
+.bs-at-button--secondary[aria-expanded='true'],
 .bs-at-button--secondary[aria-pressed='true'],
 .bs-at-button--secondary[aria-selected='true'] {
   background-color: var(--bscpn-at-button--secondary-pressed-background-color);
@@ -1114,6 +1115,7 @@ table {
   color: var(--bscpn-at-button--transparent-active-color);
 }
 .bs-at-button--transparent[aria-current],
+.bs-at-button--transparent[aria-expanded='true'],
 .bs-at-button--transparent[aria-pressed='true'],
 .bs-at-button--transparent[aria-selected='true'] {
   background-color: var(
@@ -1248,6 +1250,7 @@ table {
   color: var(--bscpn-at-button--tab-active-color);
 }
 .bs-at-button--tab[aria-current],
+.bs-at-button--tab[aria-expanded='true'],
 .bs-at-button--tab[aria-pressed='true'],
 .bs-at-button--tab[aria-selected='true'] {
   background-color: var(--bscpn-at-button--tab-pressed-background-color);

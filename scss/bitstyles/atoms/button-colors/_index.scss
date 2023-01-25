@@ -65,6 +65,7 @@
     }
 
     @if map.has-key($variant-default-theme, 'pressed') {
+      &[aria-expanded='true'],
       &[aria-pressed='true'],
       &[aria-selected='true'],
       &[aria-current] {
