@@ -10,6 +10,18 @@ Buttons are available in several color-based variations:
 - **Secondary** Most other buttons on a screen should probably use this variant. It is a visibly interactive element but not heavily emphasised.
 - **Transparent** For buttons that really shouldn’t stand out, these present only a text label until interacted with.
 
+## Button states
+
+Buttons react to user interaction, and can be disabled, giving the following states:
+
+| State    | Description                                                                                                                                                                                                                                                                                                                                 |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| default  | The default appearance of the button variant, without any user interaction                                                                                                                                                                                                                                                                  |
+| hover    | The user has their cursor over the button (`:hover` psuedoclass)                                                                                                                                                                                                                                                                            |
+| active   | The user is currently clicking, tapping, or otherwise activating the button (`:active` psuedoclass)                                                                                                                                                                                                                                         |
+| pressed  | Covers several instances where the button can be in an “on” state. This is for toggle buttons, tab buttons, navigation or steps in a process where one is currently active, or for buttons that show/hide other content. Apply the relevant aria attribute to the button: `aria-selected`, `aria-expanded`, `aria-current`, `aria-pressed`. |
+| disabled | The button is not currently clickable, and will not perform an action                                                                                                                                                                                                                                                                       |
+
 <Canvas>
   <Story name="Primary">
     {`

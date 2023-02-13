@@ -1002,6 +1002,7 @@ table {
   color: var(--bs-a-button-active-color);
 }
 .a-button[aria-current],
+.a-button[aria-expanded='true'],
 .a-button[aria-pressed='true'],
 .a-button[aria-selected='true'] {
   background-color: var(--bs-a-button-pressed-background-color);
@@ -1118,6 +1119,7 @@ table {
   color: var(--bs-a-button--secondary-active-color);
 }
 .a-button--secondary[aria-current],
+.a-button--secondary[aria-expanded='true'],
 .a-button--secondary[aria-pressed='true'],
 .a-button--secondary[aria-selected='true'] {
   background-color: var(--bs-a-button--secondary-pressed-background-color);
@@ -1254,6 +1256,7 @@ table {
   color: var(--bs-a-button--transparent-active-color);
 }
 .a-button--transparent[aria-current],
+.a-button--transparent[aria-expanded='true'],
 .a-button--transparent[aria-pressed='true'],
 .a-button--transparent[aria-selected='true'] {
   background-color: var(--bs-a-button--transparent-pressed-background-color);
@@ -1378,6 +1381,7 @@ table {
   color: var(--bs-a-button--tab-active-color);
 }
 .a-button--tab[aria-current],
+.a-button--tab[aria-expanded='true'],
 .a-button--tab[aria-pressed='true'],
 .a-button--tab[aria-selected='true'] {
   background-color: var(--bs-a-button--tab-pressed-background-color);
