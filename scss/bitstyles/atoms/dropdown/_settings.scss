@@ -8,12 +8,12 @@ $border: 2px solid palette.get('brand-1', 'base') !default;
 $background-color: palette.get('grayscale', 'white') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('brand-1', 'light'), 0.05),
+    $color: rgba(palette.get('brand-1', 'light-1'), 0.05),
     $offset: size.get('m'),
     $blur-radius: size.get('l'),
   )
 ) !default;
-$separator-border: 1px solid palette.get('background', 'darker') !default;
+$separator-border: 1px solid palette.get('grayscale', 'dark-2') !default;
 $separator-spacing: size.get('2xs') !default;
 $transition: opacity 0.12s ease-in !default;
 $will-change: opacity !default;

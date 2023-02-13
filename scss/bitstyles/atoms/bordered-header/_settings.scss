@@ -2,4 +2,4 @@
 @use '../../tools/size';
 
 $gutter: size.get('xl') !default;
-$border: size.get('3xs') solid palette.get('text', 'lighter') !default;
+$border: size.get('3xs') solid palette.get('grayscale', 'light-2') !default;

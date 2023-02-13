@@ -155,7 +155,7 @@ $border: 2px solid palette.get('brand-2', 'base');
 $background-color: palette.get('grayscale', 'white');
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('brand-2', 'light'), 0.05),
+    $color: rgba(palette.get('brand-2', 'light-1'), 0.05),
     $offset: size.get('m'),
     $blur-radius: size.get('l'),
   )
@@ -165,7 +165,7 @@ $box-shadow: shadow.to-box-shadow(
 The border and spacing above and below the separators used to divide the contents of your dropdowns (see the `<li role="separator"></li>` in the examples above) can also be customized:
 
 ```scss
-$separator-border: 1px solid palette.get('background', 'base');
+$separator-border: 1px solid palette.get('grayscale', 'base');
 $separator-spacing: size.get('2xs');
 ```
 

@@ -11,63 +11,63 @@
 @use '../../scss/bitstyles/settings/base-palette';
 @use '../../scss/bitstyles/settings/color-palette' with (
   $palette: (
-    'text': (
-      'lightest': #000,
-      'lighter': #000,
-      'light': #000,
+    'grayscale': (
+      'light-3': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
+      'dark-1': #000,
     ),
     'background': (
       'base': #000,
-      'dark': #000,
-      'darker': #000,
+      'dark-1': #000,
+      'dark-2': #000,
     ),
     'white': (
       'base': #000,
     ),
     'brand-1': (
-      'lighter': #000,
-      'light': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
-      'darker': #000,
+      'dark-1': #000,
+      'dark-2': #000,
     ),
     'brand-2': (
-      'lighter': #000,
-      'light': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
+      'dark-1': #000,
     ),
     'grayscale': (
       'white': #000,
       'black': #000,
     ),
     'accent-gray': (
-      'lighter': #000,
-      'light': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
-      'darker': #000,
-      'darkest': #000,
+      'dark-1': #000,
+      'dark-2': #000,
+      'dark-3': #000,
     ),
     'danger': (
-      'lighter': #000,
-      'light': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
+      'dark-1': #000,
     ),
     'warning': (
-      'lighter': #000,
-      'light': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
+      'dark-1': #000,
     ),
     'positive': (
-      'lighter': #000,
-      'light': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
+      'dark-1': #000,
     ),
   )
 );
@@ -96,14 +96,14 @@
   $themes: (
     'default': (
       'color': (
-        'background': var(--bscpn-color-brand-1-lightest),
-        'color': var(--bscpn-color-brand-2-darkest),
+        'background': var(--bscpn-color-brand-1-light-3),
+        'color': var(--bscpn-color-brand-2-dark-3),
       ),
     ),
-    'dark': (
+    'dark-1': (
       'color': (
-        'background': var(--bscpn-color-brand-1-darkest),
-        'text': var(--bscpn-color-brand-2-lightest),
+        'background': var(--bscpn-color-brand-1-dark-3),
+        'text': var(--bscpn-color-brand-2-light-3),
       ),
     ),
   )
@@ -194,7 +194,7 @@
   )
 );
 @use '../../scss/bitstyles/atoms/badge' with (
-  $color: 'light'
+  $color: 'light-1'
 );
 @use '../../scss/bitstyles/atoms/bordered-header' with (
   $gutter: 10rem
@@ -209,7 +209,7 @@
         'color': var(--bscpn-color-grayscale-black),
       ),
     ),
-    'dark': (
+    'dark-1': (
       'default': (
         'color': var(--bscpn-color-grayscale-white),
       ),
@@ -234,7 +234,7 @@
   $max-height: 1rem
 );
 @use '../../scss/bitstyles/atoms/flash' with (
-  $color: 'light'
+  $color: 'light-1'
 );
 @use '../../scss/bitstyles/atoms/icon' with (
   $sizes: (

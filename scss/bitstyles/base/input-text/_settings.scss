@@ -13,17 +13,17 @@ $border-width: size.get('3xs') !default;
 $font: inherit !default;
 $placeholder-font-style: italic !default;
 $placeholder-font-weight: typography.$font-weight-normal !default;
-$placeholder-color: palette.get('text', 'light') !default;
+$placeholder-color: palette.get('grayscale', 'light-1') !default;
 
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('text') !default;
-$border-color: palette.get('text', 'light') !default;
+$color: palette.get('grayscale') !default;
+$border-color: palette.get('grayscale', 'light-1') !default;
 $background: palette.get('grayscale', 'white') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('text', 'light'), 0.025),
+    $color: rgba(palette.get('grayscale', 'light-1'), 0.025),
     $blur-radius: size.get('xs'),
   )
 ) !default;
@@ -31,12 +31,12 @@ $box-shadow: shadow.to-box-shadow(
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('text', 'dark') !default;
-$background-hover: palette.get('background', 'base') !default;
-$border-color-hover: palette.get('text', 'dark') !default;
+$color-hover: palette.get('grayscale', 'dark-1') !default;
+$background-hover: palette.get('grayscale', 'base') !default;
+$border-color-hover: palette.get('grayscale', 'dark-1') !default;
 $box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('brand-1', 'light'), 0.025),
+    $color: rgba(palette.get('brand-1', 'light-1'), 0.025),
     $blur-radius: size.get('s'),
   )
 ) !default;
@@ -44,12 +44,12 @@ $box-shadow-hover: shadow.to-box-shadow(
 //
 // Active colors ////////////////////////////////////////
 
-$color-active: palette.get('text', 'dark') !default;
+$color-active: palette.get('grayscale', 'dark-1') !default;
 $background-active: palette.get('grayscale', 'white') !default;
-$border-color-active: palette.get('text', 'dark') !default;
+$border-color-active: palette.get('grayscale', 'dark-1') !default;
 $box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('brand-1', 'light'), 0.075),
+    $color: rgba(palette.get('brand-1', 'light-1'), 0.075),
     $blur-radius: size.get('2xs'),
   )
 ) !default;
@@ -57,9 +57,9 @@ $box-shadow-active: shadow.to-box-shadow(
 //
 // Disabled colors ////////////////////////////////////////
 
-$color-disabled: palette.get('text') !default;
-$background-disabled: palette.get('text', 'lighter') !default;
-$border-color-disabled: palette.get('text', 'lighter') !default;
+$color-disabled: palette.get('grayscale') !default;
+$background-disabled: palette.get('grayscale', 'light-2') !default;
+$border-color-disabled: palette.get('grayscale', 'light-2') !default;
 $box-shadow-disabled: none !default;
 
 //

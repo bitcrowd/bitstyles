@@ -15,92 +15,92 @@
   --bs-breakpoint-motion-ok: screen and (prefers-reduced-motion: no-preference);
 }
 :root {
-  --bs-color-brand-1-lighter: #f4f2ff;
-  --bs-color-brand-1-lighter-rgb: 244, 242, 255;
+  --bs-color-brand-1-light-2: #f4f2ff;
+  --bs-color-brand-1-light-2-rgb: 244, 242, 255;
   --bs-color-brand-1-light: #c8bfff;
   --bs-color-brand-1-light-rgb: 200, 191, 255;
   --bs-color-brand-1-base: #644dff;
   --bs-color-brand-1-base-rgb: 100, 77, 255;
   --bs-color-brand-1-dark: #1f00e6;
   --bs-color-brand-1-dark-rgb: 31, 0, 230;
-  --bs-color-brand-1-darker: #0e0066;
-  --bs-color-brand-1-darker-rgb: 14, 0, 102;
-  --bs-color-brand-2-lighter: #e6fffe;
-  --bs-color-brand-2-lighter-rgb: 230, 255, 254;
+  --bs-color-brand-1-dark-2: #0e0066;
+  --bs-color-brand-1-dark-2-rgb: 14, 0, 102;
+  --bs-color-brand-2-light-2: #e6fffe;
+  --bs-color-brand-2-light-2-rgb: 230, 255, 254;
   --bs-color-brand-2-light: #b3fffb;
   --bs-color-brand-2-light-rgb: 179, 255, 251;
   --bs-color-brand-2-base: #33fff5;
   --bs-color-brand-2-base-rgb: 51, 255, 245;
   --bs-color-brand-2-dark: #00e6da;
   --bs-color-brand-2-dark-rgb: 0, 230, 218;
-  --bs-color-brand-2-darker: #009991;
-  --bs-color-brand-2-darker-rgb: 0, 153, 145;
-  --bs-color-brand-2-darkest: #008079;
-  --bs-color-brand-2-darkest-rgb: 0, 128, 121;
-  --bs-color-text-lightest: #f9f8fa;
-  --bs-color-text-lightest-rgb: 249, 248, 250;
-  --bs-color-text-lighter: #e6e5eb;
-  --bs-color-text-lighter-rgb: 230, 229, 235;
-  --bs-color-text-light: #d9d7e2;
-  --bs-color-text-light-rgb: 217, 215, 226;
+  --bs-color-brand-2-dark-2: #009991;
+  --bs-color-brand-2-dark-2-rgb: 0, 153, 145;
+  --bs-color-brand-2-dark-3: #008079;
+  --bs-color-brand-2-dark-3-rgb: 0, 128, 121;
+  --bs-color-grayscale-light-3: #f9f8fa;
+  --bs-color-grayscale-light-3-rgb: 249, 248, 250;
+  --bs-color-grayscale-light-2: #e6e5eb;
+  --bs-color-grayscale-light-2-rgb: 230, 229, 235;
+  --bs-color-grayscale-light-1: #d9d7e2;
+  --bs-color-grayscale-light-1-rgb: 217, 215, 226;
   --bs-color-text-base: #9995b1;
   --bs-color-text-base-rgb: 153, 149, 177;
   --bs-color-text-dark: #645f81;
   --bs-color-text-dark-rgb: 100, 95, 129;
-  --bs-color-text-darker: #252430;
-  --bs-color-text-darker-rgb: 37, 36, 48;
+  --bs-color-grayscale-dark-2: #252430;
+  --bs-color-grayscale-dark-2-rgb: 37, 36, 48;
   --bs-color-background-base: #fff;
   --bs-color-background-base-rgb: 255, 255, 255;
   --bs-color-background-dark: #f2f2f5;
   --bs-color-background-dark-rgb: 242, 242, 245;
-  --bs-color-background-darker: #e6e5eb;
-  --bs-color-background-darker-rgb: 230, 229, 235;
-  --bs-color-background-darkest: #3e3c51;
-  --bs-color-background-darkest-rgb: 62, 60, 81;
+  --bs-color-background-dark-2: #e6e5eb;
+  --bs-color-background-dark-2-rgb: 230, 229, 235;
+  --bs-color-background-dark-3: #3e3c51;
+  --bs-color-background-dark-3-rgb: 62, 60, 81;
   --bs-color-grayscale-white: #fff;
   --bs-color-grayscale-white-rgb: 255, 255, 255;
   --bs-color-grayscale-black: #000;
   --bs-color-grayscale-black-rgb: 0, 0, 0;
-  --bs-color-accent-gray-lighter: #f9f8fa;
-  --bs-color-accent-gray-lighter-rgb: 249, 248, 250;
-  --bs-color-accent-gray-light: #e6e5eb;
-  --bs-color-accent-gray-light-rgb: 230, 229, 235;
-  --bs-color-accent-gray-base: #8c88a7;
-  --bs-color-accent-gray-base-rgb: 140, 136, 167;
-  --bs-color-accent-gray-dark: #6a6589;
-  --bs-color-accent-gray-dark-rgb: 106, 101, 137;
-  --bs-color-accent-gray-darker: #2c2a38;
-  --bs-color-accent-gray-darker-rgb: 44, 42, 56;
-  --bs-color-danger-lighter: #fff2f4;
-  --bs-color-danger-lighter-rgb: 255, 242, 244;
+  --bs-color-accent-grayscale-light-2: #f9f8fa;
+  --bs-color-accent-grayscale-light-2-rgb: 249, 248, 250;
+  --bs-color-accent-grayscale-light: #e6e5eb;
+  --bs-color-accent-grayscale-light-rgb: 230, 229, 235;
+  --bs-color-accent-grayscale-base: #8c88a7;
+  --bs-color-accent-grayscale-base-rgb: 140, 136, 167;
+  --bs-color-accent-grayscale-dark: #6a6589;
+  --bs-color-accent-grayscale-dark-rgb: 106, 101, 137;
+  --bs-color-accent-grayscale-dark-2: #2c2a38;
+  --bs-color-accent-grayscale-dark-2-rgb: 44, 42, 56;
+  --bs-color-danger-light-2: #fff2f4;
+  --bs-color-danger-light-2-rgb: 255, 242, 244;
   --bs-color-danger-light: #ffbfc6;
   --bs-color-danger-light-rgb: 255, 191, 198;
   --bs-color-danger-base: #ff6676;
   --bs-color-danger-base-rgb: 255, 102, 118;
   --bs-color-danger-dark: #d90016;
   --bs-color-danger-dark-rgb: 217, 0, 22;
-  --bs-color-danger-darker: #990010;
-  --bs-color-danger-darker-rgb: 153, 0, 16;
-  --bs-color-warning-lighter: #fff4e6;
-  --bs-color-warning-lighter-rgb: 255, 244, 230;
+  --bs-color-danger-dark-2: #990010;
+  --bs-color-danger-dark-2-rgb: 153, 0, 16;
+  --bs-color-warning-light-2: #fff4e6;
+  --bs-color-warning-light-2-rgb: 255, 244, 230;
   --bs-color-warning-light: #ffcb8c;
   --bs-color-warning-light-rgb: 255, 203, 140;
   --bs-color-warning-base: #ffa940;
   --bs-color-warning-base-rgb: 255, 169, 64;
   --bs-color-warning-dark: #ff8c00;
   --bs-color-warning-dark-rgb: 255, 140, 0;
-  --bs-color-warning-darker: #a65b00;
-  --bs-color-warning-darker-rgb: 166, 91, 0;
-  --bs-color-positive-lighter: #d9fff0;
-  --bs-color-positive-lighter-rgb: 217, 255, 240;
+  --bs-color-warning-dark-2: #a65b00;
+  --bs-color-warning-dark-2-rgb: 166, 91, 0;
+  --bs-color-positive-light-2: #d9fff0;
+  --bs-color-positive-light-2-rgb: 217, 255, 240;
   --bs-color-positive-light: #73ffc9;
   --bs-color-positive-light-rgb: 115, 255, 201;
   --bs-color-positive-base: #00d985;
   --bs-color-positive-base-rgb: 0, 217, 133;
   --bs-color-positive-dark: #00995e;
   --bs-color-positive-dark-rgb: 0, 153, 94;
-  --bs-color-positive-darker: #00663f;
-  --bs-color-positive-darker-rgb: 0, 102, 63;
+  --bs-color-positive-dark-2: #00663f;
+  --bs-color-positive-dark-2-rgb: 0, 102, 63;
 }
 :root {
   --bs-size-0: 0;
@@ -750,12 +750,12 @@ html {
 }
 :root,
 [data-theme='default'] {
-  --bs-theme-text: var(--bs-color-text-darker);
+  --bs-theme-text: var(--bs-color-grayscale-dark-2);
   --bs-theme-background: var(--bs-color-background-base);
 }
 [data-theme='dark'] {
-  --bs-theme-text: var(--bs-color-text-lightest);
-  --bs-theme-background: var(--bs-color-background-darkest);
+  --bs-theme-text: var(--bs-color-grayscale-light-3);
+  --bs-theme-background: var(--bs-color-background-dark-3);
 }
 h1,
 h2,
@@ -1027,10 +1027,10 @@ table {
   --bs-a-button-background-color: var(--bs-color-brand-1-base);
   --bs-a-button-border-color: var(--bs-color-brand-1-base);
   --bs-a-button-box-shadow: 0 0 0.2rem
-      rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.2666666667rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.8rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075);
+      rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.2666666667rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.8rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075);
   --bs-a-button-hover-color: var(--bs-color-brand-1-dark);
   --bs-a-button-hover-background-color: var(--bs-color-brand-1-light);
   --bs-a-button-hover-border-color: var(--bs-color-brand-1-light);
@@ -1055,20 +1055,20 @@ table {
     0 0 0.1333333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
     0 0 0.2rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
     0 0 0.4rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
-  --bs-a-button-disabled-color: var(--bs-color-accent-gray-base);
-  --bs-a-button-disabled-background-color: var(--bs-color-accent-gray-light);
-  --bs-a-button-disabled-border-color: var(--bs-color-accent-gray-light);
+  --bs-a-button-disabled-color: var(--bs-color-accent-grayscale-base);
+  --bs-a-button-disabled-background-color: var(--bs-color-accent-grayscale-light);
+  --bs-a-button-disabled-border-color: var(--bs-color-accent-grayscale-light);
   --bs-a-button-disabled-box-shadow: none;
 }
 [data-theme='dark'] {
   --bs-a-button-color: var(--bs-color-brand-1-base);
-  --bs-a-button-background-color: var(--bs-color-accent-gray-lighter);
-  --bs-a-button-border-color: var(--bs-color-accent-gray-lighter);
+  --bs-a-button-background-color: var(--bs-color-accent-grayscale-light-2);
+  --bs-a-button-border-color: var(--bs-color-accent-grayscale-light-2);
   --bs-a-button-box-shadow: 0 0 0.2rem
-      rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.2666666667rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.8rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075);
+      rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.2666666667rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.8rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075);
   --bs-a-button-hover-color: var(--bs-color-brand-1-dark);
   --bs-a-button-hover-background-color: var(--bs-color-brand-1-light);
   --bs-a-button-hover-border-color: var(--bs-color-brand-1-light);
@@ -1078,13 +1078,13 @@ table {
     0 0 0.5rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
     0 0 1rem rgba(var(--bs-color-brand-1-light-rgb), 0.075);
   --bs-a-button-active-color: var(--bs-color-brand-1-base);
-  --bs-a-button-active-background-color: var(--bs-color-accent-gray-lighter);
-  --bs-a-button-active-border-color: var(--bs-color-accent-gray-lighter);
+  --bs-a-button-active-background-color: var(--bs-color-accent-grayscale-light-2);
+  --bs-a-button-active-border-color: var(--bs-color-accent-grayscale-light-2);
   --bs-a-button-active-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075);
+      rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075);
   --bs-a-button-pressed-color: var(--bs-color-grayscale-white);
   --bs-a-button-pressed-background-color: var(--bs-color-brand-1-base);
   --bs-a-button-pressed-border-color: var(--bs-color-brand-1-base);
@@ -1093,9 +1093,9 @@ table {
     0 0 0.1333333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
     0 0 0.2rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
     0 0 0.4rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
-  --bs-a-button-disabled-color: var(--bs-color-accent-gray-light);
-  --bs-a-button-disabled-background-color: var(--bs-color-accent-gray-darker);
-  --bs-a-button-disabled-border-color: var(--bs-color-accent-gray-darker);
+  --bs-a-button-disabled-color: var(--bs-color-accent-grayscale-light);
+  --bs-a-button-disabled-background-color: var(--bs-color-accent-grayscale-dark-2);
+  --bs-a-button-disabled-border-color: var(--bs-color-accent-grayscale-dark-2);
   --bs-a-button-disabled-box-shadow: none;
 }
 .a-button--secondary,
@@ -1140,15 +1140,15 @@ table {
 }
 :root,
 [data-theme='default'] {
-  --bs-a-button--secondary-color: var(--bs-color-accent-gray-darker);
-  --bs-a-button--secondary-background-color: var(--bs-color-accent-gray-light);
-  --bs-a-button--secondary-border-color: var(--bs-color-accent-gray-light);
+  --bs-a-button--secondary-color: var(--bs-color-accent-grayscale-dark-2);
+  --bs-a-button--secondary-background-color: var(--bs-color-accent-grayscale-light);
+  --bs-a-button--secondary-border-color: var(--bs-color-accent-grayscale-light);
   --bs-a-button--secondary-box-shadow: 0 0 0.2rem
-      rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
-    0 0 0.2666666667rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
-    0 0 0.8rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075);
-  --bs-a-button--secondary-hover-color: var(--bs-color-accent-gray-darker);
+      rgba(var(--bs-color-accent-grayscale-light-rgb), 0.075),
+    0 0 0.2666666667rem rgba(var(--bs-color-accent-grayscale-light-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-grayscale-light-rgb), 0.075),
+    0 0 0.8rem rgba(var(--bs-color-accent-grayscale-light-rgb), 0.075);
+  --bs-a-button--secondary-hover-color: var(--bs-color-accent-grayscale-dark-2);
   --bs-a-button--secondary-hover-background-color: var(
     --bs-color-brand-1-light
   );
@@ -1178,25 +1178,25 @@ table {
     0 0 0.1333333333rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
     0 0 0.2rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
     0 0 0.4rem rgba(var(--bs-color-brand-1-light-rgb), 0.075);
-  --bs-a-button--secondary-disabled-color: var(--bs-color-accent-gray-base);
+  --bs-a-button--secondary-disabled-color: var(--bs-color-accent-grayscale-base);
   --bs-a-button--secondary-disabled-background-color: var(
-    --bs-color-accent-gray-light
+    --bs-color-accent-grayscale-light
   );
   --bs-a-button--secondary-disabled-border-color: var(
-    --bs-color-accent-gray-light
+    --bs-color-accent-grayscale-light
   );
   --bs-a-button--secondary-disabled-box-shadow: none;
 }
 [data-theme='dark'] {
-   --bs-a-button--secondary-color: var(--bs-color-accent-gray-lighter);
-   --bs-a-button--secondary-background-color: var(--bs-color-accent-gray-dark);
-   --bs-a-button--secondary-border-color: var(--bs-color-accent-gray-dark);
+   --bs-a-button--secondary-color: var(--bs-color-accent-grayscale-light-2);
+   --bs-a-button--secondary-background-color: var(--bs-color-accent-grayscale-dark);
+   --bs-a-button--secondary-border-color: var(--bs-color-accent-grayscale-dark);
    --bs-a-button--secondary-box-shadow: 0 0 0.2rem
-       rgba(var(--bs-color-accent-gray-base-rgb), 0.075),
-    0 0 0.2666666667rem rgba(var(--bs-color-accent-gray-base-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-accent-gray-base-rgb), 0.075),
-    0 0 0.8rem rgba(var(--bs-color-accent-gray-base-rgb), 0.075);
-  --bs-a-button--secondary-hover-color: var(--bs-color-accent-gray-darker);
+       rgba(var(--bs-color-accent-grayscale-base-rgb), 0.075),
+    0 0 0.2666666667rem rgba(var(--bs-color-accent-grayscale-base-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-grayscale-base-rgb), 0.075),
+    0 0 0.8rem rgba(var(--bs-color-accent-grayscale-base-rgb), 0.075);
+  --bs-a-button--secondary-hover-color: var(--bs-color-accent-grayscale-dark-2);
   --bs-a-button--secondary-hover-background-color: var(
     --bs-color-brand-1-light
   );
@@ -1226,12 +1226,12 @@ table {
     0 0 0.1333333333rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
     0 0 0.2rem rgba(var(--bs-color-brand-1-light-rgb), 0.075),
     0 0 0.4rem rgba(var(--bs-color-brand-1-light-rgb), 0.075);
-  --bs-a-button--secondary-disabled-color: var(--bs-color-accent-gray-light);
+  --bs-a-button--secondary-disabled-color: var(--bs-color-accent-grayscale-light);
   --bs-a-button--secondary-disabled-background-color: var(
-    --bs-color-accent-gray-darker
+    --bs-color-accent-grayscale-dark-2
   );
   --bs-a-button--secondary-disabled-border-color: var(
-    --bs-color-accent-gray-darker
+    --bs-color-accent-grayscale-dark-2
   );
   --bs-a-button--secondary-disabled-box-shadow: none;
 }
@@ -1277,7 +1277,7 @@ table {
 }
 :root,
 [data-theme='default'] {
-  --bs-a-button--transparent-color: var(--bs-color-accent-gray-base);
+  --bs-a-button--transparent-color: var(--bs-color-accent-grayscale-base);
   --bs-a-button--transparent-background-color: transparent;
   --bs-a-button--transparent-border-color: transparent;
   --bs-a-button--transparent-box-shadow: none;
@@ -1287,39 +1287,39 @@ table {
   --bs-a-button--transparent-hover-box-shadow: none;
   --bs-a-button--transparent-active-color: var(--bs-color-brand-1-base);
   --bs-a-button--transparent-active-background-color: var(
-    --bs-color-accent-gray-lighter
+    --bs-color-accent-grayscale-light-2
   );
   --bs-a-button--transparent-active-border-color: var(
-    --bs-color-accent-gray-lighter
+    --bs-color-accent-grayscale-light-2
   );
   --bs-a-button--transparent-active-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-accent-gray-lighter-rgb), 0.075);
+      rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-grayscale-light-2-rgb), 0.075);
   --bs-a-button--transparent-pressed-color: var(--bs-color-brand-1-dark);
   --bs-a-button--transparent-pressed-background-color: var(
-    --bs-color-accent-gray-light
+    --bs-color-accent-grayscale-light
   );
   --bs-a-button--transparent-pressed-border-color: var(
-    --bs-color-accent-gray-light
+    --bs-color-accent-grayscale-light
   );
   --bs-a-button--transparent-pressed-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-accent-gray-light-rgb), 0.075);
-  --bs-a-button--transparent-disabled-color: var(--bs-color-accent-gray-base);
+      rgba(var(--bs-color-accent-grayscale-light-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-accent-grayscale-light-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-accent-grayscale-light-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-grayscale-light-rgb), 0.075);
+  --bs-a-button--transparent-disabled-color: var(--bs-color-accent-grayscale-base);
   --bs-a-button--transparent-disabled-background-color: var(
-    --bs-color-accent-gray-light
+    --bs-color-accent-grayscale-light
   );
   --bs-a-button--transparent-disabled-border-color: var(
-    --bs-color-accent-gray-light
+    --bs-color-accent-grayscale-light
   );
   --bs-a-button--transparent-disabled-box-shadow: none;
 }
 [data-theme='dark'] {
-  --bs-a-button--transparent-color: var(--bs-color-accent-gray-light);
+  --bs-a-button--transparent-color: var(--bs-color-accent-grayscale-light);
   --bs-a-button--transparent-background-color: transparent;
   --bs-a-button--transparent-border-color: transparent;
   --bs-a-button--transparent-box-shadow: none;
@@ -1329,34 +1329,34 @@ table {
   --bs-a-button--transparent-hover-box-shadow: none;
   --bs-a-button--transparent-active-color: var(--bs-color-brand-1-light);
   --bs-a-button--transparent-active-background-color: var(
-    --bs-color-accent-gray-darker
+    --bs-color-accent-grayscale-dark-2
   );
   --bs-a-button--transparent-active-border-color: var(
-    --bs-color-accent-gray-darker
+    --bs-color-accent-grayscale-dark-2
   );
   --bs-a-button--transparent-active-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-accent-gray-darker-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-accent-gray-darker-rgb), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-accent-gray-darker-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-accent-gray-darker-rgb), 0.075);
+      rgba(var(--bs-color-accent-grayscale-dark-2-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-accent-grayscale-dark-2-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-accent-grayscale-dark-2-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-grayscale-dark-2-rgb), 0.075);
   --bs-a-button--transparent-pressed-color: var(--bs-color-grayscale-white);
   --bs-a-button--transparent-pressed-background-color: var(
-    --bs-color-accent-gray-darker
+    --bs-color-accent-grayscale-dark-2
   );
   --bs-a-button--transparent-pressed-border-color: var(
-    --bs-color-accent-gray-darker
+    --bs-color-accent-grayscale-dark-2
   );
   --bs-a-button--transparent-pressed-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-accent-gray-darker-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-accent-gray-darker-rgb), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-accent-gray-darker-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-accent-gray-darker-rgb), 0.075);
-  --bs-a-button--transparent-disabled-color: var(--bs-color-accent-gray-light);
+      rgba(var(--bs-color-accent-grayscale-dark-2-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-accent-grayscale-dark-2-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-accent-grayscale-dark-2-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-accent-grayscale-dark-2-rgb), 0.075);
+  --bs-a-button--transparent-disabled-color: var(--bs-color-accent-grayscale-light);
   --bs-a-button--transparent-disabled-background-color: var(
-    --bs-color-accent-gray-darker
+    --bs-color-accent-grayscale-dark-2
   );
   --bs-a-button--transparent-disabled-border-color: var(
-    --bs-color-accent-gray-darker
+    --bs-color-accent-grayscale-dark-2
   );
   --bs-a-button--transparent-disabled-box-shadow: none;
 }
@@ -1402,7 +1402,7 @@ table {
 }
 :root,
 [data-theme='default'] {
-  --bs-a-button--tab-color: var(--bs-color-text-darker);
+  --bs-a-button--tab-color: var(--bs-color-grayscale-dark-2);
   --bs-a-button--tab-background-color: transparent;
   --bs-a-button--tab-border-color: transparent;
   --bs-a-button--tab-box-shadow: none;
@@ -1414,33 +1414,33 @@ table {
   --bs-a-button--tab-active-background-color: transparent;
   --bs-a-button--tab-active-border-color: transparent;
   --bs-a-button--tab-active-box-shadow: none;
-  --bs-a-button--tab-pressed-color: var(--bs-color-brand-1-darker);
+  --bs-a-button--tab-pressed-color: var(--bs-color-brand-1-dark-2);
   --bs-a-button--tab-pressed-background-color: transparent;
   --bs-a-button--tab-pressed-border-color: transparent;
   --bs-a-button--tab-pressed-box-shadow: none;
-  --bs-a-button--tab-disabled-color: var(--bs-color-accent-gray-light);
+  --bs-a-button--tab-disabled-color: var(--bs-color-accent-grayscale-light);
   --bs-a-button--tab-disabled-background-color: transparent;
   --bs-a-button--tab-disabled-border-color: transparent;
   --bs-a-button--tab-disabled-box-shadow: none;
 }
 [data-theme='dark'] {
-  --bs-a-button--tab-color: var(--bs-color-text-lighter);
+  --bs-a-button--tab-color: var(--bs-color-grayscale-light-2);
   --bs-a-button--tab-background-color: transparent;
   --bs-a-button--tab-border-color: transparent;
   --bs-a-button--tab-box-shadow: none;
-  --bs-a-button--tab-hover-color: var(--bs-color-brand-1-lighter);
+  --bs-a-button--tab-hover-color: var(--bs-color-brand-1-light-2);
   --bs-a-button--tab-hover-background-color: transparent;
   --bs-a-button--tab-hover-border-color: transparent;
   --bs-a-button--tab-hover-box-shadow: none;
-  --bs-a-button--tab-active-color: var(--bs-color-brand-1-lightest);
+  --bs-a-button--tab-active-color: var(--bs-color-brand-1-light-3);
   --bs-a-button--tab-active-background-color: transparent;
   --bs-a-button--tab-active-border-color: transparent;
   --bs-a-button--tab-active-box-shadow: none;
-  --bs-a-button--tab-pressed-color: var(--bs-color-accent-gray-light);
+  --bs-a-button--tab-pressed-color: var(--bs-color-accent-grayscale-light);
   --bs-a-button--tab-pressed-background-color: transparent;
   --bs-a-button--tab-pressed-border-color: transparent;
   --bs-a-button--tab-pressed-box-shadow: none;
-  --bs-a-button--tab-disabled-color: var(--bs-color-accent-gray-darker);
+  --bs-a-button--tab-disabled-color: var(--bs-color-accent-grayscale-dark-2);
   --bs-a-button--tab-disabled-background-color: transparent;
   --bs-a-button--tab-disabled-border-color: transparent;
   --bs-a-button--tab-disabled-box-shadow: none;
@@ -2053,22 +2053,22 @@ table {
 .u-bg-brand-2 {
   background-color: #33fff5;
 }
-.u-bg-gray-darker {
+.u-bg-grayscale-dark-2 {
   background-color: #252430;
 }
-.u-bg-gray-dark {
+.u-bg-grayscale-dark {
   background-color: #645f81;
 }
-.u-bg-gray-light {
+.u-bg-grayscale-light {
   background-color: #e6e5eb;
 }
-.u-bg-gray-lighter {
+.u-bg-grayscale-light-2 {
   background-color: #e6e5eb;
 }
-.u-bg-text {
+.u-bg-grayscale {
   background-color: #9995b1;
 }
-.u-bg-text-light {
+.u-bg-grayscale-light {
   background-color: #d9d7e2;
 }
 .u-bg-white {
@@ -2077,49 +2077,49 @@ table {
 .u-bg-black {
   background-color: #000;
 }
-.u-border-gray-dark {
+.u-border-grayscale-dark {
   border: 1px solid #645f81;
 }
-.u-border-gray-dark-top {
+.u-border-grayscale-dark-top {
   border-top: 1px solid #645f81;
 }
-.u-border-gray-dark-right {
+.u-border-grayscale-dark-right {
   border-right: 1px solid #645f81;
 }
-.u-border-gray-dark-bottom {
+.u-border-grayscale-dark-bottom {
   border-bottom: 1px solid #645f81;
 }
-.u-border-gray-dark-left {
+.u-border-grayscale-dark-left {
   border-left: 1px solid #645f81;
 }
-.u-border-gray-dark-x {
+.u-border-grayscale-dark-x {
   border-left: 1px solid #645f81;
   border-right: 1px solid #645f81;
 }
-.u-border-gray-dark-y {
+.u-border-grayscale-dark-y {
   border-bottom: 1px solid #645f81;
   border-top: 1px solid #645f81;
 }
-.u-border-gray-light {
+.u-border-grayscale-light {
   border: 1px solid #d9d7e2;
 }
-.u-border-gray-light-top {
+.u-border-grayscale-light-top {
   border-top: 1px solid #d9d7e2;
 }
-.u-border-gray-light-right {
+.u-border-grayscale-light-right {
   border-right: 1px solid #d9d7e2;
 }
-.u-border-gray-light-bottom {
+.u-border-grayscale-light-bottom {
   border-bottom: 1px solid #d9d7e2;
 }
-.u-border-gray-light-left {
+.u-border-grayscale-light-left {
   border-left: 1px solid #d9d7e2;
 }
-.u-border-gray-light-x {
+.u-border-grayscale-light-x {
   border-left: 1px solid #d9d7e2;
   border-right: 1px solid #d9d7e2;
 }
-.u-border-gray-light-y {
+.u-border-grayscale-light-y {
   border-bottom: 1px solid #d9d7e2;
   border-top: 1px solid #d9d7e2;
 }
@@ -2431,19 +2431,19 @@ table {
 .u-fg-gray {
   color: #9995b1;
 }
-.u-fg-gray-light {
+.u-fg-grayscale-light {
   color: #d9d7e2;
 }
-.u-fg-text {
+.u-fg-grayscale {
   color: #9995b1;
 }
-.u-fg-text-darker {
+.u-fg-grayscale-dark-2 {
   color: #252430;
 }
-.u-fg-text-light {
+.u-fg-grayscale-light {
   color: #d9d7e2;
 }
-.u-fg-text-lighter {
+.u-fg-grayscale-light-2 {
   color: #e6e5eb;
 }
 .u-fg-warning {

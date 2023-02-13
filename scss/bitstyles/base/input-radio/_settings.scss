@@ -11,9 +11,9 @@ $size: size.get('m') !default;
 
 //
 // Base colors ////////////////////////////////////////
-$color: palette.get('text', 'light') !default;
+$color: palette.get('grayscale', 'light-1') !default;
 $background-color: palette.get('grayscale', 'white') !default;
-$border-color: palette.get('text', 'light') !default;
+$border-color: palette.get('grayscale', 'light-1') !default;
 
 //
 // Hover colors ////////////////////////////////////////
@@ -29,12 +29,12 @@ $border-color-checked: palette.get('brand-1') !default;
 
 //
 // Disabled colors ////////////////////////////////////////
-$color-disabled: palette.get('text', 'light') !default;
-$background-color-disabled: palette.get('text', 'lighter') !default;
-$border-color-disabled: palette.get('text', 'light') !default;
+$color-disabled: palette.get('grayscale', 'light-1') !default;
+$background-color-disabled: palette.get('grayscale', 'light-2') !default;
+$border-color-disabled: palette.get('grayscale', 'light-1') !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
-$color-disabled-checked: palette.get('text', 'light') !default;
-$background-color-disabled-checked: palette.get('text', 'lighter') !default;
-$border-color-disabled-checked: palette.get('text', 'light') !default;
+$color-disabled-checked: palette.get('grayscale', 'light-1') !default;
+$background-color-disabled-checked: palette.get('grayscale', 'light-2') !default;
+$border-color-disabled-checked: palette.get('grayscale', 'light-1') !default;

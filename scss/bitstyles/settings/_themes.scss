@@ -16,13 +16,13 @@ $default-theme: (
             ),
           )}
       ),
-    'text':
+    'grayscale':
       var(
         #{custom-property.get(
             $items: (
               'color',
-              'text',
-              'darker',
+              'grayscale',
+              'dark-2',
             ),
           )}
       ),
@@ -36,17 +36,17 @@ $dark-theme: (
             $items: (
               'color',
               'background',
-              'darkest',
+              'dark-3',
             ),
           )}
       ),
-    'text':
+    'grayscale':
       var(
         #{custom-property.get(
             $items: (
               'color',
-              'text',
-              'lightest',
+              'grayscale',
+              'light-3',
             ),
           )}
       ),
@@ -55,5 +55,5 @@ $dark-theme: (
 $default-theme-name: 'default' !default;
 $themes: (
   '#{$default-theme-name}': $default-theme,
-  'dark': $dark-theme,
+  'dark-1': $dark-theme,
 ) !default;

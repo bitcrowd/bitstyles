@@ -27,7 +27,7 @@ $box-shadow-visited: none !default;
 //
 // Hover /////////////////////////////////////////
 
-$color-hover: palette.get('brand-1', 'dark') !default;
+$color-hover: palette.get('brand-1', 'dark-1') !default;
 $text-decoration-hover: underline !default;
 $background-color-hover: transparent !default;
 $box-shadow-hover: none !default;
@@ -35,7 +35,7 @@ $box-shadow-hover: none !default;
 //
 // Active /////////////////////////////////////////
 
-$color-active: palette.get('brand-1', 'dark') !default;
+$color-active: palette.get('brand-1', 'dark-1') !default;
 $text-decoration-active: underline !default;
 $background-color-active: transparent !default;
 $box-shadow-active: none !default;

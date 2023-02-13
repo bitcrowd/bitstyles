@@ -41,14 +41,14 @@ First, apply the custom properties to the CSS properties you want to make change
 @include themes.get('default') {
   .a-my-custom-input {
     --my-custom-input-color: var(--bs-color-grayscale-white);
-    --my-custom-input-background-color: var(--bs-color-brand-1-dark);
+    --my-custom-input-background-color: var(--bs-color-brand-1-dark-1);
   }
 }
 
-@include themes.get('dark') {
+@include themes.get('dark-1') {
   .a-my-custom-input {
-    --my-custom-input-color: var(--bs-color-brand-1-dark);
-    --my-custom-input-background-color: var(--bs-color-brand-1-light);
+    --my-custom-input-color: var(--bs-color-brand-1-dark-1);
+    --my-custom-input-background-color: var(--bs-color-brand-1-light-1);
   }
 }
 ```
@@ -60,15 +60,15 @@ Variants of your component can be created by redefining the value of the same pr
 ```scss
 @include themes.get('default') {
   .a-my-custom-input--secondary {
-    --my-custom-input-color: var(--bs-color-brand-2-light);
-    --my-custom-input-background-color: var(--bs-color-brand-2-dark);
+    --my-custom-input-color: var(--bs-color-brand-2-light-1);
+    --my-custom-input-background-color: var(--bs-color-brand-2-dark-1);
   }
 }
 
-@include themes.get('dark') {
+@include themes.get('dark-1') {
   .a-my-custom-input--secondary {
-    --my-custom-input-color: var(--bs-color-brand-2-dark);
-    --my-custom-input-background-color: var(--bs-color-brand-2-light);
+    --my-custom-input-color: var(--bs-color-brand-2-dark-1);
+    --my-custom-input-background-color: var(--bs-color-brand-2-light-1);
   }
 }
 ```
@@ -77,13 +77,13 @@ Think of the CSS custom properties as an API that’s exposed by the component. 
 
 ```scss
 .a-my-custom-input {
-  --my-custom-input-color: var(--color-brand-1-dark);
-  --my-custom-input-background-color: var(--color-brand-1-light);
+  --my-custom-input-color: var(--color-brand-1-dark-1);
+  --my-custom-input-background-color: var(--color-brand-1-light-1);
 
   &:hover,
   &:focus {
-    --my-custom-input-color: var(--color-brand-1-darker);
-    --my-custom-input-background-color: var(--color-brand-1-lighter);
+    --my-custom-input-color: var(--color-brand-1-dark-2);
+    --my-custom-input-background-color: var(--color-brand-1-light-2);
   }
 }
 ```
@@ -101,12 +101,12 @@ Configure the names of your themes, and/or the colors they apply, and add whole 
   $themes: (
     'default': (
       'color': (
-        'background': var(--bs-color-background-lightest),
-        'color': var(--bs-color-text-darkest),
+        'background': var(--bs-color-background-light-3),
+        'color': var(--bs-color-text-dark-3),
       ),
-      'dark': (
-        'background': var(--bs-color-background-darkest),
-        'text': var(--bs-color-text-lightest),
+      'dark-1': (
+        'background': var(--bs-color-background-dark-3),
+        'text': var(--bs-color-grayscale-light-3),
       ),
     ),
   )
@@ -120,12 +120,12 @@ If you change the name of the default theme as you redefine its colors, you’ll
   $themes: (
     'custom-theme-name': (
       'color': (
-        'background': var(--bs-color-background-lightest),
-        'color': var(--bs-color-text-darkest),
+        'background': var(--bs-color-background-light-3),
+        'color': var(--bs-color-text-dark-3),
       ),
-      'dark': (
-        'background': var(--bs-color-background-darkest),
-        'text': var(--bs-color-text-lightest),
+      'dark-1': (
+        'background': var(--bs-color-background-dark-3),
+        'text': var(--bs-color-grayscale-light-3),
       ),
     ),
   ),

@@ -16,7 +16,7 @@ Use the `palette.get()` helper function for accessing colors in your Sass. Impor
 @use '~bitstyles/scss/bitstyles/tools/palette';
 
 .component-class::after {
-  background-color: palette.get('brand-1', 'light');
+  background-color: palette.get('brand-1', 'light-1');
 }
 ```
 
@@ -48,8 +48,8 @@ Use the appropriate utility classes to apply colors. See the documentation of ea
 The color palette is also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
 
 ```css
---bs-color-brand-1-lighter: #f4f2ff;
---bs-color-brand-1-lighter-rgb: 244, 242, 255;
+--bs-color-brand-1-light-3: #f4f2ff;
+--bs-color-brand-1-light-3-rgb: 244, 242, 255;
 --bs-color-brand-1-light: #c8bfff;
 --bs-color-brand-1-light-rgb: 200, 191, 255;
 --bs-color-brand-1-base: #644dff;
@@ -57,7 +57,7 @@ The color palette is also available as CSS custom properties. In the default con
 // …
 ```
 
-Note that each color is also output as rgb tuples, to make using them in CSS color functions a little easier e.g. `rgba(var(--bs-color-brand-1-lighter), 0.5)`
+Note that each color is also output as rgb tuples, to make using them in CSS color functions a little easier e.g. `rgba(var(--bs-color-brand-1-light-3), 0.5)`
 
 ## Using color-palettes in JS
 
@@ -66,7 +66,7 @@ The color design tokens can be imported and used in JS:
 ```js
 import colorPalette from '../exports/_color-palette.scss';
 
-console.log(colorPalette['brand-1.lighter']); // '#f4f2ff'
+console.log(colorPalette['brand-1.light-3']); // '#f4f2ff'
 console.log(colorPalette['brand-1.light']); // '#c8bfff'
 console.log(colorPalette['brand-1.base']); // '#644dff'
 // …
@@ -225,12 +225,12 @@ It’s recommended that you select the colors from the base palette, but it’s 
   $color-palette: (
     'brand-1': (
       'default': base-color.get('brand-1', '70'),
-      'light': base-color.get('brand-1', '30'),
-      'dark': base-color.get('brand-1', '170'),
+      'light-1': base-color.get('brand-1', '30'),
+      'dark-1': base-color.get('brand-1', '170'),
     ),
     'blue': (
       'default': #00f,
-      'dark': #006,
+      'dark-1': #006,
     ),
   )
 );

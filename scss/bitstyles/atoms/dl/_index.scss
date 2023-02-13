@@ -3,11 +3,11 @@
 @use '../../tools/classname';
 
 #{classname.get($classname-items: 'dl', $layer: 'atom')} {
-  border-top: 1px solid palette.get('text', 'light');
+  border-top: 1px solid palette.get('grayscale', 'light-1');
 }
 
 @include media-query.get('m') {
   #{classname.get($classname-items: 'dl__item', $layer: 'atom')} {
-    border-bottom: 1px solid palette.get('text', 'light');
+    border-bottom: 1px solid palette.get('grayscale', 'light-1');
   }
 }
