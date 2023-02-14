@@ -12,7 +12,7 @@ $font: inherit !default;
 
 //
 // Base appearance ////////////////////////////////////////
-$color: palette.get('grayscale', 'base') !default;
+$color: palette.get('grayscale') !default;
 $border-color: palette.get('grayscale') !default;
 $background-color: palette.get('grayscale', 'white') !default;
 $background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(palette.get('grayscale', 'light-1'))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
@@ -20,8 +20,8 @@ $background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='
 //
 // Hover styles ////////////////////////////////////////
 $color-hover: palette.get('grayscale', 'dark-1') !default;
-$border-color-hover: palette.get('grayscale', 'base') !default;
-$background-color-hover: palette.get('grayscale', 'base') !default;
+$border-color-hover: palette.get('grayscale') !default;
+$background-color-hover: palette.get('grayscale') !default;
 $background-image-hover: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color($color-hover)}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
 
 //
@@ -36,7 +36,7 @@ $background-image-active: url("data:image/svg+xml,%3Csvg width='20' height='20' 
 $color-invalid: palette.get('warning') !default;
 $border-color-invalid: palette.get('warning') !default;
 $background-color-invalid: palette.get('grayscale', 'white') !default;
-$background-image-invalid: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(palette.get('warning', 'base'))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
+$background-image-invalid: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(palette.get('warning'))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Disabled styles ////////////////////////////////////////

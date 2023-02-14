@@ -11,9 +11,9 @@ $size: size.get('m') !default;
 
 //
 // Base colors ////////////////////////////////////////
-$color: palette.get('grayscale', 'base') !default;
+$color: palette.get('grayscale') !default;
 $background-color: palette.get('grayscale', 'white') !default;
-$border-color: palette.get('grayscale', 'base') !default;
+$border-color: palette.get('grayscale') !default;
 
 //
 // Hover colors ////////////////////////////////////////

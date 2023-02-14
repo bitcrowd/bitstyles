@@ -6,27 +6,27 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Applies a background-color to the element. Default colors are
 
-- `background`
 - `brand-2`
-- `grayscale-dark-3`
-- `grayscale-dark`
-- `grayscale-light`
+- `black`
+- `grayscale-dark-2`
+- `grayscale-dark-1`
+- `grayscale`
+- `grayscale-light-1`
+- `grayscale-light-2`
 - `grayscale-light-3`
-- `text`
-- `grayscale-light`
 - `white`
 
 See the [customization](#customization) section below for details on how to change available colors.
 
 <Canvas>
-  <Story name="background">
-    {`
-      <div class="u-bg-background" style="padding: 1rem;">u-bg-background</div>
-    `}
-  </Story>
   <Story name="brand-2">
     {`
       <div class="u-bg-brand-2" style="padding: 1rem;">u-bg-brand-2</div>
+    `}
+  </Story>
+  <Story name="black">
+    {`
+      <div class="u-bg-black" style="color:#fff;padding: 1rem;">u-bg-black</div>
     `}
   </Story>
   <Story name="grayscale-dark-2">
@@ -36,22 +36,27 @@ See the [customization](#customization) section below for details on how to chan
   </Story>
   <Story name="grayscale-dark-1">
     {`
-      <div class="u-bg-grayscale-dark-1" style="padding: 1rem;">u-bg-grayscale-dark-1</div>
+      <div class="u-bg-grayscale-dark-1" style="color:#fff;padding: 1rem;">u-bg-grayscale-dark-1</div>
     `}
   </Story>
-  <Story name="grayscale-light-3">
+  <Story name="grayscale">
     {`
-      <div class="u-bg-grayscale-light-3" style="padding: 1rem;">u-bg-grayscale-light-3</div>
-    `}
-  </Story>
-  <Story name="grayscale-light-2">
-    {`
-      <div class="u-bg-grayscale-light-2" style="color:#fff;padding: 1rem;">u-bg-grayscale-light-2</div>
+      <div class="u-bg-grayscale" style="padding: 1rem;">u-bg-grayscale</div>
     `}
   </Story>
   <Story name="grayscale-light-1">
     {`
       <div class="u-bg-grayscale-light-1" style="padding: 1rem;">u-bg-grayscale-light-1</div>
+    `}
+  </Story>
+  <Story name="grayscale-light-2">
+    {`
+      <div class="u-bg-grayscale-light-2" style="padding: 1rem;">u-bg-grayscale-light-2</div>
+    `}
+  </Story>
+  <Story name="grayscale-light-3">
+    {`
+      <div class="u-bg-grayscale-light-3" style="padding: 1rem;">u-bg-grayscale-light-3</div>
     `}
   </Story>
   <Story name="white">
@@ -69,9 +74,9 @@ The available background-colors can be customized by overriding the `$bitstyles-
 @use '~bitstyles/scss/bitstyles/utilities/bg' with (
   $values: (
     'background': palette.get('grayscale'),
-    'brand-2': palette.get('brand-2', 'base'),
+    'brand-2': palette.get('brand-2'),
     'grayscale-dark-1': palette.get('grayscale', 'dark-1'),
-    'grayscale': palette.get('grayscale', 'base'),
+    'grayscale': palette.get('grayscale'),
     'grayscale-light-1': palette.get('grayscale', 'light-1'),
     'grayscale-light-2': palette.get('grayscale', 'light-2'),
     'white': palette.get('grayscale', 'white'),

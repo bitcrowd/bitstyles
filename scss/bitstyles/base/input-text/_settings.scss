@@ -19,7 +19,7 @@ $placeholder-color: palette.get('grayscale', 'light-1') !default;
 // Base colors ////////////////////////////////////////
 
 $color: palette.get('grayscale') !default;
-$border-color: palette.get('grayscale', 'light-1') !default;
+$border-color: palette.get('grayscale') !default;
 $background: palette.get('grayscale', 'white') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
@@ -32,7 +32,7 @@ $box-shadow: shadow.to-box-shadow(
 // Hover colors ////////////////////////////////////////
 
 $color-hover: palette.get('grayscale', 'dark-1') !default;
-$background-hover: palette.get('grayscale', 'base') !default;
+$background-hover: palette.get('grayscale') !default;
 $border-color-hover: palette.get('grayscale', 'dark-1') !default;
 $box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(

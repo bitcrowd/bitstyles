@@ -4,37 +4,47 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # fg (ForeGround color)
 
-Specify the `color` property of an element.
+Specify the `color` property of an element. Default colors are
+
+- `brand-1`
+- `brand-2`
+- `black`
+- `grayscale-dark-2`
+- `grayscale`
+- `grayscale-light-1`
+- `grayscale-light-2`
+- `white`
+- `warning`
 
 <Canvas>
   <Story name="brand-1">
     {`
-      <div class="u-fg-brand-1" style="padding: 1em;background-color:#eee;">u-fg-brand-1</div>
+      <div class="u-fg-brand-1" style="padding: 1em;background-color:#333;">u-fg-brand-1</div>
     `}
   </Story>
   <Story name="brand-2">
     {`
-      <div class="u-fg-brand-2" style="padding: 1em;background-color:#eee;">u-fg-brand-2</div>
+      <div class="u-fg-brand-2" style="padding: 1em;background-color:#333;">u-fg-brand-2</div>
     `}
   </Story>
-  <Story name="gray">
+  <Story name="black">
     {`
-      <div class="u-fg-gray" style="padding: 1em;background-color:#eee;">u-fg-gray</div>
+      <div class="u-fg-black" style="padding: 1em;background-color:#eee;">u-fg-black</div>
     `}
   </Story>
-  <Story name="grayscale-light">
-    {`
-      <div class="u-fg-grayscale-light" style="padding: 1em;background-color:#333;">u-fg-grayscale-light</div>
-    `}
-  </Story>
-  <Story name="text">
+  <Story name="grayscale-dark-2">
     {`
       <div class="u-fg-grayscale-dark-2" style="padding: 1em;background-color:#eee;">u-fg-grayscale-dark-2</div>
     `}
   </Story>
+  <Story name="grayscale">
+    {`
+      <div class="u-fg-grayscale" style="padding: 1em;background-color:#eee;">u-fg-grayscale</div>
+    `}
+  </Story>
   <Story name="grayscale-light-1">
     {`
-      <div class="u-fg-grayscale-light" style="padding: 1em;background-color:#eee;">u-fg-grayscale-light</div>
+      <div class="u-fg-grayscale-light" style="padding: 1em;background-color:#eee;">u-fg-grayscale-light-1</div>
     `}
   </Story>
   <Story name="grayscale-light-2">
@@ -42,9 +52,14 @@ Specify the `color` property of an element.
       <div class="u-fg-grayscale-light-2" style="padding: 1em;background-color:#333;">u-fg-grayscale-light-2</div>
     `}
   </Story>
+  <Story name="white">
+    {`
+      <div class="u-fg-white" style="padding: 1em;background-color:#333;">u-fg-white</div>
+    `}
+  </Story>
   <Story name="warning">
     {`
-      <div class="u-fg-warning" style="padding: 1em;background-color:#eee;">u-fg-warning</div>
+      <div class="u-fg-warning" style="padding: 1em;background-color:#333;">u-fg-warning</div>
     `}
   </Story>
 </Canvas>
@@ -56,14 +71,14 @@ The available display types can be customized by overriding the `$bitstyles-fg-v
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/fg' with (
   $values: (
-    'brand-1': palette.get('brand-1', 'base'),
-    'brand-2': palette.get('brand-2', 'base'),
+    'brand-1': palette.get('brand-1'),
+    'brand-2': palette.get('brand-2'),
     'grayscale-light-1': palette.get('grayscale', 'light-1'),
-    'grayscale': palette.get('grayscale', 'base'),
-    'grayscale': palette.get('grayscale', 'base'),
+    'grayscale': palette.get('grayscale'),
+    'grayscale': palette.get('grayscale'),
     'grayscale-light-1': palette.get('grayscale', 'light-1'),
     'grayscale-light-2': palette.get('grayscale', 'light-2'),
-    'warning': palette.get('warning', 'base'),
+    'warning': palette.get('warning'),
     'white': palette.get('grayscale', 'white'),
   )
 );
