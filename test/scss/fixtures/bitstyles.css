@@ -15,92 +15,96 @@
   --bs-breakpoint-motion-ok: screen and (prefers-reduced-motion: no-preference);
 }
 :root {
-  --bs-color-brand-1-light-2: #f4f2ff;
-  --bs-color-brand-1-light-2-rgb: 244, 242, 255;
-  --bs-color-brand-1-light: #c8bfff;
+  --bs-color-brand-1-light-3: #f4f2ff;
+  --bs-color-brand-1-light-3-rgb: 244, 242, 255;
+  --bs-color-brand-1-light-2: #dcd6ff;
+  --bs-color-brand-1-light-2-rgb: 220, 214, 255;
+  --bs-color-brand-1-light-1: #c8bfff;
   --bs-color-brand-1-light-1-rgb: 200, 191, 255;
-  --bs-color-brand-1: #644dff;
-  --bs-color-brand-1-rgb: 148, 133, 255;
-  --bs-color-brand-1-dark: #1f00e6;
-  --bs-color-brand-1-dark-1-rgb: 31, 0, 230;
-  --bs-color-brand-1-dark-2: #0e0066;
-  --bs-color-brand-1-dark-2-rgb: 14, 0, 102;
-  --bs-color-brand-2-light-2: #e6fffe;
-  --bs-color-brand-2-light-2-rgb: 230, 255, 254;
-  --bs-color-brand-2-light: #b3fffb;
-  --bs-color-brand-2-light-1-rgb: 179, 255, 251;
-  --bs-color-brand-2: #33fff5;
-  --bs-color-brand-2-rgb: 51, 255, 245;
-  --bs-color-brand-2-dark: #00e6da;
-  --bs-color-brand-2-dark-1-rgb: 0, 230, 218;
-  --bs-color-brand-2-dark-2: #009991;
-  --bs-color-brand-2-dark-2-rgb: 0, 153, 145;
-  --bs-color-brand-2-dark-3: #008079;
-  --bs-color-brand-2-dark-3-rgb: 0, 128, 121;
-  --bs-color-grayscale-light-3: #f9f8fa;
-  --bs-color-grayscale-light-3-rgb: 249, 248, 250;
-  --bs-color-grayscale-light-2: #e6e5eb;
-  --bs-color-grayscale-light-2-rgb: 230, 229, 235;
-  --bs-color-grayscale-light-1: #bfbbce;
-  --bs-color-grayscale-light-1-rgb: 191, 187, 206;
-  --bs-color-text: #9995b1;
-  --bs-color-text-rgb: 153, 149, 177;
-  --bs-color-text-dark: #666084;
-  --bs-color-text-dark-rgb: 100, 95, 129;
-  --bs-color-grayscale-dark-2: #252430;
-  --bs-color-grayscale-dark-2-rgb: 37, 36, 48;
-  --bs-color-background: #fff;
-  --bs-color-background-rgb: 255, 255, 255;
-  --bs-color-background-dark: #f2f2f5;
-  --bs-color-background-dark-rgb: 242, 242, 245;
-  --bs-color-background-dark-2: #e6e5eb;
-  --bs-color-background-dark-2-rgb: 230, 229, 235;
-  --bs-color-background-dark-3: #3e3c51;
-  --bs-color-background-dark-3-rgb: 62, 60, 81;
+  --bs-color-brand-1-base: #9485ff;
+  --bs-color-brand-1-base-rgb: 148, 133, 255;
+  --bs-color-brand-1-dark-1: #644dff;
+  --bs-color-brand-1-dark-1-rgb: 100, 77, 255;
+  --bs-color-brand-1-dark-2: #1f00e6;
+  --bs-color-brand-1-dark-2-rgb: 31, 0, 230;
+  --bs-color-brand-1-dark-3: #0e0066;
+  --bs-color-brand-1-dark-3-rgb: 14, 0, 102;
+  --bs-color-brand-2-light-3: #e6fffe;
+  --bs-color-brand-2-light-3-rgb: 230, 255, 254;
+  --bs-color-brand-2-light-2: #b3fffb;
+  --bs-color-brand-2-light-2-rgb: 179, 255, 251;
+  --bs-color-brand-2-light-1: #33fff5;
+  --bs-color-brand-2-light-1-rgb: 51, 255, 245;
+  --bs-color-brand-2-base: #00e5da;
+  --bs-color-brand-2-base-rgb: 0, 229, 218;
+  --bs-color-brand-2-dark-1: #009991;
+  --bs-color-brand-2-dark-1-rgb: 0, 153, 145;
+  --bs-color-brand-2-dark-2: #008079;
+  --bs-color-brand-2-dark-2-rgb: 0, 128, 121;
+  --bs-color-brand-2-dark-3: #005752;
+  --bs-color-brand-2-dark-3-rgb: 0, 87, 82;
   --bs-color-grayscale-white: #fff;
   --bs-color-grayscale-white-rgb: 255, 255, 255;
+  --bs-color-grayscale-light-3: #f9f9fa;
+  --bs-color-grayscale-light-3-rgb: 249, 249, 250;
+  --bs-color-grayscale-light-2: #eeedf2;
+  --bs-color-grayscale-light-2-rgb: 238, 237, 242;
+  --bs-color-grayscale-light-1: #bfbbce;
+  --bs-color-grayscale-light-1-rgb: 191, 187, 206;
+  --bs-color-grayscale-base: #8f89a9;
+  --bs-color-grayscale-base-rgb: 143, 137, 169;
+  --bs-color-grayscale-dark-1: #666084;
+  --bs-color-grayscale-dark-1-rgb: 102, 96, 132;
+  --bs-color-grayscale-dark-2: #534d6b;
+  --bs-color-grayscale-dark-2-rgb: 83, 77, 107;
+  --bs-color-grayscale-dark-3: #312e3e;
+  --bs-color-grayscale-dark-3-rgb: 49, 46, 62;
+  --bs-color-grayscale-dark-4: #272432;
+  --bs-color-grayscale-dark-4-rgb: 39, 36, 50;
   --bs-color-grayscale-black: #000;
   --bs-color-grayscale-black-rgb: 0, 0, 0;
-  --bs-color-grayscale-light-2: #f9f8fa;
-  --bs-color-grayscale-light-2-rgb: 249, 248, 250;
-  --bs-color-grayscale-light: #e6e5eb;
-  --bs-color-grayscale-light-1-rgb: 230, 229, 235;
-  --bs-color-grayscale: #8c88a7;
-  --bs-color-grayscale-rgb: 140, 136, 167;
-  --bs-color-grayscale-dark: #6a6589;
-  --bs-color-grayscale-dark-1-rgb: 106, 101, 137;
-  --bs-color-grayscale-dark-2: #2c2a38;
-  --bs-color-grayscale-dark-2-rgb: 44, 42, 56;
-  --bs-color-danger-light-2: #fff2f4;
-  --bs-color-danger-light-2-rgb: 255, 242, 244;
-  --bs-color-danger-light: #ffbfc6;
+  --bs-color-danger-light-3: #fff0f1;
+  --bs-color-danger-light-3-rgb: 255, 240, 241;
+  --bs-color-danger-light-2: #ffd6db;
+  --bs-color-danger-light-2-rgb: 255, 214, 219;
+  --bs-color-danger-light-1: #ffbfc6;
   --bs-color-danger-light-1-rgb: 255, 191, 198;
-  --bs-color-danger: #ff6676;
-  --bs-color-danger-rgb: 255, 102, 118;
-  --bs-color-danger-dark: #d90016;
+  --bs-color-danger-base: #ff6676;
+  --bs-color-danger-base-rgb: 255, 102, 118;
+  --bs-color-danger-dark-1: #d90016;
   --bs-color-danger-dark-1-rgb: 217, 0, 22;
   --bs-color-danger-dark-2: #990010;
   --bs-color-danger-dark-2-rgb: 153, 0, 16;
-  --bs-color-warning-light-2: #fff4e6;
-  --bs-color-warning-light-2-rgb: 255, 244, 230;
-  --bs-color-warning-light: #ffcb8c;
+  --bs-color-danger-dark-3: #5c000a;
+  --bs-color-danger-dark-3-rgb: 92, 0, 10;
+  --bs-color-warning-light-3: #fff4e6;
+  --bs-color-warning-light-3-rgb: 255, 244, 230;
+  --bs-color-warning-light-2: #ffe6c7;
+  --bs-color-warning-light-2-rgb: 255, 230, 199;
+  --bs-color-warning-light-1: #ffcb8c;
   --bs-color-warning-light-1-rgb: 255, 203, 140;
-  --bs-color-warning: #ffa940;
-  --bs-color-warning-rgb: 255, 169, 64;
-  --bs-color-warning-dark: #ff8c00;
+  --bs-color-warning-base: #ffa940;
+  --bs-color-warning-base-rgb: 255, 169, 64;
+  --bs-color-warning-dark-1: #ff8c00;
   --bs-color-warning-dark-1-rgb: 255, 140, 0;
   --bs-color-warning-dark-2: #a65b00;
   --bs-color-warning-dark-2-rgb: 166, 91, 0;
-  --bs-color-positive-light-2: #d9fff0;
-  --bs-color-positive-light-2-rgb: 217, 255, 240;
-  --bs-color-positive-light: #73ffc9;
+  --bs-color-warning-dark-3: #613500;
+  --bs-color-warning-dark-3-rgb: 97, 53, 0;
+  --bs-color-positive-light-3: #d9fff0;
+  --bs-color-positive-light-3-rgb: 217, 255, 240;
+  --bs-color-positive-light-2: #b3ffe1;
+  --bs-color-positive-light-2-rgb: 179, 255, 225;
+  --bs-color-positive-light-1: #73ffc9;
   --bs-color-positive-light-1-rgb: 115, 255, 201;
-  --bs-color-positive: #00d985;
-  --bs-color-positive-rgb: 0, 217, 133;
-  --bs-color-positive-dark: #00995e;
+  --bs-color-positive-base: #00d985;
+  --bs-color-positive-base-rgb: 0, 217, 133;
+  --bs-color-positive-dark-1: #00995e;
   --bs-color-positive-dark-1-rgb: 0, 153, 94;
   --bs-color-positive-dark-2: #00663f;
   --bs-color-positive-dark-2-rgb: 0, 102, 63;
+  --bs-color-positive-dark-3: #004229;
+  --bs-color-positive-dark-3-rgb: 0, 66, 41;
 }
 :root {
   --bs-size-0: 0;
@@ -313,7 +317,7 @@ a {
   background-color: transparent;
   border: 0;
   box-shadow: none;
-  color: #644dff;
+  color: #9485ff;
   cursor: pointer;
   font-weight: 600;
   padding: 0;
@@ -324,20 +328,20 @@ a {
 a:visited {
   background-color: transparent;
   box-shadow: none;
-  color: #644dff;
+  color: #9485ff;
   text-decoration: none;
 }
 a:focus,
 a:hover {
   background-color: transparent;
   box-shadow: none;
-  color: #1f00e6;
+  color: #644dff;
   text-decoration: underline;
 }
 a:active {
   background-color: transparent;
   box-shadow: none;
-  color: #1f00e6;
+  color: #644dff;
   text-decoration: underline;
 }
 figcaption {
@@ -427,15 +431,15 @@ img {
 ) {
   [type='checkbox'] {
     background-color: #fff;
-    border: 0.1333333333rem solid #9995b1;
+    border: 0.1333333333rem solid #8f89a9;
     border-radius: 0.2rem;
-    color: #9995b1;
+    color: #8f89a9;
   }
   [type='checkbox']:focus,
   [type='checkbox']:hover {
     background-color: #fff;
-    border-color: #644dff;
-    color: #644dff;
+    border-color: #9485ff;
+    color: #9485ff;
     outline: none;
   }
   [type='checkbox']:after {
@@ -453,8 +457,8 @@ img {
     width: 100%;
   }
   [type='checkbox']:checked {
-    background-color: #644dff;
-    border-color: #644dff;
+    background-color: #9485ff;
+    border-color: #9485ff;
     color: #fff;
   }
   [type='checkbox']:checked:after {
@@ -462,12 +466,12 @@ img {
     transform: scale(1);
   }
   [type='checkbox'][disabled] {
-    background-color: #e6e5eb;
-    border-color: #e6e5eb;
-    color: #e6e5eb;
+    background-color: #eeedf2;
+    border-color: #eeedf2;
+    color: #eeedf2;
   }
   [type='checkbox'][disabled]:checked {
-    background-color: #e6e5eb;
+    background-color: #eeedf2;
     border-color: #bfbbce;
     color: #bfbbce;
   }
@@ -491,12 +495,12 @@ img {
 ) {
   [type='radio'] {
     background-color: #fff;
-    border: 0.1333333333rem solid #bfbbce;
+    border: 0.1333333333rem solid #8f89a9;
     border-radius: 9999rem;
     color: #bfbbce;
   }
   [type='radio']:after {
-    background: #644dff;
+    background: #9485ff;
     border-radius: 9999rem;
     content: '';
     display: block;
@@ -509,26 +513,26 @@ img {
   [type='radio']:focus,
   [type='radio']:hover {
     background-color: #fff;
-    border-color: #644dff;
-    color: #644dff;
+    border-color: #9485ff;
+    color: #9485ff;
     outline: none;
   }
   [type='radio']:checked {
     background-color: #fff;
-    border-color: #644dff;
-    color: #644dff;
+    border-color: #9485ff;
+    color: #9485ff;
   }
   [type='radio']:checked:after {
     opacity: 1;
     transform: scale(0.7);
   }
   [type='radio'][disabled] {
-    background-color: #e6e5eb;
+    background-color: #eeedf2;
     border-color: #bfbbce;
     color: #bfbbce;
   }
   [type='radio'][disabled]:checked {
-    background-color: #e6e5eb;
+    background-color: #eeedf2;
     border-color: #bfbbce;
     color: #bfbbce;
   }
@@ -570,12 +574,12 @@ textarea::placeholder {
 [type='week'],
 textarea {
   background-color: #fff;
-  border: 0.1333333333rem solid #bfbbce;
+  border: 0.1333333333rem solid #8f89a9;
   border-radius: 0.4rem;
   box-shadow: 0 0 0.1rem rgba(191, 187, 206, 0.025),
     0 0 0.1333333333rem rgba(191, 187, 206, 0.025),
     0 0 0.2rem rgba(191, 187, 206, 0.025), 0 0 0.4rem rgba(191, 187, 206, 0.025);
-  color: #9995b1;
+  color: #8f89a9;
   display: block;
   font: inherit;
   padding: 0.4rem;
@@ -594,7 +598,7 @@ textarea {
 [type='url']:hover,
 [type='week']:hover,
 textarea:hover {
-  background-color: #fff;
+  background-color: #8f89a9;
   border-color: #666084;
   box-shadow: 0 0 0.15rem rgba(200, 191, 255, 0.025),
     0 0 0.2rem rgba(200, 191, 255, 0.025), 0 0 0.3rem rgba(200, 191, 255, 0.025),
@@ -681,10 +685,10 @@ textarea[aria-invalid='true'] {
 [type='url']:disabled,
 [type='week']:disabled,
 textarea:disabled {
-  background: #e6e5eb;
-  border-color: #e6e5eb;
+  background: #eeedf2;
+  border-color: #eeedf2;
   box-shadow: none;
-  color: #9995b1;
+  color: #8f89a9;
   cursor: default;
 }
 @supports (
@@ -699,9 +703,9 @@ textarea:disabled {
     background-position: right 0.75em top 50%;
     background-repeat: no-repeat;
     background-size: 1em;
-    border: 0.1333333333rem solid #9995b1;
+    border: 0.1333333333rem solid #8f89a9;
     border-radius: 0.4rem;
-    color: #9995b1;
+    color: #8f89a9;
     cursor: pointer;
     display: block;
     font: inherit;
@@ -716,9 +720,9 @@ textarea:disabled {
     display: none;
   }
   select:hover {
-    background-color: #fff;
+    background-color: #8f89a9;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23666084' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89l35.41 35.57 35.57-35.57a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E");
-    border-color: #9995b1;
+    border-color: #8f89a9;
     color: #666084;
   }
   select:active,
@@ -736,10 +740,10 @@ textarea:disabled {
     color: #ffa940;
   }
   select[disabled] {
-    background-color: #e6e5eb;
+    background-color: #eeedf2;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23bfbbce' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89l35.41 35.57 35.57-35.57a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E");
-    border-color: #e6e5eb;
-    color: #9995b1;
+    border-color: #eeedf2;
+    color: #8f89a9;
     cursor: default;
   }
 }
@@ -875,42 +879,42 @@ table {
 }
 .a-badge--grayscale {
   --bs-a-button-color: #666084;
-  --bs-a-button-background-color: #bfbbce;
-  --bs-a-button-color-hover: #bfbbce;
+  --bs-a-button-background-color: #eeedf2;
+  --bs-a-button-color-hover: #eeedf2;
   --bs-a-button-background-color-hover: #666084;
-  background-color: #bfbbce;
+  background-color: #eeedf2;
   color: #666084;
 }
 .a-badge--danger {
   --bs-a-button-color: #d90016;
-  --bs-a-button-background-color: #ffbfc6;
-  --bs-a-button-color-hover: #ffbfc6;
+  --bs-a-button-background-color: #ffd6db;
+  --bs-a-button-color-hover: #ffd6db;
   --bs-a-button-background-color-hover: #d90016;
-  background-color: #ffbfc6;
+  background-color: #ffd6db;
   color: #d90016;
 }
 .a-badge--brand-1 {
-  --bs-a-button-color: #1f00e6;
-  --bs-a-button-background-color: #c8bfff;
-  --bs-a-button-color-hover: #c8bfff;
-  --bs-a-button-background-color-hover: #1f00e6;
-  background-color: #c8bfff;
-  color: #1f00e6;
+  --bs-a-button-color: #644dff;
+  --bs-a-button-background-color: #dcd6ff;
+  --bs-a-button-color-hover: #dcd6ff;
+  --bs-a-button-background-color-hover: #644dff;
+  background-color: #dcd6ff;
+  color: #644dff;
 }
 .a-badge--brand-2 {
-  --bs-a-button-color: #00e6da;
+  --bs-a-button-color: #009991;
   --bs-a-button-background-color: #b3fffb;
   --bs-a-button-color-hover: #b3fffb;
-  --bs-a-button-background-color-hover: #00e6da;
+  --bs-a-button-background-color-hover: #009991;
   background-color: #b3fffb;
-  color: #00e6da;
+  color: #009991;
 }
 .a-badge--positive {
   --bs-a-button-color: #00995e;
-  --bs-a-button-background-color: #73ffc9;
-  --bs-a-button-color-hover: #73ffc9;
+  --bs-a-button-background-color: #b3ffe1;
+  --bs-a-button-color-hover: #b3ffe1;
   --bs-a-button-background-color-hover: #00995e;
-  background-color: #73ffc9;
+  background-color: #b3ffe1;
   color: #00995e;
 }
 .a-bordered-header {
@@ -921,7 +925,7 @@ table {
   width: 100%;
 }
 .a-bordered-header:after {
-  border-top: 0.1333333333rem solid #e6e5eb;
+  border-top: 0.1333333333rem solid #eeedf2;
   content: '';
 }
 .a-button {
@@ -1024,8 +1028,8 @@ table {
 :root,
 [data-theme='default'] {
   --bs-a-button-color: var(--bs-color-grayscale-white);
-  --bs-a-button-background-color: var(--bs-color-brand-1);
-  --bs-a-button-border-color: var(--bs-color-brand-1);
+  --bs-a-button-background-color: var(--bs-color-brand-1-base);
+  --bs-a-button-border-color: var(--bs-color-brand-1-base);
   --bs-a-button-box-shadow: 0 0 0.2rem
       rgba(var(--bs-color-grayscale-light-2-rgb), 0.075),
     0 0 0.2666666667rem rgba(var(--bs-color-grayscale-light-2-rgb), 0.075),
@@ -1035,33 +1039,33 @@ table {
   --bs-a-button-hover-background-color: var(--bs-color-brand-1-light-1);
   --bs-a-button-hover-border-color: var(--bs-color-brand-1-light-1);
   --bs-a-button-hover-box-shadow: 0 0 0.25rem
-      rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.3333333333rem rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.5rem rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 1rem rgba(var(--bs-color-brand-1-rgb), 0.075);
+      rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.3333333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.5rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 1rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
   --bs-a-button-active-color: var(--bs-color-grayscale-white);
-  --bs-a-button-active-background-color: var(--bs-color-brand-1);
-  --bs-a-button-active-border-color: var(--bs-color-brand-1);
+  --bs-a-button-active-background-color: var(--bs-color-brand-1-base);
+  --bs-a-button-active-border-color: var(--bs-color-brand-1-base);
   --bs-a-button-active-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-brand-1-rgb), 0.075);
+      rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
   --bs-a-button-pressed-color: var(--bs-color-grayscale-white);
   --bs-a-button-pressed-background-color: var(--bs-color-brand-1-dark-1);
   --bs-a-button-pressed-border-color: var(--bs-color-brand-1-dark-1);
   --bs-a-button-pressed-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-brand-1-rgb), 0.075);
-  --bs-a-button-disabled-color: var(--bs-color-grayscale);
+      rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
+  --bs-a-button-disabled-color: var(--bs-color-grayscale-base);
   --bs-a-button-disabled-background-color: var(--bs-color-grayscale-light-1);
   --bs-a-button-disabled-border-color: var(--bs-color-grayscale-light-1);
   --bs-a-button-disabled-box-shadow: none;
 }
 [data-theme='dark'] {
-  --bs-a-button-color: var(--bs-color-brand-1);
+  --bs-a-button-color: var(--bs-color-brand-1-base);
   --bs-a-button-background-color: var(--bs-color-grayscale-light-2);
   --bs-a-button-border-color: var(--bs-color-grayscale-light-2);
   --bs-a-button-box-shadow: 0 0 0.2rem
@@ -1077,7 +1081,7 @@ table {
     0 0 0.3333333333rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.5rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 1rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075);
-  --bs-a-button-active-color: var(--bs-color-brand-1);
+  --bs-a-button-active-color: var(--bs-color-brand-1-base);
   --bs-a-button-active-background-color: var(--bs-color-grayscale-light-2);
   --bs-a-button-active-border-color: var(--bs-color-grayscale-light-2);
   --bs-a-button-active-box-shadow: 0 0 0.1rem
@@ -1086,13 +1090,13 @@ table {
     0 0 0.2rem rgba(var(--bs-color-grayscale-light-2-rgb), 0.075),
     0 0 0.4rem rgba(var(--bs-color-grayscale-light-2-rgb), 0.075);
   --bs-a-button-pressed-color: var(--bs-color-grayscale-white);
-  --bs-a-button-pressed-background-color: var(--bs-color-brand-1);
-  --bs-a-button-pressed-border-color: var(--bs-color-brand-1);
+  --bs-a-button-pressed-background-color: var(--bs-color-brand-1-base);
+  --bs-a-button-pressed-border-color: var(--bs-color-brand-1-base);
   --bs-a-button-pressed-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-brand-1-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-brand-1-rgb), 0.075);
+      rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
   --bs-a-button-disabled-color: var(--bs-color-grayscale-light-1);
   --bs-a-button-disabled-background-color: var(--bs-color-grayscale-dark-2);
   --bs-a-button-disabled-border-color: var(--bs-color-grayscale-dark-2);
@@ -1150,7 +1154,7 @@ table {
     0 0 0.8rem rgba(var(--bs-color-grayscale-light-1-rgb), 0.075);
   --bs-a-button--secondary-hover-color: var(--bs-color-grayscale-dark-2);
   --bs-a-button--secondary-hover-background-color: var(
-    --bs-color-brand-1-light
+    --bs-color-brand-1-light-1
   );
   --bs-a-button--secondary-hover-border-color: var(--bs-color-brand-1-light-1);
   --bs-a-button--secondary-hover-box-shadow: 0 0 0.25rem
@@ -1160,7 +1164,7 @@ table {
     0 0 1rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075);
   --bs-a-button--secondary-active-color: var(--bs-color-brand-1-dark-1);
   --bs-a-button--secondary-active-background-color: var(
-    --bs-color-brand-1-light
+    --bs-color-brand-1-light-1
   );
   --bs-a-button--secondary-active-border-color: var(--bs-color-brand-1-light-1);
   --bs-a-button--secondary-active-box-shadow: 0 0 0.1rem
@@ -1168,17 +1172,19 @@ table {
     0 0 0.1333333333rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.2rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.4rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075);
-  --bs-a-button--secondary-pressed-color: var(--bs-color-brand-1);
+  --bs-a-button--secondary-pressed-color: var(--bs-color-brand-1-base);
   --bs-a-button--secondary-pressed-background-color: var(
-    --bs-color-brand-1-light
+    --bs-color-brand-1-light-1
   );
-  --bs-a-button--secondary-pressed-border-color: var(--bs-color-brand-1-light-1);
+  --bs-a-button--secondary-pressed-border-color: var(
+    --bs-color-brand-1-light-1
+  );
   --bs-a-button--secondary-pressed-box-shadow: 0 0 0.1rem
       rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.1333333333rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.2rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.4rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075);
-  --bs-a-button--secondary-disabled-color: var(--bs-color-grayscale);
+  --bs-a-button--secondary-disabled-color: var(--bs-color-grayscale-base);
   --bs-a-button--secondary-disabled-background-color: var(
     --bs-color-grayscale-light-1
   );
@@ -1192,13 +1198,13 @@ table {
    --bs-a-button--secondary-background-color: var(--bs-color-grayscale-dark-1);
    --bs-a-button--secondary-border-color: var(--bs-color-grayscale-dark-1);
    --bs-a-button--secondary-box-shadow: 0 0 0.2rem
-       rgba(var(--bs-color-grayscale-rgb), 0.075),
-    0 0 0.2666666667rem rgba(var(--bs-color-grayscale-rgb), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-grayscale-rgb), 0.075),
-    0 0 0.8rem rgba(var(--bs-color-grayscale-rgb), 0.075);
+       rgba(var(--bs-color-grayscale-base-rgb), 0.075),
+    0 0 0.2666666667rem rgba(var(--bs-color-grayscale-base-rgb), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-grayscale-base-rgb), 0.075),
+    0 0 0.8rem rgba(var(--bs-color-grayscale-base-rgb), 0.075);
   --bs-a-button--secondary-hover-color: var(--bs-color-grayscale-dark-2);
   --bs-a-button--secondary-hover-background-color: var(
-    --bs-color-brand-1-light
+    --bs-color-brand-1-light-1
   );
   --bs-a-button--secondary-hover-border-color: var(--bs-color-brand-1-light-1);
   --bs-a-button--secondary-hover-box-shadow: 0 0 0.25rem
@@ -1208,7 +1214,7 @@ table {
     0 0 1rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075);
   --bs-a-button--secondary-active-color: var(--bs-color-brand-1-dark-1);
   --bs-a-button--secondary-active-background-color: var(
-    --bs-color-brand-1-light
+    --bs-color-brand-1-light-1
   );
   --bs-a-button--secondary-active-border-color: var(--bs-color-brand-1-light-1);
   --bs-a-button--secondary-active-box-shadow: 0 0 0.1rem
@@ -1216,11 +1222,13 @@ table {
     0 0 0.1333333333rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.2rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.4rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075);
-  --bs-a-button--secondary-pressed-color: var(--bs-color-brand-1);
+  --bs-a-button--secondary-pressed-color: var(--bs-color-brand-1-base);
   --bs-a-button--secondary-pressed-background-color: var(
-    --bs-color-brand-1-light
+    --bs-color-brand-1-light-1
   );
-  --bs-a-button--secondary-pressed-border-color: var(--bs-color-brand-1-light-1);
+  --bs-a-button--secondary-pressed-border-color: var(
+    --bs-color-brand-1-light-1
+  );
   --bs-a-button--secondary-pressed-box-shadow: 0 0 0.1rem
       rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.1333333333rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
@@ -1277,15 +1285,15 @@ table {
 }
 :root,
 [data-theme='default'] {
-  --bs-a-button--transparent-color: var(--bs-color-grayscale);
+  --bs-a-button--transparent-color: var(--bs-color-grayscale-base);
   --bs-a-button--transparent-background-color: transparent;
   --bs-a-button--transparent-border-color: transparent;
   --bs-a-button--transparent-box-shadow: none;
-  --bs-a-button--transparent-hover-color: var(--bs-color-brand-1);
+  --bs-a-button--transparent-hover-color: var(--bs-color-brand-1-base);
   --bs-a-button--transparent-hover-background-color: transparent;
   --bs-a-button--transparent-hover-border-color: transparent;
   --bs-a-button--transparent-hover-box-shadow: none;
-  --bs-a-button--transparent-active-color: var(--bs-color-brand-1);
+  --bs-a-button--transparent-active-color: var(--bs-color-brand-1-base);
   --bs-a-button--transparent-active-background-color: var(
     --bs-color-grayscale-light-2
   );
@@ -1309,7 +1317,7 @@ table {
     0 0 0.1333333333rem rgba(var(--bs-color-grayscale-light-1-rgb), 0.075),
     0 0 0.2rem rgba(var(--bs-color-grayscale-light-1-rgb), 0.075),
     0 0 0.4rem rgba(var(--bs-color-grayscale-light-1-rgb), 0.075);
-  --bs-a-button--transparent-disabled-color: var(--bs-color-grayscale);
+  --bs-a-button--transparent-disabled-color: var(--bs-color-grayscale-base);
   --bs-a-button--transparent-disabled-background-color: var(
     --bs-color-grayscale-light-1
   );
@@ -1406,7 +1414,7 @@ table {
   --bs-a-button--tab-background-color: transparent;
   --bs-a-button--tab-border-color: transparent;
   --bs-a-button--tab-box-shadow: none;
-  --bs-a-button--tab-hover-color: var(--bs-color-brand-1);
+  --bs-a-button--tab-hover-color: var(--bs-color-brand-1-base);
   --bs-a-button--tab-hover-background-color: transparent;
   --bs-a-button--tab-hover-border-color: transparent;
   --bs-a-button--tab-hover-box-shadow: none;
@@ -1461,21 +1469,21 @@ table {
 :root,
 [data-theme='default'] {
   --bs-a-button--danger-hover-color: var(--bs-color-grayscale-white);
-  --bs-a-button--danger-hover-background-color: var(--bs-color-danger);
-  --bs-a-button--danger-hover-border-color: var(--bs-color-danger);
+  --bs-a-button--danger-hover-background-color: var(--bs-color-danger-base);
+  --bs-a-button--danger-hover-border-color: var(--bs-color-danger-base);
   --bs-a-button--danger-hover-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-danger), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-danger), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-danger), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-danger), 0.075);
+      rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-danger-base), 0.075);
   --bs-a-button--danger-active-color: var(--bs-color-grayscale-white);
   --bs-a-button--danger-active-background-color: var(--bs-color-danger-dark-1);
   --bs-a-button--danger-active-border-color: var(--bs-color-danger-dark-1);
   --bs-a-button--danger-active-box-shadow: 0 0 0.1rem
-      rgba(var(--bs-color-danger), 0.075),
-    0 0 0.1333333333rem rgba(var(--bs-color-danger), 0.075),
-    0 0 0.2rem rgba(var(--bs-color-danger), 0.075),
-    0 0 0.4rem rgba(var(--bs-color-danger), 0.075);
+      rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.1333333333rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.2rem rgba(var(--bs-color-danger-base), 0.075),
+    0 0 0.4rem rgba(var(--bs-color-danger-base), 0.075);
 }
 .a-button {
   --bs-a-button-padding-vertical: 0.4rem;
@@ -1550,14 +1558,14 @@ table {
 }
 .a-button--tab:focus:after,
 .a-button--tab:hover:after {
-  background-color: var(--bs-color-brand-1);
+  background-color: var(--bs-color-brand-1-base);
 }
 .a-button--tab:active:after {
-  background-color: var(--bs-color-brand-1);
+  background-color: var(--bs-color-brand-1-base);
 }
 .a-button--tab[aria-current]:after,
 .a-button--tab[aria-selected='true']:after {
-  background-color: var(--bs-color-brand-1);
+  background-color: var(--bs-color-brand-1-base);
 }
 .a-button--tab:disabled:after,
 .a-button--tab:disabled:focus:after,
