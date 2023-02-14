@@ -1,7 +1,7 @@
 @use '../../settings/typography';
 
 $weight-values: (
-  'light-1': typography.$font-weight-light,
+  'light': typography.$font-weight-light,
   'normal': typography.$font-weight-normal,
   'medium': typography.$font-weight-medium,
   'bold': typography.$font-weight-bold,

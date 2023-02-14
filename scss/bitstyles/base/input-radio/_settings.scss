@@ -36,5 +36,8 @@ $border-color-disabled: palette.get('grayscale', 'light-1') !default;
 //
 // Disabled-checked colors ////////////////////////////////////////
 $color-disabled-checked: palette.get('grayscale', 'light-1') !default;
-$background-color-disabled-checked: palette.get('grayscale', 'light-2') !default;
+$background-color-disabled-checked: palette.get(
+  'grayscale',
+  'light-2'
+) !default;
 $border-color-disabled-checked: palette.get('grayscale', 'light-1') !default;

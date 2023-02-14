@@ -25,6 +25,7 @@ $palette: (
     'dark-3': #005752,
   ),
   'grayscale': (
+    'white': base-palette.get('pure-gray', '100'),
     'light-3': #f9f9fa,
     'light-2': #eeedf2,
     'light-1': #bfbbce,
@@ -33,7 +34,6 @@ $palette: (
     'dark-2': #534d6b,
     'dark-3': #312e3e,
     'dark-4': #272432,
-    'white': base-palette.get('pure-gray', '100'),
     'black': base-palette.get('pure-gray', '0'),
   ),
   'danger': (
