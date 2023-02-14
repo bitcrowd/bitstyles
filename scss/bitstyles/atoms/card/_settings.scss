@@ -16,4 +16,4 @@ $box-shadow: shadow.to-box-shadow(
   )
 ) !default;
 $breakpoints: ('m', 'l') !default;
-$header-background-color: palette.get('grayscale') !default;
+$header-background-color: palette.get('grayscale', 'light-2') !default;

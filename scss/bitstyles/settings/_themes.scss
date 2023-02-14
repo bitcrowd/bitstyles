@@ -12,11 +12,10 @@ $default-theme: (
             $items: (
               'color',
               'background',
-              'base',
             ),
           )}
       ),
-    'grayscale':
+    'text':
       var(
         #{custom-property.get(
             $items: (
@@ -40,7 +39,7 @@ $dark-theme: (
             ),
           )}
       ),
-    'grayscale':
+    'text':
       var(
         #{custom-property.get(
             $items: (
@@ -55,5 +54,5 @@ $dark-theme: (
 $default-theme-name: 'default' !default;
 $themes: (
   '#{$default-theme-name}': $default-theme,
-  'dark-1': $dark-theme,
+  'dark': $dark-theme,
 ) !default;

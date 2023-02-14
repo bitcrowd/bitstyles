@@ -76,7 +76,7 @@ $bitstyles-themes-themes: (
       'color': var(--bscpn-color-brand-2-dark-3),
     ),
   ),
-  'dark-1': (
+  'dark': (
     'color': (
       'background': var(--bscpn-color-brand-1-dark-3),
       'text': var(--bscpn-color-brand-2-light-3),
@@ -128,7 +128,7 @@ $bitstyles-button-colors-default: (
       'color': var(--bscpn-color-grayscale-black),
     ),
   ),
-  'dark-1': (
+  'dark': (
     'default': (
       'color': var(--bscpn-color-grayscale-white),
     ),

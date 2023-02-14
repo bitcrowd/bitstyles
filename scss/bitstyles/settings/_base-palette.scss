@@ -6,6 +6,14 @@
 $accent-gray-color: map.get(base-colors.$colors, 'brand-1') !default;
 $accent-gray-saturation: -85% !default;
 $palette: (
+  'brand-1':
+    bs-color.generate-scale(
+      $base-color: map.get(base-colors.$colors, 'brand-1'),
+    ),
+  'brand-2':
+    bs-color.generate-scale(
+      $base-color: map.get(base-colors.$colors, 'brand-2'),
+    ),
   'pure-gray':
     bs-color.generate-scale(
       $base-color: map.get(base-colors.$colors, 'pure-gray'),
@@ -19,14 +27,6 @@ $palette: (
           $saturation: $accent-gray-saturation,
           $lightness: 10%,
         ),
-    ),
-  'brand-1':
-    bs-color.generate-scale(
-      $base-color: map.get(base-colors.$colors, 'brand-1'),
-    ),
-  'brand-2':
-    bs-color.generate-scale(
-      $base-color: map.get(base-colors.$colors, 'brand-2'),
     ),
   'red':
     bs-color.generate-scale(
