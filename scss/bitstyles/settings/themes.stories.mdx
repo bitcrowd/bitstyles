@@ -100,14 +100,12 @@ Configure the names of your themes, and/or the colors they apply, and add whole 
 @use '~bitstyles/scss/bitstyles/settings/themes' with (
   $themes: (
     'default': (
-      'color': (
-        'background': var(--bs-color-background-light-3),
-        'color': var(--bs-color-text-dark-3),
-      ),
-      'dark-1': (
-        'background': var(--bs-color-background-dark-3),
-        'text': var(--bs-color-grayscale-light-3),
-      ),
+      'background': var(--bs-color-background-light-3),
+      'text': var(--bs-color-text-dark-3),
+    ),
+    'dark': (
+      'background': var(--bs-color-background-dark-3),
+      'text': var(--bs-color-grayscale-light-3),
     ),
   )
 );
@@ -119,14 +117,12 @@ If you change the name of the default theme as you redefine its colors, you’ll
 @use '~bitstyles/scss/bitstyles/settings/themes' with (
   $themes: (
     'custom-theme-name': (
-      'color': (
-        'background': var(--bs-color-background-light-3),
-        'color': var(--bs-color-text-dark-3),
-      ),
-      'dark-1': (
-        'background': var(--bs-color-background-dark-3),
-        'text': var(--bs-color-grayscale-light-3),
-      ),
+      'background': var(--bs-color-background-light-3),
+      'text': var(--bs-color-text-dark-3),
+    ),
+    'dark': (
+      'background': var(--bs-color-background-dark-3),
+      'text': var(--bs-color-grayscale-light-3),
     ),
   ),
   $default-theme-name: 'custom-theme-name'
