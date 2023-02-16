@@ -719,6 +719,7 @@ html {
 }
 :root,
 [data-theme='default'] {
+  --bscpn-theme-text: var(--bscpn-color-brand-2-dark-3);
   --bscpn-theme-background: var(--bscpn-color-brand-1-light-3);
 }
 [data-theme='dark'] {

@@ -62,16 +62,12 @@
   ),
   $themes-themes: (
     'default': (
-      'color': (
-        'background': var(--bscpn-color-brand-1-light-3),
-        'color': var(--bscpn-color-brand-2-dark-3),
-      ),
+      'background': var(--bscpn-color-brand-1-light-3),
+      'text': var(--bscpn-color-brand-2-dark-3),
     ),
     'dark': (
-      'color': (
-        'background': var(--bscpn-color-brand-1-dark-3),
-        'text': var(--bscpn-color-brand-2-light-3),
-      ),
+      'background': var(--bscpn-color-brand-1-dark-3),
+      'text': var(--bscpn-color-brand-2-light-3),
     )
   ),
   $typography-webfont-family-name: 'FakeFont',
