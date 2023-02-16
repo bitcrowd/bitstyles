@@ -120,7 +120,7 @@ const RenderColorPaletteList = ({
       break;
     default:
       classname =
-        'u-list-none u-grid u-gap-l u-grid-cols-2@l u-margin-xl-bottom u-items-start';
+        'u-list-none u-grid u-gap-xl u-margin-xl-bottom u-items-start';
   }
 
   return `
