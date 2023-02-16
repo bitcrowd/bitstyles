@@ -5,7 +5,7 @@
 ### Changed
 
 - Buttons now show their `pressed` state when they have `aria-expanded='true'`, so it’s usable with dropdowns, and other show/hide UI.
-- Colors in the default configuration have been refreshed following our new design system. If you wish to retain the old color scheme, you can copy the configuration from older versions. If you were already overriding the color palette, you don’t need to do anything (though, see next point on naming).
+- Colors in the default configuration have been refreshed following our new design system. If you wish to retain the old color scheme, you can copy the configuration from older versions. You may need to also update the settings for any components you’re using from bitstyles to use the colors you have defined, in cases where the components expect the new colors. If you were already overriding the color palette, you don’t need to do anything (though, see next point on naming).
 - The naming scheme for color variations has changed. If you’re using the default color configuration, update the color names when you use either `palette.get()` or the equivalent CSS Custom Properties:
   - `lightest` to `light-3`
   - `lighter` to `light-2`
