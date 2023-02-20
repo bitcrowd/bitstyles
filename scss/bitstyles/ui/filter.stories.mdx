@@ -8,7 +8,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 When a user wants to filter a list of objects by fields which have a limited number of set values, present them with a group of checkboxes to choose from. To keep the UI clear, they can be hidden within a well-labelled dropdown menu.
 
-<div class="u-bg-grayscale-light-1u-padding-m-x u-padding-xs-y">
+<div class="u-bg-grayscale-light-1 u-padding-m-x u-padding-s4-y">
   <p>
     These examples use AlpineJS for the behavior. If you’re using a different JS
     package, replace the blocks of html attributes starting with `x-`, and with
@@ -16,7 +16,7 @@ When a user wants to filter a list of objects by fields which have a limited num
   </p>
 </div>
 
-<details class="u-margin-xl-y">
+<details class="u-margin-l3-y">
   <summary class="u-h4 u-font-medium">Examples use</summary>
   <ul>
     <li>
@@ -71,7 +71,7 @@ When a user wants to filter a list of objects by fields which have a limited num
         <form action="" method="POST" class="u-flex u-items-center" role="search">
           <h3 class="u-sr-only">Filter results</h3>
           <ul class="u-list-none u-flex" x-data="{ dropdownOpen: false }">
-            <li class="u-relative u-margin-xs-right">
+            <li class="u-relative u-margin-s4-right">
               <button
                 type="button"
                 class="a-button a-button--secondary"
@@ -95,7 +95,7 @@ When a user wants to filter a list of objects by fields which have a limited num
                 x-transition:leave-start="is-on-screen"
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
-                class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
+                class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s2-top"
                 id="dropdown-1"
               >
                 <li>
@@ -148,7 +148,7 @@ When a user wants to filter a list of objects by fields which have a limited num
                 x-transition:leave-start="is-on-screen"
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
-                class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
+                class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s2-top"
                 id="dropdown-2"
               >
                 <li>
@@ -223,7 +223,7 @@ Some fields such as names and emails will need to be filtered by user-entered fr
                 x-transition:leave-start="is-on-screen"
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
-                class="a-dropdown a-dropdown--right u-margin-s-top u-overflow-y-auto u-list-none u-margin-s-bottom"
+                class="a-dropdown a-dropdown--right u-margin-s2-top u-overflow-y-auto u-list-none u-margin-s2-bottom"
                 id="dropdown-1"
               >
                 <li>
@@ -265,7 +265,7 @@ When giving the user filters by category and free text, place the free text sear
         <form action="" method="POST" role="search">
           <h3 class="u-sr-only">Filter results</h3>
           <ul class="u-list-none u-flex u-items-center">
-            <li class="u-margin-xs-right">
+            <li class="u-margin-s4-right">
               <ul class="o-ui-group u-flex u-list-none">
                 <li class="u-flex">
                   <label for="search_users" class="u-sr-only">Search users</label>
@@ -294,7 +294,7 @@ When giving the user filters by category and free text, place the free text sear
                     x-transition:leave-start="is-on-screen"
                     x-transition:leave-end="is-off-screen"
                     @click.away="dropdownOpen = false"
-                    class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
+                    class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s2-top"
                     id="dropdown-1"
                   >
                     <li>
@@ -337,7 +337,7 @@ When giving the user filters by category and free text, place the free text sear
                 x-transition:leave-start="is-on-screen"
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
-                class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
+                class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s2-top"
                 id="dropdown-1"
               >
                 <li>

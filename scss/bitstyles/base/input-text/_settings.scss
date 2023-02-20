@@ -6,10 +6,10 @@
 //
 // Base styles ////////////////////////////////////////
 
-$padding-vertical: size.get('xs') !default;
-$padding-horizontal: size.get('xs') !default;
-$border-radius: size.get('xs') !default;
-$border-width: size.get('3xs') !default;
+$padding-vertical: size.get('s4') !default;
+$padding-horizontal: size.get('s4') !default;
+$border-radius: size.get('s4') !default;
+$border-width: size.get('s7') !default;
 $font: inherit !default;
 $placeholder-font-style: italic !default;
 $placeholder-font-weight: typography.$font-weight-normal !default;
@@ -24,7 +24,7 @@ $background: palette.get('grayscale', 'white') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('grayscale', 'light-1'), 0.025),
-    $blur-radius: size.get('xs'),
+    $blur-radius: size.get('s4'),
   )
 ) !default;
 
@@ -37,7 +37,7 @@ $border-color-hover: palette.get('grayscale', 'dark-1') !default;
 $box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', 'light-1'), 0.025),
-    $blur-radius: size.get('s'),
+    $blur-radius: size.get('s2'),
   )
 ) !default;
 
@@ -50,7 +50,7 @@ $border-color-active: palette.get('grayscale', 'dark-1') !default;
 $box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', 'light-1'), 0.075),
-    $blur-radius: size.get('2xs'),
+    $blur-radius: size.get('s6'),
   )
 ) !default;
 

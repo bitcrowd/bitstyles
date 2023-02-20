@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Apply margins of a specified size and direction to an element.
 
-With default configuration, the margins are available in sizes `0`, `2xs`, `xs`, `s`, `m`, `l`, `xl`, with negative-margin variations of each. They are provided at the `s` and `m` breakpoints. See [customization](#customization) below for details on how to change that.
+With default configuration, the margins are available in sizes `0`, `s6`, `xs`, `s`, `m`, `l`, `xl`, with negative-margin variations of each. They are provided at the `s` and `m` breakpoints. See [customization](#customization) below for details on how to change that.
 
 ## Margin sizes
 
@@ -18,17 +18,17 @@ With default configuration, the margins are available in sizes `0`, `2xs`, `xs`,
       </div>
     `}
   </Story>
-  <Story name="margin-2xs">
+  <Story name="margin-s6">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-2xs">u-margin-2xs</div>
+        <div class="u-bg-grayscale-light-3 u-margin-s6">u-margin-s6</div>
       </div>
     `}
   </Story>
-  <Story name="margin-xs">
+  <Story name="margin-s4">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xs">u-margin-xs</div>
+        <div class="u-bg-grayscale-light-3 u-margin-s4">u-margin-s4</div>
       </div>
     `}
   </Story>
@@ -53,10 +53,10 @@ With default configuration, the margins are available in sizes `0`, `2xs`, `xs`,
       </div>
     `}
   </Story>
-  <Story name="margin-xl">
+  <Story name="margin-l3">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xl">u-margin-xl</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l3">u-margin-l3</div>
       </div>
     `}
   </Story>
@@ -74,17 +74,17 @@ With default configuration, the margins are available in sizes `0`, `2xs`, `xs`,
 Apply the prefix `neg` to the margin size to apply the negative version of the margin.
 
 <Canvas>
-  <Story name="margin-neg-2xs">
+  <Story name="margin-neg-s6">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-neg-2xs">u-margin-neg-2xs</div>
+        <div class="u-bg-grayscale-light-3 u-margin-neg-s6">u-margin-neg-s6</div>
       </div>
     `}
   </Story>
-  <Story name="margin-neg-xs">
+  <Story name="margin-neg-s4">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-neg-xs">u-margin-neg-xs</div>
+        <div class="u-bg-grayscale-light-3 u-margin-neg-s4">u-margin-neg-s4</div>
       </div>
     `}
   </Story>
@@ -109,10 +109,10 @@ Apply the prefix `neg` to the margin size to apply the negative version of the m
       </div>
     `}
   </Story>
-  <Story name="margin-neg-xl">
+  <Story name="margin-neg-l3">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-neg-xl">u-margin-neg-xl</div>
+        <div class="u-bg-grayscale-light-3 u-margin-neg-l3">u-margin-neg-l3</div>
       </div>
     `}
   </Story>
@@ -123,46 +123,46 @@ Apply the prefix `neg` to the margin size to apply the negative version of the m
 Every margin size (negative and positive) is also available directed at the single sides `top`, `right`, `bottom`, `left`, and the double directions `x` and `y`.
 
 <Canvas>
-  <Story id="utilities-margin--margin-xl" />
-  <Story name="margin-xl-top">
+  <Story id="utilities-margin--margin-l3" />
+  <Story name="margin-l3-top">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xl-top">u-margin-xl-top</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l3-top">u-margin-l3-top</div>
       </div>
     `}
   </Story>
-  <Story name="margin-xl-right">
+  <Story name="margin-l3-right">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xl-right">u-margin-xl-right</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l3-right">u-margin-l3-right</div>
       </div>
     `}
   </Story>
-  <Story name="margin-xl-bottom">
+  <Story name="margin-l3-bottom">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xl-bottom">u-margin-xl-bottom</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l3-bottom">u-margin-l3-bottom</div>
       </div>
     `}
   </Story>
-  <Story name="margin-xl-left">
+  <Story name="margin-l3-left">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xl-left">u-margin-xl-left</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l3-left">u-margin-l3-left</div>
       </div>
     `}
   </Story>
-  <Story name="margin-xl-x">
+  <Story name="margin-l3-x">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xl-x">u-margin-xl-x</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l3-x">u-margin-l3-x</div>
       </div>
     `}
   </Story>
-  <Story name="margin-xl-y">
+  <Story name="margin-l3-y">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xl-y">u-margin-xl-y</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l3-y">u-margin-l3-y</div>
       </div>
     `}
   </Story>
@@ -173,17 +173,17 @@ Every margin size (negative and positive) is also available directed at the sing
 All the margins are also available at the `@s` and `@m` breakpoint suffixes.
 
 <Canvas>
-  <Story name="margin-xl@s">
+  <Story name="margin-l3@s">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xl@s">u-margin-xl@s</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l3@s">u-margin-l3@s</div>
       </div>
     `}
   </Story>
-  <Story name="margin-xl@m">
+  <Story name="margin-l3@m">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-xl@m">u-margin-xl@m</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l3@m">u-margin-l3@m</div>
       </div>
     `}
   </Story>
@@ -200,21 +200,21 @@ The `positive` and `negative` keys are required for each group you want to defin
   $sizes: (
     'positive': (
       '0': 0,
-      '2xs': size.get('2xs'),
-      'xs': size.get('xs'),
-      's': size.get('s'),
+      's6': size.get('s6'),
+      's4': size.get('s4'),
+      's': size.get('s2'),
       'm': size.get('m'),
-      'l': size.get('l'),
-      'xl': size.get('xl'),
+      'l': size.get('l2'),
+      'l3': size.get('l3'),
       'auto': auto,
     ),
     'negative': (
-      '2xs': -#{size.get('2xs')},
-      'xs': -#{size.get('xs')},
-      's': -#{size.get('s')},
+      's6': -#{size.get('s6')},
+      's4': -#{size.get('s4')},
+      's': -#{size.get('s2')},
       'm': -#{size.get('m')},
-      'l': -#{size.get('l')},
-      'xl': -#{size.get('xl')},
+      'l': -#{size.get('l2')},
+      'l3': -#{size.get('l3')},
     ),
   )
 );

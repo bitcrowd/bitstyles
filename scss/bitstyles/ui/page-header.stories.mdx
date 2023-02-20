@@ -13,7 +13,7 @@ The intro to every page, containing slots for:
 - action [buttons](/docs/ui-buttons-buttons--page)
 - [tabs](/docs/ui-navigation-tabs--tabs) for organising the content (note that no tabpanels are shown here)
 
-<div class="u-bg-grayscale-light-1u-padding-m-x u-padding-xs-y">
+<div class="u-bg-grayscale-light-1 u-padding-m-x u-padding-s4-y">
   <p>
     These examples use AlpineJS for the behavior. If you’re using a different JS
     package, replace the blocks of html attributes starting with `x-`, and with
@@ -21,7 +21,7 @@ The intro to every page, containing slots for:
   </p>
 </div>
 
-<details class="u-margin-xl-y">
+<details class="u-margin-l3-y">
   <summary class="u-h4 u-font-medium">Examples use</summary>
   <ul>
     <li>
@@ -86,25 +86,25 @@ This first example shows a header with all these slots filled:
   <Story name="Page header">
     {`
       <article>
-        <header class="u-bg-grayscale-light-1 u-padding-l-top">
+        <header class="u-bg-grayscale-light-1 u-padding-l2-top">
           <div class="a-content">
-            <div class="u-padding-xl-bottom">
+            <div class="u-padding-l3-bottom">
               <ol class="u-h6 u-list-none u-flex u-flex-wrap u-items-center">
-                <li class="u-margin-xs-right u-flex u-items-center">
+                <li class="u-margin-s4-right u-flex u-items-center">
                   <a href="/">Main section</a>
-                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-xs-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-s4-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <use xlink:href="${icons}#icon-caret-right"></use>
                   </svg>
                 </li>
-                <li class="u-margin-xs-right u-flex u-items-center">
+                <li class="u-margin-s4-right u-flex u-items-center">
                   <a href="/">Sub section</a>
-                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-xs-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-s4-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <use xlink:href="${icons}#icon-caret-right"></use>
                   </svg>
                 </li>
-                <li class="u-margin-xs-right u-flex u-items-center">
+                <li class="u-margin-s4-right u-flex u-items-center">
                   <a href="/">Sub page</a>
-                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-xs-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-s4-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <use xlink:href="${icons}#icon-caret-right"></use>
                   </svg>
                 </li>
@@ -117,7 +117,7 @@ This first example shows a header with all these slots filled:
                   </div>
                 </div>
                 <ul class="u-list-none u-flex u-flex-wrap">
-                  <li class="u-margin-s-right u-margin-m-bottom u-relative@m" x-data="{ dropdownOpen: false }">
+                  <li class="u-margin-s2-right u-margin-m-bottom u-relative@m" x-data="{ dropdownOpen: false }">
                     <button
                       type="button"
                       class="a-button a-button--secondary"
@@ -139,7 +139,7 @@ This first example shows a header with all these slots filled:
                       x-transition:leave-start="is-on-screen"
                       x-transition:leave-end="is-off-screen"
                       @click.away="dropdownOpen = false"
-                      class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
+                      class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s2-top"
                       id="dropdown-1"
                     >
                       <li>
@@ -184,17 +184,17 @@ This first example shows a header with all these slots filled:
               </div>
             </div>
             <ul class="u-list-none u-flex u-overflow-x-auto u-items-end a-button--tab-container u-margin-m-bottom" role="tablist" aria-label="Patient data">
-              <li class="u-margin-s-right">
+              <li class="u-margin-s2-right">
                 <button class="a-button a-button--tab" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
                   Personal details
                 </button>
               </li>
-              <li class="u-margin-s-right">
+              <li class="u-margin-s2-right">
                 <button class="a-button a-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="0">
                   Anamnese
                 </button>
               </li>
-              <li class="u-margin-s-right">
+              <li class="u-margin-s2-right">
                 <button class="a-button a-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="0">
                   Appointment history
                 </button>
@@ -213,25 +213,25 @@ It’s also common to not need tabs — if the content is not large and varied e
   <Story name="Page header, no tabs">
     {`
       <article>
-        <header class="u-bg-grayscale-light-1 u-padding-l-top">
+        <header class="u-bg-grayscale-light-1 u-padding-l2-top">
           <div class="a-content">
-            <div class="u-padding-xl-bottom">
+            <div class="u-padding-l3-bottom">
               <ol class="u-h6 u-list-none u-flex u-flex-wrap u-items-center">
-                <li class="u-margin-xs-right u-flex u-items-center">
+                <li class="u-margin-s4-right u-flex u-items-center">
                   <a href="/">Main section</a>
-                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-xs-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-s4-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <use xlink:href="${icons}#icon-caret-right"></use>
                   </svg>
                 </li>
-                <li class="u-margin-xs-right u-flex u-items-center">
+                <li class="u-margin-s4-right u-flex u-items-center">
                   <a href="/">Sub section</a>
-                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-xs-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-s4-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <use xlink:href="${icons}#icon-caret-right"></use>
                   </svg>
                 </li>
-                <li class="u-margin-xs-right u-flex u-items-center">
+                <li class="u-margin-s4-right u-flex u-items-center">
                   <a href="/">Sub page</a>
-                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-xs-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-s4-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <use xlink:href="${icons}#icon-caret-right"></use>
                   </svg>
                 </li>
@@ -244,7 +244,7 @@ It’s also common to not need tabs — if the content is not large and varied e
                   </div>
                 </div>
                 <ul class="u-list-none u-flex u-flex-wrap">
-                  <li class="u-margin-s-right u-margin-m-bottom u-relative@m" x-data="{ dropdownOpen: false }">
+                  <li class="u-margin-s2-right u-margin-m-bottom u-relative@m" x-data="{ dropdownOpen: false }">
                     <button
                       type="button"
                       class="a-button a-button--secondary"
@@ -266,7 +266,7 @@ It’s also common to not need tabs — if the content is not large and varied e
                       x-transition:leave-start="is-on-screen"
                       x-transition:leave-end="is-off-screen"
                       @click.away="dropdownOpen = false"
-                      class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s-top"
+                      class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s2-top"
                       id="dropdown-1"
                     >
                       <li>
@@ -323,25 +323,25 @@ This is a minimal example, with only breadcrumbs and a heading.
   <Story name="Page header, minimal">
     {`
       <article>
-        <header class="u-bg-grayscale-light-1 u-padding-l-top">
+        <header class="u-bg-grayscale-light-1 u-padding-l2-top">
           <div class="a-content">
-            <div class="u-padding-xl-bottom">
+            <div class="u-padding-l3-bottom">
               <ol class="u-h6 u-list-none u-flex u-flex-wrap u-items-center">
-                <li class="u-margin-xs-right u-flex u-items-center">
+                <li class="u-margin-s4-right u-flex u-items-center">
                   <a href="/">Main section</a>
-                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-xs-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-s4-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <use xlink:href="${icons}#icon-caret-right"></use>
                   </svg>
                 </li>
-                <li class="u-margin-xs-right u-flex u-items-center">
+                <li class="u-margin-s4-right u-flex u-items-center">
                   <a href="/">Sub section</a>
-                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-xs-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-s4-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <use xlink:href="${icons}#icon-caret-right"></use>
                   </svg>
                 </li>
-                <li class="u-margin-xs-right u-flex u-items-center">
+                <li class="u-margin-s4-right u-flex u-items-center">
                   <a href="/">Sub page</a>
-                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-xs-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <svg width="18" height="18" class="a-icon a-icon--m u-fg-grayscale u-margin-s4-left" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <use xlink:href="${icons}#icon-caret-right"></use>
                   </svg>
                 </li>

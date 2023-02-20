@@ -13,7 +13,7 @@ $breakpoints: (
   's': 'screen and (max-width: 29.9375em)',
   'm': 'screen and (min-width: 30em)',
   'l': 'screen and (min-width: 55em)',
-  'xl': 'screen and (min-width: 95em)',
+  'l3': 'screen and (min-width: 95em)',
   'hidpi':
     '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)',
   'landscape': 'all and (orientation:landscape)',
@@ -75,7 +75,7 @@ The breakpoints are also available as CSS custom properties. In the default conf
 --bs-breakpoint-s: screen and (max-width: 29.9375em);
 --bs-breakpoint-m: screen and (min-width: 30em);
 --bs-breakpoint-l: screen and (min-width: 55em);
---bs-breakpoint-xl: screen and (min-width: 95em);
+--bs-breakpoint-l3: screen and (min-width: 95em);
 --bs-breakpoint-hidpi: (-webkit-min-device-pixel-ratio: 2), (
     min-resolution: 192dpi
   ), (min-resolution: 2dppx);
@@ -106,8 +106,8 @@ If you don’t need to add or rename a media-query, you may be able to achieve w
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/breakpoints' with (
   $s-m-boundary: 12em,
-  $m-l-boundary: 85em,
-  $l-xl-boundary: 125em
+  $m-l2-boundary: 85em,
+  $l-l3-boundary: 125em
 );
 ```
 
@@ -116,11 +116,11 @@ If you need more control, or you want more breakpoints than are present, you’l
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/breakpoints' with (
   $breakpoints: (
-    'xs': 'screen and (max-width: 19.9875em)',
+    's4': 'screen and (max-width: 19.9875em)',
     's': 'screen and (max-width: 29.9875em)',
     'm': 'screen and (min-width: 30em)',
     'l': 'screen and (min-width: 55em)',
-    'xl': 'screen and (min-width: 95em)',
+    'l3': 'screen and (min-width: 95em)',
   )
 );
 ```

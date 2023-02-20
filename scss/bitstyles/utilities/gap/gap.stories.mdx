@@ -83,10 +83,10 @@ The available sizes can be customized by overriding `$bitstyles-gap-sizes`. Prov
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/gap' with (
   $sizes: (
-    'xs': size.get('xs'),
-    's': size.get('s'),
-    'l': size.get('l'),
-    'xl': size.get('xl'),
+    's4': size.get('s4'),
+    's': size.get('s2'),
+    'l': size.get('l2'),
+    'l3': size.get('l3'),
   )
 );
 ```
@@ -97,7 +97,7 @@ The breakpoints these classes are available at can be customised by overriding `
 @use '~bitstyles/scss/bitstyles/utilities/gap' with (
   $bitstyles-gap-breakpoints: (
     'm',
-    'xl',
+    'l3',
   )
 );
 ```

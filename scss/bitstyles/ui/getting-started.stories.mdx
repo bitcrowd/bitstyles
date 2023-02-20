@@ -75,7 +75,7 @@ Commonly you’ll want to change configuration — colors, typography, sizes etc
   $layout-size-base: 1.2rem,
   $margin-breakpoints: (
     'l',
-    'xl',
+    'l3',
   )
 );
 ```
@@ -114,7 +114,7 @@ A few things to note:
 @use '~bitstyles/scss/bitstyles/utilities/margin' with (
   $breakpoints: (
     'l',
-    'xl',
+    'l3',
   )
 );
 ```
@@ -133,7 +133,7 @@ You can configure bitstyles by defining variables before importing. Note the var
 $bitstyles-color-palette-text: #fff;
 $bitstyles-color-palette-background: #000;
 $bitstyles-layout-size-base: 1.2rem;
-$bitstyles-margin-breakpoints: ('l', 'xl');
+$bitstyles-margin-breakpoints: ('l', 'l3');
 
 @import '~bitstyles/scss/bitstyles';
 ```
@@ -144,7 +144,7 @@ If you don’t need all of bitstyles, instead of importing the whole library you
 $bitstyles-color-palette-text: #fff;
 $bitstyles-color-palette-background: #000;
 $bitstyles-layout-size-base: 1.2rem;
-$bitstyles-margin-breakpoints: ('l', 'xl');
+$bitstyles-margin-breakpoints: ('l', 'l3');
 
 @import '~bitstyles/scss/bitstyles/settings/color-palette';
 @import '~bitstyles/scss/bitstyles/settings/layout';

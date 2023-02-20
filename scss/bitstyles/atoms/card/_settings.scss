@@ -4,14 +4,14 @@
 
 $sizes: (
   'base': size.get('m'),
-  'l': size.get('xl'),
+  'l': size.get('l3'),
 ) !default;
 $border-radius: size.get('m') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1'), 0.025),
     $offset: size.get('m'),
-    $blur-radius: size.get('2xl'),
+    $blur-radius: size.get('l4'),
     $layers: 6,
   )
 ) !default;

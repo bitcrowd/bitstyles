@@ -140,14 +140,14 @@ Card appearance can be customized by overriding the following variables:
 ```scss
 $bitstyles-card-sizes: (
   'base': size.get('m'),
-  'l': size.get('xl'),
+  'l': size.get('l3'),
 );
 $bitstyles-card-border-radius: size.get('m');
 $bitstyles-card-box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1'), 0.025),
-    $offset: size.get('s'),
-    $blur-radius: size.get('l'),
+    $offset: size.get('s2'),
+    $blur-radius: size.get('l2'),
     $layers: 6,
   )
 );

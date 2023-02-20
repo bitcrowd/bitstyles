@@ -58,7 +58,7 @@
   max-width: none;
 }
 
-@include media-query.get('s') {
+@include media-query.get('s2') {
   #{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
     right: 0;
     left: 0;

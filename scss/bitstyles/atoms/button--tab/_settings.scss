@@ -7,7 +7,7 @@
 // Base styles ////////////////////////////////////////
 
 $border-radius: 0 !default;
-$border-width: size.get('2xs') !default;
+$border-width: size.get('s6') !default;
 $transition: color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing !default;
 $indicator-transition: background-color animation.$transition-duration

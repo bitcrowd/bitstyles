@@ -99,7 +99,7 @@
         'line-height': 200,
       ),
     ),
-    'xl': (
+    'l3': (
       'h1': (
         'font-size': 30rem,
         'line-height': 400,
@@ -169,7 +169,7 @@
 
 @use '../../scss/bitstyles/atoms/avatar' with (
   $sizes: (
-    'xl': 10rem,
+    'l3': 10rem,
   )
 );
 @use '../../scss/bitstyles/atoms/badge' with (
@@ -275,7 +275,7 @@
 );
 @use '../../scss/bitstyles/utilities/box-shadow' with (
   $breakpoints: (
-    'xl',
+    'l3',
   )
 );
 @use '../../scss/bitstyles/utilities/break-text';
@@ -358,7 +358,7 @@
 );
 @use '../../scss/bitstyles/utilities/margin' with (
   $breakpoints: (
-    'xl',
+    'l3',
     's',
   )
 );
@@ -393,7 +393,7 @@
 );
 @use '../../scss/bitstyles/utilities/padding' with (
   $breakpoints: (
-    'xl',
+    'l3',
     's',
   )
 );
@@ -415,7 +415,7 @@
 );
 @use '../../scss/bitstyles/utilities/sr-only' with (
   $breakpoints: (
-    'xl',
+    'l3',
   )
 );
 @use '../../scss/bitstyles/utilities/text' with (
@@ -438,7 +438,7 @@
         'line-height': 200,
       ),
     ),
-    'xl': (
+    'l3': (
       'h1': (
         'font-size': 30rem,
         'line-height': 400,
