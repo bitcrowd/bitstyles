@@ -2,13 +2,21 @@
 
 $sizes: (
   '0': 0,
+  's7': size.get('s7'),
   's6': size.get('s6'),
+  's5': size.get('s5'),
   's4': size.get('s4'),
-  's': size.get('s2'),
+  's3': size.get('s3'),
+  's2': size.get('s2'),
+  's1': size.get('s1'),
   'm': size.get('m'),
-  'l': size.get('l2'),
+  'l1': size.get('l1'),
+  'l2': size.get('l2'),
   'l3': size.get('l3'),
   'l4': size.get('l4'),
+  'l5': size.get('l5'),
+  'l6': size.get('l6'),
+  'l7': size.get('l7'),
 ) !default;
 $breakpoints: ('m', 'l') !default;
 $directions: (
