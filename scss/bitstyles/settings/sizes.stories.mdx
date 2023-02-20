@@ -8,18 +8,40 @@ Using a central scale of sizes maintains consistency in spacing (most often padd
 
 The default size scale:
 
+<Canvas>
+  <Story name="Sizes">
+    {`
+      <div class="u-flex u-items-end u-gap-xs">
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-3xs); height: var(--bs-size-3xs)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-2xs); height: var(--bs-size-2xs)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-xs); height: var(--bs-size-xs)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-s); height: var(--bs-size-s)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-m); height: var(--bs-size-m)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-l); height: var(--bs-size-l)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-xl); height: var(--bs-size-xl)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-2xl); height: var(--bs-size-2xl)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-3xl); height: var(--bs-size-3xl)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-4xl); height: var(--bs-size-4xl)"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-3xs" style="width: var(--bs-size-5xl); height: var(--bs-size-5xl)"></div>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
 ```scss
 $sizes: (
   '0': 0,
-  '3xs': 0.1rem,
-  '2xs': 0.2rem,
-  'xs': 0.4rem,
-  's': 0.6rem,
-  'm': 0.8rem,
-  'l': 1rem,
-  'xl': 1.6rem,
-  '2xl': 3.2rem,
-  '3xl': 6.4rem,
+  '3xs': 0.125rem, // 2px
+  '2xs': 0.25rem, // 4px
+  'xs': 0.45rem, // 8px
+  's': 0.75rem, // 12px
+  'm': 1rem, // 16px
+  'l': 1.5rem, // 24px
+  'xl': 2rem, // 32px
+  '2xl': 2.5rem, // 40px
+  '3xl': 3rem, // 48px
+  '4xl': 4rem, // 64px
+  '5xl': 5rem, // 80px
 );
 ```
 
@@ -61,15 +83,17 @@ Use the appropriate utility classes to apply spacing. See the documentation of e
 The sizing scale is also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
 
 ```css
---bs-size-3xs: 0.1rem;
---bs-size-2xs: 0.2rem;
---bs-size-xs: 0.4rem;
---bs-size-s: 0.6rem;
---bs-size-m: 0.8rem;
---bs-size-l: 1rem;
---bs-size-xl: 1.6rem;
---bs-size-2xl: 3.2rem;
---bs-size-3xl: 6.4rem;
+--bs-size-3xs: 0.125rem;
+--bs-size-2xs: 0.25rem;
+--bs-size-xs: 0.5rem;
+--bs-size-s: 0.75rem;
+--bs-size-m: 1rem;
+--bs-size-l: 1.5rem;
+--bs-size-xl: 2rem;
+--bs-size-2xl: 2.5rem;
+--bs-size-3xl: 3rem;
+--bs-size-4xl: 4rem;
+--bs-size-5xl: 5rem;
 ```
 
 ## Using size design tokens in JS
@@ -80,9 +104,9 @@ The size design tokens can be imported and used in JS:
 import sizes from '../exports/_sizes.scss';
 
 console.log(sizes['0']); // '0'
-console.log(sizes['2xl']); // '3.2rem'
-console.log(sizes['xl']); // '1.6rem'
-console.log(sizes['l']); // '1rem'
+console.log(sizes['2xl']); // '2.5rem'
+console.log(sizes['xl']); // '2rem'
+console.log(sizes['l']); // '1.5rem'
 // …
 ```
 
@@ -94,22 +118,24 @@ The size scale is computed from a single starting value. By changing that starti
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/layout' with (
-  $size-base: 1rem
+  $size-base: 2rem
 );
 
 /* sizes:
 
 (
   "0": 0,
-  "3xs": 0.125rem,
-  "2xs": 0.25rem,
-  "xs": 0.5rem,
-  "s": 0.75rem,
-  "m": 1rem,
-  "l": 1.25rem,
-  "xl": 2rem,
-  "2xl": 4rem,
-  "3xl": 8rem,
+  "3xs": 0.25rem,
+  "2xs": 0.5rem,
+  "xs": 1rem,
+  "s": 1.5rem,
+  "m": 2rem,
+  "l": 3rem,
+  "xl": 4rem,
+  "2xl": 5rem,
+  "3xl": 6rem,
+  "4xl": 8rem,
+  "5xl": 10rem,
 )
 */
 ```
