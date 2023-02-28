@@ -2,8 +2,8 @@
 @use '../../tools/size';
 
 $border: 1px solid palette.get('grayscale', 'light-1') !default;
-$padding-horizontal: size.get('m') !default;
-$padding-vertical-td: size.get('s2') !default;
+$padding-horizontal: size.get('s1') !default;
+$padding-vertical-td: size.get('s3') !default;
 $padding-vertical-th: size.get('s6') !default;
 $background-color-td: palette.get('grayscale', 'white') !default;
 $color-th: palette.get('grayscale', 'dark-1') !default;

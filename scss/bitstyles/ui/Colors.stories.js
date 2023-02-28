@@ -95,7 +95,7 @@ const RenderColorPaletteItem = ({ colors, withBackground, layout }) => {
     : 'u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min';
 
   return `
-    <li class="u-flex-grow-1 u-grid u-gap-s4" style="${style}">
+    <li class="u-flex-grow-1 u-grid u-gap-s5" style="${style}">
       ${RenderColors({ colors: colors[1], layout })}
       <h3 class="${titleClassname}">
         ${name}
@@ -113,14 +113,14 @@ const RenderColorPaletteList = ({
   switch (layout) {
     case 'dense':
       classname =
-        'u-list-none u-grid u-gap-l2 u-grid-cols-2@m u-grid-cols-3@l u-margin-l3-bottom u-items-start';
+        'u-list-none u-grid u-gap-m u-grid-cols-2@m u-grid-cols-3@l u-margin-l3-bottom u-items-start';
       break;
     case 'row':
       classname = 'u-list-none u-flex';
       break;
     default:
       classname =
-        'u-list-none u-grid u-gap-l2 u-margin-l3-bottom u-items-start';
+        'u-list-none u-grid u-gap-m u-margin-l3-bottom u-items-start';
   }
 
   return `

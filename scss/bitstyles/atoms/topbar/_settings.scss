@@ -3,6 +3,6 @@
 @use '../../settings/layout';
 
 $position: relative !default;
-$vertical-padding: size.get('s2') !default;
-$horizontal-padding: size.get('m') !default;
+$vertical-padding: size.get('s3') !default;
+$horizontal-padding: size.get('s1') !default;
 $z-index: zindex.get(layout.$global-z, 'topbar') !default;

@@ -1,6 +1,6 @@
 @use '../../tools/size';
 
 $sizes: (
-  'm': size.get('l3'),
-  'l': size.get('l3') + size.get('m'),
+  'm': size.get('l1'),
+  'l': size.get('l4'),
 ) !default;

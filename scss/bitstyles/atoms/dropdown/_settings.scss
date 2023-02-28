@@ -3,14 +3,14 @@
 @use '../../tools/size';
 
 $max-height: 20rem !default;
-$border-radius: size.get('s4') !default;
+$border-radius: size.get('s5') !default;
 $border: 2px solid palette.get('brand-1') !default;
 $background-color: palette.get('grayscale', 'white') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('brand-1', 'light-1'), 0.05),
-    $offset: size.get('m'),
-    $blur-radius: size.get('l2'),
+    $offset: size.get('s1'),
+    $blur-radius: size.get('m'),
   )
 ) !default;
 $separator-border: 1px solid palette.get('grayscale', 'dark-2') !default;

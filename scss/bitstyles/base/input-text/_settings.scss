@@ -6,9 +6,9 @@
 //
 // Base styles ////////////////////////////////////////
 
-$padding-vertical: size.get('s4') !default;
-$padding-horizontal: size.get('s4') !default;
-$border-radius: size.get('s4') !default;
+$padding-vertical: size.get('s5') !default;
+$padding-horizontal: size.get('s5') !default;
+$border-radius: size.get('s5') !default;
 $border-width: size.get('s7') !default;
 $font: inherit !default;
 $placeholder-font-style: italic !default;
@@ -24,7 +24,7 @@ $background: palette.get('grayscale', 'white') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('grayscale', 'light-1'), 0.025),
-    $blur-radius: size.get('s4'),
+    $blur-radius: size.get('s5'),
   )
 ) !default;
 
@@ -71,6 +71,6 @@ $border-color-invalid: palette.get('warning') !default;
 $box-shadow-invalid: shadow.to-box-shadow(
   shadow.generate(
     $color: rgba(palette.get('warning'), 0.05),
-    $blur-radius: size.get('m'),
+    $blur-radius: size.get('s4'),
   )
 ) !default;
