@@ -29,19 +29,24 @@ The default size scale:
 </Canvas>
 
 ```scss
+/* prettier-ignore */
 $sizes: (
   '0': 0,
-  's7': 0.125rem, // 2px
-  's6': 0.25rem, // 4px
-  's4': 0.45rem, // 8px
-  's': 0.75rem, // 12px
-  'm': 1rem, // 16px
-  'l': 1.5rem, // 24px
-  'l3': 2rem, // 32px
-  'l4': 2.5rem, // 40px
-  'l5': 3rem, // 48px
-  'l6': 4rem, // 64px
-  'l7': 5rem, // 80px
+  's7': $size-base * 0.125, // 2px
+  's6': $size-base * 0.25, // 4px
+  's5': $size-base * 0.375, // 6px
+  's4': $size-base * 0.5, // 8px
+  's3': $size-base * 0.625, // 10px
+  's2': $size-base * 0.75, // 12px
+  's1': $size-base * 0.875, // 14px
+  'm': $size-base, // 16px
+  'l1': $size-base * 1.25, // 20px
+  'l2': $size-base * 1.5, // 24px
+  'l3': $size-base * 2, // 32px
+  'l4': $size-base * 2.5, // 40px
+  'l5': $size-base * 3, // 48px
+  'l6': $size-base * 4, // 64px
+  'l7': $size-base * 5, // 80px
 );
 ```
 
@@ -85,10 +90,14 @@ The sizing scale is also available as CSS custom properties. In the default conf
 ```css
 --bs-size-s7: 0.125rem;
 --bs-size-s6: 0.25rem;
+--bs-size-s5: 0.375rem;
 --bs-size-s4: 0.5rem;
---bs-size-s: 0.75rem;
+--bs-size-s3: 0.625rem;
+--bs-size-s2: 0.75rem;
+--bs-size-s1: 0.875rem;
 --bs-size-m: 1rem;
---bs-size-l: 1.5rem;
+--bs-size-l1: 1.25rem;
+--bs-size-l2: 1.5rem;
 --bs-size-l3: 2rem;
 --bs-size-l4: 2.5rem;
 --bs-size-l5: 3rem;
@@ -106,7 +115,7 @@ import sizes from '../exports/_sizes.scss';
 console.log(sizes['0']); // '0'
 console.log(sizes['l4']); // '2.5rem'
 console.log(sizes['l3']); // '2rem'
-console.log(sizes['l']); // '1.5rem'
+console.log(sizes['l1']); // '1.15rem'
 // …
 ```
 
@@ -124,18 +133,22 @@ The size scale is computed from a single starting value. By changing that starti
 /* sizes:
 
 (
-  "0": 0,
-  "s7": 0.25rem,
-  "s6": 0.5rem,
-  "xs": 1rem,
-  "s": 1.5rem,
-  "m": 2rem,
-  "l": 3rem,
-  "xl": 4rem,
-  "l4": 5rem,
-  "l5": 6rem,
-  "l6": 8rem,
-  "l7": 10rem,
+  '0': 0,
+  's7': $size-base * 0.125, // 4px
+  's6': $size-base * 0.25, // 8px
+  's5': $size-base * 0.375, // 12px
+  's4': $size-base * 0.5, // 16px
+  's3': $size-base * 0.625, // 20px
+  's2': $size-base * 0.75, // 24px
+  's1': $size-base * 0.875, // 28px
+  'm': $size-base, // 32px
+  'l1': $size-base * 1.25, // 40px
+  'l2': $size-base * 1.5, // 48px
+  'l3': $size-base * 2, // 64px
+  'l4': $size-base * 2.5, // 80px
+  'l5': $size-base * 3, // 96px
+  'l6': $size-base * 4, // 128px
+  'l7': $size-base * 5, // 160px
 )
 */
 ```

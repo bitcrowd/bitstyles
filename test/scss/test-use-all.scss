@@ -79,7 +79,7 @@
         'line-height': 200,
       ),
     ),
-    'l3': (
+    'xl': (
       'h1': (
         'font-size': 30rem,
         'line-height': 400,
@@ -139,11 +139,11 @@
   $bg-values: ('f00': #f00),
   $border-values: ('f00': #f00),
   $border-radius-values: ('m': 10rem),
-  $box-shadow-breakpoints: ('l3'),
+  $box-shadow-breakpoints: ('xl'),
   $col-span-values: ('100': span 100 / span 100),
   $col-start-values: ('100': 100),
   $display-values: (inline-block: inline-block),
-  $drop-shadow-breakpoints: ('s2'),
+  $drop-shadow-breakpoints: ('s'),
   $fg-values: ('f00': #f00),
   $flex-grow-values: ('100': 100),
   $gap-sizes: ('100': 100rem),
@@ -155,7 +155,7 @@
   $justify-content-values: ('start': start),
   $line-height-values: ('10': 10),
   $list-values: ('none': none),
-  $margin-breakpoints: ('l3', 's'),
+  $margin-breakpoints: ('xl', 's'),
   $max-height-values: ('1em': 1em),
   $max-width-values: ('1em': 1em),
   $min-height-values: ('1em': 1em),
@@ -165,11 +165,11 @@
       'hidden': hidden,
     )
   ),
-  $padding-breakpoints: ('l3', 's'),
-  $position-breakpoints: ('l2'),
+  $padding-breakpoints: ('xl', 's'),
+  $position-breakpoints: ('l'),
   $row-start-values: ('100': 100, '200': 200),
   $self-values: ('start': start),
-  $sr-only-breakpoints: ('l3'),
+  $sr-only-breakpoints: ('xl'),
   $text-values: ('top': top),
   $text-decoration-values: ('text-decoration-none': none),
   $typography-responsive-utilities-values: (
@@ -179,7 +179,7 @@
         'line-height': 200,
       ),
     ),
-    'l3': (
+    'xl': (
       'h1': (
         'font-size': 30rem,
         'line-height': 400,

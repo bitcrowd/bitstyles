@@ -88,7 +88,7 @@ $bitstyles-typography-responsive-typographic-scale: (
       'line-height': 200,
     ),
   ),
-  'l3': (
+  'xl': (
     'h1': (
       'font-size': 30rem,
       'line-height': 400,
@@ -113,7 +113,7 @@ $bitstyles-base-typography-margin-paragraph: 10rem;
 // Atoms settings /////////////////////////////////////
 
 $bitstyles-avatar-sizes: (
-  'l3': 10rem,
+  'xl': 10rem,
 );
 $bitstyles-badge-color: 'light-1';
 $bitstyles-bordered-header-gutter: 10rem;
@@ -172,7 +172,7 @@ $bitstyles-border-values: (
 $bitstyles-border-radius-values: (
   'm': 10rem,
 );
-$bitstyles-box-shadow-breakpoints: ('l3');
+$bitstyles-box-shadow-breakpoints: ('xl');
 $bitstyles-col-span-values: (
   '100': span 100 / span 100,
 );
@@ -182,7 +182,7 @@ $bitstyles-col-start-values: (
 $bitstyles-display-values: (
   inline-block: inline-block,
 );
-$bitstyles-drop-shadow-breakpoints: ('s2');
+$bitstyles-drop-shadow-breakpoints: ('s');
 $bitstyles-fg-values: (
   'f00': #f00,
 );
@@ -216,7 +216,7 @@ $bitstyles-line-height-values: (
 $bitstyles-list-values: (
   'none': none,
 );
-$bitstyles-margin-breakpoints: ('l3', 's');
+$bitstyles-margin-breakpoints: ('xl', 's');
 $bitstyles-max-height-values: (
   '1em': 1em,
 );
@@ -234,8 +234,8 @@ $bitstyles-overflow-values: (
     'hidden': hidden,
   ),
 );
-$bitstyles-padding-breakpoints: ('l3', 's');
-$bitstyles-position-breakpoints: ('l2');
+$bitstyles-padding-breakpoints: ('xl', 's');
+$bitstyles-position-breakpoints: ('l');
 $bitstyles-row-start-values: (
   '100': 100,
   '200': 200,
@@ -243,7 +243,7 @@ $bitstyles-row-start-values: (
 $bitstyles-self-values: (
   'start': start,
 );
-$bitstyles-sr-only-breakpoints: ('l3');
+$bitstyles-sr-only-breakpoints: ('xl');
 $bitstyles-text-values: (
   'top': top,
 );
@@ -257,7 +257,7 @@ $bitstyles-typography-responsive-utilities-values: (
       'line-height': 200,
     ),
   ),
-  'l3': (
+  'xl': (
     'h1': (
       'font-size': 30rem,
       'line-height': 400,
