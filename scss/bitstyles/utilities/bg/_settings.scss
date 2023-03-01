@@ -1,15 +1,14 @@
 @use '../../tools/palette';
 
 $values: (
-  'background': palette.get('background'),
-  'brand-2': palette.get('brand-2', 'base'),
-  'gray-darker': palette.get('text', 'darker'),
-  'gray-dark': palette.get('text', 'dark'),
-  'gray-light': palette.get('text', 'lighter'),
-  'gray-lighter': palette.get('text', 'lighter'),
-  'text': palette.get('text', 'base'),
-  'text-light': palette.get('text', 'light'),
-  'white': palette.get('grayscale', 'white'),
+  'brand-2': palette.get('brand-2'),
   'black': palette.get('grayscale', 'black'),
+  'grayscale-dark-2': palette.get('grayscale', 'dark-2'),
+  'grayscale-dark-1': palette.get('grayscale', 'dark-1'),
+  'grayscale': palette.get('grayscale'),
+  'grayscale-light-1': palette.get('grayscale', 'light-1'),
+  'grayscale-light-2': palette.get('grayscale', 'light-2'),
+  'grayscale-light-3': palette.get('grayscale', 'light-3'),
+  'white': palette.get('grayscale', 'white'),
 ) !default;
 $breakpoints: () !default;

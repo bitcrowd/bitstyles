@@ -15,22 +15,22 @@ Note: the Nunito font provided has no `light` font-weight, so in the following l
 <Canvas isColumn>
   <Story name="font-light">
     {`
-      <p class="u-bg-background u-font-light"><span class="u-fg-brand-2">u-font-light</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
+      <p class="u-bg-grayscale-light-3 u-font-light"><span class="u-fg-brand-2">u-font-light</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
     `}
   </Story>
   <Story name="font-normal">
     {`
-      <p class="u-bg-background u-font-normal"><span class="u-fg-brand-2">u-font-normal</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
+      <p class="u-bg-grayscale-light-3 u-font-normal"><span class="u-fg-brand-2">u-font-normal</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
     `}
   </Story>
   <Story name="font-medium">
     {`
-      <p class="u-bg-background u-font-medium"><span class="u-fg-brand-2">u-font-medium</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
+      <p class="u-bg-grayscale-light-3 u-font-medium"><span class="u-fg-brand-2">u-font-medium</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
     `}
   </Story>
   <Story name="font-bold">
     {`
-      <p class="u-bg-background u-font-bold"><span class="u-fg-brand-2">u-font-bold</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
+      <p class="u-bg-grayscale-light-3 u-font-bold"><span class="u-fg-brand-2">u-font-bold</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert.</p>
     `}
   </Story>
 </Canvas>
@@ -42,12 +42,12 @@ Using bolded italics is normally not needed or wanted, and we’re not providing
 <Canvas isColumn>
   <Story name="font-italic">
     {`
-      <p class="u-bg-background u-font-italic"><span class="u-fg-brand-2">u-font-italic</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
+      <p class="u-bg-grayscale-light-3 u-font-italic"><span class="u-fg-brand-2">u-font-italic</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
     `}
   </Story>
   <Story name="font-not-italic">
     {`
-      <p class="u-bg-background u-font-not-italic"><span class="u-fg-brand-2">u-font-not-italic</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
+      <p class="u-bg-grayscale-light-3 u-font-not-italic"><span class="u-fg-brand-2">u-font-not-italic</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
     `}
   </Story>
 </Canvas>
@@ -59,12 +59,12 @@ Specify font-family on an element. Defaults to the `header` and `body` font-stac
 <Canvas isColumn>
   <Story name="font-header">
     {`
-      <p class="u-bg-background u-font-header"><span class="u-fg-brand-2">u-font-header</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
+      <p class="u-bg-grayscale-light-3 u-font-header"><span class="u-fg-brand-2">u-font-header</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
     `}
   </Story>
   <Story name="font-body">
     {`
-      <p class="u-bg-background u-font-body"><span class="u-fg-brand-2">u-font-body</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
+      <p class="u-bg-grayscale-light-3 u-font-body"><span class="u-fg-brand-2">u-font-body</span> Pastry marzipan gummi bears lollipop pie pie carrot cake dessert. Pie liquorice marshmallow muffin sweet roll gingerbread candy canes. Tiramisu cotton candy bonbon gingerbread brownie pastry. Croissant apple pie croissant halvah lollipop chocolate cake candy canes liquorice marshmallow.</p>
     `}
   </Story>
 </Canvas>
@@ -76,7 +76,7 @@ The available font-weights and font-styles can be customized by overriding the `
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/font' with (
   $weight-values: (
-    'light': typography.$font-weight-light,
+    'light-1': typography.$font-weight-light,
     'normal': typography.$font-weight-normal,
     'medium': typography.$font-weight-medium,
     'bold': typography.$font-weight-bold,

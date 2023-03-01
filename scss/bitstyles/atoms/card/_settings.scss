@@ -9,11 +9,11 @@ $sizes: (
 $border-radius: size.get('m') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('brand-1', 'base'), 0.025),
+    $color: rgba(palette.get('brand-1'), 0.025),
     $offset: size.get('m'),
     $blur-radius: size.get('2xl'),
     $layers: 6,
   )
 ) !default;
 $breakpoints: ('m', 'l') !default;
-$header-background-color: palette.get('background', 'base') !default;
+$header-background-color: palette.get('grayscale', 'light-2') !default;

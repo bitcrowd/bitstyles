@@ -27,15 +27,13 @@ html,
 
 @each $theme-name, $theme in settings.$themes {
   @include themes.get($theme-name) {
-    @each $palette-name, $colors in $theme {
-      @include custom-properties.output-filtered(
-        $properties: $colors,
-        $module-name: 'theme',
-        $allow-list: (
-          'text',
-          'background',
-        )
-      );
-    }
+    @include custom-properties.output-filtered(
+      $properties: $theme,
+      $module-name: 'theme',
+      $allow-list: (
+        'text',
+        'background',
+      )
+    );
   }
 }

@@ -11,7 +11,7 @@ A top-level navigation container, with two sections separated to the left & righ
 
 Give the active link the `aria-current="page"` attribute.
 
-<div class="u-bg-gray-light u-padding-m-x u-padding-xs-y">
+<div class="u-bg-grayscale-light-1u-padding-m-x u-padding-xs-y">
   <p>
     These examples use AlpineJS for the behavior. If you’re using a different JS
     package, replace the blocks of html attributes starting with `x-`, and with
@@ -54,7 +54,7 @@ Give the active link the `aria-current="page"` attribute.
       <a href="/docs/atoms-list-reset--list-reset">u-list-none</a>
     </li>
     <li>
-      <a href="/docs/utilities-background-color--gray-dark">u-bg</a>
+      <a href="/docs/utilities-background-color--grayscale-dark-1">u-bg</a>
     </li>
     <li>
       <a href="/docs/utilities-flex--flex">u-flex</a>
@@ -80,7 +80,7 @@ Give the active link the `aria-current="page"` attribute.
 <Canvas>
   <Story name="Navbar" inline={false} height="80vh">
     {`
-      <nav class="u-bg-gray-darker u-padding-s-top u-padding-s-bottom u-relative">
+      <nav class="u-bg-grayscale-dark-2 u-padding-s-top u-padding-s-bottom u-relative">
         <div class="u-padding-m-x u-flex u-justify-between u-items-center u-flex-wrap">
           <div class="u-flex-shrink-1 u-flex u-items-center">
             <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex-shrink-0 u-margin-l-right u-hidden u-block@l" />
@@ -121,7 +121,7 @@ Give the active link the `aria-current="page"` attribute.
               <span class="u-sr-only">Toggle menu</span>
             </button>
             <ul
-              class="u-flex u-flex-col u-list-none o-navbar u-padding-s u-bg-gray-darker"
+              class="u-flex u-flex-col u-list-none o-navbar u-padding-s u-bg-grayscale-dark-2"
               id="navbar-1"
               x-show="navbarOpen"
               @click.away="navbarOpen = false"
@@ -164,7 +164,7 @@ This navbar is only intended to hold a few link to the main sections of your sit
 <Canvas>
   <Story name="Navbar with many links" inline={false} height="80vh">
     {`
-      <nav class="u-bg-gray-darker u-padding-s-top u-padding-s-bottom u-relative">
+      <nav class="u-bg-grayscale-dark-2 u-padding-s-top u-padding-s-bottom u-relative">
         <div class="u-padding-m-x u-flex u-justify-between u-items-center">
           <div class="u-flex-shrink-1 u-flex u-items-center">
             <img src="${logoLarge}" width="150" height="50" alt="Company logo" class="u-flex-shrink-0 u-margin-l-right u-hidden u-block@l" />
@@ -217,7 +217,7 @@ This navbar is only intended to hold a few link to the main sections of your sit
               <span class="u-sr-only">Toggle menu</span>
             </button>
             <ul
-              class="u-flex u-flex-col u-list-none o-navbar u-padding-s u-bg-gray-darker"
+              class="u-flex u-flex-col u-list-none o-navbar u-padding-s u-bg-grayscale-dark-2"
               id="navbar-1"
               x-show="navbarOpen"
               @click.away="navbarOpen = false"

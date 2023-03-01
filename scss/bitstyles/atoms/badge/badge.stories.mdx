@@ -10,8 +10,8 @@ Display tags, filters, or categorization.
 <Canvas>
   <Story name="Badge">
     {`
-      <span class="a-badge a-badge--text u-h6 u-font-medium">Urgent</span>
-      <span class="a-badge a-badge--text u-h6 u-font-medium">In progress</span>
+      <span class="a-badge a-badge--grayscale u-h6 u-font-medium">Urgent</span>
+      <span class="a-badge a-badge--grayscale u-h6 u-font-medium">In progress</span>
     `}
   </Story>
 </Canvas>
@@ -23,7 +23,7 @@ By default `gray`, `brand-1`, `brand-2`, and `danger` colors are available (see 
     {`
       <ul class="u-list-none u-flex">
         <li class="u-margin-s-right">
-          <span class="a-badge a-badge--text u-h6 u-font-medium">gray</span>
+          <span class="a-badge a-badge--grayscale u-h6 u-font-medium">gray</span>
         </li>
         <li class="u-margin-s-right">
           <span class="a-badge a-badge--brand-1 u-h6 u-font-medium">brand-1</span>
@@ -46,7 +46,7 @@ You may want the badges to be removable, for example when used as part of a filt
     {`
       <ul class="u-list-none u-flex">
         <li class="u-margin-s-right">
-          <span class="a-badge a-badge--text u-h6 u-font-medium">
+          <span class="a-badge a-badge--grayscale u-h6 u-font-medium">
             badge 1
             <button class="a-button a-button--square a-button--round a-button--secondary a-button--small a-badge__button" type="button">
               <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
@@ -99,7 +99,7 @@ You may want the badges to be removable, for example when used as part of a filt
 The available variants can be specified with `$bitstyles-badge-variants`, where the strings you pass must match colors in your color palette:
 
 ```scss
-$variants: ('gray', 'danger', 'brand-1', 'brand-2', 'positive');
+$variants: ('grayscale', 'danger', 'brand-1', 'brand-2', 'positive');
 ```
 
 The keys from those colors that will be used are specified with the `$bitstyles-badge-color` and `$bitstyles-badge-background-color`, and are applied to all variants. With the following settings, the `gray` variant will have color `gray` value `80`, with background color `gray` value `10`. The `danger` variant will have color `danger` with value `80` and background-color `danger` at value `10` etc.

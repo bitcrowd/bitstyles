@@ -3,63 +3,46 @@
   $animation-transition-easing: ease-out,
   $breakpoints-boundary-width: 10em,
   $color-palette-palette: (
-    'text': (
-      'lightest': #000,
-      'lighter': #000,
-      'light': #000,
-      'base': #000,
-      'dark': #000,
-    ),
-    'background': (
-      'base': #000,
-      'dark': #000,
-      'darker': #000,
-    ),
-    'white': (
-      'base': #000,
-    ),
-    'brand-1': (
-      'lighter': #000,
-      'light': #000,
-      'base': #000,
-      'dark': #000,
-      'darker': #000,
-    ),
-    'brand-2': (
-      'lighter': #000,
-      'light': #000,
-      'base': #000,
-      'dark': #000,
-    ),
     'grayscale': (
+      'light-3': #000,
+      'light-2': #000,
+      'light-1': #000,
+      'base': #000,
+      'dark-1': #000,
+      'dark-2': #000,
       'white': #000,
       'black': #000,
     ),
-    'accent-gray': (
-      'lighter': #000,
-      'light': #000,
+    'brand-1': (
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
-      'darker': #000,
-      'darkest': #000,
+      'dark-1': #000,
+      'dark-2': #000,
+    ),
+    'brand-2': (
+      'light-2': #000,
+      'light-1': #000,
+      'base': #000,
+      'dark-1': #000,
     ),
     'danger': (
-      'lighter': #000,
-      'light': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
+      'dark-1': #000,
     ),
     'warning': (
-      'lighter': #000,
-      'light': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
+      'dark-1': #000,
     ),
     'positive': (
-      'lighter': #000,
-      'light': #000,
+      'light-2': #000,
+      'light-1': #000,
       'base': #000,
-      'dark': #000,
+      'dark-1': #000,
     )
   ),
   $layout-size-base: 10rem,
@@ -79,16 +62,12 @@
   ),
   $themes-themes: (
     'default': (
-      'color': (
-        'background': var(--bscpn-color-brand-1-lightest),
-        'color': var(--bscpn-color-brand-2-darkest),
-      ),
+      'background': var(--bscpn-color-brand-1-light-3),
+      'text': var(--bscpn-color-brand-2-dark-3),
     ),
     'dark': (
-      'color': (
-        'background': var(--bscpn-color-brand-1-darkest),
-        'text': var(--bscpn-color-brand-2-lightest),
-      ),
+      'background': var(--bscpn-color-brand-1-dark-3),
+      'text': var(--bscpn-color-brand-2-light-3),
     )
   ),
   $typography-webfont-family-name: 'FakeFont',
@@ -119,7 +98,7 @@
   $base-typography-margin-paragraph: 10rem,
   // atoms
   $avatar-sizes: ('xl': 10rem),
-  $badge-color: 'light',
+  $badge-color: 'light-1',
   $bordered-header-gutter: 10rem,
   $button-transition: none,
   $button-colors-default: (
@@ -138,7 +117,7 @@
   $card-sizes: ('base': 10rem, 's': 20rem),
   $content-max-width-base: 'full',
   $dropdown-max-height: 1rem,
-  $flash-color: 'light',
+  $flash-color: 'light-1',
   $icon-sizes: ('s': 10rem),
   $skip-link-color: #f00,
   $topbar-vertical-padding: 10rem,

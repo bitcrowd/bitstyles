@@ -5,52 +5,48 @@
 @use '../tools/palette';
 
 $default-theme: (
-  'color': (
-    'background':
-      var(
-        #{custom-property.get(
-            $items: (
-              'color',
-              'background',
-              'base',
-            ),
-          )}
-      ),
-    'text':
-      var(
-        #{custom-property.get(
-            $items: (
-              'color',
-              'text',
-              'darker',
-            ),
-          )}
-      ),
-  ),
+  'background':
+    var(
+      #{custom-property.get(
+          $items: (
+            'color',
+            'grayscale',
+            'white',
+          ),
+        )}
+    ),
+  'text':
+    var(
+      #{custom-property.get(
+          $items: (
+            'color',
+            'grayscale',
+            'dark-3',
+          ),
+        )}
+    ),
 ) !default;
 $dark-theme: (
-  'color': (
-    'background':
-      var(
-        #{custom-property.get(
-            $items: (
-              'color',
-              'background',
-              'darkest',
-            ),
-          )}
-      ),
-    'text':
-      var(
-        #{custom-property.get(
-            $items: (
-              'color',
-              'text',
-              'lightest',
-            ),
-          )}
-      ),
-  ),
+  'background':
+    var(
+      #{custom-property.get(
+          $items: (
+            'color',
+            'grayscale',
+            'dark-3',
+          ),
+        )}
+    ),
+  'text':
+    var(
+      #{custom-property.get(
+          $items: (
+            'color',
+            'grayscale',
+            'light-3',
+          ),
+        )}
+    ),
 ) !default;
 $default-theme-name: 'default' !default;
 $themes: (
