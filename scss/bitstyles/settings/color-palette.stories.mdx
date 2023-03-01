@@ -4,7 +4,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Color palette
 
-Bitstyles provides a semantically-named color palette, with each color having a scale of named variants from `dark-3` to `light-3`. These colors are used to create the components and the color-related utility classes like background-color, border, and color. A `color-palette.get()` helper function makes using them in your projects easy.
+Bitstyles provides a semantically-named color palette, with each color having a scale of named variants from `dark-4` to `light-4`. These colors are used to create the components and the color-related utility classes like background-color, border, and color. A `color-palette.get()` helper function makes using them in your projects easy.
 
 <Story id="base-colors--color-palette" />
 
@@ -48,12 +48,12 @@ Use the appropriate utility classes to apply colors. See the documentation of ea
 The color palette is also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
 
 ```css
---bs-color-brand-1-light-3: #f4f2ff;
---bs-color-brand-1-light-3-rgb: 244, 242, 255;
---bs-color-brand-1-light: #c8bfff;
---bs-color-brand-1-light-1-rgb: 200, 191, 255;
---bs-color-brand-1-base: #644dff;
---bs-color-brand-1-base-rgb: 100, 77, 255;
+--bs-color-brand-1-light-3: #ded9ff;
+--bs-color-brand-1-light-3-rgb: 222, 217, 255;
+--bs-color-brand-1-light-1: #b2a6ff;
+--bs-color-brand-1-light-1-rgb: 178, 166, 255;
+--bs-color-brand-1-base: #9485ff;
+--bs-color-brand-1-base-rgb: 148, 133, 255;
 // …
 ```
 
@@ -66,9 +66,9 @@ The color design tokens can be imported and used in JS:
 ```js
 import colorPalette from '../exports/_color-palette.scss';
 
-console.log(colorPalette['brand-1.light-3']); // '#f4f2ff'
-console.log(colorPalette['brand-1.light']); // '#c8bfff'
-console.log(colorPalette['brand-1.base']); // '#644dff'
+console.log(colorPalette['brand-1.light-3']); // '#ded9ff'
+console.log(colorPalette['brand-1.light']); // '#b2a6ff'
+console.log(colorPalette['brand-1.base']); // '#9485ff'
 // …
 ```
 
