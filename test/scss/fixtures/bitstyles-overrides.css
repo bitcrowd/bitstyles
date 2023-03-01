@@ -77,17 +77,21 @@
 }
 :root {
   --bscpn-size-0: 0;
-  --bscpn-size-4xs: 1.25rem;
-  --bscpn-size-3xs: 1.6666666667rem;
-  --bscpn-size-2xs: 2.5rem;
-  --bscpn-size-xs: 5rem;
-  --bscpn-size-s: 7.5rem;
+  --bscpn-size-s7: 1.25rem;
+  --bscpn-size-s6: 2.5rem;
+  --bscpn-size-s5: 3.75rem;
+  --bscpn-size-s4: 5rem;
+  --bscpn-size-s3: 6.25rem;
+  --bscpn-size-s2: 7.5rem;
+  --bscpn-size-s1: 8.75rem;
   --bscpn-size-m: 10rem;
-  --bscpn-size-l: 12.5rem;
-  --bscpn-size-xl: 20rem;
-  --bscpn-size-2xl: 40rem;
-  --bscpn-size-3xl: 60rem;
-  --bscpn-size-4xl: 80rem;
+  --bscpn-size-l1: 12.5rem;
+  --bscpn-size-l2: 15rem;
+  --bscpn-size-l3: 20rem;
+  --bscpn-size-l4: 25rem;
+  --bscpn-size-l5: 30rem;
+  --bscpn-size-l6: 40rem;
+  --bscpn-size-l7: 50rem;
 }
 :root {
   --bscpn-shadow-default: drop-shadow(red 0 2.5rem 5rem)
@@ -398,7 +402,7 @@ img {
 ) {
   [type='checkbox'] {
     background-color: #000;
-    border: 1.6666666667rem solid #000;
+    border: 1.25rem solid #000;
     border-radius: 10rem;
     color: #000;
   }
@@ -461,7 +465,7 @@ img {
 ) {
   [type='radio'] {
     background-color: #000;
-    border: 1.6666666667rem solid #000;
+    border: 1.25rem solid #000;
     border-radius: 10rem;
     color: #000;
   }
@@ -540,15 +544,15 @@ textarea::placeholder {
 [type='week'],
 textarea {
   background-color: #000;
-  border: 1.6666666667rem solid #000;
+  border: 1.25rem solid #000;
   border-radius: 10rem;
-  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.025),
-    0 0 1.6666666667rem rgba(0, 0, 0, 0.025), 0 0 2.5rem rgba(0, 0, 0, 0.025),
-    0 0 5rem rgba(0, 0, 0, 0.025);
+  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.025),
+    0 0 1.25rem rgba(0, 0, 0, 0.025), 0 0 1.875rem rgba(0, 0, 0, 0.025),
+    0 0 3.75rem rgba(0, 0, 0, 0.025);
   color: #000;
   display: block;
   font: inherit;
-  padding: 5rem;
+  padding: 3.75rem;
   width: 100%;
 }
 [type='date']:hover,
@@ -632,9 +636,9 @@ textarea:invalid,
 textarea[aria-invalid='true'] {
   background-color: #000;
   border-color: #000;
-  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.05),
-    0 0 3.3333333333rem rgba(0, 0, 0, 0.05), 0 0 5rem rgba(0, 0, 0, 0.05),
-    0 0 10rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.05),
+    0 0 1.6666666667rem rgba(0, 0, 0, 0.05), 0 0 2.5rem rgba(0, 0, 0, 0.05),
+    0 0 5rem rgba(0, 0, 0, 0.05);
   color: #000;
 }
 [type='date']:disabled,
@@ -668,14 +672,14 @@ textarea:disabled {
     background-position: right 0.75em top 50%;
     background-repeat: no-repeat;
     background-size: 1em;
-    border: 1.6666666667rem solid #000;
+    border: 1.25rem solid #000;
     border-radius: 10rem;
     color: #000;
     cursor: pointer;
     display: block;
     font: inherit;
     overflow: hidden;
-    padding: 5rem 20rem 5rem 10rem;
+    padding: 3.75rem 17.5rem 3.75rem 8.75rem;
     text-overflow: ellipsis;
     transition: color 75ms ease-out, background-color 75ms ease-out,
       border 75ms ease-out;
@@ -785,7 +789,7 @@ table {
   align-items: center;
   border-radius: 9999rem;
   display: inline-flex;
-  padding: 2.5rem 10rem;
+  padding: 2.5rem 8.75rem;
   white-space: nowrap;
 }
 .bs-at-badge .bs-at-badge__button {
@@ -840,7 +844,7 @@ table {
   width: 100%;
 }
 .bs-at-bordered-header:after {
-  border-top: 1.6666666667rem solid #000;
+  border-top: 1.25rem solid #000;
   content: '';
 }
 .bs-at-button {
@@ -973,11 +977,11 @@ table {
   --bscpn-at-button--secondary-hover-border-color: var(
     --bscpn-color-brand-1-light-1
   );
-  --bscpn-at-button--secondary-hover-box-shadow: 0 0 3.125rem
+  --bscpn-at-button--secondary-hover-box-shadow: 0 0 3.75rem
       rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 4.1666666667rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 6.25rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 12.5rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+    0 0 5rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
+    0 0 7.5rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
+    0 0 15rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
   --bscpn-at-button--secondary-active-color: var(--bscpn-color-brand-1-dark-1);
   --bscpn-at-button--secondary-active-background-color: var(
     --bscpn-color-brand-1-light-1
@@ -1033,11 +1037,11 @@ table {
   --bscpn-at-button--secondary-hover-border-color: var(
     --bscpn-color-brand-1-light-1
   );
-  --bscpn-at-button--secondary-hover-box-shadow: 0 0 3.125rem
+  --bscpn-at-button--secondary-hover-box-shadow: 0 0 3.75rem
       rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 4.1666666667rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 6.25rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 12.5rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+    0 0 5rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
+    0 0 7.5rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
+    0 0 15rem rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
   --bscpn-at-button--secondary-active-color: var(--bscpn-color-brand-1-dark-1);
   --bscpn-at-button--secondary-active-background-color: var(
     --bscpn-color-brand-1-light-1
@@ -1339,8 +1343,8 @@ table {
 }
 .bs-at-button {
   --bscpn-at-button-padding-vertical: 5rem;
-  --bscpn-at-button-padding-horizontal: 12.5rem;
-  --bscpn-at-button-border-width: 1.6666666667rem;
+  --bscpn-at-button-padding-horizontal: 15rem;
+  --bscpn-at-button-border-width: 1.25rem;
   --bscpn-at-button-border-radius: 5rem;
   --bscpn-at-button-min-height: 1em;
   --bscpn-at-button-min-width: 0;
@@ -1355,10 +1359,10 @@ table {
 }
 .bs-at-button--small {
   --bscpn-at-button-padding-vertical: 0;
-  --bscpn-at-button-padding-horizontal: 10rem;
+  --bscpn-at-button-padding-horizontal: 8.75rem;
   --bscpn-at-button-border-radius: 2.5rem;
-  --bscpn-at-button-min-height: 12.5rem;
-  --bscpn-at-button-min-width: 12.5rem;
+  --bscpn-at-button-min-height: 15rem;
+  --bscpn-at-button-min-width: 15rem;
   --bscpn-at-button-font-size: 0.8rem;
 }
 .bs-at-button--small.bs-at-button--square {
@@ -1382,8 +1386,8 @@ table {
   --bscpn-at-button-justify-content: flex-start;
 }
 .bs-at-button--square {
-  --bscpn-at-button-padding-vertical: 9.1666666667rem;
-  --bscpn-at-button-padding-horizontal: 9.1666666667rem;
+  --bscpn-at-button-padding-vertical: 8.75rem;
+  --bscpn-at-button-padding-horizontal: 8.75rem;
 }
 .bs-at-button--round {
   --bscpn-at-button-border-radius: 9999rem;
