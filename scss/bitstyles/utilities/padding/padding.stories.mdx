@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Apply padding of a specified size and direction to an element.
 
-With default configuration, the padding classes are available in sizes `0`, `xs`, `s`, `m`, `l`, `xl`, `l4`, and at the `m` and `l` breakpoints.
+With default configuration, the padding classes are available in sizes  `0`, `s7`, `s6`, `s5`, `s4`, `s3`, `s2`, `s1`, `m`, `l1`, `l2`, `l3`, `l4`, `l5`, `l6`, `l7`, and at the `m` and `l` breakpoints.
 
 ## Padding sizes
 
@@ -18,10 +18,38 @@ With default configuration, the padding classes are available in sizes `0`, `xs`
       </div>
     `}
   </Story>
+  <Story name="padding-s7">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-padding-s7">u-padding-s7</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-s6">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-padding-s6">u-padding-s6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-s5">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-padding-s5">u-padding-s5</div>
+      </div>
+    `}
+  </Story>
   <Story name="padding-s4">
     {`
       <div class="u-bg-brand-2 u-padding-m">
         <div class="u-bg-grayscale-light-3 u-padding-s4">u-padding-s4</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-s3">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-padding-s3">u-padding-s3</div>
       </div>
     `}
   </Story>
@@ -32,10 +60,24 @@ With default configuration, the padding classes are available in sizes `0`, `xs`
       </div>
     `}
   </Story>
+  <Story name="padding-s1">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-padding-s1">u-padding-s1</div>
+      </div>
+    `}
+  </Story>
   <Story name="padding-m">
     {`
       <div class="u-bg-brand-2 u-padding-m">
         <div class="u-bg-grayscale-light-3 u-padding-m">u-padding-m</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-l1">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-padding-l1">u-padding-l1</div>
       </div>
     `}
   </Story>
@@ -57,6 +99,27 @@ With default configuration, the padding classes are available in sizes `0`, `xs`
     {`
       <div class="u-bg-brand-2 u-padding-m">
         <div class="u-bg-grayscale-light-3 u-padding-l4">u-padding-l4</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-l5">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-padding-l5">u-padding-l5</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-l6">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-padding-l6">u-padding-l6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="padding-l7">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-padding-l7">u-padding-l7</div>
       </div>
     `}
   </Story>
@@ -135,7 +198,7 @@ All the padding classes are also available at the `@m` and `@l` breakpoint suffi
 
 ## Customization
 
-The available sizes can be configured by overriding `$bitstyles-padding-sizes` Sass map, providing the classname as the key, and the size as value:
+The available sizes can be configured by overriding `$sizes` Sass map, providing the classname as the key, and the size as value:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/padding' with (
@@ -151,7 +214,7 @@ The available sizes can be configured by overriding `$bitstyles-padding-sizes` S
 );
 ```
 
-The directions can be customised by overriding `$bitstyles-padding-directions`. Provide the name of the class as the key, and a list of directions to apply the padding to. You’ll need to copy in the default directions if you want to keep those values.
+The directions can be customised by overriding `$directions`. Provide the name of the class as the key, and a list of directions to apply the padding to. You’ll need to copy in the default directions if you want to keep those values.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/padding' with (
@@ -167,7 +230,7 @@ The directions can be customised by overriding `$bitstyles-padding-directions`. 
 
 The `'': null` entry is needed to render the padding classes with no directional modifiers.
 
-To customise the breakpoints these classes are all available at, override `$bitstyles-padding-breakpoints` with a list of the breakpoint names from the global settings.
+To customise the breakpoints these classes are all available at, override `$breakpoints` with a list of the breakpoint names from the global settings.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/padding' with (

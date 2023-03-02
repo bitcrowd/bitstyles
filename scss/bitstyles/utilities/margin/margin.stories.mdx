@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Apply margins of a specified size and direction to an element.
 
-With default configuration, the margins are available in sizes `0`, `s6`, `xs`, `s`, `m`, `l`, `xl`, with negative-margin variations of each. They are provided at the `s` and `m` breakpoints. See [customization](#customization) below for details on how to change that.
+With default configuration, the margins are available in sizes `0`, `s7`, `s6`, `s5`, `s4`, `s3`, `s2`, `s1`, `m`, `l1`, `l2`, `l3`, `l4`, `l5`, `l6`, `l7`, `auto`, with negative-margin variations of each (except `auto`). They are provided at the `s` and `m` breakpoints. See [customization](#customization) below for details on how to change that.
 
 ## Margin sizes
 
@@ -18,10 +18,24 @@ With default configuration, the margins are available in sizes `0`, `s6`, `xs`, 
       </div>
     `}
   </Story>
+  <Story name="margin-s7">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-s7">u-margin-s7</div>
+      </div>
+    `}
+  </Story>
   <Story name="margin-s6">
     {`
       <div class="u-bg-brand-2 u-padding-m">
         <div class="u-bg-grayscale-light-3 u-margin-s6">u-margin-s6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-s5">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-s5">u-margin-s5</div>
       </div>
     `}
   </Story>
@@ -32,10 +46,24 @@ With default configuration, the margins are available in sizes `0`, `s6`, `xs`, 
       </div>
     `}
   </Story>
-  <Story name="margin-s">
+  <Story name="margin-s3">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-s">u-margin-s</div>
+        <div class="u-bg-grayscale-light-3 u-margin-s3">u-margin-s3</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-s2">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-s2">u-margin-s2</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-s1">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-s1">u-margin-s1</div>
       </div>
     `}
   </Story>
@@ -46,10 +74,17 @@ With default configuration, the margins are available in sizes `0`, `s6`, `xs`, 
       </div>
     `}
   </Story>
-  <Story name="margin-l">
+  <Story name="margin-l1">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-l">u-margin-l</div>
+        <div class="u-bg-grayscale-light-3 u-margin-l1">u-margin-l1</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-l2">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-l2">u-margin-l2</div>
       </div>
     `}
   </Story>
@@ -57,6 +92,34 @@ With default configuration, the margins are available in sizes `0`, `s6`, `xs`, 
     {`
       <div class="u-bg-brand-2 u-padding-m">
         <div class="u-bg-grayscale-light-3 u-margin-l3">u-margin-l3</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-l4">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-l4">u-margin-l4</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-l5">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-l5">u-margin-l5</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-l6">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-l6">u-margin-l6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-l7">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-l7">u-margin-l7</div>
       </div>
     `}
   </Story>
@@ -74,10 +137,24 @@ With default configuration, the margins are available in sizes `0`, `s6`, `xs`, 
 Apply the prefix `neg` to the margin size to apply the negative version of the margin.
 
 <Canvas>
+  <Story name="margin-neg-s7">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-neg-s7">u-margin-neg-s7</div>
+      </div>
+    `}
+  </Story>
   <Story name="margin-neg-s6">
     {`
       <div class="u-bg-brand-2 u-padding-m">
         <div class="u-bg-grayscale-light-3 u-margin-neg-s6">u-margin-neg-s6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-s5">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-neg-s5">u-margin-neg-s5</div>
       </div>
     `}
   </Story>
@@ -88,10 +165,24 @@ Apply the prefix `neg` to the margin size to apply the negative version of the m
       </div>
     `}
   </Story>
-  <Story name="margin-neg-s">
+  <Story name="margin-neg-s3">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-neg-s">u-margin-neg-s</div>
+        <div class="u-bg-grayscale-light-3 u-margin-neg-s3">u-margin-neg-s3</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-s2">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-neg-s2">u-margin-neg-s2</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-s1">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-neg-s1">u-margin-neg-s1</div>
       </div>
     `}
   </Story>
@@ -102,10 +193,17 @@ Apply the prefix `neg` to the margin size to apply the negative version of the m
       </div>
     `}
   </Story>
-  <Story name="margin-neg-l">
+  <Story name="margin-neg-l1">
     {`
       <div class="u-bg-brand-2 u-padding-m">
-        <div class="u-bg-grayscale-light-3 u-margin-neg-l">u-margin-neg-l</div>
+        <div class="u-bg-grayscale-light-3 u-margin-neg-l1">u-margin-neg-l1</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-l2">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-neg-l2">u-margin-neg-l2</div>
       </div>
     `}
   </Story>
@@ -113,6 +211,34 @@ Apply the prefix `neg` to the margin size to apply the negative version of the m
     {`
       <div class="u-bg-brand-2 u-padding-m">
         <div class="u-bg-grayscale-light-3 u-margin-neg-l3">u-margin-neg-l3</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-l4">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-neg-l4">u-margin-neg-l4</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-l5">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-neg-l5">u-margin-neg-l5</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-l6">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-neg-l6">u-margin-neg-l6</div>
+      </div>
+    `}
+  </Story>
+  <Story name="margin-neg-l7">
+    {`
+      <div class="u-bg-brand-2 u-padding-m">
+        <div class="u-bg-grayscale-light-3 u-margin-neg-l7">u-margin-neg-l7</div>
       </div>
     `}
   </Story>
@@ -191,7 +317,7 @@ All the margins are also available at the `@s` and `@m` breakpoint suffixes.
 
 ## Customization
 
-Available margin-sizes can be configured by overriding the `$bitstyles-margin-sizes` Sass map. Provide the name to be used for the class as the key, and the value for the property as the value. If you want to keep the existing values, you’ll need to copy the default configuration as you cannot merge or update the existing map.
+Available margin-sizes can be configured by overriding the `$sizes` Sass map. Provide the name to be used for the class as the key, and the value for the property as the value. If you want to keep the existing values, you’ll need to copy the default configuration as you cannot merge or update the existing map.
 
 The `positive` and `negative` keys are required for each group you want to define (e.g. if you have no negative margins, that key is not required).
 
@@ -220,7 +346,7 @@ The `positive` and `negative` keys are required for each group you want to defin
 );
 ```
 
-To customise the breakpoints these classes are available at, override `$bitstyles-margin-breakpoints` e.g.
+To customise the breakpoints these classes are available at, override `$breakpoints` e.g.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/margin' with (
@@ -231,7 +357,7 @@ To customise the breakpoints these classes are available at, override `$bitstyle
 );
 ```
 
-Directions can be customised by overriding the `$bitstyles-margin-directions` Sass map. Provide the name for the direction as the key, and the list of directions. Note that if you want to keep the existing directions, you’ll need to copy the existing configurations — the map cannot be updated, only overwritten.
+Directions can be customised by overriding the `$directions` Sass map. Provide the name for the direction as the key, and the list of directions. Note that if you want to keep the existing directions, you’ll need to copy the existing configurations — the map cannot be updated, only overwritten.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/margin' with (
