@@ -1606,7 +1606,15 @@ table {
 .bs-at-dropdown.is-on-screen {
   opacity: 1;
 }
+@media screen and (max-width: 20em) {
+  .bs-at-dropdown {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
 .bs-at-dropdown--right {
+  left: auto;
   right: 0;
 }
 .bs-at-dropdown--top {
@@ -1618,13 +1626,6 @@ table {
   max-width: none;
   right: 0;
   width: 100%;
-}
-@media screen and (max-width: 20em) {
-  .bs-at-dropdown {
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
 }
 .bs-at-flash--brand-1 {
   background-color: #000;

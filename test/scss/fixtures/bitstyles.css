@@ -1784,7 +1784,15 @@ table {
 .a-dropdown.is-on-screen {
   opacity: 1;
 }
+@media screen and (max-width: 29.9375em) {
+  .a-dropdown {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
 .a-dropdown--right {
+  left: auto;
   right: 0;
 }
 .a-dropdown--top {
@@ -1796,13 +1804,6 @@ table {
   max-width: none;
   right: 0;
   width: 100%;
-}
-@media screen and (max-width: 29.9375em) {
-  .a-dropdown {
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
 }
 .a-flash--brand-1 {
   background-color: #c8bfff;
