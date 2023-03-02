@@ -1,12 +1,12 @@
 $boundary-width: 0.0625em !default;
 $s-m-boundary: 30em !default;
-$m-l-boundary: 55em !default;
-$l-xl-boundary: 95em !default;
+$m-l2-boundary: 55em !default;
+$l-l3-boundary: 95em !default;
 $breakpoints: (
   's': 'screen and (max-width: #{$s-m-boundary - $boundary-width})',
   'm': 'screen and (min-width: #{$s-m-boundary})',
-  'l': 'screen and (min-width: #{$m-l-boundary})',
-  'xl': 'screen and (min-width: #{$l-xl-boundary})',
+  'l': 'screen and (min-width: #{$m-l2-boundary})',
+  'xl': 'screen and (min-width: #{$l-l3-boundary})',
   'hidpi':
     '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)',
   'landscape': 'all and (orientation:landscape)',

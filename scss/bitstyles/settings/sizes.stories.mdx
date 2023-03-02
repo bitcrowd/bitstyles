@@ -6,20 +6,51 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Using a central scale of sizes maintains consistency in spacing (most often padding and margins) throughout your project. The default sizes are based on font-size to keep the spacing tied to the typography. For users who view your content at a different font-size, the spacing will remain proportional and usable.
 
-The default size scale:
+The default size scale spans from `s7` – `l7`, with `m` being the mid point, at `1rem` with the default configuration:
+
+<Canvas>
+  <Story name="Sizes">
+    {`
+      <div class="u-flex u-items-end u-gap-s5">
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-s7); height: var(--bs-size-s7)" title="s7"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-s6); height: var(--bs-size-s6)" title="s6"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-s5); height: var(--bs-size-s5)" title="s5"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-s4); height: var(--bs-size-s4)" title="s4"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-s3); height: var(--bs-size-s3)" title="s3"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-s2); height: var(--bs-size-s2)" title="s2"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-s1); height: var(--bs-size-s1)" title="s1"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-m); height: var(--bs-size-m)" title="m"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-l1); height: var(--bs-size-l1)" title="l1"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-l2); height: var(--bs-size-l2)" title="l2"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-l3); height: var(--bs-size-l3)" title="l3"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-l4); height: var(--bs-size-l4)" title="l4"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-l5); height: var(--bs-size-l5)" title="l5"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-l6); height: var(--bs-size-l6)" title="l6"></div>
+        <div class="u-shadow-default u-bg-gray-dark u-border-radius-s7" style="width: var(--bs-size-l7); height: var(--bs-size-l7)" title="l7"></div>
+      </div>
+    `}
+  </Story>
+</Canvas>
 
 ```scss
+/* prettier-ignore */
 $sizes: (
   '0': 0,
-  '3xs': 0.1rem,
-  '2xs': 0.2rem,
-  'xs': 0.4rem,
-  's': 0.6rem,
-  'm': 0.8rem,
-  'l': 1rem,
-  'xl': 1.6rem,
-  '2xl': 3.2rem,
-  '3xl': 6.4rem,
+  's7': $size-base * 0.125, // 2px
+  's6': $size-base * 0.25, // 4px
+  's5': $size-base * 0.375, // 6px
+  's4': $size-base * 0.5, // 8px
+  's3': $size-base * 0.625, // 10px
+  's2': $size-base * 0.75, // 12px
+  's1': $size-base * 0.875, // 14px
+  'm': $size-base, // 16px
+  'l1': $size-base * 1.25, // 20px
+  'l2': $size-base * 1.5, // 24px
+  'l3': $size-base * 2, // 32px
+  'l4': $size-base * 2.5, // 40px
+  'l5': $size-base * 3, // 48px
+  'l6': $size-base * 4, // 64px
+  'l7': $size-base * 5, // 80px
 );
 ```
 
@@ -31,7 +62,7 @@ Use the `size.get()` helper function for accessing sizes in the sizing scale. In
 @use '~bitstyles/scss/bitstyles/tools/size';
 
 .component-class::after {
-  margin-left: size.get('xl');
+  margin-left: size.get('l3');
 }
 ```
 
@@ -39,7 +70,7 @@ With the default setup this will output:
 
 ```css
 .component-class::after {
-  margin-left: 1.6rem;
+  margin-left: 2rem;
 }
 ```
 
@@ -61,15 +92,21 @@ Use the appropriate utility classes to apply spacing. See the documentation of e
 The sizing scale is also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
 
 ```css
---bs-size-3xs: 0.1rem;
---bs-size-2xs: 0.2rem;
---bs-size-xs: 0.4rem;
---bs-size-s: 0.6rem;
---bs-size-m: 0.8rem;
---bs-size-l: 1rem;
---bs-size-xl: 1.6rem;
---bs-size-2xl: 3.2rem;
---bs-size-3xl: 6.4rem;
+--bs-size-s7: 0.125rem;
+--bs-size-s6: 0.25rem;
+--bs-size-s5: 0.375rem;
+--bs-size-s4: 0.5rem;
+--bs-size-s3: 0.625rem;
+--bs-size-s2: 0.75rem;
+--bs-size-s1: 0.875rem;
+--bs-size-m: 1rem;
+--bs-size-l1: 1.25rem;
+--bs-size-l2: 1.5rem;
+--bs-size-l3: 2rem;
+--bs-size-l4: 2.5rem;
+--bs-size-l5: 3rem;
+--bs-size-l6: 4rem;
+--bs-size-l7: 5rem;
 ```
 
 ## Using size design tokens in JS
@@ -80,9 +117,9 @@ The size design tokens can be imported and used in JS:
 import sizes from '../exports/_sizes.scss';
 
 console.log(sizes['0']); // '0'
-console.log(sizes['2xl']); // '3.2rem'
-console.log(sizes['xl']); // '1.6rem'
-console.log(sizes['l']); // '1rem'
+console.log(sizes['l4']); // '2.5rem'
+console.log(sizes['l3']); // '2rem'
+console.log(sizes['l1']); // '1.25rem'
 // …
 ```
 
@@ -94,22 +131,28 @@ The size scale is computed from a single starting value. By changing that starti
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/layout' with (
-  $size-base: 1rem
+  $size-base: 2rem
 );
 
 /* sizes:
 
 (
-  "0": 0,
-  "3xs": 0.125rem,
-  "2xs": 0.25rem,
-  "xs": 0.5rem,
-  "s": 0.75rem,
-  "m": 1rem,
-  "l": 1.25rem,
-  "xl": 2rem,
-  "2xl": 4rem,
-  "3xl": 8rem,
+  '0': 0,
+  's7': $size-base * 0.125, // 4px
+  's6': $size-base * 0.25, // 8px
+  's5': $size-base * 0.375, // 12px
+  's4': $size-base * 0.5, // 16px
+  's3': $size-base * 0.625, // 20px
+  's2': $size-base * 0.75, // 24px
+  's1': $size-base * 0.875, // 28px
+  'm': $size-base, // 32px
+  'l1': $size-base * 1.25, // 40px
+  'l2': $size-base * 1.5, // 48px
+  'l3': $size-base * 2, // 64px
+  'l4': $size-base * 2.5, // 80px
+  'l5': $size-base * 3, // 96px
+  'l6': $size-base * 4, // 128px
+  'l7': $size-base * 5, // 160px
 )
 */
 ```
@@ -124,15 +167,15 @@ When you need to increase or reduce the number of sizes available, change the na
     '0': 0,
     // add some pixel-based sizes for small adjustments
     '1': 1px,
-    '3xs': 0.125rem,
-    '2xs': 0.25rem,
-    'xs': 0.5rem,
+    's7': 0.125rem,
+    's6': 0.25rem,
+    's4': 0.5rem,
     's': 0.75rem,
     'm': 1rem,
     'l': 1.25rem,
-    'xl': 2rem,
-    '2xl': 4rem,
-    '3xl': 8rem,
+    'l3': 2rem,
+    'l4': 4rem,
+    'l5': 8rem,
   )
 );
 ```

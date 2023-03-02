@@ -1,7 +1,7 @@
 @use '../../tools/palette';
 @use '../../tools/size';
 
-$padding: size.get('m') !default;
+$padding: size.get('s3') !default;
 $background-color: palette.get('grayscale', 'white') !default;
 $overlay-color: rgba(palette.get('grayscale', 'white'), 95%) !default;
 $transition-easing: ease-in-out !default;

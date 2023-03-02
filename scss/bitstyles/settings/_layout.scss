@@ -1,20 +1,24 @@
-@use 'sass:math';
-
 $global-z: ('topbar') !default;
 $border-radius-round: 9999rem !default;
-$size-base: 0.8rem !default;
+$size-base: 1rem !default;
+
+/* prettier-ignore */
 $sizes: (
   '0': 0,
-  '4xs': math.div($size-base, 8),
-  '3xs': math.div($size-base, 6),
-  '2xs': math.div($size-base, 4),
-  'xs': math.div($size-base, 2),
-  's': $size-base - math.div($size-base, 4),
-  'm': $size-base,
-  'l': $size-base + math.div($size-base, 4),
-  'xl': $size-base * 2,
-  '2xl': $size-base * 4,
-  '3xl': $size-base * 6,
-  '4xl': $size-base * 8,
+  's7': $size-base * 0.125, // 2px
+  's6': $size-base * 0.25, // 4px
+  's5': $size-base * 0.375, // 6px
+  's4': $size-base * 0.5, // 8px
+  's3': $size-base * 0.625, // 10px
+  's2': $size-base * 0.75, // 12px
+  's1': $size-base * 0.875, // 14px
+  'm': $size-base, // 16px
+  'l1': $size-base * 1.25, // 20px
+  'l2': $size-base * 1.5, // 24px
+  'l3': $size-base * 2, // 32px
+  'l4': $size-base * 2.5, // 40px
+  'l5': $size-base * 3, // 48px
+  'l6': $size-base * 4, // 64px
+  'l7': $size-base * 5, // 80px
 ) !default;
 $viewport-elements: ('html', 'body', '#root') !default;

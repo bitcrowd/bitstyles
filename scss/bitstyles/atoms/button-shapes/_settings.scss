@@ -5,34 +5,34 @@
 @use '../../tools/size';
 
 $default: (
-  'padding-vertical': size.get('xs'),
-  'padding-horizontal': size.get('l'),
-  'border-width': size.get('3xs'),
-  'border-radius': size.get('xs'),
+  'padding-vertical': size.get('s4'),
+  'padding-horizontal': size.get('l2'),
+  'border-width': size.get('s7'),
+  'border-radius': size.get('s4'),
   'min-height': 1em,
   'min-width': 0,
   'font-size': font-size.get('2'),
   'font-weight': typography.$font-weight-normal,
 ) !default;
 $small: (
-  'min-height': size.get('l'),
-  'min-width': size.get('l'),
+  'min-height': size.get('l2'),
+  'min-width': size.get('l2'),
   'padding-vertical': 0,
-  'padding-horizontal': size.get('m'),
-  'border-radius': size.get('2xs'),
+  'padding-horizontal': size.get('s1'),
+  'border-radius': size.get('s6'),
   'font-size': font-size.get('1'),
 ) !default;
 $large: (
-  'padding-vertical': size.get('s'),
-  'padding-horizontal': size.get('xl'),
+  'padding-vertical': size.get('s2'),
+  'padding-horizontal': size.get('l3'),
   'font-size': font-size.get('2'),
 ) !default;
 $menu: (
   'justify-content': flex-start,
 ) !default;
 $square: (
-  'padding-vertical': size.get('s') + size.get('3xs'),
-  'padding-horizontal': size.get('s') + size.get('3xs'),
+  'padding-vertical': size.get('s2') + size.get('s7'),
+  'padding-horizontal': size.get('s2') + size.get('s7'),
 ) !default;
 $round: (
   'border-radius': layout.$border-radius-round,

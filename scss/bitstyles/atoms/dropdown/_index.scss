@@ -42,8 +42,17 @@
   }
 }
 
+@include media-query.get('s') {
+  #{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
 #{classname.get($classname-items: 'dropdown--right', $layer: 'atom')} {
   right: 0;
+  left: auto;
 }
 
 #{classname.get($classname-items: 'dropdown--top', $layer: 'atom')} {
@@ -56,12 +65,4 @@
   left: 0;
   width: 100%;
   max-width: none;
-}
-
-@include media-query.get('s') {
-  #{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
-    right: 0;
-    left: 0;
-    width: 100%;
-  }
 }

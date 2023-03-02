@@ -55,12 +55,12 @@ const RenderColorItem = (label, color) =>
   `
     <li style="background-color: ${color}; min-height:3rem;" class="u-aspect-ratio-1-1">
       <div
-        class="u-margin-xs-left u-margin-xs-top u-fg-grayscale-dark-2"
+        class="u-margin-s4-left u-margin-s4-top u-fg-grayscale-dark-2"
         style="font-size: 0.625rem;"
       >
-        <strong class="u-bg-white u-padding-2xs-x">${label}</strong>
+        <strong class="u-bg-white u-padding-s6-x">${label}</strong>
         <br/>
-        <span class="u-bg-white u-padding-2xs-x">${color}</span>
+        <span class="u-bg-white u-padding-s6-x">${color}</span>
       </div>
     </li>
   `;
@@ -72,7 +72,7 @@ const RenderColors = ({ colors, layout }) => {
       classname = 'u-flex-grow-1 u-grid u-grid-cols-auto u-list-none';
       break;
     default:
-      classname = 'u-flex-grow-1 u-grid u-grid-cols-auto u-list-none u-gap-2xs';
+      classname = 'u-flex-grow-1 u-grid u-grid-cols-auto u-list-none u-gap-s6';
   }
 
   return `
@@ -91,11 +91,11 @@ const RenderColorPaletteItem = ({ colors, withBackground, layout }) => {
     baseColorValues[name] &&
     `background-color: ${baseColorValues[name]}; color: #fff`;
   const titleClassname = withBackground
-    ? 'u-padding-xs u-padding-m-bottom u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min'
+    ? 'u-padding-s4 u-padding-m-bottom u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min'
     : 'u-h4 u-margin-0-bottom u-margin-m-right u-line-height-min';
 
   return `
-    <li class="u-flex-grow-1 u-grid u-gap-xs" style="${style}">
+    <li class="u-flex-grow-1 u-grid u-gap-s5" style="${style}">
       ${RenderColors({ colors: colors[1], layout })}
       <h3 class="${titleClassname}">
         ${name}
@@ -113,14 +113,13 @@ const RenderColorPaletteList = ({
   switch (layout) {
     case 'dense':
       classname =
-        'u-list-none u-grid u-gap-l u-grid-cols-2@m u-grid-cols-3@l u-margin-xl-bottom u-items-start';
+        'u-list-none u-grid u-gap-m u-grid-cols-2@m u-grid-cols-3@l u-margin-l3-bottom u-items-start';
       break;
     case 'row':
       classname = 'u-list-none u-flex';
       break;
     default:
-      classname =
-        'u-list-none u-grid u-gap-xl u-margin-xl-bottom u-items-start';
+      classname = 'u-list-none u-grid u-gap-m u-margin-l3-bottom u-items-start';
   }
 
   return `

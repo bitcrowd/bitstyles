@@ -25,7 +25,7 @@ Avatars are available at `m` and `l` sizes by default:
         <div class="a-avatar a-avatar--m u-flex u-items-center">
           <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
         </div>
-        <span class="u-margin-s-left">Username</span>
+        <span class="u-margin-s2-left">Username</span>
       </div>
     `}
   </Story>
@@ -35,7 +35,7 @@ Avatars are available at `m` and `l` sizes by default:
         <div class="a-avatar a-avatar--l u-flex u-items-center">
           <img src="https://placekitten.com/100/100" width="46" height="46" alt="Username’s avatar" />
         </div>
-        <span class="u-margin-s-left">Username</span>
+        <span class="u-margin-s2-left">Username</span>
       </div>
     `}
   </Story>
@@ -47,7 +47,7 @@ The available avatar sizes can be customized with `$bitstyles-avatar-sizes`:
 
 ```scss
 $sizes: (
-  'm': size.get('xl'),
-  'l': size.get('xl') + size.get('m'),
+  'm': size.get('l3'),
+  'l': size.get('l3') + size.get('m'),
 );
 ```

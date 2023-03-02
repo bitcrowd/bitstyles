@@ -9,7 +9,7 @@ $max-width: (
 ) !default;
 $max-width-base: 'm' !default;
 $padding: (
-  'base': size.get('m'),
-  'l': size.get('l'),
-  'xl': size.get('xl'),
+  'base': size.get('s1'),
+  'l': size.get('m'),
+  'xl': size.get('l1'),
 ) !default;
