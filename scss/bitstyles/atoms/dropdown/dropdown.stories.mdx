@@ -9,9 +9,9 @@ A floating container shown on clicking a button (use JS for this), to show some 
 ## Left alignment (default)
 
 <Canvas>
-  <Story name="Dropdown" inline={false} height="20rem">
+  <Story name="Dropdown" inline={false} height="20rem" width="30rem">
     {`
-      <div class="u-relative" style="height: 10rem; width: 30rem">
+      <div class="u-relative" style="height: 2rem; width: 30rem">
         <ul class="a-dropdown u-overflow-y-auto u-list-none">
           <li>
             <a href="/" class="a-button a-button--transparent">Settings</a>
@@ -37,9 +37,10 @@ A floating container shown on clicking a button (use JS for this), to show some 
 The dropdown defaults to left-top-aligned, but can be aligned to any edges using the modifier classes. Note that in smaller viewports, all left/right alignment is removed and the dropdown will be displayed at the full available width.
 
 <Canvas>
-  <Story name="a-dropdown--right" inline={false} height="20rem">
+  <Story name="a-dropdown--right" inline={false} height="20rem" width="24rem">
     {`
-      <div class="u-relative" style="height: 10rem; width: 100%">
+      <div class="u-relative u-bg-grayscale-light-3 u-padding-m" style="width: 18rem">
+        Dropdown right
         <ul class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none">
           <li>
             <a href="/" class="a-button a-button--transparent">Settings</a>
@@ -58,9 +59,11 @@ The dropdown defaults to left-top-aligned, but can be aligned to any edges using
       </div>
     `}
   </Story>
-  <Story name="a-dropdown--top" inline={false} height="20rem">
+  <Story name="a-dropdown--top" inline={false} height="20rem" width="24rem">
     {`
-      <div class="u-relative u-flex" style="height: 10rem; width: 100%">
+    <div class="u-flex u-items-end" style="width: 20rem; height: 17rem;">
+      <div class="u-relative u-flex u-bg-grayscale-light-3 u-padding-m" style="width: 18rem;">
+        Dropdown top
         <ul class="a-dropdown a-dropdown--top u-overflow-y-auto u-list-none">
           <li>
             <a href="/" class="a-button a-button--transparent">Settings</a>
@@ -79,30 +82,34 @@ The dropdown defaults to left-top-aligned, but can be aligned to any edges using
       </div>
     `}
   </Story>
-  <Story name="a-dropdown--top a-dropdown--right" inline={false} height="20rem">
+  <Story name="a-dropdown--top a-dropdown--right" inline={false} height="20rem" width="24rem">
     {`
-      <div class="u-relative u-flex" style="height: 10rem; width: 100%">
-        <ul class="a-dropdown a-dropdown--top a-dropdown--right u-overflow-y-auto u-list-none">
-          <li>
-            <a href="/" class="a-button a-button--transparent">Settings</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Help</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Privacy</a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Sign out</a>
-          </li>
-        </ul>
+      <div class="u-flex u-items-end" style="width: 20rem; height: 17rem;">
+        <div class="u-relative u-bg-grayscale-light-3 u-padding-m" style="width: 18rem;">
+          Dropdown top right
+          <ul class="a-dropdown a-dropdown--top a-dropdown--right u-overflow-y-auto u-list-none">
+            <li>
+              <a href="/" class="a-button a-button--transparent">Settings</a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--transparent">Help</a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--transparent">Privacy</a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--transparent">Sign out</a>
+            </li>
+          </ul>
+        </div>
       </div>
     `}
   </Story>
-  <Story name="a-dropdown--bottom dropdown--full" inline={false} height="20rem">
+  <Story name="a-dropdown--bottom dropdown--full" inline={false} height="20rem" width="24rem">
     {`
-      <div class="u-relative u-flex" style="height: 10rem; width: 100%">
+      <div class="u-relative u-flex u-bg-grayscale-light-3 u-padding-m" style="width: 18rem">
+        Dropdown fullwidth
         <ul class="a-dropdown a-dropdown--full-width u-overflow-y-auto u-list-none">
           <li>
             <a href="/" class="a-button a-button--transparent">Settings</a>
@@ -121,24 +128,27 @@ The dropdown defaults to left-top-aligned, but can be aligned to any edges using
       </div>
     `}
   </Story>
-  <Story name="a-dropdown--top dropdown--full" inline={false} height="20rem">
+  <Story name="a-dropdown--top dropdown--full" inline={false} height="20rem" width="24rem">
     {`
-      <div class="u-relative u-flex" style="height: 10rem; width: 100%">
-        <ul class="a-dropdown a-dropdown--top a-dropdown--full-width u-overflow-y-auto u-list-none">
-          <li>
-            <a href="/" class="a-button a-button--transparent">Settings</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Help</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Privacy</a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Sign out</a>
-          </li>
-        </ul>
+      <div class="u-flex u-items-end" style="width: 20rem; height: 17rem;">
+        <div class="u-relative u-flex u-items-end u-bg-grayscale-light-3 u-padding-m" style="width: 18rem">
+          Dropdown fullwidth top
+          <ul class="a-dropdown a-dropdown--top a-dropdown--full-width u-overflow-y-auto u-list-none">
+            <li>
+              <a href="/" class="a-button a-button--transparent">Settings</a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--transparent">Help</a>
+            </li>
+            <li>
+              <a href="/" class="a-button a-button--transparent">Privacy</a>
+            </li>
+            <li role="separator"></li>
+            <li>
+              <a href="/" class="a-button a-button--transparent">Sign out</a>
+            </li>
+          </ul>
+        </div>
       </div>
     `}
   </Story>
