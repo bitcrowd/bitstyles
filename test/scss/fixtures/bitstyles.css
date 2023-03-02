@@ -630,7 +630,7 @@ textarea:hover {
   box-shadow: 0 0 0.1875rem rgba(178, 166, 255, 0.025),
     0 0 0.25rem rgba(178, 166, 255, 0.025),
     0 0 0.375rem rgba(178, 166, 255, 0.025),
-    0 0 0.75rem rgba(200, 191, 255, 0.025);rgba(178, 166, 255, 0.025);
+    0 0 0.75rem rgba(178, 166, 255, 0.025);
   color: #645f81;
 }
 [type='date']:active,
@@ -1067,7 +1067,7 @@ table {
   --bs-a-button-hover-color: var(--bs-color-brand-1-dark-1);
   --bs-a-button-hover-background-color: var(--bs-color-brand-1-light-1);
   --bs-a-button-hover-border-color: var(--bs-color-brand-1-light-1);
-  --bs-a-button-hover-box-shadow: 0 0 0.25rem
+  --bs-a-button-hover-box-shadow: 0 0 0.375rem
       rgba(var(--bs-color-brand-1-base-rgb), 0.075),
     0 0 0.5rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
     0 0 0.75rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
@@ -1085,7 +1085,7 @@ table {
   --bs-a-button-pressed-border-color: var(--bs-color-brand-1-dark-1);
   --bs-a-button-pressed-box-shadow: 0 0 0.125rem
       rgba(var(--bs-color-brand-1-base-rgb), 0.075),
-    0 0 0.1331666666667rem3333333rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
+    0 0 0.1666666667rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
     0 0 0.25rem rgba(var(--bs-color-brand-1-base-rgb), 0.075),
     0 0 0.5rem rgba(var(--bs-color-brand-1-base-rgb), 0.075);
   --bs-a-button-disabled-color: var(--bs-color-grayscale-base);
@@ -1186,7 +1186,7 @@ table {
     --bs-color-brand-1-light-1
   );
   --bs-a-button--secondary-hover-border-color: var(--bs-color-brand-1-light-1);
-  --bs-a-button--secondary-hover-box-shadow: 0 0 0.25375remrem
+  --bs-a-button--secondary-hover-box-shadow: 0 0 0.375rem
       rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.5rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
     0 0 0.75rem rgba(var(--bs-color-brand-1-light-1-rgb), 0.075),
@@ -1654,7 +1654,7 @@ table {
     padding: 0.4375rem 0.875rem;
   }
   .a-card-l\@m {
-    border-radius: 0.8rem;
+    border-radius: 0.875rem;
     box-shadow: 0 0.1458333333rem 0.5rem rgba(148, 133, 255, 0.025),
       0 0.175rem 0.6rem rgba(148, 133, 255, 0.025),
       0 0.21875rem 0.75rem rgba(148, 133, 255, 0.025),
