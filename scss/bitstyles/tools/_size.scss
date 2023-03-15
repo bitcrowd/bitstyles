@@ -16,10 +16,10 @@
 //
 
 @function get($size, $format: setup.$default-token-format) {
-  @if $format == 'custom-property' {
-    @return var(#{custom-property.get($items: ('size', $size))});
-  }
   @if map.has-key(layout.$sizes, $size) {
+    @if $format == 'custom-property' {
+      @return var(#{custom-property.get($items: ('size', $size))});
+    }
     @return map.get(layout.$sizes, $size);
   } @else {
     @error 'Oops! Size ‘#{$size}’ does not exist.';

@@ -1,52 +1,15 @@
 @use 'sass:color';
 @use 'sass:map';
 @use './color-palette';
-@use '../tools/custom-property';
 @use '../tools/palette';
 
 $default-theme: (
-  'background':
-    var(
-      #{custom-property.get(
-          $items: (
-            'color',
-            'grayscale',
-            'white',
-          ),
-        )}
-    ),
-  'text':
-    var(
-      #{custom-property.get(
-          $items: (
-            'color',
-            'grayscale',
-            'dark-3',
-          ),
-        )}
-    ),
+  'background': palette.get('grayscale', 'white'),
+  'text': palette.get('grayscale', 'dark-3'),
 ) !default;
 $dark-theme: (
-  'background':
-    var(
-      #{custom-property.get(
-          $items: (
-            'color',
-            'grayscale',
-            'dark-3',
-          ),
-        )}
-    ),
-  'text':
-    var(
-      #{custom-property.get(
-          $items: (
-            'color',
-            'grayscale',
-            'light-3',
-          ),
-        )}
-    ),
+  'background': palette.get('grayscale','dark-3'),
+  'text': palette.get('grayscale', 'light-3'),
 ) !default;
 $default-theme-name: 'default' !default;
 $themes: (

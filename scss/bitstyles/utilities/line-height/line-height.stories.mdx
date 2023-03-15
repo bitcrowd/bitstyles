@@ -4,18 +4,48 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Line-height
 
-Specify `line-height` property on an element. With the default configuration `min` is available, setting the line-height to the minimum safe value that doesn’t truncate diacritics from above letters. This is not available at any breakpoints, but see [customization](#customization) below for details on how change the configuration.
+Specify `line-height` property on an element. With the default configuration values `1` (smallest) through `6` (largest) are available. These are not available at any breakpoints, but see [customization](#customization) below for details on how change the configuration.
 
 <Canvas>
-  <Story name="u-line-height-min">
+  <Story name="u-line-height-1">
     {`
-      <div class="u-flex">
-        <p class="u-padding-m u-bg-grayscale-light">
-          <span class="u-bg-white">Default line-height</span>
-        </p>
-        <p class="u-padding-m u-bg-grayscale-light-1u-line-height-min">
-          <span class="u-bg-white">u-line-height-min</span>
-        </p>
+      <div class="u-padding-m u-bg-grayscale-light-1 u-line-height-1 u-text-4">
+        <p class="u-bg-white">u-line-height-1</p>
+      </div>
+    `}
+  </Story>
+  <Story name="u-line-height-2">
+    {`
+      <div class="u-padding-m u-bg-grayscale-light-1 u-line-height-2 u-text-4">
+        <p class="u-bg-white">u-line-height-2</p>
+      </div>
+    `}
+  </Story>
+  <Story name="u-line-height-3">
+    {`
+      <div class="u-padding-m u-bg-grayscale-light-1 u-line-height-3 u-text-4">
+        <p class="u-bg-white">u-line-height-3</p>
+      </div>
+    `}
+  </Story>
+  <Story name="u-line-height-4">
+    {`
+      <div class="u-padding-m u-bg-grayscale-light-1 u-line-height-4 u-text-4">
+        <p class="u-bg-white">u-line-height-4</p>
+      </div>
+    `}
+  </Story>
+  <Story name="u-line-height-5">
+    {`
+      <div class="u-padding-m u-bg-grayscale-light-1 u-text-4">
+        <p class="u-bg-white u-line-height-5">u-line-height-5</p>
+      </div>
+    `}
+  </Story>
+  <Story name="u-line-height-6">
+    {`
+      <div class="u-padding-m u-bg-grayscale-light-1 u-line-height-6 u-text-4">
+        <p class="u-bg-white">u-line-height-6</p>
       </div>
     `}
   </Story>
@@ -23,17 +53,19 @@ Specify `line-height` property on an element. With the default configuration `mi
 
 ## Customization
 
-Customize the available line-height values by overriding the `$bitstyles-line-height-values` Sass map. Provide the name to be used for the class as the key, and the value for the `line-height` property:
+Customize the available line-height values by overriding the `$values` Sass map. Provide the name to be used for the class as the key, and the value for the `line-height` property:
 
 ```scss
+@use '~bitstyles/scss/bitstyles/tools/line-height';
 @use '~bitstyles/scss/bitstyles/utilities/line-height' with (
   $values: (
-    'large': 2.5,
+    'large': line-height.get('5'),
+    'custom': 1.9827364rem,
   )
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-line-height-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` variable:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/line-height' with (

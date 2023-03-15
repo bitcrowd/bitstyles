@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 The default configuration provides typographic classes that apply all the font-sizes from the typographic scale, for all viewport sizes, and at the `m` breakpoint. See [customization](#customization) below for details on how to change that.
 
-These are useful when you need to produce **exceptions** to the standard resonsive typographic scale (see [responsiveness](#responsiveness), below), or when you need text with a fixed font-size at every viewport size.
+These are useful when you need to produce **exceptions** to the standard responsive typographic scale (see [responsiveness](#responsiveness), below), or when you need text with a fixed font-size at every viewport size.
 
 <Canvas isColumn>
   <Story name="u-text-1">
@@ -112,12 +112,14 @@ What these classes are useful for is producing **exceptions** to the standardize
 
 ## Customization
 
-Override `$bitstyles-typography-values` if you need to provide font-sizes outside of you base font-size design tokens, or a subset of those. But be aware this could lead to inconcistent type treatment — probably you should add the font-size you need to the base font-sizes instead.
+Override `$bitstyles-typography-values` if you need to provide font-sizes outside of your base font-size design tokens, or a subset of those. But be aware this could lead to inconsistent type treatment — probably you should add the font-size you need to the base font-sizes instead.
 
 ```scss
+@use '~bitstyles/scss/bitstyles/tools/font-size';
 @use 'bitstyles/utilities/typography' with (
   $values: (
-    '5': 5rem,
+    'small': font-size.get('1'),
+    'custom': 5.192456rem,
   )
 );
 ```

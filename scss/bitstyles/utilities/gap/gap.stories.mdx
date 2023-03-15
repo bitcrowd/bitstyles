@@ -4,14 +4,14 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 # Gap
 
-Specify the `gap` property of an element. This applies to flex and grid layouts, though right now the flex version is not as well supported. Use auto-prefixer to ensure the older `grid-gap` version of the property is used in your final CSS.
+Specify the `gap` property of an element. This applies to flex and grid layouts, though right now the flex version is not as well supported. Use autoprefixer to ensure the older `grid-gap` version of the property is used in your final CSS.
 
 By default, available sizes are `xs`, `s`, `m`, and `l`, and the classes are available at the `m` and `xl` breakpoints. See the [customization](#customization) section below for details on how to change those settings.
 
 <Canvas>
   <Story name="u-gap-s5">
     {`
-      <div class="u-grid u-padding-m u-gap-s5 u-bg-grayscale-light">
+      <div class="u-grid u-padding-m u-gap-s5 u-bg-grayscale-light-1">
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s5 Grid child 1</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s5 Grid child 2</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s5 Grid child 3</div>
@@ -23,7 +23,7 @@ By default, available sizes are `xs`, `s`, `m`, and `l`, and the classes are ava
   </Story>
   <Story name="u-gap-s3">
     {`
-      <div class="u-grid u-padding-m u-gap-s3 u-bg-grayscale-light">
+      <div class="u-grid u-padding-m u-gap-s3 u-bg-grayscale-light-1">
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s3 Grid child 1</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s3 Grid child 2</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s3 Grid child 3</div>
@@ -35,7 +35,7 @@ By default, available sizes are `xs`, `s`, `m`, and `l`, and the classes are ava
   </Story>
   <Story name="u-gap-m">
     {`
-      <div class="u-grid u-padding-m u-gap-m u-bg-grayscale-light">
+      <div class="u-grid u-padding-m u-gap-m u-bg-grayscale-light-1">
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-m Grid child 1</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-m Grid child 2</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-m Grid child 3</div>
@@ -47,7 +47,7 @@ By default, available sizes are `xs`, `s`, `m`, and `l`, and the classes are ava
   </Story>
   <Story name="u-gap-l1">
     {`
-      <div class="u-grid u-padding-m u-gap-l1 u-bg-grayscale-light">
+      <div class="u-grid u-padding-m u-gap-l1 u-bg-grayscale-light-1">
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-l1 Grid child 1</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-l1 Grid child 2</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-l1 Grid child 3</div>
@@ -64,7 +64,7 @@ By default, available sizes are `xs`, `s`, `m`, and `l`, and the classes are ava
 <Canvas isColumn>
   <Story name="u-gap-s3@m">
     {`
-      <div class="u-grid u-padding-m u-gap-s3@m u-bg-grayscale-light">
+      <div class="u-grid u-padding-m u-gap-s3@m u-bg-grayscale-light-1">
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s3@m, Grid child 1</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s3@m, Grid child 2</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s3@m, Grid child 3</div>
@@ -76,7 +76,7 @@ By default, available sizes are `xs`, `s`, `m`, and `l`, and the classes are ava
   </Story>
   <Story name="u-gap-s3@xl">
     {`
-      <div class="u-grid u-padding-m u-gap-s3@xl u-bg-grayscale-light">
+      <div class="u-grid u-padding-m u-gap-s3@xl u-bg-grayscale-light-1">
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s3@xl, Grid child 1</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s3@xl, Grid child 2</div>
         <div class="u-bg-grayscale-light-3 u-padding-m a-card">u-gap-s3@xl, Grid child 3</div>
@@ -103,7 +103,7 @@ The available sizes can be customized by overriding `$sizes`. Provide the name t
 );
 ```
 
-The breakpoints these classes are available at can be customised by overriding `$breakpoints` Sass list:
+The breakpoints these classes are available at can be customized by overriding `$breakpoints` Sass list:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/gap' with (

@@ -1,4 +1,11 @@
 @use '../../settings/typography';
+@use '../../tools/font-size';
+@use 'sass:map';
 
-$values: typography.$font-sizes !default;
+$font-sizes: ();
+@each $name, $font-size in typography.$font-sizes {
+  $font-sizes: map.set($font-sizes, $name, font-size.get($name));
+}
+
+$values: $font-sizes !default;
 $breakpoints: ('m') !default;

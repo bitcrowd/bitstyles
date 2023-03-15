@@ -27,6 +27,6 @@ label {
 }
 
 [type='color'] {
-  height: calc(#{line-height.get('5') * 1em} + #{size.get('s2')});
+  height: calc(line-height.get('5') * 1em + size.get('s2'));
 }
 /* stylelint-enable selector-max-type */

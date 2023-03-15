@@ -1,5 +1,7 @@
 @use 'sass:map';
 @use '../settings/color-palette';
+@use '../settings/setup';
+@use './custom-property';
 
 // Palette
 //
@@ -11,10 +13,13 @@
 // @param {String} $key   Optional. Key/name of the color to select from the sass map. Defaults to `100`, but that can be specified using `$bitstyles-color-palette-default-key`.
 //
 
-@function get($color, $key: color-palette.$default-key) {
+@function get($color, $key: color-palette.$default-key, $format: setup.$default-token-format) {
   @if map.has-key(color-palette.$palette, $color) {
     $palette: map.get(color-palette.$palette, $color);
-
+    
+    @if $format == 'custom-property' {
+      @return var(#{custom-property.get($items: ('color', $color, $key))});
+    }
     @if map.has-key($palette, $key) {
       @return map.get($palette, $key);
     } @else {
