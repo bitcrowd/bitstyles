@@ -1,6 +1,5 @@
 @use 'sass:list';
 @use 'sass:map';
-@use 'sass:math';
 @use 'sass:string';
 
 /*
@@ -68,8 +67,8 @@
   $shadow: ();
 
   @for $layer-index from $layers through 1 {
-    $layer-blur-radius: math.div($blur-radius, $layer-index);
-    $layer-offset: math.div($offset, $layer-index);
+    $layer-blur-radius: calc($blur-radius / $layer-index);
+    $layer-offset: calc($offset / $layer-index);
     $layer: (
       'color': $color,
       'offset': $layer-offset,

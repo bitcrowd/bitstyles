@@ -8,7 +8,7 @@
   select {
     display: block;
     width: 100%;
-    padding: settings.$padding-vertical (settings.$padding-horizontal * 2)
+    padding: settings.$padding-vertical calc(settings.$padding-horizontal * 2)
       settings.$padding-vertical settings.$padding-horizontal;
     overflow: hidden;
     transition: color animation.$transition-duration

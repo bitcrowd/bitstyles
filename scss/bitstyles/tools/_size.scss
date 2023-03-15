@@ -1,5 +1,7 @@
+@use '../settings/setup';
 @use '../settings/layout';
 @use 'sass:map';
+@use './custom-property';
 
 // Spacing
 //
@@ -13,7 +15,10 @@
 // @param {String} $spacing-size  Name of the standardised size required, as defined in the map `$bitstyles-spacing-sizes`.
 //
 
-@function get($size) {
+@function get($size, $format: setup.$default-token-format) {
+  @if $format == 'custom-property' {
+    @return var(#{custom-property.get($items: ('size', $size))});
+  }
   @if map.has-key(layout.$sizes, $size) {
     @return map.get(layout.$sizes, $size);
   } @else {

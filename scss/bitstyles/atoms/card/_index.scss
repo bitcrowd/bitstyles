@@ -1,6 +1,4 @@
 @forward 'settings';
-@use 'sass:map';
-@use 'sass:math';
 @use './settings';
 @use '../../tools/properties';
 @use '../../tools/media-query';
@@ -14,7 +12,7 @@
 
 @mixin card-header($spacing) {
   margin: (-$spacing) (-$spacing) $spacing;
-  padding: math.div($spacing, 2) $spacing;
+  padding: calc($spacing / 2) $spacing;
   background-color: settings.$header-background-color;
 }
 
