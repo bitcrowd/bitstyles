@@ -31,8 +31,8 @@ $menu: (
   'justify-content': flex-start,
 ) !default;
 $square: (
-  'padding-vertical': size.get('s2') + size.get('s7'),
-  'padding-horizontal': size.get('s2') + size.get('s7'),
+  'padding-vertical': calc(#{size.get('s2')} + #{size.get('s7')}),
+  'padding-horizontal': calc(#{size.get('s2')} + #{size.get('s7')}),
 ) !default;
 $round: (
   'border-radius': layout.$border-radius-round,
