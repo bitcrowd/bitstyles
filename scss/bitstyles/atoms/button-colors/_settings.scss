@@ -301,7 +301,7 @@ $transparent: (
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('grayscale', 'dark-2'), 0.075),
+            $color: rgba(palette.get('grayscale', 'dark-2-rgb'), 0.075),
             $blur-radius: size.get('s4'),
           )
         ),
@@ -313,7 +313,7 @@ $transparent: (
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('grayscale', 'dark-2'), 0.075),
+            $color: rgba(palette.get('grayscale', 'dark-2-rgb'), 0.075),
             $blur-radius: size.get('s4'),
           )
         ),
