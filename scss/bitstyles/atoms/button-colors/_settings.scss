@@ -8,8 +8,7 @@ $default: (
   'default': (
     'default': (
       'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-1'),
-      'border-color': palette.get('brand-1'),
+      'background-color': palette.get('brand-1', 'dark-1'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -19,9 +18,8 @@ $default: (
         ),
     ),
     'hover': (
-      'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('brand-1', 'light-1'),
-      'border-color': palette.get('brand-1', 'light-1'),
+      'color': palette.get('brand-1', 'dark-2'),
+      'background-color': palette.get('brand-1', 'light-2'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -32,8 +30,7 @@ $default: (
     ),
     'active': (
       'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-1'),
-      'border-color': palette.get('brand-1'),
+      'background-color': palette.get('brand-1', 'dark-1'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -44,8 +41,7 @@ $default: (
     ),
     'pressed': (
       'color':palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-1', 'dark-1'),
-      'border-color': palette.get('brand-1', 'dark-1'),
+      'background-color': palette.get('brand-1', 'dark-2'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -56,8 +52,7 @@ $default: (
     ),
     'disabled': (
       'color': palette.get('grayscale'),
-      'background-color': palette.get('grayscale', 'light-1'),
-      'border-color': palette.get('grayscale', 'light-1'),
+      'background-color': palette.get('grayscale', 'light-3'),
       'box-shadow': none,
     ),
   ),
@@ -65,7 +60,6 @@ $default: (
      'default': (
        'color': palette.get('brand-1'),
        'background-color': palette.get('grayscale', 'light-2'),
-       'border-color': palette.get('grayscale', 'light-2'),
        'box-shadow':
          shadow.to-box-shadow(
            shadow.generate(
@@ -77,7 +71,6 @@ $default: (
      'hover': (
        'color': palette.get('brand-1', 'dark-1'),
        'background-color': palette.get('brand-1', 'light-1'),
-       'border-color': palette.get('brand-1', 'light-1'),
        'box-shadow':
          shadow.to-box-shadow(
            shadow.generate(
@@ -89,7 +82,6 @@ $default: (
      'active': (
        'color': palette.get('brand-1'),
        'background-color': palette.get('grayscale', 'light-2'),
-       'border-color': palette.get('grayscale', 'light-2'),
        'box-shadow':
          shadow.to-box-shadow(
            shadow.generate(
@@ -101,7 +93,6 @@ $default: (
      'pressed': (
        'color': palette.get('grayscale', 'white'),
        'background-color': palette.get('brand-1'),
-       'border-color': palette.get('brand-1'),
        'box-shadow':
          shadow.to-box-shadow(
            shadow.generate(
@@ -113,7 +104,6 @@ $default: (
      'disabled': (
        'color': palette.get('grayscale', 'light-1'),
        'background-color': palette.get('grayscale', 'dark-2'),
-       'border-color': palette.get('grayscale', 'dark-2'),
        'box-shadow': none,
      ),
    ),
@@ -124,8 +114,7 @@ $secondary: (
   'default': (
     'default': (
       'color': palette.get('grayscale', 'dark-2'),
-      'background-color': palette.get('grayscale', 'light-1'),
-      'border-color': palette.get('grayscale', 'light-1'),
+      'background-color': palette.get('grayscale', 'light-3'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -136,8 +125,58 @@ $secondary: (
     ),
     'hover': (
       'color': palette.get('grayscale', 'dark-2'),
+      'background-color': palette.get('brand-1', 'light-2'),
+      'box-shadow':
+        shadow.to-box-shadow(
+          shadow.generate(
+            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
+            $blur-radius: size.get('l2'),
+          )
+        ),
+    ),
+    'active': (
+      'color': palette.get('brand-1', 'dark-2'),
+      'background-color': palette.get('brand-1', 'light-2'),
+      'box-shadow':
+        shadow.to-box-shadow(
+          shadow.generate(
+            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
+            $blur-radius: size.get('s4'),
+          )
+        ),
+    ),
+    'pressed': (
+      'color': palette.get('brand-1', 'dark-1'),
+      'background-color': palette.get('brand-1', 'light-2'),
+      'box-shadow':
+        shadow.to-box-shadow(
+          shadow.generate(
+            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
+            $blur-radius: size.get('s4'),
+          )
+        ),
+    ),
+    'disabled': (
+      'color': palette.get('grayscale'),
+      'background-color': palette.get('grayscale', 'light-3'),
+      'box-shadow': none,
+    ),
+  ),
+  'dark': (
+    'default': (
+      'color': palette.get('grayscale', 'light-2'),
+      'background-color': palette.get('grayscale', 'dark-1'),
+      'box-shadow':
+        shadow.to-box-shadow(
+          shadow.generate(
+            $color: rgba(palette.get('grayscale', 'base-rgb'), 0.075),
+            $blur-radius: size.get('m'),
+          )
+        ),
+    ),
+    'hover': (
+      'color': palette.get('grayscale', 'dark-2'),
       'background-color': palette.get('brand-1', 'light-1'),
-      'border-color': palette.get('brand-1', 'light-1'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -149,7 +188,6 @@ $secondary: (
     'active': (
       'color': palette.get('brand-1', 'dark-1'),
       'background-color': palette.get('brand-1', 'light-1'),
-      'border-color': palette.get('brand-1', 'light-1'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -161,7 +199,65 @@ $secondary: (
     'pressed': (
       'color': palette.get('brand-1'),
       'background-color': palette.get('brand-1', 'light-1'),
-      'border-color': palette.get('brand-1', 'light-1'),
+      'box-shadow':
+        shadow.to-box-shadow(
+          shadow.generate(
+            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
+            $blur-radius: size.get('s4'),
+          )
+        ),
+    ),
+    'disabled': (
+      'color': palette.get('grayscale', 'light-1'),
+      'background-color': palette.get('grayscale', 'dark-2'),
+      'box-shadow': none,
+    ),
+  ),
+) !default;
+
+/* prettier-ignore */
+$outline: (
+  'default': (
+    'default': (
+      'color': palette.get('grayscale', 'dark-2'),
+      'background-color': palette.get('grayscale', 'white'),
+      'border-color': palette.get('grayscale', 'dark-2'),
+      'box-shadow':
+        shadow.to-box-shadow(
+          shadow.generate(
+            $color: rgba(palette.get('grayscale', 'light-1-rgb'), 0.075),
+            $blur-radius: size.get('m'),
+          )
+        ),
+    ),
+    'hover': (
+      'color': palette.get('grayscale', 'dark-2'),
+      'background-color': palette.get('brand-1', 'light-4'),
+      'border-color': palette.get('grayscale', 'dark-2'),
+      'box-shadow':
+        shadow.to-box-shadow(
+          shadow.generate(
+            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
+            $blur-radius: size.get('l2'),
+          )
+        ),
+    ),
+    'active': (
+      'color': palette.get('brand-1', 'dark-1'),
+      'background-color': palette.get('brand-1', 'light-4'),
+      'border-color': palette.get('brand-1', 'dark-1'),
+      'box-shadow':
+        shadow.to-box-shadow(
+          shadow.generate(
+            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
+            $blur-radius: size.get('s4'),
+          )
+        ),
+    ),
+    'pressed': (
+      'color': palette.get('brand-1', 'dark-1'),
+      'background-color': palette.get('grayscale', 'white'),
+      'border-color': palette.get('brand-1', 'dark-1'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -172,9 +268,9 @@ $secondary: (
     ),
     'disabled': (
       'color': palette.get('grayscale'),
-      'background-color': palette.get('grayscale', 'light-1'),
-      'border-color': palette.get('grayscale', 'light-1'),
+      'background-color': palette.get('grayscale', 'light-3'),
       'box-shadow': none,
+      'border-color': palette.get('grayscale', 'light-1'),
     ),
   ),
   'dark': (
@@ -239,21 +335,21 @@ $secondary: (
 $transparent: (
   'default': (
     'default': (
-      'color': palette.get('grayscale'),
+      'color': palette.get('grayscale', 'dark-2'),
       'background-color': transparent,
       'border-color': transparent,
       'box-shadow': none,
     ),
     'hover': (
-      'color': palette.get('brand-1'),
-      'background-color': transparent,
+      'color': palette.get('grayscale', 'dark-2'),
+      'background-color': palette.get('brand-1', 'light-4'),
       'border-color': transparent,
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('brand-1'),
-      'background-color': palette.get('grayscale', 'light-2'),
-      'border-color': palette.get('grayscale', 'light-2'),
+      'color': palette.get('brand-1', 'dark-1'),
+      'background-color': palette.get('brand-1', 'light-4'),
+      'border-color': palette.get('brand-1', 'dark-1'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -264,21 +360,21 @@ $transparent: (
     ),
     'pressed': (
       'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('grayscale', 'light-1'),
-      'border-color': palette.get('grayscale', 'light-1'),
+      'background-color': palette.get('grayscale', 'white'),
+      'border-color': palette.get('brand-1', 'dark-1'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('grayscale', 'light-1-rgb'), 0.075),
+            $color: rgba(palette.get('brand-1', 'dark-1-rgb'), 0.075),
             $blur-radius: size.get('s4'),
           )
         ),
     ),
     'disabled': (
       'color': palette.get('grayscale'),
-      'background-color': palette.get('grayscale', 'light-1'),
-      'border-color': palette.get('grayscale', 'light-1'),
+      'background-color': palette.get('grayscale', 'light-3'),
       'box-shadow': none,
+      'border-color': palette.get('grayscale', 'light-3'),
     ),
   ),
   'dark': (
@@ -331,31 +427,26 @@ $transparent: (
 $tab: (
   'default': (
     'default': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('grayscale', 'dark-2'),
     ),
     'hover': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('brand-1'),
     ),
     'active': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('brand-1', 'dark-1'),
     ),
     'pressed': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('brand-1', 'dark-2'),
     ),
     'disabled': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('grayscale', 'light-1'),
@@ -363,31 +454,26 @@ $tab: (
   ),
   'dark': (
     'default': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('grayscale', 'light-2'),
     ),
     'hover': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('brand-1', 'light-2'),
     ),
     'active': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('brand-1', 'light-3'),
     ),
     'pressed': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('grayscale', 'light-1'),
     ),
     'disabled': (
-      'border-color': transparent,
       'background-color': transparent,
       'box-shadow': none,
       'color': palette.get('grayscale', 'dark-2'),
@@ -427,6 +513,7 @@ $danger: (
 $variants: (
   '': $default,
   '--secondary': $secondary,
+  '--outline': $outline,
   '--transparent': $transparent,
   '--tab': $tab,
   '--danger': $danger,

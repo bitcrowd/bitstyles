@@ -18,8 +18,9 @@
   max-width: 100%;
   min-height: var(#{custom-property.get($items: ('button', 'min-height'), $layer: 'atom')});
   margin: 0;
-  padding: var(#{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')})
-    var(#{custom-property.get($items: ('button','padding-horizontal'), $layer: 'atom')});
+  padding: 
+    calc(var(#{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')}) - var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')}, 0rem))
+    calc(var(#{custom-property.get($items: ('button','padding-horizontal'), $layer: 'atom')}) - var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')}, 0rem));
   overflow: visible;
   transition: var(#{custom-property.get($items: ('button', 'transition'), $layer: 'atom')});
   border-width: var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')});
@@ -35,11 +36,19 @@
   user-select: none;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   touch-action: manipulation;
+  outline-offset: 0;
 
   &:hover,
   &:focus {
-    outline: none;
+    outline-width: 0rem;
     text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline-color: settings.$outline-color;
+    outline-style: auto;
+    outline-width: settings.$outline-width;
+    outline-offset: settings.$outline-offset;
   }
 
   &:disabled,

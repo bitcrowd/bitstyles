@@ -23,29 +23,38 @@ Buttons react to user interaction, and can be disabled, giving the following sta
 | disabled | The button is not currently clickable, and will not perform an action                                                                                                                                                                                                                                                                       |
 
 <Canvas>
-  <Story name="Primary">
+  <Story name="primary">
     {`
       <div class="u-padding-m" data-theme="default">
         <button class="a-button">
-          Save
+          Button primary
         </button>
       </div>
     `}
   </Story>
-  <Story name="Secondary">
+  <Story name="secondary">
     {`
       <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--secondary">
-          Edit
+          Button secondary
         </button>
       </div>
     `}
   </Story>
-  <Story name="Transparent">
+  <Story name="transparent">
     {`
       <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--transparent">
-          Cancel
+          Button transparent
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="outline">
+    {`
+      <div class="u-padding-m" data-theme="default">
+        <button class="a-button a-button--outline">
+          Button outline
         </button>
       </div>
     `}
@@ -61,7 +70,7 @@ A special color variant that only shows itself on hover. This can be applied to 
     {`
       <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--danger">
-          Destroy
+          Danger primary
         </button>
       </div>
     `}
@@ -70,7 +79,7 @@ A special color variant that only shows itself on hover. This can be applied to 
     {`
       <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--secondary a-button--danger">
-          Destroy
+          Danger secondary
         </button>
       </div>
     `}
@@ -79,7 +88,57 @@ A special color variant that only shows itself on hover. This can be applied to 
     {`
       <div class="u-padding-m" data-theme="default">
         <button class="a-button a-button--transparent a-button--danger">
-          Destroy
+          Danger transparent
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="Danger/outline">
+    {`
+      <div class="u-padding-m" data-theme="default">
+        <button class="a-button a-button--outline a-button--danger">
+          Danger outline
+        </button>
+      </div>
+    `}
+  </Story>
+</Canvas>
+
+### Pressed buttons
+
+<Canvas>
+  <Story name="primary pressed">
+    {`
+      <div class="u-padding-m" data-theme="default">
+        <button class="a-button" aria-pressed="true">
+          Save
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="secondary pressed">
+    {`
+      <div class="u-padding-m" data-theme="default">
+        <button class="a-button a-button--secondary" aria-pressed="true">
+          Edit
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="transparent pressed">
+    {`
+      <div class="u-padding-m" data-theme="default">
+        <button class="a-button a-button--transparent" aria-pressed="true">
+          Cancel
+        </button>
+      </div>
+    `}
+  </Story>
+  <Story name="outline pressed">
+    {`
+      <div class="u-padding-m" data-theme="default">
+        <button class="a-button a-button--outline" aria-pressed="true">
+          Cancel
         </button>
       </div>
     `}
