@@ -486,8 +486,8 @@ $danger: (
   'default': (
     'hover': (
       'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('danger'),
-      'border-color': palette.get('danger'),
+      'background-color': palette.get('danger', 'dark-1'),
+      'border-color': palette.get('danger', 'dark-1'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
@@ -497,9 +497,21 @@ $danger: (
         ),
     ),
     'active': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('danger', 'dark-1'),
-      'border-color': palette.get('danger', 'dark-1'),
+      'color': palette.get('danger', 'dark-1'),
+      'background-color': palette.get('danger', 'light-2'),
+      'border-color': palette.get('danger', 'light-2'),
+      'box-shadow':
+        shadow.to-box-shadow(
+          shadow.generate(
+            $color: rgba(palette.get('danger', 'base-rgb'), 0.075),
+            $blur-radius: size.get('s4'),
+          )
+        ),
+    ),
+    'pressed': (
+      'color': palette.get('danger', 'dark-2'),
+      'background-color': palette.get('danger', 'light-2'),
+      'border-color': palette.get('danger', 'light-2'),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
