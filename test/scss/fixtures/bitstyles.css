@@ -1694,17 +1694,17 @@ table {
 .a-card {
   border-radius: var(--bs-size-s1);
   box-shadow: 0 calc(var(--bs-size-s1) / 6) calc(var(--bs-size-l5) / 6)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 5) calc(var(--bs-size-l5) / 5)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 4) calc(var(--bs-size-l5) / 4)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 3) calc(var(--bs-size-l5) / 3)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 2) calc(var(--bs-size-l5) / 2)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 1) calc(var(--bs-size-l5) / 1)
-      rgba(var(--bs-color-brand-1-base), 0.025);
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025);
   overflow: hidden;
   padding: var(--bs-size-s1);
 }
@@ -1717,17 +1717,17 @@ table {
 .a-card-l {
   border-radius: var(--bs-size-s1);
   box-shadow: 0 calc(var(--bs-size-s1) / 6) calc(var(--bs-size-l5) / 6)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 5) calc(var(--bs-size-l5) / 5)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 4) calc(var(--bs-size-l5) / 4)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 3) calc(var(--bs-size-l5) / 3)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 2) calc(var(--bs-size-l5) / 2)
-      rgba(var(--bs-color-brand-1-base), 0.025),
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025),
     0 calc(var(--bs-size-s1) / 1) calc(var(--bs-size-l5) / 1)
-      rgba(var(--bs-color-brand-1-base), 0.025);
+      rgba(var(--bs-color-brand-1-base-rgb), 0.025);
   overflow: hidden;
   padding: var(--bs-size-l2);
 }
@@ -1741,17 +1741,17 @@ table {
   .a-card\@m {
     border-radius: var(--bs-size-s1);
     box-shadow: 0 calc(var(--bs-size-s1) / 6) calc(var(--bs-size-l5) / 6)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 5) calc(var(--bs-size-l5) / 5)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 4) calc(var(--bs-size-l5) / 4)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 3) calc(var(--bs-size-l5) / 3)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 2) calc(var(--bs-size-l5) / 2)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 1) calc(var(--bs-size-l5) / 1)
-        rgba(var(--bs-color-brand-1-base), 0.025);
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025);
     overflow: hidden;
     padding: var(--bs-size-s1);
   }
@@ -1764,17 +1764,17 @@ table {
   .a-card-l\@m {
     border-radius: var(--bs-size-s1);
     box-shadow: 0 calc(var(--bs-size-s1) / 6) calc(var(--bs-size-l5) / 6)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 5) calc(var(--bs-size-l5) / 5)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 4) calc(var(--bs-size-l5) / 4)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 3) calc(var(--bs-size-l5) / 3)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 2) calc(var(--bs-size-l5) / 2)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 1) calc(var(--bs-size-l5) / 1)
-        rgba(var(--bs-color-brand-1-base), 0.025);
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025);
     overflow: hidden;
     padding: var(--bs-size-l2);
   }
@@ -1789,17 +1789,17 @@ table {
   .a-card\@l {
     border-radius: var(--bs-size-s1);
     box-shadow: 0 calc(var(--bs-size-s1) / 6) calc(var(--bs-size-l5) / 6)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 5) calc(var(--bs-size-l5) / 5)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 4) calc(var(--bs-size-l5) / 4)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 3) calc(var(--bs-size-l5) / 3)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 2) calc(var(--bs-size-l5) / 2)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 1) calc(var(--bs-size-l5) / 1)
-        rgba(var(--bs-color-brand-1-base), 0.025);
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025);
     overflow: hidden;
     padding: var(--bs-size-s1);
   }
@@ -1812,17 +1812,17 @@ table {
   .a-card-l\@l {
     border-radius: var(--bs-size-s1);
     box-shadow: 0 calc(var(--bs-size-s1) / 6) calc(var(--bs-size-l5) / 6)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 5) calc(var(--bs-size-l5) / 5)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 4) calc(var(--bs-size-l5) / 4)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 3) calc(var(--bs-size-l5) / 3)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 2) calc(var(--bs-size-l5) / 2)
-        rgba(var(--bs-color-brand-1-base), 0.025),
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025),
       0 calc(var(--bs-size-s1) / 1) calc(var(--bs-size-l5) / 1)
-        rgba(var(--bs-color-brand-1-base), 0.025);
+        rgba(var(--bs-color-brand-1-base-rgb), 0.025);
     overflow: hidden;
     padding: var(--bs-size-l2);
   }
@@ -1882,13 +1882,13 @@ table {
   border: 2px solid var(--bs-color-brand-1-base);
   border-radius: var(--bs-size-s5);
   box-shadow: 0 calc(var(--bs-size-s1) / 4) calc(var(--bs-size-m) / 4)
-      rgba(var(--bs-color-brand-1-light-1), 0.05),
+      rgba(var(--bs-color-brand-1-light-1-rgb), 0.05),
     0 calc(var(--bs-size-s1) / 3) calc(var(--bs-size-m) / 3)
-      rgba(var(--bs-color-brand-1-light-1), 0.05),
+      rgba(var(--bs-color-brand-1-light-1-rgb), 0.05),
     0 calc(var(--bs-size-s1) / 2) calc(var(--bs-size-m) / 2)
-      rgba(var(--bs-color-brand-1-light-1), 0.05),
+      rgba(var(--bs-color-brand-1-light-1-rgb), 0.05),
     0 calc(var(--bs-size-s1) / 1) calc(var(--bs-size-m) / 1)
-      rgba(var(--bs-color-brand-1-light-1), 0.05);
+      rgba(var(--bs-color-brand-1-light-1-rgb), 0.05);
   max-height: 20rem;
   max-width: 90vw;
   min-width: 12rem;
@@ -2124,10 +2124,10 @@ table {
 .o-sidebar--small {
   bottom: 0;
   box-shadow: var(--bs-size-s1) 0 var(--bs-size-m)
-      rgba(var(--bs-color-brand-1-base), 10%),
+      rgba(var(--bs-color-brand-1-base-rgb), 10%),
     var(--bs-size-m) 0 var(--bs-size-s1)
-      rgba(var(--bs-color-grayscale-light-1), 7%),
-    0 0 var(--bs-size-l1) rgba(var(--bs-color-grayscale-light-1), 10%);
+      rgba(var(--bs-color-grayscale-light-1-rgb), 7%),
+    0 0 var(--bs-size-l1) rgba(var(--bs-color-grayscale-light-1-rgb), 10%);
   left: 0;
   position: fixed;
   top: 0;
@@ -2179,10 +2179,13 @@ table {
 .o-ui-group {
   border-radius: var(--bs-size-s3);
   box-shadow: 0 0 calc(var(--bs-size-s5) / 4)
-      rgba(var(--bs-color-brand-1-light-1), 0.025),
-    0 0 calc(var(--bs-size-s5) / 3) rgba(var(--bs-color-brand-1-light-1), 0.025),
-    0 0 calc(var(--bs-size-s5) / 2) rgba(var(--bs-color-brand-1-light-1), 0.025),
-    0 0 calc(var(--bs-size-s5) / 1) rgba(var(--bs-color-brand-1-light-1), 0.025);
+    rgba(var(--bs-color-brand-1-light-1-rgb), 0.025),
+      0 0 calc(var(--bs-size-s5) / 3)
+        rgba(var(--bs-color-brand-1-light-1-rgb), 0.025),
+      0 0 calc(var(--bs-size-s5) / 2)
+        rgba(var(--bs-color-brand-1-light-1-rgb), 0.025),
+      0 0 calc(var(--bs-size-s5) / 1)
+        rgba(var(--bs-color-brand-1-light-1-rgb), 0.025);
 }
 .o-ui-group__item {
   box-shadow: none;
