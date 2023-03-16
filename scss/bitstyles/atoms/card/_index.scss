@@ -11,8 +11,8 @@
 }
 
 @mixin card-header($spacing) {
-  margin: calc(#{$spacing} * -1) calc(#{$spacing} * -1) $spacing;
-  padding: calc(#{$spacing} / 2) $spacing;
+  margin: calc($spacing * -1) calc($spacing * -1) $spacing;
+  padding: calc($spacing / 2) $spacing;
   background-color: settings.$header-background-color;
 }
 
