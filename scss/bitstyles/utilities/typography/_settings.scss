@@ -2,10 +2,12 @@
 @use '../../tools/font-size';
 @use 'sass:map';
 
+/* stylelint-disable scss/dollar-variable-default */
 $font-sizes: ();
 @each $name, $font-size in typography.$font-sizes {
   $font-sizes: map.set($font-sizes, $name, font-size.get($name));
 }
+/* stylelint-enable scss/dollar-variable-default */
 
 $values: $font-sizes !default;
 $breakpoints: ('m') !default;

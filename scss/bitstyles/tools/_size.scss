@@ -18,7 +18,14 @@
 @function get($size, $format: setup.$default-token-format) {
   @if map.has-key(layout.$sizes, $size) {
     @if $format == 'custom-property' {
-      @return var(#{custom-property.get($items: ('size', $size))});
+      @return var(
+        #{custom-property.get(
+            $items: (
+              'size',
+              $size,
+            )
+          )}
+      );
     }
     @return map.get(layout.$sizes, $size);
   } @else {

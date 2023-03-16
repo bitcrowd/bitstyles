@@ -16,7 +16,14 @@
 @function get($line-height, $format: setup.$default-token-format) {
   @if map.has-key(typography.$line-heights, $line-height) {
     @if $format == 'custom-property' {
-      @return var(#{custom-property.get($items: ('line-height', $line-height))});
+      @return var(
+        #{custom-property.get(
+            $items: (
+              'line-height',
+              $line-height,
+            )
+          )}
+      );
     }
     @return map.get(typography.$line-heights, $line-height);
   } @else {

@@ -16,7 +16,14 @@
 @function get($font-size, $format: setup.$default-token-format) {
   @if map.has-key(typography.$font-sizes, $font-size) {
     @if $format == 'custom-property' {
-      @return var(#{custom-property.get($items: ('font-size', $font-size))});
+      @return var(
+        #{custom-property.get(
+            $items: (
+              'font-size',
+              $font-size,
+            )
+          )}
+      );
     }
     @return map.get(typography.$font-sizes, $font-size);
   } @else {

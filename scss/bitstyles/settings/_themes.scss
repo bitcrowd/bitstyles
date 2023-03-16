@@ -8,7 +8,7 @@ $default-theme: (
   'text': palette.get('grayscale', 'dark-3'),
 ) !default;
 $dark-theme: (
-  'background': palette.get('grayscale','dark-3'),
+  'background': palette.get('grayscale', 'dark-3'),
   'text': palette.get('grayscale', 'light-3'),
 ) !default;
 $default-theme-name: 'default' !default;

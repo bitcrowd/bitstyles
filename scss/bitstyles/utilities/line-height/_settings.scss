@@ -2,10 +2,12 @@
 @use '../../tools/line-height';
 @use 'sass:map';
 
+/* stylelint-disable scss/dollar-variable-default */
 $line-heights: ();
 @each $name, $line-height in typography.$line-heights {
   $line-heights: map.set($line-heights, $name, line-height.get($name));
 }
+/* stylelint-enable scss/dollar-variable-default */
 
 $values: $line-heights !default;
 $breakpoints: () !default;
