@@ -5,8 +5,6 @@
 //
 // Base styles ////////////////////////////////////////
 
-$border-radius: 0 !default;
-$border-width: size.get('s6') !default;
 $transition: color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing !default;
 $indicator-transition: background-color animation.$transition-duration
@@ -14,9 +12,10 @@ $indicator-transition: background-color animation.$transition-duration
 
 //
 // Indicator colors ////////////////////////////////////////
-
-$indicator-color: transparent !default;
-$indicator-color-hover: palette.get('brand-1') !default;
-$indicator-color-active: palette.get('brand-1') !default;
-$indicator-color-pressed: palette.get('brand-1') !default;
-$indicator-color-disabled: transparent !default;
+$indicator-width: size.get('s6') !default;
+$indicator-border-radius: 0 !default;
+$indicator-color: palette.get('brand-1', 'light-4') !default;
+$indicator-color-hover: palette.get('brand-1', 'light-4') !default;
+$indicator-color-active: palette.get('brand-1', 'light-2') !default;
+$indicator-color-pressed: palette.get('brand-1', 'dark-1') !default;
+$indicator-color-disabled: palette.get('grayscale', 'base') !default;

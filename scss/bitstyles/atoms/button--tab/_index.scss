@@ -1,59 +1,29 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/layout';
 @use '../../tools/classname';
 @use '../../tools/custom-property';
 @use '../../tools/button';
-@use '../button/settings' as button-settings;
 
 #{classname.get($classname-items: 'button--tab-container', $layer: 'atom')} {
   & > *:first-child {
-    margin-left: -(
-        var(
-          #{custom-property.get(
-              $items: (
-                'button',
-                'padding-horizontal',
-              ),
-              $layer: 'atom'
-            )}
-        )
-      );
+    margin-left: calc(var(#{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')}) * -1);
   }
 }
 
 #{classname.get($classname-items: 'button--tab', $layer: 'atom')} {
   position: relative;
-  border: 0;
-  border-radius: settings.$border-radius;
 
   &,
   &:visited {
     &::after {
       content: '';
       position: absolute;
-      right: var(
-        #{custom-property.get(
-            $items: (
-              'button',
-              'padding-horizontal',
-            ),
-            $layer: 'atom'
-          )}
-      );
+      right: 0;
       bottom: 0;
-      left: var(
-        #{custom-property.get(
-            $items: (
-              'button',
-              'padding-horizontal',
-            ),
-            $layer: 'atom'
-          )}
-      );
-      height: settings.$border-width;
+      left: 0;
+      height: settings.$indicator-width;
       transition: settings.$indicator-transition;
-      border-radius: layout.$border-radius-round;
+      border-radius: settings.$indicator-border-radius;
       background-color: settings.$indicator-color;
     }
   }

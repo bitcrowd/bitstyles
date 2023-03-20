@@ -429,12 +429,12 @@ $tab: (
     'default': (
       'background-color': transparent,
       'box-shadow': none,
-      'color': palette.get('grayscale', 'dark-2'),
+      'color': palette.get('grayscale', 'dark-1'),
     ),
     'hover': (
       'background-color': transparent,
       'box-shadow': none,
-      'color': palette.get('brand-1'),
+      'color': palette.get('brand-1', 'dark-1'),
     ),
     'active': (
       'background-color': transparent,
@@ -449,7 +449,7 @@ $tab: (
     'disabled': (
       'background-color': transparent,
       'box-shadow': none,
-      'color': palette.get('grayscale', 'light-1'),
+      'color': palette.get('grayscale'),
     ),
   ),
   'dark': (
