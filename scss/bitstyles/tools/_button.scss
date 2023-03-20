@@ -87,29 +87,30 @@
   }
 
   @if $with-square-variant {
+    $line-height: custom-property.get(
+      $items: (
+        'line-height',
+        '5',
+      ),
+    );
+    $min-width: custom-property.get(
+      $items: (
+        'button',
+        'min-width',
+      ),
+      $layer: 'atom',
+    );
+    $min-height: custom-property.get(
+      $items: (
+        'button',
+        'min-height',
+      ),
+      $layer: 'atom',
+    );
+
     &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
-      #{custom-property.get($items: ('button', 'min-width'), $layer: 'atom')}: calc(
-        1em *
-          var(
-            #{custom-property.get(
-                $items: (
-                  'line-height',
-                  '5',
-                )
-              )}
-          )
-      );
-      #{custom-property.get($items: ('button', 'min-height'), $layer: 'atom')}: calc(
-        1em *
-          var(
-            #{custom-property.get(
-                $items: (
-                  'line-height',
-                  '5',
-                )
-              )}
-          )
-      );
+      #{$min-width}: #{calc(1em * var(#{$line-height}))};
+      #{$min-height}: #{calc(1em * var(#{$line-height}))};
 
       @if map.has-key($sizes, 'padding-vertical') {
         #{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')}: #{map.get(
