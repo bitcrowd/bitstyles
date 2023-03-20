@@ -63,6 +63,7 @@
 
 #{classname.get($classname-items: 'button__avatar', $layer: 'atom')},
 #{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
+  flex-shrink: 0;
   margin-right: settings.$icon-spacing;
   margin-left: calc((settings.$icon-spacing * -1) / 4);
 }

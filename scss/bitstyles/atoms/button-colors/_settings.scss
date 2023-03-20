@@ -270,7 +270,7 @@ $outline: (
       'color': palette.get('grayscale'),
       'background-color': palette.get('grayscale', 'light-3'),
       'box-shadow': none,
-      'border-color': palette.get('grayscale', 'light-1'),
+      'border-color': palette.get('grayscale', 'light-3'),
     ),
   ),
   'dark': (
