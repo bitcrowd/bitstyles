@@ -23,6 +23,7 @@ module.exports = {
         controls: false,
       },
     },
+    'storybook-zeplin/register',
   ],
   webpackFinal: async (config) => {
     // Make whatever fine-grained changes you need

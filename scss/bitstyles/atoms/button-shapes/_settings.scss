@@ -26,6 +26,7 @@ $small: (
 $large: (
   'padding-vertical': size.get('m'),
   'padding-horizontal': size.get('l3'),
+  'border-radius': size.get('s3'),
   'font-size': font-size.get('2'),
 ) !default;
 $transparent: (
