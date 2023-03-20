@@ -4,6 +4,7 @@
 @use '../../tools/font-size';
 @use '../../tools/size';
 
+/* stylelint-disable length-zero-no-unit */
 $default: (
   'padding-vertical': size.get('s2'),
   'padding-horizontal': size.get('l1'),
@@ -14,6 +15,7 @@ $default: (
   'font-size': font-size.get('2'),
   'font-weight': typography.$font-weight-semibold,
 ) !default;
+/* stylelint-enable length-zero-no-unit */
 $small: (
   'padding-vertical': size.get('s6'),
   'padding-horizontal': size.get('s3'),
@@ -31,10 +33,10 @@ $large: (
 ) !default;
 $transparent: (
   'border-width': 0.1875rem,
-);
+) !default;
 $outline: (
   'border-width': 0.1875rem,
-);
+) !default;
 $menu: (
   'justify-content': flex-start,
 ) !default;

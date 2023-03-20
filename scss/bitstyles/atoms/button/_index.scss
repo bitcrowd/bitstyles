@@ -26,6 +26,7 @@
   border-width: var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')});
   border-style: solid;
   border-radius: var(#{custom-property.get($items: ('button', 'border-radius'), $layer: 'atom')});
+  outline-offset: 0;
   font-family: settings.$font-family;
   font-size: var(#{custom-property.get($items: ('button', 'font-size'), $layer: 'atom')});
   font-weight: var(#{custom-property.get($items: ('button', 'font-weight'), $layer: 'atom')});
@@ -36,18 +37,15 @@
   user-select: none;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
   touch-action: manipulation;
-  outline-offset: 0;
 
   &:hover,
   &:focus {
-    outline-width: 0rem;
+    outline-width: 0;
     text-decoration: none;
   }
 
   &:focus-visible {
-    outline-color: settings.$outline-color;
-    outline-style: auto;
-    outline-width: settings.$outline-width;
+    outline-color: settings.$outline-color auto settings.$outline-width;
     outline-offset: settings.$outline-offset;
   }
 

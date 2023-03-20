@@ -6,7 +6,17 @@
 
 #{classname.get($classname-items: 'button--tab-container', $layer: 'atom')} {
   & > *:first-child {
-    margin-left: calc(var(#{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')}) * -1);
+    margin-left: calc(
+      var(
+          #{custom-property.get(
+              $items: (
+                'button',
+                'padding-horizontal',
+              ),
+              $layer: 'atom'
+            )}
+        ) * -1
+    );
   }
 }
 

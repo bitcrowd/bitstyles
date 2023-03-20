@@ -10,21 +10,21 @@ Buttons for selecting which of several tabpanels will be shown. There are severa
 <Canvas>
   <Story
     name="Tab"
-    parameters={{ 
+    parameters={{
       zeplinLink: [
         {
-          name: "base",
-          link: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094a81f046353009612ce"
+          name: 'base',
+          link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094a81f046353009612ce',
         },
         {
-          name: "hover",
-          link: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b16e5d7140eb0735c8"
+          name: 'hover',
+          link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b16e5d7140eb0735c8',
         },
         {
-          name: "active",
-          link: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b2d4c5cc51aff0b511"
+          name: 'active',
+          link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b2d4c5cc51aff0b511',
         },
-      ]
+      ],
     }}
   >
     {`
@@ -33,14 +33,26 @@ Buttons for selecting which of several tabpanels will be shown. There are severa
       </button>
     `}
   </Story>
-  <Story name="Tab [aria-selected]" parameters={{ zeplinLink: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b52890b84043f89ba4" }}>
+  <Story
+    name="Tab [aria-selected]"
+    parameters={{
+      zeplinLink:
+        'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b52890b84043f89ba4',
+    }}
+  >
     {`
       <button class="a-button a-button--tab" type="button" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
         Tab 1
       </button>
     `}
   </Story>
-  <Story name="Tab [disabled]" parameters={{ zeplinLink: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b30ee0b5408ad023fd" }}>
+  <Story
+    name="Tab [disabled]"
+    parameters={{
+      zeplinLink:
+        'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b30ee0b5408ad023fd',
+    }}
+  >
     {`
       <button class="a-button a-button--tab" type="button" role="tab" aria-selected="false" disabled aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
         Tab 1
@@ -56,21 +68,21 @@ Ideally, these would be `<button>` elements, and the behavior handled using JS, 
 <Canvas>
   <Story
     name="Tab anchor"
-    parameters={{ 
+    parameters={{
       zeplinLink: [
         {
-          name: "base",
-          link: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094a81f046353009612ce"
+          name: 'base',
+          link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094a81f046353009612ce',
         },
         {
-          name: "hover",
-          link: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b16e5d7140eb0735c8"
+          name: 'hover',
+          link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b16e5d7140eb0735c8',
         },
         {
-          name: "active",
-          link: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b2d4c5cc51aff0b511"
+          name: 'active',
+          link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b2d4c5cc51aff0b511',
         },
-      ]
+      ],
     }}
   >
     {`
@@ -79,14 +91,26 @@ Ideally, these would be `<button>` elements, and the behavior handled using JS, 
       </button>
     `}
   </Story>
-  <Story name="Tab anchor [aria-selected]"  parameters={{ zeplinLink: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b52890b84043f89ba4" }}>
+  <Story
+    name="Tab anchor [aria-selected]"
+    parameters={{
+      zeplinLink:
+        'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b52890b84043f89ba4',
+    }}
+  >
     {`
       <a href="/" class="a-button a-button--tab" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
         Tab 1
       </button>
     `}
   </Story>
-  <Story name="Tab anchor [disabled]" parameters={{ zeplinLink: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b30ee0b5408ad023fd" }}>
+  <Story
+    name="Tab anchor [disabled]"
+    parameters={{
+      zeplinLink:
+        'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b30ee0b5408ad023fd',
+    }}
+  >
     {`
       <a href="/" class="a-button a-button--tab" role="tab" aria-selected="false" aria-disabled="true" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
         Tab 1
@@ -102,21 +126,21 @@ Tab buttons can be used with just an icon as a visible label (use `.u-st-only` t
 <Canvas>
   <Story
     name="Tab (icon-only)"
-    parameters={{ 
+    parameters={{
       zeplinLink: [
         {
-          name: "base",
-          link: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094a9a2dc7d52db2d8834"
+          name: 'base',
+          link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094a9a2dc7d52db2d8834',
         },
         {
-          name: "hover",
-          link: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094af9a3e7840645a63a9"
+          name: 'hover',
+          link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094af9a3e7840645a63a9',
         },
         {
-          name: "active",
-          link: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b06c8c26529c784569"
+          name: 'active',
+          link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b06c8c26529c784569',
         },
-      ]
+      ],
     }}
   >
     {`
@@ -128,7 +152,13 @@ Tab buttons can be used with just an icon as a visible label (use `.u-st-only` t
       </button>
     `}
   </Story>
-  <Story name="Tab (icon-only) [aria-selected]" parameters={{ zeplinLink: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094ac4e82263ff99ce71b" }}>
+  <Story
+    name="Tab (icon-only) [aria-selected]"
+    parameters={{
+      zeplinLink:
+        'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094ac4e82263ff99ce71b',
+    }}
+  >
     {`
       <button class="a-button a-button--tab" type="button" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
         <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
@@ -138,7 +168,13 @@ Tab buttons can be used with just an icon as a visible label (use `.u-st-only` t
       </button>
     `}
   </Story>
-  <Story name="Tab (icon-only) [disabled]" parameters={{ zeplinLink: "https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094ad19b55352bac88778" }}>
+  <Story
+    name="Tab (icon-only) [disabled]"
+    parameters={{
+      zeplinLink:
+        'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094ad19b55352bac88778',
+    }}
+  >
     {`
       <button class="a-button a-button--tab" type="button" role="tab" aria-selected="false" disabled aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
         <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
