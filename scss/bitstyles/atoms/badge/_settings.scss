@@ -1,7 +1,48 @@
+@use '../../settings/setup';
+@use '../../tools/palette';
 @use '../../tools/size';
 
-$padding-vertical: size.get('s6') !default;
-$padding-horizontal: size.get('s1') !default;
-$color: 'dark-1' !default;
-$background-color: 'light-2' !default;
-$variants: ('grayscale', 'danger', 'brand-1', 'brand-2', 'positive') !default;
+$color-variants: (
+  'brand-1': (
+    'color': palette.get('brand-1', 'dark-1'),
+    'background-color': palette.get('brand-1', 'light-4'),
+  ),
+  'grayscale': (
+    'color': palette.get('grayscale', 'dark-2'),
+    'background-color': palette.get('grayscale', 'light-4'),
+  ),
+  'warning': (
+    'color': palette.get('warning', 'dark-1'),
+    'background-color': palette.get('warning', 'light-4'),
+  ),
+  'danger': (
+    'color': palette.get('danger', 'dark-1'),
+    'background-color': palette.get('danger', 'light-4'),
+  ),
+  'brand-2': (
+    'color': palette.get('brand-2', 'dark-1'),
+    'background-color': palette.get('brand-2', 'light-4'),
+  ),
+  'positive': (
+    'color': palette.get('brand-2', 'dark-1'),
+    'background-color': palette.get('positive', 'light-4'),
+  ),
+) !default;
+$size-variants: (
+  '#{setup.$no-media-query}': (
+    '': (
+      'padding-vertical': size.get('s6'),
+      'padding-horizontal': size.get('l1'),
+    ),
+  ),
+  'm': (
+    '': (
+      'padding-vertical': size.get('s4'),
+      'padding-horizontal': size.get('l1'),
+    ),
+    'small': (
+      'padding-vertical': size.get('s6'),
+      'padding-horizontal': size.get('l1'),
+    ),
+  ),
+) !default;

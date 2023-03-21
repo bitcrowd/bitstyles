@@ -10,31 +10,94 @@ Display tags, filters, or categorization.
 <Canvas>
   <Story name="Badge">
     {`
-      <span class="a-badge a-badge--grayscale u-h6 u-font-medium">Urgent</span>
-      <span class="a-badge a-badge--grayscale u-h6 u-font-medium">In progress</span>
+      <span class="a-badge a-badge--grayscale u-font-medium">Urgent</span>
+      <span class="a-badge a-badge--grayscale u-font-medium">In progress</span>
     `}
   </Story>
 </Canvas>
 
-By default `gray`, `brand-1`, `brand-2`, and `danger` colors are available (see [Customization](#customization) section below). Here, they’re displayed in a list (there are often multiple tags or filters so this is very common).
+## Variants
+
+Badges are available in a range of color variations, and two size variations (when using the default configuration — see [Customization](#customization) below for details on how to change that).
+
+Color variants:
+
+- grayscale
+- brand-1
+- brand-2
+- danger
+- warning
+- positive
+
+Size variants:
+
+- base (no modifier)
+- small
+
+All badges are displayed as `small` badges on small screens.
 
 <Canvas>
-  <Story name="Badge — color variants">
+  <Story name="badge — grayscale">
     {`
-      <ul class="u-list-none u-flex">
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--grayscale u-h6 u-font-medium">gray</span>
-        </li>
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--brand-1 u-h6 u-font-medium">brand-1</span>
-        </li>
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--brand-2 u-h6 u-font-medium">brand-2</span>
-        </li>
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--danger u-h6 u-font-medium">danger</span>
-        </li>
-      </ul>
+      <span class="a-badge a-badge--grayscale u-font-medium">Grayscale</span>
+    `}
+  </Story>
+  <Story name="badge — brand-1">
+    {`
+      <span class="a-badge a-badge--brand-1 u-font-medium">Brand-1</span>
+    `}
+  </Story>
+  <Story name="badge — brand-2">
+    {`
+      <span class="a-badge a-badge--brand-2 u-font-medium">Brand-2</span>
+    `}
+  </Story>
+  <Story name="badge — danger">
+    {`
+      <span class="a-badge a-badge--danger u-font-medium">Danger</span>
+    `}
+  </Story>
+  <Story name="badge — brand-warning">
+    {`
+      <span class="a-badge a-badge--warning u-font-medium">Warning</span>
+    `}
+  </Story>
+  <Story name="badge — positive">
+    {`
+      <span class="a-badge a-badge--positive u-font-medium">Positive</span>
+    `}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="badge — grayscale small">
+    {`
+      <span class="a-badge a-badge--small a-badge--grayscale u-font-medium">Grayscale</span>
+    `}
+  </Story>
+  <Story name="badge — brand-1 small">
+    {`
+      <span class="a-badge a-badge--small a-badge--brand-1 u-font-medium">Brand-1</span>
+    `}
+  </Story>
+  <Story name="badge — brand-2 small">
+    {`
+      <span class="a-badge a-badge--small a-badge--brand-2 u-font-medium">Brand-2</span>
+    `}
+  </Story>
+  <Story name="badge — danger small">
+    {`
+      <span class="a-badge a-badge--small a-badge--danger u-font-medium">Danger</span>
+    `}
+  </Story>
+  <Story name="badge — brand-warning small">
+    {`
+      <span class="a-badge a-badge--small a-badge--warning u-font-medium">Warning</span>
+    `}
+  </Story>
+  <Story name="badge — positive small">
+    {`
+      <span class="a-badge a-badge--small a-badge--positive u-font-medium">Positive</span>
     `}
   </Story>
 </Canvas>
@@ -46,7 +109,7 @@ You may want the badges to be removable, for example when used as part of a filt
     {`
       <ul class="u-list-none u-flex">
         <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--grayscale u-h6 u-font-medium">
+          <span class="a-badge a-badge--grayscale u-font-medium">
             badge 1
             <button class="a-button a-button--square a-button--round a-button--secondary a-button--small a-badge__button" type="button">
               <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
@@ -57,7 +120,7 @@ You may want the badges to be removable, for example when used as part of a filt
           </span>
         </li>
         <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--brand-1 u-h6 u-font-medium">
+          <span class="a-badge a-badge--brand-1 u-font-medium">
             badge 2
             <button class="a-button a-button--square a-button--round a-button--secondary a-button--small a-badge__button" type="button">
               <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
@@ -68,7 +131,7 @@ You may want the badges to be removable, for example when used as part of a filt
           </span>
         </li>
         <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--brand-2 u-h6 u-font-medium">
+          <span class="a-badge a-badge--brand-2 u-font-medium">
             badge 2
             <button class="a-button a-button--square a-button--round a-button--secondary a-button--small a-badge__button" type="button">
               <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
@@ -79,7 +142,7 @@ You may want the badges to be removable, for example when used as part of a filt
           </span>
         </li>
         <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--danger u-h6 u-font-medium">
+          <span class="a-badge a-badge--danger u-font-medium">
             badge 2
             <button class="a-button a-button--square a-button--round a-button--secondary a-button--small a-badge__button" type="button">
               <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
@@ -96,22 +159,36 @@ You may want the badges to be removable, for example when used as part of a filt
 
 ## Customization
 
-The available variants can be specified with `$bitstyles-badge-variants`, where the strings you pass must match colors in your color palette:
+The available color variants can be specified with `$color-variants`, where you pass the name of the variant and a Sass map of two keys (one for color, one for background-color) for each variant:
 
 ```scss
-$variants: ('grayscale', 'danger', 'brand-1', 'brand-2', 'positive');
+@use '~bitstyles/scss/bitstyles/atoms/badge' with (
+  $color-variants: (
+    'badge-name': (
+      'color': palette.get('brand-1', 'light-4'),
+      'background-color': palette.get('brand-1', 'dark-4'),
+    ),
+  )
+);
 ```
 
-The keys from those colors that will be used are specified with the `$bitstyles-badge-color` and `$bitstyles-badge-background-color`, and are applied to all variants. With the following settings, the `gray` variant will have color `gray` value `80`, with background color `gray` value `10`. The `danger` variant will have color `danger` with value `80` and background-color `danger` at value `10` etc.
+Similarly for size variants, override the `$size-variants` variable, with each breakpoint (or use `setup.$no-media-query` for the base styles) at the root, containing a size-variant name and Sass map with the vertical & horizontal padding:
 
 ```scss
-$color: '80';
-$background-color: '10';
-```
-
-Padding can be specified with `$bitstyles-badge-padding-horizontal` and ``$bitstyles-badge-padding-vertical`:
-
-```scss
-$padding-vertical: size.get('s6');
-$padding-horizontal: size.get('m');
+@use '~bitstyles/scss/bitstyles/atoms/badge' with (
+  $size-variants: (
+    '#{setup.$no-media-query}': (
+      '': (
+        'padding-vertical': size.get('s6'),
+        'padding-horizontal': size.get('l1'),
+      ),
+    ),
+    'l': (
+      '': (
+        'padding-vertical': size.get('s4'),
+        'padding-horizontal': size.get('l3'),
+      ),
+    ),
+  )
+);
 ```

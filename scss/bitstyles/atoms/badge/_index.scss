@@ -3,13 +3,15 @@
 @use '../../settings/layout';
 @use '../../tools/classname';
 @use '../../tools/custom-property';
+@use '../../tools/media-query';
 @use '../../tools/palette';
+@use '../../tools/properties';
 @use '../../tools/size';
+@use 'sass:map';
 
 #{classname.get($classname-items: 'badge', $layer: 'atom')} {
   display: inline-flex;
   align-items: center;
-  padding: settings.$padding-vertical settings.$padding-horizontal;
   border-radius: layout.$border-radius-round;
   white-space: nowrap;
 
@@ -19,25 +21,42 @@
   }
 }
 
-@each $variant in (settings.$variants) {
-  #{classname.get($classname-items: 'badge--#{$variant}', $layer: 'atom')} {
-    #{custom-property.get($items: ('button', 'color'), $layer: 'atom')}: #{palette.get(
-        $variant,
-        settings.$color
-      )};
-    #{custom-property.get($items: ('button', 'background-color'), $layer: 'atom')}: #{palette.get(
-        $variant,
-        settings.$background-color
-      )};
-    #{custom-property.get($items: ('button', 'color', 'hover'), $layer: 'atom')}: #{palette.get(
-        $variant,
-        settings.$background-color
-      )};
-    #{custom-property.get($items: ('button', 'background-color', 'hover'), $layer: 'atom')}: #{palette.get(
-        $variant,
-        settings.$color
-      )};
-    background-color: palette.get($variant, settings.$background-color);
-    color: palette.get($variant, settings.$color);
+@each $breakpoint, $size-variants in settings.$size-variants {
+  @include media-query.get($breakpoint) {
+    @each $size-variant-name, $size-variant in ($size-variants) {
+      $class: '';
+      @if $size-variant-name == '' {
+        $class: 'badge';
+      } @else {
+        $class: 'badge--#{$size-variant-name}';
+      }
+      #{classname.get($classname-items: $class, $layer: 'atom')} {
+        padding: map.get($size-variant, 'padding-vertical')
+          map.get($size-variant, 'padding-horizontal');
+      }
+    }
+  }
+}
+
+@each $color-variant-name, $color-variant in (settings.$color-variants) {
+  #{classname.get($classname-items: 'badge--#{$color-variant-name}', $layer: 'atom')} {
+    // #{custom-property.get($items: ('button', 'color'), $layer: 'atom')}: #{palette.get(
+    //     $color-variant,
+    //     settings.$color
+    //   )};
+    // #{custom-property.get($items: ('button', 'background-color'), $layer: 'atom')}: #{palette.get(
+    //     $color-variant,
+    //     settings.$background-color
+    //   )};
+    // #{custom-property.get($items: ('button', 'color', 'hover'), $layer: 'atom')}: #{palette.get(
+    //     $color-variant,
+    //     settings.$background-color
+    //   )};
+    // #{custom-property.get($items: ('button', 'background-color', 'hover'), $layer: 'atom')}: #{palette.get(
+    //     $color-variant,
+    //     settings.$color
+    //   )};
+    background-color: map.get($color-variant, 'background-color');
+    color: map.get($color-variant, 'color');
   }
 }
