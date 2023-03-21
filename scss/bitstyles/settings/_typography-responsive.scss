@@ -5,8 +5,8 @@
 $typographic-scale: (
   '#{setup.$no-media-query}': (
     'h1': (
-      'font-size': font-size.get('6'),
-      'line-height': line-height.get('2'),
+      'font-size': font-size.get('8'),
+      'line-height': line-height.get('1'),
     ),
     'h2': (
       'font-size': font-size.get('5'),
@@ -26,41 +26,49 @@ $typographic-scale: (
     ),
     'h6': (
       'font-size': font-size.get('1'),
-      'line-height': line-height.get('6'),
+      'line-height': line-height.get('5'),
     ),
     'body': (
       'font-size': font-size.get('2'),
-      'line-height': line-height.get('6'),
+      'line-height': line-height.get('5'),
     ),
   ),
   'm': (
     'h1': (
       'font-size': font-size.get('8'),
-      'line-height': line-height.get('2'),
+      'line-height': line-height.get('1'),
     ),
     'h2': (
       'font-size': font-size.get('7'),
-      'line-height': line-height.get('1'),
+      'line-height': line-height.get('2'),
     ),
     'h3': (
       'font-size': font-size.get('6'),
-      'line-height': line-height.get('3'),
+      'line-height': line-height.get('2'),
     ),
     'h4': (
-      'font-size': font-size.get('4'),
-      'line-height': line-height.get('5'),
+      'font-size': font-size.get('5'),
+      'line-height': line-height.get('3'),
     ),
     'h5': (
-      'font-size': font-size.get('2'),
+      'font-size': font-size.get('4'),
       'line-height': line-height.get('4'),
     ),
     'h6': (
-      'font-size': font-size.get('1'),
-      'line-height': line-height.get('6'),
+      'font-size': font-size.get('3'),
+      'line-height': line-height.get('4'),
     ),
     'body': (
+      'font-size': font-size.get('3'),
+      'line-height': line-height.get('4'),
+    ),
+    'h7': (
       'font-size': font-size.get('2'),
-      'line-height': line-height.get('5'),
+      'line-height': line-height.get('4'),
+    ),
+    'h8': (
+      'font-size': font-size.get('1'),
+      'line-height': line-height.get('3'),
     ),
   ),
 ) !default;
