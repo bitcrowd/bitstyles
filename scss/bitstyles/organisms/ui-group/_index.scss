@@ -14,7 +14,9 @@
   &:hover,
   &:active,
   &:focus {
-    &:not(#{classname.get($classname-items: 'ui-group__last', $layer: 'organism')}) {
+    &:not(
+        #{classname.get($classname-items: 'ui-group__last', $layer: 'organism')}
+      ) {
       border-right: 0;
     }
   }
