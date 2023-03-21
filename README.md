@@ -17,4 +17,4 @@ See [the contributing guide](./CONTRIBUTING.md) for an introduction to opening a
 
 ## Font license
 
-The Nunito webfont is included in Bitstyles, and is licensed under the [SIL Open Font License, 1.1](https://scripts.sil.org/ofl). Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito).
+The Poppins webfont is included in Bitstyles, and is licensed under the [SIL Open Font License, 1.1](https://scripts.sil.org/ofl). Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)

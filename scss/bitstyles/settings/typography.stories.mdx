@@ -2,21 +2,37 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 <Meta title="Design Tokens/Typography" />
 
+<Canvas>
+  <Story name="typographic scale">
+    {`
+      <h1>Level 1 heading</h1>
+      <h2>Level 2 heading</h2>
+      <h3>Level 3 heading</h3>
+      <h4>Level 4 heading</h4>
+      <h5>Level 5 heading</h5>
+      <h6>Level 6 heading</h6>
+      <p>Body test</p>
+      <p class="u-h7">Small text</p>
+      <p class="u-h8">Extra-small text</p>
+    `}
+  </Story>
+</Canvas>
+
 # Typography
 
-There are several aspects to typography which are handled by systems in bitstyles including font-family, webfonts, font-sizes, line-heights and default margins.
+There are several aspects to typography which are handled by systems in bitstyles including font-family, webfonts, font-sizes, line-heights and default margins. The typographic scale above is applied automatically when you use semantic elements like headings, lists, and paragraphs, but you can also make use of font-weight, font-size, and font-weight utility classes to create typography outside this scale (see the next section for details).
 
 ## Font-sizes
 
-Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default configuration provides base design tokens for font-sizes based on a ratio of 1.17 between each font-size.
+Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default configuration provides base design tokens for font-sizes using on a custom ratio between each font-size.
 
-These base tokens are used to create a responsive typographic scale that’s applied to the base elements `h1` – `h6` and the corresponding utility classes `.u-h1` – `.u-h6`. The utility classes `.u-text-1` to `.u-text-8` produce exceptions to this responsive typography at specific breakpoints.
+These design tokens are used to create a responsive typographic scale that’s applied to the base elements `h1` – `h6` and the corresponding utility classes `.u-h1` – `.u-h6` (see the example at the top of this page). The utility classes `.u-text-1` to `.u-text-8` produce exceptions to this responsive typography, at specific breakpoints.
 
-For more details on using these, see
+For more details on using these, see:
 
 - [responsive typography](/docs/base-typography-responsive-headings--h-1) — font-sizes specified for HTML elements (e.g. `h1` – `h6`) that adjust to the size of the viewport using a mobile-first approach
-- [utility classes](/docs/utilities-typography--typography) that apply the same responsive typography as the base elements, for when you need arbitrary elements to consistently match your heading elements
-- [utility classes](/docs/utilities-typography--typography) that apply specific font-sizes at specified breakpoints
+- [responsive utility classes](docs/utilities-responsive-typography--typography) that apply the same responsive typography as the base elements, for when you need arbitrary elements to consistently match your heading elements
+- [utility classes](/docs/utilities-typography--u-text-1) that apply specific font-sizes at specified breakpoints
 
 The default setup provides the following typographic scales. See [customization](#customization) below for details on how to change that:
 
@@ -43,85 +59,18 @@ $line-heights: (
 );
 ```
 
-These tokens are combined to create the following heading styles.
+These tokens are combined to create the responsive heading styles you see at the top of the page.
 
-
-
-```scss
-/* settings/typography-responsive */
-
-$typographic-scale: (
-  '#{setup.$no-media-query}': (
-    'h1': (
-      'font-size': font-size.get('6'),
-      'line-height': line-height.get('1'),
-    ),
-    'h2': (
-      'font-size': font-size.get('5'),
-      'line-height': line-height.get('2'),
-    ),
-    'h3': (
-      'font-size': font-size.get('4'),
-      'line-height': line-height.get('3'),
-    ),
-    'h4': (
-      'font-size': font-size.get('3'),
-      'line-height': line-height.get('4'),
-    ),
-    'h5': (
-      'font-size': font-size.get('2'),
-      'line-height': line-height.get('5'),
-    ),
-    'h6': (
-      'font-size': font-size.get('1'),
-      'line-height': line-height.get('5'),
-    ),
-    'body': (
-      'font-size': font-size.get('2'),
-      'line-height': line-height.get('5'),
-    ),
-  ),
-  'm': (
-    'h1': (
-      'font-size': font-size.get('8'),
-      'line-height': line-height.get('1'),
-    ),
-    'h2': (
-      'font-size': font-size.get('7'),
-      'line-height': line-height.get('2'),
-    ),
-    'h3': (
-      'font-size': font-size.get('6'),
-      'line-height': line-height.get('3'),
-    ),
-    'h4': (
-      'font-size': font-size.get('4'),
-      'line-height': line-height.get('4'),
-    ),
-    'h5': (
-      'font-size': font-size.get('2'),
-      'line-height': line-height.get('5'),
-    ),
-    'h6': (
-      'font-size': font-size.get('1'),
-      'line-height': line-height.get('5'),
-    ),
-    'body': (
-      'font-size': font-size.get('2'),
-      'line-height': line-height.get('5'),
-    ),
-  ),
-);
-```
-
-### Usage
+## Using the classes
 
 In most cases, it’s recommended to use the appropriate utility classes to apply font-size. See the documentation of the classes for information on defaults & customization:
 
-- [`typography-responsive`](/docs/utilities-typography-responsive--typography)
-- [`typography`](/docs/utilities-typography--typography)
+- [`typography-responsive`](docs/utilities-responsive-typography--typography)
+- [`typography`](/docs/utilities-typography--u-text-1)
 
 There are also helper functions in Sass that can be used to create styles in your components that match those utility classes, so you can maintain consistency — see the next sections for details.
+
+## Using the typographic scale in Sass
 
 ### responsive-font-size.get()
 
@@ -239,7 +188,7 @@ console.log(typography['line-height.2']); // '1.2rem'
 
 ## Webfonts
 
-The default webfont is Nunito. If you wish to keep using it, there’s nothing you need to do. See [customization](#customization) below for details on how to change this configuration.
+The default webfont is Poppins. If you wish to keep using it, there’s nothing you need to do. See [customization](#customization) below for details on how to change this configuration.
 
 ### Using font-family in Sass
 
