@@ -40,22 +40,6 @@
 
 @each $color-variant-name, $color-variant in (settings.$color-variants) {
   #{classname.get($classname-items: 'badge--#{$color-variant-name}', $layer: 'atom')} {
-    // #{custom-property.get($items: ('button', 'color'), $layer: 'atom')}: #{palette.get(
-    //     $color-variant,
-    //     settings.$color
-    //   )};
-    // #{custom-property.get($items: ('button', 'background-color'), $layer: 'atom')}: #{palette.get(
-    //     $color-variant,
-    //     settings.$background-color
-    //   )};
-    // #{custom-property.get($items: ('button', 'color', 'hover'), $layer: 'atom')}: #{palette.get(
-    //     $color-variant,
-    //     settings.$background-color
-    //   )};
-    // #{custom-property.get($items: ('button', 'background-color', 'hover'), $layer: 'atom')}: #{palette.get(
-    //     $color-variant,
-    //     settings.$color
-    //   )};
     background-color: map.get($color-variant, 'background-color');
     color: map.get($color-variant, 'color');
   }
