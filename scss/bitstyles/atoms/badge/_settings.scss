@@ -3,13 +3,13 @@
 @use '../../tools/size';
 
 $color-variants: (
+  '': (
+    'color': palette.get('grayscale', 'dark-2'),
+    'background-color': palette.get('grayscale', 'light-4'),
+  ),
   'brand-1': (
     'color': palette.get('brand-1', 'dark-1'),
     'background-color': palette.get('brand-1', 'light-4'),
-  ),
-  'grayscale': (
-    'color': palette.get('grayscale', 'dark-2'),
-    'background-color': palette.get('grayscale', 'light-4'),
   ),
   'warning': (
     'color': palette.get('warning', 'dark-1'),
