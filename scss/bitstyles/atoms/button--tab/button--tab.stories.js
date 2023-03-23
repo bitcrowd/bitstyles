@@ -61,11 +61,8 @@ Selected.parameters = {
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b52890b84043f89ba4',
 };
 
-export const Disabled = Template.bind({
-  colorVariant: ['tab'],
-  disabled: true,
-});
-Disabled.args = {};
+export const Disabled = Template.bind({});
+Disabled.args = { colorVariant: ['tab'], disabled: true };
 Disabled.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b30ee0b5408ad023fd',
@@ -103,12 +100,12 @@ SelectedElement.parameters = {
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b52890b84043f89ba4',
 };
 
-export const DisabledElement = Template.bind({
+export const DisabledElement = Template.bind({});
+DisabledElement.args = {
   colorVariant: ['tab'],
   element: 'a',
   ariaDisabled: true,
-});
-DisabledElement.args = {};
+};
 DisabledElement.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b30ee0b5408ad023fd',

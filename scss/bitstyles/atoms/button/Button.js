@@ -10,7 +10,6 @@ export default ({
   element = 'button',
 }) => {
   const button = document.createElement(element);
-  button.type = 'button';
   button.innerHTML = children || 'Button';
   button.classList.add('a-button');
   colorVariant.forEach((variant) => {
@@ -19,6 +18,7 @@ export default ({
   shapeVariant.forEach((variant) => {
     button.classList.add(`a-button--${variant}`);
   });
+  if (element === 'button') button.type = 'button';
   if (ariaPressed) button.setAttribute('aria-pressed', ariaPressed);
   if (ariaDisabled) button.setAttribute('aria-disabled', ariaDisabled);
   if (ariaCurrent) button.setAttribute('aria-current', ariaCurrent);

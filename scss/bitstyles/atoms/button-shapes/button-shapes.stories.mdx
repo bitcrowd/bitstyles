@@ -1,7 +1,7 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 import icons from '../../../../assets/images/icons.svg';
 
-<Meta title="Atoms/Button/Shapes" />
+<Meta title="Atoms/Button/Shapes/Overview" />
 
 # Button shapes
 
@@ -12,39 +12,18 @@ import icons from '../../../../assets/images/icons.svg';
 ### Small
 
 <Canvas>
-  <Story name="Small">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--small">
-          Dashboard
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Small square">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--small a-button--square">
-          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
-            <use xlink:href="${icons}#icon-plus"></use>
-          </svg>
-          <span class="u-sr-only">Add</span>
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Small round square">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--small a-button--square a-button--round">
-          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
-            <use xlink:href="${icons}#icon-plus"></use>
-          </svg>
-          <span class="u-sr-only">Add</span>
-        </button>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-button--small-primary" />
+  <Story id="atoms-button--small-secondary" />
+  <Story id="atoms-button--small-transparent" />
+  <Story id="atoms-button--small-outline" />
+  <Story id="atoms-button--small-square-primary" />
+  <Story id="atoms-button--small-square-secondary" />
+  <Story id="atoms-button--small-square-transparent" />
+  <Story id="atoms-button--small-square-outline" />
+  <Story id="atoms-button--small-round-primary" />
+  <Story id="atoms-button--small-round-secondary" />
+  <Story id="atoms-button--small-round-transparent" />
+  <Story id="atoms-button--small-round-outline" />
 </Canvas>
 
 ### Default

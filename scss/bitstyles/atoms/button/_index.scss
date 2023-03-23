@@ -10,7 +10,6 @@
   #{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')}: #{settings.$justify-content};
   display: flex;
   position: relative;
-  box-sizing: content-box;
   flex-shrink: 0;
   align-items: center;
   justify-content: var(#{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')});
