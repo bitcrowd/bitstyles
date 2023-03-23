@@ -109,14 +109,18 @@
     );
 
     &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
-      #{$min-width}: #{calc(1em * var(#{$line-height}) + 2 * #{map.get(
-        $sizes,
-        'padding-vertical'
-      )})};
-      #{$min-height}: #{calc(1em * var(#{$line-height}) + 2 * #{map.get(
-        $sizes,
-        'padding-vertical'
-      )})};
+      #{$min-width}: #{calc(
+          1em *
+            var(#{$line-height}) +
+            2 *
+            #{map.get($sizes, 'padding-vertical')}
+        )};
+      #{$min-height}: #{calc(
+          1em *
+            var(#{$line-height}) +
+            2 *
+            #{map.get($sizes, 'padding-vertical')}
+        )};
 
       @if map.has-key($sizes, 'padding-vertical') {
         #{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')}: #{map.get(
