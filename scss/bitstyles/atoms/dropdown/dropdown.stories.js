@@ -31,6 +31,33 @@ export default {
   },
 };
 
+const topDecorator = (story) => {
+  const decorator = document.createElement('div');
+  decorator.style.height = '20rem';
+  decorator.style.width = '30rem';
+  decorator.className = 'u-flex u-items-end';
+  const inner = document.createElement('div');
+  inner.style.position = 'relative';
+  inner.style.width = '18rem';
+  inner.className = 'u-bg-grayscale-light-3 u-padding-m';
+  inner.appendChild(story());
+  decorator.appendChild(inner);
+  return decorator;
+};
+
+const bottomDecorator = (story) => {
+  const decorator = document.createElement('div');
+  decorator.style.height = '20rem';
+  decorator.style.width = '30rem';
+  const inner = document.createElement('div');
+  inner.style.position = 'relative';
+  inner.style.width = '18rem';
+  inner.className = 'u-bg-grayscale-light-3 u-padding-m';
+  inner.appendChild(story());
+  decorator.appendChild(inner);
+  return decorator;
+};
+
 const menu = `
   <ul class="u-list-none">
     <li>
@@ -79,7 +106,7 @@ const menu = `
 
 const Template = (args) => Dropdown(args);
 
-// ***** Base colors ****************** //
+// ***** Alignments ****************** //
 
 export const Base = Template.bind({});
 Base.args = {
@@ -101,70 +128,61 @@ Base.parameters = {
     },
   ],
 };
-Base.decorators = [
-  (story) => {
-    const decorator = document.createElement('div');
-    decorator.style.position = 'relative';
-    decorator.style.height = '2rem';
-    decorator.style.width = '30rem';
-    decorator.className = 'u-bg-grayscale-light-3 u-padding-m';
-    decorator.appendChild(story());
-    return decorator;
-  },
-];
+Base.decorators = [bottomDecorator];
 
 export const Right = Template.bind({});
 Right.args = {
   alignment: ['right'],
   children: menu,
 };
-Right.decorators = [
-  (story) => {
-    const decorator = document.createElement('div');
-    decorator.style.position = 'relative';
-    decorator.style.height = '2rem';
-    decorator.style.width = '30rem';
-    decorator.className = 'u-bg-grayscale-light-3 u-padding-m';
-    decorator.appendChild(story());
-    return decorator;
-  },
-];
+Right.decorators = [bottomDecorator];
 
 export const Top = Template.bind({});
 Top.args = {
   alignment: ['top'],
   children: menu,
 };
-Top.decorators = [
-  (story) => {
-    const decorator = document.createElement('div');
-    decorator.style.height = '20rem';
-    decorator.style.width = '30rem';
-    decorator.className = 'u-flex u-items-end';
-    const inner = document.createElement('div');
-    inner.style.position = 'relative';
-    inner.style.width = '18rem';
-    inner.className = 'u-bg-grayscale-light-3 u-padding-m';
-    inner.appendChild(story());
-    decorator.appendChild(inner);
-    return decorator;
-  },
-];
+Top.decorators = [topDecorator];
 
 export const TopRight = Template.bind({});
 TopRight.args = {
   alignment: ['top', 'right'],
   children: menu,
 };
+TopRight.decorators = [topDecorator];
 
 export const BottomFullwidth = Template.bind({});
 BottomFullwidth.args = {
   alignment: ['full-width'],
   children: menu,
 };
+BottomFullwidth.decorators = [bottomDecorator];
 
 export const TopFullwidth = Template.bind({});
 TopFullwidth.args = {
   alignment: ['top', 'full-width'],
   children: menu,
 };
+TopFullwidth.decorators = [topDecorator];
+
+export const MaxHeight = Template.bind({});
+MaxHeight.args = {
+  children: menu + menu + menu,
+};
+MaxHeight.parameters = {
+  zeplinLink: [
+    {
+      name: 'base',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094a81f046353009612ce',
+    },
+    {
+      name: 'hover',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b16e5d7140eb0735c8',
+    },
+    {
+      name: 'active',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b2d4c5cc51aff0b511',
+    },
+  ],
+};
+MaxHeight.decorators = [bottomDecorator];

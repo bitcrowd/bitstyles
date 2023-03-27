@@ -73,6 +73,8 @@ $separator-spacing: size.get('s6');
 
 By default the dropdown will fade in and out respectively when the `is-on-screen` and `is-off-screen` classes are applied, but this can customized too. Be sure to update the `$will-change` value to reflect the properties you specify in the `$transition` value.
 
+These animations are only used if the user has set their preferences to allow animation.
+
 ```scss
 $transition: opacity 0.12s ease-in;
 $will-change: opacity;

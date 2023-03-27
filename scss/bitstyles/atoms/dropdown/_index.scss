@@ -8,9 +8,9 @@
   z-index: 1;
   top: 100%;
   width: min-content;
-  min-width: 12rem;
+  min-width: settings.$min-width;
   max-width: 90vw;
-  max-height: settings.$max-height;
+  max-height: 90vh;
   padding: settings.$separator-spacing 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -22,6 +22,18 @@
   [role='separator'] {
     margin: settings.$separator-spacing 0;
     border-top: settings.$separator-border;
+  }
+
+  @media screen and (min-height: settings.$max-height) {
+    max-height: settings.$max-height;
+  }
+
+  @include media-query.get('s') {
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100vw;
   }
 
   @include media-query.get('motion-ok') {
@@ -39,14 +51,6 @@
       }
       /* stylelint-enable max-nesting-depth */
     }
-  }
-}
-
-@include media-query.get('s') {
-  #{classname.get($classname-items: 'dropdown', $layer: 'atom')} {
-    right: 0;
-    left: 0;
-    width: 100%;
   }
 }
 
