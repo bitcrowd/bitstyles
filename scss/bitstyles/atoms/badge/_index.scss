@@ -37,16 +37,3 @@
     }
   }
 }
-
-@each $color-variant-name, $color-variant in (settings.$color-variants) {
-  $class: '';
-  @if $color-variant-name == '' {
-    $class: 'badge';
-  } @else {
-    $class: 'badge--#{$color-variant-name}';
-  }
-  #{classname.get($classname-items: $class, $layer: 'atom')} {
-    background-color: map.get($color-variant, 'background-color');
-    color: map.get($color-variant, 'color');
-  }
-}

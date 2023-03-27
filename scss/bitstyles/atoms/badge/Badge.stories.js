@@ -4,9 +4,9 @@ export default {
   title: 'Atoms/Badge',
   component: Badge,
   argTypes: {
-    colorVariant: {
+    theme: {
       description:
-        'Specifies the color set to use for the badge, defined in Sass.',
+        'Specifies the color theme to use for the badge, defined using the global theme system.',
       control: {
         type: 'select',
         options: [
@@ -36,34 +36,34 @@ export const Base = Template.bind({});
 Base.args = {};
 
 export const Brand1 = Template.bind({});
-Brand1.args = { colorVariant: 'brand-1' };
+Brand1.args = { theme: 'brand-1' };
 
 export const Brand2 = Template.bind({});
-Brand2.args = { colorVariant: 'brand-2' };
+Brand2.args = { theme: 'brand-2' };
 
 export const Danger = Template.bind({});
-Danger.args = { colorVariant: 'danger' };
+Danger.args = { theme: 'danger' };
 
 export const Warning = Template.bind({});
-Warning.args = { colorVariant: 'warning' };
+Warning.args = { theme: 'warning' };
 
 export const Positive = Template.bind({});
-Positive.args = { colorVariant: 'positive' };
+Positive.args = { theme: 'positive' };
 
 export const BaseSmall = Template.bind({});
 BaseSmall.args = { sizeVariant: 'small' };
 
 export const Brand1Small = Template.bind({});
-Brand1Small.args = { colorVariant: 'brand-1', sizeVariant: 'small' };
+Brand1Small.args = { theme: 'brand-1', sizeVariant: 'small' };
 
 export const Brand2Small = Template.bind({});
-Brand2Small.args = { colorVariant: 'brand-2', sizeVariant: 'small' };
+Brand2Small.args = { theme: 'brand-2', sizeVariant: 'small' };
 
 export const DangerSmall = Template.bind({});
-DangerSmall.args = { colorVariant: 'danger', sizeVariant: 'small' };
+DangerSmall.args = { theme: 'danger', sizeVariant: 'small' };
 
 export const WarningSmall = Template.bind({});
-WarningSmall.args = { colorVariant: 'warning', sizeVariant: 'small' };
+WarningSmall.args = { theme: 'warning', sizeVariant: 'small' };
 
 export const PositiveSmall = Template.bind({});
-PositiveSmall.args = { colorVariant: 'positive', sizeVariant: 'small' };
+PositiveSmall.args = { theme: 'positive', sizeVariant: 'small' };
