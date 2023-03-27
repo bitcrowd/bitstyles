@@ -34,7 +34,6 @@ export default {
 const topDecorator = (story) => {
   const decorator = document.createElement('div');
   decorator.style.height = '20rem';
-  decorator.style.width = '30rem';
   decorator.className = 'u-flex u-items-end';
   const inner = document.createElement('div');
   inner.style.position = 'relative';
@@ -48,7 +47,6 @@ const topDecorator = (story) => {
 const bottomDecorator = (story) => {
   const decorator = document.createElement('div');
   decorator.style.height = '20rem';
-  decorator.style.width = '30rem';
   const inner = document.createElement('div');
   inner.style.position = 'relative';
   inner.style.width = '18rem';
