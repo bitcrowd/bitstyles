@@ -775,8 +775,8 @@ h4,
 h5,
 h6 {
   font-family: FakeFont, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-  helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-  Segoe UI Symbol;
+    helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
   font-weight: 700;
   margin: 10rem;
   text-rendering: optimizeLegibility;
@@ -895,7 +895,6 @@ table {
   border-radius: var(--bscpn-at-button-border-radius);
   border-style: solid;
   border-width: var(--bscpn-at-button-border-width);
-  box-sizing: content-box;
   cursor: pointer;
   display: flex;
   flex-shrink: 0;
@@ -1015,40 +1014,17 @@ table {
   --bscpn-at-button--secondary-background-color: var(
     --bscpn-color-grayscale-light-3
   );
-  --bscpn-at-button--secondary-box-shadow: 0 0 calc(var(--bscpn-size-m) / 4)
-      rgba(var(--bscpn-color-grayscale-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-m) / 3)
-        rgba(var(--bscpn-color-grayscale-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-m) / 2)
-        rgba(var(--bscpn-color-grayscale-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-m) / 1)
-        rgba(var(--bscpn-color-grayscale-light-1-rgb), 0.075);
+  --bscpn-at-button--secondary-box-shadow: none;
   --bscpn-at-button--secondary-hover-color: var(--bscpn-color-grayscale-dark-2);
   --bscpn-at-button--secondary-hover-background-color: var(
     --bscpn-color-brand-1-light-2
   );
-  --bscpn-at-button--secondary-hover-box-shadow: 0 0
-      calc(var(--bscpn-size-l2) / 4)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-l2) / 3)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-l2) / 2)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-l2) / 1)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+  --bscpn-at-button--secondary-hover-box-shadow: none;
   --bscpn-at-button--secondary-active-color: var(--bscpn-color-brand-1-dark-2);
   --bscpn-at-button--secondary-active-background-color: var(
     --bscpn-color-brand-1-light-2
   );
-  --bscpn-at-button--secondary-active-box-shadow: 0 0
-      calc(var(--bscpn-size-s4) / 4)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 3)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 2)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 1)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+  --bscpn-at-button--secondary-active-box-shadow: none;
   --bscpn-at-button--secondary-pressed-color: var(--bscpn-color-brand-1-dark-1);
   --bscpn-at-button--secondary-pressed-background-color: var(
     --bscpn-color-brand-1-light-2
@@ -1056,12 +1032,12 @@ table {
   --bscpn-at-button--secondary-pressed-box-shadow: 0 0
       calc(var(--bscpn-size-s4) / 4)
       rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 3)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 2)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 1)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+    0 0 calc(var(--bscpn-size-s4) / 3)
+      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
+    0 0 calc(var(--bscpn-size-s4) / 2)
+      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
+    0 0 calc(var(--bscpn-size-s4) / 1)
+      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
   --bscpn-at-button--secondary-disabled-color: var(
     --bscpn-color-grayscale-base
   );
@@ -1075,40 +1051,17 @@ table {
   --bscpn-at-button--secondary-background-color: var(
     --bscpn-color-grayscale-dark-1
   );
-  --bscpn-at-button--secondary-box-shadow: 0 0 calc(var(--bscpn-size-m) / 4)
-      rgba(var(--bscpn-color-grayscale-base-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-m) / 3)
-        rgba(var(--bscpn-color-grayscale-base-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-m) / 2)
-        rgba(var(--bscpn-color-grayscale-base-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-m) / 1)
-        rgba(var(--bscpn-color-grayscale-base-rgb), 0.075);
+  --bscpn-at-button--secondary-box-shadow: none;
   --bscpn-at-button--secondary-hover-color: var(--bscpn-color-grayscale-dark-2);
   --bscpn-at-button--secondary-hover-background-color: var(
     --bscpn-color-brand-1-light-1
   );
-  --bscpn-at-button--secondary-hover-box-shadow: 0 0
-      calc(var(--bscpn-size-l2) / 4)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-l2) / 3)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-l2) / 2)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-l2) / 1)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+  --bscpn-at-button--secondary-hover-box-shadow: none;
   --bscpn-at-button--secondary-active-color: var(--bscpn-color-brand-1-dark-1);
   --bscpn-at-button--secondary-active-background-color: var(
     --bscpn-color-brand-1-light-1
   );
-  --bscpn-at-button--secondary-active-box-shadow: 0 0
-      calc(var(--bscpn-size-s4) / 4)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 3)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 2)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 1)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+  --bscpn-at-button--secondary-active-box-shadow: none;
   --bscpn-at-button--secondary-pressed-color: var(--bscpn-color-brand-1-base);
   --bscpn-at-button--secondary-pressed-background-color: var(
     --bscpn-color-brand-1-light-1
@@ -1116,12 +1069,12 @@ table {
   --bscpn-at-button--secondary-pressed-box-shadow: 0 0
       calc(var(--bscpn-size-s4) / 4)
       rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 3)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 2)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 1)
-        rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+    0 0 calc(var(--bscpn-size-s4) / 3)
+      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
+    0 0 calc(var(--bscpn-size-s4) / 2)
+      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
+    0 0 calc(var(--bscpn-size-s4) / 1)
+      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
   --bscpn-at-button--secondary-disabled-color: var(
     --bscpn-color-grayscale-light-1
   );
@@ -1177,14 +1130,7 @@ table {
     --bscpn-color-grayscale-white
   );
   --bscpn-at-button--outline-border-color: var(--bscpn-color-grayscale-dark-2);
-  --bscpn-at-button--outline-box-shadow: 0 0 calc(var(--bscpn-size-m) / 4)
-      rgba(var(--bscpn-color-grayscale-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-m) / 3)
-      rgba(var(--bscpn-color-grayscale-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-m) / 2)
-      rgba(var(--bscpn-color-grayscale-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-m) / 1)
-      rgba(var(--bscpn-color-grayscale-light-1-rgb), 0.075);
+  --bscpn-at-button--outline-box-shadow: none;
   --bscpn-at-button--outline-hover-color: var(--bscpn-color-grayscale-dark-2);
   --bscpn-at-button--outline-hover-background-color: var(
     --bscpn-color-brand-1-light-4
@@ -1192,15 +1138,7 @@ table {
   --bscpn-at-button--outline-hover-border-color: var(
     --bscpn-color-grayscale-dark-2
   );
-  --bscpn-at-button--outline-hover-box-shadow: 0 0
-      calc(var(--bscpn-size-l2) / 4)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-l2) / 3)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-l2) / 2)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-l2) / 1)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+  --bscpn-at-button--outline-hover-box-shadow: none;
   --bscpn-at-button--outline-active-color: var(--bscpn-color-brand-1-dark-1);
   --bscpn-at-button--outline-active-background-color: var(
     --bscpn-color-brand-1-light-4
@@ -1208,15 +1146,7 @@ table {
   --bscpn-at-button--outline-active-border-color: var(
     --bscpn-color-brand-1-dark-1
   );
-  --bscpn-at-button--outline-active-box-shadow: 0 0
-      calc(var(--bscpn-size-s4) / 4)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 3)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 2)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 1)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+  --bscpn-at-button--outline-active-box-shadow: none;
   --bscpn-at-button--outline-pressed-color: var(--bscpn-color-brand-1-dark-1);
   --bscpn-at-button--outline-pressed-background-color: var(
     --bscpn-color-grayscale-white
@@ -1248,14 +1178,7 @@ table {
     --bscpn-color-grayscale-dark-1
   );
   --bscpn-at-button--outline-border-color: var(--bscpn-color-grayscale-dark-1);
-  --bscpn-at-button--outline-box-shadow: 0 0 calc(var(--bscpn-size-m) / 4)
-      rgba(var(--bscpn-color-grayscale-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-m) / 3)
-      rgba(var(--bscpn-color-grayscale-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-m) / 2)
-      rgba(var(--bscpn-color-grayscale-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-m) / 1)
-      rgba(var(--bscpn-color-grayscale-base-rgb), 0.075);
+  --bscpn-at-button--outline-box-shadow: none;
   --bscpn-at-button--outline-hover-color: var(--bscpn-color-grayscale-dark-2);
   --bscpn-at-button--outline-hover-background-color: var(
     --bscpn-color-brand-1-light-1
@@ -1263,15 +1186,7 @@ table {
   --bscpn-at-button--outline-hover-border-color: var(
     --bscpn-color-brand-1-light-1
   );
-  --bscpn-at-button--outline-hover-box-shadow: 0 0
-      calc(var(--bscpn-size-l2) / 4)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-l2) / 3)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-l2) / 2)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-l2) / 1)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+  --bscpn-at-button--outline-hover-box-shadow: none;
   --bscpn-at-button--outline-active-color: var(--bscpn-color-brand-1-dark-1);
   --bscpn-at-button--outline-active-background-color: var(
     --bscpn-color-brand-1-light-1
@@ -1279,15 +1194,7 @@ table {
   --bscpn-at-button--outline-active-border-color: var(
     --bscpn-color-brand-1-light-1
   );
-  --bscpn-at-button--outline-active-box-shadow: 0 0
-      calc(var(--bscpn-size-s4) / 4)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 3)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 2)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 1)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.075);
+  --bscpn-at-button--outline-active-box-shadow: none;
   --bscpn-at-button--outline-pressed-color: var(--bscpn-color-brand-1-base);
   --bscpn-at-button--outline-pressed-background-color: var(
     --bscpn-color-brand-1-light-1
@@ -1382,15 +1289,7 @@ table {
   --bscpn-at-button--transparent-active-border-color: var(
     --bscpn-color-brand-1-dark-1
   );
-  --bscpn-at-button--transparent-active-box-shadow: 0 0
-      calc(var(--bscpn-size-s4) / 4)
-      rgba(var(--bscpn-color-grayscale-light-2-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 3)
-        rgba(var(--bscpn-color-grayscale-light-2-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 2)
-        rgba(var(--bscpn-color-grayscale-light-2-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 1)
-        rgba(var(--bscpn-color-grayscale-light-2-rgb), 0.075);
+  --bscpn-at-button--transparent-active-box-shadow: none;
   --bscpn-at-button--transparent-pressed-color: var(
     --bscpn-color-brand-1-dark-1
   );
@@ -1403,11 +1302,11 @@ table {
   --bscpn-at-button--transparent-pressed-box-shadow: 0 0
       calc(var(--bscpn-size-s4) / 4)
       rgba(var(--bscpn-color-brand-1-dark-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 3)
+    0 0 calc(var(--bscpn-size-s4) / 3)
       rgba(var(--bscpn-color-brand-1-dark-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 2)
+    0 0 calc(var(--bscpn-size-s4) / 2)
       rgba(var(--bscpn-color-brand-1-dark-1-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 1)
+    0 0 calc(var(--bscpn-size-s4) / 1)
       rgba(var(--bscpn-color-brand-1-dark-1-rgb), 0.075);
   --bscpn-at-button--transparent-disabled-color: var(
     --bscpn-color-grayscale-base
@@ -1440,15 +1339,7 @@ table {
   --bscpn-at-button--transparent-active-border-color: var(
     --bscpn-color-grayscale-dark-2
   );
-  --bscpn-at-button--transparent-active-box-shadow: 0 0
-      calc(var(--bscpn-size-s4) / 4)
-      rgba(var(--bscpn-color-grayscale-dark-2-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 3)
-        rgba(var(--bscpn-color-grayscale-dark-2-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 2)
-        rgba(var(--bscpn-color-grayscale-dark-2-rgb), 0.075),
-      0 0 calc(var(--bscpn-size-s4) / 1)
-        rgba(var(--bscpn-color-grayscale-dark-2-rgb), 0.075);
+  --bscpn-at-button--transparent-active-box-shadow: none;
   --bscpn-at-button--transparent-pressed-color: var(
     --bscpn-color-grayscale-white
   );
@@ -1584,14 +1475,7 @@ table {
   --bscpn-at-button--danger-hover-border-color: var(
     --bscpn-color-danger-dark-1
   );
-  --bscpn-at-button--danger-hover-box-shadow: 0 0 calc(var(--bscpn-size-s4) / 4)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 3)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 2)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 1)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075);
+  --bscpn-at-button--danger-hover-box-shadow: none;
   --bscpn-at-button--danger-active-color: var(--bscpn-color-danger-dark-1);
   --bscpn-at-button--danger-active-background-color: var(
     --bscpn-color-danger-light-2
@@ -1599,15 +1483,7 @@ table {
   --bscpn-at-button--danger-active-border-color: var(
     --bscpn-color-danger-light-2
   );
-  --bscpn-at-button--danger-active-box-shadow: 0 0
-      calc(var(--bscpn-size-s4) / 4)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 3)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 2)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 1)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075);
+  --bscpn-at-button--danger-active-box-shadow: none;
   --bscpn-at-button--danger-pressed-color: var(--bscpn-color-danger-dark-2);
   --bscpn-at-button--danger-pressed-background-color: var(
     --bscpn-color-danger-light-2
@@ -1615,15 +1491,7 @@ table {
   --bscpn-at-button--danger-pressed-border-color: var(
     --bscpn-color-danger-light-2
   );
-  --bscpn-at-button--danger-pressed-box-shadow: 0 0
-      calc(var(--bscpn-size-s4) / 4)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 3)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 2)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075),
-    0 0 calc(var(--bscpn-size-s4) / 1)
-      rgba(var(--bscpn-color-danger-base-rgb), 0.075);
+  --bscpn-at-button--danger-pressed-box-shadow: none;
 }
 .bs-at-button {
   --bscpn-at-button-padding-vertical: var(--bscpn-size-s2);
@@ -1636,8 +1504,12 @@ table {
   --bscpn-at-button-font-weight: 600;
 }
 .bs-at-button.bs-at-button--square {
-  --bscpn-at-button-min-width: calc(1em * var(--bscpn-line-height-5));
-  --bscpn-at-button-min-height: calc(1em * var(--bscpn-line-height-5));
+  --bscpn-at-button-min-width: calc(
+    1em * var(--bscpn-line-height-5) + var(--bscpn-size-s2) * 2
+  );
+  --bscpn-at-button-min-height: calc(
+    1em * var(--bscpn-line-height-5) + var(--bscpn-size-s2) * 2
+  );
   --bscpn-at-button-padding-horizontal: var(--bscpn-size-s2);
   --bscpn-at-button-padding-vertical: var(--bscpn-size-s2);
 }
@@ -1651,8 +1523,12 @@ table {
   --bscpn-at-button-font-weight: 500;
 }
 .bs-at-button--small.bs-at-button--square {
-  --bscpn-at-button-min-width: calc(1em * var(--bscpn-line-height-5));
-  --bscpn-at-button-min-height: calc(1em * var(--bscpn-line-height-5));
+  --bscpn-at-button-min-width: calc(
+    1em * var(--bscpn-line-height-5) + var(--bscpn-size-s6) * 2
+  );
+  --bscpn-at-button-min-height: calc(
+    1em * var(--bscpn-line-height-5) + var(--bscpn-size-s6) * 2
+  );
   --bscpn-at-button-padding-horizontal: var(--bscpn-size-s6);
   --bscpn-at-button-padding-vertical: var(--bscpn-size-s6);
 }
@@ -1663,8 +1539,12 @@ table {
   --bscpn-at-button-font-size: var(--bscpn-font-size-2);
 }
 .bs-at-button--large.bs-at-button--square {
-  --bscpn-at-button-min-width: calc(1em * var(--bscpn-line-height-5));
-  --bscpn-at-button-min-height: calc(1em * var(--bscpn-line-height-5));
+  --bscpn-at-button-min-width: calc(
+    1em * var(--bscpn-line-height-5) + var(--bscpn-size-m) * 2
+  );
+  --bscpn-at-button-min-height: calc(
+    1em * var(--bscpn-line-height-5) + var(--bscpn-size-m) * 2
+  );
   --bscpn-at-button-padding-horizontal: var(--bscpn-size-m);
   --bscpn-at-button-padding-vertical: var(--bscpn-size-m);
 }
@@ -1699,7 +1579,7 @@ table {
   background-color: red;
   border-radius: 0;
   bottom: 0;
-   content: '';
+  content: '';
   height: var(--bscpn-size-s6);
   left: 0;
   position: absolute;
@@ -2193,7 +2073,7 @@ table {
   border: 0;
 }
 .bs-or-table__actions {
-  padding-right:var(--bscpn-size-s3);
+  padding-right: var(--bscpn-size-s3);
 }
 .bs-or-ui-group {
   border-radius: 10rem;
