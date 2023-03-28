@@ -30,6 +30,8 @@ export default {
   },
 };
 
+const dummyOnClick = () => {};
+
 const Template = (args) => Badge(args);
 
 export const Base = Template.bind({});
@@ -67,3 +69,21 @@ WarningSmall.args = { theme: 'warning', sizeVariant: 'small' };
 
 export const PositiveSmall = Template.bind({});
 PositiveSmall.args = { theme: 'positive', sizeVariant: 'small' };
+
+export const BaseButton = Template.bind({});
+BaseButton.args = { onClick: dummyOnClick };
+
+export const Brand1Button = Template.bind({});
+Brand1Button.args = { theme: 'brand-1', onClick: dummyOnClick };
+
+export const Brand2Button = Template.bind({});
+Brand2Button.args = { theme: 'brand-2', onClick: dummyOnClick };
+
+export const DangerButton = Template.bind({});
+DangerButton.args = { theme: 'danger', onClick: dummyOnClick };
+
+export const WarningButton = Template.bind({});
+WarningButton.args = { theme: 'warning', onClick: dummyOnClick };
+
+export const PositiveButton = Template.bind({});
+PositiveButton.args = { theme: 'positive', onClick: dummyOnClick };

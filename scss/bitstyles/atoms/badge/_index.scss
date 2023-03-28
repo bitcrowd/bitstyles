@@ -9,15 +9,43 @@
 @use '../../tools/size';
 @use 'sass:map';
 
+/* stylelint-disable scss/dollar-variable-default */
+$padding-horizontal-property: custom-property.get(
+  $items: (
+    'badge',
+    'padding-horizontal',
+  ),
+  $layer: 'atom',
+);
+$padding-vertical-property: custom-property.get(
+  $items: (
+    'badge',
+    'padding-vertical',
+  ),
+  $layer: 'atom',
+);
+$gap-property: custom-property.get(
+  $items: (
+    'badge',
+    'gap',
+  ),
+  $layer: 'atom',
+);
+/* stylelint-enable scss/dollar-variable-default */
+
 #{classname.get($classname-items: 'badge', $layer: 'atom')} {
   display: inline-flex;
   align-items: center;
+  padding: var(#{$padding-vertical-property})
+    var(#{$padding-horizontal-property});
+  gap: var(#{$gap-property});
   border-radius: layout.$border-radius-round;
   white-space: nowrap;
 
   #{classname.get($classname-items: 'badge__button', $layer: 'atom')} {
-    margin-right: calc(#{size.get('s2')} * -1);
-    margin-left: size.get('s4');
+    margin-left: calc(
+      var(#{$padding-horizontal-property}) * -1 + var(#{$gap-property})
+    );
   }
 }
 
@@ -31,8 +59,15 @@
         $class: 'badge--#{$size-variant-name}';
       }
       #{classname.get($classname-items: $class, $layer: 'atom')} {
-        padding: map.get($size-variant, 'padding-vertical')
-          map.get($size-variant, 'padding-horizontal');
+        #{$padding-horizontal-property}: map.get(
+          $size-variant,
+          'padding-horizontal'
+        );
+        #{$padding-vertical-property}: map.get(
+          $size-variant,
+          'padding-vertical'
+        );
+        #{$gap-property}: map.get($size-variant, 'gap');
       }
     }
   }

@@ -7,16 +7,19 @@ $size-variants: (
     '': (
       'padding-vertical': size.get('s6'),
       'padding-horizontal': size.get('l1'),
+      'gap': size.get('s4'),
     ),
   ),
   'm': (
     '': (
       'padding-vertical': size.get('s4'),
       'padding-horizontal': size.get('l1'),
+      'gap': size.get('s6'),
     ),
     'small': (
       'padding-vertical': size.get('s6'),
       'padding-horizontal': size.get('l1'),
+      'gap': size.get('s4'),
     ),
   ),
 ) !default;
