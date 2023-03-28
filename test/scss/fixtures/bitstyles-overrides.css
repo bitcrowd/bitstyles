@@ -1791,14 +1791,14 @@ table {
   background-color: var(--bscpn-color-grayscale-white);
   border: 3px solid var(--bscpn-color-brand-1-dark-1);
   border-radius: var(--bscpn-size-s4);
-  box-shadow: 0 calc(var(--bscpn-size-s4) / 4) calc(var(--bscpn-size-m) / 4)
-      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.05),
-    0 calc(var(--bscpn-size-s4) / 3) calc(var(--bscpn-size-m) / 3)
-      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.05),
-    0 calc(var(--bscpn-size-s4) / 2) calc(var(--bscpn-size-m) / 2)
-      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.05),
-    0 calc(var(--bscpn-size-s4) / 1) calc(var(--bscpn-size-m) / 1)
-      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.05);
+  box-shadow: 0 0 calc(var(--bscpn-size-s4) / 4)
+      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.075),
+    0 0 calc(var(--bscpn-size-s4) / 3)
+      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.075),
+    0 0 calc(var(--bscpn-size-s4) / 2)
+      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.075),
+    0 0 calc(var(--bscpn-size-s4) / 1)
+      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.075);
   max-height: 90vh;
   max-width: 90vw;
   min-width: 17.5rem;
