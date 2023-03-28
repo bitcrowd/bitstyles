@@ -1,5 +1,7 @@
 @use 'sass:map';
+@use '../settings/setup';
 @use '../settings/typography';
+@use './custom-property';
 
 // Font-size
 //
@@ -11,8 +13,18 @@
 // @param {String} $breakpoint   Optional. Defaults to `base`, you can request the font-size at other breakpoints as defined in the `typography.$font-sizes` map
 //
 
-@function get($font-size) {
+@function get($font-size, $format: setup.$default-token-format) {
   @if map.has-key(typography.$font-sizes, $font-size) {
+    @if $format == 'custom-property' {
+      @return var(
+        #{custom-property.get(
+            $items: (
+              'font-size',
+              $font-size,
+            )
+          )}
+      );
+    }
     @return map.get(typography.$font-sizes, $font-size);
   } @else {
     @error 'Oops! There’s no font-size ‘#{$font-size}’.';

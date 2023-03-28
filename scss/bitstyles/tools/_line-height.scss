@@ -1,5 +1,7 @@
 @use 'sass:map';
+@use '../settings/setup';
 @use '../settings/typography';
+@use './custom-property';
 
 // Line-height
 //
@@ -11,8 +13,18 @@
 // @param {String} $breakpoint   Optional. Defaults to `base`, you can request the line-height at other breakpoints as defined in the `typography.$line-heights` map
 //
 
-@function get($line-height) {
+@function get($line-height, $format: setup.$default-token-format) {
   @if map.has-key(typography.$line-heights, $line-height) {
+    @if $format == 'custom-property' {
+      @return var(
+        #{custom-property.get(
+            $items: (
+              'line-height',
+              $line-height,
+            )
+          )}
+      );
+    }
     @return map.get(typography.$line-heights, $line-height);
   } @else {
     @error 'Oops! There’s no line-height ‘#{$line-height}’.';

@@ -35,9 +35,9 @@
   z-index: 20;
   top: 50%;
   left: 50%;
-  width: calc(100% - 2 * #{settings.$padding});
+  width: calc(100% - 2 * settings.$padding);
   height: auto;
-  max-height: calc(100vh - 2 * #{settings.$padding});
+  max-height: calc(100vh - 2 * settings.$padding);
   overflow: auto;
   transform: translate(-50%, -50%);
   transform-origin: 50% 50%;

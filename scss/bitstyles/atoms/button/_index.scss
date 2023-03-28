@@ -2,7 +2,6 @@
 @use './settings';
 @use '../../tools/classname';
 @use '../../tools/custom-property';
-@use 'sass:math';
 
 /* prettier-ignore */
 
@@ -56,11 +55,11 @@
 #{classname.get($classname-items: 'button__avatar', $layer: 'atom')},
 #{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
   margin-right: settings.$icon-spacing;
-  margin-left: math.div(-(settings.$icon-spacing), 4);
+  margin-left: calc((settings.$icon-spacing * -1) / 4);
 }
 
 #{classname.get($classname-items: 'button__label', $layer: 'atom')}
   + #{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
-  margin-right: math.div(-(settings.$icon-spacing), 4);
+  margin-right: calc((settings.$icon-spacing * -1) / 4);
   margin-left: settings.$icon-spacing;
 }

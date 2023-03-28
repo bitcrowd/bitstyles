@@ -5,7 +5,7 @@
 $border-radius: size.get('s3') !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('brand-1', 'light-1'), 0.025),
+    $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.025),
     $blur-radius: size.get('s5'),
   )
 ) !default;

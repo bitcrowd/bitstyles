@@ -3,7 +3,7 @@
 
 $padding: size.get('s3') !default;
 $background-color: palette.get('grayscale', 'white') !default;
-$overlay-color: rgba(palette.get('grayscale', 'white'), 95%) !default;
+$overlay-color: rgba(palette.get('grayscale', 'white-rgb'), 95%) !default;
 $transition-easing: ease-in-out !default;
 $transition-duration: 0.2s !default;
 $transition-duration-smallscreen: 0.25s !default;

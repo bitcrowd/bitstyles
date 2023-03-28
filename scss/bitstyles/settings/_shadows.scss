@@ -1,11 +1,12 @@
 @use '../tools/palette';
+@use '../tools/size';
 @use '../tools/shadow';
 
 $shadows: (
   'default':
     shadow.generate(
-      $color: rgba(palette.get('brand-1', 'light-1'), 0.125),
-      $offset: 2rem,
-      $blur-radius: 2rem,
+      $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.125),
+      $offset: size.get('l3'),
+      $blur-radius: size.get('l3'),
     ),
 ) !default;

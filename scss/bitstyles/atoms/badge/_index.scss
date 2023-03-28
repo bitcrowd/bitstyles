@@ -14,7 +14,7 @@
   white-space: nowrap;
 
   #{classname.get($classname-items: 'badge__button', $layer: 'atom')} {
-    margin-right: -#{size.get('s2')};
+    margin-right: calc(#{size.get('s2')} * -1);
     margin-left: size.get('s4');
   }
 }
