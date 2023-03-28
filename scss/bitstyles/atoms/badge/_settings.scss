@@ -1,6 +1,7 @@
 @use '../../settings/setup';
 @use '../../tools/palette';
 @use '../../tools/size';
+@use '../../tools/shadow';
 
 $size-variants: (
   '#{setup.$no-media-query}': (
@@ -21,5 +22,67 @@ $size-variants: (
       'padding-horizontal': size.get('l1'),
       'gap': size.get('s4'),
     ),
+  ),
+) !default;
+$theme-variants: (
+  'default': (
+    'shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('grayscale', 'dark-1-rgb'), 0.075),
+          $blur-radius: size.get('s4'),
+          $offset: size.get('s5'),
+        )
+      ),
+  ),
+  'brand-1': (
+    'shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('brand-1', 'dark-2-rgb'), 0.075),
+          $blur-radius: size.get('s4'),
+          $offset: size.get('s5'),
+        )
+      ),
+  ),
+  'brand-2': (
+    'shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('brand-2', 'dark-1-rgb'), 0.075),
+          $blur-radius: size.get('s4'),
+          $offset: size.get('s5'),
+        )
+      ),
+  ),
+  'positive': (
+    'shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('positive', 'dark-1-rgb'), 0.075),
+          $blur-radius: size.get('s4'),
+          $offset: size.get('s5'),
+        )
+      ),
+  ),
+  'warning': (
+    'shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('warning', 'dark-1-rgb'), 0.075),
+          $blur-radius: size.get('s4'),
+          $offset: size.get('s5'),
+        )
+      ),
+  ),
+  'danger': (
+    'shadow':
+      shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('danger', 'dark-1-rgb'), 0.075),
+          $blur-radius: size.get('s4'),
+          $offset: size.get('s5'),
+        )
+      ),
   ),
 ) !default;

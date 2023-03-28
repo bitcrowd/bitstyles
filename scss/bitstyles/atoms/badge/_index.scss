@@ -7,6 +7,7 @@
 @use '../../tools/palette';
 @use '../../tools/properties';
 @use '../../tools/size';
+@use '../../tools/themes';
 @use 'sass:map';
 
 /* stylelint-disable scss/dollar-variable-default */
@@ -31,6 +32,13 @@ $gap-property: custom-property.get(
   ),
   $layer: 'atom',
 );
+$shadow-property: custom-property.get(
+  $items: (
+    'badge',
+    'shadow',
+  ),
+  $layer: 'atom',
+);
 /* stylelint-enable scss/dollar-variable-default */
 
 #{classname.get($classname-items: 'badge', $layer: 'atom')} {
@@ -40,6 +48,7 @@ $gap-property: custom-property.get(
     var(#{$padding-horizontal-property});
   gap: var(#{$gap-property});
   border-radius: layout.$border-radius-round;
+  box-shadow: var(#{$shadow-property});
   white-space: nowrap;
 
   #{classname.get($classname-items: 'badge__button', $layer: 'atom')} {
@@ -48,6 +57,16 @@ $gap-property: custom-property.get(
     );
   }
 }
+
+/* Theme variants */
+
+@each $theme-name, $theme in settings.$theme-variants {
+  @include themes.get($theme-name) {
+    #{$shadow-property}: map.get($theme, 'shadow');
+  }
+}
+
+/* Size variants */
 
 @each $breakpoint, $size-variants in settings.$size-variants {
   @include media-query.get($breakpoint) {
