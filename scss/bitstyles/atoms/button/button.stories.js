@@ -242,7 +242,7 @@ DefaultRoundTransparent.args = {
 };
 
 export const DefaultRoundOutline = Template.bind({});
-DefaultRoundTransparent.args = {
+DefaultRoundOutline.args = {
   shapeVariant: ['round', 'square'],
   colorVariant: ['outline'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
@@ -1068,49 +1068,49 @@ DangerOutlineAnchorDisabled.parameters = {
 
 // ***** Icon-only tab buttons ****************** //
 
-export const IconOnlyBase = Template.bind({});
-IconOnlyBase.args = {
+export const TabIconOnlyBase = Template.bind({});
+TabIconOnlyBase.args = {
   colorVariant: ['tab'],
   shapeVariant: ['square'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
 };
-IconOnlyBase.parameters = {
+TabIconOnlyBase.parameters = {
   zeplinLink: [
     {
       name: 'base',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094a81f046353009612ce',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094a9a2dc7d52db2d8834',
     },
     {
       name: 'hover',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b16e5d7140eb0735c8',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094af9a3e7840645a63a9',
     },
     {
       name: 'active',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b2d4c5cc51aff0b511',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b06c8c26529c784569',
     },
   ],
 };
 
-export const IconOnlySelected = Template.bind({});
-IconOnlySelected.args = {
+export const TabIconOnlySelected = Template.bind({});
+TabIconOnlySelected.args = {
   colorVariant: ['tab'],
   shapeVariant: ['square'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
   ariaSelected: true,
 };
-IconOnlySelected.parameters = {
+TabIconOnlySelected.parameters = {
   zeplinLink:
-    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094ad19b55352bac88778',
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094ac4e82263ff99ce71b',
 };
 
-export const IconOnlyDisabled = Template.bind({});
-IconOnlyDisabled.args = {
+export const TabIconOnlyDisabled = Template.bind({});
+TabIconOnlyDisabled.args = {
   colorVariant: ['tab'],
   shapeVariant: ['square'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
   disabled: true,
 };
-IconOnlyDisabled.parameters = {
+TabIconOnlyDisabled.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094ad19b55352bac88778',
 };

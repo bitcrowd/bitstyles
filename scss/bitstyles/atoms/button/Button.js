@@ -1,3 +1,15 @@
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function generateLabel(shapeVariant, colorVariant) {
+  return capitalizeFirstLetter(
+    `${shapeVariant.length === 0 ? ['Default'] : shapeVariant} ${
+      colorVariant.length === 0 ? ['Primary'] : colorVariant
+    }`
+  );
+}
+
 export default ({
   children,
   colorVariant = [],
@@ -10,7 +22,7 @@ export default ({
   element = 'button',
 }) => {
   const button = document.createElement(element);
-  button.innerHTML = children || 'Button';
+  button.innerHTML = children || generateLabel(shapeVariant, colorVariant);
   button.classList.add('a-button');
   colorVariant.forEach((variant) => {
     button.classList.add(`a-button--${variant}`);
