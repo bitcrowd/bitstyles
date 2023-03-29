@@ -1,15 +1,17 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Atoms/Button/Overview" />
+<Meta title="Atoms/Button/Colors" />
 
 # Button colors
 
 Buttons are available in several color-based variations:
 
-- **Primary** This is the default color variant, that should be used sparingly (even only once) per screen to indicate the primary action.
-- **Secondary** Most other buttons on a screen should probably use this variant. It is a visibly interactive element but not heavily emphasised.
-- **Transparent** For buttons that really shouldn’t stand out, these present only a text label until interacted with.
-- **Outline** A hollow button with a heavy border, these are often used for activating dropdowns.
+| Color variant   | Description                                                                                                                      |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **Primary**     | This is the default color variant, that should be used sparingly (even only once) per screen to indicate the primary action.     |
+| **Secondary**   | Most other buttons on a screen should probably use this variant. It is a visibly interactive element but not heavily emphasised. |
+| **Transparent** | For buttons that really shouldn’t stand out, these present only a text label until interacted with.                              |
+| **Outline**     | A hollow button with a heavy border, these are often used for activating dropdowns.                                              |
 
 ## Button states
 
@@ -24,11 +26,11 @@ Buttons react to user interaction, and can be disabled, giving the following sta
 | disabled | The button is not currently clickable, and will not perform an action                                                                                                                                                                                                                                                                       |
 
 <Canvas>
-  <Story id="atoms-button--primary" />
-  <Story id="atoms-button--secondary" />
-  <Story id="atoms-button--transparent" />
-  <Story id="atoms-button--outline" />
-  <Story id="atoms-button--tab" />
+  <Story id="atoms-button--default-primary" />
+  <Story id="atoms-button--default-secondary" />
+  <Story id="atoms-button--default-transparent" />
+  <Story id="atoms-button--default-outline" />
+  <Story id="atoms-button--default-tab" />
 </Canvas>
 
 ## Danger
@@ -36,10 +38,10 @@ Buttons react to user interaction, and can be disabled, giving the following sta
 A special color variant that only shows itself on hover. This can be applied to all the other color variants to indicate to the user that the action is destructive or dangerous — it turns red on hover.
 
 <Canvas>
-  <Story id="atoms-button--danger-primary" />
-  <Story id="atoms-button--danger-secondary" />
-  <Story id="atoms-button--danger-transparent" />
-  <Story id="atoms-button--danger-outline" />
+  <Story id="atoms-button--default-danger-primary" />
+  <Story id="atoms-button--default-danger-secondary" />
+  <Story id="atoms-button--default-danger-transparent" />
+  <Story id="atoms-button--default-danger-outline" />
 </Canvas>
 
 ### Pressed buttons

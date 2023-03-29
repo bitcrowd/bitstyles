@@ -1,16 +1,16 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 import icons from '../../../../assets/images/icons.svg';
 
-<Meta title="Atoms/Button/Tab/Overview" />
+<Meta title="Atoms/Button/Tabs" />
 
 # Tab Buttons
 
 Buttons for selecting which of several tabpanels will be shown. There are several aria-attributes here that will need to be tied to the tabpanels, and you should use a background color behind the tabs — see the [tab examples](/docs/ui-navigation-tabs--tabs) for both.
 
 <Canvas>
-  <Story id="atoms-button-tab--base" />
-  <Story id="atoms-button-tab--selected" />
-  <Story id="atoms-button-tab--disabled" />
+  <Story id="atoms-button--tab-base" />
+  <Story id="atoms-button--tab-selected" />
+  <Story id="atoms-button--tab-disabled" />
 </Canvas>
 
 ## Using anchor elements for the tabs
@@ -18,9 +18,9 @@ Buttons for selecting which of several tabpanels will be shown. There are severa
 Ideally, these would be `<button>` elements, and the behavior handled using JS, but if necessary server-side routing using anchor elements can be used instead.
 
 <Canvas>
-  <Story id="atoms-button-tab--base-element" />
-  <Story id="atoms-button-tab--selected-element" />
-  <Story id="atoms-button-tab--disabled-element" />
+  <Story id="atoms-button--tab-base-anchor" />
+  <Story id="atoms-button--tab-pressed-anchor" />
+  <Story id="atoms-button--tab-disabled-anchor" />
 </Canvas>
 
 ## Icon-only tab buttons
@@ -28,7 +28,11 @@ Ideally, these would be `<button>` elements, and the behavior handled using JS, 
 Tab buttons can be used with just an icon as a visible label (use `.u-sr-only` to provide an invisible text label too).
 
 <Canvas>
-  <Story id="atoms-button-tab--icon-only-base" />
-  <Story id="atoms-button-tab--icon-only-selected" />
-  <Story id="atoms-button-tab--icon-only-disabled" />
+  <Story id="atoms-button--tab-icon-only-base" />
+  <Story id="atoms-button--tab-icon-only-selected" />
+  <Story id="atoms-button--tab-icon-only-disabled" />
 </Canvas>
+
+## Customization
+
+Tab buttons are a combination of a color and a shape button variant, so you may need to adjust both aspects if you want to customize these to match your designs. See [Button shapes](/docs/atoms-button-shapes--page) and [Button colors](/docs/atoms-button-colors--page) for details.

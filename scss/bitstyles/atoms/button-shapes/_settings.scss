@@ -17,19 +17,16 @@ $default: (
 ) !default;
 /* stylelint-enable length-zero-no-unit */
 $small: (
-  'padding-vertical': size.get('s6'),
-  'padding-horizontal': size.get('s3'),
-  'border-radius': size.get('s6'),
+  'padding-vertical': size.get('s4'),
+  'padding-horizontal': size.get('m'),
   'min-height': size.get('l1'),
   'min-width': size.get('l2'),
-  'font-size': font-size.get('1'),
   'font-weight': typography.$font-weight-medium,
 ) !default;
-$large: (
-  'padding-vertical': size.get('m'),
-  'padding-horizontal': size.get('l3'),
-  'border-radius': size.get('s3'),
-  'font-size': font-size.get('2'),
+$x-small: (
+  'padding-vertical': size.get('s6'),
+  'padding-horizontal': size.get('s2'),
+  'font-weight': typography.$font-weight-medium,
 ) !default;
 $transparent: (
   'border-width': 0.1875rem,
@@ -50,11 +47,11 @@ $round: (
 $variants: (
   '': $default,
   '--small': $small,
-  '--large': $large,
+  '--x-small': $x-small,
   '--transparent': $transparent,
   '--outline': $outline,
   '--menu': $menu,
   '--square': $square,
   '--round': $round,
 ) !default;
-$with-square-variants: ('--small', '--large', '') !default;
+$with-square-variants: ('--small', '--x-small', '') !default;
