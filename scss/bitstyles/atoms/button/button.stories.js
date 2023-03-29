@@ -162,15 +162,15 @@ DefaultSquareSecondary.parameters = {
   zeplinLink: [
     {
       name: 'base',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da72602a192ac86f33b4',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dd82c51a6528e9b46d59',
     },
     {
       name: 'hover',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da7a99d34169bc74e07c',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dd897a74d86af1a5a542',
     },
     {
       name: 'active',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da711fde7a3128496618',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dd834542a728c8ec302a',
     },
   ],
 };
@@ -185,15 +185,15 @@ DefaultSquareTransparent.parameters = {
   zeplinLink: [
     {
       name: 'base',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da72602a192ac86f33b4',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dd33b78eb26789d78c52',
     },
     {
       name: 'hover',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da7a99d34169bc74e07c',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dd3971bf8e2f8697ce41',
     },
     {
       name: 'active',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da711fde7a3128496618',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dd2d99d34169bc74f62f',
     },
   ],
 };
@@ -208,15 +208,15 @@ DefaultSquareOutline.parameters = {
   zeplinLink: [
     {
       name: 'base',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da72602a192ac86f33b4',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dce87305863282524d1f',
     },
     {
       name: 'hover',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da7a99d34169bc74e07c',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dce990b73b2be58d74fd',
     },
     {
       name: 'active',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da711fde7a3128496618',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dceaaf1a192f9d8545db',
     },
   ],
 };
@@ -226,12 +226,44 @@ DefaultRoundPrimary.args = {
   shapeVariant: ['round', 'square'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
 };
+DefaultRoundPrimary.parameters = {
+  zeplinLink: [
+    {
+      name: 'base',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b47e1e3fd922737f2544',
+    },
+    {
+      name: 'hover',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b47d52cb6022d9e0e8cd',
+    },
+    {
+      name: 'active',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b4841be18d22609be56f',
+    },
+  ],
+};
 
 export const DefaultRoundSecondary = Template.bind({});
 DefaultRoundSecondary.args = {
   shapeVariant: ['round', 'square'],
   colorVariant: ['secondary'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
+};
+DefaultRoundSecondary.parameters = {
+  zeplinLink: [
+    {
+      name: 'base',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b4bc85fed1220a826c5a',
+    },
+    {
+      name: 'hover',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b4b5b2161522b27906c7',
+    },
+    {
+      name: 'active',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b4b0044e112200e37c24',
+    },
+  ],
 };
 
 export const DefaultRoundTransparent = Template.bind({});
@@ -240,12 +272,44 @@ DefaultRoundTransparent.args = {
   colorVariant: ['transparent'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
 };
+DefaultRoundTransparent.parameters = {
+  zeplinLink: [
+    {
+      name: 'base',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b4e7fe5015225116edaf',
+    },
+    {
+      name: 'hover',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b4f52b57ee2256c16512',
+    },
+    {
+      name: 'active',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b4e23b42d6220b757020',
+    },
+  ],
+};
 
 export const DefaultRoundOutline = Template.bind({});
 DefaultRoundOutline.args = {
   shapeVariant: ['round', 'square'],
   colorVariant: ['outline'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
+};
+DefaultRoundOutline.parameters = {
+  zeplinLink: [
+    {
+      name: 'base',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b504044e112200e382ee',
+    },
+    {
+      name: 'hover',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b4fdd08a97229b35cdec',
+    },
+    {
+      name: 'active',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6422b4fa92fb67224aad2ea3',
+    },
+  ],
 };
 
 // ***** Small shapes ****************** //
@@ -744,7 +808,7 @@ TransparentDisabled.parameters = {
 };
 
 export const OutlineDisabled = Template.bind({});
-OutlineDisabled.args = { colorVariant: ['transparent'], disabled: true };
+OutlineDisabled.args = { colorVariant: ['outline'], disabled: true };
 OutlineDisabled.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363dcf429f7bb28f410acbc',

@@ -6,7 +6,7 @@ function generateLabel(shapeVariant, colorVariant) {
   return capitalizeFirstLetter(
     `${shapeVariant.length === 0 ? ['Default'] : shapeVariant} ${
       colorVariant.length === 0 ? ['Primary'] : colorVariant
-    }`
+    }`.replace(',', ' ')
   );
 }
 

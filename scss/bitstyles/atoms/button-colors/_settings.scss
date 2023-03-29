@@ -159,15 +159,15 @@ $outline: (
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
-            $blur-radius: size.get('s4'),
+            $color: rgba(palette.get('brand-1', 'dark-1-rgb'), 0.125),
+            $blur-radius: size.get('m'),
           )
         ),
     ),
     'disabled': (
       'color': palette.get('grayscale'),
-      'background-color': palette.get('grayscale', 'light-3'),
-      'border-color': palette.get('grayscale', 'light-3'),
+      'background-color': transparent,
+      'border-color': palette.get('grayscale'),
       'box-shadow': none,
     ),
   ),
@@ -197,8 +197,8 @@ $outline: (
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
-            $blur-radius: size.get('s4'),
+            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.125),
+            $blur-radius: size.get('m'),
           )
         ),
     ),
@@ -239,8 +239,8 @@ $transparent: (
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('brand-1', 'dark-1-rgb'), 0.075),
-            $blur-radius: size.get('s4'),
+            $color: rgba(palette.get('brand-1', 'dark-1-rgb'), 0.125),
+            $blur-radius: size.get('m'),
           )
         ),
     ),
@@ -277,8 +277,8 @@ $transparent: (
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('grayscale', 'dark-2-rgb'), 0.075),
-            $blur-radius: size.get('s4'),
+            $color: rgba(palette.get('grayscale', 'dark-2-rgb'), 0.125),
+            $blur-radius: size.get('m'),
           )
         ),
     ),
