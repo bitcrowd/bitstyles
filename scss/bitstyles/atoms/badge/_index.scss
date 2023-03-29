@@ -32,6 +32,7 @@ $gap-property: custom-property.get(
   ),
   $layer: 'atom',
 );
+$button-gap-property: size.get('s6');
 $shadow-property: custom-property.get(
   $items: (
     'badge',
@@ -50,12 +51,18 @@ $shadow-property: custom-property.get(
   border-radius: layout.$border-radius-round;
   box-shadow: var(#{$shadow-property});
   white-space: nowrap;
+}
 
-  #{classname.get($classname-items: 'badge__button', $layer: 'atom')} {
-    margin-left: calc(
-      var(#{$padding-horizontal-property}) * -1 + var(#{$gap-property})
-    );
-  }
+#{classname.get($classname-items: 'badge__extra', $layer: 'atom')} {
+  margin-top: calc(
+    var(#{$padding-vertical-property}) * -1 + #{$button-gap-property}
+  );
+  margin-bottom: calc(
+    var(#{$padding-vertical-property}) * -1 + #{$button-gap-property}
+  );
+  margin-left: calc(
+    var(#{$padding-horizontal-property}) * -1 + #{$button-gap-property}
+  );
 }
 
 /* Theme variants */

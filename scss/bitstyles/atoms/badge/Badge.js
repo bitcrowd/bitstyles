@@ -1,8 +1,9 @@
+import { generateLabel } from '../../../../.storybook/helpers';
 import Button from '../button/Button';
 import icons from '../../../../assets/images/icons.svg';
 
 export default ({
-  label = 'Badge',
+  label,
   theme = 'grayscale',
   sizeVariant,
   onClick = null,
@@ -14,13 +15,14 @@ export default ({
   if (typeof onClick === 'function') {
     badge.appendChild(
       Button({
-        shapeVariant: ['small', 'square', 'round'],
+        shapeVariant: ['x-small', 'square', 'round'],
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
         onClick,
-        classname: ['a-badge__button'],
+        classname: ['a-badge__extra'],
       })
     );
   }
-  badge.append(label);
+  const sizeVariantLabel = sizeVariant === undefined ? [] : sizeVariant;
+  badge.append(label || generateLabel(sizeVariantLabel, [theme]));
   return badge;
 };
