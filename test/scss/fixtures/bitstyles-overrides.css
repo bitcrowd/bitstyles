@@ -1514,15 +1514,28 @@ table {
   --bscpn-at-button-padding-vertical: var(--bscpn-size-s2);
 }
 .bs-at-button--small {
-  --bscpn-at-button-padding-vertical: var(--bscpn-size-s6);
-  --bscpn-at-button-padding-horizontal: var(--bscpn-size-s3);
-  --bscpn-at-button-border-radius: var(--bscpn-size-s6);
+  --bscpn-at-button-padding-vertical: var(--bscpn-size-s4);
+  --bscpn-at-button-padding-horizontal: var(--bscpn-size-m);
   --bscpn-at-button-min-height: var(--bscpn-size-l1);
   --bscpn-at-button-min-width: var(--bscpn-size-l2);
-  --bscpn-at-button-font-size: var(--bscpn-font-size-1);
   --bscpn-at-button-font-weight: 500;
 }
 .bs-at-button--small.bs-at-button--square {
+  --bscpn-at-button-min-width: calc(
+    1em * var(--bscpn-line-height-5) + var(--bscpn-size-s4) * 2
+  );
+  --bscpn-at-button-min-height: calc(
+    1em * var(--bscpn-line-height-5) + var(--bscpn-size-s4) * 2
+  );
+  --bscpn-at-button-padding-horizontal: var(--bscpn-size-s4);
+  --bscpn-at-button-padding-vertical: var(--bscpn-size-s4);
+}
+.bs-at-button--x-small {
+  --bscpn-at-button-padding-vertical: var(--bscpn-size-s6);
+  --bscpn-at-button-padding-horizontal: var(--bscpn-size-s2);
+  --bscpn-at-button-font-weight: 500;
+}
+.bs-at-button--x-small.bs-at-button--square {
   --bscpn-at-button-min-width: calc(
     1em * var(--bscpn-line-height-5) + var(--bscpn-size-s6) * 2
   );
@@ -1531,22 +1544,6 @@ table {
   );
   --bscpn-at-button-padding-horizontal: var(--bscpn-size-s6);
   --bscpn-at-button-padding-vertical: var(--bscpn-size-s6);
-}
-.bs-at-button--large {
-  --bscpn-at-button-padding-vertical: var(--bscpn-size-m);
-  --bscpn-at-button-padding-horizontal: var(--bscpn-size-l3);
-  --bscpn-at-button-border-radius: var(--bscpn-size-s3);
-  --bscpn-at-button-font-size: var(--bscpn-font-size-2);
-}
-.bs-at-button--large.bs-at-button--square {
-  --bscpn-at-button-min-width: calc(
-    1em * var(--bscpn-line-height-5) + var(--bscpn-size-m) * 2
-  );
-  --bscpn-at-button-min-height: calc(
-    1em * var(--bscpn-line-height-5) + var(--bscpn-size-m) * 2
-  );
-  --bscpn-at-button-padding-horizontal: var(--bscpn-size-m);
-  --bscpn-at-button-padding-vertical: var(--bscpn-size-m);
 }
 .bs-at-button--transparent {
   --bscpn-at-button-border-width: 0.1875rem;

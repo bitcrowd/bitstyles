@@ -1628,15 +1628,28 @@ table {
   --bs-a-button-padding-vertical: var(--bs-size-s2);
 }
 .a-button--small {
-  --bs-a-button-padding-vertical: var(--bs-size-s6);
-  --bs-a-button-padding-horizontal: var(--bs-size-s3);
-  --bs-a-button-border-radius: var(--bs-size-s6);
+  --bs-a-button-padding-vertical: var(--bs-size-s4);
+  --bs-a-button-padding-horizontal: var(--bs-size-m);
   --bs-a-button-min-height: var(--bs-size-l1);
   --bs-a-button-min-width: var(--bs-size-l2);
-  --bs-a-button-font-size: var(--bs-font-size-1);
   --bs-a-button-font-weight: 500;
 }
 .a-button--small.a-button--square {
+  --bs-a-button-min-width: calc(
+    1em * var(--bs-line-height-5) + var(--bs-size-s4) * 2
+  );
+  --bs-a-button-min-height: calc(
+    1em * var(--bs-line-height-5) + var(--bs-size-s4) * 2
+  );
+  --bs-a-button-padding-horizontal: var(--bs-size-s4);
+  --bs-a-button-padding-vertical: var(--bs-size-s4);
+}
+.a-button--x-small {
+  --bs-a-button-padding-vertical: var(--bs-size-s6);
+  --bs-a-button-padding-horizontal: var(--bs-size-s2);
+  --bs-a-button-font-weight: 500;
+}
+.a-button--x-small.a-button--square {
   --bs-a-button-min-width: calc(
     1em * var(--bs-line-height-5) + var(--bs-size-s6) * 2
   );
@@ -1645,22 +1658,6 @@ table {
   );
   --bs-a-button-padding-horizontal: var(--bs-size-s6);
   --bs-a-button-padding-vertical: var(--bs-size-s6);
-}
-.a-button--large {
-  --bs-a-button-padding-vertical: var(--bs-size-m);
-  --bs-a-button-padding-horizontal: var(--bs-size-l3);
-  --bs-a-button-border-radius: var(--bs-size-s3);
-  --bs-a-button-font-size: var(--bs-font-size-2);
-}
-.a-button--large.a-button--square {
-  --bs-a-button-min-width: calc(
-    1em * var(--bs-line-height-5) + var(--bs-size-m) * 2
-  );
-  --bs-a-button-min-height: calc(
-    1em * var(--bs-line-height-5) + var(--bs-size-m) * 2
-  );
-  --bs-a-button-padding-horizontal: var(--bs-size-m);
-  --bs-a-button-padding-vertical: var(--bs-size-m);
 }
 .a-button--transparent {
   --bs-a-button-border-width: 0.1875rem;
