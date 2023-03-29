@@ -18,10 +18,12 @@
 - Default visual design for buttons has been updated — colors have been refreshed utilizing the new palette, and we’ve added a new `outline` button that has a border. The `large` shape variant has been removed — the sizes are now `default`, `small`, and `x-small`. If you were overriding the default configuration for buttons, you may see no change.
 - Updated the default configuration for typography. If you want to keep the old typographic scale (font-sizes and line-heights), you can re-instate the old configuration.
 - Default visual appearance of Atoms/Dropdown component has been updated. If you were already overriding this, you may see no difference
+- New atoms/badge component, an overhaul of the existing component, that you’ll need to update your codebase to continue using. The colors for each variant are created using the theming system, meaning that buttons inside can have their colors fit the color of the badge. If you were using badges without customization, the only thing that needs to change in your component markup is that the color variant is now specified using `class="a-badge" data-theme="variant"` instead of with the modifier class `class="a-badge a-badge--variant"`. The same variants exist (`grayscale`, `brand-1`, `brand-2`, `positive`, `warning`, `danger`) See documentation for a guide on how to customize the variants.
 
 ### Added
 
 - The storybook now includes the `storybook-zeplin` plugin, for which you’ll need to provide your Zeplin personal access token, otherwise the plugin will not work. No other functionality will be affected.
+- The atoms/badge component is now available with a `small` size variant.
 
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2023-01-03
 
