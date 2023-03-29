@@ -85,6 +85,11 @@
       'background': var(--bscpn-color-brand-1-dark-3),
       'text': var(--bscpn-color-brand-2-light-3),
     ),
+    'brand-1': (),
+    'brand-2': (),
+    'danger': (),
+    'warning': (),
+    'positive': (),
   )
 );
 @use '../../scss/bitstyles/settings/typography' with (
@@ -173,7 +178,11 @@
   )
 );
 @use '../../scss/bitstyles/atoms/badge' with (
-  $color: 'light-1'
+  $theme-variants: (
+    'default': (
+      'shadow': none,
+    ),
+  )
 );
 @use '../../scss/bitstyles/atoms/bordered-header' with (
   $gutter: 10rem
