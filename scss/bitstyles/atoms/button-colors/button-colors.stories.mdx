@@ -6,12 +6,12 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 Buttons are available in several color-based variations:
 
-| Color variant   | Description                                                                                                                      |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| **Primary**     | This is the default color variant, that should be used sparingly (even only once) per screen to indicate the primary action.     |
-| **Secondary**   | Most other buttons on a screen should probably use this variant. It is a visibly interactive element but not heavily emphasised. |
-| **Transparent** | For buttons that really shouldn’t stand out, these present only a text label until interacted with.                              |
-| **Outline**     | A hollow button with a heavy border, these are often used for activating dropdowns.                                              |
+| Color variant   | Description                                                                                                                         |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Primary**     | This is the default color variant, that should be used sparingly (ideally only once) per screen to indicate the primary action.     |
+| **Secondary**   | Most other buttons on a screen should use this variant. It is a visibly interactive element but not emphasised.                     |
+| **Transparent** | For buttons that shouldn’t stand out, these present only their children (e.g. text, icon with no background) until interacted with. |
+| **Outline**     | A hollow button with a heavy border, these are often used for activating dropdowns.                                                 |
 
 ## Button states
 
@@ -23,7 +23,7 @@ Buttons react to user interaction, and can be disabled, giving the following sta
 | hover    | The user has their cursor over the button (`:hover` psuedoclass)                                                                                                                                                                                                                                                                            |
 | active   | The user is currently clicking, tapping, or otherwise activating the button (`:active` psuedoclass)                                                                                                                                                                                                                                         |
 | pressed  | Covers several instances where the button can be in an “on” state. This is for toggle buttons, tab buttons, navigation or steps in a process where one is currently active, or for buttons that show/hide other content. Apply the relevant aria attribute to the button: `aria-selected`, `aria-expanded`, `aria-current`, `aria-pressed`. |
-| disabled | The button is not currently clickable, and will not perform an action                                                                                                                                                                                                                                                                       |
+| disabled | The button is not currently clickable, and will not perform an action when clicked. If this is applied to a button rendered as an anchor element (using `aria-disabled`), that element will however be clickable.                                                                                                                           |
 
 <Canvas>
   <Story id="atoms-button--default-primary" />
@@ -35,7 +35,7 @@ Buttons react to user interaction, and can be disabled, giving the following sta
 
 ## Danger
 
-A special color variant that only shows itself on hover. This can be applied to all the other color variants to indicate to the user that the action is destructive or dangerous — it turns red on hover.
+A special color variant that shows itself on hover. This can be applied to any of the other color variants to indicate to the user that the action is destructive or dangerous. The button will turn red on hover.
 
 <Canvas>
   <Story id="atoms-button--default-danger-primary" />
@@ -70,7 +70,7 @@ A special color variant that only shows itself on hover. This can be applied to 
 
 ## Anchors
 
-For technical reasons, some “buttons” will likely be anchor elements.
+For technical reasons, sometimes “buttons” will be anchor (`<a href="">`) elements.
 
 <Canvas>
   <Story id="atoms-button--primary-anchor" />
@@ -86,7 +86,7 @@ For technical reasons, some “buttons” will likely be anchor elements.
 
 ## Disabled anchors
 
-Add `aria-disabled="true"` to an anchor to make it appear disabled. Be aware that the link will still work.
+Add `aria-disabled="true"` to an anchor to make it appear disabled. Be aware that this is only a visual indication for the user — the link will still work and navigate to the URL in its `href` attribute.
 
 <Canvas>
   <Story id="atoms-button--primary-anchor-disabled" />
@@ -102,27 +102,34 @@ Add `aria-disabled="true"` to an anchor to make it appear disabled. Be aware tha
 
 ## Customization
 
-There are two approaches to customizing the button color variants, depending on your needs. Both give you access to the following properties:
+There are two approaches to customizing the button color variants, depending on your needs. Both give you access to the following CSS properties, which will be applied to your buttons directly:
 
 - `color`
 - `background-color`
 - `border-color`
 - `box-shadow`
 
+There is one extra non-CSS property that can be specified:
+
+- `icon-color`
+
+`icon-color` is applied to any icon child of the button, allowing you to have icons that are a different color to the other button children. See the [tab buttons](/docs/atoms-button-tabs--page) for an example of how that works.
+
 ### Customize existing color variants
 
-If the variety of buttons provided fits your requirements, but you need e.g. you primary buttons to have a different box-shadow, or your secondary buttons to be outlined with a border, you can customize the existing buttons.
+If the variety of buttons provided fits your requirements, but you need e.g. your primary buttons to have a different box-shadow, or for your secondary buttons to be outlined with a border, you can customize these existing buttons.
 
-The `default`, `secondary`, `transparent`, `tab`, and `danger` configurations are all available to be overridden at variables with those names. The configuration expects a Sass map of button states `default`, `hover`, `active`, `pressed`, and `disabled`. You do not need to provide all of these, only those you require. Each state should contain a Sass map where the CSS property name (from the list above) is the key, and the value for that property is the value:
+The `default`, `secondary`, `transparent`, `tab`, and `danger` configurations are all available to be overridden at variables with those names: `button-colours.$default`, `button-colors.$secondary` and so on. This configuration expects a Sass map of button states `default`, `hover`, `active`, `pressed`, and `disabled`. You do not need to provide all of these, only those you require. Each state should contain a Sass map where the CSS property name (from the list above) is the key, and the value for that property is the value:
 
 ```scss
 $secondary: (
   'default': (
     'default': (
-      'border-color': #f00,
+      'border-color': palette.get('brand-1', 'dark-1'),
+      'icon-color': palette.get('brand-1', 'dark-3'),
     ),
     'hover': (
-      'border-color': #600,
+      'border-color': palette.get('brand-1', 'dark-3'),
     ),
   ),
 );
@@ -144,12 +151,12 @@ When you need an entirely different set of buttons, you can define your own and 
 $custom-button: (
   'default': (
     'default': (
-      'border-color': #f00,
-      'color': #fff,
+      'border-color': palette.get('brand-1', 'dark-1'),
+      'color': palette.get('grayscale', 'white'),
     ),
     'hover': (
-      'border-color': #600,
-      'color': #f00,
+      'border-color': palette.get('brand-1', 'dark-3'),
+      'color': palette.get('grayscale', 'light-4'),
     ),
   ),
 );

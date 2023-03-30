@@ -2,11 +2,20 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function generateLabel(shapeVariant, colorVariant) {
+function generateLabel(
+  shapeVariant,
+  colorVariant,
+  disabled = false,
+  pressed = false
+) {
+  console.log(disabled, pressed);
   return capitalizeFirstLetter(
-    `${shapeVariant.length === 0 ? ['Default'] : shapeVariant} ${
-      colorVariant.length === 0 ? ['Primary'] : colorVariant
-    }`.replace(',', ' ')
+    [
+      shapeVariant.length === 0 ? 'Default' : shapeVariant.join(' '),
+      colorVariant.length === 0 ? 'Primary' : colorVariant.join(' '),
+      disabled ? 'disabled' : null,
+      pressed ? 'pressed' : null,
+    ].join(' ')
   );
 }
 
@@ -22,7 +31,14 @@ export default ({
   element = 'button',
 }) => {
   const button = document.createElement(element);
-  button.innerHTML = children || generateLabel(shapeVariant, colorVariant);
+  button.innerHTML =
+    children ||
+    generateLabel(
+      shapeVariant,
+      colorVariant,
+      disabled || ariaDisabled,
+      ariaPressed || ariaCurrent || ariaSelected
+    );
   button.classList.add('a-button');
   colorVariant.forEach((variant) => {
     button.classList.add(`a-button--${variant}`);
