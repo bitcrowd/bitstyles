@@ -1,11 +1,39 @@
 @forward 'settings';
 @use './settings';
-@use '../../tools/palette';
+@use 'sass:map';
 @use '../../tools/classname';
+@use '../../tools/custom-property';
+@use '../../tools/media-query';
+@use '../../tools/palette';
 
-@each $variant in (settings.$variants) {
-  #{classname.get($classname-items: 'flash--#{$variant}', $layer: 'atom')} {
-    background-color: palette.get($variant, settings.$background-color);
-    color: palette.get($variant, settings.$color);
+$classname: classname.get($classname-items: 'flash', $layer: 'atom');
+$padding-horizontal-property: custom-property.get($items: (
+  'flash',
+  'padding',
+  'horizontal',
+), $layer: 'atom',);
+$padding-vertical-property: custom-property.get($items: (
+  'flash',
+  'padding',
+  'vertical',
+), $layer: 'atom',);
+$gap-property: custom-property.get($items: (
+  'flash',
+  'gap',
+), $layer: 'atom',);
+
+#{$classname} {
+  display: flex;
+  padding: var(#{$padding-vertical-property}) var(#{$padding-horizontal-property});
+  gap: var(#{$gap-property});
+}
+
+@each $breakpoint-name, $padding-variant in settings.$padding {
+  @include media-query.get($breakpoint-name) {
+    #{$classname} {
+      #{$padding-horizontal-property}: map.get($padding-variant, 'padding-horizontal');
+      #{$padding-vertical-property}: map.get($padding-variant, 'padding-vertical');
+      #{$gap-property}: map.get($padding-variant, 'gap');
+    }
   }
 }

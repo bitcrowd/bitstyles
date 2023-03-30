@@ -1,3 +1,15 @@
-$color: 'dark-1' !default;
-$background-color: 'light-2' !default;
-$variants: ('brand-1', 'positive', 'danger', 'warning') !default;
+@use '../../settings/setup';
+@use '../../tools/size';
+
+$padding: (
+  '#{setup.$no-media-query}': (
+    'padding-horizontal': size.get('m'),
+    'padding-vertical': size.get('s3'),
+    'gap': size.get('s3'),
+  ),
+  'm': (
+    'padding-horizontal': size.get('l1'),
+    'padding-vertical': size.get('l1'),
+    'gap': size.get('s2'),
+  )
+)

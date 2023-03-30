@@ -1,6 +1,6 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Atoms/Flash" />
+<Meta title="Atoms/Flash/Overview" />
 
 # Flash
 
@@ -11,42 +11,10 @@ Flashes come in several variants, which use color **and html** attributes to ind
 Examples here show the content of the flashes within a [content](/docs/atoms-content-content) wrapper to produce standard spacing, and restrict the content width so it aligns with other page content. You don't need to use these if it doesn’t fit your design requirements.
 
 <Canvas isColumn>
-  <Story name="a-flash--brand-1">
-    {`
-      <div class="u-padding-l2-y a-flash--brand-1" aria-live="polite">
-        <div class="a-content">
-          Changes successfully saved
-        </div>
-      </div>
-    `}
-  </Story>
-  <Story name="a-flash--positive">
-    {`
-      <div class="u-padding-l2-y a-flash--positive" aria-live="polite">
-        <div class="a-content">
-          Changes successfully saved
-        </div>
-      </div>
-    `}
-  </Story>
-  <Story name="a-flash--warning">
-    {`
-      <div class="u-padding-l2-y a-flash--warning" aria-live="polite">
-        <div class="a-content">
-          Login not successful, please try that again
-        </div>
-      </div>
-    `}
-  </Story>
-  <Story name="a-flash--danger">
-    {`
-      <div class="u-padding-l2-y a-flash--danger" role="alert">
-        <div class="a-content">
-          An error occured, please contact an admin
-        </div>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-flash--base" />
+  <Story id="atoms-flash--positive" />
+  <Story id="atoms-flash--warning" />
+  <Story id="atoms-flash--danger" />
 </Canvas>
 
 ## Customization
