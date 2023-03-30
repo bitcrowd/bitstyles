@@ -77,42 +77,42 @@ Positive.parameters = {
 };
 
 export const BaseSmall = Template.bind({});
-BaseSmall.args = { sizeVariant: 'small' };
+BaseSmall.args = { sizeVariant: ['small'] };
 BaseSmall.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640763d3ab7adf3224b8fc6f',
 };
 
 export const Brand1Small = Template.bind({});
-Brand1Small.args = { theme: 'brand-1', sizeVariant: 'small' };
+Brand1Small.args = { theme: 'brand-1', sizeVariant: ['small'] };
 Brand1Small.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640763e4ad5fd231f05b9b6c',
 };
 
 export const Brand2Small = Template.bind({});
-Brand2Small.args = { theme: 'brand-2', sizeVariant: 'small' };
+Brand2Small.args = { theme: 'brand-2', sizeVariant: ['small'] };
 Brand2Small.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640763e60a5a09421249d883',
 };
 
 export const DangerSmall = Template.bind({});
-DangerSmall.args = { theme: 'danger', sizeVariant: 'small' };
+DangerSmall.args = { theme: 'danger', sizeVariant: ['small'] };
 DangerSmall.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640763e077891e40c6ef5624',
 };
 
 export const WarningSmall = Template.bind({});
-WarningSmall.args = { theme: 'warning', sizeVariant: 'small' };
+WarningSmall.args = { theme: 'warning', sizeVariant: ['small'] };
 WarningSmall.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640763e784056140d96d1472',
 };
 
 export const PositiveSmall = Template.bind({});
-PositiveSmall.args = { theme: 'positive', sizeVariant: 'small' };
+PositiveSmall.args = { theme: 'positive', sizeVariant: ['small'] };
 PositiveSmall.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640763e03e79f8416e89de11',
@@ -233,39 +233,39 @@ PositiveButton.parameters = {
 };
 
 export const BaseButtonSmall = Template.bind({});
-BaseButtonSmall.args = { onClick: dummyOnClick, sizeVariant: 'small' };
+BaseButtonSmall.args = { onClick: dummyOnClick, sizeVariant: ['small'] };
 
 export const Brand1ButtonSmall = Template.bind({});
 Brand1ButtonSmall.args = {
   theme: 'brand-1',
   onClick: dummyOnClick,
-  sizeVariant: 'small',
+  sizeVariant: ['small'],
 };
 
 export const Brand2ButtonSmall = Template.bind({});
 Brand2ButtonSmall.args = {
   theme: 'brand-2',
   onClick: dummyOnClick,
-  sizeVariant: 'small',
+  sizeVariant: ['small'],
 };
 
 export const DangerButtonSmall = Template.bind({});
 DangerButtonSmall.args = {
   theme: 'danger',
   onClick: dummyOnClick,
-  sizeVariant: 'small',
+  sizeVariant: ['small'],
 };
 
 export const WarningButtonSmall = Template.bind({});
 WarningButtonSmall.args = {
   theme: 'warning',
   onClick: dummyOnClick,
-  sizeVariant: 'small',
+  sizeVariant: ['small'],
 };
 
 export const PositiveButtonSmall = Template.bind({});
 PositiveButtonSmall.args = {
   theme: 'positive',
   onClick: dummyOnClick,
-  sizeVariant: 'small',
+  sizeVariant: ['small'],
 };

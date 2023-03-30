@@ -12,17 +12,17 @@ function capitalizeFirstLetter(string) {
 }
 
 export const generateLabel = (
-  shapeVariant,
-  colorVariant,
+  shapeVariant = [],
+  colorVariant = [],
   disabled = false,
   pressed = false
-) => {
-  return capitalizeFirstLetter(
+) => (
+  capitalizeFirstLetter(
     [
       shapeVariant.length === 0 ? 'default' : shapeVariant.join(' '),
       colorVariant.length === 0 ? 'primary' : colorVariant.join(' '),
       disabled ? 'disabled' : null,
       pressed ? 'pressed' : null,
     ].join(' ')
-  );
-}
+  )
+)
