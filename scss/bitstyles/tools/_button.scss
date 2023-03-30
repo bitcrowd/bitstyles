@@ -8,7 +8,10 @@
 
 @mixin colors($colors, $variant-name) {
   $button-name: 'button#{$variant-name}';
-  $allow-list: list.join(settings.$allowed-color-properties, settings.$extra-color-properties);
+  $allow-list: list.join(
+    settings.$allowed-color-properties,
+    settings.$extra-color-properties
+  );
 
   @if map.has-key($colors, 'default') {
     @include custom-properties.output-filtered(

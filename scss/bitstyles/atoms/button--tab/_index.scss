@@ -70,6 +70,15 @@
   }
 
   #{classname.get($classname-items: 'icon', $layer: 'atom')} {
-    color: var(#{custom-property.get($items: ('button--tab', 'icon-color'), $layer: 'atom')}, currentcolor);
+    color: var(
+      #{custom-property.get(
+          $items: (
+            'button--tab',
+            'icon-color',
+          ),
+          $layer: 'atom'
+        )},
+      currentcolor
+    );
   }
 }
