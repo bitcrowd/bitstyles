@@ -24,6 +24,7 @@ $gap-property: custom-property.get($items: (
 
 #{$classname} {
   display: flex;
+  align-items: center;
   padding: var(#{$padding-vertical-property}) var(#{$padding-horizontal-property});
   gap: var(#{$gap-property});
 }

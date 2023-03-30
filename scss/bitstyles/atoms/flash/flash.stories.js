@@ -61,3 +61,33 @@ Positive.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd96d1e9ea1a4033367b',
 };
+
+// ***** With icons ****************** //
+
+export const BaseIcon = Template.bind({});
+BaseIcon.args = { icon: 'info-circle' };
+BaseIcon.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd93290bbf15ece3af28',
+};
+
+export const DangerIcon = Template.bind({});
+DangerIcon.args = { theme: 'danger', icon: 'exclamation' };
+DangerIcon.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd96738ff61b62c51df3',
+};
+
+export const WarningIcon = Template.bind({});
+WarningIcon.args = { theme: 'warning', icon: 'question-circle' };
+WarningIcon.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd5c81e8be1bb6c6129f',
+};
+
+export const PositiveIcon = Template.bind({});
+PositiveIcon.args = { theme: 'positive', icon: 'check-circle' };
+PositiveIcon.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd96d1e9ea1a4033367b',
+};
