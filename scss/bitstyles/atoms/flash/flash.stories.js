@@ -31,6 +31,7 @@ export default {
 };
 
 const Template = (args) => Flash(args);
+const dummyOnClick = () => {};
 
 // ***** Theme variants ****************** //
 
@@ -88,6 +89,48 @@ WarningIcon.parameters = {
 export const PositiveIcon = Template.bind({});
 PositiveIcon.args = { theme: 'positive', icon: 'check-circle' };
 PositiveIcon.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd96d1e9ea1a4033367b',
+};
+
+// ***** With icons & buttons ****************** //
+
+export const BaseIconButton = Template.bind({});
+BaseIconButton.args = { icon: 'info-circle', onClick: dummyOnClick };
+BaseIconButton.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd93290bbf15ece3af28',
+};
+
+export const DangerIconButton = Template.bind({});
+DangerIconButton.args = {
+  theme: 'danger',
+  icon: 'exclamation',
+  onClick: dummyOnClick,
+};
+DangerIconButton.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd96738ff61b62c51df3',
+};
+
+export const WarningIconButton = Template.bind({});
+WarningIconButton.args = {
+  theme: 'warning',
+  icon: 'question-circle',
+  onClick: dummyOnClick,
+};
+WarningIconButton.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd5c81e8be1bb6c6129f',
+};
+
+export const PositiveIconButton = Template.bind({});
+PositiveIconButton.args = {
+  theme: 'positive',
+  icon: 'check-circle',
+  onClick: dummyOnClick,
+};
+PositiveIconButton.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6331bd96d1e9ea1a4033367b',
 };
