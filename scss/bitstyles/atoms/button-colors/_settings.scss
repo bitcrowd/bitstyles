@@ -298,6 +298,7 @@ $tab: (
       'color': palette.get('grayscale', 'dark-1'),
       'background-color': transparent,
       'box-shadow': none,
+      'icon-color': palette.get('grayscale', 'dark-2'),
     ),
     'hover': (
       'color': palette.get('brand-1', 'dark-1'),

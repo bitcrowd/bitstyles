@@ -17,7 +17,10 @@ $allowed-color-properties: (
   'color',
   'background-color',
   'border-color',
-  'box-shadow'
+  'box-shadow',
+) !default;
+$extra-color-properties: (
+  'icon-color',
 ) !default;
 $allowed-shape-properties: (
   'padding-vertical',

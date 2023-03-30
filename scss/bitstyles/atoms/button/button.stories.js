@@ -948,6 +948,17 @@ TabAnchor.parameters = {
   ],
 };
 
+export const TabAnchorPressed = Template.bind({});
+TabAnchorPressed.args = {
+  colorVariant: ['tab'],
+  element: 'anchor',
+  ariaCurrent: 'page',
+};
+TabAnchorPressed.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b52890b84043f89ba4',
+};
+
 export const DangerPrimaryAnchor = Template.bind({});
 DangerPrimaryAnchor.args = { colorVariant: ['danger'], element: 'anchor' };
 DangerPrimaryAnchor.parameters = {
