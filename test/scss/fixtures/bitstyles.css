@@ -1665,6 +1665,9 @@ table {
 .a-button--menu {
   --bs-a-button-justify-content: flex-start;
 }
+.a-button--tab {
+  --bs-a-button-border-radius: 0;
+}
 .a-button--square {
   --bs-a-button-padding-vertical: calc(var(--bs-size-s2) + var(--bs-size-s7));
   --bs-a-button-padding-horizontal: calc(var(--bs-size-s2) + var(--bs-size-s7));

@@ -8,7 +8,6 @@ function generateLabel(
   disabled = false,
   pressed = false
 ) {
-  console.log(disabled, pressed);
   return capitalizeFirstLetter(
     [
       shapeVariant.length === 0 ? 'Default' : shapeVariant.join(' '),

@@ -1553,6 +1553,9 @@ table {
 .bs-at-button--menu {
   --bscpn-at-button-justify-content: flex-start;
 }
+.bs-at-button--tab {
+  --bscpn-at-button-border-radius: 0;
+}
 .bs-at-button--square {
   --bscpn-at-button-padding-vertical: calc(
     var(--bscpn-size-s2) + var(--bscpn-size-s7)
