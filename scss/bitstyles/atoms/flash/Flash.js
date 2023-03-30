@@ -20,10 +20,9 @@ export default ({ children, theme = 'brand-1', icon, onClick = null }) => {
   if (typeof onClick === 'function') {
     flash.appendChild(
       Button({
-        shapeVariant: ['x-small', 'square', 'round'],
+        shapeVariant: ['x-small', 'square'],
         children: Icon({ name: 'cross' }),
         onClick,
-        classname: ['a-badge__extra'],
       })
     );
   }

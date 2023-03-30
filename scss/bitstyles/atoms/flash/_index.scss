@@ -27,6 +27,8 @@ $gap-property: custom-property.get($items: (
   align-items: center;
   padding: var(#{$padding-vertical-property}) var(#{$padding-horizontal-property});
   gap: var(#{$gap-property});
+  color: var(#{custom-property.get($items: ('theme', 'text-dark'))});
+  background-color: var(#{custom-property.get($items: ('theme', 'background-dark'))});
 }
 
 @each $breakpoint-name, $padding-variant in settings.$padding {
