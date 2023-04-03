@@ -1,21 +1,18 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import typography from '../exports/_typography.scss';
+import { remToPx } from '../../../.storybook/helpers';
+import { Canvas, Meta, Story, Typeset } from '@storybook/addon-docs';
 
-<Meta title="Design Tokens/Typography" />
+<Meta title="Design Tokens/Typography/Overview" />
 
-<Canvas>
-  <Story name="typographic scale">
-    {`
-      <h1>Level 1 heading</h1>
-      <h2>Level 2 heading</h2>
-      <h3>Level 3 heading</h3>
-      <h4>Level 4 heading</h4>
-      <h5>Level 5 heading</h5>
-      <h6>Level 6 heading</h6>
-      <p>Body test</p>
-      <p class="u-h7">Small text</p>
-      <p class="u-h8">Extra-small text</p>
-    `}
-  </Story>
+<Canvas isColumn={true}>
+  <Story id="design-tokens-typography--h-8-class" />
+  <Story id="design-tokens-typography--h-7-class" />
+  <Story id="design-tokens-typography--h-6-element" />
+  <Story id="design-tokens-typography--h-5-element" />
+  <Story id="design-tokens-typography--h-4-element" />
+  <Story id="design-tokens-typography--h-3-element" />
+  <Story id="design-tokens-typography--h-2-element" />
+  <Story id="design-tokens-typography--h-1-element" />
 </Canvas>
 
 # Typography
@@ -90,12 +87,14 @@ With the default setup this will output:
 
 ```css
 .component-class::after {
-  font-size: 1.25rem;
+  font-size: var(--bs-font-size-7);
+  line-height: var(--bs-line-height-2);
 }
 
 @media screen and (min-width: 30em) {
   .component-class::after {
-    font-size: 1.45rem;
+    font-size: var(--bs-font-size-8);
+    line-height: var(--bs-line-height-1);
   }
 }
 ```
@@ -108,6 +107,21 @@ With the default setup this will output:
 | $breakpoint | string | Defaults to `null`, which will output all the font-sizes under that name, at each breakpoint, wrapped in the appropriate media-query. If you provide this parameter, the font-size at only that breakpoint will be output |
 
 ### font-size.get()
+
+<Typeset
+  fontSizes={[
+    remToPx(typography['font-size.1']),
+    remToPx(typography['font-size.2']),
+    remToPx(typography['font-size.3']),
+    remToPx(typography['font-size.4']),
+    remToPx(typography['font-size.5']),
+    remToPx(typography['font-size.7']),
+    remToPx(typography['font-size.8']),
+  ]}
+  fontWeight={500}
+  sampleText="Lorem ipsum dolor sit amet"
+  fontFamily="Poppins"
+/>
 
 Use the `font-size.get()` function for accessing the font-sizes specified in your base design tokens. This is useful when you need a component’s font-size to be rendered differently to your standard responsive typography.
 
@@ -132,12 +146,12 @@ With the default setup this will output:
 
 ```css
 .component-class::after {
-  font-size: 1.45rem;
+  font-size: var(--bs-font-size-4);
 }
 
 @media screen and (min-width: 30em) {
   .component-class::after {
-    font-size: 2rem;
+    font-size: var(--bs-font-size-6);
   }
 }
 ```
