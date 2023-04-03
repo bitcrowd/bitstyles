@@ -3,7 +3,7 @@
 @use '../../tools/custom-property';
 @use 'sass:map';
 
-$padding: (
+$sizes: (
   '#{setup.$no-media-query}': (
     'padding-horizontal':
       var(
@@ -19,16 +19,6 @@ $padding: (
     'gap': size.get('s3'),
   ),
   'm': (
-    'padding-horizontal':
-      var(
-        #{custom-property.get(
-            $items: (
-              'content',
-              'padding',
-              'base',
-            ),
-          )}
-      ),
     'padding-vertical': size.get('l1'),
     'gap': size.get('s2'),
   ),

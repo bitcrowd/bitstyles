@@ -60,18 +60,24 @@ $gap-property: custom-property.get(
   );
 }
 
-@each $breakpoint-name, $padding-variant in settings.$padding {
+@each $breakpoint-name, $size-variant in settings.$sizes {
   @include media-query.get($breakpoint-name) {
     #{$classname} {
-      #{$padding-horizontal-property}: map.get(
-        $padding-variant,
-        'padding-horizontal'
-      );
-      #{$padding-vertical-property}: map.get(
-        $padding-variant,
-        'padding-vertical'
-      );
-      #{$gap-property}: map.get($padding-variant, 'gap');
+      @if map.has-key($size-variant, 'padding-horizontal') {
+        #{$padding-horizontal-property}: map.get(
+          $size-variant,
+          'padding-horizontal'
+        );
+      }
+      @if map.has-key($size-variant, 'padding-vertical') {
+        #{$padding-vertical-property}: map.get(
+          $size-variant,
+          'padding-vertical'
+        );
+      }
+      @if map.has-key($size-variant, 'gap') {
+        #{$gap-property}: map.get($size-variant, 'gap');
+      }
     }
   }
 }
