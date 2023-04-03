@@ -18,15 +18,9 @@
   transition: padding animation.$transition-duration
     animation.$transition-easing;
 
-  @each $breakpoint-alias, $padding-value in settings.$padding {
-    @if $breakpoint-alias == 'base' {
+  @each $breakpoint-name, $padding-value in settings.$padding {
+    @include media-query.get($breakpoint-name) {
       @include content-padding($padding-value);
-    } @else {
-      /* stylelint-disable max-nesting-depth */
-      @include media-query.get($breakpoint-alias) {
-        @include content-padding($padding-value);
-      }
-      /* stylelint-enable max-nesting-depth */
     }
   }
 }

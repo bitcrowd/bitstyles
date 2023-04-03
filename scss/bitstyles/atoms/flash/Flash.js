@@ -2,9 +2,8 @@ import { generateLabel } from '../../../../.storybook/helpers';
 import icons from '../../../../assets/images/icons.svg';
 import Button from '../button/Button';
 
-const Icon = ({ name }) => {
-  return `<svg width="24" height="24" class="a-icon a-icon--xl" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-${name}"></use></svg>`;
-};
+const Icon = ({ name }) =>
+  `<svg width="24" height="24" class="a-icon a-icon--xl" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-${name}"></use></svg>`;
 
 export default ({ children, theme = 'brand-1', icon, onClick = null }) => {
   const flash = document.createElement('div');

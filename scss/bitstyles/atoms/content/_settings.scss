@@ -1,4 +1,5 @@
-@use '../../tools/size';
+@use '../../settings/setup';
+@use '../../tools/custom-property';
 
 $max-width: (
   'xs': 25rem,
@@ -9,7 +10,24 @@ $max-width: (
 ) !default;
 $max-width-base: 'm' !default;
 $padding: (
-  'base': size.get('s1'),
-  'l': size.get('m'),
-  'xl': size.get('l1'),
+  '#{setup.$no-media-query}':
+    var(
+      #{custom-property.get(
+          $items: (
+            'content',
+            'padding',
+            'base',
+          ),
+        )}
+    ),
+  'l':
+    var(
+      #{custom-property.get(
+          $items: (
+            'content',
+            'padding',
+            'l',
+          ),
+        )}
+    ),
 ) !default;

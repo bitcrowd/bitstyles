@@ -6,36 +6,71 @@
 @use '../../tools/media-query';
 @use '../../tools/palette';
 
-$classname: classname.get($classname-items: 'flash', $layer: 'atom');
-$padding-horizontal-property: custom-property.get($items: (
-  'flash',
-  'padding',
-  'horizontal',
-), $layer: 'atom',);
-$padding-vertical-property: custom-property.get($items: (
-  'flash',
-  'padding',
-  'vertical',
-), $layer: 'atom',);
-$gap-property: custom-property.get($items: (
-  'flash',
-  'gap',
-), $layer: 'atom',);
+/* stylelint-disable scss/dollar-variable-default */
+$classname: classname.get(
+  $classname-items: 'flash',
+  $layer: 'atom',
+);
+$padding-horizontal-property: custom-property.get(
+  $items: (
+    'flash',
+    'padding',
+    'horizontal',
+  ),
+  $layer: 'atom',
+);
+$padding-vertical-property: custom-property.get(
+  $items: (
+    'flash',
+    'padding',
+    'vertical',
+  ),
+  $layer: 'atom',
+);
+$gap-property: custom-property.get(
+  $items: (
+    'flash',
+    'gap',
+  ),
+  $layer: 'atom',
+);
+/* stylelint-enable scss/dollar-variable-default */
 
 #{$classname} {
   display: flex;
   align-items: center;
-  padding: var(#{$padding-vertical-property}) var(#{$padding-horizontal-property});
+  padding: var(#{$padding-vertical-property})
+    var(#{$padding-horizontal-property});
   gap: var(#{$gap-property});
-  color: var(#{custom-property.get($items: ('theme', 'text-dark'))});
-  background-color: var(#{custom-property.get($items: ('theme', 'background-dark'))});
+  background-color: var(
+    #{custom-property.get(
+        $items: (
+          'theme',
+          'background-dark',
+        )
+      )}
+  );
+  color: var(
+    #{custom-property.get(
+        $items: (
+          'theme',
+          'text-dark',
+        )
+      )}
+  );
 }
 
 @each $breakpoint-name, $padding-variant in settings.$padding {
   @include media-query.get($breakpoint-name) {
     #{$classname} {
-      #{$padding-horizontal-property}: map.get($padding-variant, 'padding-horizontal');
-      #{$padding-vertical-property}: map.get($padding-variant, 'padding-vertical');
+      #{$padding-horizontal-property}: map.get(
+        $padding-variant,
+        'padding-horizontal'
+      );
+      #{$padding-vertical-property}: map.get(
+        $padding-variant,
+        'padding-vertical'
+      );
       #{$gap-property}: map.get($padding-variant, 'gap');
     }
   }

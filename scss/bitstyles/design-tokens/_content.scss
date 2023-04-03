@@ -1,0 +1,25 @@
+@use '../settings/setup';
+@use '../tools/custom-property';
+@use '../tools/media-query';
+
+$padding: (
+  '#{setup.$no-media-query}': (
+    'base': var(custom-property.get($items: ('size', 's1'))),
+    'l': var(custom-property.get($items: ('size', 'm'))),
+  ),
+  'm': (
+    'base': var(custom-property.get($items: ('size', 'l1'))),
+    'l': var(custom-property.get($items: ('size', 'l1'))),
+  ),
+) !default;
+
+
+@each $breakpoint-name, $paddings in $padding {
+  @include media-query.get($breakpoint-name) {
+    :root {
+      @each $size-name, $size in $paddings {
+        #{custom-property.get($items: ('content', 'padding', $size-name))}: #{$size};
+      }
+    }
+  }
+}
