@@ -4,9 +4,17 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 # Flash
 
-A flash informs the user of a global or important event, such as a successful (or unsuccessful!) login, server error, network connection issues etc. When used inside a discrete block of UI like a [card](/docs/atoms-card--card), Flashes are also useful for more context-specific event notifications.
+A flash informs the user of a global or important event, such as a successful (or unsuccessful!) login, server error, network connection issues etc.
 
-Flashes come in several variants, which use color **and html** attributes to indicate severity. By default you have `brand-1`, `positive`, `warning`, and `danger`, which use colors from the respective global color theme. See the [Customization](#customization) section below for details on how to change those defaults.
+When used inside a discrete block of UI (like a [card](/docs/atoms-card--card)), flashes are also useful for more context-specific event notifications. As they’re quite attention-grabbing and permanent, flashes are most suitable for use for important messaging.
+
+Flashes have several variants, which use color to indicate severity or intention. The default configuration provides `brand-1`, `grayscale`, `positive`, `warning`, and `danger` flashes, all using colors from the global color theme system. Using the theme system means that any buttons or other components placed inside a flash will be correctly colored.
+
+Since you’re providing the user feedback, it is very likely that your flashes should be rendered inside an `aria-live` region.
+
+Apply a theme to each flash in the usual way (see [Themes](/docs/design-tokens-themes--page)). Customize the themes to customize the flash color variants available to you.
+
+With default configuration, flashes share the global `content` padding design tokens for horizontal padding, meaning the content inside a flash aligns correctly to the rest of your content, and is responsive. See [customization](#customization) below for details on how to change that.
 
 Examples here show the content of the flashes within a [content](/docs/atoms-content-content) wrapper to produce standard spacing, and restrict the content width so it aligns with other page content. You don't need to use these if it doesn’t fit your design requirements.
 
@@ -37,24 +45,21 @@ Examples here show the content of the flashes within a [content](/docs/atoms-con
 
 ## Customization
 
-The available variants can be specified with `$variants`, where the strings you pass must match colors in your color palette:
+You can adjust the vertical padding and the gap applied between child elements of the flash (e.g. icon, text, and close/dismiss button). If you need to adjust the horizontal padding for flashes, it is recommended to adjust the padding for the `content` design tokens, so that all your content will be correctly aligned - see the [content documentation](/docs/design-tokens-content--page). If you need flash content to be aligned differently to other content, you can still edit the horizontal padding here.
 
 ```scss
+@use '~bitstyles/scss/bitstyles/settings/setup';
+@use '~bitstyles/scss/bitstyles/tools/size';
 @use '~bitstyles/scss/bitstyles/atoms/flash' with (
-  $variants: (
-    'brand-1',
-    'positive',
-    'danger',
-    'warning',
+  $size-variants: (
+    '#{setup.$no-media-query}': (
+      'padding-vertical': size.get('s3'),
+      'gap': size.get('s3'),
+    ),
+    'l': (
+      'padding-vertical': size.get('l1'),
+      'gap': size.get('l5'),
+    ),
   )
-);
-```
-
-The keys from those colors that will be used are specified with the `$color` and `$background-color`, and are applied to all variants. With the following settings, the `positive` variant will have color `positive` value `90`, with background color `positive` value `10`. The `danger` variant will have color `danger` with value `90` and background-color `danger` at value `10` etc,
-
-```scss
-@use '~bitstyles/scss/bitstyles/atoms/flash' with (
-  $color: '90';
-  $background-color: '10';
 );
 ```

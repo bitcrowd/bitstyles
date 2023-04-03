@@ -1,0 +1,26 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+<Meta title="Design Tokens/Content" />
+
+A semantic-level design token used to describe the horizontal spacing of content. Used in [`atoms/content`](/docs/atoms-content--a-content) and [`atoms/flash`](/docs/atoms-flash-overview--page) to ensure the content of those components is always correctly aligned to each other.
+
+The default configuration is responsive — on small viewports, the amount of horizontal space around content is fairly minimal, while on larger viewports it’s increased.
+
+## Customization
+
+Configure your content padding in a mobile-first way — first provide the spacing for all viewport sizes, then override that as necessary at one or breakpoints. Here we just specify larger padding for `m` -sized viewports, but you can add as many breakpoints as you need.
+
+```scss
+@use 'bitstyles/settings/content' with (
+  $padding: (
+    '#{setup.$no-media-query}': (
+      'base': size.get('s1'),
+      'l': size.get('m'),
+    ),
+    'm': (
+      'base': size.get('l1'),
+      'l': size.get('l1'),
+    ),
+  )
+);
+```
