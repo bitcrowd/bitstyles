@@ -1,4 +1,5 @@
 @use 'media-query';
+@use 'sass:list';
 
 // Output font sizes
 //
@@ -14,13 +15,19 @@
 //
 
 /* stylelint-disable max-nesting-depth */
-@mixin output-responsive-font-sizes($font-sizes, $prefix: null) {
+@mixin output-responsive-font-sizes(
+  $font-sizes,
+  $prefix: null,
+  $filter-list: ()
+) {
   @each $breakpoint, $font-size-list in $font-sizes {
     @include media-query.get($breakpoint) {
       @each $name, $font-attributes in ($font-size-list) {
-        #{$prefix}#{$name} {
-          @each $property-name, $property-value in ($font-attributes) {
-            #{$property-name}: #{$property-value};
+        @if not list.index($filter-list, $name) {
+          #{$prefix}#{$name} {
+            @each $property-name, $property-value in ($font-attributes) {
+              #{$property-name}: #{$property-value};
+            }
           }
         }
       }
