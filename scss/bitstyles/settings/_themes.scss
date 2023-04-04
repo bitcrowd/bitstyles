@@ -21,7 +21,7 @@ $brand-2-theme: (
 ) !default;
 $positive-theme: (
   'background': palette.get('positive', 'light-4'),
-  'text': palette.get('brand-2', 'dark-1'),
+  'text': palette.get('positive', 'dark-1'),
 ) !default;
 $warning-theme: (
   'background': palette.get('warning', 'light-4'),

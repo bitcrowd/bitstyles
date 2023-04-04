@@ -841,7 +841,7 @@ html {
   --bs-theme-background: var(--bs-color-brand-2-light-4);
 }
 [data-theme='positive'] {
-  --bs-theme-text: var(--bs-color-brand-2-dark-1);
+  --bs-theme-text: var(--bs-color-positive-dark-1);
   --bs-theme-background: var(--bs-color-positive-light-4);
 }
 [data-theme='warning'] {
@@ -1209,7 +1209,7 @@ table {
   --bs-a-button-background-color: transparent;
   --bs-a-button-hover-color: var(--bs-color-brand-1-dark-2);
   --bs-a-button-hover-background-color: var(--bs-color-brand-1-light-3);
-  --bs-a-button-active-color: var(--bs-color-brand-1-light-4);
+  --bs-a-button-active-color: var(--bs-color-grayscale-white);
   --bs-a-button-active-background-color: var(--bs-color-brand-1-dark-1);
 }
 [data-theme='brand-2'] {
@@ -1217,7 +1217,7 @@ table {
   --bs-a-button-background-color: transparent;
   --bs-a-button-hover-color: var(--bs-color-brand-2-dark-2);
   --bs-a-button-hover-background-color: var(--bs-color-brand-2-light-3);
-  --bs-a-button-active-color: var(--bs-color-brand-2-light-4);
+  --bs-a-button-active-color: var(--bs-color-grayscale-white);
   --bs-a-button-active-background-color: var(--bs-color-brand-2-dark-1);
 }
 [data-theme='positive'] {
@@ -1225,7 +1225,7 @@ table {
   --bs-a-button-background-color: transparent;
   --bs-a-button-hover-color: var(--bs-color-positive-dark-2);
   --bs-a-button-hover-background-color: var(--bs-color-positive-light-3);
-  --bs-a-button-active-color: var(--bs-color-positive-light-4);
+  --bs-a-button-active-color: var(--bs-color-grayscale-white);
   --bs-a-button-active-background-color: var(--bs-color-positive-dark-1);
 }
 [data-theme='warning'] {
@@ -1233,7 +1233,7 @@ table {
   --bs-a-button-background-color: transparent;
   --bs-a-button-hover-color: var(--bs-color-warning-dark-2);
   --bs-a-button-hover-background-color: var(--bs-color-warning-light-3);
-  --bs-a-button-active-color: var(--bs-color-warning-light-4);
+  --bs-a-button-active-color: var(--bs-color-grayscale-white);
   --bs-a-button-active-background-color: var(--bs-color-warning-dark-1);
 }
 [data-theme='danger'] {
@@ -1241,7 +1241,7 @@ table {
   --bs-a-button-background-color: transparent;
   --bs-a-button-hover-color: var(--bs-color-danger-dark-2);
   --bs-a-button-hover-background-color: var(--bs-color-danger-light-3);
-  --bs-a-button-active-color: var(--bs-color-danger-light-4);
+  --bs-a-button-active-color: var(--bs-color-grayscale-white);
   --bs-a-button-active-background-color: var(--bs-color-danger-dark-1);
 }
 [data-theme='grayscale'] {
@@ -1249,7 +1249,7 @@ table {
   --bs-a-button-background-color: transparent;
   --bs-a-button-hover-color: var(--bs-color-grayscale-dark-2);
   --bs-a-button-hover-background-color: var(--bs-color-grayscale-light-3);
-  --bs-a-button-active-color: var(--bs-color-grayscale-light-4);
+  --bs-a-button-active-color: var(--bs-color-grayscale-white);
   --bs-a-button-active-background-color: var(--bs-color-grayscale-dark-1);
 }
 .a-button--secondary,
