@@ -36,9 +36,8 @@ const topDecorator = (story) => {
   decorator.style.height = '20rem';
   decorator.className = 'u-flex u-items-end';
   const inner = document.createElement('div');
-  inner.style.position = 'relative';
-  inner.style.width = '30rem';
-  inner.className = 'u-bg-grayscale-light-3 u-padding-m';
+  inner.className =
+    'u-relative u-width-full u-bg-grayscale-light-3 u-padding-m';
   inner.appendChild(story());
   decorator.appendChild(inner);
   return decorator;
@@ -48,9 +47,8 @@ const bottomDecorator = (story) => {
   const decorator = document.createElement('div');
   decorator.style.height = '20rem';
   const inner = document.createElement('div');
-  inner.style.position = 'relative';
-  inner.style.width = '30rem';
-  inner.className = 'u-bg-grayscale-light-3 u-padding-m';
+  inner.className =
+    'u-relative u-width-full u-bg-grayscale-light-3 u-padding-m';
   inner.appendChild(story());
   decorator.appendChild(inner);
   return decorator;
