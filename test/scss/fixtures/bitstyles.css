@@ -1905,20 +1905,21 @@ table {
   background-color: var(--bs-color-grayscale-white);
   border: 3px solid var(--bs-color-brand-1-dark-1);
   border-radius: var(--bs-size-s4);
-  box-shadow: 0 0 calc(var(--bs-size-s4) / 4)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075),
-    0 0 calc(var(--bs-size-s4) / 3)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075),
-    0 0 calc(var(--bs-size-s4) / 2)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075),
-    0 0 calc(var(--bs-size-s4) / 1)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075);
+  box-shadow: 0 0 calc(var(--bs-size-m) / 4)
+      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.125),
+    0 0 calc(var(--bs-size-m) / 3)
+      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.125),
+    0 0 calc(var(--bs-size-m) / 2)
+      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.125),
+    0 0 calc(var(--bs-size-m) / 1)
+      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.125);
+  margin: var(--bs-size-s4) 0;
   max-height: 90vh;
   max-width: 90vw;
   min-width: 17.5rem;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: var(--bs-size-s6) 0;
+  overscroll-behavior: contain;
   position: absolute;
   top: 100%;
   width: -moz-min-content;
