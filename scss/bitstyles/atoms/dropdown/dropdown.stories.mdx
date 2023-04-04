@@ -12,38 +12,21 @@ A floating container shown on clicking a button (use JS for this), to show some 
 
 The dropdown defaults to left-top-aligned, but can be aligned to any edges using the modifier classes. Note that in smaller viewports, all left/right alignment is removed and the dropdown will be displayed at the full available width.
 
+<Canvas isColumn>
+  <Story id="atoms-dropdown--base" height="20rem" />
+  <Story id="atoms-dropdown--right" height="20rem" />
+  <Story id="atoms-dropdown--top" height="20rem" />
+  <Story id="atoms-dropdown--top-right" height="20rem" />
+  <Story id="atoms-dropdown--bottom-full-width" height="20rem" />
+  <Story id="atoms-dropdown--top-full-width" height="20rem" />
+</Canvas>
+
+### Max height
+
+Once the dropdown reaches `38rem` height, it stops growing, and scrolls internally instead. See [Customization](#customization) for details on how to change that.
+
 <Canvas>
-  <Story
-    id="atoms-dropdown--base"
-    inline={false}
-    height="20rem"
-    width="32rem"
-  />
-  <Story
-    id="atoms-dropdown--right"
-    inline={false}
-    height="20rem"
-    width="32rem"
-  />
-  <Story id="atoms-dropdown--top" inline={false} height="20rem" width="32rem" />
-  <Story
-    id="atoms-dropdown--top-right"
-    inline={false}
-    height="20rem"
-    width="32rem"
-  />
-  <Story
-    id="atoms-dropdown--bottom-fullwidth"
-    inline={false}
-    height="20rem"
-    width="32rem"
-  />
-  <Story
-    id="atoms-dropdown--top-fullwidth"
-    inline={false}
-    height="20rem"
-    width="32rem"
-  />
+  <Story id="atoms-dropdown--max-height" height="60rem" />
 </Canvas>
 
 ## Customization

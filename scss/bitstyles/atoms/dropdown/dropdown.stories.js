@@ -37,7 +37,7 @@ const topDecorator = (story) => {
   decorator.className = 'u-flex u-items-end';
   const inner = document.createElement('div');
   inner.style.position = 'relative';
-  inner.style.width = '18rem';
+  inner.style.width = '30rem';
   inner.className = 'u-bg-grayscale-light-3 u-padding-m';
   inner.appendChild(story());
   decorator.appendChild(inner);
@@ -49,7 +49,7 @@ const bottomDecorator = (story) => {
   decorator.style.height = '20rem';
   const inner = document.createElement('div');
   inner.style.position = 'relative';
-  inner.style.width = '18rem';
+  inner.style.width = '30rem';
   inner.className = 'u-bg-grayscale-light-3 u-padding-m';
   inner.appendChild(story());
   decorator.appendChild(inner);
@@ -149,23 +149,23 @@ TopRight.args = {
 };
 TopRight.decorators = [topDecorator];
 
-export const BottomFullwidth = Template.bind({});
-BottomFullwidth.args = {
+export const BottomFullWidth = Template.bind({});
+BottomFullWidth.args = {
   alignment: ['full-width'],
   children: menu,
 };
-BottomFullwidth.decorators = [bottomDecorator];
+BottomFullWidth.decorators = [bottomDecorator];
 
-export const TopFullwidth = Template.bind({});
-TopFullwidth.args = {
+export const TopFullWidth = Template.bind({});
+TopFullWidth.args = {
   alignment: ['top', 'full-width'],
   children: menu,
 };
-TopFullwidth.decorators = [topDecorator];
+TopFullWidth.decorators = [topDecorator];
 
 export const MaxHeight = Template.bind({});
 MaxHeight.args = {
-  children: menu + menu + menu,
+  children: menu + menu + menu + menu,
 };
 MaxHeight.parameters = {
   zeplinLink: [

@@ -8,12 +8,13 @@
   z-index: 1;
   top: 100%;
   width: min-content;
+  margin: settings.$border-radius 0;
   min-width: settings.$min-width;
   max-width: 90vw;
   max-height: 90vh;
-  padding: settings.$separator-spacing 0;
   overflow-x: hidden;
   overflow-y: auto;
+  overscroll-behavior: contain;
   border: settings.$border;
   border-radius: settings.$border-radius;
   background-color: settings.$background-color;
