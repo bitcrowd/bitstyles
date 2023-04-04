@@ -61,7 +61,7 @@ $default: (
       'background-color': palette.get('brand-1', 'light-3'),
     ),
     'active': (
-      'color': palette.get('brand-1', 'light-4'),
+      'color': palette.get('grayscale', 'white'),
       'background-color': palette.get('brand-1', 'dark-1'),
     ),
   ),
@@ -75,7 +75,7 @@ $default: (
       'background-color': palette.get('brand-2', 'light-3'),
     ),
     'active': (
-      'color': palette.get('brand-2', 'light-4'),
+      'color': palette.get('grayscale', 'white'),
       'background-color': palette.get('brand-2', 'dark-1'),
     ),
   ),
@@ -89,7 +89,7 @@ $default: (
       'background-color': palette.get('positive', 'light-3'),
     ),
     'active': (
-      'color': palette.get('positive', 'light-4'),
+      'color': palette.get('grayscale', 'white'),
       'background-color': palette.get('positive', 'dark-1'),
     ),
   ),
@@ -103,7 +103,7 @@ $default: (
       'background-color': palette.get('warning', 'light-3'),
     ),
     'active': (
-      'color': palette.get('warning', 'light-4'),
+      'color': palette.get('grayscale', 'white'),
       'background-color': palette.get('warning', 'dark-1'),
     ),
   ),
@@ -117,7 +117,7 @@ $default: (
       'background-color': palette.get('danger', 'light-3'),
     ),
     'active': (
-      'color': palette.get('danger', 'light-4'),
+      'color': palette.get('grayscale', 'white'),
       'background-color': palette.get('danger', 'dark-1'),
     ),
   ),
@@ -131,7 +131,7 @@ $default: (
       'background-color': palette.get('grayscale', 'light-3'),
     ),
     'active': (
-      'color': palette.get('grayscale', 'light-4'),
+      'color': palette.get('grayscale', 'white'),
       'background-color': palette.get('grayscale', 'dark-1'),
     ),
   ),
