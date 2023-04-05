@@ -4,7 +4,7 @@ export default ({
   children,
   ariaDisabled = false,
   element = 'a',
-  href = '#',
+  href = '/some-url',
 }) => {
   const link = document.createElement(element);
   link.innerHTML = children || generateLabel(ariaDisabled);
