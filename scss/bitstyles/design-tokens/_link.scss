@@ -5,13 +5,13 @@
 //
 // Base styles /////////////////////////////////////////
 
-$transition: color animation.$transition-duration animation.$transition-easing !default;
+$transition: color animation.$transition-duration animation.$transition-easing, outline-offset animation.$transition-duration animation.$transition-easing !default;
 $font-weight: typography.$font-weight-medium !default;
 
 //
 // Base Colors /////////////////////////////////////////
 
-$color: palette.get('brand-1') !default;
+$color: inherit !default;
 $text-decoration: none !default;
 $background-color: transparent !default;
 $box-shadow: none !default;
@@ -19,7 +19,7 @@ $box-shadow: none !default;
 //
 // Visited /////////////////////////////////////////
 
-$color-visited: palette.get('brand-1') !default;
+$color-visited: inherit !default;
 $text-decoration-visited: none !default;
 $background-color-visited: transparent !default;
 $box-shadow-visited: none !default;
@@ -35,7 +35,7 @@ $box-shadow-hover: none !default;
 //
 // Active /////////////////////////////////////////
 
-$color-active: palette.get('brand-1', 'dark-1') !default;
+$color-active: palette.get('brand-1', 'dark-2') !default;
 $text-decoration-active: underline !default;
 $background-color-active: transparent !default;
 $box-shadow-active: none !default;

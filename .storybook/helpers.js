@@ -11,12 +11,12 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export const generateLabel = (
+export const generateLabel = ({
   shapeVariant = [],
   colorVariant = [],
   disabled = false,
   pressed = false
-) =>
+}) => (
   capitalizeFirstLetter(
     [
       shapeVariant.length === 0 ? 'default' : shapeVariant.join(' '),
@@ -24,4 +24,5 @@ export const generateLabel = (
       disabled ? 'disabled' : null,
       pressed ? 'pressed' : null,
     ].join(' ')
-  );
+  )
+)

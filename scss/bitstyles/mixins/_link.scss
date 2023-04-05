@@ -1,3 +1,4 @@
+@use '../design-tokens/focus';
 @use '../design-tokens/link';
 
 // Link
@@ -15,6 +16,7 @@
   font-weight: link.$font-weight;
   text-decoration: link.$text-decoration;
   cursor: pointer;
+  outline-offset: 0;
   text-decoration-skip-ink: auto;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
@@ -27,10 +29,17 @@
 
   &:hover,
   &:focus {
+    outline-width: 0;
     background-color: link.$background-color-hover;
     box-shadow: link.$box-shadow-hover;
     color: link.$color-hover;
     text-decoration: link.$text-decoration-hover;
+  }
+
+  &:focus-visible {
+    outline: focus.$outline-color solid focus.$outline-width;
+    outline-offset: focus.$outline-offset;
+    text-decoration: none;
   }
 
   &:active {
