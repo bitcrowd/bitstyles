@@ -536,18 +536,19 @@ a {
   background-color: transparent;
   border: 0;
   box-shadow: none;
-  color: var(--bs-color-brand-1-base);
+  color: var(--bs-color-grayscale-dark-1);
   cursor: pointer;
   font-weight: 500;
+  outline-offset: 0;
   padding: 0;
   text-decoration: none;
   text-decoration-skip-ink: auto;
-  transition: color 75ms ease-in-out;
+  transition: color 75ms ease-in-out, outline-offset 75ms ease-in-out;
 }
 a:visited {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bs-color-brand-1-base);
+  color: var(--bs-color-grayscale-dark-1);
   text-decoration: none;
 }
 a:focus,
@@ -555,12 +556,19 @@ a:hover {
   background-color: transparent;
   box-shadow: none;
   color: var(--bs-color-brand-1-dark-1);
+  outline-width: 0;
   text-decoration: underline;
+}
+a:focus-visible {
+  outline: var(--bs-color-brand-2-base) solid
+    calc(var(--bs-size-s7) + var(--bs-size-s7) / 2);
+  outline-offset: var(--bs-size-s7);
+  text-decoration: none;
 }
 a:active {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bs-color-brand-1-dark-1);
+  color: var(--bs-color-brand-1-dark-2);
   text-decoration: underline;
 }
 figcaption {
@@ -2307,18 +2315,19 @@ table {
   background-color: transparent;
   border: 0;
   box-shadow: none;
-  color: var(--bs-color-brand-1-base);
+  color: var(--bs-color-grayscale-dark-1);
   cursor: pointer;
   font-weight: 500;
+  outline-offset: 0;
   padding: 0;
   text-decoration: none;
   text-decoration-skip-ink: auto;
-  transition: color 75ms ease-in-out;
+  transition: color 75ms ease-in-out, outline-offset 75ms ease-in-out;
 }
 .a-link:visited {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bs-color-brand-1-base);
+  color: var(--bs-color-grayscale-dark-1);
   text-decoration: none;
 }
 .a-link:focus,
@@ -2326,12 +2335,19 @@ table {
   background-color: transparent;
   box-shadow: none;
   color: var(--bs-color-brand-1-dark-1);
+  outline-width: 0;
   text-decoration: underline;
+}
+.a-link:focus-visible {
+  outline: var(--bs-color-brand-2-base) solid
+    calc(var(--bs-size-s7) + var(--bs-size-s7) / 2);
+  outline-offset: var(--bs-size-s7);
+  text-decoration: none;
 }
 .a-link:active {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bs-color-brand-1-dark-1);
+  color: var(--bs-color-brand-1-dark-2);
   text-decoration: underline;
 }
 .a-skip-link {

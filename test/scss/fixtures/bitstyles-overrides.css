@@ -291,15 +291,16 @@ a {
   color: red;
   cursor: pointer;
   font-weight: 500;
+  outline-offset: 0;
   padding: 0;
   text-decoration: none;
   text-decoration-skip-ink: auto;
-  transition: color 75ms ease-out;
+  transition: color 75ms ease-out, outline-offset 75ms ease-out;
 }
 a:visited {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-base);
+  color: var(--bscpn-color-grayscale-dark-1);
   text-decoration: none;
 }
 a:focus,
@@ -307,12 +308,19 @@ a:hover {
   background-color: transparent;
   box-shadow: none;
   color: var(--bscpn-color-brand-1-dark-1);
+  outline-width: 0;
   text-decoration: underline;
+}
+a:focus-visible {
+  outline: var(--bscpn-color-brand-2-base) solid
+    calc(var(--bscpn-size-s7) + var(--bscpn-size-s7) / 2);
+  outline-offset: var(--bscpn-size-s7);
+  text-decoration: none;
 }
 a:active {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-dark-1);
+  color: var(--bscpn-color-brand-1-dark-2);
   text-decoration: underline;
 }
 figcaption {
@@ -1928,15 +1936,16 @@ table {
   color: red;
   cursor: pointer;
   font-weight: 500;
+  outline-offset: 0;
   padding: 0;
   text-decoration: none;
   text-decoration-skip-ink: auto;
-  transition: color 75ms ease-out;
+  transition: color 75ms ease-out, outline-offset 75ms ease-out;
 }
 .bs-at-link:visited {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-base);
+  color: var(--bscpn-color-grayscale-dark-1);
   text-decoration: none;
 }
 .bs-at-link:focus,
@@ -1944,12 +1953,19 @@ table {
   background-color: transparent;
   box-shadow: none;
   color: var(--bscpn-color-brand-1-dark-1);
+  outline-width: 0;
   text-decoration: underline;
+}
+.bs-at-link:focus-visible {
+  outline: var(--bscpn-color-brand-2-base) solid
+    calc(var(--bscpn-size-s7) + var(--bscpn-size-s7) / 2);
+  outline-offset: var(--bscpn-size-s7);
+  text-decoration: none;
 }
 .bs-at-link:active {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-dark-1);
+  color: var(--bscpn-color-brand-1-dark-2);
   text-decoration: underline;
 }
 .bs-at-skip-link {

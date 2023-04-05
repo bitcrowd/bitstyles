@@ -10,13 +10,13 @@
   padding: 0;
   transition: link.$transition;
   border: 0;
+  outline-offset: 0;
   background-color: link.$background-color;
   box-shadow: link.$box-shadow;
   color: link.$color;
   font-weight: link.$font-weight;
   text-decoration: link.$text-decoration;
   cursor: pointer;
-  outline-offset: 0;
   text-decoration-skip-ink: auto;
   -webkit-appearance: none; // stylelint-disable-line property-no-vendor-prefix
 
