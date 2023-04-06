@@ -2143,7 +2143,7 @@ table {
 .bs-or-table__actions {
   padding-right: var(--bscpn-size-s3);
 }
-.bs-or-ui-group {
+.bs-or-joined-ui {
   border-radius: 10rem;
   box-shadow: 0 0 calc(var(--bscpn-size-s5) / 4)
       rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.025),
@@ -2154,13 +2154,13 @@ table {
     0 0 calc(var(--bscpn-size-s5) / 1)
       rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.025);
 }
-.bs-or-ui-group__item {
+.bs-or-joined-ui__item {
   box-shadow: none;
 }
-.bs-or-ui-group__item:active:not(.bs-or-ui-group__last),
-.bs-or-ui-group__item:focus:not(.bs-or-ui-group__last),
-.bs-or-ui-group__item:hover:not(.bs-or-ui-group__last),
-.bs-or-ui-group__item:not(.bs-or-ui-group__last) {
+.bs-or-joined-ui__item:active:not(.bs-or-joined-ui__last),
+.bs-or-joined-ui__item:focus:not(.bs-or-joined-ui__last),
+.bs-or-joined-ui__item:hover:not(.bs-or-joined-ui__last),
+.bs-or-joined-ui__item:not(.bs-or-joined-ui__last) {
   border-right: 0;
 }
 .bs-aspect-ratio-10-10 {

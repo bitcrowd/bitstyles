@@ -4,7 +4,7 @@ export default ({ children }) => {
     'u-list-none',
     'u-inline-flex',
     'u-items-stretch',
-    'o-ui-group'
+    'o-joined-ui'
   );
 
   children.forEach((child) => {

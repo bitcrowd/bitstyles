@@ -32,7 +32,7 @@ When a user wants to filter a list of objects by fields which have a limited num
       <a href="/docs/atoms-dropdown--dropdown">a-dropdown</a>
     </li>
     <li>
-      <a href="/docs/organisms-ui-group--ui-group-buttons">o-ui-group</a>
+      <a href="/docs/organisms-joined-ui--joined-ui-buttons">o-joined-ui</a>
     </li>
     <li>
       <a href="/docs/utilities-flex--flex">u-flex</a>
@@ -196,10 +196,10 @@ Some fields such as names and emails will need to be filtered by user-entered fr
       <div style="min-height: 10rem;">
         <form action="" method="POST" role="search">
           <h3 class="u-sr-only">Filter results</h3>
-          <ul class="o-ui-group u-flex u-list-none">
+          <ul class="o-joined-ui u-flex u-list-none">
             <li class="u-flex">
               <label for="search_users" class="u-sr-only">Search users</label>
-              <input type="search" id="search_users" class="o-ui-group__item u-border-radius-0-tr u-border-radius-0-br" placeholder="Search users…" />
+              <input type="search" id="search_users" class="u-border-radius-0-tr u-border-radius-0-br" placeholder="Search users…" />
             </li>
             <li class="u-flex u-relative" x-data="{ dropdownOpen: false }">
               <button
@@ -266,10 +266,10 @@ When giving the user filters by category and free text, place the free text sear
           <h3 class="u-sr-only">Filter results</h3>
           <ul class="u-list-none u-flex u-items-center">
             <li class="u-margin-s4-right">
-              <ul class="o-ui-group u-flex u-list-none">
+              <ul class="o-joined-ui u-flex u-list-none">
                 <li class="u-flex">
                   <label for="search_users" class="u-sr-only">Search users</label>
-                  <input type="search" id="search_users" class="o-ui-group__item u-border-radius-0-tr u-border-radius-0-br" placeholder="Search users…" />
+                  <input type="search" id="search_users" class="u-border-radius-0-tr u-border-radius-0-br" placeholder="Search users…" />
                 </li>
                 <li class="u-flex u-relative" x-data="{ dropdownOpen: false }">
                   <button

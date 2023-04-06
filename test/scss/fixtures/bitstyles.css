@@ -2541,7 +2541,7 @@ table {
 .o-table__actions {
   padding-right: var(--bs-size-s3);
 }
-.o-ui-group {
+.o-joined-ui {
   border-radius: var(--bs-size-s3);
   box-shadow: 0 0 calc(var(--bs-size-s5) / 4)
       rgba(var(--bs-color-brand-1-light-1-rgb), 0.025),
@@ -2552,13 +2552,13 @@ table {
     0 0 calc(var(--bs-size-s5) / 1)
       rgba(var(--bs-color-brand-1-light-1-rgb), 0.025);
 }
-.o-ui-group__item {
+.o-joined-ui__item {
   box-shadow: none;
 }
-.o-ui-group__item:active:not(.o-ui-group__last),
-.o-ui-group__item:focus:not(.o-ui-group__last),
-.o-ui-group__item:hover:not(.o-ui-group__last),
-.o-ui-group__item:not(.o-ui-group__last) {
+.o-joined-ui__item:active:not(.o-joined-ui__last),
+.o-joined-ui__item:focus:not(.o-joined-ui__last),
+.o-joined-ui__item:hover:not(.o-joined-ui__last),
+.o-joined-ui__item:not(.o-joined-ui__last) {
   border-right: 0;
 }
 .u-aspect-ratio-1-1 {

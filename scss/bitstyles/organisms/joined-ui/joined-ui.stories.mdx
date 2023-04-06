@@ -11,12 +11,12 @@ Commonly, this layout is used for buttons.
 <Canvas>
   <Story name="UI group - buttons">
     {`
-      <ul class="o-ui-group u-flex u-list-none">
+      <ul class="o-joined-ui u-flex u-list-none">
         <li>
-          <button type="button" class="a-button a-button--secondary o-ui-group__item u-border-radius-0-tr u-border-radius-0-br">First</button>
+          <button type="button" class="a-button a-button--secondary u-border-radius-0-tr u-border-radius-0-br">First</button>
         </li>
         <li>
-          <button type="button" class="a-button a-button--secondary o-ui-group__item u-border-radius-0">Middle</button>
+          <button type="button" class="a-button a-button--secondary u-border-radius-0">Middle</button>
         </li>
         <li>
           <button type="button" class="a-button a-button--secondary u-border-radius-0-tl u-border-radius-0-bl">Last</button>
@@ -26,15 +26,15 @@ Commonly, this layout is used for buttons.
   </Story>
 </Canvas>
 
-The `ui-group` is also used for grouping inputs & buttons:
+The `joined-ui` is also used for grouping inputs & buttons:
 
 <Canvas>
   <Story name="UI group - input & button">
     {`
-      <ul class="o-ui-group u-flex u-list-none">
+      <ul class="o-joined-ui u-flex u-list-none">
         <li class="u-flex">
           <label for="search_users" class="u-sr-only">Search users</label>
-          <input type="search" id="search_users" class="o-ui-group__item u-border-radius-0-tr u-border-radius-0-br" />
+          <input type="search" id="search_users" class="u-border-radius-0-tr u-border-radius-0-br" />
         </li>
         <li class="u-flex">
           <button type="button" class="a-button a-button--secondary u-border-radius-0-tl u-border-radius-0-bl">Search</button>
