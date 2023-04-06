@@ -7,6 +7,10 @@
 /* prettier-ignore */
 
 #{classname.get($classname-items: 'button', $layer: 'atom')} {
+  #{custom-property.get($items: ('button', 'border-top-right-radius'), $layer: 'atom')}: var(custom-property.get($items: ('button', 'border-radius'), $layer: 'atom'));
+  #{custom-property.get($items: ('button', 'border-bottom-right-radius'), $layer: 'atom')}: var(custom-property.get($items: ('button', 'border-radius'), $layer: 'atom'));
+  #{custom-property.get($items: ('button', 'border-bottom-left-radius'), $layer: 'atom')}: var(custom-property.get($items: ('button', 'border-radius'), $layer: 'atom'));
+  #{custom-property.get($items: ('button', 'border-top-left-radius'), $layer: 'atom')}: var(custom-property.get($items: ('button', 'border-radius'), $layer: 'atom'));
   #{custom-property.get($items: ('button', 'transition'), $layer: 'atom')}: settings.$transition;
   #{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')}: settings.$justify-content;
   display: flex;
@@ -24,7 +28,11 @@
   transition: var(#{custom-property.get($items: ('button', 'transition'), $layer: 'atom')});
   border-width: var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')});
   border-style: solid;
-  border-radius: var(#{custom-property.get($items: ('button', 'border-radius'), $layer: 'atom')});
+  border-radius:
+    var(#{custom-property.get($items: ('button', 'border-top-left-radius'), $layer: 'atom')})
+    var(#{custom-property.get($items: ('button', 'border-top-right-radius'), $layer: 'atom')})
+    var(#{custom-property.get($items: ('button', 'border-bottom-right-radius'), $layer: 'atom')})
+    var(#{custom-property.get($items: ('button', 'border-bottom-left-radius'), $layer: 'atom')});
   outline-offset: 0;
   font-family: settings.$font-family;
   font-size: var(#{custom-property.get($items: ('button', 'font-size'), $layer: 'atom')});
@@ -39,13 +47,22 @@
 
   &:hover,
   &:focus {
+    z-index: 1;
     outline-width: 0;
     text-decoration: none;
   }
 
   &:focus-visible {
+    z-index: 3;
     outline: focus.$outline-color solid focus.$outline-width;
     outline-offset: focus.$outline-offset;
+  }
+
+  &[aria-expanded='true'],
+  &[aria-pressed='true'],
+  &[aria-selected='true'],
+  &[aria-current] {
+    z-index: 2;
   }
 
   &:disabled,

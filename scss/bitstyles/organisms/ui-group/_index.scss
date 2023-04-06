@@ -5,19 +5,32 @@
 #{classname.get($classname-items: 'ui-group', $layer: 'organism')} {
   border-radius: settings.$border-radius;
   box-shadow: settings.$box-shadow;
-}
 
-#{classname.get($classname-items: 'ui-group__item', $layer: 'organism')} {
-  box-shadow: none;
+  > :first-child .a-button,
+  > .a-button:first-child {
+    --bs-a-button-box-shadow: none;
+    --bs-a-button-border-top-right-radius: 0;
+    --bs-a-button-border-bottom-right-radius: 0;
 
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    &:not(
-        #{classname.get($classname-items: 'ui-group__last', $layer: 'organism')}
-      ) {
-      border-right: 0;
-    }
+    margin-right: calc(var(--bs-a-button-border-width) * -1);
+  }
+
+  > :last-child .a-button,
+  > .a-button:last-child {
+    --bs-a-button-box-shadow: none;
+    --bs-a-button-border-top-left-radius: 0;
+    --bs-a-button-border-bottom-left-radius: 0;
+
+    margin-right: 0;
+  }
+
+  > :not(:first-child):not(:last-child) .a-button,
+  > .a-button:not(:first-child):not(:last-child) {
+    --bs-a-button-border-top-left-radius: 0;
+    --bs-a-button-border-top-right-radius: 0;
+    --bs-a-button-border-bottom-right-radius: 0;
+    --bs-a-button-border-bottom-left-radius: 0;
+
+    margin-right: calc(var(--bs-a-button-border-width) * -1);
   }
 }
