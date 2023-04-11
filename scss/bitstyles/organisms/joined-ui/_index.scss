@@ -4,61 +4,25 @@
 @use '../../tools/custom-property';
 
 /* stylelint-disable scss/dollar-variable-default */
-$button-border-top-left-radius-name: custom-property.get(
-  $items: (
-    'button',
-    'border',
-    'top',
-    'left',
-    'radius',
-  ),
-  $layer: 'atom',
-);
-$button-border-top-right-radius-name: custom-property.get(
-  $items: (
-    'button',
-    'border',
-    'top',
-    'right',
-    'radius',
-  ),
-  $layer: 'atom',
-);
-$button-border-bottom-right-radius-name: custom-property.get(
-  $items: (
-    'button',
-    'border',
-    'bottom',
-    'right',
-    'radius',
-  ),
-  $layer: 'atom',
-);
-$button-border-bottom-left-radius-name: custom-property.get(
-  $items: (
-    'button',
-    'border',
-    'bottom',
-    'left',
-    'radius',
-  ),
-  $layer: 'atom',
-);
-$button-border-width-name: custom-property.get(
-  $items: (
-    'button',
-    'border',
-    'width',
-  ),
-  $layer: 'atom',
-);
-$button-box-shadow-name: custom-property.get(
-  $items: (
-    'button',
-    'box-shadow',
-  ),
-  $layer: 'atom',
-);
+
+// prettier-ignore
+$button-border-top-left-radius-name: custom-property.get($items: ('button', 'border', 'top', 'left', 'radius'),  $layer: 'atom');
+
+// prettier-ignore
+$button-border-top-right-radius-name: custom-property.get($items: ('button', 'border', 'top', 'right', 'radius'), $layer: 'atom');
+
+// prettier-ignore
+$button-border-bottom-right-radius-name: custom-property.get($items: ('button', 'border', 'bottom', 'right', 'radius'), $layer: 'atom');
+
+// prettier-ignore
+$button-border-bottom-left-radius-name: custom-property.get($items: ('button', 'border', 'bottom', 'left', 'radius'), $layer: 'atom');
+
+// prettier-ignore
+$button-border-width-name: custom-property.get($items: ('button', 'border', 'width'), $layer: 'atom');
+
+// prettier-ignore
+$button-box-shadow-name: custom-property.get($items: ('button', 'box-shadow'), $layer: 'atom');
+
 /* stylelint-enable scss/dollar-variable-default */
 
 #{classname.get($classname-items: 'joined-ui', $layer: 'organism')} {

@@ -74,7 +74,7 @@ When a user wants to filter a list of objects by fields which have a limited num
             <li class="u-relative u-margin-s4-right">
               <button
                 type="button"
-                class="a-button a-button--secondary"
+                class="a-button a-button--outline"
                 title="Filter by category"
                 aria-controls="dropdown-1"
                 @click="dropdownOpen = !dropdownOpen"
@@ -128,7 +128,7 @@ When a user wants to filter a list of objects by fields which have a limited num
             <li class="u-relative" x-data="{ dropdownOpen: false }">
               <button
                 type="button"
-                class="a-button a-button--secondary"
+                class="a-button a-button--outline"
                 title="Add filter"
                 aria-controls="dropdown-2" @click="dropdownOpen = !dropdownOpen"
                 :aria-expanded="dropdownOpen"
@@ -199,12 +199,12 @@ Some fields such as names and emails will need to be filtered by user-entered fr
           <ul class="o-joined-ui u-flex u-list-none">
             <li class="u-flex">
               <label for="search_users" class="u-sr-only">Search users</label>
-              <input type="search" id="search_users" class="u-border-radius-0-tr u-border-radius-0-br" placeholder="Search users…" />
+              <input type="search" id="search_users" placeholder="Search users…" />
             </li>
             <li class="u-flex u-relative" x-data="{ dropdownOpen: false }">
               <button
                 type="button"
-                class="a-button a-button--secondary u-border-radius-0-tl u-border-radius-0-bl"
+                class="a-button a-button--outline"
                 aria-controls="dropdown-1"
                 @click="dropdownOpen = !dropdownOpen"
                 :aria-expanded="dropdownOpen"
@@ -269,12 +269,12 @@ When giving the user filters by category and free text, place the free text sear
               <ul class="o-joined-ui u-flex u-list-none">
                 <li class="u-flex">
                   <label for="search_users" class="u-sr-only">Search users</label>
-                  <input type="search" id="search_users" class="u-border-radius-0-tr u-border-radius-0-br" placeholder="Search users…" />
+                  <input type="search" id="search_users" placeholder="Search users…" />
                 </li>
                 <li class="u-flex u-relative" x-data="{ dropdownOpen: false }">
                   <button
                     type="button"
-                    class="a-button a-button--secondary u-border-radius-0-tl u-border-radius-0-bl"
+                    class="a-button a-button--outline"
                     aria-controls="dropdown-1"
                     @click="dropdownOpen = !dropdownOpen"
                     :aria-expanded="dropdownOpen"
@@ -316,7 +316,7 @@ When giving the user filters by category and free text, place the free text sear
             <li class="u-relative" x-data="{ dropdownOpen: false }">
               <button
                 type="button"
-                class="a-button a-button--secondary"
+                class="a-button a-button--outline"
                 title="Filter by category"
                 aria-controls="dropdown-2"
                 @click="dropdownOpen = !dropdownOpen"

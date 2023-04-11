@@ -25,6 +25,10 @@ export const PlusMinusIconsOutline = () =>
       }),
     ],
   });
+PlusMinusIconsOutline.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=633d89776b2afa2c51aa8842',
+};
 
 export const PlusMinusIconsOutlinePressed = () =>
   JoinedButtons({
@@ -42,6 +46,10 @@ export const PlusMinusIconsOutlinePressed = () =>
       }),
     ],
   });
+PlusMinusIconsOutlinePressed.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6362711154efc5b0ee1a934e',
+};
 
 export const NextPreviousIconsOutline = () =>
   JoinedButtons({
@@ -144,6 +152,10 @@ export const PaginationOutline = () =>
       }),
     ],
   });
+PaginationOutline.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=63623b8da0d8f5b71d20c6f7',
+};
 
 export const PaginationOutlinePressed = () =>
   JoinedButtons({
@@ -181,6 +193,10 @@ export const PaginationOutlinePressed = () =>
       }),
     ],
   });
+PaginationOutlinePressed.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=636270724ff7c8b244910027',
+};
 
 export const PaginationSecondary = () =>
   JoinedButtons({
@@ -290,6 +306,10 @@ export const PaginationTransparent = () =>
       }),
     ],
   });
+PaginationTransparent.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=633d9edd6beac62dc519bd9c',
+};
 
 export const PaginationTransparentPressed = () =>
   JoinedButtons({
@@ -327,20 +347,7 @@ export const PaginationTransparentPressed = () =>
       }),
     ],
   });
-
-// PlusMinusIconsSecondary.parameters = {
-//   zeplinLink: [
-//     {
-//       name: 'base',
-//       link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da7dc51a6528e9b45875',
-//     },
-//     {
-//       name: 'hover',
-//       link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da7e29f7bb28f410993f',
-//     },
-//     {
-//       name: 'active',
-//       link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363da791e853730fcd23c66',
-//     },
-//   ],
-// };
+PaginationTransparentPressed.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=633d9ede3fb3ec2b14f61aa4',
+};
