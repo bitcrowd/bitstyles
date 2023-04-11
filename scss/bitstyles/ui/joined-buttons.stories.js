@@ -1,17 +1,17 @@
 import Button from '../atoms/button/Button';
-import JoinedButtons from './JoinedButtons';
+import JoinedUI from '../organisms/joined-ui/JoinedUI';
 import icons from '../../../assets/images/icons.svg';
 
 export default {
   title: 'UI/Buttons/Joined',
-  component: JoinedButtons,
+  component: JoinedUI,
   subcomponents: Button,
 };
 
 // ***** Default size, each shape & color ****************** //
 
 export const PlusMinusIconsOutline = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-minus"></use></svg><span class="u-sr-only">Remove</span>`,
@@ -31,7 +31,7 @@ PlusMinusIconsOutline.parameters = {
 };
 
 export const PlusMinusIconsOutlinePressed = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-minus"></use></svg><span class="u-sr-only">Remove</span>`,
@@ -52,7 +52,7 @@ PlusMinusIconsOutlinePressed.parameters = {
 };
 
 export const NextPreviousIconsOutline = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-caret-left"></use></svg><span class="u-sr-only">Previous</span>`,
@@ -68,7 +68,7 @@ export const NextPreviousIconsOutline = () =>
   });
 
 export const NextPreviousIconsOutlinePressed = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-caret-left"></use></svg><span class="u-sr-only">Previous</span>`,
@@ -85,7 +85,7 @@ export const NextPreviousIconsOutlinePressed = () =>
   });
 
 export const PlusMinusIconsSecondary = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-minus"></use></svg><span class="u-sr-only">Remove</span>`,
@@ -101,7 +101,7 @@ export const PlusMinusIconsSecondary = () =>
   });
 
 export const PlusMinusIconsSecondaryPressed = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-minus"></use></svg><span class="u-sr-only">Remove</span>`,
@@ -118,7 +118,7 @@ export const PlusMinusIconsSecondaryPressed = () =>
   });
 
 export const PaginationOutline = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-caret-left"></use></svg><span class="u-sr-only">Previous</span>`,
@@ -158,7 +158,7 @@ PaginationOutline.parameters = {
 };
 
 export const PaginationOutlinePressed = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-caret-left"></use></svg><span class="u-sr-only">Previous</span>`,
@@ -199,7 +199,7 @@ PaginationOutlinePressed.parameters = {
 };
 
 export const PaginationSecondary = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-caret-left"></use></svg><span class="u-sr-only">Previous</span>`,
@@ -235,7 +235,7 @@ export const PaginationSecondary = () =>
   });
 
 export const PaginationSecondaryPressed = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-caret-left"></use></svg><span class="u-sr-only">Previous</span>`,
@@ -272,7 +272,7 @@ export const PaginationSecondaryPressed = () =>
   });
 
 export const PaginationTransparent = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-caret-left"></use></svg><span class="u-sr-only">Previous</span>`,
@@ -312,7 +312,7 @@ PaginationTransparent.parameters = {
 };
 
 export const PaginationTransparentPressed = () =>
-  JoinedButtons({
+  JoinedUI({
     children: [
       Button({
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-caret-left"></use></svg><span class="u-sr-only">Previous</span>`,
