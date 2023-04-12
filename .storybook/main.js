@@ -23,6 +23,8 @@ module.exports = {
         controls: false,
       },
     },
+    'storybook-zeplin/register',
+    'storybook-addon-pseudo-states',
   ],
   webpackFinal: async (config) => {
     // Make whatever fine-grained changes you need

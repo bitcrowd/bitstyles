@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:list';
 @use './classname';
 @use '../settings/typography';
 @use '../atoms/button/settings';
@@ -7,11 +8,15 @@
 
 @mixin colors($colors, $variant-name) {
   $button-name: 'button#{$variant-name}';
+  $allow-list: list.join(
+    settings.$allowed-color-properties,
+    settings.$extra-color-properties
+  );
 
   @if map.has-key($colors, 'default') {
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'default'),
-      $allow-list: settings.$allowed-color-properties,
+      $allow-list: $allow-list,
       $module-name: (
         $button-name,
       ),
@@ -22,7 +27,7 @@
   @if map.has-key($colors, 'hover') {
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'hover'),
-      $allow-list: settings.$allowed-color-properties,
+      $allow-list: $allow-list,
       $module-name: (
         $button-name,
         'hover',
@@ -34,7 +39,7 @@
   @if map.has-key($colors, 'active') {
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'active'),
-      $allow-list: settings.$allowed-color-properties,
+      $allow-list: $allow-list,
       $module-name: (
         $button-name,
         'active',
@@ -46,7 +51,7 @@
   @if map.has-key($colors, 'pressed') {
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'pressed'),
-      $allow-list: settings.$allowed-color-properties,
+      $allow-list: $allow-list,
       $module-name: (
         $button-name,
         'pressed',
@@ -58,7 +63,7 @@
   @if map.has-key($colors, 'disabled') {
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'disabled'),
-      $allow-list: settings.$allowed-color-properties,
+      $allow-list: $allow-list,
       $module-name: (
         $button-name,
         'disabled',
@@ -87,12 +92,39 @@
   }
 
   @if $with-square-variant {
+    $line-height: custom-property.get(
+      $items: (
+        'line-height',
+        '5',
+      ),
+    );
+    $min-width: custom-property.get(
+      $items: (
+        'button',
+        'min-width',
+      ),
+      $layer: 'atom',
+    );
+    $min-height: custom-property.get(
+      $items: (
+        'button',
+        'min-height',
+      ),
+      $layer: 'atom',
+    );
+
     &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
-      #{custom-property.get($items: ('button', 'min-width'), $layer: 'atom')}: #{calc(
-          #{map.get($sizes, 'padding-vertical')} + 1em
+      #{$min-width}: #{calc(
+          1em *
+            var(#{$line-height}) +
+            2 *
+            #{map.get($sizes, 'padding-vertical')}
         )};
-      #{custom-property.get($items: ('button', 'min-height'), $layer: 'atom')}: #{calc(
-          #{map.get($sizes, 'padding-vertical')} + 1em
+      #{$min-height}: #{calc(
+          1em *
+            var(#{$line-height}) +
+            2 *
+            #{map.get($sizes, 'padding-vertical')}
         )};
 
       @if map.has-key($sizes, 'padding-vertical') {

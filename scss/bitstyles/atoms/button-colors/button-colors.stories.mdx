@@ -1,4 +1,4 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 <Meta title="Atoms/Button/Colors" />
 
@@ -6,9 +6,12 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
 
 Buttons are available in several color-based variations:
 
-- **Primary** This is the default color variant, that should be used sparingly (even only once) per screen to indicate the primary action.
-- **Secondary** Most other buttons on a screen should probably use this variant. It is a visibly interactive element but not heavily emphasised.
-- **Transparent** For buttons that really shouldn’t stand out, these present only a text label until interacted with.
+| Color variant   | Description                                                                                                                         |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Primary**     | This is the default color variant, that should be used sparingly (ideally only once) per screen to indicate the primary action.     |
+| **Secondary**   | Most other buttons on a screen should use this variant. It is a visibly interactive element but not emphasised.                     |
+| **Transparent** | For buttons that shouldn’t stand out, these present only their children (e.g. text, icon with no background) until interacted with. |
+| **Outline**     | A hollow button with a heavy border, these are often used for activating dropdowns.                                                 |
 
 ## Button states
 
@@ -20,368 +23,113 @@ Buttons react to user interaction, and can be disabled, giving the following sta
 | hover    | The user has their cursor over the button (`:hover` psuedoclass)                                                                                                                                                                                                                                                                            |
 | active   | The user is currently clicking, tapping, or otherwise activating the button (`:active` psuedoclass)                                                                                                                                                                                                                                         |
 | pressed  | Covers several instances where the button can be in an “on” state. This is for toggle buttons, tab buttons, navigation or steps in a process where one is currently active, or for buttons that show/hide other content. Apply the relevant aria attribute to the button: `aria-selected`, `aria-expanded`, `aria-current`, `aria-pressed`. |
-| disabled | The button is not currently clickable, and will not perform an action                                                                                                                                                                                                                                                                       |
+| disabled | The button is not currently clickable, and will not perform an action when clicked. If this is applied to a button rendered as an anchor element (using `aria-disabled`), that element will however be clickable.                                                                                                                           |
 
 <Canvas>
-  <Story name="Primary">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button">
-          Save
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Secondary">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--secondary">
-          Edit
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Transparent">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--transparent">
-          Cancel
-        </button>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-button--default-primary" />
+  <Story id="atoms-button--default-secondary" />
+  <Story id="atoms-button--default-transparent" />
+  <Story id="atoms-button--default-outline" />
+  <Story id="atoms-button--default-tab" />
 </Canvas>
 
 ## Danger
 
-A special color variant that only shows itself on hover. This can be applied to all the other color variants to indicate to the user that the action is destructive or dangerous — it turns red on hover.
+A special color variant that shows itself on hover. This can be applied to any of the other color variants to indicate to the user that the action is destructive or dangerous. The button will turn red on hover.
 
 <Canvas>
-  <Story name="Danger/primary">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--danger">
-          Destroy
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/secondary">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--secondary a-button--danger">
-          Destroy
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/transparent">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--transparent a-button--danger">
-          Destroy
-        </button>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-button--default-danger-primary" />
+  <Story id="atoms-button--default-danger-secondary" />
+  <Story id="atoms-button--default-danger-transparent" />
+  <Story id="atoms-button--default-danger-outline" />
+</Canvas>
+
+### Pressed buttons
+
+<Canvas>
+  <Story id="atoms-button--primary-pressed" />
+  <Story id="atoms-button--secondary-pressed" />
+  <Story id="atoms-button--transparent-pressed" />
+  <Story id="atoms-button--outline-pressed" />
+  <Story id="atoms-button--tab-pressed" />
+  <Story id="atoms-button--danger-pressed" />
 </Canvas>
 
 ## Disabled buttons
 
 <Canvas>
-  <Story name="Primary (disabled)">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button" disabled>
-          Save
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Secondary (disabled)">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--secondary" disabled>
-          Edit
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Transparent (disabled)">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--transparent" disabled>
-          Cancel
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/primary (disabled)">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--danger" disabled>
-          Destroy
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/secondary (disabled)">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--secondary a-button--danger" disabled>
-          Destroy
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/transparent (disabled)">
-    {`
-      <div class="u-padding-m" data-theme="default">
-        <button class="a-button a-button--transparent a-button--danger" disabled>
-          Destroy
-        </button>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-button--primary-disabled" />
+  <Story id="atoms-button--secondary-disabled" />
+  <Story id="atoms-button--transparent-disabled" />
+  <Story id="atoms-button--outline-disabled" />
+  <Story id="atoms-button--tab-disabled" />
+  <Story id="atoms-button--danger-primary-disabled" />
+  <Story id="atoms-button--danger-secondary-disabled" />
+  <Story id="atoms-button--danger-transparent-disabled" />
 </Canvas>
 
 ## Anchors
 
-For technical reasons, some “buttons” will likely be anchor elements.
+For technical reasons, sometimes “buttons” will be anchor (`<a href="">`) elements.
 
 <Canvas>
-  <Story name="Primary anchor">
-    {`
-      <a href="/" class="a-button">
-        Save
-      </a>
-    `}
-  </Story>
-  <Story name="Secondary anchor">
-    {`
-      <a href="/" class="a-button a-button--secondary">
-        Edit
-      </a>
-    `}
-  </Story>
-  <Story name="Transparent anchor">
-    {`
-      <a href="/" class="a-button a-button--transparent">
-        Cancel
-      </a>
-    `}
-  </Story>
-  <Story name="Danger/primary anchor">
-    {`
-      <a href="/" class="a-button a-button--danger">
-        Destroy
-      </a>
-    `}
-  </Story>
-  <Story name="Danger/secondary anchor">
-    {`
-      <a href="/" class="a-button a-button--secondary a-button--danger">
-        Destroy
-      </a>
-    `}
-  </Story>
-  <Story name="Danger/transparent anchor">
-    {`
-      <a href="/" class="a-button a-button--transparent a-button--danger">
-        Destroy
-      </a>
-    `}
-  </Story>
+  <Story id="atoms-button--primary-anchor" />
+  <Story id="atoms-button--secondary-anchor" />
+  <Story id="atoms-button--transparent-anchor" />
+  <Story id="atoms-button--outline-anchor" />
+  <Story id="atoms-button--tab-anchor" />
+  <Story id="atoms-button--danger-primary-anchor" />
+  <Story id="atoms-button--danger-secondary-anchor" />
+  <Story id="atoms-button--danger-transparent-anchor" />
+  <Story id="atoms-button--danger-outline-anchor" />
 </Canvas>
 
 ## Disabled anchors
 
-Add `aria-disabled="true"` to an anchor to make it appear disabled. Be aware that the link will still work.
+Add `aria-disabled="true"` to an anchor to make it appear disabled. Be aware that this is only a visual indication for the user — the link will still work and navigate to the URL in its `href` attribute.
 
 <Canvas>
-  <Story name="Primary anchor (disabled)">
-    {`
-      <a href="/" class="a-button" aria-disabled="true">
-        Save
-      </a>
-    `}
-  </Story>
-  <Story name="Secondary anchor (disabled)">
-    {`
-      <a href="/" class="a-button a-button--secondary" aria-disabled="true">
-        Edit
-      </a>
-    `}
-  </Story>
-  <Story name="Transparent anchor (disabled)">
-    {`
-      <a href="/" class="a-button a-button--transparent" aria-disabled="true">
-        Cancel
-      </a>
-    `}
-  </Story>
-  <Story name="Danger/primary anchor (disabled)">
-    {`
-      <a href="/" class="a-button a-button--danger" aria-disabled="true">
-        Destroy
-      </a>
-    `}
-  </Story>
-  <Story name="Danger/secondary anchor (disabled)">
-    {`
-      <a href="/" class="a-button a-button--secondary a-button--danger" aria-disabled="true">
-        Destroy
-      </a>
-    `}
-  </Story>
-  <Story name="Danger/transparent anchor (disabled)">
-    {`
-      <a href="/" class="a-button a-button--transparent a-button--danger" aria-disabled="true">
-        Destroy
-      </a>
-    `}
-  </Story>
-</Canvas>
-
-## Dark theme
-
-<Canvas>
-  <Story name="Primary (dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button">
-          Save
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Secondary (dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--secondary">
-          Edit
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Transparent (dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--transparent">
-          Cancel
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/primary (dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--danger">
-          Destroy
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/secondary (dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--secondary a-button--danger">
-          Destroy
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/transparent (dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--transparent a-button--danger">
-          Destroy
-        </a>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="Primary (disabled, dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button" aria-disabled="true">
-          Save
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Secondary (disabled, dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--secondary" aria-disabled="true">
-          Edit
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Transparent (disabled, dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--transparent" aria-disabled="true">
-          Cancel
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/primary (disabled, dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--danger" aria-disabled="true">
-          Destroy
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/secondary (disabled, dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--secondary a-button--danger" aria-disabled="true">
-          Destroy
-        </a>
-      </div>
-    `}
-  </Story>
-  <Story name="Danger/transparent (disabled, dark theme)">
-    {`
-      <div class="u-padding-m" data-theme="dark">
-        <a href="/" class="a-button a-button--transparent a-button--danger" aria-disabled="true">
-          Destroy
-        </a>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-button--primary-anchor-disabled" />
+  <Story id="atoms-button--secondary-anchor-disabled" />
+  <Story id="atoms-button--transparent-anchor-disabled" />
+  <Story id="atoms-button--outline-anchor-disabled" />
+  <Story id="atoms-button--tab-anchor-disabled" />
+  <Story id="atoms-button--danger-primary-anchor-disabled" />
+  <Story id="atoms-button--danger-secondary-anchor-disabled" />
+  <Story id="atoms-button--danger-transparent-anchor-disabled" />
+  <Story id="atoms-button--danger-outline-anchor-disabled" />
 </Canvas>
 
 ## Customization
 
-There are two approaches to customizing the button color variants, depending on your needs. Both give you access to the following properties:
+There are two approaches to customizing the button color variants, depending on your needs. Both give you access to the following CSS properties, which will be applied to your buttons directly:
 
 - `color`
 - `background-color`
 - `border-color`
 - `box-shadow`
 
+There is one extra non-standard CSS property that can be specified:
+
+- `icon-color`
+
+`icon-color` is applied to any icon child of the button, allowing you to have icons that are a different color to the other button children. See the [tab buttons](/docs/atoms-button-tabs--page) for an example of how that works.
+
 ### Customize existing color variants
 
-If the variety of buttons provided fits your requirements, but you need e.g. you primary buttons to have a different box-shadow, or your secondary buttons to be outlined with a border, you can customize the existing buttons.
+If the variety of buttons provided fits your requirements, but you need e.g. your primary buttons to have a different box-shadow, or for your secondary buttons to be outlined with a border, you can customize these existing buttons.
 
-The `default`, `secondary`, `transparent`, `tab`, and `danger` configurations are all available to be overridden at variables with those names. The configuration expects a Sass map of button states `default`, `hover`, `active`, `pressed`, and `disabled`. You do not need to provide all of these, only those you require. Each state should contain a Sass map where the CSS property name (from the list above) is the key, and the value for that property is the value:
+The `default`, `secondary`, `transparent`, `tab`, and `danger` configurations are all available to be overridden at variables with those names: `button-colours.$default`, `button-colors.$secondary` and so on. This configuration expects a Sass map of button states `default`, `hover`, `active`, `pressed`, and `disabled`. You do not need to provide all of these, only those you require. Each state should contain a Sass map where the CSS property name (from the list above) is the key, and the value for that property is the value:
 
 ```scss
 $secondary: (
   'default': (
     'default': (
-      'border-color': #f00,
+      'border-color': palette.get('brand-1', 'dark-1'),
+      'icon-color': palette.get('brand-1', 'dark-3'),
     ),
     'hover': (
-      'border-color': #600,
+      'border-color': palette.get('brand-1', 'dark-3'),
     ),
   ),
 );
@@ -403,12 +151,12 @@ When you need an entirely different set of buttons, you can define your own and 
 $custom-button: (
   'default': (
     'default': (
-      'border-color': #f00,
-      'color': #fff,
+      'border-color': palette.get('brand-1', 'dark-1'),
+      'color': palette.get('grayscale', 'white'),
     ),
     'hover': (
-      'border-color': #600,
-      'color': #f00,
+      'border-color': palette.get('brand-1', 'dark-3'),
+      'color': palette.get('grayscale', 'light-4'),
     ),
   ),
 );

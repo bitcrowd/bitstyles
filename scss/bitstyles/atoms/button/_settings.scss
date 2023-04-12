@@ -1,4 +1,5 @@
 @use '../../settings/animation';
+@use '../../tools/palette';
 @use '../../tools/size';
 
 //
@@ -8,7 +9,8 @@ $font-family: inherit !default;
 $transition: color animation.$transition-duration animation.$transition-easing,
   background-color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing,
-  box-shadow animation.$transition-duration animation.$transition-easing !default;
+  box-shadow animation.$transition-duration animation.$transition-easing,
+  outline-offset animation.$transition-duration animation.$transition-easing !default;
 $icon-spacing: size.get('s2') !default;
 $justify-content: center !default;
 $allowed-color-properties: (
@@ -17,6 +19,7 @@ $allowed-color-properties: (
   'border-color',
   'box-shadow'
 ) !default;
+$extra-color-properties: ('icon-color') !default;
 $allowed-shape-properties: (
   'padding-vertical',
   'padding-horizontal',
@@ -28,3 +31,6 @@ $allowed-shape-properties: (
   'font-weight',
   'justify-content'
 ) !default;
+$outline-color: palette.get('brand-2') !default;
+$outline-width: calc(size.get('s7') + size.get('s7') / 2) !default;
+$outline-offset: size.get('s7') !default;

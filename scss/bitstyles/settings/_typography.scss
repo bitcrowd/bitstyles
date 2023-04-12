@@ -3,41 +3,58 @@
 //
 // Font-weights /////////////////////////////////////////
 
+$font-weight-thin: 100 !default;
+$font-weight-extralight: 200 !default;
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
-$font-weight-medium: 600 !default;
-$font-weight-bold: 800 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extrabold: 800 !default;
+$font-weight-black: 900 !default;
 
 //
 // Webfonts /////////////////////////////////////////
 
 /* stylelint-disable value-keyword-case */
-$webfont-family-name: 'Nunito' !default;
+$webfont-family-name: ('Poppins') !default;
 $webfont-base-url: '../assets/fonts/' !default;
 $webfont-variants: (
   'normal': (
     'font-family': $webfont-family-name,
     'font-style': normal,
     'font-weight': $font-weight-normal,
-    'filename': 'nunito-v16-latin-400',
+    'filename': 'poppins-v20-latin-400',
   ),
   'italic': (
     'font-family': $webfont-family-name,
     'font-style': italic,
     'font-weight': $font-weight-normal,
-    'filename': 'nunito-v16-latin-italic',
+    'filename': 'poppins-v20-latin-400italic',
   ),
   'medium': (
     'font-family': $webfont-family-name,
     'font-style': normal,
     'font-weight': $font-weight-medium,
-    'filename': 'nunito-v16-latin-600',
+    'filename': 'poppins-v20-latin-500',
   ),
-  'bold': (
+  'medium-italic': (
+    'font-family': $webfont-family-name,
+    'font-style': italic,
+    'font-weight': $font-weight-medium,
+    'filename': 'poppins-v20-latin-500italic',
+  ),
+  'semibold': (
     'font-family': $webfont-family-name,
     'font-style': normal,
-    'font-weight': $font-weight-bold,
-    'filename': 'nunito-v16-latin-800',
+    'font-weight': $font-weight-semibold,
+    'filename': 'poppins-v20-latin-600',
+  ),
+  'semibold-italic': (
+    'font-family': $webfont-family-name,
+    'font-style': italic,
+    'font-weight': $font-weight-semibold,
+    'filename': 'poppins-v20-latin-600italic',
   ),
 ) !default;
 $font-family-header-stack: (

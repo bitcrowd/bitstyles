@@ -1,126 +1,64 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
 import icons from '../../../../assets/images/icons.svg';
 
 <Meta title="Atoms/Button/Shapes" />
 
 # Button shapes
 
-“Shape” refers to the size and/or shape of the button. Available with default configuration are the sizes `small`, `default`, `large`, and the shapes `square`, and `round`. The sizes and shapes can be combined to create e.g. small square buttons.
+**“Shape” refers to the size and/or shape of the button**. The sizes and shapes can be combined to create e.g. x-small square buttons.
 
-## Variations
-
-### Small
+| Shape variant | Description                                                                                                                                                                                                                                                                                                                                                   |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Default**   | No modifier class necessary, this is the base size for buttons, that should fit most usecases. It’s large enough to be visible, and indicate a main actions on a screen                                                                                                                                                                                       |
+| **Small**     | A slightly smaller button, for instances where space is limited, or where larger buttons would reduce the information density of an interface. A common example is the group of buttons at the end of every row in a table of accounts, invoices, or other objects — there to provide quick access to show/edit/delete functions, but not needed to be large. |
+| **X-Small**   | A tiny button, used sparingly because it is not so easy to hit. use it when a tiny button is needed inside other small components e.g. badges.                                                                                                                                                                                                                |
 
 <Canvas>
-  <Story name="Small">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--small">
-          Dashboard
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Small square">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--small a-button--square">
-          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
-            <use xlink:href="${icons}#icon-plus"></use>
-          </svg>
-          <span class="u-sr-only">Add</span>
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Small round square">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--small a-button--square a-button--round">
-          <svg width="20" height="20" class="a-icon a-icon--s" aria-hidden="true" focusable="false">
-            <use xlink:href="${icons}#icon-plus"></use>
-          </svg>
-          <span class="u-sr-only">Add</span>
-        </button>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-button--default-primary" />
+  <Story id="atoms-button--small-primary" />
+  <Story id="atoms-button--x-small-primary" />
+  <Story id="atoms-button--default-square-primary" />
+  <Story id="atoms-button--small-square-primary" />
+  <Story id="atoms-button--x-small-square-primary" />
+  <Story id="atoms-button--default-round-primary" />
+  <Story id="atoms-button--small-round-primary" />
+  <Story id="atoms-button--x-small-round-primary" />
 </Canvas>
 
-### Default
-
 <Canvas>
-  <Story name="Default">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button">
-          Dashboard
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Default square">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--square">
-          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
-            <use xlink:href="${icons}#icon-plus"></use>
-          </svg>
-          <span class="u-sr-only">Add</span>
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Default round">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--square a-button--round">
-          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
-            <use xlink:href="${icons}#icon-plus"></use>
-          </svg>
-          <span class="u-sr-only">Add</span>
-        </button>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-button--default-secondary" />
+  <Story id="atoms-button--small-secondary" />
+  <Story id="atoms-button--x-small-secondary" />
+  <Story id="atoms-button--default-square-secondary" />
+  <Story id="atoms-button--small-square-secondary" />
+  <Story id="atoms-button--x-small-square-secondary" />
+  <Story id="atoms-button--default-round-secondary" />
+  <Story id="atoms-button--small-round-secondary" />
+  <Story id="atoms-button--x-small-round-secondary" />
 </Canvas>
 
-### Large
+<Canvas>
+  <Story id="atoms-button--default-transparent" />
+  <Story id="atoms-button--small-transparent" />
+  <Story id="atoms-button--x-small-transparent" />
+  <Story id="atoms-button--default-square-transparent" />
+  <Story id="atoms-button--small-square-transparent" />
+  <Story id="atoms-button--x-small-square-transparent" />
+  <Story id="atoms-button--default-round-transparent" />
+  <Story id="atoms-button--small-round-transparent" />
+  <Story id="atoms-button--x-small-round-transparent" />
+</Canvas>
 
 <Canvas>
-  <Story name="Large">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--large">
-          Dashboard
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Large square">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--large a-button--square">
-          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
-            <use xlink:href="${icons}#icon-plus"></use>
-          </svg>
-          <span class="u-sr-only">Add</span>
-        </button>
-      </div>
-    `}
-  </Story>
-  <Story name="Large round">
-    {`
-      <div class="u-padding-m">
-        <button class="a-button a-button--large a-button--square a-button--round">
-          <svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
-            <use xlink:href="${icons}#icon-plus"></use>
-          </svg>
-          <span class="u-sr-only">Add</span>
-        </button>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-button--default-outline" />
+  <Story id="atoms-button--small-outline" />
+  <Story id="atoms-button--x-small-outline" />
+  <Story id="atoms-button--default-square-outline" />
+  <Story id="atoms-button--small-square-outline" />
+  <Story id="atoms-button--x-small-square-outline" />
+  <Story id="atoms-button--default-round-outline" />
+  <Story id="atoms-button--small-round-outline" />
+  <Story id="atoms-button--x-small-round-outline" />
 </Canvas>
 
 ## Customization

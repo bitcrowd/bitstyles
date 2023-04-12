@@ -10,7 +10,6 @@
   #{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')}: #{settings.$justify-content};
   display: flex;
   position: relative;
-  box-sizing: content-box;
   flex-shrink: 0;
   align-items: center;
   justify-content: var(#{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')});
@@ -18,13 +17,15 @@
   max-width: 100%;
   min-height: var(#{custom-property.get($items: ('button', 'min-height'), $layer: 'atom')});
   margin: 0;
-  padding: var(#{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')})
-    var(#{custom-property.get($items: ('button','padding-horizontal'), $layer: 'atom')});
+  padding: 
+    calc(var(#{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')}) - var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')}, 0rem))
+    calc(var(#{custom-property.get($items: ('button','padding-horizontal'), $layer: 'atom')}) - var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')}, 0rem));
   overflow: visible;
   transition: var(#{custom-property.get($items: ('button', 'transition'), $layer: 'atom')});
   border-width: var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')});
   border-style: solid;
   border-radius: var(#{custom-property.get($items: ('button', 'border-radius'), $layer: 'atom')});
+  outline-offset: 0;
   font-family: settings.$font-family;
   font-size: var(#{custom-property.get($items: ('button', 'font-size'), $layer: 'atom')});
   font-weight: var(#{custom-property.get($items: ('button', 'font-weight'), $layer: 'atom')});
@@ -38,8 +39,13 @@
 
   &:hover,
   &:focus {
-    outline: none;
+    outline-width: 0;
     text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: settings.$outline-color solid settings.$outline-width;
+    outline-offset: settings.$outline-offset;
   }
 
   &:disabled,
@@ -54,6 +60,7 @@
 
 #{classname.get($classname-items: 'button__avatar', $layer: 'atom')},
 #{classname.get($classname-items: 'button__icon', $layer: 'atom')} {
+  flex-shrink: 0;
   margin-right: settings.$icon-spacing;
   margin-left: calc((settings.$icon-spacing * -1) / 4);
 }

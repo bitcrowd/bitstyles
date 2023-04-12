@@ -1,55 +1,38 @@
-import { Canvas, Meta, Story } from '@storybook/addon-docs/blocks';
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import icons from '../../../../assets/images/icons.svg';
 
-<Meta title="Atoms/Button/Tab" />
+<Meta title="Atoms/Button/Tabs" />
 
 # Tab Buttons
 
 Buttons for selecting which of several tabpanels will be shown. There are several aria-attributes here that will need to be tied to the tabpanels, and you should use a background color behind the tabs — see the [tab examples](/docs/ui-navigation-tabs--tabs) for both.
 
 <Canvas>
-  <Story name="Tab">
-    {`
-      <button class="a-button a-button--tab" type="button" role="tab" aria-selected="false" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
-        Tab 1
-      </button>
-    `}
-  </Story>
-  <Story name="Tab [aria-selected]">
-    {`
-      <button class="a-button a-button--tab" type="button" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
-        Tab 1
-      </button>
-    `}
-  </Story>
-  <Story name="Tab [disabled]">
-    {`
-      <button class="a-button a-button--tab" type="button" role="tab" aria-selected="false" disabled aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
-        Tab 1
-      </button>
-    `}
-  </Story>
+  <Story id="atoms-button--default-tab" />
+  <Story id="atoms-button--tab-pressed" />
+  <Story id="atoms-button--tab-disabled" />
 </Canvas>
 
+## Using anchor elements for the tabs
+
+Ideally, these would be `<button>` elements, and the behavior handled using JS, but if necessary server-side routing using anchor elements can be used instead.
+
 <Canvas>
-  <Story name="Tab anchor">
-    {`
-      <a href="/" class="a-button a-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
-        Tab 1
-      </button>
-    `}
-  </Story>
-  <Story name="Tab anchor [aria-selected]">
-    {`
-      <a href="/" class="a-button a-button--tab" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
-        Tab 1
-      </button>
-    `}
-  </Story>
-  <Story name="Tab anchor [disabled]">
-    {`
-      <a href="/" class="a-button a-button--tab" role="tab" aria-selected="false" aria-disabled="true" aria-controls="tab-panel-1" id="tab-1" tabindex="-1">
-        Tab 1
-      </button>
-    `}
-  </Story>
+  <Story id="atoms-button--tab-anchor" />
+  <Story id="atoms-button--tab-anchor-pressed" />
+  <Story id="atoms-button--tab-anchor-disabled" />
 </Canvas>
+
+## Icon-only tab buttons
+
+Tab buttons can be used with just an icon as a visible label (use `.u-sr-only` to provide an invisible text label too). Tab buttons make use of CSS custom properties to render the icon in a color different to the button text — see [Button colors](/docs/atoms-button-colors--page) for details on how that works.
+
+<Canvas>
+  <Story id="atoms-button--tab-icon-only-base" />
+  <Story id="atoms-button--tab-icon-only-selected" />
+  <Story id="atoms-button--tab-icon-only-disabled" />
+</Canvas>
+
+## Customization
+
+Tab buttons are a combination of a color and a shape button variant, so you may need to adjust both aspects if you want to customize these to match your designs. See [Button shapes](/docs/atoms-button-shapes--page) and [Button colors](/docs/atoms-button-colors--page) for details.
