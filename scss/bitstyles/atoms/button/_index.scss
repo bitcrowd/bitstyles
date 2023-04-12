@@ -13,8 +13,6 @@
   #{design-token.get('button', 'border-top-left-radius')}: var(design-token.get('button', 'border-radius'));
   #{design-token.get('button', 'transition')}: settings.$transition;
   #{design-token.get('button', 'justify-content')}: settings.$justify-content;
-  #{design-token.get('button', 'transition')}: settings.$transition;
-  #{design-token.get('button', 'justify-content')}: settings.$justify-content;
   display: flex;
   position: relative;
   flex-shrink: 0;
@@ -36,7 +34,11 @@
     var(design-token.get('button', 'border-top-right-radius'))
     var(design-token.get('button', 'border-bottom-right-radius'))
     var(design-token.get('button', 'border-bottom-left-radius'));
+  border-color: var(#{design-token.get($items: ('button', 'border-color'))});
   outline-offset: 0;
+  background-color: var(#{custom-property.get($items: ('button', 'background-color'))});
+  box-shadow: var(#{custom-property.get($items: ('button', 'box-shadow'))});
+  color: var(#{custom-property.get($items: ('button', 'color'))});
   font-family: settings.$font-family;
   font-size: var(design-token.get('button', 'font-size'));
   font-weight: var(design-token.get('button', 'font-weight'));
@@ -51,7 +53,11 @@
   &:hover,
   &:focus {
     z-index: 1;
+    border-color: var(#{custom-property.get($items: ('button', 'hover', 'border-color'))});
     outline-width: 0;
+    background-color: var(#{custom-property.get($items: ('button', 'hover', 'background-color'))});
+    box-shadow: var(#{custom-property.get($items: ('button', 'hover', 'box-shadow'))});
+    color: var(#{custom-property.get($items: ('button', 'hover', 'color'))});
     text-decoration: none;
   }
 
@@ -66,6 +72,10 @@
   &[aria-selected='true'],
   &[aria-current] {
     z-index: 2;
+    border-color: var(#{custom-property.get($items: ('button', 'pressed', 'border-color'))});
+    background-color: var(#{custom-property.get($items: ('button', 'pressed', 'background-color'))});
+    box-shadow: var(#{custom-property.get($items: ('button', 'pressed', 'box-shadow'))});
+    color: var(#{custom-property.get($items: ('button', 'pressed', 'color'))});
   }
 
   &:disabled,
@@ -74,6 +84,10 @@
   &[aria-disabled='true']:hover,
   &:disabled:focus,
   &[aria-disabled='true']:focus {
+    border-color: var(#{custom-property.get($items: ('button', 'disabled', 'border-color'))});
+    background-color: var(#{custom-property.get($items: ('button', 'disabled', 'background-color'))});
+    box-shadow: var(#{custom-property.get($items: ('button', 'disabled', 'box-shadow'))});
+    color: var(#{custom-property.get($items: ('button', 'disabled', 'color'))});
     cursor: not-allowed;
   }
 }

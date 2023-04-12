@@ -6,8 +6,9 @@
 @use './design-token';
 @use './custom-properties';
 
+/* prettier-ignore */
+
 @mixin colors($colors, $variant-name) {
-  $button-name: 'button#{$variant-name}';
   $allow-list: list.join(
     settings.$allowed-color-properties,
     settings.$extra-color-properties
@@ -17,9 +18,7 @@
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'default'),
       $allow-list: $allow-list,
-      $module-name: (
-        $button-name,
-      )
+      $module-name: ($variant-name)
     );
   }
 
@@ -27,10 +26,7 @@
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'hover'),
       $allow-list: $allow-list,
-      $module-name: (
-        $button-name,
-        'hover',
-      )
+      $module-name: ($variant-name, 'hover')
     );
   }
 
@@ -38,10 +34,7 @@
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'active'),
       $allow-list: $allow-list,
-      $module-name: (
-        $button-name,
-        'active',
-      )
+      $module-name: ($variant-name, 'active')
     );
   }
 
@@ -49,10 +42,7 @@
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'pressed'),
       $allow-list: $allow-list,
-      $module-name: (
-        $button-name,
-        'pressed',
-      )
+      $module-name: ($variant-name, 'pressed')
     );
   }
 
@@ -60,19 +50,18 @@
     @include custom-properties.output-filtered(
       $properties: map.get($colors, 'disabled'),
       $allow-list: $allow-list,
-      $module-name: (
-        $button-name,
-        'disabled',
-      )
+      $module-name: ($variant-name, 'disabled')
     );
   }
 }
+
+/* prettier-ignore */
 
 @mixin sizes($sizes, $with-square-variant: true) {
   @include custom-properties.output-filtered(
     $properties: $sizes,
     $allow-list: settings.$allowed-shape-properties,
-    $module-name: 'button'
+    $module-name: 'button',
   );
 
   @each $property-name in (settings.$allowed-shape-properties) {
@@ -88,18 +77,8 @@
     $min-height-property: design-token.get('button', 'min-height');
 
     &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
-      #{$min-width-property}: calc(
-        1em *
-          var(#{$line-height-property}) +
-          2 *
-          #{map.get($sizes, 'padding-vertical')}
-      );
-      #{$min-height-property}: calc(
-        1em *
-          var(#{$line-height-property}) +
-          2 *
-          #{map.get($sizes, 'padding-vertical')}
-      );
+      #{$min-width-property}: #{calc(1em * var(#{$line-height-property}) + 2 * #{map.get($sizes, 'padding-vertical')})};
+      #{$min-height-property}: #{calc(1em * var(#{$line-height}) + 2 * #{map.get($sizes, 'padding-vertical')})};
 
       @if map.has-key($sizes, 'padding-vertical') {
         #{design-token.get('button', 'padding-horizontal')}: map.get(
@@ -110,6 +89,8 @@
           $sizes,
           'padding-vertical'
         );
+        #{design-token.get('button', 'padding-horizontal')}: #{map.get($sizes, 'padding-vertical')};
+        #{design-token.get('button', 'padding-vertical')}: #{map.get($sizes, 'padding-vertical')};
       }
     }
   }
