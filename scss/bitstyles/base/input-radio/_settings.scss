@@ -15,6 +15,7 @@ $background-color: var(
   design-token.get('color', 'grayscale', 'white')
 ) !default;
 $border-color: var(design-token.get('color', 'grayscale')) !default;
+$box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
@@ -23,6 +24,7 @@ $background-color-hover: var(
   design-token.get('color', 'grayscale', 'white')
 ) !default;
 $border-color-hover: var(design-token.get('color', 'brand-1')) !default;
+$box-shadow-hover: none !default;
 
 //
 // Checked colors ////////////////////////////////////////
@@ -31,6 +33,15 @@ $background-color-checked: var(
   design-token.get('color', 'grayscale', 'white')
 ) !default;
 $border-color-checked: var(design-token.get('color', 'brand-1')) !default;
+$box-shadow-checked: none !default;
+
+//
+// Invalid colors ////////////////////////////////////////
+
+$color-invalid: var(design-token.get('color', 'warning', 'dark-4')) !default;
+$background-color-invalid: var(design-token.get('color', 'grayscale', 'white')) !default;
+$border-color-invalid: var(design-token.get('color', 'warning', 'dark-1')) !default;
+$box-shadow-invalid: none !default;
 
 //
 // Disabled colors ////////////////////////////////////////
@@ -43,6 +54,7 @@ $background-color-disabled: var(
 $border-color-disabled: var(
   design-token.get('color', 'grayscale', 'light-1')
 ) !default;
+$box-shadow-disabled: none !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
@@ -55,3 +67,4 @@ $background-color-disabled-checked: var(
 $border-color-disabled-checked: var(
   design-token.get('color', 'grayscale', 'light-1')
 ) !default;
+$box-shadow-disabled-checked: none !default;

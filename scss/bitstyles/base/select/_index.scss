@@ -51,7 +51,8 @@
       color: settings.$color-active;
     }
 
-    &:invalid {
+    &:invalid,
+    &[aria-invalid='true'] {
       border-color: settings.$border-color-invalid;
       background-color: settings.$background-color-invalid;
       background-image: settings.$background-image-invalid;

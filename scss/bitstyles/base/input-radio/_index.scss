@@ -22,6 +22,7 @@
     border-radius: settings.$border-radius;
     background-color: settings.$background-color;
     color: settings.$color;
+    box-shadow: settings.$box-shadow;
 
     &::after {
       content: '';
@@ -45,12 +46,14 @@
       outline: none;
       background-color: settings.$background-color-hover;
       color: settings.$color-hover;
+      box-shadow: settings.$box-shadow-hover;
     }
 
     &:checked {
       border-color: settings.$border-color-checked;
       background-color: settings.$background-color-checked;
       color: settings.$color-checked;
+      box-shadow: settings.$box-shadow-checked;
 
       &::after {
         transform: scale(0.7);
@@ -62,11 +65,13 @@
       border-color: settings.$border-color-disabled;
       background-color: settings.$background-color-disabled;
       color: settings.$color-disabled;
+      box-shadow: settings.$box-shadow-disabled;
 
       &:checked {
         border-color: settings.$border-color-disabled-checked;
         background-color: settings.$background-color-disabled-checked;
         color: settings.$color-disabled-checked;
+        box-shadow: settings.$box-shadow-disabled-checked;
       }
 
       &::after {
