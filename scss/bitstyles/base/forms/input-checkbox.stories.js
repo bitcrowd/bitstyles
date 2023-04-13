@@ -1,7 +1,7 @@
-import Input from '../input-text/Input';
+import Input from './Input';
 
 export default {
-  title: 'Base/Input checkbox',
+  title: 'Base/Forms/Input checkbox',
   component: Input,
   argTypes: {},
 };

@@ -1,7 +1,7 @@
-import Input from '../input-text/Input';
+import Input from './Input';
 
 export default {
-  title: 'Base/Input radio',
+  title: 'Base/Forms/Input radio',
   component: Input,
   argTypes: {},
 };

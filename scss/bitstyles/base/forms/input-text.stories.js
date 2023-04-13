@@ -2,7 +2,7 @@ import Input from './Input';
 import { generateLabel } from '../../../../.storybook/helpers';
 
 export default {
-  title: 'Base/Input',
+  title: 'Base/Forms/Input text',
   component: Input,
   argTypes: {},
 };

@@ -2,7 +2,7 @@ import Textarea from './Textarea';
 import { generateLabel } from '../../../../.storybook/helpers';
 
 export default {
-  title: 'Base/Textarea',
+  title: 'Base/Forms/Textarea',
   component: Textarea,
   argTypes: {},
 };
