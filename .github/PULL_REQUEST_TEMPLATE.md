@@ -16,9 +16,8 @@ _Update these checklists as necessary_
 
 _Insert a detailed list explaining exactly how to QA your changes from a designer’s PoV_
 
-- `git checkout main`
-- `git pull`
-- `git checkout branch-name`
+- `git fetch`
+- `git checkout <pr-branch-name>`
 - `yarn`
 - `yarn storybook`
 - navigate to _enter component name_ component
