@@ -13,12 +13,12 @@ function capitalizeFirstLetter(string) {
 
 export const generateLabel = (items) => capitalizeFirstLetter(items.join(' '));
 
-export const generateButtonLabel = (
+export const generateButtonLabel = ({
   shapeVariant = [],
   colorVariant = [],
   disabled = false,
   pressed = false
-) =>
+}) =>
   capitalizeFirstLetter(
     [
       shapeVariant.length === 0 ? 'default' : shapeVariant.join(' '),

@@ -59,6 +59,10 @@ textarea {
     background-color: settings.$background-hover;
     box-shadow: settings.$box-shadow-hover;
     color: settings.$color-hover;
+
+    &::placeholder {
+      color: settings.$placeholder-color-hover;
+    }
   }
 
   &:active,
@@ -68,6 +72,10 @@ textarea {
     background-color: settings.$background-active;
     box-shadow: settings.$box-shadow-active;
     color: settings.$color-active;
+
+    &::placeholder {
+      color: settings.$placeholder-color-active;
+    }
   }
 
   &:invalid,
@@ -76,6 +84,10 @@ textarea {
     background-color: settings.$background-color-invalid;
     box-shadow: settings.$box-shadow-invalid;
     color: settings.$color-invalid;
+
+    &::placeholder {
+      color: settings.$placeholder-color-invalid;
+    }
   }
 
   &:disabled {
@@ -84,6 +96,10 @@ textarea {
     box-shadow: settings.$box-shadow-disabled;
     color: settings.$color-disabled;
     cursor: default;
+
+    &::placeholder {
+      color: settings.$placeholder-color-disabled;
+    }
   }
 }
 /* stylelint-enable selector-max-type */
