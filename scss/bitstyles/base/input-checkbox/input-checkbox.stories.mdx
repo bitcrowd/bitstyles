@@ -1,28 +1,13 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Base/Checkbox input" />
+<Meta title="Base/Checkbox input/Overview" />
 
 # Input - checkbox
 
 <Canvas isColumn>
-  <Story name="Input - checkbox">
-    {`
-      <input type="checkbox">
-    `}
-  </Story>
-  <Story name="Input - checkbox (disabled)">
-    {`
-      <input type="checkbox" disabled>
-    `}
-  </Story>
-  <Story name="Input - checkbox (checked)">
-    {`
-      <input type="checkbox" checked>
-    `}
-  </Story>
-  <Story name="Input - checkbox (checked, disabled">
-    {`
-      <input type="checkbox" checked disabled>
-    `}
-  </Story>
+  <Story id="base-input-checkbox--base" />
+  <Story id="base-input-checkbox--invalid" />
+  <Story id="base-input-checkbox--disabled" />
+  <Story id="base-input-checkbox--checked" />
+  <Story id="base-input-checkbox--checked-disabled" />
 </Canvas>

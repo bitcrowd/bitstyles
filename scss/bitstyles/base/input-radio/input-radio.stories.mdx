@@ -1,28 +1,13 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Base/Radio input" />
+<Meta title="Base/Input radio/Overview" />
 
 # Input - radio
 
 <Canvas isColumn>
-  <Story name="Input - radio">
-    {`
-      <input type="radio">
-    `}
-  </Story>
-  <Story name="Input - radio (disabled)">
-    {`
-      <input type="radio" disabled>
-    `}
-  </Story>
-  <Story name="Input - radio (checked)">
-    {`
-      <input type="radio" checked>
-    `}
-  </Story>
-  <Story name="Input - radio (checked, disabled)">
-    {`
-      <input type="radio" checked disabled>
-    `}
-  </Story>
+  <Story id="base-input-radio--base" />
+  <Story id="base-input-radio--invalid" />
+  <Story id="base-input-radio--disabled" />
+  <Story id="base-input-radio--checked" />
+  <Story id="base-input-radio--checked-disabled" />
 </Canvas>

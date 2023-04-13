@@ -3,6 +3,7 @@ export default ({
   placeholder = '',
   disabled = false,
   ariaInvalid = false,
+  id,
 }) => {
   const textarea = document.createElement('textarea');
   textarea.value = value;
@@ -11,5 +12,6 @@ export default ({
   textarea.setAttribute('cols', '30');
   if (disabled) textarea.setAttribute('disabled', disabled);
   if (ariaInvalid) textarea.setAttribute('aria-invalid', ariaInvalid);
+  if (id) textarea.setAttribute('id', id);
   return textarea;
 };
