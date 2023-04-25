@@ -91,6 +91,31 @@ TextInputInvalid.parameters = {
   ],
 };
 
+export const TextInputInvalidWith = InputTemplate.bind({});
+TextInputInvalid.args = {
+  id: 'input-text',
+  label: 'Telephone number',
+  value: generateLabel(['input', 'text']),
+  placeholder: generateLabel(['input', 'text', 'placeholder']),
+  ariaInvalid: true,
+};
+TextInputInvalid.parameters = {
+  zeplinLink: [
+    {
+      name: 'base',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+    },
+    {
+      name: 'hover',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+    },
+    {
+      name: 'active',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29d53bff5b7626b7444',
+    },
+  ],
+};
+
 export const TextInputDisabled = InputTemplate.bind({});
 TextInputDisabled.args = {
   id: 'input-text',

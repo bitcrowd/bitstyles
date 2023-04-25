@@ -21,16 +21,16 @@
     border: settings.$border-width solid settings.$border-color;
     border-radius: settings.$border-radius;
     background-color: settings.$background-color;
-    color: settings.$color;
     box-shadow: settings.$box-shadow;
+    color: settings.$color;
 
     &:hover,
     &:focus {
       border-color: settings.$border-color-hover;
       outline: none;
       background-color: settings.$background-color-hover;
-      color: settings.$color-hover;
       box-shadow: settings.$box-shadow-hover;
+      color: settings.$color-hover;
     }
 
     &::after {
@@ -57,8 +57,8 @@
     &:checked {
       border-color: settings.$border-color-checked;
       background-color: settings.$background-color-checked;
-      color: settings.$color-checked;
       box-shadow: settings.$box-shadow-checked;
+      color: settings.$color-checked;
 
       &::after {
         transform: scale(1);
@@ -70,21 +70,21 @@
     &[aria-invalid='true'] {
       border-color: settings.$border-color-invalid;
       background-color: settings.$background-color-invalid;
-      color: settings.$color-invalid;
       box-shadow: settings.$box-shadow-invalid;
+      color: settings.$color-invalid;
     }
 
     &[disabled] {
       border-color: settings.$border-color-disabled;
       background-color: settings.$background-color-disabled;
-      color: settings.$color-disabled;
       box-shadow: settings.$box-shadow-disabled;
+      color: settings.$color-disabled;
 
       &:checked {
         border-color: settings.$border-color-disabled-checked;
         background-color: settings.$background-color-disabled-checked;
-        color: settings.$color-disabled-checked;
         box-shadow: settings.$box-shadow-disabled-checked;
+        color: settings.$color-disabled-checked;
       }
     }
   }

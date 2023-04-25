@@ -17,7 +17,7 @@ export const generateButtonLabel = ({
   shapeVariant = [],
   colorVariant = [],
   disabled = false,
-  pressed = false
+  pressed = false,
 }) =>
   capitalizeFirstLetter(
     [

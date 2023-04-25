@@ -1,3 +1,5 @@
+@use '../../tools/size';
+
 //
 // Fieldset ////////////////////////////////////////
 
@@ -14,3 +16,8 @@ $legend-background-color: transparent !default;
 $legend-border: 0 !default;
 $legend-border-radius: 0 !default;
 $legend-color: inherit !default;
+
+//
+// Label ////////////////////////////////////////
+
+$label-gap: size.get('s7');
