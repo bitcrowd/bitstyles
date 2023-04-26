@@ -13,19 +13,19 @@ $dark-theme: (
 ) !default;
 $brand-1-theme: (
   'background': palette.get('brand-1', 'light-4'),
-  'text': palette.get('brand-1', 'dark-1'),
+  'text': palette.get('brand-1', 'dark-2'),
 ) !default;
 $brand-2-theme: (
   'background': palette.get('brand-2', 'light-4'),
-  'text': palette.get('brand-2', 'dark-1'),
+  'text': palette.get('brand-2', 'dark-2'),
 ) !default;
 $positive-theme: (
   'background': palette.get('positive', 'light-4'),
-  'text': palette.get('positive', 'dark-1'),
+  'text': palette.get('positive', 'dark-2'),
 ) !default;
 $warning-theme: (
   'background': palette.get('warning', 'light-4'),
-  'text': palette.get('warning', 'dark-1'),
+  'text': palette.get('warning', 'dark-2'),
 ) !default;
 $danger-theme: (
   'background': palette.get('danger', 'light-4'),

@@ -53,58 +53,58 @@ $default: (
   ),
   'brand-1': (
     'default': (
-      'color': palette.get('brand-1', 'dark-1'),
+      'color': palette.get('brand-1', 'dark-2'),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('brand-1', 'dark-2'),
-      'background-color': palette.get('brand-1', 'light-3'),
+      'color': palette.get('brand-1', 'dark-3'),
+      'background-color': palette.get('brand-1', 'light-2'),
     ),
     'active': (
       'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-1', 'dark-1'),
+      'background-color': palette.get('brand-1', 'dark-2'),
     ),
   ),
   'brand-2': (
     'default': (
-      'color': palette.get('brand-2', 'dark-1'),
+      'color': palette.get('brand-2', 'dark-2'),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('brand-2', 'dark-2'),
-      'background-color': palette.get('brand-2', 'light-3'),
+      'color': palette.get('grayscale', 'dark-3'),
+      'background-color': palette.get('brand-2', 'light-2'),
     ),
     'active': (
       'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-2', 'dark-1'),
+      'background-color': palette.get('brand-2', 'dark-2'),
     ),
   ),
   'positive': (
     'default': (
-      'color': palette.get('positive', 'dark-1'),
+      'color': palette.get('positive', 'dark-2'),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('positive', 'dark-2'),
-      'background-color': palette.get('positive', 'light-3'),
+      'color': palette.get('positive', 'dark-3'),
+      'background-color': palette.get('positive', 'light-2'),
     ),
     'active': (
       'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('positive', 'dark-1'),
+      'background-color': palette.get('positive', 'dark-2'),
     ),
   ),
   'warning': (
     'default': (
-      'color': palette.get('warning', 'dark-1'),
+      'color': palette.get('warning', 'dark-2'),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('warning', 'dark-2'),
-      'background-color': palette.get('warning', 'light-3'),
+      'color': palette.get('warning', 'dark-3'),
+      'background-color': palette.get('warning', 'light-2'),
     ),
     'active': (
       'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('warning', 'dark-1'),
+      'background-color': palette.get('warning', 'dark-2'),
     ),
   ),
   'danger': (
@@ -114,7 +114,7 @@ $default: (
     ),
     'hover': (
       'color': palette.get('danger', 'dark-2'),
-      'background-color': palette.get('danger', 'light-3'),
+      'background-color': palette.get('danger', 'light-2'),
     ),
     'active': (
       'color': palette.get('grayscale', 'white'),
@@ -123,16 +123,16 @@ $default: (
   ),
   'grayscale': (
     'default': (
-      'color': palette.get('grayscale', 'dark-1'),
+      'color': palette.get('grayscale', 'dark-2'),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('grayscale', 'dark-2'),
-      'background-color': palette.get('grayscale', 'light-3'),
+      'color': palette.get('grayscale', 'dark-3'),
+      'background-color': palette.get('grayscale', 'light-2'),
     ),
     'active': (
       'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('grayscale', 'dark-1'),
+      'background-color': palette.get('grayscale', 'dark-2'),
     ),
   ),
 ) !default;
