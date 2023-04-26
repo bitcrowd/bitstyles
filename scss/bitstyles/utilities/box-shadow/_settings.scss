@@ -1,6 +1,6 @@
 @use '../../tools/shadows';
 
 $values: (
-  'default': shadows.get('default', 'box'),
+  'brand-1': shadows.get('brand-1', 'box'),
 ) !default;
 $breakpoints: () !default;

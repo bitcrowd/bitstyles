@@ -1,5 +1,7 @@
+@use '../settings/setup';
 @use '../settings/shadows';
-@use '../tools/shadow';
+@use './custom-property';
+@use './shadow';
 @use 'sass:map';
 
 // Shadows
@@ -8,23 +10,28 @@
 //
 // Examples:
 //
-// `box-shadow: shadows.get('default');`
-// `filter: shadows.get('default', 'drop');`
+// `box-shadow: shadows.get('brand-1');`
+// `filter: shadows.get('brand-1', 'drop');`
 //
 // @param {String} $shadow  Name of the shadow required, as defined in the map `$bitstyles-shadows-shadows`.
 // @param {String} $format  The format in which you want the returned shadow. Options are `box` (for CSS box-shadow property) and `drop` (for CSS/SVG drop-shadow using the filter propertt). Defaults to `box`
 //
 
-@function get($shadow, $format: 'box') {
-  @if map.has-key(shadows.$shadows, $shadow) {
-    @if $format == 'box' {
-      @return shadow.to-box-shadow(map.get(shadows.$shadows, $shadow));
-    }
-
-    @if $format == 'drop' {
-      @return shadow.to-drop-shadow(map.get(shadows.$shadows, $shadow));
-    }
+/* prettier-ignore */
+@function get($shadow, $type: 'box', $format: setup.$default-token-format) {
+  @if $format == setup.$default-token-format {
+    @return var(#{custom-property.get($items: ('shadow', $shadow, $type))});
   } @else {
-    @error 'Oops! There’s no shadow with the name ‘#{$shadow}’.';
+    @if map.has-key(shadows.$shadows, $shadow) {
+      @if $type == 'box' {
+        @return shadow.to-box-shadow(map.get(shadows.$shadows, $shadow));
+      }
+
+      @if $type == 'drop' {
+        @return shadow.to-drop-shadow(map.get(shadows.$shadows, $shadow));
+      }
+    } @else {
+      @error 'Oops! There’s no shadow with the name ‘#{$shadow}’.';
+    }
   }
 }

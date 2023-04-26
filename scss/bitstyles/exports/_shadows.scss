@@ -2,9 +2,12 @@
 @use '../tools/shadows';
 
 /* stylelint-disable selector-pseudo-class-no-unknown */
+
+/* prettier-ignore */
 :export {
   @each $shadow-name, $shadow in shadows-settings.$shadows {
-    #{$shadow-name}: shadows.get($shadow-name, 'drop');
+    #{$shadow-name}-drop: shadows.get($shadow-name, $type: 'drop', $format: 'css');
+    #{$shadow-name}-box: shadows.get($shadow-name, $format: 'css');
   }
 }
 /* stylelint-enable selector-pseudo-class-no-unknown */

@@ -11,35 +11,21 @@
 @use 'sass:map';
 
 /* stylelint-disable scss/dollar-variable-default */
-$padding-horizontal-property: custom-property.get(
-  $items: (
-    'badge',
-    'padding-horizontal',
-  ),
-  $layer: 'atom',
-);
-$padding-vertical-property: custom-property.get(
-  $items: (
-    'badge',
-    'padding-vertical',
-  ),
-  $layer: 'atom',
-);
-$gap-property: custom-property.get(
-  $items: (
-    'badge',
-    'gap',
-  ),
-  $layer: 'atom',
-);
-$button-gap-property: size.get('s6');
-$shadow-property: custom-property.get(
-  $items: (
-    'badge',
-    'shadow',
-  ),
-  $layer: 'atom',
-);
+
+/* prettier-ignore */
+$padding-horizontal-property: custom-property.get($items: ('badge', 'padding-horizontal'), $layer: 'atom');
+
+/* prettier-ignore */
+$padding-vertical-property: custom-property.get($items: ('badge', 'padding-vertical'),  $layer: 'atom');
+
+/* prettier-ignore */
+$gap-property: custom-property.get($items: ('badge', 'gap'), $layer: 'atom');
+
+/* prettier-ignore */
+$extra-spacing-property: custom-property.get($items: ('badge', 'extra', 'spacing'), $layer: 'atom');
+
+/* prettier-ignore */
+$shadow-property: custom-property.get($items: ('badge', 'shadow'), $layer: 'atom');
 /* stylelint-enable scss/dollar-variable-default */
 
 #{classname.get($classname-items: 'badge', $layer: 'atom')} {
@@ -53,16 +39,11 @@ $shadow-property: custom-property.get(
   white-space: nowrap;
 }
 
+/* prettier-ignore */
 #{classname.get($classname-items: 'badge__extra', $layer: 'atom')} {
-  margin-top: calc(
-    var(#{$padding-vertical-property}) * -1 + #{$button-gap-property}
-  );
-  margin-bottom: calc(
-    var(#{$padding-vertical-property}) * -1 + #{$button-gap-property}
-  );
-  margin-left: calc(
-    var(#{$padding-horizontal-property}) * -1 + #{$button-gap-property}
-  );
+  margin-top: calc(var(#{$extra-spacing-property}) - var(#{$padding-vertical-property}));
+  margin-bottom: calc(var(#{$extra-spacing-property}) - var(#{$padding-vertical-property}));
+  margin-left: calc(var(#{$extra-spacing-property}) - var(#{$padding-horizontal-property}));
 }
 
 /* Theme variants */
@@ -75,6 +56,7 @@ $shadow-property: custom-property.get(
 
 /* Size variants */
 
+/* prettier-ignore */
 @each $breakpoint, $size-variants in settings.$size-variants {
   @include media-query.get($breakpoint) {
     @each $size-variant-name, $size-variant in ($size-variants) {
@@ -85,15 +67,20 @@ $shadow-property: custom-property.get(
         $class: 'badge--#{$size-variant-name}';
       }
       #{classname.get($classname-items: $class, $layer: 'atom')} {
-        #{$padding-horizontal-property}: map.get(
-          $size-variant,
-          'padding-horizontal'
-        );
-        #{$padding-vertical-property}: map.get(
-          $size-variant,
-          'padding-vertical'
-        );
-        #{$gap-property}: map.get($size-variant, 'gap');
+        /* stylelint-disable max-nesting-depth */
+        @if map.has-key($size-variant, 'padding-horizontal') {
+          #{$padding-horizontal-property}: map.get($size-variant, 'padding-horizontal');
+        }
+        @if map.has-key($size-variant, 'padding-vertical') {
+          #{$padding-vertical-property}: map.get($size-variant, 'padding-vertical');
+        }
+        @if map.has-key($size-variant, 'extra-spacing') {
+          #{$extra-spacing-property}: map.get($size-variant, 'extra-spacing');
+        }
+        @if map.has-key($size-variant, 'gap') {
+          #{$gap-property}: map.get($size-variant, 'gap');
+        }
+        /* stylelint-enable max-nesting-depth */
       }
     }
   }

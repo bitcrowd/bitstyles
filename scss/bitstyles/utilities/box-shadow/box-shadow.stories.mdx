@@ -1,6 +1,6 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Utilities/shadow" />
+<Meta title="Utilities/shadow/Overview" />
 
 # Box-shadow
 
@@ -9,13 +9,7 @@ Apply a CSS box-shadow to the element. By default this is selected from the stan
 ## u-shadow
 
 <Canvas>
-  <Story name="u-shadow-default">
-    {`
-      <div class="u-shadow-default u-padding-m u-bg-white" style="width: 10rem; height: 10rem;">
-        u-shadow-default
-      </div>
-    `}
-  </Story>
+  <Story id="utilities-shadow--brand-1" />
 </Canvas>
 
 ## Customization
@@ -25,7 +19,7 @@ The available box-shadows and their names can be customized by overriding the `$
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
   $values: (
-    'default': shadows.get('default', 'box'),
+    'brand-1': shadows.get('brand-1', 'box'),
   )
 );
 ```
@@ -35,7 +29,7 @@ You can also specify shadows directly, using the correct format for the CSS `box
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
   $values: (
-    'default': 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2),
+    'brand-1': 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2),
     0 0 2rem 1rem rgba(0, 0, 0, 0.2),
   )
 );

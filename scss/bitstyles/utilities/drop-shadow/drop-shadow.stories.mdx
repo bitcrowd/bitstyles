@@ -1,21 +1,15 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Utilities/drop-shadow" />
+<Meta title="Utilities/drop-shadow/Overview" />
 
 # Drop-shadow
 
-Apply a drop-shadow to the elementusing CSS filters. By default this is selected from the standard set of shadows, but you can specify any shadow (see the [“Customization”](#customization) section below).
+Apply a drop-shadow to the element using CSS filters. By default this is selected from the standard set of shadows, but you can specify any shadow (see the [“Customization”](#customization) section below).
 
 ## u-drop-shadow
 
 <Canvas isColumn>
-  <Story name="u-drop-shadow-default">
-    {`
-      <div class="u-drop-shadow-default u-padding-m u-bg-white" style="width: 10rem; height: 10rem;">
-        u-box-shadow-default
-      </div>
-    `}
-  </Story>
+  <Story id="utilities-drop-shadow--brand-1" />
 </Canvas>
 
 ## Customization
@@ -25,7 +19,7 @@ The available drop-shadows and their names can be customized by overriding the `
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (
   $values: (
-    'default': shadows.get('default', 'drop'),
+    'brand-1': shadows.get('brand-1', 'drop'),
   )
 );
 ```

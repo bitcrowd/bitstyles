@@ -2,11 +2,55 @@
 @use '../tools/size';
 @use '../tools/shadow';
 
+/* stylelint-disable length-zero-no-unit */
 $shadows: (
-  'default':
+  'brand-1':
     shadow.generate(
-      $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.125),
-      $offset: size.get('l3'),
-      $blur-radius: size.get('l3'),
+      $color: rgba(palette.get('brand-1', 'dark-2-rgb'), 0.1),
+      $offset: size.get('s6'),
+      $blur-radius: size.get('s4'),
+    ),
+  'brand-1-center':
+    shadow.generate(
+      $color: rgba(palette.get('brand-1', 'dark-2-rgb'), 0.1),
+      $offset: 0rem,
+      $blur-radius: size.get('s4'),
+    ),
+  'gray':
+    shadow.generate(
+      $color: rgba(palette.get('grayscale', 'dark-2-rgb'), 0.1),
+      $offset: size.get('s6'),
+      $blur-radius: size.get('s4'),
+    ),
+  'gray-center':
+    shadow.generate(
+      $color: rgba(palette.get('grayscale', 'dark-2-rgb'), 0.1),
+      $offset: size.get('s7'),
+      $blur-radius: size.get('s4'),
+    ),
+  'brand-2':
+    shadow.generate(
+      $color: rgba(palette.get('brand-2', 'dark-1-rgb'), 0.1),
+      $offset: size.get('s7'),
+      $blur-radius: size.get('s4'),
+    ),
+  'positive':
+    shadow.generate(
+      $color: rgba(palette.get('positive', 'dark-1-rgb'), 0.1),
+      $offset: size.get('s7'),
+      $blur-radius: size.get('s4'),
+    ),
+  'warning':
+    shadow.generate(
+      $color: rgba(palette.get('warning', 'dark-1-rgb'), 0.1),
+      $offset: size.get('s7'),
+      $blur-radius: size.get('s4'),
+    ),
+  'danger':
+    shadow.generate(
+      $color: rgba(palette.get('danger', 'dark-1-rgb'), 0.1),
+      $offset: size.get('s7'),
+      $blur-radius: size.get('s4'),
     ),
 ) !default;
+/* stylelint-enable length-zero-no-unit */

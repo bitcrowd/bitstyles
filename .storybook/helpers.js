@@ -16,7 +16,7 @@ export const generateLabel = (
   colorVariant = [],
   disabled = false,
   pressed = false
-) => (
+) =>
   capitalizeFirstLetter(
     [
       shapeVariant.length === 0 ? 'default' : shapeVariant.join(' '),
@@ -24,5 +24,4 @@ export const generateLabel = (
       disabled ? 'disabled' : null,
       pressed ? 'pressed' : null,
     ].join(' ')
-  )
-)
+  );
