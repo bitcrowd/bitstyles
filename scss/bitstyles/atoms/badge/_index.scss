@@ -75,7 +75,7 @@ $shadow-property: custom-property.get($items: ('badge', 'shadow'), $layer: 'atom
           #{$padding-vertical-property}: map.get($size-variant, 'padding-vertical');
         }
         @if map.has-key($size-variant, 'extra-spacing') {
-          #{$extra-spacing-property}: map.get($size-variant, 'extra-spacing');
+          #{$extra-spacing-property}: #{map.get($size-variant, 'extra-spacing')};
         }
         @if map.has-key($size-variant, 'gap') {
           #{$gap-property}: map.get($size-variant, 'gap');

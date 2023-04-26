@@ -70,36 +70,64 @@ You may want the badges to be removable, for example when used as part of a filt
 
 ## Customization
 
-The available color variants can be specified with `$color-variants`, where you pass the name of the variant and a Sass map of two keys (one for color, one for background-color) for each variant:
+### Color variants
+
+Badges use the theming system for their color & background-color properties — take a look at [themes](/docs/design-tokens-themes--page) for details on how to customize your themes.
+
+The custom buttons that are available in each badge are implemented in the Button component — they’re component-level additions to each theme, just for the default button color-variant. See the [Button component](/docs/atoms-button-colors--page) for details on how to customize their appearance.
+
+The badge shadows are component-level additions to the theme, which can be specified with `$theme-variants`. Pass the name of the variant and a Sass map for each variant:
 
 ```scss
+@use '~bitstyles/scss/bitstyles/tools/shadows';
 @use '~bitstyles/scss/bitstyles/atoms/badge' with (
-  $color-variants: (
-    'badge-name': (
-      'color': palette.get('brand-1', 'light-4'),
-      'background-color': palette.get('brand-1', 'dark-4'),
+  $theme-variants: (
+    'theme-name': (
+      'shadow': shadows.get('brand-2'),
     ),
   )
 );
 ```
 
-Similarly for the size variants — override the `$size-variants` variable, with each breakpoint (or use `setup.$no-media-query` for the base styles) at the root, containing a size-variant name and Sass map with the vertical & horizontal padding:
+### Size variants
+
+To configure your size variants override the `$size-variants` variable, with each breakpoint (use `setup.$no-media-query` for the mobile-first base styles) at the root, containing a size-variant name and Sass map with the sizing properties:
 
 ```scss
+@use '~bitstyles/scss/bitstyles/tools/size';
 @use '~bitstyles/scss/bitstyles/atoms/badge' with (
   $size-variants: (
     '#{setup.$no-media-query}': (
       '': (
         'padding-vertical': size.get('s6'),
         'padding-horizontal': size.get('l1'),
+        'gap': size.get('s6'),
+        'extra-spacing': 0rem,
       ),
     ),
     'l': (
       '': (
         'padding-vertical': size.get('s4'),
         'padding-horizontal': size.get('l3'),
+        'gap': size.get('s1'),
+        'extra-spacing': size.get('s4'),
+      ),
+      'small': (
+        'padding-vertical': size.get('s7'),
+        'padding-horizontal': size.get('s7'),
+        'gap': size.get('s6'),
+        'extra-spacing': 0rem,
       ),
     ),
   )
 );
 ```
+
+The size-related properties available for configuration are:
+
+| Property name        | Description                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------- |
+| `padding-vertical`   | `padding-top` and `padding-bottom` properties                                               |
+| `padding-horizontal` | `padding-left` and `padding-right` properties                                               |
+| `gap`                | The gap between the text label of the badge and any `extra` content (like a button or icon) |
+| `extra-spacing`      | The spacing from the edge of the extra content and the edge of the badge                    |

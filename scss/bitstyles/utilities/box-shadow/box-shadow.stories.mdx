@@ -14,9 +14,10 @@ Apply a CSS box-shadow to the element. By default this is selected from the stan
 
 ## Customization
 
-The available box-shadows and their names can be customized by overriding the `$bitstyles-box-shadow-values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `css` as the format:
+The available box-shadows and their names can be customized by overriding the `$values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `css` as the format:
 
 ```scss
+@use '~bitstyles/scss/bitstyles/tools/shadows';
 @use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
   $values: (
     'brand-1': shadows.get('brand-1', 'box'),

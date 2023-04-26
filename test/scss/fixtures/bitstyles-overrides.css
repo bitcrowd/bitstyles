@@ -94,8 +94,9 @@
   --bscpn-size-l7: 50rem;
 }
 :root {
-  --bscpn-shadow-default: drop-shadow(red 0 2.5rem 5rem)
+  --bscpn-shadow-default-drop: drop-shadow(red 0 2.5rem 5rem)
     drop-shadow(red 0 5rem 10rem);
+  --bscpn-shadow-default-box: 0 2.5rem 5rem red, 0 5rem 10rem red;
 }
 :root {
   --bscpn-font-size-1: 0.75rem;
@@ -834,13 +835,14 @@ table {
 }
 .bs-at-badge__extra {
   margin-bottom: calc(
-    var(--bscpn-at-badge-padding-vertical) * -1 + var(--bscpn-size-s6)
+    var(--bscpn-at-badge-extra-spacing) - var(--bscpn-at-badge-padding-vertical)
   );
   margin-left: calc(
-    var(--bscpn-at-badge-padding-horizontal) * -1 + var(--bscpn-size-s6)
+    var(--bscpn-at-badge-extra-spacing) -
+      var(--bscpn-at-badge-padding-horizontal)
   );
   margin-top: calc(
-    var(--bscpn-at-badge-padding-vertical) * -1 + var(--bscpn-size-s6)
+    var(--bscpn-at-badge-extra-spacing) - var(--bscpn-at-badge-padding-vertical)
   );
 }
 :root,
@@ -850,17 +852,20 @@ table {
 .bs-at-badge {
   --bscpn-at-badge-padding-horizontal: var(--bscpn-size-l1);
   --bscpn-at-badge-padding-vertical: var(--bscpn-size-s6);
+  --bscpn-at-badge-extra-spacing: 0rem;
   --bscpn-at-badge-gap: var(--bscpn-size-s6);
 }
 @media screen and (min-width: 30em) {
   .bs-at-badge {
     --bscpn-at-badge-padding-horizontal: var(--bscpn-size-l1);
     --bscpn-at-badge-padding-vertical: var(--bscpn-size-s4);
+    --bscpn-at-badge-extra-spacing: var(--bscpn-size-s6);
     --bscpn-at-badge-gap: var(--bscpn-size-s4);
   }
   .bs-at-badge--small {
     --bscpn-at-badge-padding-horizontal: var(--bscpn-size-l1);
     --bscpn-at-badge-padding-vertical: var(--bscpn-size-s6);
+    --bscpn-at-badge-extra-spacing: 0rem;
     --bscpn-at-badge-gap: var(--bscpn-size-s6);
   }
 }
@@ -2149,12 +2154,12 @@ table {
 .bs-border-radius-m-tl {
   border-top-left-radius: 10rem;
 }
-.bs-shadow-default {
-  box-shadow: 0 2.5rem 5rem red, 0 5rem 10rem red;
+.bs-shadow-brand-1 {
+  box-shadow: var(--bscpn-shadow-brand-1-box);
 }
 @media screen and (min-width: 95em) {
-  .bs-shadow-default\@xl {
-    box-shadow: 0 2.5rem 5rem red, 0 5rem 10rem red;
+  .bs-shadow-brand-1\@xl {
+    box-shadow: var(--bscpn-shadow-brand-1-box);
   }
 }
 .bs-break-text {
@@ -2231,12 +2236,12 @@ table {
     display: inline-block;
   }
 }
-.bs-drop-shadow-default {
-  filter: drop-shadow(#f00 0 2.5rem 5rem) drop-shadow(#f00 0 5rem 10rem);
+.bs-drop-shadow-brand-1 {
+  filter: var(--bscpn-shadow-brand-1-drop);
 }
 @media screen and (max-width: 20em) {
-  .bs-drop-shadow-default\@s {
-    filter: drop-shadow(#f00 0 2.5rem 5rem) drop-shadow(#f00 0 5rem 10rem);
+  .bs-drop-shadow-brand-1\@s {
+    filter: var(--bscpn-shadow-brand-1-drop);
   }
 }
 .bs-fg-f00 {
