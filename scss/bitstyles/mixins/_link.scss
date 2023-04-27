@@ -39,7 +39,6 @@
   &:focus-visible {
     outline: focus.$outline-color solid focus.$outline-width;
     outline-offset: focus.$outline-offset;
-    text-decoration: none;
   }
 
   &:active {
@@ -47,5 +46,12 @@
     box-shadow: link.$box-shadow-active;
     color: link.$color-active;
     text-decoration: link.$text-decoration-active;
+  }
+
+  &[aria-disabled] {
+    background-color: link.$background-color-disabled;
+    box-shadow: link.$box-shadow-disabled;
+    color: link.$color-disabled;
+    text-decoration: link.$text-decoration-disabled;
   }
 }

@@ -4,8 +4,52 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 # Anchor
 
-Standard anchor elements.
+Links navigate the user to another URL. They are the magic sauce that make the web web-like, and are one of the original HTML elements: `<a>`. Use these anchor elements for your links, using the `href` attribute to provide the URL to navigate to. When doing this, you don’t need any extra classes, just the semantic HTML:
 
 <Canvas>
   <Story id="base-anchor--base" />
+  <Story id="base-anchor--disabled" />
 </Canvas>
+
+Apply `aria-disabled="true"` to give the link a disabled appearance, but be aware that the link will still function — the `href` will still be honored by the browser, and the user will navigate to that URL when they activate the link.
+
+## Link states
+
+Available states are:
+
+| State    | Description                                                                                                                                                                                                       |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| default  | The default appearance of the button variant, without any user interaction                                                                                                                                        |
+| hover    | The user has their cursor over the button (`:hover` psuedoclass)                                                                                                                                                  |
+| active   | The user is currently clicking, tapping, or otherwise activating the button (`:active` psuedoclass)                                                                                                               |
+| visited  | This indicates to the user that they have previously visited this URL                                                                                                                                             |
+| disabled | The button is not currently clickable, and will not perform an action when clicked. If this is applied to a button rendered as an anchor element (using `aria-disabled`), that element will however be clickable. |
+
+## Customization
+
+The color and underline properties for links can be configured by overriding `settings/link`. These styles will be applied to `<a>` elements and [Atoms/Link](/docs/atoms-link-overview--page).
+
+```scss
+@use '~bitstyles/scss/bitstyles/settings/link' with (
+    $color: palette.get('brand-1', 'dark-1'),
+    $background-color: transparent,
+    $text-decoration: underline,
+    $box-shadow: none,
+
+    $color-hover: palette.get('brand-1', 'dark-1'),
+    $background-color-hover: transparent,
+    $text-decoration-hover: underline,
+    $box-shadow-hover: none,
+
+    //…
+  );
+```
+
+The following properties are available for each state:
+
+| Property name      | Description                           |
+| ------------------ | ------------------------------------- |
+| `color`            | The link’s `color` property           |
+| `background-color` | The `background-color` property       |
+| `text-decoration`  | The link’s `text-decoration` property |
+| `box-shadow`       | The `box-shadow` property             |

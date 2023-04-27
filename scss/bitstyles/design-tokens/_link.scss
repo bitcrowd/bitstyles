@@ -12,8 +12,8 @@ $font-weight: typography.$font-weight-medium !default;
 //
 // Base Colors /////////////////////////////////////////
 
-$color: palette.get('grayscale', 'dark-1') !default;
-$text-decoration: none !default;
+$color: palette.get('brand-1', 'dark-1') !default;
+$text-decoration: underline !default;
 $background-color: transparent !default;
 $box-shadow: none !default;
 
@@ -21,14 +21,14 @@ $box-shadow: none !default;
 // Visited /////////////////////////////////////////
 
 $color-visited: palette.get('grayscale', 'dark-1') !default;
-$text-decoration-visited: none !default;
+$text-decoration-visited: underline !default;
 $background-color-visited: transparent !default;
 $box-shadow-visited: none !default;
 
 //
 // Hover /////////////////////////////////////////
 
-$color-hover: palette.get('brand-1', 'dark-1') !default;
+$color-hover: palette.get('brand-1', 'dark-2') !default;
 $text-decoration-hover: underline !default;
 $background-color-hover: transparent !default;
 $box-shadow-hover: none !default;
@@ -36,7 +36,15 @@ $box-shadow-hover: none !default;
 //
 // Active /////////////////////////////////////////
 
-$color-active: palette.get('brand-1', 'dark-2') !default;
+$color-active: palette.get('brand-1') !default;
 $text-decoration-active: underline !default;
 $background-color-active: transparent !default;
 $box-shadow-active: none !default;
+
+//
+// Disabled /////////////////////////////////////////
+
+$color-disabled: palette.get('grayscale') !default;
+$text-decoration-disabled: underline !default;
+$background-color-disabled: transparent !default;
+$box-shadow-disabled: none !default;
