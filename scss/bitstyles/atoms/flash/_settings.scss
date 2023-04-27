@@ -3,18 +3,10 @@
 @use '../../tools/custom-property';
 @use 'sass:map';
 
+/* prettier-ignore */
 $sizes: (
   '#{setup.$no-media-query}': (
-    'padding-horizontal':
-      var(
-        #{custom-property.get(
-            $items: (
-              'content',
-              'padding',
-              'base',
-            ),
-          )}
-      ),
+    'padding-horizontal': var(#{custom-property.get($items: ('content', 'padding', 'base'))}),
     'padding-vertical': size.get('s3'),
     'gap': size.get('s3'),
   ),

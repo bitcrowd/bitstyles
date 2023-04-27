@@ -5,6 +5,13 @@ import Button from '../button/Button';
 const Icon = ({ name }) =>
   `<svg width="24" height="24" class="a-icon a-icon--xl" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-${name}"></use></svg>`;
 
+const LiveRegion = ({ children }) => {
+  const liveRegion = document.createElement('div');
+  liveRegion.setAttribute('aria-live', 'polite');
+  liveRegion.appendChild(children);
+  return liveRegion;
+};
+
 export default ({ children, theme = 'brand-1', icon, onClick = null }) => {
   const flash = document.createElement('div');
   flash.classList.add('a-flash');
@@ -25,5 +32,5 @@ export default ({ children, theme = 'brand-1', icon, onClick = null }) => {
       })
     );
   }
-  return flash;
+  return LiveRegion({ children: flash });
 };

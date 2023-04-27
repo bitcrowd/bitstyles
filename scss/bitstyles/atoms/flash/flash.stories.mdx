@@ -2,13 +2,20 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 <Meta title="Atoms/Flash/Overview" />
 
+<Canvas isColumn>
+  <Story id="atoms-flash--base" />
+  <Story id="atoms-flash--positive" />
+  <Story id="atoms-flash--warning" />
+  <Story id="atoms-flash--danger" />
+</Canvas>
+
 # Flash
 
 A flash informs the user of a global or important event, such as a successful (or unsuccessful!) login, server error, network connection issues etc.
 
 When used inside a discrete block of UI (like a [card](/docs/atoms-card--card)), flashes are also useful for more context-specific event notifications. As they’re quite attention-grabbing and permanent, flashes are most suitable for use for important messaging.
 
-Flashes have several variants, which use color to indicate severity or intention. The default configuration provides `brand-1`, `grayscale`, `positive`, `warning`, and `danger` flashes, all using colors from the global color theme system. Using the theme system means that any buttons or other components placed inside a flash will be correctly colored.
+Flashes have several variants, which use color to indicate severity or intention. The default configuration provides `brand-1`, `positive`, `warning`, and `danger` flashes, all using colors from the global color theme system. Using the theme system means that any buttons or other components placed inside a flash will be correctly colored.
 
 Since you’re providing the user feedback, it is very likely that your flashes should be rendered inside an `aria-live` region.
 
@@ -45,13 +52,21 @@ Examples here show the content of the flashes within a [content](/docs/atoms-con
 
 ## Customization
 
+### Color variants
+
+Flashes use the theming system for their color & background-color properties — take a look at [themes](/docs/design-tokens-themes--page) for details on how to customize your themes.
+
+The custom buttons that are available in each flash are implemented in the Button component — they’re component-level additions to each theme, just for the default button color-variant. See the [Button component](/docs/atoms-button-colors--page) for details on how to customize their appearance.
+
+### Size variants
+
 You can adjust the vertical padding and the gap applied between child elements of the flash (e.g. icon, text, and close/dismiss button). If you need to adjust the horizontal padding for flashes, it is recommended to adjust the padding for the `content` design tokens, so that all your content will be correctly aligned - see the [content documentation](/docs/design-tokens-content--page). If you need content of flash components to be aligned differently to other content, then edit the horizontal padding here directly.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/setup';
 @use '~bitstyles/scss/bitstyles/tools/size';
 @use '~bitstyles/scss/bitstyles/atoms/flash' with (
-  $size-variants: (
+  $sizes: (
     '#{setup.$no-media-query}': (
       'padding-vertical': size.get('s3'),
       'gap': size.get('s3'),
@@ -63,3 +78,11 @@ You can adjust the vertical padding and the gap applied between child elements o
   )
 );
 ```
+
+The size-related properties available for configuration are:
+
+| Property name        | Description                                                                                 |
+| -------------------- | ------------------------------------------------------------------------------------------- |
+| `padding-vertical`   | `padding-top` and `padding-bottom` properties                                               |
+| `padding-horizontal` | `padding-left` and `padding-right` properties                                               |
+| `gap`                | The gap between the text label of the badge and any `extra` content (like a button or icon) |
