@@ -29,7 +29,7 @@ $positive-theme: (
 ) !default;
 $warning-theme: (
   'background': palette.get('warning', 'light-4'),
-  'background-dark': palette.get('warning', 'light-2'),
+  'background-dark': palette.get('warning', 'light-1'),
   'text': palette.get('warning', 'dark-2'),
   'text-dark': palette.get('grayscale', 'dark-4'),
 ) !default;
