@@ -21,9 +21,9 @@ legend {
 
 label {
   display: flex;
-  flex-direction: column;
   gap: settings.$label-gap;
-  margin-bottom: 0;
+  align-items: baseline;
+  margin-bottom: settings.$label-gap;
   cursor: pointer;
 }
 

@@ -11,38 +11,50 @@ export default {
   argTypes: {},
 };
 
-const InputTemplate = (args) => {
-  let children;
-  if (args.type && (args.type === 'checkbox' || args.type === 'radio')) {
-    children = [Input(args), args.label];
-  } else {
-    children = [args.label, Input(args)];
-  }
+const TextInputTemplate = (args) =>
+  Label({
+    htmlFor: args.id,
+    ariaInvalid: args.ariaInvalid,
+    children: [args.label, Input(args)],
+  });
 
+const CheckboxTemplate = (args) => {
   return Label({
     htmlFor: args.id,
     ariaInvalid: args.ariaInvalid,
-    children,
+    children: [Input(args), args.label],
   });
 };
 
-const SelectTemplate = (args) =>
-  Label({
-    htmlFor: args.id,
-    ariaInvalid: args.ariaInvalid,
-    children: [args.label, Select(args)],
-  });
+const SelectTemplate = (args) => {
+  const wrapper = document.createElement('div');
+  wrapper.appendChild(
+    Label({
+      htmlFor: args.id,
+      ariaInvalid: args.ariaInvalid,
+      children: [args.label],
+    })
+  );
+  wrapper.appendChild(Select(args));
+  return wrapper;
+};
 
-const TextareaTemplate = (args) =>
-  Label({
-    htmlFor: args.id,
-    ariaInvalid: args.ariaInvalid,
-    children: [args.label, Textarea(args)],
-  });
+const TextareaTemplate = (args) => {
+  const wrapper = document.createElement('div');
+  wrapper.appendChild(
+    Label({
+      htmlFor: args.id,
+      ariaInvalid: args.ariaInvalid,
+      children: [args.label],
+    })
+  );
+  wrapper.appendChild(Textarea(args));
+  return wrapper;
+};
 
 // ***** Text inputs with labels ****************** //
 
-export const TextInput = InputTemplate.bind({});
+export const TextInput = TextInputTemplate.bind({});
 TextInput.args = {
   id: 'input-text',
   label: 'Delivery address',
@@ -66,7 +78,7 @@ TextInput.parameters = {
   ],
 };
 
-export const TextInputInvalid = InputTemplate.bind({});
+export const TextInputInvalid = TextInputTemplate.bind({});
 TextInputInvalid.args = {
   id: 'input-text',
   label: 'Telephone number',
@@ -91,7 +103,7 @@ TextInputInvalid.parameters = {
   ],
 };
 
-export const TextInputInvalidWith = InputTemplate.bind({});
+export const TextInputInvalidWith = TextInputTemplate.bind({});
 TextInputInvalid.args = {
   id: 'input-text',
   label: 'Telephone number',
@@ -116,7 +128,7 @@ TextInputInvalid.parameters = {
   ],
 };
 
-export const TextInputDisabled = InputTemplate.bind({});
+export const TextInputDisabled = TextInputTemplate.bind({});
 TextInputDisabled.args = {
   id: 'input-text',
   label: 'Full name',
@@ -143,14 +155,14 @@ TextInputDisabled.parameters = {
 
 // ***** Radio inputs with labels ****************** //
 
-export const RadioInput = InputTemplate.bind({});
+export const RadioInput = CheckboxTemplate.bind({});
 RadioInput.args = {
   id: 'input-radio',
   type: 'radio',
   label: 'X-Large',
 };
 
-export const RadioInputChecked = InputTemplate.bind({});
+export const RadioInputChecked = CheckboxTemplate.bind({});
 RadioInputChecked.args = {
   id: 'input-radio',
   type: 'radio',
@@ -158,7 +170,7 @@ RadioInputChecked.args = {
   checked: true,
 };
 
-export const RadioInputInvalid = InputTemplate.bind({});
+export const RadioInputInvalid = CheckboxTemplate.bind({});
 RadioInputInvalid.args = {
   id: 'input-radio',
   type: 'radio',
@@ -166,7 +178,7 @@ RadioInputInvalid.args = {
   ariaInvalid: true,
 };
 
-export const RadioInputDisabled = InputTemplate.bind({});
+export const RadioInputDisabled = CheckboxTemplate.bind({});
 RadioInputDisabled.args = {
   id: 'input-radio',
   type: 'radio',
@@ -176,14 +188,14 @@ RadioInputDisabled.args = {
 
 // ***** Radio inputs with labels ****************** //
 
-export const CheckboxInput = InputTemplate.bind({});
+export const CheckboxInput = CheckboxTemplate.bind({});
 CheckboxInput.args = {
   id: 'input-checkbox',
   type: 'checkbox',
   label: 'X-Large',
 };
 
-export const CheckboxInputChecked = InputTemplate.bind({});
+export const CheckboxInputChecked = CheckboxTemplate.bind({});
 CheckboxInputChecked.args = {
   id: 'input-checkbox',
   type: 'checkbox',
@@ -191,7 +203,7 @@ CheckboxInputChecked.args = {
   checked: true,
 };
 
-export const CheckboxInputInvalid = InputTemplate.bind({});
+export const CheckboxInputInvalid = CheckboxTemplate.bind({});
 CheckboxInputInvalid.args = {
   id: 'input-checkbox',
   type: 'checkbox',
@@ -199,7 +211,7 @@ CheckboxInputInvalid.args = {
   ariaInvalid: true,
 };
 
-export const CheckboxInputDisabled = InputTemplate.bind({});
+export const CheckboxInputDisabled = CheckboxTemplate.bind({});
 CheckboxInputDisabled.args = {
   id: 'input-checkbox',
   type: 'checkbox',

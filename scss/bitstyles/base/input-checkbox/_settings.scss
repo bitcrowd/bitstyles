@@ -1,12 +1,12 @@
-@use '../../tools/design-token';
 @use '../../tools/color';
+@use '../../tools/design-token';
 
 //
 // Base styles ////////////////////////////////////////
 $border-radius: var(design-token.get('size', 's6')) !default;
 $gap: var(design-token.get('size', 's4')) !default;
 $border-width: var(design-token.get('size', 's7')) !default;
-$size: var(design-token.get('size', 'm')) !default;
+$size: var(design-token.get('size', 'l1')) !default;
 
 //
 // Base colors ////////////////////////////////////////

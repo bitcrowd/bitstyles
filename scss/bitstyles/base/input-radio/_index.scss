@@ -8,11 +8,12 @@
   flex-shrink: 0;
   width: 1em;
   height: 1em;
-  margin-right: settings.$gap;
+  margin: settings.$gap;
   font-size: settings.$size;
   vertical-align: middle;
   cursor: pointer;
   appearance: none;
+  top: calc(settings.$gap / 2);
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or
