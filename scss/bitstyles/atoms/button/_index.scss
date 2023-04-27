@@ -1,6 +1,6 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/focus';
+@use '../../design-tokens/focus';
 @use '../../tools/classname';
 @use '../../tools/custom-property';
 

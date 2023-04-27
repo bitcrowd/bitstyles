@@ -30,6 +30,7 @@
 - The atoms/badge component is now available with a `small` size variant.
 - It is now possible to import bitstyles on a per-layer basis, instead of per-module or all at once. It is still possible to override all modules inside each layer in the normal way.
 - There are now design tokens as `design-tokens/focus` to describe a consistent `:focus` appearance, that are currently used in `base/anchor/`, `atoms/buttons`, and `atoms/links`.
+- Anchor elements and `atoms/link` components now have a disabled state, applied using the `aria-disabled` attribute.
 
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2023-01-03
 
