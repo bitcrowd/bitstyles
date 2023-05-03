@@ -16,6 +16,7 @@
 - The sizing scale now spans from `s7` (smallest) to `l7` (largest), with `m` being the mid point. If you change the names used in the sizing scale in your configuration, you may need to override some instances of the new size names where they are used in the default configuration of bitstyles. If you use the default configuration, and are using the `size.get()` Sass helper or one of the padding & margin utility classes, you’ll need to update those to use the new sizes (pick whatever is closest in size).
 - Design tokens returned by the helper functions `palette.get`, `size.get`, `font-size.get`, and `line-height.get` are now references to the CSS custom property for that token instead of the actual value. You can revert that to the old behavior by setting `setup.$default-token-format` to `'value'`.
 - Default visual design for buttons has been updated — colors have been refreshed utilizing the new palette, and we’ve added a new `outline` button that has a border. The `large` shape variant has been removed — the sizes are now `default`, `small`, and `x-small`. If you were overriding the default configuration for buttons, you may see no change.
+- Updated the default configuration for typography. If you want to keep the old typographic scale (font-sizes and line-heights), you can re-instate the old configuration.
 
 ### Added
 

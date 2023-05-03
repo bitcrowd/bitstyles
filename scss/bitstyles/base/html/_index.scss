@@ -4,7 +4,7 @@
 /* stylelint-disable selector-max-type */
 html {
   font-family: typography.$font-family-body;
-  line-height: line-height.get('5');
+  line-height: line-height.get('4');
   -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
 }
 /* stylelint-enable selector-max-type */
