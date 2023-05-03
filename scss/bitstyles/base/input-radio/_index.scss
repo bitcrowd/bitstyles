@@ -1,6 +1,7 @@
 @forward 'settings';
 @use './settings';
 @use '../../tools/design-token';
+@use '../../design-tokens/focus';
 
 [type='radio'] {
   display: inline-block;
@@ -14,6 +15,11 @@
   cursor: pointer;
   appearance: none;
   top: calc(settings.$gap / 2);
+
+  &:focus-visible {
+    outline: focus.$outline-color solid focus.$outline-width;
+    outline-offset: focus.$outline-offset;
+  }
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or
@@ -44,10 +50,16 @@
     &:hover,
     &:focus {
       border-color: settings.$border-color-hover;
-      outline: none;
       background-color: settings.$background-color-hover;
       box-shadow: settings.$box-shadow-hover;
       color: settings.$color-hover;
+    }
+
+    &:active {
+      border-color: settings.$border-color-active;
+      background-color: settings.$background-color-active;
+      box-shadow: settings.$box-shadow-active;
+      color: settings.$color-active;
     }
 
     &:checked {
@@ -60,6 +72,29 @@
         transform: scale(0.7);
         opacity: 1;
       }
+    }
+
+    &:checked:hover,
+    &:checked:focus {
+      border-color: settings.$border-color-checked-hover;
+      background-color: settings.$background-color-checked-hover;
+      box-shadow: settings.$box-shadow-checked-hover;
+      color: settings.$color-checked-hover;
+    }
+
+    &:checked:active {
+      border-color: settings.$border-color-checked-active;
+      background-color: settings.$background-color-checked-active;
+      box-shadow: settings.$box-shadow-checked-active;
+      color: settings.$color-checked-active;
+    }
+
+    &:invalid,
+    &[aria-invalid='true'] {
+      border-color: settings.$border-color-invalid;
+      background-color: settings.$background-color-invalid;
+      box-shadow: settings.$box-shadow-invalid;
+      color: settings.$color-invalid;
     }
 
     &[disabled] {

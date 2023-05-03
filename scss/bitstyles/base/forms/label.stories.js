@@ -17,9 +17,6 @@ const Link = () => {
 
 // ***** Labels ****************** //
 
-export const Base = Template.bind({});
-Base.args = { children: ['Simple text label'] };
-
 export const Invalid = Template.bind({});
 Invalid.args = {
   children: ['Simple text label for an invalid input'],

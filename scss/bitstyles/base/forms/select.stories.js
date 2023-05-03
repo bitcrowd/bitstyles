@@ -1,3 +1,4 @@
+import Label from './Label';
 import Select from './Select';
 import { generateLabel } from '../../../../.storybook/helpers';
 
@@ -7,14 +8,24 @@ export default {
   argTypes: {},
 };
 
-const Template = (args) => Select(args);
+const Template = (args) => {
+  const wrapper = new DocumentFragment();
+  wrapper.append(
+    Label({
+      htmlFor: args.id,
+      ariaInvalid: args.ariaInvalid,
+      children: [args.label],
+    })
+  );
+  wrapper.append(Select(args));
+  return wrapper;
+};
 
 // ***** Selects with values ****************** //
 
 export const Base = Template.bind({});
 Base.args = {
-  value: generateLabel(['textarea']),
-  placeholder: generateLabel(['textarea', 'placeholder']),
+  label: 'Select',
 };
 Base.parameters = {
   zeplinLink: [
@@ -39,14 +50,12 @@ Base.parameters = {
 
 export const Invalid = Template.bind({});
 Invalid.args = {
-  value: generateLabel(['textarea']),
+  label: 'Select invalid',
   ariaInvalid: true,
-  placeholder: generateLabel(['textarea', 'invalid', 'placeholder']),
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  value: generateLabel(['textarea']),
+  label: 'Select disabled',
   disabled: true,
-  placeholder: generateLabel(['textarea', 'invalid', 'placeholder']),
 };

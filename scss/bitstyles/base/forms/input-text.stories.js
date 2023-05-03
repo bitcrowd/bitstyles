@@ -1,22 +1,35 @@
 import Input from './Input';
-import { generateLabel } from '../../../../.storybook/helpers';
+import Label from './Label';
 
 export default {
   title: 'Base/Forms/Input text',
   component: Input,
+  subcomponents: [Label],
   argTypes: {},
 };
 
-const Template = (args) => Input(args);
+const Template = (args) => {
+  const wrapper = new DocumentFragment();
+  const label = Label({
+    htmlFor: args.id,
+    ariaInvalid: args.ariaInvalid,
+    children: [args.label],
+  });
+  const input = Input(args);
+  wrapper.append(label);
+  wrapper.append(input);
+  return wrapper;
+};
 
 // ***** Text inputs with values ****************** //
 
-export const Text = Template.bind({});
-Text.args = {
-  value: generateLabel(['input', 'text']),
-  placeholder: generateLabel(['input', 'text', 'placeholder']),
+export const TextWithValue = Template.bind({});
+TextWithValue.args = {
+  value: 'Input text with value',
+  placeholder: 'Input text placeholder',
+  label: 'Input text with value',
 };
-Text.parameters = {
+TextWithValue.parameters = {
   zeplinLink: [
     {
       name: 'base',
@@ -33,24 +46,26 @@ Text.parameters = {
   ],
 };
 
-export const TextInvalid = Template.bind({});
-TextInvalid.args = {
-  value: generateLabel(['input', 'text', 'invalid']),
-  placeholder: generateLabel(['input', 'text', 'invalid', 'placeholder']),
+export const TextWithValueInvalid = Template.bind({});
+TextWithValueInvalid.args = {
+  value: 'Input text with value invalid',
+  placeholder: 'Input text invalid placeholder',
   ariaInvalid: true,
+  label: 'Input text with value invalid',
 };
-TextInvalid.parameters = {
+TextWithValueInvalid.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
 };
 
-export const TextDisabled = Template.bind({});
-TextDisabled.args = {
-  value: generateLabel(['input', 'text', 'disabled']),
-  placeholder: generateLabel(['input', 'text', 'disabled', 'placeholder']),
+export const TextWithValueDisabled = Template.bind({});
+TextWithValueDisabled.args = {
+  value: 'Input text with value disabled',
+  placeholder: 'Input text disabled placeholder',
   disabled: true,
+  label: 'Input text with value disabled',
 };
-TextDisabled.parameters = {
+TextWithValueDisabled.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
 };
@@ -60,7 +75,8 @@ TextDisabled.parameters = {
 export const TextEmpty = Template.bind({});
 TextEmpty.args = {
   value: '',
-  placeholder: generateLabel(['input', 'text', 'empty', 'placeholder']),
+  placeholder: 'Input text empty',
+  label: 'Input text empty',
 };
 TextEmpty.parameters = {
   zeplinLink: [
@@ -79,49 +95,40 @@ TextEmpty.parameters = {
   ],
 };
 
-export const TextInvalidEmpty = Template.bind({});
-TextInvalidEmpty.args = {
+export const TextEmptyInvalid = Template.bind({});
+TextEmptyInvalid.args = {
   value: '',
-  placeholder: generateLabel([
-    'input',
-    'text',
-    'invalid',
-    'empty',
-    'placeholder',
-  ]),
+  placeholder: 'Input text empty invalid',
+  label: 'Input text empty invalid',
   ariaInvalid: true,
 };
-TextInvalidEmpty.parameters = {
+TextEmptyInvalid.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
 };
 
-export const TextDisabledEmpty = Template.bind({});
-TextDisabledEmpty.args = {
-  disabled: true,
+export const TextEmptyDisabled = Template.bind({});
+TextEmptyDisabled.args = {
   value: '',
-  placeholder: generateLabel([
-    'input',
-    'text',
-    'disabled',
-    'empty',
-    'placeholder',
-  ]),
+  placeholder: 'Input text empty disabled',
+  label: 'Input text empty disabled',
+  disabled: true,
 };
-TextDisabledEmpty.parameters = {
+TextEmptyDisabled.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
 };
 
 // ***** Email inputs with values ****************** //
 
-export const Email = Template.bind({});
-Email.args = {
+export const EmailWithValue = Template.bind({});
+EmailWithValue.args = {
   type: 'email',
-  value: generateLabel(['input', 'email']),
-  placeholder: generateLabel(['input', 'email', 'placeholder']),
+  value: 'Input@email.base',
+  placeholder: 'Input email placeholder',
+  label: 'Input email with value',
 };
-Email.parameters = {
+EmailWithValue.parameters = {
   zeplinLink: [
     {
       name: 'base',
@@ -138,26 +145,28 @@ Email.parameters = {
   ],
 };
 
-export const EmailInvalid = Template.bind({});
-EmailInvalid.args = {
+export const EmailWithValueInvalid = Template.bind({});
+EmailWithValueInvalid.args = {
   type: 'email',
-  value: generateLabel(['input', 'email', 'invalid']),
-  placeholder: generateLabel(['input', 'email', 'invalid', 'placeholder']),
+  value: 'Input@email.invalid',
+  placeholder: 'Input email with value invalid placeholder',
+  label: 'Input email with value invalid',
   ariaInvalid: true,
 };
-EmailInvalid.parameters = {
+EmailWithValueInvalid.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
 };
 
-export const EmailDisabled = Template.bind({});
-EmailDisabled.args = {
+export const EmailWithValueDisabled = Template.bind({});
+EmailWithValueDisabled.args = {
   type: 'email',
-  value: generateLabel(['input', 'email', 'disabled']),
-  placeholder: generateLabel(['input', 'email', 'disabled', 'placeholder']),
+  value: 'Input@email.disabled',
+  placeholder: 'Input email with value disabled placeholder',
+  label: 'Input email with value disabled',
   disabled: true,
 };
-EmailDisabled.parameters = {
+EmailWithValueDisabled.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
 };
@@ -168,7 +177,8 @@ export const EmailEmpty = Template.bind({});
 EmailEmpty.args = {
   type: 'email',
   value: '',
-  placeholder: generateLabel(['input', 'email', 'placeholder']),
+  placeholder: 'Input email empty placeholder',
+  label: 'Input email empty',
 };
 EmailEmpty.parameters = {
   zeplinLink: [
@@ -191,7 +201,8 @@ export const EmailInvalidEmpty = Template.bind({});
 EmailInvalidEmpty.args = {
   type: 'email',
   value: '',
-  placeholder: generateLabel(['input', 'email', 'invalid', 'placeholder']),
+  placeholder: 'Input email empty invalid placeholder',
+  label: 'Input email empty invalid',
   ariaInvalid: true,
 };
 EmailInvalidEmpty.parameters = {
@@ -203,7 +214,8 @@ export const EmailDisabledEmpty = Template.bind({});
 EmailDisabledEmpty.args = {
   type: 'email',
   value: '',
-  placeholder: generateLabel(['input', 'email', 'disabled', 'placeholder']),
+  placeholder: 'Input email empty disabled placeholder',
+  label: 'Input email empty disabled',
   disabled: true,
 };
 EmailDisabledEmpty.parameters = {
@@ -213,26 +225,29 @@ EmailDisabledEmpty.parameters = {
 
 // ***** Number inputs with values ****************** //
 
-export const Number = Template.bind({});
-Number.args = {
+export const NumberWithValue = Template.bind({});
+NumberWithValue.args = {
   type: 'number',
   value: '012345',
-  placeholder: generateLabel(['input', 'number', 'placeholder']),
+  placeholder: 'Input number placeholder',
+  label: 'Input number with value',
 };
 
-export const NumberInvalid = Template.bind({});
-NumberInvalid.args = {
+export const NumberWithValueInvalid = Template.bind({});
+NumberWithValueInvalid.args = {
   type: 'number',
-  value: generateLabel(['input', 'email', 'invalid']),
-  placeholder: generateLabel(['input', 'number', 'invalid', 'placeholder']),
+  value: 'Input email invalid',
+  placeholder: 'Input number invalid placeholder',
+  label: 'Input number with value invalid',
   ariaInvalid: true,
 };
 
-export const NumberDisabled = Template.bind({});
-NumberDisabled.args = {
+export const NumberWithValueDisabled = Template.bind({});
+NumberWithValueDisabled.args = {
   type: 'number',
   value: '012345',
-  placeholder: generateLabel(['input', 'number', 'disabled', 'placeholder']),
+  placeholder: 'Input number disabled placeholder',
+  label: 'Input number with value disabled',
   disabled: true,
 };
 
@@ -242,21 +257,24 @@ export const NumberEmpty = Template.bind({});
 NumberEmpty.args = {
   type: 'number',
   value: '',
-  placeholder: generateLabel(['input', 'number', 'placeholder']),
+  placeholder: 'Input number placeholder',
+  label: 'Input number empty',
 };
 
-export const NumberInvalidEmpty = Template.bind({});
-NumberInvalidEmpty.args = {
+export const NumberEmptyInvalid = Template.bind({});
+NumberEmptyInvalid.args = {
   type: 'number',
   value: '',
-  placeholder: generateLabel(['input', 'number', 'invalid', 'placeholder']),
+  placeholder: 'Input number invalid placeholder',
+  label: 'Input number empty invalid',
   ariaInvalid: true,
 };
 
-export const NumberDisabledEmpty = Template.bind({});
-NumberDisabledEmpty.args = {
+export const NumberEmptyDisabled = Template.bind({});
+NumberEmptyDisabled.args = {
   type: 'number',
   value: '',
-  placeholder: generateLabel(['input', 'number', 'disabled', 'placeholder']),
+  placeholder: 'Input number disabled placeholder',
+  label: 'Input number empty disabled',
   disabled: true,
 };

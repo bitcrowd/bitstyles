@@ -27,6 +27,13 @@ $border-color-hover: var(design-token.get('color', 'brand-1')) !default;
 $box-shadow-hover: none !default;
 
 //
+// Hover colors ////////////////////////////////////////
+$color-active: palette.get('brand-1') !default;
+$background-color-active: palette.get('grayscale', 'white') !default;
+$border-color-active: palette.get('brand-1') !default;
+$box-shadow-active: none !default;
+
+//
 // Checked colors ////////////////////////////////////////
 $color-checked: var(design-token.get('color', 'brand-1')) !default;
 $background-color-checked: var(
@@ -34,6 +41,20 @@ $background-color-checked: var(
 ) !default;
 $border-color-checked: var(design-token.get('color', 'brand-1')) !default;
 $box-shadow-checked: none !default;
+
+//
+// Checked hover colors ////////////////////////////////////////
+$color-checked-hover: palette.get('brand-1') !default;
+$background-color-checked-hover: palette.get('grayscale', 'white') !default;
+$border-color-checked-hover: palette.get('brand-1') !default;
+$box-shadow-checked-hover: none !default;
+
+//
+// Checked active colors ////////////////////////////////////////
+$color-checked-active: palette.get('brand-1') !default;
+$background-color-checked-active: palette.get('grayscale', 'white') !default;
+$border-color-checked-active: palette.get('brand-1') !default;
+$box-shadow-checked-active: none !default;
 
 //
 // Invalid colors ////////////////////////////////////////
