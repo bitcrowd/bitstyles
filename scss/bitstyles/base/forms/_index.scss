@@ -24,10 +24,10 @@ label {
   gap: settings.$label-gap;
   align-items: baseline;
   margin-bottom: settings.$label-gap;
-  cursor: pointer;
   font-weight: settings.$label-font-weight;
+  cursor: pointer;
 
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     color: settings.$label-disabled-color;
   }
 }

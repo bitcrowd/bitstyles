@@ -1,6 +1,7 @@
 @forward 'settings';
 @use 'settings';
 @use '../../tools/design-token';
+@use '../../design-tokens/focus';
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or
   (appearance: none) {
@@ -20,11 +21,13 @@
         var(design-token.get('transition', 'default', 'easing'));
     border: settings.$border-width solid settings.$border-color;
     border-radius: settings.$border-radius;
+    outline-offset: 0;
     background-color: settings.$background-color;
     background-image: settings.$background-image;
     background-repeat: no-repeat;
     background-position: right 0.75em top 50%;
     background-size: 1em;
+    box-shadow: settings.$box-shadow;
     color: settings.$color;
     font-weight: settings.$font-weight;
     text-overflow: ellipsis;
@@ -35,19 +38,26 @@
       display: none;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: settings.$border-color-hover;
       background-color: settings.$background-color-hover;
       background-image: settings.$background-image-hover;
+      box-shadow: settings.$box-shadow-hover;
       color: settings.$color-hover;
     }
 
-    &:focus,
+    &:focus-visible {
+      outline: focus.$outline-color solid focus.$outline-width;
+      outline-offset: focus.$outline-offset;
+    }
+
     &:active {
       border-color: settings.$border-color-active;
       outline: none;
       background-color: settings.$background-color-active;
       background-image: settings.$background-image-active;
+      box-shadow: settings.$box-shadow-active;
       color: settings.$color-active;
     }
 
@@ -56,6 +66,7 @@
       border-color: settings.$border-color-invalid;
       background-color: settings.$background-color-invalid;
       background-image: settings.$background-image-invalid;
+      box-shadow: settings.$box-shadow-invalid;
       color: settings.$color-invalid;
     }
 
@@ -63,8 +74,13 @@
       border-color: settings.$border-color-disabled;
       background-color: settings.$background-color-disabled;
       background-image: settings.$background-image-disabled;
+      box-shadow: settings.$box-shadow-disabled;
       color: settings.$color-disabled;
       cursor: default;
+    }
+
+    &:focus:not(:focus-visible) {
+      outline-width: 0;
     }
   }
   /* stylelint-enable selector-max-type */

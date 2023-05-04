@@ -1,6 +1,7 @@
 @forward 'settings';
 @use './settings';
 @use '../../tools/design-token';
+@use '../../design-tokens/focus';
 
 /* stylelint-disable selector-max-type */
 textarea,
@@ -10,7 +11,10 @@ input {
     background-color var(design-token.get('transition', 'default', 'duration'))
       var(design-token.get('transition', 'default', 'easing')),
     border var(design-token.get('transition', 'default', 'duration'))
+      var(design-token.get('transition', 'default', 'easing')),
+    outline-offset var(design-token.get('transition', 'default', 'duration'))
       var(design-token.get('transition', 'default', 'easing'));
+  outline-offset: 0;
   resize: vertical;
 
   &::placeholder {
@@ -54,7 +58,8 @@ textarea {
   color: settings.$color;
   font: settings.$font;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: settings.$border-color-hover;
     background-color: settings.$background-hover;
     box-shadow: settings.$box-shadow-hover;
@@ -65,10 +70,14 @@ textarea {
     }
   }
 
-  &:active,
-  &:focus {
+  &:focus-visible {
+    outline: focus.$outline-color solid focus.$outline-width;
+    outline-offset: focus.$outline-offset;
+  }
+
+  &:active {
     border-color: settings.$border-color-active;
-    outline: none;
+    outline-width: 0;
     background-color: settings.$background-active;
     box-shadow: settings.$box-shadow-active;
     color: settings.$color-active;
@@ -100,6 +109,10 @@ textarea {
     &::placeholder {
       color: settings.$placeholder-color-disabled;
     }
+  }
+
+  &:focus:not(:focus-visible) {
+    outline-width: 0;
   }
 }
 /* stylelint-enable selector-max-type */

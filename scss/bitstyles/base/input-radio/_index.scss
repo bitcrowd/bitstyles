@@ -5,19 +5,15 @@
 
 [type='radio'] {
   position: relative;
+  top: calc(settings.$gap / 2);
   flex-shrink: 0;
   width: 1em;
   height: 1em;
   margin: settings.$gap;
+  outline-offset: 0;
   font-size: settings.$size;
   cursor: pointer;
   appearance: none;
-  top: calc(settings.$gap / 2);
-
-  &:focus-visible {
-    outline: focus.$outline-color solid focus.$outline-width;
-    outline-offset: focus.$outline-offset;
-  }
 }
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or
@@ -39,6 +35,8 @@
           var(design-token.get('transition', 'default', 'duration'))
           var(design-token.get('transition', 'default', 'easing')),
         transform var(design-token.get('transition', 'default', 'duration'))
+          var(design-token.get('transition', 'default', 'easing')),
+        outline-offset var(design-token.get('transition', 'default', 'duration'))
           var(design-token.get('transition', 'default', 'easing'));
       border-radius: settings.$border-radius;
       opacity: 0;
@@ -48,9 +46,15 @@
     &:hover,
     &:focus {
       border-color: settings.$border-color-hover;
+      outline-width: 0;
       background-color: settings.$background-color-hover;
       box-shadow: settings.$box-shadow-hover;
       color: settings.$color-hover;
+    }
+
+    &:focus-visible {
+      outline: focus.$outline-color solid focus.$outline-width;
+      outline-offset: focus.$outline-offset;
     }
 
     &:active {
@@ -70,21 +74,6 @@
         transform: scale(0.7);
         opacity: 1;
       }
-    }
-
-    &:checked:hover,
-    &:checked:focus {
-      border-color: settings.$border-color-checked-hover;
-      background-color: settings.$background-color-checked-hover;
-      box-shadow: settings.$box-shadow-checked-hover;
-      color: settings.$color-checked-hover;
-    }
-
-    &:checked:active {
-      border-color: settings.$border-color-checked-active;
-      background-color: settings.$background-color-checked-active;
-      box-shadow: settings.$box-shadow-checked-active;
-      color: settings.$color-checked-active;
     }
 
     &:invalid,
@@ -111,6 +100,28 @@
       &::after {
         background: settings.$color-disabled-checked;
       }
+    }
+
+    &:focus:not(:focus-visible) {
+      outline-width: 0;
+    }
+
+    &:checked:hover:not(:invalid),
+    &:checked:focus:not(:invalid),
+    &:checked:hover:not([aria-invalid='true']),
+    &:checked:focus:not([aria-invalid='true']) {
+      border-color: settings.$border-color-checked-hover;
+      background-color: settings.$background-color-checked-hover;
+      box-shadow: settings.$box-shadow-checked-hover;
+      color: settings.$color-checked-hover;
+    }
+
+    &:checked:active:not(:invalid),
+    &:checked:active:not([aria-invalid='true']) {
+      border-color: settings.$border-color-checked-active;
+      background-color: settings.$background-color-checked-active;
+      box-shadow: settings.$box-shadow-checked-active;
+      color: settings.$color-checked-active;
     }
   }
 }
