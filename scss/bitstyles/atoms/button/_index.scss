@@ -40,8 +40,9 @@
   box-shadow: var(#{custom-property.get($items: ('button', 'box-shadow'))});
   color: var(#{custom-property.get($items: ('button', 'color'))});
   font-family: settings.$font-family;
-  font-size: var(design-token.get('button', 'font-size'));
-  font-weight: var(design-token.get('button', 'font-weight'));
+  font-size: var(design-token.get('button', 'font-size'), inherit);
+  font-weight: var(design-token.get('button', 'font-weight'), inherit);
+  line-height: var(design-token.get('button', 'line-height'), inherit);
   text-align: center;
   text-decoration: none;
   white-space: nowrap;

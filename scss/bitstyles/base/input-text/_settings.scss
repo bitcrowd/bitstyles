@@ -4,7 +4,7 @@
 //
 // Base styles ////////////////////////////////////////
 
-$padding-vertical: var(design-token.get('size', 's3')) !default;
+$padding-vertical: var(design-token.get('size', 's2')) !default;
 $padding-horizontal: var(design-token.get('size', 'm')) !default;
 $border-radius: var(design-token.get('size', 's4')) !default;
 $border-width: 0.1875rem !default;

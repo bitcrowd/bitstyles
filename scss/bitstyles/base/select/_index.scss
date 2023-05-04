@@ -2,15 +2,20 @@
 @use 'settings';
 @use '../../tools/design-token';
 @use '../../design-tokens/focus';
+@use '../../tools/custom-property';
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or
   (appearance: none) {
   /* stylelint-disable selector-max-type */
   select {
+    #{custom-property.get($items: ('select', 'padding-vertical'))}: settings.$padding-vertical;
+    #{custom-property.get($items: ('select', 'padding-horizontal'))}: settings.$padding-horizontal;
+    #{custom-property.get($items: ('select', 'border-width'))}: settings.$border-width;
     display: block;
     width: 100%;
-    padding: settings.$padding-vertical calc(settings.$padding-horizontal * 2)
-      settings.$padding-vertical settings.$padding-horizontal;
+    padding:
+      calc(var(#{custom-property.get($items: ('select', 'padding-vertical'))}) - var(#{custom-property.get($items: ('select', 'border-width'))}, 0rem))
+      calc(var(#{custom-property.get($items: ('select','padding-horizontal'))}) - var(#{custom-property.get($items: ('select', 'border-width'))}, 0rem));
     overflow: hidden;
     transition: color var(design-token.get('transition', 'default', 'duration'))
         var(design-token.get('transition', 'default', 'easing')),

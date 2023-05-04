@@ -303,10 +303,12 @@ The `role="search"` attribute highlights this functionality for screenreader use
 <Canvas>
   <Story name="Search form">
     {`
-    <form role="search" action="" method="POST" class="u-flex o-joined-ui">
+    <form role="search" action="" method="POST">
       <label for="search" class="u-sr-only">Search users</label>
-      <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1" />
-      <button type="submit" class="a-button a-button--outline">Search</button>
+      <div class="u-flex o-joined-ui">
+        <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1" />
+        <button type="submit" class="a-button a-button--outline">Search</button>
+      </div>
     </form>
     `}
   </Story>
@@ -315,15 +317,17 @@ The `role="search"` attribute highlights this functionality for screenreader use
 <Canvas>
   <Story name="Search form with icon button">
     {`
-    <form role="search" action="" method="POST" class="u-flex o-joined-ui">
+    <form role="search" action="" method="POST">
       <label for="search" class="u-sr-only">Search users</label>
-      <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1" />
-      <button type="submit" class="a-button a-button--outline" title="Search users">
-        <svg width="18" height="18" class="a-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-          <use xlink:href="${icons}#icon-search"></use>
-        </svg>
-        <span class="u-sr-only">Search</span>
-      </button>
+      <div class="u-flex o-joined-ui">
+        <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1" />
+        <button type="submit" class="a-button a-button--outline" title="Search users">
+          <svg width="18" height="18" class="a-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <use xlink:href="${icons}#icon-search"></use>
+          </svg>
+          <span class="u-sr-only">Search</span>
+        </button>
+      </div>
     </form>
     `}
   </Story>

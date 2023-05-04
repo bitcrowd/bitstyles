@@ -44,9 +44,14 @@ textarea {
   #{custom-property.get($items: ('input-text', 'border-bottom-right-radius'))}: settings.$border-radius;
   #{custom-property.get($items: ('input-text', 'border-bottom-left-radius'))}: settings.$border-radius;
   #{custom-property.get($items: ('input-text', 'border-top-left-radius'))}: settings.$border-radius;
+  #{custom-property.get($items: ('input-text', 'padding-vertical'))}: settings.$padding-vertical;
+  #{custom-property.get($items: ('input-text', 'padding-horizontal'))}: settings.$padding-horizontal;
+  #{custom-property.get($items: ('input-text', 'border-width'))}: settings.$border-width;
   display: block;
   width: 100%;
-  padding: settings.$padding-vertical settings.$padding-horizontal;
+  padding:
+      calc(var(#{custom-property.get($items: ('input-text', 'padding-vertical'))}) - var(#{custom-property.get($items: ('input-text', 'border-width'))}, 0rem))
+      calc(var(#{custom-property.get($items: ('input-text','padding-horizontal'))}) - var(#{custom-property.get($items: ('input-text', 'border-width'))}, 0rem));
   border: settings.$border-width solid settings.$border-color;
   border-radius:
     var(#{custom-property.get($items: ('input-text', 'border-top-left-radius'))})
