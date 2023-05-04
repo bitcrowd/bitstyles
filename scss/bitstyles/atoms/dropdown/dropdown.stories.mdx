@@ -1,172 +1,32 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Atoms/Dropdown" />
+<Meta title="Atoms/Dropdown/Overview" />
+
+<Story id="atoms-dropdown--base" inline={false} height="20rem" width="30rem" />
 
 # Dropdown
 
-A floating container shown on clicking a button (use JS for this), to show some small extra content such as a list of links. In smaller viewports, the dropdown will be disaplyed using the full width available.
-
-## Left alignment (default)
-
-<Canvas>
-  <Story name="Dropdown" inline={false} height="20rem" width="30rem">
-    {`
-      <div class="u-relative" style="height: 2rem; width: 30rem">
-        <ul class="a-dropdown u-overflow-y-auto u-list-none">
-          <li>
-            <a href="/" class="a-button a-button--transparent">Settings</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Help</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Privacy</a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Sign out</a>
-          </li>
-        </ul>
-      </div>
-    `}
-  </Story>
-</Canvas>
+A floating container shown on clicking a button (use JS for this), to show some small extra content such as a list of links. In smaller viewports, the dropdown will be displayed using the full width available.
 
 ## Alignment
 
 The dropdown defaults to left-top-aligned, but can be aligned to any edges using the modifier classes. Note that in smaller viewports, all left/right alignment is removed and the dropdown will be displayed at the full available width.
 
+<Canvas isColumn>
+  <Story id="atoms-dropdown--base" height="20rem" />
+  <Story id="atoms-dropdown--right" height="20rem" />
+  <Story id="atoms-dropdown--top" height="20rem" />
+  <Story id="atoms-dropdown--top-right" height="20rem" />
+  <Story id="atoms-dropdown--bottom-full-width" height="20rem" />
+  <Story id="atoms-dropdown--top-full-width" height="20rem" />
+</Canvas>
+
+### Max height
+
+Once the dropdown reaches `38rem` height, it stops growing, and scrolls internally instead. See [Customization](#customization) for details on how to change that.
+
 <Canvas>
-  <Story name="a-dropdown--right" inline={false} height="20rem" width="24rem">
-    {`
-      <div class="u-relative u-bg-grayscale-light-3 u-padding-m" style="width: 18rem">
-        Dropdown right
-        <ul class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none">
-          <li>
-            <a href="/" class="a-button a-button--transparent">Settings</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Help</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Privacy</a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Sign out</a>
-          </li>
-        </ul>
-      </div>
-    `}
-  </Story>
-  <Story name="a-dropdown--top" inline={false} height="20rem" width="24rem">
-    {`
-    <div class="u-flex u-items-end" style="width: 20rem; height: 17rem;">
-      <div class="u-relative u-flex u-bg-grayscale-light-3 u-padding-m" style="width: 18rem;">
-        Dropdown top
-        <ul class="a-dropdown a-dropdown--top u-overflow-y-auto u-list-none">
-          <li>
-            <a href="/" class="a-button a-button--transparent">Settings</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Help</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Privacy</a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Sign out</a>
-          </li>
-        </ul>
-      </div>
-    `}
-  </Story>
-  <Story
-    name="a-dropdown--top a-dropdown--right"
-    inline={false}
-    height="20rem"
-    width="24rem"
-  >
-    {`
-      <div class="u-flex u-items-end" style="width: 20rem; height: 17rem;">
-        <div class="u-relative u-bg-grayscale-light-3 u-padding-m" style="width: 18rem;">
-          Dropdown top right
-          <ul class="a-dropdown a-dropdown--top a-dropdown--right u-overflow-y-auto u-list-none">
-            <li>
-              <a href="/" class="a-button a-button--transparent">Settings</a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--transparent">Help</a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--transparent">Privacy</a>
-            </li>
-            <li role="separator"></li>
-            <li>
-              <a href="/" class="a-button a-button--transparent">Sign out</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    `}
-  </Story>
-  <Story
-    name="a-dropdown--bottom dropdown--full"
-    inline={false}
-    height="20rem"
-    width="24rem"
-  >
-    {`
-      <div class="u-relative u-flex u-bg-grayscale-light-3 u-padding-m" style="width: 18rem">
-        Dropdown fullwidth
-        <ul class="a-dropdown a-dropdown--full-width u-overflow-y-auto u-list-none">
-          <li>
-            <a href="/" class="a-button a-button--transparent">Settings</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Help</a>
-          </li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Privacy</a>
-          </li>
-          <li role="separator"></li>
-          <li>
-            <a href="/" class="a-button a-button--transparent">Sign out</a>
-          </li>
-        </ul>
-      </div>
-    `}
-  </Story>
-  <Story
-    name="a-dropdown--top dropdown--full"
-    inline={false}
-    height="20rem"
-    width="24rem"
-  >
-    {`
-      <div class="u-flex u-items-end" style="width: 20rem; height: 17rem;">
-        <div class="u-relative u-flex u-items-end u-bg-grayscale-light-3 u-padding-m" style="width: 18rem">
-          Dropdown fullwidth top
-          <ul class="a-dropdown a-dropdown--top a-dropdown--full-width u-overflow-y-auto u-list-none">
-            <li>
-              <a href="/" class="a-button a-button--transparent">Settings</a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--transparent">Help</a>
-            </li>
-            <li>
-              <a href="/" class="a-button a-button--transparent">Privacy</a>
-            </li>
-            <li role="separator"></li>
-            <li>
-              <a href="/" class="a-button a-button--transparent">Sign out</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    `}
-  </Story>
+  <Story id="atoms-dropdown--max-height" height="60rem" />
 </Canvas>
 
 ## Customization
@@ -195,6 +55,8 @@ $separator-spacing: size.get('s6');
 ```
 
 By default the dropdown will fade in and out respectively when the `is-on-screen` and `is-off-screen` classes are applied, but this can customized too. Be sure to update the `$will-change` value to reflect the properties you specify in the `$transition` value.
+
+These animations are only used if the user has set their preferences to allow animation.
 
 ```scss
 $transition: opacity 0.12s ease-in;

@@ -1550,6 +1550,7 @@ table {
   --bscpn-at-button-border-width: 0.1875rem;
 }
 .bs-at-button--menu {
+  --bscpn-at-button-border-radius: 0;
   --bscpn-at-button-justify-content: flex-start;
 }
 .bs-at-button--tab {
@@ -1788,22 +1789,23 @@ table {
 }
 .bs-at-dropdown {
   background-color: var(--bscpn-color-grayscale-white);
-  border: 2px solid var(--bscpn-color-brand-1-base);
-  border-radius: var(--bscpn-size-s5);
-  box-shadow: 0 calc(var(--bscpn-size-s1) / 4) calc(var(--bscpn-size-m) / 4)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.05),
-    0 calc(var(--bscpn-size-s1) / 3) calc(var(--bscpn-size-m) / 3)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.05),
-    0 calc(var(--bscpn-size-s1) / 2) calc(var(--bscpn-size-m) / 2)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.05),
-    0 calc(var(--bscpn-size-s1) / 1) calc(var(--bscpn-size-m) / 1)
-      rgba(var(--bscpn-color-brand-1-light-1-rgb), 0.05);
-  max-height: 1rem;
+  border: 3px solid var(--bscpn-color-brand-1-dark-1);
+  border-radius: var(--bscpn-size-s4);
+  box-shadow: 0 0 calc(var(--bscpn-size-m) / 4)
+      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.125),
+    0 0 calc(var(--bscpn-size-m) / 3)
+      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.125),
+    0 0 calc(var(--bscpn-size-m) / 2)
+      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.125),
+    0 0 calc(var(--bscpn-size-m) / 1)
+      rgba(var(--bscpn-color-brand-1-dark-2-rgb), 0.125);
+  margin: var(--bscpn-size-s4) 0;
+  max-height: 90vh;
   max-width: 90vw;
-  min-width: 12rem;
+  min-width: 17.5rem;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: var(--bscpn-size-s6) 0;
+  overscroll-behavior: contain;
   position: absolute;
   top: 100%;
   width: -moz-min-content;
@@ -1811,8 +1813,22 @@ table {
   z-index: 1;
 }
 .bs-at-dropdown [role='separator'] {
-  border-top: 1px solid var(--bscpn-color-grayscale-dark-2);
+  border-top: 2px solid var(--bscpn-color-brand-1-light-2);
   margin: var(--bscpn-size-s6) 0;
+}
+@media screen and (min-height: 1rem) {
+  .bs-at-dropdown {
+    max-height: 1rem;
+  }
+}
+@media screen and (max-width: 20em) {
+  .bs-at-dropdown {
+    left: 0;
+    max-width: 100vw;
+    min-width: 100%;
+    right: 0;
+    width: 100%;
+  }
 }
 @media screen and (prefers-reduced-motion: no-preference) {
   .bs-at-dropdown.is-transitioning {
@@ -1825,13 +1841,6 @@ table {
 }
 .bs-at-dropdown.is-on-screen {
   opacity: 1;
-}
-@media screen and (max-width: 20em) {
-  .bs-at-dropdown {
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
 }
 .bs-at-dropdown--right {
   left: auto;
