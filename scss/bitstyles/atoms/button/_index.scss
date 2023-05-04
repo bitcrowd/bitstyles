@@ -6,8 +6,8 @@
 /* prettier-ignore */
 
 #{classname.get($classname-items: 'button', $layer: 'atom')} {
-  #{custom-property.get($items: ('button', 'transition'), $layer: 'atom')}: #{settings.$transition};
-  #{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')}: #{settings.$justify-content};
+  #{custom-property.get($items: ('button', 'transition'), $layer: 'atom')}: settings.$transition;
+  #{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')}: settings.$justify-content;
   display: flex;
   position: relative;
   flex-shrink: 0;
@@ -16,7 +16,7 @@
   min-width: var(#{custom-property.get($items: ('button', 'min-width'), $layer: 'atom')});
   max-width: 100%;
   min-height: var(#{custom-property.get($items: ('button', 'min-height'), $layer: 'atom')});
-  padding: 
+  padding:
     calc(var(#{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')}) - var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')}, 0rem))
     calc(var(#{custom-property.get($items: ('button','padding-horizontal'), $layer: 'atom')}) - var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')}, 0rem));
   overflow: visible;

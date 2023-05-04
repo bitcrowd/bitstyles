@@ -4,7 +4,7 @@
 :export {
   @each $color-palette-name, $color-palette in color-palette.$palette {
     @each $color-name, $color-value in $color-palette {
-      #{$color-palette-name}#{'.'}#{$color-name}: #{$color-value};
+      #{$color-palette-name}#{'.'}#{$color-name}: $color-value;
     }
   }
 }

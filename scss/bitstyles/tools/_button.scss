@@ -84,55 +84,33 @@
   @each $property-name in (settings.$allowed-shape-properties) {
     @if map.has-key($sizes, $property-name) {
       /* prettier-ignore */
-      #{custom-property.get($items: ('button', $property-name), $layer: 'atom')}: #{map.get($sizes, $property-name)};
+      #{custom-property.get($items: ('button', $property-name), $layer: 'atom')}: map.get($sizes, $property-name);
     }
   }
 
   @if $with-square-variant {
-    $line-height: custom-property.get(
-      $items: (
-        'line-height',
-        '5',
-      ),
-    );
-    $min-width: custom-property.get(
-      $items: (
-        'button',
-        'min-width',
-      ),
-      $layer: 'atom',
-    );
-    $min-height: custom-property.get(
-      $items: (
-        'button',
-        'min-height',
-      ),
-      $layer: 'atom',
-    );
+    /* prettier-ignore */
+    $line-height: custom-property.get($items: ('line-height', '5'));
+
+    /* prettier-ignore */
+    $min-width: custom-property.get($items: ('button', 'min-width'), $layer: 'atom');
+
+    /* prettier-ignore */
+    $min-height: custom-property.get($items: ('button', 'min-height'), $layer: 'atom');
 
     &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
-      #{$min-width}: #{calc(
-          1em *
-            var(#{$line-height}) +
-            2 *
-            #{map.get($sizes, 'padding-vertical')}
-        )};
-      #{$min-height}: #{calc(
-          1em *
-            var(#{$line-height}) +
-            2 *
-            #{map.get($sizes, 'padding-vertical')}
-        )};
+      /* prettier-ignore */
+      #{$min-width}: calc(1em * var(#{$line-height}) + 2 * #{map.get($sizes, 'padding-vertical')});
+
+      /* prettier-ignore */
+      #{$min-height}: calc(1em * var(#{$line-height}) + 2 * #{map.get($sizes, 'padding-vertical')});
 
       @if map.has-key($sizes, 'padding-vertical') {
-        #{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')}: #{map.get(
-            $sizes,
-            'padding-vertical'
-          )};
-        #{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')}: #{map.get(
-            $sizes,
-            'padding-vertical'
-          )};
+        /* prettier-ignore */
+        #{custom-property.get($items: ('button', 'padding-horizontal'), $layer: 'atom')}: map.get($sizes, 'padding-vertical');
+
+        /* prettier-ignore */
+        #{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')}: map.get($sizes, 'padding-vertical');
       }
     }
   }
