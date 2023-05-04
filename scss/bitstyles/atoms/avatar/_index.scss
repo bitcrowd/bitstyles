@@ -1,6 +1,6 @@
 @forward './settings';
 @use './settings';
-@use '../../settings/layout';
+@use '../../design-tokens/layout';
 @use '../../tools/classname';
 
 #{classname.get($classname-items: 'avatar', $layer: 'atom')} {

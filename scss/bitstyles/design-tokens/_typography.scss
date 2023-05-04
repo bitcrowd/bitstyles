@@ -1,3 +1,4 @@
+@use '../tools/custom-property';
 @use 'sass:list';
 
 //
@@ -112,3 +113,13 @@ $line-heights: (
   '4': 1.5555,
   '5': 1.67,
 ) !default;
+
+:root {
+  @each $font-size-name, $font-size in $font-sizes {
+    #{custom-property.get($items: ('font-size', $font-size-name))}: $font-size;
+  }
+
+  @each $line-height-name, $line-height in $line-heights {
+    #{custom-property.get($items: ('line-height', $line-height-name))}: $line-height;
+  }
+}

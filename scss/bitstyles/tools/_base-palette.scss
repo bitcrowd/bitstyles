@@ -1,13 +1,13 @@
 @use 'sass:map';
-@use '../settings/base-colors';
-@use '../settings/base-palette';
+@use '../design-tokens/base-colors';
+@use '../design-tokens/base-palette';
 
 // Palette
 //
-// **Returns requested colours from the global `$palette` map.**
+// **Returns requested colors from the global `$palette` map.**
 // e.g. `color: palette('grayscale');`
 //
-// @param {String} $color  Base colour within the palette
+// @param {String} $color  Base color within the palette
 //
 // @param {String} $key   Optional. Key/name of the color to select from the sass map. Defaults to `100`, but that can be specified using `$bitstyles-color-palette-default-key`.
 //

@@ -97,7 +97,7 @@ The CSS custom properties output in each theme should be namespaced to the compo
 Configure the names of your themes, and/or the colors they apply, and add whole new themes. All the colors are expected to be listed under the `color` key. The values for each color should be taken from the global color CSS custom properties:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/themes' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/themes' with (
   $themes: (
     'default': (
       'background': var(--bs-color-background-light-3),
@@ -114,7 +114,7 @@ Configure the names of your themes, and/or the colors they apply, and add whole 
 If you change the name of the default theme as you redefine its colors, you’ll also need to specify the new default theme name (it’s used internally to ensure the default colors are correctly applied):
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/themes' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/themes' with (
   $themes: (
     'custom-theme-name': (
       'background': var(--bs-color-background-light-3),

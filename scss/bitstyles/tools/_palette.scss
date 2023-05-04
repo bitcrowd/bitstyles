@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '../settings/color-palette';
 @use '../settings/setup';
+@use '../design-tokens/color-palette';
 @use './custom-property';
 
 // Palette

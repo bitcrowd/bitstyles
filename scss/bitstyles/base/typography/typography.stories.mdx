@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 The default configuration provides responsive sizing for the heading elements `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, and `body` element. In this context, “responsive font-sizing” means the elements have a default font-size that is overridden at larger breakpoints to become larger (probably, though you can make them smaller if you want), making use of the extra space. The ratio difference between font-sizes is also larger on larger screens, as there’s more space to play with.
 
-All font-sizes are taken from the base font-size design tokens specified in `settings/typography`. See [Design tokens/typography](/docs/design-tokens-typography--page) for details on how to customize the font-sizes available to you. See [customization](#customization) below for detail on how to change which of the available base font-sizes are used for which HTML element.
+All font-sizes are taken from the base font-size design tokens specified in `design-tokens/typography`. See [Design tokens/typography](/docs/design-tokens-typography--page) for details on how to customize the font-sizes available to you. See [customization](#customization) below for detail on how to change which of the available base font-sizes are used for which HTML element.
 
 ## Elements
 
@@ -52,7 +52,7 @@ Semantic headings from `<h1>` to `<h6>` will be sized as shown (resize your view
 
 ## Customization
 
-The default configuration imports the styles set in [`settings/typography-responsive`](/docs/design-tokens-typography--page), so all font-size configuration should happen there. This ensures these base styles match the classes specified in `utilities/typography-responsive`.
+The default configuration imports the styles set in [`design-tokens/typography-responsive`](/docs/design-tokens-typography--page), so all font-size configuration should happen there. This ensures these base styles match the classes specified in `utilities/typography-responsive`.
 
 ### Default margins
 

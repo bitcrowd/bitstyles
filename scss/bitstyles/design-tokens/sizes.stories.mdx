@@ -130,7 +130,7 @@ console.log(sizes['l1']); // '1.25rem'
 The size scale is computed from a single starting value. By changing that starting value you can change the whole scale:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/layout' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/layout' with (
   $size-base: 2rem
 );
 
@@ -162,7 +162,7 @@ The size scale is computed from a single starting value. By changing that starti
 When you need to increase or reduce the number of sizes available, change the names of the sizes, adjust the ratio between each point of the scale, or otherwise have total control, you’ll need to override the `$sizes` Sass map. Note that you cannot add to nor edit the values in the default map. You can only overwrite the entire thing, so be sure to copy the sizes you’ll use even if you don’t change them.
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/layout' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/layout' with (
   $sizes: (
     '0': 0,
     // add some pixel-based sizes for small adjustments

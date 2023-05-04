@@ -1,8 +1,0 @@
-@use '../settings/layout';
-@use '../tools/custom-property';
-
-:root {
-  @each $size-name, $size in layout.$sizes {
-    #{custom-property.get($items: ('size', $size-name))}: $size;
-  }
-}

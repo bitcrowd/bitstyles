@@ -1,8 +1,8 @@
 @use '../tools/palette';
 @use '../tools/size';
 @use '../tools/shadow';
+@use '../tools/custom-property';
 
-/* stylelint-disable length-zero-no-unit */
 $shadows: (
   'brand-1':
     shadow.generate(
@@ -53,4 +53,11 @@ $shadows: (
       $blur-radius: size.get('s2'),
     ),
 ) !default;
-/* stylelint-enable length-zero-no-unit */
+
+/* prettier-ignore */
+:root {
+  @each $shadow-name, $shadow in $shadows {
+    #{custom-property.get($items: ('shadow', $shadow-name))}-drop: shadows.get($shadow-name, $type: 'drop', $format: 'css');
+    #{custom-property.get($items: ('shadow', $shadow-name))}-box: shadows.get($shadow-name, $format: 'css');
+  }
+}

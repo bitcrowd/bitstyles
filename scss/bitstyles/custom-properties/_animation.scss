@@ -1,8 +1,0 @@
-@use '../settings/animation';
-@use '../tools/custom-property';
-
-:root {
-  #{custom-property.get($items: ('transition', 'duration'))}: animation.$transition-duration;
-  #{custom-property.get($items: ('transition', 'duration-long'))}: animation.$transition-duration-long;
-  #{custom-property.get($items: ('transition', 'easing'))}: animation.$transition-easing;
-}

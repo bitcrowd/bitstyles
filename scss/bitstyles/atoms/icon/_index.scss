@@ -1,6 +1,6 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/animation';
+@use '../../design-tokens/animation';
 @use '../../tools/classname';
 
 #{classname.get($classname-items: 'icon', $layer: 'atom')} {

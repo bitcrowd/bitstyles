@@ -1,31 +1,23 @@
-//
-// Forwards: Global settings /////////////////////////////////////
 
-@forward 'bitstyles/settings/animation' as animation-*;
-@forward 'bitstyles/settings/breakpoints' as breakpoints-*;
-@forward 'bitstyles/settings/base-colors' as base-colors-*;
-@forward 'bitstyles/settings/base-palette' as base-palette-*;
-@forward 'bitstyles/settings/color-palette' as color-palette-*;
-@forward 'bitstyles/settings/layout' as layout-*;
+//
+// Global settings /////////////////////////////////////
+
 @forward 'bitstyles/settings/setup' as setup-*;
-@forward 'bitstyles/settings/shadows' as shadows-*;
-@forward 'bitstyles/settings/themes' as themes-*;
-@forward 'bitstyles/settings/typography' as typography-*;
-@forward 'bitstyles/settings/typography-responsive' as typography-responsive-*;
-@forward 'bitstyles/settings/link' as link-*;
 
 //
-// Custom properties ////////////////////////////////////
+// Design tokens /////////////////////////////////////
 
-@forward 'bitstyles/custom-properties/animation' as custom-properties-animation-*;
-@forward 'bitstyles/custom-properties/breakpoints' as
-  custom-properties-breakpoints-*;
-@forward 'bitstyles/custom-properties/color-palette' as
-  custom-properties-color-palette-*;
-@forward 'bitstyles/custom-properties/layout' as custom-properties-layout-*;
-@forward 'bitstyles/custom-properties/shadows' as custom-properties-shadows-*;
-@forward 'bitstyles/custom-properties/typography' as
-  custom-properties-typography-*;
+@forward 'bitstyles/design-tokens/animation' as animation-*;
+@forward 'bitstyles/design-tokens/breakpoints' as breakpoints-*;
+@forward 'bitstyles/design-tokens/base-colors' as base-colors-*;
+@forward 'bitstyles/design-tokens/base-palette' as base-palette-*;
+@forward 'bitstyles/design-tokens/color-palette' as color-palette-*;
+@forward 'bitstyles/design-tokens/layout' as layout-*;
+@forward 'bitstyles/design-tokens/shadows' as shadows-*;
+@forward 'bitstyles/design-tokens/themes' as themes-*;
+@forward 'bitstyles/design-tokens/typography' as typography-*;
+@forward 'bitstyles/design-tokens/typography-responsive' as typography-responsive-*;
+@forward 'bitstyles/design-tokens/link' as link-*;
 
 //
 // Generic ////////////////////////////////////

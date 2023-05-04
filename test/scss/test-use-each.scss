@@ -1,15 +1,29 @@
 //
 // Global settings /////////////////////////////////////
 
-@use '../../scss/bitstyles/settings/animation' with (
+@use '../../scss/bitstyles/settings/setup' with (
+  $namespace: 'bs',
+  $custom-property-namespace: 'bscpn',
+  $layer-prefixes: (
+    'atom': 'at',
+    'molecule': 'mo',
+    'organism': 'or',
+    'utility': '',
+  )
+);
+
+//
+// Design tokens /////////////////////////////////////
+
+@use '../../scss/bitstyles/design-tokens/animation' with (
   $transition-easing: ease-out
 );
-@use '../../scss/bitstyles/settings/breakpoints' with (
+@use '../../scss/bitstyles/design-tokens/breakpoints' with (
   $boundary-width: 10em
 );
-@use '../../scss/bitstyles/settings/base-colors';
-@use '../../scss/bitstyles/settings/base-palette';
-@use '../../scss/bitstyles/settings/color-palette' with (
+@use '../../scss/bitstyles/design-tokens/base-colors';
+@use '../../scss/bitstyles/design-tokens/base-palette';
+@use '../../scss/bitstyles/design-tokens/color-palette' with (
   $palette: (
     'grayscale': (
       'light-3': #000,
@@ -54,20 +68,10 @@
     ),
   )
 );
-@use '../../scss/bitstyles/settings/layout' with (
+@use '../../scss/bitstyles/design-tokens/layout' with (
   $size-base: 10rem
 );
-@use '../../scss/bitstyles/settings/setup' with (
-  $namespace: 'bs',
-  $custom-property-namespace: 'bscpn',
-  $layer-prefixes: (
-    'atom': 'at',
-    'molecule': 'mo',
-    'organism': 'or',
-    'utility': '',
-  )
-);
-@use '../../scss/bitstyles/settings/shadows' with (
+@use '../../scss/bitstyles/design-tokens/shadows' with (
   $shadows: (
     'default': (
       ('color': #f00, 'offset': 2.5rem, 'blur-radius': 5rem),
@@ -75,7 +79,7 @@
     ),
   )
 );
-@use '../../scss/bitstyles/settings/themes' with (
+@use '../../scss/bitstyles/design-tokens/themes' with (
   $themes: (
     'default': (
       'background': var(--bscpn-color-brand-1-light-3),
@@ -92,11 +96,11 @@
     'positive': (),
   )
 );
-@use '../../scss/bitstyles/settings/typography' with (
+@use '../../scss/bitstyles/design-tokens/typography' with (
   $webfont-family-name: 'FakeFont',
   $webfont-base-url: './'
 );
-@use '../../scss/bitstyles/settings/typography-responsive' with (
+@use '../../scss/bitstyles/design-tokens/typography-responsive' with (
   $typographic-scale: (
     'm': (
       'h1': (
@@ -112,24 +116,9 @@
     ),
   )
 );
-@use '../../scss/bitstyles/settings/link' as settings-link with (
+@use '../../scss/bitstyles/design-tokens/link' as settings-link with (
   $color: #f00
 );
-
-//
-// Custom properties ////////////////////////////////////
-
-@use '../../scss/bitstyles/custom-properties/animation' as
-  custom-properties-animation;
-@use '../../scss/bitstyles/custom-properties/breakpoints' as
-  custom-properties-breakpoints;
-@use '../../scss/bitstyles/custom-properties/color-palette' as
-  custom-properties-color-palette;
-@use '../../scss/bitstyles/custom-properties/layout' as custom-properties-layout;
-@use '../../scss/bitstyles/custom-properties/shadows' as
-  custom-properties-shadows;
-@use '../../scss/bitstyles/custom-properties/typography' as
-  custom-properties-typography;
 
 //
 // Generic ////////////////////////////////////

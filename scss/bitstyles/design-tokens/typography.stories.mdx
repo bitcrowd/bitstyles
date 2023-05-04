@@ -34,7 +34,7 @@ For more details on using these, see:
 The default setup provides the following typographic scales. See [customization](#customization) below for details on how to change that:
 
 ```scss
-/* settings/typography */
+/* design-tokens/typography */
 
 $font-sizes: (
   '1': 0.8rem,
@@ -213,7 +213,7 @@ There are two stacks provided, one for the heading font-family, another for the 
 For the default setup:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/typography';
+@use '~bitstyles/scss/bitstyles/design-tokens/typography';
 
 .component-class::before {
   font-family: typography.$font-family-header;
@@ -237,7 +237,7 @@ Use the `u-font` utility classes to apply font-family. See the documentation of 
 You can specify the font-sizes and names for each of your base font-size design tokens. Default configuration uses the numbers 1–8, but you can use any string, and any font-size.
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/typography' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/typography' with (
   $font-sizes: (
     'm': 1rem,
     'l': 1.5rem,
@@ -248,7 +248,7 @@ You can specify the font-sizes and names for each of your base font-size design 
 
 #### Responsive font-sizes
 
-By overriding `$typographic-scale`, you can specify which font-sizes and line-heights are applied to which HTML elements (in [`base/typography`](/docs/base-typography-responsive-headings--h-1)) and responsive-typography utility classes (in [`utilities/typography-responsive`](/docs/utilities-typography-responsive--typography)), and at which breakpoints.
+By overriding `typography-responsive.$typographic-scale`, you can specify which font-sizes and line-heights are applied to which HTML elements (in [`base/typography`](/docs/base-typography-responsive-headings--h-1)) and responsive-typography utility classes (in [`utilities/typography-responsive`](/docs/utilities-typography-responsive--typography)), and at which breakpoints.
 
 Using a mobile-first approach, the first Sass map of font-sizes shown below apply for all screensizes, until overridden at the `m` breakpoint (see [breakpoints](/docs/design-tokens-breakpoints--page)). You can provide font-size maps at every breakpoint available in your base breakpoints if you wish.
 
@@ -257,7 +257,7 @@ We’re using the global `setup.$no-media-query` to provide font-sizes that appl
 ```scss
 @use 'bitstyles/settings/setup';
 @use 'bitstyles/tools/font-size';
-@use 'bitstyles/settings/typography-responsive' with (
+@use 'bitstyles/design-tokens/typography-responsive' with (
   $typographic-scale: (
     '#{setup.$no-media-query}': (
       'h1': (
@@ -299,7 +299,7 @@ You can also specify other html elements here, if needed:
 @use 'bitstyles/settings/setup';
 @use 'bitstyles/tools/font-size';
 
-@use 'bitstyles/settings/typography-responsive' with (
+@use 'bitstyles/design-tokens/typography-responsive' with (
   $font-sizes: (
     '#{setup.$no-media-query}': (
       'li': (
@@ -320,7 +320,7 @@ You can also specify other html elements here, if needed:
 To use different webfonts, override the Sass variables specifying the name of the font-family, and the path to the folder where the font files are kept. Then, in a Sass map, list the font variants you have in the following format:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/typography' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/typography' with (
   $webfont-family-name: 'Font family name',
   $webfont-base-url: '../assets/fonts/',
   $webfont-variants: (
@@ -351,7 +351,7 @@ To use different webfonts, override the Sass variables specifying the name of th
 You may want to provide different fallback fonts. To do this, override one or both of the two font-stacks. One for headings, one for body text.
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/typography' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/typography' with (
   $font-family-header: (
     'Font family name',
     'Futura',

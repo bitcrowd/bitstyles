@@ -85,8 +85,8 @@ You could keep going like that, and reconfigure every module in bitstyles. But t
 If you’re configuring only global design tokens, you may prefer to `@use` each settings file then import the library in one. Note the variable names must _lose the module-name prefix_ because the module’s scope is clear e.g. `$color-palette-text` is now `$text`.
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/color-palette' with ($text: #fff, /* lots of options */);
-@use '~bitstyles/scss/bitstyles/settings/layout' with ($size-base: 1.2rem, /* lots of options */);
+@use '~bitstyles/scss/bitstyles/design-tokens/color-palette' with ($text: #fff, /* lots of options */);
+@use '~bitstyles/scss/bitstyles/design-tokens/layout' with ($size-base: 1.2rem, /* lots of options */);
 @use '~bitstyles/scss/bitstyles';
 ```
 
@@ -101,11 +101,11 @@ A few things to note:
 - the variable names must _lose the module-name prefix_ because the module’s scope is clear e.g. `$color-palette-text` is now `$text`
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/color-palette' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/color-palette' with (
   $text: #fff,
   $background: #000
 );
-@use '~bitstyles/scss/bitstyles/settings/layout' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/layout' with (
   $size-base: 1.2rem
 );
 

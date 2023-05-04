@@ -118,7 +118,7 @@ There are two special cases:
 The color variants in the base color palette are generated from a set of initial base colors. Changing those base colors will change the variants generated from them. For example changing the brand-1 color to pure red will generate color variants of red.
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/base-colors' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/base-colors' with (
   $colors: (
     'brand-1': #f00,
   )
@@ -172,7 +172,7 @@ Change the lightness values at which the colors of the base color palettes will 
 These are a Sass lists with number values for the percentages of the color to be mixed. The numbers will also be used as the label for the variant. `$color-scale-percentages` is used to generate most of these colors; `$grayscale-percentages` is used to generate the 0–100 grayscale.
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/base-colors' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/base-colors' with (
   $color-scale-percentages: (
     '10': 10,
     '50': 50,
@@ -201,8 +201,8 @@ Override the base palette to customize the generated colors. `tools/color` provi
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/color';
-@use '~bitstyles/scss/bitstyles/settings/base-color';
-@use '~bitstyles/scss/bitstyles/settings/base-palette' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/base-color';
+@use '~bitstyles/scss/bitstyles/design-tokens/base-palette' with (
   $color-palette: (
     'red': color.generate-tints-and-shades($base-color: map.get(base-colors.$colors, 'red')),
     'blue': color.generate-tints-and-shades($base-color: #00f),
@@ -223,7 +223,7 @@ It’s recommended that you select the colors from the base palette, but it’s 
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/base-color';
-@use '~bitstyles/scss/bitstyles/settings/color-palette' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/color-palette' with (
   $color-palette: (
     'brand-1': (
       'default': base-color.get('brand-1', '70'),

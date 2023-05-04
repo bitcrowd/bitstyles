@@ -1,7 +1,7 @@
 @forward 'settings';
 @use 'sass:map';
 @use './settings';
-@use '../../settings/animation';
+@use '../../design-tokens/animation';
 @use '../../tools/media-query';
 @use '../../tools/classname';
 
