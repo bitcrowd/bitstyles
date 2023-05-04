@@ -2,6 +2,8 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 <Meta title="Base/Forms/Overview" />
 
+<Story id="ui-data-forms--login-form-with-errors" />
+
 # Forms
 
 ## Inputs and labels
@@ -18,6 +20,9 @@ This includes all standard `type="text"` inputs, plus all the text-based inputs 
   <Story id="base-forms-input-text--text-with-value" />
   <Story id="base-forms-input-text--text-with-value-invalid" />
   <Story id="base-forms-input-text--text-with-value-disabled" />
+</Canvas>
+
+<Canvas isColumn>
   <Story id="base-forms-input-text--text-empty" />
   <Story id="base-forms-input-text--text-empty-invalid" />
   <Story id="base-forms-input-text--text-empty-disabled" />
@@ -25,30 +30,53 @@ This includes all standard `type="text"` inputs, plus all the text-based inputs 
 
 ## Textareas
 
+### No values
+
 <Canvas isColumn>
-  <Story id="base-forms-textarea--with-value" />
-  <Story id="base-forms-textarea--with-value-invalid" />
-  <Story id="base-forms-textarea--with-value-disabled" />
   <Story id="base-forms-textarea--empty" />
   <Story id="base-forms-textarea--empty-invalid" />
   <Story id="base-forms-textarea--empty-disabled" />
 </Canvas>
 
-## Checkboxes and Radios
+### With values
+
+<Canvas isColumn>
+  <Story id="base-forms-textarea--with-value" />
+  <Story id="base-forms-textarea--with-value-invalid" />
+  <Story id="base-forms-textarea--with-value-disabled" />
+</Canvas>
+
+## Checkboxes
+
+### Unchecked
 
 <Canvas isColumn>
   <Story id="base-forms-input-checkbox--base" />
   <Story id="base-forms-input-checkbox--invalid" />
   <Story id="base-forms-input-checkbox--disabled" />
+</Canvas>
+
+### Checked
+
+<Canvas isColumn>
   <Story id="base-forms-input-checkbox--checked" />
   <Story id="base-forms-input-checkbox--checked-invalid" />
   <Story id="base-forms-input-checkbox--checked-disabled" />
 </Canvas>
 
+## Radios
+
+### Unchecked
+
 <Canvas isColumn>
   <Story id="base-forms-input-radio--base" />
   <Story id="base-forms-input-radio--invalid" />
   <Story id="base-forms-input-radio--disabled" />
+</Canvas>
+
+### Checked
+
+<Canvas isColumn>
   <Story id="base-forms-input-radio--checked" />
   <Story id="base-forms-input-radio--checked-invalid" />
   <Story id="base-forms-input-radio--checked-disabled" />

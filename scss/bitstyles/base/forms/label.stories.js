@@ -23,6 +23,12 @@ Invalid.args = {
   ariaInvalid: true,
 };
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: ['Simple text label for a disabled input'],
+  ariaDisabled: true,
+};
+
 export const WithFor = Template.bind({});
 WithFor.args = {
   children: ['Simple text label with a for attribute'],

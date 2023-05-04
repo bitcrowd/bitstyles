@@ -12,12 +12,13 @@ const Template = (args) => {
   return Label({
     htmlFor: args.id,
     ariaInvalid: args.ariaInvalid,
+    ariaDisabled: args.disabled,
     children: [Input(args), args.label],
     classname: 'u-items-baseline',
   });
 };
 
-// ***** Text inputs with values ****************** //
+// ***** Unchecked radios ****************** //
 
 export const Base = Template.bind({});
 Base.args = { type: 'checkbox', label: 'Unchecked' };
@@ -55,6 +56,8 @@ Disabled.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fc971830548239007431f',
 };
+
+// ***** Checked radios ****************** //
 
 export const Checked = Template.bind({});
 Checked.args = {

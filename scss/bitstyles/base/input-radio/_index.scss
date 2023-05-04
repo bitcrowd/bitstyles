@@ -4,14 +4,12 @@
 @use '../../design-tokens/focus';
 
 [type='radio'] {
-  display: inline-block;
   position: relative;
   flex-shrink: 0;
   width: 1em;
   height: 1em;
   margin: settings.$gap;
   font-size: settings.$size;
-  vertical-align: middle;
   cursor: pointer;
   appearance: none;
   top: calc(settings.$gap / 2);

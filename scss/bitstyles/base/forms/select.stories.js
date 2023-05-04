@@ -1,6 +1,5 @@
 import Label from './Label';
 import Select from './Select';
-import { generateLabel } from '../../../../.storybook/helpers';
 
 export default {
   title: 'Base/Forms/Select',
@@ -20,8 +19,6 @@ const Template = (args) => {
   wrapper.append(Select(args));
   return wrapper;
 };
-
-// ***** Selects with values ****************** //
 
 export const Base = Template.bind({});
 Base.args = {

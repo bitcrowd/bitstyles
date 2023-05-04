@@ -1,3 +1,5 @@
+@use '../../settings/typography';
+@use '../../tools/palette';
 @use '../../tools/size';
 
 //
@@ -20,4 +22,6 @@ $legend-color: inherit !default;
 //
 // Label ////////////////////////////////////////
 
-$label-gap: size.get('s7');
+$label-gap: size.get('s7') !default;
+$label-font-weight: typography.$font-weight-medium !default;
+$label-disabled-color: palette.get('grayscale') !default;

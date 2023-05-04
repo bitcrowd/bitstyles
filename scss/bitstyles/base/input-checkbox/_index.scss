@@ -39,6 +39,13 @@
       color: settings.$color-hover;
     }
 
+    &:active {
+      border-color: settings.$border-color-active;
+      background-color: settings.$background-color-active;
+      box-shadow: settings.$box-shadow-active;
+      color: settings.$color-active;
+    }
+
     &::after {
       content: '';
       display: block;

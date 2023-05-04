@@ -12,12 +12,13 @@ const Template = (args) => {
   return Label({
     htmlFor: args.id,
     ariaInvalid: args.ariaInvalid,
+    ariaDisabled: args.disabled,
     children: [Input(args), args.label],
     classname: 'u-items-baseline',
   });
 };
 
-// ***** Text inputs with values ****************** //
+// ***** Unchecked radios ****************** //
 
 export const Base = Template.bind({});
 Base.args = { type: 'radio', label: 'Unchecked' };
@@ -43,6 +44,12 @@ Invalid.args = { type: 'radio', ariaInvalid: true, label: 'Unchecked invalid' };
 
 export const Disabled = Template.bind({});
 Disabled.args = { type: 'radio', disabled: true, label: 'Unchecked disabled' };
+Disabled.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fc2bfc40d7123d9858e06',
+};
+
+// ***** Checked radios ****************** //
 
 export const Checked = Template.bind({});
 Checked.args = { type: 'radio', checked: true, label: 'Checked' };
@@ -77,4 +84,8 @@ CheckedDisabled.args = {
   checked: true,
   disabled: true,
   label: 'Checked disabled',
+};
+CheckedDisabled.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fc2ba62f9d023b1e53c19',
 };

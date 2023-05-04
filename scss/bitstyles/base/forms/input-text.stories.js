@@ -13,6 +13,7 @@ const Template = (args) => {
   const label = Label({
     htmlFor: args.id,
     ariaInvalid: args.ariaInvalid,
+    ariaDisabled: args.disabled,
     children: [args.label],
   });
   const input = Input(args);
@@ -75,7 +76,7 @@ TextWithValueDisabled.parameters = {
 export const TextEmpty = Template.bind({});
 TextEmpty.args = {
   value: '',
-  placeholder: 'Input text empty',
+  placeholder: 'Input text empty placeholder',
   label: 'Input text empty',
 };
 TextEmpty.parameters = {
@@ -98,7 +99,7 @@ TextEmpty.parameters = {
 export const TextEmptyInvalid = Template.bind({});
 TextEmptyInvalid.args = {
   value: '',
-  placeholder: 'Input text empty invalid',
+  placeholder: 'Input text empty invalid placeholder',
   label: 'Input text empty invalid',
   ariaInvalid: true,
 };
@@ -110,7 +111,7 @@ TextEmptyInvalid.parameters = {
 export const TextEmptyDisabled = Template.bind({});
 TextEmptyDisabled.args = {
   value: '',
-  placeholder: 'Input text empty disabled',
+  placeholder: 'Input text empty disabled placeholder',
   label: 'Input text empty disabled',
   disabled: true,
 };

@@ -25,6 +25,11 @@ label {
   align-items: baseline;
   margin-bottom: settings.$label-gap;
   cursor: pointer;
+  font-weight: settings.$label-font-weight;
+
+  &[aria-disabled="true"] {
+    color: settings.$label-disabled-color;
+  }
 }
 
 [type='color'] {
