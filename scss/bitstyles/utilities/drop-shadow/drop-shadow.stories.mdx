@@ -14,7 +14,7 @@ Apply a drop-shadow to the element using CSS filters. By default this is selecte
 
 ## Customization
 
-The available drop-shadows and their names can be customized by overriding the `$bitstyles-drop-shadow-values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `drop` as the format:
+The available drop-shadows and their names can be customized by overriding the `$values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `settings/shadows`), providing `drop` as the format (drop-shadows are applied using CSS filters):
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/shadows';
@@ -25,7 +25,7 @@ The available drop-shadows and their names can be customized by overriding the `
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-drop-shadows-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` variable:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (

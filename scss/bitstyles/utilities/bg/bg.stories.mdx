@@ -68,7 +68,7 @@ See the [customization](#customization) section below for details on how to chan
 
 ## Customization
 
-The available background-colors can be customized by overriding the `$bitstyles-bg-values` Sass variable. Use the `palette.get()` function to maintain consistency throughout your project:
+The available background-colors can be customized by overriding the `$values` Sass variable. Use the `palette.get()` function to maintain consistency throughout your project:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/bg' with (
@@ -84,11 +84,11 @@ The available background-colors can be customized by overriding the `$bitstyles-
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-bg-breakpoints`:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints`:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/bg' with (
-  $bitstyles-bg-breakpoints: (
+  $breakpoints: (
     'm',
     'l',
   )

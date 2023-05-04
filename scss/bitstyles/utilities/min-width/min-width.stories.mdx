@@ -16,7 +16,7 @@ Specify the `min-width` property of an element. Default configuration provides `
 
 ## Customization
 
-Customize the available min-width by overriding the `$bitstyles-min-width-values` Sass map, providing the name to be used for the class, and the value to use.
+Customize the available min-width by overriding the `$values` Sass map, providing the name to be used for the class, and the value to use.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/min-width' with (
@@ -26,7 +26,7 @@ Customize the available min-width by overriding the `$bitstyles-min-width-values
 );
 ```
 
-Available breakpoint variables can be specified by overriding the `$bitstyles-min-width-breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
+Available breakpoint variables can be specified by overriding the `$breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/min-width' with (

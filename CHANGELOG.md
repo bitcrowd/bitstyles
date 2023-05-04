@@ -19,6 +19,9 @@
 - New atoms/badge component, a refactor of the existing component that you’ll need to update your codebase to continue using. It also features a new visual design. The colors for each variant are created using the theming system, meaning that buttons inside a badge have their colors fit the color of the badge. If you were using badges without customization, the only thing that needs to change in your component markup is that the color variant is now specified using `class="a-badge" data-theme="variant"` instead of with the modifier class `class="a-badge a-badge--variant"`. The same variants exist (`grayscale`, `brand-1`, `brand-2`, `positive`, `warning`, `danger`). See documentation for a guide on how to customize the variants.
 - `.a-badge__button` has been renamed `.a-badge__prepend` to reflect that it appears before the main content of the badge, and that it could not be a button.
 - Default configuration for shadows design tokens now includes shadows for `brand-1`, `brand-1-center`, `brand-2`, `brand-2-center`, `grayscale`, `positive`, `warning`, and `danger`. The `default` shadow has been removed — if you were making use of `shadows.get('default')`, rename that to `shadows.get('brand-1')`. Similarly for either of the utility classes `u-shadow-default` is now `u-shadow-brand-1`, and `u-drop-shadow-default` is now `u-drop-shadow-brand-1`.
+- Updated the default configuration for typography. If you want to keep the old typographic scale (font-sizes and line-heights), you can re-instate the old configuration.
+- Default visual appearance of Atoms/Dropdown component has been updated. If you were already overriding this, you may see no difference
+- Bitstyles can no longer be imported using Sass’s `@import` statements — you’ll need to either switch to using `@use` statements, or use bitstyles v5.0.1.
 
 ### Added
 

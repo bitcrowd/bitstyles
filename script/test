@@ -24,9 +24,7 @@ printf "\nComparing generated CSS against expected CSS…\n"
 
 diff -u -w $FIXTURES_FOLDER/bitstyles.css $TEMP_FOLDER/bitstyles.css \
   && diff -u -w $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-use-all.css \
-  && diff -u -w $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-each.css \
-  && diff -u -w $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-use-each.css \
-  && diff -u -w $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-import-all.css
+  && diff -u -w $FIXTURES_FOLDER/bitstyles-overrides.css $TEMP_FOLDER/test-use-each.css
 
 compare_result=$?
 

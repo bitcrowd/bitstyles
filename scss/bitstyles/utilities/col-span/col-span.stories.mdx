@@ -138,7 +138,7 @@ The `col-span` classes are available at `s`, `m`, `l`, and `xl` breakpoints. See
 
 ## Customization
 
-The available column-spans can be customized by overriding the `$bitstyles-col-span-values` Sass map. Provide a name for the class as the key, and the span values you require. If you want to add some values (because you’ve defined you grid with more columns, for example), you’ll need to copy the the existing values in order to keep them — you can only override the whole map, not update or merge:
+The available column-spans can be customized by overriding the `$values` Sass map. Provide a name for the class as the key, and the span values you require. If you want to add some values (because you’ve defined you grid with more columns, for example), you’ll need to copy the the existing values in order to keep them — you can only override the whole map, not update or merge:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/col-span' with (
@@ -154,7 +154,7 @@ The available column-spans can be customized by overriding the `$bitstyles-col-s
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-col-span-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` variable:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/col-span' with (

@@ -144,7 +144,7 @@ Column classes are available at `s`, `m`, and `xl` breakpoints using the suffix 
 
 ## Customization
 
-The available grid column counts can be customized by overriding the `$bitstyles-grid-cols-values` Sass map. Provide the name for the class as the key, and the value for the `grid-template-columns` property as the value:
+The available grid column counts can be customized by overriding the `$values` Sass map. Provide the name for the class as the key, and the value for the `grid-template-columns` property as the value:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/grid-cols' with (
@@ -161,7 +161,7 @@ The available grid column counts can be customized by overriding the `$bitstyles
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-grid-cols-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` variable:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/grid-cols' with (

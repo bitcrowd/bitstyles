@@ -43,11 +43,13 @@ Avatars are available at `m` and `l` sizes by default:
 
 ## Customization
 
-The available avatar sizes can be customized with `$bitstyles-avatar-sizes`:
+The available avatar sizes can be customized with `$sizes`:
 
 ```scss
-$sizes: (
-  'm': size.get('l3'),
-  'l': size.get('l3') + size.get('m'),
+@use '~bitstyles/scss/bitstyles/atoms/avatar' with (
+  $sizes: (
+    'm': size.get('l3'),
+    'l': size.get('l3') + size.get('m'),
+  )
 );
 ```
