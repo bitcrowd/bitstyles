@@ -1,22 +1,12 @@
 @forward 'settings';
 @use './settings';
 @use '../../tools/classname';
-@use '../../tools/custom-property';
+@use '../../tools/design-token';
 @use '../../tools/button';
 
 #{classname.get($classname-items: 'button--tab-container', $layer: 'atom')} {
   & > *:first-child {
-    margin-left: calc(
-      var(
-          #{custom-property.get(
-              $items: (
-                'button',
-                'padding-horizontal',
-              ),
-              $layer: 'atom'
-            )}
-        ) * -1
-    );
+    margin-left: calc(var(design-token.get('button', 'padding-horizontal')) * -1);
   }
 }
 
@@ -70,15 +60,6 @@
   }
 
   #{classname.get($classname-items: 'icon', $layer: 'atom')} {
-    color: var(
-      #{custom-property.get(
-          $items: (
-            'button--tab',
-            'icon-color',
-          ),
-          $layer: 'atom'
-        )},
-      currentcolor
-    );
+    color: var(design-token.get('button--tab', 'icon-color'), currentcolor);
   }
 }

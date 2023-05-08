@@ -1,10 +1,10 @@
-@use './custom-property';
+@use './design-token';
 @use 'sass:map';
 @use 'sass:list';
 
 @mixin output($properties, $module-name: '', $layer: null) {
   @each $property, $value in $properties {
-    #{custom-property.get($items: ($module-name, $property), $layer: $layer)}: $value;
+    #{design-token.get($module-name, $property)}: $value;
   }
 }
 
@@ -16,8 +16,7 @@
 ) {
   @each $property in $allow-list {
     @if map.has-key($properties, $property) {
-      /* prettier-ignore */
-      #{custom-property.get($items: list.append($module-name, $property), $layer: $layer)}: map.get($properties, $property);
+      #{design-token.get(list.append($module-name, $property))}: map.get($properties, $property);
     }
   }
 }

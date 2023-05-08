@@ -2,41 +2,44 @@
 @use './settings';
 @use '../../design-tokens/focus';
 @use '../../tools/classname';
-@use '../../tools/custom-property';
 
 /* prettier-ignore */
 
 #{classname.get($classname-items: 'button', $layer: 'atom')} {
-  #{custom-property.get($items: ('button', 'border-top-right-radius'), $layer: 'atom')}: var(custom-property.get($items: ('button', 'border-radius'), $layer: 'atom'));
-  #{custom-property.get($items: ('button', 'border-bottom-right-radius'), $layer: 'atom')}: var(custom-property.get($items: ('button', 'border-radius'), $layer: 'atom'));
-  #{custom-property.get($items: ('button', 'border-bottom-left-radius'), $layer: 'atom')}: var(custom-property.get($items: ('button', 'border-radius'), $layer: 'atom'));
-  #{custom-property.get($items: ('button', 'border-top-left-radius'), $layer: 'atom')}: var(custom-property.get($items: ('button', 'border-radius'), $layer: 'atom'));
-  #{custom-property.get($items: ('button', 'transition'), $layer: 'atom')}: settings.$transition;
-  #{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')}: settings.$justify-content;
+  #{design-token.get('button', 'border-top-right-radius')}: var(design-token.get('button', 'border-radius'));
+  #{design-token.get('button', 'border-bottom-right-radius')}: var(design-token.get('button', 'border-radius'));
+  #{design-token.get('button', 'border-bottom-left-radius')}: var(design-token.get('button', 'border-radius'));
+  #{design-token.get('button', 'border-top-left-radius')}: var(design-token.get('button', 'border-radius'));
+  #{design-token.get('button', 'transition')}: settings.$transition;
+  #{design-token.get('button', 'justify-content')}: settings.$justify-content;
+  #{design-token.get('button', 'transition')}: settings.$transition;
+  #{design-token.get('button', 'justify-content')}: settings.$justify-content;
   display: flex;
   position: relative;
   flex-shrink: 0;
   align-items: center;
-  justify-content: var(#{custom-property.get($items: ('button', 'justify-content'), $layer: 'atom')});
-  min-width: var(#{custom-property.get($items: ('button', 'min-width'), $layer: 'atom')});
+  justify-content: var(design-token.get('button', 'justify-content'));
+  min-width: var(design-token.get('button', 'min-width'));
   max-width: 100%;
-  min-height: var(#{custom-property.get($items: ('button', 'min-height'), $layer: 'atom')});
+  min-height: var(design-token.get('button', 'min-height'));
+  margin: 0;
   padding:
-    calc(var(#{custom-property.get($items: ('button', 'padding-vertical'), $layer: 'atom')}) - var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')}, 0rem))
-    calc(var(#{custom-property.get($items: ('button','padding-horizontal'), $layer: 'atom')}) - var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')}, 0rem));
+    calc(var(design-token.get('button', 'padding-vertical')) - var(design-token.get('button', 'border-width'), 0rem))
+    calc(var(design-token.get('button','padding-horizontal')) - var(design-token.get('button', 'border-width'), 0rem));
   overflow: visible;
-  transition: var(#{custom-property.get($items: ('button', 'transition'), $layer: 'atom')});
-  border-width: var(#{custom-property.get($items: ('button', 'border-width'), $layer: 'atom')});
+  transition: var(design-token.get('button', 'transition'));
+  border-width: var(design-token.get('button', 'border-width'));
   border-style: solid;
   border-radius:
-    var(#{custom-property.get($items: ('button', 'border-top-left-radius'), $layer: 'atom')})
-    var(#{custom-property.get($items: ('button', 'border-top-right-radius'), $layer: 'atom')})
-    var(#{custom-property.get($items: ('button', 'border-bottom-right-radius'), $layer: 'atom')})
-    var(#{custom-property.get($items: ('button', 'border-bottom-left-radius'), $layer: 'atom')});
+    var(design-token.get('button', 'border-top-left-radius'))
+    var(design-token.get('button', 'border-top-right-radius'))
+    var(design-token.get('button', 'border-bottom-right-radius'))
+    var(design-token.get('button', 'border-bottom-left-radius'));
+  border-radius: var(design-token.get('button', 'border-radius'));
   outline-offset: 0;
   font-family: settings.$font-family;
-  font-size: var(#{custom-property.get($items: ('button', 'font-size'), $layer: 'atom')});
-  font-weight: var(#{custom-property.get($items: ('button', 'font-weight'), $layer: 'atom')});
+  font-size: var(design-token.get('button', 'font-size'));
+  font-weight: var(design-token.get('button', 'font-weight'));
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
