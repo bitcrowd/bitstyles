@@ -80,15 +80,28 @@ Commonly you’ll want to change configuration — colors, typography, sizes etc
 );
 ```
 
-You could keep going like that, and reconfigure every module in bitstyles. But that single file starts to get unwieldy.
+You could keep going like that, and reconfigure every module in bitstyles. But that single file starts to get unwieldy — you may prefer to `@use` each layer of bitstyles:
 
-If you’re configuring only global design tokens, you may prefer to `@use` each settings file then import the library in one. Note the variable names must _lose the module-name prefix_ because the module’s scope is clear e.g. `$color-palette-text` is now `$text`.
-
+<!-- prettier-ignore-start -->
 ```scss
-@use '~bitstyles/scss/bitstyles/design-tokens/color-palette' with ($text: #fff, /* lots of options */);
-@use '~bitstyles/scss/bitstyles/design-tokens/layout' with ($size-base: 1.2rem, /* lots of options */);
-@use '~bitstyles/scss/bitstyles';
+@use '~bitstyles/scss/bitstyles/settings';
+@use '~bitstyles/scss/bitstyles/design-tokens' with (
+  $color-palette-text: #fff,
+  $layout-size-base: 1.2rem
+  /* lots of other options here */
+);
+@use '~bitstyles/scss/bitstyles/generic';
+@use '~bitstyles/scss/bitstyles/base';
+@use '~bitstyles/scss/bitstyles/atoms';
+@use '~bitstyles/scss/bitstyles/organisms';
+@use '~bitstyles/scss/bitstyles/utilities' with (
+  $margin-breakpoints: (
+    'l',
+    'l3',
+  )
+);
 ```
+<!-- prettier-ignore-end -->
 
 ### Advanced configuration
 
