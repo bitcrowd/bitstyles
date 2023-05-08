@@ -88,13 +88,3 @@ When you pass a block of CSS content to the `media-query.get()` helper, it wraps
 ```
 
 This is useful if you need a media-query with the name `no-mq` for other purposes.
-
-## Default format for design tokens
-
-By default the `get` functions for design tokens (`palette.get`, `size.get`, `font-size.get`, and `line-height.get`) output the name of the CSS custom property for that token. If you prefer the old default behavior of returning the actual value of that token, you can set `$default-token-format` to `value`.
-
-```scss
-@use 'bitstyles/settings/setup' with (
-  $default-token-format: 'value'
-);
-```

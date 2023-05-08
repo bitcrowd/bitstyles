@@ -1,9 +1,9 @@
-@use '../tools/size';
+@use '../tools/design-token';
 
 /* stylelint-disable */
 /*
   Based on normalize.css 8.0.1.
-  Customisations:
+  Customizations:
   - removes some values that we reset later (e.g. font-sizes, margins of headings)
   - uses our sizing scale when appropriate
 */

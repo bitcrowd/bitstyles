@@ -59,7 +59,7 @@ Customize the available line-height values by overriding the `$values` Sass map.
 @use '~bitstyles/scss/bitstyles/tools/line-height';
 @use '~bitstyles/scss/bitstyles/utilities/line-height' with (
   $values: (
-    'large': line-height.get('5'),
+    'large': var(design-token.get('line-height', '5'),
     'custom': 1.9827364rem,
   )
 );

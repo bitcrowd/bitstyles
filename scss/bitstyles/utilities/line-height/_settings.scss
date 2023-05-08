@@ -1,11 +1,11 @@
-@use '../../design-tokens/typography';
-@use '../../tools/line-height';
+@use '../../design-token/typography';
+@use '../../tools/design-token';
 @use 'sass:map';
 
 /* stylelint-disable scss/dollar-variable-default */
 $line-heights: ();
 @each $name, $line-height in typography.$line-heights {
-  $line-heights: map.set($line-heights, $name, line-height.get($name));
+  $line-heights: map.set($line-heights, $name, var(design-token.get('line-height', $name)));
 }
 /* stylelint-enable scss/dollar-variable-default */
 
