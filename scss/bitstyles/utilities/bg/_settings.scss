@@ -1,14 +1,14 @@
-@use '../../tools/palette';
+@use '../../tools/design-token';
 
 $values: (
-  'brand-2': palette.get('brand-2'),
-  'black': palette.get('grayscale', 'black'),
-  'grayscale-dark-2': palette.get('grayscale', 'dark-2'),
-  'grayscale-dark-1': palette.get('grayscale', 'dark-1'),
-  'grayscale': palette.get('grayscale'),
-  'grayscale-light-1': palette.get('grayscale', 'light-1'),
-  'grayscale-light-2': palette.get('grayscale', 'light-2'),
-  'grayscale-light-3': palette.get('grayscale', 'light-3'),
-  'white': palette.get('grayscale', 'white'),
+  'brand-2': var(design-token.get('color', 'brand-2')),
+  'black': var(design-token.get('color', 'grayscale', 'black')),
+  'grayscale-dark-2': var(design-token.get('color', 'grayscale', 'dark-2')),
+  'grayscale-dark-1': var(design-token.get('color', 'grayscale', 'dark-1')),
+  'grayscale': var(design-token.get('color', 'grayscale')),
+  'grayscale-light-1': var(design-token.get('color', 'grayscale', 'light-1')),
+  'grayscale-light-2': var(design-token.get('color', 'grayscale', 'light-2')),
+  'grayscale-light-3': var(design-token.get('color', 'grayscale', 'light-3')),
+  'white': var(design-token.get('color', 'grayscale', 'white')),
 ) !default;
 $breakpoints: () !default;

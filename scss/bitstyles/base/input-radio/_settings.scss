@@ -1,43 +1,39 @@
 @use '../../design-tokens/layout';
-@use '../../tools/palette';
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 //
 // Base styles ////////////////////////////////////////
 $border-radius: layout.$border-radius-round !default;
-$gap: size.get('s4') !default;
-$border-width: size.get('s7') !default;
-$size: size.get('m') !default;
+$gap: var(design-token.get('size', 's4')) !default;
+$border-width: var(design-token.get('size', 's7')) !default;
+$size: var(design-token.get('size', 'm')) !default;
 
 //
 // Base colors ////////////////////////////////////////
-$color: palette.get('grayscale', 'light-1') !default;
-$background-color: palette.get('grayscale', 'white') !default;
-$border-color: palette.get('grayscale') !default;
+$color: var(design-token.get('color', 'grayscale', 'light-1')) !default;
+$background-color: var(design-token.get('color', 'grayscale', 'white')) !default;
+$border-color: var(design-token.get('color', 'grayscale')) !default;
 
 //
 // Hover colors ////////////////////////////////////////
-$color-hover: palette.get('brand-1') !default;
-$background-color-hover: palette.get('grayscale', 'white') !default;
-$border-color-hover: palette.get('brand-1') !default;
+$color-hover: var(design-token.get('color', 'brand-1')) !default;
+$background-color-hover: var(design-token.get('color', 'grayscale', 'white')) !default;
+$border-color-hover: var(design-token.get('color', 'brand-1')) !default;
 
 //
 // Checked colors ////////////////////////////////////////
-$color-checked: palette.get('brand-1') !default;
-$background-color-checked: palette.get('grayscale', 'white') !default;
-$border-color-checked: palette.get('brand-1') !default;
+$color-checked: var(design-token.get('color', 'brand-1')) !default;
+$background-color-checked: var(design-token.get('color', 'grayscale', 'white')) !default;
+$border-color-checked: var(design-token.get('color', 'brand-1')) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
-$color-disabled: palette.get('grayscale', 'light-1') !default;
-$background-color-disabled: palette.get('grayscale', 'light-2') !default;
-$border-color-disabled: palette.get('grayscale', 'light-1') !default;
+$color-disabled: var(design-token.get('color', 'grayscale', 'light-1')) !default;
+$background-color-disabled: var(design-token.get('color', 'grayscale', 'light-2')) !default;
+$border-color-disabled: var(design-token.get('color', 'grayscale', 'light-1')) !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
-$color-disabled-checked: palette.get('grayscale', 'light-1') !default;
-$background-color-disabled-checked: palette.get(
-  'grayscale',
-  'light-2'
-) !default;
-$border-color-disabled-checked: palette.get('grayscale', 'light-1') !default;
+$color-disabled-checked: var(design-token.get('color', 'grayscale', 'light-1')) !default;
+$background-color-disabled-checked: var(design-token.get('color', 'grayscale', 'light-2')) !default;
+$border-color-disabled-checked: var(design-token.get('color', 'grayscale', 'light-1')) !default;

@@ -12,18 +12,20 @@ The default shadows used throughout bitstyles are multi-layered to create a more
 
 Use `shadow.generate()` to override the global shadow design tokens in `$shadows`:
 
+{/* prettier-ignore-start */}
 ```scss
-@use '../tools/palette';
-@use '../tools/shadow';
-@use '../tools/size';
-
+@use '../tools/design-token';
 @use '~bitstyles/scss/bitstyles/design-tokens/shadows' with (
   $shadows: (
-    'brand-1': shadow.generate($color: rgba(palette.get('brand-1', 'base-rgb'), 0.15), $offset:
-          size.get('s7'), $blur-radius: size.get('s4')),
+    'default': shadow.generate(
+      $color: rgba(var(design-token.get('color', 'brand-1', 'rgb'), 0.15)),
+      $offset: 2rem,
+      $blur-radius: 2rem,
+    ),
   )
 );
 ```
+{/* prettier-ignore-end */}
 
 This creates a specification for a multi-layered shadow using the `brand-1` color with a `2rem` blur, offset `2rem` downwards, which looks like the following examples.
 
@@ -126,35 +128,37 @@ Not all shadows belong to the global shadows design tokens. Including all the sh
 
 For example, take the two shadows overriding the `box-shadow` and `drop-shadow` settings above. We could specify them in-place instead of `shadows.get()`ing them, if they were not part of our design system right now:
 
+{/* prettier-ignore-start */}
 ```scss
 @use '../../tools/shadow';
 
 /* prettier-ignore */
 @use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
   $values: (
-    'brand-1': shadow.to-box-shadow(
-        shadow.generate(
-          $color: rgba(palette.get('brand-1', 'base-rgb'), 0.15),
-          $offset: 2rem,
-          $blur-radius: 2rem,
-        )
-      ),
+    'default': shadow.to-box-shadow(
+      shadow.generate(
+        $color: rgba(var(design-token.get('color', 'brand-1', 'rgb'), 0.15)),
+        $offset: 2rem,
+        $blur-radius: 2rem,
+      )
+    ),
   )
 );
 
 /* prettier-ignore */
 @use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (
   $values: (
-    'brand-1': shadow.to-drop-shadow(
+    'default': shadow.to-drop-shadow(
       shadow.generate(
-        $color: rgba(palette.get('brand-1', 'base-rgb'), 0.15),
+        $color: rgba(var(design-token.get('color', 'brand-1', 'rgb'), 0.15)),
         $offset: 2rem,
         $blur-radius: 2rem,
       )
     ),
-  ),
+  )
 );
 ```
+{/* prettier-ignore-end */}
 
 ## Specifying shadows manually
 
@@ -169,12 +173,12 @@ An example two-layer shadow:
   $shadows: (
     'default': (
       (
-        'color': rgba(palette.get('brand-1'), 0.15),
+        'color': rgba(var(design-token.get('color', 'brand-1'), 0.15)),
         'offset': 0.25rem,
         'blur-radius': 125rem
       ),
       (
-        'color': rgba(palette.get('brand-1'), 0.12),
+        'color': rgba(var(design-token.get('color', 'brand-1'), 0.12)),
         'offset': 0.5rem,
         'blur-radius': 2rem
       ),

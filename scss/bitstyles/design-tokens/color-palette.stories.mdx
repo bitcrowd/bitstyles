@@ -4,19 +4,19 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 # Color palette
 
-Bitstyles provides a semantically-named color palette, with each color having a scale of named variants from `dark-4` to `light-4`. These colors are used to create the components and the color-related utility classes like background-color, border, and color. A `color-palette.get()` helper function makes using them in your projects easy.
+Bitstyles provides a semantically-named color palette, with each color having a scale of named variants from `dark-4` to `light-4`. These colors are used to create the components and the color-related utility classes like background-color, border, and color. A `color-var(design-token.get('color', )` helper function makes using them in your projects easy.
 
 <Story id="base-colors--color-palette" />
 
 ## Using the color palette in Sass
 
-Use the `palette.get()` helper function for accessing colors in your Sass. Import `tools/palette`, then use the `get()` function. Pass the color name and variant you want, as parameters:
+Use the `var(design-token.get('color', )` helper function for accessing colors in your Sass. Import `tools/palette`, then use the `get()` function. Pass the color name and variant you want, as parameters:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/palette';
 
 .component-class::after {
-  background-color: palette.get('brand-1', 'light-1');
+  background-color: var(design-token.get('color', 'brand-1', 'light-1');
 }
 ```
 
@@ -28,7 +28,7 @@ With the default setup this will output:
 }
 ```
 
-### `palette.get()` parameters
+### `var(design-token.get('color', )` parameters
 
 | Name   | Type   | Description                                              |
 | ------ | ------ | -------------------------------------------------------- |
@@ -53,7 +53,7 @@ The color palette is also available as CSS custom properties. In the default con
 --bs-color-brand-1-light-1: #b2a6ff;
 --bs-color-brand-1-light-1-rgb: 178, 166, 255;
 --bs-color-brand-1-base: #9485ff;
---bs-color-brand-1-base-rgb: 148, 133, 255;
+--bs-color-brand-1-rgb: 148, 133, 255;
 // …
 ```
 
@@ -240,4 +240,4 @@ It’s recommended that you select the colors from the base palette, but it’s 
 
 ### Default key
 
-With the default configuration, `base` is the root for each color, allowing you to use e.g. `palette.get()` without specifying a color variant when you want the base color e.g. `palette.get('brand-1')`. To change the default key, override `color-palette.$default-key` with the string you wish to use.
+With the default configuration, `base` is the root for each color, allowing you to use e.g. `var(design-token.get('color', )` without specifying a color variant when you want the base color e.g. `var(design-token.get('color', 'brand-1')`. To change the default key, override `color-palette.$default-key` with the string you wish to use.

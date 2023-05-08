@@ -137,17 +137,25 @@ The `.a-card` classes are available at `m` and `l` breakpoints by default, inclu
 
 Card appearance can be customized by overriding the following variables:
 
+{/* prettier-ignore-start */}
 ```scss
 @use '~bitstyles/scss/bitstyles/atoms/card' with (
   $sizes: (
-    'base': size.get('m'),
-    'l': size.get('l3'),
+    'base': var(design-token.get('size', 'm')),
+    'l': var(design-token.get('size', 'l3')),
   ),
-  $border-radius: size.get('m'),
-  $box-shadow: shadow.to-box-shadow(shadow.generate($color: rgba(palette.get('brand-1', 'base-rgb'), 0.025), $offset:
-          size.get('s2'), $blur-radius: size.get('l2'), $layers: 6))
+  $border-radius: var(design-token.get('size', 'm')),
+  $box-shadow: shadow.to-box-shadow(
+    shadow.generate(
+      $color: rgba(var(design-token.get('color', 'brand-1', 'rgb'), 0.025)),
+      $offset: var(design-token.get('size', 's2')),
+      $blur-radius: var(design-token.get('size', 'l2')),
+      $layers: 6,
+    )
+  )
 );
 ```
+{/* prettier-ignore-end */}
 
 The breakpoints the cards are available at can be customized by overriding the `$breakpoints` variable:
 

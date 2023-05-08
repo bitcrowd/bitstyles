@@ -1,7 +1,6 @@
 @forward 'settings';
 @use './settings';
-@use '../../tools/line-height';
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 /* stylelint-disable selector-max-type */
 
@@ -27,6 +26,6 @@ label {
 }
 
 [type='color'] {
-  height: calc(line-height.get('4') * 1em + size.get('s2'));
+  height: calc(var(design-token.get('line-height', '4')) * 1em + var(design-token.get('size', 's2')));
 }
 /* stylelint-enable selector-max-type */

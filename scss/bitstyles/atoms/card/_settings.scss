@@ -1,19 +1,18 @@
-@use '../../tools/palette';
+@use '../../tools/design-token';
 @use '../../tools/shadow';
-@use '../../tools/size';
 
 $sizes: (
-  'base': size.get('s1'),
-  'l': size.get('l2'),
+  'base': var(design-token.get('size', 's1')),
+  'l': var(design-token.get('size', 'l2')),
 ) !default;
-$border-radius: size.get('s1') !default;
+$border-radius: var(design-token.get('size', 's1')) !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('brand-1', 'base-rgb'), 0.025),
-    $offset: size.get('s1'),
-    $blur-radius: size.get('l5'),
+    $color: rgba(var(design-token.get('color', 'brand-1', 'rgb')), 0.025),
+    $offset: var(design-token.get('size', 's1')),
+    $blur-radius: var(design-token.get('size', 'l5')),
     $layers: 6,
   )
 ) !default;
 $breakpoints: ('m', 'l') !default;
-$header-background-color: palette.get('grayscale', 'light-2') !default;
+$header-background-color: var(design-token.get('color', 'grayscale', 'light-2')) !default;

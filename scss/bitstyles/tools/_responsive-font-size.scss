@@ -5,7 +5,7 @@
 // Font-size
 //
 // **Outputs requested responsive font-sizes from the global `typography-responsive.$typographic-scale` map.**
-// e.g. `@include responsive-font-size.get('h1');`
+// e.g. `@include responsive-var(design-token.get('font-size', 'h1');`
 //
 // @param {String} $font-size  The font-size as named in the `typography-responsive.$typographic-scale` map
 //

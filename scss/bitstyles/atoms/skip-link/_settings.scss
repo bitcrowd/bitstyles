@@ -1,16 +1,15 @@
 @use '../../design-tokens/typography';
-@use '../../tools/palette';
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 //
 // Base styles /////////////////////////////////////////
 
-$padding: size.get('s1') !default;
+$padding: var(design-token.get('size', 's1')) !default;
 $font-weight: typography.$font-weight-medium !default;
 
 //
 // Base/hover Colors /////////////////////////////////////////
 
-$background: palette.get('grayscale', 'white') !default;
-$color: palette.get('grayscale', 'dark-1') !default;
-$border: size.get('s6') palette.get('grayscale', 'dark-1') solid !default;
+$background: var(design-token.get('color', 'grayscale', 'white')) !default;
+$color: var(design-token.get('color', 'grayscale', 'dark-1')) !default;
+$border: var(design-token.get('size', 's6')) var(design-token.get('color', 'grayscale', 'dark-1')) solid !default;

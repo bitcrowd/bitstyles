@@ -1,29 +1,28 @@
 @use '../../settings/setup';
-@use '../../tools/palette';
-@use '../../tools/size';
+@use '../../tools/design-token';
 @use '../../tools/shadows';
 
 /* stylelint-disable length-zero-no-unit */
 $size-variants: (
   '#{setup.$no-media-query}': (
     '': (
-      'padding-vertical': size.get('s6'),
-      'padding-horizontal': size.get('l1'),
-      'gap': size.get('s6'),
+      'padding-vertical': var(design-token.get('size', 's6')),
+      'padding-horizontal': var(design-token.get('size', 'l1')),
+      'gap': var(design-token.get('size', 's6')),
       'prepend-spacing': 0rem,
     ),
   ),
   'm': (
     '': (
-      'padding-vertical': size.get('s4'),
-      'padding-horizontal': size.get('l1'),
-      'gap': size.get('s4'),
-      'prepend-spacing': size.get('s6'),
+      'padding-vertical': var(design-token.get('size', 's4')),
+      'padding-horizontal': var(design-token.get('size', 'l1')),
+      'gap': var(design-token.get('size', 's4')),
+      'prepend-spacing': var(design-token.get('size', 's6')),
     ),
     'small': (
-      'padding-vertical': size.get('s6'),
-      'padding-horizontal': size.get('l1'),
-      'gap': size.get('s6'),
+      'padding-vertical': var(design-token.get('size', 's6')),
+      'padding-horizontal': var(design-token.get('size', 'l1')),
+      'gap': var(design-token.get('size', 's6')),
       'prepend-spacing': 0rem,
     ),
   ),

@@ -1,15 +1,12 @@
-@use 'sass:color';
-@use 'sass:map';
-@use './color-palette';
-@use '../tools/palette';
+@use '../tools/design-token';
 
 $default-theme: (
-  'background': palette.get('grayscale', 'white'),
-  'text': palette.get('grayscale', 'dark-3'),
+  'background': var(design-token.get('color', 'grayscale', 'white')),
+  'text': var(design-token.get('color', 'grayscale', 'dark-3')),
 ) !default;
 $dark-theme: (
-  'background': palette.get('grayscale', 'dark-3'),
-  'text': palette.get('grayscale', 'light-3'),
+  'background': var(design-token.get('color', 'grayscale', 'dark-3')),
+  'text': var(design-token.get('color', 'grayscale', 'light-3')),
 ) !default;
 $brand-1-theme: (
   'background': palette.get('brand-1', 'light-4'),

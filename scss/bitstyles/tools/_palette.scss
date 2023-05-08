@@ -15,7 +15,7 @@
 
 @function get(
   $color,
-  $key: color-palette.$default-key,
+  $key: setup.$default-color-key,
   $format: setup.$default-token-format
 ) {
   @if map.has-key(color-palette.$palette, $color) {

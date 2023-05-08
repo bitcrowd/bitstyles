@@ -118,7 +118,7 @@ Override `$values` if you need to provide font-sizes outside of your base font-s
 @use '~bitstyles/scss/bitstyles/tools/font-size';
 @use 'bitstyles/utilities/typography' with (
   $values: (
-    'small': font-size.get('1'),
+    'small': var(design-token.get('font-size', '1'),
     'custom': 5.192456rem,
   )
 );

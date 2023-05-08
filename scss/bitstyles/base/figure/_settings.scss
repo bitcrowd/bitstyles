@@ -1,4 +1,4 @@
-@use '../../tools/palette';
+@use '../../tools/design-token';
 
 $font-style: italic !default;
-$color: palette.get('grayscale', 'light-1') !default;
+$color: var(design-token.get('color', 'grayscale', 'light-1')) !default;

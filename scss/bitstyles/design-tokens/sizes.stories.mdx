@@ -56,13 +56,13 @@ $sizes: (
 
 ## Using the sizes in Sass
 
-Use the `size.get()` helper function for accessing sizes in the sizing scale. In your component Sass file first import the `size` tools, then use the `get()` function, passing the size name:
+Use the `var(design-token.get('size', )` helper function for accessing sizes in the sizing scale. In your component Sass file first import the `size` tools, then use the `get()` function, passing the size name:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/size';
 
 .component-class::after {
-  margin-left: size.get('l3');
+  margin-left: var(design-token.get('size', 'l3');
 }
 ```
 
@@ -74,7 +74,7 @@ With the default setup this will output:
 }
 ```
 
-### `size.get()` parameters
+### `var(design-token.get('size', )` parameters
 
 | Name  | Type   | Description          |
 | ----- | ------ | -------------------- |

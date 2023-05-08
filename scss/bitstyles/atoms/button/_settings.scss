@@ -1,6 +1,5 @@
 @use '../../design-tokens/animation';
-@use '../../tools/palette';
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 //
 // Base styles ////////////////////////////////////////
@@ -11,7 +10,7 @@ $transition: color animation.$transition-duration animation.$transition-easing,
   border animation.$transition-duration animation.$transition-easing,
   box-shadow animation.$transition-duration animation.$transition-easing,
   outline-offset animation.$transition-duration animation.$transition-easing !default;
-$icon-spacing: size.get('s2') !default;
+$icon-spacing: var(design-token.get('size', 's2')) !default;
 $justify-content: center !default;
 $allowed-color-properties: (
   'color',

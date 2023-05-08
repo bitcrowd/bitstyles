@@ -1,138 +1,144 @@
-@use '../../tools/custom-property';
-@use '../../tools/palette';
+@use '../../tools/design-token';
 @use '../../tools/shadow';
-@use '../../tools/size';
 
 /* prettier-ignore */
 $default: (
   'default': (
     'default': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-1', 'dark-1'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'brand-1', 'dark-1')),
       'box-shadow': none,
     ),
     'hover': (
-      'color': palette.get('brand-1', 'dark-2'),
-      'background-color': palette.get('brand-1', 'light-2'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-2')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-2')),
+      'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-1', 'dark-1'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'box-shadow': none,
     ),
     'pressed': (
-      'color':palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-1', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'brand-1', 'dark-2')),
+      'box-shadow': none,
     ),
     'disabled': (
-      'color': palette.get('grayscale'),
-      'background-color': palette.get('grayscale', 'light-3'),
+      'color': var(design-token.get('color', 'grayscale')),
+      'background-color': var(design-token.get('color', 'grayscale', 'light-3')),
+      'box-shadow': none,
     ),
   ),
   'dark': (
-    'default': (
-      'color': palette.get('brand-1'),
-      'background-color': palette.get('grayscale', 'light-2'),
-      'box-shadow': none,
-    ),
-    'hover': (
-      'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('brand-1', 'light-1'),
-    ),
-    'active': (
-      'color': palette.get('brand-1'),
-      'background-color': palette.get('grayscale', 'light-2'),
-    ),
-    'pressed': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-1'),
-    ),
-    'disabled': (
-      'color': palette.get('grayscale', 'light-1'),
-      'background-color': palette.get('grayscale', 'dark-2'),
-    ),
-  ),
+     'default': (
+       'color': var(design-token.get('color', 'brand-1')),
+       'background-color': var(design-token.get('color', 'grayscale', 'light-2')),
+       'box-shadow': none,
+     ),
+     'hover': (
+       'color': var(design-token.get('color', 'brand-1', 'dark-1')),
+       'background-color': var(design-token.get('color', 'brand-1', 'light-1')),
+       'box-shadow': none,
+     ),
+     'active': (
+       'color': var(design-token.get('color', 'brand-1')),
+       'background-color': var(design-token.get('color', 'grayscale', 'light-2')),
+       'box-shadow': none,
+     ),
+     'pressed': (
+       'color': var(design-token.get('color', 'grayscale', 'white')),
+       'background-color': var(design-token.get('color', 'brand-1')),
+       'box-shadow': none,
+     ),
+     'disabled': (
+       'color': var(design-token.get('color', 'grayscale', 'light-1')),
+       'background-color': var(design-token.get('color', 'grayscale', 'dark-2')),
+       'box-shadow': none,
+     ),
+   ),
   'brand-1': (
     'default': (
-      'color': palette.get('brand-1', 'dark-2'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-2')),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('brand-1', 'dark-3'),
-      'background-color': palette.get('brand-1', 'light-2'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-3')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-2')),
     ),
     'active': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-1', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'brand-1', 'dark-2')),
     ),
   ),
   'brand-2': (
     'default': (
-      'color': palette.get('brand-2', 'dark-2'),
+      'color': var(design-token.get('color', 'brand-2', 'dark-2')),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('grayscale', 'dark-3'),
-      'background-color': palette.get('brand-2', 'light-2'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-3')),
+      'background-color': var(design-token.get('color', 'brand-2', 'light-2')),
     ),
     'active': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('brand-2', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'brand-2', 'dark-2')),
     ),
   ),
   'positive': (
     'default': (
-      'color': palette.get('positive', 'dark-2'),
+      'color': var(design-token.get('color', 'positive', 'dark-2'),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('positive', 'dark-3'),
-      'background-color': palette.get('positive', 'light-2'),
+      'color': var(design-token.get('color', 'positive', 'dark-3')),
+      'background-color': var(design-token.get('color', 'positive', 'light-2')),
     ),
     'active': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('positive', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'positive', 'dark-2')),
     ),
   ),
   'warning': (
     'default': (
-      'color': palette.get('warning', 'dark-2'),
+      'color': var(design-token.get('color', 'warning', 'dark-2')),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('warning', 'dark-3'),
-      'background-color': palette.get('warning', 'light-2'),
+      'color': var(design-token.get('color', 'warning', 'dark-3')),
+      'background-color': var(design-token.get('color', 'warning', 'light-2')),
     ),
     'active': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('warning', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'warning', 'dark-2')),
     ),
   ),
   'danger': (
     'default': (
-      'color': palette.get('danger', 'dark-1'),
+      'color': var(design-token.get('color', 'danger', 'dark-1')),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('danger', 'dark-2'),
-      'background-color': palette.get('danger', 'light-2'),
+      'color': var(design-token.get('color', 'danger', 'dark-2')),
+      'background-color': var(design-token.get('color', 'danger', 'light-2')),
     ),
     'active': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('danger', 'dark-1'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'danger', 'dark-1')),
     ),
   ),
   'grayscale': (
     'default': (
-      'color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'background-color': transparent,
     ),
     'hover': (
-      'color': palette.get('grayscale', 'dark-3'),
-      'background-color': palette.get('grayscale', 'light-2'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-3')),
+      'background-color': var(design-token.get('color', 'grayscale', 'light-2')),
     ),
     'active': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'grayscale', 'dark-2')),
     ),
   ),
 ) !default;
@@ -141,67 +147,67 @@ $default: (
 $secondary: (
   'default': (
     'default': (
-      'color': palette.get('grayscale', 'dark-2'),
-      'background-color': palette.get('grayscale', 'light-3'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'background-color': var(design-token.get('color', 'grayscale', 'light-3')),
       'box-shadow': none,
     ),
     'hover': (
-      'color': palette.get('grayscale', 'dark-2'),
-      'background-color': palette.get('brand-1', 'light-2'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-2')),
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('brand-1', 'dark-2'),
-      'background-color': palette.get('brand-1', 'light-2'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-2')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-2')),
       'box-shadow': none,
     ),
     'pressed': (
-      'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('brand-1', 'light-2'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-2')),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
-            $blur-radius: size.get('s4'),
+            $color: rgba(var(design-token.get('color', 'brand-1', 'light-1-rgb')), 0.075),
+            $blur-radius: var(design-token.get('size', 's4')),
           )
         ),
     ),
     'disabled': (
-      'color': palette.get('grayscale'),
-      'background-color': palette.get('grayscale', 'light-3'),
+      'color': var(design-token.get('color', 'grayscale')),
+      'background-color': var(design-token.get('color', 'grayscale', 'light-3')),
       'box-shadow': none,
     ),
   ),
   'dark': (
     'default': (
-      'color': palette.get('grayscale', 'light-2'),
-      'background-color': palette.get('grayscale', 'dark-1'),
+      'color': var(design-token.get('color', 'grayscale', 'light-2')),
+      'background-color': var(design-token.get('color', 'grayscale', 'dark-1')),
       'box-shadow': none,
     ),
     'hover': (
-      'color': palette.get('grayscale', 'dark-2'),
-      'background-color': palette.get('brand-1', 'light-1'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-1')),
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('brand-1', 'light-1'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-1')),
       'box-shadow': none,
     ),
     'pressed': (
-      'color': palette.get('brand-1'),
-      'background-color': palette.get('brand-1', 'light-1'),
+      'color': var(design-token.get('color', 'brand-1')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-1')),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
-            $blur-radius: size.get('s4'),
+            $color: rgba(var(design-token.get('color', 'brand-1', 'light-1-rgb')), 0.075),
+            $blur-radius: var(design-token.get('size', 's4')),
           )
         ),
     ),
     'disabled': (
-      'color': palette.get('grayscale', 'light-1'),
-      'background-color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'light-1')),
+      'background-color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'box-shadow': none,
     ),
   ),
@@ -211,77 +217,77 @@ $secondary: (
 $outline: (
   'default': (
     'default': (
-      'color': palette.get('grayscale', 'dark-2'),
-      'background-color': palette.get('grayscale', 'white'),
-      'border-color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'background-color': var(design-token.get('color', 'grayscale', 'white')),
+      'border-color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'box-shadow': none,
     ),
     'hover': (
-      'color': palette.get('grayscale', 'dark-2'),
-      'background-color': palette.get('brand-1', 'light-4'),
-      'border-color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-4')),
+      'border-color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('brand-1', 'light-4'),
-      'border-color': palette.get('brand-1', 'dark-1'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-4')),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-1')),
       'box-shadow': none,
     ),
     'pressed': (
-      'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('grayscale', 'white'),
-      'border-color': palette.get('brand-1', 'dark-1'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'background-color': var(design-token.get('color', 'grayscale', 'white')),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-1')),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('brand-1', 'dark-1-rgb'), 0.125),
-            $blur-radius: size.get('m'),
+            $color: rgba(var(design-token.get('color', 'brand-1', 'dark-1-rgb')), 0.125),
+            $blur-radius: var(design-token.get('size', 'm')),
           )
         ),
     ),
     'disabled': (
-      'color': palette.get('grayscale'),
+      'color': var(design-token.get('color', 'grayscale')),
       'background-color': transparent,
-      'border-color': palette.get('grayscale'),
+      'border-color': var(design-token.get('color', 'grayscale')),
       'box-shadow': none,
     ),
   ),
   'dark': (
     'default': (
-      'color': palette.get('grayscale', 'light-2'),
-      'background-color': palette.get('grayscale', 'dark-1'),
-      'border-color': palette.get('grayscale', 'dark-1'),
+      'color': var(design-token.get('color', 'grayscale', 'light-2')),
+      'background-color': var(design-token.get('color', 'grayscale', 'dark-1')),
+      'border-color': var(design-token.get('color', 'grayscale', 'dark-1')),
       'box-shadow': none,
     ),
     'hover': (
-      'color': palette.get('grayscale', 'dark-2'),
-      'background-color': palette.get('brand-1', 'light-1'),
-      'border-color': palette.get('brand-1', 'light-1'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-1')),
+      'border-color': var(design-token.get('color', 'brand-1', 'light-1')),
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('brand-1', 'light-1'),
-      'border-color': palette.get('brand-1', 'light-1'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-1')),
+      'border-color': var(design-token.get('color', 'brand-1', 'light-1')),
       'box-shadow': none,
     ),
     'pressed': (
-      'color': palette.get('brand-1'),
-      'background-color': palette.get('brand-1', 'light-1'),
-      'border-color': palette.get('brand-1', 'light-1'),
+      'color': var(design-token.get('color', 'brand-1')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-1')),
+      'border-color': var(design-token.get('color', 'brand-1', 'light-1')),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.125),
-            $blur-radius: size.get('m'),
+            $color: rgba(var(design-token.get('color', 'brand-1', 'light-1-rgb')), 0.125),
+            $blur-radius: var(design-token.get('size', 'm')),
           )
         ),
     ),
     'disabled': (
-      'color': palette.get('grayscale', 'light-1'),
-      'background-color': palette.get('grayscale', 'dark-2'),
-      'border-color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'light-1')),
+      'background-color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'border-color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'box-shadow': none,
     ),
   ),
@@ -291,77 +297,77 @@ $outline: (
 $transparent: (
   'default': (
     'default': (
-      'color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'background-color': transparent,
       'border-color': transparent,
       'box-shadow': none,
     ),
     'hover': (
-      'color': palette.get('grayscale', 'dark-2'),
-      'background-color': palette.get('brand-1', 'light-4'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-4')),
       'border-color': transparent,
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('brand-1', 'light-4'),
-      'border-color': palette.get('brand-1', 'dark-1'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'background-color': var(design-token.get('color', 'brand-1', 'light-4')),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-1')),
       'box-shadow': none,
     ),
     'pressed': (
-      'color': palette.get('brand-1', 'dark-1'),
-      'background-color': palette.get('grayscale', 'white'),
-      'border-color': palette.get('brand-1', 'dark-1'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'background-color': var(design-token.get('color', 'grayscale', 'white')),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-1')),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('brand-1', 'dark-1-rgb'), 0.125),
-            $blur-radius: size.get('m'),
+            $color: rgba(var(design-token.get('color', 'brand-1', 'dark-1-rgb')), 0.125),
+            $blur-radius: var(design-token.get('size', 'm')),
           )
         ),
     ),
     'disabled': (
-      'color': palette.get('grayscale'),
-      'background-color': palette.get('grayscale', 'light-3'),
-      'border-color': palette.get('grayscale', 'light-3'),
+      'color': var(design-token.get('color', 'grayscale')),
+      'background-color': var(design-token.get('color', 'grayscale', 'light-3')),
+      'border-color': var(design-token.get('color', 'grayscale', 'light-3')),
       'box-shadow': none,
     ),
   ),
   'dark': (
     'default': (
-      'color': palette.get('grayscale', 'light-1'),
+      'color': var(design-token.get('color', 'grayscale', 'light-1')),
       'background-color': transparent,
       'border-color': transparent,
       'box-shadow': none,
     ),
     'hover': (
-      'color': palette.get('brand-1', 'light-1'),
+      'color': var(design-token.get('color', 'brand-1', 'light-1')),
       'background-color': transparent,
       'border-color': transparent,
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('brand-1', 'light-1'),
-      'background-color': palette.get('grayscale', 'dark-2'),
-      'border-color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'brand-1', 'light-1')),
+      'background-color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'border-color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'box-shadow': none,
     ),
     'pressed': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('grayscale', 'dark-2'),
-      'border-color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'border-color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'box-shadow':
         shadow.to-box-shadow(
           shadow.generate(
-            $color: rgba(palette.get('grayscale', 'dark-2-rgb'), 0.125),
-            $blur-radius: size.get('m'),
+            $color: rgba(var(design-token.get('color', 'grayscale', 'dark-2-rgb')), 0.125),
+            $blur-radius: var(design-token.get('size', 'm')),
           )
         ),
     ),
     'disabled': (
-      'color': palette.get('grayscale', 'light-1'),
-      'background-color': palette.get('grayscale', 'dark-2'),
-      'border-color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'light-1')),
+      'background-color': var(design-token.get('color', 'grayscale', 'dark-2')),
+      'border-color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'box-shadow': none,
     ),
   ),
@@ -371,55 +377,55 @@ $transparent: (
 $tab: (
   'default': (
     'default': (
-      'color': palette.get('grayscale', 'dark-1'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-1')),
       'background-color': transparent,
       'box-shadow': none,
-      'icon-color': palette.get('grayscale', 'dark-2'),
+      'icon-color': var(design-token.get('color', 'grayscale', 'dark-2')),
     ),
     'hover': (
-      'color': palette.get('brand-1', 'dark-1'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-1')),
       'background-color': transparent,
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('brand-1', 'dark-1'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-1')),
       'background-color': transparent,
       'box-shadow': none,
     ),
     'pressed': (
-      'color': palette.get('brand-1', 'dark-2'),
+      'color': var(design-token.get('color', 'brand-1', 'dark-2')),
       'background-color': transparent,
       'box-shadow': none,
     ),
     'disabled': (
-      'color': palette.get('grayscale'),
+      'color': var(design-token.get('color', 'grayscale')),
       'background-color': transparent,
       'box-shadow': none,
     ),
   ),
   'dark': (
     'default': (
-      'color': palette.get('grayscale', 'light-2'),
+      'color': var(design-token.get('color', 'grayscale', 'light-2')),
       'background-color': transparent,
       'box-shadow': none,
     ),
     'hover': (
-      'color': palette.get('brand-1', 'light-2'),
+      'color': var(design-token.get('color', 'brand-1', 'light-2')),
       'background-color': transparent,
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('brand-1', 'light-3'),
+      'color': var(design-token.get('color', 'brand-1', 'light-3')),
       'background-color': transparent,
       'box-shadow': none,
     ),
     'pressed': (
-      'color': palette.get('grayscale', 'light-1'),
+      'color': var(design-token.get('color', 'grayscale', 'light-1')),
       'background-color': transparent,
       'box-shadow': none,
     ),
     'disabled': (
-      'color': palette.get('grayscale', 'dark-2'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-2')),
       'background-color': transparent,
       'box-shadow': none,
     ),
@@ -430,21 +436,21 @@ $tab: (
 $danger: (
   'default': (
     'hover': (
-      'color': palette.get('grayscale', 'white'),
-      'background-color': palette.get('danger', 'dark-1'),
-      'border-color': palette.get('danger', 'dark-1'),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
+      'background-color': var(design-token.get('color', 'danger', 'dark-1')),
+      'border-color': var(design-token.get('color', 'danger', 'dark-1')),
       'box-shadow': none,
     ),
     'active': (
-      'color': palette.get('danger', 'dark-1'),
-      'background-color': palette.get('danger', 'light-2'),
-      'border-color': palette.get('danger', 'light-2'),
+      'color': var(design-token.get('color', 'danger', 'dark-1')),
+      'background-color': var(design-token.get('color', 'danger', 'light-2')),
+      'border-color': var(design-token.get('color', 'danger', 'light-2')),
       'box-shadow': none,
     ),
     'pressed': (
-      'color': palette.get('danger', 'dark-2'),
-      'background-color': palette.get('danger', 'light-2'),
-      'border-color': palette.get('danger', 'light-2'),
+      'color': var(design-token.get('color', 'danger', 'dark-2')),
+      'background-color': var(design-token.get('color', 'danger', 'light-2')),
+      'border-color': var(design-token.get('color', 'danger', 'light-2')),
       'box-shadow': none,
     ),
   ),

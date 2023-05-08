@@ -56,10 +56,10 @@ The available sizes and their classnames can be customized using `$sizes`:
 ```scss
 @use '~bitstyles/scss/bitstyles/atoms/icon' with (
   $sizes: (
-    's': size.get('s4'),
-    'm': size.get('m'),
-    'l': size.get('l2'),
-    'xl': size.get('l2') + size.get('s4'),
+    's': var(design-token.get('size', 's4')),
+    'm': var(design-token.get('size', 'm')),
+    'l': var(design-token.get('size', 'l2')),
+    'xl': calc(var(design-token.get('size', 'l2') + var(design-token.get('size', 's4')))),
   )
 );
 ```

@@ -1,9 +1,8 @@
-@use '../../tools/palette';
-@use '../../tools/size';
+@use '../../tools/design-token';
 
-$padding: size.get('s3') !default;
-$background-color: palette.get('grayscale', 'white') !default;
-$overlay-color: rgba(palette.get('grayscale', 'white-rgb'), 95%) !default;
+$padding: var(design-token.get('size', 's3')) !default;
+$background-color: var(design-token.get('color', 'grayscale', 'white')) !default;
+$overlay-color: rgba(var(design-token.get('color', 'grayscale', 'white-rgb')), 95%) !default;
 $transition-easing: ease-in-out !default;
 $transition-duration: 0.2s !default;
 $transition-duration-smallscreen: 0.25s !default;

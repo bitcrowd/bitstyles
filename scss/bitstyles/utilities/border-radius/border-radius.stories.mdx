@@ -41,7 +41,7 @@ The available sizes of border radius can be customized by overriding the `$value
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/border-radius' with (
   $values: (
-    'm': size.get('m'),
+    'm': var(design-token.get('size', 'm'),
   )
 );
 ```

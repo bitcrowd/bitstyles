@@ -3,10 +3,9 @@
 @use '../../design-tokens/layout';
 @use '../../tools/classname';
 @use '../../tools/custom-property';
+@use '../../tools/design-token';
 @use '../../tools/media-query';
-@use '../../tools/palette';
 @use '../../tools/properties';
-@use '../../tools/size';
 @use '../../tools/themes';
 @use 'sass:map';
 

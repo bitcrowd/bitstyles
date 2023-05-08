@@ -1,8 +1,8 @@
-@use '../../tools/size';
+@use '../../tools/design-token';
 @use '../../tools/zindex';
 @use '../../design-tokens/layout';
 
 $position: relative !default;
-$vertical-padding: size.get('s3') !default;
-$horizontal-padding: size.get('s1') !default;
+$vertical-padding: var(design-token.get('size', 's3')) !default;
+$horizontal-padding: var(design-token.get('size', 's1')) !default;
 $z-index: zindex.get(layout.$global-z, 'topbar') !default;
