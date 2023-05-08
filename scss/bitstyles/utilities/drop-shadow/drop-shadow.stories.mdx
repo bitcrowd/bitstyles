@@ -14,13 +14,13 @@ Apply a drop-shadow to the element using CSS filters. By default this is selecte
 
 ## Customization
 
-The available drop-shadows and their names can be customized by overriding the `$values` Sass variable. Use the `shadows.get()` helper from `tools/shadows` to access the shadows you’ve setup in your global design tokens (see `design-tokens/shadows`), providing `drop` as the format (drop-shadows are applied using CSS filters):
+The available drop-shadows and their names can be customized by overriding the `$values` Sass variable. Use the `design-token.get()` helper from `tools/design-token` to access the shadows you’ve setup in your global design tokens (see `design-tokens/shadows`), providing `drop` as the format (drop-shadows are applied using CSS filters):
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/shadows';
 @use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (
   $values: (
-    'brand-1': shadows.get('brand-1', 'drop'),
+    'brand-1': var(design-token.get('shadow', 'brand-1', 'drop')),
   )
 );
 ```

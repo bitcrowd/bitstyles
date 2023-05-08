@@ -1,6 +1,6 @@
-@use '../../tools/shadows';
+@use '../../tools/design-token';
 
 $values: (
-  'brand-1': shadows.get('brand-1', 'drop'),
+  'brand-1': var(design-token.get('shadow', 'brand-1', 'drop')),
 ) !default;
 $breakpoints: () !default;
