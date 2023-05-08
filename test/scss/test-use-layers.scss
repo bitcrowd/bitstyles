@@ -1,0 +1,279 @@
+@use '../../scss/bitstyles/settings' with (
+  $setup-namespace: 'bs',
+  $setup-custom-property-namespace: 'bscpn',
+  $setup-layer-prefixes: (
+    'atom': 'at',
+    'molecule': 'mo',
+    'organism': 'or',
+    'utility': '',
+  )
+);
+@use '../../scss/bitstyles/design-tokens' with (
+  // global settings
+  $animation-transition-easing: ease-out,
+  $breakpoints-boundary-width: 10em,
+  $color-palette-palette: (
+    'grayscale': (
+      'light-3': #000,
+      'light-2': #000,
+      'light-1': #000,
+      'base': #000,
+      'dark-1': #000,
+      'dark-2': #000,
+      'white': #000,
+      'black': #000,
+    ),
+    'brand-1': (
+      'light-2': #000,
+      'light-1': #000,
+      'base': #000,
+      'dark-1': #000,
+      'dark-2': #000,
+    ),
+    'brand-2': (
+      'light-2': #000,
+      'light-1': #000,
+      'base': #000,
+      'dark-1': #000,
+    ),
+    'danger': (
+      'light-2': #000,
+      'light-1': #000,
+      'base': #000,
+      'dark-1': #000,
+    ),
+    'warning': (
+      'light-2': #000,
+      'light-1': #000,
+      'base': #000,
+      'dark-1': #000,
+    ),
+    'positive': (
+      'light-2': #000,
+      'light-1': #000,
+      'base': #000,
+      'dark-1': #000,
+    )
+  ),
+  $layout-size-base: 10rem,
+  $shadows-shadows: (
+    'default': (
+      ('color': #f00, 'offset': 2.5rem, 'blur-radius': 5rem),
+      ('color': #f00, 'offset': 5rem, 'blur-radius': 10rem),
+    )
+  ),
+  $themes-themes: (
+    'default': (
+      'background': var(--bscpn-color-brand-1-light-3),
+      'text': var(--bscpn-color-brand-2-dark-3),
+    ),
+    'dark': (
+      'background': var(--bscpn-color-brand-1-dark-3),
+      'text': var(--bscpn-color-brand-2-light-3),
+    )
+  ),
+  $typography-webfont-family-name: 'FakeFont',
+  $typography-webfont-base-url: './',
+  $typography-responsive-typographic-scale: (
+    'm': (
+      'h1': (
+        'font-size': 10rem,
+        'line-height': 200,
+      ),
+    ),
+    'xl': (
+      'h1': (
+        'font-size': 30rem,
+        'line-height': 400,
+      ),
+    )
+  ),
+  $link-color: #f00
+);
+@use '../../scss/bitstyles/generic';
+@use '../../scss/bitstyles/base' with (
+  $figure-font-style: bold,
+  $forms-fieldset-padding: 10rem,
+  $input-checkbox-border-radius: 10rem,
+  $input-radio-border-radius: 10rem,
+  $input-text-border-radius: 10rem,
+  $select-border-radius: 10rem,
+  $base-typography-margin-heading: 10rem,
+  $base-typography-margin-paragraph: 10rem
+);
+@use '../../scss/bitstyles/atoms' with (
+  $avatar-sizes: (
+    'xl': 10rem,
+  ),
+  $badge-color: 'light-1',
+  $bordered-header-gutter: 10rem,
+  $button-transition: none,
+  $button-colors-default: (
+    'default': (
+      'default': (
+        'color': var(--bscpn-color-grayscale-black),
+      ),
+    ),
+    'dark': (
+      'default': (
+        'color': var(--bscpn-color-grayscale-white),
+      ),
+    ),
+  ),
+  $button-tab-indicator-color: #f00,
+  $card-sizes: (
+    'base': 10rem,
+    's': 20rem,
+  ),
+  $content-max-width-base: 'full',
+  $dropdown-max-height: 1rem,
+  $flash-color: 'light-1',
+  $icon-sizes: (
+    's': 10rem,
+  ),
+  $skip-link-color: #f00,
+  $topbar-vertical-padding: 10rem
+);
+@use '../../scss/bitstyles/organisms' with (
+  $modal-padding: 10rem,
+  $navbar-will-change: opacity,
+  $sidebar-large-width: 1rem,
+  $sidebar-small-location: right,
+  $table-color-th: #f00,
+  $ui-group-border-radius: 10rem
+);
+@use '../../scss/bitstyles/utilities' with (
+  $aspect-ratio-values: (
+    '10-10': (
+      'width': 1,
+      'height': 1,
+    ),
+  ),
+  $bg-values: (
+    'f00': #f00,
+  ),
+  $border-values: (
+    'f00': #f00,
+  ),
+  $border-radius-values: (
+    'm': 10rem,
+  ),
+  $box-shadow-breakpoints: (
+    'xl',
+  ),
+  $col-span-values: (
+    '100': span 100 / span 100,
+  ),
+  $col-start-values: (
+    '100': 100,
+  ),
+  $display-values: (
+    inline-block: inline-block,
+  ),
+  $drop-shadow-breakpoints: (
+    's',
+  ),
+  $fg-values: (
+    'f00': #f00,
+  ),
+  $flex-grow-values: (
+    '100': 100,
+  ),
+  $gap-sizes: (
+    '100': 100rem,
+  ),
+  $grid-cols-values: (
+    '100': repeat(100, minmax(0, 1fr)),
+  ),
+  $grid-rows-values: (
+    'auto': auto,
+  ),
+  $height-values: (
+    '1em': 1em,
+  ),
+  $inset-values: (
+    '100': 100rem,
+  ),
+  $items-values: (
+    'start': start,
+  ),
+  $justify-content-values: (
+    'start': start,
+  ),
+  $line-height-values: (
+    '10': 10,
+  ),
+  $list-values: (
+    'none': none,
+  ),
+  $margin-breakpoints: (
+    'xl',
+    's',
+  ),
+  $max-height-values: (
+    '1em': 1em,
+  ),
+  $max-width-values: (
+    '1em': 1em,
+  ),
+  $min-height-values: (
+    '1em': 1em,
+  ),
+  $min-width-values: (
+    '1em': 1em,
+  ),
+  $overflow-values: (
+    'overflow': (
+      'hidden': hidden,
+    ),
+  ),
+  $padding-breakpoints: (
+    'xl',
+    's',
+  ),
+  $position-breakpoints: (
+    'l',
+  ),
+  $row-start-values: (
+    '100': 100,
+    '200': 200,
+  ),
+  $self-values: (
+    'start': start,
+  ),
+  $sr-only-breakpoints: (
+    'xl',
+  ),
+  $text-values: (
+    'top': top,
+  ),
+  $text-decoration-values: (
+    'text-decoration-none': none,
+  ),
+  $typography-responsive-utilities-values: (
+    'm': (
+      'h1': (
+        'font-size': 10rem,
+        'line-height': 200,
+      ),
+    ),
+    'xl': (
+      'h1': (
+        'font-size': 30rem,
+        'line-height': 400,
+      ),
+    ),
+  ),
+  $typography-utilities-values: (
+    '100': 100rem,
+  ),
+  $white-space-values: (
+    'normal': normal,
+  ),
+  $width-values: (
+    '0': 0,
+  ),
+  $z-index-values: (
+    '100': 100,
+  )
+);
