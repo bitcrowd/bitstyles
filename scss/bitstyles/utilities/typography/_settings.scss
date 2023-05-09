@@ -5,7 +5,11 @@
 /* stylelint-disable scss/dollar-variable-default */
 $font-sizes: ();
 @each $name, $font-size in typography.$font-sizes {
-  $font-sizes: map.set($font-sizes, $name, var(design-token.get('font-size', $name)));
+  $font-sizes: map.set(
+    $font-sizes,
+    $name,
+    var(design-token.get('font-size', $name))
+  );
 }
 /* stylelint-enable scss/dollar-variable-default */
 

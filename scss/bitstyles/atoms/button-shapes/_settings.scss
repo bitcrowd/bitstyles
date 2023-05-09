@@ -40,8 +40,14 @@ $tab: (
   'border-radius': 0,
 ) !default;
 $square: (
-  'padding-vertical': calc(var(design-token.get('size', 's2')) + var(design-token.get('size', 's7'))),
-  'padding-horizontal': calc(var(design-token.get('size', 's2')) + var(design-token.get('size', 's7'))),
+  'padding-vertical':
+    calc(
+      var(design-token.get('size', 's2')) + var(design-token.get('size', 's7'))
+    ),
+  'padding-horizontal':
+    calc(
+      var(design-token.get('size', 's2')) + var(design-token.get('size', 's7'))
+    ),
 ) !default;
 $round: (
   'border-radius': layout.$border-radius-round,

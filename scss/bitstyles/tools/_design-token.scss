@@ -3,10 +3,7 @@
 @use 'sass:list';
 
 @function get($items...) {
-  $string-items: list.join(
-    (setup.$custom-property-namespace),
-    $items
-  );
+  $string-items: list.join((setup.$custom-property-namespace), $items);
   $custom-property-name: string.join-with-dashes(
     $string-items: $string-items,
   );

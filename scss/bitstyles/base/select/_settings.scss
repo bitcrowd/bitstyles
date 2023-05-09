@@ -13,7 +13,9 @@ $font: inherit !default;
 // Base appearance ////////////////////////////////////////
 $color: var(design-token.get('color', 'grayscale')) !default;
 $border-color: var(design-token.get('color', 'grayscale')) !default;
-$background-color: var(design-token.get('color', 'grayscale', 'white')) !default;
+$background-color: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
 $background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(var(design-token.get('color', 'grayscale', 'light-1')))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
 
 //
@@ -26,7 +28,9 @@ $background-image-hover: url("data:image/svg+xml,%3Csvg width='20' height='20' x
 //
 // Active styles ////////////////////////////////////////
 $color-active: var(design-token.get('color', 'grayscale', 'dark-1')) !default;
-$border-color-active: var(design-token.get('color', 'grayscale', 'dark-1')) !default;
+$border-color-active: var(
+  design-token.get('color', 'grayscale', 'dark-1')
+) !default;
 $background-color-active: transparent !default;
 $background-image-active: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(var(design-token.get('color', 'grayscale', 'light-1')))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
 
@@ -34,12 +38,18 @@ $background-image-active: url("data:image/svg+xml,%3Csvg width='20' height='20' 
 // Invalid styles ////////////////////////////////////////
 $color-invalid: var(design-token.get('color', 'warning')) !default;
 $border-color-invalid: var(design-token.get('color', 'warning')) !default;
-$background-color-invalid: var(design-token.get('color', 'grayscale', 'white')) !default;
+$background-color-invalid: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
 $background-image-invalid: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(var(design-token.get('color', 'warning')))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;
 
 //
 // Disabled styles ////////////////////////////////////////
 $color-disabled: var(design-token.get('color', 'grayscale')) !default;
-$border-color-disabled: var(design-token.get('color', 'grayscale', 'light-2')) !default;
-$background-color-disabled: var(design-token.get('color', 'grayscale', 'light-2')) !default;
+$border-color-disabled: var(
+  design-token.get('color', 'grayscale', 'light-2')
+) !default;
+$background-color-disabled: var(
+  design-token.get('color', 'grayscale', 'light-2')
+) !default;
 $background-image-disabled: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='#{color.url-encode-color(var(design-token.get('color', 'grayscale', 'light-1')))}' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89L49.92 61.91 85.49 26.34a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E") !default;

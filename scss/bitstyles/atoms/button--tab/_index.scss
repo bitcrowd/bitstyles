@@ -6,7 +6,9 @@
 
 #{classname.get($classname-items: 'button--tab-container', $layer: 'atom')} {
   & > *:first-child {
-    margin-left: calc(var(design-token.get('button', 'padding-horizontal')) * -1);
+    margin-left: calc(
+      var(design-token.get('button', 'padding-horizontal')) * -1
+    );
   }
 }
 

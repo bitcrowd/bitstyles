@@ -15,4 +15,6 @@ $box-shadow: shadow.to-box-shadow(
   )
 ) !default;
 $breakpoints: ('m', 'l') !default;
-$header-background-color: var(design-token.get('color', 'grayscale', 'light-2')) !default;
+$header-background-color: var(
+  design-token.get('color', 'grayscale', 'light-2')
+) !default;

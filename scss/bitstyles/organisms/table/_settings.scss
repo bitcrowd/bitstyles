@@ -4,6 +4,8 @@ $border: 1px solid var(design-token.get('color', 'grayscale', 'light-1')) !defau
 $padding-horizontal: var(design-token.get('size', 's1')) !default;
 $padding-vertical-td: var(design-token.get('size', 's3')) !default;
 $padding-vertical-th: var(design-token.get('size', 's6')) !default;
-$background-color-td: var(design-token.get('color', 'grayscale', 'white')) !default;
+$background-color-td: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
 $color-th: var(design-token.get('color', 'grayscale', 'dark-1')) !default;
 $background-color-th: var(design-token.get('color', 'grayscale')) !default;

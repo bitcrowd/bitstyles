@@ -26,6 +26,9 @@ label {
 }
 
 [type='color'] {
-  height: calc(var(design-token.get('line-height', '4')) * 1em + var(design-token.get('size', 's2')));
+  height: calc(
+    var(design-token.get('line-height', '4')) * 1em +
+      var(design-token.get('size', 's2'))
+  );
 }
 /* stylelint-enable selector-max-type */

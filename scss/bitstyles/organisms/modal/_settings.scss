@@ -1,8 +1,13 @@
 @use '../../tools/design-token';
 
 $padding: var(design-token.get('size', 's3')) !default;
-$background-color: var(design-token.get('color', 'grayscale', 'white')) !default;
-$overlay-color: rgba(var(design-token.get('color', 'grayscale', 'white-rgb')), 95%) !default;
+$background-color: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$overlay-color: rgba(
+  var(design-token.get('color', 'grayscale', 'white-rgb')),
+  95%
+) !default;
 $transition-easing: ease-in-out !default;
 $transition-duration: 0.2s !default;
 $transition-duration-smallscreen: 0.25s !default;

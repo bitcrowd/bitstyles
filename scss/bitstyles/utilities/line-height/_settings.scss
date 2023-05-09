@@ -5,7 +5,11 @@
 /* stylelint-disable scss/dollar-variable-default */
 $line-heights: ();
 @each $name, $line-height in typography.$line-heights {
-  $line-heights: map.set($line-heights, $name, var(design-token.get('line-height', $name)));
+  $line-heights: map.set(
+    $line-heights,
+    $name,
+    var(design-token.get('line-height', $name))
+  );
 }
 /* stylelint-enable scss/dollar-variable-default */
 
