@@ -6,8 +6,8 @@
 /* prettier-ignore */
 :export {
   @each $shadow-name, $shadow in shadows-settings.$shadows {
-    #{$shadow-name}-drop: shadows.get($shadow-name, $type: 'drop', $format: 'css');
-    #{$shadow-name}-box: shadows.get($shadow-name, $format: 'css');
+    #{$shadow-name}-drop: shadow.to-drop-shadow($shadow);
+    #{$shadow-name}-box: shadow.to-box-shadow($shadow);
   }
 }
 /* stylelint-enable selector-pseudo-class-no-unknown */

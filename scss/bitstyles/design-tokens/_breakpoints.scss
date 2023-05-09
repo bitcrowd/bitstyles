@@ -1,4 +1,4 @@
-@use '../tools/custom-property';
+@use '../tools/design-token';
 
 $boundary-width: 0.0625em !default;
 $s-m-boundary: 30em !default;
@@ -18,6 +18,6 @@ $breakpoints: (
 
 :root {
   @each $breakpoint-name, $breakpoint in $breakpoints {
-    #{custom-property.get($items: ('breakpoint', $breakpoint-name))}: #{$breakpoint};
+    #{design-token.get('breakpoint', $breakpoint-name)}: #{$breakpoint};
   }
 }
