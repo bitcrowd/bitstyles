@@ -7,9 +7,12 @@
 :root {
   @each $palette-name, $colors in color-palette.$palette {
     @each $color-name, $color in $colors {
+      /* stylelint-disable max-nesting-depth */
       @if $color-name == setup.$default-color-key {
         $color-name: null;
       }
+      /* stylelint-enable max-nesting-depth */
+
       #{design-token.get('color', $palette-name, $color-name)}: #{$color};
       #{design-token.get('color', $palette-name, $color-name, 'rgb')}: #{color.red($color), color.green($color), color.blue($color)};
     }

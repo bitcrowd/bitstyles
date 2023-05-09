@@ -44,7 +44,7 @@
       &[aria-selected='true'],
       &[aria-current] {
         @each $property in button-settings.$allowed-color-properties {
-          #{$property}: var(design-token.get('button#{$variant-name}', 'pressed', $property), $layer: 'atom');
+          #{$property}: var(design-token.get('button#{$variant-name}', 'pressed', $property));
         }
       }
     }

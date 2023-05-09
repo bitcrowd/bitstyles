@@ -3,7 +3,7 @@
 @use './classname';
 @use '../design-tokens/typography';
 @use '../atoms/button/settings';
-@use './custom-property';
+@use './design-token';
 @use './custom-properties';
 
 @mixin colors($colors, $variant-name) {
@@ -20,7 +20,6 @@
       $module-name: (
         $button-name,
       ),
-      $layer: 'atom'
     );
   }
 
@@ -32,7 +31,6 @@
         $button-name,
         'hover',
       ),
-      $layer: 'atom'
     );
   }
 
@@ -44,7 +42,6 @@
         $button-name,
         'active',
       ),
-      $layer: 'atom'
     );
   }
 
@@ -56,7 +53,6 @@
         $button-name,
         'pressed',
       ),
-      $layer: 'atom'
     );
   }
 
@@ -68,7 +64,6 @@
         $button-name,
         'disabled',
       ),
-      $layer: 'atom'
     );
   }
 }
@@ -78,7 +73,6 @@
     $properties: $sizes,
     $allow-list: settings.$allowed-shape-properties,
     $module-name: 'button',
-    $layer: 'atom'
   );
 
   @each $property-name in (settings.$allowed-shape-properties) {
@@ -89,13 +83,13 @@
   }
 
   @if $with-square-variant {
-    $line-height-name: design-token.get('line-height', '5');
-    $min-width-name: design-token.get('button', 'min-width');
-    $min-height-name: design-token.get('button', 'min-height');
+    $line-height-property: design-token.get('line-height', '5');
+    $min-width-property: design-token.get('button', 'min-width');
+    $min-height-property: design-token.get('button', 'min-height');
 
     &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
-      #{$min-width-name}: calc(1em * var(#{$line-height}) + 2 * #{map.get($sizes, 'padding-vertical')});
-      #{$min-height-name}: calc(1em * var(#{$line-height}) + 2 * #{map.get($sizes, 'padding-vertical')});
+      #{$min-width-property}: calc(1em * var(#{$line-height-property}) + 2 * #{map.get($sizes, 'padding-vertical')});
+      #{$min-height-property}: calc(1em * var(#{$line-height-property}) + 2 * #{map.get($sizes, 'padding-vertical')});
 
       @if map.has-key($sizes, 'padding-vertical') {
         #{design-token.get('button', 'padding-horizontal')}: map.get($sizes, 'padding-vertical');

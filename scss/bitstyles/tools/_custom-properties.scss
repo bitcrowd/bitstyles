@@ -11,12 +11,11 @@
 @mixin output-filtered(
   $properties,
   $module-name: (''),
-  $allow-list: (),
-  $layer: null
+  $allow-list: ()
 ) {
   @each $property in $allow-list {
     @if map.has-key($properties, $property) {
-      #{design-token.get(list.append($module-name, $property))}: map.get($properties, $property);
+      #{design-token.get(list.join($module-name, $property))}: map.get($properties, $property);
     }
   }
 }
