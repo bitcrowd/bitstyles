@@ -1153,15 +1153,15 @@ table {
     var(--bs-a-badge-padding-horizontal);
   white-space: nowrap;
 }
-.a-badge__extra {
+.a-badge__prepend {
   margin-bottom: calc(
-    var(--bs-a-badge-extra-spacing) - var(--bs-a-badge-padding-vertical)
+    var(--bs-a-badge-prepend-spacing) - var(--bs-a-badge-padding-vertical)
   );
   margin-left: calc(
-    var(--bs-a-badge-extra-spacing) - var(--bs-a-badge-padding-horizontal)
+    var(--bs-a-badge-prepend-spacing) - var(--bs-a-badge-padding-horizontal)
   );
   margin-top: calc(
-    var(--bs-a-badge-extra-spacing) - var(--bs-a-badge-padding-vertical)
+    var(--bs-a-badge-prepend-spacing) - var(--bs-a-badge-padding-vertical)
   );
 }
 :root,
@@ -1186,20 +1186,20 @@ table {
 .a-badge {
   --bs-a-badge-padding-horizontal: var(--bs-size-l1);
   --bs-a-badge-padding-vertical: var(--bs-size-s6);
-  --bs-a-badge-extra-spacing: 0rem;
+  --bs-a-badge-prepend-spacing: 0rem;
   --bs-a-badge-gap: var(--bs-size-s6);
 }
 @media screen and (min-width: 30em) {
   .a-badge {
     --bs-a-badge-padding-horizontal: var(--bs-size-l1);
     --bs-a-badge-padding-vertical: var(--bs-size-s4);
-    --bs-a-badge-extra-spacing: var(--bs-size-s6);
+    --bs-a-badge-prepend-spacing: var(--bs-size-s6);
     --bs-a-badge-gap: var(--bs-size-s4);
   }
   .a-badge--small {
     --bs-a-badge-padding-horizontal: var(--bs-size-l1);
     --bs-a-badge-padding-vertical: var(--bs-size-s6);
-    --bs-a-badge-extra-spacing: 0rem;
+    --bs-a-badge-prepend-spacing: 0rem;
     --bs-a-badge-gap: var(--bs-size-s6);
   }
 }

@@ -833,16 +833,18 @@ table {
     var(--bscpn-at-badge-padding-horizontal);
   white-space: nowrap;
 }
-.bs-at-badge__extra {
+.bs-at-badge__prepend {
   margin-bottom: calc(
-    var(--bscpn-at-badge-extra-spacing) - var(--bscpn-at-badge-padding-vertical)
+    var(--bscpn-at-badge-prepend-spacing) -
+      var(--bscpn-at-badge-padding-vertical)
   );
   margin-left: calc(
-    var(--bscpn-at-badge-extra-spacing) -
+    var(--bscpn-at-badge-prepend-spacing) -
       var(--bscpn-at-badge-padding-horizontal)
   );
   margin-top: calc(
-    var(--bscpn-at-badge-extra-spacing) - var(--bscpn-at-badge-padding-vertical)
+    var(--bscpn-at-badge-prepend-spacing) -
+      var(--bscpn-at-badge-padding-vertical)
   );
 }
 :root,
@@ -852,20 +854,20 @@ table {
 .bs-at-badge {
   --bscpn-at-badge-padding-horizontal: var(--bscpn-size-l1);
   --bscpn-at-badge-padding-vertical: var(--bscpn-size-s6);
-  --bscpn-at-badge-extra-spacing: 0rem;
+  --bscpn-at-badge-prepend-spacing: 0rem;
   --bscpn-at-badge-gap: var(--bscpn-size-s6);
 }
 @media screen and (min-width: 30em) {
   .bs-at-badge {
     --bscpn-at-badge-padding-horizontal: var(--bscpn-size-l1);
     --bscpn-at-badge-padding-vertical: var(--bscpn-size-s4);
-    --bscpn-at-badge-extra-spacing: var(--bscpn-size-s6);
+    --bscpn-at-badge-prepend-spacing: var(--bscpn-size-s6);
     --bscpn-at-badge-gap: var(--bscpn-size-s4);
   }
   .bs-at-badge--small {
     --bscpn-at-badge-padding-horizontal: var(--bscpn-size-l1);
     --bscpn-at-badge-padding-vertical: var(--bscpn-size-s6);
-    --bscpn-at-badge-extra-spacing: 0rem;
+    --bscpn-at-badge-prepend-spacing: 0rem;
     --bscpn-at-badge-gap: var(--bscpn-size-s6);
   }
 }
