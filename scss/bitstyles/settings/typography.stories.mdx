@@ -248,7 +248,7 @@ You can specify the font-sizes and names for each of your base font-size design 
 
 #### Responsive font-sizes
 
-By overriding `$bitstyles-typography-responsive-font-sizes`, you can specify which font-sizes and line-heights are applied to which HTML elements (in [`base/typography`](/docs/base-typography-responsive-headings--h-1)) and responsive-typography utility classes (in [`utilities/typography-responsive`](/docs/utilities-typography-responsive--typography)), and at which breakpoints.
+By overriding `$typographic-scale`, you can specify which font-sizes and line-heights are applied to which HTML elements (in [`base/typography`](/docs/base-typography-responsive-headings--h-1)) and responsive-typography utility classes (in [`utilities/typography-responsive`](/docs/utilities-typography-responsive--typography)), and at which breakpoints.
 
 Using a mobile-first approach, the first Sass map of font-sizes shown below apply for all screensizes, until overridden at the `m` breakpoint (see [breakpoints](/docs/design-tokens-breakpoints--page)). You can provide font-size maps at every breakpoint available in your base breakpoints if you wish.
 
@@ -258,38 +258,38 @@ We’re using the global `setup.$no-media-query` to provide font-sizes that appl
 @use 'bitstyles/settings/setup';
 @use 'bitstyles/tools/font-size';
 @use 'bitstyles/settings/typography-responsive' with (
-$typographic-scale: (
-  '#{setup.$no-media-query}': (
-    'h1': (
-      'font-size': font-size.get('6'),
-      'line-height': line-height.get('1'),
+  $typographic-scale: (
+    '#{setup.$no-media-query}': (
+      'h1': (
+        'font-size': font-size.get('6'),
+        'line-height': line-height.get('1'),
+      ),
+      'h2': (
+        'font-size': font-size.get('5'),
+        'line-height': line-height.get('2'),
+      ),
+      'h3': (
+        'font-size': font-size.get('4'),
+        'line-height': line-height.get('3'),
+      ),
+      // ...
     ),
-    'h2': (
-      'font-size': font-size.get('5'),
-      'line-height': line-height.get('2'),
+    'm': (
+      'h1': (
+        'font-size': font-size.get('8'),
+        'line-height': line-height.get('1'),
+      ),
+      'h2': (
+        'font-size': font-size.get('7'),
+        'line-height': line-height.get('2'),
+      ),
+      'h3': (
+        'font-size': font-size.get('6'),
+        'line-height': line-height.get('3'),
+      ),
+      // ...
     ),
-    'h3': (
-      'font-size': font-size.get('4'),
-      'line-height': line-height.get('3'),
-    ),
-    // ...
-  ),
-  'm': (
-    'h1': (
-      'font-size': font-size.get('8'),
-      'line-height': line-height.get('1'),
-    ),
-    'h2': (
-      'font-size': font-size.get('7'),
-      'line-height': line-height.get('2'),
-    ),
-    'h3': (
-      'font-size': font-size.get('6'),
-      'line-height': line-height.get('3'),
-    ),
-    // ...
-  ),
-);
+  )
 );
 ```
 
