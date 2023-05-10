@@ -22,7 +22,7 @@ $padding-vertical-property: custom-property.get($items: ('badge', 'padding-verti
 $gap-property: custom-property.get($items: ('badge', 'gap'), $layer: 'atom');
 
 /* prettier-ignore */
-$extra-spacing-property: custom-property.get($items: ('badge', 'extra', 'spacing'), $layer: 'atom');
+$prepend-spacing-property: custom-property.get($items: ('badge', 'prepend', 'spacing'), $layer: 'atom');
 
 /* prettier-ignore */
 $shadow-property: custom-property.get($items: ('badge', 'shadow'), $layer: 'atom');
@@ -40,10 +40,10 @@ $shadow-property: custom-property.get($items: ('badge', 'shadow'), $layer: 'atom
 }
 
 /* prettier-ignore */
-#{classname.get($classname-items: 'badge__extra', $layer: 'atom')} {
-  margin-top: calc(var(#{$extra-spacing-property}) - var(#{$padding-vertical-property}));
-  margin-bottom: calc(var(#{$extra-spacing-property}) - var(#{$padding-vertical-property}));
-  margin-left: calc(var(#{$extra-spacing-property}) - var(#{$padding-horizontal-property}));
+#{classname.get($classname-items: 'badge__prepend', $layer: 'atom')} {
+  margin-top: calc(var(#{$prepend-spacing-property}) - var(#{$padding-vertical-property}));
+  margin-bottom: calc(var(#{$prepend-spacing-property}) - var(#{$padding-vertical-property}));
+  margin-left: calc(var(#{$prepend-spacing-property}) - var(#{$padding-horizontal-property}));
 }
 
 /* Theme variants */
@@ -74,8 +74,8 @@ $shadow-property: custom-property.get($items: ('badge', 'shadow'), $layer: 'atom
         @if map.has-key($size-variant, 'padding-vertical') {
           #{$padding-vertical-property}: map.get($size-variant, 'padding-vertical');
         }
-        @if map.has-key($size-variant, 'extra-spacing') {
-          #{$extra-spacing-property}: #{map.get($size-variant, 'extra-spacing')};
+        @if map.has-key($size-variant, 'prepend-spacing') {
+          #{$prepend-spacing-property}: #{map.get($size-variant, 'prepend-spacing')};
         }
         @if map.has-key($size-variant, 'gap') {
           #{$gap-property}: map.get($size-variant, 'gap');

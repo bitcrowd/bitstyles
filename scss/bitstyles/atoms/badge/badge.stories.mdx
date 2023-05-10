@@ -46,9 +46,9 @@ Size variants:
 
 All badges are displayed as `small` badges on small screens.
 
-## “Extra” area
+## “prepend” area
 
-You may want the badges to be removable, for example when used as part of a filter interface. Or perhaps your badges need icons nestled in the curve. You can add a button, icon, or any other content to the left-hand edge of a badge by using the `.a-badge__extra` class:
+You may want the badges to be removable, for example when used as part of a filter interface. Or perhaps your badges need icons nestled in the curve. You can add a button, icon, or any other content to the left-hand edge of a badge by using the `.a-badge__prepend` class:
 
 <Canvas>
   <Story id="atoms-badge--base-button" />
@@ -102,7 +102,7 @@ To configure your size variants override the `$size-variants` variable, with eac
         'padding-vertical': size.get('s6'),
         'padding-horizontal': size.get('l1'),
         'gap': size.get('s6'),
-        'extra-spacing': 0rem,
+        'prepend-spacing': 0rem,
       ),
     ),
     'l': (
@@ -110,13 +110,13 @@ To configure your size variants override the `$size-variants` variable, with eac
         'padding-vertical': size.get('s4'),
         'padding-horizontal': size.get('l3'),
         'gap': size.get('s1'),
-        'extra-spacing': size.get('s4'),
+        'prepend-spacing': size.get('s4'),
       ),
       'small': (
         'padding-vertical': size.get('s7'),
         'padding-horizontal': size.get('s7'),
         'gap': size.get('s6'),
-        'extra-spacing': 0rem,
+        'prepend-spacing': 0rem,
       ),
     ),
   )
@@ -125,9 +125,9 @@ To configure your size variants override the `$size-variants` variable, with eac
 
 The size-related properties available for configuration are:
 
-| Property name        | Description                                                                                 |
-| -------------------- | ------------------------------------------------------------------------------------------- |
-| `padding-vertical`   | `padding-top` and `padding-bottom` properties                                               |
-| `padding-horizontal` | `padding-left` and `padding-right` properties                                               |
-| `gap`                | The gap between the text label of the badge and any `extra` content (like a button or icon) |
-| `extra-spacing`      | The spacing from the edge of the extra content and the edge of the badge                    |
+| Property name        | Description                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| `padding-vertical`   | `padding-top` and `padding-bottom` properties                                                 |
+| `padding-horizontal` | `padding-left` and `padding-right` properties                                                 |
+| `gap`                | The gap between the text label of the badge and any `prepend` content (like a button or icon) |
+| `prepend-spacing`    | The spacing from the edge of the prepend content and the edge of the badge                    |

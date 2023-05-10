@@ -18,7 +18,7 @@ export default ({
         shapeVariant: ['x-small', 'square', 'round'],
         children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
         onClick,
-        classname: ['a-badge__extra'],
+        classname: ['a-badge__prepend'],
       })
     );
   }
