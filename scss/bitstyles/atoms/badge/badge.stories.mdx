@@ -1,117 +1,133 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import Badge from './Badge';
 import icons from '../../../../assets/images/icons.svg';
 
-<Meta title="Atoms/Badge" />
+<Meta title="Atoms/Badge/Overview" component={Badge} />
+
+<Canvas>
+  <Story id="atoms-badge--base" />
+  <Story id="atoms-badge--brand-1" />
+  <Story id="atoms-badge--brand-2" />
+  <Story id="atoms-badge--danger" />
+  <Story id="atoms-badge--warning" />
+  <Story id="atoms-badge--positive" />
+</Canvas>
+
+<Canvas>
+  <Story id="atoms-badge--base-small" />
+  <Story id="atoms-badge--brand-1-small" />
+  <Story id="atoms-badge--brand-2-small" />
+  <Story id="atoms-badge--danger-small" />
+  <Story id="atoms-badge--warning-small" />
+  <Story id="atoms-badge--positive-small" />
+</Canvas>
 
 # Badge
 
 Display tags, filters, or categorization.
 
+## Variants
+
+Badges are available in a range of color variations, and two size variations (when using the default configuration — see [Customization](#customization) below for details on how to change that).
+
+Color variants:
+
+- grayscale (default)
+- brand-1
+- brand-2
+- danger
+- warning
+- positive
+
+Size variants:
+
+- base (default)
+- small
+
+All badges are displayed as `small` badges on small screens.
+
+## “prepend” area
+
+You may want the badges to be removable, for example when used as part of a filter interface. Or perhaps your badges need icons nestled in the curve. You can add a button, icon, or any other content to the left-hand edge of a badge by using the `.a-badge__prepend` class:
+
 <Canvas>
-  <Story name="Badge">
-    {`
-      <span class="a-badge a-badge--grayscale u-h6 u-font-medium">Urgent</span>
-      <span class="a-badge a-badge--grayscale u-h6 u-font-medium">In progress</span>
-    `}
-  </Story>
+  <Story id="atoms-badge--base-button" />
+  <Story id="atoms-badge--brand-1-button" />
+  <Story id="atoms-badge--brand-2-button" />
+  <Story id="atoms-badge--danger-button" />
+  <Story id="atoms-badge--warning-button" />
+  <Story id="atoms-badge--positive-button" />
 </Canvas>
 
-By default `gray`, `brand-1`, `brand-2`, and `danger` colors are available (see [Customization](#customization) section below). Here, they’re displayed in a list (there are often multiple tags or filters so this is very common).
-
 <Canvas>
-  <Story name="Badge — color variants">
-    {`
-      <ul class="u-list-none u-flex">
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--grayscale u-h6 u-font-medium">gray</span>
-        </li>
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--brand-1 u-h6 u-font-medium">brand-1</span>
-        </li>
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--brand-2 u-h6 u-font-medium">brand-2</span>
-        </li>
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--danger u-h6 u-font-medium">danger</span>
-        </li>
-      </ul>
-    `}
-  </Story>
-</Canvas>
-
-You may want the badges to be removable, for example when used as part of a filter interface. You can add a button to do that (be sure to provide text for users’ AT):
-
-<Canvas>
-  <Story name="Badge — with buttons">
-    {`
-      <ul class="u-list-none u-flex">
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--grayscale u-h6 u-font-medium">
-            badge 1
-            <button class="a-button a-button--square a-button--round a-button--secondary a-button--small a-badge__button" type="button">
-              <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
-                <use xlink:href="${icons}#icon-cross"></use>
-              </svg>
-              <span class="u-sr-only">Remove</span>
-            </button>
-          </span>
-        </li>
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--brand-1 u-h6 u-font-medium">
-            badge 2
-            <button class="a-button a-button--square a-button--round a-button--secondary a-button--small a-badge__button" type="button">
-              <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
-                <use xlink:href="${icons}#icon-cross"></use>
-              </svg>
-              <span class="u-sr-only">Remove</span>
-            </button>
-          </span>
-        </li>
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--brand-2 u-h6 u-font-medium">
-            badge 2
-            <button class="a-button a-button--square a-button--round a-button--secondary a-button--small a-badge__button" type="button">
-              <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
-                <use xlink:href="${icons}#icon-cross"></use>
-              </svg>
-              <span class="u-sr-only">Remove</span>
-            </button>
-          </span>
-        </li>
-        <li class="u-margin-s2-right">
-          <span class="a-badge a-badge--danger u-h6 u-font-medium">
-            badge 2
-            <button class="a-button a-button--square a-button--round a-button--secondary a-button--small a-badge__button" type="button">
-              <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false">
-                <use xlink:href="${icons}#icon-cross"></use>
-              </svg>
-              <span class="u-sr-only">Remove</span>
-            </button>
-          </span>
-        </li>
-      </ul>
-    `}
-  </Story>
+  <Story id="atoms-badge--base-button-small" />
+  <Story id="atoms-badge--brand-1-button-small" />
+  <Story id="atoms-badge--brand-2-button-small" />
+  <Story id="atoms-badge--danger-button-small" />
+  <Story id="atoms-badge--warning-button-small" />
+  <Story id="atoms-badge--positive-button-small" />
 </Canvas>
 
 ## Customization
 
-The available variants can be specified with `$bitstyles-badge-variants`, where the strings you pass must match colors in your color palette:
+### Color variants
+
+Badges use the theming system for their color & background-color properties — take a look at [themes](/docs/design-tokens-themes--page) for details on how to customize your themes.
+
+The custom buttons that are available in each badge are implemented in the Button component — they’re component-level additions to each theme, just for the default button color-variant. See the [Button component](/docs/atoms-button-colors--page) for details on how to customize their appearance.
+
+The badge shadows are component-level additions to the theme, which can be specified with `$theme-variants`. Pass the name of the variant and a Sass map for each variant:
 
 ```scss
-$variants: ('grayscale', 'danger', 'brand-1', 'brand-2', 'positive');
+@use '~bitstyles/scss/bitstyles/tools/shadows';
+@use '~bitstyles/scss/bitstyles/atoms/badge' with (
+  $theme-variants: (
+    'theme-name': (
+      'shadow': shadows.get('brand-2'),
+    ),
+  )
+);
 ```
 
-The keys from those colors that will be used are specified with the `$bitstyles-badge-color` and `$bitstyles-badge-background-color`, and are applied to all variants. With the following settings, the `gray` variant will have color `gray` value `80`, with background color `gray` value `10`. The `danger` variant will have color `danger` with value `80` and background-color `danger` at value `10` etc.
+### Size variants
+
+To configure your size variants override the `$size-variants` variable, with each breakpoint (use `setup.$no-media-query` for the mobile-first base styles) at the root, containing a size-variant name and Sass map with the sizing properties:
 
 ```scss
-$color: '80';
-$background-color: '10';
+@use '~bitstyles/scss/bitstyles/tools/size';
+@use '~bitstyles/scss/bitstyles/atoms/badge' with (
+  $size-variants: (
+    '#{setup.$no-media-query}': (
+      '': (
+        'padding-vertical': size.get('s6'),
+        'padding-horizontal': size.get('l1'),
+        'gap': size.get('s6'),
+        'prepend-spacing': 0rem,
+      ),
+    ),
+    'l': (
+      '': (
+        'padding-vertical': size.get('s4'),
+        'padding-horizontal': size.get('l3'),
+        'gap': size.get('s1'),
+        'prepend-spacing': size.get('s4'),
+      ),
+      'small': (
+        'padding-vertical': size.get('s7'),
+        'padding-horizontal': size.get('s7'),
+        'gap': size.get('s6'),
+        'prepend-spacing': 0rem,
+      ),
+    ),
+  )
+);
 ```
 
-Padding can be specified with `$bitstyles-badge-padding-horizontal` and ``$bitstyles-badge-padding-vertical`:
+The size-related properties available for configuration are:
 
-```scss
-$padding-vertical: size.get('s6');
-$padding-horizontal: size.get('m');
-```
+| Property name        | Description                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| `padding-vertical`   | `padding-top` and `padding-bottom` properties                                                 |
+| `padding-horizontal` | `padding-left` and `padding-right` properties                                                 |
+| `gap`                | The gap between the text label of the badge and any `prepend` content (like a button or icon) |
+| `prepend-spacing`    | The spacing from the edge of the prepend content and the edge of the badge                    |

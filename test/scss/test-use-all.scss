@@ -68,7 +68,12 @@
     'dark': (
       'background': var(--bscpn-color-brand-1-dark-3),
       'text': var(--bscpn-color-brand-2-light-3),
-    )
+    ),
+    'brand-1': (),
+    'brand-2': (),
+    'danger': (),
+    'warning': (),
+    'positive': ()
   ),
   $typography-webfont-family-name: 'FakeFont',
   $typography-webfont-base-url: './',
@@ -98,7 +103,11 @@
   $base-typography-margin-paragraph: 10rem,
   // atoms
   $avatar-sizes: ('xl': 10rem),
-  $badge-color: 'light-1',
+  $badge-theme-variants: (
+    'default': (
+      'shadow': none,
+    )
+  ),
   $bordered-header-gutter: 10rem,
   $button-transition: none,
   $button-colors-default: (

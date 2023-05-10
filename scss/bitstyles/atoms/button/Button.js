@@ -1,22 +1,4 @@
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function generateLabel(
-  shapeVariant,
-  colorVariant,
-  disabled = false,
-  pressed = false
-) {
-  return capitalizeFirstLetter(
-    [
-      shapeVariant.length === 0 ? 'Default' : shapeVariant.join(' '),
-      colorVariant.length === 0 ? 'Primary' : colorVariant.join(' '),
-      disabled ? 'disabled' : null,
-      pressed ? 'pressed' : null,
-    ].join(' ')
-  );
-}
+import { generateLabel } from '../../../../.storybook/helpers';
 
 export default ({
   children,
@@ -28,6 +10,8 @@ export default ({
   ariaSelected = false,
   disabled = false,
   element = 'button',
+  onClick = null,
+  classname = [],
 }) => {
   const button = document.createElement(element);
   button.innerHTML =
@@ -45,11 +29,15 @@ export default ({
   shapeVariant.forEach((variant) => {
     button.classList.add(`a-button--${variant}`);
   });
+  classname.forEach((cls) => {
+    button.classList.add(cls);
+  });
   if (element === 'button') button.type = 'button';
   if (ariaPressed) button.setAttribute('aria-pressed', ariaPressed);
   if (ariaDisabled) button.setAttribute('aria-disabled', ariaDisabled);
   if (ariaCurrent) button.setAttribute('aria-current', ariaCurrent);
   if (ariaSelected) button.setAttribute('aria-selected', ariaSelected);
   if (disabled) button.setAttribute('disabled', disabled);
+  if (typeof onClick === 'function') button.addEventListener('click', onClick);
   return button;
 };

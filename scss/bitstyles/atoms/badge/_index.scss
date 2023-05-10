@@ -3,41 +3,85 @@
 @use '../../settings/layout';
 @use '../../tools/classname';
 @use '../../tools/custom-property';
+@use '../../tools/media-query';
 @use '../../tools/palette';
+@use '../../tools/properties';
 @use '../../tools/size';
+@use '../../tools/themes';
+@use 'sass:map';
+
+/* stylelint-disable scss/dollar-variable-default */
+
+/* prettier-ignore */
+$padding-horizontal-property: custom-property.get($items: ('badge', 'padding-horizontal'), $layer: 'atom');
+
+/* prettier-ignore */
+$padding-vertical-property: custom-property.get($items: ('badge', 'padding-vertical'),  $layer: 'atom');
+
+/* prettier-ignore */
+$gap-property: custom-property.get($items: ('badge', 'gap'), $layer: 'atom');
+
+/* prettier-ignore */
+$prepend-spacing-property: custom-property.get($items: ('badge', 'prepend', 'spacing'), $layer: 'atom');
+
+/* prettier-ignore */
+$shadow-property: custom-property.get($items: ('badge', 'shadow'), $layer: 'atom');
+/* stylelint-enable scss/dollar-variable-default */
 
 #{classname.get($classname-items: 'badge', $layer: 'atom')} {
   display: inline-flex;
   align-items: center;
-  padding: settings.$padding-vertical settings.$padding-horizontal;
+  padding: var(#{$padding-vertical-property})
+    var(#{$padding-horizontal-property});
+  gap: var(#{$gap-property});
   border-radius: layout.$border-radius-round;
+  box-shadow: var(#{$shadow-property});
   white-space: nowrap;
+}
 
-  #{classname.get($classname-items: 'badge__button', $layer: 'atom')} {
-    margin-right: calc(#{size.get('s2')} * -1);
-    margin-left: size.get('s4');
+/* prettier-ignore */
+#{classname.get($classname-items: 'badge__prepend', $layer: 'atom')} {
+  margin-top: calc(var(#{$prepend-spacing-property}) - var(#{$padding-vertical-property}));
+  margin-bottom: calc(var(#{$prepend-spacing-property}) - var(#{$padding-vertical-property}));
+  margin-left: calc(var(#{$prepend-spacing-property}) - var(#{$padding-horizontal-property}));
+}
+
+/* Theme variants */
+
+@each $theme-name, $theme in settings.$theme-variants {
+  @include themes.get($theme-name) {
+    #{$shadow-property}: map.get($theme, 'shadow');
   }
 }
 
-@each $variant in (settings.$variants) {
-  #{classname.get($classname-items: 'badge--#{$variant}', $layer: 'atom')} {
-    #{custom-property.get($items: ('button', 'color'), $layer: 'atom')}: #{palette.get(
-        $variant,
-        settings.$color
-      )};
-    #{custom-property.get($items: ('button', 'background-color'), $layer: 'atom')}: #{palette.get(
-        $variant,
-        settings.$background-color
-      )};
-    #{custom-property.get($items: ('button', 'color', 'hover'), $layer: 'atom')}: #{palette.get(
-        $variant,
-        settings.$background-color
-      )};
-    #{custom-property.get($items: ('button', 'background-color', 'hover'), $layer: 'atom')}: #{palette.get(
-        $variant,
-        settings.$color
-      )};
-    background-color: palette.get($variant, settings.$background-color);
-    color: palette.get($variant, settings.$color);
+/* Size variants */
+
+/* prettier-ignore */
+@each $breakpoint, $size-variants in settings.$size-variants {
+  @include media-query.get($breakpoint) {
+    @each $size-variant-name, $size-variant in ($size-variants) {
+      $class: '';
+      @if $size-variant-name == '' {
+        $class: 'badge';
+      } @else {
+        $class: 'badge--#{$size-variant-name}';
+      }
+      #{classname.get($classname-items: $class, $layer: 'atom')} {
+        /* stylelint-disable max-nesting-depth */
+        @if map.has-key($size-variant, 'padding-horizontal') {
+          #{$padding-horizontal-property}: map.get($size-variant, 'padding-horizontal');
+        }
+        @if map.has-key($size-variant, 'padding-vertical') {
+          #{$padding-vertical-property}: map.get($size-variant, 'padding-vertical');
+        }
+        @if map.has-key($size-variant, 'prepend-spacing') {
+          #{$prepend-spacing-property}: #{map.get($size-variant, 'prepend-spacing')};
+        }
+        @if map.has-key($size-variant, 'gap') {
+          #{$gap-property}: map.get($size-variant, 'gap');
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+    }
   }
 }

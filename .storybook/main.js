@@ -20,7 +20,6 @@ module.exports = {
       name: '@storybook/addon-essentials',
       options: {
         actions: false,
-        controls: false,
       },
     },
     'storybook-zeplin/register',

@@ -1,7 +1,51 @@
+@use '../../settings/setup';
+@use '../../tools/palette';
 @use '../../tools/size';
+@use '../../tools/shadows';
 
-$padding-vertical: size.get('s6') !default;
-$padding-horizontal: size.get('s1') !default;
-$color: 'dark-1' !default;
-$background-color: 'light-2' !default;
-$variants: ('grayscale', 'danger', 'brand-1', 'brand-2', 'positive') !default;
+/* stylelint-disable length-zero-no-unit */
+$size-variants: (
+  '#{setup.$no-media-query}': (
+    '': (
+      'padding-vertical': size.get('s6'),
+      'padding-horizontal': size.get('l1'),
+      'gap': size.get('s6'),
+      'prepend-spacing': 0rem,
+    ),
+  ),
+  'm': (
+    '': (
+      'padding-vertical': size.get('s4'),
+      'padding-horizontal': size.get('l1'),
+      'gap': size.get('s4'),
+      'prepend-spacing': size.get('s6'),
+    ),
+    'small': (
+      'padding-vertical': size.get('s6'),
+      'padding-horizontal': size.get('l1'),
+      'gap': size.get('s6'),
+      'prepend-spacing': 0rem,
+    ),
+  ),
+) !default;
+/* stylelint-enable length-zero-no-unit */
+$theme-variants: (
+  'default': (
+    'shadow': shadows.get('gray'),
+  ),
+  'brand-1': (
+    'shadow': shadows.get('brand-1'),
+  ),
+  'brand-2': (
+    'shadow': shadows.get('brand-2'),
+  ),
+  'positive': (
+    'shadow': shadows.get('positive'),
+  ),
+  'warning': (
+    'shadow': shadows.get('warning'),
+  ),
+  'danger': (
+    'shadow': shadows.get('danger'),
+  ),
+) !default;

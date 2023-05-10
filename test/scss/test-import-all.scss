@@ -78,6 +78,11 @@ $bitstyles-themes-themes: (
     'background': var(--bscpn-color-brand-1-dark-3),
     'text': var(--bscpn-color-brand-2-light-3),
   ),
+  'brand-1': (),
+  'brand-2': (),
+  'danger': (),
+  'warning': (),
+  'positive': (),
 );
 $bitstyles-typography-webfont-family-name: 'FakeFont';
 $bitstyles-typography-webfont-base-url: './';
@@ -115,7 +120,11 @@ $bitstyles-base-typography-margin-paragraph: 10rem;
 $bitstyles-avatar-sizes: (
   'xl': 10rem,
 );
-$bitstyles-badge-color: 'light-1';
+$bitstyles-badge-theme-variants: (
+  'default': (
+    'shadow': none,
+  ),
+);
 $bitstyles-bordered-header-gutter: 10rem;
 $bitstyles-button-transition: none;
 $bitstyles-button-colors-default: (

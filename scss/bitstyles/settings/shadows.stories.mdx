@@ -1,34 +1,48 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Design Tokens/Shadows" />
+<Meta title="Design Tokens/Shadows/Overview" />
 
 # Shadows
 
-Bitstyles provides a global list of shadow specifications, to maintain consistency of shadows throughout your components. The shadows are specified in a Sass list so they can be translated to various formats as needed — the order of parameters for CSS `box-shadow` is different to the CSS filter `drop-shadow()`. We need to be able to translate to either of those formats.
+Bitstyles provides a global list of shadow design tokens, to maintain consistency of shadows throughout your components. The shadows are specified in a Sass list so they can be translated to various formats as needed — the order of parameters for CSS `box-shadow` is different to the CSS filter `drop-shadow()`. We need to be able to translate to either of those formats.
 
-The default shadows used throughout bitstyles are multi-layered to create a more natural or realistic appearance than you get from a single box-shadow or filter. We provide a generator function that you can use to produce “natural” multi-layered shadows in the correct format for our Sass design system, and functions to translate those to useful formats.
+The default shadows used throughout bitstyles are multi-layered to create a more natural or realistic appearance than you get from a single box-shadow or filter. We provide a generator function that you can use to produce your own natural-looking multi-layered shadows in the common format we use, and functions to translate those to the box-shadow and drop-shadow formats.
 
 ## Generating shadows
 
-The simplest way to override the global shadow design tokens in `$bitstyles-shadows-shadows` is to use `shadow.generate()`:
+Use `shadow.generate()` to override the global shadow design tokens in `$shadows`:
 
 ```scss
+@use '../tools/palette';
 @use '../tools/shadow';
+@use '../tools/size';
 
-$bitstyles-shadows-shadows: (
-  'default': shadow.generate(
-      $color: rgba(palette.get('brand-1', 'base-rgb'), 0.15),
-      $offset: 2rem,
-      $blur-radius: 2rem,
-    ),
+@use '~bitstyles/scss/bitstyles/settings/shadows' with (
+  $shadows: (
+    'brand-1': shadow.generate($color: rgba(palette.get('brand-1', 'base-rgb'), 0.15), $offset:
+          size.get('s7'), $blur-radius: size.get('s4')),
+  )
 );
 ```
 
 This creates a specification for a multi-layered shadow using the `brand-1` color with a `2rem` blur, offset `2rem` downwards, which looks like the following examples.
 
 <Canvas>
-  <Story id="utilities-shadow--u-shadow-default" />
-  <Story id="utilities-drop-shadow--u-drop-shadow-default" />
+  <Story id="utilities-shadow--brand-1" />
+  <Story id="utilities-drop-shadow--brand-1" />
+</Canvas>
+
+Default configuration provides the following shadows (drop-shadow versions shown here):
+
+<Canvas>
+  <Story id="design-tokens-shadows--brand-1" />
+  <Story id="design-tokens-shadows--brand-1-center" />
+  <Story id="design-tokens-shadows--brand-2" />
+  <Story id="design-tokens-shadows--gray" />
+  <Story id="design-tokens-shadows--gray-center" />
+  <Story id="design-tokens-shadows--positive" />
+  <Story id="design-tokens-shadows--warning" />
+  <Story id="design-tokens-shadows--danger" />
 </Canvas>
 
 ### Parameters
@@ -42,51 +56,57 @@ This creates a specification for a multi-layered shadow using the `brand-1` colo
 
 ## Using shadows
 
-The accessor function `shadows.get()` is the most straightfoward way to use shadows stored in this format. Specify the name of the shadow and the output format you need (these examples are taken from the settings files for `box-shadow` and `drop-shadow` utility classes, each of which uses a different format):
+The getter function `shadows.get()` is the most straightforward way to use shadows stored in this format. Specify the name of the shadow and the output format you need. You can use this when configuring the `box-shadow` and `drop-shadow` utility classes, and when using it in your own components. The examples here are for the utility classes:
 
 ```scss
 @use '../../tools/shadows';
-
-$bitstyles-box-shadow-values: (
-  'default': shadows.get('default', 'box'),
+@use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
+  $values: (
+    'brand-1': shadows.get('brand-1', 'box'),
+  )
 );
 
 /*
 
-box-shadow:
-  0 0.5rem 0.5rem rgba(0, 13, 255, 0.15),
-  0 0.6666666667rem 0.6666666667rem rgba(0, 13, 255, 0.15),
-  0 1rem 1rem rgba(0, 13, 255, 0.15),
-  0 2rem 2rem rgba(0, 13, 255, 0.15);
+.u-shadow-brand-1 {
+  box-shadow: var(--bs-shadow-brand-1-box);
+}
 
 */
 
-$bitstyles-drop-shadow-values: (
-  'default': shadows.get('default', 'drop'),
+@use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (
+  $values: (
+    'brand-1': shadows.get('brand-1', 'drop'),
+  )
 );
 
 /*
 
-filter:
-  drop-shadow(rgba(0, 13, 255, 0.15) 0 0.5rem 0.5rem)
-  drop-shadow(rgba(0, 13, 255, 0.15) 0 0.6666666667rem 0.6666666667rem)
-  drop-shadow(rgba(0, 13, 255, 0.15) 0 1rem 1rem)
-  drop-shadow(rgba(0, 13, 255, 0.15) 0 2rem 2rem);
+.u-drop-shadow-brand-1 {
+  filter: var(--bs-shadow-brand-1-drop);
+}
 
 */
 ```
 
 ## Using the shadows in CSS
 
-The shadow definitions are also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
+The shadow definitions are available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page) for details on how to change that. Each is suffixed with the format (one of `box` and `drop`):
 
 ```css
---bs-shadow-default: drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem) drop-shadow(
-    rgba(200, 191, 255, 0.125) 0 0.6666666667rem 0.6666666667rem
-  )
-  drop-shadow(rgba(200, 191, 255, 0.125) 0 1rem 1rem) drop-shadow(
-    rgba(200, 191, 255, 0.125) 0 2rem 2rem
-  );
+/* prettier-ignore */
+--bs-shadow-brand-1-drop:
+  drop-shadow(rgba(31,0,230,0.075) 0 calc(0.25rem/4) calc(0.625rem/4))
+  drop-shadow(rgba(31,0,230,0.075) 0 calc(0.25rem/3) calc(0.625rem/3))
+  drop-shadow(rgba(31,0,230,0.075) 0 calc(0.25rem/2) calc(0.625rem/2))
+  drop-shadow(rgba(31,0,230,0.075) 0 calc(0.25rem/1) calc(0.625rem/1));
+
+/* prettier-ignore */
+--bs-shadow-brand-1-box:
+  0 calc(0.25rem/4) calc(0.625rem/4) rgba(31,0,230,0.075),
+  0 calc(0.25rem/3) calc(0.625rem/3) rgba(31,0,230,0.075),
+  0 calc(0.25rem/2) calc(0.625rem/2) rgba(31,0,230,0.075),
+  0 calc(0.25rem/1) calc(0.625rem/1) rgba(31,0,230,0.075);
 ```
 
 ## Using shadow design tokens in JS
@@ -96,7 +116,7 @@ The shadow design tokens can be imported and used in JS:
 ```js
 import shadows from '../exports/_shadows.scss';
 
-console.log(shadows['default']); // 'drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 0.6666666667rem 0.6666666667rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 1rem 1rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 2rem 2rem)'
+console.log(shadows['brand-1']); // 'drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 0.6666666667rem 0.6666666667rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 1rem 1rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 2rem 2rem)'
 ```
 
 ### Using local shadows
@@ -108,24 +128,30 @@ For example, take the two shadows overriding the `box-shadow` and `drop-shadow` 
 ```scss
 @use '../../tools/shadow';
 
-$bitstyles-box-shadow-values: (
-  'default': shadow.to-box-shadow(
-      shadow.generate(
-        $color: rgba(palette.get('brand-1', 'base-rgb'), 0.15),
-        $offset: 2rem,
-        $blur-radius: 2rem,
-      )
-    ),
+/* prettier-ignore */
+@use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
+  $values: (
+    'brand-1': shadow.to-box-shadow(
+        shadow.generate(
+          $color: rgba(palette.get('brand-1', 'base-rgb'), 0.15),
+          $offset: 2rem,
+          $blur-radius: 2rem,
+        )
+      ),
+  )
 );
 
-$bitstyles-drop-shadow-values: (
-  'default': shadow.to-drop-shadow(
+/* prettier-ignore */
+@use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (
+  $values: (
+    'brand-1': shadow.to-drop-shadow(
       shadow.generate(
         $color: rgba(palette.get('brand-1', 'base-rgb'), 0.15),
         $offset: 2rem,
         $blur-radius: 2rem,
       )
     ),
+  ),
 );
 ```
 

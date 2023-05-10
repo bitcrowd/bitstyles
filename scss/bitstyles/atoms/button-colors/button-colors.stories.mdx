@@ -138,7 +138,7 @@ $secondary: (
   $variants: (
     '': $default,
     '--secondary': $secondary,
-    // other created variants can be passed here
+    // pass other created variants here
   )
 );
 ```
@@ -164,6 +164,36 @@ $custom-button: (
 @use '~bitstyles/scss/bitstyles/atoms/button-colors' with (
   $variants: (
     '--custom-button': $custom-button,
+  )
+);
+```
+
+### Theming color variants
+
+Each color variant must provide a set of colors for the default theme, but you can also provide sets of colors for any of the other themes you have defined in [Design tokens/Themes](/docs/design-tokens-themes--page).
+
+```scss
+$primary: (
+  'default': (
+    // colors for this button color variant when in the default theme
+  ),
+  'positive': (
+    'default': (
+      'border-color': palette.get('brand-1', 'dark-1'),
+      'color': palette.get('grayscale', 'white'),
+    ),
+    'hover': (
+      'border-color': palette.get('brand-1', 'dark-3'),
+      'color': palette.get('grayscale', 'light-4'),
+    ),
+    // colors for this button color variant when it’s in a `positive` themed area
+  ),
+);
+
+@use '~bitstyles/scss/bitstyles/atoms/button-colors' with (
+  $variants: (
+    '': $primary,
+    // pass other created variants here
   )
 );
 ```

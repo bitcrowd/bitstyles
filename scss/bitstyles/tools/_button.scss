@@ -84,10 +84,7 @@
   @each $property-name in (settings.$allowed-shape-properties) {
     @if map.has-key($sizes, $property-name) {
       /* prettier-ignore */
-      #{custom-property.get($items: ('button', $property-name), $layer: 'atom')}: #{map.get(
-          $sizes,
-          $property-name
-        )};
+      #{custom-property.get($items: ('button', $property-name), $layer: 'atom')}: #{map.get($sizes, $property-name)};
     }
   }
 
