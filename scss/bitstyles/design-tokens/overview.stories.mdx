@@ -1,0 +1,61 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+<Meta title="Design Tokens/Overview" />
+
+Design tokens in bitstyles are specified globally as Sass variables, which are then output as CSS custom properties at the `:root` level in the browser. When using them in your own components and utility classes, it is recommended that you use the same Sass helper function that bitstyles does:
+
+```scss
+@use '~bitstyles/tools/design-token';
+
+.sass-component {
+  color: var(design-token.get('color', 'brand-1', 'light-4'));
+  margin-bottom: var(design-token.get('size', 's4'));
+  font-size: var(design-token.get('font-size', '4'));
+}
+
+/* Output */
+
+.sass-component {
+  color: var(--bs-color-brand-1-light-4);
+  margin-bottom: var(--bs-size-s4);
+  font-size: var(--bs-font-size-4);
+}
+```
+
+Note that you must wrap the calls to `design-token.get()` in a CSS `var()` call in the same way as for vanilla CSS — without it, custom properties do not work. This also give you a chance to provide a fallback value:
+
+```scss
+@use '~bitstyles/tools/design-token';
+
+.sass-component {
+  color: var(design-token.get('color', 'brand-1', 'light-4'), #ff0);
+  margin-bottom: var(design-token.get('size', 's4'), 1rem);
+  font-size: var(design-token.get('font-size', '4'), 1.125rem);
+}
+
+/* Output */
+
+.sass-component {
+  color: var(--bs-color-brand-1-light-4, #ff0);
+  margin-bottom: var(--bs-size-s4, 1rem);
+  font-size: var(--bs-font-size-4, 1.125rem);
+}
+```
+
+### Custom property prefixes
+
+Bitstyles prefixes all custom properties with `bs` to avoid namespace clashes with any other CSS (or even JS) frameworks you may be using on your site. Using the `design-token.get()` helper function ensures that your CSS custom properties are named using the global prefix. You can customize the prefix used by overriding `setup.$custom-property-namespace`:
+
+```scss
+@use '~bitstyles/settings/setup' with (
+  $custom-property-namespace: 'your-prefix'
+);
+```
+
+When necessary, you can refer to the custom properties directly, but be sure to use the prefix. This can be useful in vanilla CSS or in JS environments, where you do not have access to the Sass `design-token.get()` function.
+
+```css
+.css-component {
+  color: var(--bs-color-brand-1-light-4);
+}
+```

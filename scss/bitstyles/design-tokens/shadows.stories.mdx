@@ -10,11 +10,12 @@ The default shadows used throughout bitstyles are multi-layered to create a more
 
 ## Generating shadows
 
-Use `shadow.generate()` to override the global shadow design tokens in `$shadows`:
+Use `shadow.generate()` to override the global shadow design tokens in `$shadows`. Note that when specifying the color, we’re using the `rgb` version as this allows us to specify the opacity in the CSS `rgba` specification (using the hex value would not):
 
 {/* prettier-ignore-start */}
 ```scss
-@use '../tools/design-token';
+@use '~bitstyles/scss/bitstyles/tools/design-token';
+@use '~bitstyles/scss/bitstyles/tools/shadow';
 @use '~bitstyles/scss/bitstyles/design-tokens/shadows' with (
   $shadows: (
     'default': shadow.generate(
@@ -58,14 +59,13 @@ Default configuration provides the following shadows (drop-shadow versions shown
 
 ## Using shadows
 
-The getter function `shadows.get()` is the most straightforward way to use shadows stored in this format. Specify the name of the shadow and the output format you need. You can use this when configuring the `box-shadow` and `drop-shadow` utility classes, and when using it in your own components. The examples here are for the utility classes:
+Use the global `design-token.get()` helper function to access shadows. Specify the name of the shadow and the output format you need (these examples are taken from the settings files for `box-shadow` and `drop-shadow` utility classes, each of which uses a different format):
 
 ```scss
-@use '../../tools/shadows';
-
+@use '~bitstyles/scss/bitstyles/tools/design-token';
 @use '~bitstyles/scss/bitstyles/utilities/box-shadows' with (
   $values: (
-    'default': shadows.get('brand-1', 'box'),
+    'default': design-token.get('shadow', 'brand-1', 'box'),
   )
 );
 
@@ -79,7 +79,7 @@ The getter function `shadows.get()` is the most straightforward way to use shado
 
 @use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (
   $values: (
-    'brand-1': shadows.get('brand-1', 'drop'),
+    'default': design-token.get('brand-1', 'default', 'drop'),
   )
 );
 
@@ -91,6 +91,8 @@ The getter function `shadows.get()` is the most straightforward way to use shado
 
 */
 ```
+
+See [`Design Tokens/Overview`](/docs/design-tokens--overview) for more details on this helper function.
 
 ## Using the shadows in CSS
 
@@ -117,9 +119,9 @@ The shadow definitions are available as CSS custom properties. In the default co
 The shadow design tokens can be imported and used in JS:
 
 ```js
-import shadows from '../exports/_shadows.scss';
+import shadows from '~bitstyles/scss/bitstyles/exports/_shadows.scss';
 
-console.log(shadows['brand-1']); // 'drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 0.6666666667rem 0.6666666667rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 1rem 1rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 2rem 2rem)'
+console.log(shadows['brand-1-drop']); // 'drop-shadow(rgba(200, 191, 255, 0.125) 0 0.5rem 0.5rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 0.6666666667rem 0.6666666667rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 1rem 1rem) drop-shadow(rgba(200, 191, 255, 0.125) 0 2rem 2rem)'
 ```
 
 ### Using local shadows
@@ -137,7 +139,7 @@ For example, take the two shadows overriding the `box-shadow` and `drop-shadow` 
   $values: (
     'default': shadow.to-box-shadow(
       shadow.generate(
-        $color: rgba(var(design-token.get('color', 'brand-1', 'rgb'), 0.15)),
+        $color: rgba(var(design-token.get('color', 'brand-1', 'rgb')), 0.15),
         $offset: 2rem,
         $blur-radius: 2rem,
       )
@@ -150,7 +152,7 @@ For example, take the two shadows overriding the `box-shadow` and `drop-shadow` 
   $values: (
     'default': shadow.to-drop-shadow(
       shadow.generate(
-        $color: rgba(var(design-token.get('color', 'brand-1', 'rgb'), 0.15)),
+        $color: rgba(var(design-token.get('color', 'brand-1', 'rgb')), 0.15),
         $offset: 2rem,
         $blur-radius: 2rem,
       )
@@ -173,12 +175,12 @@ An example two-layer shadow:
   $shadows: (
     'default': (
       (
-        'color': rgba(var(design-token.get('color', 'brand-1'), 0.15)),
+        'color': rgba(var(design-token.get('color', 'brand-1')), 0.15),
         'offset': 0.25rem,
         'blur-radius': 125rem
       ),
       (
-        'color': rgba(var(design-token.get('color', 'brand-1'), 0.12)),
+        'color': rgba(var(design-token.get('color', 'brand-1')), 0.12),
         'offset': 0.5rem,
         'blur-radius': 2rem
       ),

@@ -4,13 +4,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 # Color palette
 
-Bitstyles provides a semantically-named color palette, with each color having a scale of named variants from `dark-4` to `light-4`. These colors are used to create the components and the color-related utility classes like background-color, border, and color. A `color-var(design-token.get('color', )` helper function makes using them in your projects easy.
+Bitstyles provides a semantically-named color palette, with each color having a scale of named variants from `dark-4` to `light-4`. These colors are used to create the components, and the color-related utility classes like background-color, border, and color. The `design-token.get('color', color-name)` helper function makes using them in your projects easy.
 
 <Story id="base-colors--color-palette" />
 
 ## Using the color palette in Sass
 
-Use the `var(design-token.get('color', )` helper function for accessing colors in your Sass. Import `tools/palette`, then use the `get()` function. Pass the color name and variant you want, as parameters:
+Use the `design-token.get('color', color-name)` helper function for accessing colors in your Sass. Import `tools/design-token`, then use the `get()` function. Pass the color name and variant as parameters. The returned value is the name of the CSS custom property for that design token, which you’ll need to wrap in a `var()` call:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/palette';
@@ -24,16 +24,11 @@ With the default setup this will output:
 
 ```css
 .component-class::after {
-  background-color: #4d56ff;
+  background-color: var(--bs-color-brand-1-light-1);
 }
 ```
 
-### `var(design-token.get('color', )` parameters
-
-| Name   | Type   | Description                                              |
-| ------ | ------ | -------------------------------------------------------- |
-| $color | string | The name of the color                                    |
-| $key   | string | The variant of that color you want. Default is `"base"`. |
+See [`Design Tokens/Overview`](/docs/design-tokens--overview) for details on this helper function.
 
 ## Using colors with classnames
 
@@ -45,14 +40,14 @@ Use the appropriate utility classes to apply colors. See the documentation of ea
 
 ## Using the color palette in CSS
 
-The color palette is also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
+The color palette is available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page) and [`Design Tokens/Overview`](/docs/design-tokens--overview):
 
 ```css
 --bs-color-brand-1-light-3: #ded9ff;
 --bs-color-brand-1-light-3-rgb: 222, 217, 255;
 --bs-color-brand-1-light-1: #b2a6ff;
 --bs-color-brand-1-light-1-rgb: 178, 166, 255;
---bs-color-brand-1-base: #9485ff;
+--bs-color-brand-1: #9485ff;
 --bs-color-brand-1-rgb: 148, 133, 255;
 // …
 ```
@@ -64,11 +59,11 @@ Note that each color is also output as rgb tuples, to make using them in CSS col
 The color design tokens can be imported and used in JS:
 
 ```js
-import colorPalette from '../exports/_color-palette.scss';
+import colorPalette from '~bitstyles/scss/bitstyles/exports/_color-palette.scss';
 
 console.log(colorPalette['brand-1.light-3']); // '#ded9ff'
 console.log(colorPalette['brand-1.light']); // '#b2a6ff'
-console.log(colorPalette['brand-1.base']); // '#9485ff'
+console.log(colorPalette['brand-1']); // '#9485ff'
 // …
 ```
 
@@ -88,7 +83,7 @@ In the default configuration, these are named with numbers from `5` (darkest) to
 
 The base palette is used during setup to configure our **semantic palette**, which is what’s used throughout the codebase to apply colors to components, and for any utility classes that apply color. The base palette is not to be used outside of setting up this semantic palette.
 
-The semantic palette is your final source of truth for colors in your project. If a color doesn’t exist here, it should not be used in your components or utility classes. It’s a limited list of semantically-named colors, selected from those base color palettes, providing colors with meaningful names such as `background-light`, `background-dark`, `danger-base`, `danger-light`.
+The semantic palette is your final source of truth for colors in your project. If a color doesn’t exist here, it should not be used in your components or utility classes. It’s a limited list of semantically-named colors, selected from those base color palettes, providing colors with meaningful names such as `background-light`, `background-dark`, `danger`, `danger-light`.
 
 The default configuration includes a few colors that are not from the generated
 
@@ -237,7 +232,3 @@ It’s recommended that you select the colors from the base palette, but it’s 
   )
 );
 ```
-
-### Default key
-
-With the default configuration, `base` is the root for each color, allowing you to use e.g. `var(design-token.get('color', )` without specifying a color variant when you want the base color e.g. `var(design-token.get('color', 'brand-1')`. To change the default key, override `color-palette.$default-key` with the string you wish to use.

@@ -23,7 +23,11 @@ There are several aspects to typography which are handled by systems in bitstyle
 
 Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default configuration provides base design tokens for font-sizes using on a custom ratio between each font-size.
 
-These design tokens are used to create a responsive typographic scale that’s applied to the base elements `h1` – `h6` and the corresponding utility classes `.u-h1` – `.u-h6` (see the example at the top of this page). The utility classes `.u-text-1` to `.u-text-8` produce exceptions to this responsive typography, at specific breakpoints.
+These base design tokens for font-sizes are combined with the similar scale of base line-heights, and are used to create a responsive typographic scale that’s applied to the elements `h1` – `h6` and a set of corresponding utility classes `.u-h1` – `.u-h6` (see the example at the top of this page).
+
+These are “responsive”, meaning the font-size of these elements changes dependent on viewport size — on larger viewports, your typography will be larger, using the available space and being more expressive. On small viewports, we apply smaller font-sizes to better fit into the available space.
+
+The utility classes `.u-text-1` to `.u-text-8` produce exceptions to this responsive typography, at specific breakpoints, by applying the base font-sizes directly.
 
 For more details on using these, see:
 
@@ -69,9 +73,9 @@ There are also helper functions in Sass that can be used to create styles in you
 
 ## Using the typographic scale in Sass
 
-### responsive-var(design-token.get('font-size', )
+### responsive-font-size.get()
 
-Use the `responsive-var(design-token.get('font-size', )` mixin for accessing the responsive font-sizes specified in your base design tokens. By using this mixin you ensure the font-size of a component will match the responsive typography of your heading elements and responsive-typography utility classes.
+Use the `responsive-font-size.get()` mixin for accessing the responsive font-sizes specified in your base design tokens. By using this mixin you ensure the font-size of a component will match the responsive typography of your heading elements and responsive-typography utility classes.
 
 In your Sass file first import the `responsive-font-size` tools, then use the `get()` function, passing in the font-size you need:
 
@@ -79,7 +83,7 @@ In your Sass file first import the `responsive-font-size` tools, then use the `g
 @use '~bitstyles/scss/bitstyles/tools/responsive-font-size';
 
 .component-class::after {
-  @include responsive-var(design-token.get('font-size', 'h4');
+  @include responsive-font-size.get('h4');
 }
 ```
 
@@ -99,14 +103,14 @@ With the default setup this will output:
 }
 ```
 
-#### `responsive-var(design-token.get('font-size', )` parameters
+#### `responsive-font-size.get()` parameters
 
 | Name        | Type   | Description                                                                                                                                                                                                               |
 | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $font-size  | string | The name of the font-size                                                                                                                                                                                                 |
 | $breakpoint | string | Defaults to `null`, which will output all the font-sizes under that name, at each breakpoint, wrapped in the appropriate media-query. If you provide this parameter, the font-size at only that breakpoint will be output |
 
-### var(design-token.get('font-size', )
+### design-token.get('font-size', size-name)
 
 <Typeset
   fontSizes={[
@@ -123,9 +127,9 @@ With the default setup this will output:
   fontFamily="Poppins"
 />
 
-Use the `var(design-token.get('font-size', )` function for accessing the font-sizes specified in your base design tokens. This is useful when you need a component’s font-size to be rendered differently to your standard responsive typography.
+Use `design-token.get('font-size', size-name)` wrapped in a CSS `var()` to access the font-sizes specified in your base design tokens. This is useful when you need a component’s font-size to be rendered differently to your standard responsive typography.
 
-Import the `font-size` tools, then use the `get()` function, passing in the font-size you need:
+Import the `design-token` helper then use the `get()` function, passing in the font-size you need:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/design-token';
@@ -156,7 +160,9 @@ With the default setup this will output:
 }
 ```
 
-`var(design-token.get('font-size', )` is also used in the setup the responsive typographic scale for the [base styles](/docs/base-typography-responsive-headings--h-1) and the [utility classes](/docs/utilities-typography--typography), to ensure consistency across your designs.
+These design tokens are also used in the setup the responsive typographic scale for the [base styles](/docs/base-typography-responsive-headings--h-1) and the [utility classes](/docs/utilities-typography--typography), to ensure consistency across your designs.
+
+See [`Design Tokens/Overview`](/docs/design-tokens--overview) for details on the `design-token.get()` helper function.
 
 ## Using font-sizes and line-heights in CSS
 
