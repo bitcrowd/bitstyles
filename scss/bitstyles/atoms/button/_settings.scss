@@ -4,12 +4,16 @@
 // Base styles ////////////////////////////////////////
 
 $font-family: inherit !default;
-$transition:
-  color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-  background-color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-  border var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-  box-shadow var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-  outline-offset var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')) !default;
+$transition: color var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')),
+  background-color var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')),
+  border var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')),
+  box-shadow var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')),
+  outline-offset var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')) !default;
 $icon-spacing: var(design-token.get('size', 's2')) !default;
 $justify-content: center !default;
 $allowed-color-properties: (

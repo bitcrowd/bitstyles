@@ -36,7 +36,7 @@ $token-category-map: (
     @if not map.has-key($design-tokens, list.nth($items, 2)) {
       @error 'Oops! #{$token-category} ‘#{$token-name}’ does not exist.';
     }
-  };
+  }
 
   @return custom-property.name($items);
 }

@@ -10,12 +10,13 @@
 );
 @use '../../scss/bitstyles/design-tokens/primary' with (
   // global settings
-  $animation-transitions: (
-    'default': (
-      'duration': 1s,
-      'easing': ease-out,
-    )
-  ),
+  $animation-transitions:
+    (
+      'default': (
+        'duration': 1s,
+        'easing': ease-out,
+      )
+    ),
   $breakpoints-boundary-width: 10em,
   $color-palette-palette: (
     'grayscale': (
@@ -62,7 +63,7 @@
   ),
   $layout-size-base: 10rem,
   $typography-webfont-family-name: 'FakeFont',
-  $typography-webfont-base-url: './',
+  $typography-webfont-base-url: './'
 );
 @use '../../scss/bitstyles/design-tokens/secondary' with (
   $link-color: #f00,
@@ -70,7 +71,7 @@
     'default': (
       ('color': #f00, 'offset': 2.5rem, 'blur-radius': 5rem),
       ('color': #f00, 'offset': 5rem, 'blur-radius': 10rem),
-    )
+    ),
   ),
   $themes-themes: (
     'default': (
@@ -99,8 +100,8 @@
         'font-size': 30rem,
         'line-height': 400,
       ),
-    )
-  ),
+    ),
+  )
 );
 @use '../../scss/bitstyles/generic';
 @use '../../scss/bitstyles/base' with (

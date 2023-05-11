@@ -11,10 +11,13 @@
     padding: settings.$padding-vertical calc(settings.$padding-horizontal * 2)
       settings.$padding-vertical settings.$padding-horizontal;
     overflow: hidden;
-    transition:
-      color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-      background-color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-      border var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing'));
+    transition: color var(design-token.get('transition', 'default', 'duration'))
+        var(design-token.get('transition', 'default', 'easing')),
+      background-color
+        var(design-token.get('transition', 'default', 'duration'))
+        var(design-token.get('transition', 'default', 'easing')),
+      border var(design-token.get('transition', 'default', 'duration'))
+        var(design-token.get('transition', 'default', 'easing'));
     border: settings.$border-width solid settings.$border-color;
     border-radius: settings.$border-radius;
     background-color: settings.$background-color;

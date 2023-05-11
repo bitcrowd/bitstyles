@@ -29,9 +29,11 @@
       width: 100%;
       height: 100%;
       transform: scale(0.5);
-      transition:
-        opacity var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-        transform var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing'));
+      transition: opacity
+          var(design-token.get('transition', 'default', 'duration'))
+          var(design-token.get('transition', 'default', 'easing')),
+        transform var(design-token.get('transition', 'default', 'duration'))
+          var(design-token.get('transition', 'default', 'easing'));
       border-radius: settings.$border-radius;
       opacity: 0;
       background: settings.$color-checked;

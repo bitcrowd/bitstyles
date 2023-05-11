@@ -3,10 +3,13 @@
 //
 // Base styles ////////////////////////////////////////
 
-$transition:
-  color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-  border var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')) !default;
-$indicator-transition: background-color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')) !default;
+$transition: color var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')),
+  border var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')) !default;
+$indicator-transition: background-color
+  var(design-token.get('transition', 'default', 'duration'))
+  var(design-token.get('transition', 'default', 'easing')) !default;
 
 //
 // Indicator colors ////////////////////////////////////////

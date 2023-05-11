@@ -5,10 +5,12 @@
 /* stylelint-disable selector-max-type */
 textarea,
 input {
-  transition:
-    color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-    background-color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-    border var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing'));
+  transition: color var(design-token.get('transition', 'default', 'duration'))
+      var(design-token.get('transition', 'default', 'easing')),
+    background-color var(design-token.get('transition', 'default', 'duration'))
+      var(design-token.get('transition', 'default', 'easing')),
+    border var(design-token.get('transition', 'default', 'duration'))
+      var(design-token.get('transition', 'default', 'easing'));
   resize: vertical;
 
   &::placeholder {
