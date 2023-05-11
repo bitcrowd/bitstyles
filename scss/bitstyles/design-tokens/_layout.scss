@@ -1,4 +1,4 @@
-@use '../tools/design-token';
+@use '../tools/custom-property';
 
 $global-z: ('topbar') !default;
 $border-radius-round: 9999rem !default;
@@ -27,6 +27,6 @@ $viewport-elements: ('html', 'body', '#root') !default;
 
 :root {
   @each $size-name, $size in $sizes {
-    #{design-token.get('size', $size-name)}: $size;
+    #{custom-property.name('size', $size-name)}: $size;
   }
 }

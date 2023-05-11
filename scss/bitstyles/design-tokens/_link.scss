@@ -5,8 +5,8 @@
 //
 // Base styles /////////////////////////////////////////
 
-$transition: color animation.$transition-duration animation.$transition-easing,
-  outline-offset animation.$transition-duration animation.$transition-easing !default;
+$transition: color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
+  outline-offset var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')) !default;
 $font-weight: typography.$font-weight-medium !default;
 
 //

@@ -1,11 +1,20 @@
-@use '../tools/design-token';
+@use '../tools/custom-property';
 
-$transition-duration: 0.075s !default;
-$transition-duration-long: 0.5s !default;
-$transition-easing: ease-in-out !default;
+$transitions: (
+  'default': (
+    'duration': 0.075s,
+    'easing': ease-in-out,
+  ),
+  'long': (
+    'duration': 0.5s,
+    'easing': ease-in-out,
+  )
+) !default;
 
 :root {
-  #{design-token.get('transition', 'duration')}: $transition-duration;
-  #{design-token.get('transition', 'duration-long')}: $transition-duration-long;
-  #{design-token.get('transition', 'easing')}: $transition-easing;
+  @each $transition-name, $transition in $transitions {
+    @each $transition-property, $transition-value in $transition {
+      #{custom-property.name('transition', $transition-name, $transition-property)}: $transition-value;
+    }
+  }
 }

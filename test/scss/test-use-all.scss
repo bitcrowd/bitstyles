@@ -1,6 +1,11 @@
 @use '../../scss/bitstyles' with (
   // global settings
-  $animation-transition-easing: ease-out,
+  $animation-transitions: (
+    'default': (
+      'duration': 1s,
+      'easing': ease-out,
+    )
+  ),
   $breakpoints-boundary-width: 10em,
   $color-palette-palette: (
     'grayscale': (

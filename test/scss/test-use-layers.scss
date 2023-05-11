@@ -8,9 +8,14 @@
     'utility': '',
   )
 );
-@use '../../scss/bitstyles/design-tokens' with (
+@use '../../scss/bitstyles/design-tokens/primary' with (
   // global settings
-  $animation-transition-easing: ease-out,
+  $animation-transitions: (
+    'default': (
+      'duration': 1s,
+      'easing': ease-out,
+    )
+  ),
   $breakpoints-boundary-width: 10em,
   $color-palette-palette: (
     'grayscale': (
@@ -56,6 +61,11 @@
     )
   ),
   $layout-size-base: 10rem,
+  $typography-webfont-family-name: 'FakeFont',
+  $typography-webfont-base-url: './',
+);
+@use '../../scss/bitstyles/design-tokens/secondary' with (
+  $link-color: #f00,
   $shadows-shadows: (
     'default': (
       ('color': #f00, 'offset': 2.5rem, 'blur-radius': 5rem),
@@ -77,8 +87,6 @@
     'warning': (),
     'positive': ()
   ),
-  $typography-webfont-family-name: 'FakeFont',
-  $typography-webfont-base-url: './',
   $typography-responsive-typographic-scale: (
     'm': (
       'h1': (
@@ -93,7 +101,6 @@
       ),
     )
   ),
-  $link-color: #f00
 );
 @use '../../scss/bitstyles/generic';
 @use '../../scss/bitstyles/base' with (

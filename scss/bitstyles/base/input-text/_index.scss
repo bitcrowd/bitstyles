@@ -1,14 +1,14 @@
 @forward 'settings';
 @use './settings';
-@use '../../design-tokens/animation';
-@use 'sass:math';
+@use '../../tools/design-token';
 
 /* stylelint-disable selector-max-type */
 textarea,
 input {
-  transition: color animation.$transition-duration animation.$transition-easing,
-    background-color animation.$transition-duration animation.$transition-easing,
-    border animation.$transition-duration animation.$transition-easing;
+  transition:
+    color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
+    background-color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
+    border var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing'));
   resize: vertical;
 
   &::placeholder {

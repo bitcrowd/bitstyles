@@ -1,6 +1,6 @@
 @use '../settings/setup';
 @use '../tools/base-palette';
-@use '../tools/design-token';
+@use '../tools/custom-property';
 @use 'sass:color';
 
 //
@@ -87,8 +87,8 @@ $palette: (
       }
       /* stylelint-enable max-nesting-depth */
 
-      #{design-token.get('color', $palette-name, $color-name)}: $color;
-      #{design-token.get('color', $palette-name, $color-name, 'rgb')}: color.red($color), color.green($color), color.blue($color);
+      #{custom-property.name('color', $palette-name, $color-name)}: $color;
+      #{custom-property.name('color', $palette-name, $color-name, 'rgb')}: color.red($color), color.green($color), color.blue($color);
     }
   }
 }

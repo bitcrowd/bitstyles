@@ -1,4 +1,4 @@
-@use '../tools/design-token';
+@use '../tools/custom-property';
 @use '../tools/shadow';
 
 /* stylelint-disable length-zero-no-unit */
@@ -57,7 +57,7 @@ $shadows: (
 /* prettier-ignore */
 :root {
   @each $shadow-name, $shadow in $shadows {
-    #{design-token.get('shadow', $shadow-name, 'drop')}: shadow.to-drop-shadow($shadow);
-    #{design-token.get('shadow', $shadow-name, 'box')}: shadow.to-box-shadow($shadow);
+    #{custom-property.name('shadow', $shadow-name, 'drop')}: shadow.to-drop-shadow($shadow);
+    #{custom-property.name('shadow', $shadow-name, 'box')}: shadow.to-box-shadow($shadow);
   }
 }

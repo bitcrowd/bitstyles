@@ -21,10 +21,12 @@ Note that there are two transition variables. The short transition-duration is b
 `@use` the settings module in your component Sass file, then access the variables in the standard Sass way:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/design-tokens/animation';
+@use '../../tools/design-token';
 
 .component-class {
-  transition-duration: animation.$transition-duration;
+  transition-duration: var(
+    design-token.get('transition', 'default', 'duration')
+  );
 }
 ```
 

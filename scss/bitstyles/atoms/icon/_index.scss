@@ -1,17 +1,18 @@
 @forward 'settings';
 @use './settings';
-@use '../../design-tokens/animation';
 @use '../../tools/classname';
+@use '../../tools/design-token';
 
 #{classname.get($classname-items: 'icon', $layer: 'atom')} {
   display: inline-block;
   flex-shrink: 0;
   width: 1em;
   height: 1em;
-  transition: fill animation.$transition-duration animation.$transition-easing,
-    stroke animation.$transition-duration animation.$transition-easing,
-    background-color animation.$transition-duration animation.$transition-easing,
-    transform animation.$transition-duration animation.$transition-easing;
+  transition:
+    fill var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
+    stroke var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
+    background-color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
+    transform var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing'));
   outline: none;
   fill: currentColor;
   font-size: 1em;

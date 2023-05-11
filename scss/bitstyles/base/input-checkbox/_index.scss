@@ -1,7 +1,6 @@
 @forward 'settings';
 @use './settings';
-@use '../../design-tokens/animation';
-@use 'sass:math';
+@use '../../tools/design-token';
 
 [type='checkbox'] {
   display: inline-block;
@@ -38,10 +37,10 @@
       width: 100%;
       height: 100%;
       transform: scale(0.7);
-      transition: opacity math.div(animation.$transition-duration, 2)
-          animation.$transition-duration animation.$transition-easing,
-        transform math.div(animation.$transition-duration, 2)
-          animation.$transition-duration animation.$transition-easing;
+      transition: opacity calc(var(design-token.get('transition', 'default', 'duration')) / 2)
+          var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
+        transform calc(var(design-token.get('transition', 'default', 'duration')) / 2)
+          var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing'));
       opacity: 0;
       background-image: settings.$background-image-checked;
       background-repeat: no-repeat;

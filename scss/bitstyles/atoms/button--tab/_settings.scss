@@ -1,13 +1,12 @@
-@use '../../design-tokens/animation';
 @use '../../tools/design-token';
 
 //
 // Base styles ////////////////////////////////////////
 
-$transition: color animation.$transition-duration animation.$transition-easing,
-  border animation.$transition-duration animation.$transition-easing !default;
-$indicator-transition: background-color animation.$transition-duration
-  animation.$transition-easing !default;
+$transition:
+  color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
+  border var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')) !default;
+$indicator-transition: background-color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')) !default;
 
 //
 // Indicator colors ////////////////////////////////////////

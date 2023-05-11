@@ -1,9 +1,9 @@
 @forward 'settings';
 @use 'sass:map';
 @use './settings';
-@use '../../design-tokens/animation';
-@use '../../tools/media-query';
 @use '../../tools/classname';
+@use '../../tools/design-token';
+@use '../../tools/media-query';
 
 @mixin content-padding($padding-value) {
   padding-right: $padding-value;
@@ -15,8 +15,8 @@
   max-width: map.get(settings.$max-width, settings.$max-width-base);
   margin-right: auto;
   margin-left: auto;
-  transition: padding animation.$transition-duration
-    animation.$transition-easing;
+  transition: padding var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing'));
 
   @each $breakpoint-name, $padding-value in settings.$padding {
     @include media-query.get($breakpoint-name) {

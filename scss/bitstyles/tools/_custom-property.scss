@@ -1,0 +1,12 @@
+@use '../settings/setup';
+@use './string';
+@use 'sass:list';
+
+@function name($items...) {
+  $string-items: list.join((setup.$custom-property-namespace), $items);
+  $custom-property-name: string.join-with-dashes(
+    $string-items: $string-items,
+  );
+
+  @return --#{$custom-property-name};
+}

@@ -1,4 +1,4 @@
-@use '../tools/design-token';
+@use '../tools/custom-property';
 @use 'sass:list';
 
 //
@@ -116,10 +116,10 @@ $line-heights: (
 
 :root {
   @each $font-size-name, $font-size in $font-sizes {
-    #{design-token.get('font-size', $font-size-name)}: $font-size;
+    #{custom-property.name('font-size', $font-size-name)}: $font-size;
   }
 
   @each $line-height-name, $line-height in $line-heights {
-    #{design-token.get('line-height', $line-height-name)}: $line-height;
+    #{custom-property.name('line-height', $line-height-name)}: $line-height;
   }
 }
