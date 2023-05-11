@@ -8,7 +8,9 @@ $overlay-color: rgba(
   var(design-token.get('color', 'grayscale', 'white-rgb')),
   95%
 ) !default;
-$transition-easing: ease-in-out !default;
+$transition-easing: var(
+  design-token.get('transition', 'default', 'easing')
+) !default;
 $transition-duration: 0.2s !default;
 $transition-duration-smallscreen: 0.25s !default;
 $transition-delay: 0.05s !default;

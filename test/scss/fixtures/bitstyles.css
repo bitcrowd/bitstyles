@@ -1,7 +1,8 @@
 :root {
-  --bs-transition-duration: 0.075s;
-  --bs-transition-duration-long: 0.5s;
-  --bs-transition-easing: ease-in-out;
+  --bs-transition-default-duration: 0.075s;
+  --bs-transition-default-easing: ease-in-out;
+  --bs-transition-long-duration: 0.5s;
+  --bs-transition-long-easing: ease-in-out;
 }
 :root {
   --bs-breakpoint-s: screen and (max-width: 29.9375em);
@@ -356,21 +357,6 @@
     0 calc(var(--bs-size-s7) / 1) calc(var(--bs-size-s2) / 1)
       rgba(var(--bs-color-danger-dark-1-rgb), 0.1);
 }
-:root {
-  --bs-font-size-1: 0.75rem;
-  --bs-font-size-2: 0.875rem;
-  --bs-font-size-3: 1rem;
-  --bs-font-size-4: 1.125rem;
-  --bs-font-size-5: 1.25rem;
-  --bs-font-size-6: 1.5rem;
-  --bs-font-size-7: 2rem;
-  --bs-font-size-8: 3rem;
-  --bs-line-height-1: 1.1667;
-  --bs-line-height-2: 1.25;
-  --bs-line-height-3: 1.4;
-  --bs-line-height-4: 1.5555;
-  --bs-line-height-5: 1.67;
-}
 html {
   box-sizing: border-box;
 }
@@ -553,7 +539,10 @@ a {
   padding: 0;
   text-decoration: underline;
   text-decoration-skip-ink: auto;
-  transition: color 75ms ease-in-out, outline-offset 75ms ease-in-out;
+  transition: color var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    outline-offset var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing);
 }
 a:visited {
   background-color: transparent;
@@ -710,8 +699,12 @@ img {
     height: 100%;
     opacity: 0;
     transform: scale(0.7);
-    transition: opacity 0.0375s ease-in-out 75ms,
-      transform 0.0375s ease-in-out 75ms;
+    transition: opacity calc(var(--bs-transition-default-duration) / 2)
+        var(--bs-transition-default-duration)
+        var(--bs-transition-default-easing),
+      transform calc(var(--bs-transition-default-duration) / 2)
+        var(--bs-transition-default-duration)
+        var(--bs-transition-default-easing);
     width: 100%;
   }
   [type='checkbox']:checked {
@@ -765,7 +758,10 @@ img {
     height: 100%;
     opacity: 0;
     transform: scale(0.5);
-    transition: opacity 75ms ease-in-out, transform 75ms ease-in-out;
+    transition: opacity var(--bs-transition-default-duration)
+        var(--bs-transition-default-easing),
+      transform var(--bs-transition-default-duration)
+        var(--bs-transition-default-easing);
     width: 100%;
   }
   [type='radio']:focus,
@@ -801,8 +797,12 @@ img {
 input,
 textarea {
   resize: vertical;
-  transition: color 75ms ease-in-out, background-color 75ms ease-in-out,
-    border 75ms ease-in-out;
+  transition: color var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    background-color var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    border var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing);
 }
 input::-moz-placeholder,
 textarea::-moz-placeholder {
@@ -988,8 +988,12 @@ textarea:disabled {
     padding: var(--bs-size-s5) calc(var(--bs-size-s1) * 2) var(--bs-size-s5)
       var(--bs-size-s1);
     text-overflow: ellipsis;
-    transition: color 75ms ease-in-out, background-color 75ms ease-in-out,
-      border 75ms ease-in-out;
+    transition: color var(--bs-transition-default-duration)
+        var(--bs-transition-default-easing),
+      background-color var(--bs-transition-default-duration)
+        var(--bs-transition-default-easing),
+      border var(--bs-transition-default-duration)
+        var(--bs-transition-default-easing);
     width: 100%;
   }
   select::-ms-expand {
@@ -1180,8 +1184,7 @@ table {
   box-shadow: var(--bs-badge-shadow);
   display: inline-flex;
   gap: var(--bs-badge-gap);
-  padding: var(--bs-badge-padding-vertical)
-    var(--bs-badge-padding-horizontal);
+  padding: var(--bs-badge-padding-vertical) var(--bs-badge-padding-horizontal);
   white-space: nowrap;
 }
 .a-badge__prepend {
@@ -1250,10 +1253,16 @@ table {
   --bs-button-border-bottom-right-radius: var(--bs-button-border-radius);
   --bs-button-border-bottom-left-radius: var(--bs-button-border-radius);
   --bs-button-border-top-left-radius: var(--bs-button-border-radius);
-  --bs-button-transition: color 0.075s ease-in-out,
-  --bs-button-transition: color 0.075s ease-in-out,
-    background-color 0.075s ease-in-out, border 0.075s ease-in-out,
-    box-shadow 0.075s ease-in-out, outline-offset 0.075s ease-in-out;
+  --bs-button-transition: color var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    background-color var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    border var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    box-shadow var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    outline-offset var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing);
   --bs-button-justify-content: center;
   align-items: center;
   -webkit-appearance: none;
@@ -1978,7 +1987,8 @@ table {
   left: 0;
   position: absolute;
   right: 0;
-  transition: background-color 75ms ease-in-out;
+  transition: background-color var(--bs-transition-default-duration)
+    var(--bs-transition-default-easing);
 }
 .a-button--tab:focus:after,
 .a-button--tab:hover:after {
@@ -2150,7 +2160,8 @@ table {
   max-width: 65rem;
   padding-left: var(--bs-content-padding-base);
   padding-right: var(--bs-content-padding-base);
-  transition: padding 75ms ease-in-out;
+  transition: padding var(--bs-transition-default-duration)
+    var(--bs-transition-default-easing);
   width: 100%;
 }
 @media screen and (min-width: 55em) {
@@ -2294,8 +2305,7 @@ table {
   color: var(--bs-theme-text-dark);
   display: flex;
   gap: var(--bs-flash-gap);
-  padding: var(--bs-flash-padding-vertical)
-    var(--bs-flash-padding-horizontal);
+  padding: var(--bs-flash-padding-vertical) var(--bs-flash-padding-horizontal);
 }
 .a-flash {
   --bs-flash-padding-horizontal: var(--bs-content-padding-base);
@@ -2315,8 +2325,14 @@ table {
   font-size: 1em;
   height: 1em;
   outline: none;
-  transition: fill 75ms ease-in-out, stroke 75ms ease-in-out,
-    background-color 75ms ease-in-out, transform 75ms ease-in-out;
+  transition: fill var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    stroke var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    background-color var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    transform var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing);
   vertical-align: middle;
   width: 1em;
 }
@@ -2345,7 +2361,10 @@ table {
   padding: 0;
   text-decoration: underline;
   text-decoration-skip-ink: auto;
-  transition: color 75ms ease-in-out, outline-offset 75ms ease-in-out;
+  transition: color var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing),
+    outline-offset var(--bs-transition-default-duration)
+      var(--bs-transition-default-easing);
 }
 .a-link:visited {
   background-color: transparent;
@@ -2416,13 +2435,14 @@ table {
   position: fixed;
   right: 0;
   top: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s var(--bs-transition-default-easing);
   will-change: opacity, transform, visibility;
   z-index: 10;
 }
 [aria-hidden='true'] .o-modal__overlay {
   opacity: 0;
-  transition: all 0.2s ease-in-out, visibility 0 ease-in-out 0.2s;
+  transition: all 0.2s var(--bs-transition-default-easing),
+    visibility 0 var(--bs-transition-default-easing) 0.2s;
   visibility: hidden;
 }
 .o-modal__content {
@@ -2438,7 +2458,7 @@ table {
   top: 50%;
   transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.25s var(--bs-transition-default-easing);
   width: calc(100% - var(--bs-size-s3) * 2);
   will-change: opacity, transform, visibility;
   z-index: 20;
@@ -2446,16 +2466,19 @@ table {
 [aria-hidden='true'] .o-modal__content {
   opacity: 0;
   transform: translate(-50%, 50%);
-  transition: all 0.25s ease-in-out, visibility 0 ease-in-out 0.2s;
+  transition: all 0.25s var(--bs-transition-default-easing),
+    visibility 0 var(--bs-transition-default-easing) 0.2s;
   visibility: hidden;
 }
 @media screen and (min-width: 30em) {
   .o-modal__content {
-    transition: all 0.2s ease-in-out, visibility 0 ease-in-out;
+    transition: all 0.2s var(--bs-transition-default-easing),
+      visibility 0 var(--bs-transition-default-easing);
   }
   [aria-hidden='true'] .o-modal__content {
     transform: translate(-50%, -50%) scale(0.875);
-    transition: all 0.2s ease-in-out, visibility 0 ease-in-out 0.2s;
+    transition: all 0.2s var(--bs-transition-default-easing),
+      visibility 0 var(--bs-transition-default-easing) 0.2s;
   }
 }
 .o-modal--animation-cancel[aria-hidden='true'] .o-modal__content {
