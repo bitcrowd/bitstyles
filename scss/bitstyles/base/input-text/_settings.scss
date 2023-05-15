@@ -1,4 +1,3 @@
-@use '../../design-tokens/typography';
 @use '../../tools/design-token';
 @use '../../tools/shadow';
 
@@ -11,7 +10,9 @@ $border-radius: var(design-token.get('size', 's5')) !default;
 $border-width: var(design-token.get('size', 's7')) !default;
 $font: inherit !default;
 $placeholder-font-style: italic !default;
-$placeholder-font-weight: typography.$font-weight-normal !default;
+$placeholder-font-weight: var(
+  design-token.get('font-weight', 'normal')
+) !default;
 $placeholder-color: var(
   design-token.get('color', 'grayscale', 'light-1')
 ) !default;

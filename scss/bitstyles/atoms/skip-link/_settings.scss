@@ -1,11 +1,10 @@
-@use '../../design-tokens/typography';
 @use '../../tools/design-token';
 
 //
 // Base styles /////////////////////////////////////////
 
 $padding: var(design-token.get('size', 's1')) !default;
-$font-weight: typography.$font-weight-medium !default;
+$font-weight: var(design-token.get('font-weight', 'medium')) !default;
 
 //
 // Base/hover Colors /////////////////////////////////////////

@@ -20,28 +20,40 @@ $shadows: (
   'gray':
     shadow.generate(
       $color:
-        rgba(var(custom-property.name('color', 'grayscale', 'dark-2-rgb')), 0.0875),
+        rgba(
+          var(custom-property.name('color', 'grayscale', 'dark-2-rgb')),
+          0.0875
+        ),
       $offset: var(custom-property.name('size', 's6')),
       $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'gray-center':
     shadow.generate(
       $color:
-        rgba(var(custom-property.name('color', 'grayscale', 'dark-2-rgb')), 0.0875),
+        rgba(
+          var(custom-property.name('color', 'grayscale', 'dark-2-rgb')),
+          0.0875
+        ),
       $offset: var(custom-property.name('size', 's7')),
       $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'brand-2':
     shadow.generate(
       $color:
-        rgba(var(custom-property.name('color', 'brand-2', 'dark-1-rgb')), 0.1375),
+        rgba(
+          var(custom-property.name('color', 'brand-2', 'dark-1-rgb')),
+          0.1375
+        ),
       $offset: var(custom-property.name('size', 's7')),
       $blur-radius: var(custom-property.name('size', 's1')),
     ),
   'positive':
     shadow.generate(
       $color:
-        rgba(var(custom-property.name('color', 'positive', 'dark-1-rgb')), 0.125),
+        rgba(
+          var(custom-property.name('color', 'positive', 'dark-1-rgb')),
+          0.125
+        ),
       $offset: var(custom-property.name('size', 's7')),
       $blur-radius: var(custom-property.name('size', 's1')),
     ),
@@ -54,7 +66,8 @@ $shadows: (
     ),
   'danger':
     shadow.generate(
-      $color: rgba(var(custom-property.name('color', 'danger', 'dark-1-rgb')), 0.1),
+      $color:
+        rgba(var(custom-property.name('color', 'danger', 'dark-1-rgb')), 0.1),
       $offset: var(custom-property.name('size', 's7')),
       $blur-radius: var(custom-property.name('size', 's2')),
     ),

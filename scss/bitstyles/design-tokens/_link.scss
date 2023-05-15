@@ -1,13 +1,11 @@
-@use './typography';
 @use '../tools/design-token';
-@use 'animation';
 
 //
 // Base styles /////////////////////////////////////////
 
 $transition: color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
   outline-offset var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')) !default;
-$font-weight: typography.$font-weight-medium !default;
+$font-weight: var(design-token.get('font-weight', 'medium')) !default;
 
 //
 // Base Colors /////////////////////////////////////////

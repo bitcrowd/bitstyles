@@ -35,14 +35,14 @@ The visual appearance & layout of the dropdowns can be customized:
 
 ```scss
 $max-height: 20rem;
-$border-radius: var(design-token.get('size', 's4');
-$border: 2px solid var(design-token.get('color', 'brand-2');
-$background-color: var(design-token.get('color', 'grayscale', 'white');
+$border-radius: var(design-token.get('size', 's4'));
+$border: 2px solid var(design-token.get('color', 'brand-2'));
+$background-color: var(design-token.get('color', 'grayscale', 'white'));
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(var(design-token.get('color', 'brand-2', 'light-1-rgb'), 0.05),
-    $offset: var(design-token.get('size', 'm'),
-    $blur-radius: var(design-token.get('size', 'l2'),
+    $color: rgba(var(design-token.get('color', 'brand-2', 'light-1-rgb')), 0.05),
+    $offset: var(design-token.get('size', 'm')),
+    $blur-radius: var(design-token.get('size', 'l2')),
   )
 );
 ```
@@ -50,8 +50,8 @@ $box-shadow: shadow.to-box-shadow(
 The border and spacing above and below the separators used to divide the contents of your dropdowns (see the `<li role="separator"></li>` in the examples above) can also be customized:
 
 ```scss
-$separator-border: 1px solid var(design-token.get('color', 'grayscale');
-$separator-spacing: var(design-token.get('size', 's6');
+$separator-border: 1px solid var(design-token.get('color', 'grayscale'));
+$separator-spacing: var(design-token.get('size', 's6'));
 ```
 
 By default the dropdown will fade in and out respectively when the `is-on-screen` and `is-off-screen` classes are applied, but this can customized too. Be sure to update the `$will-change` value to reflect the properties you specify in the `$transition` value.

@@ -1,5 +1,4 @@
 @use '../../settings/setup';
-@use '../../design-tokens/typography';
 @use '../../tools/design-token';
 
 $layout-breakpoint: 'm' !default;
@@ -15,7 +14,7 @@ $sizes: (
     ),
     'dt': (
       'font-size': var(design-token.get('font-size', '1')),
-      'font-weight': typography.$font-weight-bold,
+      'font-weight': var(design-token.get('font-weight', 'bold')),
       'color': var(design-token.get('color', 'grayscale', 'dark-1')),
     ),
   ),

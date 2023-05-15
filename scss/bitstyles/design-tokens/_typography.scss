@@ -4,15 +4,17 @@
 //
 // Font-weights /////////////////////////////////////////
 
-$font-weight-thin: 100 !default;
-$font-weight-extralight: 200 !default;
-$font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-medium: 500 !default;
-$font-weight-semibold: 600 !default;
-$font-weight-bold: 700 !default;
-$font-weight-extrabold: 800 !default;
-$font-weight-black: 900 !default;
+$font-weights: (
+  'thin': 100,
+  'extralight': 200,
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'extrabold': 800,
+  'black': 900,
+) !default;
 
 //
 // Webfonts /////////////////////////////////////////
@@ -24,37 +26,37 @@ $webfont-variants: (
   'normal': (
     'font-family': $webfont-family-name,
     'font-style': normal,
-    'font-weight': $font-weight-normal,
+    'font-weight': custom-property.name('font-weight', 'normal'),
     'filename': 'poppins-v20-latin-400',
   ),
   'italic': (
     'font-family': $webfont-family-name,
     'font-style': italic,
-    'font-weight': $font-weight-normal,
+    'font-weight': custom-property.name('font-weight', 'normal'),
     'filename': 'poppins-v20-latin-400italic',
   ),
   'medium': (
     'font-family': $webfont-family-name,
     'font-style': normal,
-    'font-weight': $font-weight-medium,
+    'font-weight': custom-property.name('font-weight', 'medium'),
     'filename': 'poppins-v20-latin-500',
   ),
   'medium-italic': (
     'font-family': $webfont-family-name,
     'font-style': italic,
-    'font-weight': $font-weight-medium,
+    'font-weight': custom-property.name('font-weight', 'medium'),
     'filename': 'poppins-v20-latin-500italic',
   ),
   'semibold': (
     'font-family': $webfont-family-name,
     'font-style': normal,
-    'font-weight': $font-weight-semibold,
+    'font-weight': custom-property.name('font-weight', 'semibold'),
     'filename': 'poppins-v20-latin-600',
   ),
   'semibold-italic': (
     'font-family': $webfont-family-name,
     'font-style': italic,
-    'font-weight': $font-weight-semibold,
+    'font-weight': custom-property.name('font-weight', 'semibold'),
     'filename': 'poppins-v20-latin-600italic',
   ),
 ) !default;
@@ -121,5 +123,9 @@ $line-heights: (
 
   @each $line-height-name, $line-height in $line-heights {
     #{custom-property.name('line-height', $line-height-name)}: $line-height;
+  }
+
+  @each $font-weight-name, $font-weight in $font-weights {
+    #{custom-property.name('font-weight', $font-weight-name)}: $font-weight;
   }
 }

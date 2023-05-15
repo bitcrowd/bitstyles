@@ -65,7 +65,7 @@ Use the global `design-token.get()` helper function to access shadows. Specify t
 @use '~bitstyles/scss/bitstyles/tools/design-token';
 @use '~bitstyles/scss/bitstyles/utilities/box-shadows' with (
   $values: (
-    'default': design-token.get('shadow', 'brand-1', 'box'),
+    'default': var(design-token.get('shadow', 'brand-1', 'box')),
   )
 );
 
@@ -79,7 +79,7 @@ Use the global `design-token.get()` helper function to access shadows. Specify t
 
 @use '~bitstyles/scss/bitstyles/utilities/drop-shadow' with (
   $values: (
-    'default': design-token.get('brand-1', 'default', 'drop'),
+    'default': var(design-token.get('brand-1', 'default', 'drop')),
   )
 );
 

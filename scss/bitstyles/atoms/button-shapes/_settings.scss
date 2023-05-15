@@ -1,5 +1,4 @@
 @use '../../design-tokens/layout';
-@use '../../design-tokens/typography';
 @use '../../tools/design-token';
 
 /* stylelint-disable length-zero-no-unit */
@@ -11,7 +10,7 @@ $default: (
   'min-height': 1em,
   'min-width': 0,
   'font-size': var(design-token.get('font-size', '2')),
-  'font-weight': typography.$font-weight-semibold,
+  'font-weight': var(design-token.get('font-weight', 'semibold')),
 ) !default;
 /* stylelint-enable length-zero-no-unit */
 $small: (
@@ -19,12 +18,12 @@ $small: (
   'padding-horizontal': var(design-token.get('size', 'm')),
   'min-height': var(design-token.get('size', 'l1')),
   'min-width': var(design-token.get('size', 'l2')),
-  'font-weight': typography.$font-weight-medium,
+  'font-weight': var(design-token.get('font-weight', 'medium')),
 ) !default;
 $x-small: (
   'padding-vertical': var(design-token.get('size', 's6')),
   'padding-horizontal': var(design-token.get('size', 's2')),
-  'font-weight': typography.$font-weight-medium,
+  'font-weight': var(design-token.get('font-weight', 'medium')),
 ) !default;
 $transparent: (
   'border-width': 0.1875rem,

@@ -16,9 +16,11 @@ $token-category-map: (
   'breakpoint': breakpoints.$breakpoints,
   'color': color-palette.$palette,
   'font-size': typography.$font-sizes,
+  'font-weight': typography.$font-weights,
   'line-height': typography.$line-heights,
   'size': layout.$sizes,
   'shadow': shadows.$shadows,
+  'z-index': layout.$z-indexes,
 );
 /* stylelint-enable scss/dollar-variable-default */
 

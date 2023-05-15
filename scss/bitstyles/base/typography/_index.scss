@@ -1,7 +1,6 @@
 @forward 'settings';
 @use './settings';
-@use '../../design-tokens/typography';
-@use '../../tools/typography' as typography-tools;
+@use '../../tools/typography' as typography;
 
 /* stylelint-disable selector-max-type */
 h1,
@@ -11,12 +10,12 @@ h4,
 h5,
 h6 {
   margin: settings.$margin-heading;
-  font-family: typography.$font-family-header;
-  font-weight: typography.$font-weight-bold;
+  font-family: settings.$font-family-heading;
+  font-weight: settings.$font-weight-heading;
   text-rendering: optimizeLegibility;
 }
 
-@include typography-tools.output-responsive-font-sizes(
+@include typography.output-responsive-font-sizes(
   $font-sizes: settings.$typographic-scale,
   $filter-list: settings.$typographic-scale-filter
 );
@@ -30,7 +29,7 @@ address {
 }
 
 dt {
-  font-weight: typography.$font-weight-bold;
+  font-weight: settings.$font-weight-dt;
 }
 
 table {

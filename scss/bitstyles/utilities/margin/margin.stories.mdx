@@ -326,21 +326,21 @@ The `positive` and `negative` keys are required for each group you want to defin
   $sizes: (
     'positive': (
       '0': 0,
-      's6': var(design-token.get('size', 's6'),
-      's4': var(design-token.get('size', 's4'),
-      's': var(design-token.get('size', 's2'),
-      'm': var(design-token.get('size', 'm'),
-      'l': var(design-token.get('size', 'l2'),
-      'l3': var(design-token.get('size', 'l3'),
+      's6': var(design-token.get('size', 's6')),
+      's4': var(design-token.get('size', 's4')),
+      's': var(design-token.get('size', 's2')),
+      'm': var(design-token.get('size', 'm')),
+      'l': var(design-token.get('size', 'l2')),
+      'l3': var(design-token.get('size', 'l3')),
       'auto': auto,
     ),
     'negative': (
-      's6': -#{var(design-token.get('size', 's6')},
-      's4': -#{var(design-token.get('size', 's4')},
-      's': -#{var(design-token.get('size', 's2')},
-      'm': -#{var(design-token.get('size', 'm')},
-      'l': -#{var(design-token.get('size', 'l2')},
-      'l3': -#{var(design-token.get('size', 'l3')},
+      's6': calc(var(design-token.get('size', 's6')) * -1),
+      's4': calc(var(design-token.get('size', 's4')) * -1),
+      's': calc(var(design-token.get('size', 's2')) * -1),
+      'm': calc(var(design-token.get('size', 'm')) * -1),
+      'l': calc(var(design-token.get('size', 'l2')) * -1),
+      'l3': calc(var(design-token.get('size', 'l3')) * -1),
     ),
   )
 );
