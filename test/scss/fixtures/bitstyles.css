@@ -2147,12 +2147,49 @@ table {
 .a-content--full {
   max-width: 100%;
 }
+.a-dl,
+.a-dl__item {
+  align-items: baseline;
+  display: grid;
+}
+.a-dl__item:last-child {
+  border: 0;
+}
 .a-dl {
-  border-top: 1px solid var(--bs-color-grayscale-light-1);
+  gap: var(--bs-size-s1);
+}
+.a-dl__item {
+  color: var(--bs-color-grayscale-dark-4);
+  gap: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.a-dl__dt {
+  color: var(--bs-color-grayscale-dark-1);
+  font-size: var(--bs-font-size-1);
+  font-weight: 700;
+}
+@media screen and (min-width: 30em) {
+  .a-dl {
+    border-top: 1px solid var(--bs-color-grayscale-light-3);
+    gap: 0;
+  }
+  .a-dl__item {
+    border-bottom: 1px solid var(--bs-color-grayscale-light-3);
+    gap: var(--bs-size-l1);
+    padding-bottom: var(--bs-size-l1);
+    padding-top: var(--bs-size-l1);
+  }
+  .a-dl__dt {
+    font-size: var(--bs-font-size-2);
+  }
 }
 @media screen and (min-width: 30em) {
   .a-dl__item {
-    border-bottom: 1px solid var(--bs-color-grayscale-light-1);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .a-dl__dd {
+    grid-column: span 2 / span 2;
   }
 }
 .a-dropdown {

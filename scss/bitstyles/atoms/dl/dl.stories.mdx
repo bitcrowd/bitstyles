@@ -10,19 +10,93 @@ A list of term/description pairs, used to display any set of key-value pairs. It
   <Story name="dl">
     {`
       <dl class="a-dl">
-        <div class="a-dl__item u-grid@m u-grid-cols-3 u-gap-m u-padding-m-y u-padding-m@m u-items-baseline">
-          <dt class="u-font-medium u-h6 u-fg-grayscale u-margin-s4-bottom@s">Full name</dt>
-          <dd class="u-col-span-2">Muffin Gummies</dd>
+        <div class="a-dl__item">
+          <dt class="a-dl__dt">Full name</dt>
+          <dd class="a-dl__dd">Muffin Gummies</dd>
         </div>
-        <div class="a-dl__item u-grid@m u-grid-cols-3 u-gap-m u-padding-m-y u-padding-m@m u-items-baseline">
-          <dt class="u-font-medium u-h6 u-fg-grayscale u-margin-s4-bottom@s">Email</dt>
-          <dd class="u-col-span-2">cupcake@tiramisu.com</dd>
+        <div class="a-dl__item">
+          <dt class="a-dl__dt">Email</dt>
+          <dd class="a-dl__dd">cupcake@tiramisu.com</dd>
         </div>
-        <div class="a-dl__item u-grid@m u-grid-cols-3 u-gap-m u-padding-m-y u-padding-m@m u-items-baseline">
-          <dt class="u-font-medium u-h6 u-fg-grayscale u-margin-s4-bottom@s">Description</dt>
-          <dd class="u-col-span-2">Muffin gummies tart fruitcake gummi bears chocolate bar. Jujubes candy macaroon topping dessert biscuit topping sugar plum sesame snaps. Chocolate donut cake tootsie roll donut biscuit caramels sugar plum jelly beans. Dessert dragée jelly-o gummi bears sweet halvah soufflé.</dd>
+        <div class="a-dl__item">
+          <dt class="a-dl__dt">Description</dt>
+          <dd class="a-dl__dd">Muffin gummies tart fruitcake gummi bears chocolate bar. Jujubes candy macaroon topping dessert biscuit topping sugar plum sesame snaps. Chocolate donut cake tootsie roll donut biscuit caramels sugar plum jelly beans. Dessert dragée jelly-o gummi bears sweet halvah soufflé.</dd>
         </div>
       </dl>
     `}
   </Story>
 </Canvas>
+
+## Responsiveness
+
+There are two layouts for this component, with a simpler vertical stack for small viewports, and a wider asymmetrical two-column layout for larger viewports. The simple stack has no borders and minimal spacing, whereas the two-column layout uses borders and increased spacing to group content. With default configuration, the `m` breakpoint is used.
+
+## Customization
+
+The spacing and borders of the root component, and each item inside the list, can be specified at any breakpoint. Font properties of the `a-dl__dt` elements can be specified.
+
+The component accepts a variable called `$sizes` that has a nested object for each breakpoint you want to configure the layout, with the key being the name of the breakpoint from the global breakpoints. Inside each object can be up to three further objects: `'dl'`, `'item'`, and `'dl'`, where you can specify certain CSS properties of that part of the component.
+
+The complete list of variables you can configure for each part of the component at each breakpoint are:
+
+- dl
+  - `gap` Space between each item.
+  - `border-top` Border at the top of the dl.
+  - `border-bottom` Border at the bottom of the dl.
+- item
+  - `border-top` Border at the top of each item.
+  - `border-bottom` Border at the bottom of each item.
+  - `color` Color for each item (can be specified for the `dt` elements separately)
+  - `gap` Space between each `dt` and `dd` child of the item. Note that this could be horizontal of vertical space, depending on whether the layout is the vertically-stacked small-viewport version, or the horizontal grid of the large-viewport component.
+  - `padding-horizontal` Applies space the left and right of each item.
+- dt
+  - `font-weight` Font-weight of the dt.
+  - `font-weight` Font-size of the dt.
+  - `color` Color for the dt (overrides the color used for the rest of each item)
+
+Note that the styles will be built mobile-first — if you do not need to override a value from an earlier breakpoint, you do not need to re-specify it.
+
+An example of how to configure the component:
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/dl' with (
+  $sizes: (
+    setup.$no-media-query: (
+      'dl': (
+        'gap': size.get('xl'),
+      ),
+      'item': (
+        'gap': size.get('xl'),
+        'padding-horizontal': size.get('xl'),
+      ),
+      'dt': (
+        'font-weight': typography.$font-weight-medium,
+        'color': palette.get('text', 'light'),
+      ),
+    )
+    // all the above values will still hold, unless overridden below
+  'm':
+    (
+      'dl': (
+        'gap': 0,
+      ),
+      'item': (
+        'gap': size.get('l1'),
+      ),
+      'dt': (
+        'font-size': font-size.get('2'),
+      ),
+    ),
+  )
+);
+```
+
+There is an extra variable that may be useful:
+
+- `$layout-breakpoint` specifies the breakpoint at which you want the layout to switch between the vertical stack & two-column layout.
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/dl' with (
+  $layout-breakpoint: 'l'
+);
+```
