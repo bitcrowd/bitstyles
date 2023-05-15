@@ -5,6 +5,7 @@
 
 $padding: var(design-token.get('size', 's1')) !default;
 $font-weight: var(design-token.get('font-weight', 'medium')) !default;
+$z-index: var(design-token.get('z-index', 'top')) !default;
 
 //
 // Base/hover Colors /////////////////////////////////////////

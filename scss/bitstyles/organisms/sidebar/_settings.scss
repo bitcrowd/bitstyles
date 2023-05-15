@@ -20,3 +20,4 @@ $states: (
     'transform': none,
   ),
 ) !default;
+$z-index: var(design-token.get('z-index', 'overlay')) !default;

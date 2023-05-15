@@ -2,7 +2,8 @@
 
 $z-indexes: (
   'base': 0,
-  'topbar': 1,
+  'overlay': 10,
+  'top': 20,
 ) !default;
 $border-radius-round: 9999rem !default;
 $size-base: 1rem !default;

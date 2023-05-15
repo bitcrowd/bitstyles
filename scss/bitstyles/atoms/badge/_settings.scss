@@ -29,21 +29,21 @@ $size-variants: (
 /* stylelint-enable length-zero-no-unit */
 $theme-variants: (
   'default': (
-    'shadow': var(design-token.get('shadow', 'gray')),
+    'shadow': var(design-token.get('shadow', 'gray', 'box')),
   ),
   'brand-1': (
-    'shadow': var(design-token.get('shadow', 'brand-1')),
+    'shadow': var(design-token.get('shadow', 'brand-1', 'box')),
   ),
   'brand-2': (
-    'shadow': var(design-token.get('shadow', 'brand-2')),
+    'shadow': var(design-token.get('shadow', 'brand-2', 'box')),
   ),
   'positive': (
-    'shadow': var(design-token.get('shadow', 'positive')),
+    'shadow': var(design-token.get('shadow', 'positive', 'box')),
   ),
   'warning': (
-    'shadow': var(design-token.get('shadow', 'warning')),
+    'shadow': var(design-token.get('shadow', 'warning', 'box')),
   ),
   'danger': (
-    'shadow': var(design-token.get('shadow', 'danger')),
+    'shadow': var(design-token.get('shadow', 'danger', 'box')),
   ),
 ) !default;

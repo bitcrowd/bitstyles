@@ -156,6 +156,9 @@
   --bs-size-l5: 3rem;
   --bs-size-l6: 4rem;
   --bs-size-l7: 5rem;
+  --bs-z-index-base: 0;
+  --bs-z-index-overlay: 10;
+  --bs-z-index-top: 20;
 }
 :root {
   --bs-shadow-brand-1-drop: drop-shadow(
@@ -357,6 +360,30 @@
     0 calc(var(--bs-size-s7) / 1) calc(var(--bs-size-s2) / 1)
       rgba(var(--bs-color-danger-dark-1-rgb), 0.1);
 }
+:root {
+  --bs-font-size-1: 0.75rem;
+  --bs-font-size-2: 0.875rem;
+  --bs-font-size-3: 1rem;
+  --bs-font-size-4: 1.125rem;
+  --bs-font-size-5: 1.25rem;
+  --bs-font-size-6: 1.5rem;
+  --bs-font-size-7: 2rem;
+  --bs-font-size-8: 3rem;
+  --bs-line-height-1: 1.1667;
+  --bs-line-height-2: 1.25;
+  --bs-line-height-3: 1.4;
+  --bs-line-height-4: 1.5555;
+  --bs-line-height-5: 1.67;
+  --bs-font-weight-thin: 100;
+  --bs-font-weight-extralight: 200;
+  --bs-font-weight-light: 300;
+  --bs-font-weight-normal: 400;
+  --bs-font-weight-medium: 500;
+  --bs-font-weight-semibold: 600;
+  --bs-font-weight-bold: 700;
+  --bs-font-weight-extrabold: 800;
+  --bs-font-weight-black: 900;
+}
 html {
   box-sizing: border-box;
 }
@@ -534,7 +561,7 @@ a {
   box-shadow: none;
   color: var(--bs-color-brand-1-dark-1);
   cursor: pointer;
-  font-weight: 500;
+  font-weight: var(--bs-font-weight-medium);
   outline-offset: 0;
   padding: 0;
   text-decoration: underline;
@@ -583,7 +610,7 @@ figcaption {
   font-display: swap;
   font-family: Poppins;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--bs-font-weight-normal);
   src: url(../assets/fonts/poppins-v20-latin-400.woff2) format('woff2'),
     url(../assets/fonts/poppins-v20-latin-400.woff) format('woff');
 }
@@ -591,7 +618,7 @@ figcaption {
   font-display: swap;
   font-family: Poppins;
   font-style: italic;
-  font-weight: 400;
+  font-weight: var(--bs-font-weight-normal);
   src: url(../assets/fonts/poppins-v20-latin-400italic.woff2) format('woff2'),
     url(../assets/fonts/poppins-v20-latin-400italic.woff) format('woff');
 }
@@ -599,7 +626,7 @@ figcaption {
   font-display: swap;
   font-family: Poppins;
   font-style: normal;
-  font-weight: 500;
+  font-weight: var(--bs-font-weight-medium);
   src: url(../assets/fonts/poppins-v20-latin-500.woff2) format('woff2'),
     url(../assets/fonts/poppins-v20-latin-500.woff) format('woff');
 }
@@ -607,7 +634,7 @@ figcaption {
   font-display: swap;
   font-family: Poppins;
   font-style: italic;
-  font-weight: 500;
+  font-weight: var(--bs-font-weight-medium);
   src: url(../assets/fonts/poppins-v20-latin-500italic.woff2) format('woff2'),
     url(../assets/fonts/poppins-v20-latin-500italic.woff) format('woff');
 }
@@ -615,7 +642,7 @@ figcaption {
   font-display: swap;
   font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--bs-font-weight-semibold);
   src: url(../assets/fonts/poppins-v20-latin-600.woff2) format('woff2'),
     url(../assets/fonts/poppins-v20-latin-600.woff) format('woff');
 }
@@ -623,7 +650,7 @@ figcaption {
   font-display: swap;
   font-family: Poppins;
   font-style: italic;
-  font-weight: 600;
+  font-weight: var(--bs-font-weight-semibold);
   src: url(../assets/fonts/poppins-v20-latin-600italic.woff2) format('woff2'),
     url(../assets/fonts/poppins-v20-latin-600italic.woff) format('woff');
 }
@@ -808,14 +835,14 @@ input::-moz-placeholder,
 textarea::-moz-placeholder {
   color: var(--bs-color-grayscale-light-1);
   font-style: italic;
-  font-weight: 400;
+  font-weight: var(--bs-font-weight-normal);
   opacity: 1;
 }
 input::placeholder,
 textarea::placeholder {
   color: var(--bs-color-grayscale-light-1);
   font-style: italic;
-  font-weight: 400;
+  font-weight: var(--bs-font-weight-normal);
   opacity: 1;
 }
 [type='date'],
@@ -1082,7 +1109,7 @@ h6 {
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     helvetica, arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol;
-  font-weight: 700;
+  font-weight: var(--bs-font-weight-bold);
   margin: 0;
   text-rendering: optimizeLegibility;
 }
@@ -1151,7 +1178,7 @@ address {
   font-style: normal;
 }
 dt {
-  font-weight: 700;
+  font-weight: var(--bs-font-weight-bold);
 }
 table {
   border-collapse: collapse;
@@ -1384,13 +1411,16 @@ table {
   --bs-button-box-shadow: none;
   --bs-button-hover-color: var(--bs-color-brand-1-dark-2);
   --bs-button-hover-background-color: var(--bs-color-brand-1-light-2);
+  --bs-button-hover-box-shadow: none;
   --bs-button-active-color: var(--bs-color-grayscale-white);
   --bs-button-active-background-color: var(--bs-color-brand-1-dark-1);
+  --bs-button-active-box-shadow: none;
   --bs-button-pressed-color: var(--bs-color-grayscale-white);
   --bs-button-pressed-background-color: var(--bs-color-brand-1-dark-2);
   --bs-button-pressed-box-shadow: none;
   --bs-button-disabled-color: var(--bs-color-grayscale);
   --bs-button-disabled-background-color: var(--bs-color-grayscale-light-3);
+  --bs-button-disabled-box-shadow: none;
 }
 [data-theme='dark'] {
   --bs-button-color: var(--bs-color-brand-1);
@@ -1401,11 +1431,13 @@ table {
   --bs-button-hover-box-shadow: none;
   --bs-button-active-color: var(--bs-color-brand-1);
   --bs-button-active-background-color: var(--bs-color-grayscale-light-2);
+  --bs-button-active-box-shadow: none;
   --bs-button-pressed-color: var(--bs-color-grayscale-white);
   --bs-button-pressed-background-color: var(--bs-color-brand-1);
   --bs-button-pressed-box-shadow: none;
   --bs-button-disabled-color: var(--bs-color-grayscale-light-1);
   --bs-button-disabled-background-color: var(--bs-color-grayscale-dark-2);
+  --bs-button-disabled-box-shadow: none;
 }
 [data-theme='brand-1'] {
   --bs-button-color: var(--bs-color-brand-1-dark-2);
@@ -1907,7 +1939,7 @@ table {
   --bs-button-min-height: 1em;
   --bs-button-min-width: 0;
   --bs-button-font-size: var(--bs-font-size-2);
-  --bs-button-font-weight: 600;
+  --bs-button-font-weight: var(--bs-font-weight-semibold);
 }
 .a-button.a-button--square {
   --bs-button-min-width: calc(
@@ -1924,7 +1956,7 @@ table {
   --bs-button-padding-horizontal: var(--bs-size-m);
   --bs-button-min-height: var(--bs-size-l1);
   --bs-button-min-width: var(--bs-size-l2);
-  --bs-button-font-weight: 500;
+  --bs-button-font-weight: var(--bs-font-weight-medium);
 }
 .a-button--small.a-button--square {
   --bs-button-min-width: calc(
@@ -1939,7 +1971,7 @@ table {
 .a-button--x-small {
   --bs-button-padding-vertical: var(--bs-size-s6);
   --bs-button-padding-horizontal: var(--bs-size-s2);
-  --bs-button-font-weight: 500;
+  --bs-button-font-weight: var(--bs-font-weight-medium);
 }
 .a-button--x-small.a-button--square {
   --bs-button-min-width: calc(
@@ -2205,7 +2237,7 @@ table {
 .a-dl__dt {
   color: var(--bs-color-grayscale-dark-1);
   font-size: var(--bs-font-size-1);
-  font-weight: 700;
+  font-weight: var(--bs-font-weight-bold);
 }
 @media screen and (min-width: 30em) {
   .a-dl {
@@ -2253,7 +2285,7 @@ table {
   top: 100%;
   width: -moz-min-content;
   width: min-content;
-  z-index: 1;
+  z-index: var(--bs-z-index-top);
 }
 .a-dropdown [role='separator'] {
   border-top: 2px solid var(--bs-color-brand-1-light-2);
@@ -2356,7 +2388,7 @@ table {
   box-shadow: none;
   color: var(--bs-color-brand-1-dark-1);
   cursor: pointer;
-  font-weight: 500;
+  font-weight: var(--bs-font-weight-medium);
   outline-offset: 0;
   padding: 0;
   text-decoration: underline;
@@ -2398,13 +2430,13 @@ table {
   text-decoration: underline;
 }
 .a-skip-link {
-  font-weight: 500;
+  font-weight: var(--bs-font-weight-medium);
   left: 50%;
   padding: var(--bs-size-s1);
   position: absolute;
   top: -100%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: var(--bs-z-index-top);
 }
 .a-skip-link,
 .a-skip-link:focus,
@@ -2423,7 +2455,7 @@ table {
   position: relative;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: var(--bs-z-index-overlay);
 }
 .o-modal__overlay {
   -webkit-backface-visibility: hidden;
@@ -2437,7 +2469,7 @@ table {
   top: 0;
   transition: all 0.2s var(--bs-transition-default-easing);
   will-change: opacity, transform, visibility;
-  z-index: 10;
+  z-index: var(--bs-z-index-top);
 }
 [aria-hidden='true'] .o-modal__overlay {
   opacity: 0;
@@ -2522,7 +2554,7 @@ table {
   position: fixed;
   top: 0;
   width: 80vw;
-  z-index: 1;
+  z-index: var(--bs-z-index-overlay);
 }
 @media screen and (prefers-reduced-motion: no-preference) {
   .o-sidebar--small.is-transitioning {
@@ -3087,16 +3119,16 @@ table {
   }
 }
 .u-font-light {
-  font-weight: 300;
+  font-weight: var(--bs-font-weight-light);
 }
 .u-font-normal {
-  font-weight: 400;
+  font-weight: var(--bs-font-weight-normal);
 }
 .u-font-medium {
-  font-weight: 500;
+  font-weight: var(--bs-font-weight-medium);
 }
 .u-font-bold {
-  font-weight: 700;
+  font-weight: var(--bs-font-weight-bold);
 }
 .u-font-italic {
   font-style: italic;

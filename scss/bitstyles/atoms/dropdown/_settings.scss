@@ -28,3 +28,4 @@ $states: (
     'opacity': 1,
   ),
 ) !default;
+$z-index: var(design-token.get('z-index', 'top')) !default;

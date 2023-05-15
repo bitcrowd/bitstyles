@@ -17,3 +17,4 @@ $transition-delay: 0.05s !default;
 $will-change: opacity, transform, visibility !default;
 $border-radius: 0 !default;
 $breakpoint: 'm' !default;
+$z-index: var(design-token.get('z-index', 'top')) !default;
