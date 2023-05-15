@@ -18,7 +18,7 @@ Specify the `width` property of an element. Default configuration provides `100%
 
 ## Customization
 
-Customize the available widths by overriding the `$bitstyles-width-values` Sass map, providing the name to be used for the class, and the value to use.
+Customize the available widths by overriding the `$values` Sass map, providing the name to be used for the class, and the value to use.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/width' with (
@@ -28,7 +28,7 @@ Customize the available widths by overriding the `$bitstyles-width-values` Sass 
 );
 ```
 
-Available breakpoint variables can be specified by overriding the `$bitstyles-width-breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
+Available breakpoint variables can be specified by overriding the `$breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/width' with (

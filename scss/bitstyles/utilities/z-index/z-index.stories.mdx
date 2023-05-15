@@ -20,7 +20,7 @@ Not available at any breakpoint when using the default configuration. See [custo
 
 ## Customization
 
-The available z-indexes can be customized by overriding the `$bitstyles-z-index-values` map. Provide the name to be used for the class as the key, and the value:
+The available z-indexes can be customized by overriding the `$values` map. Provide the name to be used for the class as the key, and the value:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/z-index' with (
@@ -31,7 +31,7 @@ The available z-indexes can be customized by overriding the `$bitstyles-z-index-
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-z-index-breakpoints` list, providing the names of breakpoints from the global list of breakpoints:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` list, providing the names of breakpoints from the global list of breakpoints:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/z-index' with (

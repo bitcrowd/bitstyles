@@ -138,23 +138,24 @@ The `.a-card` classes are available at `m` and `l` breakpoints by default, inclu
 Card appearance can be customized by overriding the following variables:
 
 ```scss
-$bitstyles-card-sizes: (
-  'base': size.get('m'),
-  'l': size.get('l3'),
-);
-$bitstyles-card-border-radius: size.get('m');
-$bitstyles-card-box-shadow: shadow.to-box-shadow(
-  shadow.generate(
-    $color: rgba(palette.get('brand-1', 'base-rgb'), 0.025),
-    $offset: size.get('s2'),
-    $blur-radius: size.get('l2'),
-    $layers: 6,
-  )
+@use '~bitstyles/scss/bitstyles/atoms/card' with (
+  $sizes: (
+    'base': size.get('m'),
+    'l': size.get('l3'),
+  ),
+  $border-radius: size.get('m'),
+  $box-shadow: shadow.to-box-shadow(shadow.generate($color: rgba(palette.get('brand-1', 'base-rgb'), 0.025), $offset:
+          size.get('s2'), $blur-radius: size.get('l2'), $layers: 6))
 );
 ```
 
-The breakpoints the cards are available at can be customized by overriding the `$bitstyles-card-breakpoints` variable:
+The breakpoints the cards are available at can be customized by overriding the `$breakpoints` variable:
 
 ```scss
-$bitstyles-card-breakpoints: ('m', 'l');
+@use '~bitstyles/scss/bitstyles/atoms/card' with (
+  $breakpoints: (
+    'm',
+    'l',
+  )
+);
 ```

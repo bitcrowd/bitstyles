@@ -51,13 +51,15 @@ The base icon size inherits from the surrounding text i.e. `1em`. Other sizes av
 
 ## Customization
 
-The available sizes and their classnames can be customized using `$bitstyles-icon-sizes`:
+The available sizes and their classnames can be customized using `$sizes`:
 
 ```scss
-$sizes: (
-  's': size.get('s4'),
-  'm': size.get('m'),
-  'l': size.get('l2'),
-  'xl': size.get('l2') + size.get('s4'),
+@use '~bitstyles/scss/bitstyles/atoms/icon' with (
+  $sizes: (
+    's': size.get('s4'),
+    'm': size.get('m'),
+    'l': size.get('l2'),
+    'xl': size.get('l2') + size.get('s4'),
+  )
 );
 ```

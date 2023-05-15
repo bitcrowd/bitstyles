@@ -69,7 +69,7 @@ Specify font-family on an element. Defaults to the `header` and `body` font-stac
 
 ## Customization
 
-The available font-weights and font-styles can be customized by overriding the `$bitstyles-font-weight-values`, `$bitstyles-font-style-values`, and `$bitstyles-font-family-values` Sass maps respectively. Provide the name to be used for the class, and the value for that CSS property:
+The available font-weights and font-styles can be customized by overriding the `$weight-values`, `$style-values`, and `$family-values` Sass maps respectively. Provide the name to be used for the class, and the value for that CSS property:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/font' with (
@@ -90,17 +90,17 @@ The available font-weights and font-styles can be customized by overriding the `
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-font-weight-breakpoints`, `$bitstyles-font-style-breakpoints`, and `$bitstyles-font-family-breakpoints` Sass lists respectively:
+The breakpoints these classes are available at can be customized by overriding the `$weight-breakpoints`, `$style-breakpoints`, and `$family-breakpoints` Sass lists respectively:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/font' with (
-  $bitstyles-font-weight-breakpoints: (
+  $weight-breakpoints: (
     'm',
   ),
-  $bitstyles-font-style-breakpoints: (
+  $style-breakpoints: (
     'l',
   ),
-  $bitstyles-font-family-breakpoints: (
+  $family-breakpoints: (
     's',
   )
 );

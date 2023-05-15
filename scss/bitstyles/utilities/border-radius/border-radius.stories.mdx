@@ -36,7 +36,7 @@ Specify the radius of the corners of an element (`border-radius`). It defaults t
 
 ## Customization
 
-The available sizes of border radius can be customized by overriding the `$bitstyles-border-radius-values` Sass map, specifying the name to be used for the class, and the value to apply:
+The available sizes of border radius can be customized by overriding the `$values` Sass map, specifying the name to be used for the class, and the value to apply:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/border-radius' with (
@@ -46,7 +46,7 @@ The available sizes of border radius can be customized by overriding the `$bitst
 );
 ```
 
-Make these classes available at breakpoints using the `$bitstyles-border-radius-breakpoints` Sass list:
+Make these classes available at breakpoints using the `$breakpoints` Sass list:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/border-radius' with (
@@ -56,7 +56,7 @@ Make these classes available at breakpoints using the `$bitstyles-border-radius-
 );
 ```
 
-If you need it, you can also customize which corners are available using `$bitstyles-border-radius-directions`. Provide a Sass map with the name to be used for the class as the keys, and a Sass list of the directions that class will specify. Note the directions must each end with the suffix `radius` (it’s because of the unusual ordering of the directions and property name in the CSS properties like `border-top-left-radius`):
+If you need it, you can also customize which corners are available using `$directions`. Provide a Sass map with the name to be used for the class as the keys, and a Sass list of the directions that class will specify. Note the directions must each end with the suffix `radius` (it’s because of the unusual ordering of the directions and property name in the CSS properties like `border-top-left-radius`):
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/border-radius' with (

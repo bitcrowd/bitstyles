@@ -3,6 +3,6 @@
 
 :root {
   @each $size-name, $size in layout.$sizes {
-    #{custom-property.get($items: ('size', $size-name))}: #{$size};
+    #{custom-property.get($items: ('size', $size-name))}: $size;
   }
 }

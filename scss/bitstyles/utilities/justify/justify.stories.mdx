@@ -247,7 +247,7 @@ These classes are available at the `m` breakpoint with the default configuration
 
 ## Customization
 
-Customize the available justify-content values by overriding the `$bitstyles-justify-content-values` Sass map. Similarly for `justify-items` and `justify-self`: `$bitstyles-justify-items-values` `$bitstyles-justify-self-values`.
+Customize the available justify-content values by overriding the `$content-values` Sass map. Similarly for `justify-items` and `justify-self`: `$items-values` `$self-values`.
 
 Provide the name to be used for the class as the key, and the value for the property:
 
@@ -266,11 +266,14 @@ Provide the name to be used for the class as the key, and the value for the prop
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `breakpoints` variables `$bitstyles-justify-content-breakpoints`, `$bitstyles-justify-items-breakpoints`, and `$bitstyles-justify-self-breakpoints`
+The breakpoints these classes are available at can be customized by overriding the `breakpoints` variables `$content-breakpoints`, `$items-breakpoints`, and `$self-breakpoints`
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/justify' with (
   $content-breakpoints: (
+    'm',
+  ),
+  $items-breakpoints: (
     'm',
   ),
   $self-breakpoints: (

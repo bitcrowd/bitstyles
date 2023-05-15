@@ -130,7 +130,7 @@ The `col-start` classes are available at `s`, `m`, and `xl` breakpoints by defau
 
 ## Customization
 
-The available start columns can be customized by overriding the `$bitstyles-col-start-values` Sass map. Provide a name for the class as the key, and the col-start value you require. If you want to add some values (because you’ve defined you grid with more columns, for example), you’ll need to copy the the existing values in order to keep them — you can only override the whole map, not update or merge:
+The available start columns can be customized by overriding the `$values` Sass map. Provide a name for the class as the key, and the col-start value you require. If you want to add some values (because you’ve defined you grid with more columns, for example), you’ll need to copy the the existing values in order to keep them — you can only override the whole map, not update or merge:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/col-start' with (
@@ -146,7 +146,7 @@ The available start columns can be customized by overriding the `$bitstyles-col-
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-col-start-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` variable:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/col-start' with (

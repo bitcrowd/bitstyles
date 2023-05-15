@@ -5,7 +5,7 @@
 /* prettier-ignore */
 :root {
   @each $shadow-name, $shadow in shadows-settings.$shadows {
-    #{custom-property.get($items: ('shadow', $shadow-name))}-drop: #{shadows.get($shadow-name, $type: 'drop', $format: 'css')};
-    #{custom-property.get($items: ('shadow', $shadow-name))}-box: #{shadows.get($shadow-name, $format: 'css')};
+    #{custom-property.get($items: ('shadow', $shadow-name))}-drop: shadows.get($shadow-name, $type: 'drop', $format: 'css');
+    #{custom-property.get($items: ('shadow', $shadow-name))}-box: shadows.get($shadow-name, $format: 'css');
   }
 }

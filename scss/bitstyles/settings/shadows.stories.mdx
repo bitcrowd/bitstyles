@@ -60,9 +60,10 @@ The getter function `shadows.get()` is the most straightforward way to use shado
 
 ```scss
 @use '../../tools/shadows';
-@use '~bitstyles/scss/bitstyles/utilities/box-shadow' with (
+
+@use '~bitstyles/scss/bitstyles/utilities/box-shadows' with (
   $values: (
-    'brand-1': shadows.get('brand-1', 'box'),
+    'default': shadows.get('brand-1', 'box'),
   )
 );
 
@@ -164,19 +165,21 @@ In this format, each shadow is specified as a list of maps (Sass lists and Sass 
 An example two-layer shadow:
 
 ```scss
-$bitstyles-shadows-shadows: (
-  'default': (
-    (
-      'color': rgba(palette.get('brand-1'), 0.15),
-      'offset': 0.25rem,
-      'blur-radius': 125rem,
+@use '~bitstyles/scss/bitstyles/settings/shadows' with (
+  $shadows: (
+    'default': (
+      (
+        'color': rgba(palette.get('brand-1'), 0.15),
+        'offset': 0.25rem,
+        'blur-radius': 125rem
+      ),
+      (
+        'color': rgba(palette.get('brand-1'), 0.12),
+        'offset': 0.5rem,
+        'blur-radius': 2rem
+      ),
     ),
-    (
-      'color': rgba(palette.get('brand-1'), 0.12),
-      'offset': 0.5rem,
-      'blur-radius': 2rem,
-    ),
-  ),
+  )
 );
 
 /*

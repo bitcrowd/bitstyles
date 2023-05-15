@@ -112,7 +112,7 @@ What these classes are useful for is producing **exceptions** to the standardize
 
 ## Customization
 
-Override `$bitstyles-typography-values` if you need to provide font-sizes outside of your base font-size design tokens, or a subset of those. But be aware this could lead to inconsistent type treatment — probably you should add the font-size you need to the base font-sizes instead.
+Override `$values` if you need to provide font-sizes outside of your base font-size design tokens, or a subset of those. But be aware this could lead to inconsistent type treatment — probably you should add the font-size you need to the base font-sizes instead.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/font-size';
@@ -124,7 +124,7 @@ Override `$bitstyles-typography-values` if you need to provide font-sizes outsid
 );
 ```
 
-You can configure the breakpoints at which the classes are available by overriding `$bitstyles-typography-breakpoints`:
+You can configure the breakpoints at which the classes are available by overriding `$breakpoints`:
 
 ```scss
 @use 'bitstyles/utilities/typography' with (

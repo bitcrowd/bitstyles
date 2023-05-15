@@ -4,7 +4,7 @@
 
 @mixin output($properties, $module-name: '', $layer: null) {
   @each $property, $value in $properties {
-    #{custom-property.get($items: ($module-name, $property), $layer: $layer)}: #{$value};
+    #{custom-property.get($items: ($module-name, $property), $layer: $layer)}: $value;
   }
 }
 
@@ -16,10 +16,8 @@
 ) {
   @each $property in $allow-list {
     @if map.has-key($properties, $property) {
-      #{custom-property.get($items: list.append($module-name, $property), $layer: $layer)}: #{map.get(
-          $properties,
-          $property
-        )};
+      /* prettier-ignore */
+      #{custom-property.get($items: list.append($module-name, $property), $layer: $layer)}: map.get($properties, $property);
     }
   }
 }

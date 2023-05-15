@@ -57,7 +57,7 @@ You can configure the layer prefixes by overriding `setup.$layer-prefix`. Change
 
 ```scss
 @use 'bitstyles/settings/setup' with (
-  $bitstyles-setup-layer-prefixes: (
+  $layer-prefixes: (
     'atom': 'at',
     'molecule': 'mo',
     'organism': 'or',
@@ -79,7 +79,7 @@ This would result in classnames like:
 
 ## “No media query” name
 
-When you pass a block of CSS content to the `media-query.get()` helper, it wraps that content in a media-query. To make looping over media-queries easier, there is a special-case media-query name that results in no media query wrapper. This defaults to `no-mq`, and can be configured using `$bitstyles-setup-no-media-query`:
+When you pass a block of CSS content to the `media-query.get()` helper, it wraps that content in a media-query. To make looping over media-queries easier, there is a special-case media-query name that results in no media query wrapper. This defaults to `no-mq`, and can be configured using `$no-media-query`:
 
 ```scss
 @use 'bitstyles/settings/setup' with (

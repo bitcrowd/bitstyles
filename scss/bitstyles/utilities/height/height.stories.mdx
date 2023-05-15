@@ -27,7 +27,7 @@ Specify an element’s height. Default configuration provides `height: 100vh` an
 
 ## Customization
 
-Customize the available heights by overriding the `$bitstyles-height-values` Sass map, providing the name to be used for the class, and the value to use.
+Customize the available heights by overriding the `$values` Sass map, providing the name to be used for the class, and the value to use.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/height' with (
@@ -37,7 +37,7 @@ Customize the available heights by overriding the `$bitstyles-height-values` Sas
 );
 ```
 
-Available breakpoint variables can be specified by overriding the `$bitstyles-height-breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
+Available breakpoint variables can be specified by overriding the `$breakpoints` Sass list, providing a list of names of breakpoints taken from the global breakpoint list:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/height' with (

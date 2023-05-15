@@ -58,7 +58,7 @@ Default configuration gives you `none`, `decimal`, and `disc`. To change that, a
 
 ## Customization
 
-Customize the available list-style-type values by overriding the `$bitstyles-list-values` Sass map. Provide the name to be used for the class as the key, and the value for the property:
+Customize the available list-style-type values by overriding the `$values` Sass map. Provide the name to be used for the class as the key, and the value for the property:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/list' with (
@@ -69,7 +69,7 @@ Customize the available list-style-type values by overriding the `$bitstyles-lis
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-list-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` variable:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/list' with (

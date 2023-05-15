@@ -49,7 +49,7 @@ Default configuration provides a value of `0` for each of the properties at the 
 
 ## Customization
 
-Available positioning types can be configured by overriding the `$bitstyles-inset-values` Sass map. Provide the name to be used for the class as the key, and the value for the property as the value. If you want to keep the existing values, you’ll need to copy the default configuration as you cannot merge or update the existing map.
+Available positioning types can be configured by overriding the `$values` Sass map. Provide the name to be used for the class as the key, and the value for the property as the value. If you want to keep the existing values, you’ll need to copy the default configuration as you cannot merge or update the existing map.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/inset' with (
@@ -60,7 +60,7 @@ Available positioning types can be configured by overriding the `$bitstyles-inse
 );
 ```
 
-To make these classes available at breakpoints, override `$bitstyles-inset-breakpoints`, providing the name(s) of breakpoints defined in your global breakpoint settings:
+To make these classes available at breakpoints, override `$breakpoints`, providing the name(s) of breakpoints defined in your global breakpoint settings:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/inset' with (
@@ -70,7 +70,7 @@ To make these classes available at breakpoints, override `$bitstyles-inset-break
 );
 ```
 
-Available directions can be customised by overriding the `$bitstyles-inset-directions` Sass map. Provide the name for the direction as the key, and the list of directions. Note that if you want to keep the existing directions, you’ll need to copy the existing configurations — the map cannot be updated, only overwritten.
+Available directions can be customized by overriding the `$directions` Sass map. Provide the name for the direction as the key, and the list of directions. Note that if you want to keep the existing directions, you’ll need to copy the existing configurations — the map cannot be updated, only overwritten.
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/inset' with (

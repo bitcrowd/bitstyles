@@ -51,15 +51,24 @@ Examples here show the content of the flashes within a [content](/docs/atoms-con
 
 ## Customization
 
-The available variants can be specified with `$bitstyles-flash-variants`, where the strings you pass must match colors in your color palette:
+The available variants can be specified with `$variants`, where the strings you pass must match colors in your color palette:
 
 ```scss
-$variants: ('brand-1', 'positive', 'danger', 'warning');
+@use '~bitstyles/scss/bitstyles/atoms/flash' with (
+  $variants: (
+    'brand-1',
+    'positive',
+    'danger',
+    'warning',
+  )
+);
 ```
 
-The keys from those colors that will be used are specified with the `$bitstyles-flash-color` and `$bitstyles-flash-background-color`, and are applied to all variants. With the following settings, the `positive` variant will have color `positive` value `90`, with background color `positive` value `10`. The `danger` variant will have color `danger` with value `90` and background-color `danger` at value `10` etc,
+The keys from those colors that will be used are specified with the `$color` and `$background-color`, and are applied to all variants. With the following settings, the `positive` variant will have color `positive` value `90`, with background color `positive` value `10`. The `danger` variant will have color `danger` with value `90` and background-color `danger` at value `10` etc,
 
 ```scss
-$color: '90';
-$background-color: '10';
+@use '~bitstyles/scss/bitstyles/atoms/flash' with (
+  $color: '90';
+  $background-color: '10';
+);
 ```

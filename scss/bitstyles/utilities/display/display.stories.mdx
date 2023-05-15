@@ -289,7 +289,7 @@ Another use is to add `.u-hidden` to “remove” an element from the page, then
 
 ## Customization
 
-The available display types can be customized by overriding the `$bitstyles-display-values` Sass map. Provide a name for the class as the key, and the `display` property value:
+The available display types can be customized by overriding the `$values` Sass map. Provide a name for the class as the key, and the `display` property value:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/display' with (
@@ -303,7 +303,7 @@ The available display types can be customized by overriding the `$bitstyles-disp
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-display-breakpoints` variable:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` variable:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/display' with (

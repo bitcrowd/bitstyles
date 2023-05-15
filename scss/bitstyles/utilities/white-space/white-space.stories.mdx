@@ -20,7 +20,7 @@ Default configuration gives you `nowrap`, which prevents text from wrapping when
 
 ## Customization
 
-The available classes can be customized by overriding the `$bitstyles-white-space-values` map. Provide the name to be used for the class as the key, and the value:
+The available classes can be customized by overriding the `$values` map. Provide the name to be used for the class as the key, and the value:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/white-space' with (
@@ -31,7 +31,7 @@ The available classes can be customized by overriding the `$bitstyles-white-spac
 );
 ```
 
-The breakpoints these classes are available at can be customized by overriding the `$bitstyles-white-space-breakpoints` list, providing the names of breakpoints from the global list of breakpoints:
+The breakpoints these classes are available at can be customized by overriding the `$breakpoints` list, providing the names of breakpoints from the global list of breakpoints:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/white-space' with (

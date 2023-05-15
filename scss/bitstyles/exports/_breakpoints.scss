@@ -3,7 +3,7 @@
 /* stylelint-disable selector-pseudo-class-no-unknown */
 :export {
   @each $breakpoint-name, $breakpoint in breakpoints.$breakpoints {
-    #{$breakpoint-name}: #{$breakpoint};
+    #{$breakpoint-name}: $breakpoint;
   }
 }
 /* stylelint-enable selector-pseudo-class-no-unknown */

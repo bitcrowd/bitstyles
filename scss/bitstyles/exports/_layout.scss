@@ -3,7 +3,7 @@
 /* stylelint-disable selector-pseudo-class-no-unknown */
 :export {
   @each $size-name, $size in layout.$sizes {
-    #{$size-name}: #{$size};
+    #{$size-name}: $size;
   }
 }
 /* stylelint-enable selector-pseudo-class-no-unknown */

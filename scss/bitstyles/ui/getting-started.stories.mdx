@@ -121,38 +121,7 @@ A few things to note:
 
 ### Legacy `@import`
 
-Although deprecated, Sass still supports the `@import` directive. Bitstyles can for now be configured and built using this method, but it’s recommended that you use the `@use` approach shown above.
-
-```scss
-@import '~bitstyles/scss/bitstyles';
-```
-
-You can configure bitstyles by defining variables before importing. Note the variables need to be prefixed with `bitstyles-`:
-
-```scss
-$bitstyles-color-palette-text: #fff;
-$bitstyles-color-palette-background: #000;
-$bitstyles-layout-size-base: 1.2rem;
-$bitstyles-margin-breakpoints: ('l', 'l3');
-
-@import '~bitstyles/scss/bitstyles';
-```
-
-If you don’t need all of bitstyles, instead of importing the whole library you could define your variables then import the modules you need.
-
-```scss
-$bitstyles-color-palette-text: #fff;
-$bitstyles-color-palette-background: #000;
-$bitstyles-layout-size-base: 1.2rem;
-$bitstyles-margin-breakpoints: ('l', 'l3');
-
-@import '~bitstyles/scss/bitstyles/settings/color-palette';
-@import '~bitstyles/scss/bitstyles/settings/layout';
-
-/* … */
-
-@import '~bitstyles/scss/bitstyles/settings/color-palette';
-```
+Bitstyles can no longer be configured and built using the legacy `@import` method. If you need this functionality, you’ll need to use v5.0.1.
 
 ## Next steps
 
