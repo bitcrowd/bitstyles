@@ -1,3 +1,5 @@
+@use '../tools/custom-property';
+
 $boundary-width: 0.0625em !default;
 $s-m-boundary: 30em !default;
 $m-l2-boundary: 55em !default;
@@ -13,3 +15,9 @@ $breakpoints: (
   'portrait': 'all and (orientation:portrait)',
   'motion-ok': 'screen and (prefers-reduced-motion: no-preference)',
 ) !default;
+
+:root {
+  @each $breakpoint-name, $breakpoint in $breakpoints {
+    #{custom-property.get($items: ('breakpoint', $breakpoint-name))}: #{$breakpoint};
+  }
+}

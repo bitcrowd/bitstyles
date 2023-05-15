@@ -1,6 +1,6 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/animation';
+@use '../../design-tokens/animation';
 @use 'sass:math';
 
 [type='checkbox'] {

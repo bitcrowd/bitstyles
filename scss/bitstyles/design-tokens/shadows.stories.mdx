@@ -17,7 +17,7 @@ Use `shadow.generate()` to override the global shadow design tokens in `$shadows
 @use '../tools/shadow';
 @use '../tools/size';
 
-@use '~bitstyles/scss/bitstyles/settings/shadows' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/shadows' with (
   $shadows: (
     'brand-1': shadow.generate($color: rgba(palette.get('brand-1', 'base-rgb'), 0.15), $offset:
           size.get('s7'), $blur-radius: size.get('s4')),
@@ -165,7 +165,7 @@ In this format, each shadow is specified as a list of maps (Sass lists and Sass 
 An example two-layer shadow:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/shadows' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/shadows' with (
   $shadows: (
     'default': (
       (

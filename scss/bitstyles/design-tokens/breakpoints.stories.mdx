@@ -104,7 +104,7 @@ Override the values for the available breakpoints at the start of your Sass mani
 If you don’t need to add or rename a media-query, you may be able to achieve what you need by overriding the values of the variables used to build the default breakpoints. This will alter the boundaries at which `s` becomes `m`, `m` becomes `l`, and so on:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/breakpoints' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/breakpoints' with (
   $s-m-boundary: 12em,
   $m-l2-boundary: 85em,
   $l-l3-boundary: 125em
@@ -114,7 +114,7 @@ If you don’t need to add or rename a media-query, you may be able to achieve w
 If you need more control, or you want more breakpoints than are present, you’ll need to override the `$breakpoints` map. Note that you cannot add to nor edit the values in the default map, you can only overwrite the entire thing. Be sure to copy the breakpoints you use even if you don’t change them:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/settings/breakpoints' with (
+@use '~bitstyles/scss/bitstyles/design-tokens/breakpoints' with (
   $breakpoints: (
     's4': 'screen and (max-width: 19.9875em)',
     's': 'screen and (max-width: 29.9875em)',

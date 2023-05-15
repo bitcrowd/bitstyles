@@ -1,130 +1,22 @@
 //
-// Forwards: Global settings /////////////////////////////////////
+// Global settings /////////////////////////////////////
 
-@forward 'bitstyles/settings/animation' as animation-*;
-@forward 'bitstyles/settings/breakpoints' as breakpoints-*;
-@forward 'bitstyles/settings/base-colors' as base-colors-*;
-@forward 'bitstyles/settings/base-palette' as base-palette-*;
-@forward 'bitstyles/settings/color-palette' as color-palette-*;
-@forward 'bitstyles/settings/layout' as layout-*;
-@forward 'bitstyles/settings/setup' as setup-*;
-@forward 'bitstyles/settings/shadows' as shadows-*;
-@forward 'bitstyles/settings/themes' as themes-*;
-@forward 'bitstyles/settings/typography' as typography-*;
-@forward 'bitstyles/settings/typography-responsive' as typography-responsive-*;
-@forward 'bitstyles/settings/link' as link-*;
+@forward 'bitstyles/settings/';
 
 //
-// Custom properties ////////////////////////////////////
+// Design tokens /////////////////////////////////////
 
-@forward 'bitstyles/custom-properties/animation' as custom-properties-animation-*;
-@forward 'bitstyles/custom-properties/breakpoints' as
-  custom-properties-breakpoints-*;
-@forward 'bitstyles/custom-properties/color-palette' as
-  custom-properties-color-palette-*;
-@forward 'bitstyles/custom-properties/layout' as custom-properties-layout-*;
-@forward 'bitstyles/custom-properties/shadows' as custom-properties-shadows-*;
-@forward 'bitstyles/custom-properties/typography' as
-  custom-properties-typography-*;
+@forward 'bitstyles/design-tokens/';
 
 //
-// Generic ////////////////////////////////////
+// Components ////////////////////////////////////
 
-@forward 'bitstyles/generic/box-sizing' as box-sizing-*;
-@forward 'bitstyles/generic/normalize' as normalize-*;
-@forward 'bitstyles/generic/reset' as reset-*;
-
-//
-// Base /////////////////////////////////////////
-
-@forward 'bitstyles/base/anchor' as anchor-*;
-@forward 'bitstyles/base/figure' as figure-*;
-@forward 'bitstyles/base/font-face' as font-face-*;
-@forward 'bitstyles/base/forms' as forms-*;
-@forward 'bitstyles/base/html' as html-*;
-@forward 'bitstyles/base/images' as images-*;
-@forward 'bitstyles/base/input-checkbox' as input-checkbox-*;
-@forward 'bitstyles/base/input-radio' as input-radio-*;
-@forward 'bitstyles/base/input-text' as input-text-*;
-@forward 'bitstyles/base/select' as select-*;
-@forward 'bitstyles/base/themes' as base-themes-*;
-@forward 'bitstyles/base/typography' as base-typography-*;
-
-//
-// Atoms //////////////////////////////////////
-
-@forward 'bitstyles/atoms/avatar' as avatar-*;
-@forward 'bitstyles/atoms/badge' as badge-*;
-@forward 'bitstyles/atoms/bordered-header' as bordered-header-*;
-@forward 'bitstyles/atoms/button' as button-*;
-@forward 'bitstyles/atoms/button-colors' as button-colors-*;
-@forward 'bitstyles/atoms/button-shapes' as button-shapes-*;
-@forward 'bitstyles/atoms/button--tab' as button-tab-*;
-@forward 'bitstyles/atoms/card' as card-*;
-@forward 'bitstyles/atoms/content' as content-*;
-@forward 'bitstyles/atoms/dl' as dl-*;
-@forward 'bitstyles/atoms/dropdown' as dropdown-*;
-@forward 'bitstyles/atoms/flash' as flash-*;
-@forward 'bitstyles/atoms/icon' as icon-*;
-@forward 'bitstyles/atoms/link' as link-*;
-@forward 'bitstyles/atoms/skip-link' as skip-link-*;
-@forward 'bitstyles/atoms/topbar' as topbar-*;
-
-//
-// Organisms ///////////////////////////////////
-
-@forward 'bitstyles/organisms/modal' as modal-*;
-@forward 'bitstyles/organisms/navbar' as navbar-*;
-@forward 'bitstyles/organisms/sidebar' as sidebar-*;
-@forward 'bitstyles/organisms/notification-center' as notification-center-*;
-@forward 'bitstyles/organisms/table' as table-*;
-@forward 'bitstyles/organisms/ui-group' as ui-group-*;
+@forward 'bitstyles/generic/';
+@forward 'bitstyles/base/';
+@forward 'bitstyles/atoms/';
+@forward 'bitstyles/organisms/';
 
 //
 // Utilities ////////////////////////////////////
 
-@forward 'bitstyles/utilities/aspect-ratio' as aspect-ratio-*;
-@forward 'bitstyles/utilities/bg' as bg-*;
-@forward 'bitstyles/utilities/border' as border-*;
-@forward 'bitstyles/utilities/border-radius' as border-radius-*;
-@forward 'bitstyles/utilities/box-shadow' as box-shadow-*;
-@forward 'bitstyles/utilities/break-text' as break-text-*;
-@forward 'bitstyles/utilities/clearfix' as clearfix-*;
-@forward 'bitstyles/utilities/col-span' as col-span-*;
-@forward 'bitstyles/utilities/col-start' as col-start-*;
-@forward 'bitstyles/utilities/display' as display-*;
-@forward 'bitstyles/utilities/drop-shadow' as drop-shadow-*;
-@forward 'bitstyles/utilities/fg' as fg-*;
-@forward 'bitstyles/utilities/flex' as flex-*;
-@forward 'bitstyles/utilities/font' as font-*;
-@forward 'bitstyles/utilities/gap' as gap-*;
-@forward 'bitstyles/utilities/grid-cols' as grid-cols-*;
-@forward 'bitstyles/utilities/grid-rows' as grid-rows-*;
-@forward 'bitstyles/utilities/height' as height-*;
-@forward 'bitstyles/utilities/inset' as inset-*;
-@forward 'bitstyles/utilities/items' as items-*;
-@forward 'bitstyles/utilities/justify' as justify-*;
-@forward 'bitstyles/utilities/line-height' as line-height-*;
-@forward 'bitstyles/utilities/list' as list-*;
-@forward 'bitstyles/utilities/margin' as margin-*;
-@forward 'bitstyles/utilities/max-height' as max-height-*;
-@forward 'bitstyles/utilities/max-width' as max-width-*;
-@forward 'bitstyles/utilities/min-height' as min-height-*;
-@forward 'bitstyles/utilities/min-width' as min-width-*;
-@forward 'bitstyles/utilities/object-cover' as object-cover-*;
-@forward 'bitstyles/utilities/outline' as outline-*;
-@forward 'bitstyles/utilities/overflow' as overflow-*;
-@forward 'bitstyles/utilities/padding' as padding-*;
-@forward 'bitstyles/utilities/position' as position-*;
-@forward 'bitstyles/utilities/row-start' as row-start-*;
-@forward 'bitstyles/utilities/self' as self-*;
-@forward 'bitstyles/utilities/sr-only' as sr-only-*;
-@forward 'bitstyles/utilities/text' as text-*;
-@forward 'bitstyles/utilities/text-decoration' as text-decoration-*;
-@forward 'bitstyles/utilities/truncate' as truncate-*;
-@forward 'bitstyles/utilities/typography-responsive' as
-  typography-responsive-utilities-*;
-@forward 'bitstyles/utilities/typography' as typography-utilities-*;
-@forward 'bitstyles/utilities/white-space' as white-space-*;
-@forward 'bitstyles/utilities/width' as width-*;
-@forward 'bitstyles/utilities/z-index' as z-index-*;
+@forward 'bitstyles/utilities/';

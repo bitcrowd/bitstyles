@@ -1,6 +1,6 @@
 @forward 'settings';
 @use './settings';
-@use '../../settings/animation';
+@use '../../design-tokens/animation';
 
 [type='radio'] {
   display: inline-block;

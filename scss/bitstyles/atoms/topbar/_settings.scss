@@ -1,6 +1,6 @@
 @use '../../tools/size';
 @use '../../tools/zindex';
-@use '../../settings/layout';
+@use '../../design-tokens/layout';
 
 $position: relative !default;
 $vertical-padding: size.get('s3') !default;

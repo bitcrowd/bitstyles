@@ -1,4 +1,4 @@
-@use '../../settings/typography';
+@use '../../design-tokens/typography';
 
 $weight-values: (
   'light': typography.$font-weight-light,

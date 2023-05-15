@@ -2,7 +2,7 @@
 @use '../../tools/palette';
 @use '../../tools/size';
 @use '../../settings/setup';
-@use '../../settings/typography';
+@use '../../design-tokens/typography';
 
 $layout-breakpoint: 'm' !default;
 /* stylelint-disable scss/map-keys-quotes */

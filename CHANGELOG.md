@@ -27,6 +27,7 @@
 
 - The storybook now includes the `storybook-zeplin` plugin, for which you’ll need to provide your Zeplin personal access token, otherwise the plugin will not work. No other functionality will be affected.
 - The atoms/badge component is now available with a `small` size variant.
+- It is now possible to import bitstyles on a per-layer basis, instead of per-module or all at once. It is still possible to override all modules inside each layer in the normal way.
 
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2023-01-03
 

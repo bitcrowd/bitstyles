@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use 'sass:list';
 @use './classname';
-@use '../settings/typography';
+@use '../design-tokens/typography';
 @use '../atoms/button/settings';
 @use './custom-property';
 @use './custom-properties';

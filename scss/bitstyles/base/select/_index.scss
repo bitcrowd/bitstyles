@@ -1,6 +1,6 @@
 @forward 'settings';
 @use 'settings';
-@use '../../settings/animation';
+@use '../../design-tokens/animation';
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or
   (appearance: none) {
