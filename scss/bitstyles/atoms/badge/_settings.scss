@@ -1,6 +1,5 @@
 @use '../../settings/setup';
 @use '../../tools/design-token';
-@use '../../tools/shadows';
 
 /* stylelint-disable length-zero-no-unit */
 $size-variants: (
@@ -30,21 +29,21 @@ $size-variants: (
 /* stylelint-enable length-zero-no-unit */
 $theme-variants: (
   'default': (
-    'shadow': shadows.get('gray'),
+    'shadow': var(design-token.get('shadow', 'gray')),
   ),
   'brand-1': (
-    'shadow': shadows.get('brand-1'),
+    'shadow': var(design-token.get('shadow', 'brand-1')),
   ),
   'brand-2': (
-    'shadow': shadows.get('brand-2'),
+    'shadow': var(design-token.get('shadow', 'brand-2')),
   ),
   'positive': (
-    'shadow': shadows.get('positive'),
+    'shadow': var(design-token.get('shadow', 'positive')),
   ),
   'warning': (
-    'shadow': shadows.get('warning'),
+    'shadow': var(design-token.get('shadow', 'warning')),
   ),
   'danger': (
-    'shadow': shadows.get('danger'),
+    'shadow': var(design-token.get('shadow', 'danger')),
   ),
 ) !default;

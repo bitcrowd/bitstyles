@@ -13,10 +13,10 @@ Bitstyles provides a semantically-named color palette, with each color having a 
 Use the `design-token.get('color', color-name)` helper function for accessing colors in your Sass. Import `tools/design-token`, then use the `get()` function. Pass the color name and variant as parameters. The returned value is the name of the CSS custom property for that design token, which you’ll need to wrap in a `var()` call:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/tools/palette';
+@use '~bitstyles/scss/bitstyles/tools/design-token';
 
 .component-class::after {
-  background-color: var(design-token.get('color', 'brand-1', 'light-1');
+  background-color: var(design-token.get('color', 'brand-1', 'light-1'));
 }
 ```
 

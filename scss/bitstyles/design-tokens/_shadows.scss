@@ -5,51 +5,58 @@
 $shadows: (
   'brand-1':
     shadow.generate(
-      $color: rgba(var(design-token.get('color', 'brand-1', 'dark-2-rgb')), 0.075),
-      $offset: var(design-token.get('size', 's6')),
-      $blur-radius: var(design-token.get('size', 's3')),
+      $color:
+        rgba(var(custom-property.name('color', 'brand-1', 'dark-2-rgb')), 0.075),
+      $offset: var(custom-property.name('size', 's6')),
+      $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'brand-1-center':
     shadow.generate(
-      $color: rgba(var(design-token.get('color', 'brand-1', 'dark-2-rgb')), 0.075),
+      $color:
+        rgba(var(custom-property.name('color', 'brand-1', 'dark-2-rgb')), 0.075),
       $offset: 0rem,
-      $blur-radius: var(design-token.get('size', 's3')),
+      $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'gray':
     shadow.generate(
-      $color: rgba(var(design-token.get('color', 'grayscale', 'dark-2-rgb')), 0.0875),
-      $offset: var(design-token.get('size', 's6')),
-      $blur-radius: var(design-token.get('size', 's3')),
+      $color:
+        rgba(var(custom-property.name('color', 'grayscale', 'dark-2-rgb')), 0.0875),
+      $offset: var(custom-property.name('size', 's6')),
+      $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'gray-center':
     shadow.generate(
-      $color: rgba(var(design-token.get('color', 'grayscale', 'dark-2-rgb')), 0.0875),
-      $offset: var(design-token.get('size', 's7')),
-      $blur-radius: var(design-token.get('size', 's3')),
+      $color:
+        rgba(var(custom-property.name('color', 'grayscale', 'dark-2-rgb')), 0.0875),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'brand-2':
     shadow.generate(
-      $color: rgba(var(design-token.get('color', 'brand-2', 'dark-1-rgb')), 0.1375),
-      $offset: var(design-token.get('size', 's7')),
-      $blur-radius: var(design-token.get('size', 's1')),
+      $color:
+        rgba(var(custom-property.name('color', 'brand-2', 'dark-1-rgb')), 0.1375),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's1')),
     ),
   'positive':
     shadow.generate(
-      $color: rgba(var(design-token.get('color', 'positive', 'dark-1-rgb')), 0.125),
-      $offset: var(design-token.get('size', 's7')),
-      $blur-radius: var(design-token.get('size', 's1')),
+      $color:
+        rgba(var(custom-property.name('color', 'positive', 'dark-1-rgb')), 0.125),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's1')),
     ),
   'warning':
     shadow.generate(
-      $color: rgba(var(design-token.get('color', 'warning', 'dark-1-rgb')), 0.125),
-      $offset: var(design-token.get('size', 's7')),
-      $blur-radius: var(design-token.get('size', 's1')),
+      $color:
+        rgba(var(custom-property.name('color', 'warning', 'dark-1-rgb')), 0.125),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's1')),
     ),
   'danger':
     shadow.generate(
-      $color: rgba(var(design-token.get('color', 'danger', 'dark-1-rgb')), 0.1),
-      $offset: var(design-token.get('size', 's7')),
-      $blur-radius: var(design-token.get('size', 's2')),
+      $color: rgba(var(custom-property.name('color', 'danger', 'dark-1-rgb')), 0.1),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's2')),
     ),
 ) !default;
 /* stylelint-enable length-zero-no-unit */

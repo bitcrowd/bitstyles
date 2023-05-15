@@ -63,15 +63,15 @@ An example of how to configure the component:
   $sizes: (
     setup.$no-media-query: (
       'dl': (
-        'gap': size.get('xl'),
+        'gap': var(design-token.get('size', 'xl')),
       ),
       'item': (
-        'gap': size.get('xl'),
-        'padding-horizontal': size.get('xl'),
+        'gap': var(design-token.get('size', 'xl')),
+        'padding-horizontal': var(design-token.get('size', 'xl')),
       ),
       'dt': (
         'font-weight': typography.$font-weight-medium,
-        'color': palette.get('text', 'light'),
+        'color': var(design-token.get('color', 'text', 'light'),
       ),
     )
     // all the above values will still hold, unless overridden below
@@ -81,10 +81,10 @@ An example of how to configure the component:
         'gap': 0,
       ),
       'item': (
-        'gap': size.get('l1'),
+        'gap': var(design-token.get('size', 'l1')),
       ),
       'dt': (
-        'font-size': font-size.get('2'),
+        'font-size': var(design-token.get('font-size', '2')),
       ),
     ),
   )

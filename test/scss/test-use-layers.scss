@@ -62,17 +62,17 @@
     )
   ),
   $layout-size-base: 10rem,
+  $shadows-shadows: (
+    'brand-1': (
+      ('color': #f00, 'offset': 2.5rem, 'blur-radius': 5rem),
+      ('color': #f00, 'offset': 5rem, 'blur-radius': 10rem),
+    ),
+  ),
   $typography-webfont-family-name: 'FakeFont',
   $typography-webfont-base-url: './'
 );
 @use '../../scss/bitstyles/design-tokens/secondary' with (
   $link-color: #f00,
-  $shadows-shadows: (
-    'default': (
-      ('color': #f00, 'offset': 2.5rem, 'blur-radius': 5rem),
-      ('color': #f00, 'offset': 5rem, 'blur-radius': 10rem),
-    ),
-  ),
   $themes-themes: (
     'default': (
       'background': var(--bscpn-color-brand-1-light-3),
@@ -86,7 +86,7 @@
     'brand-2': (),
     'danger': (),
     'warning': (),
-    'positive': ()
+    'positive': (),
   ),
   $typography-responsive-typographic-scale: (
     'm': (

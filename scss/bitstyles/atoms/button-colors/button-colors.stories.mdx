@@ -125,11 +125,11 @@ The `default`, `secondary`, `transparent`, `tab`, and `danger` configurations ar
 $secondary: (
   'default': (
     'default': (
-      'border-color': var(design-token.get('color', 'brand-1', 'dark-1'),
-      'icon-color': var(design-token.get('color', 'brand-1', 'dark-3'),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'icon-color': var(design-token.get('color', 'brand-1', 'dark-3')),
     ),
     'hover': (
-      'border-color': var(design-token.get('color', 'brand-1', 'dark-3'),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-3')),
     ),
   ),
 );
@@ -151,12 +151,12 @@ When you need an entirely different set of buttons, you can define your own and 
 $custom-button: (
   'default': (
     'default': (
-      'border-color': var(design-token.get('color', 'brand-1', 'dark-1'),
-      'color': var(design-token.get('color', 'grayscale', 'white'),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
     ),
     'hover': (
-      'border-color': var(design-token.get('color', 'brand-1', 'dark-3'),
-      'color': var(design-token.get('color', 'grayscale', 'light-4'),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-3')),
+      'color': var(design-token.get('color', 'grayscale', 'light-4')),
     ),
   ),
 );
@@ -179,12 +179,12 @@ $primary: (
   ),
   'positive': (
     'default': (
-      'border-color': palette.get('brand-1', 'dark-1'),
-      'color': palette.get('grayscale', 'white'),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-1')),
+      'color': var(design-token.get('color', 'grayscale', 'white')),
     ),
     'hover': (
-      'border-color': palette.get('brand-1', 'dark-3'),
-      'color': palette.get('grayscale', 'light-4'),
+      'border-color': var(design-token.get('color', 'brand-1', 'dark-3')),
+      'color': var(design-token.get('color', 'grayscale', 'light-4')),
     ),
     // colors for this button color variant when it’s in a `positive` themed area
   ),

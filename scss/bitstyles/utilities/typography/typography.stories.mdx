@@ -115,10 +115,10 @@ What these classes are useful for is producing **exceptions** to the standardize
 Override `$values` if you need to provide font-sizes outside of your base font-size design tokens, or a subset of those. But be aware this could lead to inconsistent type treatment — probably you should add the font-size you need to the base font-sizes instead.
 
 ```scss
-@use '~bitstyles/scss/bitstyles/tools/font-size';
+@use '~bitstyles/scss/bitstyles/tools/design-token';
 @use 'bitstyles/utilities/typography' with (
   $values: (
-    'small': var(design-token.get('font-size', '1'),
+    'small': var(design-token.get('font-size', '1')),
     'custom': 5.192456rem,
   )
 );

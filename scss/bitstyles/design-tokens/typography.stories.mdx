@@ -261,31 +261,31 @@ We’re using the global `setup.$no-media-query` to provide font-sizes that appl
   $typographic-scale: (
     '#{setup.$no-media-query}': (
       'h1': (
-        'font-size': var(design-token.get('font-size', '6'),
-        'line-height': var(design-token.get('line-height', '1'),
+        'font-size': var(design-token.get('font-size', '6')),
+        'line-height': var(design-token.get('line-height', '1')),
       ),
       'h2': (
-        'font-size': var(design-token.get('font-size', '5'),
-        'line-height': var(design-token.get('line-height', '2'),
+        'font-size': var(design-token.get('font-size', '5')),
+        'line-height': var(design-token.get('line-height', '2')),
       ),
       'h3': (
-        'font-size': var(design-token.get('font-size', '4'),
-        'line-height': var(design-token.get('line-height', '3'),
+        'font-size': var(design-token.get('font-size', '4')),
+        'line-height': var(design-token.get('line-height', '3')),
       ),
       // ...
     ),
     'm': (
       'h1': (
-        'font-size': var(design-token.get('font-size', '8'),
-        'line-height': var(design-token.get('line-height', '1'),
+        'font-size': var(design-token.get('font-size', '8')),
+        'line-height': var(design-token.get('line-height', '1')),
       ),
       'h2': (
-        'font-size': var(design-token.get('font-size', '7'),
-        'line-height': var(design-token.get('line-height', '2'),
+        'font-size': var(design-token.get('font-size', '7')),
+        'line-height': var(design-token.get('line-height', '2')),
       ),
       'h3': (
-        'font-size': var(design-token.get('font-size', '6'),
-        'line-height': var(design-token.get('line-height', '3'),
+        'font-size': var(design-token.get('font-size', '6')),
+        'line-height': var(design-token.get('line-height', '3')),
       ),
       // ...
     ),
@@ -297,18 +297,18 @@ You can also specify other html elements here, if needed:
 
 ```scss
 @use 'bitstyles/settings/setup';
-@use 'bitstyles/tools/font-size';
+@use 'bitstyles/tools/design-token';
 
 @use 'bitstyles/design-tokens/typography-responsive' with (
   $font-sizes: (
     '#{setup.$no-media-query}': (
       'li': (
-        'font-size': var(design-token.get('font-size', '6'),
-        'line-height': var(design-token.get('line-height', '3'),
+        'font-size': var(design-token.get('font-size', '6')),
+        'line-height': var(design-token.get('line-height', '3')),
       ),
       'code': (
-        'font-size': var(design-token.get('font-size', '5'),
-        'line-height': var(design-token.get('line-height', '2'),
+        'font-size': var(design-token.get('font-size', '5')),
+        'line-height': var(design-token.get('line-height', '2')),
       ),
     ),
   )

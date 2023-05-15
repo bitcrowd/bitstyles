@@ -1,37 +1,37 @@
-@use '../../tools/font-size';
-@use '../../tools/palette';
-@use '../../tools/size';
 @use '../../settings/setup';
 @use '../../design-tokens/typography';
+@use '../../tools/design-token';
 
 $layout-breakpoint: 'm' !default;
 /* stylelint-disable scss/map-keys-quotes */
 $sizes: (
   '#{setup.$no-media-query}': (
     'dl': (
-      'gap': size.get('s1'),
+      'gap': var(design-token.get('size', 's1')),
     ),
     'item': (
       'gap': 0,
-      'color': palette.get('grayscale', 'dark-4'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-4')),
     ),
     'dt': (
-      'font-size': font-size.get('1'),
+      'font-size': var(design-token.get('font-size', '1')),
       'font-weight': typography.$font-weight-bold,
-      'color': palette.get('grayscale', 'dark-1'),
+      'color': var(design-token.get('color', 'grayscale', 'dark-1')),
     ),
   ),
   '#{$layout-breakpoint}': (
     'dl': (
-      'border-top': 1px solid palette.get('grayscale', 'light-3'),
+      'border-top': 1px solid
+        var(design-token.get('color', 'grayscale', 'light-3')),
       'gap': 0,
     ),
     'item': (
-      'gap': size.get('l1'),
-      'border-bottom': 1px solid palette.get('grayscale', 'light-3'),
+      'gap': var(design-token.get('size', 'l1')),
+      'border-bottom': 1px solid
+        var(design-token.get('color', 'grayscale', 'light-3')),
     ),
     'dt': (
-      'font-size': font-size.get('2'),
+      'font-size': var(design-token.get('font-size', '2')),
     ),
   ),
 ) !default;

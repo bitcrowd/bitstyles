@@ -87,7 +87,7 @@ $default: (
   ),
   'positive': (
     'default': (
-      'color': var(design-token.get('color', 'positive', 'dark-2'),
+      'color': var(design-token.get('color', 'positive', 'dark-2')),
       'background-color': transparent,
     ),
     'hover': (
