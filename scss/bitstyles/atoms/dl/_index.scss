@@ -41,6 +41,9 @@
         @if map.has-key($item-values, 'border-bottom') {
           border-bottom: map.get($item-values, 'border-bottom');
         }
+        @if map.has-key($item-values, 'color') {
+          color: map.get($item-values, 'color');
+        }
         @if map.has-key($item-values, 'gap') {
           gap: map.get($item-values, 'gap');
           padding-top: map.get($item-values, 'gap');

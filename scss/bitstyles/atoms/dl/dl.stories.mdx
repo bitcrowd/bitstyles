@@ -46,14 +46,15 @@ The complete list of variables you can configure for each part of the component 
 - item
   - `border-top` Border at the top of each item.
   - `border-bottom` Border at the bottom of each item.
+  - `color` Color for each item (can be specified for the `dt` elements separately)
   - `gap` Space between each `dt` and `dd` child of the item. Note that this could be horizontal of vertical space, depending on whether the layout is the vertically-stacked small-viewport version, or the horizontal grid of the large-viewport component.
   - `padding-horizontal` Applies space the left and right of each item.
 - dt
   - `font-weight` Font-weight of the dt.
   - `font-weight` Font-size of the dt.
-  - `color` Color for the dt.
+  - `color` Color for the dt (overrides the color used for the rest of each item)
 
-Note that the styles will be built mobile-first — if you do not need to override a value from an earlier breakpoint, you do not need to re-sepcify it.
+Note that the styles will be built mobile-first — if you do not need to override a value from an earlier breakpoint, you do not need to re-specify it.
 
 An example of how to configure the component:
 
@@ -80,7 +81,7 @@ An example of how to configure the component:
         'gap': 0,
       ),
       'item': (
-        'gap': size.get('l'),
+        'gap': size.get('l1'),
       ),
       'dt': (
         'font-size': font-size.get('2'),
