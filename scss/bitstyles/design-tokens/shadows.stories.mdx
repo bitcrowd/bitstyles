@@ -4,13 +4,13 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 # Shadows
 
-Bitstyles provides a global list of shadow design tokens, to maintain consistency of shadows throughout your components. The shadows are specified in a Sass list so they can be translated to various formats as needed — the order of parameters for CSS `box-shadow` is different to the CSS filter `drop-shadow()`. We need to be able to translate to either of those formats.
+Bitstyles provides a global list of shadow design tokens, to maintain consistency of shadows throughout your components. The shadows are specified in a Sass list so they can be translated to various formats as needed — the order of parameters for the CSS `box-shadow` property is different to the CSS filter property’s `drop-shadow()` function. We need to be able to translate to either of those formats.
 
 The default shadows used throughout bitstyles are multi-layered to create a more natural or realistic appearance than you get from a single box-shadow or filter. We provide a generator function that you can use to produce your own natural-looking multi-layered shadows in the common format we use, and functions to translate those to the box-shadow and drop-shadow formats.
 
 ## Generating shadows
 
-Use `shadow.generate()` to override the global shadow design tokens in `$shadows`. Note that when specifying the color, we’re using the `rgb` version as this allows us to specify the opacity in the CSS `rgba` specification (using the hex value would not):
+Use `shadow.generate()` to configure the global shadow design tokens in `$shadows`. Note that when specifying the color, we’re using the `rgb` version as this allows us to specify the opacity in the CSS `rgba` specification (whereas using the hex value would not):
 
 {/* prettier-ignore-start */}
 ```scss

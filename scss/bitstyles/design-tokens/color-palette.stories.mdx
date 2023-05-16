@@ -10,7 +10,7 @@ Bitstyles provides a semantically-named color palette, with each color having a 
 
 ## Using the color palette in Sass
 
-Use the `design-token.get('color', color-name)` helper function for accessing colors in your Sass. Import `tools/design-token`, then use the `get()` function. Pass the color name and variant as parameters. The returned value is the name of the CSS custom property for that design token, which you’ll need to wrap in a `var()` call:
+Use the `design-token.get('color', 'color-name')` helper function for accessing colors in your Sass. Import `tools/design-token`, then use the `get()` function. Pass the color name and variant as parameters. The returned value is the name of the CSS custom property for that design token, which you’ll need to wrap in a standard CSS `var()` call:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/tools/design-token';
@@ -40,16 +40,17 @@ Use the appropriate utility classes to apply colors. See the documentation of ea
 
 ## Using the color palette in CSS
 
-The color palette is available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page) and [`Design Tokens/Overview`](/docs/design-tokens--overview):
+The color palette is available directly as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page) and [`Design Tokens/Overview`](/docs/design-tokens--overview):
 
 ```css
---bs-color-brand-1-light-3: #ded9ff;
---bs-color-brand-1-light-3-rgb: 222, 217, 255;
---bs-color-brand-1-light-1: #b2a6ff;
---bs-color-brand-1-light-1-rgb: 178, 166, 255;
---bs-color-brand-1: #9485ff;
---bs-color-brand-1-rgb: 148, 133, 255;
-// …
+:root {
+  --bs-color-brand-1-light-3: #ded9ff;
+  --bs-color-brand-1-light-3-rgb: 222, 217, 255;
+  --bs-color-brand-1-light-1: #b2a6ff;
+  --bs-color-brand-1-light-1-rgb: 178, 166, 255;
+  --bs-color-brand-1: #9485ff;
+  --bs-color-brand-1-rgb: 148, 133, 255;
+}
 ```
 
 Note that each color is also output as rgb tuples, to make using them in CSS color functions a little easier e.g. `rgba(var(--bs-color-brand-1-light-3-rgb), 0.5)`
@@ -102,7 +103,7 @@ For each color, 39 variants are generated from `5` to `195`. Lower numbers indic
 There are two special cases:
 
 - The `pure-gray` palette offers a scale of 25 colors from black to white, 0 to 100 respectively.
-- The `accent-gray` colors are a grayscale backgrounded with a color (your brand-1 color by default).
+- The `accent-gray` colors are a grayscale backgrounded with a color (your `brand-1` color by default).
 
 <Story id="base-colors--base-palette" />
 

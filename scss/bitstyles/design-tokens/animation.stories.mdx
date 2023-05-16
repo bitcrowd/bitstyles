@@ -4,21 +4,28 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 # Animation
 
-Animations for many simple interactive state changes are defined globally in `design-tokens/animation`. This simple system ensures that buttons, inputs, links etc. all transition with the same speed and easing function, with the minimum of maintenance.
+Animations for many simple interactive state changes are defined globally in `design-tokens/animation`. This system ensures that buttons, inputs, links etc. all transition with the same speed and easing function, with the minimum of maintenance.
 
-The default values are:
+The default values provide a set of properties for `default` and `long` transitions:
 
 ```scss
-$transition-easing: ease-in-out;
-$transition-duration: 0.075s;
-$transition-duration-long: 0.5s;
+$transitions: (
+  'default': (
+    'duration': 0.075s,
+    'easing': ease-in-out,
+  ),
+  'long': (
+    'duration': 0.5s,
+    'easing': ease-in-out,
+  ),
+);
 ```
 
-Note that there are two transition variables. The short transition-duration is by default used for fast and responsive-feeling user interactions such as hovering a button, link, or input. The second is present to standardize larger transitions of content (e.g. a modal or sidebar), where a short transition may be jarring.
+The default transition properties are used for fast and responsive-feeling user interactions such as hovering a button, link, or input. The `long` transitions are best kept for larger blocks content (e.g. a modal or sidebar), where a short transition can be jarring.
 
 ## Using animation settings in Sass
 
-`@use` the settings module in your component Sass file, then access the variables in the standard Sass way:
+Use the global `design-token.get()` helper function to access animations properties:
 
 ```scss
 @use '../../tools/design-token';
@@ -30,14 +37,26 @@ Note that there are two transition variables. The short transition-duration is b
 }
 ```
 
+Gives:
+
+```css
+.component-class {
+  transition-duration: var(--bs-transition-default-duration);
+}
+```
+
+See [`Design Tokens/Overview`](/docs/design-tokens--overview) for more details on this helper function.
+
 ## Using animation settings in CSS
 
 The animation design tokens are also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
 
 ```css
---bs-transition-duration: 0.075s;
---bs-transition-duration-long: 0.5s;
---bs-transition-easing: ease-in-out;
+:root {
+  --bs-transition-default-duration: 0.075s;
+  --bs-transition-default-duration-long: 0.5s;
+  --bs-transition-default-easing: ease-in-out;
+}
 ```
 
 ## Using animation settings in JS
@@ -54,12 +73,17 @@ console.log(animation['duration-long']); // '0.5s'
 
 ## Customization
 
-Override the values for these animation variables at the start of your Sass manifest file.
+Configure the values for these animation variables:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/design-tokens/animation' with (
-  $transition-easing: ease-in-out,
-  $transition-duration: 0.075s,
-  $transition-duration-long: 0.5s
+  'default': (
+    'duration': 0.075s,
+    'easing': ease-in-out,
+  ),
+  'fast': (
+    'duration': 0.015s,
+    'easing': ease-in,
+  )
 );
 ```
