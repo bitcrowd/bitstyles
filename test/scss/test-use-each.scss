@@ -77,10 +77,6 @@
 @use '../../scss/bitstyles/design-tokens/layout' with (
   $size-base: 10rem
 );
-@use '../../scss/bitstyles/design-tokens/typography' with (
-  $webfont-family-name: 'FakeFont',
-  $webfont-base-url: './'
-);
 @use '../../scss/bitstyles/design-tokens/shadows' with (
   $shadows: (
     'brand-1': (
@@ -88,6 +84,10 @@
       ('color': #f00, 'offset': 5rem, 'blur-radius': 10rem),
     ),
   )
+);
+@use '../../scss/bitstyles/design-tokens/typography' with (
+  $webfont-family-name: 'FakeFont',
+  $webfont-base-url: './'
 );
 @use '../../scss/bitstyles/design-tokens/themes' with (
   $themes: (
