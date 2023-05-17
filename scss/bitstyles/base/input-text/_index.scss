@@ -47,8 +47,8 @@ textarea {
   #{custom-property.get($items: ('input-text', 'padding-vertical'))}: settings.$padding-vertical;
   #{custom-property.get($items: ('input-text', 'padding-horizontal'))}: settings.$padding-horizontal;
   #{custom-property.get($items: ('input-text', 'border-width'))}: settings.$border-width;
-  display: block;
-  width: 100%;
+  display: flex;
+  flex-grow: 1;
   padding:
       calc(var(#{custom-property.get($items: ('input-text', 'padding-vertical'))}) - var(#{custom-property.get($items: ('input-text', 'border-width'))}, 0rem))
       calc(var(#{custom-property.get($items: ('input-text','padding-horizontal'))}) - var(#{custom-property.get($items: ('input-text', 'border-width'))}, 0rem));
@@ -76,6 +76,7 @@ textarea {
   }
 
   &:focus-visible {
+    z-index: 3;
     outline: focus.$outline-color solid focus.$outline-width;
     outline-offset: focus.$outline-offset;
   }

@@ -10,7 +10,7 @@ $padding-horizontal: var(design-token.get('size', 'l1')) !default;
 $border-radius: var(design-token.get('size', 's4')) !default;
 $border-width: 0.1875rem !default;
 $font: inherit !default;
-$font-weight: var(design-token.get('font-weight', 'normal'));
+$font-weight: var(design-token.get('font-weight', 'bold'));
 
 //
 // Base appearance ////////////////////////////////////////

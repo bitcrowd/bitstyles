@@ -21,8 +21,22 @@
   $input-text-border-width-name: design-token.get('input-text', 'border', 'width');
   $input-text-box-shadow-name: design-token.get('input-text', 'box-shadow');
 
+  /* Selects */
+  $select-border-top-left-radius-name: custom-property.get($items: ('select', 'border', 'top', 'left', 'radius'));
+  $select-border-top-right-radius-name: custom-property.get($items: ('select', 'border', 'top', 'right', 'radius'));
+  $select-border-bottom-right-radius-name: custom-property.get($items: ('select', 'border', 'bottom', 'right', 'radius'));
+  $select-border-bottom-left-radius-name: custom-property.get($items: ('select', 'border', 'bottom', 'left', 'radius'));
+  $select-border-width-name: custom-property.get($items: ('select', 'border', 'width'));
+  $select-box-shadow-name: custom-property.get($items: ('select', 'box-shadow'));
+
+  display: inline-flex;
+  align-items: stretch;
   border-radius: settings.$border-radius;
   box-shadow: settings.$box-shadow;
+
+  > * {
+    display: flex;
+  }
 
   > :first-child #{$button-classname},
   > #{$button-classname}:first-child {
@@ -40,6 +54,14 @@
     margin-right: calc(var(#{$input-text-border-width-name}) * -1);
   }
 
+  > :first-child select,
+  > select:first-child {
+    #{$select-box-shadow-name}: none;
+    #{$select-border-top-right-radius-name}: #{0};
+    #{$select-border-bottom-right-radius-name}: #{0};
+    margin-right: calc(var(#{$select-border-width-name}) * -1);
+  }
+
   > :last-child #{$button-classname},
   > #{$button-classname}:last-child {
     #{$button-box-shadow-name}: none;
@@ -53,6 +75,14 @@
     #{$input-text-box-shadow-name}: none;
     #{$input-text-border-top-left-radius-name}: #{0};
     #{$input-text-border-bottom-left-radius-name}: #{0};
+    margin-right: 0;
+  }
+
+  > :last-child select,
+  > select:last-child {
+    #{$select-box-shadow-name}: none;
+    #{$select-border-top-left-radius-name}: #{0};
+    #{$select-border-bottom-left-radius-name}: #{0};
     margin-right: 0;
   }
 
@@ -72,5 +102,14 @@
     #{$input-text-border-bottom-right-radius-name}: #{0};
     #{$input-text-border-bottom-left-radius-name}: #{0};
     margin-right: calc(var(#{$input-text-border-width-name}) * -1);
+  }
+
+  > :not(:first-child):not(:last-child) select,
+  > select:not(:first-child):not(:last-child) {
+    #{$select-border-top-left-radius-name}: #{0};
+    #{$select-border-top-right-radius-name}: #{0};
+    #{$select-border-bottom-right-radius-name}: #{0};
+    #{$select-border-bottom-left-radius-name}: #{0};
+    margin-right: calc(var(#{$select-border-width-name}) * -1);
   }
 }

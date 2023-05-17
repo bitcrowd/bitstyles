@@ -1,7 +1,7 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 import icons from '../../../assets/images/icons.svg';
 
-<Meta title="UI/Data/Forms" />
+<Meta title="UI/Data/Forms/Overview" />
 
 # Forms
 
@@ -64,7 +64,7 @@ Here are some examples using the grid utility classes to create common form layo
         <form class="a-card-l@m u-bg-white" method="POST" action="">
           <h2>Login</h2>
           <ul class="u-list-none u-margin-l3-bottom">
-            <li class="u-margin-m-bottom">
+            <li class="u-margin-m-bottom u-flex u-flex-col">
               <label for="email">Email</label>
               <input id="email" type="email" autocomplete="email" />
             </li>
@@ -115,7 +115,7 @@ The `aria-describedby` attribute accepts a space-separated list of IDs, so if an
           </div>
           <h2>Login</h2>
           <ul class="u-list-none u-margin-l3-bottom">
-            <li class="u-margin-m-bottom">
+            <li class="u-margin-m-bottom u-flex u-flex-col">
               <label for="email">Email</label>
               <input id="email" type="email" autocomplete="email" aria-invalid="true" aria-describedby="email-help-text" />
               <span id="email-help-text" class="u-fg-warning u-margin-s4-top">Missing email address</span>
@@ -153,15 +153,15 @@ This form has the commonly-required fields for creating an account. Note the wor
         <form class="a-card-l@m u-bg-white" method="POST" action="">
           <h2>Create an account</h2>
           <ul class="u-list-none u-margin-l3-bottom">
-            <li class="u-margin-m-bottom">
+            <li class="u-margin-m-bottom u-flex u-flex-col">
               <label for="email">Email</label>
               <input id="email" type="email" autocomplete="email" />
             </li>
-            <li class="u-margin-m-bottom">
+            <li class="u-margin-m-bottom u-flex u-flex-col">
               <label for="password">Password</label>
               <input id="new-password" type="password" autocomplete="new-password" />
             </li>
-            <li class="u-margin-m-bottom">
+            <li class="u-margin-m-bottom u-flex u-flex-col">
               <label for="confirm_password">Confirm password</label>
               <input id="confirm_password" type="password" autocomplete="new-password" />
             </li>
@@ -195,15 +195,15 @@ For a more complex form, `.u-grid-cols-6@m` allows for fields of different sizes
           </div>
           <div class="u-grid u-gap-m u-grid-cols-6@l">
             <ul class="u-list-none u-col-start-3@l u-grid u-gap-m u-grid-cols-6@m u-col-span-4@l">
-              <li class="u-col-span-4@m u-col-start-1@m u-col-span-3@l">
+              <li class="u-col-span-4@m u-col-start-1@m u-col-span-3@l u-flex u-flex-col">
                 <label for="name">Name</label>
                 <input id="name" type="text" autocomplete="name" value="Jon Doe" />
               </li>
-              <li class="u-col-span-4@m u-col-start-1@m u-col-span-3@l">
+              <li class="u-col-span-4@m u-col-start-1@m u-col-span-3@l u-flex u-flex-col">
                 <label for="email">Email</label>
                 <input id="email" type="text" autocomplete="email" value="jon.doe@gmx.de" />
               </li>
-              <li class="u-col-start-1@m u-col-span-2@m">
+              <li class="u-col-start-1@m u-col-span-2@m u-flex u-flex-col">
                 <label for="type">Account type</label>
                 <select id="type">
                   <option value="user">User</option>
@@ -222,23 +222,23 @@ For a more complex form, `.u-grid-cols-6@m` allows for fields of different sizes
               <p class="u-h6 u-fg-grayscale-light-1 u-padding-l2-y@l u-padding-l3-right@m">Some intro text can go here, to describe this section</p>
             </div>
             <ul class="u-list-none u-col-start-3@l u-col-span-4@l u-grid u-gap-m u-grid-cols-6@m">
-              <li class="u-col-span-4@m u-col-span-3@l">
+              <li class="u-col-span-4@m u-col-span-3@l u-flex u-flex-col">
                 <label for="street">Street</label>
                 <input id="street" type="text" autocomplete="address-line1" />
               </li>
-              <li class="u-col-span-2@m u-col-span-1@l">
+              <li class="u-col-span-2@m u-col-span-1@l u-flex u-flex-col">
                 <label for="house">House Nr.</label>
                 <input id="house" type="text" />
               </li>
-              <li class="u-col-start-1@m u-col-start-1@l u-col-span-3@m">
+              <li class="u-col-start-1@m u-col-start-1@l u-col-span-3@m u-flex u-flex-col">
                 <label for="city">City</label>
                 <input id="city" type="text" autocomplete="address-line2" />
               </li>
-              <li class="u-col-span-3@m">
+              <li class="u-col-span-3@m u-flex u-flex-col">
                 <label for="country">Country</label>
                 <input id="country" type="text" autocomplete="country-name" />
               </li>
-              <li class="u-col-span-2@m">
+              <li class="u-col-span-2@m u-flex u-flex-col">
                 <label for="postal-code">Postal code</label>
                 <input id="postal-code" type="text" autocomplete="postal-code" />
               </li>
@@ -301,36 +301,11 @@ Some forms are always going to be small and simple, with just a few text inputs 
 The `role="search"` attribute highlights this functionality for screenreader users. The label element is present, but visually hidden using `.u-sr-only`.
 
 <Canvas>
-  <Story name="Search form">
-    {`
-    <form role="search" action="" method="POST">
-      <label for="search" class="u-sr-only">Search users</label>
-      <div class="u-flex o-joined-ui">
-        <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1" />
-        <button type="submit" class="a-button a-button--outline">Search</button>
-      </div>
-    </form>
-    `}
-  </Story>
+  <Story id="ui-data-forms--search-form-with-button" />
 </Canvas>
 
 <Canvas>
-  <Story name="Search form with icon button">
-    {`
-    <form role="search" action="" method="POST">
-      <label for="search" class="u-sr-only">Search users</label>
-      <div class="u-flex o-joined-ui">
-        <input type="search" id="search" placeholder="Username or email…" class="u-flex-grow-1" />
-        <button type="submit" class="a-button a-button--outline" title="Search users">
-          <svg width="18" height="18" class="a-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <use xlink:href="${icons}#icon-search"></use>
-          </svg>
-          <span class="u-sr-only">Search</span>
-        </button>
-      </div>
-    </form>
-    `}
-  </Story>
+  <Story id="ui-data-forms--search-form-with-icon-button" />
 </Canvas>
 
 ## Form with select, input, & button
@@ -338,25 +313,5 @@ The `role="search"` attribute highlights this functionality for screenreader use
 The heights of selects, inputs, and buttons should all match, allowing them to be placed side by side.
 
 <Canvas>
-  <Story name="Select input and button">
-    {`
-    <form role="search" action="" method="POST" class="u-flex">
-      <ul class="u-list-none u-flex u-items-end">
-        <li class="u-margin-s4-right">
-          <label for="filter">Search users</label>
-          <input type="search" id="filter" placeholder="Username or email…" />
-        </li>
-        <li class="u-margin-s4-right">
-          <select id="type">
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-          </select>
-        </li>
-        <li>
-          <button type="submit" class="a-button a-button--outline">Search</button>
-        </li>
-      </ul>
-    </form>
-    `}
-  </Story>
+  <Story id="ui-data-forms--search-form-with-select-and-button" />
 </Canvas>

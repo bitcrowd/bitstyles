@@ -4,7 +4,7 @@ import Label from './Label';
 export default {
   title: 'Base/Forms/Input radio',
   component: Input,
-  subcomponents: [Label],
+  subcomponents: { Label },
   argTypes: {},
 };
 

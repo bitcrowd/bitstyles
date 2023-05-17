@@ -5,7 +5,7 @@ import icons from '../../../assets/images/icons.svg';
 export default {
   title: 'UI/Buttons/Joined',
   component: JoinedUI,
-  subcomponents: Button,
+  subcomponents: { Button },
 };
 
 // ***** Default size, each shape & color ****************** //
