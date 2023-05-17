@@ -4,15 +4,46 @@
 
 $padding: (
   '#{setup.$no-media-query}': (
-    'base': var(custom-property.get($items: ('size', 's1'))),
-    'l': var(custom-property.get($items: ('size', 'm'))),
+    'base':
+      var(
+        custom-property.get(
+          $items: (
+            'size',
+            's1',
+          ),
+        )
+      ),
+    'l':
+      var(
+        custom-property.get(
+          $items: (
+            'size',
+            'm',
+          ),
+        )
+      ),
   ),
   'm': (
-    'base': var(custom-property.get($items: ('size', 'l1'))),
-    'l': var(custom-property.get($items: ('size', 'l1'))),
+    'base':
+      var(
+        custom-property.get(
+          $items: (
+            'size',
+            'l1',
+          ),
+        )
+      ),
+    'l':
+      var(
+        custom-property.get(
+          $items: (
+            'size',
+            'l1',
+          ),
+        )
+      ),
   ),
 ) !default;
-
 
 @each $breakpoint-name, $paddings in $padding {
   @include media-query.get($breakpoint-name) {

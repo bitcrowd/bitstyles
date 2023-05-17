@@ -129,6 +129,16 @@
   --bs-color-positive-dark-4-rgb: 0, 38, 24;
 }
 :root {
+  --bs-content-padding-base: var(--bs-size-s1);
+  --bs-content-padding-l: var(--bs-size-m);
+}
+@media screen and (min-width: 30em) {
+  :root {
+    --bs-content-padding-base: var(--bs-size-l1);
+    --bs-content-padding-l: var(--bs-size-l1);
+  }
+}
+:root {
   --bs-size-0: 0;
   --bs-size-s7: 0.125rem;
   --bs-size-s6: 0.25rem;
@@ -360,16 +370,6 @@
   --bs-line-height-3: 1.4;
   --bs-line-height-4: 1.5555;
   --bs-line-height-5: 1.67;
-}
-:root {
-  --bs-content-padding-base: var(--bs-size-s1);
-  --bs-content-padding-l: var(--bs-size-m);
-}
-@media screen and (min-width: 30em) {
-  :root {
-    --bs-content-padding-base: var(--bs-size-l1);
-    --bs-content-padding-l: var(--bs-size-l1);
-  }
 }
 html {
   box-sizing: border-box;

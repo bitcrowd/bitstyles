@@ -76,6 +76,16 @@
   --bscpn-color-positive-dark-1-rgb: 0, 0, 0;
 }
 :root {
+  --bscpn-content-padding-base: var(--bscpn-size-s1);
+  --bscpn-content-padding-l: var(--bscpn-size-m);
+}
+@media screen and (min-width: 30em) {
+  :root {
+    --bscpn-content-padding-base: var(--bscpn-size-l1);
+    --bscpn-content-padding-l: var(--bscpn-size-l1);
+  }
+}
+:root {
   --bscpn-size-0: 0;
   --bscpn-size-s7: 1.25rem;
   --bscpn-size-s6: 2.5rem;
@@ -112,16 +122,6 @@
   --bscpn-line-height-3: 1.4;
   --bscpn-line-height-4: 1.5555;
   --bscpn-line-height-5: 1.67;
-}
-:root {
-  --bscpn-content-padding-base: var(--bscpn-size-s1);
-  --bscpn-content-padding-l: var(--bscpn-size-m);
-}
-@media screen and (min-width: 30em) {
-  :root {
-    --bscpn-content-padding-base: var(--bscpn-size-l1);
-    --bscpn-content-padding-l: var(--bscpn-size-l1);
-  }
 }
 html {
   box-sizing: border-box;

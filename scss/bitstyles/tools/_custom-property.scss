@@ -12,5 +12,5 @@
     $string-items: $string-items,
   );
 
-  @return '--#{$custom-property-name}';
+  @return --#{$custom-property-name};
 }

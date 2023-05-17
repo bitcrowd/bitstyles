@@ -136,7 +136,11 @@
   ),
   $content-max-width-base: 'full',
   $dropdown-max-height: 1rem,
-  $flash-color: 'light-1',
+  $flash-sizes: (
+    'no-mq': (
+      'gap': #{10rem},
+    ),
+  ),
   $icon-sizes: (
     's': 10rem,
   ),
