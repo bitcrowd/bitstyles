@@ -28,9 +28,13 @@ $box-shadow-hover: none !default;
 
 //
 // Active colors ////////////////////////////////////////
-$color-active: palette.get('brand-1') !default;
-$background-color-active: palette.get('grayscale', 'white') !default;
-$border-color-active: palette.get('brand-1', 'dark-1') !default;
+$color-active: var(design-token.get('color', 'brand-1')) !default;
+$background-color-active: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$border-color-active: var(
+  design-token.get('color', 'brand-1', 'dark-1')
+) !default;
 $box-shadow-active: none !default;
 
 //
@@ -39,29 +43,41 @@ $color-checked: var(design-token.get('color', 'brand-1', 'dark-1')) !default;
 $background-color-checked: var(
   design-token.get('color', 'grayscale', 'white')
 ) !default;
-$border-color-checked: var(design-token.get('color', 'brand-1', 'dark-1')) !default;
-$box-shadow-checked: var(design-token.get('shadow', 'default')) !default;
+$border-color-checked: var(
+  design-token.get('color', 'brand-1', 'dark-1')
+) !default;
+$box-shadow-checked: var(design-token.get('shadow', 'brand-1')) !default;
 
 //
 // Checked hover colors ////////////////////////////////////////
-$color-checked-hover: palette.get('brand-1') !default;
-$background-color-checked-hover: palette.get('grayscale', 'white') !default;
-$border-color-checked-hover: palette.get('brand-1') !default;
+$color-checked-hover: var(design-token.get('color', 'brand-1')) !default;
+$background-color-checked-hover: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$border-color-checked-hover: var(design-token.get('color', 'brand-1')) !default;
 $box-shadow-checked-hover: none !default;
 
 //
 // Checked active colors ////////////////////////////////////////
-$color-checked-active: palette.get('brand-1') !default;
-$background-color-checked-active: palette.get('grayscale', 'white') !default;
-$border-color-checked-active: palette.get('brand-1') !default;
+$color-checked-active: var(design-token.get('color', 'brand-1')) !default;
+$background-color-checked-active: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$border-color-checked-active: var(
+  design-token.get('color', 'brand-1')
+) !default;
 $box-shadow-checked-active: none !default;
 
 //
 // Invalid colors ////////////////////////////////////////
 
 $color-invalid: var(design-token.get('color', 'warning', 'dark-4')) !default;
-$background-color-invalid: var(design-token.get('color', 'grayscale', 'white')) !default;
-$border-color-invalid: var(design-token.get('color', 'warning', 'dark-1')) !default;
+$background-color-invalid: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$border-color-invalid: var(
+  design-token.get('color', 'warning', 'dark-1')
+) !default;
 $box-shadow-invalid: none !default;
 
 //

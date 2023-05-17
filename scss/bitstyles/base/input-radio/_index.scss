@@ -36,7 +36,8 @@
           var(design-token.get('transition', 'default', 'easing')),
         transform var(design-token.get('transition', 'default', 'duration'))
           var(design-token.get('transition', 'default', 'easing')),
-        outline-offset var(design-token.get('transition', 'default', 'duration'))
+        outline-offset
+          var(design-token.get('transition', 'default', 'duration'))
           var(design-token.get('transition', 'default', 'easing'));
       border-radius: settings.$border-radius;
       opacity: 0;

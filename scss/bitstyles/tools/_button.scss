@@ -78,7 +78,7 @@
 
     &#{classname.get($classname-items: 'button--square', $layer: 'atom')} {
       #{$min-width-property}: #{calc(1em * var(#{$line-height-property}) + 2 * #{map.get($sizes, 'padding-vertical')})};
-      #{$min-height-property}: #{calc(1em * var(#{$line-height}) + 2 * #{map.get($sizes, 'padding-vertical')})};
+      #{$min-height-property}: #{calc(1em * var(#{$line-height-property}) + 2 * #{map.get($sizes, 'padding-vertical')})};
 
       @if map.has-key($sizes, 'padding-vertical') {
         #{design-token.get('button', 'padding-horizontal')}: map.get(

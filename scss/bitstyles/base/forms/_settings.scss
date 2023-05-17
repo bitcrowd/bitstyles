@@ -1,6 +1,4 @@
-@use '../../design-tokens/typography';
-@use '../../tools/palette';
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 //
 // Fieldset ////////////////////////////////////////
@@ -22,6 +20,6 @@ $legend-color: inherit !default;
 //
 // Label ////////////////////////////////////////
 
-$label-gap: size.get('s7') !default;
-$label-font-weight: typography.$font-weight-medium !default;
-$label-disabled-color: palette.get('grayscale') !default;
+$label-gap: var(design-token.get('size', 's7')) !default;
+$label-font-weight: var(design-token.get('font-weight', 'medium')) !default;
+$label-disabled-color: var(design-token.get('color', 'grayscale')) !default;

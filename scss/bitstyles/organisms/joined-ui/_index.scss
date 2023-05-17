@@ -5,29 +5,108 @@
 
 #{classname.get($classname-items: 'joined-ui', $layer: 'organism')} {
   /* Buttons */
-  $button-classname: classname.get($classname-items: 'button', $layer: 'atom');
-  $button-border-top-left-radius-name: design-token.get('button', 'border', 'top', 'left', 'radius');
-  $button-border-top-right-radius-name: design-token.get('button', 'border', 'top', 'right', 'radius');
-  $button-border-bottom-right-radius-name: design-token.get('button', 'border', 'bottom', 'right', 'radius');
-  $button-border-bottom-left-radius-name: design-token.get('button', 'border', 'bottom', 'left', 'radius');
+  $button-classname: classname.get(
+    $classname-items: 'button',
+    $layer: 'atom',
+  );
+  $button-border-top-left-radius-name: design-token.get(
+    'button',
+    'border',
+    'top',
+    'left',
+    'radius'
+  );
+  $button-border-top-right-radius-name: design-token.get(
+    'button',
+    'border',
+    'top',
+    'right',
+    'radius'
+  );
+  $button-border-bottom-right-radius-name: design-token.get(
+    'button',
+    'border',
+    'bottom',
+    'right',
+    'radius'
+  );
+  $button-border-bottom-left-radius-name: design-token.get(
+    'button',
+    'border',
+    'bottom',
+    'left',
+    'radius'
+  );
   $button-border-width-name: design-token.get('button', 'border', 'width');
   $button-box-shadow-name: design-token.get('button', 'box-shadow');
 
   /* Text inputs */
-  $input-text-border-top-left-radius-name: design-token.get('input-text', 'border', 'top', 'left', 'radius');
-  $input-text-border-top-right-radius-name: design-token.get('input-text', 'border', 'top', 'right', 'radius');
-  $input-text-border-bottom-right-radius-name: design-token.get('input-text', 'border', 'bottom', 'right', 'radius');
-  $input-text-border-bottom-left-radius-name: design-token.get('input-text', 'border', 'bottom', 'left', 'radius');
-  $input-text-border-width-name: design-token.get('input-text', 'border', 'width');
+  $input-text-border-top-left-radius-name: design-token.get(
+    'input-text',
+    'border',
+    'top',
+    'left',
+    'radius'
+  );
+  $input-text-border-top-right-radius-name: design-token.get(
+    'input-text',
+    'border',
+    'top',
+    'right',
+    'radius'
+  );
+  $input-text-border-bottom-right-radius-name: design-token.get(
+    'input-text',
+    'border',
+    'bottom',
+    'right',
+    'radius'
+  );
+  $input-text-border-bottom-left-radius-name: design-token.get(
+    'input-text',
+    'border',
+    'bottom',
+    'left',
+    'radius'
+  );
+  $input-text-border-width-name: design-token.get(
+    'input-text',
+    'border',
+    'width'
+  );
   $input-text-box-shadow-name: design-token.get('input-text', 'box-shadow');
 
   /* Selects */
-  $select-border-top-left-radius-name: custom-property.get($items: ('select', 'border', 'top', 'left', 'radius'));
-  $select-border-top-right-radius-name: custom-property.get($items: ('select', 'border', 'top', 'right', 'radius'));
-  $select-border-bottom-right-radius-name: custom-property.get($items: ('select', 'border', 'bottom', 'right', 'radius'));
-  $select-border-bottom-left-radius-name: custom-property.get($items: ('select', 'border', 'bottom', 'left', 'radius'));
-  $select-border-width-name: custom-property.get($items: ('select', 'border', 'width'));
-  $select-box-shadow-name: custom-property.get($items: ('select', 'box-shadow'));
+  $select-border-top-left-radius-name: design-token.get(
+    'select',
+    'border',
+    'top',
+    'left',
+    'radius'
+  );
+  $select-border-top-right-radius-name: design-token.get(
+    'select',
+    'border',
+    'top',
+    'right',
+    'radius'
+  );
+  $select-border-bottom-right-radius-name: design-token.get(
+    'select',
+    'border',
+    'bottom',
+    'right',
+    'radius'
+  );
+  $select-border-bottom-left-radius-name: design-token.get(
+    'select',
+    'border',
+    'bottom',
+    'left',
+    'radius'
+  );
+  $select-border-width-name: design-token.get('select', 'border', 'width');
+  $select-box-shadow-name: design-token.get('select', 'box-shadow');
 
   display: inline-flex;
   align-items: stretch;

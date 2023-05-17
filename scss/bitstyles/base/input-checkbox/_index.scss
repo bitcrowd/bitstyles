@@ -1,5 +1,6 @@
 @forward 'settings';
 @use './settings';
+@use '../../design-tokens/focus';
 @use '../../tools/design-token';
 
 [type='checkbox'] {

@@ -34,11 +34,11 @@
     var(design-token.get('button', 'border-top-right-radius'))
     var(design-token.get('button', 'border-bottom-right-radius'))
     var(design-token.get('button', 'border-bottom-left-radius'));
-  border-color: var(#{design-token.get($items: ('button', 'border-color'))});
+  border-color: var(design-token.get('button', 'border-color'));
   outline-offset: 0;
-  background-color: var(#{custom-property.get($items: ('button', 'background-color'))});
-  box-shadow: var(#{custom-property.get($items: ('button', 'box-shadow'))});
-  color: var(#{custom-property.get($items: ('button', 'color'))});
+  background-color: var(design-token.get('button', 'background-color'));
+  box-shadow: var(design-token.get('button', 'box-shadow'));
+  color: var(design-token.get('button', 'color'));
   font-family: settings.$font-family;
   font-size: var(design-token.get('button', 'font-size'), inherit);
   font-weight: var(design-token.get('button', 'font-weight'), inherit);
@@ -54,11 +54,21 @@
   &:hover,
   &:focus {
     z-index: 1;
-    border-color: var(#{custom-property.get($items: ('button', 'hover', 'border-color'))});
+    border-color: var(design-token.get('button', 'hover', 'border-color'));
     outline-width: 0;
-    background-color: var(#{custom-property.get($items: ('button', 'hover', 'background-color'))});
-    box-shadow: var(#{custom-property.get($items: ('button', 'hover', 'box-shadow'))});
-    color: var(#{custom-property.get($items: ('button', 'hover', 'color'))});
+    background-color: var(design-token.get('button', 'hover', 'background-color'));
+    box-shadow: var(design-token.get('button', 'hover', 'box-shadow'));
+    color: var(design-token.get('button', 'hover', 'color'));
+    text-decoration: none;
+  }
+
+  &:active {
+    z-index: 1;
+    border-color: var(design-token.get('button', 'active', 'border-color'));
+    outline-width: 0;
+    background-color: var(design-token.get('button', 'active', 'background-color'));
+    box-shadow: var(design-token.get('button', 'active', 'box-shadow'));
+    color: var(design-token.get('button', 'active', 'color'));
     text-decoration: none;
   }
 
@@ -73,10 +83,10 @@
   &[aria-selected='true'],
   &[aria-current] {
     z-index: 2;
-    border-color: var(#{custom-property.get($items: ('button', 'pressed', 'border-color'))});
-    background-color: var(#{custom-property.get($items: ('button', 'pressed', 'background-color'))});
-    box-shadow: var(#{custom-property.get($items: ('button', 'pressed', 'box-shadow'))});
-    color: var(#{custom-property.get($items: ('button', 'pressed', 'color'))});
+    border-color: var(design-token.get('button', 'pressed', 'border-color'));
+    background-color: var(design-token.get('button', 'pressed', 'background-color'));
+    box-shadow: var(design-token.get('button', 'pressed', 'box-shadow'));
+    color: var(design-token.get('button', 'pressed', 'color'));
   }
 
   &:disabled,
@@ -85,10 +95,10 @@
   &[aria-disabled='true']:hover,
   &:disabled:focus,
   &[aria-disabled='true']:focus {
-    border-color: var(#{custom-property.get($items: ('button', 'disabled', 'border-color'))});
-    background-color: var(#{custom-property.get($items: ('button', 'disabled', 'background-color'))});
-    box-shadow: var(#{custom-property.get($items: ('button', 'disabled', 'box-shadow'))});
-    color: var(#{custom-property.get($items: ('button', 'disabled', 'color'))});
+    border-color: var(design-token.get('button', 'disabled', 'border-color'));
+    background-color: var(design-token.get('button', 'disabled', 'background-color'));
+    box-shadow: var(design-token.get('button', 'disabled', 'box-shadow'));
+    color: var(design-token.get('button', 'disabled', 'color'));
     cursor: not-allowed;
   }
 }

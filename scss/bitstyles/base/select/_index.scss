@@ -9,17 +9,17 @@
   (appearance: none) {
   /* stylelint-disable selector-max-type */
   select {
-    #{custom-property.get($items: ('select', 'padding-vertical'))}: settings.$padding-vertical;
-    #{custom-property.get($items: ('select', 'padding-horizontal'))}: settings.$padding-horizontal;
-    #{custom-property.get($items: ('select', 'border-width'))}: settings.$border-width;
-    #{custom-property.get($items: ('select', 'border-top-right-radius'))}: settings.$border-radius;
-    #{custom-property.get($items: ('select', 'border-bottom-right-radius'))}: settings.$border-radius;
-    #{custom-property.get($items: ('select', 'border-bottom-left-radius'))}: settings.$border-radius;
-    #{custom-property.get($items: ('select', 'border-top-left-radius'))}: settings.$border-radius;
+    #{design-token.get('select', 'padding-vertical')}: settings.$padding-vertical;
+    #{design-token.get('select', 'padding-horizontal')}: settings.$padding-horizontal;
+    #{design-token.get('select', 'border-width')}: settings.$border-width;
+    #{design-token.get('select', 'border-top-right-radius')}: settings.$border-radius;
+    #{design-token.get('select', 'border-bottom-right-radius')}: settings.$border-radius;
+    #{design-token.get('select', 'border-bottom-left-radius')}: settings.$border-radius;
+    #{design-token.get('select', 'border-top-left-radius')}: settings.$border-radius;
     display: flex;
     padding:
-      calc(var(#{custom-property.get($items: ('select', 'padding-vertical'))}) - var(#{custom-property.get($items: ('select', 'border-width'))}, 0rem))
-      calc(var(#{custom-property.get($items: ('select','padding-horizontal'))}) - var(#{custom-property.get($items: ('select', 'border-width'))}, 0rem));
+      calc(var(design-token.get('select', 'padding-vertical')) - var(design-token.get('select', 'border-width'), 0rem))
+      calc(var(design-token.get('select','padding-horizontal')) - var(design-token.get('select', 'border-width'), 0rem));
     overflow: hidden;
     transition: color var(design-token.get('transition', 'default', 'duration'))
         var(design-token.get('transition', 'default', 'easing')),
@@ -30,10 +30,10 @@
         var(design-token.get('transition', 'default', 'easing'));
     border: settings.$border-width solid settings.$border-color;
     border-radius:
-      var(#{custom-property.get($items: ('select', 'border-top-left-radius'))})
-      var(#{custom-property.get($items: ('select', 'border-top-right-radius'))})
-      var(#{custom-property.get($items: ('select', 'border-bottom-right-radius'))})
-      var(#{custom-property.get($items: ('select', 'border-bottom-left-radius'))});
+      var(design-token.get('select', 'border-top-left-radius'))
+      var(design-token.get('select', 'border-top-right-radius'))
+      var(design-token.get('select', 'border-bottom-right-radius'))
+      var(design-token.get('select', 'border-bottom-left-radius'));
     outline-offset: 0;
     background-color: settings.$background-color;
     background-image: settings.$background-image;
