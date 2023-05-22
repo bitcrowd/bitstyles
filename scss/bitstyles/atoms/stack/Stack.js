@@ -8,11 +8,19 @@ const StackItem = ({
   stackItem.style.backgroundColor = backgroundColor;
   stackItem.style.padding = 'var(--bs-content-padding-base)';
   stackItem.style.borderRadius = 'var(--bs-size-s3)';
+  stackItem.style.minHeight = '6rem';
   stackItem.innerHTML = children;
   return stackItem;
 };
 
-export default ({ length, classname = [], sizeVariant = '' }) => {
+const Stack = ({
+  length = 3,
+  classname = [],
+  sizeVariant = '',
+  itemColor,
+  labelPrefix = 'stack',
+  children = [],
+}) => {
   const stack = document.createElement('div');
   stack.classList.add('a-stack');
   if (sizeVariant) {
@@ -23,11 +31,20 @@ export default ({ length, classname = [], sizeVariant = '' }) => {
     stack.classList.add(cls);
   });
 
-  for (let child = 0; child < length; child += 1) {
-    stack.append(
-      StackItem({ children: generateLabel(['stack', 'child', child + 1]) })
-    );
+  if (children.length) {
+    children.forEach((child) => stack.append(child));
+  } else {
+    for (let child = 0; child < length; child += 1) {
+      stack.append(
+        StackItem({
+          children: generateLabel([labelPrefix, 'child', child + 1]),
+          backgroundColor: itemColor,
+        })
+      );
+    }
   }
 
   return stack;
 };
+
+export { StackItem, Stack };

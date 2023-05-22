@@ -2,14 +2,22 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 <Meta title="Atoms/Stack/Overview" />
 
+<Canvas>
+  <Story id="atoms-stack--base" />
+</Canvas>
+
 # Stack
 
 A layout atom that stacks its children vertically and ensures consistent space between each. This component is responsive, applying larger spacing between children when rendered on larger viewports.
 
+This layout is suitable for large blocks of content, such as the sections in the main content of a page.
+
 The spacing and the breakpoints the component responds to can be [customized](#customization). You can also add extra size variants of the stack, that apply different spacing, but the default configuration provides only one.
 
+Stacks can be nested — children of a stack can themselves be stacks — while the spacing will remain consistent:
+
 <Canvas>
-  <Story id="atoms-stack--base" />
+  <Story id="atoms-stack--nested" />
 </Canvas>
 
 ## Customization
