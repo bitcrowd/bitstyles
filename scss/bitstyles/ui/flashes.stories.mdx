@@ -1,11 +1,20 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 import icons from '../../../assets/images/icons.svg';
 
-<Meta title="UI/Flashes" />
+<Meta title="UI/Notifications/Flashes" />
+
+<Canvas isColumn>
+  <Story id="atoms-flash--base-icon-button" />
+  <Story id="atoms-flash--positive-icon-button" />
+  <Story id="atoms-flash--warning-icon-button" />
+  <Story id="atoms-flash--danger-icon-button" />
+</Canvas>
 
 # Flashes
 
 Inform the user of a global or important event, such as may happen after a page reload. There are several variants, which use color, iconography, and html attributes to indicate severity.
+
+See [Atoms/Flash](/docs/atoms-flash-overview--page) for more details on how to use Flashes.
 
 <details class="u-margin-l3-y">
   <summary class="u-h4 u-font-medium">Examples use</summary>
@@ -37,68 +46,9 @@ Inform the user of a global or important event, such as may happen after a page 
   </ul>
 </details>
 
-<Canvas isColumn>
-  <Story name="Flash (brand-1)">
-    {`
-      <div aria-live="polite">
-        <div class="u-padding-l2-y a-flash--brand-1">
-          <div class="a-content u-flex u-items-center u-font-medium">
-            <svg width="14" height="14" class="a-icon a-icon--m u-flex-shrink-0 u-margin-m-right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-info-circle"></use>
-            </svg>
-            Something you may be interested to hear
-          </div>
-        </div>
-      </div>
-    `}
-  </Story>
-  <Story name="Flash (positive)">
-    {`
-      <div aria-live="polite">
-        <div class="u-padding-l2-y a-flash--positive" aria-live="polite">
-          <div class="a-content u-flex u-items-center u-font-medium">
-            <svg width="14" height="14" class="a-icon a-icon--m u-flex-shrink-0 u-margin-m-right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-check-circle"></use>
-            </svg>
-            Changes successfully saved
-          </div>
-        </div>
-      </div>
-    `}
-  </Story>
-  <Story name="Flash (warning)">
-    {`
-      <div aria-live="polite">
-        <div class="u-padding-l2-y a-flash--warning" aria-live="polite">
-          <div class="a-content u-flex u-items-center u-font-medium">
-            <svg width="14" height="14" class="a-icon a-icon--m u-flex-shrink-0 u-margin-m-right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-question-circle"></use>
-            </svg>
-            Login not successful, please try that again
-          </div>
-        </div>
-      </div>
-    `}
-  </Story>
-  <Story name="Flash (danger)">
-    {`
-      <div aria-live="polite">
-        <div class="u-padding-l2-y a-flash--danger" role="alert">
-          <div class="a-content u-flex u-items-center u-font-medium">
-            <svg width="14" height="14" class="a-icon a-icon--m u-flex-shrink-0 u-margin-m-right" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-exclamation"></use>
-            </svg>
-            An error occured, please contact an admin
-          </div>
-        </div>
-      </div>
-    `}
-  </Story>
-</Canvas>
-
 ## Flashes in forms
 
-If a flash is used to give feedback to a form submission, place the flash close to the form in the HTML, and visually.
+If a flash is used to give feedback to a form submission, place the flash close to the form in the HTML, and visually. See [UI/Forms](/docs/ui-data-forms--login-form-with-errors) and [Atoms/Cards](/docs/atoms-card--card-header) for more examples of Flashes in use.
 
 <Canvas>
   <Story id="ui-data-forms--login-form-with-errors" />

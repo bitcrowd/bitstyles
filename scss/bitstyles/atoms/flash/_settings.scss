@@ -1,3 +1,17 @@
-$color: 'dark-1' !default;
-$background-color: 'light-2' !default;
-$variants: ('brand-1', 'positive', 'danger', 'warning') !default;
+@use '../../settings/setup';
+@use '../../tools/size';
+@use '../../tools/custom-property';
+@use 'sass:map';
+
+/* prettier-ignore */
+$sizes: (
+  '#{setup.$no-media-query}': (
+    'padding-horizontal': var(#{custom-property.get($items: ('content', 'padding', 'base'))}),
+    'padding-vertical': size.get('s3'),
+    'gap': size.get('s3'),
+  ),
+  'm': (
+    'padding-vertical': size.get('l1'),
+    'gap': size.get('s2'),
+  ),
+) !default;

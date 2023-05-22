@@ -76,6 +76,16 @@
   --bscpn-color-positive-dark-1-rgb: 0, 0, 0;
 }
 :root {
+  --bscpn-content-padding-base: var(--bscpn-size-s1);
+  --bscpn-content-padding-l: var(--bscpn-size-m);
+}
+@media screen and (min-width: 30em) {
+  :root {
+    --bscpn-content-padding-base: var(--bscpn-size-l1);
+    --bscpn-content-padding-l: var(--bscpn-size-l1);
+  }
+}
+:root {
   --bscpn-size-0: 0;
   --bscpn-size-s7: 1.25rem;
   --bscpn-size-s6: 2.5rem;
@@ -1755,21 +1765,15 @@ table {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  padding-left: var(--bscpn-size-s1);
-  padding-right: var(--bscpn-size-s1);
+  padding-left: var(--bscpn-content-padding-base);
+  padding-right: var(--bscpn-content-padding-base);
   transition: padding 75ms ease-out;
   width: 100%;
 }
 @media screen and (min-width: 55em) {
   .bs-at-content {
-    padding-left: var(--bscpn-size-m);
-    padding-right: var(--bscpn-size-m);
-  }
-}
-@media screen and (min-width: 95em) {
-  .bs-at-content {
-    padding-left: var(--bscpn-size-l1);
-    padding-right: var(--bscpn-size-l1);
+    padding-left: var(--bscpn-content-padding-l);
+    padding-right: var(--bscpn-content-padding-l);
   }
 }
 .bs-at-content--xs {
@@ -1901,21 +1905,17 @@ table {
   right: 0;
   width: 100%;
 }
-.bs-at-flash--brand-1 {
-  background-color: var(--bscpn-color-brand-1-light-2);
-  color: var(--bscpn-color-brand-1-light-1);
+.bs-at-flash {
+  align-items: center;
+  background-color: var(--bscpn-theme-background-dark);
+  color: var(--bscpn-theme-text-dark);
+  display: flex;
+  gap: var(--bscpn-at-flash-gap);
+  padding: var(--bscpn-at-flash-padding-vertical)
+    var(--bscpn-at-flash-padding-horizontal);
 }
-.bs-at-flash--positive {
-  background-color: var(--bscpn-color-positive-light-2);
-  color: var(--bscpn-color-positive-light-1);
-}
-.bs-at-flash--danger {
-  background-color: var(--bscpn-color-danger-light-2);
-  color: var(--bscpn-color-danger-light-1);
-}
-.bs-at-flash--warning {
-  background-color: var(--bscpn-color-warning-light-2);
-  color: var(--bscpn-color-warning-light-1);
+.bs-at-flash {
+  --bscpn-at-flash-gap: 10rem;
 }
 .bs-at-icon {
   fill: currentColor;

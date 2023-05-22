@@ -1,11 +1,83 @@
 @forward 'settings';
 @use './settings';
-@use '../../tools/palette';
+@use 'sass:map';
 @use '../../tools/classname';
+@use '../../tools/custom-property';
+@use '../../tools/media-query';
+@use '../../tools/palette';
 
-@each $variant in (settings.$variants) {
-  #{classname.get($classname-items: 'flash--#{$variant}', $layer: 'atom')} {
-    background-color: palette.get($variant, settings.$background-color);
-    color: palette.get($variant, settings.$color);
+/* stylelint-disable scss/dollar-variable-default */
+$classname: classname.get(
+  $classname-items: 'flash',
+  $layer: 'atom',
+);
+$padding-horizontal-property: custom-property.get(
+  $items: (
+    'flash',
+    'padding',
+    'horizontal',
+  ),
+  $layer: 'atom',
+);
+$padding-vertical-property: custom-property.get(
+  $items: (
+    'flash',
+    'padding',
+    'vertical',
+  ),
+  $layer: 'atom',
+);
+$gap-property: custom-property.get(
+  $items: (
+    'flash',
+    'gap',
+  ),
+  $layer: 'atom',
+);
+/* stylelint-enable scss/dollar-variable-default */
+
+#{$classname} {
+  display: flex;
+  align-items: center;
+  padding: var(#{$padding-vertical-property})
+    var(#{$padding-horizontal-property});
+  gap: var(#{$gap-property});
+  background-color: var(
+    #{custom-property.get(
+        $items: (
+          'theme',
+          'background-dark',
+        )
+      )}
+  );
+  color: var(
+    #{custom-property.get(
+        $items: (
+          'theme',
+          'text-dark',
+        )
+      )}
+  );
+}
+
+@each $breakpoint-name, $size-variant in settings.$sizes {
+  @include media-query.get($breakpoint-name) {
+    #{$classname} {
+      @if map.has-key($size-variant, 'padding-horizontal') {
+        #{$padding-horizontal-property}: map.get(
+          $size-variant,
+          'padding-horizontal'
+        );
+      }
+      @if map.has-key($size-variant, 'padding-vertical') {
+        #{$padding-vertical-property}: map.get(
+          $size-variant,
+          'padding-vertical'
+        );
+      }
+      @if map.has-key($size-variant, 'gap') {
+        #{$gap-property}: map.get($size-variant, 'gap');
+      }
+    }
   }
 }

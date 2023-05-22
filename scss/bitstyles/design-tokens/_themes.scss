@@ -13,7 +13,9 @@ $dark-theme: (
 ) !default;
 $brand-1-theme: (
   'background': palette.get('brand-1', 'light-4'),
+  'background-dark': palette.get('brand-1', 'light-2'),
   'text': palette.get('brand-1', 'dark-2'),
+  'text-dark': palette.get('brand-1', 'dark-2'),
 ) !default;
 $brand-2-theme: (
   'background': palette.get('brand-2', 'light-4'),
@@ -21,15 +23,21 @@ $brand-2-theme: (
 ) !default;
 $positive-theme: (
   'background': palette.get('positive', 'light-4'),
+  'background-dark': palette.get('positive', 'light-2'),
   'text': palette.get('positive', 'dark-2'),
+  'text-dark': palette.get('positive', 'dark-2'),
 ) !default;
 $warning-theme: (
   'background': palette.get('warning', 'light-4'),
+  'background-dark': palette.get('warning', 'light-1'),
   'text': palette.get('warning', 'dark-2'),
+  'text-dark': palette.get('grayscale', 'dark-4'),
 ) !default;
 $danger-theme: (
   'background': palette.get('danger', 'light-4'),
+  'background-dark': palette.get('danger', 'light-2'),
   'text': palette.get('danger', 'dark-1'),
+  'text-dark': palette.get('danger', 'dark-2'),
 ) !default;
 $grayscale-theme: (
   'background': palette.get('grayscale', 'light-4'),

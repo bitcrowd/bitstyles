@@ -32,7 +32,9 @@ html,
       $module-name: 'theme',
       $allow-list: (
         'text',
+        'text-dark',
         'background',
+        'background-dark',
       )
     );
   }

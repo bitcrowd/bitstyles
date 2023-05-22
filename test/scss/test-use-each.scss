@@ -68,6 +68,7 @@
     ),
   )
 );
+@use '../../scss/bitstyles/design-tokens/content' as design-tokens-content;
 @use '../../scss/bitstyles/design-tokens/layout' with (
   $size-base: 10rem
 );
@@ -211,7 +212,11 @@
   $max-height: 1rem
 );
 @use '../../scss/bitstyles/atoms/flash' with (
-  $color: 'light-1'
+  $sizes: (
+    'no-mq': (
+      'gap': #{10rem},
+    ),
+  )
 );
 @use '../../scss/bitstyles/atoms/icon' with (
   $sizes: (
