@@ -1,0 +1,59 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/classname';
+@use '../../tools/custom-property';
+
+/* stylelint-disable scss/dollar-variable-default */
+
+// prettier-ignore
+$button-classname: classname.get($classname-items: 'button', $layer: 'atom');
+
+// prettier-ignore
+$button-border-top-left-radius-name: custom-property.get($items: ('button', 'border', 'top', 'left', 'radius'),  $layer: 'atom');
+
+// prettier-ignore
+$button-border-top-right-radius-name: custom-property.get($items: ('button', 'border', 'top', 'right', 'radius'), $layer: 'atom');
+
+// prettier-ignore
+$button-border-bottom-right-radius-name: custom-property.get($items: ('button', 'border', 'bottom', 'right', 'radius'), $layer: 'atom');
+
+// prettier-ignore
+$button-border-bottom-left-radius-name: custom-property.get($items: ('button', 'border', 'bottom', 'left', 'radius'), $layer: 'atom');
+
+// prettier-ignore
+$button-border-width-name: custom-property.get($items: ('button', 'border', 'width'), $layer: 'atom');
+
+// prettier-ignore
+$button-box-shadow-name: custom-property.get($items: ('button', 'box-shadow'), $layer: 'atom');
+
+/* stylelint-enable scss/dollar-variable-default */
+
+#{classname.get($classname-items: 'joined-ui', $layer: 'organism')} {
+  border-radius: settings.$border-radius;
+  box-shadow: settings.$box-shadow;
+
+  > :first-child #{$button-classname},
+  > #{$button-classname}:first-child {
+    #{$button-box-shadow-name}: none;
+    #{$button-border-top-right-radius-name}: #{0};
+    #{$button-border-bottom-right-radius-name}: #{0};
+    margin-right: calc(var(#{$button-border-width-name}) * -1);
+  }
+
+  > :last-child #{$button-classname},
+  > #{$button-classname}:last-child {
+    #{$button-box-shadow-name}: none;
+    #{$button-border-top-left-radius-name}: #{0};
+    #{$button-border-bottom-left-radius-name}: #{0};
+    margin-right: 0;
+  }
+
+  > :not(:first-child):not(:last-child) #{$button-classname},
+  > #{$button-classname}:not(:first-child):not(:last-child) {
+    #{$button-border-top-left-radius-name}: #{0};
+    #{$button-border-top-right-radius-name}: #{0};
+    #{$button-border-bottom-right-radius-name}: #{0};
+    #{$button-border-bottom-left-radius-name}: #{0};
+    margin-right: calc(var(#{$button-border-width-name}) * -1);
+  }
+}

@@ -24,6 +24,7 @@
 - Bitstyles can no longer be imported using Sass’s `@import` statements — you’ll need to either switch to using `@use` statements, or use bitstyles v5.0.1.
 - Default visual design for links (anchor elements and the `.a-link` class) has been updated. If you were overriding the default configuration for links, you may see no change.
 - New atoms/flash component, an overhaul of the existing component that you’ll need to update your codebase to continue using. The colors for each variant are created using the theming system, meaning that buttons inside can have their colors fit the color of the badge. If you were using flashes without customization, the only thing that needs to change in your component markup is that the color variant is now specified using `class="a-flash" data-theme="variant"` instead of with the modifier class `class="a-flash a-flash--variant"`. The same variants exist (`grayscale`, `brand-1`, `positive`, `warning`, `danger`). See documentation for a guide on how to customize the variants.
+- Renames the `.o-ui-group` component to `.o-joined-ui`, and removes the need for extra child classes on your elements. You’ll need to replace all instances of `.o-ui-group` with `o-joined-ui`, and remove all instances of `.o-ui-group__item`, `.o-ui-group__first`, and `.o-ui-group__last`. Any instances of `u-border-radius-0` classes on these components must also be removed, as this is now handled in pure CSS.
 
 ### Added
 

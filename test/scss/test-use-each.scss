@@ -246,7 +246,7 @@
 @use '../../scss/bitstyles/organisms/table' with (
   $color-th: #f00
 );
-@use '../../scss/bitstyles/organisms/ui-group' with (
+@use '../../scss/bitstyles/organisms/joined-ui' with (
   $border-radius: 10rem
 );
 

@@ -1,7 +1,7 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 import icons from '../../../assets/images/icons.svg';
 
-<Meta title="UI/Buttons/Joined buttons" />
+<Meta title="UI/Buttons/Joined/Overview" />
 
 # Joined buttons
 
@@ -30,7 +30,7 @@ For a series of buttons that are very directly related e.g.
       <a href="/docs/atoms-list-reset--list-reset">u-list-none</a>
     </li>
     <li>
-      <a href="/docs/organisms-ui-group--ui-group-buttons">o-ui-group</a>
+      <a href="/docs/organisms-joined-ui--joined-ui-buttons">o-joined-ui</a>
     </li>
     <li>
       <a href="/docs/utilities-flex--flex">u-flex</a>
@@ -58,146 +58,27 @@ For a series of buttons that are very directly related e.g.
 When you have multiple actions that are applied to a single entity, group those actions to make the relationship clear.
 
 <Canvas>
-  <Story name="Joined buttons - icons">
-    {`
-      <ul class="u-list-none u-inline-flex u-items-stretch o-ui-group">
-        <li class="u-flex">
-          <button class="a-button a-button--square a-button--secondary u-border-radius-0-tr u-border-radius-0-br o-ui-group__item" type="button">
-            <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-minus"></use>
-            </svg>
-            <span class="u-sr-only">minus</span>
-          </button>
-        </li>
-        <li class="u-flex">
-          <button class="a-button a-button--square a-button--secondary o-ui-group__item o-ui-group__last u-border-radius-0-tl u-border-radius-0-bl" type="button">
-            <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-plus"></use>
-            </svg>
-            <span class="u-sr-only">plus</span>
-          </button>
-        </li>
-      </ul>
-    `}
-  </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="Joined buttons - icons 2">
-    {`
-      <ul class="u-list-none u-inline-flex u-items-stretch o-ui-group">
-        <li class="u-flex">
-          <button class="a-button a-button--square a-button--secondary u-border-radius-0-tr u-border-radius-0-br o-ui-group__item" type="button">
-            <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-caret-left"></use>
-            </svg>
-            <span class="u-sr-only">previous</span>
-          </button>
-        </li>
-        <li class="u-flex">
-          <button class="a-button a-button--square a-button--secondary o-ui-group__item o-ui-group__last u-border-radius-0-tl u-border-radius-0-bl" type="button">
-            <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <use xlink:href="${icons}#icon-caret-right"></use>
-            </svg>
-            <span class="u-sr-only">next</span>
-          </button>
-        </li>
-      </ul>
-    `}
-  </Story>
+  <Story id="ui-buttons-joined--plus-minus-icons-outline" />
+  <Story id="ui-buttons-joined--plus-minus-icons-outline-pressed" />
+  <Story id="ui-buttons-joined--next-previous-icons-outline" />
+  <Story id="ui-buttons-joined--next-previous-icons-outline-pressed" />
 </Canvas>
 
 ## Pagination
 
 Mark the current page in a series of pagination buttons by giving the link the `aria-current="page"` attribute. If there are no previous pages or next pages, disable the previous or next buttons respectively, using `aria-disabled="true"`.
 
-<Canvas isColumn>
-  <Story name="Pagination">
-    {`
-      <nav aria-label="pagination">
-        <ul class="u-list-none u-inline-flex u-items-stretch o-ui-group">
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--square a-button--secondary u-border-radius-0-tr u-border-radius-0-br o-ui-group__item">
-              <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <use xlink:href="${icons}#icon-caret-left"></use>
-              </svg>
-              <span class="u-sr-only">previous</span>
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--secondary o-ui-group__item u-border-radius-0">
-              1
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--secondary o-ui-group__item u-border-radius-0" aria-current="page">
-              2
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--secondary o-ui-group__item u-border-radius-0">
-              3
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--secondary o-ui-group__item u-border-radius-0">
-              4
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--square a-button--secondary o-ui-group__item o-ui-group__last u-border-radius-0-tl u-border-radius-0-bl">
-              <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <use xlink:href="${icons}#icon-caret-right"></use>
-              </svg>
-              <span class="u-sr-only">next</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    `}
-  </Story>
-  <Story name="Pagination with disabled buttons">
-    {`
-      <nav aria-label="pagination">
-        <ul class="u-list-none u-inline-flex u-items-stretch o-ui-group">
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--square a-button--secondary u-border-radius-0-tr u-border-radius-0-br o-ui-group__item" aria-disabled="true">
-              <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <use xlink:href="${icons}#icon-caret-left"></use>
-              </svg>
-              <span class="u-sr-only">previous</span>
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--secondary o-ui-group__item u-border-radius-0">
-              1
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--secondary o-ui-group__item u-border-radius-0" aria-current="page">
-              2
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--secondary o-ui-group__item u-border-radius-0">
-              3
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--secondary o-ui-group__item u-border-radius-0">
-              4
-            </a>
-          </li>
-          <li class="u-flex">
-            <a href="/" class="a-button a-button--square a-button--secondary o-ui-group__item o-ui-group__last u-border-radius-0-tl u-border-radius-0-bl" aria-disabled="true">
-              <svg width="14" height="14" class="a-icon a-icon--m" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <use xlink:href="${icons}#icon-caret-right"></use>
-              </svg>
-              <span class="u-sr-only">next</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    `}
-  </Story>
+<Canvas>
+  <Story id="ui-buttons-joined--pagination-outline" />
+  <Story id="ui-buttons-joined--pagination-outline-pressed" />
+</Canvas>
+
+<Canvas>
+  <Story id="ui-buttons-joined--pagination-transparent" />
+  <Story id="ui-buttons-joined--pagination-transparent-pressed" />
+</Canvas>
+
+<Canvas>
+  <Story id="ui-buttons-joined--pagination-secondary" />
+  <Story id="ui-buttons-joined--pagination-secondary-pressed" />
 </Canvas>
