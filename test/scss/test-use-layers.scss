@@ -172,6 +172,15 @@
       ),
     ),
   ),
+  $stack-size-variants: (
+    'no-mq': (
+      '': var(--bscpn-content-padding-base),
+      'large': var(--bscpn-content-padding-l),
+    ),
+    'm': (
+      '': var(--bscpn-content-padding-l),
+    ),
+  ),
   $topbar-vertical-padding: 10rem
 );
 @use '../../scss/bitstyles/organisms' with (

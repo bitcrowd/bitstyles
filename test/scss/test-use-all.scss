@@ -142,6 +142,15 @@
     )
   ),
   $icon-sizes: ('s': 10rem),
+  $stack-size-variants: (
+    'no-mq': (
+      '': var(--bscpn-content-padding-base),
+      'large': var(--bscpn-content-padding-l),
+    ),
+    'm': (
+      '': var(--bscpn-content-padding-l),
+    )
+  ),
   $skip-link-color: #f00,
   $switcher-size-variants: (
     'no-mq': (
