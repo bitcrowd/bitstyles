@@ -1,6 +1,6 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Atoms/Skip link" />
+<Meta title="Atoms/Skip link/Overview" />
 
 # Skip link
 
@@ -13,12 +13,7 @@ To see the link in the example here, you need to give the link focus, just like 
 If you try this example using a screenreader, move the screenreader focus to the skip link. The link text will be read out but the link itself may not become visible (that requires keyboard focus). You can follow the link in the normal way provided by your screenreader software; when you do so, the text in the main content area will be read out loud.
 
 <Canvas>
-  <Story inline={false} name="a-skip-link">
-    {`
-      <a href="#main" class="a-skip-link">Skip to content</a>
-      <div id="main">Your main content here, after some other content that gets repeated on every page (navigation etc.)</div>
-    `}
-  </Story>
+  <Story inline={false} id="atoms-skip-link--base" />
 </Canvas>
 
 ## Customization
