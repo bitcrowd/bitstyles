@@ -1,0 +1,45 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/classname';
+@use '../../tools/design-token';
+@use '../../tools/media-query';
+
+#{classname.get($classname-items: 'stack', $layer: 'atom')} {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &:only-child {
+    height: 100%;
+  }
+
+  > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  > * + * {
+    margin-top: var(design-token.get('stack', 'spacing'));
+  }
+}
+
+@each $breakpoint, $size-variants in settings.$size-variants {
+  @include media-query.get($breakpoint) {
+    @each $size-variant-name, $padding in ($size-variants) {
+      $class: '';
+      @if $size-variant-name == '' {
+        $class: 'stack';
+      } @else {
+        $class: 'stack--#{$size-variant-name}';
+      }
+
+      #{classname.get($classname-items: $class, $layer: 'atom')} {
+        /* stylelint-disable max-nesting-depth */
+        > * + * {
+          #{design-token.get('stack', 'spacing')}: $padding;
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+    }
+  }
+}

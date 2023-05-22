@@ -1,0 +1,61 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+<Meta title="Atoms/Stack/Overview" />
+
+# Stack
+
+A layout atom that stacks its children vertically and ensures consistent space between each. This component is responsive, applying larger spacing between children when rendered on larger viewports.
+
+The spacing and the breakpoints the component responds to can be [customized](#customization). You can also add extra size variants of the stack, that apply different spacing, but the default configuration provides only one.
+
+<Canvas>
+  <Story id="atoms-stack--base" />
+</Canvas>
+
+## Customization
+
+The component expects a Sass list of Sass maps, with the keys being the name of the breakpoint (use `setup.$no-media-query` for the base mobile-first styles) and the values being the name of the stack variant. You can change the breakpoint names or add new breakpoints if you want the component to apply different spacing at extra breakpoints (in which case you probably also want to [edit the available `content` padding design tokens](/docs/design-tokens-content--page) available to you, though you can also pass `size` design tokens directly)
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/stack' with (
+  $size-variants: (
+    '#{setup.$no-media-query}': (
+      '': var(design-token.get('content', 'padding', 'base')),
+    ),
+    'm': (
+      '': var(design-token.get('content', 'padding', 'l')),
+    ),
+    'l': (
+      '': var(design-token.get('content', 'padding', 'xl')),
+      // this value of content-padding would need to be added to the content design tokens
+    ),
+  )
+);
+```
+
+### Extra size variants
+
+The keys of the spacing values above are deliberately left blank — that results in those spacing values being applied to the base `a-stack` component. If you provide a key, that will be used to create a stack variant:
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/stack' with (
+  $size-variants: (
+    '#{setup.$no-media-query}': (
+      '': var(design-token.get('content', 'padding', 'base')),
+      'large': var(design-token.get('content', 'padding', 'l')),
+    ),
+  )
+);
+```
+
+Produces CSS similar to the following:
+
+```css
+.a-stack > * + * {
+  margin-top: var(--bs-content-padding-base);
+}
+
+.a-stack--large > * + * {
+  margin-top: var(--bs-content-padding-l);
+}
+```
