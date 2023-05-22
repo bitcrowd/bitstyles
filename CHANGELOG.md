@@ -31,6 +31,7 @@
   - `font-size.get($font-size-name)` to `design-token.get('font-size', $font-size-name)`
   - `shadows.get($shadow-name)` to `design-token.get('shadow', $shadow-name)`
   - `custom-property.get()` to `design-token.get()`
+- Updated design for `.a-skip-link`. If you were overriding the appearance before, the only difference you’ll notice is that the skip-link now has a focus indicator, and a hover state. There are extra Sass variables available for customizing the hover state — see the docs for details.
 
 ### Added
 
