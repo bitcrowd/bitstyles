@@ -2430,9 +2430,11 @@ table {
   text-decoration: underline;
 }
 .a-skip-link {
+  border-radius: var(--bs-size-s4);
   font-weight: var(--bs-font-weight-medium);
   left: 50%;
-  padding: var(--bs-size-s1);
+  outline-offset: 0;
+  padding: var(--bs-size-m) var(--bs-size-l2);
   position: absolute;
   top: -100%;
   transform: translateX(-50%);
@@ -2440,14 +2442,24 @@ table {
 }
 .a-skip-link,
 .a-skip-link:focus,
-.a-skip-link:hover,
 .a-skip-link:visited {
   background: var(--bs-color-grayscale-white);
-  border: var(--bs-size-s6) var(--bs-color-grayscale-dark-1) solid;
-  color: var(--bs-color-grayscale-dark-1);
+  border: var(--bs-size-s6) var(--bs-color-grayscale-black) solid;
+  color: var(--bs-color-grayscale-black);
+  outline-width: 0;
+  text-decoration: none;
+}
+.a-skip-link:hover {
+  background: var(--bs-color-grayscale-black);
+  color: var(--bs-color-grayscale-white);
 }
 .a-skip-link:focus {
-  top: 0;
+  top: var(--bs-size-s4);
+}
+.a-skip-link:focus-visible {
+  outline: var(--bs-color-brand-2) solid
+    calc(var(--bs-size-s7) + var(--bs-size-s7) / 2);
+  outline-offset: var(--bs-size-s7);
 }
 .a-topbar {
   left: 0;

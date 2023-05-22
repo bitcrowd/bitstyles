@@ -1999,9 +1999,11 @@ table {
   text-decoration: underline;
 }
 .bs-at-skip-link {
+  border-radius: var(--bscpn-size-s4);
   font-weight: var(--bscpn-font-weight-medium);
   left: 50%;
-  padding: var(--bscpn-size-s1);
+  outline-offset: 0;
+  padding: var(--bscpn-size-m) var(--bscpn-size-l2);
   position: absolute;
   top: -100%;
   transform: translateX(-50%);
@@ -2009,14 +2011,24 @@ table {
 }
 .bs-at-skip-link,
 .bs-at-skip-link:focus,
-.bs-at-skip-link:hover,
 .bs-at-skip-link:visited {
   background: var(--bscpn-color-grayscale-white);
-  border: var(--bscpn-size-s6) var(--bscpn-color-grayscale-dark-1) solid;
+  border: var(--bscpn-size-s6) var(--bscpn-color-grayscale-black) solid;
   color: red;
+  outline-width: 0;
+  text-decoration: none;
+}
+.bs-at-skip-link:hover {
+  background: var(--bscpn-color-grayscale-black);
+  color: var(--bscpn-color-grayscale-white);
 }
 .bs-at-skip-link:focus {
-  top: 0;
+  top: var(--bscpn-size-s4);
+}
+.bs-at-skip-link:focus-visible {
+  outline: var(--bscpn-color-brand-2) solid
+    calc(var(--bscpn-size-s7) + var(--bscpn-size-s7) / 2);
+  outline-offset: var(--bscpn-size-s7);
 }
 .bs-at-topbar {
   left: 0;

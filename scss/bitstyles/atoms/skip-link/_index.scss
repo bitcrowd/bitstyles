@@ -10,19 +10,23 @@
   left: 50%;
   padding: settings.$padding;
   transform: translateX(-50%);
-  font-weight: settings.$font-weight;
-  outline-offset: 0;
   border-radius: settings.$border-radius;
+  outline-offset: 0;
+  font-weight: settings.$font-weight;
 
   &,
   &:visited,
-  &:hover,
   &:focus {
     border: settings.$border;
     outline-width: 0;
     background: settings.$background;
     color: settings.$color;
     text-decoration: settings.$text-decoration;
+  }
+
+  &:hover {
+    background: settings.$background-hover;
+    color: settings.$color-hover;
   }
 
   &:focus {
