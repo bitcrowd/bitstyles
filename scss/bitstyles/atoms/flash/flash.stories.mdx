@@ -64,16 +64,16 @@ You can adjust the vertical padding and the gap applied between child elements o
 
 ```scss
 @use '~bitstyles/scss/bitstyles/settings/setup';
-@use '~bitstyles/scss/bitstyles/tools/size';
+@use '~bitstyles/scss/bitstyles/tools/design-token';
 @use '~bitstyles/scss/bitstyles/atoms/flash' with (
   $sizes: (
     '#{setup.$no-media-query}': (
-      'padding-vertical': size.get('s3'),
-      'gap': size.get('s3'),
+      'padding-vertical': var(design-token.get('size', 's3')),
+      'gap': var(design-token.get('size', 's3')),
     ),
     'l': (
-      'padding-vertical': size.get('l1'),
-      'gap': size.get('l5'),
+      'padding-vertical': var(design-token.get('size', 'l1')),
+      'gap': var(design-token.get('size', 'l5')),
     ),
   )
 );

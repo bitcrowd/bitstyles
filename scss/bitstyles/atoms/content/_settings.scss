@@ -1,5 +1,5 @@
 @use '../../settings/setup';
-@use '../../tools/custom-property';
+@use '../../tools/design-token';
 
 $max-width: (
   'xs': 25rem,
@@ -11,23 +11,6 @@ $max-width: (
 $max-width-base: 'm' !default;
 $padding: (
   '#{setup.$no-media-query}':
-    var(
-      #{custom-property.get(
-          $items: (
-            'content',
-            'padding',
-            'base',
-          ),
-        )}
-    ),
-  'l':
-    var(
-      #{custom-property.get(
-          $items: (
-            'content',
-            'padding',
-            'l',
-          ),
-        )}
-    ),
+    var(design-token.get('content', 'padding', 'base')),
+  'l': var(design-token.get('content', 'padding', 'l')),
 ) !default;

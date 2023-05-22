@@ -73,7 +73,6 @@
     ),
   )
 );
-@use '../../scss/bitstyles/design-tokens/content' as design-tokens-content;
 @use '../../scss/bitstyles/design-tokens/layout' with (
   $size-base: 10rem
 );
@@ -89,6 +88,7 @@
   $webfont-family-name: 'FakeFont',
   $webfont-base-url: './'
 );
+@use '../../scss/bitstyles/design-tokens/content' as design-tokens-content;
 @use '../../scss/bitstyles/design-tokens/themes' with (
   $themes: (
     'default': (

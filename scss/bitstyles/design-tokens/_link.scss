@@ -3,8 +3,10 @@
 //
 // Base styles /////////////////////////////////////////
 
-$transition: color var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')),
-  outline-offset var(design-token.get('transition', 'default', 'duration')) var(design-token.get('transition', 'default', 'easing')) !default;
+$transition: color var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')),
+  outline-offset var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')) !default;
 $font-weight: var(design-token.get('font-weight', 'medium')) !default;
 
 //
@@ -42,7 +44,7 @@ $box-shadow-active: none !default;
 //
 // Disabled /////////////////////////////////////////
 
-$color-disabled: palette.get('grayscale') !default;
+$color-disabled: var(design-token.get('color', 'grayscale')) !default;
 $text-decoration-disabled: underline !default;
 $background-color-disabled: transparent !default;
 $box-shadow-disabled: none !default;

@@ -1,6 +1,4 @@
-@use '../../tools/palette';
-@use '../../tools/shadow';
-@use '../../tools/size';
+@use '../../tools/design-token';
 
-$border-radius: size.get('s3') !default;
+$border-radius: var(design-token.get('size', 's3')) !default;
 $box-shadow: none !default;

@@ -1,47 +1,15 @@
 @use '../settings/setup';
-@use '../tools/custom-property';
+@use '../tools/design-token';
 @use '../tools/media-query';
 
 $padding: (
   '#{setup.$no-media-query}': (
-    'base':
-      var(
-        custom-property.get(
-          $items: (
-            'size',
-            's1',
-          ),
-        )
-      ),
-    'l':
-      var(
-        custom-property.get(
-          $items: (
-            'size',
-            'm',
-          ),
-        )
-      ),
+    'base': var(design-token.get('size', 's1')),
+    'l': var(design-token.get('size', 'm')),
   ),
   'm': (
-    'base':
-      var(
-        custom-property.get(
-          $items: (
-            'size',
-            'l1',
-          ),
-        )
-      ),
-    'l':
-      var(
-        custom-property.get(
-          $items: (
-            'size',
-            'l1',
-          ),
-        )
-      ),
+    'base': var(design-token.get('size', 'l1')),
+    'l': var(design-token.get('size', 'l1')),
   ),
 ) !default;
 
@@ -49,7 +17,7 @@ $padding: (
   @include media-query.get($breakpoint-name) {
     :root {
       @each $size-name, $size in $paddings {
-        #{custom-property.get($items: ('content', 'padding', $size-name))}: #{$size};
+        #{design-token.get('content', 'padding', $size-name)}: #{$size};
       }
     }
   }

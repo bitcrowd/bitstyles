@@ -36,7 +36,6 @@
     var(design-token.get('button', 'border-top-right-radius'))
     var(design-token.get('button', 'border-bottom-right-radius'))
     var(design-token.get('button', 'border-bottom-left-radius'));
-  border-radius: var(design-token.get('button', 'border-radius'));
   outline-offset: 0;
   font-family: settings.$font-family;
   font-size: var(design-token.get('button', 'font-size'));

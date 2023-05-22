@@ -130,16 +130,6 @@
   --bs-color-positive-dark-4-rgb: 0, 38, 24;
 }
 :root {
-  --bs-content-padding-base: var(--bs-size-s1);
-  --bs-content-padding-l: var(--bs-size-m);
-}
-@media screen and (min-width: 30em) {
-  :root {
-    --bs-content-padding-base: var(--bs-size-l1);
-    --bs-content-padding-l: var(--bs-size-l1);
-  }
-}
-:root {
   --bs-size-0: 0;
   --bs-size-s7: 0.125rem;
   --bs-size-s6: 0.25rem;
@@ -384,6 +374,16 @@
   --bs-font-weight-extrabold: 800;
   --bs-font-weight-black: 900;
 }
+:root {
+  --bs-content-padding-base: var(--bs-size-s1);
+  --bs-content-padding-l: var(--bs-size-m);
+}
+@media screen and (min-width: 30em) {
+  :root {
+    --bs-content-padding-base: var(--bs-size-l1);
+    --bs-content-padding-l: var(--bs-size-l1);
+  }
+}
 html {
   box-sizing: border-box;
 }
@@ -586,20 +586,20 @@ a:hover {
   text-decoration: underline;
 }
 a:focus-visible {
-  outline: var(--bs-color-brand-2-base) solid
+  outline: var(--bs-color-brand-2) solid
     calc(var(--bs-size-s7) + var(--bs-size-s7) / 2);
   outline-offset: var(--bs-size-s7);
 }
 a:active {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bs-color-brand-1-base);
+  color: var(--bs-color-brand-1);
   text-decoration: underline;
 }
 a[aria-disabled] {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bs-color-grayscale-base);
+  color: var(--bs-color-grayscale);
   text-decoration: underline;
 }
 figcaption {
@@ -2378,7 +2378,7 @@ table {
   font-size: var(--bs-size-m);
 }
 .a-icon--xl {
-  font-size: var(--bs-size-l2);
+  font-size: var(--bs-size-l1);
 }
 .a-link {
   -webkit-text-decoration-skip: ink;
@@ -2413,20 +2413,20 @@ table {
   text-decoration: underline;
 }
 .a-link:focus-visible {
-  outline: var(--bs-color-brand-2-base) solid
+  outline: var(--bs-color-brand-2) solid
     calc(var(--bs-size-s7) + var(--bs-size-s7) / 2);
   outline-offset: var(--bs-size-s7);
 }
 .a-link:active {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bs-color-brand-1-base);
+  color: var(--bs-color-brand-1);
   text-decoration: underline;
 }
 .a-link[aria-disabled] {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bs-color-grayscale-base);
+  color: var(--bs-color-grayscale);
   text-decoration: underline;
 }
 .a-skip-link {
