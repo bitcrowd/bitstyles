@@ -2003,7 +2003,8 @@ table {
 }
 .bs-at-skip-link {
   border-radius: var(--bscpn-size-s4);
-  font-weight: var(--bscpn-font-weight-medium);
+  font-size: var(--bscpn-font-size-4);
+  font-weight: var(--bscpn-font-weight-semibold);
   left: 50%;
   outline-offset: 0;
   padding: var(--bscpn-size-m) var(--bscpn-size-l2);
@@ -2016,7 +2017,7 @@ table {
 .bs-at-skip-link:focus,
 .bs-at-skip-link:visited {
   background: var(--bscpn-color-grayscale-white);
-  border: var(--bscpn-size-s6) var(--bscpn-color-grayscale-black) solid;
+  border: var(--bscpn-size-s6) var(--bscpn-color-grayscale-dark-4) solid;
   box-shadow: var(--bscpn-shadow-brand-2-box);
   color: red;
   outline-width: 0;
