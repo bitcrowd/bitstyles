@@ -2445,6 +2445,7 @@ table {
 .a-skip-link:visited {
   background: var(--bs-color-grayscale-white);
   border: var(--bs-size-s6) var(--bs-color-grayscale-black) solid;
+  box-shadow: var(--bs-shadow-brand-2-box);
   color: var(--bs-color-grayscale-black);
   outline-width: 0;
   text-decoration: none;

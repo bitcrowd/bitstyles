@@ -17,6 +17,7 @@ $color: var(design-token.get('color', 'grayscale', 'black')) !default;
 $border: var(design-token.get('size', 's6'))
   var(design-token.get('color', 'grayscale', 'black')) solid !default;
 $border-radius: var(design-token.get('size', 's4')) !default;
+$shadow: var(design-token.get('shadow', 'brand-2', 'box')) !default;
 
 //
 // Hover Colors /////////////////////////////////////////

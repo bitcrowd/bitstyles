@@ -99,6 +99,9 @@
   --bscpn-shadow-brand-1-drop: drop-shadow(red 0 2.5rem 5rem)
     drop-shadow(red 0 5rem 10rem);
   --bscpn-shadow-brand-1-box: 0 2.5rem 5rem red, 0 5rem 10rem red;
+  --bscpn-shadow-brand-2-drop: drop-shadow(#00f 0 2.5rem 5rem)
+    drop-shadow(#00f 0 5rem 10rem);
+  --bscpn-shadow-brand-2-box: 0 2.5rem 5rem #00f, 0 5rem 10rem #00f;
 }
 :root {
   --bscpn-font-size-1: 0.75rem;
@@ -2014,6 +2017,7 @@ table {
 .bs-at-skip-link:visited {
   background: var(--bscpn-color-grayscale-white);
   border: var(--bscpn-size-s6) var(--bscpn-color-grayscale-black) solid;
+  box-shadow: var(--bscpn-shadow-brand-2-box);
   color: red;
   outline-width: 0;
   text-decoration: none;
