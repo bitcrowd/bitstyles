@@ -22,12 +22,15 @@
 - Updated the default configuration for typography. If you want to keep the old typographic scale (font-sizes and line-heights), you can re-instate the old configuration.
 - Default visual appearance of Atoms/Dropdown component has been updated. If you were already overriding this, you may see no difference
 - Bitstyles can no longer be imported using Sass’s `@import` statements — you’ll need to either switch to using `@use` statements, or use bitstyles v5.0.1.
+- Default visual design for links (anchor elements and the `.a-link` class)as been updated. If you were overriding the default configuration for links, you may see no change.
 
 ### Added
 
 - The storybook now includes the `storybook-zeplin` plugin, for which you’ll need to provide your Zeplin personal access token, otherwise the plugin will not work. No other functionality will be affected.
 - The atoms/badge component is now available with a `small` size variant.
 - It is now possible to import bitstyles on a per-layer basis, instead of per-module or all at once. It is still possible to override all modules inside each layer in the normal way.
+- There are now design tokens as `design-tokens/focus` to describe a consistent `:focus` appearance, that are currently used in `base/anchor/`, `atoms/buttons`, and `atoms/links`.
+- Anchor elements and `atoms/link` components now have a disabled state, applied using the `aria-disabled` attribute.
 
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2023-01-03
 

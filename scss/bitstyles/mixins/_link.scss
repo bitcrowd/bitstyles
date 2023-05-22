@@ -1,3 +1,4 @@
+@use '../design-tokens/focus';
 @use '../design-tokens/link';
 
 // Link
@@ -9,6 +10,7 @@
   padding: 0;
   transition: link.$transition;
   border: 0;
+  outline-offset: 0;
   background-color: link.$background-color;
   box-shadow: link.$box-shadow;
   color: link.$color;
@@ -27,10 +29,16 @@
 
   &:hover,
   &:focus {
+    outline-width: 0;
     background-color: link.$background-color-hover;
     box-shadow: link.$box-shadow-hover;
     color: link.$color-hover;
     text-decoration: link.$text-decoration-hover;
+  }
+
+  &:focus-visible {
+    outline: focus.$outline-color solid focus.$outline-width;
+    outline-offset: focus.$outline-offset;
   }
 
   &:active {
@@ -38,5 +46,12 @@
     box-shadow: link.$box-shadow-active;
     color: link.$color-active;
     text-decoration: link.$text-decoration-active;
+  }
+
+  &[aria-disabled] {
+    background-color: link.$background-color-disabled;
+    box-shadow: link.$box-shadow-disabled;
+    color: link.$color-disabled;
+    text-decoration: link.$text-decoration-disabled;
   }
 }

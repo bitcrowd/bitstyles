@@ -31,6 +31,3 @@ $allowed-shape-properties: (
   'font-weight',
   'justify-content'
 ) !default;
-$outline-color: palette.get('brand-2') !default;
-$outline-width: calc(size.get('s7') + size.get('s7') / 2) !default;
-$outline-offset: size.get('s7') !default;

@@ -1,5 +1,6 @@
 @forward 'settings';
 @use './settings';
+@use '../../design-tokens/focus';
 @use '../../tools/classname';
 @use '../../tools/custom-property';
 
@@ -43,8 +44,8 @@
   }
 
   &:focus-visible {
-    outline: settings.$outline-color solid settings.$outline-width;
-    outline-offset: settings.$outline-offset;
+    outline: focus.$outline-color solid focus.$outline-width;
+    outline-offset: focus.$outline-offset;
   }
 
   &:disabled,

@@ -291,28 +291,41 @@ a {
   color: red;
   cursor: pointer;
   font-weight: 500;
+  outline-offset: 0;
   padding: 0;
-  text-decoration: none;
+  text-decoration: underline;
   text-decoration-skip-ink: auto;
-  transition: color 75ms ease-out;
+  transition: color 75ms ease-out, outline-offset 75ms ease-out;
 }
 a:visited {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-base);
-  text-decoration: none;
+  color: var(--bscpn-color-grayscale-dark-1);
+  text-decoration: underline;
 }
 a:focus,
 a:hover {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-dark-1);
+  color: var(--bscpn-color-brand-1-dark-2);
+  outline-width: 0;
   text-decoration: underline;
+}
+a:focus-visible {
+  outline: var(--bscpn-color-brand-2-base) solid
+    calc(var(--bscpn-size-s7) + var(--bscpn-size-s7) / 2);
+  outline-offset: var(--bscpn-size-s7);
 }
 a:active {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-dark-1);
+  color: var(--bscpn-color-brand-1-base);
+  text-decoration: underline;
+}
+a[aria-disabled] {
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--bscpn-color-grayscale-base);
   text-decoration: underline;
 }
 figcaption {
@@ -1928,28 +1941,41 @@ table {
   color: red;
   cursor: pointer;
   font-weight: 500;
+  outline-offset: 0;
   padding: 0;
-  text-decoration: none;
+  text-decoration: underline;
   text-decoration-skip-ink: auto;
-  transition: color 75ms ease-out;
+  transition: color 75ms ease-out, outline-offset 75ms ease-out;
 }
 .bs-at-link:visited {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-base);
-  text-decoration: none;
+  color: var(--bscpn-color-grayscale-dark-1);
+  text-decoration: underline;
 }
 .bs-at-link:focus,
 .bs-at-link:hover {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-dark-1);
+  color: var(--bscpn-color-brand-1-dark-2);
+  outline-width: 0;
   text-decoration: underline;
+}
+.bs-at-link:focus-visible {
+  outline: var(--bscpn-color-brand-2-base) solid
+    calc(var(--bscpn-size-s7) + var(--bscpn-size-s7) / 2);
+  outline-offset: var(--bscpn-size-s7);
 }
 .bs-at-link:active {
   background-color: transparent;
   box-shadow: none;
-  color: var(--bscpn-color-brand-1-dark-1);
+  color: var(--bscpn-color-brand-1-base);
+  text-decoration: underline;
+}
+.bs-at-link[aria-disabled] {
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--bscpn-color-grayscale-base);
   text-decoration: underline;
 }
 .bs-at-skip-link {

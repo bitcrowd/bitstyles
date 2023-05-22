@@ -1,17 +1,17 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Atoms/Link" />
+<Meta title="Atoms/Link/Overview" />
+
+<Story id="base-anchor--base" />
 
 # Link
 
-Mimic the appearance of a standard anchor element by applying a classname. This allows other interactive elements (e.g. `<button>`) to visually match your links.
+See [Base/Anchor](/docs/base-anchor-overview--page) for details on anchor elements.
 
-This is a slightly bad practice — if it looks like a link, it should be a link — that’s sometimes necessary for technical reasons, generally when building a JS app. Actions triggered by JavaScript should not use anchor elements because no navigation occurs, instead they should use `button` elements. But sometimes that button needs to look like a link (examples are the trigger to displaying a modal, or a smaller de-emphasised cancel button next to your primary “OK” action).
+## Buttons as links (`.a-link`)
 
-<Canvas>
-  <Story name="Link">
-    {`
-      <button class="a-link" type="button">A button element</button>
-    `}
-  </Story>
+You may sometimes want to mimic the appearance of a standard anchor element in some other interactive element e.g. a `<button>` that needs to look like a link. You can do this by applying the `a-link` classname:
+
+<Canvas isColumn>
+  <Story id="atoms-link--button-as-link" />
 </Canvas>
