@@ -157,6 +157,21 @@
     's': 10rem,
   ),
   $skip-link-color: #f00,
+  $switcher-size-variants: (
+    'no-mq': (
+      '': (
+        'spacing': var(--bscpn-content-padding-base),
+      ),
+      'large': (
+        'spacing': var(--bscpn-content-padding-l1),
+      ),
+    ),
+    'm': (
+      '': (
+        'spacing': var(--bscpn-content-padding-l1),
+      )
+    ),
+  ),
   $topbar-vertical-padding: 10rem
 );
 @use '../../scss/bitstyles/organisms' with (

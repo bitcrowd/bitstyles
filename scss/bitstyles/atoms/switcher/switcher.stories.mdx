@@ -45,14 +45,14 @@ The component expects a Sass list of Sass maps, with the keys being the name of 
   $size-variants: (
     '#{setup.$no-media-query}': (
       '': (
-        'gap': var(design-token.get('size', 's5')),
+        'spacing': var(design-token.get('size', 's5')),
         'breakpoint': 30rem,
         'limit': 4,
       ),
     ),
     'l': (
       '': (
-        'gap': var(design-token.get('size', 's3')),
+        'spacing': var(design-token.get('size', 's3')),
       ),
     ),
   )
@@ -63,20 +63,24 @@ The component expects a Sass list of Sass maps, with the keys being the name of 
 
 | Property     | Description                                                                                                                   |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| `gap`        | Spacing between each child.                                                                                                   |
+| `spacing`    | Spacing between each child. This value is used in both horizontal and vertical layouts.                                       |
 | `breakpoint` | Minimum inline-size of the row layout, below which it switches to the stack layout.                                           |
 | `limit`      | The maximum number of children that will fit in the row. If there are more children, the switcher will render a stack layout. |
 
-### Extra size variants
+### New size variants
 
-The keys of the spacing values above are deliberately left blank — that results in those spacing values being applied to the base `a-stack` component. If you provide a key, that will be used to create a stack variant:
+The keys of the variants values above are deliberately left blank — that results in those properties being applied to the base `a-stack` component. If you provide a key, that will be used to create a stack variant. See the example below, where a `tight` variant is created with no spacing
 
 ```scss
-@use '~bitstyles/scss/bitstyles/atoms/stack' with (
+@use '~bitstyles/scss/bitstyles/atoms/switcher' with (
   $size-variants: (
     '#{setup.$no-media-query}': (
-      '': var(design-token.get('content', 'padding', 'base')),
-      'large': var(design-token.get('content', 'padding', 'l1')),
+      '': (
+        'spacing': var(design-token.get('size', 's5')),
+      ),
+      'tight': (
+        'spacing': 0,
+      ),
     ),
   )
 );
@@ -85,11 +89,11 @@ The keys of the spacing values above are deliberately left blank — that result
 Produces CSS similar to the following:
 
 ```css
-.a-stack > * + * {
-  margin-top: var(--bs-content-padding-base);
+.a-switcher {
+  gap: var(--bs-size-s5);
 }
 
-.a-stack--large > * + * {
-  margin-top: var(--bs-content-padding-l);
+.a-switcher--tight {
+  gap: 0;
 }
 ```

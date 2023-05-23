@@ -34,12 +34,7 @@ $spacing-property-name: design-token.get('switcher', 'spacing');
       /* stylelint-disable max-nesting-depth */
       #{classname.get($classname-items: $class, $layer: 'atom')} {
         @if map.has-key($size-variant, 'breakpoint') {
-          > * {
-            #{$breakpoint-property-name}: #{map.get(
-                $size-variant,
-                'breakpoint'
-              )};
-          }
+          #{$breakpoint-property-name}: #{map.get($size-variant, 'breakpoint')};
         }
 
         @if map.has-key($size-variant, 'spacing') {
