@@ -1,0 +1,95 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+
+<Meta title="Atoms/Switcher/Overview" />
+
+<Canvas>
+  <Story id="atoms-switcher--three" />
+</Canvas>
+
+# Switcher
+
+A layout atom that places its children in a single horizontal row and ensures consistent space between each. The layout switches to a vertical stack when it is less than `30rem` wide, or when there are more than 4 children (with default configuration). All children will be the same width in both layouts. This component is responsive, applying larger spacing between children when rendered on larger viewports.
+
+The layout is best suited to small blocks of content such as a list of related buttons or stats.
+
+The spacing and the breakpoints the component responds to can be [customized](#customization). You can also add extra size variants of the switcher that apply different spacing; the default configuration provides one size variant that applies a larger spacing at the `l` breakpoint.
+
+<Canvas>
+  <Story id="atoms-switcher--one" />
+</Canvas>
+
+<Canvas>
+  <Story id="atoms-switcher--two" />
+</Canvas>
+
+<Canvas>
+  <Story id="atoms-switcher--three" />
+</Canvas>
+
+<Canvas>
+  <Story id="atoms-switcher--four" />
+</Canvas>
+
+When a switcher has more children than the specified limit (4 in the default configuration), it will switch to the vertical layout, to avoid the children being squashed.
+
+<Canvas>
+  <Story id="atoms-switcher--five" />
+</Canvas>
+
+## Customization
+
+The component expects a Sass list of Sass maps, with the keys being the name of the breakpoint (use `setup.$no-media-query` for the base mobile-first styles) and the values being map with the key being the name of the switcher variant, and the value a list of properties. You can change the breakpoint names or add new breakpoints if you want the component to apply different spacing at extra breakpoints (in which case you probably also want to [edit the available `content` padding design tokens](/docs/design-tokens-content--page) available to you, though you can also pass `size` design tokens directly)
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/switcher' with (
+  $size-variants: (
+    '#{setup.$no-media-query}': (
+      '': (
+        'gap': var(design-token.get('size', 's5')),
+        'breakpoint': 30rem,
+        'limit': 4,
+      ),
+    ),
+    'l': (
+      '': (
+        'gap': var(design-token.get('size', 's3')),
+      ),
+    ),
+  )
+);
+```
+
+### Available properties
+
+| Property     | Description                                                                                                                   |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| `gap`        | Spacing between each child.                                                                                                   |
+| `breakpoint` | Minimum inline-size of the row layout, below which it switches to the stack layout.                                           |
+| `limit`      | The maximum number of children that will fit in the row. If there are more children, the switcher will render a stack layout. |
+
+### Extra size variants
+
+The keys of the spacing values above are deliberately left blank — that results in those spacing values being applied to the base `a-stack` component. If you provide a key, that will be used to create a stack variant:
+
+```scss
+@use '~bitstyles/scss/bitstyles/atoms/stack' with (
+  $size-variants: (
+    '#{setup.$no-media-query}': (
+      '': var(design-token.get('content', 'padding', 'base')),
+      'large': var(design-token.get('content', 'padding', 'l1')),
+    ),
+  )
+);
+```
+
+Produces CSS similar to the following:
+
+```css
+.a-stack > * + * {
+  margin-top: var(--bs-content-padding-base);
+}
+
+.a-stack--large > * + * {
+  margin-top: var(--bs-content-padding-l);
+}
+```

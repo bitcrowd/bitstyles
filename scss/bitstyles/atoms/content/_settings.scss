@@ -12,5 +12,5 @@ $max-width-base: 'm' !default;
 $padding: (
   '#{setup.$no-media-query}':
     var(design-token.get('content', 'padding', 'base')),
-  'l': var(design-token.get('content', 'padding', 'l')),
+  'l': var(design-token.get('content', 'padding', 'l1')),
 ) !default;

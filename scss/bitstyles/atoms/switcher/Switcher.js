@@ -6,7 +6,8 @@ const SwitcherItem = ({
 }) => {
   const switcherItem = document.createElement('div');
   switcherItem.style.backgroundColor = backgroundColor;
-  switcherItem.style.padding = 'var(--bs-content-padding-base)';
+  switcherItem.style.paddingBlock = 'var(--bs-size-s2)';
+  switcherItem.style.paddingInline = 'var(--bs-content-padding-base)';
   switcherItem.style.borderRadius = 'var(--bs-size-s4)';
   switcherItem.innerHTML = children;
   return switcherItem;
