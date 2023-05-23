@@ -1,0 +1,17 @@
+@use '../../settings/setup';
+@use '../../tools/design-token';
+
+$size-variants: (
+  '#{setup.$no-media-query}': (
+    '': (
+      'gap': var(design-token.get('content', 'padding', 'base')),
+      'breakpoint': 30rem,
+      'limit': 4,
+    ),
+  ),
+  'm': (
+    '': (
+      'gap': var(design-token.get('content', 'padding', 'l')),
+    ),
+  ),
+) !default;

@@ -1,0 +1,52 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/classname';
+@use '../../tools/design-token';
+@use '../../tools/media-query';
+@use 'sass:map';
+
+$breakpoint-property-name: design-token.get('switcher', 'breakpoint');
+$gap-property-name: design-token.get('switcher', 'gap');
+
+#{classname.get($classname-items: 'switcher', $layer: 'atom')} {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(#{$gap-property-name});
+
+  > * {
+    flex-grow: 1;
+    flex-basis: calc((var(#{$breakpoint-property-name}) - 100%) * 999);
+  }
+}
+
+@each $breakpoint, $size-variants in settings.$size-variants {
+  @include media-query.get($breakpoint) {
+    @each $size-variant-name, $size-variant in ($size-variants) {
+      $class: '';
+      @if $size-variant-name == '' {
+        $class: 'switcher';
+      } @else {
+        $class: 'switcher--#{$size-variant-name}';
+      }
+
+      #{classname.get($classname-items: $class, $layer: 'atom')} {
+        @if map.has-key($size-variant, 'breakpoint') {
+          > * {
+            #{$breakpoint-property-name}: #{map.get($size-variant, 'breakpoint')};
+          }
+        }
+
+        @if map.has-key($size-variant, 'gap') {
+          #{$gap-property-name}: #{map.get($size-variant, 'gap')}
+        }
+
+        @if map.has-key($size-variant, 'limit') {
+          > :nth-last-child(n + #{map.get($size-variant, 'limit') + 1}),
+          > :nth-last-child(n + #{map.get($size-variant, 'limit') + 1}) ~ * {
+            flex-basis: 100%;
+          }
+        }
+      }
+    }
+  }
+}

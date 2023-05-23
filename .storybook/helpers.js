@@ -11,7 +11,9 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-export const generateLabel = (
+export const generateLabel = (items) => capitalizeFirstLetter(items.join(' '));
+
+export const generateButtonLabel = (
   shapeVariant = [],
   colorVariant = [],
   disabled = false,
