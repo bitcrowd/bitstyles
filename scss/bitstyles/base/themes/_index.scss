@@ -1,27 +1,13 @@
 @use '../../design-tokens/themes' as settings;
 @use '../../tools/custom-properties';
-@use '../../tools/custom-property';
+@use '../../tools/design-token';
 @use '../../tools/themes';
 
 /* stylelint-disable selector-max-type */
-html,
+:root,
 [data-theme] {
-  background-color: var(
-    #{custom-property.get(
-        $items: (
-          'theme',
-          'background',
-        )
-      )}
-  );
-  color: var(
-    #{custom-property.get(
-        $items: (
-          'theme',
-          'text',
-        )
-      )}
-  );
+  background-color: var(design-token.get('theme', 'background'));
+  color: var(design-token.get('theme', 'text'));
 }
 /* stylelint-enable selector-max-type */
 

@@ -1,18 +1,18 @@
-@use './typography';
-@use '../tools/palette';
-@use 'animation';
+@use '../tools/design-token';
 
 //
 // Base styles /////////////////////////////////////////
 
-$transition: color animation.$transition-duration animation.$transition-easing,
-  outline-offset animation.$transition-duration animation.$transition-easing !default;
-$font-weight: typography.$font-weight-medium !default;
+$transition: color var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')),
+  outline-offset var(design-token.get('transition', 'default', 'duration'))
+    var(design-token.get('transition', 'default', 'easing')) !default;
+$font-weight: var(design-token.get('font-weight', 'medium')) !default;
 
 //
 // Base Colors /////////////////////////////////////////
 
-$color: palette.get('brand-1', 'dark-1') !default;
+$color: var(design-token.get('color', 'brand-1', 'dark-1')) !default;
 $text-decoration: underline !default;
 $background-color: transparent !default;
 $box-shadow: none !default;
@@ -20,7 +20,7 @@ $box-shadow: none !default;
 //
 // Visited /////////////////////////////////////////
 
-$color-visited: palette.get('grayscale', 'dark-1') !default;
+$color-visited: var(design-token.get('color', 'grayscale', 'dark-1')) !default;
 $text-decoration-visited: underline !default;
 $background-color-visited: transparent !default;
 $box-shadow-visited: none !default;
@@ -28,7 +28,7 @@ $box-shadow-visited: none !default;
 //
 // Hover /////////////////////////////////////////
 
-$color-hover: palette.get('brand-1', 'dark-2') !default;
+$color-hover: var(design-token.get('color', 'brand-1', 'dark-2')) !default;
 $text-decoration-hover: underline !default;
 $background-color-hover: transparent !default;
 $box-shadow-hover: none !default;
@@ -36,7 +36,7 @@ $box-shadow-hover: none !default;
 //
 // Active /////////////////////////////////////////
 
-$color-active: palette.get('brand-1') !default;
+$color-active: var(design-token.get('color', 'brand-1')) !default;
 $text-decoration-active: underline !default;
 $background-color-active: transparent !default;
 $box-shadow-active: none !default;
@@ -44,7 +44,7 @@ $box-shadow-active: none !default;
 //
 // Disabled /////////////////////////////////////////
 
-$color-disabled: palette.get('grayscale') !default;
+$color-disabled: var(design-token.get('color', 'grayscale')) !default;
 $text-decoration-disabled: underline !default;
 $background-color-disabled: transparent !default;
 $box-shadow-disabled: none !default;

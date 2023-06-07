@@ -79,11 +79,11 @@ The custom buttons that are available in each badge are implemented in the Butto
 The badge shadows are component-level additions to the theme, which can be specified with `$theme-variants`. Pass the name of the variant and a Sass map for each variant:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/tools/shadows';
+@use '~bitstyles/scss/bitstyles/tools/design-token';
 @use '~bitstyles/scss/bitstyles/atoms/badge' with (
   $theme-variants: (
     'theme-name': (
-      'shadow': shadows.get('brand-2'),
+      'shadow': var(design-token.get('shadow', 'brand-2')),
     ),
   )
 );
@@ -94,28 +94,28 @@ The badge shadows are component-level additions to the theme, which can be speci
 To configure your size variants override the `$size-variants` variable, with each breakpoint (use `setup.$no-media-query` for the mobile-first base styles) at the root, containing a size-variant name and Sass map with the sizing properties:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/tools/size';
+@use '~bitstyles/scss/bitstyles/tools/design-token';
 @use '~bitstyles/scss/bitstyles/atoms/badge' with (
   $size-variants: (
     '#{setup.$no-media-query}': (
       '': (
-        'padding-vertical': size.get('s6'),
-        'padding-horizontal': size.get('l1'),
-        'gap': size.get('s6'),
+        'padding-vertical': var(design-token.get('size', 's6')),
+        'padding-horizontal': var(design-token.get('size', 'l1')),
+        'gap': var(design-token.get('size', 's6')),
         'prepend-spacing': 0rem,
       ),
     ),
     'l': (
       '': (
-        'padding-vertical': size.get('s4'),
-        'padding-horizontal': size.get('l3'),
-        'gap': size.get('s1'),
-        'prepend-spacing': size.get('s4'),
+        'padding-vertical': var(design-token.get('size', 's4')),
+        'padding-horizontal': var(design-token.get('size', 'l3')),
+        'gap': var(design-token.get('size', 's1')),
+        'prepend-spacing': var(design-token.get('size', 's4')),
       ),
       'small': (
-        'padding-vertical': size.get('s7'),
-        'padding-horizontal': size.get('s7'),
-        'gap': size.get('s6'),
+        'padding-vertical': var(design-token.get('size', 's7')),
+        'padding-horizontal': var(design-token.get('size', 's7')),
+        'gap': var(design-token.get('size', 's6')),
         'prepend-spacing': 0rem,
       ),
     ),

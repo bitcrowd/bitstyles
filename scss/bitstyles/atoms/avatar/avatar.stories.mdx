@@ -48,8 +48,8 @@ The available avatar sizes can be customized with `$sizes`:
 ```scss
 @use '~bitstyles/scss/bitstyles/atoms/avatar' with (
   $sizes: (
-    'm': size.get('l3'),
-    'l': size.get('l3') + size.get('m'),
+    'm': var(design-token.get('size', 'l3')),
+    'l': calc(var(design-token.get('size', 'l3')) + var(design-token.get('size', 'm'))),
   )
 );
 ```

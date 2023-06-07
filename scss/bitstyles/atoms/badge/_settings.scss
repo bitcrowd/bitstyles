@@ -1,29 +1,27 @@
 @use '../../settings/setup';
-@use '../../tools/palette';
-@use '../../tools/size';
-@use '../../tools/shadows';
+@use '../../tools/design-token';
 
 /* stylelint-disable length-zero-no-unit */
 $size-variants: (
   '#{setup.$no-media-query}': (
     '': (
-      'padding-vertical': size.get('s6'),
-      'padding-horizontal': size.get('l1'),
-      'gap': size.get('s6'),
+      'padding-vertical': var(design-token.get('size', 's6')),
+      'padding-horizontal': var(design-token.get('size', 'l1')),
+      'gap': var(design-token.get('size', 's6')),
       'prepend-spacing': 0rem,
     ),
   ),
   'm': (
     '': (
-      'padding-vertical': size.get('s4'),
-      'padding-horizontal': size.get('l1'),
-      'gap': size.get('s4'),
-      'prepend-spacing': size.get('s6'),
+      'padding-vertical': var(design-token.get('size', 's4')),
+      'padding-horizontal': var(design-token.get('size', 'l1')),
+      'gap': var(design-token.get('size', 's4')),
+      'prepend-spacing': var(design-token.get('size', 's6')),
     ),
     'small': (
-      'padding-vertical': size.get('s6'),
-      'padding-horizontal': size.get('l1'),
-      'gap': size.get('s6'),
+      'padding-vertical': var(design-token.get('size', 's6')),
+      'padding-horizontal': var(design-token.get('size', 'l1')),
+      'gap': var(design-token.get('size', 's6')),
       'prepend-spacing': 0rem,
     ),
   ),
@@ -31,21 +29,21 @@ $size-variants: (
 /* stylelint-enable length-zero-no-unit */
 $theme-variants: (
   'default': (
-    'shadow': shadows.get('gray'),
+    'shadow': var(design-token.get('shadow', 'gray', 'box')),
   ),
   'brand-1': (
-    'shadow': shadows.get('brand-1'),
+    'shadow': var(design-token.get('shadow', 'brand-1', 'box')),
   ),
   'brand-2': (
-    'shadow': shadows.get('brand-2'),
+    'shadow': var(design-token.get('shadow', 'brand-2', 'box')),
   ),
   'positive': (
-    'shadow': shadows.get('positive'),
+    'shadow': var(design-token.get('shadow', 'positive', 'box')),
   ),
   'warning': (
-    'shadow': shadows.get('warning'),
+    'shadow': var(design-token.get('shadow', 'warning', 'box')),
   ),
   'danger': (
-    'shadow': shadows.get('danger'),
+    'shadow': var(design-token.get('shadow', 'danger', 'box')),
   ),
 ) !default;

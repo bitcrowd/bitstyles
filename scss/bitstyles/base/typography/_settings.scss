@@ -1,6 +1,11 @@
+@use '../../tools/design-token';
+@use '../../design-tokens/typography';
 @use '../../design-tokens/typography-responsive';
 
 $margin-heading: 0 !default;
 $margin-paragraph: 0 !default;
+$font-weight-heading: var(design-token.get('font-weight', 'bold')) !default;
+$font-weight-dt: var(design-token.get('font-weight', 'bold')) !default;
+$font-family-heading: typography.$font-family-header !default;
 $typographic-scale: typography-responsive.$typographic-scale !default;
 $typographic-scale-filter: ('h7', 'h8') !default;

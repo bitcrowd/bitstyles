@@ -12,7 +12,7 @@
 
   @for $i from 1 through list.length($list) {
     @if list.nth($list, $i) != $value {
-      $result: list.append($result, list.nth($list, $i));
+      $result: list.join($result, list.nth($list, $i));
     }
   }
 

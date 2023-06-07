@@ -1,11 +1,20 @@
 @use '../tools/custom-property';
 
-$transition-duration: 0.075s !default;
-$transition-duration-long: 0.5s !default;
-$transition-easing: ease-in-out !default;
+$transitions: (
+  'default': (
+    'duration': 0.075s,
+    'easing': ease-in-out,
+  ),
+  'long': (
+    'duration': 0.5s,
+    'easing': ease-in-out,
+  ),
+) !default;
 
 :root {
-  #{custom-property.get($items: ('transition', 'duration'))}: $transition-duration;
-  #{custom-property.get($items: ('transition', 'duration-long'))}: $transition-duration-long;
-  #{custom-property.get($items: ('transition', 'easing'))}: $transition-easing;
+  @each $transition-name, $transition in $transitions {
+    @each $transition-property, $transition-value in $transition {
+      #{custom-property.name('transition', $transition-name, $transition-property)}: $transition-value;
+    }
+  }
 }

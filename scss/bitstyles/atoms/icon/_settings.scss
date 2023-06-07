@@ -1,8 +1,8 @@
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 $sizes: (
-  's': size.get('s3'),
-  'm': size.get('s1'),
-  'l': size.get('m'),
-  'xl': size.get('l2'),
+  's': var(design-token.get('size', 's3')),
+  'm': var(design-token.get('size', 's1')),
+  'l': var(design-token.get('size', 'm')),
+  'xl': var(design-token.get('size', 'l1')),
 ) !default;

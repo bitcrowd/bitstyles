@@ -1,6 +1,6 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="Design Tokens/Sizes" />
+<Meta title="Design Tokens/Sizes/Overview" />
 
 # Sizes
 
@@ -9,27 +9,21 @@ Using a central scale of sizes maintains consistency in spacing (most often padd
 The default size scale spans from `s7` – `l7`, with `m` being the mid point, at `1rem` with the default configuration:
 
 <Canvas>
-  <Story name="Sizes">
-    {`
-      <div class="u-flex u-items-end u-gap-s5">
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-s7); height: var(--bs-size-s7)" title="s7"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-s6); height: var(--bs-size-s6)" title="s6"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-s5); height: var(--bs-size-s5)" title="s5"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-s4); height: var(--bs-size-s4)" title="s4"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-s3); height: var(--bs-size-s3)" title="s3"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-s2); height: var(--bs-size-s2)" title="s2"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-s1); height: var(--bs-size-s1)" title="s1"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-m); height: var(--bs-size-m)" title="m"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-l1); height: var(--bs-size-l1)" title="l1"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-l2); height: var(--bs-size-l2)" title="l2"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-l3); height: var(--bs-size-l3)" title="l3"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-l4); height: var(--bs-size-l4)" title="l4"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-l5); height: var(--bs-size-l5)" title="l5"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-l6); height: var(--bs-size-l6)" title="l6"></div>
-        <div class="u-shadow-default u-bg-grayscale-dark-1 u-border-radius-s7" style="width: var(--bs-size-l7); height: var(--bs-size-l7)" title="l7"></div>
-      </div>
-    `}
-  </Story>
+  <Story id="design-tokens-sizes--s-7" />
+  <Story id="design-tokens-sizes--s-6" />
+  <Story id="design-tokens-sizes--s-5" />
+  <Story id="design-tokens-sizes--s-4" />
+  <Story id="design-tokens-sizes--s-3" />
+  <Story id="design-tokens-sizes--s-2" />
+  <Story id="design-tokens-sizes--s-1" />
+  <Story id="design-tokens-sizes--m" />
+  <Story id="design-tokens-sizes--l-1" />
+  <Story id="design-tokens-sizes--l-2" />
+  <Story id="design-tokens-sizes--l-3" />
+  <Story id="design-tokens-sizes--l-4" />
+  <Story id="design-tokens-sizes--l-5" />
+  <Story id="design-tokens-sizes--l-6" />
+  <Story id="design-tokens-sizes--l-7" />
 </Canvas>
 
 ```scss
@@ -56,13 +50,13 @@ $sizes: (
 
 ## Using the sizes in Sass
 
-Use the `size.get()` helper function for accessing sizes in the sizing scale. In your component Sass file first import the `size` tools, then use the `get()` function, passing the size name:
+Use the design-token helper, wrapped in a CSS `var()` to access sizes in the sizing scale: `var(design-token.get('size', size-name)`. In your component Sass file first import the `design-token` helper, then use the `get()` function, passing the size name:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/tools/size';
+@use '~bitstyles/scss/bitstyles/tools/design-token';
 
 .component-class::after {
-  margin-left: size.get('l3');
+  margin-left: var(design-token.get('size', 'l3'));
 }
 ```
 
@@ -70,15 +64,11 @@ With the default setup this will output:
 
 ```css
 .component-class::after {
-  margin-left: 2rem;
+  margin-left: var(--bs-size-l3);
 }
 ```
 
-### `size.get()` parameters
-
-| Name  | Type   | Description          |
-| ----- | ------ | -------------------- |
-| $size | string | The name of the size |
+See [`Design Tokens/Overview`](/docs/design-tokens--overview) for more details on this helper function.
 
 ## Using the sizes in classes
 
@@ -92,21 +82,23 @@ Use the appropriate utility classes to apply spacing. See the documentation of e
 The sizing scale is also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
 
 ```css
---bs-size-s7: 0.125rem;
---bs-size-s6: 0.25rem;
---bs-size-s5: 0.375rem;
---bs-size-s4: 0.5rem;
---bs-size-s3: 0.625rem;
---bs-size-s2: 0.75rem;
---bs-size-s1: 0.875rem;
---bs-size-m: 1rem;
---bs-size-l1: 1.25rem;
---bs-size-l2: 1.5rem;
---bs-size-l3: 2rem;
---bs-size-l4: 2.5rem;
---bs-size-l5: 3rem;
---bs-size-l6: 4rem;
---bs-size-l7: 5rem;
+:root {
+  --bs-size-s7: 0.125rem;
+  --bs-size-s6: 0.25rem;
+  --bs-size-s5: 0.375rem;
+  --bs-size-s4: 0.5rem;
+  --bs-size-s3: 0.625rem;
+  --bs-size-s2: 0.75rem;
+  --bs-size-s1: 0.875rem;
+  --bs-size-m: 1rem;
+  --bs-size-l1: 1.25rem;
+  --bs-size-l2: 1.5rem;
+  --bs-size-l3: 2rem;
+  --bs-size-l4: 2.5rem;
+  --bs-size-l5: 3rem;
+  --bs-size-l6: 4rem;
+  --bs-size-l7: 5rem;
+}
 ```
 
 ## Using size design tokens in JS
@@ -114,7 +106,7 @@ The sizing scale is also available as CSS custom properties. In the default conf
 The size design tokens can be imported and used in JS:
 
 ```js
-import sizes from '../exports/_sizes.scss';
+import sizes from '~bitstyles/scss/bitstyles/exports/_sizes.scss';
 
 console.log(sizes['0']); // '0'
 console.log(sizes['l4']); // '2.5rem'

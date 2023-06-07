@@ -68,18 +68,18 @@ See the [customization](#customization) section below for details on how to chan
 
 ## Customization
 
-The available background-colors can be customized by overriding the `$values` Sass variable. Use the `palette.get()` function to maintain consistency throughout your project:
+The available background-colors can be customized by overriding the `$values` Sass variable. Use the `var(design-token.get('color', color-name)` function to maintain consistency throughout your project:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/bg' with (
   $values: (
-    'background': palette.get('grayscale'),
-    'brand-2': palette.get('brand-2'),
-    'grayscale-dark-1': palette.get('grayscale', 'dark-1'),
-    'grayscale': palette.get('grayscale'),
-    'grayscale-light-1': palette.get('grayscale', 'light-1'),
-    'grayscale-light-2': palette.get('grayscale', 'light-2'),
-    'white': palette.get('grayscale', 'white'),
+    'background': var(design-token.get('color', 'grayscale')),
+    'brand-2': var(design-token.get('color', 'brand-2')),
+    'grayscale-dark-1': var(design-token.get('color', 'grayscale', 'dark-1')),
+    'grayscale': var(design-token.get('color', 'grayscale')),
+    'grayscale-light-1': var(design-token.get('color', 'grayscale', 'light-1')),
+    'grayscale-light-2': var(design-token.get('color', 'grayscale', 'light-2')),
+    'white': var(design-token.get('color', 'grayscale', 'white')),
   )
 );
 ```

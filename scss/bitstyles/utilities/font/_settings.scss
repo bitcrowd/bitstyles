@@ -1,10 +1,11 @@
 @use '../../design-tokens/typography';
+@use '../../tools/design-token';
 
 $weight-values: (
-  'light': typography.$font-weight-light,
-  'normal': typography.$font-weight-normal,
-  'medium': typography.$font-weight-medium,
-  'bold': typography.$font-weight-bold,
+  'light': var(design-token.get('font-weight', 'light')),
+  'normal': var(design-token.get('font-weight', 'normal')),
+  'medium': var(design-token.get('font-weight', 'medium')),
+  'bold': var(design-token.get('font-weight', 'bold')),
 ) !default;
 $weight-breakpoints: () !default;
 $style-values: (

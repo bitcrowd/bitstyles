@@ -23,7 +23,11 @@ There are several aspects to typography which are handled by systems in bitstyle
 
 Using a central scale of font-sizes maintains consistency in the typography throughout your project. The default configuration provides base design tokens for font-sizes using on a custom ratio between each font-size.
 
-These design tokens are used to create a responsive typographic scale that’s applied to the base elements `h1` – `h6` and the corresponding utility classes `.u-h1` – `.u-h6` (see the example at the top of this page). The utility classes `.u-text-1` to `.u-text-8` produce exceptions to this responsive typography, at specific breakpoints.
+These base design tokens for font-sizes are combined with the similar scale of base line-heights, and are used to create a responsive typographic scale that’s applied to the elements `h1` – `h6` and a set of corresponding utility classes `.u-h1` – `.u-h6` (see the example at the top of this page).
+
+These are “responsive”, meaning the font-size of these elements changes dependent on viewport size — on larger viewports, your typography will be larger, using the available space and being more expressive. On small viewports, we apply smaller font-sizes to better fit into the available space.
+
+The utility classes `.u-text-1` to `.u-text-8` produce exceptions to this responsive typography, at specific breakpoints, by applying the base font-sizes directly.
 
 For more details on using these, see:
 
@@ -106,7 +110,7 @@ With the default setup this will output:
 | $font-size  | string | The name of the font-size                                                                                                                                                                                                 |
 | $breakpoint | string | Defaults to `null`, which will output all the font-sizes under that name, at each breakpoint, wrapped in the appropriate media-query. If you provide this parameter, the font-size at only that breakpoint will be output |
 
-### font-size.get()
+### design-token.get('font-size', size-name)
 
 <Typeset
   fontSizes={[
@@ -123,21 +127,21 @@ With the default setup this will output:
   fontFamily="Poppins"
 />
 
-Use the `font-size.get()` function for accessing the font-sizes specified in your base design tokens. This is useful when you need a component’s font-size to be rendered differently to your standard responsive typography.
+Use `design-token.get('font-size', size-name)` wrapped in a CSS `var()` to access the font-sizes specified in your base design tokens. This is useful when you need a component’s font-size to be rendered differently to your standard responsive typography.
 
-Import the `font-size` tools, then use the `get()` function, passing in the font-size you need:
+Import the `design-token` helper then use the `get()` function, passing in the font-size you need:
 
 ```scss
-@use '~bitstyles/scss/bitstyles/tools/font-size';
+@use '~bitstyles/scss/bitstyles/tools/design-token';
 @use '~bitstyles/scss/bitstyles/tools/media-query';
 
 .component-class::after {
-  font-size: font-size.get('4');
+  font-size: var(design-token.get('font-size', '4'));
 }
 
 @include media-query('m') {
   .component-class::after {
-    font-size: font-size.get('6');
+    font-size: var(design-token.get('font-size', '6'));
   }
 }
 ```
@@ -156,33 +160,31 @@ With the default setup this will output:
 }
 ```
 
-`font-size.get()` is also used in the setup the responsive typographic scale for the [base styles](/docs/base-typography-responsive-headings--h-1) and the [utility classes](/docs/utilities-typography--typography), to ensure consistency across your designs.
+These design tokens are also used in the setup the responsive typographic scale for the [base styles](/docs/base-typography-responsive-headings--h-1) and the [utility classes](/docs/utilities-typography--typography), to ensure consistency across your designs.
 
-#### `font-size.get()` parameters
-
-| Name       | Type   | Description               |
-| ---------- | ------ | ------------------------- |
-| $font-size | string | The name of the font-size |
+See [`Design Tokens/Overview`](/docs/design-tokens--overview) for details on the `design-token.get()` helper function.
 
 ## Using font-sizes and line-heights in CSS
 
 The font-size and line-height scales are also available as CSS custom properties. In the default configuration, they are namespaced with `bs`, see [setup](/story/design-tokens-setup--page):
 
 ```css
---bs-font-size-1: 0.8rem;
---bs-font-size-2: 1rem;
---bs-font-size-3: 1.25rem;
---bs-font-size-4: 1.45rem;
---bs-font-size-5: 1.7rem;
---bs-font-size-6: 2rem;
---bs-font-size-7: 3rem;
---bs-font-size-8: 4.8rem;
---bs-line-height-1: 1.21;
---bs-line-height-2: 1.29;
---bs-line-height-3: 1.33;
---bs-line-height-4: 1.43;
---bs-line-height-5: 1.5;
---bs-line-height-6: 1.67;
+:root {
+  --bs-font-size-1: 0.8rem;
+  --bs-font-size-2: 1rem;
+  --bs-font-size-3: 1.25rem;
+  --bs-font-size-4: 1.45rem;
+  --bs-font-size-5: 1.7rem;
+  --bs-font-size-6: 2rem;
+  --bs-font-size-7: 3rem;
+  --bs-font-size-8: 4.8rem;
+  --bs-line-height-1: 1.21;
+  --bs-line-height-2: 1.29;
+  --bs-line-height-3: 1.33;
+  --bs-line-height-4: 1.43;
+  --bs-line-height-5: 1.5;
+  --bs-line-height-6: 1.67;
+}
 ```
 
 ## Using typography design tokens in JS
@@ -252,40 +254,40 @@ By overriding `typography-responsive.$typographic-scale`, you can specify which 
 
 Using a mobile-first approach, the first Sass map of font-sizes shown below apply for all screensizes, until overridden at the `m` breakpoint (see [breakpoints](/docs/design-tokens-breakpoints--page)). You can provide font-size maps at every breakpoint available in your base breakpoints if you wish.
 
-We’re using the global `setup.$no-media-query` to provide font-sizes that apply with no media-query (this is recommended, otherwise you’ll be seeing your browser defaults), and `font-size.get()` to get our font-sizes, `line-height.get()` to get our line-heights from our base design tokens:
+We’re using the global `setup.$no-media-query` to provide font-sizes that apply with no media-query (this is recommended, otherwise you’ll be seeing your browser defaults), and `var(design-token.get('font-size', )` to get our font-sizes, `var(design-token.get('line-height', )` to get our line-heights from our base design tokens:
 
 ```scss
 @use 'bitstyles/settings/setup';
-@use 'bitstyles/tools/font-size';
+@use 'bitstyles/tools/design-token';
 @use 'bitstyles/design-tokens/typography-responsive' with (
   $typographic-scale: (
     '#{setup.$no-media-query}': (
       'h1': (
-        'font-size': font-size.get('6'),
-        'line-height': line-height.get('1'),
+        'font-size': var(design-token.get('font-size', '6')),
+        'line-height': var(design-token.get('line-height', '1')),
       ),
       'h2': (
-        'font-size': font-size.get('5'),
-        'line-height': line-height.get('2'),
+        'font-size': var(design-token.get('font-size', '5')),
+        'line-height': var(design-token.get('line-height', '2')),
       ),
       'h3': (
-        'font-size': font-size.get('4'),
-        'line-height': line-height.get('3'),
+        'font-size': var(design-token.get('font-size', '4')),
+        'line-height': var(design-token.get('line-height', '3')),
       ),
       // ...
     ),
     'm': (
       'h1': (
-        'font-size': font-size.get('8'),
-        'line-height': line-height.get('1'),
+        'font-size': var(design-token.get('font-size', '8')),
+        'line-height': var(design-token.get('line-height', '1')),
       ),
       'h2': (
-        'font-size': font-size.get('7'),
-        'line-height': line-height.get('2'),
+        'font-size': var(design-token.get('font-size', '7')),
+        'line-height': var(design-token.get('line-height', '2')),
       ),
       'h3': (
-        'font-size': font-size.get('6'),
-        'line-height': line-height.get('3'),
+        'font-size': var(design-token.get('font-size', '6')),
+        'line-height': var(design-token.get('line-height', '3')),
       ),
       // ...
     ),
@@ -297,18 +299,18 @@ You can also specify other html elements here, if needed:
 
 ```scss
 @use 'bitstyles/settings/setup';
-@use 'bitstyles/tools/font-size';
+@use 'bitstyles/tools/design-token';
 
 @use 'bitstyles/design-tokens/typography-responsive' with (
   $font-sizes: (
     '#{setup.$no-media-query}': (
       'li': (
-        'font-size': font-size.get('6'),
-        'line-height': line-height.get('3'),
+        'font-size': var(design-token.get('font-size', '6')),
+        'line-height': var(design-token.get('line-height', '3')),
       ),
       'code': (
-        'font-size': font-size.get('5'),
-        'line-height': line-height.get('2'),
+        'font-size': var(design-token.get('font-size', '5')),
+        'line-height': var(design-token.get('line-height', '2')),
       ),
     ),
   )

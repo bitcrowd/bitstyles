@@ -6,7 +6,7 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
 # Themes
 
-The semantic color palette is used to create color schemes called “themes”, implemented using CSS custom properties in the browser. Themed areas can be nested, as in the example above, and are intended to allow different parts of your UI or page to apply a different but coherent color scheme to their contents. Themes could be used for a content sectioning (a callout or highlighted block of content), or for a piece of UI like a sidebar or top menu.
+The semantic color palette is used to create color groupings called “themes”, implemented using CSS custom properties in the browser. Themed areas can be nested, as in the example above, and are intended to allow different parts of your UI or page to apply a different but coherent color scheme to their contents. Themes could be used for a content sectioning (a callout or highlighted block of content), or for a piece of UI like a sidebar or top menu.
 
 Components can provide their colors on a per-theme basis if desired. Bitstyles buttons do this in the default configuration, which you see above in the different theme versions of each button type (primary, secondary etc.).
 
@@ -22,7 +22,7 @@ Default configuration provides a `default` (light) theme, and a `dark` theme. Se
 
 ## Using themes in HTML
 
-Themes are applied to elements using the `data-theme` data attribute, with the value being the name of the theme you wish to apply e.g. `data-theme="default"` or `data-theme="dark"`. The default theme is automatically applied to the HTML element, and the custom properties are inherited down the DOM until encountering another `data-theme` attribute. That means there’s no need to apply the default theme yourself, unless you want a default-themed area inside a dark-themed area.
+Themes are applied to elements using the `data-theme` data attribute, with the value being the name of the theme you wish to apply e.g. `data-theme="default"` or `data-theme="dark"`. The `default` theme is automatically applied to the HTML element, and the custom properties are inherited down the DOM until encountering another `data-theme` attribute. That means there’s no need to apply the default theme yourself, unless you want a default-themed area inside a dark-themed area.
 
 If you add themes to the global theme design token (see [customization](#customization)), you can apply them to HTML elements in the same way, using the name you specified when configuring the theme.
 
@@ -45,7 +45,7 @@ First, apply the custom properties to the CSS properties you want to make change
   }
 }
 
-@include themes.get('dark-1') {
+@include themes.get('dark') {
   .a-my-custom-input {
     --my-custom-input-color: var(--bs-color-brand-1-dark-1);
     --my-custom-input-background-color: var(--bs-color-brand-1-light-1);
@@ -65,7 +65,7 @@ Variants of your component can be created by redefining the value of the same pr
   }
 }
 
-@include themes.get('dark-1') {
+@include themes.get('dark') {
   .a-my-custom-input--secondary {
     --my-custom-input-color: var(--bs-color-brand-2-dark-1);
     --my-custom-input-background-color: var(--bs-color-brand-2-light-1);

@@ -55,7 +55,7 @@ Available positioning types can be configured by overriding the `$values` Sass m
 @use '~bitstyles/scss/bitstyles/utilities/inset' with (
   $values: (
     '0': 0,
-    'm': size.get('m'),
+    'm': var(design-token.get('size', 'm')),
   )
 );
 ```

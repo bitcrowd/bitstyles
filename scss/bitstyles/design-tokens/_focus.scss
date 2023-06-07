@@ -1,6 +1,7 @@
-@use '../tools/palette';
-@use '../tools/size';
+@use '../tools/design-token';
 
-$outline-color: palette.get('brand-2') !default;
-$outline-width: calc(size.get('s7') + size.get('s7') / 2) !default;
-$outline-offset: size.get('s7') !default;
+$outline-color: var(design-token.get('color', 'brand-2')) !default;
+$outline-width: calc(
+  var(design-token.get('size', 's7')) + var(design-token.get('size', 's7')) / 2
+) !default;
+$outline-offset: var(design-token.get('size', 's7')) !default;

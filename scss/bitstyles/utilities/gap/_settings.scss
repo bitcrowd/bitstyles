@@ -1,9 +1,9 @@
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 $sizes: (
-  's5': size.get('s5'),
-  's3': size.get('s3'),
-  'm': size.get('m'),
-  'l1': size.get('l1'),
+  's5': var(design-token.get('size', 's5')),
+  's3': var(design-token.get('size', 's3')),
+  'm': var(design-token.get('size', 'm')),
+  'l1': var(design-token.get('size', 'l1')),
 ) !default;
 $breakpoints: ('m', 'xl') !default;

@@ -1,13 +1,20 @@
-@use '../../tools/palette';
-@use '../../tools/size';
+@use '../../tools/design-token';
 
-$padding: size.get('s3') !default;
-$background-color: palette.get('grayscale', 'white') !default;
-$overlay-color: rgba(palette.get('grayscale', 'white-rgb'), 95%) !default;
-$transition-easing: ease-in-out !default;
+$padding: var(design-token.get('size', 's3')) !default;
+$background-color: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$overlay-color: rgba(
+  var(design-token.get('color', 'grayscale', 'white-rgb')),
+  95%
+) !default;
+$transition-easing: var(
+  design-token.get('transition', 'default', 'easing')
+) !default;
 $transition-duration: 0.2s !default;
 $transition-duration-smallscreen: 0.25s !default;
 $transition-delay: 0.05s !default;
 $will-change: opacity, transform, visibility !default;
 $border-radius: 0 !default;
 $breakpoint: 'm' !default;
+$z-index: var(design-token.get('z-index', 'top')) !default;

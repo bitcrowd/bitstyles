@@ -1,0 +1,13 @@
+.a-size-block {
+  position: relative;
+}
+
+.a-size-block::after {
+  content: attr(title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}

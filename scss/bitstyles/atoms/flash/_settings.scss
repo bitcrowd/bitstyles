@@ -1,17 +1,17 @@
 @use '../../settings/setup';
-@use '../../tools/size';
+@use '../../tools/design-token';
 @use '../../tools/custom-property';
 @use 'sass:map';
 
 /* prettier-ignore */
 $sizes: (
   '#{setup.$no-media-query}': (
-    'padding-horizontal': var(#{custom-property.get($items: ('content', 'padding', 'base'))}),
-    'padding-vertical': size.get('s3'),
-    'gap': size.get('s3'),
+    'padding-horizontal': var(custom-property.name('content', 'padding', 'base')),
+    'padding-vertical': var(design-token.get('size', 's3')),
+    'gap': var(design-token.get('size', 's3')),
   ),
   'm': (
-    'padding-vertical': size.get('l1'),
-    'gap': size.get('s2'),
+    'padding-vertical': var(design-token.get('size', 'l1')),
+    'gap': var(design-token.get('size', 's2')),
   ),
 ) !default;

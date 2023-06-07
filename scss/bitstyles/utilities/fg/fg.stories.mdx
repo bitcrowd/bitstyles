@@ -66,20 +66,20 @@ Specify the `color` property of an element. Default colors are
 
 ## Customization
 
-The available display types can be customized by overriding the `$values` Sass map. Provide a name for the class, and use the `palette.get()` helper from `tools/palette` to access colors from your global color palette:
+The available display types can be customized by overriding the `$values` Sass map. Provide a name for the class, and use the `var(design-token.get('color', color-name))` helper from `tools/design-token` to access colors from your global color palette:
 
 ```scss
 @use '~bitstyles/scss/bitstyles/utilities/fg' with (
   $values: (
-    'brand-1': palette.get('brand-1'),
-    'brand-2': palette.get('brand-2'),
-    'grayscale-light-1': palette.get('grayscale', 'light-1'),
-    'grayscale': palette.get('grayscale'),
-    'grayscale': palette.get('grayscale'),
-    'grayscale-light-1': palette.get('grayscale', 'light-1'),
-    'grayscale-light-2': palette.get('grayscale', 'light-2'),
-    'warning': palette.get('warning'),
-    'white': palette.get('grayscale', 'white'),
+    'brand-1': var(design-token.get('color', 'brand-1')),
+    'brand-2': var(design-token.get('color', 'brand-2')),
+    'grayscale-light-1': var(design-token.get('color', 'grayscale', 'light-1')),
+    'grayscale': var(design-token.get('color', 'grayscale')),
+    'grayscale': var(design-token.get('color', 'grayscale')),
+    'grayscale-light-1': var(design-token.get('color', 'grayscale', 'light-1')),
+    'grayscale-light-2': var(design-token.get('color', 'grayscale', 'light-2')),
+    'warning': var(design-token.get('color', 'warning')),
+    'white': var(design-token.get('color', 'grayscale', 'white')),
   )
 );
 ```

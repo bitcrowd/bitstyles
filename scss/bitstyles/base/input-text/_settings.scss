@@ -1,76 +1,93 @@
-@use '../../design-tokens/typography';
-@use '../../tools/palette';
+@use '../../tools/design-token';
 @use '../../tools/shadow';
-@use '../../tools/size';
 
 //
 // Base styles ////////////////////////////////////////
 
-$padding-vertical: size.get('s5') !default;
-$padding-horizontal: size.get('s5') !default;
-$border-radius: size.get('s5') !default;
-$border-width: size.get('s7') !default;
+$padding-vertical: var(design-token.get('size', 's5')) !default;
+$padding-horizontal: var(design-token.get('size', 's5')) !default;
+$border-radius: var(design-token.get('size', 's5')) !default;
+$border-width: var(design-token.get('size', 's7')) !default;
 $font: inherit !default;
 $placeholder-font-style: italic !default;
-$placeholder-font-weight: typography.$font-weight-normal !default;
-$placeholder-color: palette.get('grayscale', 'light-1') !default;
+$placeholder-font-weight: var(
+  design-token.get('font-weight', 'normal')
+) !default;
+$placeholder-color: var(
+  design-token.get('color', 'grayscale', 'light-1')
+) !default;
 
 //
 // Base colors ////////////////////////////////////////
 
-$color: palette.get('grayscale') !default;
-$border-color: palette.get('grayscale') !default;
-$background: palette.get('grayscale', 'white') !default;
+$color: var(design-token.get('color', 'grayscale')) !default;
+$border-color: var(design-token.get('color', 'grayscale')) !default;
+$background: var(design-token.get('color', 'grayscale', 'white')) !default;
 $box-shadow: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('grayscale', 'light-1-rgb'), 0.025),
-    $blur-radius: size.get('s5'),
+    $color:
+      rgba(var(design-token.get('color', 'grayscale', 'light-1-rgb')), 0.025),
+    $blur-radius: var(design-token.get('size', 's5')),
   )
 ) !default;
 
 //
 // Hover colors ////////////////////////////////////////
 
-$color-hover: palette.get('grayscale', 'dark-1') !default;
-$background-hover: palette.get('grayscale') !default;
-$border-color-hover: palette.get('grayscale', 'dark-1') !default;
+$color-hover: var(design-token.get('color', 'grayscale', 'dark-1')) !default;
+$background-hover: var(design-token.get('color', 'grayscale')) !default;
+$border-color-hover: var(
+  design-token.get('color', 'grayscale', 'dark-1')
+) !default;
 $box-shadow-hover: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.025),
-    $blur-radius: size.get('s2'),
+    $color:
+      rgba(var(design-token.get('color', 'brand-1', 'light-1-rgb')), 0.025),
+    $blur-radius: var(design-token.get('size', 's2')),
   )
 ) !default;
 
 //
 // Active colors ////////////////////////////////////////
 
-$color-active: palette.get('grayscale', 'dark-1') !default;
-$background-active: palette.get('grayscale', 'white') !default;
-$border-color-active: palette.get('grayscale', 'dark-1') !default;
+$color-active: var(design-token.get('color', 'grayscale', 'dark-1')) !default;
+$background-active: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$border-color-active: var(
+  design-token.get('color', 'grayscale', 'dark-1')
+) !default;
 $box-shadow-active: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('brand-1', 'light-1-rgb'), 0.075),
-    $blur-radius: size.get('s6'),
+    $color:
+      rgba(var(design-token.get('color', 'brand-1', 'light-1-rgb')), 0.075),
+    $blur-radius: var(design-token.get('size', 's6')),
   )
 ) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
 
-$color-disabled: palette.get('grayscale') !default;
-$background-disabled: palette.get('grayscale', 'light-2') !default;
-$border-color-disabled: palette.get('grayscale', 'light-2') !default;
+$color-disabled: var(design-token.get('color', 'grayscale')) !default;
+$background-disabled: var(
+  design-token.get('color', 'grayscale', 'light-2')
+) !default;
+$border-color-disabled: var(
+  design-token.get('color', 'grayscale', 'light-2')
+) !default;
 $box-shadow-disabled: none !default;
 
 //
 // Invalid colors ////////////////////////////////////////
 
-$color-invalid: palette.get('warning') !default;
-$background-color-invalid: palette.get('grayscale', 'white') !default;
-$border-color-invalid: palette.get('warning') !default;
+$color-invalid: var(design-token.get('color', 'warning')) !default;
+$background-color-invalid: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$border-color-invalid: var(design-token.get('color', 'warning')) !default;
 $box-shadow-invalid: shadow.to-box-shadow(
   shadow.generate(
-    $color: rgba(palette.get('warning', 'base-rgb'), 0.05),
-    $blur-radius: size.get('s4'),
+    $color: rgba(var(design-token.get('color', 'warning', 'rgb')), 0.05),
+    $blur-radius: var(design-token.get('size', 's4')),
   )
 ) !default;

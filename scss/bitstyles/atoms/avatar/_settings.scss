@@ -1,6 +1,6 @@
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 $sizes: (
-  'm': size.get('l1'),
-  'l': size.get('l4'),
+  'm': var(design-token.get('size', 'l1')),
+  'l': var(design-token.get('size', 'l4')),
 ) !default;

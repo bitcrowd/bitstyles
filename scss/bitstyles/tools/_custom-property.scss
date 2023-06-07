@@ -1,13 +1,9 @@
 @use '../settings/setup';
 @use './string';
 @use 'sass:list';
-@use 'sass:map';
 
-@function get($items: (), $layer: null) {
-  $string-items: list.join(
-    (setup.$custom-property-namespace, map.get(setup.$layer-prefixes, $layer)),
-    $items
-  );
+@function name($items...) {
+  $string-items: list.join((setup.$custom-property-namespace), $items);
   $custom-property-name: string.join-with-dashes(
     $string-items: $string-items,
   );

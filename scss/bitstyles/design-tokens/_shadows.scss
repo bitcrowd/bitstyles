@@ -1,57 +1,75 @@
-@use '../tools/palette';
-@use '../tools/size';
-@use '../tools/shadow';
 @use '../tools/custom-property';
+@use '../tools/shadow';
 
 /* stylelint-disable length-zero-no-unit */
 $shadows: (
   'brand-1':
     shadow.generate(
-      $color: rgba(palette.get('brand-1', 'dark-2-rgb'), 0.075),
-      $offset: size.get('s6'),
-      $blur-radius: size.get('s3'),
+      $color:
+        rgba(var(custom-property.name('color', 'brand-1', 'dark-2-rgb')), 0.075),
+      $offset: var(custom-property.name('size', 's6')),
+      $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'brand-1-center':
     shadow.generate(
-      $color: rgba(palette.get('brand-1', 'dark-2-rgb'), 0.075),
+      $color:
+        rgba(var(custom-property.name('color', 'brand-1', 'dark-2-rgb')), 0.075),
       $offset: 0rem,
-      $blur-radius: size.get('s3'),
+      $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'gray':
     shadow.generate(
-      $color: rgba(palette.get('grayscale', 'dark-2-rgb'), 0.0875),
-      $offset: size.get('s6'),
-      $blur-radius: size.get('s3'),
+      $color:
+        rgba(
+          var(custom-property.name('color', 'grayscale', 'dark-2-rgb')),
+          0.0875
+        ),
+      $offset: var(custom-property.name('size', 's6')),
+      $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'gray-center':
     shadow.generate(
-      $color: rgba(palette.get('grayscale', 'dark-2-rgb'), 0.0875),
-      $offset: size.get('s7'),
-      $blur-radius: size.get('s3'),
+      $color:
+        rgba(
+          var(custom-property.name('color', 'grayscale', 'dark-2-rgb')),
+          0.0875
+        ),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's3')),
     ),
   'brand-2':
     shadow.generate(
-      $color: rgba(palette.get('brand-2', 'dark-1-rgb'), 0.1375),
-      $offset: size.get('s7'),
-      $blur-radius: size.get('s1'),
+      $color:
+        rgba(
+          var(custom-property.name('color', 'brand-2', 'dark-1-rgb')),
+          0.1375
+        ),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's1')),
     ),
   'positive':
     shadow.generate(
-      $color: rgba(palette.get('positive', 'dark-1-rgb'), 0.125),
-      $offset: size.get('s7'),
-      $blur-radius: size.get('s1'),
+      $color:
+        rgba(
+          var(custom-property.name('color', 'positive', 'dark-1-rgb')),
+          0.125
+        ),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's1')),
     ),
   'warning':
     shadow.generate(
-      $color: rgba(palette.get('warning', 'dark-1-rgb'), 0.125),
-      $offset: size.get('s7'),
-      $blur-radius: size.get('s1'),
+      $color:
+        rgba(var(custom-property.name('color', 'warning', 'dark-1-rgb')), 0.125),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's1')),
     ),
   'danger':
     shadow.generate(
-      $color: rgba(palette.get('danger', 'dark-1-rgb'), 0.1),
-      $offset: size.get('s7'),
-      $blur-radius: size.get('s2'),
+      $color:
+        rgba(var(custom-property.name('color', 'danger', 'dark-1-rgb')), 0.1),
+      $offset: var(custom-property.name('size', 's7')),
+      $blur-radius: var(custom-property.name('size', 's2')),
     ),
 ) !default;
 /* stylelint-enable length-zero-no-unit */
@@ -59,7 +77,7 @@ $shadows: (
 /* prettier-ignore */
 :root {
   @each $shadow-name, $shadow in $shadows {
-    #{custom-property.get($items: ('shadow', $shadow-name))}-drop: shadow.to-drop-shadow($shadow);
-    #{custom-property.get($items: ('shadow', $shadow-name))}-box: shadow.to-box-shadow($shadow);
+    #{custom-property.name('shadow', $shadow-name, 'drop')}: shadow.to-drop-shadow($shadow);
+    #{custom-property.name('shadow', $shadow-name, 'box')}: shadow.to-box-shadow($shadow);
   }
 }

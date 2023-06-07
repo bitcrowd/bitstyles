@@ -16,7 +16,12 @@
 // Design tokens /////////////////////////////////////
 
 @use '../../scss/bitstyles/design-tokens/animation' with (
-  $transition-easing: ease-out
+  $transitions: (
+    'default': (
+      'duration': 1s,
+      'easing': ease-out,
+    ),
+  )
 );
 @use '../../scss/bitstyles/design-tokens/breakpoints' with (
   $boundary-width: 10em
@@ -68,18 +73,22 @@
     ),
   )
 );
-@use '../../scss/bitstyles/design-tokens/content' as design-tokens-content;
 @use '../../scss/bitstyles/design-tokens/layout' with (
   $size-base: 10rem
 );
 @use '../../scss/bitstyles/design-tokens/shadows' with (
   $shadows: (
-    'default': (
+    'brand-1': (
       ('color': #f00, 'offset': 2.5rem, 'blur-radius': 5rem),
       ('color': #f00, 'offset': 5rem, 'blur-radius': 10rem),
     ),
   )
 );
+@use '../../scss/bitstyles/design-tokens/typography' with (
+  $webfont-family-name: 'FakeFont',
+  $webfont-base-url: './'
+);
+@use '../../scss/bitstyles/design-tokens/content' as design-tokens-content;
 @use '../../scss/bitstyles/design-tokens/themes' with (
   $themes: (
     'default': (
@@ -96,10 +105,6 @@
     'warning': (),
     'positive': (),
   )
-);
-@use '../../scss/bitstyles/design-tokens/typography' with (
-  $webfont-family-name: 'FakeFont',
-  $webfont-base-url: './'
 );
 @use '../../scss/bitstyles/design-tokens/typography-responsive' with (
   $typographic-scale: (

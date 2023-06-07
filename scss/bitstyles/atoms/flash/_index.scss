@@ -4,36 +4,23 @@
 @use '../../tools/classname';
 @use '../../tools/custom-property';
 @use '../../tools/media-query';
-@use '../../tools/palette';
 
 /* stylelint-disable scss/dollar-variable-default */
 $classname: classname.get(
   $classname-items: 'flash',
   $layer: 'atom',
 );
-$padding-horizontal-property: custom-property.get(
-  $items: (
-    'flash',
-    'padding',
-    'horizontal',
-  ),
-  $layer: 'atom',
+$padding-horizontal-property: custom-property.name(
+  'flash',
+  'padding',
+  'horizontal'
 );
-$padding-vertical-property: custom-property.get(
-  $items: (
-    'flash',
-    'padding',
-    'vertical',
-  ),
-  $layer: 'atom',
+$padding-vertical-property: custom-property.name(
+  'flash',
+  'padding',
+  'vertical'
 );
-$gap-property: custom-property.get(
-  $items: (
-    'flash',
-    'gap',
-  ),
-  $layer: 'atom',
-);
+$gap-property: custom-property.name('flash', 'gap');
 /* stylelint-enable scss/dollar-variable-default */
 
 #{$classname} {
@@ -42,22 +29,8 @@ $gap-property: custom-property.get(
   padding: var(#{$padding-vertical-property})
     var(#{$padding-horizontal-property});
   gap: var(#{$gap-property});
-  background-color: var(
-    #{custom-property.get(
-        $items: (
-          'theme',
-          'background-dark',
-        )
-      )}
-  );
-  color: var(
-    #{custom-property.get(
-        $items: (
-          'theme',
-          'text-dark',
-        )
-      )}
-  );
+  background-color: var(custom-property.name('theme', 'background-dark'));
+  color: var(custom-property.name('theme', 'text-dark'));
 }
 
 @each $breakpoint-name, $size-variant in settings.$sizes {

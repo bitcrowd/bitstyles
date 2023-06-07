@@ -3,7 +3,7 @@
 @use '../button/settings' as button-settings;
 @use '../../tools/button';
 @use '../../tools/classname';
-@use '../../tools/custom-property';
+@use '../../tools/design-token';
 @use '../../tools/themes';
 @use 'sass:map';
 
@@ -17,13 +17,7 @@
       &:visited {
         @each $property in button-settings.$allowed-color-properties {
           #{$property}: var(
-            #{custom-property.get(
-                $items: (
-                  'button#{$variant-name}',
-                  $property,
-                ),
-                $layer: 'atom'
-              )}
+            design-token.get('button#{$variant-name}', $property)
           );
         }
       }
@@ -34,14 +28,7 @@
       &:focus {
         @each $property in button-settings.$allowed-color-properties {
           #{$property}: var(
-            #{custom-property.get(
-                $items: (
-                  'button#{$variant-name}',
-                  'hover',
-                  $property,
-                ),
-                $layer: 'atom'
-              )}
+            design-token.get('button#{$variant-name}', 'hover', $property)
           );
         }
       }
@@ -51,14 +38,7 @@
       &:active {
         @each $property in button-settings.$allowed-color-properties {
           #{$property}: var(
-            #{custom-property.get(
-                $items: (
-                  'button#{$variant-name}',
-                  'active',
-                  $property,
-                ),
-                $layer: 'atom'
-              )}
+            design-token.get('button#{$variant-name}', 'active', $property)
           );
         }
       }
@@ -71,14 +51,7 @@
       &[aria-current] {
         @each $property in button-settings.$allowed-color-properties {
           #{$property}: var(
-            #{custom-property.get(
-                $items: (
-                  'button#{$variant-name}',
-                  'pressed',
-                  $property,
-                ),
-                $layer: 'atom'
-              )}
+            design-token.get('button#{$variant-name}', 'pressed', $property)
           );
         }
       }
@@ -93,14 +66,7 @@
       &[aria-disabled='true']:focus {
         @each $property in button-settings.$allowed-color-properties {
           #{$property}: var(
-            #{custom-property.get(
-                $items: (
-                  'button#{$variant-name}',
-                  'disabled',
-                  $property,
-                ),
-                $layer: 'atom'
-              )}
+            design-token.get('button#{$variant-name}', 'disabled', $property)
           );
         }
       }

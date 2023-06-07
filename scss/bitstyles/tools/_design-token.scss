@@ -1,0 +1,44 @@
+@use '../settings/setup';
+@use '../design-tokens/animation';
+@use '../design-tokens/breakpoints';
+@use '../design-tokens/color-palette';
+@use '../design-tokens/layout';
+@use '../design-tokens/shadows';
+@use '../design-tokens/typography';
+@use './custom-property';
+@use './string';
+@use 'sass:list';
+@use 'sass:map';
+
+/* stylelint-disable scss/dollar-variable-default */
+$token-category-map: (
+  'transition': animation.$transitions,
+  'breakpoint': breakpoints.$breakpoints,
+  'color': color-palette.$palette,
+  'font-size': typography.$font-sizes,
+  'font-weight': typography.$font-weights,
+  'line-height': typography.$line-heights,
+  'size': layout.$sizes,
+  'shadow': shadows.$shadows,
+  'z-index': layout.$z-indexes,
+);
+/* stylelint-enable scss/dollar-variable-default */
+
+/*
+ * Validates whether the requested design token is a valid global design token.
+ * Does not check design tokens defined at component level.
+ */
+@function get($items...) {
+  $token-category: list.nth($items, 1);
+
+  @if map.has-key($token-category-map, $token-category) {
+    $design-tokens: map.get($token-category-map, $token-category);
+    $token-name: list.nth($items, 2);
+
+    @if not map.has-key($design-tokens, list.nth($items, 2)) {
+      @error 'Oops! #{$token-category} ‘#{$token-name}’ does not exist.';
+    }
+  }
+
+  @return custom-property.name($items);
+}

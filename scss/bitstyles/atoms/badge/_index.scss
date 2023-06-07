@@ -2,30 +2,28 @@
 @use './settings';
 @use '../../design-tokens/layout';
 @use '../../tools/classname';
-@use '../../tools/custom-property';
+@use '../../tools/design-token';
 @use '../../tools/media-query';
-@use '../../tools/palette';
 @use '../../tools/properties';
-@use '../../tools/size';
 @use '../../tools/themes';
 @use 'sass:map';
 
 /* stylelint-disable scss/dollar-variable-default */
 
 /* prettier-ignore */
-$padding-horizontal-property: custom-property.get($items: ('badge', 'padding-horizontal'), $layer: 'atom');
+$padding-horizontal-property: design-token.get('badge', 'padding-horizontal');
 
 /* prettier-ignore */
-$padding-vertical-property: custom-property.get($items: ('badge', 'padding-vertical'),  $layer: 'atom');
+$padding-vertical-property: design-token.get('badge', 'padding-vertical');
 
 /* prettier-ignore */
-$gap-property: custom-property.get($items: ('badge', 'gap'), $layer: 'atom');
+$gap-property: design-token.get('badge', 'gap');
 
 /* prettier-ignore */
-$prepend-spacing-property: custom-property.get($items: ('badge', 'prepend', 'spacing'), $layer: 'atom');
+$prepend-spacing-property: design-token.get('badge', 'prepend', 'spacing');
 
 /* prettier-ignore */
-$shadow-property: custom-property.get($items: ('badge', 'shadow'), $layer: 'atom');
+$shadow-property: design-token.get('badge', 'shadow');
 /* stylelint-enable scss/dollar-variable-default */
 
 #{classname.get($classname-items: 'badge', $layer: 'atom')} {

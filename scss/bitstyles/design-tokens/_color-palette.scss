@@ -1,8 +1,7 @@
+@use '../settings/setup';
 @use '../tools/base-palette';
 @use '../tools/custom-property';
 @use 'sass:color';
-
-$default-key: 'base' !default;
 
 //
 // Color palette /////////////////////////////////////////
@@ -78,12 +77,18 @@ $palette: (
   ),
 ) !default;
 
-/* prettier-ignore */
+// prettier-ignore
 :root {
   @each $palette-name, $colors in $palette {
     @each $color-name, $color in $colors {
-      #{custom-property.get($items: ('color', $palette-name, $color-name))}: $color;
-      #{custom-property.get($items: ('color', $palette-name, $color-name, 'rgb'))}: color.red($color), color.green($color), color.blue($color);
+      /* stylelint-disable max-nesting-depth */
+      @if $color-name == setup.$default-color-key {
+        $color-name: null;
+      }
+      /* stylelint-enable max-nesting-depth */
+
+      #{custom-property.name('color', $palette-name, $color-name)}: $color;
+      #{custom-property.name('color', $palette-name, $color-name, 'rgb')}: color.red($color), color.green($color), color.blue($color);
     }
   }
 }

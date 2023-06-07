@@ -1,32 +1,29 @@
-@use 'sass:math';
 @use '../../design-tokens/layout';
-@use '../../design-tokens/typography';
-@use '../../tools/font-size';
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 /* stylelint-disable length-zero-no-unit */
 $default: (
-  'padding-vertical': size.get('s2'),
-  'padding-horizontal': size.get('l1'),
+  'padding-vertical': var(design-token.get('size', 's2')),
+  'padding-horizontal': var(design-token.get('size', 'l1')),
   'border-width': 0rem,
-  'border-radius': size.get('s4'),
+  'border-radius': var(design-token.get('size', 's4')),
   'min-height': 1em,
   'min-width': 0,
-  'font-size': font-size.get('2'),
-  'font-weight': typography.$font-weight-semibold,
+  'font-size': var(design-token.get('font-size', '2')),
+  'font-weight': var(design-token.get('font-weight', 'semibold')),
 ) !default;
 /* stylelint-enable length-zero-no-unit */
 $small: (
-  'padding-vertical': size.get('s4'),
-  'padding-horizontal': size.get('m'),
-  'min-height': size.get('l1'),
-  'min-width': size.get('l2'),
-  'font-weight': typography.$font-weight-medium,
+  'padding-vertical': var(design-token.get('size', 's4')),
+  'padding-horizontal': var(design-token.get('size', 'm')),
+  'min-height': var(design-token.get('size', 'l1')),
+  'min-width': var(design-token.get('size', 'l2')),
+  'font-weight': var(design-token.get('font-weight', 'medium')),
 ) !default;
 $x-small: (
-  'padding-vertical': size.get('s6'),
-  'padding-horizontal': size.get('s2'),
-  'font-weight': typography.$font-weight-medium,
+  'padding-vertical': var(design-token.get('size', 's6')),
+  'padding-horizontal': var(design-token.get('size', 's2')),
+  'font-weight': var(design-token.get('font-weight', 'medium')),
 ) !default;
 $transparent: (
   'border-width': 0.1875rem,
@@ -42,8 +39,14 @@ $tab: (
   'border-radius': 0,
 ) !default;
 $square: (
-  'padding-vertical': calc(size.get('s2') + size.get('s7')),
-  'padding-horizontal': calc(size.get('s2') + size.get('s7')),
+  'padding-vertical':
+    calc(
+      var(design-token.get('size', 's2')) + var(design-token.get('size', 's7'))
+    ),
+  'padding-horizontal':
+    calc(
+      var(design-token.get('size', 's2')) + var(design-token.get('size', 's7'))
+    ),
 ) !default;
 $round: (
   'border-radius': layout.$border-radius-round,

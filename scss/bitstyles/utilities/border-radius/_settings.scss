@@ -1,8 +1,8 @@
-@use '../../tools/size';
+@use '../../tools/design-token';
 
 $values: (
   '0': 0,
-  's7': size.get('s7'),
+  's7': var(design-token.get('size', 's7')),
 ) !default;
 $breakpoints: () !default;
 $directions: (

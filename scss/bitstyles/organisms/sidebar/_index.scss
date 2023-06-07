@@ -9,7 +9,7 @@
 
 #{classname.get($classname-items: 'sidebar--small', $layer: 'organism')} {
   position: fixed;
-  z-index: 1;
+  z-index: settings.$z-index;
   top: 0;
   bottom: 0;
   #{settings.$small-location}: 0;

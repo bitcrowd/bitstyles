@@ -1,8 +1,10 @@
-@use '../../tools/palette';
+@use '../../tools/design-token';
 
 $values: (
-  'grayscale-dark-1': 1px solid palette.get('grayscale', 'dark-1'),
-  'grayscale-light-1': 1px solid palette.get('grayscale', 'light-1'),
+  'grayscale-dark-1': 1px solid
+    var(design-token.get('color', 'grayscale', 'dark-1')),
+  'grayscale-light-1': 1px solid
+    var(design-token.get('color', 'grayscale', 'light-1')),
 ) !default;
 $breakpoints: () !default;
 $directions: (

@@ -1,9 +1,11 @@
-@use '../design-tokens/animation';
+@use '../../design-tokens/animation';
 
 /* stylelint-disable selector-pseudo-class-no-unknown */
 :export {
-  #{'easing'}: ease-in-out;
-  #{'duration'}: 0.075s;
-  #{'duration-long'}: 0.5s;
+  @each $transition-name, $transition in animation.$transitions {
+    @each $transition-property, $transition-value in $transition {
+      #{$transition-name}#{'.'}#{$transition-property}: $transition-value;
+    }
+  }
 }
 /* stylelint-enable selector-pseudo-class-no-unknown */
