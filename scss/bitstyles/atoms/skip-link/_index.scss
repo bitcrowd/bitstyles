@@ -1,5 +1,6 @@
 @forward './settings';
 @use './settings';
+@use '../../design-tokens/focus';
 @use '../../tools/classname';
 
 #{classname.get($classname-items: 'skip-link', $layer: 'atom')} {
@@ -9,18 +10,33 @@
   left: 50%;
   padding: settings.$padding;
   transform: translateX(-50%);
+  border-radius: settings.$border-radius;
+  outline-offset: 0;
+  font-size: settings.$font-size;
   font-weight: settings.$font-weight;
 
   &,
   &:visited,
-  &:hover,
   &:focus {
     border: settings.$border;
+    outline-width: 0;
     background: settings.$background;
+    box-shadow: settings.$shadow;
     color: settings.$color;
+    text-decoration: settings.$text-decoration;
+  }
+
+  &:hover {
+    background: settings.$background-hover;
+    color: settings.$color-hover;
   }
 
   &:focus {
-    top: 0;
+    top: settings.$spacing;
+  }
+
+  &:focus-visible {
+    outline: focus.$outline-color solid focus.$outline-width;
+    outline-offset: focus.$outline-offset;
   }
 }

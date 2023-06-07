@@ -3,14 +3,27 @@
 //
 // Base styles /////////////////////////////////////////
 
-$padding: var(design-token.get('size', 's1')) !default;
-$font-weight: var(design-token.get('font-weight', 'medium')) !default;
+$padding: var(design-token.get('size', 'm')) var(design-token.get('size', 'l2')) !default;
+$font-size: var(design-token.get('font-size', '4')) !default;
+$font-weight: var(design-token.get('font-weight', 'semibold')) !default;
 $z-index: var(design-token.get('z-index', 'top')) !default;
+$text-decoration: none !default;
+$spacing: var(design-token.get('size', 's4')) !default;
 
 //
-// Base/hover Colors /////////////////////////////////////////
+// Base/focus Colors /////////////////////////////////////////
 
 $background: var(design-token.get('color', 'grayscale', 'white')) !default;
-$color: var(design-token.get('color', 'grayscale', 'dark-1')) !default;
+$color: var(design-token.get('color', 'grayscale', 'dark-4')) !default;
 $border: var(design-token.get('size', 's6'))
-  var(design-token.get('color', 'grayscale', 'dark-1')) solid !default;
+  var(design-token.get('color', 'grayscale', 'dark-4')) solid !default;
+$border-radius: var(design-token.get('size', 's4')) !default;
+$shadow: var(design-token.get('shadow', 'brand-2', 'box')) !default;
+
+//
+// Hover Colors /////////////////////////////////////////
+
+$background-hover: var(
+  design-token.get('color', 'grayscale', 'black')
+) !default;
+$color-hover: var(design-token.get('color', 'grayscale', 'white')) !default;
