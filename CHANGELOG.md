@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## [[6.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v6.0.0) - 2023-06-08
 
 ### Changed
 
