@@ -5,11 +5,11 @@
 $padding: (
   '#{setup.$no-media-query}': (
     'base': var(design-token.get('size', 's1')),
-    'l': var(design-token.get('size', 'm')),
+    'l1': var(design-token.get('size', 'm')),
   ),
   'm': (
     'base': var(design-token.get('size', 'l1')),
-    'l': var(design-token.get('size', 'l1')),
+    'l1': var(design-token.get('size', 'l3')),
   ),
 ) !default;
 

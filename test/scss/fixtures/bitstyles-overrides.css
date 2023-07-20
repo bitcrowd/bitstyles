@@ -129,12 +129,12 @@
 }
 :root {
   --bscpn-content-padding-base: var(--bscpn-size-s1);
-  --bscpn-content-padding-l: var(--bscpn-size-m);
+  --bscpn-content-padding-l1: var(--bscpn-size-m);
 }
 @media screen and (min-width: 30em) {
   :root {
     --bscpn-content-padding-base: var(--bscpn-size-l1);
-    --bscpn-content-padding-l: var(--bscpn-size-l1);
+    --bscpn-content-padding-l1: var(--bscpn-size-l3);
   }
 }
 html {
@@ -1786,8 +1786,8 @@ table {
 }
 @media screen and (min-width: 55em) {
   .bs-at-content {
-    padding-left: var(--bscpn-content-padding-l);
-    padding-right: var(--bscpn-content-padding-l);
+    padding-left: var(--bscpn-content-padding-l1);
+    padding-right: var(--bscpn-content-padding-l1);
   }
 }
 .bs-at-content--xs {
@@ -2034,6 +2034,26 @@ table {
   outline: var(--bscpn-color-brand-2) solid
     calc(var(--bscpn-size-s7) + var(--bscpn-size-s7) / 2);
   outline-offset: var(--bscpn-size-s7);
+}
+.bs-at-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bscpn-switcher-spacing);
+}
+.bs-at-switcher > * {
+  flex-basis: calc((var(--bscpn-switcher-breakpoint) - 100%) * 999);
+  flex-grow: 1;
+}
+.bs-at-switcher {
+  --bscpn-switcher-spacing: var(--bscpn-content-padding-base);
+}
+.bs-at-switcher--large {
+  --bscpn-switcher-spacing: var(--bscpn-content-padding-l1);
+}
+@media screen and (min-width: 30em) {
+  .bs-at-switcher {
+    --bscpn-switcher-spacing: var(--bscpn-content-padding-l1);
+  }
 }
 .bs-at-topbar {
   left: 0;

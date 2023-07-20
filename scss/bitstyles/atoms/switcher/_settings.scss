@@ -1,0 +1,17 @@
+@use '../../settings/setup';
+@use '../../tools/design-token';
+
+$size-variants: (
+  '#{setup.$no-media-query}': (
+    '': (
+      'spacing': var(design-token.get('size', 's5')),
+      'breakpoint': 30rem,
+      'limit': 4,
+    ),
+  ),
+  'l': (
+    '': (
+      'spacing': var(design-token.get('size', 's3')),
+    ),
+  ),
+) !default;

@@ -376,12 +376,12 @@
 }
 :root {
   --bs-content-padding-base: var(--bs-size-s1);
-  --bs-content-padding-l: var(--bs-size-m);
+  --bs-content-padding-l1: var(--bs-size-m);
 }
 @media screen and (min-width: 30em) {
   :root {
     --bs-content-padding-base: var(--bs-size-l1);
-    --bs-content-padding-l: var(--bs-size-l1);
+    --bs-content-padding-l1: var(--bs-size-l3);
   }
 }
 html {
@@ -2198,8 +2198,8 @@ table {
 }
 @media screen and (min-width: 55em) {
   .a-content {
-    padding-left: var(--bs-content-padding-l);
-    padding-right: var(--bs-content-padding-l);
+    padding-left: var(--bs-content-padding-l1);
+    padding-right: var(--bs-content-padding-l1);
   }
 }
 .a-content--xs {
@@ -2462,6 +2462,28 @@ table {
   outline: var(--bs-color-brand-2) solid
     calc(var(--bs-size-s7) + var(--bs-size-s7) / 2);
   outline-offset: var(--bs-size-s7);
+}
+.a-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bs-switcher-spacing);
+}
+.a-switcher > * {
+  flex-basis: calc((var(--bs-switcher-breakpoint) - 100%) * 999);
+  flex-grow: 1;
+}
+.a-switcher {
+  --bs-switcher-breakpoint: 30rem;
+  --bs-switcher-spacing: var(--bs-size-s5);
+}
+.a-switcher > :nth-last-child(n + 5),
+.a-switcher > :nth-last-child(n + 5) ~ * {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 55em) {
+  .a-switcher {
+    --bs-switcher-spacing: var(--bs-size-s3);
+  }
 }
 .a-topbar {
   left: 0;

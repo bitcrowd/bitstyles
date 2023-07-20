@@ -40,6 +40,7 @@
 - It is now possible to import bitstyles on a per-layer basis, instead of per-module or all at once. It is still possible to override all modules inside each layer in the normal way.
 - There are now design tokens as `design-tokens/focus` to describe a consistent `:focus` appearance, that are currently used in `base/anchor/`, `atoms/buttons`, and `atoms/links`.
 - Anchor elements and `atoms/link` components now have a disabled state, applied using the `aria-disabled` attribute.
+- A new layout component at `atoms/switcher`, that lays out its children in a horizontal row with consistent spacing between children. The layout switches to a vertical stack once the width of the component passes below a threshold, or the number of children goes over a limit.
 
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2023-01-03
 

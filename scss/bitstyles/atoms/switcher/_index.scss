@@ -1,0 +1,54 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/classname';
+@use '../../tools/design-token';
+@use '../../tools/media-query';
+@use 'sass:map';
+
+/* stylelint-disable scss/dollar-variable-default */
+$breakpoint-property-name: design-token.get('switcher', 'breakpoint');
+$spacing-property-name: design-token.get('switcher', 'spacing');
+
+#{classname.get($classname-items: 'switcher', $layer: 'atom')} {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(#{$spacing-property-name});
+
+  > * {
+    flex-basis: calc((var(#{$breakpoint-property-name}) - 100%) * 999);
+    flex-grow: 1;
+  }
+}
+/* stylelint-enable scss/dollar-variable-default */
+
+@each $breakpoint, $size-variants in settings.$size-variants {
+  @include media-query.get($breakpoint) {
+    @each $size-variant-name, $size-variant in ($size-variants) {
+      $class: '';
+      @if $size-variant-name == '' {
+        $class: 'switcher';
+      } @else {
+        $class: 'switcher--#{$size-variant-name}';
+      }
+
+      /* stylelint-disable max-nesting-depth */
+      #{classname.get($classname-items: $class, $layer: 'atom')} {
+        @if map.has-key($size-variant, 'breakpoint') {
+          #{$breakpoint-property-name}: #{map.get($size-variant, 'breakpoint')};
+        }
+
+        @if map.has-key($size-variant, 'spacing') {
+          #{$spacing-property-name}: #{map.get($size-variant, 'spacing')};
+        }
+
+        @if map.has-key($size-variant, 'limit') {
+          > :nth-last-child(n + #{map.get($size-variant, 'limit') + 1}),
+          > :nth-last-child(n + #{map.get($size-variant, 'limit') + 1}) ~ * {
+            flex-basis: 100%;
+          }
+        }
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+}
