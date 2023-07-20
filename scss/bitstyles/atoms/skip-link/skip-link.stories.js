@@ -6,7 +6,7 @@ export default {
 };
 
 const Template = (args) => {
-  const fragment = new DocumentFragment();
+  const fragment = document.createElement('div');
   const mainContent = document.createElement('div');
   mainContent.setAttribute('id', 'main');
   mainContent.innerHTML =

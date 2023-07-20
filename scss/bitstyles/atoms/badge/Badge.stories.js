@@ -269,3 +269,20 @@ PositiveButtonSmall.args = {
   onClick: dummyOnClick,
   sizeVariant: ['small'],
 };
+
+const TemplateBadgeWithLabel = (args) => {
+  const fragment = document.createElement('div');
+  const mainContent = document.createElement('span');
+  mainContent.setAttribute('id', 'main');
+  mainContent.classList.add('u-margin-m-left');
+  mainContent.innerHTML = 'Trailing label';
+  fragment.append(Badge(args));
+  fragment.append(mainContent);
+  return fragment;
+};
+
+export const BadgeWithLabel = TemplateBadgeWithLabel.bind({});
+BadgeWithLabel.args = {
+  theme: 'default',
+  sizeVariant: ['small'],
+};
