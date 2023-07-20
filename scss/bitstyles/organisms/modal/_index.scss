@@ -11,10 +11,7 @@
 #{classname.get($classname-items: 'modal__overlay', $layer: 'organism')} {
   position: fixed;
   z-index: settings.$z-index;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   -webkit-backface-visibility: hidden; // stylelint-disable-line property-no-vendor-prefix
   backface-visibility: hidden;
   transition: all settings.$transition-duration settings.$transition-easing;

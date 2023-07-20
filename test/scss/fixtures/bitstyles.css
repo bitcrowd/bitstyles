@@ -2475,12 +2475,9 @@ table {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background: rgba(var(--bs-color-grayscale-white-rgb), 95%);
-  bottom: 0;
   cursor: pointer;
-  left: 0;
+  inset: 0;
   position: fixed;
-  right: 0;
-  top: 0;
   transition: all 0.2s var(--bs-transition-default-easing);
   will-change: opacity, transform, visibility;
   z-index: var(--bs-z-index-top);
