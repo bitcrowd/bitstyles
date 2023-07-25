@@ -1,4 +1,4 @@
-export const Label = () => {
+export const textLabel = () => {
   const span = document.createElement('span');
   span.classList.add(
     'u-fg-grayscale-light-1',
