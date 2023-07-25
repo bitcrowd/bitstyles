@@ -1,6 +1,6 @@
 import Badge from '../atoms/badge/Badge';
 import Button from '../atoms/button/Button';
-import SectionHeading, { Label } from './SectionHeading';
+import SectionHeading, { textLabel } from './SectionHeading';
 
 export default {
   title: 'UI/Content/Section heading',
@@ -29,7 +29,7 @@ TextOnly.parameters = {
 export const WithLabel = Template.bind({});
 WithLabel.args = {
   title: 'Recent bookings',
-  label: Label(),
+  label: textLabel(),
 };
 WithLabel.parameters = {
   zeplinLink: '',
@@ -63,7 +63,7 @@ WithButtons.parameters = {
 export const WithLabelAndButtons = Template.bind({});
 WithLabelAndButtons.args = {
   title: 'Recent bookings',
-  label: Label(),
+  label: textLabel(),
   extra: [
     Button({
       colorVariant: ['outline'],
