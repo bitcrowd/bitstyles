@@ -1,6 +1,7 @@
+import SectionHeading from './SectionHeading';
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
 
-<Meta title="UI/Content/Section heading" />
+<Meta title="UI/Content/Section heading" component={SectionHeading} />
 
 # Section heading
 
@@ -55,87 +56,32 @@ A heading with optional actions, badges and labels. Be sure to use the correct h
   </ul>
 </details>
 
-## Section heading
+### With text only
 
 <Canvas>
-  <Story name="Section heading">
-    {`
-      <div class="u-padding-m-bottom u-border-grayscale-light-bottom">
-        <h3 class="u-margin-0 u-margin-m-right">Recent bookings</h3>
-      </div>
-    `}
-  </Story>
+  <Story id="ui-content-section-heading--text-only" />
 </Canvas>
 
-## Section headings with labels and badges
-
-Next to the heading text is a good place to add important information about the content referred to, such as its current state or counts.
+### With label
 
 <Canvas>
-  <Story name="Section heading with count">
-    {`
-      <div class="u-flex u-items-center u-padding-m-bottom u-border-grayscale-light-bottom">
-        <h3 class="u-margin-0 u-margin-s4-right">
-          Recent bookings
-        </h3>
-        <span class="u-fg-grayscale-light-1 u-font-normal u-h6">[3/10]<span>
-      </div>
-    `}
-  </Story>
+  <Story id="ui-content-section-heading--with-label" />
 </Canvas>
 
+### With badge
+
 <Canvas>
-  <Story name="Section heading with badge">
-    {`
-      <div class="u-flex u-items-center u-padding-m-bottom u-border-grayscale-light-bottom">
-        <h3 class="u-margin-0 u-margin-s4-right">
-          Recent bookings
-        </h3>
-        <span class="a-badge a-badge--brand-1 u-h6">New<span>
-      </div>
-    `}
-  </Story>
+  <Story id="ui-content-section-heading--with-badge" />
 </Canvas>
 
-## Section headings with actions
-
-Section headings are a good place for important actions relating to the content the heading’s referring to, and can be combined with badges and labels.
+### With buttons
 
 <Canvas>
-  <Story name="Section heading with actions">
-    {`
-      <div class="u-flex u-flex-wrap u-items-center u-justify-between u-padding-m-bottom u-border-grayscale-light-bottom">
-        <h3 class="u-margin-0 u-margin-m-right">Recent bookings</h3>
-        <ul class="u-list-none u-flex u-flex-wrap u-flex-shrink-0">
-          <li class="u-margin-s2-right">
-            <button type="button" class="a-button a-button--secondary">Edit</button>
-          </li>
-          <li class="u-margin-s2-right">
-            <button type="button" class="a-button">Create</button>
-          </li>
-        </ul>
-      </div>
-    `}
-  </Story>
+  <Story id="ui-content-section-heading--with-buttons" />
 </Canvas>
 
+### With label and buttons
+
 <Canvas>
-  <Story name="Section heading with badge and actions">
-    {`
-      <div class="u-flex u-flex-wrap u-items-center u-justify-between u-padding-m-bottom u-border-grayscale-light-bottom">
-        <div class="u-flex u-items-center">
-          <h3 class="u-margin-0 u-margin-m-right">Recent bookings</h3>
-          <span class="a-badge a-badge--brand-1 u-h6">New<span>
-        </div>
-        <ul class="u-list-none u-flex u-flex-wrap u-flex-shrink-0">
-          <li class="u-margin-s2-right">
-            <button type="button" class="a-button a-button--secondary">Edit</button>
-          </li>
-          <li class="u-margin-s2-right">
-            <button type="button" class="a-button">Create</button>
-          </li>
-        </ul>
-      </div>
-    `}
-  </Story>
+  <Story id="ui-content-section-heading--with-label-and-buttons" />
 </Canvas>
