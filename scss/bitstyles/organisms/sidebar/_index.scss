@@ -8,7 +8,7 @@
 }
 
 #{classname.get($classname-items: 'sidebar--small', $layer: 'organism')} {
-  position: fixed;
+  position: absolute;
   z-index: settings.$z-index;
   top: 0;
   bottom: 0;
