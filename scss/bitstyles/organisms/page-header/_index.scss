@@ -1,16 +1,18 @@
-@use "../../tools/media-query";
-@use "../../tools/classname";
-@use "../../tools/design-token";
+@use '../../tools/media-query';
+@use '../../tools/classname';
+@use '../../tools/design-token';
 
-#{classname.get($classname-items: "page-header", $layer: "organism")} {
-  background-color: var(design-token.get("color", "grayscale", "light-3"));
-  padding-top: var(design-token.get("size", "m"));
-
+#{classname.get($classname-items: 'page-header', $layer: 'organism')} {
+  background-color: var(design-token.get('color', 'grayscale', 'light-3'));
+  padding-top: var(design-token.get('size', 'm'));
 }
 
 .o-page-header__content {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @include media-query.get('motion-ok') {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .o-page-header__top-left {
@@ -21,7 +23,9 @@
   grid-column: 2;
   grid-row: 1;
   display: flex;
-  justify-content: flex-end;
+  @include media-query.get('motion-ok') {
+    justify-content: flex-end;
+  }
 }
 .o-page-header__center-left {
   grid-column: 1;
@@ -31,7 +35,9 @@
   grid-column: 2;
   grid-row: 2;
   display: flex;
-  justify-content: flex-end;
+  @include media-query.get('motion-ok') {
+    justify-content: flex-end;
+  }
 }
 .o-page-header__bottom-left {
   grid-column: 1;
@@ -40,6 +46,8 @@
 .o-page-header__bottom-right {
   grid-column: 2;
   grid-row: 3;
-    display: flex;
-  justify-content: flex-end;
+  display: flex;
+  @include media-query.get('motion-ok') {
+    justify-content: flex-end;
+  }
 }
