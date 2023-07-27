@@ -1,7 +1,7 @@
-import PageHeader, { breadCrumbsMenu, header } from './PageHeader';
+import PageHeader, { breadCrumbsMenu, header, tabs } from './PageHeader';
 
 export default {
-  title: 'Organisms/PageHeader',
+  title: 'Organisms/Page Header',
   component: PageHeader,
   argTypes: {
     topLeft: {
@@ -30,8 +30,19 @@ const Template = (args) => PageHeader(args);
 export const Default = Template.bind({});
 Default.args = {
   topLeft: breadCrumbsMenu,
+  topRight: breadCrumbsMenu.cloneNode(true),
   centerLeft: header,
-  //   centerRight: `<p>centerRight</p>`,
-  //   bottomLeft: `<p>bottomLeft</p>`,
-  //   bottomRight: `<p>bottomRight</p>`,
+  bottomLeft: tabs,
+};
+
+export const NoBottomSlot = Template.bind({});
+NoBottomSlot.args = {
+  topLeft: breadCrumbsMenu.cloneNode(true),
+  centerLeft: header.cloneNode(true),
+};
+
+export const OnlyTopSlot = Template.bind({});
+OnlyTopSlot.args = {
+  topLeft: header.cloneNode(true),
+  topRight: breadCrumbsMenu.cloneNode(true),
 };

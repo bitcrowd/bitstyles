@@ -1,4 +1,5 @@
 import icons from '../../../../assets/images/icons.svg';
+import Button from '../../atoms/button/Button';
 
 const PageHeader = ({
   topLeft,
@@ -92,10 +93,64 @@ breadCrumbsMenu.innerHTML = `
 
 export const header = document.createElement('div');
 header.innerHTML = `
-<div class="u-flex u-justify-between u-flex-wrap u-items-center u-margin-m-top">
+<div class="u-flex u-justify-between u-flex-wrap u-items-center u-margin-m-y">
 <div class="u-flex u-flex-wrap u-items-center">
   <h1 class="u-margin-m-right u-break-text">Title Header</h1>
   <div class="u-flex-shrink-0 u-margin-m-bottom@s">
     <span class="a-badge u-font-medium" data-theme="brand-1">Online</span>
   </div>
 </div>`;
+
+export const tabs = document.createElement('ul');
+tabs.classList.add(
+  'u-list-none',
+  'u-flex',
+  'u-overflow-x-auto',
+  'u-items-end',
+  'a-button--tab-container',
+  'u-margin-m-bottom'
+);
+tabs.setAttribute('role', 'tablist');
+tabs.setAttribute('aria-label', 'Data');
+
+const tabsListItem = document.createElement('li');
+tabsListItem.classList.add('u-margin-s2-right');
+
+const tabsButton = ({ label, ariaSelected, ariaControls }) =>
+  Button({
+    classname: ['a-button', 'a-button--tab'],
+    children: label,
+    role: 'tab',
+    ariaSelected,
+    ariaControls,
+  });
+
+const tabsLabels = [
+  {
+    label: 'Tab1',
+    ariaSelected: true,
+    ariaControls: 'tab-panel-1',
+  },
+  {
+    label: 'Tab2',
+    ariaSelected: false,
+    ariaControls: 'tab-panel-2',
+  },
+  {
+    label: 'Tab3',
+    ariaSelected: false,
+    ariaControls: 'tab-panel-3',
+  },
+];
+
+tabsLabels.forEach((item) =>
+  tabs.appendChild(
+    tabsListItem.appendChild(
+      tabsButton({
+        label: item.label,
+        ariaSelected: item.ariaSelected,
+        ariaControls: item.ariaControls,
+      })
+    )
+  )
+);
