@@ -34,6 +34,14 @@ Default.args = {
   bottomSlot: bottom,
   mainContent,
 };
+Default.parameters = {
+  zeplinLink: [
+    {
+      name: 'base',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=63c7b0d90bf0da0ef88e1f19',
+    },
+  ],
+};
 
 export const Minimal = Template.bind({});
 Minimal.args = {
