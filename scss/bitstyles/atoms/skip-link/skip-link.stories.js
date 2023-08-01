@@ -6,14 +6,14 @@ export default {
 };
 
 const Template = (args) => {
-  const fragment = document.createElement('div');
+  const wrapper = document.createElement('div');
   const mainContent = document.createElement('div');
   mainContent.setAttribute('id', 'main');
   mainContent.innerHTML =
     'Your main content here, after some other content that gets repeated on every page (navigation etc.)';
-  fragment.append(Link(args));
-  fragment.append(mainContent);
-  return fragment;
+  wrapper.append(Link(args));
+  wrapper.append(mainContent);
+  return wrapper;
 };
 
 // ***** Default size, each shape & color ****************** //

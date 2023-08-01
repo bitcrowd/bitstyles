@@ -271,18 +271,21 @@ PositiveButtonSmall.args = {
 };
 
 const TemplateBadgeWithLabel = (args) => {
-  const fragment = document.createElement('div');
-  const mainContent = document.createElement('span');
-  mainContent.setAttribute('id', 'main');
-  mainContent.classList.add('u-margin-m-left');
-  mainContent.innerHTML = 'Trailing label';
-  fragment.append(Badge(args));
-  fragment.append(mainContent);
-  return fragment;
+  const wrapper = document.createElement('div');
+  const trailingLabel = document.createElement('span');
+  trailingLabel.classList.add('u-margin-m-left');
+  trailingLabel.innerHTML = 'Trailing label';
+  wrapper.append(Badge(args));
+  wrapper.append(trailingLabel);
+  return wrapper;
 };
 
 export const BadgeWithLabel = TemplateBadgeWithLabel.bind({});
 BadgeWithLabel.args = {
   theme: 'default',
   sizeVariant: ['small'],
+};
+BadgeWithLabel.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640ef6a6805d9020e491d493',
 };
