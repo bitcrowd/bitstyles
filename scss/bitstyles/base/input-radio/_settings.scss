@@ -15,7 +15,7 @@ $background-color: var(
   design-token.get('color', 'grayscale', 'white')
 ) !default;
 $border-color: var(design-token.get('color', 'grayscale', 'dark-2')) !default;
-$box-shadow: none !default;
+$box-shadow: var(design-token.get('shadow', 'brand-1')) !default;
 
 //
 // Hover colors ////////////////////////////////////////
@@ -78,7 +78,7 @@ $background-color-invalid: var(
 $border-color-invalid: var(
   design-token.get('color', 'warning', 'dark-1')
 ) !default;
-$box-shadow-invalid: none !default;
+$box-shadow-invalid: var(design-token.get('shadow', 'warning')) !default;
 
 //
 // Disabled colors ////////////////////////////////////////

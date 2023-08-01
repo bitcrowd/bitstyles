@@ -671,12 +671,12 @@ label {
   align-items: baseline;
   cursor: pointer;
   display: flex;
-  font-weight: 500;
+  font-weight: var(--bs-font-weight-medium);
   gap: var(--bs-size-s7);
   margin-bottom: var(--bs-size-s7);
 }
 label[aria-disabled='true'] {
-  color: var(--bs-color-grayscale-base);
+  color: var(--bs-color-grayscale);
 }
 [type='color'] {
   height: calc(var(--bs-line-height-4) * 1em + var(--bs-size-s2));
@@ -714,13 +714,13 @@ img {
     border: 0.1875rem solid var(--bs-color-grayscale-dark-2);
     border-radius: var(--bs-size-s6);
     box-shadow: none;
-    color: var(--bs-color-grayscale-base);
+    color: var(--bs-color-grayscale);
   }
   [type='checkbox']:focus,
   [type='checkbox']:hover {
     background-color: var(--bs-color-grayscale-white);
     border-color: var(--bs-color-brand-1);
-    box-shadow: none;
+    box-shadow: var(--bs-shadow-brand-1);
     color: var(--bs-color-brand-1);
     outline-width: 0;
   }
@@ -759,7 +759,7 @@ img {
   [type='checkbox']:checked {
     background-color: var(--bs-color-brand-1-dark-1);
     border-color: var(--bs-color-brand-1-dark-1);
-    box-shadow: var(--bs-shadow-brand-1);
+    box-shadow: none;
     color: var(--bs-color-grayscale-white);
   }
   [type='checkbox']:checked:after {
@@ -770,7 +770,7 @@ img {
   [type='checkbox'][aria-invalid='true'] {
     background-color: var(--bs-color-brand-1);
     border-color: var(--bs-color-brand-1);
-    box-shadow: none;
+    box-shadow: var(--bs-shadow-warning);
     color: var(--bs-color-grayscale-white);
   }
   [type='checkbox'][disabled] {
@@ -821,9 +821,9 @@ img {
 ) {
   [type='radio'] {
     background-color: var(--bs-color-grayscale-white);
-    border: 0.1875rem solid var(--bs-color-grayscale);
+    border: 0.1875rem solid var(--bs-color-grayscale-dark-2);
     border-radius: 9999rem;
-    box-shadow: none;
+    box-shadow: var(--bs-shadow-brand-1);
     color: var(--bs-color-grayscale-light-1);
   }
   [type='radio']:after {
@@ -875,7 +875,7 @@ img {
   [type='radio'][aria-invalid='true'] {
     background-color: var(--bs-color-grayscale-white);
     border-color: var(--bs-color-warning-dark-1);
-    box-shadow: none;
+    box-shadow: var(--bs-shadow-warning);
     color: var(--bs-color-warning-dark-4);
   }
   [type='radio'][disabled] {
@@ -1008,14 +1008,7 @@ textarea:focus,
 textarea:hover {
   background-color: var(--bs-color-grayscale-white);
   border-color: var(--bs-color-grayscale-dark-2);
-  box-shadow: 0 0 calc(var(--bs-size-s4) / 4)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075),
-    0 0 calc(var(--bs-size-s4) / 3)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075),
-    0 0 calc(var(--bs-size-s4) / 2)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075),
-    0 0 calc(var(--bs-size-s4) / 1)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075);
+  box-shadow: none;
   color: var(--bs-color-grayscale-dark-4);
 }
 [type='date']:focus::-moz-placeholder,
@@ -1107,14 +1100,7 @@ textarea:focus-visible {
 textarea:active {
   background-color: var(--bs-color-grayscale-white);
   border-color: var(--bs-color-brand-1-dark-1);
-  box-shadow: 0 0 calc(var(--bs-size-s4) / 4)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075),
-    0 0 calc(var(--bs-size-s4) / 3)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075),
-    0 0 calc(var(--bs-size-s4) / 2)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075),
-    0 0 calc(var(--bs-size-s4) / 1)
-      rgba(var(--bs-color-brand-1-dark-2-rgb), 0.075);
+  box-shadow: none;
   color: var(--bs-color-grayscale-dark-4);
   outline-width: 0;
 }
@@ -1373,7 +1359,7 @@ textarea:focus:not(:focus-visible) {
   select:invalid,
   select[aria-invalid='true'] {
     background-color: var(--bs-color-grayscale-white);
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='var(--bs-color-warning-base)' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89l35.41 35.57 35.57-35.57a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='var(--bs-color-warning)' d='M6.64 34.23a5.57 5.57 0 0 1 7.87-7.89l35.41 35.57 35.57-35.57a5.57 5.57 0 0 1 7.87 7.89L53.94 73.66a5.58 5.58 0 0 1-7.88 0Z'/%3E%3C/svg%3E");
     border-color: var(--bs-color-warning);
     box-shadow: none;
     color: var(--bs-color-warning);
