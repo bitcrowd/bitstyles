@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Badge with Label, added an example showing a text label rendered next to a badge component, to the badge docs.
+
 ## [[6.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v6.0.0) - 2023-06-08
 
 ### Changed
