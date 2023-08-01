@@ -3,12 +3,11 @@
 @use '../../tools/design-token';
 
 #{classname.get($classname-items: 'page-header', $layer: 'organism')} {
-  background-color: var(design-token.get('color', 'grayscale', 'light-3'));
   padding-top: var(design-token.get('size', 'm'));
+  background-color: var(design-token.get('color', 'grayscale', 'light-3'));
 }
 
 .o-page-header__content {
-
   @include media-query.get('motion-ok') {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -19,34 +18,39 @@
   grid-column: 1;
   grid-row: 1;
 }
+
 .o-page-header__top-right {
+  display: flex;
   grid-column: 2;
   grid-row: 1;
-  display: flex;
   @include media-query.get('motion-ok') {
     justify-content: flex-end;
   }
 }
+
 .o-page-header__center-left {
   grid-column: 1;
   grid-row: 2;
 }
+
 .o-page-header__center-right {
+  display: flex;
   grid-column: 2;
   grid-row: 2;
-  display: flex;
   @include media-query.get('motion-ok') {
     justify-content: flex-end;
   }
 }
+
 .o-page-header__bottom-left {
   grid-column: 1;
   grid-row: 3;
 }
+
 .o-page-header__bottom-right {
+  display: flex;
   grid-column: 2;
   grid-row: 3;
-  display: flex;
   @include media-query.get('motion-ok') {
     justify-content: flex-end;
   }
