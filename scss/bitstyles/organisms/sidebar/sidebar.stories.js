@@ -12,8 +12,14 @@ export default {
       description:
         'All the items that will go on the center of the sidebar, a list of buttons for example',
     },
-    bottomSlot:
-      'The bottom area of the sidebar, a footer, or avatar link for example ',
+    bottomSlot: {
+      description:
+        'The bottom area of the sidebar, a footer, or avatar link for example ',
+    },
+    mainContent: {
+      description:
+        'Content that goes on the main area, not part of the sidebar',
+    },
   },
 };
 
@@ -26,5 +32,11 @@ Default.args = {
   topSlot: logoImg,
   children: buttonList,
   bottomSlot: bottom,
+  mainContent,
+};
+
+export const Minimal = Template.bind({});
+Minimal.args = {
+  children: buttonList.cloneNode(true),
   mainContent,
 };
