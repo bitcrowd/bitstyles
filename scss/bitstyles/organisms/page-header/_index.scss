@@ -49,7 +49,6 @@
 }
 
 .o-page-header__bottom-left {
-
   @include media-query.get('m') {
     grid-column: 1;
     grid-row: 3;
