@@ -8,53 +8,60 @@
 }
 
 .o-page-header__content {
-  @include media-query.get('motion-ok') {
+  @include media-query.get('m') {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 .o-page-header__top-left {
-  grid-column: 1;
-  grid-row: 1;
+  @include media-query.get('m') {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 
 .o-page-header__top-right {
   display: flex;
-  grid-column: 2;
-  grid-row: 1;
 
-  @include media-query.get('motion-ok') {
+  @include media-query.get('m') {
+    grid-column: 2;
+    grid-row: 1;
     justify-content: flex-end;
   }
 }
 
 .o-page-header__center-left {
-  grid-column: 1;
-  grid-row: 2;
+  @include media-query.get('m') {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
 
 .o-page-header__center-right {
   display: flex;
-  grid-column: 2;
-  grid-row: 2;
 
-  @include media-query.get('motion-ok') {
+  @include media-query.get('m') {
+    grid-column: 2;
+    grid-row: 2;
     justify-content: flex-end;
   }
 }
 
 .o-page-header__bottom-left {
-  grid-column: 1;
-  grid-row: 3;
+
+  @include media-query.get('m') {
+    grid-column: 1;
+    grid-row: 3;
+  }
 }
 
 .o-page-header__bottom-right {
   display: flex;
-  grid-column: 2;
-  grid-row: 3;
 
-  @include media-query.get('motion-ok') {
+  @include media-query.get('m') {
+    grid-column: 2;
+    grid-row: 3;
     justify-content: flex-end;
   }
 }

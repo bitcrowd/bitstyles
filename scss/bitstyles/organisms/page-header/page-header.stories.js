@@ -34,6 +34,14 @@ Default.args = {
   centerLeft: header,
   bottomLeft: tabs,
 };
+Default.parameters = {
+  zeplinLink: [
+    {
+      name: 'default',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6407627ec0507f42b9eec653',
+    },
+  ],
+};
 
 export const NoBottomSlot = Template.bind({});
 NoBottomSlot.args = {
