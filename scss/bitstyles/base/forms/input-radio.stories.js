@@ -41,6 +41,10 @@ Base.parameters = {
 
 export const Invalid = Template.bind({});
 Invalid.args = { type: 'radio', ariaInvalid: true, label: 'Unchecked invalid' };
+Invalid.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=645a5888f64b970e42359dbc',
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = { type: 'radio', disabled: true, label: 'Unchecked disabled' };
@@ -76,6 +80,10 @@ CheckedInvalid.args = {
   checked: true,
   ariaInvalid: true,
   label: 'Checked invalid',
+};
+CheckedInvalid.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=645a58805b9d821337cb7b6c',
 };
 
 export const CheckedDisabled = Template.bind({});

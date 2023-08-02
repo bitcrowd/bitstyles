@@ -89,6 +89,13 @@
       background-color: settings.$background-color-invalid;
       box-shadow: settings.$box-shadow-invalid;
       color: settings.$color-invalid;
+
+      &:checked {
+        border-color: settings.$border-color-invalid-checked;
+        background-color: settings.$background-color-invalid-checked;
+        box-shadow: settings.$box-shadow-invalid-checked;
+        color: settings.$color-invalid-checked;
+      }
     }
 
     &[disabled] {

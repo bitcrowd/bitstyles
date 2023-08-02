@@ -45,6 +45,10 @@ Invalid.args = {
   ariaInvalid: true,
   label: 'Unchecked invalid',
 };
+Invalid.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=645a598e4880c213a3197320',
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -88,6 +92,10 @@ CheckedInvalid.args = {
   checked: true,
   ariaInvalid: true,
   label: 'Checked invalid',
+};
+CheckedInvalid.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=645a59a5d47c930dfb98d064',
 };
 
 export const CheckedDisabled = Template.bind({});

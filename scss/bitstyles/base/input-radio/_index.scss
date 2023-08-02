@@ -83,6 +83,10 @@
       background-color: settings.$background-color-invalid;
       box-shadow: settings.$box-shadow-invalid;
       color: settings.$color-invalid;
+
+      &::after {
+        background: settings.$color-invalid;
+      }
     }
 
     &[disabled] {
@@ -115,6 +119,10 @@
       background-color: settings.$background-color-checked-hover;
       box-shadow: settings.$box-shadow-checked-hover;
       color: settings.$color-checked-hover;
+
+      &::after {
+        background: settings.$color-checked-hover;
+      }
     }
 
     &:checked:active:not(:invalid),
@@ -123,6 +131,10 @@
       background-color: settings.$background-color-checked-active;
       box-shadow: settings.$box-shadow-checked-active;
       color: settings.$color-checked-active;
+
+      &::after {
+        background: settings.$color-checked-active;
+      }
     }
   }
 }
