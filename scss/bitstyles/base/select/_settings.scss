@@ -46,7 +46,7 @@ $box-shadow-active: var(design-token.get('shadow', 'brand-1')) !default;
 
 //
 // Invalid styles ////////////////////////////////////////
-$color-invalid: var(design-token.get('color', 'warning')) !default;
+$color-invalid: var(design-token.get('color', 'grayscale', 'dark-1')) !default;
 $border-color-invalid: var(design-token.get('color', 'warning')) !default;
 $background-color-invalid: var(
   design-token.get('color', 'grayscale', 'white')

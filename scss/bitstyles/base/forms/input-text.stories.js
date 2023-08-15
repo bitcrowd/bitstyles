@@ -34,15 +34,15 @@ TextWithValue.parameters = {
   zeplinLink: [
     {
       name: 'base',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbb9d8f3dc7239794dccd',
     },
     {
       name: 'hover',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba235ff5623d67079eb',
     },
     {
       name: 'active',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29d53bff5b7626b7444',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbb9e62f9d023b1e475f2',
     },
   ],
 };
@@ -56,7 +56,7 @@ TextWithValueInvalid.args = {
 };
 TextWithValueInvalid.parameters = {
   zeplinLink:
-    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba098cca5236f016f66',
 };
 
 export const TextWithValueDisabled = Template.bind({});
@@ -68,7 +68,7 @@ TextWithValueDisabled.args = {
 };
 TextWithValueDisabled.parameters = {
   zeplinLink:
-    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=645259551dc67b3c0c0f8634',
 };
 
 // ***** Text inputs without values ****************** //
@@ -83,15 +83,15 @@ TextEmpty.parameters = {
   zeplinLink: [
     {
       name: 'base',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbb9c4fed4a236a1c340c',
     },
     {
       name: 'hover',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba7ebc1c823de19d9b4',
     },
     {
       name: 'active',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29d53bff5b7626b7444',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba6122e2e235f235223',
     },
   ],
 };
@@ -105,7 +105,7 @@ TextEmptyInvalid.args = {
 };
 TextEmptyInvalid.parameters = {
   zeplinLink:
-    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba425cd9623cef856c0',
 };
 
 export const TextEmptyDisabled = Template.bind({});
@@ -117,7 +117,7 @@ TextEmptyDisabled.args = {
 };
 TextEmptyDisabled.parameters = {
   zeplinLink:
-    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbb9ff25cd023ae394942',
 };
 
 // ***** Email inputs with values ****************** //
@@ -133,15 +133,15 @@ EmailWithValue.parameters = {
   zeplinLink: [
     {
       name: 'base',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbb9c4fed4a236a1c340c',
     },
     {
       name: 'hover',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba7ebc1c823de19d9b4',
     },
     {
       name: 'active',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29d53bff5b7626b7444',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba6122e2e235f235223',
     },
   ],
 };
@@ -156,7 +156,7 @@ EmailWithValueInvalid.args = {
 };
 EmailWithValueInvalid.parameters = {
   zeplinLink:
-    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba098cca5236f016f66',
 };
 
 export const EmailWithValueDisabled = Template.bind({});
@@ -169,7 +169,7 @@ EmailWithValueDisabled.args = {
 };
 EmailWithValueDisabled.parameters = {
   zeplinLink:
-    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=645259551dc67b3c0c0f8634',
 };
 
 // ***** Email inputs without values ****************** //
@@ -185,15 +185,15 @@ EmailEmpty.parameters = {
   zeplinLink: [
     {
       name: 'base',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbb9c4fed4a236a1c340c',
     },
     {
       name: 'hover',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29350fae8b712a63460',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba7ebc1c823de19d9b4',
     },
     {
       name: 'active',
-      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29d53bff5b7626b7444',
+      link: 'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba6122e2e235f235223',
     },
   ],
 };
@@ -208,7 +208,7 @@ EmailInvalidEmpty.args = {
 };
 EmailInvalidEmpty.parameters = {
   zeplinLink:
-    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbba425cd9623cef856c0',
 };
 
 export const EmailDisabledEmpty = Template.bind({});
@@ -221,7 +221,7 @@ EmailDisabledEmpty.args = {
 };
 EmailDisabledEmpty.parameters = {
   zeplinLink:
-    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6363a29861150a30c8ecffa3',
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=643fbb9ff25cd023ae394942',
 };
 
 // ***** Number inputs with values ****************** //

@@ -50,6 +50,10 @@ Invalid.args = {
   label: 'Select invalid',
   ariaInvalid: true,
 };
+Invalid.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=646f20300fe8d32205780813',
+};
 
 export const Disabled = Template.bind({});
 Disabled.args = {

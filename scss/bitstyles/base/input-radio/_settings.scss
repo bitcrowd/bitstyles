@@ -78,7 +78,23 @@ $background-color-invalid: var(
 $border-color-invalid: var(
   design-token.get('color', 'warning', 'dark-1')
 ) !default;
-$box-shadow-invalid: var(design-token.get('shadow', 'warning', 'box')) !default;
+$box-shadow-invalid: none !default;
+
+//
+// Checked invalid colors ////////////////////////////////////////
+
+$color-invalid-checked: var(
+  design-token.get('color', 'warning', 'dark-1')
+) !default;
+$background-color-invalid-checked: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$border-color-invalid-checked: var(
+  design-token.get('color', 'warning', 'dark-1')
+) !default;
+$box-shadow-invalid-checked: var(
+  design-token.get('shadow', 'warning', 'box')
+) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
