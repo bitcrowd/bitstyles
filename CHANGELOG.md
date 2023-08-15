@@ -7,6 +7,16 @@
 - Badge with Label, added an example showing a text label rendered next to a badge component, to the badge docs.
 - A new layout component at `atoms/switcher`, that lays out its children in a horizontal row with consistent spacing between children. The layout switches to a vertical stack once the width of the component passes below a threshold, or the number of children goes over a limit.
 - A new layout component at `atoms/stack`, that lays out its children vertically, with consistent spacing between children.
+- Joined-ui now works with inputs — you can now join inputs together with other inputs, or inputs together with buttons.
+- Inputs now use the global `:focus` outline, for improved keyboard navigation and visual accessibility.
+
+### Fixed
+
+- Default configuration for webfonts uses absolute values instead of CSS Custom Properties, so the font-weights work correctly again.
+
+### Changed
+
+- Updated visual appearance of inputs. If you weren’t overriding the default configuration, you don’t need to do anything to update. If you were overriding the configuration, be aware that there are now extra states for radio & checkboxes that you should override the colors for: active, checked-hover, checked-active, invalid, invalid-checked. You can now also set the box-shadow for each state.
 
 ## [[6.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v6.0.0) - 2023-06-08
 
