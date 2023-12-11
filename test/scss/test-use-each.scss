@@ -251,6 +251,17 @@
     ),
   )
 );
+@use '../../scss/bitstyles/atoms/stack' with (
+  $size-variants: (
+    'no-mq': (
+      '': var(--bscpn-content-padding-base),
+      'large': var(--bscpn-content-padding-l),
+    ),
+    'm': (
+      '': var(--bscpn-content-padding-l),
+    ),
+  )
+);
 @use '../../scss/bitstyles/atoms/topbar' with (
   $vertical-padding: 10rem
 );

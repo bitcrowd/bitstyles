@@ -1,4 +1,4 @@
-import { generateLabel } from '../../../../.storybook/helpers';
+import { generateButtonLabel } from '../../../../.storybook/helpers';
 
 export default ({
   children,
@@ -16,7 +16,7 @@ export default ({
   const button = document.createElement(element);
   button.innerHTML =
     children ||
-    generateLabel(
+    generateButtonLabel(
       shapeVariant,
       colorVariant,
       disabled || ariaDisabled,

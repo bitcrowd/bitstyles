@@ -2485,6 +2485,29 @@ table {
     --bs-switcher-spacing: var(--bs-size-s3);
   }
 }
+.a-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.a-stack:only-child {
+  height: 100%;
+}
+.a-stack > * {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.a-stack > * + * {
+  margin-top: var(--bs-stack-spacing);
+}
+.a-stack > * + * {
+  --bs-stack-spacing: var(--bs-content-padding-base);
+}
+@media screen and (min-width: 30em) {
+  .a-stack > * + * {
+    --bs-stack-spacing: var(--bs-content-padding-l);
+  }
+}
 .a-topbar {
   left: 0;
   padding: var(--bs-size-s3) var(--bs-size-s1);
