@@ -366,7 +366,7 @@ figcaption {
   font-display: swap;
   font-family: FakeFont;
   font-style: normal;
-  font-weight: var(--bscpn-font-weight-normal);
+  font-weight: 400;
   src: url(poppins-v20-latin-400.woff2) format('woff2'),
     url(poppins-v20-latin-400.woff) format('woff');
 }
@@ -374,7 +374,7 @@ figcaption {
   font-display: swap;
   font-family: FakeFont;
   font-style: italic;
-  font-weight: var(--bscpn-font-weight-normal);
+  font-weight: 400;
   src: url(poppins-v20-latin-400italic.woff2) format('woff2'),
     url(poppins-v20-latin-400italic.woff) format('woff');
 }
@@ -382,7 +382,7 @@ figcaption {
   font-display: swap;
   font-family: FakeFont;
   font-style: normal;
-  font-weight: var(--bscpn-font-weight-medium);
+  font-weight: 500;
   src: url(poppins-v20-latin-500.woff2) format('woff2'),
     url(poppins-v20-latin-500.woff) format('woff');
 }
@@ -390,7 +390,7 @@ figcaption {
   font-display: swap;
   font-family: FakeFont;
   font-style: italic;
-  font-weight: var(--bscpn-font-weight-medium);
+  font-weight: 500;
   src: url(poppins-v20-latin-500italic.woff2) format('woff2'),
     url(poppins-v20-latin-500italic.woff) format('woff');
 }
@@ -398,7 +398,7 @@ figcaption {
   font-display: swap;
   font-family: FakeFont;
   font-style: normal;
-  font-weight: var(--bscpn-font-weight-semibold);
+  font-weight: 600;
   src: url(poppins-v20-latin-600.woff2) format('woff2'),
     url(poppins-v20-latin-600.woff) format('woff');
 }
@@ -406,7 +406,7 @@ figcaption {
   font-display: swap;
   font-family: FakeFont;
   font-style: italic;
-  font-weight: var(--bscpn-font-weight-semibold);
+  font-weight: 600;
   src: url(poppins-v20-latin-600italic.woff2) format('woff2'),
     url(poppins-v20-latin-600italic.woff) format('woff');
 }
