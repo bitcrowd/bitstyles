@@ -3,48 +3,119 @@
 @use '../../tools/classname';
 @use '../../tools/design-token';
 
-/* stylelint-disable scss/dollar-variable-default */
-
-$button-classname: classname.get(
-  $classname-items: 'button',
-  $layer: 'atom',
-);
-$button-border-top-left-radius-name: design-token.get(
-  'button',
-  'border',
-  'top',
-  'left',
-  'radius'
-);
-$button-border-top-right-radius-name: design-token.get(
-  'button',
-  'border',
-  'top',
-  'right',
-  'radius'
-);
-$button-border-bottom-right-radius-name: design-token.get(
-  'button',
-  'border',
-  'bottom',
-  'right',
-  'radius'
-);
-$button-border-bottom-left-radius-name: design-token.get(
-  'button',
-  'border',
-  'bottom',
-  'left',
-  'radius'
-);
-$button-border-width-name: design-token.get('button', 'border', 'width');
-$button-box-shadow-name: design-token.get('button', 'box-shadow');
-
-/* stylelint-enable scss/dollar-variable-default */
-
 #{classname.get($classname-items: 'joined-ui', $layer: 'organism')} {
+  /* Buttons */
+  $button-classname: classname.get(
+    $classname-items: 'button',
+    $layer: 'atom',
+  );
+  $button-border-top-left-radius-name: design-token.get(
+    'button',
+    'border',
+    'top',
+    'left',
+    'radius'
+  );
+  $button-border-top-right-radius-name: design-token.get(
+    'button',
+    'border',
+    'top',
+    'right',
+    'radius'
+  );
+  $button-border-bottom-right-radius-name: design-token.get(
+    'button',
+    'border',
+    'bottom',
+    'right',
+    'radius'
+  );
+  $button-border-bottom-left-radius-name: design-token.get(
+    'button',
+    'border',
+    'bottom',
+    'left',
+    'radius'
+  );
+  $button-border-width-name: design-token.get('button', 'border', 'width');
+  $button-box-shadow-name: design-token.get('button', 'box-shadow');
+
+  /* Text inputs */
+  $input-text-border-top-left-radius-name: design-token.get(
+    'input-text',
+    'border',
+    'top',
+    'left',
+    'radius'
+  );
+  $input-text-border-top-right-radius-name: design-token.get(
+    'input-text',
+    'border',
+    'top',
+    'right',
+    'radius'
+  );
+  $input-text-border-bottom-right-radius-name: design-token.get(
+    'input-text',
+    'border',
+    'bottom',
+    'right',
+    'radius'
+  );
+  $input-text-border-bottom-left-radius-name: design-token.get(
+    'input-text',
+    'border',
+    'bottom',
+    'left',
+    'radius'
+  );
+  $input-text-border-width-name: design-token.get(
+    'input-text',
+    'border',
+    'width'
+  );
+  $input-text-box-shadow-name: design-token.get('input-text', 'box-shadow');
+
+  /* Selects */
+  $select-border-top-left-radius-name: design-token.get(
+    'select',
+    'border',
+    'top',
+    'left',
+    'radius'
+  );
+  $select-border-top-right-radius-name: design-token.get(
+    'select',
+    'border',
+    'top',
+    'right',
+    'radius'
+  );
+  $select-border-bottom-right-radius-name: design-token.get(
+    'select',
+    'border',
+    'bottom',
+    'right',
+    'radius'
+  );
+  $select-border-bottom-left-radius-name: design-token.get(
+    'select',
+    'border',
+    'bottom',
+    'left',
+    'radius'
+  );
+  $select-border-width-name: design-token.get('select', 'border', 'width');
+  $select-box-shadow-name: design-token.get('select', 'box-shadow');
+
+  display: inline-flex;
+  align-items: stretch;
   border-radius: settings.$border-radius;
   box-shadow: settings.$box-shadow;
+
+  > * {
+    display: flex;
+  }
 
   > :first-child #{$button-classname},
   > #{$button-classname}:first-child {
@@ -52,6 +123,22 @@ $button-box-shadow-name: design-token.get('button', 'box-shadow');
     #{$button-border-top-right-radius-name}: #{0};
     #{$button-border-bottom-right-radius-name}: #{0};
     margin-right: calc(var(#{$button-border-width-name}) * -1);
+  }
+
+  > :first-child input,
+  > input:first-child {
+    #{$input-text-box-shadow-name}: none;
+    #{$input-text-border-top-right-radius-name}: #{0};
+    #{$input-text-border-bottom-right-radius-name}: #{0};
+    margin-right: calc(var(#{$input-text-border-width-name}) * -1);
+  }
+
+  > :first-child select,
+  > select:first-child {
+    #{$select-box-shadow-name}: none;
+    #{$select-border-top-right-radius-name}: #{0};
+    #{$select-border-bottom-right-radius-name}: #{0};
+    margin-right: calc(var(#{$select-border-width-name}) * -1);
   }
 
   > :last-child #{$button-classname},
@@ -62,6 +149,22 @@ $button-box-shadow-name: design-token.get('button', 'box-shadow');
     margin-right: 0;
   }
 
+  > :last-child input,
+  > input:last-child {
+    #{$input-text-box-shadow-name}: none;
+    #{$input-text-border-top-left-radius-name}: #{0};
+    #{$input-text-border-bottom-left-radius-name}: #{0};
+    margin-right: 0;
+  }
+
+  > :last-child select,
+  > select:last-child {
+    #{$select-box-shadow-name}: none;
+    #{$select-border-top-left-radius-name}: #{0};
+    #{$select-border-bottom-left-radius-name}: #{0};
+    margin-right: 0;
+  }
+
   > :not(:first-child):not(:last-child) #{$button-classname},
   > #{$button-classname}:not(:first-child):not(:last-child) {
     #{$button-border-top-left-radius-name}: #{0};
@@ -69,5 +172,23 @@ $button-box-shadow-name: design-token.get('button', 'box-shadow');
     #{$button-border-bottom-right-radius-name}: #{0};
     #{$button-border-bottom-left-radius-name}: #{0};
     margin-right: calc(var(#{$button-border-width-name}) * -1);
+  }
+
+  > :not(:first-child):not(:last-child) input,
+  > input:not(:first-child):not(:last-child) {
+    #{$input-text-border-top-left-radius-name}: #{0};
+    #{$input-text-border-top-right-radius-name}: #{0};
+    #{$input-text-border-bottom-right-radius-name}: #{0};
+    #{$input-text-border-bottom-left-radius-name}: #{0};
+    margin-right: calc(var(#{$input-text-border-width-name}) * -1);
+  }
+
+  > :not(:first-child):not(:last-child) select,
+  > select:not(:first-child):not(:last-child) {
+    #{$select-border-top-left-radius-name}: #{0};
+    #{$select-border-top-right-radius-name}: #{0};
+    #{$select-border-bottom-right-radius-name}: #{0};
+    #{$select-border-bottom-left-radius-name}: #{0};
+    margin-right: calc(var(#{$select-border-width-name}) * -1);
   }
 }

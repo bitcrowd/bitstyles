@@ -26,37 +26,37 @@ $webfont-variants: (
   'normal': (
     'font-family': $webfont-family-name,
     'font-style': normal,
-    'font-weight': var(custom-property.name('font-weight', 'normal')),
+    'font-weight': 400,
     'filename': 'poppins-v20-latin-400',
   ),
   'italic': (
     'font-family': $webfont-family-name,
     'font-style': italic,
-    'font-weight': var(custom-property.name('font-weight', 'normal')),
+    'font-weight': 400,
     'filename': 'poppins-v20-latin-400italic',
   ),
   'medium': (
     'font-family': $webfont-family-name,
     'font-style': normal,
-    'font-weight': var(custom-property.name('font-weight', 'medium')),
+    'font-weight': 500,
     'filename': 'poppins-v20-latin-500',
   ),
   'medium-italic': (
     'font-family': $webfont-family-name,
     'font-style': italic,
-    'font-weight': var(custom-property.name('font-weight', 'medium')),
+    'font-weight': 500,
     'filename': 'poppins-v20-latin-500italic',
   ),
   'semibold': (
     'font-family': $webfont-family-name,
     'font-style': normal,
-    'font-weight': var(custom-property.name('font-weight', 'semibold')),
+    'font-weight': 600,
     'filename': 'poppins-v20-latin-600',
   ),
   'semibold-italic': (
     'font-family': $webfont-family-name,
     'font-style': italic,
-    'font-weight': var(custom-property.name('font-weight', 'semibold')),
+    'font-weight': 600,
     'filename': 'poppins-v20-latin-600italic',
   ),
 ) !default;

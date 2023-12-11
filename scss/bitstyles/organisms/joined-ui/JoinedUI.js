@@ -1,11 +1,6 @@
-export default ({ children }) => {
+export default ({ children, classname }) => {
   const list = document.createElement('ul');
-  list.classList.add(
-    'u-list-none',
-    'u-inline-flex',
-    'u-items-stretch',
-    'o-joined-ui'
-  );
+  list.classList.add('u-list-none', 'o-joined-ui', classname);
 
   children.forEach((child) => {
     const listItem = document.createElement('li');

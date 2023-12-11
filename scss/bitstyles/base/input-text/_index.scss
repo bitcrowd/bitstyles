@@ -1,6 +1,7 @@
 @forward 'settings';
 @use './settings';
 @use '../../tools/design-token';
+@use '../../design-tokens/focus';
 
 /* stylelint-disable selector-max-type */
 textarea,
@@ -10,7 +11,10 @@ input {
     background-color var(design-token.get('transition', 'default', 'duration'))
       var(design-token.get('transition', 'default', 'easing')),
     border var(design-token.get('transition', 'default', 'duration'))
+      var(design-token.get('transition', 'default', 'easing')),
+    outline-offset var(design-token.get('transition', 'default', 'duration'))
       var(design-token.get('transition', 'default', 'easing'));
+  outline-offset: 0;
   resize: vertical;
 
   &::placeholder {
@@ -21,9 +25,8 @@ input {
   }
 }
 
-/*
- * Selects all the text-like input types. We’re avoiding using e.g. `input[type="text"]` as it means we cannot use a single class later on
- */
+/* prettier-ignore */
+
 [type='text'],
 [type='email'],
 [type='number'],
@@ -37,30 +40,57 @@ input {
 [type='time'],
 [type='url'],
 textarea {
-  display: block;
-  width: 100%;
-  padding: settings.$padding-vertical settings.$padding-horizontal;
+  #{design-token.get('input-text', 'border-top-right-radius')}: settings.$border-radius;
+  #{design-token.get('input-text', 'border-bottom-right-radius')}: settings.$border-radius;
+  #{design-token.get('input-text', 'border-bottom-left-radius')}: settings.$border-radius;
+  #{design-token.get('input-text', 'border-top-left-radius')}: settings.$border-radius;
+  #{design-token.get('input-text', 'padding-vertical')}: settings.$padding-vertical;
+  #{design-token.get('input-text', 'padding-horizontal')}: settings.$padding-horizontal;
+  #{design-token.get('input-text', 'border-width')}: settings.$border-width;
+  display: flex;
+  flex-grow: 1;
+  padding:
+      calc(var(design-token.get('input-text', 'padding-vertical')) - var(design-token.get('input-text', 'border-width'), 0rem))
+      calc(var(design-token.get('input-text','padding-horizontal')) - var(design-token.get('input-text', 'border-width'), 0rem));
   border: settings.$border-width solid settings.$border-color;
-  border-radius: settings.$border-radius;
+  border-radius:
+    var(design-token.get('input-text', 'border-top-left-radius'))
+    var(design-token.get('input-text', 'border-top-right-radius'))
+    var(design-token.get('input-text', 'border-bottom-right-radius'))
+    var(design-token.get('input-text', 'border-bottom-left-radius'));
   background-color: settings.$background;
   box-shadow: settings.$box-shadow;
   color: settings.$color;
   font: settings.$font;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: settings.$border-color-hover;
     background-color: settings.$background-hover;
     box-shadow: settings.$box-shadow-hover;
     color: settings.$color-hover;
+
+    &::placeholder {
+      color: settings.$placeholder-color-hover;
+    }
   }
 
-  &:active,
-  &:focus {
+  &:focus-visible {
+    z-index: 3;
+    outline: focus.$outline-color solid focus.$outline-width;
+    outline-offset: focus.$outline-offset;
+  }
+
+  &:active {
     border-color: settings.$border-color-active;
-    outline: none;
+    outline-width: 0;
     background-color: settings.$background-active;
     box-shadow: settings.$box-shadow-active;
     color: settings.$color-active;
+
+    &::placeholder {
+      color: settings.$placeholder-color-active;
+    }
   }
 
   &:invalid,
@@ -69,6 +99,10 @@ textarea {
     background-color: settings.$background-color-invalid;
     box-shadow: settings.$box-shadow-invalid;
     color: settings.$color-invalid;
+
+    &::placeholder {
+      color: settings.$placeholder-color-invalid;
+    }
   }
 
   &:disabled {
@@ -77,6 +111,14 @@ textarea {
     box-shadow: settings.$box-shadow-disabled;
     color: settings.$color-disabled;
     cursor: default;
+
+    &::placeholder {
+      color: settings.$placeholder-color-disabled;
+    }
+  }
+
+  &:focus:not(:focus-visible) {
+    outline-width: 0;
   }
 }
 /* stylelint-enable selector-max-type */

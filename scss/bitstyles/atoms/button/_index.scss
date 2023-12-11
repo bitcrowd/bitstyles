@@ -13,8 +13,6 @@
   #{design-token.get('button', 'border-top-left-radius')}: var(design-token.get('button', 'border-radius'));
   #{design-token.get('button', 'transition')}: settings.$transition;
   #{design-token.get('button', 'justify-content')}: settings.$justify-content;
-  #{design-token.get('button', 'transition')}: settings.$transition;
-  #{design-token.get('button', 'justify-content')}: settings.$justify-content;
   display: flex;
   position: relative;
   flex-shrink: 0;
@@ -36,10 +34,15 @@
     var(design-token.get('button', 'border-top-right-radius'))
     var(design-token.get('button', 'border-bottom-right-radius'))
     var(design-token.get('button', 'border-bottom-left-radius'));
+  border-color: var(design-token.get('button', 'border-color'));
   outline-offset: 0;
+  background-color: var(design-token.get('button', 'background-color'));
+  box-shadow: var(design-token.get('button', 'box-shadow'));
+  color: var(design-token.get('button', 'color'));
   font-family: settings.$font-family;
-  font-size: var(design-token.get('button', 'font-size'));
-  font-weight: var(design-token.get('button', 'font-weight'));
+  font-size: var(design-token.get('button', 'font-size'), inherit);
+  font-weight: var(design-token.get('button', 'font-weight'), inherit);
+  line-height: var(design-token.get('button', 'line-height'), inherit);
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -51,7 +54,21 @@
   &:hover,
   &:focus {
     z-index: 1;
+    border-color: var(design-token.get('button', 'hover', 'border-color'));
     outline-width: 0;
+    background-color: var(design-token.get('button', 'hover', 'background-color'));
+    box-shadow: var(design-token.get('button', 'hover', 'box-shadow'));
+    color: var(design-token.get('button', 'hover', 'color'));
+    text-decoration: none;
+  }
+
+  &:active {
+    z-index: 1;
+    border-color: var(design-token.get('button', 'active', 'border-color'));
+    outline-width: 0;
+    background-color: var(design-token.get('button', 'active', 'background-color'));
+    box-shadow: var(design-token.get('button', 'active', 'box-shadow'));
+    color: var(design-token.get('button', 'active', 'color'));
     text-decoration: none;
   }
 
@@ -66,6 +83,10 @@
   &[aria-selected='true'],
   &[aria-current] {
     z-index: 2;
+    border-color: var(design-token.get('button', 'pressed', 'border-color'));
+    background-color: var(design-token.get('button', 'pressed', 'background-color'));
+    box-shadow: var(design-token.get('button', 'pressed', 'box-shadow'));
+    color: var(design-token.get('button', 'pressed', 'color'));
   }
 
   &:disabled,
@@ -74,6 +95,10 @@
   &[aria-disabled='true']:hover,
   &:disabled:focus,
   &[aria-disabled='true']:focus {
+    border-color: var(design-token.get('button', 'disabled', 'border-color'));
+    background-color: var(design-token.get('button', 'disabled', 'background-color'));
+    box-shadow: var(design-token.get('button', 'disabled', 'box-shadow'));
+    color: var(design-token.get('button', 'disabled', 'color'));
     cursor: not-allowed;
   }
 }

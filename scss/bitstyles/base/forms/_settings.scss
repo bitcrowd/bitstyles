@@ -1,3 +1,5 @@
+@use '../../tools/design-token';
+
 //
 // Fieldset ////////////////////////////////////////
 
@@ -14,3 +16,10 @@ $legend-background-color: transparent !default;
 $legend-border: 0 !default;
 $legend-border-radius: 0 !default;
 $legend-color: inherit !default;
+
+//
+// Label ////////////////////////////////////////
+
+$label-gap: var(design-token.get('size', 's7')) !default;
+$label-font-weight: var(design-token.get('font-weight', 'medium')) !default;
+$label-disabled-color: var(design-token.get('color', 'grayscale')) !default;

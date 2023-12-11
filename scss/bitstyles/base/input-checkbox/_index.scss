@@ -1,16 +1,17 @@
 @forward 'settings';
 @use './settings';
+@use '../../design-tokens/focus';
 @use '../../tools/design-token';
 
 [type='checkbox'] {
-  display: inline-block;
   position: relative;
+  top: calc(settings.$gap / 2);
   flex-shrink: 0;
   width: 1em;
   height: 1em;
-  margin-right: settings.$gap;
+  margin: settings.$gap;
+  outline-offset: 0;
   font-size: settings.$size;
-  vertical-align: middle;
   cursor: pointer;
   appearance: none;
 }
@@ -21,14 +22,28 @@
     border: settings.$border-width solid settings.$border-color;
     border-radius: settings.$border-radius;
     background-color: settings.$background-color;
+    box-shadow: settings.$box-shadow;
     color: settings.$color;
 
     &:hover,
     &:focus {
       border-color: settings.$border-color-hover;
-      outline: none;
+      outline-width: 0;
       background-color: settings.$background-color-hover;
+      box-shadow: settings.$box-shadow-hover;
       color: settings.$color-hover;
+    }
+
+    &:focus-visible {
+      outline: focus.$outline-color solid focus.$outline-width;
+      outline-offset: focus.$outline-offset;
+    }
+
+    &:active {
+      border-color: settings.$border-color-active;
+      background-color: settings.$background-color-active;
+      box-shadow: settings.$box-shadow-active;
+      color: settings.$color-active;
     }
 
     &::after {
@@ -44,6 +59,10 @@
         transform
           calc(var(design-token.get('transition', 'default', 'duration')) / 2)
           var(design-token.get('transition', 'default', 'duration'))
+          var(design-token.get('transition', 'default', 'easing')),
+        outline-offset
+          calc(var(design-token.get('transition', 'default', 'duration')) / 2)
+          var(design-token.get('transition', 'default', 'duration'))
           var(design-token.get('transition', 'default', 'easing'));
       opacity: 0;
       background-image: settings.$background-image-checked;
@@ -55,6 +74,7 @@
     &:checked {
       border-color: settings.$border-color-checked;
       background-color: settings.$background-color-checked;
+      box-shadow: settings.$box-shadow-checked;
       color: settings.$color-checked;
 
       &::after {
@@ -63,16 +83,51 @@
       }
     }
 
+    &:invalid,
+    &[aria-invalid='true'] {
+      border-color: settings.$border-color-invalid;
+      background-color: settings.$background-color-invalid;
+      box-shadow: settings.$box-shadow-invalid;
+      color: settings.$color-invalid;
+
+      &:checked {
+        border-color: settings.$border-color-invalid-checked;
+        background-color: settings.$background-color-invalid-checked;
+        box-shadow: settings.$box-shadow-invalid-checked;
+        color: settings.$color-invalid-checked;
+      }
+    }
+
     &[disabled] {
       border-color: settings.$border-color-disabled;
       background-color: settings.$background-color-disabled;
+      box-shadow: settings.$box-shadow-disabled;
       color: settings.$color-disabled;
 
       &:checked {
         border-color: settings.$border-color-disabled-checked;
         background-color: settings.$background-color-disabled-checked;
+        box-shadow: settings.$box-shadow-disabled-checked;
         color: settings.$color-disabled-checked;
       }
+    }
+
+    &:checked:hover:not(:invalid),
+    &:checked:focus:not(:invalid),
+    &:checked:hover:not([aria-invalid='true']),
+    &:checked:focus:not([aria-invalid='true']) {
+      border-color: settings.$border-color-checked-hover;
+      background-color: settings.$background-color-checked-hover;
+      box-shadow: settings.$box-shadow-checked-hover;
+      color: settings.$color-checked-hover;
+    }
+
+    &:checked:active:not(:invalid),
+    &:checked:active:not([aria-invalid='true']) {
+      border-color: settings.$border-color-checked-active;
+      background-color: settings.$background-color-checked-active;
+      box-shadow: settings.$box-shadow-checked-active;
+      color: settings.$color-checked-active;
     }
   }
 }

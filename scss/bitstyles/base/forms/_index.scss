@@ -20,9 +20,16 @@ legend {
 }
 
 label {
-  display: block;
-  margin-bottom: 0;
+  display: flex;
+  gap: settings.$label-gap;
+  align-items: baseline;
+  margin-bottom: settings.$label-gap;
+  font-weight: settings.$label-font-weight;
   cursor: pointer;
+
+  &[aria-disabled='true'] {
+    color: settings.$label-disabled-color;
+  }
 }
 
 [type='color'] {

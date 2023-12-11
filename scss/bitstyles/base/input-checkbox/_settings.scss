@@ -1,12 +1,12 @@
-@use '../../tools/design-token';
 @use '../../tools/color';
+@use '../../tools/design-token';
 
 //
 // Base styles ////////////////////////////////////////
 $border-radius: var(design-token.get('size', 's6')) !default;
 $gap: var(design-token.get('size', 's4')) !default;
-$border-width: var(design-token.get('size', 's7')) !default;
-$size: var(design-token.get('size', 'm')) !default;
+$border-width: 0.1875rem !default;
+$size: var(design-token.get('size', 'l2')) !default;
 
 //
 // Base colors ////////////////////////////////////////
@@ -14,7 +14,8 @@ $color: var(design-token.get('color', 'grayscale')) !default;
 $background-color: var(
   design-token.get('color', 'grayscale', 'white')
 ) !default;
-$border-color: var(design-token.get('color', 'grayscale')) !default;
+$border-color: var(design-token.get('color', 'grayscale', 'dark-2')) !default;
+$box-shadow: none !default;
 
 //
 // Hover colors ////////////////////////////////////////
@@ -23,13 +24,84 @@ $background-color-hover: var(
   design-token.get('color', 'grayscale', 'white')
 ) !default;
 $border-color-hover: var(design-token.get('color', 'brand-1')) !default;
+$box-shadow-hover: var(design-token.get('shadow', 'brand-1')) !default;
+
+//
+// Active colors ////////////////////////////////////////
+$color-active: var(design-token.get('color', 'brand-1', 'dark-1')) !default;
+$background-color-active: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$border-color-active: var(
+  design-token.get('color', 'brand-1', 'dark-1')
+) !default;
+$box-shadow-active: none !default;
 
 //
 // Checked colors ////////////////////////////////////////
 $color-checked: var(design-token.get('color', 'grayscale', 'white')) !default;
-$background-color-checked: var(design-token.get('color', 'brand-1')) !default;
-$border-color-checked: var(design-token.get('color', 'brand-1')) !default;
+$background-color-checked: var(
+  design-token.get('color', 'brand-1', 'dark-1')
+) !default;
+$border-color-checked: var(
+  design-token.get('color', 'brand-1', 'dark-1')
+) !default;
 $background-image-checked: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{color.url-encode-color(#ffffff)}' d='m83.07 11.71-44.41 44.59-21.73-21.81-15.93 15.99 37.65 37.81 60.35-60.59z'/%3E%3C/svg%3E") !default;
+$box-shadow-checked: var(design-token.get('shadow', 'brand-1', 'box')) !default;
+
+//
+// Checked hover colors ////////////////////////////////////////
+$color-checked-hover: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$background-color-checked-hover: var(
+  design-token.get('color', 'brand-1')
+) !default;
+$border-color-checked-hover: var(design-token.get('color', 'brand-1')) !default;
+$background-image-checked-hover: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{color.url-encode-color(#ffffff)}' d='m83.07 11.71-44.41 44.59-21.73-21.81-15.93 15.99 37.65 37.81 60.35-60.59z'/%3E%3C/svg%3E") !default;
+$box-shadow-checked-hover: none !default;
+
+//
+// Checked active colors ////////////////////////////////////////
+$color-checked-active: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$background-color-checked-active: var(
+  design-token.get('color', 'brand-1')
+) !default;
+$border-color-checked-active: var(
+  design-token.get('color', 'brand-1', 'dark-1')
+) !default;
+$background-image-checked-active: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='var(#{design-token.get('color', 'grayscale', 'white')})' d='m83.07 11.71-44.41 44.59-21.73-21.81-15.93 15.99 37.65 37.81 60.35-60.59z'/%3E%3C/svg%3E") !default;
+$box-shadow-checked-active: none !default;
+
+//
+// Invalid colors ////////////////////////////////////////
+$color-invalid: var(design-token.get('color', 'grayscale', 'white')) !default;
+$background-color-invalid: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$border-color-invalid: var(
+  design-token.get('color', 'warning', 'dark-1')
+) !default;
+$background-image-invalid: none !default;
+$box-shadow-invalid: none !default;
+
+//
+// Invalid checked colors ////////////////////////////////////////
+$color-invalid-checked: var(
+  design-token.get('color', 'grayscale', 'white')
+) !default;
+$background-color-invalid-checked: var(
+  design-token.get('color', 'warning', 'dark-1')
+) !default;
+$border-color-invalid-checked: var(
+  design-token.get('color', 'warning', 'dark-1')
+) !default;
+$background-image-invalid-checked: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='var(#{design-token.get('color', 'grayscale', 'white')})' d='m83.07 11.71-44.41 44.59-21.73-21.81-15.93 15.99 37.65 37.81 60.35-60.59z'/%3E%3C/svg%3E") !default;
+$box-shadow-invalid-checked: var(
+  design-token.get('shadow', 'warning', 'box')
+) !default;
 
 //
 // Disabled colors ////////////////////////////////////////
@@ -37,20 +109,22 @@ $color-disabled: var(
   design-token.get('color', 'grayscale', 'light-2')
 ) !default;
 $background-color-disabled: var(
-  design-token.get('color', 'grayscale', 'light-2')
+  design-token.get('color', 'grayscale', 'white')
 ) !default;
 $border-color-disabled: var(
-  design-token.get('color', 'grayscale', 'light-2')
+  design-token.get('color', 'grayscale', 'light-1')
 ) !default;
+$box-shadow-disabled: none !default;
 
 //
 // Disabled-checked colors ////////////////////////////////////////
 $color-disabled-checked: var(
-  design-token.get('color', 'grayscale', 'light-1')
+  design-token.get('color', 'grayscale', 'white')
 ) !default;
 $background-color-disabled-checked: var(
-  design-token.get('color', 'grayscale', 'light-2')
+  design-token.get('color', 'grayscale', 'light-1')
 ) !default;
 $border-color-disabled-checked: var(
   design-token.get('color', 'grayscale', 'light-1')
 ) !default;
+$box-shadow-disabled-checked: none !default;
