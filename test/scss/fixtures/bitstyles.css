@@ -2604,7 +2604,7 @@ table {
       rgba(var(--bs-color-grayscale-light-1-rgb), 7%),
     0 0 var(--bs-size-l1) rgba(var(--bs-color-grayscale-light-1-rgb), 10%);
   left: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 80vw;
   z-index: var(--bs-z-index-overlay);
