@@ -1866,8 +1866,7 @@ table {
   max-height: 90vh;
   max-width: 90vw;
   min-width: 17.5rem;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow-x: hidden auto;
   overscroll-behavior: contain;
   position: absolute;
   top: 100%;
@@ -2090,7 +2089,6 @@ table {
   z-index: var(--bscpn-z-index-overlay);
 }
 .bs-or-modal__overlay {
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background: rgba(var(--bscpn-color-grayscale-white-rgb), 95%);
   cursor: pointer;
@@ -2108,7 +2106,6 @@ table {
 }
 .bs-or-modal__content {
   -webkit-overflow-scrolling: touch;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: var(--bscpn-color-grayscale-white);
   height: auto;
