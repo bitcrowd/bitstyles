@@ -286,7 +286,9 @@
 @use '../../scss/bitstyles/organisms/joined-ui' with (
   $border-radius: 10rem
 );
-
+@use '../../scss/bitstyles/organisms/page-header' with (
+  $padding-top: 10rem
+);
 //
 // Utilities ////////////////////////////////////
 
