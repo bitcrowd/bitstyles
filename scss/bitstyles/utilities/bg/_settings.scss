@@ -9,6 +9,7 @@ $values: (
   'grayscale-light-1': var(design-token.get('color', 'grayscale', 'light-1')),
   'grayscale-light-2': var(design-token.get('color', 'grayscale', 'light-2')),
   'grayscale-light-3': var(design-token.get('color', 'grayscale', 'light-3')),
+  'grayscale-light-4': var(design-token.get('color', 'grayscale', 'light-4')),
   'white': var(design-token.get('color', 'grayscale', 'white')),
 ) !default;
 $breakpoints: () !default;

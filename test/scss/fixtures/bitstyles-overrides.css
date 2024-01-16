@@ -2176,7 +2176,7 @@ table {
     var(--bscpn-size-m) 0 var(--bscpn-size-s1)
       rgba(var(--bscpn-color-grayscale-light-1-rgb), 7%),
     0 0 var(--bscpn-size-l1) rgba(var(--bscpn-color-grayscale-light-1-rgb), 10%);
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   width: 80vw;
