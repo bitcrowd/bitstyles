@@ -12,8 +12,7 @@
   max-width: 90vw;
   max-height: 90vh;
   margin: settings.$border-radius 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow-x: hidden auto;
   overscroll-behavior: contain;
   border: settings.$border;
   border-radius: settings.$border-radius;
