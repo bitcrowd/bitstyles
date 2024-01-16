@@ -5,62 +5,39 @@
 #{classname.get($classname-items: 'page-header', $layer: 'organism')} {
   padding-top: var(design-token.get('size', 'm'));
   background-color: var(design-token.get('color', 'grayscale', 'light-3'));
-}
-
-.o-page-header__content {
-  @include media-query.get('m') {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-.o-page-header__top-left {
-  @include media-query.get('m') {
-    grid-column: 1;
-    grid-row: 1;
-  }
-}
-
-.o-page-header__top-right {
-  display: flex;
 
   @include media-query.get('m') {
-    grid-column: 2;
-    grid-row: 1;
-    justify-content: flex-end;
-  }
-}
-
-.o-page-header__center-left {
-  @include media-query.get('m') {
-    grid-column: 1;
-    grid-row: 2;
-  }
-}
-
-.o-page-header__center-right {
-  display: flex;
-
-  @include media-query.get('m') {
-    grid-column: 2;
-    grid-row: 2;
-    justify-content: flex-end;
-  }
-}
-
-.o-page-header__bottom-left {
-  @include media-query.get('m') {
-    grid-column: 1;
-    grid-row: 3;
-  }
-}
-
-.o-page-header__bottom-right {
-  display: flex;
-
-  @include media-query.get('m') {
-    grid-column: 2;
-    grid-row: 3;
-    justify-content: flex-end;
+    &__content {
+      display: grid;
+      grid-template-areas:
+        'top-left top-right'
+        'center-left center-right'
+        'bottom-left bottom-right';
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    &__top-left {
+      grid-area: top-left;
+    }
+    &__top-right {
+      grid-area: top-right;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__center-left {
+      grid-area: center-left;
+    }
+    &__center-right {
+      grid-area: center-right;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__bottom-left {
+      grid-area: bottom-left;
+    }
+    &__bottom-right {
+      grid-area: bottom-right;
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }

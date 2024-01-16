@@ -26,10 +26,10 @@ const PageHeader = ({
   ];
 
   contentPositions.forEach((item) => {
-    if (item) {
+    if (item.content) {
       const contentElement = document.createElement('div');
       contentElement.classList.add(`o-page-header__${item.position}`);
-      if (item.content) contentElement.appendChild(item.content);
+      contentElement.appendChild(item.content);
       content.appendChild(contentElement);
     }
   });

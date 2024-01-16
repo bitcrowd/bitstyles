@@ -14,13 +14,13 @@ export default {
       description: 'The center left of the header',
     },
     centerRight: {
-      description: 'The top left area of the header',
+      description: 'The center right area of the header',
     },
     bottomLeft: {
-      description: 'The top left area of the header',
+      description: 'The bottom left area of the header',
     },
     bottomRight: {
-      description: 'The top left area of the header',
+      description: 'The bottom right area of the header',
     },
   },
 };
