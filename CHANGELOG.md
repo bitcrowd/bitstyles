@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Changed
+
+- Updated the required node version number be more permissive. Should stop warnings about this in projects that use bitstyles
+
 ### Added
 
 - Badge with Label, added an example showing a text label rendered next to a badge component, to the badge docs.
