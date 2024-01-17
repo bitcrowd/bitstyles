@@ -91,13 +91,14 @@ breadCrumbsMenu.innerHTML = `
       </svg>
     </li>`;
 
-export const header = document.createElement('div');
+export const header = document.createElement('header');
 header.innerHTML = `
 <div class="u-flex u-justify-between u-flex-wrap u-items-center u-margin-m-y">
-<div class="u-flex u-flex-wrap u-items-center">
-  <h1 class="u-margin-m-right u-break-text">Title Header</h1>
-  <div class="u-flex-shrink-0 u-margin-m-bottom@s">
-    <span class="a-badge u-font-medium" data-theme="brand-1">Online</span>
+  <div class="u-flex u-flex-wrap u-items-center">
+    <h1 class="u-margin-m-right u-break-text">Title Header</h1>
+    <div class="u-flex-shrink-0 u-margin-m-bottom@s">
+      <span class="a-badge u-font-medium" data-theme="brand-1">Online</span>
+    </div>
   </div>
 </div>`;
 

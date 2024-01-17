@@ -8,9 +8,9 @@
 
 ### Added
 
-- Page Header Organism, added a page header organism component and storybook docs for it.
+- New Pageheader Organism-level component, that encapsulates what was previously an example component built using utility classes.
 
-- Sidebar component updates
+- Updates the layout of the Sidebar Organism-level component, improvements to the scrolling behavior and uses the invisible button variant.
 
 - Badge with Label, added an example showing a text label rendered next to a badge component, to the badge docs.
 - A new layout component at `atoms/switcher`, that lays out its children in a horizontal row with consistent spacing between children. The layout switches to a vertical stack once the width of the component passes below a threshold, or the number of children goes over a limit.
