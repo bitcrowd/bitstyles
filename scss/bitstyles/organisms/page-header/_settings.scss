@@ -1,0 +1,6 @@
+@use '../../tools/design-token';
+
+$padding-top: var(design-token.get('size', 'm')) !default;
+$background-color: var(
+  design-token.get('color', 'grayscale', 'light-3')
+) !default;

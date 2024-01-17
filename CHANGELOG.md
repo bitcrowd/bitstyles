@@ -8,6 +8,10 @@
 
 ### Added
 
+- New Pageheader Organism-level component, that encapsulates what was previously an example component built using utility classes.
+
+- Updates the layout of the Sidebar component, improvements to the scrolling behavior and uses the invisible button variant.
+
 - Badge with Label, added an example showing a text label rendered next to a badge component, to the badge docs.
 - A new layout component at `atoms/switcher`, that lays out its children in a horizontal row with consistent spacing between children. The layout switches to a vertical stack once the width of the component passes below a threshold, or the number of children goes over a limit.
 - A new layout component at `atoms/stack`, that lays out its children vertically, with consistent spacing between children.

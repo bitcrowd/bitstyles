@@ -1,0 +1,50 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/media-query';
+@use '../../tools/classname';
+
+#{classname.get($classname-items: 'page-header', $layer: 'organism')} {
+  padding-top: settings.$padding-top;
+  background-color: settings.$background-color;
+
+  @include media-query.get('m') {
+    &__content {
+      display: grid;
+      grid-template-areas:
+        'top-left top-right'
+        'center-left center-right'
+        'bottom-left bottom-right';
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &__top-left {
+      grid-area: top-left;
+    }
+
+    &__top-right {
+      display: flex;
+      grid-area: top-right;
+      justify-content: flex-end;
+    }
+
+    &__center-left {
+      grid-area: center-left;
+    }
+
+    &__center-right {
+      display: flex;
+      grid-area: center-right;
+      justify-content: flex-end;
+    }
+
+    &__bottom-left {
+      grid-area: bottom-left;
+    }
+
+    &__bottom-right {
+      display: flex;
+      grid-area: bottom-right;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -189,7 +189,8 @@
   $sidebar-large-width: 1rem,
   $sidebar-small-location: right,
   $table-color-th: #f00,
-  $joined-ui-border-radius: 10rem
+  $joined-ui-border-radius: 10rem,
+  $page-header-padding-top: 10rem
 );
 @use '../../scss/bitstyles/utilities' with (
   $aspect-ratio-values: (
