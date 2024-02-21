@@ -38,7 +38,10 @@ export default ({ title, label, extra = [] }) => {
   );
   heading.textContent = title;
   if (label) {
-    heading.appendChild(label);
+    const span = document.createElement('span');
+    span.classList.add('u-margin-l2-left');
+    span.appendChild(label);
+    heading.appendChild(span);
   }
 
   wrapper.appendChild(heading);

@@ -35,6 +35,15 @@ WithLabel.parameters = {
   zeplinLink: '',
 };
 
+export const LongTitleWithLabel = Template.bind({});
+LongTitleWithLabel.args = {
+  title: 'Recent bookings because booking are nice, who doesnt love books',
+  label: textLabel(),
+};
+LongTitleWithLabel.parameters = {
+  zeplinLink: '',
+};
+
 export const WithBadge = Template.bind({});
 WithBadge.args = {
   title: 'Recent bookings',
