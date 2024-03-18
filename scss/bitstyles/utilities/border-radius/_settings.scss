@@ -3,6 +3,7 @@
 $values: (
   '0': 0,
   's7': var(design-token.get('size', 's7')),
+  's2': var(design-token.get('size', 's2')),
 ) !default;
 $breakpoints: () !default;
 $directions: (
