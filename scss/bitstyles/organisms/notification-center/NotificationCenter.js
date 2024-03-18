@@ -26,26 +26,30 @@ export default ({ title, subtitle }) => {
   const article = document.createElement('article');
   const iconWrapperStart = document.createElement('div');
   const contentWrapper = document.createElement('div');
-  const iconWrapperEnd = document.createElement('div');
+  const iconWrapperEnd = document.createElement('button');
   const heading = document.createElement('h2');
   const subtitleElement = document.createElement('p');
 
   article.classList.add(
     'a-card',
-    'u-padding-0',
     'u-border-radius-s2',
-    'u-flex'
+    'u-overflow-visible',
+    'u-padding-0',
+    'u-flex',
+    'u-justify-between'
   );
 
   iconWrapperStart.classList.add(
     'u-flex-shrink-0',
     'u-flex',
+    'u-border-radius-s2-tl',
+    'u-border-radius-s2-bl',
     'u-items-center',
     'u-padding-s2',
     'u-bg-brand-2-light-4'
   );
   iconWrapperStart.innerHTML = `
-    <svg class="a-icon a-icon--l3" viewBox="0 0 100 100" width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <svg class="a-icon a-icon--xl" viewBox="0 0 100 100" width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <use xlink:href="${icons}#icon-mail"></use>
     </svg>
   `;
@@ -64,14 +68,18 @@ export default ({ title, subtitle }) => {
   subtitleElement.textContent = subtitle;
 
   iconWrapperEnd.classList.add(
-    'u-flex-shrink-0',
     'u-flex',
+    'a-button',
+    'a-button--transparent',
+    'u-border-radius-s2-tr',
+    'u-border-radius-s2-br',
     'u-items-center',
     'u-padding-s2',
+    'u-border-radius-0',
     'u-bg-grayscale-light-3'
   );
   iconWrapperEnd.innerHTML = `
-    <svg class="a-icon a-icon--l3" viewBox="0 0 100 100" width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <svg class="a-icon a-icon--xl" viewBox="0 0 100 100" width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <use xlink:href="${icons}#icon-mail"></use>
     </svg>
   `;
