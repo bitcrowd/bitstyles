@@ -1,5 +1,11 @@
 # Changelog
 
+## [[5.0.1]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.1) - 2024-04-18
+
+### Fixed
+
+- Built files have been updated in the npm package and CDN, so if you’re directly importing the built CSS, you will now get the correct version.
+
 ## [[5.0.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v5.0.0) - 2023-01-03
 
 ### Fixed
