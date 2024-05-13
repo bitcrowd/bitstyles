@@ -1,11 +1,6 @@
 export const textLabel = () => {
   const span = document.createElement('span');
-  span.classList.add(
-    'u-fg-grayscale-light-1',
-    'u-font-normal',
-    'u-h6',
-    'u-margin-s1-left'
-  );
+  span.classList.add('u-fg-grayscale', 'u-font-normal', 'u-h6');
   span.textContent = '[3/10]';
   return span;
 };
@@ -21,7 +16,8 @@ export default ({ title, label, extra = [] }) => {
     'u-flex',
     'u-items-center',
     'u-justify-between',
-    'u-flex-wrap'
+    'u-flex-wrap',
+    'u-gap-m'
   );
 
   extraContentContainer.classList.add(
@@ -30,26 +26,25 @@ export default ({ title, label, extra = [] }) => {
     'u-justify-between'
   );
 
-  heading.classList.add(
-    'u-margin-0',
-    'u-margin-m-right',
-    'u-flex',
-    'u-items-center'
-  );
+  heading.classList.add('u-margin-0');
   heading.textContent = title;
+
   if (label) {
     const span = document.createElement('span');
-    span.classList.add('u-margin-l2-left');
+    span.classList.add('u-margin-s1-left');
     span.appendChild(label);
     heading.appendChild(span);
   }
 
   wrapper.appendChild(heading);
 
-  extra.forEach((child) => {
-    extraContentContainer.append(child);
-  });
+  if (extra.length > 0) {
+    extra.forEach((child) => {
+      extraContentContainer.append(child);
+    });
 
-  wrapper.appendChild(extraContentContainer);
+    wrapper.appendChild(extraContentContainer);
+  }
+
   return wrapper;
 };
