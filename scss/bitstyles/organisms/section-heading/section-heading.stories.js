@@ -1,9 +1,9 @@
-import Badge from '../atoms/badge/Badge';
-import Button from '../atoms/button/Button';
+import Badge from '../../atoms/badge/Badge';
+import Button from '../../atoms/button/Button';
 import SectionHeading, { textLabel } from './SectionHeading';
 
 export default {
-  title: 'UI/Content/Section heading',
+  title: 'Organisms/Section heading',
   component: SectionHeading,
   argTypes: {},
 };

@@ -24,6 +24,9 @@ $prepend-spacing-property: design-token.get('badge', 'prepend', 'spacing');
 
 /* prettier-ignore */
 $shadow-property: design-token.get('badge', 'shadow');
+
+/* prettier-ignore */
+$font-size-property: design-token.get('badge', 'font-size');
 /* stylelint-enable scss/dollar-variable-default */
 
 #{classname.get($classname-items: 'badge', $layer: 'atom')} {
@@ -34,6 +37,8 @@ $shadow-property: design-token.get('badge', 'shadow');
   gap: var(#{$gap-property});
   border-radius: layout.$border-radius-round;
   box-shadow: var(#{$shadow-property});
+  font-size: var(design-token.get('badge', 'font-size'));
+  font-weight: var(design-token.get('font-weight', 'normal'));
   white-space: nowrap;
 }
 
@@ -77,6 +82,9 @@ $shadow-property: design-token.get('badge', 'shadow');
         }
         @if map.has-key($size-variant, 'gap') {
           #{$gap-property}: map.get($size-variant, 'gap');
+        }
+        @if map.has-key($size-variant, 'font-size') {
+          #{$font-size-property}: map.get($size-variant, 'font-size');
         }
         /* stylelint-enable max-nesting-depth */
       }
