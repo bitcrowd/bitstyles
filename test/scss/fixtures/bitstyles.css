@@ -1210,6 +1210,8 @@ table {
   border-radius: 9999rem;
   box-shadow: var(--bs-badge-shadow);
   display: inline-flex;
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-font-weight-normal);
   gap: var(--bs-badge-gap);
   padding: var(--bs-badge-padding-vertical) var(--bs-badge-padding-horizontal);
   white-space: nowrap;
@@ -1249,6 +1251,7 @@ table {
   --bs-badge-padding-vertical: var(--bs-size-s6);
   --bs-badge-prepend-spacing: 0rem;
   --bs-badge-gap: var(--bs-size-s6);
+  --bs-badge-font-size: var(--bs-font-size-3);
 }
 @media screen and (min-width: 30em) {
   .a-badge {
@@ -2680,7 +2683,7 @@ table {
 .o-page-header {
   background-color: var(--bs-color-grayscale-light-3);
   padding-top: var(--bs-size-m);
-  }
+}
 @media screen and (min-width: 30em) {
   .o-page-header__content {
     display: grid;
