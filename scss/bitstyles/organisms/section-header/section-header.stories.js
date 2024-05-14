@@ -1,14 +1,14 @@
 import Badge from '../../atoms/badge/Badge';
 import Button from '../../atoms/button/Button';
-import SectionHeading, { textLabel } from './SectionHeading';
+import SectionHeader, { textLabel } from './SectionHeader';
 
 export default {
-  title: 'Organisms/Section heading',
-  component: SectionHeading,
+  title: 'Organisms/Section header',
+  component: SectionHeader,
   argTypes: {},
 };
 
-const Template = (args) => SectionHeading(args);
+const Template = (args) => SectionHeader(args);
 
 export const Base = Template.bind({});
 Base.args = {
@@ -31,7 +31,7 @@ WithLabel.parameters = {
 
 export const LongTitleWithLabel = Template.bind({});
 LongTitleWithLabel.args = {
-  title: 'Recent bookings because booking are nice, who doesnt love books',
+  title: 'Betäubungsmittelverschreibungsverordnungen',
   label: textLabel(),
 };
 LongTitleWithLabel.parameters = {

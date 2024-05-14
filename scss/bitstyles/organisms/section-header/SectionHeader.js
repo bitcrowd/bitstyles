@@ -10,28 +10,16 @@ export default ({ title, label, extra = [] }) => {
   const extraContentContainer = document.createElement('div');
   const heading = document.createElement('h3');
 
-  wrapper.classList.add(
-    'u-padding-m-bottom',
-    'u-border-grayscale-light-1-bottom',
-    'u-flex',
-    'u-items-center',
-    'u-justify-between',
-    'u-flex-wrap',
-    'u-gap-m'
-  );
+  wrapper.classList.add('o-section-header');
 
-  extraContentContainer.classList.add(
-    'u-flex',
-    'u-items-center',
-    'u-justify-between'
-  );
+  extraContentContainer.classList.add('o-section-header__extra');
 
-  heading.classList.add('u-margin-0');
+  heading.classList.add('o-section-header__heading');
   heading.textContent = title;
 
   if (label) {
     const span = document.createElement('span');
-    span.classList.add('u-margin-s1-left');
+    span.classList.add('o-section-header__label');
     span.appendChild(label);
     heading.appendChild(span);
   }
