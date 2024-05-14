@@ -15,15 +15,8 @@ Base.args = {
   title: 'Recent bookings',
 };
 Base.parameters = {
-  zeplinLink: 'https://zpl.io/YYQmz7L',
-};
-
-export const TextOnly = Template.bind({});
-TextOnly.args = {
-  title: 'Most recent bookings',
-};
-TextOnly.parameters = {
-  zeplinLink: 'https://zpl.io/DlMR39W',
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=63613539842cc318bb1a433c',
 };
 
 export const WithLabel = Template.bind({});
@@ -32,7 +25,8 @@ WithLabel.args = {
   label: textLabel(),
 };
 WithLabel.parameters = {
-  zeplinLink: '',
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=63613539842cc318bb1a433c',
 };
 
 export const LongTitleWithLabel = Template.bind({});
@@ -41,16 +35,18 @@ LongTitleWithLabel.args = {
   label: textLabel(),
 };
 LongTitleWithLabel.parameters = {
-  zeplinLink: '',
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=63613539842cc318bb1a433c',
 };
 
 export const WithBadge = Template.bind({});
 WithBadge.args = {
   title: 'Recent bookings',
-  label: Badge({ sizeVariant: ['small'], theme: 'brand-1' }),
+  label: Badge({ sizeVariant: ['small'], theme: 'brand-1', label: 'New' }),
 };
 WithBadge.parameters = {
-  zeplinLink: 'https://zpl.io/mDqzmNQ',
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6361353cfeaf26147151d11d',
 };
 
 export const WithButtons = Template.bind({});
@@ -66,7 +62,8 @@ WithButtons.args = {
   ],
 };
 WithButtons.parameters = {
-  zeplinLink: 'https://zpl.io/3Xp7yoA',
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=6361353a09cd62193b39d1e7',
 };
 
 export const WithLabelAndButtons = Template.bind({});
@@ -83,5 +80,24 @@ WithLabelAndButtons.args = {
   ],
 };
 WithLabelAndButtons.parameters = {
-  zeplinLink: 'https://zpl.io/ll7RvE0',
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=636135388713c218d8a6ffca',
+};
+
+export const WithBadgeAndButtons = Template.bind({});
+WithBadgeAndButtons.args = {
+  title: 'Recent bookings',
+  label: Badge({ sizeVariant: ['small'], theme: 'brand-1', label: 'New' }),
+  extra: [
+    Button({
+      colorVariant: ['outline'],
+      children: ['Settings'],
+      classname: ['u-margin-m-right'],
+    }),
+    Button({ colorVariant: ['outline'], children: ['Edit'] }),
+  ],
+};
+WithBadgeAndButtons.parameters = {
+  zeplinLink:
+    'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=636135388713c218d8a6ffca',
 };
