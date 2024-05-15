@@ -37,7 +37,6 @@ $padding-property-name: design-token.get('section-header', 'padding');
 
 #{classname.get($classname-items: 'section-header__heading', $layer: 'organism')} {
   min-width: 0;
-  margin: 0;
 }
 
 #{classname.get($classname-items: 'section-header__label', $layer: 'organism')} {
