@@ -3,11 +3,11 @@ import Button from '../../atoms/button/Button';
 
 const CloseButton = () => {
   return Button({
-    colorVariant: ['transparent'],
+    colorVariant: ['secondary'],
     children: `<svg class="a-icon a-icon--xl" viewBox="0 0 100 100" width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <use xlink:href="${icons}#icon-cross"></use>
     </svg><span class="u-sr-only">Remove notification</span>`,
-    classname: ['u-self-start'],
+    classname: ['m-notification__button'],
   });
 };
 
