@@ -1,94 +1,75 @@
 import icons from '../../../../assets/images/icons.svg';
+import Button from '../../atoms/button/Button';
+import Dropdown from '../../atoms/dropdown/Dropdown';
 
-export function NotificationWrapper(children) {
-  const contentWrapper = document.createElement('div');
-  contentWrapper.style.position = 'relative';
-  contentWrapper.style.zIndex = 0;
-  contentWrapper.style.transform = 'translate3d(0,0,0)';
-  contentWrapper.style.minHeight = '15rem';
+const CloseButton = () => {
+  return Button({
+    colorVariant: ['transparent'],
+    children: `<svg class="a-icon a-icon--xl" viewBox="0 0 100 100" width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="${icons}#icon-cross"></use>
+    </svg><span class="u-sr-only">Remove notification</span>`,
+    classname: ['u-self-start'],
+  });
+};
 
-  const notificationWrapper = document.createElement('div');
-  notificationWrapper.classList.add(
-    'o-notification-center',
-    'a-content',
-    'a-content--s',
-    'u-margin-0'
-  );
-  notificationWrapper.setAttribute('aria-live', 'polite');
-  notificationWrapper.innerHTML = children;
-
-  contentWrapper.appendChild(notificationWrapper);
-
-  return contentWrapper;
-}
-
-export default ({ title, subtitle }) => {
-  const article = document.createElement('article');
+const Notification = ({ title, subtitle, theme = 'default' }) => {
+  const notification = document.createElement('article');
   const iconWrapperStart = document.createElement('div');
   const contentWrapper = document.createElement('div');
-  const iconWrapperEnd = document.createElement('button');
   const heading = document.createElement('h2');
   const subtitleElement = document.createElement('p');
 
-  article.classList.add(
-    'a-card',
-    'u-border-radius-s2',
-    'u-overflow-visible',
-    'u-padding-0',
-    'u-flex',
-    'u-justify-between'
-  );
+  notification.classList.add('m-notification');
+  notification.setAttribute('data-theme', theme);
 
-  iconWrapperStart.classList.add(
-    'u-flex-shrink-0',
-    'u-flex',
-    'u-border-radius-s2-tl',
-    'u-border-radius-s2-bl',
-    'u-items-center',
-    'u-padding-s2',
-    'u-bg-brand-2-light-4'
-  );
+  iconWrapperStart.classList.add('m-notification__highlight');
   iconWrapperStart.innerHTML = `
     <svg class="a-icon a-icon--xl" viewBox="0 0 100 100" width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <use xlink:href="${icons}#icon-mail"></use>
     </svg>
   `;
 
-  contentWrapper.classList.add('u-margin-l2');
+  contentWrapper.classList.add('m-notification__content');
 
-  heading.classList.add(
-    'u-h4',
-    'u-margin-0',
-    'u-margin-s6-bottom',
-    'u-white-space-nowrap'
-  );
+  heading.classList.add('u-h4', 'u-margin-s6-bottom');
   heading.textContent = title;
 
   subtitleElement.classList.add('u-margin-0', 'u-font-light');
   subtitleElement.textContent = subtitle;
 
-  iconWrapperEnd.classList.add(
-    'u-flex',
-    'a-button',
-    'a-button--transparent',
-    'u-border-radius-s2-tr',
-    'u-border-radius-s2-br',
-    'u-items-center',
-    'u-padding-s2',
-    'u-border-radius-0',
-    'u-bg-grayscale-light-3'
-  );
-  iconWrapperEnd.innerHTML = `
-    <svg class="a-icon a-icon--xl" viewBox="0 0 100 100" width="18" height="18" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-      <use xlink:href="${icons}#icon-mail"></use>
-    </svg>
-  `;
-
-  article.appendChild(iconWrapperStart);
+  notification.appendChild(iconWrapperStart);
   contentWrapper.appendChild(heading);
   contentWrapper.appendChild(subtitleElement);
-  article.appendChild(contentWrapper);
-  article.appendChild(iconWrapperEnd);
+  notification.appendChild(contentWrapper);
+  notification.appendChild(CloseButton());
 
-  return article;
+  return notification;
 };
+
+const NotificationCenter = ({ children = [], isGlobal = true }) => {
+  const notificationCenter = document.createElement('ul');
+
+  if (isGlobal) {
+    notificationCenter.setAttribute('aria-live', 'polite');
+    notificationCenter.classList.add(
+      'o-notification-center',
+      'a-content',
+      'a-content--s'
+    );
+  }
+
+  children.forEach((child) => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('o-notification-center__item');
+    listItem.appendChild(child);
+    notificationCenter.appendChild(listItem);
+  });
+
+  if (isGlobal) {
+    return notificationCenter;
+  }
+
+  return Dropdown({ children: notificationCenter, alignment: ['right'] });
+};
+
+export { Notification, NotificationCenter };
