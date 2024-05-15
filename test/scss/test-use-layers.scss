@@ -184,13 +184,14 @@
   $topbar-vertical-padding: 10rem
 );
 @use '../../scss/bitstyles/organisms' with (
+  $joined-ui-border-radius: 10rem,
   $modal-padding: 10rem,
   $navbar-will-change: opacity,
+  $page-header-padding-top: 10rem,
+  $section-header-background-color: #f00,
   $sidebar-large-width: 1rem,
   $sidebar-small-location: right,
   $table-color-th: #f00,
-  $joined-ui-border-radius: 10rem,
-  $page-header-padding-top: 10rem
 );
 @use '../../scss/bitstyles/utilities' with (
   $aspect-ratio-values: (

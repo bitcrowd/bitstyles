@@ -269,25 +269,28 @@
 //
 // Organisms ///////////////////////////////////
 
+@use '../../scss/bitstyles/organisms/joined-ui' with (
+  $border-radius: 10rem
+);
 @use '../../scss/bitstyles/organisms/modal' with (
   $padding: 10rem
 );
 @use '../../scss/bitstyles/organisms/navbar' with (
   $will-change: opacity
 );
+@use '../../scss/bitstyles/organisms/notification-center';
+@use '../../scss/bitstyles/organisms/page-header' with (
+  $padding-top: 10rem
+);
+@use '../../scss/bitstyles/organisms/section-header' with (
+  $background-color: #f00
+);
 @use '../../scss/bitstyles/organisms/sidebar' with (
   $large-width: 1rem,
   $small-location: right
 );
-@use '../../scss/bitstyles/organisms/notification-center';
 @use '../../scss/bitstyles/organisms/table' with (
   $color-th: #f00
-);
-@use '../../scss/bitstyles/organisms/joined-ui' with (
-  $border-radius: 10rem
-);
-@use '../../scss/bitstyles/organisms/page-header' with (
-  $padding-top: 10rem
 );
 //
 // Utilities ////////////////////////////////////
