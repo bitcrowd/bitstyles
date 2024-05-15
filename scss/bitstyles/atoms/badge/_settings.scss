@@ -9,6 +9,7 @@ $size-variants: (
       'padding-horizontal': var(design-token.get('size', 'l1')),
       'gap': var(design-token.get('size', 's6')),
       'prepend-spacing': 0rem,
+      'font-size': var(design-token.get('font-size', '3')),
     ),
   ),
   'm': (

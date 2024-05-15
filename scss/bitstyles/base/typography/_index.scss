@@ -13,6 +13,9 @@ h6 {
   font-family: settings.$font-family-heading;
   font-weight: settings.$font-weight-heading;
   text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  hyphens: auto;
 }
 
 @include typography.output-responsive-font-sizes(

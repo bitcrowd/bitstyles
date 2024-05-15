@@ -1,0 +1,50 @@
+@forward 'settings';
+@use './settings';
+@use '../../tools/classname';
+@use '../../tools/design-token';
+
+/* stylelint-disable scss/dollar-variable-default */
+$border-bottom-property-name: design-token.get(
+  'section-header',
+  'border-bottom'
+);
+$border-radius-property-name: design-token.get(
+  'section-header',
+  'border-radius'
+);
+$background-color-property-name: design-token.get(
+  'section-header',
+  'background-color'
+);
+$padding-property-name: design-token.get('section-header', 'padding');
+/* stylelint-enable scss/dollar-variable-default */
+
+#{classname.get($classname-items: 'section-header', $layer: 'organism')} {
+  #{$border-bottom-property-name}: settings.$border-bottom;
+  #{$border-radius-property-name}: settings.$border-radius;
+  #{$background-color-property-name}: settings.$background-color;
+  #{$padding-property-name}: settings.$padding;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(#{$padding-property-name});
+  border-bottom: var(#{$border-bottom-property-name});
+  border-radius: var(#{$border-radius-property-name});
+  background-color: var(#{$background-color-property-name});
+  gap: var(design-token.get('size', 'm'));
+}
+
+#{classname.get($classname-items: 'section-header__heading', $layer: 'organism')} {
+  min-width: 0;
+}
+
+#{classname.get($classname-items: 'section-header__label', $layer: 'organism')} {
+  margin-left: var(design-token.get('size', 's4'));
+}
+
+#{classname.get($classname-items: 'section-header__extra', $layer: 'organism')} {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

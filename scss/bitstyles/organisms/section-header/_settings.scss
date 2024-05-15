@@ -1,0 +1,7 @@
+@use '../../tools/design-token';
+
+$border-bottom: var(design-token.get('size', 's7')) solid
+  var(design-token.get('color', 'grayscale', 'light-1')) !default;
+$border-radius: 0 !default;
+$background-color: transparent !default;
+$padding: 0 0 var(design-token.get('size', 'm')) !default;
