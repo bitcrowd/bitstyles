@@ -1,28 +1,5 @@
 @use '../../tools/design-token';
 
-$theme-variants: (
-  'default': (
-    'highlight-background-color': var(design-token.get('color', 'grayscale', 'light-4')),
-    'highlight-color': var(design-token.get('color', 'grayscale', 'dark-3')),
-  ),
-  'brand-1': (
-    'highlight-background-color': var(design-token.get('color', 'brand-1', 'light-4')),
-    'highlight-color': var(design-token.get('color', 'brand-1', 'dark-1')),
-  ),
-  'brand-2': (
-    'highlight-background-color': var(design-token.get('color', 'brand-2', 'light-4')),
-    'highlight-color': var(design-token.get('color', 'brand-2', 'dark-1')),
-  ),
-  'positive': (
-    'highlight-background-color': var(design-token.get('color', 'positive', 'light-4')),
-    'highlight-color': var(design-token.get('color', 'positive', 'dark-1')),
-  ),
-  'warning': (
-    'highlight-background-color': var(design-token.get('color', 'warning', 'light-4')),
-    'highlight-color': var(design-token.get('color', 'warning', 'dark-1')),
-  ),
-  'danger': (
-    'highlight-background-color': var(design-token.get('color', 'danger', 'light-4')),
-    'highlight-color': var(design-token.get('color', 'danger', 'dark-1')),
-  ),
-) !default;
+$border-radius: var(design-token.get("size", "m")) !default;
+$shadow: var(design-token.get("shadow", "brand-1", "center", "box")) !default;
+$item-border-bottom: 2px solid var(design-token.get("color", "brand-1", "light-2")) !default;

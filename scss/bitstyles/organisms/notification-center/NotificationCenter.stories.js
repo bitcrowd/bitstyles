@@ -1,9 +1,9 @@
-import { Notification, NotificationCenter } from './NotificationCenter';
+import Notification from '../../molecules/notification/Notification';
+import NotificationCenter from './NotificationCenter';
 
 export default {
   title: 'Organisms/Notification center',
   component: NotificationCenter,
-  subcomponents: Notification,
   argTypes: {},
 };
 

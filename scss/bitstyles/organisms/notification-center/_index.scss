@@ -2,10 +2,16 @@
 @use "./settings";
 @use '../../tools/classname';
 @use '../../tools/design-token';
-@use '../../tools/themes';
-@use 'sass:map';
+
+/* prettier-ignore */
+$border-radius-property: design-token.get('notification-center', 'border-radius');
+$shadow-property: design-token.get('notification-center', 'shadow');
+$border-bottom-property: design-token.get('notification-center-item', 'border-bottom');
 
 #{classname.get($classname-items: 'notification-center', $layer: 'organism')} {
+  #{$border-radius-property}: settings.$border-radius;
+  #{$shadow-property}: settings.$shadow;
+
   position: fixed;
   top: 0;
   right: 0;
@@ -14,11 +20,11 @@
   list-style: none;
   padding: 0;
   z-index: var(design-token.get("z-index", 'top'));
-  border-radius: var(design-token.get("size", "m"));
+  border-radius: var($border-radius-property);
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 80vh;
-  box-shadow: var(design-token.get("shadow", "brand-1", "center", "box"));
+  box-shadow: var(#{$shadow-property});
 
   > * {
     pointer-events: auto;
@@ -26,37 +32,6 @@
 }
 
 #{classname.get($classname-items: 'notification-center__item', $layer: 'organism')} {
-  border-bottom: 2px solid var(design-token.get("color", "brand-1", "light-2"));
-}
-
-/* prettier-ignore */
-$highlight-color-property: design-token.get('notification', 'highlight-color');
-$highlight-background-color-property: design-token.get('notification', 'highlight-background-color');
-
-#{classname.get($classname-items: 'notification', $layer: 'molecule')} {
-  display: flex;
-  background-color: var(design-token.get("color", "grayscale", "white"));
-  color: var(design-token.get("color", "grayscale", "dark-3"));
-}
-
-#{classname.get($classname-items: 'notification__content', $layer: 'molecule')} {
-  flex: 1;
-  min-width: 0;
-  padding: var(design-token.get("size", "l2")) 0 var(design-token.get("size", "l2")) var(design-token.get("size", "l2"));
-}
-
-#{classname.get($classname-items: 'notification__highlight', $layer: 'molecule')} {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  padding: var(design-token.get("size", "s2"));
-  color: var($highlight-color-property, var(design-token.get("color", "brand-1", "dark-1")));
-  background-color: var($highlight-background-color-property, var(design-token.get("color", "brand-1", "light-4")));
-}
-
-@each $theme-name, $theme in settings.$theme-variants {
-  @include themes.get($theme-name) {
-    #{$highlight-color-property}: map.get($theme, 'highlight-color');
-    #{$highlight-background-color-property}: map.get($theme, 'highlight-background-color');
-  }
+  #{$border-bottom-property}: settings.$item-border-bottom;
+  border-bottom: var(#{$border-bottom-property});
 }
