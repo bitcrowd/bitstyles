@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## Changed
+
+- Relaxed NodeJS version requirement.
+
 ### Added
 
 - New section-header component at organism level. Encapsulates what was previously built using utility classes.
