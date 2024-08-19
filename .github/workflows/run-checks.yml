@@ -10,17 +10,27 @@ jobs:
         with:
           node-version: '18.16.1'
 
+      - name: Install dependencies ⚙️
+        run: yarn
+
       - name: Lint 👀
-        run: |
-          yarn
-          yarn lint
+        run: yarn lint
 
       - name: Test 🚀
-        run: |
-          yarn
-          yarn test
+        run: yarn test
 
       - name: Build Storybook 📖
+        run: yarn build-storybook
+
+      - name: Setup Playwright for Storybook tests
+        run: yarn playwright install
+
+      - name: Storybook Tests (axe-core) ♿️
         run: |
-          yarn
-          yarn build-storybook
+          yarn storybook &
+          echo "wait for storybook to start"
+          until curl --output /dev/null --silent --head --fail http://localhost:6006; do
+            printf '.'
+            sleep 5
+          done
+          yarn test-storybook
