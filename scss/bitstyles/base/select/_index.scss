@@ -1,6 +1,7 @@
 @forward 'settings';
 @use 'settings';
 @use '../../tools/design-token';
+@use '../../design-tokens/focus';
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) or
   (appearance: none) {
@@ -17,9 +18,12 @@
         var(design-token.get('transition', 'default', 'duration'))
         var(design-token.get('transition', 'default', 'easing')),
       border var(design-token.get('transition', 'default', 'duration'))
+        var(design-token.get('transition', 'default', 'easing')),
+      outline-offset var(design-token.get('transition', 'default', 'duration'))
         var(design-token.get('transition', 'default', 'easing'));
     border: settings.$border-width solid settings.$border-color;
     border-radius: settings.$border-radius;
+    outline-offset: 0;
     background-color: settings.$background-color;
     background-image: settings.$background-image;
     background-repeat: no-repeat;
@@ -49,6 +53,11 @@
       background-color: settings.$background-color-active;
       background-image: settings.$background-image-active;
       color: settings.$color-active;
+    }
+
+    &:focus-visible {
+      outline: focus.$outline-color solid focus.$outline-width;
+      outline-offset: focus.$outline-offset;
     }
 
     &:invalid {

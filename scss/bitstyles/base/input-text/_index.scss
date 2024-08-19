@@ -1,6 +1,7 @@
 @forward 'settings';
 @use './settings';
 @use '../../tools/design-token';
+@use '../../design-tokens/focus';
 
 /* stylelint-disable selector-max-type */
 textarea,
@@ -10,6 +11,8 @@ input {
     background-color var(design-token.get('transition', 'default', 'duration'))
       var(design-token.get('transition', 'default', 'easing')),
     border var(design-token.get('transition', 'default', 'duration'))
+      var(design-token.get('transition', 'default', 'easing')),
+    outline-offset var(design-token.get('transition', 'default', 'duration'))
       var(design-token.get('transition', 'default', 'easing'));
   resize: vertical;
 
