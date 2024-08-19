@@ -67,7 +67,7 @@ bottom.innerHTML = `
   >
     <div class="a-button__icon a-avatar">
       <img
-        src="https://placekitten.com/100/150"
+        src="https://placehold.co/100x150"
         width="36"
         height="54"
         alt="Jane Dobermann’s avatar"
