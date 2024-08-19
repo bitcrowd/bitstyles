@@ -5,6 +5,7 @@ module.exports = {
     '../scss/**/*.stories.mdx',
     '../scss/**/*.stories.@(js|jsx|ts|tsx)',
   ],
+  features: { buildStoriesJson: true },
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-a11y',

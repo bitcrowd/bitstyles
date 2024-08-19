@@ -4,6 +4,8 @@ export default ({
   children,
   colorVariant = [],
   shapeVariant = [],
+  role = undefined,
+  ariaLabel = undefined,
   ariaPressed = false,
   ariaDisabled = false,
   ariaCurrent = false,
@@ -33,6 +35,8 @@ export default ({
     button.classList.add(cls);
   });
   if (element === 'button') button.type = 'button';
+  if (role) button.setAttribute('role', role);
+  if (ariaLabel) button.setAttribute('aria-label', ariaLabel);
   if (ariaPressed) button.setAttribute('aria-pressed', ariaPressed);
   if (ariaDisabled) button.setAttribute('aria-disabled', ariaDisabled);
   if (ariaCurrent) button.setAttribute('aria-current', ariaCurrent);

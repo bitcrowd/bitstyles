@@ -7,29 +7,35 @@ import { Canvas, Meta, Story } from '@storybook/addon-docs';
 <Canvas isColumn>
   <Story name="Select">
     {`
-      <select>
-        <option value="value1" selected>Long option text to see some truncation especially in smaller viewports</option>
-        <option value="value2">Value 2</option>
-        <option value="value3">Value 3</option>
-      </select>
+      <label>label
+        <select>
+          <option value="value1" selected>Long option text to see some truncation especially in smaller viewports</option>
+          <option value="value2">Value 2</option>
+          <option value="value3">Value 3</option>
+        </select>
+      </label
     `}
   </Story>
   <Story name="Select (disabled)">
     {`
-      <select disabled>
-        <option value="value1" selected>Long option text to see some truncation especially in smaller viewports</option>
-        <option value="value2">Value 2</option>
-        <option value="value3">Value 3</option>
-      </select>
+      <label>label
+        <select disabled>
+          <option value="value1" selected>Long option text to see some truncation especially in smaller viewports</option>
+          <option value="value2">Value 2</option>
+          <option value="value3">Value 3</option>
+        </select>
+      </label
     `}
   </Story>
   <Story name="Select (invalid)">
     {`
-      <select required>
-        <option value="" disabled hidden selected>Please select</option>
-        <option value="value2">Value 2</option>
-        <option value="value3">Value 3</option>
-      </select>
+      <label>label
+        <select required>
+          <option value="" disabled hidden selected>Please select</option>
+          <option value="value2">Value 2</option>
+          <option value="value3">Value 3</option>
+        </select>
+      </label
     `}
   </Story>
 </Canvas>

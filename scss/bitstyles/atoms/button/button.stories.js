@@ -111,8 +111,21 @@ DefaultOutline.parameters = {
   ],
 };
 
+const baseTabArgs = {
+  colorVariant: ['tab'],
+  role: 'tab',
+};
+
+const TabDecorator = (story) => {
+  const decorator = document.createElement('ul');
+  decorator.setAttribute('role', 'tablist');
+  decorator.appendChild(story());
+  return decorator;
+};
+
 export const DefaultTab = Template.bind({});
-DefaultTab.args = { colorVariant: ['tab'] };
+DefaultTab.decorators = [TabDecorator];
+DefaultTab.args = { ...baseTabArgs };
 DefaultTab.parameters = {
   zeplinLink: [
     {
@@ -771,7 +784,8 @@ OutlinePressed.parameters = {
 };
 
 export const TabPressed = Template.bind({});
-TabPressed.args = { colorVariant: ['tab'], ariaCurrent: 'page' };
+TabPressed.decorators = [TabDecorator];
+TabPressed.args = { ...baseTabArgs, ariaCurrent: 'page' };
 TabPressed.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b52890b84043f89ba4',
@@ -815,7 +829,8 @@ OutlineDisabled.parameters = {
 };
 
 export const TabDisabled = Template.bind({});
-TabDisabled.args = { colorVariant: ['tab'], disabled: true };
+TabDisabled.decorators = [TabDecorator];
+TabDisabled.args = { ...baseTabArgs, disabled: true };
 TabDisabled.parameters = {
   zeplinLink:
     'https://app.zeplin.io/styleguide/63079b90d0bf4a646c46c227/components?coid=640094b30ee0b5408ad023fd',
@@ -930,7 +945,8 @@ OutlineAnchor.parameters = {
 };
 
 export const TabAnchor = Template.bind({});
-TabAnchor.args = { colorVariant: ['tab'], element: 'anchor' };
+TabAnchor.decorators = [TabDecorator];
+TabAnchor.args = { ...baseTabArgs, element: 'anchor' };
 TabAnchor.parameters = {
   zeplinLink: [
     {
@@ -949,8 +965,9 @@ TabAnchor.parameters = {
 };
 
 export const TabAnchorPressed = Template.bind({});
+TabAnchorPressed.decorators = [TabDecorator];
 TabAnchorPressed.args = {
-  colorVariant: ['tab'],
+  ...baseTabArgs,
   element: 'anchor',
   ariaCurrent: 'page',
 };
@@ -1087,8 +1104,9 @@ OutlineAnchorDisabled.parameters = {
 };
 
 export const TabAnchorDisabled = Template.bind({});
+TabAnchorDisabled.decorators = [TabDecorator];
 TabAnchorDisabled.args = {
-  colorVariant: ['tab'],
+  ...baseTabArgs,
   ariaDisabled: true,
   element: 'a',
 };
@@ -1144,8 +1162,9 @@ DangerOutlineAnchorDisabled.parameters = {
 // ***** Icon-only tab buttons ****************** //
 
 export const TabIconOnlyBase = Template.bind({});
+TabIconOnlyBase.decorators = [TabDecorator];
 TabIconOnlyBase.args = {
-  colorVariant: ['tab'],
+  ...baseTabArgs,
   shapeVariant: ['square'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
 };
@@ -1167,8 +1186,9 @@ TabIconOnlyBase.parameters = {
 };
 
 export const TabIconOnlySelected = Template.bind({});
+TabIconOnlySelected.decorators = [TabDecorator];
 TabIconOnlySelected.args = {
-  colorVariant: ['tab'],
+  ...baseTabArgs,
   shapeVariant: ['square'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
   ariaSelected: true,
@@ -1179,8 +1199,9 @@ TabIconOnlySelected.parameters = {
 };
 
 export const TabIconOnlyDisabled = Template.bind({});
+TabIconOnlyDisabled.decorators = [TabDecorator];
 TabIconOnlyDisabled.args = {
-  colorVariant: ['tab'],
+  ...baseTabArgs,
   shapeVariant: ['square'],
   children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-plus"></use></svg><span class="u-sr-only">Add</span>`,
   disabled: true,

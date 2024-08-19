@@ -28,6 +28,7 @@ export default ({ children, theme = 'brand-1', icon, onClick = null }) => {
       Button({
         shapeVariant: ['x-small', 'square'],
         children: Icon({ name: 'cross' }),
+        ariaLabel: 'Close',
         onClick,
       })
     );

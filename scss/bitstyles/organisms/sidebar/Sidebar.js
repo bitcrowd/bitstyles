@@ -28,12 +28,9 @@ buttonList.classList.add(
   'u-padding-s4-left'
 );
 
-const listItem = document.createElement('li');
-listItem.classList.add('u-margin-s2-bottom', 'u-flex');
-
-const buttomComponent = (label) =>
+const buttonComponent = (label) =>
   Button({
-    classname: ['u-justify-start'],
+    classname: ['u-justify-start', 'u-flex-grow-1'],
     children: `<svg width="20" height="20" class="a-icon a-icon--m" aria-hidden="true" focusable="false"><use xlink:href="${icons}#icon-caret-right"></use></svg><span class="u-margin-s1-left">${label}</span>`,
     colorVariant: ['transparent'],
   });
@@ -47,9 +44,12 @@ const labels = [
   'Sales',
 ];
 
-labels.forEach((label) =>
-  buttonList.appendChild(listItem.appendChild(buttomComponent(label)))
-);
+labels.forEach((label) => {
+  const listItem = document.createElement('li');
+  listItem.classList.add('u-margin-s2-bottom', 'u-flex');
+  listItem.appendChild(buttonComponent(label));
+  buttonList.appendChild(listItem);
+});
 
 export const bottom = document.createElement('div');
 bottom.innerHTML = `
@@ -67,7 +67,7 @@ bottom.innerHTML = `
   >
     <div class="a-button__icon a-avatar">
       <img
-        src="https://placekitten.com/100/150"
+        src="https://placehold.co/100x150"
         width="36"
         height="54"
         alt="Jane Dobermann’s avatar"
@@ -91,7 +91,6 @@ bottom.innerHTML = `
         <li>
             <a href="/" class="a-button a-button--transparent"> Privacy </a>
         </li>
-        <li role="separator"></li>
         <li>
             <a href="/" class="a-button a-button--transparent"> Sign out </a>
         </li>

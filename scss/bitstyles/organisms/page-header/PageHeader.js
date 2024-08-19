@@ -91,7 +91,7 @@ breadCrumbsMenu.innerHTML = `
       </svg>
     </li>`;
 
-export const header = document.createElement('header');
+export const header = document.createElement('div');
 header.innerHTML = `
 <div class="u-flex u-justify-between u-flex-wrap u-items-center u-margin-m-y">
   <div class="u-flex u-flex-wrap u-items-center">
