@@ -15,7 +15,7 @@
     "format:docs": "prettier --ignore-path .gitignore --write './**/*.{md,mdx}'",
     "format": "yarn format:js && yarn format:scss && yarn format:docs",
     "test": "script/test",
-    "test-storybook": "test-storybook",
+    "test-storybook": "test-storybook --stories-json",
     "checks": "yarn lint && yarn css:stats && yarn test",
     "watch": "yarn build && yarn build --watch",
     "clean": "rimraf build/*",
