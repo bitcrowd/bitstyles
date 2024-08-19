@@ -86,7 +86,6 @@ const menu = `
         }).outerHTML
       }
     </li>
-    <li role="separator"></li>
     <li>
       ${
         Button({
