@@ -204,27 +204,27 @@ Sidebar, header, and content that uses all available space.
                   </ul>
                 </div>
               </div>
-              <ul class="u-list-none u-flex u-overflow-x-auto l-items-end a-button--tab-container u-margin-m-bottom" role="tablist" aria-label="Patient data">
-                <li class="u-margin-s2-right">
-                  <button class="a-button a-button--tab" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
-                    Personal details
-                  </button>
-                </li>
-                <li class="u-margin-s2-right">
-                  <button class="a-button a-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="0">
-                    Anamnese
-                  </button>
-                </li>
-                <li class="u-margin-s2-right">
-                  <button class="a-button a-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="0">
-                    Appointment history
-                  </button>
-                </li>
-              </ul>
+              <div class="u-list-none u-flex u-overflow-x-auto l-items-end a-button--tab-container u-margin-m-bottom" role="tablist" aria-label="Patient data">
+                <button class="a-button a-button--tab u-margin-s2-right" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
+                  Personal details
+                </button>
+                <button class="a-button a-button--tab u-margin-s2-right" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="0">
+                  Anamnese
+                </button>
+                <button class="a-button a-button--tab u-margin-s2-right" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="0">
+                  Appointment history
+                </button>
+              </div>
             </div>
           </header>
           <div class="a-content a-content--full u-padding-l2-y u-flex-grow-1 u-overflow-y-auto">
             <h2 class="u-sr-only">Users</h2>
+            <div id="tab-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+            </div>
+            <div id="tab-panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+            </div>
+            <div id="tab-panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+            </div>
             <form action="" method="POST" role="search" class="u-margin-m-bottom u-flex">
               <h3 class="u-sr-only">Filter results</h3>
               <ul class="o-joined-ui u-flex u-list-none">
@@ -457,27 +457,28 @@ Sidebar, header, and content that uses all available space.
                   </ul>
                 </div>
               </div>
-              <ul class="u-list-none u-flex u-overflow-x-auto l-items-end a-button--tab-container u-margin-m-bottom" role="tablist" aria-label="Patient data">
-                <li class="u-margin-s2-right">
-                  <button class="a-button a-button--tab" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
-                    Personal details
-                  </button>
-                </li>
-                <li class="u-margin-s2-right">
-                  <button class="a-button a-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="0">
-                    Anamnese
-                  </button>
-                </li>
-                <li class="u-margin-s2-right">
-                  <button class="a-button a-button--tab" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="0">
-                    Appointment history
-                  </button>
-                </li>
-              </ul>
+              <div class="u-list-none u-flex u-overflow-x-auto l-items-end a-button--tab-container u-margin-m-bottom" role="tablist" aria-label="Patient data">
+                <button class="a-button a-button--tab u-margin-s2-right" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-1" tabindex="0">
+                  Personal details
+                </button>
+                <button class="a-button a-button--tab u-margin-s2-right" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-2" tabindex="0">
+                  Anamnese
+                </button>
+                <button class="a-button a-button--tab u-margin-s2-right" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-3" tabindex="0">
+                  Appointment history
+                </button>
+              </div>
             </div>
           </header>
           <div class="u-flex-grow-1 u-overflow-y-auto u-grid u-gap-m u-grid-cols-2@xl a-content a-content--full u-margin-0">
             <div class="u-padding-l2-y">
+              <h2 class="u-sr-only">Users</h2>
+              <div id="tab-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+              </div>
+              <div id="tab-panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+              </div>
+              <div id="tab-panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+              </div>
               <form action="" method="POST" role="search" class="u-margin-m-bottom u-flex">
                 <h3 class="u-sr-only">Filter results</h3>
                 <ul class="o-joined-ui u-flex u-list-none">

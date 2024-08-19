@@ -62,7 +62,7 @@ const menu = `
           colorVariant: ['transparent'],
           shapeVariant: ['menu'],
           children: 'Settings',
-          element: 'a',
+          classname: ['u-width-full'],
         }).outerHTML
       }
     </li>
@@ -72,7 +72,7 @@ const menu = `
           colorVariant: ['transparent'],
           shapeVariant: ['menu'],
           children: 'Help',
-          element: 'a',
+          classname: ['u-width-full'],
         }).outerHTML
       }
     </li>
@@ -82,7 +82,7 @@ const menu = `
           colorVariant: ['transparent'],
           shapeVariant: ['menu'],
           children: 'Privacy',
-          element: 'a',
+          classname: ['u-width-full'],
         }).outerHTML
       }
     </li>
@@ -92,7 +92,7 @@ const menu = `
           colorVariant: ['transparent'],
           shapeVariant: ['menu'],
           children: 'Sign out',
-          element: 'a',
+          classname: ['u-width-full'],
         }).outerHTML
       }
     </li>

@@ -76,7 +76,7 @@ When a user wants to filter a list of objects by fields which have a limited num
                 type="button"
                 class="a-button a-button--outline"
                 title="Filter by category"
-                aria-controls="dropdown-1"
+                aria-controls="dropdown-2"
                 @click="dropdownOpen = !dropdownOpen"
                 :aria-expanded="dropdownOpen"
               >
@@ -96,7 +96,7 @@ When a user wants to filter a list of objects by fields which have a limited num
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
                 class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s2-top"
-                id="dropdown-1"
+                id="dropdown-2"
               >
                 <li>
                   <label class="a-button a-button--transparent u-flex u-items-center">
@@ -338,7 +338,7 @@ When giving the user filters by category and free text, place the free text sear
                 x-transition:leave-end="is-off-screen"
                 @click.away="dropdownOpen = false"
                 class="a-dropdown a-dropdown--right u-overflow-y-auto u-list-none u-margin-s2-top"
-                id="dropdown-1"
+                id="dropdown-2"
               >
                 <li>
                   <label class="a-button a-button--transparent u-flex u-items-center">

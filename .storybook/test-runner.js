@@ -23,9 +23,9 @@ module.exports = {
         axeOptions: {
           rules: {
             // TODO: enable this rule again once all color contrast issues are fixed
-            "color-contrast": {
-              enabled: false
-            }
+            'color-contrast': {
+              enabled: false,
+            },
           },
         },
         detailedReport: true,
