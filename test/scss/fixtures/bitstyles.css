@@ -838,7 +838,7 @@ input,
 textarea {
   resize: vertical;
   transition: color var(--bs-transition-default-duration)
-  var(--bs-transition-default-easing),
+      var(--bs-transition-default-easing),
     background-color var(--bs-transition-default-duration)
       var(--bs-transition-default-easing),
     border var(--bs-transition-default-duration)
