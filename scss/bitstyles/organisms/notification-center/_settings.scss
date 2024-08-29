@@ -1,0 +1,5 @@
+@use '../../tools/design-token';
+
+$border-radius: var(design-token.get("size", "m")) !default;
+$shadow: var(design-token.get("shadow", "brand-1", "center", "box")) !default;
+$item-border-bottom: 2px solid var(design-token.get("color", "brand-1", "light-2")) !default;

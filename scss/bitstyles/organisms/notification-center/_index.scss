@@ -1,12 +1,37 @@
+@forward "./settings";
+@use "./settings";
 @use '../../tools/classname';
+@use '../../tools/design-token';
+
+/* prettier-ignore */
+$border-radius-property: design-token.get('notification-center', 'border-radius');
+$shadow-property: design-token.get('notification-center', 'shadow');
+$border-bottom-property: design-token.get('notification-center-item', 'border-bottom');
 
 #{classname.get($classname-items: 'notification-center', $layer: 'organism')} {
+  #{$border-radius-property}: settings.$border-radius;
+  #{$shadow-property}: settings.$shadow;
+
   position: fixed;
   top: 0;
   right: 0;
   pointer-events: none;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  z-index: var(design-token.get("z-index", 'top'));
+  border-radius: var($border-radius-property);
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 80vh;
+  box-shadow: var(#{$shadow-property});
 
   > * {
     pointer-events: auto;
   }
+}
+
+#{classname.get($classname-items: 'notification-center__item', $layer: 'organism')} {
+  #{$border-bottom-property}: settings.$item-border-bottom;
+  border-bottom: var(#{$border-bottom-property});
 }
