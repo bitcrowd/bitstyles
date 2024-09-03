@@ -440,7 +440,6 @@ img {
   max-width: 100%;
 }
 [type='checkbox'] {
-  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
@@ -453,9 +452,7 @@ img {
   vertical-align: middle;
   width: 1em;
 }
-@supports (
-  (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)
-) {
+@supports ((-moz-appearance: none) or (appearance: none)) {
   [type='checkbox'] {
     background-color: var(--bscpn-color-grayscale-white);
     border: var(--bscpn-size-s7) solid var(--bscpn-color-grayscale);
@@ -508,7 +505,6 @@ img {
   }
 }
 [type='radio'] {
-  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
@@ -521,9 +517,7 @@ img {
   vertical-align: middle;
   width: 1em;
 }
-@supports (
-  (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)
-) {
+@supports ((-moz-appearance: none) or (appearance: none)) {
   [type='radio'] {
     background-color: var(--bscpn-color-grayscale-white);
     border: var(--bscpn-size-s7) solid var(--bscpn-color-grayscale);
@@ -749,11 +743,8 @@ textarea:disabled {
   color: var(--bscpn-color-grayscale);
   cursor: default;
 }
-@supports (
-  (-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)
-) {
+@supports ((-moz-appearance: none) or (appearance: none)) {
   select {
-    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background-color: var(--bscpn-color-grayscale-white);
@@ -6096,7 +6087,6 @@ table {
 .bs-sr-only {
   clip: rect(0, 0, 0, 0);
   border: 0;
-  -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   height: 1px;
   margin: -1px;
@@ -6110,7 +6100,6 @@ table {
   .bs-sr-only\@xl {
     clip: rect(0, 0, 0, 0);
     border: 0;
-    -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
     height: 1px;
     margin: -1px;
