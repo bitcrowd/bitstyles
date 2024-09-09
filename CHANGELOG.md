@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## [[6.2.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v6.2.0) - 2024-09-09
 
 ## Changed
 
@@ -8,7 +8,7 @@
 
 ### Added
 
-- New section-header component at organism level. Encapsulates what was previously built using utility classes.
+- New section-header component (`.o-section-header`) at organism level. Encapsulates what was previously built using utility classes.
 
 ## [[6.1.0]](https://github.com/bitcrowd/bitstyles/releases/tag/v6.1.0) - 2024-02-14
 
