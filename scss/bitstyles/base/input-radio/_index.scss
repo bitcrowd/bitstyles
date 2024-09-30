@@ -1,6 +1,7 @@
 @forward 'settings';
 @use './settings';
 @use '../../tools/design-token';
+@use '../../design-tokens/focus';
 
 [type='radio'] {
   display: inline-block;
@@ -45,6 +46,11 @@
       outline: none;
       background-color: settings.$background-color-hover;
       color: settings.$color-hover;
+    }
+
+    &:focus-visible {
+      outline: focus.$outline-color solid focus.$outline-width;
+      outline-offset: focus.$outline-offset;
     }
 
     &:checked {

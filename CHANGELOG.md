@@ -5,6 +5,7 @@
 ## Changed
 
 - Relaxed NodeJS version requirement.
+- The focus design tokens are now also used in `base/input-checkbox`, `base/input-radio`, and `base/select`.
 
 ### Added
 

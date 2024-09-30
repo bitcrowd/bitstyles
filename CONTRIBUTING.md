@@ -58,7 +58,7 @@ yarn format:mdx
 
 ## Testing
 
-After adding or changing anything that affects the final output CSS, you’ll need to update the fixtures. These record the expected state of the CSS output by the entire library in its default state, and when some configuration is being overidden.
+After adding or changing anything that affects the final output CSS, you’ll need to update the fixtures. These record the expected state of the CSS output by the entire library in its default state, and when some configuration is being overridden.
 
 Run the build & comparison:
 

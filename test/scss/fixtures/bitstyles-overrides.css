@@ -466,6 +466,11 @@ img {
     color: var(--bscpn-color-brand-1);
     outline: none;
   }
+  [type='checkbox']:focus-visible {
+    outline: var(--bscpn-color-brand-2) solid
+    calc(var(--bscpn-size-s7) + var(--bscpn-size-s7) / 2);
+    outline-offset: var(--bscpn-size-s7);
+  }
   [type='checkbox']:after {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M83.07 11.71 38.66 56.3 16.93 34.49 1 50.48l37.65 37.81L99 27.7z'/%3E%3C/svg%3E");
     background-position: 50% 50%;
@@ -475,12 +480,15 @@ img {
     display: block;
     height: 100%;
     opacity: 0;
+    outline-offset: 0;
     transform: scale(0.7);
     transition: opacity calc(var(--bscpn-transition-default-duration) / 2)
         var(--bscpn-transition-default-duration)
         var(--bscpn-transition-default-easing),
       transform calc(var(--bscpn-transition-default-duration) / 2)
         var(--bscpn-transition-default-duration)
+        var(--bscpn-transition-default-easing),
+      outline-offset var(--bscpn-transition-default-duration)
         var(--bscpn-transition-default-easing);
     width: 100%;
   }
@@ -545,6 +553,11 @@ img {
     color: var(--bscpn-color-brand-1);
     outline: none;
   }
+  [type='radio']:focus-visible {
+    outline: var(--bscpn-color-brand-2) solid
+      calc(var(--bscpn-size-s7) + var(--bscpn-size-s7) / 2);
+    outline-offset: var(--bscpn-size-s7);
+    }
   [type='radio']:checked {
     background-color: var(--bscpn-color-grayscale-white);
     border-color: var(--bscpn-color-brand-1);
@@ -576,6 +589,8 @@ textarea {
     background-color var(--bscpn-transition-default-duration)
       var(--bscpn-transition-default-easing),
     border var(--bscpn-transition-default-duration)
+      var(--bscpn-transition-default-easing),
+    outline-offset var(--bscpn-transition-default-duration)
       var(--bscpn-transition-default-easing);
 }
 input::-moz-placeholder,
@@ -758,6 +773,7 @@ textarea:disabled {
     cursor: pointer;
     display: block;
     font: inherit;
+    outline-offset: 0;
     overflow: hidden;
     padding: var(--bscpn-size-s5) calc(var(--bscpn-size-s1) * 2)
       var(--bscpn-size-s5) var(--bscpn-size-s1);
@@ -767,6 +783,8 @@ textarea:disabled {
       background-color var(--bscpn-transition-default-duration)
         var(--bscpn-transition-default-easing),
       border var(--bscpn-transition-default-duration)
+        var(--bscpn-transition-default-easing),
+      outline-offset var(--bscpn-transition-default-duration)
         var(--bscpn-transition-default-easing);
     width: 100%;
   }
@@ -786,6 +804,11 @@ textarea:disabled {
     border-color: var(--bscpn-color-grayscale-dark-1);
     color: var(--bscpn-color-grayscale-dark-1);
     outline: none;
+  }
+  select:focus-visible {
+    outline: var(--bscpn-color-brand-2) solid
+      calc(var(--bscpn-size-s7) + var(--bscpn-size-s7) / 2);
+    outline-offset: var(--bscpn-size-s7);
   }
   select:invalid {
     background-color: var(--bscpn-color-grayscale-white);
