@@ -11,7 +11,7 @@ export default ({ alignment = [], children }) => {
   });
   wrapper.appendChild(button);
   const dropdown = document.createElement('div');
-  dropdown.innerHTML = children || 'Dropdown';
+  dropdown.appendChild(children);
   dropdown.classList.add('a-dropdown', 'u-overflow-y-auto');
   alignment.forEach((variant) => {
     dropdown.classList.add(`a-dropdown--${variant}`);
